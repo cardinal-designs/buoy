@@ -4,3 +4,15 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+.three-quarter {
+  position: relative;
+}
+
+.three-quarter img {
+  position: absolute;
+  bottom: 23px;
+  right: 23px;
+  width: 100px;
+  height: 100px;
+}
