@@ -1,6 +1,5 @@
 .polaroid-slider {
   padding: 100px 0 80px;
-  background: transparent linear-gradient(180deg, #F8F1EB00 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
   overflow: hidden;
 }
  
@@ -58,7 +57,6 @@
   border: 1px solid black;
   overflow: hidden;
   position: relative;
-  background-color: var(--beige-light);
 }
 
 
