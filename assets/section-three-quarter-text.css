@@ -1,0 +1,5 @@
+.three-quarter__text-container {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+  gap: 30px;
+}
