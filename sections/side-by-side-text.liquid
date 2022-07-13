@@ -1,12 +1,12 @@
 {{ 'section-side-by-side-text.css' | asset_url | stylesheet_tag }}
 
-<div class="side-by-side__container">
+<div styles="background-color: {{ section.settings.background }};" class="side-by-side__container">
   <div class="page-width">
-    <div class="side-by-side__text">
+    <div styles="color: {{ section.settings.color }};" class="side-by-side__text">
       <h2 class="h3 light">{{ section.settings.title1 }}</h2>
       <p class="h6 light">{{ section.settings.text1 }}</p>
     </div>
-    <div class="side-by-side__text">
+    <div styles="color: {{ section.settings.color }};" class="side-by-side__text">
       <h2 class="h3 light">{{ section.settings.title2 }}</h2>
       <p class="h6 light">{{ section.settings.text2 }}</p>
     </div>
@@ -37,6 +37,16 @@
         "type": "textarea",
         "id": "text2",
         "label": "Text 2"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
       }
     ],
     "presets": [
