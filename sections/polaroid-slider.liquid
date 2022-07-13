@@ -1,12 +1,12 @@
 {{ 'section-polaroid-slider.css' | asset_url | stylesheet_tag }}
 
-<div class="product-timeline">
+<div class="polaroid-slider">
   <div class="page-width">
-    <div class="product-timeline__content-wrapper no-scrollbar drag-scroll">
-      <div class="product-timeline__content">
+    <div class="polaroid-slider__content-wrapper no-scrollbar drag-scroll">
+      <div class="polaroid-slider__content">
         {% for block in section.blocks %}
-          <div class="product-timeline__item">
-            <div class="product-timeline__image">
+          <div class="polaroid-slider__item">
+            <div class="polaroid-slider__image">
               {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
             </div>
           </div>
