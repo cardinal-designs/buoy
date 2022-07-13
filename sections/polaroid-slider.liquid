@@ -1,12 +1,81 @@
+{{ 'section-product-timeline.css' | asset_url | stylesheet_tag }}
+
+<div class="product-timeline">
+  <div class="page-width">
+	<div class="product-timeline__header">
+      <h2>{{ section.settings.title }}</h2>
+      <p class="sh2 light">{{ section.settings.text }}</p>
+    </div>
+    <div class="product-timeline__content-wrapper no-scrollbar drag-scroll">
+      <div class="product-timeline__content">
+        {% for block in section.blocks %}
+          <div class="product-timeline__item">
+            <h2 class="product-timeline__time product-timeline__time--{{ forloop.index }}">{{ block.settings.time }}</h2>
+            <div class="product-timeline__image">
+              {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+            </div>
+            <h5>{{ block.settings.title }}</h5>
+            <p class="sh4 light">{{ block.settings.text }}</p>
+
+            <style>
+              .product-timeline__time--{{ forloop.index }}::before {
+                content: '{{ block.settings.time }}';
+              }
+            </style>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Polaroid Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "time",
+            "label": "Time"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Polaroid Slider"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
