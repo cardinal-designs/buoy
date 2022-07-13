@@ -1,12 +1,50 @@
+{{ 'section-three-quarter-text.css' | asset_url | stylesheet_tag }}
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Three Quarter Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title "
+      },
+	  {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+	  {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Floating Image"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Three Quarter Text"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
