@@ -7,7 +7,9 @@
         {% for block in section.blocks %}
           <div class="polaroid-slider__item">
             <div class="polaroid-slider__image">
+              <a href="{{ block.settings.image_url }}">
               {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+              </a>
             </div>
           </div>
         {% endfor %}
