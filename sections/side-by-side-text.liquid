@@ -1,12 +1,48 @@
+{{ 'section-side-by-side-text.css' | asset_url | stylesheet_tag }}
+
+<div class="side-by-side__container">
+  <div class="page-width">
+    <div class="side-by-side__text">
+      <h2>{{ section.settings.title1 }}</h2>
+      <p>{{ section.settings.text1 }}</p>
+    </div>
+    <div class="side-by-side__text">
+      <h2>{{ section.settings.title2 }}</h2>
+      <p>{{ section.settings.text2 }}</p>
+    </div>
+  </div>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Side by Side Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title 1"
+      },
+      {
+        "type": "textarea",
+        "id": "text1",
+        "label": "Text 1"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "text2",
+        "label": "Text 2"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Side by Side Text"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
