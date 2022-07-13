@@ -1,27 +1,10 @@
-.product-timeline {
+.polaroid-slider {
   padding: 100px 0 80px;
   background: transparent linear-gradient(180deg, #F8F1EB00 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
   overflow: hidden;
 }
  
-.product-timeline__header {
-  text-align: center;
-}
-
-.product-timeline__header h2 {
-  margin: 0 0 40px;
-}
-
-.product-timeline__header .sh2 {
-  max-width: 500px;
-  margin: 0 auto 60px;
-}
-
-.product-timeline__header .sh2 span {
-  font-weight: 500;
-}
-
-.product-timeline__content-wrapper {
+.polaroid-slider__content-wrapper {
   margin: 0px -1000px;
   padding-left: calc(50vw - 290px);
   padding-right: calc(50vw - 290px);
@@ -32,17 +15,17 @@
   font-size: 0px;
 }
 
-.product-timeline__content {
+.polaroid-slider__content {
   padding: 0px 1000px;
   display: inline-flex;
   white-space: nowrap;
 }
 
-.product-timeline__content .slick-list {
+.polaroid-slider__content .slick-list {
   overflow: visible;
 }
 
-.product-timeline__item {
+.polaroid-slider__item {
   width: 380px;
   padding: 0 20px;
   text-align: center;
@@ -50,7 +33,7 @@
   white-space: normal;
 }
 
-.product-timeline__item::before {
+.polaroid-slider__item::before {
   content: '';
   position: absolute;
   top: 130px;
@@ -59,32 +42,15 @@
   border-bottom: 1px solid black;
 }
 
-.product-timeline__item:first-child:before {
+.polaroid-slider__item:first-child:before {
   left: 50%;
 }
 
-.product-timeline__item:last-child:before {
+.polaroid-slider__item:last-child:before {
   right: 50%;
 }
 
-.product-timeline__time {
-  margin: 0 0 30px;
-  color: var(--beige);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--charcoal);
-  position: relative;
-}
-
-.product-timeline__time::before {
-  position: absolute;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--charcoal);
-  transform: translate(-4px, -4px);
-  z-index: 2;
-}
-
-.product-timeline__image {
+.polaroid-slider__image {
   height: 100px;
   width: 100px;
   margin: 0 auto;
@@ -95,57 +61,34 @@
   background-color: var(--beige-light);
 }
 
-.product-timeline__item h5 {
-  margin: 40px 0 18px;
-}
 
-.product-timeline__item .sh4 {
-  margin: 0;
-}
-
-.product-timeline__arrows {
+.polaroid-slider__arrows {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.product-timeline__arrows .slick-arrow {
+.polaroid-slider__arrows .slick-arrow {
   margin: 0 20px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-  .product-timeline {
+  .polaroid-slider {
     padding: 70px 0 40px;
   }
 
-  .product-timeline__header h2 {
-    margin-bottom: 20px;
-  }
-
-  .product-timeline__header .sh2 {
-    margin-bottom: 40px;
-  }
-
-  .product-timeline__time {
-    margin-bottom: 24px;
-  }
-
-  .product-timeline__item {
+  .polaroid-slider__item {
     width: 340px;
   }
 
-  .product-timeline__item h5 {
-    margin: 30px 0 10px;
-  }
-
-  .product-timeline__item::before {
+  .polaroid-slider__item::before {
     top: 115px;
   }
 }
 
 @media screen and (min-width: 1450px) {
-  .product-timeline__content {
+  .polaroid-slider__content {
     padding-left: 41%;
     padding-right: 41%;
   }
