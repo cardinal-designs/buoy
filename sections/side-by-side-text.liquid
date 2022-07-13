@@ -1,12 +1,12 @@
 {{ 'section-side-by-side-text.css' | asset_url | stylesheet_tag }}
 
-<div styles="background-color: {{ section.settings.background }};" class="side-by-side__container">
+<div style="background-color: {{ section.settings.background }};" class="side-by-side__container">
   <div class="page-width">
-    <div styles="color: {{ section.settings.color }};" class="side-by-side__text">
+    <div style="color: {{ section.settings.color }};" class="side-by-side__text">
       <h2 class="h3 light">{{ section.settings.title1 }}</h2>
       <p class="h6 light">{{ section.settings.text1 }}</p>
     </div>
-    <div styles="color: {{ section.settings.color }};" class="side-by-side__text">
+    <div style="color: {{ section.settings.color }};" class="side-by-side__text">
       <h2 class="h3 light">{{ section.settings.title2 }}</h2>
       <p class="h6 light">{{ section.settings.text2 }}</p>
     </div>
