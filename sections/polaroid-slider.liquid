@@ -1,6 +1,6 @@
 {{ 'section-polaroid-slider.css' | asset_url | stylesheet_tag }}
 
-<div class="polaroid-slider">
+<div style="background-color: {{ section.settings.color }}" class="polaroid-slider">
   <div class="page-width">
     <div class="polaroid-slider__content-wrapper no-scrollbar drag-scroll">
       <div class="polaroid-slider__content">
@@ -19,7 +19,13 @@
 {% schema %}
   {
     "name": "Polaroid Slider",
-    "settings": [],
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Background Color"
+      }
+	],
     "blocks": [
       {
         "type": "block",
