@@ -32,14 +32,6 @@
   white-space: normal;
 }
 
-.polaroid-slider__item::before {
-  content: '';
-  position: absolute;
-  top: 130px;
-  left: 0;
-  right: 0;
-/*   border-bottom: 1px solid black; */
-}
 
 .polaroid-slider__item:first-child:before {
   left: 50%;
@@ -78,9 +70,6 @@
     width: 340px;
   }
 
-  .polaroid-slider__item::before {
-    top: 115px;
-  }
 }
 
 @media screen and (min-width: 1450px) {
