@@ -27,11 +27,15 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
-  
+
+
   .side-by-side__container {
     text-align: center;
     padding-bottom: 77px;
     padding-top: 10px;
+  }
+
+  .side-by-side__text h2 {
+    margin-bottom: 20px;
   }
 }
