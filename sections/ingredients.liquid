@@ -1,0 +1,173 @@
+{{ 'section-ingredients.css' | asset_url | stylesheet_tag }} 
+
+<div class="ingredients">
+  <div class="page-width">
+    <div class="ingredients__header">
+      <h2 class="h3">{{ section.settings.title }}</h2>
+      <p class="sh2">{{ section.settings.text }}</p>
+    </div>
+    <div class="ingredients__grid{% if section.blocks.size > 6 %} show-more{% endif %}{% if section.blocks.size == 8 %} stretch-8{% endif %}{% if section.blocks.size == 11 %} stretch-11{% endif %}">
+      {% for block in section.blocks %}
+        <button class="ingredients__grid-item" data-idx="{{ forloop.index0 }}">
+          <div class="ingredients__grid-item-x"></div>
+          <div class="ingredients__grid-item-image">
+            <img
+              srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w{%- endif -%}"
+              src="{{ block.settings.image | img_url: '533x' }}"
+              sizes="500px"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce img-fill"
+            >
+          </div>
+          <p class="body-xs">{{ block.settings.location }}</p>
+          <div class="ingredients__grid-item-group">
+            <h6>{{ block.settings.name }}</h6>
+            <p class="body">{{ block.settings.description }}</p>
+          </div>
+        </button>
+      {% endfor %}
+    </div>
+    {% if section.blocks.size > 6 %}
+      <button class="ingredients__show-more">
+        <p class="body medium">See All {{ section.blocks.size }}</p>
+        {% render 'icon-caret' %}
+      </button>
+    {% endif %}
+  </div>
+</div>
+
+<div class="ingredients-popup-wrapper">
+  <div class="ingredients-popup">
+    <div class="page-width">
+      <div class="ingredients-popup__slider">
+        {% for block in section.blocks %}
+          <div class="ingredients-popup__item">
+            <button class="ingredients-popup__close">{% render 'icon-close' %}</button>
+            <div class="ingredients-popup__item-image">
+              <div class="ingredients-popup__item-image-wrapper">
+                {% render 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+              </div>
+            </div>
+            <div class="ingredients-popup__item-about">
+              <h4>{{ block.settings.name }}</h4>
+              <p class="sh4">{{ block.settings.description }}</p>
+              <p class="medium">{{ block.settings.location }}</p>
+            </div>
+            <div class="ingredients-popup__item-content">
+              <div class="ingredients-popup__item-content-block">
+                <p class="medium caps">Fast Fact</p>
+                <p class="light">{{ block.settings.fast_fact }}</p>
+              </div>
+              <div class="ingredients-popup__item-content-block">
+                <p class="medium caps">Why It's Important</p>
+                <p class="light">{{ block.settings.important }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="ingredients-popup__arrows"></div>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  // Set up popup slider
+  $('.ingredients-popup__slider').each(function() {
+    var $arrows = $(this).siblings('.ingredients-popup__arrows');
+
+    $(this).slick({
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(272.182 1503.504) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(28.001 11.504) rotate(180)"><g id="Arrow-2" data-name="Arrow" transform="translate(271.17 1503) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></g></svg></button>',
+      appendArrows: $arrows
+    });
+  });
+  
+  // Handle open popup
+  $('.ingredients__grid-item').click(function() {
+    var idx = $(this).data('idx');
+    var $parent = $(this).closest('.ingredients');
+    var $popupWrapper = $(this).closest('.ingredients').siblings('.ingredients-popup-wrapper');
+    var $popupSlider = $(this).closest('.ingredients').siblings('.ingredients-popup-wrapper').find('.ingredients-popup__slider');
+    
+    $popupSlider.slick('slickGoTo', idx, false);
+    setTimeout(function() {
+      $popupWrapper.addClass('is-visible');
+    }, 300);
+  });
+      
+  // Close Popup
+  $('.ingredients-popup__close').click(function() {
+    $('.ingredients-popup-wrapper').removeClass('is-visible');
+  });
+
+  // Handle Show More
+  $('.ingredients__show-more').click(function() {
+    $('.ingredients__grid').removeClass('show-more');
+    $(this).hide();
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Ingredients",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ingredient",
+        "name": "Ingredient",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "location",
+            "label": "Location"
+          },
+          {
+            "type": "textarea",
+            "id": "fast_fact",
+            "label": "Fast Fact"
+          },
+          {
+            "type": "textarea",
+            "id": "important",
+            "label": "Why It's Important"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ingredients"
+      }
+    ]
+  }
+{% endschema %}

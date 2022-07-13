@@ -1,0 +1,127 @@
+.main-menu {
+  max-width: 400px;
+  width: 100%;
+  padding: 50px 20px 50px 50px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: white;
+  color: var(--charcoal);
+  overflow: scroll;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transition: .4s ease-in-out;
+}
+
+.main-menu[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+.main-menu__close {
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.main-menu__close svg {
+  height: 18px;
+  width: 18px;
+}
+
+.main-menu__close svg path {
+  stroke: currentColor;
+  stroke-width: .5px;
+}
+
+/* Main */
+.main-menu__main-links {
+  margin-bottom: 60px;
+}
+
+.main-menu__main-link {
+  margin-bottom: 12px;
+}
+
+.main-menu__main-link .h6 {
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-menu__main-link .h6:hover {
+  font-weight: 500;
+}
+
+.main-menu__main-link .callout-text {
+  margin-left: 14px;
+  padding: 5px 18px;
+  font-size: 12px;
+  border-radius: 50px;
+  background: var(--beige-dark);
+}
+
+.main-menu__main-link .subtext {
+  margin: 0;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--charcoal-light);
+}
+
+.main-menu__main-links .arrow-link {
+  margin-top: 30px;
+}
+
+/* Secondary */
+.main-menu__secondary-links .sh4 {
+  margin: 0 0 12px;
+  display: block;
+}
+
+.main-menu__secondary-links .sh4:hover {
+  font-weight: 500;
+}
+
+.main-menu__secondary-links .account-link {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-menu__secondary-links .account-link svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-menu {
+    padding: 30px;
+  }
+
+  .main-menu__main-links {
+    margin-bottom: 80px;
+  }
+
+  .main-menu__main-links .h6 {
+    font-size: 22px;
+  }
+  
+  .main-menu__main-link {
+    margin-bottom: 28px;
+  }
+
+  .main-menu__secondary-links .sh4 {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+}

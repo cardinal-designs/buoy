@@ -1,0 +1,199 @@
+.hydration-sign-up {
+  background: transparent linear-gradient(180deg, var(---f8f1eb-primary-beige-light) 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #F8F1EB 0%, #F8F1EB00 50%) 0% 0% no-repeat padding-box;
+  padding: 120px 0 0;
+}
+
+.hydration-sign-up__form {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto 150px;
+}
+
+.hydration-sign-up__heading {
+  margin-bottom: 40px;
+}
+
+.hydration-sign-up__subtitle {
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+.hydration-sign-up__description {
+  font-size: 10px;
+  color: #545759;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.hydration-sign-up__two-fields {
+  display: flex;
+  grid-gap: 16px;
+}
+
+.hydration-sign-up__two-fields > div {
+  width: 100%;
+}
+
+.hydration-sign-up .email-form {
+  margin-bottom: 12px; 
+}
+
+@media only screen and (max-width: 768px) {
+  .hydration-sign-up {
+    padding: 70px 0 0;
+  }
+
+  .hydration-sign-up__heading {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  
+  .hydration-sign-up__subtitle {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }  
+
+  .hydration-sign-up__two-fields {
+    flex-direction: column;
+    grid-gap: 14px;
+  }
+
+  .hydration-sign-up__form {
+    margin-bottom: 70px;
+  }
+}
+
+/* Klaviyo Form */
+
+.hydration-sign-up p {
+  background: transparent !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 input[type='email'] {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+  border-color: #F8F1EB !important;
+  box-shadow: none !important;
+  background-color: #F8F1EB !important;
+
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 input[type='email']::placeholder {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 input[type='text'] {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+  border-color: #F8F1EB !important;
+  box-shadow: none !important;
+  background-color: #F8F1EB !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 input[type='text']::placeholder {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 .kl-private-reset-css-Xuajs1 input[type='tel'] {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+  border-color: #F8F1EB !important;
+  box-shadow: none !important;
+  background-color: #F8F1EB !important;
+  border-radius: 0 !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 .kl-private-reset-css-Xuajs1 input[type='tel']::placeholder {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 .kl-private-reset-css-Xuajs1 input[type='tel'] button {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+}
+
+.hydration-sign-up .kl-private-reset-css-Xuajs1 button {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.375em !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-decoration: underline !important;
+  text-underline-offset: 1px !important;
+  height: 47px !important;
+  border-color: #F8F1EB !important;
+  box-shadow: none !important;
+  background-color: #F8F1EB !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.hydration-sign-up .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-container.ql-container.ql-container p {
+  letter-spacing: 0 !important;
+  font-style: normal !important;
+}
+
+.hydration-sign-up .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor .ql-font-arial {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 45px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.hydration-sign-up .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-font-inter {
+  font-family: inter, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.6em !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .hydration-sign-up .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor .ql-font-arial {
+    font-size: 30px !important;
+  }
+
+  .hydration-sign-up .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-font-inter {
+    font-size: 12px !important;
+  }
+}
+

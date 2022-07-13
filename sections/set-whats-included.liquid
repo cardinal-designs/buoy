@@ -1,0 +1,325 @@
+{{ 'section-set-whats-included.css' | asset_url | stylesheet_tag }}
+
+<div class="included-set">
+  <div class="page-width">
+    <div class="included-set__header">
+      <p class="sh3 light">{{ section.settings.title }}</p>
+      <div class="included-set__header-tabs">
+        {% for block in section.blocks %}
+          {% assign current_product = all_products[block.settings.product] %}
+          <button class="included-set__header-tab{% if forloop.first %} active{% endif %}" data-tab="{{ current_product.handle }}">
+            {% render 'lazy-image' image: block.settings.tab_image, fade: true, classes: 'img-fill' %}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="included-set__container">
+    <div class="page-width">
+      {% for block in section.blocks %}
+        {% assign current_product = all_products[block.settings.product] %}
+        <div class="included-set__product{% if forloop.first %} active{% endif %}" data-tab="{{ current_product.handle }}">
+          <div class="included-set__product-header">
+            <h4 class="medium">{{ block.settings.title }}</h4>
+            <p class="h6 light">{{ block.settings.subtitle }}</p>
+          </div>
+          <div class="included-set__product-content">
+            <div class="included-set__product-image">
+              <div class="included-set__product-image-container">
+                {% if block.settings.video_url != blank %}
+                  <video autoplay loop muted playsinline class="img-fill">
+                    <source src="{{ block.settings.video_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                {% else %}
+                  {% render 'lazy-image' image: block.settings.image, fade: true, classes: 'img-fill' %}
+                {% endif %}
+              </div>
+            </div>
+            <div class="included-set__product-bullets">
+              {% if block.settings.bullet_1_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_1_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_1_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_1_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.bullet_2_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_2_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_2_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_2_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.bullet_3_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_3_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_3_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_3_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.bullet_4_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_4_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_4_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_4_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.bullet_5_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_5_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_5_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_5_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.bullet_6_emoji != blank %}
+                <div class="included-set__product-bullet">
+                  <div class="included-set__product-bullet-emoji">
+                    <h6>{{ block.settings.bullet_6_emoji }}</h6>
+                  </div>
+                  <div class="included-set__product-bullet-content">
+                    <p class="sh2">{{ block.settings.bullet_6_title }}</p>
+                    <p class="body light">{{ block.settings.bullet_6_text }}</p>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="included-set__product-arrows">
+            {% if forloop.index == 1 %}
+              {% assign prev_index = 2 %}
+              {% assign next_index = 1 %}
+            {% elsif forloop.index == 2 %}
+              {% assign prev_index = 0 %}
+              {% assign next_index = 2 %}
+            {% elsif forloop.index == 3 %}
+              {% assign prev_index = 1 %}
+              {% assign next_index = 0 %}
+            {% endif %}
+
+            {% assign prev_product = section.blocks[prev_index].settings.product %}
+            {% assign next_product = section.blocks[next_index].settings.product %}
+
+            <button class="included-set__product-arrow" data-tab="{{ prev_product }}">{% render 'icon-arrow-left' %}</button>
+            <button class="included-set__product-arrow" data-tab="{{ next_product }}">{% render 'icon-arrow-right' %}</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  $('.included-set__header-tab').click(function() {
+    var tab = $(this).data('tab');
+
+    $('.included-set__header-tab.active').removeClass('active');
+    $(this).addClass('active');
+
+    $('.included-set__product.active').removeClass('active');
+    $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
+  });
+
+  $('.included-set__product-arrow').click(function() {
+    var tab = $(this).data('tab');
+
+    $('.included-set__product.active').removeClass('active');
+    $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
+
+    $('.included-set__header-tab.active').removeClass('active');
+    $(`.included-set__header-tab[data-tab="${tab}"]`).addClass('active');
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "What's Included (Set)",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "What's Included"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "tab_image",
+            "label": "Tab Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL",
+            "info": "This will override the image"
+          },
+          {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 1"
+          },
+          {
+            "type": "text",
+            "id": "bullet_1_emoji",
+            "label": "Bullet 1 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_1_title",
+            "label": "Bullet 1 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_1_text",
+            "label": "Bullet 1 Text"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 2"
+          },
+          {
+            "type": "text",
+            "id": "bullet_2_emoji",
+            "label": "Bullet 2 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_2_title",
+            "label": "Bullet 2 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_2_text",
+            "label": "Bullet 2 Text"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 3"
+          },
+          {
+            "type": "text",
+            "id": "bullet_3_emoji",
+            "label": "Bullet 3 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_3_title",
+            "label": "Bullet 3 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_3_text",
+            "label": "Bullet 3 Text"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 4"
+          },
+          {
+            "type": "text",
+            "id": "bullet_4_emoji",
+            "label": "Bullet 4 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_4_title",
+            "label": "Bullet 4 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_4_text",
+            "label": "Bullet 4 Text"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 5"
+          },
+          {
+            "type": "text",
+            "id": "bullet_5_emoji",
+            "label": "Bullet 5 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_5_title",
+            "label": "Bullet 5 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_5_text",
+            "label": "Bullet 5 Text"
+          },
+          {
+            "type": "header",
+            "content": "Bullet 6"
+          },
+          {
+            "type": "text",
+            "id": "bullet_6_emoji",
+            "label": "Bullet 6 Emoji"
+          },
+          {
+            "type": "text",
+            "id": "bullet_6_title",
+            "label": "Bullet 6 Title"
+          },
+          {
+            "type": "textarea",
+            "id": "bullet_6_text",
+            "label": "Bullet 6 Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "What's Included (Set)"
+      }
+    ],
+    "templates": ["product"]
+  }
+{% endschema %}

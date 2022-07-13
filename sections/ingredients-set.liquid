@@ -1,0 +1,136 @@
+{{ 'section-ingredients-set.css' | asset_url | stylesheet_tag }} 
+
+<div class="ingredients ingredients--set">
+  <div class="page-width">
+    <button class="ingredients-set__header">
+      <h4>{{ section.settings.title }}</h4>
+      {% render 'icon-caret' %}
+    </button>
+    <div class="ingredients-set__content">
+
+      <div class="ingredients__grid{% if section.blocks.size == 2 %} stretch-2{% endif %}{% if section.blocks.size == 8 %} stretch-8{% endif %}">
+        {% for block in section.blocks %}
+          <button class="ingredients__grid-item" data-idx="{{ forloop.index0 }}">
+            <div class="ingredients__grid-item-x"></div>
+            <div class="ingredients__grid-item-image">
+              <img
+                srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w{%- endif -%}"
+                src="{{ block.settings.image | img_url: '533x' }}"
+                sizes="500px"
+                alt="{{ block.settings.image.alt | escape }}"
+                loading="lazy"
+                class="motion-reduce img-fill"
+              >
+            </div>
+            <p class="body-xs">{{ block.settings.location }}</p>
+            <div class="ingredients__grid-item-group">
+              <h6>{{ block.settings.name }}</h6>
+              <p class="body">{{ block.settings.description }}</p>
+            </div>
+          </button>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="ingredients-popup-wrapper">
+  <div class="ingredients-popup">
+    <div class="page-width">
+      <div class="ingredients-popup__slider">
+        {% for block in section.blocks %}
+          <div class="ingredients-popup__item">
+            <button class="ingredients-popup__close">{% render 'icon-close' %}</button>
+            <div class="ingredients-popup__item-image">
+              <div class="ingredients-popup__item-image-wrapper">
+                {% render 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+              </div>
+            </div>
+            <div class="ingredients-popup__item-about">
+              <h4>{{ block.settings.name }}</h4>
+              <p class="sh4">{{ block.settings.description }}</p>
+              <p class="medium">{{ block.settings.location }}</p>
+            </div>
+            <div class="ingredients-popup__item-content">
+              <div class="ingredients-popup__item-content-block">
+                <p class="medium caps">Fast Fact</p>
+                <p class="light">{{ block.settings.fast_fact }}</p>
+              </div>
+              <div class="ingredients-popup__item-content-block">
+                <p class="medium caps">Why It's Important</p>
+                <p class="light">{{ block.settings.important }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="ingredients-popup__arrows"></div>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  $('.ingredients-set__header').click(function() {
+    $(this).toggleClass('active');
+    $(this).siblings('.ingredients-set__content').slideToggle(300);
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Ingredients (Set)",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ingredient",
+        "name": "Ingredient",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "location",
+            "label": "Location"
+          },
+          {
+            "type": "textarea",
+            "id": "fast_fact",
+            "label": "Fast Fact"
+          },
+          {
+            "type": "textarea",
+            "id": "important",
+            "label": "Why It's Important"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ingredients (Set)"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,120 @@
+{{ 'section-text-image-props.css' | asset_url | stylesheet_tag }}
+{{ 'section-value-props.css' | asset_url | stylesheet_tag }}
+
+<div class="text-image-props">
+  <div class="page-width">
+  	<div class="text-image-props__container">
+  	  <div class="text-image-props__content">
+        <h2 class="h1 h1--{{ section.id }}">{{ section.settings.title }}</h2>
+        <p class="sh2 light">{{ section.settings.text }}</p>
+        
+        <style>
+          .h1--{{ section.id }}::before {
+            content: '{{ section.settings.title }}';
+            position: absolute;
+            color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: var(--charcoal);
+            transform: translate(-4px, -4px);
+            z-index: 2;
+          }
+        </style>
+      </div>
+      <div class="text-image-props__image">
+  		<div class="text-image-props__image-container">
+          {% if section.settings.video_url != blank %}
+          <video autoplay loop muted playsinline class="img-fill">
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          {% else %}
+          <img
+            srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+              {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+              {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+              {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+            src="{{ section.settings.image | img_url: '533x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            class="motion-reduce img-fill"
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="text-image-props__props-container">
+      <h6>{{ section.settings.value_props_title }}</h6>
+      <div class="value-props__props-container no-scrollbar drag-scroll">
+        <div class="value-props__props-slider">
+          {% for block in section.blocks %}
+            {% if block.type == 'value_prop' %}
+              <div class="value-props__prop">
+                <h3 class="float {% cycle '', 'is-reversed' %}">{{ block.settings.emoji }}</h3>
+                <p class="body">{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text / Image + Props",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "value_props_title",
+        "label": "Value Props Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "value_prop",
+        "name": "Value Prop",
+        "settings": [
+          {
+            "type": "text",
+            "id": "emoji",
+            "label": "Emoji"
+          },
+		  {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text / Image + Props"
+      }
+    ]
+  }
+{% endschema %}

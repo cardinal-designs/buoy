@@ -1,0 +1,301 @@
+
+{%- liquid
+    assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
+    assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+     
+    if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
+      assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+    endif
+  assign popuptext = "<Strong>How Subscriptions Work</strong><br> Make healthy your habit. Save money, save<br> time and get healthy. Your custom MANTRA <br>ubscription is automatically delivered on<br>your schedule, right to your door. No<br>obligation, modify or cancel your<br>subscription anytime."
+
+-%}
+{% assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "5859381" %}
+{% for selling_plan in product.selling_plan_groups %}
+    {% if selling_plan.app_id == '5859381' %}
+    {% assign rtx_selling_plan = selling_plan %}
+    {% endif %}
+{% endfor %}
+{% assign first_selling_plan_allocation = product.variants.first.selling_plan_allocations[0] %}
+{% assign subPrice = first_selling_plan_allocation.price | money %}
+<p class="plan_label">PICK YOUR PLAN</p>
+
+    {% if product.selling_plan_groups[0].name %}
+        <input type='hidden' name="id" id="variant_{{ product.id }}" value="{{ current_variant.id }}">
+        <input type='hidden' name="selling_plan" id="selling_plan_{{ product.id }}" value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
+        <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
+            <div class="rtx_container" data-product='{{ product | json }}'>
+                {% unless product.requires_selling_plan %}
+                    <div class="rtx_option_{{ product.id }} rtx_option_one_time" id="rtx_option_one_time">
+                        <div class="rtx_option_selector">
+                            <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}" checked >
+                            <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
+                            <div class="rtx_option_heading">
+                                One-Time Purchase
+                            </div>
+                            <p class="one_sub_text">{{section.settings.one_time_subtext}}</p>
+                            </label>
+                        </div>
+              </div>
+              {% endunless %}
+              <div id='rtx_sands_block'>
+                <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub" >
+                  <div class="rtx_option_selector">
+                    <input type="radio" id='radio_sub_{{ product.id }}' class="radio_rtx" value="subsave" name="selling_plan_select" data-product_id="{{ product.id }}"  >
+                    <label for="product_subsave_{{ product.id }}" class="rtx_option_label">
+                      <div class="rtx-tooltip__flex">
+
+                        <div class="rtx_option_heading">
+                          {% comment %}
+                          {{rtx_selling_plan.name}}
+                          {% endcomment %}
+                          Subscribe
+                        </div>
+                        <div class="product__rtx-tooltip">
+                          <div class="rtx_popup">
+                            <div class="clear_button">
+                              <p class="clear_tag">Clear Pee Club <span class="save24">Save 24%</span></p>
+                              <svg class="clear_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.10634 3.16406C6.33359 3.16406 4.87747 4.56156 4.87747 6.29014C4.87634 6.38125 4.91177 6.46898 4.97574 6.53393C5.03985 6.59874 5.12716 6.6353 5.21827 6.6353C5.30952 6.6353 5.39682 6.59874 5.46079 6.53393C5.5249 6.46897 5.56033 6.38125 5.55921 6.29014C5.55921 4.94383 6.68903 3.84579 8.10636 3.84579C8.81353 3.84579 9.52466 4.13386 10.0124 4.58009C10.5001 5.02632 10.7619 5.6018 10.6565 6.23403V6.23445C10.4288 7.60974 9.81022 7.83933 9.10107 8.27476C8.74649 8.4924 8.36266 8.75533 8.10171 9.21099C7.84077 9.66664 7.72042 10.2833 7.78861 11.1658V11.1656C7.79452 11.2566 7.83656 11.3414 7.90545 11.4011C7.9742 11.4609 8.06418 11.4906 8.155 11.4835C8.24596 11.4765 8.33018 11.4335 8.38909 11.3637C8.448 11.2941 8.47654 11.2039 8.46838 11.1131C8.4068 10.3149 8.51829 9.85532 8.69333 9.54954C8.86837 9.24374 9.12509 9.05987 9.45773 8.85558C10.1229 8.44728 11.0662 7.93285 11.329 6.34597V6.34568C11.4764 5.46107 11.0924 4.64409 10.4727 4.07708C9.85278 3.50992 8.99433 3.16407 8.10648 3.16407L8.10634 3.16406Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12012 12.0918C7.74868 12.0918 7.43994 12.4031 7.43994 12.7735C7.43994 13.144 7.74672 13.4552 8.12012 13.4552C8.49352 13.4552 8.80044 13.1461 8.80044 12.7735C8.80044 12.401 8.49155 12.0918 8.12012 12.0918Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12012 0.75C3.9814 0.75 0.620117 4.12734 0.620117 8.28203C0.620117 12.4369 3.98144 15.8126 8.12012 15.8126C12.2588 15.8126 15.6201 12.4371 15.6201 8.28203C15.6201 4.12712 12.2589 0.75 8.12012 0.75V0.75ZM8.12012 1.43172C11.8888 1.43172 14.9381 4.49413 14.9381 8.28207C14.9381 12.0702 11.8886 15.131 8.12012 15.131C4.35165 15.131 1.30216 12.0704 1.30216 8.28207C1.30216 4.49392 4.35176 1.43172 8.12012 1.43172V1.43172Z" fill="currentColor"/>
+                              </svg>
+                            </div>
+                            <div class="rtx_popup_content" >
+                              <blockquote class= "rtx_text">
+                                <p>You’re the boss.</p>
+                                <p>✓ Free Shipping<br>✓ 30 Day Guarantee<br>✓ Cancel after your first order or make it a habit</p>
+                              </blockquote>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                       
+                            <div class="rtx_sub_container">
+
+                                {% for block in section.blocks %}
+
+                                <div class="subscribe-item_info">
+                                  <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
+                                  <div>
+                                    <p>{{block.settings.purchase_type_text }}</p>
+                                    <p>{{block.settings.purchase_type_subtext }}</p>
+                                  </div>
+                                </div>
+                                {% endfor %}
+                              </div>
+                            </label>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+<script>
+    var product = {{ product | json }}
+    var rtxSPG = {{ rtx_selling_plan | json }}
+    var currentProductId = "{{ product.id }}";
+
+    document.querySelectorAll(`#rtx_buy_box_${currentProductId} .rtx_option_${currentProductId}`).forEach((div) => {      
+        div.addEventListener('click', function (e) {
+//             var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
+ 			   var el = e.target.value;
+            if(el === 'subsave'){ 
+                if(product.handle === 'wellness-kit'){
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[0].id
+                } else {
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[1].id
+                }
+                var rad1 = document.getElementById(`radio_one_${currentProductId}`)
+                const noClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                yesClickBtn.checked = true; 
+              
+            } else if (el === 'onetime') {
+
+                const noClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                yesClickBtn.checked = true;
+
+                var spgOneTimeValue = "";
+                document.querySelector(`#selling_plan_${currentProductId}`).value = spgOneTimeValue;
+            }
+        });
+    });
+   
+       
+
+</script>
+
+<style> 
+    .clear_svg {
+        margin-top: 2px;
+        margin-left: 6px;
+        margin-right: 10px;
+    }
+    .clear_tag {
+        margin-left: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+        color: #696969;
+    }
+
+    .rtx-tooltip__flex{
+        display: flex;
+    }
+
+    .one_sub_text {
+        color: rgba(0,0,0,0.4);
+        margin: 0;
+        font-size: 12px !important;
+        margin-left: 33px;
+        margin-top: 5px;
+    }
+    
+    .rtx_sub_container { 
+        margin-left: 35px;
+        margin-bottom: 40px;
+    }
+  
+    .rtx_option_selector{
+        margin-top: 5px;
+    }
+
+  
+    .rtx_option_heading {
+        font-size: 16px;
+        font-family: inter,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.5em;
+    }
+    
+    .rtx_option_plans {
+        margin-bottom: 15px
+    }
+    
+    
+    .rtx_option_subheading {
+        font-size: .875rem;
+        line-height: 1.428572;
+        width: 90%;
+        margin-left: 28px;
+        margin-top: 4px;
+    }
+    
+    .rtx_option {
+        margin-top: 10px;
+        width: fit-content;
+    }
+  
+
+    input[type='radio'] {
+        float: left;
+        appearance: none;
+        margin-top: 3px;
+        margin-right: 10px;
+        background: transparent !important;
+        border: 2px solid #000;
+        border-radius: 100%;
+        content: " ";
+        height: 1.75rem;
+        width: 1.7rem;
+    }
+    
+    input[type='radio']:before {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 70%;
+        margin: 15% auto;
+        border-radius: 50%;
+    } 
+           
+   input[type='radio']:checked {
+        background: white;
+        -webkit-box-shadow: inset 0 0 1 8px black;
+    }
+    
+    input[type='radio']:checked:before {
+        background: black;
+    }
+
+    .clear_button{
+        cursor: pointer;
+        position: relative;
+		margin-left: 10px;
+        margin-top: 0;
+        background: transparent linear-gradient(146deg, #E2EEF6 0%, #FEEBCD 26%, #E0EAEB 50%, #F0F6FA 79%, #FEEBCD 100%) 0% 0% no-repeat padding-box;
+        border-radius: 14px;
+        padding: 3px;
+        animation: gradient 3s ease infinite;
+        background-size: 400% 400%; 
+        display: flex;
+        width: 100%;
+        white-space: nowrap;
+    }
+    
+    .rtx_text {
+        position: absolute;
+        left: 160px;
+        bottom: -155px;
+        background:	#696969;
+        font-size: 12px;
+        z-index: 2;
+        padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+        min-width: 338px;
+        color: white;
+    }
+  
+    .rtx_popup_content {
+        display: none;
+        position: relative;
+    }  
+    
+
+    .rtx_popup {
+        width: fit-content;
+    }
+
+    .rtx_sub_script {
+        margin-left: 45px;
+        width: fit-content;
+        font-size: small;
+    } 
+ 
+
+  .rtx_question_icon {
+        margin-top: -2px;
+        position: absolute;
+        margin-left: 19px;
+    }
+    .clear_button:hover ~ .rtx_popup_content {
+        display: inline !important;
+    }
+    .clear_tag .save24{
+        color: #545759;
+      font-weight: 700;
+    }
+
+  @media only screen and (max-width: 500px) {
+    .rtx-tooltip__flex{
+      flex-direction: column;
+    }
+    
+    .clear_button {
+     margin-left: 0; 
+    }
+
+  }
+
+    
+    
+</style>
+  
+  
+  

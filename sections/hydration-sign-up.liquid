@@ -1,0 +1,74 @@
+{{ 'section-hydration-sign-up.css' | asset_url | stylesheet_tag }}
+
+<div class="hydration-sign-up" id="sign-up">
+  <div class="page-width">
+    
+    <div class="hydration-sign-up__form">
+      <div class="klaviyo-form-WUyTqF"></div>
+    </div>
+    
+    {% comment %}
+    {%- for block in section.blocks -%}
+      <div class="hydration-sign-up__form">
+        <div class="h3 hydration-sign-up__heading">{{ block.settings.heading_text }}</div>
+        <div class="sh2 hydration-sign-up__subtitle">{{ block.settings.subtitle }}</div>
+
+        <div class="{% if block.settings.field_1 != blank and block.settings.field_2 %}hydration-sign-up__two-fields{% endif %}">
+          {{ block.settings.field_1 }}
+          {{ block.settings.field_2 }}
+        </div>
+
+        {% if block.settings.description %}
+          <div class="body hydration-sign-up__description">{{ block.settings.description }}</div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+    {% endcomment %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hydration Sign Up",
+    "settings": [],
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "form",
+        "name": "Sign Up Form",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle Text"
+          },
+          {
+            "type": "html",
+            "id": "field_1",
+            "label": "Field 1"
+          },
+          {
+            "type": "html",
+            "id": "field_2",
+            "label": "Field 2"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hydration Sign Up"
+      }
+    ]
+  }
+{% endschema %}

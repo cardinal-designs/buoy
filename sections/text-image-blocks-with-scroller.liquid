@@ -1,0 +1,231 @@
+{{ 'section-text-image-blocks.css' | asset_url | stylesheet_tag }}
+{{ 'text-image-blocks-with-scroller.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'text-image-blocks-with-scroller.js' | asset_url }}" defer="defer"></script>
+
+<div class="text-image-blocks-wrapper">
+
+    <div class="text-image-blocks text-image-scroller gradient--{{ section.settings.gradient }}{% if section.settings.extra_top_padding %} top-padding{% endif %}{% if section.settings.extra_bottom_padding %} bottom-padding{% endif %}">
+      <div class="page-width">
+        <div class="text-image-blocks__container{% if section.settings.is_reversed %} reversed{% endif %}">
+          <div class="text-image-blocks__content">
+            <div class="text-image-blocks__content-container">
+              
+              {% if section.settings.title != blank %}
+              <h2 class="h3 heading">{{ section.settings.title }} 
+              {% for block in section.blocks %}
+              <span style="{% if forloop.index == 1 %}display: inline-block {% else %}display: none;{% endif %}" class="hide-mobile emoji-swap" data-emoji="{{ forloop.index }}">{{block.settings.emoji}}</span>
+              {% endfor %}
+              </h2>
+              {% endif %}
+              
+              <div class="content_wrapper">
+              {% for block in section.blocks %}
+                <div data-step="{{ forloop.index }}" class="content_item">
+                  <div class="text-image-blocks__image">
+                    <div class="text-image-blocks__image-container size--{{ block.settings.image_size }}">
+                      {% if block.settings.video_url != blank %}
+                      <video autoplay loop muted playsinline class="video">
+                        <source src="{{ block.settings.video_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>       
+                      {% else %}
+                      <img src="{{ block.settings.image | img_url: '533x' }}" alt="{{ block.settings.image.alt | escape }}"
+                           loading="lazy" class="motion-reduce img-fill">
+                      {% endif %}
+                    </div>
+                  </div>
+                  
+                  {% if block.settings.secondary_title != blank %}
+                    <h5 class="h5">{{ block.settings.secondary_title }}</h3>
+                  {% endif %}
+                  
+                  {% if block.settings.text != blank %}
+                    <p class="light sh2">{{ block.settings.text }}</p>
+                  {% endif %}
+                  
+                  {% if block.settings.display_as_button != blank %}
+                    {% if block.settings.button_label != blank %}
+                      <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
+                    {% endif %}
+                  {% else %}
+                    {% if block.settings.button_label != blank %}
+                      <a href="{{ block.settings.button_link }}" class="body bold arrow-link">{{ block.settings.button_label }} {% render 'icon-arrow-right' %}</a>
+                    {% endif %}
+                  {% endif %}
+                  
+                </div>
+              {% endfor %}
+              </div>
+              
+            </div>
+          </div>
+          <div class="text-image-blocks__image image_item">
+            {% for block in section.blocks %}
+            <div data-id="{{forloop.index}}" style="{% if forloop.index == 1 %}display: inline-block {% else %}display: none;{% endif %}" class="{% if block.settings.video_url != blank %}scroll-video {% endif %}text-image-blocks__image-container flip-images size--{{ block.settings.image_size }}">
+
+              {% if block.settings.video_url != blank %}
+              <video autoplay loop muted playsinline class="video">
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>       
+              {% else %}
+              <img
+                   srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                           {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+                  {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+                  {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+                src="{{ block.settings.image | img_url: '533x' }}"
+                sizes="(min-width: {{ section.page_width }}px) {{ section.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ block.settings.image.alt | escape }}"
+                loading="lazy"
+                class="motion-reduce img-fill"
+              >
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text/Image With Scroller",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_reversed",
+        "label": "Reversed Layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "extra_top_padding",
+        "label": "Extra Top Padding"
+      },
+      {
+        "type": "checkbox",
+        "id": "extra_bottom_padding",
+        "label": "Extra Bottom Padding"
+      },
+      {
+        "type": "select",
+        "id": "gradient",
+        "label": "Gradient",
+        "options": [
+          {
+            "value": "none",
+            "label": "No Gradient"
+          },
+          {
+            "value": "top",
+            "label": "Gradient on Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient on Bottom"
+          }
+        ],
+      	"default": "none"
+      },
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "image_size",
+        "label": "Image Size",
+        "options": [
+          {
+            "value": "square",
+            "label": "Square"
+          },
+          {
+            "value": "tall",
+            "label": "Tall"
+          }
+        ],
+        "default": "square"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [  
+		  {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+		  {
+            "type": "select",
+            "id": "image_size",
+            "label": "Image Size",
+            "options": [
+              {
+                "value": "square",
+                "label": "Square"
+              },
+              {
+                "value": "tall",
+                "label": "Tall"
+              }
+            ],
+            "default": "square"
+          },
+          {
+            "type": "text",
+            "id": "secondary_title",
+            "label": "Secondary Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+          },
+          {
+            "type": "text",
+            "id": "emoji",
+            "label": "Title Emoji"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          },
+		  {
+            "type": "checkbox",
+            "id": "display_as_button",
+            "label": "Display as Button"
+          } 
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text/Image With Scroller"
+      }
+    ]
+  }
+{% endschema %}

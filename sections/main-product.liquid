@@ -1,0 +1,484 @@
+{% comment %}theme-check-disable TemplateLength{% endcomment %}
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<section data="{{product | json}}" class="page-width">
+  <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
+    <div class="product__info-wrapper">
+      <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+        {% render 'okendo-reviews-product-rating-summary', product: product %}
+
+        <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>
+
+        <h1 class="product__title h4">
+          {{ product.title | escape }}
+        </h1>
+
+        <div class="product__description sh4 light">
+          {{ product.description }}
+        </div>
+
+        {% if product.metafields.my_fields.product_grid_1 != blank %}
+        <div class="info-grid__container">
+          <div class="info-grid__item">
+            <p class="light">{{ product.metafields.my_fields.product_grid_1 }}</p>
+          </div>
+          <div class="info-grid__item">
+            <p class="light">{{ product.metafields.my_fields.product_grid_2 }}</p>
+          </div>
+          <div class="info-grid__item">
+            <p class="light">{{ product.metafields.my_fields.product_grid_3 }}</p>
+          </div>
+          <div class="info-grid__item">
+            <p class="light">{{ product.metafields.my_fields.product_grid_4 }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% comment %}
+        {% render 'product-tabs' product: product %}
+
+        <div class="product-form__input product-form__quantity">
+          <label class="form__label" for="Quantity-{{ section.id }}">
+            {{ 'products.product.quantity.label' | t }}
+          </label>
+          <quantity-input class="quantity">
+            <button class="quantity__button no-js-hidden" name="minus" type="button">
+              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+              {% render 'icon-minus' %}
+            </button>
+            <input class="quantity__input"
+                   type="number"
+                   name="quantity"
+                   id="Quantity-{{ section.id }}"
+                   min="1"
+                   value="1"
+                   form="product-form-{{ section.id }}"
+                   >
+            <button class="quantity__button no-js-hidden" name="plus" type="button">
+              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+              {% render 'icon-plus' %}
+            </button>
+          </quantity-input>
+        </div>
+        {% endcomment %}
+
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+          {%- unless product.has_only_default_variant -%}
+          {%- if section.settings.picker_type == 'button' -%}
+          <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+            {%- for option in product.options_with_values -%}
+            <fieldset class="js product-form__input">
+              {%- for value in option.values -%}
+              <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                     name="{{ option.name }}"
+                     value="{{ value | escape }}"
+                     form="product-form-{{ section.id }}"
+                     {% if option.selected_value == value %}checked{% endif %}
+                     >
+              <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                {{ value }}
+              </label>
+              {%- endfor -%}
+            </fieldset>
+            {%- endfor -%}
+            <script type="application/json">
+                    {{ product.variants | json }}
+            </script>
+          </variant-radios>
+          {%- else -%}
+          <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+            {%- for option in product.options_with_values -%}
+            <div class="product-form__input product-form__input--dropdown">
+              <div class="select">
+                <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                        class="select__select body"
+                        name="options[{{ option.name | escape }}]"
+                        form="product-form-{{ section.id }}"
+                        >
+                  {%- for value in option.values -%}
+                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                    {{ value }} 
+                    {% if value == 'Single' %}
+                    — 40 Servings (1 week supply)
+                    {% elsif value == '3 Pack' %}
+                    — 120 Servings (1 month supply)
+                    {% elsif value == '6 Pack' %}
+                    — 240 Servings (2 month supply)
+                    {% elsif value == '12 Pack' %}
+                    — 480 Servings (4 month supply)
+                    {% endif %}
+                  </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+            </div>
+            {%- endfor -%}
+
+            <script type="application/json">
+                    {{ product.variants | json }}
+            </script>
+          </variant-selects>
+          {%- endif -%}
+          {%- endunless -%}
+
+          <noscript>
+            <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+              <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+              <div class="select">
+                <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                  {%- for variant in product.variants -%}
+                  <option
+                          {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                          {% if variant.available == false %}disabled{% endif %}
+                          value="{{ variant.id }}"
+                          >
+                    {{ variant.title }}
+                    {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                  </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+            </div>
+          </noscript>
+
+          {% comment %} {% render 'smartrr-product' %} {% endcomment %}
+          {% render 'rtx-pdp' %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <div class="product-form__buttons">
+            <button
+                    type="submit"
+                    name="add"
+                    style="flex-direction: column; padding: 12px 10px;"
+                    class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    >
+              <div style="display: flex;">
+                {%- if product.selected_or_first_available_variant.available -%}
+                  {% render 'rtx_price'%}
+                 
+                {% comment %} Add to Cart —&nbsp; {% endcomment %}
+                {%comment%} {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%endcomment%}
+                {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                  <span data-smartrr-compare-price></span>
+                  <span data-smartrr-regular-price></span>
+                  <span data-smartrr-subscribe-price></span>
+                </div> {% endcomment %}
+                {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
+              </div>
+            </button>
+            {%- if block.settings.show_dynamic_checkout -%}
+            {% comment %} {{ form | payment_button }} {% endcomment %}
+            <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+              <span data-smartrr-compare-price></span>
+              <span data-smartrr-regular-price></span>
+              <span data-smartrr-subscribe-price></span>
+            </div>
+            {%- endif -%}
+          </div>
+          {%- endform -%}
+        </product-form>
+        {% comment %}
+        {% if product.type == 'Subscription' or product.type == 'Bundle' %}
+        <div class="product__subscription-tooltip">
+          <button class="product__subscription-tooltip-text">
+            <p class="body-small light">How the Anti-Yellow Pee Club Works</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.10634 3.16406C6.33359 3.16406 4.87747 4.56156 4.87747 6.29014C4.87634 6.38125 4.91177 6.46898 4.97574 6.53393C5.03985 6.59874 5.12716 6.6353 5.21827 6.6353C5.30952 6.6353 5.39682 6.59874 5.46079 6.53393C5.5249 6.46897 5.56033 6.38125 5.55921 6.29014C5.55921 4.94383 6.68903 3.84579 8.10636 3.84579C8.81353 3.84579 9.52466 4.13386 10.0124 4.58009C10.5001 5.02632 10.7619 5.6018 10.6565 6.23403V6.23445C10.4288 7.60974 9.81022 7.83933 9.10107 8.27476C8.74649 8.4924 8.36266 8.75533 8.10171 9.21099C7.84077 9.66664 7.72042 10.2833 7.78861 11.1658V11.1656C7.79452 11.2566 7.83656 11.3414 7.90545 11.4011C7.9742 11.4609 8.06418 11.4906 8.155 11.4835C8.24596 11.4765 8.33018 11.4335 8.38909 11.3637C8.448 11.2941 8.47654 11.2039 8.46838 11.1131C8.4068 10.3149 8.51829 9.85532 8.69333 9.54954C8.86837 9.24374 9.12509 9.05987 9.45773 8.85558C10.1229 8.44728 11.0662 7.93285 11.329 6.34597V6.34568C11.4764 5.46107 11.0924 4.64409 10.4727 4.07708C9.85278 3.50992 8.99433 3.16407 8.10648 3.16407L8.10634 3.16406Z" fill="currentColor"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12012 12.0918C7.74868 12.0918 7.43994 12.4031 7.43994 12.7735C7.43994 13.144 7.74672 13.4552 8.12012 13.4552C8.49352 13.4552 8.80044 13.1461 8.80044 12.7735C8.80044 12.401 8.49155 12.0918 8.12012 12.0918Z" fill="currentColor"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12012 0.75C3.9814 0.75 0.620117 4.12734 0.620117 8.28203C0.620117 12.4369 3.98144 15.8126 8.12012 15.8126C12.2588 15.8126 15.6201 12.4371 15.6201 8.28203C15.6201 4.12712 12.2589 0.75 8.12012 0.75V0.75ZM8.12012 1.43172C11.8888 1.43172 14.9381 4.49413 14.9381 8.28207C14.9381 12.0702 11.8886 15.131 8.12012 15.131C4.35165 15.131 1.30216 12.0704 1.30216 8.28207C1.30216 4.49392 4.35176 1.43172 8.12012 1.43172V1.43172Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <div class="product__subscription-tooltip-popover">
+            <p class="body-small light">You’re the boss.</p>
+            <p class="body-small light"><div class="check-item body light">✓ Save 24% ✓ Free Shipping ✓ 30 Day Guarantee ✓ Cancel after your first order or make it a habit</div></p>
+          </div>
+        </div>
+
+        <div class="product__subscription-benefits">
+          <p class="sh4 light caps">Monthly Subscription Benefits</p>
+          <p class="body light">✓ 30 Day Money-Back Guarantee</p>
+          <p class="body light">✓ Cancel Anytime</p>
+          <p class="body light">✓ Save 24%</p>
+          <p class="body light">✓ Free Shipping</p>
+        </div>
+        {% endif %}
+        {% endcomment %}
+
+
+        <div class="pdp-faq">
+          <div class="faq-section">
+            <div class="faq-section__container">
+              {% if product.metafields.my_fields.highlights_tab != blank %}
+              <div class="faq__item">
+                <button class="faq__header">
+                  <p class="sh4 medium">Details</p>
+                  {% render 'icon-caret' %}
+                </button>
+                <div class="faq__content">
+                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.highlights_tab }}</p>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.my_fields.ingredients_tab != blank %}
+              <div class="faq__item">
+                <button class="faq__header">
+                  <p class="sh4 medium">Ingredients</p>
+                  {% render 'icon-caret' %}
+                </button>
+                <div class="faq__content">
+                  <p class="sh4 single_line_text_field">
+                    {{ product.metafields.my_fields.ingredients_tab }}
+                    {% if product.metafields.my_fields.nutrition_label != blank %}
+                    <a href="{{ product.metafields.my_fields.nutrition_label }}" target="_blank" class="tabs-label body medium">View Full Nutrition Label</a>
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.my_fields.greatfor_tab != blank %}
+              <div class="faq__item">
+                <button class="faq__header">
+                  <p class="sh4 medium">Great For</p>
+                  {% render 'icon-caret' %}
+                </button>
+                <div class="faq__content">
+                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.greatfor_tab }}</p>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.my_fields.sustainability_tab != blank %}
+              <div class="faq__item">
+                <button class="faq__header">
+                  <p class="sh4 medium">Sustainability</p>
+                  {% render 'icon-caret' %}
+                </button>
+                <div class="faq__content">
+                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.sustainability_tab }}</p>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="product__links">
+          {% if section.settings.shop_more_text1 != blank %}
+          <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+            {{ section.settings.shop_more_text1 }}
+            {% render 'icon-arrow-right' %}
+          </a>
+          {% endif %}
+          {% if section.settings.shop_more_text2 != blank %}
+          <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+            {{ section.settings.shop_more_text2 }}
+            {% render 'icon-arrow-right' %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="product__media-wrapper no-scrollbar drag-scroll">
+      <div class="sticky-images">
+        <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+          {{ "accessibility.skip_to_product_info" | t }}
+        </a>
+        <div class="product__media-list">
+          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+          {% comment %}
+          {%- if product.selected_or_first_available_variant.featured_media != null -%}
+          {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+          <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+            {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
+          </div>
+          {%- endif -%}
+          {% endcomment %}
+          {%- for media in product.media -%}
+          <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+            {% if forloop.index == 1 %}
+            {% if product.available == false %}
+            {% render 'spinner-sold-out' %}
+            {% elsif product.metafields.my_fields.show_trending_product_card == true %}
+            {% render 'spinner-trending' %}
+            {% elsif product.metafields.my_fields.show_most_popular_product_card == true %}
+            {% render 'spinner-most-popular' %}
+            {% endif %}
+            {% endif %}
+            {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
+          </div>
+          {%- endfor -%}
+        </div>
+        <div class="product__media-arrows hide-mobile"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div class="show-product-bar"></div>
+
+{% unless product.type == 'Bundle' %}
+{% if product.metafields.my_fields.nutrition_label != blank %}
+<div class="product-nutrition-label">
+  <div class="product-nutrition-label__wrapper">
+    <div class="product-nutrition-label__overlay"></div>
+    <div class="product-nutrition-label__container">
+      <button class="product-nutrition-label__close">{% render 'icon-close' %}</button>
+      <div class="product-nutrition-label__container-inner">
+        <div class="product-nutrition-label__image">
+          <img src="{{ product.metafields.my_fields.nutrition_label | img_url: 'master' }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% else %}
+<div class="product-nutrition-label" data-tab="hydration">
+  <div class="product-nutrition-label__wrapper">
+    <div class="product-nutrition-label__overlay"></div>
+    <div class="product-nutrition-label__container">
+      <button class="product-nutrition-label__close">{% render 'icon-close' %}</button>
+      <div class="product-nutrition-label__container-inner">
+        <div class="product-nutrition-label__image">
+          {% assign hydration = all_products['hydration-drops'] %}
+          <img src="{{ product.metafields.my_fields.nutrition_label | img_url: 'master' }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endunless %}
+
+{% javascript %}
+// Product tabs
+$('.product__tabs-header .body').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
+
+$(this).siblings().removeClass('active');
+$(this).addClass('active');
+
+$(this).closest('.product__tabs').find('.product__tab').removeClass('active');
+$(this).closest('.product__tabs').find(`.product__tab[data-tab="${tab}"]`).addClass('active');
+}
+});
+
+// Bundle tabs
+$('.product__bundle-header-container button').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
+
+$('.product__bundle-header-container button').removeClass('active');
+$(this).addClass('active');
+
+$('.product__tabs').removeClass('active');
+$(`.product__tabs[data-tab="${tab}"]`).addClass('active');
+}
+});
+
+// Nutrition Label Popup
+$('.tabs-label').click(function(event) {
+event.preventDefault();
+
+$('body').addClass('lock-scroll');
+$('.product-nutrition-label').fadeIn('300');
+$('.product-nutrition-label__overlay, .product-nutrition-label__close').click(function() {
+$('body').removeClass('lock-scroll');
+$('.product-nutrition-label').fadeOut('300');
+});
+});
+
+{% endjavascript %}
+
+{% schema %}
+{
+"name": "t:sections.main-product.name",
+"tag": "section",
+"class": "product-section",
+"settings": [
+{
+"type": "select",
+"id": "picker_type",
+"options": [
+{
+"value": "dropdown",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+},
+{
+"value": "button",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+}
+],
+"default": "button",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+},
+{
+"type" : "header",
+"content" : "Shop More"
+},
+{
+"type" : "text",
+"id" : "shop_more_text1",
+"label" : "Shop More Text 1"
+},
+{
+"type" : "url",
+"id" : "shop_more_link1",
+"label" : "Shop More URL 1"
+},
+{
+"type" : "text",
+"id" : "shop_more_text2",
+"label" : "Shop More Text 2"
+},
+{
+"type" : "url",
+"id" : "shop_more_link2",
+"label" : "Shop More URL 2"
+},
+{
+"type" : "text",
+"id" : "one_time_subtext",
+"label" : "One Time Purchase Subtext"
+}
+],
+"blocks": [
+{
+"type": "block",
+"name": "Block",
+"settings": [
+{
+"type": "image_picker",
+"id": "purchase_type_img",
+"label": "Subscription subimage"
+},
+{
+"type": "text",
+"id": "purchase_type_text",
+"label": "Subscription text"
+},
+{
+"type": "text",
+"id": "purchase_type_subtext",
+"label": "Subscription subtext"
+}
+]
+}
+]
+}
+{% endschema %}

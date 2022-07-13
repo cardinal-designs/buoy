@@ -1,0 +1,89 @@
+{{ 'section-how-to-2.css' | asset_url | stylesheet_tag }}
+
+<div class="how-to-2">
+  <div class="how-to-2__content">
+    <div class="how-to-2__content-container">
+      <h2 class="h4">{{ section.settings.title }}</h2>
+      <div class="how-to-2__content-points">
+        {% for block in section.blocks %}
+          <div class="how-to-2__content-point">
+            <div class="how-to-2__content-circle">
+              <h5>{{ block.settings.emoji }}</h5>
+            </div>
+            <div class="how-to-2__content-text">
+              <h6>{{ block.settings.title }}</h6>
+              <p class="light">{{ block.settings.text }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="how-to-2__image">
+    {% if section.settings.video_url != blank %}
+    <video autoplay loop muted playsinline class="img-fill">
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    {% elsif section.settings.video_url != blank %}
+    <video autoplay loop muted playsinline class="img-fill">
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    {% else %}
+    {% render 'lazy-image' image: section.settings.image, fade: true, classes: 'img-fill' %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "How To 2",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL",
+        "info": "This will override image."
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "point",
+        "name": "Point",
+        "settings": [
+          {
+            "type": "text",
+            "id": "emoji",
+            "label": "Emoji"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "How To 2"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,157 @@
+.card {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+}
+
+.card + .card-information {
+  margin-top: 25px;
+}
+
+.card--product {
+  position: relative;
+}
+
+.card--stretch {
+  height: 100%;
+}
+
+.card__inner {
+  border-radius: 17px;
+  overflow: hidden;
+  border: 1px solid var(--charcoal);
+}
+
+.card__text {
+  margin: 0;
+  word-break: break-word;
+}
+
+.card-information__wrapper .okeReviews {
+  margin-bottom: 8px;
+}
+
+.card-information__wrapper .okeReviews .okeReviews-starRating--small {
+  width: 75px;
+  height: 15px;
+}
+
+.card-information__wrapper .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
+  background-size: 75px 15px;
+}
+
+.card-information__wrapper .okeReviews-reviewsSummary-ratingCount {
+  margin: 0;
+}
+
+.card-information__wrapper .okeReviews-reviewsSummary-ratingCount span {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+}
+
+.card-information__title {
+  margin: 0 0 16px;
+}
+
+.card-information__text {
+  margin: 0;
+}
+
+.card-wrapper {
+  color: inherit;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.card-wrapper .product-spinner {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+}
+
+.card__buttons {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.card-wrapper .button {
+  min-width: unset;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card__buttons .learn-more {
+  width: 100%;
+  background: rgba(255, 255, 255, .7);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: .3s ease;
+  will-change: opacity, transform, background;
+}
+
+.card__buttons .button:hover {
+  background: white;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.card-wrapper .media > .aspect-ratio + .aspect-ratio {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.card-wrapper .media > .aspect-ratio + video {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+@media screen and (min-width: 769px) {
+  .card-wrapper:hover .media > .aspect-ratio + .aspect-ratio {
+    opacity: 1;
+  }
+
+  .card-wrapper:hover .media > .aspect-ratio + video {
+    opacity: 1;
+  }
+  
+  .card-wrapper:hover .card__buttons .button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-information__wrapper .button {
+    width: 100%;
+  }
+  
+  .card-information__title {
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+  
+  .card-information__text {
+    margin: 0;
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  .card-information .shop-btn {
+    padding: 10px;
+  }
+
+  .card-wrapper .product-spinner {
+    display: none !important;
+  } 
+}

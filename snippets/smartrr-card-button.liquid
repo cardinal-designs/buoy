@@ -1,0 +1,31 @@
+{%- liquid
+  assign current_variant = product_card_product.selected_or_first_available_variant
+  assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+  if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
+    assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+  endif
+  assign filtered_selling_plan_groups = product_card_product.selling_plan_groups | where: "app_id", "4836205"
+  assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
+  assign visibleGroupsSize = filtered_selling_plan_groups.size | minus: hiddenGroups.size
+  assign selling_plan = ''
+-%}
+
+{% if visibleGroupsSize > 0 %}
+  {% for group in filtered_selling_plan_groups %}
+    {% unless group.name contains "[hidden]" %}
+		{% for plan in group.selling_plans %}
+			{% assign selling_plan = plan.id %}
+			{% break %}
+		{% endfor %}
+		{% break %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+<button class="button add-to-cart js-add-to-cart" data-selling-plan="{% if product_card_product.requires_selling_plan %}{{ selling_plan }}{% endif %}" data-id="{{ product_card_product.selected_or_first_available_variant.id }}"{% unless product_card_product.available %} disabled{% endunless %}>
+  {% if product_card_product.available %}
+  Add to Cart — {{ product_card_product.price | money_without_trailing_zeros }}
+  {% else %}
+  Sold Out
+  {% endif %}
+</button>

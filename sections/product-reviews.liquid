@@ -1,0 +1,44 @@
+<div class="product-reviews page-width">
+  {% if product.metafields.okendo.summaryData.reviewCount > 0 %}
+          <div data-oke-reviews-version="2.11.0" class="okeReviews okeReviews--theme okeReview-custom-aggregate">
+              <div class="okeReviews-reviewsSummary js-okeReviews-reviewsSummary" data-oke-ga-click-action="Star Rating Summary Click">
+                  <div class="okeReviews-reviewsSummary-starRating">
+                      <span class="okeReviews-starRating okeReviews-starRating--large">
+                          <span class="okeReviews-a11yText">{{ product.metafields.okendo.summaryData.reviewAverageValue | default: 0 }} out of 5</span>
+                          <span class="okeReviews-starRating-indicator" role="presentation">
+                              <span class="okeReviews-starRating-indicator-layer"></span>
+                              <span class="okeReviews-starRating-indicator-layer okeReviews-starRating-indicator-layer--foreground" style="width: {{ product.metafields.okendo.summaryData.reviewAverageValue | times: 20 }}%"></span>
+                          </span>
+                      </span>
+                  </div>
+                  <div class="okeReviews-reviewsSummary-ratingCount">{{ product.metafields.okendo.summaryData.reviewAverageValue | default: 0 }} out of 5.0 stars</div>
+              </div>
+          </div>
+  {% endif %}
+  <div data-oke-reviews-widget-holder data-oke-reviews-product-id="shopify-{{ product.id }}">
+      <div data-oke-reviews-nav-bar></div>
+      <div data-oke-reviews-widget>{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+      <div data-oke-reviews-qanda></div>
+  </div>
+</div>
+
+<style>
+  .product-reviews {
+    margin: 0 auto;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Product Reviews",
+    "settings": [
+
+    ],
+    "presets": [
+      {
+        "name": "Product Reviews"
+      }
+    ],
+    "templates": ["product"]
+  }
+{% endschema %}

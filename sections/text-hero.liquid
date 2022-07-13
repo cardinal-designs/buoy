@@ -1,0 +1,65 @@
+{{ 'section-text-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="text-hero">
+  <div class="page-width">
+    <div class="text-hero__container">
+      <div class="text-hero__svg{% if section.settings.no_animation %} no-animation{% endif %}">
+        {{ section.settings.text_svg }}
+      </div>
+      <div class="text-hero__title">
+        <h1 class="h2">{{ section.settings.title }} <span>{{ section.settings.title }}</span></h1>
+      </div>
+    </div>
+    {% if section.settings.text %}
+      <div class="text-hero__text">
+        <h6 class="light">{{ section.settings.text }}</h6>
+      </div>
+    {% endif %}
+    {% if section.settings.button_label != blank %}
+      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text_svg",
+        "label": "Text SVG"
+      },
+      {
+        "type": "checkbox",
+        "id": "no_animation",
+        "label": "No Animation"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Hero"
+      }
+    ]
+  }
+{% endschema %}

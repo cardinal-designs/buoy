@@ -1,0 +1,122 @@
+{{ 'section-product-quick-add.css' | asset_url | stylesheet_tag }}
+
+{% assign current_product = all_products[section.settings.product] %}
+
+<div class="product-quick-add">
+  <h2 class="h4 hide-desktop">{{ section.settings.title }}</h2>
+  {% render 'lazy-image' image: section.settings.image, fade: true, classes: 'img-fill hide-mobile' %}
+  <div class="page-width">
+    <div class="product-quick-add__container">
+      <div class="product-quick-add__content">
+        <h2 class="h4 hide-mobile">{{ section.settings.title }}</h2>
+        <p class="h6 hide-mobile">{{ section.settings.subtitle }}</p>
+        <img class="hide-desktop" src="{{ section.settings.mobile_image | img_url: 'master' }}" />
+        <p class="h6 hide-desktop">{{ section.settings.subtitle }}</p>
+        <p class="sh4 light">{{ section.settings.text }}</p>
+        <div class="product-quick-add__form">
+          <div class="product-quick-add__form-item one-time">
+            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ current_product.price | money_without_trailing_zeros }}" checked>
+            <label class="body" for="one-time--{{ section.id }}">
+              <span class="hide-mobile">{{ section.settings.one_time_text }}</span>
+              <span class="hide-desktop">One-Time Sample Bundle</span>
+              <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              {{ current_product.price | money_without_trailing_zeros  }}
+            </label>
+          </div>
+          <div class="product-quick-add__form-item subscription">
+            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{{ current_product.selling_plan_groups[0].selling_plans[0].id }}" name="form-{{ section.id }}" data-price="{{current_product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}">
+            <label class="body" for="subscription--{{ section.id }}">
+              <span class="hide-mobile">{{ section.settings.subscription_text }}</span>
+              <span class="hide-desktop">Subscribe & Save</span>
+              <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              <span>{{ current_product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ current_product.price | money_without_trailing_zeros }}</span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <button class="button js-add-to-cart" 
+          {% if current_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+          data-id="{{ current_product.selected_or_first_available_variant.id }}" 
+          data-time="one-time" style="padding: 10px; line-height: 1;">
+
+          {% if current_product.selected_or_first_available_variant.available == false %}
+            <span>Sold Out</span>
+          {% else %}
+            <span>Add to Cart</span> — 
+            <span class="button-money">{{ current_product.price | money_without_trailing_zeros }}</span>
+          {% endif %}
+          <br><span style="font-size: 10px;">3 Bottles — 120 Servings</span>
+
+        </button>
+
+        {% if section.settings.text_link_label != blank %}
+          <a href="{{ section.settings.text_link }}" class="body mdeium arrow-link">{{ section.settings.text_link_label }} {% render 'icon-arrow-right' %}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Quick Add",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "one_time_text",
+        "label": "One Time Text"
+      },
+      {
+        "type": "text",
+        "id": "subscription_text",
+        "label": "Subscription Text"
+      },
+      {
+        "type": "text",
+        "id": "text_link_label",
+        "label": "Text Link Label"
+      },
+      {
+        "type": "url",
+        "id": "text_link",
+        "label": "Text Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Quick Add"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,129 @@
+{{ 'section-product-slider-2.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-slider-2 
+    background--{{ section.settings.background }}
+    {% if section.settings.add_top_border %} top-border{% endif %}
+    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
+  <div class="page-width">
+    <div class="product-slider-2__header">
+      <h2 class="h3">{{ section.settings.title }}</h2>
+      <div class="product-slider-2__header-group">
+        <p class="body light">{{ section.settings.text }}</p>
+        <a href="{{ section.settings.shop_all_link }}" class="arrow-link body medium">
+          Shop All Products
+          {% render 'icon-arrow-right' %}
+        </a>
+      </div>
+    </div>
+    <div class="product-slider-2__grid-wrapper no-scrollbar drag-scroll">
+      <div class="product-slider-2__grid">
+        {% for block in section.blocks %}
+          {% assign current_product = all_products[block.settings.product] %}
+          <div class="product-slider-2__grid-item">
+            {% render 'product-card'
+              product_card_product: current_product,
+              show_secondary_image: true,
+              hover_video: block.settings.hover_video,
+              show_shop_button: false %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if section.settings.promo_link_text %}
+      <div class="product-slider-2__promo">
+        <a href="{{ section.settings.promo_link }}" class="arrow-link body light">
+          {{ section.settings.promo_link_text }}
+          {% render 'icon-arrow-right' %}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Slider 2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "shop_all_link",
+        "label": "Shop All Link"
+      },
+      {
+        "type": "text",
+        "id": "promo_link_text",
+        "label": "Promo Link Text"
+      },
+      {
+        "type": "url",
+        "id": "promo_link",
+        "label": "Promo Link"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "hover_video",
+            "label": "Video URL (Shown on hover)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Slider 2"
+      }
+    ]
+  }
+{% endschema %}

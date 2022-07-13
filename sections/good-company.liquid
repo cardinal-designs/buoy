@@ -1,0 +1,54 @@
+{{ 'section-good-company.css' | asset_url | stylesheet_tag }}
+
+
+<div class="page-width good-company__container">
+  <p class="sh3">{{section.settings.title}}</p>
+  {% for block in section.blocks %}
+  <img src="{{ block.settings.img | img_url: 'master' }}"/>
+  {% endfor %}
+</div>
+
+{% if section.settings.background_color %}
+<style>
+  .good-company-wrapper {
+    background: {{section.settings.background_color}};
+  }
+</style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Good Company",
+    "class": "good-company-wrapper",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Good Company"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,39 @@
+.text-list {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.text-list__container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.text-list__container h6 {
+  margin: 0;
+}
+
+.text-list__list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-list__list p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .text-list {
+    margin: 60px 0;
+  }
+
+  .text-list__container {
+    margin: 0 auto;
+  }
+
+  .text-list__list {
+    display: none;
+  }
+}

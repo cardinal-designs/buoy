@@ -1,0 +1,113 @@
+{{ 'section-subscription-promo.css' | asset_url | stylesheet_tag }}
+
+<div class="subscription-promo">
+  <div class="page-width">
+    <div class="subscription-promo__container">
+      {% if section.settings.video_url != blank %}
+        <div class="subscription-promo__video">
+          <video autoplay loop muted playsinline class="img-fill">
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      {% else %}
+        <div class="subscription-promo__icon{% if section.settings.spin %} spin{% endif %}">
+          {{ section.settings.icon_svg }}
+        </div>
+      {% endif %}
+      <h2 class="h3">{{ section.settings.heading }}</h2>
+      <p class="h6 light">{{ section.settings.text }}</p>
+      <div class="subscription-promo__grid">
+        {% for block in section.blocks %}
+          <div class="subscription-promo__item">
+            <h3 class="float">{{ block.settings.emoji }}</h3>
+            <p>{{ block.settings.text }}</p>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+      {% endif %}
+      {% if section.settings.text_link_label != blank %}
+        <a href="{{ section.settings.text_link }}" class="body medium arrow-link">{{ section.settings.text_link_label }} {% render 'icon-arrow-right' %}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Subscription Promo",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "icon_svg",
+        "label": "Icon (SVG)"
+      },
+      {
+        "type": "checkbox",
+        "id": "spin",
+        "label": "Spin"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL",
+        "info": "This will override the SVG."
+      },
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "text_link_label",
+        "label": "Text Link Label"
+      },
+      {
+        "type": "url",
+        "id": "text_link",
+        "label": "Text Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "prop",
+        "name": "Prop",
+        "settings": [
+          {
+            "type": "text",
+            "id": "emoji",
+            "label": "Emoji"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Subscription Promo"
+      }
+    ]
+  }
+{% endschema %}

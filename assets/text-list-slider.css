@@ -1,0 +1,81 @@
+.page-science-efficacy .text-list .page-width{
+  max-width: 968px;
+}
+
+.page-science-efficacy .text-list__list{
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 126px 0 0;
+  flex-wrap: nowrap;
+}
+
+.page-science-efficacy .text-list__list p{
+  line-height: 22px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.page-science-efficacy .text-list .button{
+  background: no-repeat;
+  border: none;
+  padding: 0;
+  border-bottom: 2px solid;
+  border-radius: unset;
+  min-width: auto;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  min-height: auto;
+  height: auto;
+  margin-top: 60px;
+}
+
+.page-science-efficacy .text-list__container a{
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+.page-science-efficacy .text-list__container a:hover{
+  color: var(--charcoal);
+}
+
+.page-science-efficacy .text-list .arrow-link{
+  border-bottom: 1.5px solid;
+  display: inline-block;
+  line-height: 17px;
+  padding-bottom: 5px;
+  margin-top: 60px;
+}
+
+.page-science-efficacy .text-list__list.hide-desktop{
+  display:none;
+}
+
+@media (min-width: 769px) {
+  
+  .page-science-efficacy .text-list__list{
+    margin: 135px 0 0;
+  }
+  
+  .page-science-efficacy .text-list__list p{
+    flex: 0 1 calc(20% - 20px);
+  }
+  
+}
+
+@media (max-width: 768px){
+  
+  .page-science-efficacy .text-list__list.hide-desktop{
+    display:flex;
+  }
+  
+  .page-science-efficacy .text-list__list p{
+    width: 152px;
+    margin: 0 8px;
+  }
+  
+  .page-science-efficacy .text-list .arrow-link svg{
+    display: none;
+  }
+  
+}
