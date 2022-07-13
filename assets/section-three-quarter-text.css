@@ -17,6 +17,10 @@
   height: 100px;
 }
 
-.three-quarter h2, .three-quarter p {
+.three-quarter h2{
+  margin-right 10%;
+}
+
+.three-quarter p {
   margin-top: 0;
 }
