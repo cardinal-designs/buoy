@@ -50,6 +50,10 @@
   }
   
   .three-quarter a {
-    margin-top: 40px;
+    text-align: center;
+    margin: 40px auto 0;
+    display: flex;
+    width: max-content;
+    justify-content: center;
   }
 }
