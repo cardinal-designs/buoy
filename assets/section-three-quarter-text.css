@@ -31,4 +31,10 @@
     top: -23px;
     bottom: unset;
   }
+
+  .three-quarter__text-container {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
 }
