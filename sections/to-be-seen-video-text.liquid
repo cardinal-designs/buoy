@@ -2,7 +2,10 @@
 
 <div class="to-be-seen-video__container">
   <div class="page-width">
-  
+    <video autoplay loop muted playsinline class="img-fill">
+    <source src="{{ section.settings.video_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   </div>
 </div>
 
@@ -21,9 +24,9 @@
         "label": "Subtitle"
       },
       {
-        "type": "image_picker",
-        "id": "img",
-        "label": "Floating Image"
+        "type": "text",
+        "id": "video_url",
+        "label": "Video"
       },
       {
         "type": "textarea",
