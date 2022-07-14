@@ -1,12 +1,60 @@
+{{ 'section-to-be-seen-video-text.css' | asset_url | stylesheet_tag }}
+
+<div class="to-be-seen-video__container">
+  <div class="page-width">
+  
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "To Be Seen Video Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Floating Image"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+	  {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+	  {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "To Be Seen Video Text"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
