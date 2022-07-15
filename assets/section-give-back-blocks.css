@@ -6,7 +6,6 @@
 .give-back-block__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-flow: column;
 }
 
 .give-back__container {
@@ -45,10 +44,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.give-back__item {
- height: 100%;
 }
 
 .give-back__item:nth-of-type(2) {
