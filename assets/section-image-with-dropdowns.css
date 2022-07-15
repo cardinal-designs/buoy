@@ -25,6 +25,10 @@
   position: relative;
 }
 
+.image-with-dropdowns__dropdown {
+  position: relative;
+}
+
 .image-with-dropdowns__content-point:before {
   content: "";
   position: absolute;
