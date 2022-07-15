@@ -64,6 +64,10 @@
   display: none;
 }
 
+.image-with-dropdowns__a:first-of-type {
+  display: block;
+}
+
 .image-with-dropdowns__a .light {
  color: #545759; 
 }
