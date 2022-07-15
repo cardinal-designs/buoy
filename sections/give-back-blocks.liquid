@@ -5,15 +5,17 @@
     <h3 class="light">{{ section.settings.title }}</h3>
     <div class="give-back-block__container">
       {% for block in section.blocks %}
-      <div class="give-back__item">
+      <div class="give-back__item">  
         <div class="give-back__count">{{ forloop.index }}</div>
-        <div class="give-back-image__container">
-          {% include 'lazy-image' image: block.settings.image, classes: '' %}
-        </div>
-        <div class="give-back__text">
-          <h5>{{ block.settings.title }}</h5>
-          <p class="light">{{ block.settings.text }}</p>
-          <a href="{{ block.settings.link }}" class="button">{{ block.settings.link_text }}</a>
+        <div class="give-back__item-info">
+          <div class="give-back-image__container">
+            {% include 'lazy-image' image: block.settings.image, classes: '' %}
+          </div>
+          <div class="give-back__text">
+            <h5>{{ block.settings.title }}</h5>
+            <p class="light">{{ block.settings.text }}</p>
+            <a href="{{ block.settings.link }}" class="button">{{ block.settings.link_text }}</a>
+          </div>
         </div>
       </div>
       {% endfor %}
