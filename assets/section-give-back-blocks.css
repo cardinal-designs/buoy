@@ -100,16 +100,10 @@
   }
 
   .give-back-image__container {
-    border-radius: 34px 34px 0 0;
+    border-radius: 27px 27px 0 0;
   }
   
   .give-back-image__container img{
     border-radius: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .give-back-image__container {
-    border-radius: 27px 27px 0 0;
   }
 }
