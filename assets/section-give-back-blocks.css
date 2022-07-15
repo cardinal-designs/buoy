@@ -85,8 +85,15 @@
   line-height: 54px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1175px) {
+  .give-back-block__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
 
+
+@media screen and (max-width: 768px) {
   .give-back-block__container {
     grid-template-columns: 1fr;
     gap: 30px;
