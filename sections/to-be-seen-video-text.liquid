@@ -1,7 +1,7 @@
 {{ 'section-to-be-seen-video-text.css' | asset_url | stylesheet_tag }}
 
-<div class="to-be-seen-video__container">
-  <div class="page-width">
+<div style="background-color: {{ section.settings.background }};" class="to-be-seen-video__container">
+  <div style="color: {{ section.settings.color }};" class="page-width">
     <h2>{{ section.settings.title }}</h2>
     <p>{{ section.settings.subtitle }}</p>
     <div class="video-section__media">
