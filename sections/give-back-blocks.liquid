@@ -6,7 +6,13 @@
   <div>
   {% for block in section.blocks %}
     <div>
-    
+                    {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+      <div>
+        <h5></h5>
+        <p></p>
+        <a href="{{ section.settings.link }}" class="button">{{ section.settings.link_text }}</a>
+      </div>
+
     </div>
     {% endfor %}
   </div>
