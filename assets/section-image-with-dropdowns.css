@@ -11,3 +11,25 @@
 .image-with-dropdowns__image img {
   object-fit: contain;
 }
+
+.image-with-dropdowns__content-circle {
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+  border: 1px solid black;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.image-with-dropdowns__content-point:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  bottom: 0;
+  border-left: 1px solid var(--charcoal);
+}
