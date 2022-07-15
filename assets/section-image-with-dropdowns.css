@@ -30,6 +30,10 @@
   position: relative;
 }
 
+.image-with-dropdowns__content-point {
+  margin-bottom: 20px;
+}
+
 .image-with-dropdowns__content-point:before {
   content: "";
   position: absolute;
