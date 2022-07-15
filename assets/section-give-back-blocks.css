@@ -98,4 +98,8 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .give-back-image__container {
+    border-radius: 34px 34px 0 0;
+  }
 }
