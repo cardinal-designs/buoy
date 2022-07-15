@@ -28,7 +28,13 @@
 .give-back__text h5 {
   margin: 0;
   padding-top: 36px;
-  padding-bottom: 0;
+  padding-bottom: 12px;
+}
+
+.give-back__text p {
+  padding-bottom: 36px;
+  text-align: left;
+  color: #545759;
 }
 
 .give-back-image__container {
