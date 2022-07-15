@@ -1,14 +1,54 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 
+<div class="image-with-dropdowns__container">
+  <div class="page-width">
+    <div>
+      {% include 'lazy-image' image: block.settings.image, classes: '' %}
+    </div>
+    <div>
+      <h2></h2>
+      <p class="sh2"></p>
+      <div>
+        {% for block in section.blocks %}
+        <div class="image-with-dropdowns__content-point">
+          <div class="image-with-dropdowns__q">
+          <div class="image-with-dropdowns__content-circle">
+            <h5>{{ block.settings.emoji }}</h5>
+            </div>
+            <div class="image-with-dropdowns__content-text">
+              <h6>{{ block.settings.title }}</h6>
+            </div>
+          </div>
+          <div class="image-with-dropdowns__a">
+            <p class="light">{{ block.settings.text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 {% schema %}
   {
     "name": "Image With Dropdowns",
     "settings": [
       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
         "type": "text",
         "id": "title",
         "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
       }
 	],
     "blocks": [
@@ -17,29 +57,24 @@
         "name": "Block",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
             "type": "text",
             "id": "title",
             "label": "Title"
           },
           {
-            "type": "textarea",
-            "id": "text",
-            "label": "Text"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Button Link"
+            "type": "text",
+            "id": "emoji",
+            "label": "Emoji"
           },
           {
             "type": "text",
-            "id": "link_text",
-            "label": "Button Text"
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
           }
         ]
       }
