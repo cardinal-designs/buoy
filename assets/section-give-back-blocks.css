@@ -4,8 +4,9 @@
 
 
 .give-back-block__container {
-  display: flex;
+  display: grid;
   gap: 33px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .give-back__container {
