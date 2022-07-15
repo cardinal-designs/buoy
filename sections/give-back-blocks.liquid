@@ -6,9 +6,7 @@
     <div class="give-back-block__container">
       {% for block in section.blocks %}
       <div class="give-back__item">
-        {% comment %}
         <div class="give-back__count">{{ forloop.index }}</div>
-        {% endcomment %}
         <div class="give-back-image__container">
           {% include 'lazy-image' image: block.settings.image, classes: '' %}
         </div>
