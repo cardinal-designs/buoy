@@ -34,9 +34,9 @@
   text-align: left;
 }
 
-/* .give-back__text a {
-  min-width: unset;
-} */
+.give-back__text a {
+  min-width: 240px;
+}
 
 .give-back__text p {
   padding-bottom: 36px;
