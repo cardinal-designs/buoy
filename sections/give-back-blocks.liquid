@@ -3,20 +3,20 @@
 <div class="give-back__container">
 <div class="page-width">
   <h2>{{ section.settings.title }}</h2>
-  <div>
+  <div class="give-back-block__container">
   {% for block in section.blocks %}
-    <div>
-                    {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
-      <div>
-        <h5></h5>
-        <p></p>
-        <a href="{{ section.settings.link }}" class="button">{{ section.settings.link_text }}</a>
+    <div class="give-back__item">
+      <div class="give-back__count">{{ forloop.index }}</div>
+      {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+      <div class="give-back__text">
+        <h5>{{ block.settings.title }}</h5>
+        <p>{{ block.settings.text }}</p>
+        <a href="{{ block.settings.link }}" class="button">{{ block.settings.link_text }}</a>
       </div>
-
     </div>
     {% endfor %}
   </div>
-</div>
+  </div>
 </div>
 
 {% schema %}
