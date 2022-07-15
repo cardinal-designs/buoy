@@ -25,6 +25,7 @@
   border-top: none;
   border-radius: 0 0 21px 21px;
   padding: 0px 30px 30px;
+  height: 100%;
 }
 
 .give-back__text h5 {
@@ -48,7 +49,12 @@
 .give-back__item-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+}
+
+.give-back__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .give-back-image__container {
