@@ -3,7 +3,7 @@
 <div style="background-color: {{ section.settings.background }};" class="to-be-seen-video__container">
   <div style="color: {{ section.settings.color }};" class="page-width">
     <h1>{{ section.settings.title }}</h1>
-    <h6>{{ section.settings.subtitle }}</h6>
+    <h6 class="light">{{ section.settings.subtitle }}</h6>
     <div class="video-section__media">
       {%- if section.settings.video_url.type == 'youtube' -%}
       <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
