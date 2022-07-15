@@ -76,6 +76,49 @@
         "link_text": "Join the Conversation"
       }
     },
+    "1657856778a2b1e281": {
+      "type": "give-back-blocks",
+      "blocks": {
+        "3a8dd64f-d1de-43ad-8918-9cfa213dfa52": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CIP_D_35_off_2x_2e2582e4-1e03-4fe0-9bb2-57e132cf4402.png",
+            "title": "Get 35% Off",
+            "text": "For those with chronic illnesses looking for clean hydration, get Buoy’s lifetime 35% off discount with our Chronic Illness Support Program. Apply for the program in two minutes.",
+            "link": "",
+            "link_text": "Get Your Discount"
+          }
+        },
+        "1f98d946-2a01-4edb-b38c-e45493055e69": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CIP_D_Donations_2x_b0d5f4b3-75ec-4375-b698-616be3b1db5f.png",
+            "title": "Donations to Nonprofits",
+            "text": "We donate a bottle for every bottle sold on our website to a verified 501(c)3 nonprofit supporting chronic illness communities. If you don’t have an illness, you can still support those who do.",
+            "link": "",
+            "link_text": "Hydrate and Support"
+          }
+        },
+        "febbdb37-9c68-4f1d-b66e-803972fe2364": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CIP_D_Chronic_Illness_Creators_2x_ea85349f-3574-47ca-a2d8-ebd89fd65042.png",
+            "title": "Chronic Illness Creators",
+            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
+            "link": "",
+            "link_text": "Follow Buoy on TikTok"
+          }
+        }
+      },
+      "block_order": [
+        "3a8dd64f-d1de-43ad-8918-9cfa213dfa52",
+        "1f98d946-2a01-4edb-b38c-e45493055e69",
+        "febbdb37-9c68-4f1d-b66e-803972fe2364"
+      ],
+      "settings": {
+        "title": "3 Ways Buoy Gives Back"
+      }
+    },
     "16577538346bc4c626": {
       "type": "three-quarter-text",
       "settings": {
@@ -93,6 +136,7 @@
     "165783050479d5868f",
     "165769038330bdedb0",
     "16577518262fe9b559",
+    "1657856778a2b1e281",
     "16577538346bc4c626"
   ]
 }
