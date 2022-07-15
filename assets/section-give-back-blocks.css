@@ -46,6 +46,11 @@
   justify-content: space-between;
 }
 
+.give-back__item:nth-of-type(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .give-back-image__container {
   border: 2px solid #1F2322;
   border-bottom: none;
