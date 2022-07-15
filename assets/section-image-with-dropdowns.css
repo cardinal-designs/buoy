@@ -47,6 +47,10 @@
   border-left: 1px solid var(--charcoal);
 }
 
+.image-with-dropdowns__content-point:last-of-type:before {
+  border-left: unset;
+}
+
 .image-with-dropdowns__content-text h6 {
   margin: 0 0 0 24px;
 }
