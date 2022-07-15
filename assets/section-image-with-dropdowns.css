@@ -6,3 +6,7 @@
 .image-with-dropdowns__image {
   position: relative;
 }
+
+.image-with-dropdowns__image img {
+  object-fit: contain;
+}
