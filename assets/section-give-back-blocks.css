@@ -1,5 +1,8 @@
 .give-back__item {
   position: relative;
+}
+
+.give-back-block__container {
   display: flex;
   gap: 33px;
 }
