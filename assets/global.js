@@ -1246,5 +1246,9 @@ $(window).on('resize scroll', function() {
     }
 });
 
+$('.image-with-dropdowns__q').click(function () {
+  $(this).next().slideToggle()
+})
+
 
 
