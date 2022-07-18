@@ -35,6 +35,10 @@
   position: relative;
 }
 
+.image-with-dropdowns__content h2 {
+  margin-top: 0;
+}
+
 .image-with-dropdowns__content-point {
   padding-bottom: 20px;
 }
