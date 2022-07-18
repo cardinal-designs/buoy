@@ -1,3 +1,7 @@
+.image-with-dropdowns__container {
+  padding-top: 120px;
+}
+
 .image-with-dropdowns__container .page-width {
   display: grid;
   grid-template-columns: 1fr 1fr;
