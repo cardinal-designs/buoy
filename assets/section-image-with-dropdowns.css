@@ -135,4 +135,8 @@
   .image-with-dropdowns__container .page-width {
     grid-template-columns: 1fr;
   }
+
+  .image-with-dropdowns__container {
+    padding-top: 26px;
+  }
 }
