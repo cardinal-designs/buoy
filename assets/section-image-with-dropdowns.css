@@ -90,6 +90,13 @@
   cursor: pointer;
 }
 
+.image-with-dropdowns__q svg {
+  width: 17px;
+  color: #1f2322;
+  height: unset;
+  transition: transform .3s ease;
+}
+
 .image-with-dropdowns__a p {
   margin-left: 68px;
   line-height: 27px;
