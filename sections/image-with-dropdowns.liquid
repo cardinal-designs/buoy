@@ -3,7 +3,14 @@
 <div class="image-with-dropdowns__container">
   <div class="page-width">
     <div class="image-with-dropdowns__image">
-      {% include 'lazy-image' image: section.settings.image, classes: 'img-fill' %}
+      {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="video">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+      {% render 'lazy-image' image: section.settings.image, classes: 'img-fill' %}
+      {% endif %}    
     </div>
     <div>
       <h2>{{ section.settings.title }}</h2>
@@ -36,6 +43,11 @@
   {
     "name": "Image With Dropdowns",
     "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video Url"
+      },
       {
         "type": "image_picker",
         "id": "image",
