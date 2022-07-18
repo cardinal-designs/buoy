@@ -143,4 +143,10 @@
   .image-with-dropdowns__image {
     margin-right: unset;
   }
+
+  .image-with-dropdowns__content h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
