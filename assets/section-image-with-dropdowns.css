@@ -12,6 +12,11 @@
   object-fit: contain;
 }
 
+.image-with-dropdowns__image .aspect-ratio {
+  position: sticky;
+  top: 120px;
+}
+
 .image-with-dropdowns__content-circle {
   height: 44px;
   width: 44px;
