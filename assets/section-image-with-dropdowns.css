@@ -130,3 +130,9 @@
 .image-with-dropdowns__a .light {
  color: #545759; 
 }
+
+@media screen and (max-width: 768px) {
+  .image-with-dropdowns__container .page-width {
+    grid-template-columns: 1fr;
+  }
+}
