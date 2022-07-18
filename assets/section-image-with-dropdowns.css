@@ -139,4 +139,8 @@
   .image-with-dropdowns__container {
     padding-top: 26px;
   }
+  
+  .image-with-dropdowns__image {
+    margin-right: unset;
+  }
 }
