@@ -807,6 +807,10 @@ $('.faq__header').click(function() {
   $(this).toggleClass('active');
   $(this).siblings('.faq__content').slideToggle(300);
 });
+    
+$('.image-with-dropdowns__q').click(function() {
+  $(this).toggleClass('active');
+});
 
 /* ---------- SLIDERS ---------- */
 // Product Slider
