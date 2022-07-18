@@ -100,6 +100,10 @@
   right: 0;
 }
 
+.image-with-dropdowns__q.active svg {
+  transform: rotate(180deg);
+}
+
 .image-with-dropdowns__a p {
   margin-left: 68px;
   line-height: 27px;
