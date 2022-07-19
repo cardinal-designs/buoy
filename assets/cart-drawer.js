@@ -21,7 +21,6 @@ class CartDrawer extends HTMLElement {
     this.cartButton.addEventListener('click', this.handleCartClick.bind(this));
 
     this.closeIcon = document.getElementById('cart-drawer__close');
-    console.log(this.closeIcon)
     this.closeIcon.addEventListener('click', this.close.bind(this));
     
     this.onBodyClick = this.handleBodyClick.bind(this);
@@ -115,9 +114,7 @@ class CartDrawer extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
-        console.log('rend',this.getSectionsToRender())
         this.getSectionsToRender().forEach((section => {
-          console.log('va',parsedState.sections[section.section], section.selector)
           const elementToReplace =  document.getElementById(section.id);
           elementToReplace.innerHTML =
             this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
