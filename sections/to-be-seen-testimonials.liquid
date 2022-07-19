@@ -1,11 +1,11 @@
 {{ 'section-to-be-seen-testimonials.css' | asset_url | stylesheet_tag }}
 
-<div style="background-color: {{ section.settings.color }}" class="to-be-seen-testimonials">
-  <div class="page-width">
+<div style="background-color: {{ section.settings.background }}" class="to-be-seen-testimonials">
     {% for block in section.blocks %}
-    
-    {% endfor %}
+  <div style="color: {{ section.settings.color }}">
+  
   </div>
+    {% endfor %}
 </div>
 
 
