@@ -24,19 +24,7 @@ class CartDrawer extends HTMLElement {
     this.closeIcon.addEventListener('click', this.close.bind(this));
     
     $('body').on('click', '.cart-drawer__close', function(event) {
-      console.log('jq')
-    });
-    
-    document.body.addEventListener('click', event => {
-      event.stopPropagation();
-      console.log(event.target)
-      if (event.target.classList.contains('cart-drawer__close')) {
-		this.drawer.setAttribute('aria-hidden', true);
-        this.drawer.removeAttribute('aria-expanded', true);
-
-        this.pageOverlayElement.classList.remove('is-visible');
-        this.pageOverlayElement.removeEventListener('click', this.onBodyClick);
-      }
+      this.close();
     });
     
     this.onBodyClick = this.handleBodyClick.bind(this);
