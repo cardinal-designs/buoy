@@ -1,0 +1,60 @@
+{{ 'section-polaroid-slider.css' | asset_url | stylesheet_tag }}
+ 
+<div style="background-color: {{ section.settings.color }}" class="polaroid-slider">
+  <div class="page-width">
+    <div class="polaroid-slider__content-wrapper no-scrollbar drag-scroll">
+      <div class="polaroid-slider__content">
+        {% for block in section.blocks %}
+          <div class="polaroid-slider__item">
+            <div class="polaroid-slider__image">
+              {% if block.settings.image_url != blank %}
+              <a href="{{ block.settings.image_url }}">
+              {% endif %}
+                {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+              {% if block.settings.image_url != blank %}
+              </a>
+              {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Polaroid Slider",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Background Color"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "image_url",
+            "label": "Image Link (optional)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Polaroid Slider"
+      }
+    ]
+  }
+{% endschema %}
