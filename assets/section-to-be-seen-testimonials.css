@@ -59,6 +59,14 @@
   opacity: 1;
 }
 
+.to-be-seen-testimonials .slick-list {
+  overflow: visible;
+}
+
+.to-be-seen-testimonials .slick-slide {
+  padding: 0 200px;
+}
+
 @media screen and (max-width: 768px) {
   .to-be-seen-testimonials .slick-dots {
     margin: -30px 0 40px;
@@ -82,5 +90,10 @@
   
   .to-be-seen-testimonials .slick-list {
     top: -60px;
+    overflow: unset;
   }
+  
+  .to-be-seen-testimonials .slick-slide {
+  padding: unset;
+}
 }
