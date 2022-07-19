@@ -159,6 +159,7 @@ class CartDrawer extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector) {
+    console.log(document.querySelector(selector)
     return new DOMParser()
       .parseFromString(html, 'text/html')
       .querySelector(selector).innerHTML;
