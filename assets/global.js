@@ -863,7 +863,8 @@ $('.testimonials-slider__img-slider').slick({
     
 $('.to-be-seen-testimonials').slick({
     arrows: true,
-    autoplay: false
+    autoplay: false,
+  appendArrows: "to-be-seen-testimonials__arrows"
 });
     
     
