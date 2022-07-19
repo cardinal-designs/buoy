@@ -23,6 +23,10 @@ class CartDrawer extends HTMLElement {
     this.closeIcon = document.getElementById('cart-drawer__close');
     this.closeIcon.addEventListener('click', this.close.bind(this));
     
+    $('body').on('click', '.cart-drawer__close', function(event) {
+      console.log(event.target)
+    });
+    
     document.body.addEventListener('click', event => {
       event.stopPropagation();
       console.log(event.target)
