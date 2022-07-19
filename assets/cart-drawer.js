@@ -68,7 +68,7 @@ class CartDrawer extends HTMLElement {
   }
 
   updateQuantity(line, quantity, name) {
-//     this.enableLoading(line);
+    this.enableLoading(line);
 
     const body = JSON.stringify({
       line,
@@ -93,9 +93,9 @@ class CartDrawer extends HTMLElement {
 
         }));
         
-//         this.disableLoading();  
+        this.disableLoading();  
       }).catch(() => {
-//         this.disableLoading();
+        this.disableLoading();
       });
 
 
