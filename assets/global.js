@@ -1232,8 +1232,8 @@ $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+    var viewportTop = $(window).scrollTop() - 300;
+    var viewportBottom = viewportTop + $(window).height() - 300;
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
   }
