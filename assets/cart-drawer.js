@@ -21,8 +21,7 @@ class CartDrawer extends HTMLElement {
     this.cartButton.addEventListener('click', this.handleCartClick.bind(this));
 
     this.closeIcon = document.getElementById('cart-drawer__close');
-    console.log(this.closeIcon)
-    this.closeIcon.addEventListener('click', this.handleCartClose.bind(this));
+    this.closeIcon.addEventListener('click', this.close.bind(this));
     
     this.onBodyClick = this.handleBodyClick.bind(this);
     this.drawer.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
@@ -212,11 +211,6 @@ class CartDrawer extends HTMLElement {
   handleCartClick(evt) {
     evt.preventDefault();
     this.open();
-  }
-
-  handleCartClose(evt) {
-    evt.preventDefault();
-    this.close();
   }
 }
 
