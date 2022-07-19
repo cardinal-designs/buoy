@@ -153,7 +153,7 @@ class CartDrawer extends HTMLElement {
   }
 
   enableLoading() {
-    document.getElementById('cart-drawer-loading').classList.removeClass('hidden');
+    document.getElementById('cart-drawer-loading').classList.remove('hidden');
   }
 
   disableLoading() {
