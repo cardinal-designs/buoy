@@ -28,3 +28,29 @@
   justify-content: center;
   gap: 50px;
 }
+
+.to-be-seen-testimonials__arrows .slick-dots {
+  margin: 25px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.to-be-seen-testimonials__arrows .slick-dots li {
+  padding: 5px 3px;
+}
+
+.to-be-seen-testimonials__arrows .slick-dots li button {
+  height: 8px;
+  width: 8px;
+  display: block;
+  background: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  font-size: 0;
+}
+
+.to-be-seen-testimonials__arrows .slick-dots li.slick-active button {
+  background: black;
+}
