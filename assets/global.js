@@ -1277,4 +1277,8 @@ $('.image-with-dropdowns__q').click(function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
 });
 
+$('.cart-drawer__close').click(function() {
+  $('.cart-drawer').attr('aria-hidden','true')
+})
+
 
