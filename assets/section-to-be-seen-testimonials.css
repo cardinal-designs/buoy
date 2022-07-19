@@ -68,5 +68,6 @@
 
   .to-be-seen-testimonials img {
     margin: -60px auto 0;
+    z-index: 99;
   }
 }
