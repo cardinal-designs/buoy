@@ -216,8 +216,4 @@ class CartDrawer extends HTMLElement {
 }
 
 
-$('#cart-drawer__close').click(function() {
-  console.log('afafwwww')
-})
-
 customElements.define('cart-drawer', CartDrawer);
