@@ -85,7 +85,7 @@
     padding-top: 0;
     padding-left: 27px;
     padding-right: 27px;
-    overflow: visible !important;
+    overflow: unset !important;
   }
 
   .to-be-seen-testimonials img {
@@ -99,7 +99,7 @@
   
   .to-be-seen-testimonials .slick-list {
     top: -60px;
-    overflow: visible !important;
+    overflow: auto !important;
   }
   
   .to-be-seen-testimonials.slick-slider {
