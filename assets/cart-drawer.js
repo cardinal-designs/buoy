@@ -118,7 +118,7 @@ class CartDrawer extends HTMLElement {
         console.log('rend',this.getSectionsToRender())
         this.getSectionsToRender().forEach((section => {
           console.log('va',document.getElementById(section.id).querySelector(section.selector),document.getElementById(section.id))
-          const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+          const elementToReplace =  document.getElementById(section.id);
           elementToReplace.innerHTML =
             this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
           
