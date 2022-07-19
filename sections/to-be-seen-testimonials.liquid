@@ -1,7 +1,10 @@
-{{ 'section-give-back-blocks.css' | asset_url | stylesheet_tag }}
+{{ 'section-to-be-seen-testimonials.css' | asset_url | stylesheet_tag }}
 
 <div style="background-color: {{ section.settings.color }}" class="polaroid-slider">
   <div class="page-width">
+    {% for block in section.blocks %}
+    
+    {% endfor %}
   </div>
 </div>
 
@@ -9,7 +12,18 @@
 {% schema %}
   {
     "name": "To Be Seen Testimonials",
-    "settings": [],
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
+      }
+	],
     "blocks": [
       {
         "type": "block",
