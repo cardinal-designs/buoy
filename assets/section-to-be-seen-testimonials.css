@@ -59,13 +59,13 @@
   opacity: 1;
 }
 
-/* .to-be-seen-testimonials .slick-list {
+.to-be-seen-testimonials .slick-list {
   overflow: visible;
 }
 
 .to-be-seen-testimonials .slick-slide {
-  padding: 0 200px;
-} */
+  padding: 0 100px;
+}
 
 @media screen and (max-width: 768px) {
   .to-be-seen-testimonials .slick-dots {
