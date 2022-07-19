@@ -860,6 +860,13 @@ $('.testimonials-slider__img-slider').slick({
     cssEase: 'linear'
 });
     
+    
+$('.to-be-seen-testimonials').slick({
+    arrows: true,
+    autoplay: false
+});
+    
+    
 // $('.testimonial-slider-new').slick({
 //     arrows: false,
 //     autoplay: false,
