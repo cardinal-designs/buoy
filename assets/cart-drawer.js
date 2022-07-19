@@ -24,6 +24,7 @@ class CartDrawer extends HTMLElement {
     this.closeIcon.addEventListener('click', this.close.bind(this));
     
     document.body.addEventListener('click', event => {
+      console.log(event.target)
       if (event.target.classList.contains('cart-drawer__close')) {
 		console.log('adsf');
       }
@@ -159,7 +160,6 @@ class CartDrawer extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector) {
-    console.log(selector, document.querySelector(selector).innerHTML)
     return new DOMParser()
       .parseFromString(html, 'text/html')
       .querySelector(selector).innerHTML;
