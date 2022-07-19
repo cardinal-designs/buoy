@@ -53,7 +53,6 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
-    console.log('asdf')
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
 
@@ -78,8 +77,6 @@ class CartDrawer extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
-    
-    console.log(body)
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
@@ -200,7 +197,6 @@ class CartDrawer extends HTMLElement {
       }
 
       if(only_singles) {
-        console.log('only singles')
 //         for(let i=0;i<data.items.length;i++) {
 // 		this.closest('cart-drawer').updateQuantity(i+1, 0);
 //         }
