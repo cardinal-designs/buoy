@@ -53,7 +53,6 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
-    console.log('aaaaa')
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
 
@@ -205,6 +204,7 @@ class CartDrawer extends HTMLElement {
     const target = evt.target;
     if ($(target).hasClass('page-overlay')) {
       this.close();
+      console.log('aaaaa')
       this.pageOverlayElement.classList.remove('is-visible');
     }
   }
