@@ -1278,6 +1278,7 @@ $('.image-with-dropdowns__q').click(function () {
 });
 
 $('.cart-drawer__close').click(function() {
+  console.log('fafa')
   $('.cart-drawer').attr('aria-hidden','true')
 })
 
