@@ -71,6 +71,10 @@
   border-radius: 19px 19px 0 0;
 }
 
+.give-back-image__container video {
+  max-width: 100%;
+}
+
 .give-back__count {
   font-family: 'Dela Gothic One', sans-serif;
   letter-spacing: 0.49px;
