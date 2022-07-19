@@ -64,15 +64,15 @@
 }
 
 .to-be-seen-testimonials.slick-slider {
-  padding: 0 180px;
+  padding: 0 10%;
 }
 
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .to-be-seen-testimonials.slick-slider {
   padding: 0 250px;
 }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .to-be-seen-testimonials .slick-dots {
