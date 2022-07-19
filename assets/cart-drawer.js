@@ -204,7 +204,6 @@ class CartDrawer extends HTMLElement {
     const target = evt.target;
     if ($(target).hasClass('page-overlay')) {
       this.close();
-      console.log('aaaaa')
       this.pageOverlayElement.classList.remove('is-visible');
     }
   }
