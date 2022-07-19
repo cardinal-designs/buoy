@@ -99,7 +99,7 @@
   
   .to-be-seen-testimonials .slick-list {
     top: -60px;
-    overflow: auto !important;
+    overflow: hidden !important;
   }
   
   .to-be-seen-testimonials.slick-slider {
