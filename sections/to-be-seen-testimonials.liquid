@@ -1,12 +1,42 @@
+{{ 'section-give-back-blocks.css' | asset_url | stylesheet_tag }}
+
+<div style="background-color: {{ section.settings.color }}" class="polaroid-slider">
+  <div class="page-width">
+  </div>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "To Be Seen Testimonials",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "testimonial",
+            "label": "Testimonial"
+          },
+          {
+            "type": "text",
+            "id": "author",
+            "label": "Author"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "To Be Seen Testimonials"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
