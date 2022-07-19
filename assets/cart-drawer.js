@@ -27,7 +27,6 @@ class CartDrawer extends HTMLElement {
       event.stopImmediatePropagation();
       console.log(event.target)
       if (event.target.classList.contains('cart-drawer__close')) {
-        console.log(this)
 		this.close.bind(this);
       }
     });
@@ -62,6 +61,7 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
+    console.log('close')
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
 
