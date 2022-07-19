@@ -61,6 +61,13 @@
   cursor: pointer;
 }
 
+.polaroid-slider__content.shake {
+  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 @media screen and (max-width: 768px) {
   .polaroid-slider {
     padding: 70px 0 40px;
