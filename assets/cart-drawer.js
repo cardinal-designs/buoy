@@ -101,7 +101,6 @@ class CartDrawer extends HTMLElement {
         this.disableLoading();
       });
 
-
   }
   
   
