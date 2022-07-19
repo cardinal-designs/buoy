@@ -85,6 +85,7 @@ class CartDrawer extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
+       console.log('rend2',this.getSectionsToRender())
         this.getSectionsToRender().forEach((section => {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
