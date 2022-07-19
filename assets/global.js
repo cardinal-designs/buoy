@@ -1245,7 +1245,15 @@ $(window).on('resize scroll', function() {
     } else {
         $('.info-grid__container').removeClass('shake')
     }
+  
+    if ($('.polaroid-slider__content').isInViewport()) {
+        $('.polaroid-slider__content').addClass('shake')
+    } else {
+        $('.polaroid-slider__content').removeClass('shake')
+    }
+  
 });
+
 
 $('.image-with-dropdowns__q').click(function () {
   $(this).next().slideToggle()
