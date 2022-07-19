@@ -1,11 +1,11 @@
 .to-be-seen-testimonials__container {
   margin-top: 120px; 
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
 .to-be-seen-testimonials {
   text-align: center;
-  padding-top: 55px;
-  padding-bottom: 55px;
 }
 
 .to-be-seen-testimonials img {
@@ -21,4 +21,9 @@
 
 .to-be-seen-testimonials .sh4 {
   margin: 0;
+}
+
+.to-be-seen-testimonials__arrows {
+  display: flex;
+  justify-content: center;
 }
