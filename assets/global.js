@@ -1261,6 +1261,7 @@ $('.image-with-dropdowns__q').click(function () {
 })
 
   window.addEventListener("hashchange", function () {
+    console.log('ww')
     window.scrollTo(window.scrollX, window.scrollY - 100);
 });
 
