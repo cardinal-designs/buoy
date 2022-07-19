@@ -53,6 +53,7 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
+    console.log('asdf')
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
 
