@@ -213,6 +213,11 @@ class CartDrawer extends HTMLElement {
     evt.preventDefault();
     this.open();
   }
+
+  handleCartClose(evt) {
+    evt.preventDefault();
+    this.close();
+  }
 }
 
 
