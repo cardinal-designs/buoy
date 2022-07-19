@@ -68,7 +68,6 @@ class CartDrawer extends HTMLElement {
   }
 
   updateQuantity(line, quantity, name) {
-    console.log(line, quantity, name)
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -78,7 +77,6 @@ class CartDrawer extends HTMLElement {
       sections_url: window.location.pathname
     });
     
-    console.log(body)
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
@@ -112,7 +110,6 @@ class CartDrawer extends HTMLElement {
 
     fetch('/cart/clear.js', {...fetchConfig(), ...{ body }})
       .then((response) => {
-      console.log(response)
         return response.text();
       })
       .then((state) => {
@@ -199,7 +196,6 @@ class CartDrawer extends HTMLElement {
       }
 
       if(only_singles) {
-        console.log('only singles')
 //         for(let i=0;i<data.items.length;i++) {
 // 		this.closest('cart-drawer').updateQuantity(i+1, 0);
 //         }
