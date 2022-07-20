@@ -17,15 +17,6 @@ $( document ).ready(function() {
             $('.text-image-blocks__content-container h3 u').html('Immunity');
           }
           
-          if ($(this).scrollTop() < 2000) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('electrolytes +');
-          } else if ($(this).scrollTop() > 2400) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('antioxidants');
-          } else if ($(this).scrollTop() > 2200) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('trace minerals +');
-          } else if ($(this).scrollTop() >= 2000) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('vitamins + ');
-          }
 
           if ($(this).scrollTop() < 5000) { 
             $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Fast absorption 🤩');
