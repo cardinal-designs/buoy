@@ -9,23 +9,14 @@ $( document ).ready(function() {
         $(window).scroll(function () {
           // 600 - 1300 mobile
           // 0 - 900 desktop
-          if ($(this).scrollTop() < 333) { 
+          /*if ($(this).scrollTop() < 333) { 
             $('.text-image-blocks__content-container h3 u').html('Hydration');
           } else if ($(this).scrollTop() > 666) { 
             $('.text-image-blocks__content-container h3 u').html('Energy');
           } else if ($(this).scrollTop() > 333) {
             $('.text-image-blocks__content-container h3 u').html('Immunity');
-          }
+          }*/
           
-          if ($(this).scrollTop() < 2000) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('electrolytes +');
-          } else if ($(this).scrollTop() > 2400) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('antioxidants');
-          } else if ($(this).scrollTop() > 2200) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('trace minerals +');
-          } else if ($(this).scrollTop() >= 2000) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('vitamins + ');
-          }
 
           if ($(this).scrollTop() < 5000) { 
             $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Fast absorption 🤩');
@@ -36,7 +27,6 @@ $( document ).ready(function() {
           } else if ($(this).scrollTop() >= 5000) {
             $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('High bioavailability ✨');
           }
-          
           
           if($(this).scrollTop() < 1000) {
             $('.flip-images').hide();
@@ -76,17 +66,6 @@ $( document ).ready(function() {
             $('.text-image-blocks__content-container h3 u').html('Energy');
           } else if ($(this).scrollTop() > 850) {
             $('.text-image-blocks__content-container h3 u').html('Immunity');
-          }
-          
-          
-          if ($(this).scrollTop() < 3900) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('electrolytes +');
-          } else if ($(this).scrollTop() > 4200) { 
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('antioxidants');
-          } else if ($(this).scrollTop() > 4050) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('trace minerals +');
-          } else if ($(this).scrollTop() >= 3900) {
-            $('.page-who-we-are .text-image-blocks__content-container h3 span').html('vitamins +');
           }
           
           if ($(this).scrollTop() < 4800) { 
