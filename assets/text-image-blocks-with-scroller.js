@@ -28,7 +28,7 @@ $( document ).ready(function() {
             $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('High bioavailability ✨');
           }
           
-          
+          console.log('sdfasd')
           if($(this).scrollTop() < 1000) {
             $('.flip-images').hide();
             $(`.emoji-swap`).hide()
