@@ -9,6 +9,14 @@ $( document ).ready(function() {
         $(window).scroll(function () {
           // 600 - 1300 mobile
           // 0 - 900 desktop
+          /*if ($(this).scrollTop() < 333) { 
+            $('.text-image-blocks__content-container h3 u').html('Hydration');
+          } else if ($(this).scrollTop() > 666) { 
+            $('.text-image-blocks__content-container h3 u').html('Energy');
+          } else if ($(this).scrollTop() > 333) {
+            $('.text-image-blocks__content-container h3 u').html('Immunity');
+          }*/
+          
 
           if ($(this).scrollTop() < 5000) { 
             $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Fast absorption 🤩');
