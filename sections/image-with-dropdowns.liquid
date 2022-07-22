@@ -1,6 +1,6 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 
-<div class="image-with-dropdowns__container">
+<div style="{{ section.settings.background }}" class="image-with-dropdowns__container">
   <div class="page-width">
     <div class="image-with-dropdowns__image">
       {% if section.settings.video_url != blank %}
@@ -63,6 +63,11 @@
         "type": "textarea",
         "id": "text",
         "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "backgroud",
+        "label": "Background Style"
       }
 	],
     "blocks": [
