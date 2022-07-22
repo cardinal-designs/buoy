@@ -2,9 +2,13 @@
 
 {% style %}
   {%  if section.blocks.size == 2 %}
-    
+    .text-two-blocks__blocks {
+      grid-template-columns: 1fr 1fr;
+    }
   {% else %}
-
+    .text-two-blocks__blocks {
+      grid-template-columns: 1fr;
+    }
   {% endif %}
 {% endstyle %}
 
