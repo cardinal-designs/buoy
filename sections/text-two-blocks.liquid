@@ -1,12 +1,26 @@
 {{ 'section-text-two-blocks.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  {%  if section.blocks.size == 2 %}
+    .
+  {% else %}
+
+  {% endif %}
+{% endstyle %}
+
 <div style="background: {{ section.settings.background }};" class="text-two-blocks__container">
   <div style="color: {{ section.settings.color }};" class="page-width">
     <h1>{{ section.settings.title }}</h1>
     <h6 class="light">{{ section.settings.subtitle }}</h6>
     <div>
-
-      
+    {% for block in section.blocks %}
+      <div>
+        {% render 'lazy-image' image: block.settings.image, classes: '' %}
+        <div>
+          
+        </div>           
+      </div>
+    {% endfor %}
     </div>
   </div>
 </div>
