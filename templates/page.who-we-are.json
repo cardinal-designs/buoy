@@ -32,7 +32,7 @@
             "text": "We don't use ingredients linked to inflammation and disease.<br><br>\nMade without sugar, sweeteners like stevia and dextrose, \"natural\" flavors, artificial ingredients, dyes and oils—even if they're organic.",
             "button_label": "Try Clean Hydration",
             "emoji": "",
-            "button_link": "shopify:\/\/pages\/science-efficacy",
+            "button_link": "#shop",
             "display_as_button": false
           }
         },
@@ -83,6 +83,25 @@
     "1635523051e181cd76": {
       "type": "text-image-blocks",
       "blocks": {
+        "999a6def-906b-454f-a73c-5736e12c4ec8": {
+          "type": "block",
+          "settings": {
+            "is_reversed": false,
+            "extra_top_padding": false,
+            "extra_bottom_padding": false,
+            "gradient": "none",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Bottle_With_Drops_1X1-min.jpg",
+            "image_size": "square",
+            "subtitle": "",
+            "title": "",
+            "secondary_title": "Drops Do It Better",
+            "text": "Electrolytes and trace minerals in their most bioavailable, fast-absorbing form factor: liquid drops.",
+            "subtext": "",
+            "button_label": "Try It",
+            "button_link": ""
+          }
+        },
         "c0a01e3e-9886-4bfe-be7f-113446d088cf": {
           "type": "block",
           "settings": {
@@ -104,6 +123,7 @@
         }
       },
       "block_order": [
+        "999a6def-906b-454f-a73c-5736e12c4ec8",
         "c0a01e3e-9886-4bfe-be7f-113446d088cf"
       ],
       "settings": {
