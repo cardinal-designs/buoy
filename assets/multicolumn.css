@@ -80,3 +80,10 @@
 .chronic-multicolumn__container a {
   margin-bottom: 40px;
 }
+
+@media screen and (max-width: 1100px) {
+  .chronic-multicolumn__left, chronic-multicolumn__right {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
