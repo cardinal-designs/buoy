@@ -20,7 +20,9 @@
     <div class="text-two-blocks__blocks">
     {% for block in section.blocks %}
       <div class="text-two-blocks__block">
+        <div class="text-two-blocks__image">
         {% render 'lazy-image' image: block.settings.image, classes: '' %}
+        </div>
         <div class="text-two-blocks__inner">
           <h4 class="medium">{{ block.settings.title }}</h4>
           <p class="sh2">{{ block.settings.text }}</p>
