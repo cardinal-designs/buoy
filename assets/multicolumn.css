@@ -56,6 +56,11 @@
 .chronic-multicolumn__list-item {
   display: flex;
   gap: 14px;
+  align-items: center;
+}
+
+.chronic-multicolumn__list-item .sh2 {
+  margin: 0;
 }
 
 .chronic-multicolumn__left-item {
