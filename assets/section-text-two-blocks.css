@@ -53,3 +53,9 @@
 .learn-more-links a {
   width: 240px;
 }
+
+@media screen and (max-width: 768px) {
+  .text-two-blocks__blocks {
+    grid-template-columns: 1fr;
+  }
+}
