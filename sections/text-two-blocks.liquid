@@ -26,8 +26,10 @@
         <div class="text-two-blocks__inner">
           <h4 class="medium">{{ block.settings.title }}</h4>
           <p class="sh2 light">{{ block.settings.text }}</p>
-          <a class="button" href="{{ block.settings.btn_link }}">{{ block.settings.btn_text }}</a>
-          <a class="learn-more-link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+          <div class="learn-more-links">
+            <a class="button" href="{{ block.settings.btn_link }}">{{ block.settings.btn_text }}</a>
+            <a class="learn-more-link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+          </div>
         </div>           
       </div>
     {% endfor %}
