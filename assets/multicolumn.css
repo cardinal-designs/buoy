@@ -7,7 +7,6 @@
   background: transparent linear-gradient(180deg, transparent 90%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
-
 .chronic-multicolumn__left {
   border-right: 2px solid #1f2322;
   overflow-y: scroll;
@@ -21,6 +20,11 @@
 .chronic-multicolumn__left .sh3 {
   max-width: 475px;
   margin: 90px auto 40px;
+}
+
+.chronic-multicolumn__left-inner h5 {
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .chronic-multicolumn__right {
