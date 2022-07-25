@@ -1,16 +1,16 @@
 {{ 'multicolumn.css' | asset_url | stylesheet_tag }}
 
-<div>
-  <div>
+<div class="chronic-multicolumn__container">
+  <div class="chronic-multicolumn__left">
     <p class="sh3">{{ section.settings.title }}</p>
-  <div>
+  <div class="chronic-multicolumn__left-inner">
     {% for block in section.blocks %}
       {% if block.type == 'testimonial' %}
       {% endif %}
     {% endfor %}
   </div>
   </div>
-  <div>
+  <div class="chronic-multicolumn__right">
     {% for block in section.blocks %}
       {% if block.type == 'block' %}
         <div>
