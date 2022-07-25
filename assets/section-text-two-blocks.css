@@ -57,5 +57,6 @@
 @media screen and (max-width: 768px) {
   .text-two-blocks__blocks {
     grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 }
