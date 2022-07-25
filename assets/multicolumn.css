@@ -14,6 +14,10 @@
   margin-top: 90px;
   margin-bottom: 30px;
 }
+.chronic-multicolumn__left-inner {
+  max-width: 475px;
+  margin: 0 auto;
+}
 
 .chronic-multicolumn__right {
   overflow-y: scroll;
