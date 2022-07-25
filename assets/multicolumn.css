@@ -7,6 +7,15 @@
   background: transparent linear-gradient(180deg, transparent 90%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
+.chronic-multicolumn__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: calc(100% - 65px);
+  background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+}
+
 .chronic-multicolumn__left {
   border-right: 2px solid #1f2322;
   overflow-y: scroll;
