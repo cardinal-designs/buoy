@@ -6,7 +6,7 @@
     <div class="chronic-multicolumn__left-inner">
       {% for block in section.blocks %}
         {% if block.type == 'testimonial' %}
-          <div>
+          <div class="chronic-multicolumn__left-inner">
             <h5 class="medium">{{ block.settings.subtitle }}</h5>
             <p class="sh4 light">{{ block.settings.testimonial }}</p>
             <p class="body-xs">{{ block.settings.author }}</p>
