@@ -1,8 +1,8 @@
 {{ 'multicolumn.css' | asset_url | stylesheet_tag }}
 
 <div class="chronic-multicolumn__container">
-  <div class="chronic-multicolumn__overlay"></div>
   <div class="chronic-multicolumn__left">
+    <div class="chronic-multicolumn__overlay"></div>
     <p class="sh3">{{ section.settings.left_title }}</p>
     <div class="chronic-multicolumn__left-inner">
       {% for block in section.blocks %}
@@ -17,6 +17,7 @@
     </div>
   </div>
   <div class="chronic-multicolumn__right">
+    <div class="chronic-multicolumn__overlay"></div>
     <p class="sh3">{{ section.settings.right_title }}</p>
       <div class="chronic-multicolumn__right-inner">
         {% for block in section.blocks %}
