@@ -56,6 +56,6 @@
 
 @media screen and (max-width: 768px) {
   .text-two-blocks__blocks {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
