@@ -43,6 +43,8 @@
   margin: 20px auto 40px;
 }
 
-.learn-more-link {
-  display: inline-block;
+.learn-more-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
