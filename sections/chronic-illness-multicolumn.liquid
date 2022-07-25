@@ -1,73 +1,24 @@
 {{ 'multicolumn.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="multicolumn lifetime-story">
-  <div class="page-width">
-      <h2 class="title">
-        {{ section.settings.title | escape }}
-      </h2>
-    <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 3 %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 %} grid--2-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list">
-        <li class="multicolumn-list__item grid__item">
-          {%- for block in section.blocks -%}
-            {% if block.type == 'testimonial' %}
-            <div class="multicolumn-card">
-              <div class="multicolumn-card__info">
-                <p>{{ block.settings.subtitle }}</p>
-                <p>{{ block.settings.testimonial }}</p>
-                <p>{{ block.settings.author }}</p>
-              </div>
-            </div>
-            {% endif %}
-          {%- endfor -%}
-          </li>
-       
-          <li class="multicolumn-list__item grid__item">
-            <div class="testimonial-slider">
-        	{%- for block in section.blocks -%}
-              {% if block.type == 'block' %}
-              <div class="multicolumn-card__itel">
-                <div class="multicolumn-card__info">          
-                {%- if block.settings.text != blank -%}
-                  <div class="light sh2">{{ block.settings.text }}</div>
-                {%- endif -%}
-              </div>
-              </div>
-              {% endif %}
-            {%- endfor -%}
-            </div>
-          </li>
-        
-      </ul>
-
-      {%- if section.settings.swipe_on_mobile -%}
-        <div class="slider-buttons no-js-hidden medium-hide{% if section.blocks.size < 2 %} small-hide{% endif %}">
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div>
-      {%- endif -%}
-    </slider-component>
-    <div class="center{% if section.settings.swipe_on_mobile %} small-hide medium-hide{% endif %}">
-      {%- if section.settings.button_label != blank -%}
-        <a class="button button--primary"{% if section.settings.button_link == blank %} aria-disabled="true" role="link"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
-          {{ section.settings.button_label | escape }}
-        </a>
-      {%- endif-%}
-    </div>
+<div>
+  <div>
+    <p class="sh3">{{ section.settings.title }}</p>
+  <div>
+    {% for block in section.blocks %}
+      {% if block.type == 'testimonial' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+  <div>
+    {% for block in section.blocks %}
+      {% if block.type == 'block' %}
+        <p class="sh2">{{ block.settings.subtitle }}</p>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
-<script>
 
-</script>
 {% schema %}
 {
   "name": "Multicolumn",
