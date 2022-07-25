@@ -6,6 +6,11 @@
   <div class="chronic-multicolumn__left-inner">
     {% for block in section.blocks %}
       {% if block.type == 'testimonial' %}
+        <div>
+          <p class="sh3 light">{{ block.settings.subtitle }}</p>
+          <p class="sh3 light">{{ block.settings.testimonial }}</p>
+          <p class="sh3 light">{{ block.settings.author }}</p>
+        </div>
       {% endif %}
     {% endfor %}
   </div>
@@ -14,12 +19,12 @@
     <p class="sh3">{{ section.settings.right_title }}</p>
       <div class="chronic-multicolumn__right-inner">
         {% for block in section.blocks %}
-        {% if block.type == 'block' %}
-      <div class="chronic-multicolumn__list-item">
-        {%  render 'icon-checkmark' %}
-        <p class="sh2">{{ block.settings.text }}</p>
-      </div>
-      {% endif %}
+          {% if block.type == 'block' %}
+          <div class="chronic-multicolumn__list-item">
+            {%  render 'icon-checkmark' %}
+            <p class="sh2">{{ block.settings.text }}</p>
+          </div>
+          {% endif %}
       {% endfor %}
       </div>
     </div>
