@@ -14,7 +14,9 @@
           </div>
         {% endif %}
       {% endfor %}
-      <a class="button" href="{{ block.settings.left_button_link }}">{{ block.settings.left_button_label }}</a>
+      {% if section.settings.left_button_label != blank %}
+      <a class="button" href="{{ section.settings.left_button_link }}">{{ section.settings.left_button_label }}</a>
+      {% endif %}
     </div>
   </div>
   <div class="chronic-multicolumn__right">
@@ -29,7 +31,9 @@
           </div>
           {% endif %}
       {% endfor %}
-      <a class="button" href="{{ block.settings.right_button_link }}">{{ block.settings.right_button_label }}</a>
+      {% if section.settings.right_button_label != blank %}
+      <a class="button" href="{{ section.settings.right_button_link }}">{{ section.settings.right_button_label }}</a>
+      {% endif %}
       </div>
     </div>
 </div>
