@@ -23,13 +23,14 @@
                 <p>{{ block.settings.author }}</p>
               </div>
             </div>
-              {% endif %}
+            {% endif %}
           {%- endfor -%}
           </li>
        
           <li class="multicolumn-list__item grid__item">
             <div class="testimonial-slider">
         	{%- for block in section.blocks -%}
+              {% if block.settings.type == 'block' %}
               <div class="multicolumn-card__itel">
                 <div class="multicolumn-card__info">          
                 {%- if block.settings.text != blank -%}
@@ -37,6 +38,7 @@
                 {%- endif -%}
               </div>
               </div>
+              {% endif %}
             {%- endfor -%}
             </div>
           </li>
