@@ -12,6 +12,8 @@
   left: 0;
   right: 0;
   top: calc(100% - 65px);
+  width: 100%;
+  height: 65px;
   background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
