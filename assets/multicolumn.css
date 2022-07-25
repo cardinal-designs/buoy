@@ -2,6 +2,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 550px;
+  position: relative;
+}
+
+.chronic-multicolumn__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent linear-gradient(180deg, transparent 90%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .chronic-multicolumn__left {
