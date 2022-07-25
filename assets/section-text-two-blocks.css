@@ -16,6 +16,7 @@
 
 .text-two-blocks__blocks {
   display: grid;
+  position: relative;
 }
 
 .text-two-blocks__blocks img {
