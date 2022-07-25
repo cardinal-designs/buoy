@@ -57,10 +57,11 @@
   display: flex;
   gap: 14px;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .chronic-multicolumn__list-item .sh2 {
-  margin: 0 0 20px;
+  margin: 0;
 }
 
 .chronic-multicolumn__left-item {
