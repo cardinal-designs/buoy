@@ -78,4 +78,12 @@
   .text-two-blocks__container {
     padding-top:50px; 
   }
+
+  .text-two-blocks__container h1 {
+    margin: 0 auto 20px;
+  }
+  
+  .text-two-blocks__container h6 {
+    margin: 0 auto 40px;
+  }
 }
