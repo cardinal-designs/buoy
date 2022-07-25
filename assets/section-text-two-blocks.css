@@ -33,7 +33,12 @@
   text-align: center;
 }
 
-.text-two-blocks__inner h4, .text-two-blocks__inner p {
+.text-two-blocks__inner h4 {
   max-width: 376px;
   margin: 0 auto;
+}
+
+.text-two-blocks__inner p {
+  max-width: 376px;
+  margin: 20px auto 40px;
 }
