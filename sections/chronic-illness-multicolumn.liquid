@@ -14,13 +14,15 @@
         id="Slider-{{ section.id }}"
         role="list">
         <li class="multicolumn-list__item grid__item">
+          {%- for block in section.blocks -%}
             <div class="multicolumn-card">
               <div class="multicolumn-card__info">
-                <p>{{ section.settings.subtitle }}</p>
-                <p>{{ section.settings.testimonial }}</p>
-                <p>{{ section.settings.authro }}</p>
+                <p>{{ block.settings.subtitle }}</p>
+                <p>{{ block.settings.testimonial }}</p>
+                <p>{{ block.settings.author }}</p>
               </div>
             </div>
+          {%- endfor -%}
           </li>
        
           <li class="multicolumn-list__item grid__item">
@@ -73,21 +75,6 @@
       "id": "title",
       "label": "Title"
     },
-	{
-      "type": "text",
-      "id": "subtitle",
-      "label": "Subtitle"
-    },
-    {
-      "type": "textarea",
-      "id": "testimonial",
-      "label": "Testimonial"
-    },
-    {
-      "type": "text",
-      "id": "author",
-      "label": "Author"
-    },
     {
       "type": "select",
       "id": "column_alignment",
@@ -127,9 +114,30 @@
     }
   ],
   "blocks": [
+      {
+      "type": "testimonial",
+      "name": "testimonial",
+      "settings": [
+    	{
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "textarea",
+          "id": "testimonial",
+          "label": "Testimonial"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    },
     {
       "type": "block",
-      "name": "block",
+      "name": "List Item",
       "settings": [
         {
           "type": "text",
