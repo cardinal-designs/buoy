@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 550px;
-  position: relative;
   border-top: 1px solid #1f2322;
   background: transparent linear-gradient(180deg, transparent 90%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
@@ -19,6 +18,12 @@
 .chronic-multicolumn__left {
   border-right: 2px solid #1f2322;
   overflow-y: scroll;
+  position: relative;
+}
+
+.chronic-multicolumn__right {
+  overflow-y: scroll;
+  position: relative;
 }
 
 .chronic-multicolumn__left-inner {
@@ -34,10 +39,6 @@
 .chronic-multicolumn__left-inner h5 {
   margin-top: 0;
   margin-bottom: 18px;
-}
-
-.chronic-multicolumn__right {
-  overflow-y: scroll;
 }
 
 .chronic-multicolumn__container .icon-checkmark {
