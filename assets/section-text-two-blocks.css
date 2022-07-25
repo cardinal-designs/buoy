@@ -17,3 +17,8 @@
 .text-two-blocks__blocks {
   display: grid;
 }
+
+.text-two-blocks__blocks img {
+  width: 213px;
+  height: 213px;
+}
