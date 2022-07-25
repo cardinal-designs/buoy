@@ -8,6 +8,9 @@
       <h2 class="title">
         {{ section.settings.title | escape }}
       </h2>
+      <p>{{ section.settings.subtitle }}</p>
+      <p>{{ section.settings.testimonial }}</p>
+      <p>{{ section.settings.authro }}</p>
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
         <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
       {%- endif -%}
