@@ -15,7 +15,7 @@
         role="list">
         <li class="multicolumn-list__item grid__item">
           {%- for block in section.blocks -%}
-            {{ block.settings.type }}
+            {{ block.settings }}
             {% if block.settings.type == 'testimonial' %}
             <div class="multicolumn-card">
               <div class="multicolumn-card__info">
