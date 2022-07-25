@@ -3,17 +3,17 @@
 <div class="chronic-multicolumn__container">
   <div class="chronic-multicolumn__left">
     <p class="sh3">{{ section.settings.title }}</p>
-  <div class="chronic-multicolumn__left-inner">
-    {% for block in section.blocks %}
-      {% if block.type == 'testimonial' %}
-        <div>
-          <p class="sh3 light">{{ block.settings.subtitle }}</p>
-          <p class="sh3 light">{{ block.settings.testimonial }}</p>
-          <p class="sh3 light">{{ block.settings.author }}</p>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+    <div class="chronic-multicolumn__left-inner">
+      {% for block in section.blocks %}
+        {% if block.type == 'testimonial' %}
+          <div>
+            <p class="sh3 light">{{ block.settings.subtitle }}</p>
+            <p class="sh3 light">{{ block.settings.testimonial }}</p>
+            <p class="sh3 light">{{ block.settings.author }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
   <div class="chronic-multicolumn__right">
     <p class="sh3">{{ section.settings.right_title }}</p>
