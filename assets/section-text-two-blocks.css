@@ -54,6 +54,10 @@
   width: 240px;
 }
 
+.learn-more-link {
+  border-bottom: 1.5px solid;
+}
+
 @media screen and (max-width: 768px) {
   .text-two-blocks__blocks {
     grid-template-columns: 1fr !important;
