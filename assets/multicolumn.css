@@ -1,10 +1,16 @@
 .chronic-multicolumn__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 550px;
 }
 
 .chronic-multicolumn__left {
   border-right: 2px solid #1f2322;
+  overflow-y: scroll;
+}
+
+.chronic-multicolumn__right {
+  overflow-y: scroll;
 }
 
 .chronic-multicolumn__container .icon-checkmark {
