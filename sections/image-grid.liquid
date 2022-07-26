@@ -15,15 +15,15 @@
           <div class="image-grid__image">
             {% render 'lazy-image' image: block.settings.image, classes: '' %}
           </div>
-          <h5 class="medium">{{ section.settings.name }}</h5>
-          <p class="light">{{ section.settings.subtitle }}</p>
+          <h5 class="medium">{{ block.settings.name }}</h5>
+          <p class="light">{{ block.settings.subtitle }}</p>
           <a href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a>
         </div>
       {% endfor %}
     </div>
     <div>
       <p class="sh2">{{ section.settings.text2 }}</p>
-      <a class="button" href="{{ section.settings.button_link }}">{{ block.settings.button_label }}</a>
+      <a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
     </div>
   </div>
 </div>
