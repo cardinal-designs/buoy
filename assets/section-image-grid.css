@@ -4,6 +4,11 @@
   gap: 34px;
 }
 
+.image-grid__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 
