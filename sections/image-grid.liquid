@@ -15,9 +15,8 @@
           <div class="image-grid__image">
             {% render 'lazy-image' image: section.settings.image, classes: '' %}
           </div>
-          <h5 class="medium"></h5>
-          <p class="light"></p>
-          <p class="medium"></p>
+          <h5 class="medium">{{ section.settings.name }}</h5>
+          <p class="light">{{ section.settings.subtitle }}</p>
           <a href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a>
         </div>
       {% endfor %}
