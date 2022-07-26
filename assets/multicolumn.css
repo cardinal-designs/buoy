@@ -195,7 +195,9 @@
     font-size: 18px;
     padding: 0;
   }
+}
 
+@media screen and (max-width: 499px) {
   .chronic-multicolumn__left-inner {
     max-width: 350px;
   }
