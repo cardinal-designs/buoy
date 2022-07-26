@@ -106,6 +106,7 @@
 
   .chronic-multicolumn__right {
     overflow-y: unset;
+    width: 100%;
   }
 
   .chronic-multicolumn__list-item {
@@ -123,6 +124,7 @@
   .chronic-multicolumn__left {
     overflow-y: unset;
     border-right: unset;
+    width: 100%;
     border-bottom: 2px solid #1f2322;
   }
 
