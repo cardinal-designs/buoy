@@ -256,11 +256,69 @@
         "right_button_link": "",
         "swipe_on_mobile": true
       }
+    },
+    "1658859713736eb586": {
+      "type": "lifetime-multicolumn",
+      "blocks": {
+        "0ca083d6-2fa7-4d04-9d1b-a6f707413b0f": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "author": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "subtext": ""
+          }
+        },
+        "e35b910b-036a-4f82-ad3c-b9617f522432": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "author": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "subtext": ""
+          }
+        },
+        "6f0d8453-a45d-4b6a-9f71-4b73bf2ae032": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "author": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "subtext": ""
+          }
+        },
+        "e8221358-52d5-4f70-b903-bd387e342b2d": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "author": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "0ca083d6-2fa7-4d04-9d1b-a6f707413b0f",
+        "e35b910b-036a-4f82-ad3c-b9617f522432",
+        "6f0d8453-a45d-4b6a-9f71-4b73bf2ae032",
+        "e8221358-52d5-4f70-b903-bd387e342b2d"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "head-title": "Column",
+        "sub-text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
     }
   },
   "order": [
     "1658521904450c81ff",
     "165851980455d32374",
-    "16587798397a0aec69"
+    "16587798397a0aec69",
+    "1658859713736eb586"
   ]
 }
