@@ -5,6 +5,7 @@
     <div class="chronic-multicolumn__overlay"></div>
     <p class="sh3">{{ section.settings.left_title }}</p>
     <div class="chronic-multicolumn__left-inner">
+      <div class="chronic-multicolumn__slider">
       {% for block in section.blocks %}
         {% if block.type == 'testimonial' %}
           <div class="chronic-multicolumn__left-item">
@@ -14,6 +15,7 @@
           </div>
         {% endif %}
       {% endfor %}
+      </div>
       {% if section.settings.left_button_label != blank %}
       <a class="button hide-mobile" href="{{ section.settings.left_button_link }}">{{ section.settings.left_button_label }}</a>
       {% endif %}
