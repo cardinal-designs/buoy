@@ -1,2 +1,14 @@
+.image-grid__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 34px;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
 }
