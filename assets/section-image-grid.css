@@ -4,6 +4,10 @@
   gap: 34px;
 }
 
+.image-grid__grid-item {
+  text-align: center;
+}
+
 .image-grid__flex {
   display: flex;
   justify-content: space-between;
