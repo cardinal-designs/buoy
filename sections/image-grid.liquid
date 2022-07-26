@@ -11,7 +11,7 @@
     </div>
     <div class="image-grid__grid">
       {% for block in section.blocks %}
-        <div>
+        <div class="image-grid__grid-item">
           <div class="image-grid__image">
             {% render 'lazy-image' image: block.settings.image, classes: '' %}
           </div>
