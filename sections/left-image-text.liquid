@@ -1,6 +1,6 @@
 {{ 'section-left-image-text.css' | asset_url | stylesheet_tag }}
 
-<div class="left-image-text__container">
+<div style="background-color: {{ section.settings.color }};" class="left-image-text__container">
   <div class="left-image-text__image">
     {% render 'lazy-image' image: section.settings.image, classes: '' %}
   </div>
@@ -16,6 +16,11 @@
 {
   "name": "Left Image Text",
   "settings": [
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Background Color"
+    },    
     {
       "type": "image_picker",
       "id": "image",
