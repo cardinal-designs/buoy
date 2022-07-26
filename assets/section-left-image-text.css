@@ -1,6 +1,8 @@
 .left-image-text__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-top: 2px solid #1F2322;
+  border-bottom: 2px solid #1F2322;
 }
 
 
