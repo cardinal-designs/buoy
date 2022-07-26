@@ -36,6 +36,11 @@
   .left-image-text__container {
     grid-template-columns: 1fr;
   }
+
+  .left-image-text__text .left-image-text__suptitle {
+    margin-top: 70px;
+    margin-bottom: 14px;
+  }
   
   .left-image-text__text {
     align-self: center;
