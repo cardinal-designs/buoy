@@ -1,12 +1,53 @@
+{{ 'section-image-grid.css' | asset_url | stylesheet_tag }}
+
+<div style="background: {{ section.settings.color }};" class="image-grid__container">
+
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Left Image Text",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "color",
+      "label": "Background Color"
+    },    
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "suptitle",
+      "label": "Suptitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+   "presets": [
+    {
+      "name": "Left Image Text"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
