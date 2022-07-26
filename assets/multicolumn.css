@@ -3,7 +3,6 @@
   grid-template-columns: 1fr 1fr;
   height: 550px;
   border-top: 1px solid #1f2322;
-  background: transparent linear-gradient(180deg, transparent 90%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 }
 
 .chronic-multicolumn__overlay {
@@ -98,5 +97,9 @@
 @media screen and (max-width: 768px) {
   .chronic-multicolumn__container {
     grid-template-columns: 1fr;
+  }
+
+  .chronic-multicolumn__overlay {
+    display: none;
   }
 }
