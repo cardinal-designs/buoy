@@ -143,12 +143,19 @@
     width: fit-content;
   }
 
-.chronic-multicolumn__container .slick-dots li button {
+  .chronic-multicolumn__container .slick-dots li button {
     width: 8px;
     height: 8px;
     border: 1px solid #1f2322;
     border-radius: 50%;
     font-size: 0;
     margin: 4px;
+  }
+
+  .chronic-multicolumn__container .slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
   }
 }
