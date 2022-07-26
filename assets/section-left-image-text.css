@@ -13,6 +13,25 @@
   align-self: center;
 }
 
+.left-image-text__text .left-ifmage-text__suptitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.left-image-text__text h3 {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.left-image-text__text .sh2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.left-image-text__text a {
+  margin-bottom: 0;
+}
+
 
 
 @media screen and (min-width: 769px) {
