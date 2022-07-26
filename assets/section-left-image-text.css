@@ -6,12 +6,9 @@
 }
 
 .left-image-text__text {
- margin-left: 52px;
-}
-
-.left-image-text__text {
   align-self: center;
   margin-right: 100px;
+  margin-left: 52px;
 }
 
 .left-image-text__text .left-image-text__suptitle {
@@ -36,4 +33,20 @@
 
 
 @media screen and (min-width: 769px) {
+  .left-image-text__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-image-text__text {
+    align-self: center;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-left: 0;
+    margin-right: 0;
+    order: 2;
+  }
+
+  .left-image-text__image {
+    order: 1;
+  }
 }
