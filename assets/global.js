@@ -905,14 +905,12 @@ var lifetimeSlider = {
 slickOnMobile($lifetimeSlider, lifetimeSlider);
 
 
-$multiColumnSlider = $('.chronic-multicolumn__slider');
-var multiColumnSlider = {
+$('.chronic-multicolumn__slider').slick({
   slidesToShow: 1,
   dots: true,
   arrows: false
-}
+})
 
-slickOnMobile($multiColumnSlider, multiColumnSlider);
 
 // PDP main slider
 $productMediaSlider = $('.product__media-list');
