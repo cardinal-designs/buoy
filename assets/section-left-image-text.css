@@ -43,7 +43,8 @@
   }
 
   .left-image-text__text h3 {
-    margin-bottom: 24px;
+    max-width: 300px;
+    margin: 0 auto 24px;
   }
   
   .left-image-text__text {
