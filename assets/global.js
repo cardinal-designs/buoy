@@ -905,7 +905,7 @@ var lifetimeSlider = {
 slickOnMobile($lifetimeSlider, lifetimeSlider);
 
 
-$multiColumnSlider = $('.chronic-multicolumn__left-inner');
+$multiColumnSlider = $('.chronic-multicolumn__slider');
 var multiColumnSlider = {
   slidesToShow: 1,
   dots: true,
