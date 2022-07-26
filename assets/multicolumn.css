@@ -194,5 +194,11 @@
     padding: 0;
   }
 
+  .chronic-multicolumn__left-inner {
+    max-width: 400px;
+  }
   
+  .chronic-multicolumn__right-inner {
+    max-width: 400px;
+  }
 }
