@@ -13,7 +13,7 @@
       {% for block in section.blocks %}
         <div>
           <div class="image-grid__image">
-            {% render 'lazy-image' image: block.settings.image, classes: '' %}
+            {% render 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
           </div>
           <h5 class="medium">{{ block.settings.name }}</h5>
           <p class="light">{{ block.settings.subtitle }}</p>
