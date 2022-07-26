@@ -125,14 +125,7 @@
     overflow-y: unset;
     border-right: unset;
     width: 100%;
-    max-width: 100%;
     border-bottom: 2px solid #1f2322;
-    position: relative;
-  }
-
-  .chronic-multicolumn__left .slick-slide {
-    max-width: 100%;
-    width: 100%;
     position: relative;
   }
 
@@ -181,17 +174,14 @@
 
   .chronic-multicolumn__left .body-xs {
     margin-bottom: 0;
-    padding: 0;
   }
 
   .chronic-multicolumn__left .sh3 {
     margin-top: 70px;
     margin-bottom: 40px;
-    padding: 0;
   }
 
   .chronic-multicolumn__left-inner h5 {
     font-size: 18px;
-    padding: 0;
   }
 }
