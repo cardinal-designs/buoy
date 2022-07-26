@@ -904,6 +904,16 @@ var lifetimeSlider = {
 
 slickOnMobile($lifetimeSlider, lifetimeSlider);
 
+
+$multiColumnSlider = $('.chronic-multicolumn__left-inner');
+var multiColumnSlider = {
+  slidesToShow: 1,
+  dots: true,
+  arrows: false
+}
+
+slickOnMobile($multiColumnSlider, multiColumnSlider);
+
 // PDP main slider
 $productMediaSlider = $('.product__media-list');
 var productMediaSlider = {
