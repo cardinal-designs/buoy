@@ -107,6 +107,8 @@
   .chronic-multicolumn__right {
     overflow-y: unset;
     width: 100%;
+    padding-right: 28px;
+    padding-left: 28px;
   }
 
   .chronic-multicolumn__list-item {
@@ -127,6 +129,8 @@
     width: 100%;
     border-bottom: 2px solid #1f2322;
     position: relative;
+    padding-right: 28px;
+    padding-left: 28px;
   }
 
   .chronic-multicolumn__container .icon-checkmark {
@@ -174,14 +178,19 @@
 
   .chronic-multicolumn__left .body-xs {
     margin-bottom: 0;
+    padding: 0;
   }
 
   .chronic-multicolumn__left .sh3 {
     margin-top: 70px;
     margin-bottom: 40px;
+    padding: 0;
   }
 
   .chronic-multicolumn__left-inner h5 {
     font-size: 18px;
+    padding: 0;
   }
+
+  
 }
