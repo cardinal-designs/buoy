@@ -127,6 +127,13 @@
     width: 100%;
     max-width: 100%;
     border-bottom: 2px solid #1f2322;
+    position: relative;
+  }
+
+  .chronic-multicolumn__left .slick-slider {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
   }
 
   .chronic-multicolumn__container .icon-checkmark {
@@ -180,10 +187,6 @@
   .chronic-multicolumn__left .sh3 {
     margin-top: 70px;
     margin-bottom: 40px;
-    padding: 0;
-  }
-
-  .chronic-multicolumn__left .sh4 {
     padding: 0;
   }
 
