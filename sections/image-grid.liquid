@@ -2,21 +2,29 @@
 
 <div style="background: {{ section.settings.color }};" class="image-grid__container">
   <div class="page-width">
-  <div>
     <div>
-      <h3 class="light">{{ section.settings.title }}</h3>
-      <p class="sh2">{{ section.settings.text }}</p>
-    </div>
-    <a href="{{ section.settings.link_url }}" class="">{{ section.settings.link_label }}</a>
-  </div>
-  <div>
-    {%  for block in section.blocks %}
       <div>
-        
+        <h3 class="light">{{ section.settings.title }}</h3>
+        <p class="sh2">{{ section.settings.text }}</p>
       </div>
-    {% endfor %}
-  </div>
-  <div></div>
+      <a href="{{ section.settings.link_url }}" class="">{{ section.settings.link_label }}</a>
+    </div>
+    <div>
+      {% for block in section.blocks %}
+        <div>
+          <div class="image-grid__image">
+            {% render 'lazy-image' image: section.settings.image, classes: '' %}
+          </div>
+          <h5 class="medium"></h5>
+          <p class="light"></p>
+          <p class="medium"></p>
+          <a href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a>
+        </div>
+      {% endfor %}
+    </div>
+    <div>
+      
+    </div>
   </div>
 </div>
 
