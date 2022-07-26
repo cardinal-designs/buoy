@@ -97,6 +97,7 @@
 @media screen and (max-width: 768px) {
   .chronic-multicolumn__container {
     grid-template-columns: 1fr;
+    height: unset;
   }
 
   .chronic-multicolumn__overlay {
