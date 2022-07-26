@@ -159,7 +159,7 @@
     margin: 4px;
   }
 
-  .slick-slide {   
+  .chronic-multicolumn__container .slick-slide {   
     padding: 0px 28px;
   }
 
@@ -204,5 +204,9 @@
 @media screen and (max-width: 499px) {
   .chronic-multicolumn__left-inner {
     max-width: 350px;
+  }
+
+  .chronic-multicolumn__container .slick-slide {   
+    padding: 0;
   }
 }
