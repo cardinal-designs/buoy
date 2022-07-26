@@ -112,6 +112,10 @@
     margin-bottom: 12px;
   }
 
+  .chronic-multicolumn__list-item:last-of-type {
+    margin-bottom: 40px;
+  }
+
   .chronic-multicolumn__right .sh3 {
     margin: 70px auto 40px;
   }
