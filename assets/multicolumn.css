@@ -103,4 +103,14 @@
   .chronic-multicolumn__overlay {
     display: none;
   }
+
+  .chronic-multicolumn__right {
+    overflow-y: unset;
+  }
+
+  .chronic-multicolumn__left {
+    overflow-y: unset;
+    border-right: unset;
+    border-bottom: 2px solid #1f2322;
+  }
 }
