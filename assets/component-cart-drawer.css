@@ -198,7 +198,10 @@
 
 .cart-drawer__subtotal-wrapper .body {
   margin: 0;
-  font-size: 12px
+}
+
+.cart-drawer__footer .body {
+  margin: 0;
 }
 
 .cart-drawer__loading-container {
