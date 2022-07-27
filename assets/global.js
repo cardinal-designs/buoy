@@ -1282,9 +1282,16 @@ $('.image-with-dropdowns__q').click(function () {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        const element = document.querySelector(this.getAttribute('href'));
+        const offset = 45;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+          behavior: 'smooth',
+          top: offsetPosition
         });
     });
 });
