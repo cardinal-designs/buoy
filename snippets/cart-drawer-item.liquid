@@ -21,6 +21,44 @@
 
     <h4 class="cart-drawer__item-title sh3">{{ item.product.title }}</h4>
 
+    <div class="cart-drawer__item-price sh2">
+        {%- if item.original_price != item.final_price -%}
+          <dl class="cart-item__discounted-prices">
+            <dt class="visually-hidden">
+              {{ 'products.product.price.regular_price' | t }}
+            </dt>
+            <dd>
+              <s class="cart-item__old-price price price--end">
+                {{ item.original_price | money }}
+              </s>
+            </dd>
+            <dt class="visually-hidden">
+              {{ 'products.product.price.sale_price' | t }}
+            </dt>
+            <dd class="price price--end">
+              {{ item.final_price | money }}
+            </dd>
+          </dl>
+
+          {%- if item.variant.available and item.unit_price_measurement -%}
+            <div class="unit-price caption">
+              <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+              {{ item.variant.unit_price | money }}
+              <span aria-hidden="true">/</span>
+              <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+              {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                {{- item.variant.unit_price_measurement.reference_value -}}
+              {%- endif -%}
+              {{ item.variant.unit_price_measurement.reference_unit }}
+            </div>
+          {%- endif -%}
+        {%- else -%}
+          <span class="price price--end">
+            {{ item.original_price | money }}
+          </span>
+        {%- endif -%}
+      </div>
+
     {% comment %} CHANGE {% endcomment %}
 
     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
@@ -91,46 +129,6 @@
           </button>
         </quantity-input>
       </div>
-
-      <div class="cart-drawer__item-price sh2">
-        {%- if item.original_price != item.final_price -%}
-          <dl class="cart-item__discounted-prices">
-            <dt class="visually-hidden">
-              {{ 'products.product.price.regular_price' | t }}
-            </dt>
-            <dd>
-              <s class="cart-item__old-price price price--end">
-                {{ item.original_price | money }}
-              </s>
-            </dd>
-            <dt class="visually-hidden">
-              {{ 'products.product.price.sale_price' | t }}
-            </dt>
-            <dd class="price price--end">
-              {{ item.final_price | money }}
-            </dd>
-          </dl>
-
-          {%- if item.variant.available and item.unit_price_measurement -%}
-            <div class="unit-price caption">
-              <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-              {{ item.variant.unit_price | money }}
-              <span aria-hidden="true">/</span>
-              <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
-              {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                {{- item.variant.unit_price_measurement.reference_value -}}
-              {%- endif -%}
-              {{ item.variant.unit_price_measurement.reference_unit }}
-            </div>
-          {%- endif -%}
-        {%- else -%}
-          <span class="price price--end">
-            {{ item.original_price | money }}
-          </span>
-        {%- endif -%}
-      </div>
-
     </div>
-      
   </div>
 </div>
