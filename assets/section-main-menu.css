@@ -281,6 +281,12 @@
     font-family: inter,sans-serif;
   }
 
+  .Bottom_List {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+  }
+
 }
 
 @media only screen and (max-width: 374px) {
