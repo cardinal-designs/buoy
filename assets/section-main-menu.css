@@ -187,10 +187,6 @@
   margin-right: 10px;
 }
 
-.main-menu[aria-hidden="false"] .main-menu__close {
-  display:none;
-}
-
 .main-menu__main-link .h6:hover {
   font-weight: 300;
 }
@@ -223,6 +219,10 @@
 
   .main-menu {
     top: 56px;
+  }
+
+  .main-menu[aria-hidden="false"] .main-menu__close {
+    display:none;
   }
 
   .main-menu__close.Mobile_Menu_Close {
