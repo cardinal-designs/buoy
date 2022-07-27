@@ -106,6 +106,15 @@
   margin: 0 auto 40px;
 }
 
+.chronic-illness-slide-out__checks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chronic-illness-slide-out__checks p {
+  text-transform: unset;
+}
+
 .chronic-illness-slide-out__info button {
   width: 100%;
 }
