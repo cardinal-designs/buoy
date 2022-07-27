@@ -51,17 +51,28 @@
 </div>
 
 {% javascript %}
+
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
+    $('.page-overlay').addClass('is-visible');
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
+
+    $('.page-overlay').click(function() {
+      $('.main-menu').attr('aria-hidden', true);
+      $('.page-overlay').removeClass('is-visible');
+      $('.Mobile_Menu_Close').hide();
+      $('.Hamburger_New').show();
+    });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
+    $('.page-overlay').removeClass('is-visible');
     $('.Mobile_Menu_Close').hide();
     $('.Hamburger_New').show();
   }); 
+
 {% endjavascript %}
 
 {% schema %}
