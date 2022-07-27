@@ -109,10 +109,12 @@
 .chronic-illness-slide-out__checks {
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.5px solid #545759;
 }
 
 .chronic-illness-slide-out__checks p {
   text-transform: unset;
+  margin-bottom: 12px;
 }
 
 .chronic-illness-slide-out__info button {
