@@ -224,6 +224,13 @@
             {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
 
+            <div class="cart-content">
+              <h4 class="body">{{ section.settings.content_title }}</h4>
+              <div class="description">
+                {{ section.settings.cart_content }}
+              </div>
+            </div>
+
             {% comment %}
             <div class="sub-upsell__container">
               <div class="sub-products__text no-sub">
