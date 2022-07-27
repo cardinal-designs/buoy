@@ -7,8 +7,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 34px;
-  margin-top: 60px;
-  margin-bottom: 90px;
+/*   margin-top: 60px;
+  margin-bottom: 90px; */
+
+  cursor: grabbing;
+  user-select: none;
+  margin: 60px -1000px 90px;
+  scroll-padding: 0px 1000px;
+  scroll-snap-type: x mandatory;
+  cursor: grabbing;
+  overflow-x: scroll;
+  font-size: 0px;
 }
 
 .image-grid__grid-item {
