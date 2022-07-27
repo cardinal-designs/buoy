@@ -132,6 +132,16 @@
   margin-bottom: 52px;
 }
 
+.chronic-illness-slide-out__price-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chronic-illness-slide-out__price-subdetail {
+  display: flex;
+  justify-content: space-between;
+}
+
 .chronic-illness-slide-out__footer p {
   color: #545759;
   margin-bottom: 14px;
