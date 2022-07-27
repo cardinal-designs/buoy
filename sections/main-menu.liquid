@@ -51,14 +51,13 @@
 </div>
 
 {% javascript %}
-  $('.Mobile_Hamburger').click(function() {
+  $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
   });
 
   $('.main-menu__close').click(function() {
-  console.log(11);
     $('.main-menu').attr('aria-hidden', true);
     $('.Mobile_Menu_Close').hide();
     $('.Hamburger_New').show();
