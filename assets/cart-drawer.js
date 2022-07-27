@@ -221,7 +221,12 @@ class CartDrawer extends HTMLElement {
 /* cart button on click - add class to the body - Start */
 
 document.getElementById("cart-icon-bubble").onclick = function() {
-  documentbody.classList.toggle("demo-class");
+  document.body.classList.add('demo-class');
+};
+
+
+document.getElementById("cart-icon-bubble").onclick = function() {
+  document.body.classList.remove('demo-class');
 };
 
 /* cart button on click - add class to the body - End */
