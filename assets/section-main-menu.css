@@ -262,6 +262,25 @@
     background: transparent !important;
   }
 
+  .Main_Menu_Bottom {
+    text-align: center;
+    margin: 0 -27px;
+    border-top: 1px solid #000;
+    padding: 14px 20px 0;
+  }
+
+  .Bottom_List {
+    list-style: none;
+    padding: 0;
+  }
+
+  .Bottom_List li {
+    display: inline-block;
+    color: #1F2322;
+    font-size: 12px;
+    font-family: inter,sans-serif;
+  }
+
 }
 
 @media only screen and (max-width: 374px) {
