@@ -54,19 +54,19 @@
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
     $('.Mobile_Menu_Close').show();
-    $('.Mobile_Hamburger svg').hide();
+    $('.Hamburger_New').hide();
 
     $('.Mobile_Menu_Close').click(function() {
       $('.main-menu').attr('aria-hidden', true);
       $(this).hide();
-      $('.Mobile_Hamburger svg').show();
+      $('.Hamburger_New').show();
     });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
     $('.Mobile_Menu_Close').hide();
-    $('.Mobile_Hamburger svg').show();
+    $('.Hamburger_New').show();
   }); 
 {% endjavascript %}
 

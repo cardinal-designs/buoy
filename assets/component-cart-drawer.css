@@ -59,8 +59,8 @@
 }
 
 .cart-drawer__items {
-  height: calc(100% - 215px);
-  overflow: scroll;
+  height: calc(100% - 270px);
+  overflow-y: scroll;
 }
 
 .cart-drawer__welcome-message {
