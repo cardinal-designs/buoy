@@ -234,6 +234,12 @@
   width: 100%;
 }
 
+.cart-drawer__footer .button svg {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
 .cart-drawer__shipping-discounts {
   margin: 15px 0 5px;
   text-align: center;
