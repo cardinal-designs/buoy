@@ -53,7 +53,7 @@
       </div>
       <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
         {% if item.selling_plan_allocation.selling_plan %}
-          {% render 'icon-redo' %} Monthly: 
+          {% render 'icon-calendar' %} Monthly: 
         {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
             One-Time Purchase: 
         {% endif %}
