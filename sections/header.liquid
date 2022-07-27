@@ -535,12 +535,12 @@
           <div class="cart-count-bubble sh1">
             {{ cart.item_count }}
           </div>
-          {% render 'icon-cart' %}
+          {% render 'icon-cart-new' %}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         </button>
       {% else %}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
-          {%- render 'icon-cart' -%}
+          {%- render 'icon-cart-new' -%}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
             <div class="cart-count-bubble">
