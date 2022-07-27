@@ -226,6 +226,10 @@
   }
 
   .main-menu__close.Mobile_Menu_Close {
+    display: none;
+  }
+
+  .main-menu__close.Mobile_Menu_Close {
     position: relative;
     left: unset;
     top: unset;
