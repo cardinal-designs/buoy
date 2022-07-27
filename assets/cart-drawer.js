@@ -220,19 +220,12 @@ class CartDrawer extends HTMLElement {
 
 /* cart button on click - add class to the body - Start */
 
-document.getElementById("cart-icon-bubble").onclick = function() {
+document.querySelector("#cart-icon-bubble").onclick = function() {
   document.body.classList.add('demo-class');
 };
-
-document.getElementById("cart-drawer__close").onclick = function() {
+document.querySelector("#cart-drawer__close").onclick = function() {
   document.body.classList.remove('demo-class');
 };
-
-// document.getElementsByClassName("page-overlay").onclick = function() {
-//   console.log("overlay Clicked");
-//   document.body.classList.remove('demo-class');
-// };
-
 document.querySelector('.page-overlay').onclick = function() {
   document.body.classList.remove('demo-class');
 };
