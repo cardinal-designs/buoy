@@ -1,6 +1,6 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 
-<div style="{{ section.settings.background }}" class="image-with-dropdowns__container">
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container">
   <div class="page-width">
     <div class="image-with-dropdowns__image">
       {% if section.settings.video_url != blank %}
