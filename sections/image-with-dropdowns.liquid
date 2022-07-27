@@ -34,6 +34,10 @@
         </div>
         {% endfor %}
       </div>
+      <div class="image-with-dropdowns__bottom-text">
+        <p class="sh2 light">{{ section.settings.text_bottom }}</p>
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+      </div>
     </div>
   </div>
 </div>
@@ -63,6 +67,21 @@
         "type": "textarea",
         "id": "text",
         "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "text_bottom",
+        "label": "Bottom Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
       },
       {
         "type": "textarea",
