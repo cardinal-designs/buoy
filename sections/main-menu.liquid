@@ -48,6 +48,12 @@
       </div>
     </div>
   </div>
+
+  {% if section.settings.bottom_button_text != blank %}
+    <div class="Main_Menu_Bottom">
+      <a href="{{ section.settings.bottom_button_url }}" class="button">{{ section.settings.bottom_button_text }}</a>
+    </div>
+  {% endif %}
 </div>
 
 {% javascript %}
@@ -106,6 +112,17 @@
         "id": "main_menu_title",
         "label": "Main Menu Title",
         "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "botom_button_text",
+        "label": "Bottom Button Text",
+        "default": "Shop All Products"
+      },
+      {
+        "type": "url",
+        "id": "botom_button_url",
+        "label": "Bottom Button Url"
       }
     ],
     "blocks": [
