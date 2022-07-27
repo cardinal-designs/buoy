@@ -221,6 +221,9 @@
           </div>
           
           {%- else -%}
+          <div class="cart-title">
+            <h2 class="cart-drawer__title sh2 light">{{ section.settings.cart_title }} ({{ cart.item_count }})</h2>
+          </div>
           <div class="cart-drawer__items" id="cart-drawer-items">
             {% for item in cart.items %}
             {% render 'cart-drawer-item' item: item, idx: forloop.index %}
