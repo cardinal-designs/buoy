@@ -1,6 +1,6 @@
 {{ 'section-shop-slide-out.css' | asset_url | stylesheet_tag }}
 
-<div class="shop-slide-out">
+<div class="chronic-illness-slide-out shop-slide-out">
   <div class="shop-slide-out__inner">
     <div class="shop-slide-out__header">
       <button class="shop-slide-out__close">
@@ -80,20 +80,20 @@
 
 {% javascript %}
 $('[href="#chronic"]').click(function() {
-$('.shop-slide-out').addClass('active');
+$('.chronic-illness-slide-out').addClass('active');
     $('.page-overlay').addClass('is-visible');
  
     $('body').click(function(e) {
       const target = e.target;
       if ($(target).hasClass('page-overlay')) {
-        $('.shop-slide-out').removeClass('active');
+        $('.chronic-illness-slide-out').removeClass('active');
         $('.page-overlay').removeClass('is-visible');
       }
     });
   });
 
-  $('.shop-slide-out__close').click(function() {
-    $('.shop-slide-out').removeClass('active');
+  $('.chronic-illness-slide-out__close').click(function() {
+    $('.chronic-illness-slide-out').removeClass('active');
     $('.page-overlay').removeClass('is-visible');
   });
 
