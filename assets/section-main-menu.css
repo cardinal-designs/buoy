@@ -239,11 +239,6 @@
     padding: 27px;
   }
 
-  .Main_Menu_Title {
-    position: absolute;
-    top: 22px;
-  }
-
   .main-menu__main-links {
     margin-bottom: 50px;
   }
@@ -251,6 +246,10 @@
   .main-menu__secondary-links .sh4 {
     line-height: 27px;
     margin-bottom: 12px;
+  }
+
+  .Main_Menu_Title {
+    margin: 0 0 27px;
   }
 
 }

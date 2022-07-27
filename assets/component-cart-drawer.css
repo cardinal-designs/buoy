@@ -60,7 +60,9 @@
 
 .cart-drawer__items {
   height: calc(100% - 270px);
-  overflow-y: scroll;
+  overflow-y: auto;
+  margin: 30px 20px;
+  border-top: 0.75px solid rgb(84 87 89 / 30%);
 }
 
 .cart-drawer__welcome-message {
