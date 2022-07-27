@@ -13,6 +13,7 @@
       </a>
     </div>
     <div class="image-grid__grid">
+      <div  class="image-grid__grid-content">
       {% for block in section.blocks %}
         <div class="image-grid__grid-item">
           <div class="image-grid__image">
@@ -23,6 +24,7 @@
           <a href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a> 
         </div>
       {% endfor %}
+      </div>
     </div>
     <div class="image-grid__title-bottom">
       <p class="sh2 light">{{ section.settings.text2 }}</p>
