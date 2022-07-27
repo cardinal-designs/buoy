@@ -133,3 +133,10 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .image-grid__title-bottom .sh2 {
+    max-width: 260px;
+    margin: 0 auto 40px;
+  }
+}
