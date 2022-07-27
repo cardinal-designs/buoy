@@ -1,5 +1,5 @@
 .image-grid__container {
-    padding-top: 120px;
+  padding-top: 120px;
   padding-bottom: 90px;
   overflow: hidden;
 }
@@ -16,10 +16,10 @@
 }
 
 .image-grid__grid-content {
-padding: 0 1000px;
+  padding: 0 1000px;
   display: inline-flex;
   white-space: nowrap;
-gap: 34px;
+  gap: 34px;
 }
 
 .image-grid__grid-item {
