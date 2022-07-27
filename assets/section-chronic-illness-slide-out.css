@@ -164,6 +164,15 @@
   text-transform: unset;
 }
 
+@media only screen and (max-width: 768px) {
+  .chronic-illness-slide-out__checks p {
+    font-size: 10px;
+  }
+  
+  .chronic-illness-slide-out__checks p svg {
+    width: 9px;
+  }
+}
 
 
 /* Second page */
