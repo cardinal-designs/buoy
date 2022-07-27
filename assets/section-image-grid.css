@@ -1,9 +1,12 @@
+.image-grid__container {
+    padding-top: 120px;
+  padding-bottom: 90px;
+}
+
 .image-grid__grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 34px;
-  padding-top: 120px;
-  padding-bottom: 90px;
 }
 
 .image-grid__grid-item {
