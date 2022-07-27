@@ -125,3 +125,8 @@
     font-size: 16px;
   }
 }
+
+.main-menu {
+  max-width: 479px;
+  overflow: auto;
+}
