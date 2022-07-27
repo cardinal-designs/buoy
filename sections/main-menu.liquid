@@ -32,9 +32,9 @@
               <p class="body light subtext">{{ block.settings.subtext }}</p>
             {% endif %}
           </div>
-        {% endfor %}
-
+       {% endfor %}
       </div>
+      
       <div class="main-menu__secondary-links">
         {% for link in section.settings.secondary_menu.links %}
           <a href="{{ link.url }}" class="sh4 light">{{ link.title }}</a>
@@ -49,11 +49,16 @@
     </div>
   </div>
 
-  {% if section.settings.bottom_button_text != blank %}
-    <div class="Main_Menu_Bottom">
+  <div class="Main_Menu_Bottom">
+    {% if section.settings.bottom_button_text != blank %}
       <a href="{{ section.settings.bottom_button_url }}" class="button">{{ section.settings.bottom_button_text }}</a>
-    </div>
-  {% endif %}
+    {% endif %}
+    <ul class="Bottom_List">
+      <li>{{ 'general.main_menu.free_shipping' | t }}</li>
+      <li>{{ 'general.main_menu.risk_free' | t }}</li>
+    </ul>
+  </div>
+  
 </div>
 
 {% javascript %}
