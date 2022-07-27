@@ -24,9 +24,9 @@
   text-align: center;
 }
 
-/* .image-grid__image img {
-    width: 265px;
-} */
+.image-grid__image {
+  width: 265px;
+} 
 
 .image-grid__flex {
   display: flex;
