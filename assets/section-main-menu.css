@@ -211,6 +211,10 @@
   transition: transform .2s ease;
 }
 
+.header .sh2.Mobile_Hamburger:hover {
+  font-weight: 300;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
