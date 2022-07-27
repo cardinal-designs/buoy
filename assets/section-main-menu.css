@@ -195,6 +195,10 @@
   display:none;
 }
 
+.main-menu__main-link .h6:hover {
+  font-weight: inherit;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
