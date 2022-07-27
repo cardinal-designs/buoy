@@ -60,6 +60,7 @@
 
 .cart-drawer__items {
   height: calc(100% - 325px);
+  padding-right: 10px;
   overflow-y: auto;
   margin: 30px 20px;
   border-top: 0.75px solid rgb(84 87 89 / 30%);
