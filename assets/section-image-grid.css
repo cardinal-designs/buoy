@@ -1,6 +1,7 @@
 .image-grid__container {
     padding-top: 120px;
   padding-bottom: 90px;
+  overflow: hidden;
 }
 
 .image-grid__grid {
