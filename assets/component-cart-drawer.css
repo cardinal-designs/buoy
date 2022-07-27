@@ -113,6 +113,12 @@
   margin-bottom: 5px;
 }
 
+.cart-drawer__item-content .cart-drawer__item-price {
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+
 .cart-drawer__item-frequency {
   margin: 0 0 10px;
   text-transform: unset;
