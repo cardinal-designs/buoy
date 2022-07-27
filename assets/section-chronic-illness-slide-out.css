@@ -102,6 +102,14 @@
   border-bottom: 2px solid black;
 }
 
+.chronic-illness-slide-out__second-back {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 .chronic-illness-slide-out__second-header img {
   width: 50px;
 }
