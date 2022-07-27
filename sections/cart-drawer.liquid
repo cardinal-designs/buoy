@@ -8,8 +8,9 @@
     <form id="cart-drawer__form" action="{{ routes.cart_url }}" method="post" class="cart-drawer__form">
       <div class="cart-drawer__inner">
         <div class="cart-drawer__header" id="cart-drawer__header" data-id="{{ section.id }}">
-
           <h2 class="cart-drawer__title body light">{{ section.settings.cart_title }}</h2>
+
+          {% comment %}
           <button type="button" class="header__icon header__icon--cart link link--text focus-inset {% if cart.item_count > 0 %} active{% endif %}" id="cart-icon-bubble-2"  aria-label="Open Cart Drawer">
             {% render 'icon-cart' %}
             <div class="cart-count-bubble sh2">
@@ -17,6 +18,7 @@
             </div>
             <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           </button> 
+          {% endcomment %}
           <button type="button" class="cart-drawer__close modal__close-button link link--text focus-inset" id="cart-drawer__close" aria-label="{{ 'accessibility.close' | t }}">
             {% render 'icon-arrow-cross' %}
           </button>
