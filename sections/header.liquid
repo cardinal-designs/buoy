@@ -218,7 +218,7 @@
                   </ul>
                 </nav>
                 <div class="menu-drawer__utility-links">
-                  {%- if shop.customer_accounts_enabled -%}
+      
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link link--text focus-inset h5">
                       {% comment %} {% render 'icon-account' %} {% endcomment %}
                       {%- liquid
@@ -229,7 +229,7 @@
                         endif
                       -%}
                     </a>
-                  {%- endif -%}
+         
                   <ul class="list list-social list-unstyled" role="list">
                     {%- if settings.social_twitter_link != blank -%}
                       <li class="list-social__item">
