@@ -298,6 +298,17 @@
     margin-bottom: 30px !important;
   }
 
+  .Bottom_List li:first-child::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background-color: #1F2322;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 }
 
 @media only screen and (max-width: 374px) {
