@@ -101,6 +101,6 @@
 
   .image-grid__flex {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: unset;
   }
 }
