@@ -126,7 +126,17 @@
   }
 }
 
+/*** NEW MAIN MENU CSS START ***/
+
 .main-menu {
   max-width: 479px;
   overflow: auto;
 }
+
+.main-menu__close {
+  top: 12px;
+  left: 12px;
+  right: unset;
+}
+
+/*** NEW MAIN MENU CSS END ***/
