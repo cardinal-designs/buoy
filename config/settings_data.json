@@ -25,6 +25,42 @@
       },
       "cart-drawer": {
         "type": "cart-drawer",
+        "blocks": {
+          "6fc230ac-da4b-4d60-b87a-4e730ad8e5e0": {
+            "type": "empty",
+            "settings": {
+              "product": "hydration-drops",
+              "description": "Hydrate and remineralize at the cellular level."
+            }
+          },
+          "4bfc7d67-d54f-4abe-b1e6-ffa3fcf6283b": {
+            "type": "empty",
+            "settings": {
+              "product": "immunity-drops",
+              "description": "Immune support stacked with hydration to target nutrient gaps in American diets."
+            }
+          },
+          "698d5998-fbb4-4873-aa3b-5ae3939f02b4": {
+            "type": "empty",
+            "settings": {
+              "product": "energy-drops",
+              "description": "Naturally sourced energy stacked with hydration for gentler rises and no crashes."
+            }
+          },
+          "03cb9426-18fa-48b8-9750-312ec7f17672": {
+            "type": "empty",
+            "settings": {
+              "product": "wellness-kit",
+              "description": "Meet all your health and wellness needs in one go, with or without the subscription."
+            }
+          }
+        },
+        "block_order": [
+          "6fc230ac-da4b-4d60-b87a-4e730ad8e5e0",
+          "4bfc7d67-d54f-4abe-b1e6-ffa3fcf6283b",
+          "698d5998-fbb4-4873-aa3b-5ae3939f02b4",
+          "03cb9426-18fa-48b8-9750-312ec7f17672"
+        ],
         "settings": {
           "cart_title": "Your Cart",
           "title": "🥵",

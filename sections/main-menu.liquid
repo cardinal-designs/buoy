@@ -53,17 +53,17 @@
 {% javascript %}
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
-    $('.page-overlay').addClass('is-visible');
+    $('.page-overlay').addClass('is-visible Menu_Overlay');
 
     $('.page-overlay').click(function() {
       $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible');
+      $('.page-overlay').removeClass('is-visible Menu_Overlay');
     });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $('.page-overlay').removeClass('is-visible');
+    $('.page-overlay').removeClass('is-visible Menu_Overlay');
   }); 
 {% endjavascript %}
 
