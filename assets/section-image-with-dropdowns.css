@@ -134,7 +134,11 @@
 }
 
 .image-with-dropdowns__bottom-text {
-  
+  margin-top: 50px;
+}
+
+.image-with-dropdowns__bottom-text .sh2 {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
