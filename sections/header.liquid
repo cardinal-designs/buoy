@@ -469,11 +469,13 @@
 
     <div class="header__icons">
 
-      {% if section.settings.show_pee_link != blank %}
-      <a href="/pages/anti-yellow-pee-club" class="header__menu-item list-menu__item link link--text focus-inset sh2 hide-mobile">
-        <span>{{ section.settings.pee_club_link }}</span>
-      </a>
-      {% endif %}
+      {% comment %}
+        {% if section.settings.show_pee_link != blank %}
+          <a href="/pages/anti-yellow-pee-club" class="header__menu-item list-menu__item link link--text focus-inset sh2 hide-mobile">
+            <span>{{ section.settings.pee_club_link }}</span>
+          </a>
+        {% endif %}
+      {% endcomment %}
 
     {% comment %}
       <details-modal class="header__search">
