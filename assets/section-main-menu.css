@@ -187,10 +187,6 @@
   margin-right: 10px;
 }
 
-.main-menu__close.Mobile_Menu_Close {
-  display: none;
-}
-
 .main-menu[aria-hidden="false"] .main-menu__close {
   display:none;
 }
