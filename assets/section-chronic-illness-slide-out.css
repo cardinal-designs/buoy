@@ -64,6 +64,7 @@
   height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .chronic-illness-slide-out__compare {
