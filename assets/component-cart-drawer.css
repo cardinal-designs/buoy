@@ -650,3 +650,11 @@
   left: 0;
   top: 4px;
 }
+
+@media screen and (max-width: 768px) {
+  
+  .cart-drawer {
+    max-width: 360px;
+  }
+  
+}
