@@ -204,6 +204,10 @@
   margin: 0;
 }
 
+.cart-drawer__always-free .body.green {
+  color: #75A951;
+}
+
 .cart-drawer__loading-container {
   position: relative;
   display: flex;
