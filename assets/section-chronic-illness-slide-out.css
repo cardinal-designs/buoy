@@ -94,12 +94,16 @@
 
 .chronic-illness-slide-out__second-header {
   height: 60px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+  padding: 0 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
   border-bottom: 2px solid black;
+}
+
+.chronic-illness-slide-out__second-header img {
+  width: 50px;
 }
 
 
