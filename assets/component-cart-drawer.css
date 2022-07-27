@@ -683,4 +683,11 @@
 
 @media screen and (max-width: 374px) {
   
+  .cart-drawer__footer .button {
+    font-size: 12px;
+  }
+
+  .cart-drawer__footer .car-notes {
+    font-size: 10px;
+  }
 }
