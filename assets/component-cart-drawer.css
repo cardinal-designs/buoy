@@ -670,5 +670,9 @@
   .cart-drawer__footer {
     bottom: 50px;
   }
+
+  .cart-drawer__items {
+    height: calc(100% - 380px);
+  }
   
 }
