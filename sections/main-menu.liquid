@@ -13,6 +13,10 @@
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
       <div class="main-menu__main-links">
+        {% if section.settings.main_menu_title != blank %}
+          <h5 class="Main_Menu_Title">{{ section.settings.main_menu_title }}</h5>
+        {% endif %}
+          
         {% for block in section.blocks %}
           <div class="main-menu__main-link">
             <a class="h6 light" href="{{ block.settings.link }}">
