@@ -199,6 +199,18 @@
   font-weight: 300;
 }
 
+.Shop_Link.arrow-link:hover svg {
+  transform: translate(0);
+}
+
+.Shop_Link.arrow-link:hover {
+  transform: translate(5px);
+}
+
+.Shop_Link.arrow-link {
+  transition: transform .2s ease;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
