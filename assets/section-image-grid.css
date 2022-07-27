@@ -19,12 +19,6 @@
   text-align: center;
 }
 
-.image-grid__image {
-  width: 265px;
-  height: 331.25px;
-  position: relative;
-} 
-
 .image-grid__flex {
   display: flex;
   justify-content: space-between;
@@ -98,4 +92,10 @@
     white-space: nowrap;
     gap: 34px;
   }
+
+    .image-grid__image {
+    width: 265px;
+    height: 331.25px;
+    position: relative;
+    } 
 }
