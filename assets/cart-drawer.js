@@ -218,5 +218,10 @@ class CartDrawer extends HTMLElement {
   }
 }
 
+var element = document. getElementById('cart-icon-bubble');
+
+console.log(element);
+
+
 
 customElements.define('cart-drawer', CartDrawer);
