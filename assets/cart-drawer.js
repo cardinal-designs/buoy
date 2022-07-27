@@ -225,7 +225,7 @@ document.getElementById("cart-icon-bubble").onclick = function() {
 };
 
 
-document.getElementById("cart-icon-bubble").onclick = function() {
+document.getElementById("cart-drawer__close").onclick = function() {
   document.body.classList.remove('demo-class');
 };
 
