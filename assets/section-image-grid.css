@@ -39,6 +39,11 @@
   margin-bottom: 8px;
 }
 
+.image-grid__grid-item p {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
 .image-grid__title-bottom {
   max-width: 960px;
   margin: 0 auto;
