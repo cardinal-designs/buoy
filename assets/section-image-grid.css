@@ -4,10 +4,9 @@
 }
 
 .image-grid__grid {
-/*   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 34px;
-  display: flex;
 /*   margin-top: 60px;
   margin-bottom: 90px; */
 
@@ -25,7 +24,7 @@
   text-align: center;
 }
 
-.image-grid__image {
+.image-grid__image img {
     width: 265px;
 }
 
