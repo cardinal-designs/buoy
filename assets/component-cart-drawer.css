@@ -651,6 +651,10 @@
   top: 4px;
 }
 
+.cart-drawer__content .cart-title .cart-drawer__title {
+  margin: 30px 0 0;
+}
+
 @media screen and (max-width: 768px) {
   
   .cart-drawer {
