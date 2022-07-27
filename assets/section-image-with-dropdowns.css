@@ -152,6 +152,7 @@
 
   .image-with-dropdowns__container {
     padding-top: 50px;
+    padding-bottom: 70px;
   }
   
   .image-with-dropdowns__image {
@@ -177,5 +178,16 @@
 
   .image-with-dropdowns__content-text h6 {
     font-size: 22px;
+  }
+
+  .image-with-dropdowns__bottom-text a {
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+  }
+
+  .image-with-dropdowns__bottom-text {
+    margin-top: 40px;
   }
 }
