@@ -53,7 +53,6 @@
 {% javascript %}
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
-    $('.page-overlay').addClass('is-visible Menu_Overlay');
     $('.Mobile_Menu_Close').show();
     $('.Mobile_Hamburger svg').hide();
 
@@ -61,7 +60,6 @@
 
     $('.page-overlay').click(function() {
       $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible Menu_Overlay');
       $('.Mobile_Menu_Close').hide();
       $('.Mobile_Hamburger svg').show();
     });
@@ -69,7 +67,6 @@
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $('.page-overlay').removeClass('is-visible Menu_Overlay');
     $('.Mobile_Menu_Close').hide();
     $('.Mobile_Hamburger svg').show();
   }); 
