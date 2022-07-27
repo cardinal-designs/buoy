@@ -530,7 +530,7 @@
       {%- endif -%}
       {% endcomment %}
 
-      <a href="/account" class="header__shop-link sh2">Account</a>
+      <a href="/account" class="header__shop-link sh2">Account{% render 'icon-cart-new' %}</a>
       {% if template != 'cart' %}
         <button class="js-open-cart header__icon header__icon--cart link link--text focus-inset {% if cart.item_count > 0 %} active{% endif %}" id="cart-icon-bubble"  aria-label="Open Cart Drawer">
           <div class="cart-count-bubble sh1">
