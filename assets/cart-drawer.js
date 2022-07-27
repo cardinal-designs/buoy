@@ -218,11 +218,13 @@ class CartDrawer extends HTMLElement {
   }
 }
 
-var element = document. getElementById('cart-icon-bubble');
+/* cart button on click - add class to the body - Start */
+
 document.getElementById("cart-icon-bubble").onclick = function() {
-  console.log("Button Clicked");
   document.body.classList.add('demo-class');
 };
+
+/* cart button on click - add class to the body - End */
 
 
 
