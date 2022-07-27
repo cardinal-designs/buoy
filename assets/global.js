@@ -1290,7 +1290,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const offsetPosition = elementPosition - offset;
         console.log('aaa',offsetPosition)
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        window.scrollTo({
           behavior: 'smooth',
           top: offsetPosition
         });
