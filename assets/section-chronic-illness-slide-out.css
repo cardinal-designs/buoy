@@ -89,12 +89,14 @@
 }
 
 .chronic-illness__price-item {
-  display: flex;
-  justify-content: space-between;
+
 }
 
 .chronic-illness-slide-out__info {
   padding: 40px 20px 14px;
+    display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .chronic-illness-slide-out__info button {
