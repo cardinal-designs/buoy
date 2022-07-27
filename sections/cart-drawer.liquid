@@ -27,32 +27,71 @@
           <div class="shop-slide-out__marquee">
             {%- if cart.items.size == 0 -%}
              <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Ships Carbon Neutral ♻️</p>
-              <p class="shop-slide-out__marquee-item body-small">Biodegradable Mailers 🌎</p>
-              <p class="shop-slide-out__marquee-item body-small">Obsessed with Functional Ingredients</p>
+              {% if section.settings.e_marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
+              {% endif %}
             </div> 
             <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Ships Carbon Neutral ♻️</p>
-              <p class="shop-slide-out__marquee-item body-small">Biodegradable Mailers 🌎</p>
-              <p class="shop-slide-out__marquee-item body-small">Obsessed with Functional Ingredients</p>
+              {% if section.settings.e_marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
+              {% endif %}
             </div>
             <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Ships Carbon Neutral ♻️</p>
-              <p class="shop-slide-out__marquee-item body-small">Biodegradable Mailers 🌎</p>
-              <p class="shop-slide-out__marquee-item body-small">Obsessed with Functional Ingredients</p>
+              {% if section.settings.e_marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.e_marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
+              {% endif %}
             </div>
             {%- else -%}
             <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
+              {% if section.settings.marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
+              {% endif %}
             </div> 
             <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
+              {% if section.settings.marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
+              {% endif %}
             </div>
             <div class="shop-slide-out__marquee-container">
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
-              <p class="shop-slide-out__marquee-item body-small">Welcome to the Clear Pee Club 🥳</p>
+              {% if section.settings.marquee_1 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_2 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
+              {% endif %}
+              {% if section.settings.marquee_3 != blank %}
+              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
+              {% endif %}
             </div>
             {%- endif -%}
           </div>
