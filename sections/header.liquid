@@ -375,7 +375,7 @@
     {%- if section.settings.mobile_menu != blank -%}
       <nav class="header__inline-menu Mobile_Show">
         <ul class="list-menu list-menu--inline" role="list">
-          {%- for link in section.settings.menu.links -%}
+          {%- for link in section.settings.mobile_menu.links -%}
             <li>
               {%- if link.links != blank -%}
                 <details-disclosure>
