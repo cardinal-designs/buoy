@@ -233,10 +233,9 @@ document.getElementById("cart-drawer__close").onclick = function() {
 //   document.body.classList.remove('demo-class');
 // };
 
-var button = document.querySelector('.page-overlay');
-button.onclick = function() {
+document.querySelector('.page-overlay').onclick = function() {
   document.body.classList.remove('demo-class');
-}
+};
 
 /* cart button on click - add class to the body - End */
 
