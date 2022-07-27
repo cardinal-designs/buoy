@@ -98,4 +98,9 @@
     height: 331.25px;
     position: relative;
   } 
+
+  .image-grid__flex {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
