@@ -219,6 +219,7 @@ class CartDrawer extends HTMLElement {
 }
 
 /* cart button on click - add class to the body - Start */
+
 var classNameToggle = "open-cart-drawer";
 document.querySelector("#cart-icon-bubble").onclick = function() {
   document.body.classList.add(classNameToggle);
