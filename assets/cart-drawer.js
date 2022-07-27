@@ -229,6 +229,7 @@ document.getElementById("cart-drawer__close").onclick = function() {
 };
 
 document.getElementsByClassName("page-overlay").onclick = function() {
+  console.log("overlay Clicked");
   document.body.classList.remove('demo-class');
 };
 
