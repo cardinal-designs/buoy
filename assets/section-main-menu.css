@@ -219,6 +219,10 @@
   margin-bottom: 0;
 }
 
+.main-menu {
+  display: block;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
@@ -233,7 +237,6 @@
 
   .main-menu {
     padding: 27px;
-    display: block;
   }
 
   .Main_Menu_Title {
