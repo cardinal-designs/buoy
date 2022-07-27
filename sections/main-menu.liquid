@@ -2,6 +2,14 @@
 
 <div class="main-menu" aria-hidden="true">
   <button class="main-menu__close">{% render 'icon-close' %}</button>
+
+  {% if section.settings.arrow_link_label != blank %}
+    <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium">
+      {{ section.settings.arrow_link_label }}
+      {% render 'icon-arrow-right' %}
+    </a>
+  {% endif %}
+  
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
       <div class="main-menu__main-links">
@@ -18,12 +26,7 @@
             {% endif %}
           </div>
         {% endfor %}
-        {% if section.settings.arrow_link_label != blank %}
-          <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium">
-            {{ section.settings.arrow_link_label }}
-            {% render 'icon-arrow-right' %}
-          </a>
-        {% endif %}
+
       </div>
       <div class="main-menu__secondary-links">
         {% for link in section.settings.secondary_menu.links %}
