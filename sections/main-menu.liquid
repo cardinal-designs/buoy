@@ -54,16 +54,19 @@
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
     $('.page-overlay').addClass('is-visible Menu_Overlay');
+    $('.Mobile_Menu_Close').addClass('.active');
 
     $('.page-overlay').click(function() {
       $('.main-menu').attr('aria-hidden', true);
       $('.page-overlay').removeClass('is-visible Menu_Overlay');
+      $('.Mobile_Menu_Close').removeClass('.active');
     });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
     $('.page-overlay').removeClass('is-visible Menu_Overlay');
+    $('.Mobile_Menu_Close').removeClass('.active');
   }); 
 {% endjavascript %}
 
