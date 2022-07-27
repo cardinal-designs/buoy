@@ -267,11 +267,12 @@
   }
 
   .Main_Menu_Bottom {
-    display:block;
+    display: block;
     text-align: center;
     margin: 0 -27px;
-    border-top: 1px solid #1F2322 -;
+    border-top: 1px solid #1F2322;
     padding: 14px 20px 0;
+    box-shadow: 0px -2px 9px #5457591A;
   }
 
   .Bottom_List {
