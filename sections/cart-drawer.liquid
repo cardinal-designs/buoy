@@ -501,3 +501,20 @@
   ]
 }
 {% endschema %}
+
+<script>
+
+  $('.header__icon--cart').click(function() {
+    $('.page-overlay').addClass('Menu_Overlay');
+    $('.Cart_Close_Mobile').show();
+
+    $('.page-overlay').click(function() {
+      $('.main-menu').attr('aria-hidden', true);
+      $('.page-overlay').removeClass('is-visible Menu_Overlay');
+      $('.Cart_Close_Mobile').hide();
+    });
+  });
+  
+</script>
+
+</script>
