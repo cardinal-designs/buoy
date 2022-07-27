@@ -23,6 +23,11 @@
   max-width: 670px;
 }
 
+.image-grid__title-top h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .image-grid__title-bottom {
   max-width: 960px;
   margin: 0 auto;
