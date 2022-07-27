@@ -224,10 +224,15 @@ document.getElementById("cart-icon-bubble").onclick = function() {
   document.body.classList.add('demo-class');
 };
 
-
 document.getElementById("cart-drawer__close").onclick = function() {
   document.body.classList.remove('demo-class');
 };
+
+document.getElementsByClassName("page-overlay").onclick = function() {
+  document.body.classList.remove('demo-class');
+};
+
+page-overlay
 
 /* cart button on click - add class to the body - End */
 
