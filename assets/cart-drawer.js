@@ -220,3 +220,8 @@ class CartDrawer extends HTMLElement {
 
 
 customElements.define('cart-drawer', CartDrawer);
+
+jQuery('.header__icon--cart').click(function(){
+    jQuery(this).toggleClass('open');
+    jQuery("body").toggleClass('open-cart-drawer');
+});
