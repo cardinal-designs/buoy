@@ -19,9 +19,11 @@
             <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           </button> 
           {% endcomment %}
+          
           <button type="button" class="cart-drawer__close modal__close-button link link--text focus-inset" id="cart-drawer__close" aria-label="{{ 'accessibility.close' | t }}">
             {% render 'icon-arrow-cross' %}
           </button>
+          
         </div>
         <div class="cart-drawer__content" id="cart-drawer__content" data-id="{{ section.id }}">
           <div class="shop-slide-out__marquee">
