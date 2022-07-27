@@ -201,6 +201,12 @@
     top: 56px;
   }
 
+  .main-menu__close.Mobile_Menu_Close {
+    position: relative;
+    left: unset;
+    top: unset;
+  }
+
 }
 
 /*** NEW MAIN MENU CSS END ***/
