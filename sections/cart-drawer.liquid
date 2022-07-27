@@ -370,7 +370,7 @@
                   </div>
                 </div>
               </div>
-              <a href="/checkout" class="button button--full-width" name="checkout" form="cart">{{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
+              <a href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
               <span class="car-notes">{{ section.settings.cart_notes }}</span>
             </div>
           {%- endif -%}
