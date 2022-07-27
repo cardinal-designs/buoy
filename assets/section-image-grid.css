@@ -109,3 +109,10 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .image-grid__container {
+    padding-top: 60px;
+    padding-bottom: 87px;
+  }
+}
