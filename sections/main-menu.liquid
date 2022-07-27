@@ -57,12 +57,11 @@
     $('.Hamburger_New').hide();
   });
 
-  $('.Mobile_Menu_Close').click(function() {
+  $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $(this).hide();
+    $('.Mobile_Menu_Close').hide();
     $('.Hamburger_New').show();
-  });
-
+  }); 
 {% endjavascript %}
 
 {% schema %}
