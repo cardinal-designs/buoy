@@ -221,6 +221,7 @@ class CartDrawer extends HTMLElement {
 var element = document. getElementById('cart-icon-bubble');
 document.getElementById("cart-icon-bubble").onclick = function() {
   console.log("Button Clicked");
+  document.body.classList.add('demo-class');
 };
 
 
