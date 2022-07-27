@@ -215,6 +215,10 @@
   font-weight: 300;
 }
 
+.main-menu__main-link:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
@@ -234,6 +238,10 @@
   .Main_Menu_Title {
     position: absolute;
     top: 22px;
+  }
+
+  .main-menu__main-links {
+    margin-bottom: 50px;
   }
 
 }
