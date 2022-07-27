@@ -55,20 +55,14 @@
     $('.main-menu').attr('aria-hidden', false);
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
-    
-    $('.Mobile_Menu_Close').click(function() {
-      $('.main-menu').attr('aria-hidden', true);
-      $(this).hide();
-      $('.Hamburger_New').show();
-    });
-    
   });
 
-  $('.main-menu__close').click(function() {
+  $('.Mobile_Menu_Close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $('.Mobile_Menu_Close').hide();
+    $(this).hide();
     $('.Hamburger_New').show();
-  }); 
+  });
+
 {% endjavascript %}
 
 {% schema %}
