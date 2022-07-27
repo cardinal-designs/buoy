@@ -309,6 +309,11 @@
     transform: translateY(-50%);
   }
 
+  .Bottom_List li {
+    padding: 0 10px;
+    position: relative;
+  }
+
 }
 
 @media only screen and (max-width: 374px) {
