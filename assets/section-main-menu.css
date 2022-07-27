@@ -187,6 +187,10 @@
   margin-right: 10px;
 }
 
+.main-menu__close.Mobile_Menu_Close {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
