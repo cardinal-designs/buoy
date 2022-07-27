@@ -133,6 +133,10 @@
  color: #545759; 
 }
 
+.image-with-dropdowns__bottom-text {
+  
+}
+
 @media screen and (max-width: 768px) {
   .image-with-dropdowns__container .page-width {
     grid-template-columns: 1fr;
