@@ -7,7 +7,11 @@
   text-align: center;
 }
 
-.chronic-submitted__text p {
+.chronic-submitted__text .light {
+  max-width: 563px;
+}
+
+.chronic-submitted__text .sh3 {
   max-width: 563px;
 }
 
