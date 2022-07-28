@@ -33,6 +33,7 @@
   overflow-x: hidden;
   display: flex;
   z-index: 1;
+  border-top: 2px solid #1F2322;
 }
 
 .chronic-submitted__info .marquee__container {
