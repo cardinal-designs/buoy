@@ -4,11 +4,13 @@
   <div class="chronic-submitted__image">
     {% render 'lazy-image' image: section.settings.image, classes: '' %}
   </div>
-  <div class="chronic-submitted__text">
-    <p class="sh3">{{ section.settings.suptitle }}</p>
-    <h2>{{ section.settings.title }}</h2>
-    <p class="light">{{ section.settings.text }}</p>
-    <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+  <div class="chronic-submitted__info">
+    <div class="chronic-submitted__text">
+      <p class="sh3">{{ section.settings.suptitle }}</p>
+      <h2>{{ section.settings.title }}</h2>
+      <p class="light">{{ section.settings.text }}</p>
+      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+    </div>
   </div>
 </div>
 {% schema %}
