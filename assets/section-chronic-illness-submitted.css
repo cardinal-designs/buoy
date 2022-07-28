@@ -10,7 +10,11 @@
 .chronic-submitted__text {
   text-align: center;
   padding: 0 28px;
-  align-self: center;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 40px);
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .chronic-submitted__info, .chronic-submitted__image {
