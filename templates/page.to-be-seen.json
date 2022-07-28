@@ -160,20 +160,20 @@
     "1658198652e8b63b50": {
       "type": "to-be-seen-testimonials",
       "blocks": {
-        "16a281c3-52c7-4fe9-84c1-be8222330728": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/D_1x1_120x120_TBS_Creator_4.png",
-            "testimonial": "\"Keeps this POTS girlie balanced\"",
-            "author": "Ash Levi, POTS"
-          }
-        },
         "0ad43c21-aafa-493c-8cb2-c010833d992f": {
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_120x120_TBS_Creator_3.png",
             "testimonial": "\"Doesn't hurt my stomach like the others\"",
             "author": "Paula Sojo, Crohn's & POTS"
+          }
+        },
+        "16a281c3-52c7-4fe9-84c1-be8222330728": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/D_1x1_120x120_TBS_Creator_4.png",
+            "testimonial": "\"Keeps this POTS girlie balanced\"",
+            "author": "Ash Levi, POTS"
           }
         },
         "b0539b19-4612-48b2-9176-3db9f7edc6df": {
@@ -194,8 +194,8 @@
         }
       },
       "block_order": [
-        "16a281c3-52c7-4fe9-84c1-be8222330728",
         "0ad43c21-aafa-493c-8cb2-c010833d992f",
+        "16a281c3-52c7-4fe9-84c1-be8222330728",
         "b0539b19-4612-48b2-9176-3db9f7edc6df",
         "066dd2e0-4af8-4347-a3bf-a6908f304e35"
       ],
