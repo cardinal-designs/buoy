@@ -5,10 +5,10 @@
     {% render 'lazy-image' image: section.settings.image, classes: '' %}
   </div>
   <div class="chronic-submitted__text">
-    <p class="sh3"></p>
-    <h2></h2>
-    <p class="light"></p>
-    <a href="" class="button"></a>
+    <p class="sh3">{{ section.settings.suptitle }}</p>
+    <h2>{{ section.settings.title }}</h2>
+    <p class="light">{{ section.settings.text }}</p>
+    <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
   </div>
 </div>
 {% schema %}
