@@ -1,22 +1,29 @@
 {{ 'section-chronic-illness-submitted.css' | asset_url | stylesheet_tag }}
 
-<div>
-  <div></div>
-  <div></div>
+<div class="chronic-submitted__container">
+  <div class="chronic-submitted__image">
+    {% render 'lazy-image' image: section.settings.image, classes: '' %}
+  </div>
+  <div class="chronic-submitted__text">
+    <p class="sh3"></p>
+    <h2></h2>
+    <p class="light"></p>
+    <a href="" class="button"></a>
+  </div>
 </div>
 {% schema %}
   {
     "name": "Chronic Illness Submitted",
     "settings": [
       {
-        "type": "text",
-        "id": "video_url",
-        "label": "Video Url"
-      },
-      {
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "suptitle",
+        "label": "Suptitle"
       },
       {
         "type": "text",
@@ -29,11 +36,6 @@
         "label": "Text"
       },
       {
-        "type": "textarea",
-        "id": "text_bottom",
-        "label": "Bottom Text"
-      },
-      {
         "type": "text",
         "id": "button_label",
         "label": "Button Label"
@@ -42,11 +44,6 @@
         "type": "url",
         "id": "button_link",
         "label": "Button Link"
-      },
-      {
-        "type": "textarea",
-        "id": "background",
-        "label": "Background Style"
       }
 	],
     "blocks": [
