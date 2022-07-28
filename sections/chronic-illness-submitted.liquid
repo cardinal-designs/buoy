@@ -25,8 +25,11 @@
       <div class="marquee__container">
         {% for block in section.blocks %}
           <div class="marquee__item">
+          <span>
             {% render 'icon-check' %}
+          </span>
             <p class="body-xs light">{{ block.settings.text }}</p>
+            
           </div>
         {% endfor %}
       </div>
