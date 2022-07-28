@@ -63,7 +63,6 @@
   padding-right: 10px;
   overflow-y: auto;
   margin: 30px 10px 30px 20px;
-  border-top: 0.75px solid rgb(84 87 89 / 30%);
 }
 
 .cart-drawer__welcome-message {
@@ -74,6 +73,7 @@
   padding: 20px 0;
   display: flex;
   position: relative;
+  border-top: 0.75px solid rgb(84 87 89 / 30%);
   border-bottom: 0.75px solid rgb(84 87 89 / 30%);
 }
 
