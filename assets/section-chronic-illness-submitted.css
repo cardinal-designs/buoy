@@ -1,17 +1,18 @@
 .chronic-submitted__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 }
 
 .chronic-submitted__image-wrapper {
   position: relative;
   padding-bottom: 100%;
+  width: 50%;
 }
 
 .chronic-submitted__text {
   text-align: center;
   padding: 0 28px;
   align-self: center;
+  width: 50%;
 }
 
 .chronic-submitted__text .sh3 {
