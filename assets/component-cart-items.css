@@ -163,7 +163,7 @@ cart-remove-button .icon-remove {
 }
 
 .cart-drawer__item-price.sh4 .price {
-  letter-spacing: 0px !important;
+  letter-spacing: 0;
 }
 
 @media screen and (max-width: 768px) {
