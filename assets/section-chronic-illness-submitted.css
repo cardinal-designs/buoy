@@ -64,6 +64,10 @@
   align-items: center;
 }
 
+.chronic-submitted__info .marquee__item svg {
+ width: 11px;
+}
+
 .chronic-submitted__info .marquee__item p {
   margin: 0;
   margin-top: 4px;
