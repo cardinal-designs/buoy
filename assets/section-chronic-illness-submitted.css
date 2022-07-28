@@ -5,13 +5,15 @@
 .chronic-submitted__image-wrapper {
   position: relative;
   padding-bottom: 100%;
-  width: 50%;
 }
 
 .chronic-submitted__text {
   text-align: center;
   padding: 0 28px;
   align-self: center;
+}
+
+.chronic-submitted__info, .chronic-submitted__image {
   width: 50%;
 }
 
