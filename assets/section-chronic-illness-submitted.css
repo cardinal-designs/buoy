@@ -1,5 +1,6 @@
 .chronic-submitted__container {
   display: flex;
+  overflow: hidden;
 }
 
 .chronic-submitted__image-wrapper {
