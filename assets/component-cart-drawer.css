@@ -73,8 +73,11 @@
   padding: 20px 0;
   display: flex;
   position: relative;
-  border-top: 0.75px solid rgb(84 87 89 / 30%);
   border-bottom: 0.75px solid rgb(84 87 89 / 30%);
+}
+
+.cart-drawer__item:first-child {
+  border-top: 0.75px solid rgb(84 87 89 / 30%);
 }
 
 .cart-drawer__item-remove {
