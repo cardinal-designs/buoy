@@ -94,6 +94,10 @@
   letter-spacing: 0;
 }
 
+.cart-drawer__item-remove:hover {
+  font-weight: 600;
+}
+
 .cart-drawer__item-image {
   height: 90px;
   width: 90px;
