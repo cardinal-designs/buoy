@@ -692,6 +692,10 @@
     height: calc(100vh - 0px);
   }
   
+  .cart-drawer__content .cart-title .cart-drawer__title {
+    font-size: 18px;
+  }
+  
 }
 
 @media screen and (max-width: 374px) {
