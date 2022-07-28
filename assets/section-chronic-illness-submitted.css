@@ -24,3 +24,37 @@
   max-width: 563px;
   margin: 0 auto 30px
 }
+
+.chronic-submitted__info .marquee {
+  width: 100vw;
+  max-width: 100%;
+  padding: 15px 0 17px;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  z-index: 1;
+}
+
+.chronic-submitted__info .marquee__container {
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee__item {
+  margin: 0;
+  padding: 0 20px;
+  display: flex !important;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee__item .sh1 {
+  margin: 0 7px 0 0;
+}
+
+.chronic-submitted__info .marquee__item .sh2 {
+  margin: 0;
+  margin-top: 4px;
+}
