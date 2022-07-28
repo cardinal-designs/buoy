@@ -67,3 +67,37 @@
   margin: 0;
   margin-top: 4px;
 }
+
+@media (max-width: 768px) {
+  .chronic-submitted__container {
+    flex-direction: column;
+  }
+
+  .chronic-submitted__image {
+    width: 100%;
+  }
+
+  .chronic-submitted__image-wrapper {
+    padding-bottom: 300px;
+  }
+
+  .chronic-submitted__image-wrapper img {
+      height: 300px;
+  }
+
+  .chronic-submitted__info {
+    width: 100%;
+  }
+  
+  .chronic-submitted__text {
+    position: relative;
+    left: unset;
+    top: unset;
+    width: unset;
+    transform: unset;
+  }
+
+  .chronic-submitted__info .marquee {
+    position: relative;
+  } 
+}
