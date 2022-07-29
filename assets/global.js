@@ -1271,6 +1271,13 @@ $('.image-with-dropdowns__q').click(function () {
   $(this).toggleClass('active');
 })
 
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
+    }, 500);
+});
 
 
 
