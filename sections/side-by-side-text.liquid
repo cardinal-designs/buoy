@@ -1,19 +1,32 @@
 {{ 'section-side-by-side-text.css' | asset_url | stylesheet_tag }}
 
-<div style="background-color: {{ section.settings.background }};" class="side-by-side__container">
+{% style %}
+  {%  if section.blocks.size > 1 %}
+    .side-by-side__text-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+  {% else %}
+    .side-by-side__text-container {
+      grid-template-columns: 1fr;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+  {% endif %}
+{%  endstyle %}
+
+<div id="side-by-side__container" style="background-color: {{ section.settings.background }};" class="side-by-side__container">
   <div class="page-width">
-    <div class="side-by-side__text-container">
-    <div style="color: {{ section.settings.color }};" class="side-by-side__text">
-      <h2 class="h3 light">{{ section.settings.title1 }}</h2>
-      <p class="h6 light">{{ section.settings.text1 }}</p>
-    </div>
-    <div style="color: {{ section.settings.color }};" class="side-by-side__text">
-      <h2 class="h3 light">{{ section.settings.title2 }}</h2>
-      <p class="h6 light">{{ section.settings.text2 }}</p>
-    </div>
-    </div>
-    <a id="join-convo" href="{{ section.settings.link }}" class="button button--white">{{ section.settings.link_text }}</a>
+  <div class="side-by-side__text-container">
+    {% for block in section.blocks %}
+  <div style="color: {{ block.settings.color }};" class="side-by-side__text">
+    <h2 class="h3 light">{{ block.settings.title }}</h2>
+    <p class="h6 light">{{ block.settings.text }}</p>
   </div>
+    {% endfor %}
+  </div>
+  <a id="join-convo" href="{{ section.settings.link }}" class="button button--white">{{ section.settings.link_text }}</a>
+</div>
 </div>
 
 
@@ -22,34 +35,9 @@
     "name": "Side by Side Text",
     "settings": [
       {
-        "type": "text",
-        "id": "title1",
-        "label": "Title 1"
-      },
-      {
-        "type": "textarea",
-        "id": "text1",
-        "label": "Text 1"
-      },
-      {
-        "type": "text",
-        "id": "title2",
-        "label": "Title 2"
-      },
-      {
-        "type": "textarea",
-        "id": "text2",
-        "label": "Text 2"
-      },
-      {
         "type": "color",
         "id": "background",
         "label": "Background Color"
-      },
-	  {
-        "type": "color",
-        "id": "color",
-        "label": "Text Color"
       },
 	  {
         "type": "url",
@@ -60,6 +48,30 @@
         "type": "text",
         "id": "link_text",
         "label": "Link Text"
+      }
+    ],
+    "max_blocks": 2,
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+    	  {
+            "type": "color",
+            "id": "color",
+            "label": "Text Color"
+          }
+        ]
       }
     ],
     "presets": [
