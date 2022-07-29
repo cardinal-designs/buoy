@@ -175,7 +175,10 @@
   }
 }
 
-
+.product-bar-illness__flex {
+  gap: 20px;
+  display: flex;
+}
 
 .product-bar-illness__flex .check svg {
   width: 11px;
