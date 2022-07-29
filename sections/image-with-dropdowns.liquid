@@ -35,10 +35,16 @@
         </div>
         {% endfor %}
       </div>
+      {% if section.settings.button_label != blank or section.settings.text_bottom != blank %}
       <div class="image-with-dropdowns__bottom-text">
+        {% if section.settings.text_bottom != blank %}
         <p class="sh2 light">{{ section.settings.text_bottom }}</p>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
         <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+        {% endif %}
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
