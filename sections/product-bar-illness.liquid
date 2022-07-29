@@ -1,11 +1,11 @@
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
   
-<div class="product-bar product-bar-toggle">
+<div class="product-bar product-bar-toggle product-bar-illness">
   <div class="page-width">
     <div class="product-bar__container">
       <div class="product-bar__title">
         <h5>{{ section.settings.title }}</h5>
-        <div>
+        <div class="product-bar-illness__flex">
           <div class="check">
             {% render 'icon-check' %}
             <p class="body-xs light">{{ section.settings.check1 }}</p>
