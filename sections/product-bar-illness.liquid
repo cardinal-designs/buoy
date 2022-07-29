@@ -1,6 +1,6 @@
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
   
-<div data="{{product.variants[0] | json }}" class="product-bar product-bar-toggle">
+<div class="product-bar product-bar-toggle">
   <div class="page-width">
     <div class="product-bar__container">
       <div class="product-bar__title">
@@ -52,7 +52,33 @@
   {
     "name": "Product Bar Illness",
     "class": "product-bar-wrapper",
-    "settings": [],
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "title",
+        "label" : "Title"
+      },
+      {
+        "type" : "text",
+        "id" : "check1",
+        "label" : "Check 1"
+      },
+      {
+        "type" : "text",
+        "id" : "check2",
+        "label" : "Check 2"
+      },
+      {
+        "type" : "text",
+        "id" : "check3",
+        "label" : "Check 3"
+      },
+      {
+        "type" : "text",
+        "id" : "btn_label",
+        "label" : "Button Label"
+      }
+    ],
     "presets": [
       {
         "name": "Product Bar Illness"
