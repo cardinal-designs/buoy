@@ -180,6 +180,11 @@
   display: flex;
 }
 
+.product-bar-illness__flex .check {
+  display: flex;
+  align-items: center;
+}
+
 .product-bar-illness__flex .check svg {
   width: 11px;
   margin-top: 4px;
