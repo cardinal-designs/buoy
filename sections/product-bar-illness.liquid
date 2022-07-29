@@ -1,6 +1,6 @@
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
 
-{% assign product = all_products[product.settings.product] %}
+{% assign product = all_products[section.settings.product] %}
   
 {% for selling_plan in product.selling_plan_groups %}
     {% if selling_plan.app_id == '5859381' %}
@@ -14,7 +14,7 @@
   {% assign num = 0 %}
 {% endif %} 
   {% assign num = 0 %}
-{{ product }}
+  
 <div data="{{product.variants[0] | json }}" class="product-bar product-bar-toggle">
   <div class="page-width">
     <div class="product-bar__container">
