@@ -267,7 +267,7 @@
 }
 
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 10px 20px;
 }
