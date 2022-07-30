@@ -904,6 +904,14 @@ var lifetimeSlider = {
 
 slickOnMobile($lifetimeSlider, lifetimeSlider);
 
+
+$('.chronic-multicolumn__slider').slick({
+  slidesToShow: 1,
+  dots: true,
+  arrows: false
+})
+
+
 // PDP main slider
 $productMediaSlider = $('.product__media-list');
 var productMediaSlider = {
@@ -1271,12 +1279,21 @@ $('.image-with-dropdowns__q').click(function () {
   $(this).toggleClass('active');
 })
 
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const element = document.querySelector(this.getAttribute('href'));
+        const offset = 100;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 100
-    }, 500);
+        window.scrollTo({
+          behavior: 'smooth',
+          top: offsetPosition
+        });
+    });
 });
 
 
