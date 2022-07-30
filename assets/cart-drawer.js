@@ -218,5 +218,21 @@ class CartDrawer extends HTMLElement {
   }
 }
 
+/* cart button on click - add class to the body - Start */
+
+var classNameToggle = "open-cart-drawer";
+document.querySelector("#cart-icon-bubble").onclick = function() {
+  document.body.classList.add(classNameToggle);
+};
+document.querySelector("#cart-drawer__close").onclick = function() {
+  document.body.classList.remove(classNameToggle);
+};
+document.querySelector('.page-overlay').onclick = function() {
+  document.body.classList.remove(classNameToggle);
+};
+
+/* cart button on click - add class to the body - End */
+
+
 
 customElements.define('cart-drawer', CartDrawer);
