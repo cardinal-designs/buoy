@@ -279,6 +279,11 @@
   align-items: unset !important;
 }
 
+.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label svg circle {
+  stroke: var(--charcoal);
+  fill: white;
+}
+
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
