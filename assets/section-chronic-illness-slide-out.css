@@ -275,7 +275,8 @@
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label {
   padding: 11px 12px;
   border-radius: 50px;
-  background: vaer(--beige-light);
+  background: var(--beige-light);
+  align-items: unset !important;
 }
 
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
