@@ -249,6 +249,10 @@
   border: 1px solid var(--charcoal);
 }
 
+.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button:hover {
+  box-shadow: 6px 6px 0 0 var(--charcoal);
+}
+
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
