@@ -266,6 +266,12 @@
   transition: 0.2s ease;
 }
 
+.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
