@@ -281,17 +281,17 @@
 
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label div {
   margin-bottom: 5px;
-}
+} */
 
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg:first-child {
   width: 17px !important;
   height: 17px !important;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] circle {
+.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg:first-child circle {
   stroke: var(--charcoal);
   fill: white;
-} */
+}
 
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
   transform: translateX(-100%);
