@@ -67,12 +67,12 @@
   z-index: -1;
 }
 
-.give-back-image__container img{
+.give-back-image__container video {
+  max-width: 100%;
   border-radius: 19px 19px 0 0;
 }
 
-.give-back-image__container video {
-  max-width: 100%;
+.give-back-image__container img {
   border-radius: 19px 19px 0 0;
 }
 
@@ -102,18 +102,6 @@
   .give-back-block__container {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .give-back-image__container {
-    border-radius: 27px 27px 0 0;
-  }
-  
-  .give-back-image__container video {
-    border-radius: 27px 27px 0 0;
-  }
-
-  .give-back-image__container img{
-    border-radius: 0;
   }
 
   .give-back__container {
