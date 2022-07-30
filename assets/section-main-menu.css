@@ -85,6 +85,7 @@
 .main-menu__secondary-links .sh4 {
   margin: 0 0 12px;
   display: block;
+  line-height: 1.5em;
 }
 
 .main-menu__secondary-links .sh4:hover {
@@ -125,3 +126,218 @@
     font-size: 16px;
   }
 }
+
+/*** NEW MAIN MENU CSS START ***/
+
+.main-menu {
+  max-width: 479px;
+  overflow: auto;
+}
+
+.main-menu__close {
+  top: 15px;
+  left: 15px;
+  right: unset;
+}
+
+.Shop_Link {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.Maine_Menu_Link_Image img {
+  width: 42px;
+  vertical-align: middle;
+}
+
+.Maine_Menu_Link_Image {
+  margin-right: 10px;
+}
+
+.main-menu__main-link {
+  margin-bottom: 15px;
+}
+
+.main-menu__main-link .callout-text {
+  margin-left: 8px;
+  padding: 2.2px 8px;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+
+.main-menu__close svg {
+  height: 14px;
+  width: 14px;
+}
+
+.Main_Menu_Title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #545759;
+  margin: 44px 0 30px;
+}
+
+.main-menu__secondary-links .account-link {
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.main-menu__secondary-links .account-link svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.main-menu__main-link .h6:hover {
+  font-weight: 300;
+}
+
+.Shop_Link.arrow-link:hover svg {
+  transform: translate(0);
+}
+
+.Shop_Link.arrow-link:hover {
+  transform: translate(5px);
+}
+
+.Shop_Link.arrow-link {
+  transition: transform .2s ease;
+}
+
+.header .sh2.Mobile_Hamburger:hover {
+  font-weight: 500;
+}
+
+.main-menu__main-link:last-child {
+  margin-bottom: 0;
+}
+
+.main-menu {
+  display: block;
+}
+
+.Main_Menu_Bottom {
+  display:none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .main-menu {
+    top: 54px;
+  }
+
+  .main-menu[aria-hidden="false"] .main-menu__close {
+    display:none;
+  }
+
+  .main-menu__close.Mobile_Menu_Close {
+    display: none;
+  }
+
+  .main-menu__close.Mobile_Menu_Close {
+    position: relative;
+    left: unset;
+    top: unset;
+  }
+
+  .main-menu {
+    padding: 27px 27px 0;
+  }
+
+  .main-menu__main-links {
+    margin-bottom: 50px;
+  }
+
+  .main-menu__secondary-links .sh4 {
+    line-height: 27px;
+    margin-bottom: 12px;
+  }
+
+  .Main_Menu_Title {
+    margin: -5px 0 27px;
+  }
+
+  .main-menu {
+    max-width: 100%;
+  }
+
+  .Shop_Link {
+    top: 21px;
+  }
+
+  .page-overlay.is-visible.Menu_Overlay {
+    background: transparent !important;
+  }
+
+  .Main_Menu_Bottom {
+    display: block;
+    text-align: center;
+    margin: 0 -27px;
+    border-top: 1px solid #1F2322;
+    padding: 14px 20px 14px;
+    box-shadow: 0px -2px 9px #5457591A;
+  }
+
+  .Bottom_List {
+    list-style: none;
+    padding: 0;
+  }
+
+  .Bottom_List li {
+    display: inline-block;
+    color: #1F2322;
+    font-size: 12px;
+    font-family: inter,sans-serif;
+    font-weight: 300;
+  }
+
+  .Bottom_List {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+  }
+
+  .main-menu__secondary-links .account-link {
+    margin-top: 28px;
+    font-size: 14px;
+    margin-bottom: 30px !important;
+  }
+
+  .Bottom_List li:first-child::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background-color: #1F2322;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .Bottom_List li {
+    padding: 0 10px;
+    position: relative;
+  }
+
+  .Main_Menu_Bottom .button {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 374px) {
+
+  .main-menu__main-links .h6 {
+    font-size: 12px;
+  }
+
+  .main-menu__main-link .callout-text {
+    padding: 2.2px 5px;
+    font-size: 10px;
+  }
+
+}
+
+/*** NEW MAIN MENU CSS END ***/

@@ -1666,7 +1666,7 @@ input[type='checkbox'] {
 }
 
 .quantity__button svg {
-  width: 1rem;
+  width: 0.8rem;
   pointer-events: none;
 }
 
@@ -2466,3 +2466,11 @@ details-disclosure > details {
     width: auto;
   }
 }
+
+.Cart_Close_Mobile {
+  displa:none;
+}
+
+.Cart_Close_Mobile svg {
+  max-width: 14px;
+}     

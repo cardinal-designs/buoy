@@ -221,4 +221,147 @@ li:focus, :focus{
 	outline: none;	
 }
 
+/*** NEW HEADER CSS START ***/
 
+.header {
+  padding: 22px 40px
+}
+
+.header__icon--cart .cart-count-bubble {
+  display: none;
+}
+
+.header__shop-link.sh2 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 0;
+  font-size: 14px;
+  color: #1F2322;
+  font-weight: 300;
+}
+
+.header__shop-link.sh2 svg {
+  margin-left: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .list-menu__item {
+  line-height: normal;
+}
+
+.header__inline-menu {
+  margin-left: 0;
+}
+
+.header--transparent:not(.header--scrolled) .header-wrapper {
+  background-color: #fff;
+  border-color: inherit;
+}
+
+.Mobile_Show.header__inline-menu {
+  display: none;
+}
+
+header-drawer {
+  display: none;
+}
+
+.header__menu-item {
+  padding: 0 15px;
+}
+
+.header__icon span.Cart_Close_Mobile {
+  display:none;
+}
+
+.Cart_Close_Mobile svg {
+  max-width: 14px;
+}
+
+.open-cart-drawer .header__icons .header__icon--cart .icon-cart{
+  display: none;
+}
+
+.header__icon span.Cart_Close_Mobile .icon-close {
+  max-width: 20px;
+}
+
+@media screen and (max-width: 959px){  
+
+  .header {
+    padding: 22px 27px;
+  }
+
+  .header__menu-item {
+    padding: 0 12.5px;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 768px){  
+
+  .Mobile_Show.header__inline-menu {
+    display: flex;
+  }
+  
+  .Mobile_Show.header__inline-menu {
+    order: 1;
+  }
+  
+  .header__icons .header__icon--cart {
+    margin-left: 0;
+  }
+
+  .header__heading,
+  .header .header-icon--logo {
+    order: 2;
+  }
+
+  .header__inline-menu {
+    display: none;
+  }
+
+  .header__shop-link.sh2 {
+    display: none;
+  }
+
+  .header__icons {
+    order: 2;
+  }
+
+  .header__inline-menu {
+    display: none;
+  }
+
+  header-drawer {
+    display: none;
+  }
+
+  .Mobile_Show .header__menu-item {
+    padding: 0;
+    font-size: 16px;
+    line-height: 27px;
+  }
+  
+  .Mobile_Show .header__menu-item svg {
+    margin-right: 10px;
+    margin-top: 1px;
+  }
+
+  .header {
+    padding: 8.8px 15px;
+  }
+
+  .header__svg-logo {
+    margin-left: -40px;
+    max-width: 50px;
+  }
+    
+}
+
+/*** NEW HEADER CSS END ***/

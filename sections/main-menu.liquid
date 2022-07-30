@@ -2,12 +2,27 @@
 
 <div class="main-menu" aria-hidden="true">
   <button class="main-menu__close">{% render 'icon-close' %}</button>
+
+  {% if section.settings.arrow_link_label != blank %}
+    <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
+      {{ section.settings.arrow_link_label }}
+      {% render 'icon-arrow-right' %}
+    </a>
+  {% endif %}
+  
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
       <div class="main-menu__main-links">
+        {% if section.settings.main_menu_title != blank %}
+          <h5 class="Main_Menu_Title">{{ section.settings.main_menu_title }}</h5>
+        {% endif %}
+          
         {% for block in section.blocks %}
           <div class="main-menu__main-link">
             <a class="h6 light" href="{{ block.settings.link }}">
+              {% if section.settings.arrow_link_label != blank %}
+                <span class="Maine_Menu_Link_Image"><img src="{{ block.settings.image | img_url : '300x' }}"></span>
+              {% endif %} 
               <span>{{ block.settings.title }}</span>
               {% if block.settings.callout_text != blank %}
                 <span class="body light callout-text">{{ block.settings.callout_text }}</span>
@@ -17,44 +32,59 @@
               <p class="body light subtext">{{ block.settings.subtext }}</p>
             {% endif %}
           </div>
-        {% endfor %}
-        {% if section.settings.arrow_link_label != blank %}
-          <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium">
-            {{ section.settings.arrow_link_label }}
-            {% render 'icon-arrow-right' %}
-          </a>
-        {% endif %}
+       {% endfor %}
       </div>
+      
       <div class="main-menu__secondary-links">
         {% for link in section.settings.secondary_menu.links %}
           <a href="{{ link.url }}" class="sh4 light">{{ link.title }}</a>
         {% endfor %}
         {% if section.settings.show_account %}
           <a href="/account" class="sh4 light account-link">
-            {% render 'icon-account' %}
+            {% render 'icon-account-new' %}
             Account
           </a>
         {% endif %}
       </div>
     </div>
   </div>
+
+  <div class="Main_Menu_Bottom">
+    {% if section.settings.bottom_button_text != blank %}
+      <a href="{{ section.settings.bottom_button_url }}" class="button">{{ section.settings.bottom_button_text }}</a>
+    {% endif %}
+    <ul class="Bottom_List">
+      <li>{{ 'main_menu.free_shipping' | t }}</li>
+      <li>{{ 'main_menu.risk_free' | t }}</li>
+    </ul>
+  </div>
+  
 </div>
 
 {% javascript %}
+
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
     $('.page-overlay').addClass('is-visible');
+    $('.page-overlay').addClass('Menu_Overlay');
+    $('.Mobile_Menu_Close').show();
+    $('.Hamburger_New').hide();
 
     $('.page-overlay').click(function() {
       $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible');
+      $('.page-overlay').removeClass('is-visible Menu_Overlay');
+      $('.Mobile_Menu_Close').hide();
+      $('.Hamburger_New').show();
     });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $('.page-overlay').removeClass('is-visible');
+    $('.page-overlay').removeClass('is-visible Menu_Overlay');
+    $('.Mobile_Menu_Close').hide();
+    $('.Hamburger_New').show();
   }); 
+
 {% endjavascript %}
 
 {% schema %}
@@ -81,6 +111,23 @@
         "id": "show_account",
         "label": "Show Account",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "main_menu_title",
+        "label": "Main Menu Title",
+        "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "bottom_button_text",
+        "label": "Bottom Button Text",
+        "default": "Shop All Products"
+      },
+      {
+        "type": "url",
+        "id": "botom_button_url",
+        "label": "Bottom Button Url"
       }
     ],
     "blocks": [
@@ -107,6 +154,11 @@
             "type": "text",
             "id": "callout_text",
             "label": "Callout Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Add image"
           }
         ]
       }

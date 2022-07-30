@@ -71,7 +71,7 @@
 .shop-slide-out__marquee {
   width: 100%;
   max-width: 100%;
-  padding: 10px 0;
+  padding: 9px 0;
   position: relative;
   overflow-x: hidden;
   display: flex;
@@ -91,6 +91,10 @@
   margin: 0;
   padding: 0 15px;
   font-size: 12px;
+}
+
+.cart-drawer .shop-slide-out__marquee-item {
+  line-height: 1;
 }
 
 /* Items */
