@@ -279,9 +279,13 @@
   align-items: unset !important;
 }
 
+.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label div {
+  margin-bottom: 5px;
+}
+
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg {
-  width: 17px;
-  height: 17px;
+  width: 17px !important;
+  height: 17px !important;
 }
 
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] circle {
