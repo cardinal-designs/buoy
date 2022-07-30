@@ -272,6 +272,12 @@
   gap: 10px 20px;
 }
 
+.chronic-illness-slide-out__second-content .klaviyo-form [role="checkbox"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
 /* .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label {
   padding: 11px 12px;
   border-radius: 50px;
