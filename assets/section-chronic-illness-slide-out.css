@@ -248,6 +248,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow: auto;
 }
 
 .chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form {
