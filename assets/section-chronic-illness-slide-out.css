@@ -283,7 +283,7 @@
   margin-bottom: 5px;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg {
+.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg:first-child {
   width: 17px !important;
   height: 17px !important;
 }
