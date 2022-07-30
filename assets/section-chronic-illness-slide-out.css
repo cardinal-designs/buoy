@@ -272,7 +272,7 @@
   gap: 10px 20px;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label {
+/* .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label {
   padding: 11px 12px;
   border-radius: 50px;
   background: var(--beige-light);
@@ -291,7 +291,7 @@
 .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] circle {
   stroke: var(--charcoal);
   fill: white;
-}
+} */
 
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
   transform: translateX(-100%);
