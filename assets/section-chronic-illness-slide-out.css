@@ -245,13 +245,17 @@
   padding-right: 20px;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button:last-of-type {
+.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button {
   border: 1px solid var(--charcoal) !important;
   transition: 0.2s ease;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button:last-of-type:hover {
+.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button:hover {
   box-shadow: 6px 6px 0 0 var(--charcoal) !important;
+}
+
+.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 input[type=number] button {
+  border: 0 !important;
 }
 
 .chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
