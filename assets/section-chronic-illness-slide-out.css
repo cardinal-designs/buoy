@@ -158,6 +158,15 @@
   justify-content: space-between;
 }
 
+.chronic-illness-slide-out__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: white;
+}
+
 .chronic-illness-slide-out__footer p {
   color: #545759;
   margin-bottom: 14px;
