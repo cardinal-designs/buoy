@@ -208,7 +208,9 @@
         {{ 'okendo-reviews.js' | asset_url | script_tag }}
     {% endif %}
 
-  </head>
+  
+  {% render 'shogun-head' %}
+</head>
 
   <body class="{% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %}">
    <!-- Google Tag Manager (noscript) -->
