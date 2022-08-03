@@ -14,6 +14,10 @@
   font-size: 0px;
 }
 
+.polaroid-video__container iframe {
+ height: 400px;
+}
+
 .polaroid-slider__content {
   padding: 0px 1000px;
   display: inline-flex;
