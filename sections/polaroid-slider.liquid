@@ -10,7 +10,18 @@
               {% if block.settings.image_url != blank %}
               <a href="{{ block.settings.image_url }}">
               {% endif %}
-                {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+                {% if block.settings.video != blank %}
+                  <iframe 
+                    src="{{ block.settings.video | escape }}?background=1&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen" 
+                    allowfullscreen="" 
+                    data-fluidvids="loaded"
+                  >
+                  </iframe>
+                {% else %}             
+                  {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
+                {% endif %}
               {% if block.settings.image_url != blank %}
               </a>
               {% endif %}
@@ -38,6 +49,15 @@
         "type": "block",
         "name": "Block",
         "settings": [
+          {
+            "type": "video_url",
+            "id": "video",
+            "label": "Video",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
+          },
           {
             "type": "image_picker",
             "id": "image",
