@@ -11,6 +11,7 @@
               <a href="{{ block.settings.image_url }}">
               {% endif %}
                 {% if block.settings.video != blank %}
+                  <div>
                   <iframe 
                     src="{{ block.settings.video | escape }}?background=1&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" 
                     frameborder="0" 
@@ -19,6 +20,7 @@
                     data-fluidvids="loaded"
                   >
                   </iframe>
+                  </div>
                 {% else %}             
                   {% include 'lazy-image' image: block.settings.image, classes: 'img-fill' %}
                 {% endif %}
