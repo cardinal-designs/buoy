@@ -3,40 +3,72 @@
     "1659542719aea25423": {
       "type": "hero",
       "settings": {
-        "video_url": "",
-        "mobile_video_url": "",
-        "txt_shadow": false,
-        "title": "",
-        "text": "",
-        "button_label": "",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e8858d67253a4c10a19e054620533e63.mp4",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/651377dfaf7b43d082f7246ff7027592.mp4",
+        "txt_shadow": true,
+        "title": "5 reasons why you need Buoy on your next night out",
+        "text": "The hangover killer taking the internet by storm.",
+        "button_label": "Hydrate While You Dehydrate",
         "button_link": ""
-      }
-    },
-    "1659542774aea53169": {
-      "type": "value-props",
-      "settings": {
-        "text": "",
-        "bold_text": "",
-        "no_background": false,
-        "add_top_padding": false,
-        "add_bottom_padding": false
-      }
-    },
-    "1659542852719bb2a4": {
-      "type": "to-be-seen-testimonials",
-      "settings": {
-        "background": "",
-        "color": ""
       }
     },
     "165954300060c5939c": {
       "type": "product-sticky-scroll",
+      "blocks": {
+        "8a75cc63-184a-419d-9814-d0d479cb7e51": {
+          "type": "text_block",
+          "settings": {
+            "title": "Helps prevent hangovers",
+            "text": "DD",
+            "subtext": ""
+          }
+        },
+        "ddd408e3-8925-4e79-b229-04aedc9f8a78": {
+          "type": "text_block",
+          "settings": {
+            "title": "Purposefully unflavored",
+            "text": "",
+            "subtext": ""
+          }
+        },
+        "24f7c2bb-2e08-4377-b852-030725570d48": {
+          "type": "text_block",
+          "settings": {
+            "title": "Blends with any drink",
+            "text": "",
+            "subtext": ""
+          }
+        },
+        "bbd0c88f-1130-490a-974e-e1228c478570": {
+          "type": "text_block",
+          "settings": {
+            "title": "No sugar, sweeteners or calories",
+            "text": "",
+            "subtext": ""
+          }
+        },
+        "b69608d7-4c83-45cf-807b-3e6b48f20ff2": {
+          "type": "text_block",
+          "settings": {
+            "title": "Free Shipping & Money-Back Guarantee",
+            "text": "",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "8a75cc63-184a-419d-9814-d0d479cb7e51",
+        "ddd408e3-8925-4e79-b229-04aedc9f8a78",
+        "24f7c2bb-2e08-4377-b852-030725570d48",
+        "bbd0c88f-1130-490a-974e-e1228c478570",
+        "b69608d7-4c83-45cf-807b-3e6b48f20ff2"
+      ],
       "settings": {
-        "add_gradient": false,
-        "video_url": "",
-        "title": "",
+        "add_gradient": true,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8308a1f5a1c94866af6b946978192caa.mp4",
+        "title": "Hydrate while you dehydrate",
         "text": "",
-        "button_label": "",
+        "button_label": "Try Buoy",
         "button_link": "",
         "value_title": "",
         "value_check1": "",
@@ -45,10 +77,51 @@
         "value_check4": ""
       }
     },
+    "1659542852719bb2a4": {
+      "type": "to-be-seen-testimonials",
+      "blocks": {
+        "bc374647-00f4-4b5d-abfe-af371177afa6": {
+          "type": "block",
+          "settings": {
+            "testimonial": "gg",
+            "author": "ff"
+          }
+        }
+      },
+      "block_order": [
+        "bc374647-00f4-4b5d-abfe-af371177afa6"
+      ],
+      "settings": {
+        "background": "",
+        "color": ""
+      }
+    },
+    "1659542774aea53169": {
+      "type": "value-props",
+      "blocks": {
+        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "",
+            "text": "It Prevents Hangovers"
+          }
+        }
+      },
+      "block_order": [
+        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8"
+      ],
+      "settings": {
+        "text": "Hydrate While You Dehydrate",
+        "bold_text": "",
+        "no_background": false,
+        "add_top_padding": false,
+        "add_bottom_padding": false
+      }
+    },
     "1659564169757272eb": {
       "type": "press-logos",
       "settings": {
-        "background": "#ECD8C5",
+        "background": "#ecd8c5",
         "add_border": false
       }
     },
@@ -69,9 +142,9 @@
   },
   "order": [
     "1659542719aea25423",
-    "1659542774aea53169",
-    "1659542852719bb2a4",
     "165954300060c5939c",
+    "1659542852719bb2a4",
+    "1659542774aea53169",
     "1659564169757272eb",
     "1659564343ed533038",
     "1659564367703aea1a"
