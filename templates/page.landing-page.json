@@ -77,6 +77,60 @@
         "value_check4": ""
       }
     },
+    "1659542774aea53169": {
+      "type": "value-props",
+      "blocks": {
+        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🧪",
+            "text": "Third Party Tested"
+          }
+        },
+        "ecfda7e1-5f65-4c4e-bdb8-17033d59f294": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "💦",
+            "text": "Liquid Is Better"
+          }
+        },
+        "eb118982-b4c4-4a8e-bcce-b61ea37d621d": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "👩‍🔬",
+            "text": "Whitepaper Published"
+          }
+        },
+        "5a30f7e7-a5e5-4ea0-99a8-27895274e048": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "✅",
+            "text": "Major Allergen Free"
+          }
+        },
+        "aff3decc-9b5b-4400-81de-a0f21d87e971": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🌱",
+            "text": "Vegan & NonGMO"
+          }
+        }
+      },
+      "block_order": [
+        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8",
+        "ecfda7e1-5f65-4c4e-bdb8-17033d59f294",
+        "eb118982-b4c4-4a8e-bcce-b61ea37d621d",
+        "5a30f7e7-a5e5-4ea0-99a8-27895274e048",
+        "aff3decc-9b5b-4400-81de-a0f21d87e971"
+      ],
+      "settings": {
+        "text": "Made with the highest standards",
+        "bold_text": "Scroll to see how we're setting new standards.",
+        "no_background": true,
+        "add_top_padding": false,
+        "add_bottom_padding": false
+      }
+    },
     "1659542852719bb2a4": {
       "type": "to-be-seen-testimonials",
       "blocks": {
@@ -94,28 +148,6 @@
       "settings": {
         "background": "",
         "color": ""
-      }
-    },
-    "1659542774aea53169": {
-      "type": "value-props",
-      "blocks": {
-        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8": {
-          "type": "value_prop",
-          "settings": {
-            "emoji": "",
-            "text": "It Prevents Hangovers"
-          }
-        }
-      },
-      "block_order": [
-        "bf8d6f58-dd27-4dbe-bcd0-da2f4d9bdaf8"
-      ],
-      "settings": {
-        "text": "Hydrate While You Dehydrate",
-        "bold_text": "",
-        "no_background": false,
-        "add_top_padding": false,
-        "add_bottom_padding": false
       }
     },
     "1659564169757272eb": {
@@ -143,8 +175,8 @@
   "order": [
     "1659542719aea25423",
     "165954300060c5939c",
-    "1659542852719bb2a4",
     "1659542774aea53169",
+    "1659542852719bb2a4",
     "1659564169757272eb",
     "1659564343ed533038",
     "1659564367703aea1a"
