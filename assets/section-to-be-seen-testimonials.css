@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 768px) {
   .to-be-seen-testimonials .slick-dots {
-    margin: -30px 0 40px;
+    margin: 30px 0 40px;
   }
 
   .to-be-seen-testimonials__container {
@@ -97,7 +97,7 @@
   }
   
   .to-be-seen-testimonials .slick-list {
-    top: -60px;
+    top: 50px;
     overflow: hidden !important;
   }
   
