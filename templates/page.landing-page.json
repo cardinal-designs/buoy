@@ -6,7 +6,7 @@
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e8858d67253a4c10a19e054620533e63.mp4",
         "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/651377dfaf7b43d082f7246ff7027592.mp4",
         "txt_shadow": true,
-        "title": "5 reasons why you need Buoy on your next night out",
+        "title": "Lorem Ipsum",
         "text": "The hangover killer taking the internet by storm.",
         "button_label": "Hydrate While You Dehydrate",
         "button_link": ""
@@ -164,11 +164,51 @@
         "text": ""
       }
     },
+    "16602323734f0819e2": {
+      "type": "hero",
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e8858d67253a4c10a19e054620533e63.mp4",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/651377dfaf7b43d082f7246ff7027592.mp4",
+        "txt_shadow": false,
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "1659564367703aea1a": {
       "type": "faq",
+      "blocks": {
+        "b29a9fd4-335b-44c2-96e4-9002362aa916": {
+          "type": "faq_item",
+          "settings": {
+            "title": "FAQ question 1",
+            "answer": "FAQ answer 1"
+          }
+        },
+        "640d97f9-e5b8-425a-b1b8-b43b63b8b934": {
+          "type": "faq_item",
+          "settings": {
+            "title": "FAQ question 2",
+            "answer": "FAQ answer 2"
+          }
+        },
+        "5bd6459d-5347-4804-805b-f6b500b04674": {
+          "type": "faq_item",
+          "settings": {
+            "title": "FAQ question 3",
+            "answer": "FAQ answer 3"
+          }
+        }
+      },
+      "block_order": [
+        "b29a9fd4-335b-44c2-96e4-9002362aa916",
+        "640d97f9-e5b8-425a-b1b8-b43b63b8b934",
+        "5bd6459d-5347-4804-805b-f6b500b04674"
+      ],
       "settings": {
-        "title": "",
-        "text": ""
+        "title": "FAQ",
+        "text": "FAQ subtitle"
       }
     },
     "16602320909d214a3f": {
@@ -341,6 +381,7 @@
     "1659542852719bb2a4",
     "1659564169757272eb",
     "1659564343ed533038",
+    "16602323734f0819e2",
     "1659564367703aea1a",
     "16602320909d214a3f",
     "1660232095ccc2a74d",
