@@ -14,6 +14,38 @@
     },
     "16602327178c6a50be": {
       "type": "text-list",
+      "blocks": {
+        "46b5b1c9-e432-479e-9d8c-128f8d8cdfee": {
+          "type": "list_check",
+          "settings": {
+            "text": "No Sugar"
+          }
+        },
+        "87e1eb08-e217-47be-b949-7e4f95aed134": {
+          "type": "list_check",
+          "settings": {
+            "text": "No Calories"
+          }
+        },
+        "4327a52c-2f42-4e5e-9d46-c80642e02fc5": {
+          "type": "list_check",
+          "settings": {
+            "text": "No Sweeteners"
+          }
+        },
+        "1f033028-844f-403d-89c5-a149341061b4": {
+          "type": "list_check",
+          "settings": {
+            "text": "No Artificial Flavor"
+          }
+        }
+      },
+      "block_order": [
+        "46b5b1c9-e432-479e-9d8c-128f8d8cdfee",
+        "87e1eb08-e217-47be-b949-7e4f95aed134",
+        "4327a52c-2f42-4e5e-9d46-c80642e02fc5",
+        "1f033028-844f-403d-89c5-a149341061b4"
+      ],
       "settings": {
         "text": "Add electrolytes, 87 ionic <span class=\"gradient animated-text wave\">trace minerals<\/span>, vitamins and antioxidants to any beverage—dissolves instantly and evenly in every drink.",
         "button_label": "",
