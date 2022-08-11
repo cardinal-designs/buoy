@@ -6,7 +6,7 @@
       <h6 class="light">{{ section.settings.text }}</h6>
     </div>
     {% if section.blocks.size > 1 %}
-      <div class="text-list__list">
+      <div class="text-list__list {% if section.settings.show_divider != true %}show-mobile{% endif %}">
         {% for block in section.blocks %}
           {% if section.settings.show_divider != true %}
             {% render 'icon-checkmark' %}&nbsp;<p class="body medium">{{ block.settings.text }}</p>
