@@ -8,6 +8,7 @@
     {% if section.blocks.size > 1 %}
       <div class="text-list__list">
         {% for block in section.blocks %}
+          {{ block.type | json }}
           {% if block.type == 'list_item' %}
           <p class="body medium">{{ block.settings.text }}
             {% if section.settings.show_divider %}
