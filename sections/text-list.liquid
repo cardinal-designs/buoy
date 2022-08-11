@@ -9,14 +9,10 @@
       <div class="text-list__list">
         {% for block in section.blocks %}
           {% if section.settings.show_divider != true %}
-          {% render 'icon-checkmark' %}
+          {% render 'icon-checkmark' %}<p class="body medium">{{ block.settings.text }}</p>
+            {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
+             <p class="body medium">{{ block.settings.text }}</p>
           {% endif %}
-          <p class="body medium">{{ block.settings.text }}
-            {% if section.settings.show_divider %}
-              {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
-             
-            {% endif %}
-          </p>
         {% endfor %}
       </div>
     {% endif %}
