@@ -10,6 +10,8 @@
         {% for block in section.blocks %}
           {% if section.settings.show_divider != true %}
           {% render 'icon-checkmark' %}<p class="body medium">{{ block.settings.text }}</p>
+          {% unless forloop.last %}&nbsp;&nbsp;&nbsp;{% endunless %}
+        {% else %}
             {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
              <p class="body medium">{{ block.settings.text }}</p>
           {% endif %}
