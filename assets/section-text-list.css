@@ -40,4 +40,8 @@
   .text-list__list {
     display: none;
   }
+
+  .text-list__list .show-mobile {
+    display: flex;
+  }
 }
