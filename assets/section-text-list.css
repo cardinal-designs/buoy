@@ -42,6 +42,11 @@
   }
 
   .text-list__list.show-mobile {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text-list__list.show-mobile p {
+    text-align: left;
   }
 }
