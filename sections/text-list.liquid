@@ -8,14 +8,11 @@
     {% if section.blocks.size > 1 %}
       <div class="text-list__list">
         {% for block in section.blocks %}
-          {{ block.type | json }}
-          {% if block.type == 'list_item' %}
           <p class="body medium">{{ block.settings.text }}
             {% if section.settings.show_divider %}
               {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
             {% endif %}
           </p>
-        {% endif %}
         {% endfor %}
       </div>
     {% endif %}
@@ -56,17 +53,6 @@
       {
         "type": "list_item",
         "name": "List Item",
-        "settings": [
-          {
-            "type": "text",
-            "id": "text",
-            "label": "Text"
-          }
-        ]
-      },
-      {
-        "type": "list_check",
-        "name": "List Check",
         "settings": [
           {
             "type": "text",
