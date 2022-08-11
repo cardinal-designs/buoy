@@ -41,7 +41,7 @@
     display: none;
   }
 
-  .text-list__list .show-mobile {
+  .text-list__list.show-mobile {
     display: flex;
   }
 }
