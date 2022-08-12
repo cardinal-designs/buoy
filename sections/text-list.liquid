@@ -6,13 +6,16 @@
       <h6 class="light">{{ section.settings.text }}</h6>
     </div>
     {% if section.blocks.size > 1 %}
-      <div class="text-list__list">
+      <div class="text-list__list {% if section.settings.show_divider != true %}show-mobile{% endif %}">
         {% for block in section.blocks %}
-          <p class="body medium">{{ block.settings.text }}
-            {% if section.settings.show_divider %}
-              {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
-            {% endif %}
-          </p>
+          {% if section.settings.show_divider != true %}
+            <p class="body medium">
+            {% render 'icon-checkmark' %}&nbsp;{{ block.settings.text }}
+            {% unless forloop.last %}&nbsp;&nbsp;&nbsp;&nbsp;{% endunless %}</p>
+          {% else %}
+            <p class="body medium">{{ block.settings.text }}</p>
+            {% unless forloop.last %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% endunless %}
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
