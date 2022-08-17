@@ -41,7 +41,7 @@
   >
   {% endif %}
   <div class="page-width">
-    <div class="hero__container">
+    <div class="hero__container {% if section.settings.mobile_text_location == 'top' %}text-top{% else %}text-bottom{% endif %}">
       <span>
         {% if page.handle == 'shop-wholesale' %}
           <h2 class="about-hero__text image-text-blocks__title h1">{{ section.settings.title }}<span>{{ section.settings.title }}</span></h2>
@@ -120,6 +120,22 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "mobile_text_location",
+      "label": "Mobile Text Location",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
     }
   ],
   "presets": [
