@@ -58,13 +58,16 @@
 .faq__content .sh4 {
   margin: -6px 0 30px;
 }
+..faq-video__container {
+  width: 50%;
+  margin: 0 auto 65px;
+}
 
-.faq-video__container {
+.faq-video {
   width: 100%;
   padding-bottom: 100%;
   position: relative;
   border: 1px solid var(--charcoal);
-  margin-bottom: 65px;
 }
 
 @media screen and (max-width: 768px) {
