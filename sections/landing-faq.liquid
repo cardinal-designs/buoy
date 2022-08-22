@@ -2,7 +2,7 @@
 
 <div class="faq-section">
   <div class="page-width">
-    {% unless section.settings.video_url != blank and section.settings.image != blank %}
+    {% unless section.settings.video_url == blank and section.settings.image == blank %}
     <div class="faq-video__container">
     {% if section.settings.video_url != blank %}
       <video autoplay loop muted playsinline class="img-fill">
