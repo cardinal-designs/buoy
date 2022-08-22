@@ -2,6 +2,28 @@
 
 <div class="faq-section">
   <div class="page-width">
+    <div class="faq-video__container">
+    {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="img-fill">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    {% elsif section.settings.image != blank %}
+      <img
+        srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+          {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+          {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+          {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+        src="{{ section.settings.image | img_url: '533x' }}"
+        sizes="(min-width: {{ section.page_width }}px) {{ section.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+        class="motion-reduce img-fill"
+      >
+    {% endif %}
+    </div>
     <div class="faq-section__container">
       <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
