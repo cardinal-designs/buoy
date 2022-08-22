@@ -2,6 +2,7 @@
 
 <div class="faq-section">
   <div class="page-width">
+    {% unless section.settings.video_url != blank and section.settings.image != blank %}
     <div class="faq-video__container">
     {% if section.settings.video_url != blank %}
       <video autoplay loop muted playsinline class="img-fill">
@@ -24,6 +25,7 @@
       >
     {% endif %}
     </div>
+    {% endunless %}
     <div class="faq-section__container">
       <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
