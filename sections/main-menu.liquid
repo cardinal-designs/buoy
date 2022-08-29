@@ -51,7 +51,7 @@
 
   <div class="Main_Menu_Bottom">
     {% if section.settings.bottom_button_text != blank %}
-      <a href="{{ section.settings.bottom_button_url }}" class="button">{{ section.settings.bottom_button_text }}</a>
+      <a href="{% if section.settings.bottom_button_url != blank %}{{ section.settings.bottom_button_url }}{% else %}#{% endif %}" class="button">{{ section.settings.bottom_button_text }}</a>
     {% endif %}
     <ul class="Bottom_List">
       <li>{{ 'main_menu.free_shipping' | t }}</li>
