@@ -12,8 +12,14 @@
   border-bottom: 1px solid var(--charcoal);
 }
 
-.newsletter-footer__text h4 {
+.newsletter-footer__text .h4 {
   margin: 0 0 25px;
+  font-family: inter,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: 1.2;
 }
 
 .newsletter-footer__text p {
