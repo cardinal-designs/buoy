@@ -44,7 +44,8 @@
       </a>
       
       <div class="card__buttons hide-mobile">
-        <a href="{{ product_card_product.url | default: '#' }}" class="button learn-more">Learn More</a>
+        <a href="{{ product_card_product.url | default: '#' }}" class="button learn-more">
+          <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
       </div>
       
     </div>
