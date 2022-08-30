@@ -3,7 +3,10 @@
 <div class="text-list">
   <div class="page-width">
     <div class="text-list__container">
+      <span class="h6">{{ section.settings.text }}</span>
+      {% comment %}
       <h6 class="light">{{ section.settings.text }}</h6>
+      {% endcomment %}
     </div>
     {% if section.blocks.size > 1 %}
       <div class="text-list__list {% if section.settings.show_divider != true %}show-mobile{% endif %}">
