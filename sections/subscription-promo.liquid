@@ -1,3 +1,4 @@
+
 {{ 'section-subscription-promo.css' | asset_url | stylesheet_tag }}
 
 <div class="subscription-promo">
@@ -29,7 +30,7 @@
         <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
       {% endif %}
       {% if section.settings.text_link_label != blank %}
-        <a href="{{ section.settings.text_link }}" class="body medium arrow-link">{{ section.settings.text_link_label }} {% render 'icon-arrow-right' %}</a>
+        <a href="{{ section.settings.text_link }}" class="body medium arrow-link"><span class="visually-hidden">{{ shop.name }}</span>{{ section.settings.text_link_label }} {% render 'icon-arrow-right' %}</a>
       {% endif %}
     </div>
   </div>

@@ -1,3 +1,4 @@
+
 {{ 'section-product-quick-add.css' | asset_url | stylesheet_tag }}
 
 {% assign current_product = all_products[section.settings.product] %}
@@ -10,7 +11,7 @@
       <div class="product-quick-add__content">
         <h2 class="h4 hide-mobile">{{ section.settings.title }}</h2>
         <p class="h6 hide-mobile">{{ section.settings.subtitle }}</p>
-        <img class="hide-desktop" src="{{ section.settings.mobile_image | img_url: 'master' }}" />
+        <img alt="{{ section.settings.mobile_image.alt }}" class="hide-desktop" src="{{ section.settings.mobile_image | img_url: 'master' }}" />
         <p class="h6 hide-desktop">{{ section.settings.subtitle }}</p>
         <p class="sh4 light">{{ section.settings.text }}</p>
         <div class="product-quick-add__form">

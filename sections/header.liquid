@@ -335,6 +335,7 @@
       <div class="header__heading">
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header-icon header-icon--logo">
+          <span class="visually-hidden">{{ shop.name }}</span>
           <div class="header__logo-wrapper">
             {%- if section.settings.svg_logo != blank -%}
               <div class="header__svg-logo" style="max-width: {{ section.settings.logo_width }}">
