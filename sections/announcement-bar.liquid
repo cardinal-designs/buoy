@@ -16,12 +16,15 @@
 </div>
 
 {% if section.settings.hide_mobile %}
+<style>
 @media screen and (max-width: 768px) {
   #shopify-section-announcement-bar {
     display: none;
   }
 }
+</style>
 {% endif %}
+
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
