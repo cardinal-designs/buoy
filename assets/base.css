@@ -1962,13 +1962,13 @@ header-container {
   border-color: transparent;
 }
 
-#MainContent {
+.template-index #MainContent {
   margin-top: -81px;
 }
 
 
 @media screen and (max-width: 768px) {
-  #MainContent {
+  .template-index #MainContent {
     margin-top: -56px;
   }
 }
