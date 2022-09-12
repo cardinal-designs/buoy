@@ -1962,6 +1962,10 @@ header-container {
   border-color: transparent;
 }
 
+.page-chronic-illness-support .header--transparent:not(.header--scrolled) .header-wrapper {
+  background-color: #F8F1EB;
+}
+
 .template-index #MainContent {
   margin-top: -81px;
 }
