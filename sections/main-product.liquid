@@ -225,54 +225,58 @@
           <div class="faq-section">
             <div class="faq-section__container">
               {% if product.metafields.my_fields.highlights_tab != blank %}
-              <div class="faq__item">
-                <button class="faq__header">
-                  <p class="sh4 medium">Details</p>
-                  {% render 'icon-caret' %}
-                </button>
-                <div class="faq__content">
-                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.highlights_tab }}</p>
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Details</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.highlights_tab }}</p>
+                  </div>
                 </div>
-              </div>
               {% endif %}
+              
               {% if product.metafields.my_fields.ingredients_tab != blank %}
-              <div class="faq__item">
-                <button class="faq__header">
-                  <p class="sh4 medium">Ingredients</p>
-                  {% render 'icon-caret' %}
-                </button>
-                <div class="faq__content">
-                  <p class="sh4 single_line_text_field">
-                    {{ product.metafields.my_fields.ingredients_tab }}
-                    {% if product.metafields.my_fields.nutrition_label != blank %}
-                    <a href="{{ product.metafields.my_fields.nutrition_label }}" target="_blank" class="tabs-label body medium">Full Ingredients List</a>
-                    {% endif %}
-                  </p>
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Ingredients</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">
+                      {{ product.metafields.my_fields.ingredients_tab }}
+                      {% if product.metafields.my_fields.nutrition_label != blank %}
+                      <a href="{{ product.metafields.my_fields.nutrition_label }}" target="_blank" class="tabs-label body medium">Full Ingredients List</a>
+                      {% endif %}
+                    </p>
+                  </div>
                 </div>
-              </div>
               {% endif %}
+              
               {% if product.metafields.my_fields.greatfor_tab != blank %}
-              <div class="faq__item">
-                <button class="faq__header">
-                  <p class="sh4 medium">Great For</p>
-                  {% render 'icon-caret' %}
-                </button>
-                <div class="faq__content">
-                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.greatfor_tab }}</p>
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Great For</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.greatfor_tab }}</p>
+                  </div>
                 </div>
-              </div>
               {% endif %}
+              
               {% if product.metafields.my_fields.sustainability_tab != blank %}
-              <div class="faq__item">
-                <button class="faq__header">
-                  <p class="sh4 medium">Sustainability</p>
-                  {% render 'icon-caret' %}
-                </button>
-                <div class="faq__content">
-                  <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.sustainability_tab }}</p>
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Sustainability</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.sustainability_tab }}</p>
+                  </div>
                 </div>
-              </div>
               {% endif %}
+              
             </div>
           </div>
         </div>
