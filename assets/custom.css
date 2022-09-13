@@ -7,7 +7,8 @@
     font-family: inter,sans-serif;
 }
 
-.pdp-faq .faq__content ul {
+.pdp-faq .faq__content ul,
+.pdp-faq .faq__content ol {
   padding: 0;
   margin: 0;
 }
