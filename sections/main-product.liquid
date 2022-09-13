@@ -236,6 +236,30 @@
                   </div>
                 </div>
               {% endif %}   
+
+              {% if product.metafields.my_fields.new_ingredients_tab != blank %}
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Ingredients</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.new_ingredients_tab }}</p>
+                  </div>
+                </div>
+              {% endif %} 
+
+              {% if product.metafields.my_fields.how_to_use != blank %}
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Ingredients</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.how_to_use }}</p>
+                  </div>
+                </div>
+              {% endif %} 
               
               {% if product.metafields.my_fields.highlights_tab != blank %}
                 <div class="faq__item">
