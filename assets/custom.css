@@ -139,5 +139,18 @@ input[type="radio"]:checked::before {
 }
 
 .One_Time_Info .one_sub_text {
+  color: #1F2322;
   margin: 0;
+  font-size: 14px !important;
+}
+
+
+.One_Time_Info > img {
+  margin-right: 14px;
+}
+
+.one_sub_text_new {
+  margin: 0;
+  color: #545759;
+  font-weight: 300;
 }
