@@ -142,6 +142,8 @@ input[type="radio"]:checked::before {
   color: #1F2322;
   margin: 0;
   font-size: 14px !important;
+  line-height: normal;
+  margin-bottom: 6px;
 }
 
 
