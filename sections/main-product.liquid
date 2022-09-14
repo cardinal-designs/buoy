@@ -349,21 +349,23 @@
             <a href="{{ section.settings.testimonial_button_url }}" class="All_Reviews">{{ section.settings.testimonial_button_text }}</a>
           {% endif %}
         </div>
-        
-        <div class="product__links">
-          {% if section.settings.shop_more_text1 != blank %}
-          <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
-            {{ section.settings.shop_more_text1 }}
-            {% render 'icon-arrow-right' %}
-          </a>
-          {% endif %}
-          {% if section.settings.shop_more_text2 != blank %}
-          <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
-            {{ section.settings.shop_more_text2 }}
-            {% render 'icon-arrow-right' %}
-          </a>
-          {% endif %}
-        </div>
+
+        {% if section.settings.shop_more_text1 != blank or section.settings.shop_more_text2 != blank %}
+          <div class="product__links">
+            {% if section.settings.shop_more_text1 != blank %}
+            <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+              {{ section.settings.shop_more_text1 }}
+              {% render 'icon-arrow-right' %}
+            </a>
+            {% endif %}
+            {% if section.settings.shop_more_text2 != blank %}
+            <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+              {{ section.settings.shop_more_text2 }}
+              {% render 'icon-arrow-right' %}
+            </a>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     </div>
     <div class="product__media-wrapper no-scrollbar drag-scroll">
