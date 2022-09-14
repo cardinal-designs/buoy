@@ -41,3 +41,29 @@
 .Testimonials_Wrapper {
   text-align: center;
 }
+
+.Testimonials_Main .slick-dots {
+  padding: 0;
+  margin: 0;
+}
+
+.Testimonials_Main .slick-dots li {
+  display: inline-block;
+}
+
+.Testimonials_Main .slick-dots li button {
+  font-size: 0;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.Testimonials_Main .slick-dots li button::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #000;
+  border-radius: 50%;
+}
