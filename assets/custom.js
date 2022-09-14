@@ -1,6 +1,7 @@
 $('docuemnt').ready({
   $('.Testimonials_Main').slick({
     dots: true,
+    arrows: false,
     infinite: false,
     speed: 300,
     slidesToShow: 4,
