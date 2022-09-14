@@ -329,17 +329,17 @@
           </div>
         </div>
 
-        <div class="Testimonails_Wrapper">
+        <div class="Testimonials_Main">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'testimonials' -%}
-                 <div class="Testimonails_Wrapper">
+                 <div class="Testimonials_Wrapper">
                    {% if block.settings.testimonial_text != blank %}
-                     <h4 class="Testimonails_Title">{{ block.settings.testimonial_text }}</h4>
+                     <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
                    {% endif %}
               
                    {% if block.settings.testimonial_text != blank %}
-                     <span class="Testimonails_Author">{{ block.settings.testimonial_author }}</span>
+                     <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
                    {% endif %}
                  </div>
             {%- endcase -%}
