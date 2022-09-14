@@ -72,6 +72,10 @@
   top: 0;
 }
 
+.Testimonials_Main .slick-dots li.slick-active:before {
+  background: #fff;
+}
+
 .Testimonials_Main {
   margin-top: 90px;
 }
