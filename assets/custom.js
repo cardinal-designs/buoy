@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $('.Testimonials_Main').slick({
+  $('.Testimonials_Slider').slick({
     dots: true,
     arrows: false,
     infinite: false,
