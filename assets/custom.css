@@ -116,7 +116,7 @@
 
 .product-form input[type=radio]:checked + label .one_sub_text_new,
 .product-form input[type=radio]:checked + label .one_sub_text {
-  display: none;
+  display: block;
 }
 
 .product-form input[type="radio"] {
