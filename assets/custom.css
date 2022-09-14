@@ -114,7 +114,12 @@
   display: none;
 }
 
-input[type=radio]:checked + label .one_sub_text_new,
-input[type=radio]:checked + label .one_sub_text {
+.product-form input[type=radio]:checked + label .one_sub_text_new,
+.product-form input[type=radio]:checked + label .one_sub_text {
   display: none;
+}
+
+.product-form input[type="radio"] {
+  height: 20px;
+  width: 20px;
 }
