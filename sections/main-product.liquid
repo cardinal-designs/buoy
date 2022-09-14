@@ -344,6 +344,10 @@
                  </div>
             {%- endcase -%}
           {%- endfor -%}
+          
+          {% if section.settings.testimonial_button_text != blank %}
+            <a href="{{ section.settings.testimonial_button_url }}" class="All_Reviews">{{ section.settings.testimonial_button_text }}</a>
+          {% endif %}
         </div>
         
         <div class="product__links">
