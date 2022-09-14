@@ -1,5 +1,5 @@
 $('docuemnt').ready({
-  $('.responsive').slick({
+  $('.Testimonials_Main').slick({
     dots: true,
     infinite: false,
     speed: 300,
