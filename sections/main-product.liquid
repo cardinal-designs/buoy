@@ -334,12 +334,12 @@
             {%- case block.type -%}
               {%- when 'testimonials' -%}
                  <div class="Testimonials_Wrapper">
-                   {% if section.settings.testimonial_text != blank %}
-                     <h4 class="Testimonials_Title">{{ section.settings.testimonial_text }}</h4>
+                   {% if block.settings.testimonial_text != blank %}
+                     <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
                    {% endif %}
               
-                   {% if section.settings.testimonial_text != blank %}
-                     <span class="Testimonials_Author">{{ section.settings.testimonial_author }}</span>
+                   {% if block.settings.testimonial_text != blank %}
+                     <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
                    {% endif %}
                  </div>
             {%- endcase -%}
