@@ -108,3 +108,12 @@
   border-radius: 17px;
   padding: 20px;
 }
+
+.one_sub_text_new,
+.one_sub_text {
+  display: none;
+}
+
+input[type="radio"]:checked {
+  display: none;
+}
