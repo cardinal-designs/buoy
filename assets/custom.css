@@ -109,16 +109,6 @@
   padding: 20px;
 }
 
-.one_sub_text_new,
-.one_sub_text {
-  display: none;
-}
-
-.product-form input[type=radio]:checked + label .one_sub_text_new,
-.product-form input[type=radio]:checked + label .one_sub_text {
-  display: block;
-}
-
 .product-form input[type="radio"] {
   height: 20px;
   width: 20px;
@@ -134,9 +124,13 @@ input[type="radio"]:checked::before {
 }
 
 .One_Time_Info {
-  display: flex;
+  display: none;
   align-items: center;
   margin-top: 20px;
+}
+
+.product-form input[type=radio]:checked + label .One_Time_Info,
+  display: flex;
 }
 
 .One_Time_Info .one_sub_text {
