@@ -329,6 +329,23 @@
           </div>
         </div>
 
+        <div class="Testimonails_Wrapper">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'testimonails' -%}
+                 <div class="Testimonails_Wrapper">
+                   {% if block.settings.testimonial_text != blank %}
+                     <h4 class="Testimonails_Title">{{ block.settings.testimonial_text }}</h4>
+                   {% endif %}
+              
+                   {% if block.settings.testimonial_text != blank %}
+                     <span class="Testimonails_Author">{{ block.settings.testimonial_author }}</span>
+                   {% endif %}
+                 </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        
         <div class="product__links">
           {% if section.settings.shop_more_text1 != blank %}
           <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
