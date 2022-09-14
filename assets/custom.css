@@ -114,7 +114,7 @@
   display: none;
 }
 
-input[type="radio"]:checked + label .one_sub_text_new,
-input[type="radio"]:checked + label .one_sub_text {
+input[type=radio]:checked + label .one_sub_text_new,
+input[type=radio]:checked + label .one_sub_text {
   display: none;
 }
