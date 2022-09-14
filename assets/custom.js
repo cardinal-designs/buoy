@@ -1,4 +1,4 @@
-$('document').ready({
+$( document ).ready(function() {
   $('.Testimonials_Main').slick({
     dots: true,
     arrows: false,
