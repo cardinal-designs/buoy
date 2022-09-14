@@ -164,3 +164,9 @@ input[type="radio"]:checked::before {
   color: #545759 !important;
   font-weight: lighter;
 }
+
+.subscribe-item_info img {
+  width: 60px;
+  height: 60px;
+  margin-right: 14px;
+}
