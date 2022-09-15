@@ -448,9 +448,9 @@
            {% for refer_product in product.metafields.my_fields.badges_image.value %}
              {% assign badges_index = forloop.index %}
              {% assign main_index = forloop.parentloop.index %}
-             {{ badges_index }}--{{ main_index }}
-<!--           <img src="{{ refer_product | img_url:'master' }}"/> -->
-           
+             {% if badges_index == main_index %}
+          <img src="{{ refer_product | img_url:'master' }}"/>
+           {% endif %}
             {% endfor %}
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
