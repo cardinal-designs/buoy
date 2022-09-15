@@ -309,3 +309,8 @@ input[type="radio"]:checked::before {
 .pdp-faq .faq__content .sh4 {
   line-height: normal;
 }
+
+.pdp-faq .faq__content ol li,
+.pdp-faq .faq__content ul li {
+  margin-bottom: 10px;
+}
