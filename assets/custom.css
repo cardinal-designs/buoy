@@ -283,3 +283,8 @@ input[type="radio"]:checked::before {
 .pdp-faq .faq__content ul li {
   font-size: 14px;
 }
+
+.pdp-faq .faq__header svg {
+  width: 17px;
+  color: #545759;
+}
