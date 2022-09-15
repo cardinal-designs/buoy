@@ -512,6 +512,11 @@ input[type="radio"]:checked::before {
   .Usp_Wrapper ul {
     flex-wrap: wrap;
   }
+
+  .Usp_Wrapper ul li:last-child {
+    width: 100%;
+    text-align: center;
+  }
   
 }
 
