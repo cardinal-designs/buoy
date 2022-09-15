@@ -446,6 +446,8 @@
             {% endif %}
 
            {% for refer_product in product.metafields.my_fields.badges_image.value %}
+             {% assign badges_index = forloop.indx %}
+             {{ badges_index }}-badges_index
 <!--           <img src="{{ refer_product | img_url:'master' }}"/> -->
            
             {% endfor %}
