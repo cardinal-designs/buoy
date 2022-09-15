@@ -440,8 +440,10 @@ input[type="radio"]:checked::before {
     width: 30px;
   }
 
-  .product__media-list {
-    padding: 0 989px;
-  }
+}
 
+@media screen and (max-width: 768px) {
+
+
+  
 }
