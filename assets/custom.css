@@ -452,6 +452,10 @@ input[type="radio"]:checked::before {
   transform: translate(5px);
 }
 
+.okeReviews-reviewsSummary-ratingCount span {
+  font-weight: 300 !important;
+}
+
 @media screen and (max-width: 1199px) {
 
   .template-product .product-section .page-width {
