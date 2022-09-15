@@ -451,7 +451,9 @@
              {% assign badges_index = forloop.index %}
              {% assign main_index = forloop.parentloop.index %}
              {% if badges_index == main_index %}
+               <div class="product-spinner">
                 <img src="{{ refer_product | img_url:'master' }}"/>
+               </div>
            {% endif %}
             {% endfor %}
             
