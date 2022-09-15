@@ -506,6 +506,7 @@ input[type="radio"]:checked::before {
 
   .Usp_Wrapper ul li {
     font-size: 14px;
+    margin-bottom: 4px;
     width: 50%;
   }
 
@@ -516,6 +517,7 @@ input[type="radio"]:checked::before {
   .Usp_Wrapper ul li:last-child {
     width: 100%;
     text-align: center;
+    margin-bottom: 0;
   }
   
 }
