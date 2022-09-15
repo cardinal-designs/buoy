@@ -446,7 +446,7 @@
             {% endif %}
 
            {% for refer_product in product.metafields.my_fields.badges_image.value %}
-{{ refer_product }}-
+          <img src="{{ refer_product | img_url:'master' }}"/>
            
             {% endfor %}
             
