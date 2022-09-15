@@ -199,27 +199,27 @@
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
-          <div class="info-grid__container">
+          <div class="Badge_Grid_Container">
             {% if my_fields.badge_one != blank %}
-              <div class="info-grid__item">
+              <div class="Badge_Grid_Item">
                 <p class="light">{{ my_fields.badge_one }}</p>
               </div>
             {%- endif -%}
 
             {% if my_fields.badge_two != blank %}
-              <div class="info-grid__item">
+              <div class="Badge_Grid_Item">
                 <p class="light">{{ my_fields.badge_two }}</p>
               </div>
             {%- endif -%}
 
             {% if my_fields.badge_three != blank %}
-              <div class="info-grid__item">
+              <div class="Badge_Grid_Item">
                 <p class="light">{{ my_fields.badge_three }}</p>
               </div>
             {%- endif -%}
 
             {% if my_fields.badge_four != blank %}
-              <div class="info-grid__item">
+              <div class="Badge_Grid_Item">
                 <p class="light">{{ my_fields.badge_four }}</p>
               </div>
             {%- endif -%}
