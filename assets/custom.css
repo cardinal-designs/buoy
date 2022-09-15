@@ -204,3 +204,7 @@ input[type="radio"]:checked::before {
   font-size: 14px;
   line-height: normal;
 }
+
+.rtx_sub_container .Label_Text {
+  display: flex;
+}
