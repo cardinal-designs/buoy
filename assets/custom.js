@@ -7,4 +7,10 @@ $( document ).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  $( '.radio_rtx' ).click(function() {
+    $(this).parent('.Subscribe_Box').addClass('active');
+    $(this).parent('.Subscribe_Box').sibling('.Subscribe_Box').removeClass('active');
+  });
+  
 });
