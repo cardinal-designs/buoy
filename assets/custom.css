@@ -233,6 +233,19 @@ input[type="radio"]:checked::before {
   text-align: center;
 }
 
+.Badge_Grid {
+  display: block;
+}
+
+.Badge_Grid p {
+  font-size: 14px;
+  margin: 0 0 0;
+}
+
 .Badge_Grid span {
   font-size: 40px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto 20px;
 }
