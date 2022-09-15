@@ -519,5 +519,9 @@ input[type="radio"]:checked::before {
   .template-product .rtx_option_heading {
     font-size: 14px;
   }
+
+  .clear_button {
+    margin-left: 6px !important;
+  }
   
 }
