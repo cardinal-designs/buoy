@@ -430,4 +430,8 @@ input[type="radio"]:checked::before {
     flex-direction: column-reverse !important;
   }
 
+  .template-product .product__info-wrapper {
+    padding-right: 0;
+  }
+
 }
