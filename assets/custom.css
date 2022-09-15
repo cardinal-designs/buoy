@@ -314,6 +314,7 @@ input[type="radio"]:checked::before {
 .pdp-faq .faq__content ol li,
 .pdp-faq .faq__content ul li {
   margin-bottom: 10px;
+  line-height: 21px;
 }
 
 .pdp-faq .faq__content ol li:last-child,
