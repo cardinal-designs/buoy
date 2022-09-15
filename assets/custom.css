@@ -450,10 +450,14 @@ input[type="radio"]:checked::before {
   
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 500px) {
 
   .template-product .subscribe-item_info p {
     font-size: 12px !important;
+  }
+
+  .rtx-tooltip__flex {
+    flex-direction: row;
   }
   
 }
