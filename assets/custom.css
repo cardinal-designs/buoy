@@ -140,7 +140,10 @@ input[type="radio"]:checked::before {
   margin-top: 20px;
   height: 100%;
   visibility: visible;
-  transition: all 15s linear;
+  -moz-transition: height 1s ease;
+  -webkit-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
 }
 
 .One_Time_Info .one_sub_text {
