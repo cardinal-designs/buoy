@@ -249,3 +249,9 @@ input[type="radio"]:checked::before {
   width: 40px;
   margin: 0 auto 20px;
 }
+
+.Risk_Free {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
