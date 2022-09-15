@@ -443,6 +443,12 @@ input[type="radio"]:checked::before {
   display: none;
 }
 
+.rtx_one_time_price s {
+  color: #545759;
+  font-weight: 300;
+  font-size: 14px;
+}
+
 .Subscribe_Box.active .rtx_option_heading #rtx_one_price {
   display:block;
 }
