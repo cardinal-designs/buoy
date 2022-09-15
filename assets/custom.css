@@ -357,6 +357,7 @@ input[type="radio"]:checked::before {
 .template-product .product__description p {
   line-height: 27px;
   font-size: 16px;
+  font-weight: 300;
 }
 
 .product__media-arrows {
