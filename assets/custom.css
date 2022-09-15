@@ -188,6 +188,8 @@ input[type="radio"]:checked::before {
   background-color: #F6ECE1;
   border: 1px solid #545759;
   border-radius: 18px;
+  color: #1F2322;
+  padding: 5px 16px;
 }
 
 .Usp_Wrapper ul {
@@ -199,4 +201,5 @@ input[type="radio"]:checked::before {
 .Usp_Wrapper ul li {
   font-family: inter,sans-serif;
   font-size: 14px;
+  line-height: normal;
 }
