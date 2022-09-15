@@ -27,23 +27,6 @@
           {{ product.description }}
         </div>
 
-        {% if product.metafields.my_fields.product_grid_1 != blank %}
-          <div class="info-grid__container">
-            <div class="info-grid__item">
-              <p class="light">{{ product.metafields.my_fields.product_grid_1 }}</p>
-            </div>
-            <div class="info-grid__item">
-              <p class="light">{{ product.metafields.my_fields.product_grid_2 }}</p>
-            </div>
-            <div class="info-grid__item">
-              <p class="light">{{ product.metafields.my_fields.product_grid_3 }}</p>
-            </div>
-            <div class="info-grid__item">
-              <p class="light">{{ product.metafields.my_fields.product_grid_4 }}</p>
-            </div>
-          </div>
-        {% endif %}
-
         {% comment %}
         {% render 'product-tabs' product: product %}
 
