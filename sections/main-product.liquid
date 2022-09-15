@@ -196,6 +196,36 @@
           </div>
           {%- endform -%}
         </product-form>
+
+        {% assign my_fields = product.metafields.my_fields %}
+        {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
+          <div class="info-grid__container">
+            {% if my_fields.badge_one != blank %}
+              <div class="info-grid__item">
+                <p class="light">{{ my_fields.badge_one }}</p>
+              </div>
+            {%- endif -%}
+
+            {% if my_fields.badge_two != blank %}
+              <div class="info-grid__item">
+                <p class="light">{{ my_fields.badge_two }}</p>
+              </div>
+            {%- endif -%}
+
+            {% if my_fields.badge_three != blank %}
+              <div class="info-grid__item">
+                <p class="light">{{ my_fields.badge_three }}</p>
+              </div>
+            {%- endif -%}
+
+            {% if my_fields.badge_four != blank %}
+              <div class="info-grid__item">
+                <p class="light">{{ my_fields.badge_four }}</p>
+              </div>
+            {%- endif -%}
+          </div>
+        {% endif %}
+        
         {% comment %}
         {% if product.type == 'Subscription' or product.type == 'Bundle' %}
         <div class="product__subscription-tooltip">
