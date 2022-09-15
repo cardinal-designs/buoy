@@ -23,7 +23,7 @@
         <input type='hidden' name="selling_plan" id="selling_plan_{{ product.id }}" value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
         <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
             <div class="rtx_container" data-product='{{ product | json }}'>
-              <div id='rtx_sands_block'>
+              <div id='rtx_sands_block' class="active">
                 <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub" >
                   <div class="rtx_option_selector">
                     <input type="radio" id='radio_sub_{{ product.id }}' class="radio_rtx" value="subsave" name="selling_plan_select" data-product_id="{{ product.id }}"  >
