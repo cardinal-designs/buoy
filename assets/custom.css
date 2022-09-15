@@ -73,10 +73,11 @@
   border-radius: 50%;
   left: 0;
   top: 0;
+  border: 1px solid #1F2322;
 }
 
 .Testimonials_Main .slick-dots li.slick-active button::before {
-  background: #000;
+  background: #1F2322;
 }
 
 .Testimonials_Main {
