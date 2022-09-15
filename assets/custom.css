@@ -449,3 +449,11 @@ input[type="radio"]:checked::before {
   }
   
 }
+
+@media screen and (max-width: 568px) {
+
+  .template-product .subscribe-item_info p {
+    font-size: 12px !important;
+  }
+  
+}
