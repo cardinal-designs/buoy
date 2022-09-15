@@ -592,7 +592,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 500px) {
 
   .template-product .subscribe-item_info p {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .template-product .rtx-tooltip__flex {
@@ -605,6 +605,14 @@ input[type="radio"]:checked::before {
 
   .clear_button {
     margin-left: 6px !important;
+  }
+  
+}
+
+@media screen and (max-width: 374px) {
+
+  .template-product .subscribe-item_info p {
+    font-size: 12px !important;
   }
   
 }
