@@ -434,4 +434,10 @@ input[type="radio"]:checked::before {
     padding-right: 0;
   }
 
+  .Badge_Grid span {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
 }
