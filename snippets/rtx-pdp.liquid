@@ -35,7 +35,6 @@
                           {{rtx_selling_plan.name}}
                           {% endcomment %}
                           Subscribe
-                          <span id='rtx_one_price'>{{ onePrice }}{{ subPrice }}</span>
                         </div>
                         <div class="product__rtx-tooltip">
                           <div class="rtx_popup">
@@ -79,25 +78,25 @@
                     </div>
                 </div>
                 {% unless product.requires_selling_plan %}
-                    <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box" id="rtx_option_one_time">
-                        <div class="rtx_option_selector">
-                            <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
-                            <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
-                            <div class="rtx_option_heading">
-                                One-Time Purchase
-                               <span id='rtx_one_price'>{{ onePrice }}</span>
-                            </div>
-                            <div class="One_Time_Info">
-                             <img src="{{ section.settings.one_time_image | img_url: '60x' }}"/>
-                                <div>
-                                  <p class="one_sub_text">{{section.settings.one_time_subtext}}</p>
-                                  <p class="one_sub_text_new">{{section.settings.one_time_subtext_new}}</p>
-                                </div>
-                                </label>
-                            </div>
-                        </div>
-                     </div>
-              {% endunless %}              
+                  <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box" id="rtx_option_one_time">
+                      <div class="rtx_option_selector">
+                          <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
+                          <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
+                          <div class="rtx_option_heading">
+                              One-Time Purchase
+                             <span id='rtx_one_price'>{{ onePrice }}</span>
+                          </div>
+                          <div class="One_Time_Info">
+                           <img src="{{ section.settings.one_time_image | img_url: '60x' }}"/>
+                              <div>
+                                <p class="one_sub_text">{{section.settings.one_time_subtext}}</p>
+                                <p class="one_sub_text_new">{{section.settings.one_time_subtext_new}}</p>
+                              </div>
+                              </label>
+                          </div>
+                      </div>
+                   </div>
+                {% endunless %}              
             </div>
         </div>
     {% endif %}
