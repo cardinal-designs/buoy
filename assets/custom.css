@@ -419,6 +419,10 @@ input[type="radio"]:checked::before {
   text-underline-offset: 7px;
 }
 
+.template-product .product__description {
+  margin: 0 0 20px;
+}
+
 @media screen and (max-width: 1199px) {
 
   .template-product .product-section .page-width {
