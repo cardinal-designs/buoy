@@ -412,6 +412,13 @@ input[type="radio"]:checked::before {
   margin-top: 3px;
 }
 
+.Link_Text {
+  font-size: 14px;
+  font-family: inter,sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
 @media screen and (max-width: 1199px) {
 
   .template-product .product-section .page-width {
