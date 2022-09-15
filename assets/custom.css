@@ -532,7 +532,11 @@ input[type="radio"]:checked::before {
   .pdp-faq .faq__header {
     padding: 0;
   }
-  
+
+  .Testimonials_Main {
+    margin-top: 80px;
+  }
+    
 }
 
 @media screen and (max-width: 500px) {
