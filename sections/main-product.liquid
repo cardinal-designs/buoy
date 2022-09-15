@@ -435,6 +435,7 @@
           {% endcomment %}
           {%- for media in product.media -%}
           <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+           {% comment %}
             {% if forloop.index == 1 %}
             {% if product.available == false %}
               {% render 'spinner-sold-out' %}
@@ -444,12 +445,13 @@
               {% render 'spinner-most-popular' %}
             {% endif %}
             {% endif %}
+            {% endcomment %}
 
            {% for refer_product in product.metafields.my_fields.badges_image.value %}
              {% assign badges_index = forloop.index %}
              {% assign main_index = forloop.parentloop.index %}
              {% if badges_index == main_index %}
-          <img src="{{ refer_product | img_url:'master' }}"/>
+                <img src="{{ refer_product | img_url:'master' }}"/>
            {% endif %}
             {% endfor %}
             
