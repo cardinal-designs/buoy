@@ -425,9 +425,9 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 991px) {
 
   .product {
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column-reverse;
+    padding-top: 10px !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
   }
 
 }
