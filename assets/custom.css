@@ -142,7 +142,7 @@ input[type="radio"]:checked::before {
 }
 
 
-.One_Time_Info > img {
+.template-product .One_Time_Info > img {
   margin-right: 14px;
 }
 
@@ -152,11 +152,11 @@ input[type="radio"]:checked::before {
   font-weight: 300;
 }
 
-.clear_button {
+.template-product.clear_button {
   background: #C6DB76;
 }
 
-.subscribe-item_info p {
+.template-product .subscribe-item_info p {
   font-size: 14px !important;
 }
 
@@ -165,9 +165,13 @@ input[type="radio"]:checked::before {
   font-weight: lighter;
 }
 
-.subscribe-item_info img {
+.template-product .subscribe-item_info img {
   width: 60px !important;
   height: 60px !important;
   margin-right: 14px !important;
   border-radius: 0 !important;
+}
+
+.template-product .rtx_option_selector {
+  margin-top: 12px;
 }
