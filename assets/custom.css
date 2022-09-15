@@ -298,3 +298,7 @@ input[type="radio"]:checked::before {
 .pdp-faq .faq__content ol li {
   font-size: 14px;
 }
+
+.pdp-faq .faq__content ol {
+  padding-left: 15px;
+}
