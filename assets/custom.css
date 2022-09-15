@@ -207,14 +207,24 @@ input[type="radio"]:checked::before {
   line-height: normal;
 }
 
-.rtx_sub_container .Label_Text {
+.template-product .rtx_sub_container .Label_Text {
   display: flex;
 }
 
-.rtx_sub_container .Label_Text span {
+.template-product .rtx_sub_container .Label_Text span {
   margin-right: 6px;
 }
 
-.rtx_sub_container .subscribe-item_info:last-child .Label_Text span {
+.template-product .rtx_sub_container .subscribe-item_info:last-child .Label_Text span {
   display:none;
+}
+
+.template-product .rtx_sub_container {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.template-product .rtx_sub_container .subscribe-item_info {
+  margin-left: 0 !important;
+  margin-top: 20px !important;
 }
