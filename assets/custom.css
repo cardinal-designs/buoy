@@ -208,3 +208,11 @@ input[type="radio"]:checked::before {
 .rtx_sub_container .Label_Text {
   display: flex;
 }
+
+.rtx_sub_container .Label_Text span {
+  margin-right: 6px;
+}
+
+.rtx_sub_container .subscribe-item_info:last-child .Label_Text span {
+  display:none;
+}
