@@ -131,11 +131,17 @@ input[type="radio"]:checked::before {
 .One_Time_Info {
   display: none;
   align-items: center;
-  margin-top: 20px;
+  height: 0;
+  visibility: hidden;
+  margin: 0;
 }
 
 .product-form input[type=radio]:checked + label .One_Time_Info {
   display: flex;
+  margin-top: 20px;
+  height: 100%;
+  visibility: visible;
+  transition: all 15s linear;
 }
 
 .One_Time_Info .one_sub_text {
