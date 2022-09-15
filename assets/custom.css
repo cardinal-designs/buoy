@@ -69,14 +69,14 @@
   content: '';
   height: 8px;
   width: 8px;
-  background: #000;
+  background: #fff;
   border-radius: 50%;
   left: 0;
   top: 0;
 }
 
 .Testimonials_Main .slick-dots li.slick-active:before {
-  background: #fff;
+  background: #000;
 }
 
 .Testimonials_Main {
