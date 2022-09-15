@@ -545,7 +545,11 @@ input[type="radio"]:checked::before {
   .Testimonials_Main .slick-dots {
     margin: 0;
   }
-    
+
+  .All_Reviews {
+    margin-top: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
