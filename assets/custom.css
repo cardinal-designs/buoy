@@ -457,7 +457,11 @@ input[type="radio"]:checked::before {
   margin-top: 40px;
 }
 
-.pdp-faq .faq__content ul li span {
+.Cross {
+  font-size: 14px;
+}
+
+.Tick {
   font-size: 17px;
 }
 
