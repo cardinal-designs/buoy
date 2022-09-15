@@ -433,11 +433,11 @@
           <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
             {% if forloop.index == 1 %}
             {% if product.available == false %}
-            {% render 'spinner-sold-out' %}
+              {% render 'spinner-sold-out' %}
             {% elsif product.metafields.my_fields.show_trending_product_card == true %}
-            {% render 'spinner-trending' %}
+              {% render 'spinner-trending' %}
             {% elsif product.metafields.my_fields.show_most_popular_product_card == true %}
-            {% render 'spinner-most-popular' %}
+              {% render 'spinner-most-popular' %}
             {% endif %}
             {% endif %}
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
