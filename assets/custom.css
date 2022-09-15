@@ -586,6 +586,10 @@ input[type="radio"]:checked::before {
   .clear_tag {
     font-size: 12px;
   }
+
+  .product__media-wrapper .sticky-images {
+    margin-bottom: 6px !important;
+  }
   
 }
 
