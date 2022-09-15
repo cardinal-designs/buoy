@@ -285,6 +285,7 @@ input[type="radio"]:checked::before {
   border-right: 1px solid #1F2322;
   line-height: normal;
   padding: 0 10px;
+  font-weight: 500;
 }
 
 .Risk_Free li:last-child {
