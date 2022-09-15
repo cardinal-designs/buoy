@@ -70,20 +70,21 @@
                           </div>
                         </div>
                         </div>
-                        <div class="rtx_sub_container">
-                          {% for block in section.blocks %}
-                            {%- case block.type -%}
-                            {%- when 'block' -%}
-                              <div class="subscribe-item_info">
-                                <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
-                                <div>
-                                  <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
-                                  <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+                        <div class="Subscribe_Info">
+                          <div class="rtx_sub_container">
+                            {% for block in section.blocks %}
+                              {%- case block.type -%}
+                              {%- when 'block' -%}
+                                <div class="subscribe-item_info">
+                                  <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
+                                  <div>
+                                    <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
+                                    <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+                                  </div>
                                 </div>
-                              </div>
-                            {% endcase %}
-                          {% endfor %}
-                          </div>
+                              {% endcase %}
+                            {% endfor %}
+                            </div>
                           <div class="Usp_Wrapper">
                             <ul>
                               <li><span class="Usp_Tick">✓</span> Free Shipping</li>
@@ -91,6 +92,7 @@
                               <li><span class="Usp_Tick">✓</span> Money-Back Guarantee</li>
                             </ul>
                           </div>
+                        </div>
                         </label>
                      </div>
                     </div>
