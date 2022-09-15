@@ -325,6 +325,6 @@ input[type="radio"]:checked::before {
 .pdp-faq .faq__content .tabs-label {
   text-decoration: underline;
   text-underline-offset: 7px;
-  margin-top: 25px;
+  margin: 25px 0 8px;
   display: block;
 }
