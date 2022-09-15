@@ -310,6 +310,9 @@
                   </button>
                   <div class="faq__content">
                     <div class="sh4 single_line_text_field">{{ section.settings.ship_text }}</div>
+                    {% if product.metafields.my_fields.nutrition_label != blank %}
+                      <a href="{{ product.metafields.my_fields.nutrition_label }}" target="_blank" class="tabs-label body medium">Full Ingredients List</a>
+                    {% endif %}
                   </div>
                 </div>
               {% endif %}       
