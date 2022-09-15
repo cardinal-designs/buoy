@@ -444,6 +444,8 @@ input[type="radio"]:checked::before {
 
 @media screen and (max-width: 768px) {
 
-
+  .template-product .product-section .page-width {
+    padding: 0 27px;
+  }
   
 }
