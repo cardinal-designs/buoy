@@ -503,6 +503,15 @@ input[type="radio"]:checked::before {
   .template-product .product-section .page-width {
     padding: 0 27px;
   }
+
+  .Usp_Wrapper ul li {
+    font-size: 14px;
+    width: 50%;
+  }
+
+  .Usp_Wrapper ul {
+    flex-wrap: wrap;
+  }
   
 }
 
