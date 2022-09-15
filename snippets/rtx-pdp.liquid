@@ -26,7 +26,7 @@
               <div id='rtx_sands_block' class="active">
                 <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub" >
                   <div class="rtx_option_selector">
-                    <input type="radio" id='radio_sub_{{ product.id }}' class="radio_rtx" value="subsave" name="selling_plan_select" data-product_id="{{ product.id }}"  >
+                    <input type="radio" id='radio_sub_{{ product.id }}' class="radio_rtx" value="subsave" name="selling_plan_select" data-product_id="{{ product.id }}" checked>
                     <label for="product_subsave_{{ product.id }}" class="rtx_option_label">
                       <div class="rtx-tooltip__flex">
 
@@ -80,7 +80,7 @@
                 {% unless product.requires_selling_plan %}
                     <div class="rtx_option_{{ product.id }} rtx_option_one_time" id="rtx_option_one_time">
                         <div class="rtx_option_selector">
-                            <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}" checked >
+                            <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
                             <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
                             <div class="rtx_option_heading">
                                 One-Time Purchase
