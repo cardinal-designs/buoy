@@ -271,3 +271,9 @@ input[type="radio"]:checked::before {
 .template-product .product-form__submit.button.button--full-width.button--primary {
   margin-bottom: 14px;
 }
+
+.pdp-faq .faq__header .sh4 {
+  color: #1F2322 !important;
+  font-size: 18px;
+  line-height: normal;
+}
