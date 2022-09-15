@@ -460,11 +460,15 @@ input[type="radio"]:checked::before {
 }
 
 .product__media-arrows .slick-arrow:hover.slick-prev {
-  transform: translate(0);
+  transform: translate(0) !important;
 }
 
 .product__media-arrows .slick-arrow:hover.slick-prev svg {
-  transform: translate(-5px);
+  transform: translate(-5px) !important;
+}
+
+.product__media-arrows .slick-arrow svg {
+  transition: transform .2s ease;
 }
 
 .product__media-arrows .slick-arrow:hover.slick-next svg {
