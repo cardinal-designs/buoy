@@ -197,16 +197,14 @@
           {%- endform -%}
         </product-form>
         
-        <div class="Risk_Free">
-          <ul>
-            <li>
-              {{ general.main_menu.free_shipping }}
-            </li>
-            <li>
-              {{ general.main_menu.free_shipping }}
-            </li>            
-          </ul>
-        </div>
+        <ul class="Risk_Free">>
+          <li>
+            {{ general.main_menu.free_shipping }}
+          </li>
+          <li>
+            {{ general.main_menu.risk_free }}
+          </li>            
+        </ul>
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
