@@ -460,8 +460,12 @@ input[type="radio"]:checked::before {
     font-size: 12px !important;
   }
 
-  .rtx-tooltip__flex {
+  .template-product .rtx-tooltip__flex {
     flex-direction: row;
+  }
+
+  .template-product .rtx_option_heading {
+    font-size: 14px;
   }
   
 }
