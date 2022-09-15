@@ -44,7 +44,7 @@
 
 .Testimonials_Author {
   font-family: inter,sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.75em;
 }
 
@@ -549,10 +549,6 @@ input[type="radio"]:checked::before {
   .Testimonials_Main {
     margin-top: 80px;
     margin-bottom: 40px;
-  }
-
-  .Testimonials_Author {
-    font-size: 12px;
   }
 
   .Testimonials_Main .slick-dots {
