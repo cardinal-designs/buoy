@@ -578,6 +578,10 @@ input[type="radio"]:checked::before {
   .product__media-item .product-spinner {
     width: 60px;
   }
+
+  .product__title {
+    font-size: 35px !important;
+  }
   
 }
 
