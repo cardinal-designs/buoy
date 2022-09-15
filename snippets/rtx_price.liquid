@@ -33,7 +33,7 @@
             if(el === 'subsave') {
                 document.getElementById(`rtx_one_price_save`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
-                document.getElementById(`rtx_one_time_price`).innerText = {{ onePrice | json }};
+                document.getElementsByClassName(`rtx_one_time_price`).innerText = {{ onePrice | json }};
             }
         });
     }); 
