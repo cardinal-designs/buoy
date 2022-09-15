@@ -17,7 +17,6 @@
 {% endfor %}
 {% assign first_selling_plan_allocation = product.variants.first.selling_plan_allocations[0] %}
 {% assign subPrice = first_selling_plan_allocation.price | money %}
-<p class="plan_label">PICK YOUR PLAN</p>
 
     {% if product.selling_plan_groups[0].name %}
         <input type='hidden' name="id" id="variant_{{ product.id }}" value="{{ current_variant.id }}">
