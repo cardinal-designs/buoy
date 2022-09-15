@@ -129,21 +129,21 @@ input[type="radio"]:checked::before {
 }
 
 .One_Time_Info {
+  display: none;
   align-items: center;
-  height: 0;
-  visibility: hidden;
-  margin: 0;
+  margin-top: 20px;
 }
 
 .product-form input[type=radio]:checked + label .One_Time_Info {
   display: flex;
-  margin-top: 20px;
-  height: 100%;
-  visibility: visible;
-  -moz-transition: height 1s ease;
-  -webkit-transition: height 1s ease;
-  -o-transition: height 1s ease;
-  transition: height 1s ease;
+}
+
+.Subscribe_Info {
+  display: none;
+}
+
+.product-form #rtx_option_sub input[type=radio]:checked + label .Subscribe_Info {
+  display: block;
 }
 
 .One_Time_Info .one_sub_text {
