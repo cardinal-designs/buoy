@@ -31,8 +31,16 @@
                       <div class="rtx-tooltip__flex">
 
                         <div class="rtx_option_heading">
+                          {% comment %}
+                          {{rtx_selling_plan.name}}
+                          {% endcomment %}
                           Subscribe
-                         <div class="product__rtx-tooltip">
+                          <div class="Multi_Price">
+                            <span id='rtx_one_price_save'>{{ onePrice }}</span>
+                             <span id='rtx_one_time_price'>{{ onePrice }}</span>
+                          </div>
+                        </div>
+                          <div class="product__rtx-tooltip">
                             <div class="rtx_popup">
                               <div class="clear_button">
                                 <p class="clear_tag"><span class="save24">Save 24%</span></p>
@@ -45,12 +53,6 @@
                               </div>
                             </div>
                           </div>
-                          <div class="Multi_Price">
-                            <span id='rtx_one_price_save'>{{ onePrice }}</span>
-                             <span id='rtx_one_time_price'>{{ onePrice }}</span>
-                          </div>
-                        </div>
-       
                         </div>
                         <div class="Subscribe_Info">
                           <div class="rtx_sub_container">

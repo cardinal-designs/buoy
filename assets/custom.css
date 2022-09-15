@@ -451,7 +451,7 @@ input[type="radio"]:checked::before {
   position: relative;
 }
 
-.template-product #rtx_one_price_save {
+.template-product .Multi_Price {
   position: absolute;
   right: 0;
 }
