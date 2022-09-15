@@ -405,3 +405,15 @@ input[type="radio"]:checked::before {
   font-style: italic;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 1199px) {
+
+  .template-product .product-section .page-width {
+    padding: 0 40px;
+  }
+
+  .template-product .product__info-wrapper {
+    padding-right: 30px;
+  }
+  
+}
