@@ -391,3 +391,15 @@ input[type="radio"]:checked::before {
 .product__media-item {
   border: 2px solid #1F2322 !important;
 }
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.pdp-faq .Shipping_Tab .faq__content p {
+  font-size: 14px;
+}
+
+.pdp-faq .Shipping_Tab .faq__content p.small {
+  font-size: 12px;
+}
