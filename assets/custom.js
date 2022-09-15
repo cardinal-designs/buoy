@@ -9,8 +9,8 @@ $( document ).ready(function() {
   });
 
   $( '.radio_rtx' ).click(function() {
-    $(this).parent('.Subscribe_Box').addClass('active');
-    $(this).parent('.Subscribe_Box').siblings('.Subscribe_Box').removeClass('active');
+    $(this).parents('.Subscribe_Box').addClass('active');
+    $(this).parents('.Subscribe_Box').siblings('.Subscribe_Box').removeClass('active');
   });
   
 });
