@@ -447,12 +447,12 @@
             {% endif %}
             {% endcomment %}
 
-           {% for refer_product in product.metafields.my_fields.badges_image.value %}
+           {% for badges_image in product.metafields.my_fields.badges_image.value %}
              {% assign badges_index = forloop.index %}
              {% assign main_index = forloop.parentloop.index %}
              {% if badges_index == main_index %}
                <div class="product-spinner">
-                <img src="{{ refer_product | img_url:'master' }}"/>
+                <img src="{{ badges_image | img_url:'master' }}"/>
                </div>
            {% endif %}
             {% endfor %}
