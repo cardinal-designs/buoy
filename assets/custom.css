@@ -183,3 +183,20 @@ input[type="radio"]:checked::before {
 .template-product .product-form__buttons .button {
   padding: 15px 10px !important;
 }
+
+.Usp_Wrapper {
+  background-color: #F6ECE1;
+  border: 1px solid #545759;
+  border-radius: 18px;
+}
+
+.Usp_Wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Usp_Wrapper ul li {
+  font-family: inter,sans-serif;
+  font-size: 14px;
+}
