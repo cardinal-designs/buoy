@@ -35,6 +35,7 @@
                           {{rtx_selling_plan.name}}
                           {% endcomment %}
                           Subscribe
+                          <span id='rtx_one_price_save'>{{ onePrice }}</span>
                         </div>
                         <div class="product__rtx-tooltip">
                           <div class="rtx_popup">
@@ -84,7 +85,7 @@
                           <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
                           <div class="rtx_option_heading">
                               One-Time Purchase
-                             <span id='rtx_one_price'>{{ onePrice }}</span>
+                             <span id='rtx_one_time_price'>{{ onePrice }}</span>
                           </div>
                           <div class="One_Time_Info">
                            <img src="{{ section.settings.one_time_image | img_url: '60x' }}"/>
