@@ -534,6 +534,10 @@ input[type="radio"]:checked::before {
   display: flex;
 }
 
+.pdp-faq .faq-section {
+  margin: 50px 0 30px !important;
+}
+
 @media screen and (max-width: 1280px) {
 
   .Usp_Wrapper ul li {
@@ -585,10 +589,6 @@ input[type="radio"]:checked::before {
     margin: 0 10px 4px;
     width: auto;
     text-align: center;
-  }
-
-  .pdp-faq .faq-section {
-    margin: 50px 0 30px;
   }
 
   .Usp_Wrapper ul {
