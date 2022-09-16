@@ -583,7 +583,7 @@ input[type="radio"]:checked::before {
   .Usp_Wrapper ul li {
     font-size: 14px;
     margin: 0 10px 4px;
-    width: 50%;
+    width: auto;
     text-align: center;
   }
 
@@ -654,10 +654,6 @@ input[type="radio"]:checked::before {
     line-height: normal;
   }
 
-  .Usp_Wrapper ul li {
-    margin: 0 0px 4px;
-  }
-
   .template-product .rtx_sub_container .subscribe-item_info {
     margin-top: 15px;
   }
@@ -684,6 +680,10 @@ input[type="radio"]:checked::before {
 
   .clear_button {
     margin-left: 6px !important;
+  }
+
+  .Usp_Wrapper ul li {
+    margin: 0 0px 4px;
   }
   
 }
