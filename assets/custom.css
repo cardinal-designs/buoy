@@ -490,10 +490,12 @@ input[type="radio"]:checked::before {
 
 .Cross {
   font-size: 14px;
+  margin-right: 8px;
 }
 
 .Tick {
   font-size: 17px;
+  margin-right: 8px;
 }
 
 .product__media-item .product-spinner {
