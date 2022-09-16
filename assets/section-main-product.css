@@ -442,12 +442,16 @@ fieldset.product-form__input .form__label {
   position: unset;
 }
 
+.product-spinner img {
+  animation: spin 10s linear infinite;
+}
+
 .product__media-arrows .slick-arrow:hover.slick-prev {
-	transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .product__media-arrows .slick-arrow:hover.slick-next {
-	transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .product__media-arrows .slick-prev {
