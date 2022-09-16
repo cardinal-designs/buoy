@@ -652,6 +652,10 @@ input[type="radio"]:checked::before {
     display: block;
     text-align: right;
   }
+
+  .Usp_Wrapper ul li {
+    margin: 0 0px 4px;
+  }
   
 }
 
