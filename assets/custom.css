@@ -508,6 +508,10 @@ input[type="radio"]:checked::before {
   transform: translate(0) !important;
 }
 
+.product__media-arrows .slick-arrow:hover.slick-next{
+  transform: translate(0) !important;
+}
+
 .product__media-arrows .slick-arrow:hover.slick-prev svg {
   transform: translate(-5px) !important;
 }
