@@ -651,6 +651,7 @@ input[type="radio"]:checked::before {
   .template-product .Multi_Price span {
     display: block;
     text-align: right;
+    line-height: normal;
   }
 
   .Usp_Wrapper ul li {
