@@ -647,6 +647,11 @@ input[type="radio"]:checked::before {
   .Risk_Free li {
     padding: 0 6px;
   }
+
+  .template-product .Multi_Price span {
+    display: block;
+    text-align: right;
+  }
   
 }
 
