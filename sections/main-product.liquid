@@ -458,12 +458,12 @@
             {% endfor %}
             {% endcomment %}
             
-            {% for media in product.media %}
+           
               {{ media.alt | handle }}
               <div class="product-spinner">
                 <img src="{{ badges_image | img_url:'master' }}"/>
               </div>
-            {% endfor %}
+           
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
           </div>
