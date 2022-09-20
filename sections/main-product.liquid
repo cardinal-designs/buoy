@@ -259,19 +259,22 @@
 
             {% if my_fields.badge_two != blank %}
               <div class="Badge_Grid_Item">
-                <span class="Badge_Grid">{{ my_fields.badge_two }}</span>
+                <img src="{{ badge_two_image }}" alt=""/>
+                <span class="Badge_Grid">{{ badge_two_text }}</span>
               </div>
             {%- endif -%}
 
             {% if my_fields.badge_three != blank %}
               <div class="Badge_Grid_Item">
-                <span class="Badge_Grid">{{ my_fields.badge_three }}</span>
+                <img src="{{ badge_three_image }}" alt=""/>
+                <span class="Badge_Grid">{{ badge_three_text }}</span>
               </div>
             {%- endif -%}
 
             {% if my_fields.badge_four != blank %}
               <div class="Badge_Grid_Item">
-                <span class="Badge_Grid">{{ my_fields.badge_four }}</span>
+                <img src="{{ badge_four_image }}" alt=""/>
+                <span class="Badge_Grid">{{ badge_four_text }}</span>
               </div>
             {%- endif -%}
           </div>
