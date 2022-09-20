@@ -286,6 +286,10 @@ input[type="radio"]:checked::before {
   width: 40px;
   margin: 0 auto 20px;
 }
+.Badge_Grid img {
+  width:40px;
+  height:40px;
+} 
 
 .Risk_Free {
   padding: 0;
