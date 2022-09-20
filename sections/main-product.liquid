@@ -253,20 +253,24 @@
             
               <div class="Badge_Grid_Item">
                 {% if badge_one_image != blank %}
-                <img src="{{ badge_one_image | img_url:'master' }}" alt=""/>
+                 <img src="{{ badge_one_image | img_url:'master' }}" alt=""/>
                 {% endif %}  
                 {% if badge_one_text != blank %}
-                <span class="Badge_Grid">{{ badge_one_text }}</span>
+                 <span class="Badge_Grid">{{ badge_one_text }}</span>
                 {% endif %}
               </div>
             
 
-            {% if badge_two_image != blank or badge_two_text != blank %}
+            
               <div class="Badge_Grid_Item">
-                <img src="{{ badge_two_image | img_url:'master' }}" alt=""/>
-                <span class="Badge_Grid">{{ badge_two_text }}</span>
+                {% if badge_two_image != blank %}
+                 <img src="{{ badge_two_image | img_url:'master' }}" alt=""/>
+                {% endif %}
+                {% if badge_two_text != blank %}
+                 <span class="Badge_Grid">{{ badge_two_text }}</span>
+                {% endif %}
               </div>
-            {%- endif -%}
+            
 
             {% if badge_three_image != blank or badge_three_text != blank %}
               <div class="Badge_Grid_Item">
