@@ -645,7 +645,28 @@ $('.product-nutrition-label').fadeOut('300');
       "blocks": [
         {
           "type": "block",
-          "name": "Block",
+          "name": "Subscribe Block",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "purchase_type_img",
+              "label": "Subscription subimage"
+            },
+            {
+              "type": "text",
+              "id": "purchase_type_text",
+              "label": "Subscription text"
+            },
+            {
+              "type": "text",
+              "id": "purchase_type_subtext",
+              "label": "Subscription subtext"
+            }
+          ]
+        },
+        {
+          "type": "onetime_block",
+          "name": "OneTime Block",
           "settings": [
             {
               "type": "image_picker",
