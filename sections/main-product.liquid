@@ -446,24 +446,19 @@
             {% endif %}
             {% endcomment %}
 
-           {% comment %}
-           {% for badges_image in product.metafields.my_fields.badges_image.value %}
-             {% assign badges_index = forloop.index %}
-             {% assign main_index = forloop.parentloop.index %}
-             {% if badges_index == main_index %}
-               <div class="product-spinner">
-                <img src="{{ badges_image | img_url:'master' }}"/>
-               </div>
-             {% endif %}
-            {% endfor %}
-            {% endcomment %}
-            
-             {% assign media_alt = media.alt | handle %}
-            
-              <div class="product-spinner">
-                <img src="{{ media_alt | append:'.svg' | file_url }}"/>
-              </div>
            
+            {% for badges_image in product.metafields.my_fields.badges_image.value %}
+              {% assign badges_index = forloop.index %}
+              {% assign main_index = forloop.parentloop.index %}
+              {% if badges_index == main_index %}
+                <div class="product-spinner">
+                  <img src="{{ badges_image | img_url:'master' }}"/>
+                </div>
+              {% endif %}
+             {% endfor %}
+           
+            
+             
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
           </div>
