@@ -269,7 +269,8 @@
         <div class="pdp-faq">
           <div class="faq-section">
             <div class="faq-section__container">
-
+              
+              {% comment %}
               {% if product.metafields.my_fields.health_benefits != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -281,6 +282,7 @@
                   </div>
                 </div>
               {% endif %}   
+              {% endcomment %}
 
               {% if product.metafields.custom.new_ingredients_tab != blank %}
                 <div class="faq__item">
