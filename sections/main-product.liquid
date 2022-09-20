@@ -248,7 +248,7 @@
         {% assign badge_three_text = product.metafields.custom.badge_three_text %}
         {% assign badge_four_image = product.metafields.custom.badge_four_image %}
         {% assign badge_four_text = product.metafields.custom.badge_four_text %}
-        {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
+        
           <div class="Badge_Grid_Container">
             {% if my_fields.badge_one != blank %}
               <div class="Badge_Grid_Item">
@@ -275,7 +275,7 @@
               </div>
             {%- endif -%}
           </div>
-        {% endif %}
+        
         
         {% comment %}
         {% if product.type == 'Subscription' or product.type == 'Bundle' %}
