@@ -250,7 +250,7 @@
         {% assign badge_four_text = product.metafields.custom.badge_four_text %}
         
           <div class="Badge_Grid_Container">
-            {% if my_fields.badge_one != blank %}
+            {% if badge_one_image != blank or badge_one_text != blank %}
               <div class="Badge_Grid_Item">
                 <span>{{ badge_one_image }}</span>
                 <span class="Badge_Grid">{{ badge_one_text }}</span>
