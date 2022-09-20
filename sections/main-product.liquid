@@ -252,7 +252,7 @@
           <div class="Badge_Grid_Container">
             {% if badge_one_image != blank or badge_one_text != blank %}
               <div class="Badge_Grid_Item">
-                <img src="{{ badge_one_image }}" alt=""/>
+                <img src="{{ badge_one_image | img_url:'master' }}" alt=""/>
                 <span class="Badge_Grid">{{ badge_one_text }}</span>
               </div>
             {%- endif -%}
