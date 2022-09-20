@@ -92,15 +92,15 @@
                           </div>
                         {% for block in section.blocks %}
                           {% case block.type %}
-                          {% when 'onetime_block' %}
-                            <div class="One_Time_Info">
-                             <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
+                            {% when 'onetime_block' %}
+                              <div class="One_Time_Info">
+                                <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
                                 <div>
                                   <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
                                   <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
                                 </div>
                               </div>
-                            {% endcase %}
+                              {% endcase %}
                           {% endfor %}
                         </label>
                       </div>
