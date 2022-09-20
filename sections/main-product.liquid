@@ -459,9 +459,9 @@
             {% endcomment %}
             
              {% assign media_alt = media.alt | handle %}
-            {{ media_alt | append:'.svg' }}
+            
               <div class="product-spinner">
-                <img src="{{ media_alt | append:'.svg' | file_img_url }}"/>
+                <img src="{{ media_alt | file_img_url }}"/>
               </div>
            
             
