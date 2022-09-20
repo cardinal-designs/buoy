@@ -90,16 +90,21 @@
                               One-Time Purchase
                              <span class="rtx_one_time_price">{{ product.price | money }}</span>
                           </div>
-                          <div class="One_Time_Info">
-                           <img src="{{ section.settings.one_time_image | img_url: '60x' }}"/>
-                              <div>
-                                <p class="one_sub_text">{{section.settings.one_time_subtext}}</p>
-                                <p class="one_sub_text_new">{{section.settings.one_time_subtext_new}}</p>
+                        {% for block in section.blocks %}
+                          {% case block.type %}
+                          {% when 'onetime_block' %}
+                            <div class="One_Time_Info">
+                             <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
+                                <div>
+                                  <p class="one_sub_text">{{block.settings.onetime_purchase_type_text}}</p>
+                                  <p class="one_sub_text_new">{{block.settings.onetime_purchase_type_subtext}}</p>
+                                </div>
                               </div>
-                            </div>
-                          </label>
-                        </div>
+                            {% endcase %}
+                          {% endfor %}
+                        </label>
                       </div>
+                    </div>
                 {% endunless %}              
             </div>
         </div>
