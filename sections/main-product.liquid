@@ -209,7 +209,6 @@
           </li>            
         </ul>
 
-        {% comment %}
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
           <div class="Badge_Grid_Container">
@@ -236,56 +235,6 @@
                 <span class="Badge_Grid">{{ my_fields.badge_four }}</span>
               </div>
             {%- endif -%}
-          </div>
-        {% endif %}
-        {% endcomment %}
-
-        {% assign badge_one_image = product.metafields.custom.badge_one_image %}
-        {% assign badge_one_text = product.metafields.custom.badge_one_text %}
-        {% assign badge_two_image = product.metafields.custom.badge_two_image %}
-        {% assign badge_two_text = product.metafields.custom.badge_two_text %}
-        {% assign badge_three_image = product.metafields.custom.badge_three_image %}
-        {% assign badge_three_text = product.metafields.custom.badge_three_text %}
-        {% assign badge_four_image = product.metafields.custom.badge_four_image %}
-        {% assign badge_four_text = product.metafields.custom.badge_four_text %}
-        {% if badge_one_image != blank or badge_two_image != blank or badge_three_image != blank or badge_four_image != blank %}
-          <div class="Badge_Grid_Container">
-            <div class="Badge_Grid_Item">
-              {% if badge_one_image != blank %}
-               <img src="{{ badge_one_image | img_url:'master' }}" alt=""/>
-              {% endif %}  
-              {% if badge_one_text != blank %}
-               <span class="Badge_Grid">{{ badge_one_text }}</span>
-              {% endif %}
-            </div>
-
-            <div class="Badge_Grid_Item">
-              {% if badge_two_image != blank %}
-               <img src="{{ badge_two_image | img_url:'master' }}" alt=""/>
-              {% endif %}
-              {% if badge_two_text != blank %}
-               <span class="Badge_Grid">{{ badge_two_text }}</span>
-              {% endif %}
-            </div>
-
-            <div class="Badge_Grid_Item">
-              {% if badge_three_image != blank %}
-               <img src="{{ badge_three_image | img_url:'master' }}" alt=""/>
-              {% endif %}
-              {% if badge_three_text != blank %}
-               <span class="Badge_Grid">{{ badge_three_text }}</span>
-              {% endif %}
-            </div>
-
-            <div class="Badge_Grid_Item">
-              {% if badge_four_image != blank %}
-               <img src="{{ badge_four_image | img_url:'master' }}" alt=""/>
-              {% endif %}
-              {% if badge_four_text != blank %}  
-               <span class="Badge_Grid">{{ badge_four_text }}</span>
-              {% endif %}  
-            </div>
-            
           </div>
         {% endif %}
         
@@ -320,7 +269,7 @@
         <div class="pdp-faq">
           <div class="faq-section">
             <div class="faq-section__container">
-              
+
               {% if product.metafields.my_fields.health_benefits != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -370,8 +319,7 @@
                   </div>
                 </div>
               {% endif %}       
-
-              {% comment %}
+              
               {% if product.metafields.my_fields.highlights_tab != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -424,7 +372,6 @@
                   </div>
                 </div>
               {% endif %}
-              {% endcomment %}
               
             </div>
           </div>
@@ -499,6 +446,7 @@
             {% endif %}
             {% endcomment %}
 
+           {% comment %}
            {% for badges_image in product.metafields.my_fields.badges_image.value %}
              {% assign badges_index = forloop.index %}
              {% assign main_index = forloop.parentloop.index %}
@@ -507,6 +455,14 @@
                 <img src="{{ badges_image | img_url:'master' }}"/>
                </div>
              {% endif %}
+            {% endfor %}
+            {% endcomment %}
+            
+            {% for media in product.media %}
+              {{ media.media_type }}
+              <div class="product-spinner">
+                <img src="{{ badges_image | img_url:'master' }}"/>
+              </div>
             {% endfor %}
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
