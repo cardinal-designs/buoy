@@ -208,7 +208,8 @@
             {{ 'main_menu.risk_free' | t }}
           </li>            
         </ul>
-          
+
+        {% comment %}
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
           <div class="Badge_Grid_Container">
@@ -237,6 +238,7 @@
             {%- endif -%}
           </div>
         {% endif %}
+        {% endcomment %}
         
         {% comment %}
         {% if product.type == 'Subscription' or product.type == 'Bundle' %}
