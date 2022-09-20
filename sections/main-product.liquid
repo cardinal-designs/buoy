@@ -459,9 +459,10 @@
             {% endcomment %}
             
              {% assign media_alt = media.alt | handle %}
+             {% assign media_alt_icon = media_alt | append:'-icon' %}
               <div class="product-spinner">
                 <img src="{{ media_alt | append:'.svg' | file_url }}"/>
-                <img src="{{ media_alt | append:'-icon.svg' | file_url }}"/>
+                <img src="{{ media_alt_icon | append:'.svg' | file_url }}"/>
               </div>
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
