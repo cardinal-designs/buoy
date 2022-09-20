@@ -461,7 +461,7 @@
            
               {{ media.alt | handle }}
               <div class="product-spinner">
-                <img src="{{ badges_image | img_url:'master' }}"/>
+                <img src="{{ media.alt | append:'.svg' | file_img_url: 'master' }}"/>
               </div>
            
             
