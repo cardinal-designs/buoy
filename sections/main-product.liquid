@@ -459,7 +459,7 @@
             {% endcomment %}
             
             {% for media in product.media %}
-              {{ media.alt }}
+              {{ media.alt |handle }}
               <div class="product-spinner">
                 <img src="{{ badges_image | img_url:'master' }}"/>
               </div>
