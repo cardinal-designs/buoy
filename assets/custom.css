@@ -645,6 +645,9 @@ body.js-open-drawer:before {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  align-itmes: flex-start;
+  column-gap: 50px;
 }
 .drawer_cover_cls .drawer_left {
   
