@@ -471,14 +471,44 @@
               <div class="product-spinner badge_animat_cls">
                 {% if media_alt == 'all-day-hydration' %}
                   <div class="fixed_badge_center">
-                  ⚡
+                    ⚡
                   </div>  
                 {% elsif media_alt == 'clean-pure' %}
-                  💦
+                  <div class="fixed_badge_center">
+                    💦
+                  </div>
                 {% elsif media_alt == 'vegan-nongmo' %}
-                  🌱
-                {% elsif media_alt == 'vegan-nongmo' %}
-                  
+                  <div class="fixed_badge_center">
+                    🌱
+                  </div>
+                {% elsif media_alt == '100-pcr-bottles' %}
+                  <div class="fixed_badge_center">
+                    ♻️
+                  </div>
+                {% elsif media_alt == 'unsweetened-unflavored' %}
+                  <div class="fixed_badge_center">
+                    👅
+                  </div>
+                {% elsif media_alt == 'add-to-any-drink' %}
+                  <div class="fixed_badge_center">
+                    🍺
+                  </div>
+                {% elsif media_alt == 'all-day-energy' %}
+                  <div class="fixed_badge_center">
+                    🔋
+                  </div>
+                {% elsif media_alt == 'no-crashes' %}
+                  <div class="fixed_badge_center">
+                    📉
+                  </div>
+                {% elsif media_alt == 'plant-powered-antioxidants' %}
+                  <div class="fixed_badge_center">
+                    🫐
+                  </div>
+                {% elsif media_alt == 'fortifying-minerals' %}
+                  <div class="fixed_badge_center">
+                    🛡
+                  </div>
                 {% endif %} 
                 <div class="rotet_badge_svg">
                   <img src="{{ media_alt | append:'.svg' | file_url }}"/>
