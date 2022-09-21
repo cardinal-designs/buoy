@@ -6,9 +6,10 @@
   {% for image in product.metafields.supplement.supplement_facts_icon_images.value %}
     {% assign split_title = image | split:'/' %}
     {% assign split_value = split_title[1] | split:'.' %}
-    {% assign get_title = split_value[0] | replace: '-', " " %}
+    {% assign set_title = split_value[0] | replace: '-', " " %}
+    {% assign product_title = set_title | upcase %}
     
-    {{ get_title | upcase}}
+    {{ product_title }}
   
     <img src="{{ image | img_url:'small' }}"/>
   {% endfor %}
