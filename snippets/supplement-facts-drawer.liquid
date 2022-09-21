@@ -2,9 +2,9 @@
   <a href="javascript:void(0)" class="js-close-supplement-drawer">&times;</a>
   <p>{{ product.title }}</p>
   <h3>Supplement Facts</h3>
-  {{ product.metafields.supplement.supplement_facts_serving_text }}
-  {{ product.metafields.supplement.supplement_facts_icon_images }}
-  {{ product.metafields.supplement.supplement_facts_serving_text }}
+  <span>{{ product.metafields.supplement.supplement_facts_serving_text }}</span>
+  <img src="{{ product.metafields.supplement.supplement_facts_icon_images }}"/>
+  <p>{{ product.metafields.supplement.supplement_facts_details_text }}</p>
 </div>
 
 
