@@ -556,7 +556,7 @@ input[type="radio"]:checked::before {
   border-radius: 100%;
   width: 100%;
   height: auto;
-  object-fit:cover;
+  object-fit: cover;
 }
 .badge_animat_cls .rotet_badge_svg {
   position: absolute;
