@@ -466,7 +466,7 @@
             
            {% assign media_alt = media.preview_image.alt | handle %}
            {% assign media_alt_icon = media_alt | append:'-icon' %}
-            {{ media.media_type }}
+            {{ media_alt }}
             {% if media.preview_image.alt != blank %}
               <div class="product-spinner badge_animat_cls">
                 {% if media_alt == 'all-day-hydration' %}
