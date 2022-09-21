@@ -14,10 +14,12 @@
     {% assign split_value = split_url[1] | split:'.' %}
     {% assign set_title = split_value[0] | replace: '-', " " %}
     {% assign icon_title = set_title | upcase %}
-    <span>{{ icon_title }}</span>
-    <img src="{{ image | img_url:'small' }}"/>
+      <span>{{ icon_title }}</span>
+      <img src="{{ image | img_url:'small' }}"/>
   {% endfor %}
   <p>{{ supplement_facts_details_text }}</p>
+
+  
 </div>
 
 
