@@ -679,7 +679,15 @@ body.js-open-drawer:before {
   font-family: inter,sans-serif;
   font-weight: 300;
 }
-
+.icons--with-title {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.icons--with-title .badge_drawer_inner img{
+  width:100%;
+}
 
 @media screen and (max-width: 1280px) {
 
