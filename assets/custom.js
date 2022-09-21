@@ -16,8 +16,8 @@ $( document ).ready(function() {
 });
 
 
-/* Open Supplement Drawer */
 (function(){
+  /* Open Supplement Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
       closeDrawer: '.js-close-supplement-drawer'
@@ -40,4 +40,11 @@ $( document ).ready(function() {
     document.getElementById("supplementSideDrawer").style.width = "0";
     document.body.classList.remove('js-open-drawer');
   }
+
+  $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
+    var text= $(this).text().trim().split(" ");
+    var first = text.shift();
+    return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
+  });
+  
 })();
