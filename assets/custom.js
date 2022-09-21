@@ -16,12 +16,14 @@ $( document ).ready(function() {
 });
 
 (function(){
-selectors={
-  openDrawer: '.js-open-supplement-drawer',
-  closeDrawer: '.js-close-supplement-drawer'
+let selectors = {
+    openDrawer: '.js-open-supplement-drawer',
+    closeDrawer: '.js-close-supplement-drawer'
 
 }
 
-  console.log(selectors.openDrawer);
+  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
+    console.log("open")
+  })
   
 })();
