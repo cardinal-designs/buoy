@@ -585,6 +585,22 @@ input[type="radio"]:checked::before {
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText::first-word{
   display: none !important;
 }
+body.js-open-drawer:before {
+  position:relative;
+}
+body.js-open-drawer:before {
+  background: #F6ECE1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  opacity: 0.9;
+}
 
 
 @media screen and (max-width: 1280px) {
