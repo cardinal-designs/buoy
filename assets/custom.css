@@ -691,6 +691,10 @@ body.js-open-drawer:before {
 .badge_drawer_inner {
   padding: 0 15px;
 }
+.badge_drawer_inner span.icon-title {
+  font-size: 12px;
+  line-height: normal !important;
+}
 
 @media screen and (max-width: 1280px) {
 
