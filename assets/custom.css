@@ -698,6 +698,23 @@ input[type="radio"]:checked::before {
     
 }
 
+@media screen and (max-width: 640px) {
+  .badge_animat_cls .fixed_badge_center {
+    position: absolute;
+    right: 22px;
+    width: 60px;
+    height: 60px;
+    top: 22px;
+  }
+  .badge_animat_cls .rotet_badge_svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105px;
+    height: 105px;
+  }
+}
+
 @media screen and (max-width: 500px) {
 
   .template-product .subscribe-item_info p {
