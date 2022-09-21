@@ -5,7 +5,7 @@
   <span>{{ product.metafields.supplement.supplement_facts_serving_text }}</span>
   {% for image in product.metafields.supplement.supplement_facts_icon_images.value %}
     {% assign split_title = image |split:'/' %}
-    {{ split_title[1] }}
+    {{ split_title[1] | remove: '.png'}}
     <img src="{{ image | img_url:'small' }}"/>
   {% endfor %}
   <p>{{ product.metafields.supplement.supplement_facts_details_text }}</p>
