@@ -686,7 +686,8 @@ body.js-open-drawer:before {
   justify-content: space-around;
 }
 .icons--with-title .badge_drawer_inner img{
-  width:100%;
+  width: auto;
+  height: 80px;
 }
 .badge_drawer_inner {
   padding: 0 15px;
