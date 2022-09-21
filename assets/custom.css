@@ -582,10 +582,8 @@ input[type="radio"]:checked::before {
   width: 30px !important;
   overflow: hidden;
 }
-.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText::first-word{
-  display: none !important;
-}
-body.js-open-drawer:before {
+
+/* body.js-open-drawer:before {
   position:relative;
 }
 body.js-open-drawer:before {
@@ -600,7 +598,7 @@ body.js-open-drawer:before {
   right: 0;
   content: "";
   opacity: 0.9;
-}
+} */
 
 .supplement-side-drawer {
   height: 100%;
