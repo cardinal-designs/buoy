@@ -33,10 +33,12 @@ $( document ).ready(function() {
 
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+    document.body.classList.add('js-open-drawer');
   }
   
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.body.classList.remove('js-open-drawer');
   }
   
 })();
