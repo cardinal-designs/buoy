@@ -688,6 +688,9 @@ body.js-open-drawer:before {
 .icons--with-title .badge_drawer_inner img{
   width:100%;
 }
+.badge_drawer_inner {
+  padding: 0 15px;
+}
 
 @media screen and (max-width: 1280px) {
 
