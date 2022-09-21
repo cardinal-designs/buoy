@@ -19,8 +19,10 @@
             {% assign split_value = split_url[1] | split:'.' %}
             {% assign set_title = split_value[0] | replace: '-', " " %}
             {% assign icon_title = set_title | upcase %}
+            <div class="badge_drawer_inner">
               <span class="icon-title">{{ icon_title }}</span>
               <img src="{{ image | img_url:'small' }}"/>
+            </div>
           {% endfor %}
         </div> 
         <div class="supplement-detail-text">
