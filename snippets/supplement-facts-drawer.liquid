@@ -3,7 +3,10 @@
   <p>{{ product.title }}</p>
   <h3>Supplement Facts</h3>
   <span>{{ product.metafields.supplement.supplement_facts_serving_text }}</span>
-  <img src="{{ product.metafields.supplement.supplement_facts_icon_images }}"/>
+  {% for image in product.metafields.supplement.supplement_facts_icon_images %}
+    
+    {{ image }}
+  {% endfor %}
   <p>{{ product.metafields.supplement.supplement_facts_details_text }}</p>
 </div>
 
