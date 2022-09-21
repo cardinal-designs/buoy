@@ -568,6 +568,13 @@ input[type="radio"]:checked::before {
 .badge_animat_cls .rotet_badge_svg img {
   width:100%;
 }
+.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
+  width: 100% !important;
+  height: 100% !important;
+  clip: inherit !important;
+  right: -180px;
+}
+
 
 @media screen and (max-width: 1280px) {
 
