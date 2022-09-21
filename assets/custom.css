@@ -700,7 +700,9 @@ body.js-open-drawer:before {
   width: 100%;
 }
 .supplement-detail-text p {
-  
+  font-size: 12px;
+  margin: 17px 0 !important;
+  font-weight: 300 !important;
 }
 
 @media screen and (max-width: 1280px) {
