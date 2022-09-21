@@ -466,16 +466,20 @@
             
            {% assign media_alt = media.preview_image.alt | handle %}
            {% assign media_alt_icon = media_alt | append:'-icon' %}
-            {{ media_alt }}
+            {{ media.media_type }}
             {% if media.preview_image.alt != blank %}
               <div class="product-spinner badge_animat_cls">
                 {% if media_alt == 'all-day-hydration' %}
                   <div class="fixed_badge_center">
-                    ⚡
+                  ⚡
                   </div>  
-                {% elsif media_alt == '' %}
+                {% elsif media_alt == 'clean-pure' %}
+                  💦
+                {% elsif media_alt == 'vegan-nongmo' %}
+                  🌱
+                {% elsif media_alt == 'vegan-nongmo' %}
                   
-                 {% endif %} 
+                {% endif %} 
                 <div class="rotet_badge_svg">
                   <img src="{{ media_alt | append:'.svg' | file_url }}"/>
                 </div>
