@@ -15,15 +15,28 @@ $( document ).ready(function() {
   
 });
 
-(function(){
-let selectors = {
-    openDrawer: '.js-open-supplement-drawer',
-    closeDrawer: '.js-close-supplement-drawer'
 
-}
+/* Open Supplement Drawer */
+(function(){
+  let selectors = {
+      openDrawer: '.js-open-supplement-drawer',
+      closeDrawer: '.js-close-supplement-drawer'
+  }
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-    console.log("open")
-  })
+    openNav();
+  });
+
+  document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+    closeNav();
+  });
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
   
 })();
