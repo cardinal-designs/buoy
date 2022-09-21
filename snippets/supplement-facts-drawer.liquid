@@ -4,13 +4,11 @@
   <h3>Supplement Facts</h3>
   <span>{{ product.metafields.supplement.supplement_facts_serving_text }}</span>
   {% for image in product.metafields.supplement.supplement_facts_icon_images.value %}
-    {% assign split_title = image | split:'/' %}
-    {% assign split_value = split_title[1] | split:'.' %}
+    {% assign split_url = image | split:'/' %}
+    {% assign split_value = split_url[1] | split:'.' %}
     {% assign set_title = split_value[0] | replace: '-', " " %}
     {% assign icon_title = set_title | upcase %}
-    
     <span>{{ icon_title }}</span>
-  
     <img src="{{ image | img_url:'small' }}"/>
   {% endfor %}
   <p>{{ product.metafields.supplement.supplement_facts_details_text }}</p>
