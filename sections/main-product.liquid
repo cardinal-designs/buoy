@@ -27,10 +27,14 @@
           {{ product.description }}
         </div>
 
-        {% if section.settings.supplement_fact_text != blank %}
-          <a class="Link_Text" href="{{ section.settings.supplement_fact_link }}">{{ section.settings.supplement_fact_text }}</a>
-        {% endif %}
-
+        <a class="Link_Text" href="javascript:void(0)">{{ section.settings.supplement_fact_text }}</a>
+        
+        {% comment %}
+         {% if section.settings.supplement_fact_text != blank %}
+           <a class="Link_Text" href="{{ section.settings.supplement_fact_link }}">{{ section.settings.supplement_fact_text }}</a>
+         {% endif %}
+        {% endcomment %}
+      
         {% comment %}
         {% render 'product-tabs' product: product %}
 
