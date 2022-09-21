@@ -582,8 +582,8 @@ input[type="radio"]:checked::before {
   width: 30px !important;
   overflow: hidden;
 }
-.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText:first-word{
-  display:none !important;
+.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText::first-word{
+  display: none !important;
 }
 
 
