@@ -1,9 +1,16 @@
+{% liquid
+  assign supplement_facts_serving_text  = product.metafields.supplement.supplement_facts_serving_text
+  assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
+  assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
+
+ %}
+ 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="js-close-supplement-drawer">&times;</a>
   <p>{{ product.title }}</p>
   <h3>Supplement Facts</h3>
-  <span>{{ product.metafields.supplement.supplement_facts_serving_text }}</span>
-  {% for image in product.metafields.supplement.supplement_facts_icon_images.value %}
+  <span>{{ supplement_facts_serving_text }}</span>
+  {% for image in supplement_facts_icon_images.value %}
     {% assign split_url = image | split:'/' %}
     {% assign split_value = split_url[1] | split:'.' %}
     {% assign set_title = split_value[0] | replace: '-', " " %}
@@ -11,7 +18,7 @@
     <span>{{ icon_title }}</span>
     <img src="{{ image | img_url:'small' }}"/>
   {% endfor %}
-  <p>{{ product.metafields.supplement.supplement_facts_details_text }}</p>
+  <p>{{ supplement_facts_details_text }}</p>
 </div>
 
 
