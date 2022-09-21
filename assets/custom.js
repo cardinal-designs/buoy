@@ -41,10 +41,13 @@ $( document ).ready(function() {
     document.body.classList.remove('js-open-drawer');
   }
 
-  $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
+  
+setTimeout(function(){
+ $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
     var text= $(this).text().trim().split(" ");
     var first = text.shift();
     return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
   });
+},500)
   
 })();
