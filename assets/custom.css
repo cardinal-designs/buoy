@@ -573,6 +573,12 @@ input[type="radio"]:checked::before {
   height: 100% !important;
   clip: inherit !important;
   right: -180px;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
 }
 
 
