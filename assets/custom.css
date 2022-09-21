@@ -606,7 +606,7 @@ body.js-open-drawer:before {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #fff;
