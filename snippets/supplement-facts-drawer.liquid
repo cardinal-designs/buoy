@@ -2,6 +2,7 @@
     assign supplement_facts_serving_text  = product.metafields.supplement.supplement_facts_serving_text
     assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
     assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
+    assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image
 %}
 
 <div id="mySidenav" class="supplement-side-drawer">
@@ -18,7 +19,7 @@
           <img src="{{ image | img_url:'small' }}"/>
         {% endfor %}
         <p>{{ supplement_facts_details_text }}</p>
-
+{{ supplement_facts_form_image }}
 </div>
 
 
