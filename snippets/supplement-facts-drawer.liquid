@@ -4,7 +4,7 @@
   assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
  %}
  
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="supplement-side-drawer">
   <a href="javascript:void(0)" class="js-close-supplement-drawer">&times;</a>
   <p>{{ product.title }}</p>
   <h3>Supplement Facts</h3>
@@ -25,7 +25,7 @@
 
 
 <style>
-.sidenav {
+.supplement-side-drawer {
   height: 100%;
   width: 0;
   position: fixed;
@@ -39,7 +39,7 @@
   text-align:center;
 }
 
-.sidenav a {
+.supplement-side-drawer a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -48,11 +48,11 @@
   transition: 0.3s;
 }
 
-.sidenav a:hover{
+.supplement-side-drawer a:hover{
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.supplement-side-drawer .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .supplement-side-drawer {padding-top: 15px;}
+  .supplement-side-drawer a {font-size: 18px;}
 }
 </style>
