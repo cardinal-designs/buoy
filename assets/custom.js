@@ -40,5 +40,4 @@ $( document ).ready(function() {
     document.getElementById("mySidenav").style.width = "0";
     document.body.classList.remove('js-open-drawer');
   }
-  
 })();
