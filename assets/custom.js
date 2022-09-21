@@ -32,7 +32,7 @@ $( document ).ready(function() {
   });
 
   function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "100%";
     document.body.classList.add('js-open-drawer');
   }
   
