@@ -650,7 +650,19 @@ body.js-open-drawer:before {
   column-gap: 50px;
 }
 .drawer_cover_cls .drawer_left {
-  
+    text-align: left;
+}
+.drawer_cover_cls .drawer_left p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 30px;
+  color: #1F2322;
+}
+.drawer_cover_cls .drawer_left h3 {
+  font-size: 35px;
+  margin: 0;
+  line-height: 40px;
+  color: #1F2322;
 }
 
 
