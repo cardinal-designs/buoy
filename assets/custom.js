@@ -14,3 +14,14 @@ $( document ).ready(function() {
   });
   
 });
+
+(function(){
+selectors={
+  openDrawer: '.js-open-supplement-drawer',
+  closeDrawer: '.js-close-supplement-drawer'
+
+}
+
+  console.log(selectors.openDrawer);
+  
+})();
