@@ -460,6 +460,7 @@
             
            {% assign media_alt = media.alt | handle %}
            {% assign media_alt_icon = media_alt | append:'-icon' %}
+            {{ media.alt }}
             {% if media.alt != blank %}
               <div class="product-spinner">
                 <img src="{{ media_alt | append:'.svg' | file_url }}"/>
