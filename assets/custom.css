@@ -544,6 +544,30 @@ input[type="radio"]:checked::before {
   margin: 50px 0 30px !important;
 }
 
+.badge_animat_cls .fixed_badge_center {
+  position: absolute;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+}
+.badge_animat_cls .fixed_badge_center img {
+  animation: inherit;
+  border-radius: 100%;
+  width: 100%;
+  height: auto;
+}
+.badge_animat_cls .rotet_badge_svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+}
+.badge_animat_cls .rotet_badge_svg img {
+  width:100%;
+}
+
 @media screen and (max-width: 1280px) {
 
   .Usp_Wrapper ul li {
