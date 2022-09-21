@@ -547,8 +547,8 @@ input[type="radio"]:checked::before {
 .badge_animat_cls .fixed_badge_center {
   position: absolute;
   right: 25px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   top: 25px;
 }
 .badge_animat_cls .fixed_badge_center img {
@@ -562,8 +562,8 @@ input[type="radio"]:checked::before {
   position: absolute;
   top: 0;
   right: 0;
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
 }
 .badge_animat_cls .rotet_badge_svg img {
   width:100%;
