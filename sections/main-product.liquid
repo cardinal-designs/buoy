@@ -445,7 +445,8 @@
             {% endif %}
             {% endif %}
             {% endcomment %}
-           
+
+           {% comment %}
             {% for badges_image in product.metafields.my_fields.badges_image.value %}
               {% assign badges_index = forloop.index %}
               {% assign main_index = forloop.parentloop.index %}
@@ -455,15 +456,15 @@
                 </div>
               {% endif %}
              {% endfor %}
-
-            {% comment %}
+            {% endcomment %}
+            
              {% assign media_alt = media.alt | handle %}
              {% assign media_alt_icon = media_alt | append:'-icon' %}
               <div class="product-spinner">
                 <img src="{{ media_alt | append:'.svg' | file_url }}"/>
                 <img src="{{ media_alt_icon | append:'.svg' | file_url }}"/>
               </div>
-            {% endcomment %}
+            
             
             {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
           </div>
