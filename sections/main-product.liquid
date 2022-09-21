@@ -461,7 +461,7 @@
            {% assign media_alt = media.preview_image.alt | handle %}
            {% assign media_alt_icon = media_alt | append:'-icon' %}
             {% if media.preview_image.alt != blank %}
-              <div class="product-spinner">
+              <div class="product-spinner badge_animat_cls">
                 <div class="fixed_badge_center">
                   <img src="{{ media_alt_icon | append:'.png' | file_url }}"/>
                 </div>  
