@@ -572,10 +572,10 @@ input[type="radio"]:checked::before {
   width: 100% !important;
   height: 100% !important;
   clip: inherit !important;
-  right: -35px;
+  right: -30px;
   font-family: inter,sans-serif;
   font-style: normal;
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 1.8em !important;
@@ -584,6 +584,10 @@ input[type="radio"]:checked::before {
 }
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text{
   display:none;
+}
+.okeReviews-reviewsSummary-ratingCount {
+    position: relative;
+    left: 22px;
 }
 
 /* body.js-open-drawer:before {
