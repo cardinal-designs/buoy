@@ -699,6 +699,10 @@ body.js-open-drawer:before {
 .drawer_cover_cls .supplement-facts-form-image img {
   width: 100%;
 }
+.supplement-detail-text {
+  position: relative;
+  top: 290px;
+}
 .supplement-detail-text p {
   font-size: 12px !important;
   margin: 17px 0 !important;
