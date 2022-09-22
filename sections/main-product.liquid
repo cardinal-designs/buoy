@@ -11,6 +11,9 @@
 
 <section data="{{product | json}}" class="page-width">
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
+     
+     {% render 'supplement-facts-drawer' %}
+     
     <div class="product__info-wrapper">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
