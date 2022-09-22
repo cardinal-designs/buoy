@@ -32,6 +32,16 @@ $( document ).ready(function() {
   });
 
   function openNav() {
+        if ($(window).width() < 992) {
+            document.getElementById("supplementSideDrawer").style.width = "70%";
+        }
+        else if ($(window).width() >= 768 &&  $(window).width() <= 992) {
+            document.getElementById("supplementSideDrawer").style.width = "100%";
+        }
+        else{
+            document.getElementById("supplementSideDrawer").style.width = "50%";
+        }
+    
       document.getElementById("supplementSideDrawer").style.width = "50%";
       document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
