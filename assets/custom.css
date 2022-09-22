@@ -917,6 +917,10 @@ input[type="radio"]:checked::before {
   .drawer_cover_cls .drawer_left, .drawer_cover_cls .supplement-facts-form-image {
     width: 100%;
   }
+  .supplement-detail-text {
+    position: inherit;
+    padding-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 500px) {
