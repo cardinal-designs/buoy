@@ -40,7 +40,7 @@ $( document ).ready(function() {
             document.getElementById("supplementSideDrawer").style.width = "50%";
         }
     
-      document.getElementById("supplementSideDrawer").style.width = "50%";
+      // document.getElementById("supplementSideDrawer").style.width = "50%";
       document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
   
