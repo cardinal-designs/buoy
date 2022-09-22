@@ -785,7 +785,13 @@ input[type="radio"]:checked::before {
     height: 30px;
     width: 30px;
   }
-
+  .badge_drawer_inner span.icon-title {
+    top:47px;
+  }
+  .badge_drawer_inner span.icon-title svg {
+    width: auto;
+    height: 45px;
+  }
 }
 
 @media screen and (max-width: 768px) {
