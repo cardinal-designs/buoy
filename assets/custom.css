@@ -698,6 +698,8 @@ body.js-open-drawer:before {
 .icons--with-title .badge_drawer_inner .emoji_img {
   width: 55px;
   height: 55px;
+  margin: 0 auto;
+  border-radius: 100px;
 }
 .icons--with-title .badge_drawer_inner img {
   width: 100%;
