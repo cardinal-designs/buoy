@@ -39,12 +39,12 @@ $( document ).ready(function() {
     }else{
       document.getElementById("supplementSideDrawer").style.width = "50%";
     }
-      document.body.classList.add('js-open-drawer');
+      document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
   
   function closeNav() {
     document.getElementById("supplementSideDrawer").style.width = "0";
-    document.body.classList.remove('js-open-drawer');
+    document.querySelector('.js-main-drawer-suppliment').classList.remove('js-open-drawer');
   }
 
   
