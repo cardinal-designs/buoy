@@ -594,7 +594,7 @@ input[type="radio"]:checked::before {
     left: 24px;
 }
 
-body.js-open-drawer:before {
+/* body.js-open-drawer:before {
   position:relative;
 }
 body.js-open-drawer:before {
@@ -609,7 +609,7 @@ body.js-open-drawer:before {
   right: 0;
   content: "";
   opacity: 0.9;
-}
+} */
 
 .supplement-side-drawer {
   height: 100%;
