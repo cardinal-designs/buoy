@@ -38,12 +38,30 @@
             </div>
           {% endfor %}
           {% endcomment %}
+          {% if emoji_img_one != blank %}
           <div class="badge_drawer_inner">
-            <span class="icon-title">{{ icon_title }}</span>
+            <span class="icon-title">{{ emoji_title_one }}</span>
             <div class="emoji_img">
-              <img src="{{ image | img_url:'small' }}"/>
+              <img src="{{ emoji_img_one | img_url:'small' }}"/>
             </div>  
           </div>
+          {% endif %}
+          {% if emoji_img_two != blank %}
+          <div class="badge_drawer_inner">
+            <span class="icon-title">{{ emoji_title_two }}</span>
+            <div class="emoji_img">
+              <img src="{{ emoji_img_two | img_url:'small' }}"/>
+            </div>  
+          </div>
+          {% endif %}
+          {% if emoji_img_three != blank %}
+          <div class="badge_drawer_inner">
+            <span class="icon-title">{{ emoji_title_three }}</span>
+            <div class="emoji_img">
+              <img src="{{ emoji_img_three | img_url:'small' }}"/>
+            </div>  
+          </div>
+          {% endif %}
         </div> 
         <div class="supplement-detail-text">
           <p>{{ supplement_facts_details_text }}</p>
