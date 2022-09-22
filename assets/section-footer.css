@@ -59,6 +59,10 @@
   margin-bottom: 50px;
 }
 
+.footer__logo-mascot svg {
+  max-width: 220px;
+}
+
 .footer__content {
   display: grid;
   grid-template-columns: max-content max-content;
