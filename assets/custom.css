@@ -885,7 +885,9 @@ input[type="radio"]:checked::before {
   .product__media-item .product-spinner {
     right: 13px;
   }
-
+  .drawer_header {
+    border-bottom: solid 1px #ddd;
+  }
 }
 
 @media screen and (max-width: 640px) {
