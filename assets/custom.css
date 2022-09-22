@@ -885,13 +885,13 @@ input[type="radio"]:checked::before {
   .product__media-item .product-spinner {
     right: 13px;
   }
-  .drawer_cover_cls .drawer_left {
+/*   .drawer_cover_cls .drawer_left {
     width: 100%;
   }
   .drawer_cover_cls .supplement-facts-form-image {
     width: 100%;
     padding: 0;
-  }
+  } */
 }
 
 @media screen and (max-width: 640px) {
