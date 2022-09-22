@@ -32,13 +32,7 @@ $( document ).ready(function() {
   });
 
   function openNav() {
-    if(window.outerWidth > 640){
-      document.getElementById("supplementSideDrawer").style.width = "70%";
-    }else if(window.outerWidth < 992){
-      document.getElementById("supplementSideDrawer").style.width = "100%";
-    }else{
       document.getElementById("supplementSideDrawer").style.width = "50%";
-    }
       document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
   
