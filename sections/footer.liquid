@@ -64,7 +64,7 @@
         {% render 'icon-chevron-down' %}
       </button>
       <div class="footer__content-links footer__content-dropdown-content">
-        {% render 'pelican' %}
+        {{ section.settings.pelican_svg }}
       </div>
     </div>
 
@@ -288,6 +288,11 @@
       "type": "link_list",
       "id": "menu",
       "label": "Menu"
+    },
+    {
+      "type": "textarea",
+      "id": "pelican_svg",
+      "label": "Pelican (SVG)"
     }
   ]
 }
