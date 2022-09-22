@@ -3,6 +3,13 @@
     assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
     assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
     assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image.value
+
+    assign emoji_img_one = product.metafields.custom.drawer_emoji_image_one
+    assign emoji_title_one = product.metafields.custom.drawer_emoji_title_one
+    assign emoji_img_two = product.metafields.custom.drawer_emoji_image_two
+    assign emoji_title_two = product.metafields.custom.drawer_emoji_title_two
+    assign emoji_img_three = product.metafields.custom.drawer_emoji_image_three
+    assign emoji_title_three = product.metafields.custom.drawer_emoji_title_three
 %}
 
 <div id="supplementSideDrawer" class="supplement-side-drawer">
@@ -17,6 +24,7 @@
         <h3>Supplement Facts</h3>
         <span>{{ supplement_facts_serving_text }}</span>
         <div class="icons--with-title">
+          {% comment %}
           {% for image in supplement_facts_icon_images.value %}
             {% assign split_url = image | split:'/' %}
             {% assign split_value = split_url[1] | split:'.' %}
@@ -29,6 +37,13 @@
               </div>  
             </div>
           {% endfor %}
+          {% endcomment %}
+          <div class="badge_drawer_inner">
+            <span class="icon-title">{{ icon_title }}</span>
+            <div class="emoji_img">
+              <img src="{{ image | img_url:'small' }}"/>
+            </div>  
+          </div>
         </div> 
         <div class="supplement-detail-text">
           <p>{{ supplement_facts_details_text }}</p>
