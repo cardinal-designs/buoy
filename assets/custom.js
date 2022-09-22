@@ -35,7 +35,7 @@ $( document ).ready(function() {
         if ($(window).width() < 992) {
             document.getElementById("supplementSideDrawer").style.width = "70%";
         }
-        else if ($(window).width() >= 640 &&  $(window).width() <= 992) {
+        else if ($(window).width() <= 640 &&  $(window).width() <= 992) {
             document.getElementById("supplementSideDrawer").style.width = "100%";
         }
         else{
