@@ -694,6 +694,8 @@ body.js-open-drawer:before {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  position: relative;
+  top: -30px;
 }
 .icons--with-title .badge_drawer_inner .emoji_img {
   width: 55px;
