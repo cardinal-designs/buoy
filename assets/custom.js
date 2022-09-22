@@ -34,7 +34,7 @@ $( document ).ready(function() {
   function openNav() {
         if (window.innerWidth <= 992 && window.innerWidth > 640 ) {
             document.getElementById("supplementSideDrawer").style.width = "70%";
-        }else if (window.innerWidth <= 640) {
+        }else if (window.innerWidth <= 768) {
             document.getElementById("supplementSideDrawer").style.width = "100%";
         }else{
             document.getElementById("supplementSideDrawer").style.width = "50%";
