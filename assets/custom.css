@@ -748,6 +748,13 @@ input[type="radio"]:checked::before {
   }
 }
 
+@media  screen and (max-width: 1440px){
+  .badge_drawer_inner span.icon-title svg {
+    width: auto !important;
+    height: 50px !important;
+  }
+}
+
 @media screen and (max-width: 1280px) {
 
   .Usp_Wrapper ul li {
