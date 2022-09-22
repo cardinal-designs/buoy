@@ -32,9 +32,9 @@ $( document ).ready(function() {
   });
 
   function openNav() {
-    if(window.outerWidth >= 640){
+    if(window.outerWidth > 640){
       document.getElementById("supplementSideDrawer").style.width = "70%";
-    }else if(window.outerWidth <= 992){
+    }else if(window.outerWidth < 992){
       document.getElementById("supplementSideDrawer").style.width = "100%";
     }else{
       document.getElementById("supplementSideDrawer").style.width = "50%";
