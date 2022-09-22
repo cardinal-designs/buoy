@@ -923,7 +923,9 @@ input[type="radio"]:checked::before {
   .drawer_cover_cls {
     padding-top: 40px;
   }
-  
+  .icons--with-title {
+    top: -25px;
+  }
 }
 
 @media screen and (max-width: 640px) {
