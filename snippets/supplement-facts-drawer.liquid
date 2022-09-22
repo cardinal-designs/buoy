@@ -24,7 +24,9 @@
             {% assign icon_title = set_title | upcase %}
             <div class="badge_drawer_inner">
               <span class="icon-title">{{ icon_title }}</span>
-              <img src="{{ image | img_url:'small' }}"/>
+              <div class="emoji_img">
+                <img src="{{ image | img_url:'small' }}"/>
+              </div>  
             </div>
           {% endfor %}
         </div> 
