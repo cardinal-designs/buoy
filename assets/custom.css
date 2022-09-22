@@ -888,6 +888,12 @@ input[type="radio"]:checked::before {
   .drawer_header {
     border-bottom: solid 1px #ddd;
   }
+  .supplement-side-drawer {
+    padding-top: 4px;
+  }
+  .drawer_header {
+    padding-bottom: 4px;
+  }
 }
 
 @media screen and (max-width: 640px) {
