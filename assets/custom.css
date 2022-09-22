@@ -736,7 +736,10 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 1590px) {
   .badge_drawer_inner span.icon-title {
     position: relative;
-    top: 43px;
+    top: 49px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }  
   .badge_drawer_inner span.icon-title svg {
     width: 50px;
