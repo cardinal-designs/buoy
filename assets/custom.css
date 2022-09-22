@@ -710,8 +710,8 @@ body.js-open-drawer:before {
   padding: 0 15px;
 }
 .badge_drawer_inner span.icon-title {
-  font-size: 12px;
-  line-height: normal !important;
+  position: relative;
+  top: 59px;
 }
 .drawer_cover_cls .supplement-facts-form-image img {
   width: 100%;
