@@ -792,6 +792,10 @@ input[type="radio"]:checked::before {
     width: auto;
     height: 45px;
   }
+  .icons--with-title .badge_drawer_inner .emoji_img {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -881,7 +885,13 @@ input[type="radio"]:checked::before {
   .product__media-item .product-spinner {
     right: 13px;
   }
-    
+  .drawer_cover_cls .drawer_left {
+    width: 100%;
+  }
+  .drawer_cover_cls .supplement-facts-form-image {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
