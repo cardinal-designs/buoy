@@ -677,16 +677,10 @@ input[type="radio"]:checked::before {
   text-transform: uppercase;
 }
 
-.drawer_cover_cls .drawer_left span br {
-  content: "";
-  display: block;
-  font-size: 100%;
-}
-
 .drawer_cover_cls .drawer_left h3 {
   font-size: 35px;
   margin: 10px 0 12px 0;
-  line-height: 40px;
+  line-height: 4w0px;
   color: #1F2322;
   font-weight: 500;
 }
