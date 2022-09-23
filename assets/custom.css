@@ -698,7 +698,7 @@ input[type="radio"]:checked::before {
   align-items: flex-start;
   justify-content: space-around;
   position: relative;
-  top: -38px;
+  top: -55px;
 }
 .icons--with-title .badge_drawer_inner .emoji_img {
   width: 55px;
@@ -744,7 +744,7 @@ input[type="radio"]:checked::before {
     margin: auto;
   }  
   .badge_drawer_inner span.icon-title svg {
-    width: 50px;
+    width: 72px;
     height: auto;
   }
   .icons--with-title .badge_drawer_inner .emoji_img{
@@ -756,7 +756,7 @@ input[type="radio"]:checked::before {
 @media  screen and (max-width: 1440px){
   .badge_drawer_inner span.icon-title svg {
     width: auto !important;
-    height: 50px !important;
+    height: 72px !important;
   }
 }
 
@@ -812,7 +812,7 @@ input[type="radio"]:checked::before {
   }
   .badge_drawer_inner span.icon-title svg {
     width: auto;
-    height: 45px;
+    height: 72px;
   }
   .icons--with-title .badge_drawer_inner .emoji_img {
     width: 38px;
