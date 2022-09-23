@@ -726,7 +726,7 @@ input[type="radio"]:checked::before {
 }
 .supplement-detail-text {
   position: relative;
-  top: 160px;
+  top: 60px;
 }
 .supplement-detail-text p {
   font-size: 12px !important;
@@ -786,7 +786,7 @@ input[type="radio"]:checked::before {
   }
   .supplement-detail-text {
     position: relative;
-    top: 50px;
+    top: 60px;
   }
 }
 
