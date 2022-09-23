@@ -2,6 +2,7 @@
     assign supplement_facts_serving_text  = product.metafields.supplement.supplement_facts_serving_text
     assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
     assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
+    assign supplement_facts_details_text_2 = product.metafields.custom.supplement_facts_details_text_2
     assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image.value
 
     assign emoji_img_one = product.metafields.custom.drawer_emoji_image_one
@@ -23,6 +24,7 @@
         
         <h3>Supplement Facts</h3>
         <span>{{ supplement_facts_serving_text }}</span>
+        <span>{{ supplement_facts_details_text_2 }}</span>
         <div class="icons--with-title">
           {% comment %}
           {% for image in supplement_facts_icon_images.value %}
