@@ -719,7 +719,7 @@ input[type="radio"]:checked::before {
 }
 .badge_drawer_inner span.icon-title {
   position: relative;
-  top: 68px;
+  top: 80px;
 }
 .drawer_cover_cls .supplement-facts-form-image img {
   width: 100%;
@@ -738,7 +738,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 1590px) {
   .badge_drawer_inner span.icon-title {
     position: relative;
-    top: 68px;
+    top: 80px;
     left: 0;
     right: 0;
     margin: auto;
@@ -808,7 +808,7 @@ input[type="radio"]:checked::before {
     width: 30px;
   }
   .badge_drawer_inner span.icon-title {
-    top:68px;
+    top:80px;
   }
   .badge_drawer_inner span.icon-title svg {
     width: auto;
