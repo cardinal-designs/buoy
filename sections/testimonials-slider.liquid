@@ -5,22 +5,8 @@
     <div class="testimonials-slider__img-slider">
       <div class="testimonials-slider__img-slide">
         {% render 'lazy-image' image: section.settings.image %}
+        {% render 'lazy-image' image: section.settings.image_mob %}
       </div>
-      {% if section.settings.image2 != blank %}
-        <div class="testimonials-slider__img-slide">
-          {% render 'lazy-image' image: section.settings.image2 %}
-        </div>
-      {% endif %}
-      {% if section.settings.image3 != blank %}
-        <div class="testimonials-slider__img-slide">
-          {% render 'lazy-image' image: section.settings.image3 %}
-        </div>
-      {% endif %}
-      {% if section.settings.image4 != blank %}
-        <div class="testimonials-slider__img-slide">
-          {% render 'lazy-image' image: section.settings.image4 %}
-        </div>
-      {% endif %}
     </div>
   </div>
 
