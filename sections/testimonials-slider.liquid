@@ -5,10 +5,10 @@
     <div class="testimonials-slider__img-slider">
       <div class="testimonials-slider__img-slide">
         {%  if section.settings.image_mob != blank %}
-          {% render 'lazy-image' image: section.settings.image %}
-        {% else %}
           {% render 'lazy-image' image: section.settings.image, classes: 'hide-mobile' %}
           {% render 'lazy-image' image: section.settings.image_mob, classes: 'hide-desktop' %}
+        {% else %}
+          {% render 'lazy-image' image: section.settings.image %}
         {% endif %}        
       </div>
     </div>
