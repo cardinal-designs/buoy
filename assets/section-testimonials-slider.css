@@ -17,7 +17,7 @@
 }
 
 .testimonials-slider__img-slider {
-  height: 520px;
+  height: 100%;
 }
 
 .testimonials-slider__img-slide {
@@ -25,7 +25,7 @@
 }
 
 .testimonials-slider__img-slide .aspect-ratio {
-  max-width: 560px !important;
+  max-width: 100% !important;
 }
 
 .testimonials-slider img {
