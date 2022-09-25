@@ -4,8 +4,12 @@
   <div class="testimonials-slider__img-slider-wrapper">
     <div class="testimonials-slider__img-slider">
       <div class="testimonials-slider__img-slide">
-        {% render 'lazy-image' image: section.settings.image %}
-        {% render 'lazy-image' image: section.settings.image_mob %}
+        {%  if section.settings.image_mob != blank %}
+          {% render 'lazy-image' image: section.settings.image %}
+        {% else %}
+          {% render 'lazy-image' image: section.settings.image, classes: 'hide-mobile' %}
+          {% render 'lazy-image' image: section.settings.image_mob, classes: 'hide-desktop' %}
+        {% endif %}        
       </div>
     </div>
   </div>
@@ -39,18 +43,8 @@
       },
 	  {
         "type": "image_picker",
-        "id": "image2",
-        "label": "Image 2 (Optional)"
-      },
-	  {
-        "type": "image_picker",
-        "id": "image3",
-        "label": "Image 3 (Optional)"
-      },
-	  {
-        "type": "image_picker",
-        "id": "image4",
-        "label": "Image 4 (Optional)"
+        "id": "image_mob",
+        "label": "Mobile Image"
       }
     ],
     "blocks": [
