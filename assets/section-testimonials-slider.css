@@ -62,9 +62,21 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .testimonials-slider__img-slider-wrapper {
+    top: unset;
+  }
+
   .testimonials-slider__img-slider {
     display: flex;
     align-items: flex-end;
+  }
+  
+  .testimonials-slider__img-slider .slick-list {
+    width: 100%;
+  }
+
+  .testimonials-slider__img-slider .aspect-ratio::before {
+    padding-bottom: 140%;
   }
   
   .testimonials-slider__marquee-item {
