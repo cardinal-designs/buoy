@@ -1,5 +1,5 @@
 .testimonials-slider {
-  height: 515px;
+  height: calc(100vw / 2.4);
   background: transparent linear-gradient(180deg, white 0%, var(--beige-light) 100%) 0% 0% no-repeat padding-box;
   position: relative;
   display: flex;
