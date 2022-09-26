@@ -72,6 +72,7 @@
       <div class="supplement-facts-form-image">
         <div class="image_form">
           <img src="{{ supplement_facts_form_image | img_url:'master' }}"/>
+          {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: 'img-fill' %}
         </div>  
       </div>
     </div>  
