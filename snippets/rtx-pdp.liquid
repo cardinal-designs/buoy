@@ -60,7 +60,7 @@
                               {%- case block.type -%}
                               {%- when 'block' -%}
                                 <div class="subscribe-item_info">
-                                  <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
+                                 {% render 'lazy-image' image: block.settings.purchase_type_img, fade: true, classes: 'img-fill' %}
                                   <div>
                                     <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
                                     <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
