@@ -33,7 +33,7 @@ $( document ).ready(function() {
 
   function openNav() {
         if (window.innerWidth > 768 ) {
-          document.getElementById("supplementSideDrawer").style.width = "683px";
+          document.getElementById("supplementSideDrawer").style.width = "768px";
         } else {
           document.getElementById("supplementSideDrawer").style.width = "100%";
         }
