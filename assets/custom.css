@@ -1021,6 +1021,6 @@ input[type="radio"]:checked::before {
 }
 
 
-.okeReviews-starRating--small .okeReviews-a11yText {
+.okeReviews-starRating--small .okeReviews-a11yText span {
   display: none;
 }
