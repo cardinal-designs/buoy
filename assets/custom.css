@@ -583,7 +583,7 @@ input[type="radio"]:checked::before {
   font-size: 14px;
   letter-spacing: 0;
   line-height: 1.7em !important;
-/*   width: 25px !important; */
+  width: 25px !important;
   overflow: hidden;
 }
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text{
