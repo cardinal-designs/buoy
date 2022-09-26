@@ -59,7 +59,7 @@
                             {% for block in section.blocks %}
                               {%- case block.type -%}
                               {%- when 'block' -%}
-                                <div class="fe subscribe-item_info">
+                                <div class="subscribe-item_info">
                                   <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
                                   <div>
                                     <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
