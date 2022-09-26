@@ -61,6 +61,7 @@ setTimeout(function(){
     var text= $(this).text().trim().split(" ");
     var first = text.shift();
     return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
+   $(".okeReviews-starRating--small .okeReviews-a11yText").show()
   });
 },500)
   
