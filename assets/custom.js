@@ -23,7 +23,8 @@ $( document ).ready(function() {
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
       closeDrawer: '.js-close-supplement-drawer',
-      openIngredients: '.js-ingredients-open'
+      openIngredients: '.js-ingredients-open',
+      closeContinue: '.mobile-supplement-continue'
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
@@ -35,6 +36,10 @@ $( document ).ready(function() {
   });
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+    closeNav();
+  });
+
+  document.querySelector(selectors.closeContinue).addEventListener('click', function(){
     closeNav();
   });
 
