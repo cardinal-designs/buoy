@@ -21,9 +21,14 @@ $( document ).ready(function() {
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
-      openDrawer: '.js-open-supplement-drawer, .js-ingredients-open',
-      closeDrawer: '.js-close-supplement-drawer'
+      openDrawer: '.js-open-supplement-drawer',
+      closeDrawer: '.js-close-supplement-drawer',
+      openIngredients: '.js-ingredients-open'
   }
+
+  document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+    openNav();
+  });
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
     openNav();
