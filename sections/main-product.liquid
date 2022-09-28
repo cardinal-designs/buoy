@@ -529,6 +529,7 @@
 
 <div class="show-product-bar"></div>
 
+{% comment %}
 {% unless product.type == 'Bundle' %}
 {% if product.metafields.my_fields.nutrition_label != blank %}
 <div class="product-nutrition-label">
@@ -561,6 +562,7 @@
   </div>
 </div>
 {% endunless %}
+{% endcomment %}
 
 {% javascript %}
 // Product tabs
