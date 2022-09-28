@@ -871,9 +871,6 @@ input[type="radio"]:checked::before {
   .drawer_header {
     border-bottom: solid 1px #ddd;
   }
-   {
-    padding-top: 4px;
-  }
   .drawer_header {
     padding-bottom: 4px;
   }
@@ -881,6 +878,7 @@ input[type="radio"]:checked::before {
     position: fixed;
     top: 0;
     width: 100%;
+    left: 0;
     background: #fff;
   }
   .drawer_cover_cls {
