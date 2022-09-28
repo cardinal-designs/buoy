@@ -346,9 +346,8 @@
                   <div class="faq__content">
                     <p class="sh4 single_line_text_field">
                       {{ product.metafields.my_fields.ingredients_tab }}
-                      {% if product.metafields.my_fields.nutrition_label != blank %}
-                        <a href="{{ product.metafields.my_fields.nutrition_label }}" target="_blank" class="tabs-label body medium">Full Ingredients List</a>
-                      {% endif %}
+                      
+                      <button class="tabs-label body medium js-open-supplement-drawer">Full Ingredients List</button>                      
                     </p>
                   </div>
                 </div>
