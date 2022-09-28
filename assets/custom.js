@@ -25,11 +25,11 @@ $( document ).ready(function() {
       closeDrawer: '.js-close-supplement-drawer'
   }
 
-  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
+  document.querySelectorAll(selectors.openDrawer).addEventListener('click', function(){
     openNav();
   });
 
-  document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+  document.querySelectorAll(selectors.closeDrawer).addEventListener('click', function(){
     closeNav();
   });
 
