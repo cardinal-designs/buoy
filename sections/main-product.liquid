@@ -590,16 +590,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 });
 
 // Nutrition Label Popup
-$('.tabs-label').click(function(event) {
-event.preventDefault();
 
-$('body').addClass('lock-scroll');
-$('.product-nutrition-label').fadeIn('300');
-$('.product-nutrition-label__overlay, .product-nutrition-label__close').click(function() {
-$('body').removeClass('lock-scroll');
-$('.product-nutrition-label').fadeOut('300');
-});
-});
 
 {% endjavascript %}
 
