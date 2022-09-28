@@ -21,7 +21,7 @@ $( document ).ready(function() {
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
-      openDrawer: '.js-open-supplement-drawer',
+      openDrawer: '.js-open-supplement-drawer, .js-ingredients-open',
       closeDrawer: '.js-close-supplement-drawer'
   }
 
