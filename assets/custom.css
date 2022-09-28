@@ -889,9 +889,6 @@ input[type="radio"]:checked::before {
   .drawer_cover_cls {
     padding-top: 40px;
   }
-  .icons--with-title {
-    top: -25px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -932,10 +929,6 @@ input[type="radio"]:checked::before {
   .drawer_cover_cls .drawer_left h3 {
     font-size: 30px;
     margin-top: 30px;
-  }
-  .icons--with-title {
-    top: -33px;
-    z-index: -1;
   }
 }
 
