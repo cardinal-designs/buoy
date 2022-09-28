@@ -613,11 +613,11 @@ input[type="radio"]:checked::before {
 
 .supplement-side-drawer {
   height: 100%;
-  width: 0;
+  width: 768px;
   position: fixed;
   z-index: 5;
   top: 0;
-  right: 0;
+  right: -100%;
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
@@ -870,7 +870,7 @@ input[type="radio"]:checked::before {
   .drawer_header {
     border-bottom: solid 1px #ddd;
   }
-  .supplement-side-drawer {
+   {
     padding-top: 4px;
   }
   .drawer_header {
@@ -956,6 +956,10 @@ input[type="radio"]:checked::before {
   .Usp_Wrapper {
     padding: 8px 14px;
   }
+
+   .supplement-side-drawer {
+    width: 100%;
+   }
   
 }
 
