@@ -712,8 +712,13 @@ input[type="radio"]:checked::before {
   position: relative;
 }
 .badge_drawer_inner span.icon-title {
-  position: absolute;
-  top: 0;
+    top: 50%;
+    left: 50%;
+    right: unset;
+    position: absolute;
+    width: fit-content;
+    transform: translate(-50%, -36%);
+    font-size: 30px;
 }
 .drawer_cover_cls .supplement-facts-form-image img {
   width: 100%;
@@ -727,27 +732,6 @@ input[type="radio"]:checked::before {
   margin: 17px 0 !important;
   font-weight: 300 !important;
   line-height: 18px !important;
-}
-
-@media screen and (max-width: 1590px) {
-  .badge_drawer_inner span.icon-title {
-    position: relative;
-    top: 70px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }  
-  .badge_drawer_inner span.icon-title svg {
-    width: 72px;
-    height: auto;
-  }
-}
-
-@media  screen and (max-width: 1440px){
-  .badge_drawer_inner span.icon-title svg {
-    width: auto !important;
-    height: 72px !important;
-  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -796,13 +780,6 @@ input[type="radio"]:checked::before {
     font-size: 30px;
     height: 30px;
     width: 30px;
-  }
-  .badge_drawer_inner span.icon-title {
-    top:70px;
-  }
-  .badge_drawer_inner span.icon-title svg {
-    width: auto;
-    height: 72px;
   }
 }
 
