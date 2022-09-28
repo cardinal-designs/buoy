@@ -34,17 +34,12 @@ $( document ).ready(function() {
   });
 
   function openNav() {
-        if (window.innerWidth > 768 ) {
-          document.getElementById("supplementSideDrawer").style.width = "768px";
-        } else {
-          document.getElementById("supplementSideDrawer").style.width = "100%";
-        }
-
-      document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
+    document.getElementById("supplementSideDrawer").style.right = "0";
+    document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
   
   function closeNav() {
-    document.getElementById("supplementSideDrawer").style.width = "0";
+    document.getElementById("supplementSideDrawer").style.width = "-100%";
     document.querySelector('.js-main-drawer-suppliment').classList.remove('js-open-drawer');
   }
 
