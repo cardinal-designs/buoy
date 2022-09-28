@@ -749,10 +749,6 @@ input[type="radio"]:checked::before {
     width: 72px;
     height: auto;
   }
-  .icons--with-title .badge_drawer_inner .emoji_img{
-    width: 60px;
-    height: 60px;
-  }
 }
 
 @media  screen and (max-width: 1440px){
@@ -815,10 +811,6 @@ input[type="radio"]:checked::before {
   .badge_drawer_inner span.icon-title svg {
     width: auto;
     height: 72px;
-  }
-  .icons--with-title .badge_drawer_inner .emoji_img {
-    width: 60px;
-    height: 60px;
   }
 }
 
