@@ -726,7 +726,7 @@ input[type="radio"]:checked::before {
 }
 .supplement-detail-text {
   position: relative;
-  top: 60px;
+  top: 80px;
 }
 .supplement-detail-text p {
   font-size: 12px !important;
@@ -758,10 +758,6 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 1024px){
   .drawer_cover_cls .drawer_left{
     width: 45%;
-  }
-  .supplement-detail-text {
-    position: relative;
-    top: 60px;
   }
 }
 
