@@ -39,16 +39,7 @@ $( document ).ready(function() {
         } else {
           document.getElementById("supplementSideDrawer").style.width = "100%";
         }
-    
-        // if (window.innerWidth <= 992 && window.innerWidth > 768 ) {
-        //     document.getElementById("supplementSideDrawer").style.width = "70%";
-        // }else if (window.innerWidth <= 768) {
-        //     document.getElementById("supplementSideDrawer").style.width = "100%";
-        // }else{
-        //     document.getElementById("supplementSideDrawer").style.width = "50%";
-        // }
-    
-      // document.getElementById("supplementSideDrawer").style.width = "50%";
+
       document.querySelector('.js-main-drawer-suppliment').classList.add('js-open-drawer');
   }
   
