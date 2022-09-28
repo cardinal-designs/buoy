@@ -713,13 +713,13 @@ input[type="radio"]:checked::before {
   position: relative;
 }
 .badge_drawer_inner span.icon-title {
-    top: 50%;
-    left: 50%;
-    right: unset;
-    position: absolute;
-    width: fit-content;
-    transform: translate(-50%, -36%);
-    font-size: 30px;
+  top: 50%;
+  left: 50%;
+  right: unset;
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, -36%);
+  font-size: 30px;
 }
 .drawer_cover_cls .supplement-facts-form-image img {
   width: 100%;
