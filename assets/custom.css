@@ -875,7 +875,7 @@ input[type="radio"]:checked::before {
     padding-bottom: 4px;
   }
   .drawer_header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     left: 0;
