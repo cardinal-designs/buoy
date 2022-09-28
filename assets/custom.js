@@ -39,7 +39,7 @@ $( document ).ready(function() {
   }
   
   function closeNav() {
-    document.getElementById("supplementSideDrawer").style.width = "-100%";
+    document.getElementById("supplementSideDrawer").style.right = "-100%";
     document.querySelector('.js-main-drawer-suppliment').classList.remove('js-open-drawer');
   }
 
