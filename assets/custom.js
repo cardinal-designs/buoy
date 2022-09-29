@@ -24,7 +24,8 @@ $( document ).ready(function() {
       openDrawer: '.js-open-supplement-drawer',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
-      closeContinue: '.mobile-supplement-continue'
+      closeContinue: '.mobile-supplement-continue',
+      pageOverlay: '.page-overlay'
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
@@ -36,6 +37,10 @@ $( document ).ready(function() {
   });
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+    closeNav();
+  });
+
+  document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
     closeNav();
   });
 
