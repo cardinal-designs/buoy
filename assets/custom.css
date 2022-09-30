@@ -719,6 +719,10 @@ input[type="radio"]:checked::before {
   line-height: 18px !important;
 }
 
+.mobile-fixed-header {
+  position: relative;
+}
+
 @media screen and (max-width: 1280px) {
 
   .Usp_Wrapper ul li {
