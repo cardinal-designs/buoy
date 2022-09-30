@@ -911,6 +911,10 @@ input[type="radio"]:checked::before {
     font-size: 30px;
     margin-top: 30px;
   }
+
+  .supplement-side-drawer .drawer_header {
+    position: fixed;
+  }
 }
 
 @media screen and (max-width: 500px) {
