@@ -11,9 +11,10 @@
     var product = {{product | json }}
     document.querySelectorAll(`#rtx_buy_box_${product.id} .rtx_option_${product.id}`).forEach((div) => {      
         div.addEventListener('click', function (e) {
-            var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
-          console.log('el',el)
+           // var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
+          
            var el = e.target.value;
+          console.log('el',el)
             if(el === 'subsave') {
                 document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
