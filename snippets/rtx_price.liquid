@@ -24,7 +24,7 @@
     // }); 
 
       $(document).ready(function() {
-        var el = $(this).find('input:checked').val()
+        var el = $('.Subscribe_Box').find('input:checked').val()
         if(el === 'subsave') {
           document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
         } else if (el === 'onetime') {
