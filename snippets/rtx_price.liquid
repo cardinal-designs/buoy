@@ -13,8 +13,8 @@
         div.addEventListener('click', function (e) {
            // var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
           
-           var el = e.target;
-          console.log('el',el)
+           var el = e.target.val;
+          console.log('eel',el)
             if(el === 'subsave') {
                 document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
