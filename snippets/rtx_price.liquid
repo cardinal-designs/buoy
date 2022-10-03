@@ -14,7 +14,7 @@
            // var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
           
            var el = e.target.value;
-          console.log('el',e.target.value)
+          console.log('el',e.target)
             if(el === 'subsave') {
                 document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
