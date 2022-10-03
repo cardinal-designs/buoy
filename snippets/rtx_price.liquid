@@ -14,7 +14,7 @@
            // var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
           
            var el = e.target.value;
-          console.log('el',$())
+     
             if(el === 'subsave') {
                 document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
@@ -26,7 +26,8 @@
 
 
     $('.Subscribe_Box').click(function() {
-      console.log('aea')
+      var productType = $(this).find('input').val()
+      console.log('tt',productType)
     })
    
        
