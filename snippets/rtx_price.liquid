@@ -26,8 +26,12 @@
 
 
     $('.Subscribe_Box').click(function() {
-      var productType = $(this).find('input').val()
-      console.log('tt',productType)
+      var el = $(this).find('input').val()
+      if(el === 'subsave') {
+        document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
+      } else if (el === 'onetime') {
+        document.getElementById(`rtx_one_price`).innerText = {{ onePrice | json }};
+      }
     })
    
        
