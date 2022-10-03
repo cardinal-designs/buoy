@@ -5,6 +5,8 @@
     assign supplement_facts_details_text_2 = product.metafields.custom.supplement_facts_details_text_2
     assign supplement_facts_details_text_3 = product.metafields.custom.supplement_facts_details_text_3
     assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image.value
+    assign supplement_facts_form_image_2 = product.metafields.supplement.supplement_facts_form_image_2.value
+    assign supplement_facts_form_image_3 = product.metafields.supplement.supplement_facts_form_image_3.value
 
     assign emoji_img_one = product.metafields.custom.drawer_emoji_image_one
     assign emoji_title_one = product.metafields.custom.drawer_emoji_title_one
@@ -77,6 +79,16 @@
         <div class="image_form">
           {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: '' %}
         </div>  
+        {% if supplement_facts_form_image_2 %}
+        <div class="image_form">
+          {% render 'lazy-image' image: supplement_facts_form_image_2, fade: true, classes: '' %}
+        </div> 
+        {% endif %}
+        {% if supplement_facts_form_image_3 %}
+        <div class="image_form">
+          {% render 'lazy-image' image: supplement_facts_form_image_3, fade: true, classes: '' %}
+        </div>  
+        {% endif %}
       </div>
       <div class="hide-desktop mobile-supplement-continue">
         <a href="javascript:void(0)" class="button button--full-width">Continue Shopping</a>        
