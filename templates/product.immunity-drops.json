@@ -7,16 +7,24 @@
           "type": "block",
           "settings": {
             "purchase_type_img": "shopify:\/\/shop_images\/IMMUNITY-TRIO_RT_V1-1x1.png",
-            "purchase_type_text": "Immunity Drops",
-            "purchase_type_subtext": "3 Bottles — 120 Servings (1 Month Supply)"
+            "purchase_type_text": "3 Bottles Delivered Monthly",
+            "purchase_type_subtext": "120 Servings · (1 Month Supply)"
           }
         },
         "358a75ea-3a1b-4df8-931a-1e218abe2cbe": {
           "type": "block",
           "settings": {
             "purchase_type_img": "shopify:\/\/shop_images\/WELCOME_BOX_KIT_STOP_MOTION-STILL-01-1x1.png",
-            "purchase_type_text": "Welcome Package",
-            "purchase_type_subtext": "Only for First-Time Clear Pee Club Members"
+            "purchase_type_text": "Clear Pee Club Welcome Box",
+            "purchase_type_subtext": "FREE With First Month's Order"
+          }
+        },
+        "c8cbfd4a-c224-4d3e-9486-26c93dbbd5a5": {
+          "type": "onetime_block",
+          "settings": {
+            "onetime_purchase_type_img": "shopify:\/\/shop_images\/IMMUNITY-TRIO_RT_V1-1x1.png",
+            "onetime_purchase_type_text": "3 Bottles",
+            "onetime_purchase_type_subtext": "120 Servings · (1 Month Supply)"
           }
         },
         "5a9efd84-78ec-4f97-bf8c-3d377aa1ee9a": {
@@ -58,6 +66,7 @@
       "block_order": [
         "e6b15be2-49ed-42d1-bc76-2f6eb0423a6b",
         "358a75ea-3a1b-4df8-931a-1e218abe2cbe",
+        "c8cbfd4a-c224-4d3e-9486-26c93dbbd5a5",
         "5a9efd84-78ec-4f97-bf8c-3d377aa1ee9a",
         "506a7e62-3754-4a4b-a8a1-9aea5233d724",
         "164b83f2-903d-41cb-95cb-5a40515e1e6b",
