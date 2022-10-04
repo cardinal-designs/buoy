@@ -7,22 +7,29 @@
           "type": "block",
           "settings": {
             "purchase_type_img": "shopify:\/\/shop_images\/ENERGY-TRIO_RT_V1.png",
-            "purchase_type_text": "Energy Drops",
-            "purchase_type_subtext": "3 Bottles — 120 Servings (1 Month Supply)"
+            "purchase_type_text": "3 Bottles Delivered Monthly",
+            "purchase_type_subtext": "120 Servings · (1 Month Supply)"
           }
         },
         "3f9a04cd-dc1d-4cfc-8086-b200bf0f0cbc": {
           "type": "block",
           "settings": {
             "purchase_type_img": "shopify:\/\/shop_images\/WELCOME_BOX_KIT_STOP_MOTION-STILL-01-1x1.png",
-            "purchase_type_text": "Welcome Package",
-            "purchase_type_subtext": "Only for First-Time Clear Pee Club Members"
+            "purchase_type_text": "Clear Pee Club Welcome Package",
+            "purchase_type_subtext": "Free with first month's order"
+          }
+        },
+        "a065866c-dd80-4368-a375-3c1136ede850": {
+          "type": "onetime_block",
+          "settings": {
+            "onetime_purchase_type_text": "",
+            "onetime_purchase_type_subtext": ""
           }
         },
         "f6625a45-434f-4c18-9a4a-11f6219a858d": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "⭐️ ⭐️ ⭐️ ⭐️ ⭐️<br>“Skeptical at first but I see changes in my skin\"",
+            "testimonial_text": "⭐️ ⭐️ ⭐️ ⭐️ ⭐️“Skeptical at first but I see changes in my skin\"",
             "testimonial_author": "- Delaney K"
           }
         },
@@ -58,6 +65,7 @@
       "block_order": [
         "e7c50f2f-3164-40b4-8bb2-b95a611b259a",
         "3f9a04cd-dc1d-4cfc-8086-b200bf0f0cbc",
+        "a065866c-dd80-4368-a375-3c1136ede850",
         "f6625a45-434f-4c18-9a4a-11f6219a858d",
         "31308db2-1005-4b29-b3c8-f2d26c2b170f",
         "a55b8a89-545d-43e7-8111-8b7a0c79c0c5",
