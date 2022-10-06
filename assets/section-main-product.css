@@ -71,13 +71,17 @@
   margin: 0 0 20px;
 }
 
-.product__description {
+.product__subtitle {
   font-size: 18px;
   line-height: normal;
   letter-spacing: 0;
   text-transform: inherit;
   font-weight: 400;
   margin: 0 0 16px;
+}
+
+.product__description {
+  margin: 0 0 36px;
 }
 
 /* Tabs */
