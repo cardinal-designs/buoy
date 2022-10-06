@@ -41,12 +41,12 @@
 }
 
 .product__info-wrapper .okeReviews .okeReviews-starRating--small {
-  width: 75px;
-  height: 15px;
+  width: 82px;
+  height: 22px;
 }
 
 .product__info-wrapper .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
-  background-size: 75px 15px;
+  background-size: 82px 20px;
 }
 
 .product__info-wrapper .okeReviews-reviewsSummary-ratingCount {
@@ -57,7 +57,7 @@
   font-family: inter, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0;
   line-height: 1.375em;
 }
@@ -67,7 +67,17 @@
 }
 
 .product__title {
-  margin: 0 0 20px;
+  font-size: 45px;
+  margin: 0 0 12px;
+}
+
+.product__subtitle {
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0;
+  text-transform: inherit;
+  font-weight: 400;
+  margin: 0 0 16px;
 }
 
 .product__description {
@@ -442,12 +452,16 @@ fieldset.product-form__input .form__label {
   position: unset;
 }
 
+.product-spinner img {
+  animation: spin 10s linear infinite;
+}
+
 .product__media-arrows .slick-arrow:hover.slick-prev {
-	transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .product__media-arrows .slick-arrow:hover.slick-next {
-	transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .product__media-arrows .slick-prev {
@@ -729,7 +743,7 @@ fieldset.product-form__input .form__label {
   }
 
   .product__title {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .product__tabs-header-wrapper {
