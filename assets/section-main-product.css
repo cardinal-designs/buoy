@@ -742,6 +742,10 @@ fieldset.product-form__input .form__label {
     content: none;
   }
 
+  .product__title {
+    font-size: 30px;
+  }
+
   .product__tabs-header-wrapper {
     margin: 0 -27px;
     overflow-x: scroll;
