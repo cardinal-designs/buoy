@@ -677,7 +677,6 @@ class HeaderContainer extends HTMLElement {
 
 customElements.define('header-container', HeaderContainer);
 
-
 /* ---------- FUNCTIONS ---------- */
 // Cookies
 function getCookie(name) {
@@ -690,20 +689,6 @@ function setCookie(name, value, days) {
   d.setTime(d.getTime() + 24*60*60*1000*days);
   document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 }
-
-// Announcement bar
-// if (getCookie('legalCookie')){
-//   $('.legal-popup').fadeOut(400);
-// } else{
-//   $('.legal-popup').fadeIn(400);
-// }
-
-// $('.legal-popup__close').click(function () {
-//   var day = $('.legal-popup').attr('data-day');
-
-//   $('.legal-popup').fadeOut(400);
-//   setCookie('legalCookie', true, day)
-// });
 
 // Drag to scroll
 const dragScroll = document.querySelectorAll('.drag-scroll');
@@ -808,7 +793,6 @@ $('.faq__header').click(function() {
   $(this).siblings('.faq__content').slideToggle(300);
 });
 
-
 /* ---------- SLIDERS ---------- */
 // Product Slider
 $('.product-slider__slides').slick({
@@ -860,7 +844,6 @@ $('.testimonials-slider__img-slider').slick({
     cssEase: 'linear'
 });
     
-    
 $('.to-be-seen-testimonials').slick({
   arrows: true,
   autoplay: false,
@@ -869,30 +852,6 @@ $('.to-be-seen-testimonials').slick({
   prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(272.182 1503.504) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#FFF" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#FFF" stroke-width="1.5"/></g></svg></button>',
   nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(28.001 11.504) rotate(180)"><g id="Arrow-2" data-name="Arrow" transform="translate(271.17 1503) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#FFF" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#FFF" stroke-width="1.5"/></g></g></svg></button>'
 });
-    
-    
-// $('.testimonial-slider-new').slick({
-//     arrows: false,
-//     autoplay: false,
-//     infinite: true
-// });
-
-// Value Props Slider
-// $('.text-image-props__props-slider').slick({
-//   slidesToShow: 5,
-//   arrows: false,
-//   responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         slidesToShow: 1,
-//         infinite: false,
-//         variableWidth: true,
-//         centerMode: true
-//       }
-//     }
-//   ]
-// });
     
 // Lifetime slider mobile
 $lifetimeSlider = $('.testimonial-slider');
@@ -903,7 +862,6 @@ var lifetimeSlider = {
 }
 
 slickOnMobile($lifetimeSlider, lifetimeSlider);
-
 
 $('.chronic-multicolumn__slider').slick({
   slidesToShow: 1,
@@ -968,7 +926,6 @@ $('.people-slider__people-slider--1').slick({
   ]
 });
 
-
 $('.people-slider__drink-slider--2').slick({
   asNavFor: '.people-slider__people-slider--2',
   fade: true,
@@ -1018,7 +975,6 @@ $('.people-slider__people-slider--3').on('init', function(event, slick){
   $('.people-slider__arrows--3 .slick-prev').hide()
 });
     
-
 $('.people-slider__people-slider--3').slick({
   asNavFor: '.people-slider__drink-slider--3',
   slidesToShow: 3,
@@ -1105,7 +1061,6 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
   $('.menu-fixed').fadeOut(200).removeClass('active');
 })
 
-
 function getSectionInnerHTML(html, selector) {
   return new DOMParser()
     .parseFromString(html, 'text/html')
@@ -1177,7 +1132,6 @@ function atcGetSectionsToRender() {
   ];
 }
 
-
 $(document).on('click', '.has-second-slide' , function() {
   $('.cart-drawer__second-slide').addClass('show-second');
 });
@@ -1195,8 +1149,6 @@ $(document).on('change', '.product-quick-add__form-item input' , function() {
   let price = $(this).data('price')
   $('.button-money').text(price)
 })
-
-
 
 $(document).on('click', '.slideout-button' , function(e) {
   e.preventDefault();
@@ -1244,8 +1196,6 @@ $(document).on('click', '.slideout-button' , function(e) {
 });
 })
 
-
-
 $.fn.isInViewport = function() {
   if (!!$(this).offset()) {
     var elementTop = $(this).offset().top;
@@ -1259,20 +1209,20 @@ $.fn.isInViewport = function() {
 };
 
 $(window).on('resize scroll', function() {
-    if ($('.info-grid__container').isInViewport()) {
-        $('.info-grid__container').addClass('shake')
-    } else {
-        $('.info-grid__container').removeClass('shake')
-    }
   
-    if ($('.polaroid-slider__content').isInViewport()) {
-        $('.polaroid-slider__content').addClass('shake')
-    } else {
-        $('.polaroid-slider__content').removeClass('shake')
-    }
+  if ($('.info-grid__container').isInViewport()) {
+      $('.info-grid__container').addClass('shake')
+  } else {
+      $('.info-grid__container').removeClass('shake')
+  }
+
+  if ($('.polaroid-slider__content').isInViewport()) {
+      $('.polaroid-slider__content').addClass('shake')
+  } else {
+      $('.polaroid-slider__content').removeClass('shake')
+  }
   
 });
-
 
 $('.image-with-dropdowns__q').click(function () {
   $(this).next().slideToggle()
@@ -1280,18 +1230,18 @@ $('.image-with-dropdowns__q').click(function () {
 })
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const element = document.querySelector(this.getAttribute('href'));
-        const offset = 100;
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = element.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-          behavior: 'smooth',
-          top: offsetPosition
-        });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const element = document.querySelector(this.getAttribute('href'));
+    const offset = 100;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+  
+    window.scrollTo({
+      behavior: 'smooth',
+      top: offsetPosition
     });
+  });
 });
