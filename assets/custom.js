@@ -8,16 +8,22 @@ $( document ).ready(function() {
     slidesToScroll: 1
   });
 
+
+  physicalClickRadio = () => {
+    $('.rtx_option_selector input:checked').click()
+  }
+
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
-    $(this).find('input:before').click();
-    console.log($(this).find('input'))
     $(this).siblings('.Subscribe_Box').removeClass('active');
+    physicalClickRadio()
   });
   
 });
+
+
 
 
 (function(){
