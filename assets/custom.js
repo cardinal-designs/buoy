@@ -12,6 +12,7 @@ $( document ).ready(function() {
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
+    $(this).find('input:before').click();
     console.log($(this).find('input'))
     $(this).siblings('.Subscribe_Box').removeClass('active');
   });
