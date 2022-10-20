@@ -8,20 +8,15 @@ $( document ).ready(function() {
     slidesToScroll: 1
   });
 
-
-  physicalClickRadio = () => {
-    
-  }
-
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
-    // physicalClickRadio()
     document.querySelector('.rtx_option_selector input:checked').click();
   });
-  
+
+  document.querySelector('.rtx_option_selector input:checked').click();
 });
 
 
