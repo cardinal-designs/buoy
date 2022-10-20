@@ -20,7 +20,6 @@ $( document ).ready(function() {
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
     physicalClickRadio()
-    break;
   });
   
 });
