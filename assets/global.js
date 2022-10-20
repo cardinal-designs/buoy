@@ -1297,6 +1297,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// Close supplement drawer on page-overlay click
+$('.js-open-supplement-drawer').click(function() {
+  $('.page-overlay').click(function() {
+    $('.js-close-supplement-drawer').click();
+  });
+});
 
 
 
