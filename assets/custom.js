@@ -10,8 +10,7 @@ $( document ).ready(function() {
 
 
   physicalClickRadio = () => {
-    // $('.rtx_option_selector input:checked').click()
-    document.querySelector('.rtx_option_selector input:checked').click();
+    
   }
 
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
@@ -19,7 +18,8 @@ $( document ).ready(function() {
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
-    physicalClickRadio()
+    // physicalClickRadio()
+    document.querySelector('.rtx_option_selector input:checked').click();
   });
   
 });
