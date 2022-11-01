@@ -952,6 +952,14 @@ input[type="radio"]:checked::before {
    .supplement-side-drawer {
     width: 100%;
    }
+
+  .Testimonials_Main .slick-prev {
+    left: -20px;
+  }
+  
+  .Testimonials_Main .slick-next {
+    right: -20px;
+  }
   
 }
 
