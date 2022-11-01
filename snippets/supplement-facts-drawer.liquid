@@ -77,10 +77,17 @@
       </div>
       <div class="supplement-facts-form-image">
         <div class="image_form">
-        <svg>       
-             <image width="100%" height="100%" xlink:href="{{ supplement_facts_form_image.url }}" />    
-        </svg>
+          {% if product.handle == 'hydration-drops' and supplement_facts_form_image == blank %}
+            {% include 'hydration-nutrition' %}
+          {% elsif product.handle == 'immunity-drops' and supplement_facts_form_image == blank %}
+            {% include 'immunity-nutrition' %}
+          {% elsif product.handle == 'energy-drops' and supplement_facts_form_image == blank %}
+            {% include 'energy-nutrition' %}
+          {% else %}
+            {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: '' %}
+          {% endif %}
         </div>
+          
         {% comment %}
         <div class="image_form">
           {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: '' %}
