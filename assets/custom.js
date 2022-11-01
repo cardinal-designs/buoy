@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   $('.Testimonials_Slider').slick({
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: false,
     speed: 300,
     slidesToShow: 1,
