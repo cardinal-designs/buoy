@@ -77,12 +77,8 @@
       </div>
       <div class="supplement-facts-form-image">
         <div class="image_form">
-          {% if product.handle == 'hydration-drops' and supplement_facts_form_image == blank %}
-            {% include 'hydration-nutrition' %}
-          {% elsif product.handle == 'immunity-drops' and supplement_facts_form_image == blank %}
-            {% include 'immunity-nutrition' %}
-          {% elsif product.handle == 'energy-drops' and supplement_facts_form_image == blank %}
-            {% include 'energy-nutrition' %}
+          {% if product.metafields.custom.nutrition_label_svg != blank %}
+            {{ product.metafields.custom.nutrition_label_svg }}
           {% else %}
             {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: '' %}
           {% endif %}
