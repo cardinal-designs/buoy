@@ -2455,6 +2455,11 @@ details-disclosure > details {
   animation: spin 10s linear infinite;
 }
 
+.curved-hydrating {
+  margin-left: -35px;
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .product-spinner__emoji {
     font-size: 23px;
