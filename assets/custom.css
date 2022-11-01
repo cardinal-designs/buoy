@@ -93,6 +93,18 @@
   margin-top: 55px;
 }
 
+.Testimonials_Main .slick-prev {
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+.Testimonials_Main .slick-next {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
 .All_Reviews {
   display: block;
   text-align: center;
