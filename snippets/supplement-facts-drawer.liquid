@@ -46,7 +46,9 @@
             </div>
           {% endfor %}
           {% endcomment %}
-          {% if emoji_img_one != blank %}
+          {% if product.metafield.custom.supp_icon_svg_1 %}
+            {{ product.metafield.custom.supp_icon_svg_1 }}
+          {% elsif emoji_img_one != blank %}
           <div class="badge_drawer_inner">
             <span class="icon-title">{{ emoji_title_one }}</span>
             <div class="emoji_img">
@@ -54,7 +56,9 @@
             </div>  
           </div>
           {% endif %}
-          {% if emoji_img_two != blank %}
+          {% if product.metafield.custom.supp_icon_svg_2 %}
+            {{ product.metafield.custom.supp_icon_svg_2 }}
+          {% elsif emoji_img_two != blank %}
           <div class="badge_drawer_inner">
             <span class="icon-title">{{ emoji_title_two }}</span>
             <div class="emoji_img">
@@ -62,7 +66,9 @@
             </div>  
           </div>
           {% endif %}
-          {% if emoji_img_three != blank %}
+          {% if product.metafield.custom.supp_icon_svg_3 %}
+            {{ product.metafield.custom.supp_icon_svg_3 }}
+          {% elsif emoji_img_three != blank %}
           <div class="badge_drawer_inner">
             <span class="icon-title">{{ emoji_title_three }}</span>
             <div class="emoji_img">
