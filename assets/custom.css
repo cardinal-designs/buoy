@@ -105,6 +105,14 @@
   top: 30%;
 }
 
+.Testimonials_Main .slick-next svg,
+.Testimonials_Main .slick-prev svg{
+  width: 17px;
+  color: #1f2322;
+  height: unset;
+  transition: transform .3s ease;
+}
+
 .All_Reviews {
   display: block;
   text-align: center;
