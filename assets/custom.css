@@ -975,8 +975,11 @@ input[type="radio"]:checked::before {
 
 .mobile-supplement-continue {
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  background: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+  bottom: 0px;
 }
 
 .mobile-supplement-continue a {
