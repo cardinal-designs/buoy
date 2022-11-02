@@ -616,7 +616,8 @@ input[type="radio"]:checked::before {
 .supplement-side-drawer .drawer_header a {
 /*   padding: 8px 30px 8px 30px; */
   text-decoration: none;
-  font-size: 25px;
+  font-size: 40px;
+  line-height: 1.2;
   color: black;
   display: block;
   transition: 0.3s;
