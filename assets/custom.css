@@ -986,3 +986,7 @@ input[type="radio"]:checked::before {
 .mobile-supplement-continue a {
   width: 100%;
 }
+
+#mCSB_1_scrollbar_vertical {
+  display: none !important;
+}
