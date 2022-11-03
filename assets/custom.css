@@ -871,9 +871,6 @@ input[type="radio"]:checked::before {
     left: 0;
     background: #fff;
   }
-  .drawer_cover_cls {
-    padding-top: 40px;
-  }
   .icons--with-title .badge_drawer_inner .emoji_img {
     height: 80px;
   }
@@ -903,6 +900,7 @@ input[type="radio"]:checked::before {
     padding: 0;
   } 
   .drawer_cover_cls {
+    padding-top: 10px;
     flex-wrap: wrap;
   }
   .drawer_cover_cls .drawer_left, .drawer_cover_cls .supplement-facts-form-image {
