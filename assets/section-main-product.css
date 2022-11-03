@@ -743,7 +743,17 @@ fieldset.product-form__input .form__label {
   }
 
   .product__title {
-    font-size: 35px;
+    font-size: 30px;
+  }
+
+  .product__subtitle {
+    font-size: 16px;
+  }
+
+  .template-product .product__description,
+  .template-product .product__description p,
+  .template-product .product__description span {
+    font-size: 14px;
   }
 
   .product__tabs-header-wrapper {

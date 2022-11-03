@@ -93,6 +93,26 @@
   margin-top: 55px;
 }
 
+.Testimonials_Main .slick-prev {
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+.Testimonials_Main .slick-next {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
+.Testimonials_Main .slick-next svg,
+.Testimonials_Main .slick-prev svg{
+  width: 20px;
+  color: #1f2322;
+  height: unset;
+  transition: transform .3s ease;
+}
+
 .All_Reviews {
   display: block;
   text-align: center;
@@ -327,7 +347,7 @@ input[type="radio"]:checked::before {
 
 .pdp-faq .faq__content p {
   margin: 0 0 30px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -589,14 +609,14 @@ input[type="radio"]:checked::before {
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 10px;
   text-align:center;
 }
 
 .supplement-side-drawer .drawer_header a {
 /*   padding: 8px 30px 8px 30px; */
   text-decoration: none;
-  font-size: 25px;
+  font-size: 40px;
+  line-height: 1.5;
   color: black;
   display: block;
   transition: 0.3s;
@@ -608,6 +628,7 @@ input[type="radio"]:checked::before {
   justify-content: space-between;
   padding: 0 20px;
   z-index: 9999;
+  background: #f6ece180;
 }
 
 /* .supplement-side-drawer a:hover{
@@ -706,6 +727,7 @@ input[type="radio"]:checked::before {
 
 .mobile-fixed-header {
   position: relative;
+  background-color: #f6ece180 !important;
 }
 
 @media screen and (max-width: 1280px) {
@@ -849,9 +871,6 @@ input[type="radio"]:checked::before {
     left: 0;
     background: #fff;
   }
-  .drawer_cover_cls {
-    padding-top: 40px;
-  }
   .icons--with-title .badge_drawer_inner .emoji_img {
     height: 80px;
   }
@@ -881,6 +900,7 @@ input[type="radio"]:checked::before {
     padding: 0;
   } 
   .drawer_cover_cls {
+    padding-top: 10px;
     flex-wrap: wrap;
   }
   .drawer_cover_cls .drawer_left, .drawer_cover_cls .supplement-facts-form-image {
@@ -894,7 +914,6 @@ input[type="radio"]:checked::before {
   }
   .drawer_cover_cls .drawer_left h3 {
     font-size: 30px;
-    margin-top: 30px;
   }
 
   .mobile-fixed-header {
@@ -954,10 +973,17 @@ input[type="radio"]:checked::before {
 
 .mobile-supplement-continue {
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  background: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+  bottom: 0px;
 }
 
 .mobile-supplement-continue a {
   width: 100%;
+}
+
+#mCSB_1_scrollbar_vertical {
+  display: none !important;
 }
