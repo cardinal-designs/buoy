@@ -1,5 +1,20 @@
 {
   "sections": {
+    "2219209b-112e-4e6e-b03f-71b62e2980f4": {
+      "type": "hero",
+      "settings": {
+        "video_url": "",
+        "mobile_video_url": "",
+        "txt_shadow": false,
+        "color": "",
+        "suptitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "mobile_text_location": "top"
+      }
+    },
     "hero": {
       "type": "hero",
       "settings": {
@@ -457,6 +472,7 @@
     }
   },
   "order": [
+    "2219209b-112e-4e6e-b03f-71b62e2980f4",
     "hero",
     "1629829015861e9793",
     "1629837198545c20e2",
