@@ -103,6 +103,12 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .hero {
+    height: 115vh;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .hero {
     height: 46vh;
