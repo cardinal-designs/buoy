@@ -8,6 +8,8 @@
         "image": "shopify:\/\/shop_images\/Desktop_-_Hero_Image_2x_cbccb329-5268-479b-bcd7-3bf914edc274.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Mobile_-_Hero_Image_2x_2x_a211c0fd-983a-4eaa-bbe3-63e38c5fc364.jpg",
         "txt_shadow": false,
+        "color": "",
+        "suptitle": "",
         "title": "Squeeze in what life takes out.",
         "text": "Unsweetened and unflavored hydration and trace mineral drops for all the drinks you're already drinking.",
         "button_label": "Start Squeezing",
@@ -17,6 +19,7 @@
     },
     "hero": {
       "type": "hero",
+      "disabled": true,
       "settings": {
         "video_url": "",
         "mobile_video_url": "",
