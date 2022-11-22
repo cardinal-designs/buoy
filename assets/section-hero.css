@@ -51,12 +51,22 @@
   margin-left: 0;
 }
 
+.hero-suptitle {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
 
 @media screen and (max-width: 768px) {
   .hero {
-    height: 650px;
+    height: 123vh;
     align-items: center;
     text-align: center;
+    margin-top: 60px;
+  }
+
+  .hero-suptitle {
+    display: none;
   }
 
   .hero .page-width {
@@ -74,6 +84,10 @@
     max-width: unset;
   }
 
+  .hero__container.text-top span {
+    visibility: hidden;
+  }
+
   .about-hero__text {
     color: black !important;
     justify-content: center !important;
@@ -86,5 +100,17 @@
 
   .hero__container.text-top {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero {
+    height: 115vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    height: 89vh;
   }
 }

@@ -42,7 +42,10 @@
   {% endif %}
   <div class="page-width">
     <div class="hero__container {% if section.settings.mobile_text_location == 'top' %}text-top{% else %}text-bottom{% endif %}">
-      <span>
+      <span {% if section.settings.color !=blank %}style="color: {{ section.settings.color }}"{% endif %}>
+        {% if section.settings.suptitle != blank %}
+          <h2 class="hero-suptitle">{{ section.settings.suptitle }}</h2>
+        {% endif %}
         {% if page.handle == 'shop-wholesale' %}
           <h2 class="about-hero__text image-text-blocks__title h1">{{ section.settings.title }}<span>{{ section.settings.title }}</span></h2>
         {% else %}
@@ -100,6 +103,16 @@
       "type": "checkbox",
       "id": "txt_shadow",
       "label": "Add Text Shadow"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Text Color"
+    },
+    {
+      "type": "text",
+      "id": "suptitle",
+      "label": "Suptitle"
     },
     {
       "type": "text",
