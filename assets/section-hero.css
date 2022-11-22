@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    height: 650px;
+    height: 134vh;
     align-items: center;
     text-align: center;
     margin-top: 60px;
@@ -100,5 +100,11 @@
 
   .hero__container.text-top {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    height: 650px;
   }
 }
