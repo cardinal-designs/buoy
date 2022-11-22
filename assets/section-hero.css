@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    height: 100vh;
+    height: 123vh;
     align-items: center;
     text-align: center;
     margin-top: 60px;
@@ -103,8 +103,8 @@
   }
 }
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .hero {
-    height: 840px;
+    height: 100vh;
   }
-} */
+}
