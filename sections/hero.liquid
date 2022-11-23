@@ -1,5 +1,15 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }} 
 
+{% style %}
+  {%  if section.settings.hide_mobile_text %}
+    @media screen and (max-width: 768px) {
+      .hero__container.text-top span {
+        visibility: hidden;
+      } 
+    }
+  {% endif %}
+{% endstyle %}
+
 <div class="hero">
   {% if section.settings.video_url != blank %}
   <video autoplay loop muted playsinline class="img-fill hide-mobile">
@@ -149,6 +159,12 @@
         }
       ],
       "default": "top"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_mobile_text",
+      "label": "Hide Mobile HTML Text",
+      "default": false
     }
   ],
   "presets": [
