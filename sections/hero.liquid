@@ -6,6 +6,22 @@
       .hero__container.text-top span {
         visibility: hidden;
       } 
+
+      .hero {
+        height: 123vh;
+      } 
+    }
+
+    @media screen and (max-width: 650px) {
+      .hero {
+        height: 115vh;
+      }
+    }
+    
+    @media screen and (max-width: 500px) {
+      .hero {
+        height: 89vh;
+      }
     }
   {% endif %}
 {% endstyle %}
