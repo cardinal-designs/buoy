@@ -62,6 +62,10 @@
   justify-content: center;
 }
 
+.Testimonials_Main .slick-prev {
+  z-index: 999;
+}
+
 .Testimonials_Main .slick-dots li {
   display: inline-block;
 }
