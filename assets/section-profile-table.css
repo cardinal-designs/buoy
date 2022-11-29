@@ -13,3 +13,10 @@
 .profile-table__svg svg {
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .profile-table__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
