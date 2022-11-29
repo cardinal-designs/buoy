@@ -1,9 +1,18 @@
 {{ 'section-profile-table.css' | asset_url | stylesheet_tag }}
 
+<div class="profile-table__container">
+  <h2 class="h4">{{ section.settings.title }}</h2>
+  <div class="profile-table__svg hide-mobile">
+    {{ section.settings.desktop_svg }}
+  </div>
+  <div class="profile-table__svg hide-desktop">
+    {{ section.settings.mobile_svg }}
+  </div>
+</div>
 
 {% schema %}
   {
-    "name": "Marquee",
+    "name": "Profile Table",
     "settings": [
       {
         "type": "text",
