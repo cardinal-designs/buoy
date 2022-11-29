@@ -1,6 +1,6 @@
 {{ 'section-marquee.css' | asset_url | stylesheet_tag }}
 
-<div class="marquee{% if section.settings.add_border %} add-border{% endif %}{% if section.settings.no_background %} no-background{% endif %}">
+<div style="{% if section.settings.background != blank %}background: {{ section.settings.background }};{% endif %}" class="marquee{% if section.settings.add_border %} add-border{% endif %}{% if section.settings.no_background %} no-background{% endif %}">
   <div class="marquee__container">
     {% for block in section.blocks %}
       <div class="marquee__item">
@@ -30,6 +30,12 @@
         "type": "checkbox",
         "id": "no_background",
         "label": "No Background"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color (not default)",
+        "default": "#F8F1EB"
       },
       {
         "type": "checkbox",
