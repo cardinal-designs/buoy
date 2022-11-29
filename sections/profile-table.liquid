@@ -1,12 +1,30 @@
+{{ 'section-profile-table.css' | asset_url | stylesheet_tag }}
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Marquee",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "desktop_svg",
+        "label": "Desktop SVG"
+      },
+      {
+        "type": "textarea",
+        "id": "mobile_svg",
+        "label": "Mobile SVG"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Profile Table"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
