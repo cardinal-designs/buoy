@@ -2,7 +2,6 @@
   padding-top: 115px;
   padding-bottom: 115px;
   text-align: center;
-  color: #1F2322;
   background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;
 }
 
@@ -13,6 +12,7 @@
 
 .dropdowns__container .h3 {
   margin: 0 0 30px;
+  color: #1F2322;
 }
 
 .dropdowns__subtitle {
@@ -37,4 +37,9 @@
 
 .dropdown-ind h6 {
   margin: 0 0 16px;
+  color: #1F2322;
+}
+
+.dropdown-ind p {
+  color: #1F2322;
 }
