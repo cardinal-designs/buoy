@@ -51,7 +51,9 @@ $('.faq__item.Shipping_Tab .faq__header').click(function() {
 })
 
 $('.dropdown-ind__drop .close').click(function() {
+  $(this).parent().find('img').show()
   $(this).parent().find('p, img').slideToggle()
+  
 })
 
 
