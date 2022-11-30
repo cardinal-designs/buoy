@@ -54,14 +54,10 @@ $('.faq__item.Shipping_Tab .faq__header').click(function() {
 $('.dropdown-ind__drop .close').click(function() {
   $(this).parent().find('p, img').toggle()
 
-  $({deg: 0}).animate({deg: angle}, {
-    duration: 2000,
-    step: function() {
         $(this).css({
             transform: 'rotate(' + 45 + 'deg)'
         });
-      }
-  });
+
   
 })
 
