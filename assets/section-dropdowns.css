@@ -34,6 +34,13 @@
 .dropdown-ind__drop .close {
   border: 2px solid #1F2322;
   background: white;
+  height: 34px;
+  width: 34px;
+  border-radius: 25px;
+}
+
+.dropdown-ind__drop .close svg {
+  width: 100%;
 }
 
 .dropdown-ind {
