@@ -39,6 +39,7 @@
   width: 34px;
   border-radius: 25px;
   margin-left: -17px;
+  transform: rotate(45deg);
 }
 
 .dropdown-ind__drop .close svg {
@@ -73,4 +74,8 @@
 .dropdown-ind__drop:first-of-type p,
 .dropdown-ind__drop:first-of-type img {
   display: block;
+}
+
+.dropdown-ind__drop:first-of-type .close {
+  transform: rotate(0deg);
 }
