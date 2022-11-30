@@ -31,6 +31,11 @@
   align-items: center;
 }
 
+.dropdown-ind__drop .close {
+  border: 2px solid #1F2322;
+  background: white;
+}
+
 .dropdown-ind {
   background: white;
   border: 2px solid #1F2322;
