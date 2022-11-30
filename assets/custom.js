@@ -29,6 +29,25 @@ $( document ).ready(function() {
   document.querySelector('.rtx_option_selector input:checked').click();
 });
 
+function AnimateRotate(angle) {
+    // caching the object for performance reasons
+    var $elem = $('#MyDiv2');
+
+    // we use a pseudo object for the animation
+    // (starts from `0` to `angle`), you can name it as you want
+    $({deg: 0}).animate({deg: angle}, {
+        duration: 2000,
+        step: function(now) {
+            // in the step-callback (that is fired each step of the animation),
+            // you can use the `now` paramter which contains the current
+            // animation-position (`0` up to `angle`)
+            $elem.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
+}
+
 $('.faq__item.Shipping_Tab .faq__header').click(function() {
     $('.Testimonials_Slider').slick({
     dots: true,
@@ -52,6 +71,15 @@ $('.faq__item.Shipping_Tab .faq__header').click(function() {
 
 $('.dropdown-ind__drop .close').click(function() {
   $(this).parent().find('p, img').toggle()
+
+  $({deg: 0}).animate({deg: angle}, {
+    duration: 2000,
+    step: function(45) {
+        $(this).css({
+            transform: 'rotate(' + now + 'deg)'
+        });
+      }
+  });
   
 })
 
