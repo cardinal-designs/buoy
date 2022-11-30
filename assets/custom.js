@@ -55,7 +55,7 @@ $('.dropdown-ind__drop .close').click(function() {
   $(this).parent().find('p, img').toggle()
 
         $(this).css({
-            transform: 'rotate(' + 45 + 'deg)'
+            transform: 'rotate(45deg)'
         });
 
   
