@@ -69,3 +69,8 @@
   margin-top: 16px;
   display: none;
 }
+
+.dropdown-ind:first-of-type p,
+.dropdown-ind:first-of-type img {
+  display: block;
+}
