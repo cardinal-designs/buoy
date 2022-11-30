@@ -1,7 +1,7 @@
 {{ 'section-dropdowns.css' | asset_url | stylesheet_tag }} 
 
 <div class="dropdowns__container page-width">
-  <h2 class="h4">{{ section.settings.title }}</h2>
+  <h2 class="h3">{{ section.settings.title }}</h3>
   <p>{{ section.settings.subtext }}</p>
   <div class="dropdown-ind-container">
     {% for block in section.blocks %}
