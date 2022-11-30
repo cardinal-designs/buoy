@@ -9,6 +9,7 @@
   width: 108px;
   height: 108px;
   margin-left: 30px;
+  display: none;
 }
 
 .dropdowns__container .h3 {
@@ -65,4 +66,5 @@
 .dropdown-ind p {
   color: #1F2322;
   margin-top: 16px;
+  display: none;
 }
