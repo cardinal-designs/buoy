@@ -70,7 +70,7 @@
   display: none;
 }
 
-.dropdown-ind:first-of-type p,
-.dropdown-ind:first-of-type img {
+.dropdown-ind__drop:first-of-type p,
+.dropdown-ind__drop:first-of-type img {
   display: block;
 }
