@@ -74,9 +74,9 @@ $('.dropdown-ind__drop .close').click(function() {
 
   $({deg: 0}).animate({deg: angle}, {
     duration: 2000,
-    step: function(45) {
+    step: function() {
         $(this).css({
-            transform: 'rotate(' + now + 'deg)'
+            transform: 'rotate(' + 45 + 'deg)'
         });
       }
   });
