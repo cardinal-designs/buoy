@@ -5,12 +5,20 @@
   <p class="dropdowns__subtitle sh4">{{ section.settings.subtext }}</p>
   <div class="dropdown-ind-container">
     {% for block in section.blocks %}
-    <div class="dropdown-ind">
-      <div class="dropdown-ind__text">
-        <h6>{{ block.settings.title }}</h6>
-        <p>{{ block.settings.text }}</p>
+    <div class="dropdown-ind__container">
+      <div class="dropdown-ind">
+        <div class="dropdown-ind__text">
+          <h6>{{ block.settings.title }}</h6>
+          <p>{{ block.settings.text }}</p>
+        </div>
+        <img src="{{ block.settings.img | img_url: 'master' }}"/>
       </div>
-      <img src="{{ block.settings.img | img_url: 'master' }}"/>
+      <span class="close">
+        <svg aria-hidden="true" focusable="false" role="presentation" width="40" height="40" class="icon icon-close-small" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.48627 9.32917L2.82849 3.67098" stroke="#333030" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M2.88539 9.38504L8.42932 3.61524" stroke="#333030" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </span>
     </div>
     {% endfor %}
   </div>
