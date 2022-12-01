@@ -4,6 +4,10 @@
   position: unset;
 }
 
+.image-dropdowns__container .image-with-dropdowns__content {
+  margin-right: 60px;
+}
+
 .image-dropdowns__container .image-with-dropdowns__content-text h6 {
   margin: 0 !important;
 }
