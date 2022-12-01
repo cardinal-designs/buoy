@@ -6,10 +6,10 @@
     <p class="image-slider__subtitle sh4">{{ section.settings.subtext }}</p>
   </div>
   <div class="hide-mobile">
-    {{ section.settings.svg }}
+    <img src="{{ section.settings.img | img_url: 'master'}}"/>
   </div>
   <div class="hide-desktop">
-   {{ section.settings.mobile_svg }}
+   <img src="{{ section.settings.mobile_img | img_url: 'master'}}"/>
   </div>
 </div>
 
@@ -29,14 +29,14 @@
         "label": "Subtext"
       },
       {
-        "type": "textarea",
-        "id": "svg",
-        "label": "Desktop SVG"
+        "type": "image_picker",
+        "id": "img",
+        "label": "Desktop Image"
       },
       {
-        "type": "textarea",
-        "id": "mobile_svg",
-        "label": "Mobile SVG"
+        "type": "image_picker",
+        "id": "mobile_img",
+        "label": "Mobile Image"
       }
     ],
     "presets": [
