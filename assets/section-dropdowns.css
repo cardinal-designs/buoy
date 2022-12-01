@@ -92,4 +92,9 @@
     margin-left: 12px;
     align-self: self-end;
   }
+
+  .dropdown-ind__drop .close.flip {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
 }
