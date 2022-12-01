@@ -323,6 +323,60 @@ body.lock-scroll {
 	}
 }
 
+@keyframes delay-wave1 {
+  0%{
+    transform: translateY(0em);
+  }
+  25%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave1 {
+  0%{
+    transform: translateY(0em);
+  }
+  25%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@keyframes delay-wave2 {
+  25%{
+    transform: translateY(0em);
+  }
+  50%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave2 {
+  25%{
+    transform: translateY(0em);
+  }
+  50%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@keyframes delay-wave3 {
+  50%{
+    transform: translateY(0em);
+  }
+  75%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave3 {
+  50%{
+    transform: translateY(0em);
+  }
+  75%{
+    transform: translateY(-.8rem);
+  }
+}
+
 .animated-text {
   white-space: nowrap;
 }
@@ -349,18 +403,18 @@ body.lock-scroll {
   -webkit-text-fill-color: transparent;
 }
 
-.animated-text-delay1.wave span.letter{
+.animated-text-delay1.delay-wave1 span.letter{
   animation: 1s wave backwards ease-in-out;
   display: inline-block;
 }
 
-.animated-text-delay2.wave span.letter{
+.animated-text-delay2.delay-wave2 span.letter{
   animation: 1s wave backwards ease-in-out;
   animation-delay: 1s;
   display: inline-block;
 }
 
-.animated-text-delay3.wave span.letter{
+.animated-text-delay3.delay-wave3 span.letter{
   animation: 1s wave backwards ease-in-out;
   animation-delay: 2s;
   display: inline-block;
