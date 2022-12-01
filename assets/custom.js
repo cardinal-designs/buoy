@@ -58,9 +58,11 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 
 
 $('.image-slider__img-container').scroll(function() {
-  // let width = 0;
-  // let margin = .css("marginRight")
-console.log($(this).scrollLeft()/$(this).width())
+  let width = $(this).find('img').width()
+  let marginRight = $(this).find('img').css("marginRight");
+  let marginLeft = $(this).find('img').css("marginLeft")
+  let realWidth =  width - marginLeft - marginRight;
+console.log($(this).scrollLeft()/realWidth)
 })
 
 
