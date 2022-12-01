@@ -87,6 +87,58 @@
         "testimonial_btn_link": "#Product_Reviews"
       }
     },
+    "6983854f-d9de-42d9-a4db-eb7be2a46441": {
+      "type": "image-dropdowns",
+      "blocks": {
+        "6a7bb855-0356-4b7a-b0d4-8b88376b2a9f": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "7afd64d4-ece3-4776-9fb1-00fff4aeb786": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "ae58be72-db71-48a4-9b71-c1a6042cf92b": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "ad610cab-af6e-4f12-a62b-daf281f63edb": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "17fe94f1-0eb3-424c-90ad-458fc05c2283": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6a7bb855-0356-4b7a-b0d4-8b88376b2a9f",
+        "7afd64d4-ece3-4776-9fb1-00fff4aeb786",
+        "ae58be72-db71-48a4-9b71-c1a6042cf92b",
+        "ad610cab-af6e-4f12-a62b-daf281f63edb",
+        "17fe94f1-0eb3-424c-90ad-458fc05c2283"
+      ],
+      "settings": {
+        "title": "Sip on functional benefits",
+        "img": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
+        "subtext": ""
+      }
+    },
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200": {
       "type": "marquee",
       "blocks": {
@@ -196,7 +248,7 @@
         "4b8b39bc-fd7d-4a2b-8b33-d8e3d4944205"
       ],
       "settings": {
-        "title": "Ingredients your body can <i style=\"font-weight: 300;\">actually absorb<\/i>",
+        "title": "Ingredients your body can actually absorb",
         "subtext": "Harvested | Bioavailable | Fast-Absorbing"
       }
     },
@@ -346,6 +398,7 @@
   },
   "order": [
     "main",
+    "6983854f-d9de-42d9-a4db-eb7be2a46441",
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200",
     "755d6fdb-322b-4169-af92-fe0a6988e43a",
     "8b9c24a7-0d88-4279-a771-d04362368955",
