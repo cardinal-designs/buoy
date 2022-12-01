@@ -12,6 +12,10 @@
   padding-top: 24px;
 }
 
+.image-dropdowns__container .image-with-dropdowns__content h3 {
+  margin-bottom: 40px;
+}
+
 .image-dropdowns__container .image-with-dropdowns__content-point:first-of-type {
   border-top: 0.5px solid #54575980;
 }
