@@ -2,3 +2,10 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.image-slider__img-container {
+  display: flex;
+  flex-wrap: no-wrap;
+  overflow-x: auto;
+  margin: 20px;
+}
