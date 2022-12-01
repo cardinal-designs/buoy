@@ -55,5 +55,7 @@
   .image-dropdowns__container .image-with-dropdowns__bottom-text {
     order: 2;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
