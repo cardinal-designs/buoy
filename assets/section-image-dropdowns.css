@@ -4,6 +4,10 @@
   position: unset;
 }
 
+.image-dropdowns__container .image-with-dropdowns__content-point {
+  border-bottom: 0.5px solid #545759;
+}
+
 .image-dropdowns__container .image-with-dropdowns__content {
   margin-right: 60px;
 }
