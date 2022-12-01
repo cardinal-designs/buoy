@@ -12,6 +12,10 @@
   padding-top: 24px;
 }
 
+.image-dropdowns__container .image-with-dropdowns__content-point:first-of-type {
+  border-top: 0.5px solid #54575980;
+}
+
 .image-dropdowns__container .image-with-dropdowns__content-point {
   border-bottom: 0.5px solid #54575980;
   padding-bottom: 24px !important;
