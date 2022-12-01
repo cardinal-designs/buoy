@@ -1,6 +1,7 @@
 {{ 'section-dropdowns.css' | asset_url | stylesheet_tag }} 
 
-<div class="dropdowns__container page-width">
+<div class="dropdowns__container"> 
+  <div class="page-width">
   <h2 class="h3">{{ section.settings.title }}</h3>
   <p class="dropdowns__subtitle sh4">{{ section.settings.subtext }}</p>
   <div class="dropdown-ind-container">
@@ -21,6 +22,7 @@
       </div>
     </div>
     {% endfor %}
+  </div>
   </div>
 </div>
 
