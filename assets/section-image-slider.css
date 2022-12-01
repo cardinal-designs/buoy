@@ -7,5 +7,9 @@
   display: flex;
   flex-wrap: no-wrap;
   overflow-x: auto;
+  margin: 0;
+}
+
+.image-slider__img-container img {
   margin: 0 25%;
 }
