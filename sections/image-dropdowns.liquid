@@ -1,12 +1,45 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Image Dropdowns",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtext"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "dropdown",
+        "name": "Dropdown",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Dropdowns"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
