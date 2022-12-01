@@ -57,6 +57,12 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 })
 
 
+$('.image-slider__img-container').scroll(function() {
+console.log($(this)scrollLeft())
+})
+
+
+
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
