@@ -47,6 +47,10 @@
     grid-row: 1; 
   }
 
+  .image-dropdowns__container .image-with-dropdowns__a p {
+    line-height: 1;
+  }
+
   .image-dropdowns__container .image-with-dropdowns__dropdown {
     order: 3
   }
