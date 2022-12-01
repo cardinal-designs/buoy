@@ -49,9 +49,11 @@
 
   .image-dropdowns__container .image-with-dropdowns__content h3 {
     order: 1;
+    text-align: center;
   }
 
   .image-dropdowns__container .image-with-dropdowns__bottom-text {
     order: 2;
+    text-align: center;
   }
 }
