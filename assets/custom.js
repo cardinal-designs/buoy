@@ -57,7 +57,7 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 })
 
 
-$('.image-slider__img-container').scroll(function() {
+$('.image-slider__img-container img').scroll(function() {
 console.log($(this).scrollLeft(),$(this).width())
 })
 
