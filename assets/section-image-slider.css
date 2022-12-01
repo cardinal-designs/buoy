@@ -18,3 +18,9 @@
 .image-slider__img-container img {
   margin: 0 36%;
 }
+
+@media screen and (max-width: 768px) {
+  .image-slider__img-container img {
+    margin: 0 23%;
+  }
+}
