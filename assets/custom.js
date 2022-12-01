@@ -59,10 +59,8 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 
 $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img').width()
-  let marginRight = $(this).find('img').css("marginRight");
-  let marginLeft = $(this).find('img').css("marginLeft")
-  let realWidth =  width - parseInt(marginLeft, 10) - parseInt(marginRight, 10);
-console.log($(this).scrollLeft()/realWidth)
+  var maxScrollLeft = $(this).find('img').scrollWidth - $(this).find('img').clientWidth;
+  console.log($(this).scrollLeft()/maxScrollLeft)
 })
 
 
