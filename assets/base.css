@@ -355,13 +355,13 @@ body.lock-scroll {
 }
 
 .animated-text-delay2.wave span.letter{
-  animation: 1s wave backwards ease-in-out infinite;
+  animation: 1s wave backwards ease-in-out;
   animation-delay: 1s;
   display: inline-block;
 }
 
 .animated-text-delay3.wave span.letter{
-  animation: 1s wave backwards ease-in-out infinite;
+  animation: 1s wave backwards ease-in-out;
   animation-delay: 2s;
   display: inline-block;
 }
