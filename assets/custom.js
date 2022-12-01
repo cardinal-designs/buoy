@@ -62,7 +62,7 @@ $('.image-slider__img-container').scroll(function() {
   let marginRight = $(this).find('img').css("marginRight");
   let marginLeft = $(this).find('img').css("marginLeft")
   let realWidth =  width - marginLeft - marginRight;
-  console.log(width, marginRight, marginLeft)
+  console.log(width, parseInt('marginRight', 10), parseInt('marginLeft', 10))
 console.log($(this).scrollLeft()/realWidth)
 })
 
