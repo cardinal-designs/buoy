@@ -6,3 +6,32 @@
     <p class="image-slider__subtitle sh4">{{ section.settings.subtext }}</p>
   </div>
 </div>
+
+
+{% schema %}
+  {
+    "name": "Image Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Slider"
+      }
+    ]
+  }
+{% endschema %}
