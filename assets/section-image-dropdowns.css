@@ -1,3 +1,11 @@
 .image-dropdowns__container {
   display: flex;
 }
+
+.image-dropdowns__text {
+  width: 50%;
+}
+
+.image-dropdowns__image {
+  width: 50%;
+}
