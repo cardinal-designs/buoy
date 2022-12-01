@@ -1,3 +1,6 @@
+{{ 'section-image-dropdowns.css' | asset_url | stylesheet_tag }} 
+
+
 {% schema %}
   {
     "name": "Image Dropdowns",
@@ -6,6 +9,11 @@
         "type": "text",
         "id": "title",
         "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
       },
       {
         "type": "text",
@@ -27,11 +35,6 @@
             "type": "textarea",
             "id": "text",
             "label": "Text"
-          },
-          {
-            "type": "image_picker",
-            "id": "img",
-            "label": "Image"
           }
         ]
       }
