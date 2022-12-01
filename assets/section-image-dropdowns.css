@@ -35,9 +35,23 @@
 @media screen and (max-width: 768px) {
   .image-dropdowns__container .image-with-dropdowns__content {
     margin-right: 0 !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .image-dropdowns__container .image-with-dropdowns__image {
     grid-row: 1; 
+  }
+
+  .image-dropdowns__container .image-with-dropdowns__dropdown {
+    order: 3
+  }
+
+  .image-dropdowns__container .image-with-dropdowns__content h3 {
+    order: 1;
+  }
+
+  .image-dropdowns__container .image-with-dropdowns__bottom-text {
+    order: 2;
   }
 }
