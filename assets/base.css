@@ -404,19 +404,17 @@ body.lock-scroll {
 }
 
 .animated-text-delay1.delay-wave1 span.letter{
-  animation: 1s wave backwards ease-in-out;
+  animation: 1s wave backwards ease-in-out infinite;
   display: inline-block;
 }
 
 .animated-text-delay2.delay-wave2 span.letter{
-  animation: 1s wave backwards ease-in-out;
-  animation-delay: 1s;
+  animation: 1s wave backwards ease-in-out infinite;
   display: inline-block;
 }
 
 .animated-text-delay3.delay-wave3 span.letter{
-  animation: 1s wave backwards ease-in-out;
-  animation-delay: 2s;
+  animation: 1s wave backwards ease-in-out infinite;
   display: inline-block;
 }
 
