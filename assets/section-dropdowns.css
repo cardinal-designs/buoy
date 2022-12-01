@@ -83,3 +83,12 @@
 .flip {
   transform: rotate(0deg) !important;
 }
+
+
+@media screen and (max-width: 768px) {
+  .dropdowns__container img {
+    width: 65px;
+    height: 65px;
+    margin-left: 12px;
+  }
+}
