@@ -58,7 +58,7 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 
 
 $('.image-slider__img-container').scroll(function() {
-console.log($(this).scrollLeft(),$(this).find('img').width())
+console.log($(this).scrollLeft()/$(this).find('img').width())
 })
 
 
