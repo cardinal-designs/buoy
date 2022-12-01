@@ -1,6 +1,6 @@
 {{ 'section-image-slider.css' | asset_url | stylesheet_tag }} 
 
-<div class="image-slider__container"> 
+<div style="{{ section.settings.background }}" class="image-slider__container"> 
   <div class="page-width">
     <h2 class="h3">{{ section.settings.title }}</h3>
     <p class="image-slider__subtitle sh4">{{ section.settings.subtext }}</p>
@@ -18,6 +18,11 @@
   {
     "name": "Image Slider",
     "settings": [
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background"
+      },
       {
         "type": "text",
         "id": "title",
