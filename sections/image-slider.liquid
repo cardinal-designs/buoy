@@ -5,6 +5,9 @@
     <h2 class="h3">{{ section.settings.title }}</h3>
     <p class="image-slider__subtitle sh4">{{ section.settings.subtext }}</p>
   </div>
+  <div>
+    {{ section.settings.svg }}
+  </div>
 </div>
 
 
@@ -23,9 +26,9 @@
         "label": "Subtext"
       },
       {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
+        "type": "textarea",
+        "id": "svg",
+        "label": "SVG"
       }
     ],
     "presets": [
