@@ -37,6 +37,10 @@
   margin-top: 24px;
 }
 
+.image-dropdowns__container .image-with-dropdowns__q svg {
+  color: #545759;
+}
+
 @media screen and (max-width: 768px) {
   .image-dropdowns__container .image-with-dropdowns__content {
     margin-right: 0 !important;
