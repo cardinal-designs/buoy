@@ -327,6 +327,12 @@ body.lock-scroll {
   white-space: nowrap;
 }
 
+.animated-text-delay1,
+.animated-text-delay2,
+.animated-text-delay3 {
+  white-space: nowrap;
+}
+
 .animated-text span.letter{
   display: inline-block;
 }
@@ -345,16 +351,19 @@ body.lock-scroll {
 
 .animated-text-delay1.wave span.letter{
   animation: 1s wave backwards ease-in-out;
+  display: inline-block;
 }
 
 .animated-text-delay2.wave span.letter{
   animation: 1s wave backwards ease-in-out infinite;
   animation-delay: 1s;
+  display: inline-block;
 }
 
 .animated-text-delay3.wave span.letter{
   animation: 1s wave backwards ease-in-out infinite;
   animation-delay: 2s;
+  display: inline-block;
 }
 
 .float {
