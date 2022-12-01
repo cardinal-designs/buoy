@@ -23,6 +23,7 @@
 
 .image-dropdowns__container .image-with-dropdowns__content {
   margin-right: 60px;
+  padding-top: 110px;
 }
 
 .image-dropdowns__container .image-with-dropdowns__content-text h6 {
@@ -41,6 +42,7 @@
     margin-right: 0 !important;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
   }
 
   .image-dropdowns__container .image-with-dropdowns__image {
