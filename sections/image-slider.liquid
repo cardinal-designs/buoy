@@ -5,8 +5,11 @@
     <h2 class="h3">{{ section.settings.title }}</h3>
     <p class="image-slider__subtitle sh4">{{ section.settings.subtext }}</p>
   </div>
-  <div>
+  <div class="hide-mobile">
     {{ section.settings.svg }}
+  </div>
+  <div class="hide-desktop">
+   {{ section.settings.mobile_svg }}
   </div>
 </div>
 
@@ -28,7 +31,12 @@
       {
         "type": "textarea",
         "id": "svg",
-        "label": "SVG"
+        "label": "Desktop SVG"
+      },
+      {
+        "type": "textarea",
+        "id": "mobile_svg",
+        "label": "Mobile SVG"
       }
     ],
     "presets": [
