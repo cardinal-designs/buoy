@@ -6,7 +6,9 @@
     <div class="image-dropdowns__drops">
     {% for block in section.blocks %}
       <div class="image-dropdowns__drop">
-        <h2 class="sh2">{{ block.settings.title }}</h2>
+        <div class="image-dropdowns__drop-title">
+          <h2 class="sh2">{{ block.settings.title }}</h2>
+        </div>
         <p>{{ block.settings.text }}</p>
       </div>
     {% endfor %}
