@@ -62,8 +62,8 @@ $('.image-slider__img-container').scroll(function() {
   // var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
   
 
-  var maxScrollLeft = $(this).find('img').scrollLeft()
-  console.log(width, maxScrollLeft)
+  var maxScrollLeft = $(this).scrollLeft()
+  console.log('af',width, maxScrollLeft)
 })
 
 
