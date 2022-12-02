@@ -57,15 +57,14 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 })
 
 
-
-
-
 //scrollbar js start
 $('.image-slider__img-container').scroll(function() {
   let window_width = $( window ).width();
   let img_width =  $(this).find('img').width() + (parseInt($(this).find('img').css("marginRight"),10)*2);
   let scroll_width = img_width - window_width
   let scrollable =  $(this).scrollLeft()
+
+  $( ".image-slider__dot" ).css("left", scrollable )
   console.log('af', scroll_width, scrollable) 
 })
 
