@@ -25,3 +25,9 @@
 .healthy-perks .how-to-2__content-text h6 {
   font-size: 18px;
 }
+
+@media screen and (max-width: 768px) {
+  .how-to-2__content-container h2 {
+    font-size: 30px;
+  }
+}
