@@ -59,9 +59,9 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 //scrollbar js start
 $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img')[0].clientWidth
-   var maxScrollLeft = $(this).find('img').get(0).scrollWidth - (parseInt($(this).find('img').css("marginRight"),10))
+   var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
   let scrollable = $(this).scrollLeft()
-  console.log('af',width,scrollable, maxScrollLeft)
+  console.log('af',width,scrollable, maxScrollLeft, parseInt($(this).find('img').css("marginRight"),10))
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
