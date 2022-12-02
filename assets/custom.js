@@ -61,7 +61,7 @@ $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img')[0].clientWidth
   // var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
   
-  let scrollable = document.getElementsByClassName("image-slider__img-container").getElementsByTagName('img').scrollLeftMax;
+  let scrollable = document.getElementById("image-slider__img-desktop").scrollLeftMax;
 
 
   var maxScrollLeft = $(this).scrollLeft()
