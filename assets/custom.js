@@ -66,7 +66,7 @@ $('.image-slider__img-container').scroll(function() {
   console.log('af',width,scrollable, maxScrollLeft)
 
 
-    var scrollTop = $(window).scrollWidth();
+    var scrollTop = $(window).width();
     var docHeight = $(document).width();
     var winHeight = $(window).width();
     var scrollPercent = (scrollTop) / (docHeight - winHeight);
