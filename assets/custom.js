@@ -84,7 +84,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   
  
    $('.image-slider__img-container').find('img').scrollLeft( scroll_percent2 )
-  console.log('afafa',scroll_percent2)
+  
 } );
 // scrollbar js end
 
