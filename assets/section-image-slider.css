@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.image-slider__container .h3 {
+  margin: 0 auto 30px;
+}
+
 .image-slider__img-container {
   display: flex;
   flex-wrap: no-wrap;
