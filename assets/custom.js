@@ -56,7 +56,7 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
   $(this).parent().find('.close').toggleClass('flip'); 
 })
 
-
+//scrollbar js start
 $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img')[0].clientWidth
   // var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
@@ -65,16 +65,12 @@ $('.image-slider__img-container').scroll(function() {
   console.log('af',width,scrollable, maxScrollLeft)
 })
 
-
-//scrollbar js start
-
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
-// scrollbar js end
 $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let drag_width = $('.image-slider__track').width() - 12;
   console.log('afafa',ui.position.left, drag_width)
 } );
-
+// scrollbar js end
 
 (function(){
   /* Open Supplement Drawer */
