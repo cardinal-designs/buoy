@@ -64,13 +64,12 @@ $('.image-slider__img-container').scroll(function() {
 
 
 //scrollbar js start
-function drag(e, ui) {
-  console.log('aa',ui)
-}
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: drag() });
 // scrollbar js end
-
+$( ".image-slider__dot" ).on( "drag", function( event, ui ) {
+  console.log('afafa',ui.position.left)
+} );
 
 
 (function(){
