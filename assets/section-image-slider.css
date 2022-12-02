@@ -19,14 +19,14 @@
   margin: 0 36%;
 }
 
-.image-slider__img-container::-webkit-scrollbar {
+/* .image-slider__img-container::-webkit-scrollbar {
   display: none;
 }
 
 .image-slider__img-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+} */
 
 
 .image-slider__img-container {
