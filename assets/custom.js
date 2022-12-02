@@ -68,7 +68,7 @@ $('.image-slider__img-container').scroll(function() {
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
 // scrollbar js end
 $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
-  let drag_width = $('.image-slider__track').width()
+  let drag_width = $('.image-slider__track').width() - 12;
   console.log('afafa',ui.position.left, drag_width)
 } );
 
