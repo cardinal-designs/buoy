@@ -45,6 +45,9 @@
   position: absolute;
 }
 
+.image-slider__subtitle {
+  margin: 30px auto 58px;
+}
 
 @media screen and (max-width: 768px) {
   .image-slider__img-container img {
