@@ -64,13 +64,6 @@ $('.image-slider__img-container').scroll(function() {
   let scrollable = $(this).find('img')[0].scrollWidth
   var maxScrollLeft = $(this).scrollLeft()
   console.log('af',width,scrollable, maxScrollLeft)
-
-
-    var scrollTop = $(this).find('img')[0].clientWidth
-    var docHeight = $(this).find('img').width();
-    var winHeight = $(window).width();
-    var scrollPercent = (scrollTop) / (docHeight - winHeight);
-  console.log('aaaa',scrollPercent) 
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
