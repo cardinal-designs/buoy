@@ -16,7 +16,8 @@
 }
 
 .image-slider__img-container img {
-  margin: 0 36%;
+/*   margin: 0 36%; */
+  margin: 0;
 }
 
 .image-slider__img-container::-webkit-scrollbar {
