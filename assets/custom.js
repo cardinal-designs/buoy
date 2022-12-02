@@ -63,6 +63,10 @@ $('.image-slider__img-container').scroll(function() {
 })
 
 
+//scrollbar js start
+
+// scrollbar js end
+
 
 (function(){
   /* Open Supplement Drawer */
