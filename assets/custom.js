@@ -69,7 +69,7 @@ $('.image-slider__img-container').scroll(function() {
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
-$( ".image-slider__track img" ).draggable({ containment: "parent", axis: "x", drag2: function( event, ui ) {} });
+$( ".image-slider__track img" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
 $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let drag_width = $('.image-slider__track').width() - 12;
   let window_width = $( window ).width();
@@ -77,7 +77,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let scroll_width = img_width - window_width
 
   let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
-  $( ".image-slider__track img" ).on( "drag2", function( event, ui ) {
+  $( ".image-slider__track img" ).on( "drag", function( event, ui ) {
     console.log('working')
   })
    // $('.image-slider__img-container').find('img').scroll( scroll_percent2 )
