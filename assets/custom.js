@@ -70,7 +70,7 @@ $('.image-slider__img-container').scroll(function() {
     var docHeight = $(document).width();
     var winHeight = $(window).width();
     var scrollPercent = (scrollTop) / (docHeight - winHeight);
-  console.log(scrollPercent)
+  console.log('aaaa',scrollPercent)
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
