@@ -64,8 +64,10 @@ $('.image-slider__img-container').scroll(function() {
   let scroll_width = img_width - window_width
   let scrollable =  $(this).scrollLeft()
 
+  let scroll_percent = (scrollable / scroll_width)*($('.image-slider__track').width() - 12)
+  console.log('scroll',scroll_percent)
   $( ".image-slider__dot" ).css("left", scrollable )
-  console.log('af', scroll_width, scrollable) 
+  // console.log('af', scroll_width, scrollable) 
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
