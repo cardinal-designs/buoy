@@ -59,6 +59,7 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 //scrollbar js start
 $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img')[0].clientWidth
+  console.log(width, $(this).width());
   // var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
   let scrollable = $(this).find('img')[0].scrollWidth
   var maxScrollLeft = $(this).scrollLeft()
