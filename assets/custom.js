@@ -63,10 +63,10 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 //scrollbar js start
 $('.image-slider__img-container').scroll(function() {
     let window_width = $( window ).width();
-  let img_width =  $(this).find('img').width() + parseInt($(this).find('img').css("marginRight"),10);
+  let img_width =  $(this).find('img').width() + (parseInt($(this).find('img').css("marginRight"),10)*2);
   let scroll_width = img_width - window_width
   let scrollable =  $(this).scrollLeft()
-  console.log('af',window_width,img_width, scroll_width, scrollable)
+  console.log('af', scroll_width, scrollable)
 
   
 })
