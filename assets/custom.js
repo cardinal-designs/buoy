@@ -65,9 +65,12 @@ $('.image-slider__img-container').scroll(function() {
 
 //scrollbar js start
 
-$( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x" });
+$( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: "drag" });
 // scrollbar js end
 
+function drag(e, ui) {
+  console.log('aa',ui.position.left)
+}
 
 (function(){
   /* Open Supplement Drawer */
