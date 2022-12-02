@@ -59,13 +59,9 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 
 $('.image-slider__img-container').scroll(function() {
   let width = $(this).find('img')[0].clientWidth
-  // var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
-  
-  let scrollable = document.getElementById("image-slider__img-desktop")[0]
+  var maxScrollLeft = $(this).find('img').get(0).scrollWidth - parseInt($(this).find('img').css("marginRight"),10)
 
-
-  var maxScrollLeft = $(this).scrollLeft()
-  console.log('af',width,scrollable, maxScrollLeft)
+  console.log('af',width, maxScrollLeft)
 })
 
 
