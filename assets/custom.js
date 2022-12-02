@@ -65,7 +65,7 @@ $('.image-slider__img-container').scroll(function() {
 
 //scrollbar js start
 function drag(e, ui) {
-  console.log('aa',ui.position.left)
+  console.log('aa',ui)
 }
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: drag() });
