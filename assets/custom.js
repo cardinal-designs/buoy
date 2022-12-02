@@ -76,10 +76,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let scroll_width = img_width - window_width
 
   let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
-
-  $( ".image-slider__img-container img" ).scroll(function() {
-    console.log('afafa')
-  })
+   $('.image-slider__img-container').scroll(scroll_percent2)
    // $('.image-slider__img-container').find('img').scroll( scroll_percent2 )
   
 } );
