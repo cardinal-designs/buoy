@@ -65,9 +65,7 @@ $('.image-slider__img-container').scroll(function() {
   let scrollable =  $(this).scrollLeft()
 
   let scroll_percent = (scrollable / scroll_width)*($('.image-slider__track').width() - 12)
-  // console.log('scroll',scroll_percent)
   $( ".image-slider__dot" ).css("left", scroll_percent )
-  // console.log('af', scroll_width, scrollable) 
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
@@ -77,13 +75,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let img_width =  $('.image-slider__img-container').find('img').width() + (parseInt($('.image-slider__img-container').find('img').css("marginRight"),10)*2);
   let scroll_width = img_width - window_width
 
-
-  console.log(ui.position.left,drag_width,scroll_width)
-  let scroll_percent2 = ((ui.position.left / drag_width)*scroll_width)*-1
- 
-  console.log('1',scroll_percent2)
- 
-   $('.image-slider__img-container').find('img').scrollLeft( scroll_percent2 )
+  let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
+  
+   $('.image-slider__img-container').find('img').scroll( scroll_percent2 )
   
 } );
 // scrollbar js end
