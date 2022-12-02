@@ -58,7 +58,7 @@ $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
 
 
 //scrollbar js start
-$('.image-slider__img-container').scroll(function() {
+$('.image-slider__img-container, .image-slider__img-container-mobile').scroll(function() {
   let window_width = $( window ).width();
   let img_width =  $(this).find('img').width() + (parseInt($(this).find('img').css("marginRight"),10)*2);
   let scroll_width = img_width - window_width
@@ -76,7 +76,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let scroll_width = img_width - window_width
 
   let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
-   $('.image-slider__img-container').scrollLeft(scroll_percent2)  
+   $('.image-slider__img-container, image-slider__img-container-mobile').scrollLeft(scroll_percent2)  
 } );
 // scrollbar js end
 
