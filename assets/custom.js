@@ -62,7 +62,7 @@ $('.image-slider__img-container').scroll(function() {
   let img_width =  $(this).find('img').width();
   let scroll_width = img_width - window_width
   let scrollable =  $(this).scrollLeft()
-  console.log('af', scroll_width, scrollable)
+  console.log('af',window_width,img_width, scroll_width, scrollable)
 })
 
 $( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
