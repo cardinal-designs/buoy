@@ -36,6 +36,13 @@
   margin: 0 auto;
 }
 
+.image-slider__dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background: black;
+}
+
 
 @media screen and (max-width: 768px) {
   .image-slider__img-container img {
