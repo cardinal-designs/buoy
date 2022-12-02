@@ -63,7 +63,7 @@ $('.image-slider__img-container').scroll(function() {
   let scrollable = $(this).find('img')[0].scrollWidth
 
 
-  var maxScrollLeft = $(this).find('img').scrollLeft()
+  var maxScrollLeft = $(this).scrollLeft()
   console.log('af',width,scrollable, maxScrollLeft)
 })
 
