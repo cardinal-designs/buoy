@@ -75,8 +75,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   let img_width =  $('.image-slider__img-container').find('img').width() + (parseInt($('.image-slider__img-container').find('img').css("marginRight"),10)*2);
   let scroll_width = img_width - window_width
 
+  let img_width_mobile =  $('.image-slider__img-container-mobile').find('img').width() + (parseInt($('.image-slider__img-container-mobile').find('img').css("marginRight"),10)*2);
+  let scroll_width_mobile = img_width - window_width
+  
   let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
-   $('.image-slider__img-container, image-slider__img-container-mobile').scrollLeft(scroll_percent2)  
+   $('.image-slider__img-container').scrollLeft(scroll_percent2)  
+
+    let scroll_percent3 = (ui.position.left / drag_width)*scroll_width_mobile
+   $('.image-slider__img-container-mobile').scrollLeft(scroll_percent3) 
 } );
 // scrollbar js end
 
