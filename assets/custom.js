@@ -82,6 +82,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
    $('.image-slider__img-container').scrollLeft(scroll_percent2)  
 
     let scroll_percent3 = (ui.position.left / drag_width)*scroll_width_mobile
+  console.log('f',scroll_percent3)
    $('.image-slider__img-container-mobile').scrollLeft(scroll_percent3) 
 } );
 // scrollbar js end
