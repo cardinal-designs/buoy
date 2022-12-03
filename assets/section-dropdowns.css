@@ -94,6 +94,11 @@
     align-self: self-end;
   }
 
+  .dropdowns__container {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
   .dropdown-ind__drop .close.flip {
     align-self: flex-start;
     margin-top: 20px;
