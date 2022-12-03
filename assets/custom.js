@@ -91,6 +91,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   /* Open Supplement Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
+      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       closeContinue: '.mobile-supplement-continue',
@@ -98,6 +99,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+    openNav();
+  });
+
+  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
     openNav();
   });
 
