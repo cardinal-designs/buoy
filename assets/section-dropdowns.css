@@ -34,6 +34,7 @@
 }
 
 .dropdown-ind__drop .close {
+  cursor: pointer;
   border: 2px solid #1F2322;
   background: white;
   height: 34px;
@@ -41,7 +42,6 @@
   border-radius: 25px;
   margin-left: -17px;
   transform: rotate(45deg);
-
   -moz-transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
   transition: transform 0.5s;
