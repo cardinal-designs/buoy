@@ -34,7 +34,7 @@
 
 .image-slider__track {
   width: 410px;
-  height: 16px;
+  height: 14px;
   border-radius: 18px;
   border: 2px solid #1F2322;
   margin: 50px auto 0;
@@ -61,9 +61,8 @@
 
   .image-slider__track {
     width: 80%;
-    height: 16px;
     border-radius: 18px;
-    border: 2px solid #1F2322;
+    border: 1px solid #1F2322;
     margin: 50px auto 0;
   }
 
