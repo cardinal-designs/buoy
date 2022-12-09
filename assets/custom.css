@@ -55,9 +55,15 @@
 }
 
 .Testimonials_Main .slick-dots {
-  padding: 0;
-  margin: 5px 0 0;
-  text-align: center;
+  padding: 0 !important;
+  margin: 20px 0 0 !important;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+}
+
+.Testimonials_Main .slick-prev {
+  z-index: 999;
 }
 
 .Testimonials_Main .slick-dots li {
@@ -90,7 +96,8 @@
 }
 
 .Testimonials_Main {
-  margin-top: 55px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .Testimonials_Main .slick-prev {

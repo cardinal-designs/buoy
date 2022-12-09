@@ -1,5 +1,37 @@
 $( document ).ready(function() {
-  $('.Testimonials_Slider').slick({
+  // $('.Testimonials_Slider').slick({
+  //   dots: true,
+  //   arrows: true,
+  //   infinite: false,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   prevArrow: '<button type="button" class="slick-prev"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>',
+  //   nextArrow: '<button type="button" class="slick-next"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(-90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>',
+  //     responsive: [
+  //       {
+  //         breakpoint: 768, 
+  //         settings: {
+  //           arrows: false
+  //         }
+  //       }
+  //     ]
+  // });
+
+  $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
+    $(this).addClass('active');
+    $('.rtx_option_selector input').prop( "checked", false );
+    $(this).find('input').prop( "checked", true );
+    $(this).siblings('.Subscribe_Box').removeClass('active');
+    document.querySelector('.rtx_option_selector input:checked').click();
+  });
+
+  document.querySelector('.rtx_option_selector input:checked').click();
+});
+
+
+$('.faq__item.Shipping_Tab .faq__header').click(function() {
+    $('.Testimonials_Slider').slick({
     dots: true,
     arrows: true,
     infinite: false,
@@ -17,25 +49,49 @@ $( document ).ready(function() {
         }
       ]
   });
+})
 
-  $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
-    $(this).addClass('active');
-    $('.rtx_option_selector input').prop( "checked", false );
-    $(this).find('input').prop( "checked", true );
-    $(this).siblings('.Subscribe_Box').removeClass('active');
-    document.querySelector('.rtx_option_selector input:checked').click();
-  });
-
-  document.querySelector('.rtx_option_selector input:checked').click();
-});
+$('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
+  $(this).parent().find('p, img').toggle()
+  $(this).parent().find('.close').toggleClass('flip'); 
+})
 
 
+//scrollbar js start
+$('.image-slider__img-container, .image-slider__img-container-mobile').scroll(function() {
+  let window_width = $( window ).width();
+  let img_width =  $(this).find('img').width() + (parseInt($(this).find('img').css("marginRight"),10)*2);
+  let scroll_width = img_width - window_width
+  let scrollable =  $(this).scrollLeft()
 
+  let scroll_percent = (scrollable / scroll_width)*($('.image-slider__track').width() - 12)
+  $( ".image-slider__dot" ).css("left", scroll_percent )
+})
+
+$( ".image-slider__dot" ).draggable({ containment: "parent", axis: "x", drag: function( event, ui ) {} });
+$( ".image-slider__dot" ).on( "drag", function( event, ui ) {
+  let drag_width = $('.image-slider__track').width() - 12;
+  let window_width = $( window ).width();
+  let img_width =  $('.image-slider__img-container').find('img').width() + (parseInt($('.image-slider__img-container').find('img').css("marginRight"),10)*2);
+  let scroll_width = img_width - window_width
+
+  let img_width_mobile =  $('.image-slider__img-container-mobile').find('img').width() + (parseInt($('.image-slider__img-container-mobile').find('img').css("marginRight"),10)*2);
+  let scroll_width_mobile = img_width_mobile - window_width
+  
+  let scroll_percent2 = (ui.position.left / drag_width)*scroll_width
+   $('.image-slider__img-container').scrollLeft(scroll_percent2)  
+
+    let scroll_percent3 = (ui.position.left / drag_width)*scroll_width_mobile
+  console.log('f',scroll_percent3)
+   $('.image-slider__img-container-mobile').scrollLeft(scroll_percent3) 
+} );
+// scrollbar js end
 
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
+      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       closeContinue: '.mobile-supplement-continue',
@@ -43,6 +99,10 @@ $( document ).ready(function() {
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+    openNav();
+  });
+
+  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
     openNav();
   });
 

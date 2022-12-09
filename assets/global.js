@@ -750,7 +750,7 @@ dragScroll.forEach(ele => {
   ele.addEventListener('mousedown', mouseDownHandler);
 });
 
-var animatedText = document.querySelectorAll('.animated-text');
+var animatedText = document.querySelectorAll('.animated-text, .animated-text-delay1, .animated-text-delay2, .animated-text-delay3');
 
 function animate(element){
   var textArray = element.innerText.split('');

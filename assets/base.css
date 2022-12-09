@@ -323,7 +323,67 @@ body.lock-scroll {
 	}
 }
 
+@keyframes delay-wave1 {
+  0%{
+    transform: translateY(0em);
+  }
+  25%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave1 {
+  0%{
+    transform: translateY(0em);
+  }
+  25%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@keyframes delay-wave2 {
+  25%{
+    transform: translateY(0em);
+  }
+  50%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave2 {
+  25%{
+    transform: translateY(0em);
+  }
+  50%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@keyframes delay-wave3 {
+  50%{
+    transform: translateY(0em);
+  }
+  75%{
+    transform: translateY(-.8rem);
+  }
+}
+
+@-webkit-keyframes delay-wave3 {
+  50%{
+    transform: translateY(0em);
+  }
+  75%{
+    transform: translateY(-.8rem);
+  }
+}
+
 .animated-text {
+  white-space: nowrap;
+}
+
+.animated-text-delay1,
+.animated-text-delay2,
+.animated-text-delay3 {
   white-space: nowrap;
 }
 
@@ -341,6 +401,21 @@ body.lock-scroll {
   background-size: 3000% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.animated-text-delay1.delay-wave1 span.letter{
+  animation: 3s delay-wave1 backwards ease-in-out infinite;
+  display: inline-block;
+}
+
+.animated-text-delay2.delay-wave2 span.letter{
+  animation: 3s delay-wave2 backwards ease-in-out infinite;
+  display: inline-block;
+}
+
+.animated-text-delay3.delay-wave3 span.letter{
+  animation: 3s delay-wave3 backwards ease-in-out infinite;
+  display: inline-block;
 }
 
 .float {
