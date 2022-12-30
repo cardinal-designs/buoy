@@ -1,7 +1,7 @@
 {{ 'section-faq.css' | asset_url | stylesheet_tag }} 
 {{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
 
-<div style="{% if section.settings.background != blank %}background: {{ section.settings.background }}{% endif %}" class="faq-section">
+<div style="{% if section.settings.background != blank %}background: {{ section.settings.background }}{% endif %}" class="faq-section faq-text-above__container">
   <div class="page-width">
     <div class="faq-section__container">
       <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
