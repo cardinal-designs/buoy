@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.hero-button-link__container {
+  width: fit-content;
+}
+
 .hero-sub-button-link a {
   font-weight: bold;
   text-decoration: underline;
