@@ -2,7 +2,7 @@
 {{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
 
 {% if section.settings.suptitle != blank %}
-<div class="hide-desktop">
+<div class="faq-suptext__container hide-desktop">
   <h5>{{ section.settings.suptitle }}</h5>
   <p>{{ section.settings.suptext }}</p>
 </div>
@@ -11,7 +11,7 @@
   <div class="page-width">
     <div class="faq-section__container">
       {% if section.settings.suptitle != blank %}
-      <div class="hide-mobile">
+      <div class="faq-suptext__container hide-mobile">
         <h5>{{ section.settings.suptitle }}</h5>
         <p>{{ section.settings.suptext }}</p>
       </div>
