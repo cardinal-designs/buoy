@@ -3,11 +3,17 @@
 
 {% style %}
   {% if section.settings.background != blank %}
-  
+    .faq-text-above__container {
+      background: {{ section.settings.background }};
+    }
   {% endif %}
   
-  {% if section.settings.background_mobile != blank %}
-  
+  {% if section.settings.background_mobile != blank %} 
+    @media screen and (max-width: 768px) {
+      .faq-text-above__container {
+        background: {{ section.settings.background_mobile }};
+      }
+    }
   {% endif %}
 {% endstyle %}
 
@@ -17,7 +23,7 @@
   <p class="light">{{ section.settings.suptext }}</p>
 </div>
 {% endif %}
-<div style="{% if section.settings.background != blank %}background: {{ section.settings.background }}{% endif %}" class="faq-section faq-text-above__container">
+<div class="faq-section faq-text-above__container">
   <div class="page-width">
     <div class="faq-section__container">
       {% if section.settings.suptitle != blank %}
