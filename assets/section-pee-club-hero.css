@@ -16,3 +16,9 @@
 .pee-club-hero__container .hero__container .h1 {
   letter-spacing: 0 !important;
 }
+
+@media screen and (max-width: 768px) {
+  .pee-club-hero__container .hero__container .h1 {
+    font-size: 32px;
+  }
+}
