@@ -5,6 +5,26 @@
       "settings": {
       }
     },
+    "af6e48c2-58b8-4143-b5ac-61bf1bb64a75": {
+      "type": "pee-club-hero",
+      "settings": {
+        "video_url": "",
+        "mobile_video_url": "",
+        "image": "shopify:\/\/shop_images\/Subscription_Hero_Image_D_2x_3b18bf43-2b62-47fb-a589-12de8bad31a6.png",
+        "mobile_image": "shopify:\/\/shop_images\/Subscription_Hero_Image_D_2x_a7a34795-567e-43c4-8bb5-117e82d01d6e.png",
+        "txt_shadow": false,
+        "color": "",
+        "suptitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "link_label": "",
+        "link_link": "",
+        "mobile_text_location": "top",
+        "hide_mobile_text": false
+      }
+    },
     "16390276435f9f6aac": {
       "type": "apps",
       "blocks": {
@@ -26,6 +46,7 @@
   },
   "order": [
     "main",
+    "af6e48c2-58b8-4143-b5ac-61bf1bb64a75",
     "16390276435f9f6aac"
   ]
 }
