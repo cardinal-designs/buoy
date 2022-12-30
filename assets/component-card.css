@@ -157,10 +157,6 @@
     font-size: 12px;
   }
 
-  .card-information__wrapper .okeReviews-reviewsSummary-ratingCount {
-    width: 100%;
-  }
-
   .card-information .shop-btn {
     padding: 10px;
   }
@@ -169,3 +165,10 @@
     display: none !important;
   } 
 }
+
+@media screen and (max-width: 450px) {
+  .card-information__wrapper .okeReviews-reviewsSummary-ratingCount {
+    width: 100%;
+  }
+}
+
