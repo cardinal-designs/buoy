@@ -4,7 +4,7 @@
 {% if section.settings.suptitle != blank %}
 <div class="faq-suptext__container hide-desktop">
   <h5>{{ section.settings.suptitle }}</h5>
-  <p>{{ section.settings.suptext }}</p>
+  <p class="light">{{ section.settings.suptext }}</p>
 </div>
 {% endif %}
 <div style="{% if section.settings.background != blank %}background: {{ section.settings.background }}{% endif %}" class="faq-section faq-text-above__container">
@@ -13,7 +13,7 @@
       {% if section.settings.suptitle != blank %}
       <div class="faq-suptext__container hide-mobile">
         <h5>{{ section.settings.suptitle }}</h5>
-        <p>{{ section.settings.suptext }}</p>
+        <p class="light">{{ section.settings.suptext }}</p>
       </div>
       {% endif %}
       <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
