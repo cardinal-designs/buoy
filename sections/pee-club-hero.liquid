@@ -96,14 +96,15 @@
         {% endif %}
           <p class="h6">{{ section.settings.text }}</p>
       </span>
-
-      {% if section.settings.button_label  != blank %}
-        <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
-      {% endif %}
-
-      {% if section.settings.link_label  != blank %}
-        <p class="hero-sub-button-link">{{ section.settings.link_label }}</p>
-      {% endif %}
+      <div>
+        {% if section.settings.button_label  != blank %}
+          <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+        {% endif %}
+  
+        {% if section.settings.link_label  != blank %}
+          <p class="hero-sub-button-link">{{ section.settings.link_label }}</p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
