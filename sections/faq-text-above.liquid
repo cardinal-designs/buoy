@@ -1,9 +1,21 @@
 {{ 'section-faq.css' | asset_url | stylesheet_tag }} 
 {{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
 
+{% if section.settings.suptitle != blank %}
+<div class="hide-desktop">
+  <h5>{{ section.settings.suptitle }}</h5>
+  <p>{{ section.settings.suptext }}</p>
+</div>
+{% endif %}
 <div style="{% if section.settings.background != blank %}background: {{ section.settings.background }}{% endif %}" class="faq-section faq-text-above__container">
   <div class="page-width">
     <div class="faq-section__container">
+      {% if section.settings.suptitle != blank %}
+      <div class="hide-mobile">
+        <h5>{{ section.settings.suptitle }}</h5>
+        <p>{{ section.settings.suptext }}</p>
+      </div>
+      {% endif %}
       <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
       {% for block in section.blocks %}
@@ -34,6 +46,16 @@
         "type": "textarea",
         "id": "text",
         "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "suptitle",
+        "label": "Suptitle"
+      },
+      {
+        "type": "textarea",
+        "id": "suptext",
+        "label": "Suptext"
       },
       {
         "type": "textarea",
