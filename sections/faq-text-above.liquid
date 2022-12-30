@@ -1,6 +1,16 @@
 {{ 'section-faq.css' | asset_url | stylesheet_tag }} 
 {{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
 
+{% style %}
+  {% if section.settings.background != blank %}
+  
+  {% endif %}
+  
+  {% if section.settings.background_mobile != blank %}
+  
+  {% endif %}
+{% endstyle %}
+
 {% if section.settings.suptitle != blank %}
 <div class="faq-suptext__container hide-desktop">
   <h5>{{ section.settings.suptitle }}</h5>
@@ -56,11 +66,16 @@
         "type": "textarea",
         "id": "suptext",
         "label": "Suptext"
-      },
+      },  
       {
         "type": "textarea",
         "id": "background",
         "label": "Background Gradient (optional)"
+      },
+      {
+        "type": "textarea",
+        "id": "background_mobile",
+        "label": "Background Gradient - Mobile (optional)"
       }
     ],
     "blocks": [
