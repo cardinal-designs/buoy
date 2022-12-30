@@ -138,6 +138,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .card + .card-information {
+    margin-top: 10px;
+  }
+  
   .card-information__wrapper .button {
     width: 100%;
   }
