@@ -41,6 +41,11 @@
   background-size: 75px 15px;
 }
 
+.card-information__wrapper .okeReviews-reviewsSummary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card-information__wrapper .okeReviews-reviewsSummary-ratingCount {
   margin: 0;
   position: initial;
