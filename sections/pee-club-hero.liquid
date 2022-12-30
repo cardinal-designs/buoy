@@ -96,8 +96,13 @@
         {% endif %}
           <p class="h6">{{ section.settings.text }}</p>
       </span>
+
       {% if section.settings.button_label  != blank %}
         <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+      {% endif %}
+
+      {% if section.settings.link_label  != blank %}
+        <p>{{ section.settings.link_label }}</p>
       {% endif %}
     </div>
   </div>
@@ -166,11 +171,6 @@
       "type": "text",
       "id": "link_label",
       "label": "Link Label"
-    },
-    {
-      "type": "url",
-      "id": "link_link",
-      "label": "Link URL"
     },
     {
       "type": "select",
