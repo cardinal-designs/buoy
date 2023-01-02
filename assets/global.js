@@ -1305,8 +1305,13 @@ $('.js-open-supplement-drawer').click(function() {
 });
 
 $('.mobile-pee-club-toggle div').click(function() {
+  let num = $(this).data('id')
+  
   $('.mobile-pee-club-toggle div').removeClass('active')
   $(this).addClass('active')
+
+  $('.pee-club-half-image__container .month-list').hide()
+  $(`.pee-club-half-image__container .month-list[data-id="${num}"]`).show()
 });
 
 
