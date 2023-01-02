@@ -19,7 +19,7 @@
         {% endif %}
       </div>
       <div class="pee-club-product-bar-buttons">
-        <div class="pee-club-product-bar-dropdown-selected">{{ all_products[section.blocks[0].settings.product].title }} afff</div>
+        <div class="pee-club-product-bar-dropdown-selected">{{ all_products[section.blocks[0].settings.product].title }}<span>{{ all_products[section.blocks[0].settings.product].text }}</span></div>
         <ul class="pee-club-product-bar-dropdown">
           {% for block in section.blocks %}
           {% assign product = all_products[block.settings.product] %}
