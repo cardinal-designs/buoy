@@ -60,14 +60,13 @@
     display: flex;
   }
 
-  .mobile-pee-club-toggle div {
+  .mobile-pee-club-toggle p {
     width: 100%;
     background: white;
     color: #1F232280;
-    border-radius: 27px;
   }
 
-  .mobile-pee-club-toggle .active {
+  .mobile-pee-club-toggle p.active {
     width: 100%;
     background: #f4ece2;
     color: #1F2322;
