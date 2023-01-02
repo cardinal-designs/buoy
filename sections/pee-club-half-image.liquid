@@ -20,7 +20,7 @@
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
           <div>
-            <p>{{ block.section }}</p>
+            <p>{{ block.settings.title }}</p>
           </div>
         {% endfor %}
       </div>
@@ -68,7 +68,7 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Title"
+            "label": "List Item"
           }
         ]
       }
