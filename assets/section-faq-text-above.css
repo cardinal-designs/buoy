@@ -25,8 +25,14 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .faq-suptext__container {
+    
+  }
+  
   .faq-suptext__container h5 {
     font-size: 22px;
+    margin-bottom: 16px;
   }
 
   .faq-suptext__container p {
