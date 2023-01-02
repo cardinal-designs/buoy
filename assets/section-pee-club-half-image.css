@@ -52,4 +52,23 @@
   .pee-club-half-image__container {
     padding-bottom: 60px;
   }
+
+  .mobile-pee-club-toggle {
+    width: 100%;
+    border: 2px solid #1F2322;
+    border-radius: 27px;
+    display: flex;
+  }
+
+  .mobile-pee-club-toggle p {
+    width: 100%;
+    background: white;
+    color: #1F232280;
+  }
+
+    .mobile-pee-club-toggle p.active {
+      width: 100%;
+      background: #f4ece2;
+      color: #1F2322;
+    }
 }
