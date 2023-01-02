@@ -17,6 +17,11 @@
     <div class="image-with-dropdowns__content">
       <p class="light">{{ section.settings.text }}</p>
       <h3>{{ section.settings.title }}</h3>
+      <div class="hide-desktop mobile-pee-club-toggle">
+        {% for block in section.blocks %}
+        <div class="active">{{ block.settings.title }}</div>
+        {% endfor %}
+      </div>
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
           <div class="month-list">
