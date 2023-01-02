@@ -40,7 +40,11 @@
     display: none;
   }
 
-  .month-list:not(:first-child) {
+  .pee-club-half-image__container .month-list {
+    margin-bottom: 0;
+  }  
+  
+  .pee-club-half-image__container .month-list:not(:first-child) {
     display: none;
   }
 }
