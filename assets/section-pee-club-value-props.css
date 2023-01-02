@@ -24,4 +24,9 @@
     padding-left: unset;
     padding-right: unset;
   }
+
+  .value-props__prop {
+    width: unset !important;
+    padding: unset;
+  }
 }
