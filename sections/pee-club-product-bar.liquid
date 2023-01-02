@@ -1,19 +1,5 @@
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
 
-
-{% for selling_plan in product.selling_plan_groups %}
-    {% if selling_plan.app_id == '5859381' %}
-    {% assign rtx_selling_plan = selling_plan %}
-    {% endif %}
-{% endfor %}
-
-{% if product.title == 'Hydration Drops' %}
-  {% assign num = 1 %}
-{% else %}
-  {% assign num = 0 %}
-{% endif %} 
-  {% assign num = 0 %}
-
 <div data="{{product.variants[0] | json }}" class="product-bar product-bar-toggle pee-club-product-bar">
   <div class="page-width">
     <div class="product-bar__container">
