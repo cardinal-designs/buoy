@@ -20,3 +20,10 @@
 .pee-club-half-image__container .month-list {
   margin-bottom: 100px;
 }
+
+@media only screen and (max-width: 768px) {
+  .pee-club-half-image__container .image-with-dropdowns__content {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
