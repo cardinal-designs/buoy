@@ -24,6 +24,11 @@
   font-size: 16px;
 }
 
+.faq-suptext__container .emoji {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
 @media screen and (max-width: 768px) {
   .faq-text-above__container {
     padding-top: 60px;
