@@ -19,7 +19,9 @@
       <h3>{{ section.settings.title }}</h3>
       <div class="hide-desktop mobile-pee-club-toggle">
         {% for block in section.blocks %}
-        <p class="{% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</p>
+        <div class="{% if forloop.index == 1 %}active{% endif %}">
+          <p>{{ block.settings.title }}</p>
+        </div>
         {% endfor %}
       </div>
       <div class="image-with-dropdowns__dropdown">
