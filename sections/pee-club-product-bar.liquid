@@ -43,7 +43,9 @@
             </label>
           </div>
         </div>
-        <button class="button js-add-to-cart" 
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        <button style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                 data-id="{{ product.selected_or_first_available_variant.id }}" 
                 data-time="one-time">
@@ -57,6 +59,7 @@
             </span>
           {% endif %}
         </button>
+        {% endfor %}
       </div>
     </div>
   </div>
