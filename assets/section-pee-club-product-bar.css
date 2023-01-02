@@ -23,6 +23,11 @@
   display: none;
 }
 
+.pee-club-product-bar-buttons {
+  display: flex;
+  gap: 14px;
+}
+
 .pee-club-product-bar-dropdown {
   min-width: 240px;
   padding: 14px 20px 15px;
