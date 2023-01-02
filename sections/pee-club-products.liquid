@@ -1,12 +1,84 @@
+{{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
+
+<div class="pee-club-products__container">
+  <div class="show-product-bar"></div>
+</div>
+
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Pee Club Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "text_bottom",
+        "label": "Bottom Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Style"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "servings",
+            "label": "Servings Text"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "textarea"
+          },
+          {
+            "type": "textarea",
+            "id": "list",
+            "label": "List Text"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Products"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
