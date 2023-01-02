@@ -43,7 +43,11 @@
   .pee-club-half-image__container .month-list {
     margin-bottom: 0;
     text-align: left;
-  }  
+  } 
+  
+  .pee-club-half-image__container .month-list p {
+    font-size: 16px;
+  } 
   
   .pee-club-half-image__container .month-list:not(:first-child) {
     display: none;
