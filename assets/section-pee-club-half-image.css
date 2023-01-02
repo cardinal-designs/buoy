@@ -39,4 +39,8 @@
   .pee-club-half-image__container .list-title {
     display: none;
   }
+
+  .month-list:not(:first-child) {
+    display: none;
+  }
 }
