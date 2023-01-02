@@ -1,12 +1,104 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
+{{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
+
+{% assign product = all_products[section.settings.product] %}
+{% for selling_plan in product.selling_plan_groups %}
+    {% if selling_plan.app_id == '5859381' %}
+    {% assign rtx_selling_plan = selling_plan %}
+    {% endif %}
+{% endfor %}
+
+{% if product.title == 'Hydration Drops' %}
+  {% assign num = 1 %}
+{% else %}
+  {% assign num = 0 %}
+{% endif %} 
+  {% assign num = 0 %}
+
+<div data="{{product.variants[0] | json }}" class="product-bar product-bar-toggle">
+  <div class="page-width">
+    <div class="product-bar__container">
+      <div class="product-bar__title">
+        <h5>{{ product.title }}</h5>
+      </div>
+      <div class="flex-buttons-bar">
+        <div class="product-quick-add__form">
+          <div class="product-quick-add__form-item one-time">
+            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" checked>
+            <label class="body" for="one-time--{{ section.id }}">
+              <span>One-time</span>
+              <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              <span class="hide-mobile">{{ product.price | money_without_trailing_zeros  }}</span>
+            </label>
+          </div>
+          <div class="product-quick-add__form-item subscription">
+            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}">
+            <label class="body" for="subscription--{{ section.id }}">
+              <span>Subscribe & Save</span>
+              <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              <span data-id="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | json }}" class="hide-mobile">{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <button class="button js-add-to-cart" 
+                {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                data-id="{{ product.selected_or_first_available_variant.id }}" 
+                data-time="one-time">
+
+          {% if product.selected_or_first_available_variant.available == false %}
+          <span>Sold Out</span>
+          {% else %}
+          <span>Add to Cart</span> — 
+          <span class="button-money">{{ product.price | money_without_trailing_zeros }}</span>
+          {% endif %}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('.show-product-bar');
+    if ( $(window).width() > 768 ) {
+      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        $('.product-bar').addClass('scrolled');
+      } else {
+        $('.product-bar').removeClass('scrolled');
+      }
+    } else {
+      if ($scrollTop > 1200) {
+        $('.product-bar').addClass('scrolled');
+      } else {
+        $('.product-bar').removeClass('scrolled');
+      }
+	}
+  });
 {% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Pee Club Product Bar",
+    "class": "product-bar-wrapper",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Product Bar"
+      }
+    ]
+  }
+{% endschema %}  
+
+
+
+
+
