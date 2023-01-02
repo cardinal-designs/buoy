@@ -67,6 +67,9 @@
     color: #1F232280;
     cursor: pointer;
     border-radius: 0 27px 27px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .mobile-pee-club-toggle div p {
@@ -75,9 +78,6 @@
 
   .mobile-pee-club-toggle div:first-of-type {
     border-right: 2px solid #1F2322;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 27px 0 0 27px;
   }
 
