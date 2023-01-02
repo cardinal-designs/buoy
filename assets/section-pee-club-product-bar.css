@@ -6,6 +6,13 @@
   display: inline-block;
   width: max-content;
   gap: 20px;
+  margin: 0;
+  align-self: center;
+}
+
+.pee-club-product-bar .flex-buttons-bar h5 {
+  margin: 0;
+  align-self: center;
 }
 
 .pee-club-product-bar button {
