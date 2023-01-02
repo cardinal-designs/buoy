@@ -1311,7 +1311,7 @@ $('.mobile-pee-club-toggle div').click(function() {
   $(this).addClass('active')
 
   $('.pee-club-half-image__container .month-list').hide()
-  $(`.pee-club-half-image__container .month-list[data-id="${num}"]`).show()
+  $(`.pee-club-half-image__container .month-list p[data-id="${num}"]`).show()
 });
 
 
