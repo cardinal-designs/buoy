@@ -15,8 +15,8 @@
       {% endif %}    
     </div>
     <div class="image-with-dropdowns__content">
-      <h3>{{ section.settings.title }}</h3>
       <p class="sh2 light">{{ section.settings.text }}</p>
+      <h3>{{ section.settings.title }}</h3>
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
           <div>
@@ -51,7 +51,7 @@
         "label": "Title"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "text",
         "label": "Text"
       },
