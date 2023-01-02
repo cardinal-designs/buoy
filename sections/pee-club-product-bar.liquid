@@ -22,7 +22,7 @@
         <select class="pee-club-product-bar-dropdown">
           {% for block in section.blocks %}
           {% assign product = all_products[block.settings.product] %}
-            <option data-id="{{ forloop.index }}" value="{{ forloop.index0 }}">{{ product.title }}<br>{{ block.settings.text }}</option>
+            <option data-id="{{ forloop.index }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></option>
           {% endfor %}
         </select>
         {% for block in section.blocks %}
