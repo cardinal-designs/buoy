@@ -25,8 +25,12 @@
     padding-right: unset;
   }
 
-  .value-props__prop {
+  .pee-club-value-props .value-props__prop {
     width: unset !important;
     padding: 12px 12px 0;
+  }
+
+  .pee-club-value-props .value-props__text-container .h4 {
+    font-size: 30px;
   }
 }
