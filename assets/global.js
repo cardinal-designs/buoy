@@ -1320,6 +1320,7 @@ $('.pee-club-product-bar-dropdown').on('change', function (e) {
   var optionSelected = $("option:selected", this).data('id');
   $(`.pee-club-product-bar button`).hide()
   $(`.pee-club-product-bar button[data-button="${optionSelected}"`).show()
+  $(`.pee-club-product-bar button[data-button="${optionSelected}"`).append( "<br><p>Test</p>" );
 })
 
 
