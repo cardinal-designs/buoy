@@ -19,7 +19,7 @@
       <h3>{{ section.settings.title }}</h3>
       <div class="hide-desktop mobile-pee-club-toggle">
         {% for block in section.blocks %}
-        <div class="{% if forloop.index == 1 %}active{% endif %}">
+        <div data-id="{{ forloop.index }}" class="{% if forloop.index == 1 %}active{% endif %}">
           <p>{{ block.settings.title }}</p>
         </div>
         {% endfor %}
@@ -27,7 +27,7 @@
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
           <div class="month-list">
-            <p class="list-title">{{ block.settings.title }}</p>            
+            <p data-id="{{ forloop.index }}" class="list-title">{{ block.settings.title }}</p>            
             <p>{{ block.settings.list }}</p>
           </div>
         {% endfor %}
