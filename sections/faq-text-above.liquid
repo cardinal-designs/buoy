@@ -19,6 +19,7 @@
 
 {% if section.settings.suptitle != blank %}
 <div class="faq-suptext__container hide-desktop">
+  <p class="emoji">{{ section.settings.emoji }}</p>
   <h5>{{ section.settings.suptitle }}</h5>
   <p class="light">{{ section.settings.suptext }}</p>
 </div>
@@ -28,6 +29,7 @@
     <div class="faq-section__container">
       {% if section.settings.suptitle != blank %}
       <div class="faq-suptext__container hide-mobile">
+        <p class="emoji">{{ section.settings.emoji }}</p>
         <h5>{{ section.settings.suptitle }}</h5>
         <p class="light">{{ section.settings.suptext }}</p>
       </div>
