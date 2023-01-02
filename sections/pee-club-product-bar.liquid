@@ -19,7 +19,13 @@
         {% endif %}
       </div>
       <div class="pee-club-product-bar-buttons">
-        <div class="pee-club-product-bar-dropdown-selected"><p class="title-text">{{ all_products[section.blocks[0].settings.product].title }}</p><p class="subtext">{{ section.blocks[0].settings.text }}</p>{% render 'icon-caret' %}</div>
+        <div class="pee-club-product-bar-dropdown-selected">
+          <div>
+            <p class="title-text">{{ all_products[section.blocks[0].settings.product].title }}</p>
+            <p class="subtext">{{ section.blocks[0].settings.text }}</p>
+          </div>
+        {% render 'icon-caret' %}
+        </div>
         <ul class="pee-club-product-bar-dropdown">
           {% for block in section.blocks %}
           {% assign product = all_products[block.settings.product] %}
