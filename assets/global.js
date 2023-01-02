@@ -1315,13 +1315,18 @@ $('.mobile-pee-club-toggle div').click(function() {
 });
 
 
-$('.pee-club-product-bar-dropdown').on('change', function (e) {
-  console.log($("option:selected", this).data('id'))
-  var optionSelected = $("option:selected", this).data('id');
-  $(`.pee-club-product-bar button`).hide()
-  $(`.pee-club-product-bar button[data-button="${optionSelected}"`).show()
-  $('.pee-club-product-bar-dropdown').append( "<br><p>Test</p>" );
+
+$('.pee-club-product-bar-dropdown-selected').click(function() {
+  $('.pee-club-product-bar-dropdown').slideToggle()
 })
+
+// $('.pee-club-product-bar-dropdown').on('change', function (e) {
+//   console.log($("option:selected", this).data('id'))
+//   var optionSelected = $("option:selected", this).data('id');
+//   $(`.pee-club-product-bar button`).hide()
+//   $(`.pee-club-product-bar button[data-button="${optionSelected}"`).show()
+//   $('.pee-club-product-bar-dropdown').append( "<br><p>Test</p>" );
+// })
 
 
 
