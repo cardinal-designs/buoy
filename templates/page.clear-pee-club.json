@@ -19,6 +19,67 @@
         "hide_mobile_text": false
       }
     },
+    "405317ad-bd14-4c16-8257-d6c329a4adcd": {
+      "type": "pee-club-value-props",
+      "blocks": {
+        "2518298a-0c5d-4731-a070-f8d7962bec57": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "⚡️",
+            "text": "All Day Energy"
+          }
+        },
+        "4d3d504f-ef02-45c3-ae7c-47afce7a8cd6": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🧽",
+            "text": "Nutrient Absorption"
+          }
+        },
+        "788dd157-7a03-4cc6-833c-6be3b8931250": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "✅",
+            "text": "Healthy Gut Biome"
+          }
+        },
+        "5694cbea-400d-404b-b7e6-34c442bc660c": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "♻️",
+            "text": "Detoxification"
+          }
+        },
+        "c3fd2f82-25d2-40db-995a-03c4035d9756": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🤗",
+            "text": "Lifted Moods"
+          }
+        },
+        "320f8258-f03f-4721-9fc8-24c645b05c34": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🌞",
+            "text": "Radiant Skin"
+          }
+        }
+      },
+      "block_order": [
+        "2518298a-0c5d-4731-a070-f8d7962bec57",
+        "4d3d504f-ef02-45c3-ae7c-47afce7a8cd6",
+        "788dd157-7a03-4cc6-833c-6be3b8931250",
+        "5694cbea-400d-404b-b7e6-34c442bc660c",
+        "c3fd2f82-25d2-40db-995a-03c4035d9756",
+        "320f8258-f03f-4721-9fc8-24c645b05c34"
+      ],
+      "settings": {
+        "text": "One squeeze. <i style=\"font-weight: 200\">Any drink.<\/i> 3 to 5 times daily.",
+        "no_background": true,
+        "add_top_padding": true,
+        "add_bottom_padding": true
+      }
+    },
     "8c3644b2-781b-4419-8321-49ab3ed30c0f": {
       "type": "faq-text-above",
       "blocks": {
@@ -96,6 +157,7 @@
   },
   "order": [
     "af6e48c2-58b8-4143-b5ac-61bf1bb64a75",
+    "405317ad-bd14-4c16-8257-d6c329a4adcd",
     "8c3644b2-781b-4419-8321-49ab3ed30c0f",
     "16390276435f9f6aac"
   ]
