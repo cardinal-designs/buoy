@@ -49,7 +49,9 @@
   display: none; /*hide original SELECT element: */
 }
 
-
+.select-selected {
+  background-color: DodgerBlue;
+}
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
