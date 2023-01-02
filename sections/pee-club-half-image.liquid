@@ -1,12 +1,81 @@
+{{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
+
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container">
+  <div class="show-product-bar"></div>
+  <div class="page-width">
+    <div class="image-with-dropdowns__image">
+      {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="video">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+      {% render 'lazy-image' image: section.settings.image, classes: '' %}
+      {% endif %}    
+    </div>
+    <div class="image-with-dropdowns__content">
+      <h3>{{ section.settings.title }}</h3>
+      <p class="sh2 light">{{ section.settings.text }}</p>
+      <div class="image-with-dropdowns__dropdown">
+        {% for block in section.blocks %}
+          <div>
+            <p>{{ block.section }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Pee Club Half Image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Style"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Half Image"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
