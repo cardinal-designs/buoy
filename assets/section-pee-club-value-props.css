@@ -17,4 +17,11 @@
     display: grid;
     padding: unset;
   }
+
+  .pee-club-value-props  .value-props__props-container {
+    margin: unset;
+    overflow-x: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
 }
