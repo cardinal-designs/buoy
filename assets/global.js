@@ -1304,5 +1304,10 @@ $('.js-open-supplement-drawer').click(function() {
   });
 });
 
+$('.mobile-pee-club-toggle div').click(function() {
+  $('.mobile-pee-club-toggle div').removeClass('active')
+  $(this).addClass('active')
+});
+
 
 
