@@ -69,6 +69,9 @@
 
   .mobile-pee-club-toggle div:first-of-type {
     border-right: 2px solid #1F2322;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .mobile-pee-club-toggle .active {
