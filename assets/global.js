@@ -1315,7 +1315,7 @@ $('.mobile-pee-club-toggle div').click(function() {
 });
 
 
-$('.pee-club-product-bar-buttons .custom-select').on('change', function (e) {
+$('.pee-club-product-bar-dropdown').on('change', function (e) {
   console.log($("option:selected", this).data('id'))
   var optionSelected = $("option:selected", this).data('id');
   $(`.pee-club-product-bar button`).hide()
