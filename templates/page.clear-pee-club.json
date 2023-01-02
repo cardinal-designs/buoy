@@ -80,6 +80,47 @@
         "add_bottom_padding": false
       }
     },
+    "0afc455c-f2c9-4d0a-9fb0-e4a480bc880d": {
+      "type": "pee-club-half-image",
+      "blocks": {
+        "5c708821-ff18-4e8c-872d-002043cc0878": {
+          "type": "block",
+          "settings": {
+            "title": "3 Bottles - 120 Servings"
+          }
+        },
+        "41b4a9c1-4fbf-44e3-860e-fbfd18fdf7c6": {
+          "type": "block",
+          "settings": {
+            "title": "Eco-Friendly Welcome Kit"
+          }
+        },
+        "e47fa321-cdda-49ad-95ac-c3ec0db9ae1d": {
+          "type": "block",
+          "settings": {
+            "title": "Free, Carbon Neutral Shipping"
+          }
+        },
+        "30d7f0c1-c253-4105-9d63-5bb31308bc80": {
+          "type": "block",
+          "settings": {
+            "title": "Cancel, pause, swap anytime"
+          }
+        }
+      },
+      "block_order": [
+        "5c708821-ff18-4e8c-872d-002043cc0878",
+        "41b4a9c1-4fbf-44e3-860e-fbfd18fdf7c6",
+        "e47fa321-cdda-49ad-95ac-c3ec0db9ae1d",
+        "30d7f0c1-c253-4105-9d63-5bb31308bc80"
+      ],
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "text": "",
+        "background": ""
+      }
+    },
     "8c3644b2-781b-4419-8321-49ab3ed30c0f": {
       "type": "faq-text-above",
       "blocks": {
@@ -158,6 +199,7 @@
   "order": [
     "af6e48c2-58b8-4143-b5ac-61bf1bb64a75",
     "405317ad-bd14-4c16-8257-d6c329a4adcd",
+    "0afc455c-f2c9-4d0a-9fb0-e4a480bc880d",
     "8c3644b2-781b-4419-8321-49ab3ed30c0f",
     "16390276435f9f6aac"
   ]
