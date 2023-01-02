@@ -21,6 +21,7 @@
         {% for block in section.blocks %}
           <div>
             <p>{{ block.settings.title }}</p>
+            <p>{{ block.settings.list }}</p>
           </div>
         {% endfor %}
       </div>
@@ -68,7 +69,12 @@
           {
             "type": "text",
             "id": "title",
-            "label": "List Item"
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "list",
+            "label": "List"
           }
         ]
       }
