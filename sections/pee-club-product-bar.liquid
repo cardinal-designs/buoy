@@ -18,7 +18,13 @@
           <p>{% render 'icon-checkmark' %} {{ section.settings.check3 }}</p>
         {% endif %}
       </div>
-      
+      <div>
+          <select>
+          {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+            <option value="{{ forloop.index0 }}">{{ product.title }}</option>
+          {% endfor %}
+          </select>
         {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product] %}
         <button data-id="{{ forloop.index }}" style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
@@ -36,6 +42,7 @@
           {% endif %}
         </button>
         {% endfor %}
+      </div>
       </div>
     </div>
   </div>
