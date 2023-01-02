@@ -27,7 +27,8 @@
 @media screen and (max-width: 768px) {
 
   .faq-suptext__container {
-    padding: 0 27px 92px;
+    padding: 0 27px;
+    margin: 0 auto 92px;
   }
   
   .faq-suptext__container h5 {
