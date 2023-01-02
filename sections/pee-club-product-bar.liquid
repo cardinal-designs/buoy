@@ -19,12 +19,14 @@
         {% endif %}
       </div>
       <div class="pee-club-product-bar-buttons">
-        <select class="pee-club-product-bar-dropdown">
+        <ul class="pee-club-product-bar-dropdown">
           {% for block in section.blocks %}
           {% assign product = all_products[block.settings.product] %}
-            <option data-id="{{ forloop.index }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></option>
+            <li data-id="{{ forloop.index }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></li>
           {% endfor %}
-        </select>
+        </ul>
+
+        
         {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product] %}
         <button data-button="{{ forloop.index }}" style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
