@@ -5,11 +5,9 @@
 <div class="hide-mobile product-bar product-bar-toggle pee-club-product-bar">
   <div class="page-width">
     <div class="product-bar__container">
-      <div>
-      <div class="product-bar__title">
-        <h5>{{ section.settings.title }}</h5>
-      </div>
+  
       <div class="flex-buttons-bar">
+        <h5>{{ section.settings.title }}</h5>
         {% if section.settings.check1 != blank %}
           <p>{% render 'icon-checkmark' %} {{ section.settings.check1 }}</p>
         {% endif %}
@@ -20,7 +18,7 @@
           <p>{% render 'icon-checkmark' %} {{ section.settings.check3 }}</p>
         {% endif %}
       </div>
-      </div>
+      
         {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product] %}
         <button data-id="{{ forloop.index }}" style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
