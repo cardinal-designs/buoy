@@ -1306,7 +1306,7 @@ $('.js-open-supplement-drawer').click(function() {
 
 $('.mobile-pee-club-toggle div').click(function() {
   let num = $(this).data('id')
-  
+  console.log(num)
   $('.mobile-pee-club-toggle div').removeClass('active')
   $(this).addClass('active')
 
