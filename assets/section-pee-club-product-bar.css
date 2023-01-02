@@ -22,3 +22,19 @@
 .pee-club-product-bar button {
   display: none;
 }
+
+.pee-club-product-bar-dropdown {
+  min-width: 240px;
+  padding: 14px 20px 15px;
+  display: inline-block;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+  text-align: center;
+  border: 1px solid var(--charcoal);
+  border-radius: 50px;
+  color: var(--charcoal);
+}
