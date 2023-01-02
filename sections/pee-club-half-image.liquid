@@ -21,7 +21,8 @@
         {% for block in section.blocks %}
           <div>
             <p>{{ block.settings.title }}</p>
-            <p>{{ block.settings.list }}</p>
+            
+            <p>{%  render 'icon-checkmark' %} {{ block.settings.list }}</p>
           </div>
         {% endfor %}
       </div>
