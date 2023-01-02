@@ -1,3 +1,7 @@
 .pee-club-half-image__container .image-with-dropdowns__content {
   margin-top: 150px;
 }
+
+.pee-club-half-image__container .image-with-dropdowns__content > p {
+  margin-bottom: 20px;
+}
