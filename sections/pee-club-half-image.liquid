@@ -26,9 +26,9 @@
       </div>
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
-          <div class="month-list">
+          <div data-id="{{ forloop.index }}" class="month-list">
             <p class="list-title">{{ block.settings.title }}</p>            
-            <p data-id="{{ forloop.index }}">{{ block.settings.list }}</p>
+            <p>{{ block.settings.list }}</p>
           </div>
         {% endfor %}
       </div>
