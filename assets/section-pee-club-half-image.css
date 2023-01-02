@@ -47,4 +47,8 @@
   .pee-club-half-image__container .month-list:not(:first-child) {
     display: none;
   }
+
+  .pee-club-half-image__container .image-with-dropdowns__container {
+    padding-bottom: 60px;
+  }
 }
