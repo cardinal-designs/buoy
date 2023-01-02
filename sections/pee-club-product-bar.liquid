@@ -1,7 +1,5 @@
-
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
 
-{% assign product = all_products[section.settings.product] %}
 
 {% for selling_plan in product.selling_plan_groups %}
     {% if selling_plan.app_id == '5859381' %}
