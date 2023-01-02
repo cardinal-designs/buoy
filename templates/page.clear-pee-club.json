@@ -80,6 +80,65 @@
         "add_bottom_padding": false
       }
     },
+    "74a67b66-5d60-41fe-b3b9-b73374644bbe": {
+      "type": "pee-club-products",
+      "blocks": {
+        "fc36dce2-21e8-428c-bb7c-b94d25f7c194": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list": "",
+            "button_text": ""
+          }
+        },
+        "979f8209-aebb-4a57-9721-290ec3ec2823": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list": "",
+            "button_text": ""
+          }
+        },
+        "cf2b2d77-df7c-41af-b8ca-d9f8be5fe7ae": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list": "",
+            "button_text": ""
+          }
+        },
+        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "fc36dce2-21e8-428c-bb7c-b94d25f7c194",
+        "979f8209-aebb-4a57-9721-290ec3ec2823",
+        "cf2b2d77-df7c-41af-b8ca-d9f8be5fe7ae",
+        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_bottom": "",
+        "button_label": "",
+        "button_link": "",
+        "background": ""
+      }
+    },
     "0afc455c-f2c9-4d0a-9fb0-e4a480bc880d": {
       "type": "pee-club-half-image",
       "blocks": {
@@ -184,31 +243,51 @@
         "include_margins": true
       }
     },
-    "74a67b66-5d60-41fe-b3b9-b73374644bbe": {
-      "type": "pee-club-products",
-      "settings": {
-        "title": "",
-        "text": "",
-        "text_bottom": "",
-        "button_label": "",
-        "button_link": "",
-        "background": ""
-      }
-    },
     "266e2dbc-8732-48f7-8d3e-7fe282659839": {
       "type": "pee-club-product-bar",
+      "blocks": {
+        "5f778658-acbf-4330-8091-9276d15ec967": {
+          "type": "block",
+          "settings": {
+            "product": "hydration-drops"
+          }
+        },
+        "a551e6a3-efa2-4cdc-829f-74bd35e62b98": {
+          "type": "block",
+          "settings": {
+            "product": "immunity-drops"
+          }
+        },
+        "47f0a23d-6dc2-4fd9-814b-c89637a278cf": {
+          "type": "block",
+          "settings": {
+            "product": "energy-drops"
+          }
+        },
+        "ddec1775-d0b5-439b-8e39-44d11587324f": {
+          "type": "block",
+          "settings": {
+            "product": "wellness-kit"
+          }
+        }
+      },
+      "block_order": [
+        "5f778658-acbf-4330-8091-9276d15ec967",
+        "a551e6a3-efa2-4cdc-829f-74bd35e62b98",
+        "47f0a23d-6dc2-4fd9-814b-c89637a278cf",
+        "ddec1775-d0b5-439b-8e39-44d11587324f"
+      ],
       "settings": {
-        "product": ""
       }
     }
   },
   "order": [
     "af6e48c2-58b8-4143-b5ac-61bf1bb64a75",
     "405317ad-bd14-4c16-8257-d6c329a4adcd",
+    "74a67b66-5d60-41fe-b3b9-b73374644bbe",
     "0afc455c-f2c9-4d0a-9fb0-e4a480bc880d",
     "8c3644b2-781b-4419-8321-49ab3ed30c0f",
     "16390276435f9f6aac",
-    "74a67b66-5d60-41fe-b3b9-b73374644bbe",
     "266e2dbc-8732-48f7-8d3e-7fe282659839"
   ]
 }
