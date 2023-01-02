@@ -25,7 +25,11 @@
 }
 
 @media screen and (max-width: 768px) {
-
+  .faq-text-above__container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+  
   .faq-suptext__container {
     padding: 0 27px;
     margin: 69px auto 92px;
