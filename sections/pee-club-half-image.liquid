@@ -19,7 +19,9 @@
       <h3>{{ section.settings.title }}</h3>
       <div class="hide-desktop mobile-pee-club-toggle">
         {% for block in section.blocks %}
-        <div class="active">{{ block.settings.title }}</div>
+        <div class="active">
+          <p>{{ block.settings.title }}</p>
+        </div>
         {% endfor %}
       </div>
       <div class="image-with-dropdowns__dropdown">
