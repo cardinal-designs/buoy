@@ -66,6 +66,10 @@
     color: #1F232280;
   }
 
+  .mobile-pee-club-toggle div:first-of-type {
+    border-right: 2px solid #1F2322;
+  }
+
   .mobile-pee-club-toggle .active {
     width: 100%;
     background: #f4ece2;
