@@ -51,8 +51,10 @@
           {% if product.selected_or_first_available_variant.available == false %}
           <span>Sold Out</span>
           {% else %}
-          <span>Add to Cart</span> — 
-          <span class="button-money">{{ product.price | money_without_trailing_zeros }}</span>
+          <span>Get Started</span> — 
+            <span data-id="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | json }}" class="hide-mobile">{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+            </span>
           {% endif %}
         </button>
       </div>
