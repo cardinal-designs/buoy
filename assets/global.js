@@ -1314,5 +1314,9 @@ $('.mobile-pee-club-toggle div').click(function() {
   $(`.pee-club-half-image__container .month-list[data-id="${num}"]`).show()
 });
 
+$('.pee-club-product-bar-dropdown').change(function() {
+console.log($(this).data('id'))
+})
+
 
 
