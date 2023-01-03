@@ -5,7 +5,6 @@
 .pee-club-products__wrapper {
   scroll-snap-type: x mandatory;
   cursor: grabbing;
-  width: calc(100% - 500px);
   overflow: auto;
   white-space: nowrap;
 }
