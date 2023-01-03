@@ -217,12 +217,14 @@
 
   .pee-club-products {
     flex-direction: column;
+    gap: 20px;
   }
   
   .pee-club-product {
     display: block;
     width: 100%;
-    margin: unset;
+    margin: 0;
+    
   }
 
   .pee-club-products__flex {
