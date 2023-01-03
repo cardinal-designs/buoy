@@ -14,6 +14,7 @@
 
         <h5>{{ product.title }}</h5>
         <p>{{ block.settings.servings }}</p>
+        <p class="light">{{ block.settings.text }}</p>
         <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ product.selling_plan_groups[0].selling_plans[0].id }}{% else %}{{ product.selling_plan_groups[0].selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
           <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
               <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
