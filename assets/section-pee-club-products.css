@@ -11,6 +11,7 @@
     scroll-padding: 0px 1000px;
     scroll-snap-type: x mandatory;
     cursor: grabbing;
+    width: calc(100% - 500px)
   }
 
   .pee-club-products {
