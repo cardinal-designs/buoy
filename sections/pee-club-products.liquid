@@ -9,7 +9,7 @@
       {% assign product = all_products[block.settings.product] %}
       <div>
         <h5>{{ product.title }}</h5>
-        <button class="button">{{ block.settings.button_text }} - 
+        <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
           <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
               <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
             </span>
