@@ -33,6 +33,10 @@
   position: relative;
 }
 
+.pee-club-products__text a {
+  text-decoration: underline;
+}
+
 .pee-club-product button {
   width: 100%;
 }
