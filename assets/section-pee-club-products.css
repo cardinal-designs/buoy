@@ -2,20 +2,14 @@
   display: flex;
 }
 
-  .pee-club-products__wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-    max-width: unset;
-    overflow-x: scroll;
-    margin: 0px -1000px;
-    scroll-padding: 0px 1000px;
-    scroll-snap-type: x mandatory;
-    cursor: grabbing;
-    width: calc(100% - 500px)
-  }
+.pee-club-products__wrapper {
+  scroll-snap-type: x mandatory;
+  cursor: grabbing;
+  width: calc(100% - 500px)
+  overflow: auto;
+  white-space: nowrap;
+}
 
-  .pee-club-products {
-    padding: 0px 1000px;
-    display: inline-flex;
-    white-space: nowrap; 
-  }
+.pee-club-product {
+  display: inline-block;
+}
