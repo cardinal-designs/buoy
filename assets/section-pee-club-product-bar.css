@@ -48,6 +48,9 @@
 .pee-club-product-bar-dropdown {
   display: none;
   padding-left: 0;
+  border-top: 1px solid var(--charcoal);
+  border-left: 1px solid var(--charcoal);
+  border-right: 1px solid var(--charcoal);
 }
 
 .pee-club-product-bar-dropdown li {
@@ -60,6 +63,7 @@
   font-size: 14px;
   letter-spacing: 0;
   line-height: 1.5em;
+  border-bottom: 1px solid var(--charcoal);
 }
 
 
