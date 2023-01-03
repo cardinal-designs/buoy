@@ -67,6 +67,7 @@
 .pee-club-product__list {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .pee-club-product__list > div {
