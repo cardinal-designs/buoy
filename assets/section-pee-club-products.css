@@ -11,8 +11,11 @@
 
 .pee-club-products__wrapper {
   cursor: pointer;
-  overflow: auto;
-  white-space: nowrap;
+  width: calc(100% - 553px);
+}
+
+.pee-club-products {
+  
 }
 
 .pee-club-product {
