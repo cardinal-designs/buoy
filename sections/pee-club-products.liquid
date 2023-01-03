@@ -2,6 +2,22 @@
 
 <div class="pee-club-products__container">
   <div class="show-product-bar"></div>
+  <div>
+    <div></div>
+    <div>
+      {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      <div>
+        <h5>{ product.title }}</h5>
+        <button class="button">{{ block.settings.button_text }} - 
+          <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+            </span>
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 
