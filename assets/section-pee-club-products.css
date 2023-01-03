@@ -10,7 +10,7 @@
 
 .pee-club-products__wrapper {
   cursor: pointer;
-  width: calc(100% - 553px);
+  width: calc(100% - 588px);
   display: flex;
   overflow: auto;
   position: relative;
@@ -65,7 +65,8 @@
 
 .pee-club-products__text {
   padding-left: 100px;
-  width: 533px;
+  width: 588px;
+  padding-right: 55px;
 }
 
 .pee-club-product .okeReviews {
