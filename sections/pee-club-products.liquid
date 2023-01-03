@@ -7,6 +7,9 @@
     <div>
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
+      {% if product.selling_plan_groups.app_id == '5859381' %}
+       {% assign rtx_selling_plan = product.selling_plan_groups %}
+      {% endif %}
       <div>
         <h5>{{ product.title }}</h5>
         <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
