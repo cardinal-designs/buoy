@@ -34,7 +34,8 @@
     flex-direction: column;
   }
 
-  .pee-club-products__text {
+  .pee-club-products__text,
+  .pee-club-products__wrapper {
     padding-left: 27px;
     padding-right: 27px;
     width: 100%;
