@@ -45,6 +45,7 @@
   position: relative;
   justify-content: center;
   height: 100%;
+  cursor: pointer;
 }
 
 .pee-club-product-bar-dropdown-selected svg {
@@ -79,6 +80,7 @@
   line-height: 1.5em;
   border-bottom: 1px solid var(--charcoal);
   padding: 8px 0;
+  cursor: pointer;
 }
 
 .pee-club-dropdown-text {
