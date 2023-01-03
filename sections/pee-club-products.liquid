@@ -10,6 +10,7 @@
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       <div class="pee-club-product">
+        <img src="{{ product.media[0].src | img_url: 'master' }}"/>
        <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
         <h5>{{ product.title }}</h5>
