@@ -152,11 +152,14 @@
   position: relative;
 }
 
-.pee-club-product > svg {
-    width: 18px;
-    position: absolute;
-    bottom: 18px;
-    right: 18px;
+.pee-club-product-arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+}
+
+.pee-club-product-arrow  svg {
+  width: 18px;
 }
 
 .pee-club-products__image .sale-sticker {
