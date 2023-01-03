@@ -13,6 +13,16 @@
   display: inline-block;
 }
 
+.pee-club-products__text {
+  padding-left: 100px;
+}
+
+@media (max-width: 1050px) {
+  .pee-club-products__text {
+    padding-left: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .pee-club-product {
     display: block;
