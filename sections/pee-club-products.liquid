@@ -6,18 +6,20 @@
     <div>
       
     </div>
-    <div class="pee-club-products">
-      {% for block in section.blocks %}
-      {% assign product = all_products[block.settings.product] %}
-      <div class="pee-club-product">
-        <h5>{{ product.title }}</h5>
-        <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ product.selling_plan_groups[0].selling_plans[0].id }}{% else %}{{ product.selling_plan_groups[0].selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
-          <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
-              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
-            </span>
-        </button>
+    <div class="pee-club-products__wrapper">
+      <div class="pee-club-products">
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        <div class="pee-club-product">
+          <h5>{{ product.title }}</h5>
+          <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ product.selling_plan_groups[0].selling_plans[0].id }}{% else %}{{ product.selling_plan_groups[0].selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
+            <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              </span>
+          </button>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>
