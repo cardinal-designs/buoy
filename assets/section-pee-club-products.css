@@ -9,8 +9,7 @@
 }
 
 .pee-club-products__wrapper {
-  scroll-snap-type: x mandatory;
-  cursor: grabbing;
+  cursor: pointer;
   overflow: auto;
   white-space: nowrap;
 }
