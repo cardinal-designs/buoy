@@ -36,6 +36,38 @@
   width: 533px;
 }
 
+.pee-club-product .okeReviews {
+  margin-bottom: 8px;
+}
+
+.pee-club-product .okeReviews .okeReviews-starRating--small {
+  width: 75px;
+  height: 15px;
+}
+
+.pee-club-product .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
+  background-size: 75px 15px;
+}
+
+.pee-club-product .okeReviews-reviewsSummary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pee-club-product .okeReviews-reviewsSummary-ratingCount {
+  margin: 2px 0 0 0;
+  position: initial;
+}
+
+.pee-club-product .okeReviews-reviewsSummary-ratingCount span {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+}
+
 @media (max-width: 1050px) {
   .pee-club-products__text {
     padding-left: 60px;
