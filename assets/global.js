@@ -1162,6 +1162,48 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     });
 });
 
+$('body').on('click', '.pee-club-add-to-cart', function(e) {
+  e.preventDefault();
+  let add_items;
+  let id = Number($(this).data('id'));
+  let subid = Number($(this).data('subid'));
+  
+  $.getJSON('/cart', function (results) {
+    if(Number(results.item_count) > 0) {
+      $('.cart-count-bubble').text(`${results.item_count}`)
+    } else {
+      $('.cart-count-bubble').text('')
+    }
+  })
+  
+  add_items = [{id: id, quantity: 1, selling_plan: subid}]
+
+  
+  const body = JSON.stringify({
+    items: add_items,
+    sections: atcGetSectionsToRender().map((section) => section.section),
+    sections_url: window.location.pathname
+  });
+
+  fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
+    .then((response) => response.json())
+    .then((parsedState) => {
+      atcGetSectionsToRender().forEach((section => {
+        const elementToReplace =
+          document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+
+        elementToReplace.innerHTML =
+          getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+      }));
+    })
+    .catch((e) => {
+      console.error(e);
+    })
+    .finally(() => {
+      document.querySelector('cart-drawer').open();
+    });
+});
+
 function atcGetSectionsToRender() {
   return [
     {
