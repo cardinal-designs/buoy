@@ -13,6 +13,12 @@
   cursor: pointer;
   width: calc(100% - 553px);
   display: flex;
+  overflow: auto;
+  position: relative;
+}
+
+.pee-club-products {
+  display: flex;
 }
 
 
