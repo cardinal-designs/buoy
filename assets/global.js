@@ -1322,6 +1322,7 @@ $('.pee-club-product-bar-dropdown-selected').click(function() {
 
 $('.pee-club-product-bar-dropdown li').click(function() {
   let id = $(this).data("id")
+  $(`.pee-club-product-bar button`).hide()
   $(`.pee-club-product-bar button[data-button="${id}"`).show()
 })
 
