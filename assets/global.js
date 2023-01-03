@@ -1322,18 +1322,15 @@ $('.pee-club-product-bar-dropdown-selected').click(function() {
 
 $('.pee-club-product-bar-dropdown li').click(function() {
   let id = $(this).data("id")
+  let title = $(this).data('title')
+  let text = $(this).data('text')
   $(`.pee-club-product-bar button`).hide()
   $(`.pee-club-product-bar button[data-button="${id}"`).show()
+  $('.pee-club-dropdown-text .title-text').text(`${title}`)
+  $('.pee-club-dropdown-text .subtext').text(`${text}`)
+  
   $('.pee-club-product-bar-dropdown').slideToggle()
 })
-
-// $('.pee-club-product-bar-dropdown').on('change', function (e) {
-//   console.log($("option:selected", this).data('id'))
-//   var optionSelected = $("option:selected", this).data('id');
-//   $(`.pee-club-product-bar button`).hide()
-//   $(`.pee-club-product-bar button[data-button="${optionSelected}"`).show()
-//   $('.pee-club-product-bar-dropdown').append( "<br><p>Test</p>" );
-// })
 
 
 
