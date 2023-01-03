@@ -27,6 +27,14 @@
   width: 100%;
 }
 
+.pee-club-product-info {
+  display: none;
+}
+
+.pee-club-product-info:first-of-type {
+  display: block;
+}
+
 .pee-club-product img {
   border-radius: 12px;
 }
