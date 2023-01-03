@@ -17,7 +17,7 @@
         <p class="light">{{ block.settings.text }}</p>
         <div>
           {% if block.settings.list_item1 != blank %}
-            <p class="light">{% render 'icon-checkmark' %} <span>{{ block.settings.list_item1 }}</span></p>
+            <span class="light">{% render 'icon-checkmark' %}</span> <span class="light">{{ block.settings.list_item1 }}</span>
           {% endif %}
           {% if block.settings.list_item2 != blank %}
             <p class="light">{% render 'icon-checkmark' %} <span>{{ block.settings.list_item2 }}</span></p>
