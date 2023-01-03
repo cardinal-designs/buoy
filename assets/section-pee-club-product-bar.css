@@ -109,6 +109,7 @@
 @media screen and (max-width: 1000px) {
   .pee-club-product-bar-buttons {
     flex-direction: column;
+    gap: 3px;
   }
 }
 
