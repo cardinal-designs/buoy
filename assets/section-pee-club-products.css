@@ -12,3 +12,18 @@
 .pee-club-product {
   display: inline-block;
 }
+
+@media (max-width: 768px) {
+  .pee-club-product {
+    display: block;
+  }
+
+  .pee-club-products__wrapper {
+    scroll-snap-type: unset;
+    cursor: pointer;
+    overflow: unset;
+    white-space: unset;
+    display: flex;
+    flex-direction: column;
+  }
+}
