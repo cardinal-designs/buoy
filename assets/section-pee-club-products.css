@@ -35,6 +35,10 @@
 }
 
 @media (max-width: 768px) {
+  .pee-club-products__container {
+    background: #F8F1EB 
+  }
+  
   .pee-club-product {
     display: block;
   }
