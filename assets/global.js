@@ -1374,5 +1374,10 @@ $('.pee-club-product-bar-dropdown li').click(function() {
   $('.pee-club-product-bar-dropdown').toggle()
 })
 
+$('.pee-club-product > svg').click(function() {
+  $(this).parent().find('.pee-club-product-info').slideDown()
+  $(this).hide()
+})
+
 
 
