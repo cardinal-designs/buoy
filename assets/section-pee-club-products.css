@@ -29,9 +29,15 @@
     display: block;
   }
 
+  .pee-club-products__flex {
+    width: 100%;
+    flex-direction: column;
+  }
+
   .pee-club-products__text {
     padding-left: 27px;
     padding-right: 27px;
+    width: 100%;
   }
 
   .pee-club-products__wrapper {
