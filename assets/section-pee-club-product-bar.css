@@ -92,10 +92,11 @@
   line-height: 1;
 }
 
-.pee-club-dropdown-text i {
+.pee-club-dropdown-text i, .pee-club-product-bar-dropdown li span {
   font-size: 12px;
   color: #545759;
   line-height: 1;
+  font-style: italic;
 }
 
 
