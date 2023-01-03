@@ -123,6 +123,8 @@
 .pee-club-product-rec {
   background: #C6DB76;
   border-radius: 17px 17px 0px 0px;
+  width: calc(100% + 36px);
+  margin-left: -18px;
 }
 
 @media (max-width: 1050px) {
