@@ -15,6 +15,10 @@
 
 .pee-club-product {
   display: inline-block;
+  padding: 18px;
+  margin: 0 8px;
+  background: white;
+  border-radius: 17px;
 }
 
 .pee-club-products__text {
@@ -31,8 +35,6 @@
 @media (max-width: 768px) {
   .pee-club-product {
     display: block;
-    padding: 18px;
-    margin: 0 8px;
   }
 
   .pee-club-products__flex {
