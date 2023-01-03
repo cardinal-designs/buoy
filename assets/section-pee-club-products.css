@@ -1,3 +1,20 @@
 .pee-club-products__flex {
   display: flex;
 }
+
+  .value-props__props-container {
+    padding-left: calc(50vw - 110px);
+    padding-right: calc(50vw - 110px);
+    max-width: unset;
+    overflow-x: scroll;
+    margin: 0px -1000px;
+    scroll-padding: 0px 1000px;
+    scroll-snap-type: x mandatory;
+    cursor: grabbing;
+  }
+
+  .value-props__props-slider {
+    padding: 0px 1000px;
+    display: inline-flex;
+    white-space: nowrap; 
+  }
