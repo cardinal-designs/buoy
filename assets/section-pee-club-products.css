@@ -2,7 +2,7 @@
   display: flex;
 }
 
-  .value-props__props-container {
+  .pee-club-products__wrapper {
     padding-left: calc(50vw - 110px);
     padding-right: calc(50vw - 110px);
     max-width: unset;
@@ -13,7 +13,7 @@
     cursor: grabbing;
   }
 
-  .value-props__props-slider {
+  .pee-club-products {
     padding: 0px 1000px;
     display: inline-flex;
     white-space: nowrap; 
