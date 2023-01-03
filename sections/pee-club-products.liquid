@@ -9,10 +9,10 @@
     <div class="pee-club-products__wrapper">
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
+      <div class="pee-club-product-rec">
+      <p>WE RECOMMEND STARTING WITH</p>
+      </div>
       <div class="pee-club-product">
-        <div class="pee-club-product-rec">
-          <p>WE RECOMMEND STARTING WITH</p>
-        </div>
         <div class="media" style="padding-bottom: 100%;">
           {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
         </div>
