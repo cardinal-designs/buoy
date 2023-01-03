@@ -12,20 +12,18 @@
 .pee-club-products__wrapper {
   cursor: pointer;
   width: calc(100% - 553px);
+  display: flex;
 }
 
-.pee-club-products {
-  
-}
 
 .pee-club-product {
-  display: inline-block;
   padding: 0 18px 18px;
   margin: 0 8px;
   background: white;
   border-radius: 17px;
   width: 336px;
   vertical-align: top;
+  flex: 0 0 auto;
 }
 
 .pee-club-product button {
