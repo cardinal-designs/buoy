@@ -67,6 +67,7 @@
   background: white;
   width: 240px;
   top: 26px;
+  z-index: -1;
 }
 
 .pee-club-product-bar-dropdown li {
@@ -82,6 +83,10 @@
   border-bottom: 1px solid var(--charcoal);
   padding: 8px 0;
   cursor: pointer;
+}
+
+.pee-club-product-bar-dropdown li:first-of-type {
+  margin-top: 20px;
 }
 
 .pee-club-dropdown-text {
