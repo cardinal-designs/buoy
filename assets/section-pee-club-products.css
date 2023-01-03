@@ -34,7 +34,8 @@
 }
 
 .pee-club-products__text a {
-  text-decoration: underline;
+  width: fit-content;
+  border-bottom: 1px solid black;
 }
 
 .pee-club-product button {
