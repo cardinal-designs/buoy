@@ -9,7 +9,7 @@
     <div class="pee-club-products__wrapper">
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
-      <div class="pee-club-product">
+      <div style="{% if block.settings.recommend == false %}padding-top: 18px;{% endif %}" class="pee-club-product">
         {% if block.settings.recommend == true %}
         <div class="pee-club-product-rec">
           <p>WE RECOMMEND STARTING WITH</p>
