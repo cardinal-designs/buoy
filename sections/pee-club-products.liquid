@@ -17,13 +17,13 @@
         <p class="light">{{ block.settings.text }}</p>
         <div  class="pee-club-product__list">
           {% if block.settings.list_item1 != blank %}
-            {% render 'icon-checkmark' %} <p class="light">{{ block.settings.list_item1 }}</p>
+            <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item1 }}</span></div>
           {% endif %}
           {% if block.settings.list_item2 != blank %}
-            {% render 'icon-checkmark' %} <p class="light">{{ block.settings.list_item2 }}</p>
+            <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item2 }}</span></div>
           {% endif %}
           {% if block.settings.list_item3 != blank %}
-            {% render 'icon-checkmark' %} <p class="light">{{ block.settings.list_item3 }}</p>
+            <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item3 }}</span></div>
           {% endif %}
         </div>
         <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ product.selling_plan_groups[0].selling_plans[0].id }}{% else %}{{ product.selling_plan_groups[0].selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
