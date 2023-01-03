@@ -16,7 +16,7 @@
         </div>
         {% endif %}
         <div class="pee-club-products__image">
-          <p class="sale-sticker">blababa</p>
+          <p class="sale-sticker">{{ block.settings.sale_text }}</p>
           <div class="media" style="padding-bottom: 100%;">
             {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
           </div>
