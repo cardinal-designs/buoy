@@ -1317,7 +1317,7 @@ $('.mobile-pee-club-toggle div').click(function() {
 
 
 $('.pee-club-product-bar-dropdown-selected').click(function() {
-  $('.pee-club-product-bar-dropdown').slideToggle()
+  $('.pee-club-product-bar-dropdown').toggle()
 })
 
 $('.pee-club-product-bar-dropdown li').click(function() {
@@ -1329,7 +1329,7 @@ $('.pee-club-product-bar-dropdown li').click(function() {
   $('.pee-club-dropdown-text .title-text').text(`${title}`)
   $('.pee-club-dropdown-text .subtext').text(`${text}`)
   
-  $('.pee-club-product-bar-dropdown').slideToggle()
+  $('.pee-club-product-bar-dropdown').toggle()
 })
 
 
