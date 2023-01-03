@@ -15,7 +15,7 @@
         <h5>{{ product.title }}</h5>
         <p class="serving">{{ block.settings.servings }}</p>
         <p class="light">{{ block.settings.text }}</p>
-        <div>
+        <div  class="pee-club-product__list">
           {% if block.settings.list_item1 != blank %}
             {% render 'icon-checkmark' %} <p class="light">{{ block.settings.list_item1 }}</p>
           {% endif %}
