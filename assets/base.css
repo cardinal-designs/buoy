@@ -20,6 +20,10 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body.lock-scroll {
   overflow: hidden;
 }
