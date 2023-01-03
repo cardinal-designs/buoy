@@ -64,6 +64,11 @@
   line-height: 1.5em;
 }
 
+.pee-club-product__list {
+  display: flex;
+  flex-direction: column;
+}
+
 .pee-club-product__list > div {
   display: inline-flex;
   align-items: flex-start;
