@@ -11,6 +11,7 @@
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       <div style="{% if block.settings.recommend == false %}padding-top: 18px; margin-top: 37px;{% endif %}" class="pee-club-product">
+         {% render 'icon-caret' %}
         {% if block.settings.recommend == true %}
         <div class="pee-club-product-rec">
           <p>WE RECOMMEND STARTING WITH</p>
