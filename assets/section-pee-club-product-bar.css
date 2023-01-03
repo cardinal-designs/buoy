@@ -46,6 +46,9 @@
 }
 
 .pee-club-product-bar-dropdown-selected svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
   width: 13px;
 }
 
