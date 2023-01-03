@@ -140,6 +140,21 @@
   padding: 8px 0;
 }
 
+.pee-club-product__image {
+  position: relative;
+}
+
+.pee-club-product__image .sale_text {
+  position: absolute;
+  z-index: 999;
+  background: #C6DB76;
+  right: 8px;
+  top: 8px;
+  border-radius: 18px;
+  padding: 6.5px 14px;
+  line-height: 1;
+}
+
 @media (max-width: 1050px) {
   .pee-club-products__text {
     padding-left: 60px;
