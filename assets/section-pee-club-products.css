@@ -28,6 +28,10 @@
     display: block;
   }
 
+  .pee-club-products__text {
+    padding-left: 27px;
+  }
+
   .pee-club-products__wrapper {
     scroll-snap-type: unset;
     cursor: pointer;
