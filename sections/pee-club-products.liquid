@@ -15,11 +15,11 @@
           <p>WE RECOMMEND STARTING WITH</p>
         </div>
         {% endif %}
-        <div>
-          <div>blababa</div>
-        <div class="media" style="padding-bottom: 100%;">
-          {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
-        </div>
+        <div class="pee-club-products__image">
+          <p class="sale-sticker">blababa</p>
+          <div class="media" style="padding-bottom: 100%;">
+            {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
+          </div>
         </div>
         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
