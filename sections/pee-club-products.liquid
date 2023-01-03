@@ -1,9 +1,6 @@
 {{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
 
 <div class="pee-club-products__container">
-
-
-  
   <div class="show-product-bar"></div>
   <div class="pee-club-products__flex">
     <div class="pee-club-products__text">
@@ -60,7 +57,6 @@
                 <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
               </span>
           </button>
-          <a class="Link_Text js-open-supplement-drawer" href="javascript:void(0);">Supplement Facts</a>
         </div>
       </div>
       {% endfor %}
