@@ -25,6 +25,11 @@
   margin-bottom: 100px;
 }
 
+.pee-club-half-image__container .month-list p:not(.list-title) {
+  font-size: 18px;
+  margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .pee-club-half-image__container .image-with-dropdowns__content {
     margin-top: 40px;
