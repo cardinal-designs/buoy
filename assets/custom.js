@@ -85,6 +85,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   console.log('f',scroll_percent3)
    $('.image-slider__img-container-mobile').scrollLeft(scroll_percent3) 
 } );
+
+console.log(22);
 // scrollbar js end
 
 (function(){
@@ -147,7 +149,7 @@ setTimeout(function(){
   
 })();
 
-console.log(22);
+
 
 (function(){
   /* Open Supplement Drawer */
