@@ -706,7 +706,7 @@ input[type="radio"]:checked::before {
   object-fit: contain;
 }
 .pee-club-product .badge_drawer_inner img {
-  border-radius: 12px;
+  border-radius: 0;
 }
 .badge_drawer_inner {
   padding: 0;
