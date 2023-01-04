@@ -168,7 +168,7 @@ setTimeout(function(){
   });
 
   function openNavMain() {
-    document.querySelector(selectors.openDrawer).closest().getElementsByClassName("Supplement_Side_Drawer").style.right = "0";
+    document.querySelector(selectors.openDrawer).closest('.Supplement_Side_Drawer').style.right = "0";
     document.querySelector('.page-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
     document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
