@@ -100,22 +100,23 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
 
-  
-  document.querySelector(selectors.openIngredients).addEventListener('click', function(){
-    openNav();
-  }); 
-
-  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-    openNav();
-  });
-
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
+    document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+      openNav();
+    }); 
+  }
+
+  if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
+    document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
+      openNav();
+    });
+  }
+
+  if (document.querySelector(selectors.openDrawer) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openDrawer).addEventListener('click', function(){
       openNav();
     });
   }
-  
-
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
     closeNav();
