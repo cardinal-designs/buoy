@@ -164,7 +164,7 @@ $('.page-overlay').click(function(){
   $('.page-overlay').removeClass('is-visible');
 });
 
-$('.Supplement_Side_Drawer')click(function(){
+$('.Supplement_Side_Drawer').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
    $('.page-overlay').removeClass('is-visible');
 });
