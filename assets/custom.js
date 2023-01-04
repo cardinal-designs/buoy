@@ -164,7 +164,6 @@ setTimeout(function(){
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
     openNavMain();
-    console.log(11);
   });
 
   function openNavMain() {
