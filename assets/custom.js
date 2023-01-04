@@ -150,7 +150,7 @@ setTimeout(function(){
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
-      openDrawer: '.js-open-supplement-drawer',
+      openDrawer: '.Open_Drawer',
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
