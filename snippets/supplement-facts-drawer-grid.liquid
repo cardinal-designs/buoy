@@ -1,19 +1,19 @@
 {% liquid
-    assign supplement_facts_serving_text  = product.metafields.supplement.supplement_facts_serving_text
-    assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
-    assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
-    assign supplement_facts_details_text_2 = product.metafields.custom.supplement_facts_details_text_2
-    assign supplement_facts_details_text_3 = product.metafields.custom.supplement_facts_details_text_3
-    assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image.value
-    assign supplement_facts_form_image_2 = product.metafields.supplement.supplement_facts_form_image_2.value
-    assign supplement_facts_form_image_3 = product.metafields.supplement.supplement_facts_form_image_3.value
+  assign supplement_facts_serving_text  = product.metafields.supplement.supplement_facts_serving_text
+  assign supplement_facts_icon_images = product.metafields.supplement.supplement_facts_icon_images
+  assign supplement_facts_details_text = product.metafields.supplement.supplement_facts_details_text
+  assign supplement_facts_details_text_2 = product.metafields.custom.supplement_facts_details_text_2
+  assign supplement_facts_details_text_3 = product.metafields.custom.supplement_facts_details_text_3
+  assign supplement_facts_form_image = product.metafields.supplement.supplement_facts_form_image.value
+  assign supplement_facts_form_image_2 = product.metafields.supplement.supplement_facts_form_image_2.value
+  assign supplement_facts_form_image_3 = product.metafields.supplement.supplement_facts_form_image_3.value
 
-    assign emoji_img_one = product.metafields.custom.drawer_emoji_image_one
-    assign emoji_title_one = product.metafields.custom.drawer_emoji_title_one
-    assign emoji_img_two = product.metafields.custom.drawer_emoji_image_two
-    assign emoji_title_two = product.metafields.custom.drawer_emoji_title_two
-    assign emoji_img_three = product.metafields.custom.drawer_emoji_image_three
-    assign emoji_title_three = product.metafields.custom.drawer_emoji_title_three
+  assign emoji_img_one = product.metafields.custom.drawer_emoji_image_one
+  assign emoji_title_one = product.metafields.custom.drawer_emoji_title_one
+  assign emoji_img_two = product.metafields.custom.drawer_emoji_image_two
+  assign emoji_title_two = product.metafields.custom.drawer_emoji_title_two
+  assign emoji_img_three = product.metafields.custom.drawer_emoji_image_three
+  assign emoji_title_three = product.metafields.custom.drawer_emoji_title_three
 %}
 
 <div id="supplementSideDrawer" class="supplement-side-drawer Supplement_Side_Drawer">
@@ -24,7 +24,6 @@
     </div>  
     <div class="drawer_cover_cls">  
       <div class="drawer_left">
-        
         <h3>Supplement Facts</h3>
         <p>{{ supplement_facts_serving_text }}</p>
         <p>{{ supplement_facts_details_text_2 }}</p>
