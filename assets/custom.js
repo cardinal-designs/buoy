@@ -157,14 +157,17 @@ setTimeout(function(){
 $('.Open_Drawer').click(function(){
   $(this).parent('.pee-club-product-info').siblings('.Supplement_Side_Drawer').css('right','0');
   $('.page-overlay').addClass('is-visible');
+  $('body').addClass('.lock-scroll');
 });
 
 $('.page-overlay').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
   $('.page-overlay').removeClass('is-visible');
+  $('body').removeClass('.lock-scroll');
 });
 
 $('.Supplement_Side_Drawer').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
-   $('.page-overlay').removeClass('is-visible');
+  $('.page-overlay').removeClass('is-visible');
+  $('body').removeClass('.lock-scroll');
 });
