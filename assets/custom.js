@@ -98,9 +98,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-overlay'
   }
 
-  document.querySelector(selectors.openIngredients).addEventListener('click', function(){
-    openNav();
-  });
+  if (selectors.openIngredients > 0) {
+    document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+      openNav();
+    }); 
+  }
+
 
   document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
     openNav();
