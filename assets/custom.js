@@ -183,6 +183,7 @@ setTimeout(function(){
   });
 
   function openNavMain() {
+        console.log(11);
     document.getElementByClassNames("Supplement_Side_Drawer").style.right = "0";
     document.querySelector('.page-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
