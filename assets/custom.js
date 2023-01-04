@@ -196,5 +196,5 @@ $('.Open_Drawer').click(function(){
 });
 
 $('.page-overlay').click(function(){
-  $('.Supplement_Side_Drawer').css('right','100%');
+  $('.Supplement_Side_Drawer').css('right','-100%');
 });
