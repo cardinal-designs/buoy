@@ -168,7 +168,7 @@ $('.page-overlay').click(function(){
   $('.Supplement_Side_Drawer .drawer_header').removeClass('mobile-fixed-header');
 });
 
-$('.Supplement_Side_Drawer').click(function(){
+$('.Supplement_Side_Drawer .js-close-supplement-drawer').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
   $('.page-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
