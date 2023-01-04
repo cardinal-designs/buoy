@@ -136,7 +136,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
   }
 
-  
 setTimeout(function(){
  $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
     var text= $(this).text().trim().split(" ");
