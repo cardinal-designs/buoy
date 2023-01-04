@@ -167,9 +167,7 @@ setTimeout(function(){
   });
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-        console.log(11);
     openNavMain();
-    console.log(11);
   });
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
