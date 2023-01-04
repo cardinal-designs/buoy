@@ -154,38 +154,42 @@ setTimeout(function(){
   
 })();
 
-(function(){
-  /* Open Supplement Drawer */
-  let selectors = {
-      openDrawer: '.Open_Drawer',
-      closeDrawer: '.js-close-supplement-drawer',
-      pageOverlay: '.page-overlay'
-  }
+// (function(){
+//   /* Open Supplement Drawer */
+//   let selectors = {
+//       openDrawer: '.Open_Drawer',
+//       closeDrawer: '.js-close-supplement-drawer',
+//       pageOverlay: '.page-overlay'
+//   }
 
-  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-    openNavMain();
-  });
+//   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
+//     openNavMain();
+//   });
 
-  function openNavMain() {
-    document.querySelector(selectors.openDrawer).closest('.Supplement_Side_Drawer').style.right = "0";
-    document.querySelector('.page-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
-  }
+//   function openNavMain() {
+//     document.querySelector(selectors.openDrawer).closest('.Supplement_Side_Drawer').style.right = "0";
+//     document.querySelector('.page-overlay').classList.add('is-visible');
+//     document.querySelector('body').classList.add('lock-scroll');
+//     document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
+//   }
   
-  function closeNavMain() {
-    document.getElementsByClassName("Supplement_Side_Drawer").style.right = "-100%";
-    document.querySelector('.page-overlay').classList.remove('is-visible');
-    document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
-  }
+//   function closeNavMain() {
+//     document.getElementsByClassName("Supplement_Side_Drawer").style.right = "-100%";
+//     document.querySelector('.page-overlay').classList.remove('is-visible');
+//     document.querySelector('body').classList.remove('lock-scroll');
+//     document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
+//   }
 
-  setTimeout(function() {
-    $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
-      var text= $(this).text().trim().split(" ");
-      var first = text.shift();
-      return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
-     });
-   },100);
+//   setTimeout(function() {
+//     $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
+//       var text= $(this).text().trim().split(" ");
+//       var first = text.shift();
+//       return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
+//      });
+//    },100);
   
-})();
+// })();
+
+$('.Open_Drawer').click(function(){
+  $(this).parent('.pee-club-product-info').sibling('.Supplement_Side_Drawer').css('right','0');
+});
