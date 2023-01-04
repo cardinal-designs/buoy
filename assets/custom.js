@@ -165,10 +165,6 @@ setTimeout(function(){
     console.log(11);
   });
 
-  document.querySelector(selectors.closeContinue).addEventListener('click', function(){
-    closeNavMain();
-  });
-
   function openNavMain() {
     document.getElementByClassNames("Supplement_Side_Drawer").style.right = "0";
     document.querySelector('.page-overlay').classList.add('is-visible');
