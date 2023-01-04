@@ -98,7 +98,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-overlay'
   }
 
-    var element =  document.getElementByClassNames('js-open-supplement-drawer');
+    var element =  document.getElementsByClassName('js-open-supplement-drawer');
 
   
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
