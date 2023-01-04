@@ -147,6 +147,8 @@ setTimeout(function(){
   
 })();
 
+console.log(22);
+
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
