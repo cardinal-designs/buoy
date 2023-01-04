@@ -160,8 +160,9 @@ setTimeout(function(){
       pageOverlay: '.page-overlay'
   }
 
-  document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+  document.querySelector(selectors.Open_Drawer).addEventListener('click', function(){
     openNavMain();
+    console.log(11);
   });
 
   document.querySelector(selectors.closeContinue).addEventListener('click', function(){
