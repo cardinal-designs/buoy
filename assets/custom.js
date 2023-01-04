@@ -150,32 +150,12 @@ setTimeout(function(){
   /* Open Supplement Drawer */
   let selectors = {
       openDrawer: '.Open_Drawer',
-      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
-      openIngredients: '.js-ingredients-open',
-      closeContinue: '.mobile-supplement-continue',
       pageOverlay: '.page-overlay'
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
     openNavMain();
-  });
-
-  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-    openNavMain();
-  });
-
-  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-    openNavMain();
-    console.log(11);
-  });
-
-  document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-    closeNavMain();
-  });
-
-  document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
-    closeNavMain();
   });
 
   document.querySelector(selectors.closeContinue).addEventListener('click', function(){
