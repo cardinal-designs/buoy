@@ -98,6 +98,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-overlay'
   }
 
+    var element =  document.getElementByClassNames('js-open-supplement-drawer');
+
   
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
     openNav();
@@ -107,11 +109,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     openNav();
   });
 
-  if(document.querySelector(selectors.openDrawer).length > 0) {
-    document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-      openNav();
-    });
-  }
+    if (typeof(element) != 'undefined' && element != null)
+    {
+  
+  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
+    openNav();
+  });
+    }
+  
 
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
