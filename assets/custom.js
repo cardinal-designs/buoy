@@ -183,14 +183,14 @@ setTimeout(function(){
   });
 
   function openNavMain() {
-    document.getElementById("supplementSideDrawer").style.right = "0";
+    document.getElementByClassNames("Supplement_Side_Drawer").style.right = "0";
     document.querySelector('.page-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
     document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
   }
   
   function closeNavMain() {
-    document.getElementById("supplementSideDrawer").style.right = "-100%";
+    document.getElementByClassNames("Supplement_Side_Drawer").style.right = "-100%";
     document.querySelector('.page-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
     document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
