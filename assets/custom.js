@@ -159,27 +159,27 @@ setTimeout(function(){
   }
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
-    openNav();
+    openNavMain();
   });
 
   document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-    openNav();
+    openNavMain();
   });
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-    openNav();
+    openNavMain();
   });
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-    closeNav();
+    closeNavMain();
   });
 
   document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
-    closeNav();
+    closeNavMain();
   });
 
   document.querySelector(selectors.closeContinue).addEventListener('click', function(){
-    closeNav();
+    closeNavMain();
   });
 
   function openNavMain() {
