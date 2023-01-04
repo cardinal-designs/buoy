@@ -104,14 +104,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }); 
   }
 
+  if (selectors.openDrawerSection > 0) {
+    document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
+      openNav();
+    });
+  }
 
-  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-    openNav();
-  });
-
-  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-    openNav();
-  });
+  if (selectors.openDrawer > 0) {
+    document.querySelector(selectors.openDrawer).addEventListener('click', function(){
+      openNav();
+    });
+  }
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
     closeNav();
