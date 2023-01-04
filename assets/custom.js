@@ -181,7 +181,7 @@ setTimeout(function(){
     document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
   }
 
-  setTimeout(function(){
+  setTimeout(function() {
     $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
       var text= $(this).text().trim().split(" ");
       var first = text.shift();
