@@ -150,36 +150,11 @@ setTimeout(function(){
 (function(){
   /* Open Supplement Drawer */
   let selectors = {
-      openDrawer: '.Open_Drawer',
-      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
-      closeDrawer: '.js-close-supplement-drawer',
-      openIngredients: '.js-ingredients-open',
-      closeContinue: '.mobile-supplement-continue',
-      pageOverlay: '.page-overlay'
+      openDrawer: '.Open_Drawer'
   }
-
-  document.querySelector(selectors.openIngredients).addEventListener('click', function(){
-    openNavMain();
-  });
-
-  document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-    openNavMain();
-  });
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
     openNavMain();
-  });
-
-  document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-    closeNavMain();
-  });
-
-  document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
-    closeNavMain();
-  });
-
-  document.querySelector(selectors.closeContinue).addEventListener('click', function(){
-    closeNavMain();
   });
 
   function openNavMain() {
@@ -189,20 +164,5 @@ setTimeout(function(){
     document.querySelector('body').classList.add('lock-scroll');
     document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
   }
-  
-  function closeNavMain() {
-    document.getElementByClassNames("Supplement_Side_Drawer").style.right = "-100%";
-    document.querySelector('.page-overlay').classList.remove('is-visible');
-    document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
-  }
-
-  setTimeout(function(){
-    $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
-      var text= $(this).text().trim().split(" ");
-      var first = text.shift();
-      return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
-     });
-   },100);
   
 })();
