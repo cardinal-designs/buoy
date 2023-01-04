@@ -160,7 +160,6 @@ setTimeout(function(){
 
   document.querySelector(selectors.openIngredients).addEventListener('click', function(){
     openNavMain();
-    console.log(11);
   });
 
   document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
@@ -169,6 +168,7 @@ setTimeout(function(){
 
   document.querySelector(selectors.openDrawer).addEventListener('click', function(){
     openNavMain();
+    console.log(11);
   });
 
   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
