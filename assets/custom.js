@@ -162,7 +162,7 @@ setTimeout(function(){
       pageOverlay: '.page-overlay'
   }
 
-  document.querySelector(selectors.Open_Drawer).addEventListener('click', function(){
+  document.querySelector(selectors.openDrawer).addEventListener('click', function(){
     openNavMain();
     console.log(11);
   });
