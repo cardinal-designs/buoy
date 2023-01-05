@@ -3,6 +3,13 @@
   padding-right: 40px;
 }
 
+@media screen and (max-width: 959px) {
+  .pee-club-product-bar .page-width {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
 .pee-club-product-bar .flex-buttons-bar svg {
   width: 12px;
   margin-right: 3px;
