@@ -643,6 +643,12 @@ noscript .localization-selector.link {
   .footer {
     grid-template-columns: .4fr 1fr;
   }
+
+  .footer__content {
+    grid-template-columns: 1fr 1fr:
+    justify-content: space-between;
+    gap: 70px 40px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
