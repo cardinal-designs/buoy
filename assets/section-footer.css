@@ -639,6 +639,12 @@ noscript .localization-selector.link {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 989px) {
+  .footer {
+    grid-template-columns: .4fr 1fr;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .newsletter-footer {
     padding: 50px 0;
