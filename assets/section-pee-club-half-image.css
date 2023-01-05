@@ -102,4 +102,8 @@
     background: #f4ece2;
     color: #1F2322;
   }
+  
+  .pee-club-half-image__container .month-list p:not(.list-title) {
+    font-size: 16px;
+  }
 }
