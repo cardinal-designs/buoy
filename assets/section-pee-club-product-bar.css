@@ -9,14 +9,16 @@
 }
 
 .pee-club-product-bar .flex-buttons-bar p {
-  display: inline-block;
-  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  width: -webkit-fill-available;
   margin: 0;
   align-self: center;
 }
 
 .pee-club-product-bar .flex-buttons-bar h5 {
   margin: 0;
+  width: -webkit-fill-available;
   align-self: center;
   padding-right: 10px;
 }
