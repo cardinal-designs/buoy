@@ -644,7 +644,7 @@ noscript .localization-selector.link {
     grid-template-columns: .4fr 1fr;
   }
 
-  .footer__content {
+  .footer .footer__content {
     grid-template-columns: 1fr 1fr:
     justify-content: space-between;
     gap: 70px 40px;
