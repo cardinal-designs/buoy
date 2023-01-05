@@ -10,6 +10,17 @@
   }
 }
 
+.pee-club-product-bar .flex-buttons-bar {
+  gap: 20px;
+}
+
+@media screen and (max-width: 959px) {
+  .pee-club-product-bar .flex-buttons-bar {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+}
+
 .pee-club-product-bar .flex-buttons-bar svg {
   width: 12px;
   margin-right: 3px;
@@ -28,10 +39,6 @@
   width: -webkit-fill-available;
   align-self: center;
   padding-right: 10px;
-}
-
-.pee-club-product-bar .flex-buttons-bar {
-  gap: 20px;
 }
 
 .pee-club-product-bar button {
