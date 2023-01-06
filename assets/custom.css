@@ -930,6 +930,10 @@ input[type="radio"]:checked::before {
     position: sticky;
     top: -10px;
   }
+
+   .supplement-side-drawer {
+    width: 100%;
+   }
 }
 
 @media screen and (max-width: 500px) {
@@ -957,10 +961,6 @@ input[type="radio"]:checked::before {
   .Usp_Wrapper {
     padding: 8px 14px;
   }
-
-   .supplement-side-drawer {
-    width: 100%;
-   }
   
 }
 
