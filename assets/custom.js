@@ -26,7 +26,7 @@ $( document ).ready(function() {
     document.querySelector('.rtx_option_selector input:checked').click();
   });
 
-  // document.querySelector('.rtx_option_selector input:checked').click();
+  document.querySelector('.rtx_option_selector input:checked').click();
 });
 
 
