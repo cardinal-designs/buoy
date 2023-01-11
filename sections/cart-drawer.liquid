@@ -28,6 +28,8 @@
           
         </div>
         <div class="cart-drawer__content" id="cart-drawer__content" data-id="{{ section.id }}">
+
+          {% if section.settings.e_marquee_1 != blank %}
           <div class="shop-slide-out__marquee">
             {%- if cart.items.size == 0 -%}
              <div class="shop-slide-out__marquee-container">
@@ -99,6 +101,7 @@
             </div>
             {%- endif -%}
           </div>
+          {% endif %}
          
           {%- if cart.items.size == 0 -%}
           <div class="cart-drawer__empty">
