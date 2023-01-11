@@ -698,6 +698,10 @@
   .cart-drawer__footer .car-notes {
     text-transform: capitalize;
   }
+
+  .cart-drawer__content .cart-title .cart-drawer__title {
+    visibility: hidden;
+  }
   
 }
 
