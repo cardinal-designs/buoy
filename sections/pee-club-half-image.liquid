@@ -19,7 +19,15 @@
         </div>
         {% endfor %}
       </div>
-      <div class="image-with-dropdowns__dropdown">
+      <div class="image-with-dropdowns__dropdown hide-mobile">
+        {% for block in section.blocks %}
+          <div data-id="{{ forloop.index }}" class="month-list">
+            <p class="list-title">{{ block.settings.title }}</p>            
+            {{ block.settings.list }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="image-with-dropdowns__dropdown hide-desktop">
         {% for block in section.blocks %}
           <div data-id="{{ forloop.index }}" class="month-list">
             <p class="list-title">{{ block.settings.title }}</p>            
