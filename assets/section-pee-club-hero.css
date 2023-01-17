@@ -21,4 +21,8 @@
   .pee-club-hero__container .hero__container .h1 {
     font-size: 32px;
   }
+
+  .pee-club-hero__container {
+    height: 75vh !important;
+  }
 }
