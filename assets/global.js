@@ -1354,6 +1354,14 @@ $('.mobile-pee-club-toggle div').click(function() {
 
   $('.pee-club-half-image__container .month-list').hide()
   $(`.pee-club-half-image__container .month-list[data-id="${num}"]`).show()
+
+  if(num == 1) {
+    $('.image-with-dropdowns__image .aspect-ratio').first().show();
+    $('.image-with-dropdowns__image .aspect-ratio').last().hide();
+  } else {
+    $('.image-with-dropdowns__image .aspect-ratio').last().show();
+    $('.image-with-dropdowns__image .aspect-ratio').first().hide();
+  }
 });
 
 
