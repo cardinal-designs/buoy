@@ -30,11 +30,11 @@
   margin: 0 0 12px;
 }
 
-.pee-club-half-image__container .image-with-dropdowns__image .aspect-ratio  {
+.pee-club-half-image__container .image-with-dropdowns__image div .aspect-ratio  {
   display: none;
 }
 
-.pee-club-half-image__container .image-with-dropdowns__image .aspect-ratio:first-of-type {
+.pee-club-half-image__container .image-with-dropdowns__image div:first-of-type .aspect-ratio {
   display: block;
 }
 
