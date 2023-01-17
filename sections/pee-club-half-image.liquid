@@ -4,7 +4,12 @@
 <div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="pee-club-half-image__container image-with-dropdowns__container">
   <div class="show-product-bar"></div>
   <div class="page-width">
-    <div class="image-with-dropdowns__image">
+    <div class="image-with-dropdowns__image hide-desktop">
+      {% for block in section.blocks %}
+      {% render 'lazy-image' image: block.settings.image, classes: '' %}
+      {% endfor %}
+    </div>
+    <div class="image-with-dropdowns__image hide-mobile">
       {% for block in section.blocks %}
       {% render 'lazy-image' image: block.settings.image, classes: '' %}
       {% endfor %}
