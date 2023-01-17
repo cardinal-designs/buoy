@@ -1352,8 +1352,8 @@ $('.mobile-pee-club-toggle div').click(function() {
   $('.mobile-pee-club-toggle div').removeClass('active')
   $(this).addClass('active')
 
-  $('.pee-club-half-image__container .month-list').hide()
-  $(`.pee-club-half-image__container .month-list[data-id="${num}"]`).show()
+  $('.pee-club-half-image__container .image-with-dropdowns__dropdown-mobile .month-list').hide()
+  $(`.pee-club-half-image__container .image-with-dropdowns__dropdown-mobile .month-list[data-id="${num}"]`).show()
 
   if(num == 1) {
     $('.image-with-dropdowns__image .aspect-ratio').first().show();
