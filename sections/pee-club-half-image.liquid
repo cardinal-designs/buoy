@@ -6,9 +6,7 @@
   <div class="page-width">
     <div class="image-with-dropdowns__image">
       {% for block in section.blocks %}
-      <div data-id="{{ forloop.index }}">
       {% render 'lazy-image' image: block.settings.image, classes: '' %}
-      </div>
       {% endfor %}
     </div>
     <div class="image-with-dropdowns__content">
