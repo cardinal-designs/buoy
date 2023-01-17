@@ -25,4 +25,13 @@
   .pee-club-hero__container {
     height: 75vh !important;
   }
+
+  .hero-sub-button-link a {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+
+  .hero-sub-button-link {
+    color: white;
+  }
 }
