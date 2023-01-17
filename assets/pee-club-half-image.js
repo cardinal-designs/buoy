@@ -8,11 +8,11 @@ $( document ).ready(function() {
       if (windowsize > 768) {
         $(window).scroll(function () {
           if ($(this).scrollTop() < 2300) { 
-            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').first().show();
-            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').last().hide();  
+            $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').first().show();
+            $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').last().hide();  
           } else {
-            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').last().show();
-            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').first().hide();
+            $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').last().show();
+            $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').first().hide();
           }
         });
       }
