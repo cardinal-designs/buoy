@@ -7,15 +7,12 @@ $( document ).ready(function() {
       var windowsize = $window.width();
       if (windowsize > 768) {
         $(window).scroll(function () {
-          console.log($(this).scrollTop())
-          if ($(this).scrollTop() < 5000) { 
-            $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Fast absorption 🤩');
-          } else if ($(this).scrollTop() > 5400) { 
-            $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Made for all day use 🦸🏽‍♀️');
-          } else if ($(this).scrollTop() > 5250) {
-            $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('Easy on stomach 😌');
-          } else if ($(this).scrollTop() >= 5000) {
-            $('.page-science-efficacy .text-image-blocks__content-container h3 span').html('High bioavailability ✨');
+          if ($(this).scrollTop() < 2300) { 
+            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').first().show();
+            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').last().hide();  
+          } else {
+            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').last().show();
+            $('.image-with-dropdowns__image.hide-desktop .aspect-ratio').first().hide();
           }
         });
       }
