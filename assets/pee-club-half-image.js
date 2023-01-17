@@ -7,7 +7,7 @@ $( document ).ready(function() {
       var windowsize = $window.width();
       if (windowsize > 768) {
         $(window).scroll(function () {
-          if ($(this).scrollTop() < 2300) { 
+          if ($(this).scrollTop() < 2500) { 
             $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').first().show();
             $('.image-with-dropdowns__image.hide-mobile .aspect-ratio').last().hide();  
           } else {
