@@ -14,7 +14,15 @@
   display: flex;
   overflow: auto;
   position: relative;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.pee-club-products__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .pee-club-products {
   display: flex;
