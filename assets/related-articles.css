@@ -11,4 +11,5 @@
 .related-blog-articles .blog-articles__article.article {
   display: flex;
   grid-column: auto;
+  text-align: left;
 }
