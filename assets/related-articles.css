@@ -17,4 +17,15 @@
   grid-column: auto !important;
   text-align: left !important;
   border: 2px solid var(--charcoal);
+  border-radius: 17px;
+  background: #fff;
+}
+
+.related-blog-articles .blog-articles__article.article  .article-card__image {
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.related-blog-articles .blog-articles__article.article .article-card__info {
+  padding: 30px;
 }
