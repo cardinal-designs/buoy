@@ -33,6 +33,7 @@
 
 .instagram__content-container a {
   font-weight: 500;
+  transition: 0.25s ease-in;
 }
 
 .instagram__image {
@@ -58,6 +59,11 @@
 
 .instagram__content-container .arrow-link {
   margin-top: 20px;
+}
+
+.instagram__content-container a:hover {
+  opacity: 0.8;
+  transition: 0.25s ease-in;
 }
 
 @media only screen and (max-width: 768px) {
