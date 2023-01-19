@@ -163,7 +163,9 @@
   font-style: inherit;
 }
 
-.default-article__page * {
+.default-article__page p, 
+.default-article__page span, 
+.default-article__page span {
   font-family: inter,sans-serif;
   font-size: 16px;
   font-weight: 300;
