@@ -38,8 +38,10 @@
                     </div>
                   </div>
                   <div class="article-card__info">
-                    <span class="caption">{{  }}</span>
                     <header class="article-card__header" {{ block.shopify_attributes }}>
+                      {% if article.metafields.custom.reading_time != blank%}
+                        <span class="caption">{{ article.metafields.custom.reading_time }}</span>
+                      {% endif %}
                       <h2 class="article-card__title h5" id="Article-{{ articles.id }}">
                         {{ articles.title | escape }}
                       </h2>
