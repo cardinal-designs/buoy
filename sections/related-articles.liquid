@@ -5,7 +5,7 @@
 <div class="related-blog-articles">
   <div class="page-width page-width--narrow">
     <div class="title-wrapper--self-padded-mobile center">
-      <h2 class="related-article-title">{{ section.settings.title | escape }}</h2>
+      <h4 class="related-article-title h4">{{ section.settings.title | escape }}</h4>
     </div>
   </div>
   <div class="page-width page-width--narrow">
@@ -39,6 +39,7 @@
                     </div>
                   </div>
                   <div class="article-card__info">
+                    <span class="caption">{{  }}</span>
                     <header class="article-card__header" {{ block.shopify_attributes }}>
                       <h2 class="article-card__title h5" id="Article-{{ articles.id }}">
                         {{ articles.title | escape }}
