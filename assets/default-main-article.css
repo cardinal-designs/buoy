@@ -165,6 +165,9 @@
 
 .default-article__page > * {
   font-family: inter,sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27px;
 }
 
 .default-article__page .rte blockquote h5 {
