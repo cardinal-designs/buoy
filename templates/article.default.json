@@ -42,6 +42,11 @@
     "145aed53-5406-445e-b315-a206f56badaf": {
       "type": "related-articles",
       "settings": {
+        "bg_color": "#F8F1EB",
+        "title": "Related Articles",
+        "show_section_borders": true,
+        "link_text": "See All Articles",
+        "link_url": "shopify:\/\/blogs\/hydration-station"
       }
     },
     "493f8d6c-69c4-48e0-9a6d-3b40dd793b53": {
@@ -52,7 +57,10 @@
         "title": "Give your best self a squeeze",
         "text": "A healthier, hydrated, and clear-minded you is only a squeeze away with <a href=\"#\">Buoy Hydration.<\/a>",
         "button_label": "Shop Hydration",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify:\/\/collections",
+        "button_style": "beige",
+        "link_label": "",
+        "link_link": ""
       }
     }
   },
