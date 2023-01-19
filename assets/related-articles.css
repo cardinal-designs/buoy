@@ -40,6 +40,10 @@
   color: #545759;
 }
 
+.article-card__footer .button {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
   .related-blog-articles {
