@@ -48,12 +48,12 @@
           </header>
 
         {%- when 'content'-%}
-          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+          <div class="main-article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
           </div>
 
         {%- when 'share' -%}
-          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <div class="main-article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
                 {% render 'icon-share' %}
@@ -95,22 +95,22 @@
   {%- endfor -%}
 
   <div class="element-margin center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
+    <a href="{{ blog.url }}" class="main-article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
       <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
   </div>
   {%- if blog.comments_enabled? -%}
-    <div class="article-template__comment-wrapper background-secondary">
+    <div class="main-article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
 
           <h2 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
           {% paginate article.comments by 5 %}
-            <div class="article-template__comments">
+            <div class="main-article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
-                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                <article id="{{ comment.id }}" class="main-article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
@@ -119,7 +119,7 @@
               {%- endif -%}
 
               {%- for comment in article.comments -%}
-                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                <article id="{{ comment.id }}" class="main-article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'month_year' }}</span>
