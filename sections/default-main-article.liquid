@@ -30,7 +30,7 @@
             </div>
             <div class="main-article-template__hero-{{ block.settings.image_height }} media hide-desktop"
               itemprop="image"
-              {% if block.settings.image_height == 'adapt' and article.metafields.custom.article_mobile_image %} style="padding-bottom: {{ 1 | divided_by: article.metafields.custom.article_mobile_image.aspect_ratio | times: 100 }}%;"{% endif %}
+              {% if block.settings.image_height == 'adapt' and article.metafields.custom.article_mobile_image %} style="padding-bottom: 100%;"{% endif %}
             >
               <img
                 srcset="{% if article.metafields.custom.article_mobile_image.width >= 350 %}{{ article.metafields.custom.article_mobile_image | img_url: '350x' }} 350w,{% endif %}
