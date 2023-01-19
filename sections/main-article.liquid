@@ -29,19 +29,6 @@
                 alt="{{ article.image.alt | escape }}">
             </div>
           </div>
-           {%- if block.settings.show_share_buttons -%}    
-           {%- assign share_url = shop.url | append: article.url -%}
-           {%- assign title = article.title -%}
-           {%- assign description = article.description | strip_html | truncatewords: 15 | url_param_escape -%}
-           {%- assign image = article.image | img_url: '750x' | prepend: 'https:' -%}
-           <div class="Article__ShareButtons">
-               <div class="ShareItem_List">
-                 <a class="ShareItem ShareButtons__Item--facebook" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon-facebook'-%}</a>
-                 <a class="ShareItem ShareButtons__Item--twitter" href="https://twitter.com/share?{% if title != blank %}text={{title}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon-twitter' -%}</a>
-                 <a class="ShareItem ShareButtons__Item--instagram" href="//www.instagram.com/share?u={{ share_url }}&amp;media={{ image | img_url: '1024x1024' }}&amp;description={{ description | url_param_escape }}" target="_blank" >{% render 'icon-instagram' %}</a>
-              </div>
-           </div>
-           {%- endif -%}
         {%- endif -%}
 
         {%- when 'title'-%}
@@ -290,12 +277,6 @@
           "default": "adapt",
           "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
           "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_share_buttons",
-          "label": "Show share buttons",
-          "default": false
         }
       ]
     },
