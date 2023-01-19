@@ -2,7 +2,11 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
 <div class="related-blog-articles">
-  <h1>Related Articles</h1>
+  <div class="page-width page-width--narrow">
+    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile">
+      <h2 class="related-article-title">{{ section.settings.title | escape }}</h2>
+    </div>
+  </div>
   <div class="page-width page-width--narrow">
   <div class="blog-articles">
    <div class="blog-articles__article article">
@@ -63,7 +67,14 @@
 {% schema %}
   {
     "name": "Related Article",
-    "settings": [],
+    "settings": [
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "Related Article"
+       }
+    ],
     "presets": [
       {
         "name": "Related Article"
