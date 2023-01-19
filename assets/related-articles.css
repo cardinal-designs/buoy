@@ -63,6 +63,10 @@
   transition: 0.25s ease-in;
 }
 
+.related-blog-articles .related-article-title {
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 768px) {
 
   .related-blog-articles {
@@ -75,6 +79,10 @@
 
   .blog-redirection.center {
     margin-top: 40px;
+  }
+
+  .related-blog-articles .related-article-title {
+    margin-bottom: 40px;
   }
   
 }
