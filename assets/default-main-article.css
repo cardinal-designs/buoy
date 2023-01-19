@@ -175,6 +175,10 @@
   .default-article__page .page-width--narrow {
     padding: 0 1.8em;
   }
+
+  .default-article__page blockquote {
+    padding: 30px 24px;
+  }
   
 }
 
