@@ -145,7 +145,7 @@
   }
 }
 
-.caption {
+.default-article__page .caption {
   font-family: inter,sans-serif;
   color: #545759;
   font-size: 14px;
@@ -153,7 +153,7 @@
   letter-spacing: 0.42px;
 }
 
-.main-article-template__content blockquote {
+.default-article__page blockquote {
   background: #F8F1EB;
   margin: 40px 0 !important;
   padding: 50px 40px;
@@ -161,11 +161,16 @@
   width: 100%;
 }
 
-.main-article-template__content p, 
-.main-article-template__content span, 
-.main-article-template__content ul li, 
-.main-article-template__content ol li {
+.default-article__page > * {
   font-family: inter,sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-article-template__content {
+    
+  }
+  
 }
 
 
