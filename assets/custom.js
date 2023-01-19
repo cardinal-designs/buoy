@@ -29,6 +29,8 @@ $( document ).ready(function() {
   document.querySelector('.rtx_option_selector input:checked').click();
 });
 
+$('.related-blog-wrapper .article-card__title').matchHeight();
+
 
 $('.faq__item.Shipping_Tab .faq__header').click(function() {
     $('.Testimonials_Slider').slick({
