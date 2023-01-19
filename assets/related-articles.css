@@ -40,6 +40,8 @@
 
 .article-card__footer .button {
   width: 100%;
+  display: block;
+  min-width: 100%;
 }
 
 .related-blog .related-blog-wrapper {
