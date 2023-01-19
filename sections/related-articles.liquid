@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="related-blog">
-    <div class="page-width page-width--narrow">
+    <div class="related-blog-wrapper">
      <div class="blog-articles">
         {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %}
         {% if article.metafields["custom"]["related_article_1"] != blank or article.metafields["custom"]["related_article_2"] != blank %}
