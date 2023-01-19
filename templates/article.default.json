@@ -62,11 +62,26 @@
         "link_label": "Shop All",
         "link_link": "shopify:\/\/collections"
       }
+    },
+    "171207cd-5d45-4b52-91db-2a3d75e98ec9": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/Interior_Image.png",
+        "title": "Test",
+        "text": "Test",
+        "button_label": "Test",
+        "button_link": "#",
+        "button_style": "white",
+        "link_label": "Shop All",
+        "link_link": "#"
+      }
     }
   },
   "order": [
     "main",
     "145aed53-5406-445e-b315-a206f56badaf",
-    "493f8d6c-69c4-48e0-9a6d-3b40dd793b53"
+    "493f8d6c-69c4-48e0-9a6d-3b40dd793b53",
+    "171207cd-5d45-4b52-91db-2a3d75e98ec9"
   ]
 }
