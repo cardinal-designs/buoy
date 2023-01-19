@@ -165,6 +165,10 @@
   font-family: inter,sans-serif;
 }
 
+.default-article__page .rte ol {
+  list-style: auto;
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page .page-width--narrow {
