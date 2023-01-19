@@ -167,8 +167,8 @@
 
 @media screen and (max-width: 768px) {
 
-  .main-article-template__content {
-    
+  .default-article__page .page-width--narrow {
+    padding: 0 2.8px;
   }
   
 }
