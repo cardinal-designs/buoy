@@ -40,22 +40,10 @@
                   </div>
                   <div class="article-card__info">
                     <header class="article-card__header" {{ block.shopify_attributes }}>
-                      <h2 class="article-card__title sh2" id="Article-{{ articles.id }}">
+                      <h2 class="article-card__title h5" id="Article-{{ articles.id }}">
                         {{ articles.title | escape }}
                       </h2>
-                      {%- if block.settings.show_author -%}
-                      <span class="caption-with-letter-spacing body3">{{ articles.author -}}</span>
-                      {%- endif -%}
                     </header>
-                    {%- if articles.excerpt.size > 0 or articles.content.size > 0 -%}
-                    <p class="article-card__excerpt rte-width" {{ block.shopify_attributes }}>
-                      {%- if articles.excerpt.size > 0 -%}
-                      {{ articles.excerpt | strip_html | truncatewords: 25 }}
-                      {%- else -%}
-                      {{ articles.content | strip_html | truncatewords:25}}
-                      {%- endif -%}
-                    </p>
-                    {%- endif -%}
                   </div>
                </a>
             </article>
