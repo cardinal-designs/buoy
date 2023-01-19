@@ -183,6 +183,25 @@
   padding-left: 2rem;
 }
 
+.default-article__page  .main-article-footer {
+  margin: 0;
+}
+
+.default-article__page .main-article-footer .main-article-footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 0;
+  border-top: 2px solid #1F23224D;
+}
+
+.default-article__page .main-article-footer .main-article-footer-info a {
+  margin: 0;
+}
+
+.main-article-template {
+  padding-bottom: 120px;
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
