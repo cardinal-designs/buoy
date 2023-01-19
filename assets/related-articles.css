@@ -2,12 +2,6 @@
   padding: 120px 0;
 }
 
-.related-article-section {
-  background: #F8F1EB;
-  border-top: 1px solid var(--charcoal);
-  border-bottom: 1px solid var(--charcoal);
-}
-
 .related-blog-articles .blog-articles {
   grid-gap: 36px
 }
@@ -38,6 +32,8 @@
   font-family: inter,sans-serif;
   font-size: 12px;
   color: #545759;
+  font-weight: 300;
+  line-height: 21px;
 }
 
 .article-card__footer .button {
