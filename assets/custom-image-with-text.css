@@ -117,4 +117,9 @@
   .custom-image-text__content-container .button:hover {
     background: rgba(255, 255, 255, 1);
   }
+
+  .custom-image-text__content-container .arrow-link {
+    justify-content: center;
+  }
+  
 }
