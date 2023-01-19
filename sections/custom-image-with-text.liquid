@@ -1,15 +1,15 @@
-{{ 'section-instagram.css' | asset_url | stylesheet_tag }}
+{{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="instagram">
-  <div class="instagram__content">
-    <div class="instagram__content-container">
+<div class="custom-image-text">
+  <div class="custom-image-text__content">
+    <div class="custom-image-text__content-container">
       <h2 class="h1">{{ section.settings.title }}</h2>
       <p class="sh2 light">{{ section.settings.text }}</p>
       <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
       {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_url }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>{% endif %}
     </div>
   </div>
-  <div class="instagram__image">
+  <div class="custom-image-text__image">
     {% if section.settings.video_url != blank %}
     <video autoplay loop muted playsinline class="img-fill">
       <source src="{{ section.settings.video_url }}" type="video/mp4">
