@@ -19,36 +19,35 @@
         {% if relatedArticles contains handle %}
           <div class="blog-articles__article article">
             <article class="article-card{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}" aria-labelledby="Article-{{ article.id }}">
-               <a href="{{ articles.url }}" class="article-content motion-reduce">
-                  <div class="article-card__image-wrapper">
-                    <div class="article-card__image media media--landscape">
-                        <img srcset="
-                               {%- if articles.image.src.width >= 165 -%}{{ articles.image.src | img_url: '165x' }} 165w,{%- endif -%}
-                               {%- if articles.image.src.width >= 360 -%}{{ articles.image.src | img_url: '360x' }} 360w,{%- endif -%}
-                               {%- if articles.image.src.width >= 533 -%}{{ articles.image.src | img_url: '533x' }} 533w,{%- endif -%}
-                               {%- if articles.image.src.width >= 720 -%}{{ articles.image.src | img_url: '720x' }} 720w,{%- endif -%}
-                               {%- if articles.image.src.width >= 940 -%}{{ articles.image.src | img_url: '940x' }} 940w,{%- endif -%}
-                               {%- if articles.image.src.width >= 1066 -%}{{ articles.image.src | img_url: '1066x' }} 1066w{%- endif -%}"
-                       src="{{ articles.image.src | img_url: '533x' }}"
-                       sizes="(min-width: 1100px) 535px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                       alt="{{ articles.image.src.alt | escape }}"
-                       width="{{ articles.image.width }}"
-                       height="{{ articles.image.height }}"
-                       loading="lazy"
-                       class="motion-reduce">
-                    </div>
-                  </div>
-                  <div class="article-card__info">
-                    <header class="article-card__header" {{ block.shopify_attributes }}>
-                      {% if article.metafields.custom.reading_time != blank%}
-                        <span class="caption">{{ article.metafields.custom.reading_time }}</span>
-                      {% endif %}
-                      <h2 class="article-card__title h5" id="Article-{{ articles.id }}">
-                        {{ articles.title | escape }}
-                      </h2>
-                    </header>
-                  </div>
-               </a>
+              <div class="article-card__image-wrapper">
+                <div class="article-card__image media media--landscape">
+                    <img srcset="
+                           {%- if articles.image.src.width >= 165 -%}{{ articles.image.src | img_url: '165x' }} 165w,{%- endif -%}
+                           {%- if articles.image.src.width >= 360 -%}{{ articles.image.src | img_url: '360x' }} 360w,{%- endif -%}
+                           {%- if articles.image.src.width >= 533 -%}{{ articles.image.src | img_url: '533x' }} 533w,{%- endif -%}
+                           {%- if articles.image.src.width >= 720 -%}{{ articles.image.src | img_url: '720x' }} 720w,{%- endif -%}
+                           {%- if articles.image.src.width >= 940 -%}{{ articles.image.src | img_url: '940x' }} 940w,{%- endif -%}
+                           {%- if articles.image.src.width >= 1066 -%}{{ articles.image.src | img_url: '1066x' }} 1066w{%- endif -%}"
+                   src="{{ articles.image.src | img_url: '533x' }}"
+                   sizes="(min-width: 1100px) 535px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                   alt="{{ articles.image.src.alt | escape }}"
+                   width="{{ articles.image.width }}"
+                   height="{{ articles.image.height }}"
+                   loading="lazy"
+                   class="motion-reduce">
+                </div>
+              </div>
+              <div class="article-card__info">
+                <header class="article-card__header" {{ block.shopify_attributes }}>
+                  {% if article.metafields.custom.reading_time != blank%}
+                    <span class="caption">{{ article.metafields.custom.reading_time }}</span>
+                  {% endif %}
+                  <h2 class="article-card__title h5" id="Article-{{ articles.id }}">
+                    {{ articles.title | escape }}
+                  </h2>
+                </header>
+                <a href="{{ articles.url }}" class="button">{{ section.settings.button_text }}</a>  
+              </div>
             </article>
             </div>
         {% endif %}
