@@ -1,8 +1,7 @@
 {% if article.metafields.custom.related_article_1 != blank or article.metafields.custom.related_article_2 != blank %}
 {{ 'related-articles.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
-
+  
 <div class="related-blog-articles">
   <div class="page-width page-width--narrow">
     <div class="title-wrapper--self-padded-mobile center">
