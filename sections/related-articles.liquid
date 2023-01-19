@@ -1,6 +1,55 @@
 <div class="blog-articles">
    <div class="blog-articles__article article">
-       {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+        {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %} 
+        {% if article.metafields["custom"]["related_article_1"] != blank or article.metafields["custom"]["related_article_2"] != blank %}
+        {% for articles in blogs.news.articles %}
+        {% assign handle = articles.url | split: '/' %}
+        {% assign handle = handle.last %}
+        {% if relatedArticles contains handle %}
+            <article class="article-card{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}" aria-labelledby="Article-{{ article.id }}">
+               <a href="{{ articles.url }}" class="article-content motion-reduce">
+                  <div class="article-card__image-wrapper">
+                    <div class="article-card__image media media--landscape">
+                        <img srcset="
+                               {%- if articles.image.src.width >= 165 -%}{{ articles.image.src | img_url: '165x' }} 165w,{%- endif -%}
+                               {%- if articles.image.src.width >= 360 -%}{{ articles.image.src | img_url: '360x' }} 360w,{%- endif -%}
+                               {%- if articles.image.src.width >= 533 -%}{{ articles.image.src | img_url: '533x' }} 533w,{%- endif -%}
+                               {%- if articles.image.src.width >= 720 -%}{{ articles.image.src | img_url: '720x' }} 720w,{%- endif -%}
+                               {%- if articles.image.src.width >= 940 -%}{{ articles.image.src | img_url: '940x' }} 940w,{%- endif -%}
+                               {%- if articles.image.src.width >= 1066 -%}{{ articles.image.src | img_url: '1066x' }} 1066w{%- endif -%}"
+                       src="{{ articles.image.src | img_url: '533x' }}"
+                       sizes="(min-width: 1100px) 535px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                       alt="{{ articles.image.src.alt | escape }}"
+                       width="{{ articles.image.width }}"
+                       height="{{ articles.image.height }}"
+                       loading="lazy"
+                       class="motion-reduce">
+                    </div>
+                  </div>
+                  <div class="article-card__info">
+                    <header class="article-card__header" {{ block.shopify_attributes }}>
+                      <h2 class="article-card__title sh2" id="Article-{{ articles.id }}">
+                        {{ articles.title | escape }}
+                      </h2>
+                      {%- if block.settings.show_author -%}
+                      <span class="caption-with-letter-spacing body3">{{ articles.author -}}</span>
+                      {%- endif -%}
+                    </header>
+                    {%- if articles.excerpt.size > 0 or articles.content.size > 0 -%}
+                    <p class="article-card__excerpt rte-width" {{ block.shopify_attributes }}>
+                      {%- if articles.excerpt.size > 0 -%}
+                      {{ articles.excerpt | strip_html | truncatewords: 25 }}
+                      {%- else -%}
+                      {{ articles.content | strip_html | truncatewords:25}}
+                      {%- endif -%}
+                    </p>
+                    {%- endif -%}
+                  </div>
+               </a>
+            </article>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     </div>
 </div>
 
