@@ -5,7 +5,7 @@
     <div class="instagram__content-container">
       <h2 class="h1">{{ section.settings.title }}</h2>
       <p class="sh2 light">{{ section.settings.text }}</p>
-      <a href="{{ section.settings.button_link }}" class="button button--{{ section-settings.button_style }}">{{ section.settings.button_label }}</a>
+      <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
       {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_url }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>{% endif %}
     </div>
   </div>
