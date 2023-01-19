@@ -29,7 +29,8 @@
   padding: 30px;
 }
 
-.related-blog-articles .related-article-title.h4 {
+.related-blog-articles .related-article-title.h4 , 
+.related-blog-articles .article-card__title {
   margin-top: 0;
 }
 
