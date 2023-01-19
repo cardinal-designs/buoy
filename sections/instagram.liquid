@@ -6,7 +6,7 @@
       <h2 class="h1">{{ section.settings.title }}</h2>
       <p class="sh2 light">{{ section.settings.text }}</p>
       <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
-      {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_url }}" class="body mdeium arrow-link">{{ section.settings.link_label }} </a>{% endif %}
+      {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_url }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>{% endif %}
     </div>
   </div>
   <div class="instagram__image">
