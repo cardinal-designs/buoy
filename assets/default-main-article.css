@@ -145,10 +145,18 @@
   }
 }
 
-.caption {
+.main-article-template__content .caption {
   font-family: inter,sans-serif;
   color: #545759;
   font-size: 14px;
   line-height: 30px;
   letter-spacing: 0.42px;
+}
+
+.main-article-template__content blockquote {
+  background: #F8F1EB;
+  margin: 40px 0 !important;
+  padding: 50px 40px;
+  border-radius: 17px;
+  width: 100%;
 }
