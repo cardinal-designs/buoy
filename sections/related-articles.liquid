@@ -1,7 +1,9 @@
 {{ 'related-articles.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<div class="blog-articles">
+<div class="related-blog-articles">
+  <div class="page-width page-width--narrow">
+    <div class="blog-articles">
    <div class="blog-articles__article article">
         {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %} 
         {% if article.metafields["custom"]["related_article_1"] != blank or article.metafields["custom"]["related_article_2"] != blank %}
@@ -55,7 +57,8 @@
     {% endif %}
     </div>
 </div>
-
+  </div>
+</div>
 {% schema %}
   {
     "name": "Related Article",
