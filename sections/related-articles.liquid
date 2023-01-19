@@ -56,6 +56,9 @@
       {% endfor %}
     {% endif %}
     </div>
+     <div class="blog-redirection">
+        <a href="{{ section.settings.link_url }}" class="link">{{ section.settings.link_text }}</a>
+     </div> 
    </div>
   </div>
 </div>
@@ -92,6 +95,17 @@
          "id": "show_section_borders",
          "label": "Show Section Borders",
          "default": true
+       },
+       {
+         "type": "text",
+         "id": "link_text",
+         "label": "Link Text",
+         "default": "See All Articles"
+       },
+       {
+         "type": "url",
+         "id": "link_url",
+         "label": "Link URL"
        }
     ],
     "presets": [
