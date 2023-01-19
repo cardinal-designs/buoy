@@ -13,7 +13,6 @@
 }
 
 .related-blog-articles .blog-articles__article.article {
-  display: flex !important;
   grid-column: auto !important;
   text-align: left !important;
   border: 2px solid var(--charcoal);
