@@ -84,5 +84,9 @@
   .related-blog-articles .related-article-title {
     margin-bottom: 40px;
   }
+
+  .related-blog-articles .blog-articles__article.article .article-card__info {
+    padding: 20px;
+  }
   
 }
