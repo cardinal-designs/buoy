@@ -8,6 +8,10 @@
   border-bottom: 1px solid var(--charcoal);
 }
 
+.related-blog-articles .blog-articles {
+  grid-gap: 36px
+}
+
 .related-blog-articles .blog-articles__article.article {
   display: flex !important;
   grid-column: auto !important;
