@@ -7,3 +7,8 @@
   border-top: 1px solid var(--charcoal);
   border-bottom: 1px solid var(--charcoal);
 }
+
+.related-blog-articles .blog-articles__article.article {
+  display: flex;
+  grid-column: auto;
+}
