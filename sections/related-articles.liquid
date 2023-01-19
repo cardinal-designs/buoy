@@ -1,3 +1,4 @@
+{{ 'related-articles'| asset_url | stylesheet_tag }}
 <div class="blog-articles">
    <div class="blog-articles__article article">
         {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %} 
