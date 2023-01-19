@@ -87,6 +87,10 @@
     margin-bottom: 40px;
   }
 
+  .related-blog-articles .blog-articles {
+    row-gap: 36px;
+  }
+
   .related-blog-articles .blog-articles__article.article {
     flex: 0 1 100%;
     width: 100%;
