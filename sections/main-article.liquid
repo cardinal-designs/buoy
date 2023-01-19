@@ -29,7 +29,7 @@
                 alt="{{ article.image.alt | escape }}">
             </div>
           </div>
-           {%- if section.settings.show_share_buttons -%}    
+           {%- if block.settings.show_share_buttons -%}    
            {%- assign share_url = shop.url | append: article.url -%}
            {%- assign twitter_text = article.title -%}
            {%- assign pinterest_description = article.description | strip_html | truncatewords: 15 | url_param_escape -%}
