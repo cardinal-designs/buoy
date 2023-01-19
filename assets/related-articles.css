@@ -3,11 +3,14 @@
 }
 
 .related-blog-articles .blog-articles {
-  grid-gap: 36px
+  column-gap: 36px;
+  display:flex;
+  flex-wrap: wrap;
+  
 }
 
 .related-blog-articles .blog-articles__article.article {
-  grid-column: auto !important;
+  flex: 0 1 50%;
   text-align: left !important;
   border: 2px solid var(--charcoal);
   border-radius: 17px;
