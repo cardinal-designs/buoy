@@ -9,13 +9,14 @@
   </div>
   <div class="page-width page-width--narrow">
   <div class="blog-articles">
-   <div class="blog-articles__article article">
+  
         {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %}
         {% if article.metafields["custom"]["related_article_1"] != blank or article.metafields["custom"]["related_article_2"] != blank %}
         {% for articles in blogs.hydration-station.articles %}
         {% assign handle = articles.url | split: '/' %}
         {% assign handle = handle.last %}
         {% if relatedArticles contains handle %}
+          <div class="blog-articles__article article">
             <article class="article-card{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}" aria-labelledby="Article-{{ article.id }}">
                <a href="{{ articles.url }}" class="article-content motion-reduce">
                   <div class="article-card__image-wrapper">
@@ -57,11 +58,11 @@
                   </div>
                </a>
             </article>
+            </div>
         {% endif %}
       {% endfor %}
     {% endif %}
     </div>
-</div>
   </div>
 </div>
 {% schema %}
