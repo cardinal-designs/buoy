@@ -67,11 +67,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+  
   .custom-image-text {
     min-height: 475px;
     display: flex;
     border-top: 0;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
   }
 
   .custom-image-text__content {
@@ -87,6 +92,16 @@
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .custom-image-text__image {
+    position: relative;
+    width: 100%;
+  }  
+
+  .custom-image-text__image .img-fill {
+    position: relative;
+    display: block;
   }
 
   .custom-image-text__content-container .h1 {
