@@ -160,3 +160,12 @@
   border-radius: 17px;
   width: 100%;
 }
+
+.main-article-template__content p, 
+.main-article-template__content span, 
+.main-article-template__content ul li, 
+.main-article-template__content ol li {
+  font-family: inter,sans-serif;
+}
+
+
