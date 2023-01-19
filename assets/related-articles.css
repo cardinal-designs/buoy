@@ -6,11 +6,10 @@
   column-gap: 36px;
   display:flex;
   flex-wrap: wrap;
-  
 }
 
 .related-blog-articles .blog-articles__article.article {
-  flex: 0 1 50%;
+  flex: 0 1 calc(50% - 18px);
   text-align: left !important;
   border: 2px solid var(--charcoal);
   border-radius: 17px;
