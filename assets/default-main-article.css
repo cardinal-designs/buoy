@@ -159,7 +159,7 @@
   padding: 50px 40px;
   border-radius: 17px;
   width: 100%;
-  display: block;
+  display: block !important;
 }
 
 .default-article__page > * {
