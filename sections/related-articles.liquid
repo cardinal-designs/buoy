@@ -8,7 +8,8 @@
       <h4 class="related-article-title h4">{{ section.settings.title | escape }}</h4>
     </div>
   </div>
-  <div class="page-width page-width--narrow">
+  <div class="related-blog">
+    <div class="page-width page-width--narrow">
      <div class="blog-articles">
         {% capture relatedArticles %}{{ article.metafields["custom"]["related_article_1"] }},{{ article.metafields["custom"]["related_article_2"] }}{% endcapture %}
         {% if article.metafields["custom"]["related_article_1"] != blank or article.metafields["custom"]["related_article_2"] != blank %}
@@ -54,6 +55,7 @@
       {% endfor %}
     {% endif %}
     </div>
+  </div>
   </div>
 </div>
 {% schema %}
