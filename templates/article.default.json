@@ -12,8 +12,9 @@
         "title": {
           "type": "title",
           "settings": {
-            "blog_show_date": false,
-            "blog_show_author": false
+            "blog_show_read_time": true,
+            "blog_show_date": true,
+            "blog_show_author": true
           }
         },
         "share": {
