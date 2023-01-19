@@ -31,14 +31,14 @@
           </div>
            {%- if block.settings.show_share_buttons -%}    
            {%- assign share_url = shop.url | append: article.url -%}
-           {%- assign twitter_text = article.title -%}
-           {%- assign pinterest_description = article.description | strip_html | truncatewords: 15 | url_param_escape -%}
-           {%- assign pinterest_image = article.image | img_url: '750x' | prepend: 'https:' -%}
+           {%- assign title = article.title -%}
+           {%- assign description = article.description | strip_html | truncatewords: 15 | url_param_escape -%}
+           {%- assign image = article.image | img_url: '750x' | prepend: 'https:' -%}
            <div class="Article__ShareButtons">
                <div class="ShareItem_List">
                  <a class="ShareItem ShareButtons__Item--facebook" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon-facebook'-%}</a>
-                 <a class="ShareItem ShareButtons__Item--twitter" href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon-twitter' -%}</a>
-                 <a class="ShareItem ShareButtons__Item--instagram" href="//www.instagram.com/share?u={{ share_url }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}" target="_blank" >{% render 'icon-instagram' %}</a>
+                 <a class="ShareItem ShareButtons__Item--twitter" href="https://twitter.com/share?{% if title != blank %}text={{title}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon-twitter' -%}</a>
+                 <a class="ShareItem ShareButtons__Item--instagram" href="//www.instagram.com/share?u={{ share_url }}&amp;media={{ image | img_url: '1024x1024' }}&amp;description={{ description | url_param_escape }}" target="_blank" >{% render 'icon-instagram' %}</a>
               </div>
            </div>
            {%- endif -%}
