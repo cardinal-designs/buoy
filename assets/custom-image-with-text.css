@@ -61,6 +61,15 @@
   margin-top: 20px;
 }
 
+.custom-image-text__content-container p a {
+  transition: 0.25s ease-in;
+}
+
+.custom-image-text__content-container p a:hover {
+  opacity: 0.7;
+  transition: 0.25s ease-in;
+}
+
 .custom-image-text__content-container .arrow-link:hover {
   opacity: 0.7;
   transition: 0.25s ease-in;
