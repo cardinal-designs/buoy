@@ -48,9 +48,22 @@
                      <a href="{{ articles.url }}">{{ articles.title | escape }}</a>
                   </h2>
                 </header>
+                {% if secton.settings.show_excerpt == true %}
+                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                  <p class="article-card__excerpt rte-width">
+                  {%- if article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {%- else -%}
+                    {{ article.content | strip_html | truncatewords: 30 }}
+                  {%- endif -%}
+                  </p>
+                {%- endif -%}
+                {% endif %}
+                {% if section.settings.show_read_more %}
                 <div class="article-card__footer center">
                   <a href="{{ articles.url }}" class="button">Read More</a>  
                 </div>
+                {% endif %}
               </div>
             </article>
             </div>
@@ -97,6 +110,18 @@
          "type": "checkbox",
          "id": "show_section_borders",
          "label": "Show Section Borders",
+         "default": true
+       },
+       {
+         "type": "checkbox",
+         "id": "show_excerpt",
+         "label": "Show Excerpt",
+         "default": false
+       },
+       {
+         "type": "checkbox",
+         "id": "show_read_more",
+         "label": "Show Read More",
          "default": true
        },
        {
