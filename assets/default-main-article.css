@@ -210,9 +210,15 @@
 .default-article__page h3, 
 .default-article__page .h3, 
 .default-article__page h4,
-.default-article__page .h4 {
+.default-article__page .h4, 
+.default-article__page h5,
+.default-article__page .h5, 
+.default-article__page h6,
+.default-article__page .h6 {
   margin-top: 0
 }
+
+
 
 
 
