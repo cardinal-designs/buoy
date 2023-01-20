@@ -13,8 +13,8 @@
           "type": "title",
           "settings": {
             "blog_show_read_time": true,
-            "blog_show_date": true,
-            "blog_show_author": true
+            "blog_show_date": false,
+            "blog_show_author": false
           }
         },
         "share": {
@@ -42,7 +42,7 @@
     "145aed53-5406-445e-b315-a206f56badaf": {
       "type": "related-articles",
       "settings": {
-        "bg_color": "#F8F1EB",
+        "bg_color": "#f8f1eb",
         "title": "Related Articles",
         "show_section_borders": true,
         "link_text": "See All Articles",
