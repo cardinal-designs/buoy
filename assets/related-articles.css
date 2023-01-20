@@ -73,6 +73,11 @@
   margin-bottom: 60px;
 }
 
+
+.related-blog-articles .blog-articles__article.article .article-card__title a:hover {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 768px) {
 
   .related-blog-articles {
