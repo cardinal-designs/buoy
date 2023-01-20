@@ -228,6 +228,10 @@
   width: 18px;
 }
 
+.main-article-template__hero-social .social-sharing {
+  justify-content: flex-end;
+}
+
 
 @media screen and (max-width: 768px) {
 
