@@ -116,8 +116,35 @@
 
   <div class="main-article-footer page-width page-width--narrow">
     <div class="main-article-social-sharing">
-      {% if section.settings.show_share_buttons %}      {% endif %}
-        {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+       <ul class="social-sharing list-social list-unstyled">
+         
+            <li class="list-social__item">
+              <a
+                class="list-social__link link link--text"
+                href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}"
+                target="_blank"
+              >
+                {% render 'icon-facebook' %}
+                <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+                <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+              </a>
+            </li>
+       
+        
+         
+            <li class="list-social__item">
+              <a
+                class="list-social__link link link--text"
+                href="//twitter.com/share?text={{ article.title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}"
+                target="_blank"
+              >
+                {% render 'icon-twitter' %}
+                <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+                <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+              </a>
+            </li>
+  
+       </ul>
     </div>
     <div class="main-article-footer-info">
       <a href="{{ blog.url }}" class="main-article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
