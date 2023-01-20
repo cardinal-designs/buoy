@@ -205,6 +205,21 @@
   padding-bottom: 120px;
 }
 
+.main-article-social-sharing .list-social {
+  justify-content: flex-start;
+  padding-bottom: 32px;
+}
+
+.main-article-social-sharing .list-social .list-social__item .list-social__link  svg {
+  width: 18px;
+  height: 18px;
+}
+
+.main-article-social-sharing .list-social__item .list-social__link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
 @media screen and (max-width: 768px) {
 
