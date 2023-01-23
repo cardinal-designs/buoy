@@ -301,6 +301,12 @@ body, * {
     margin: 40px 0 60px !important;
   }
 
+  .default-article__page h1 {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
   .default-article__page h1, 
   .default-article__page h2, 
   .default-article__page h3, 
