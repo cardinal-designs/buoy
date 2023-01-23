@@ -303,6 +303,11 @@ body, * {
     padding-bottom: 70px;  
   }
 
+  .default-article__page .caption {
+    font-size: 12px;
+    line-height: 21px;
+  }
+
   .default-article__page p, 
   .default-article__page span, 
   .default-article__page ul li, 
