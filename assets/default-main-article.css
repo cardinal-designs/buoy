@@ -289,7 +289,7 @@
 
   .default-article__page blockquote {
     padding: 30px 24px;
-    margin: 40px 0 60px;
+    margin: 40px 0 60px !important;
   }
 
   .default-article__page h1, 
