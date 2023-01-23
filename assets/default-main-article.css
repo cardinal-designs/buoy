@@ -254,6 +254,11 @@
   margin-bottom: 20px;
 }
 
+.default-article__page p {
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
