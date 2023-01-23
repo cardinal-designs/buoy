@@ -306,6 +306,10 @@ body, * {
     margin-top: 0;
     margin-bottom: 30px;
   }
+
+  .default-article__page h5 {
+    font-size: 18px;
+  }
   
   .default-article__page h1, 
   .default-article__page h2, 
