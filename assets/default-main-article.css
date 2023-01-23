@@ -1,57 +1,57 @@
-.main-article-template__hero-container {
+.default-article__page .main-article-template__hero-container {
   max-width: 130rem;
   margin: 0 auto;
 }
 
-.main-article-template__hero-medium {
+.default-article__page .main-article-template__hero-medium {
   height: 15.6rem;
 }
 
-.main-article-template__hero-large {
+.default-article__page .main-article-template__hero-large {
   height: 19rem;
 }
 
 @media screen and (min-width: 769px) and (max-width: 989px) {
-  .main-article-template__hero-medium {
+  .default-article__page .main-article-template__hero-medium {
     height: 34.9rem;
   }
 
-  .main-article-template__hero-large {
+  .default-article__page .main-article-template__hero-large {
     height: 42.3rem;
   }
 }
 
 @media screen and (min-width: 990px) {
-  .main-article-template__hero-medium {
+  .default-article__page .main-article-template__hero-medium {
     height: 54.5rem;
   }
 
-  .main-article-template__hero-large {
+  .default-article__page .main-article-template__hero-large {
     height: 66rem;
   }
 }
 
-.main-article-template header {
+.default-article__page .main-article-template header {
   margin-top: 3.4rem;
   margin-bottom: 2rem;
   line-height: 0.8;
 }
 
 @media screen and (min-width: 769px) {
-  .main-article-template header {
+  .default-article__page .main-article-template header {
     margin-top: 8rem;
   }
 }
 
-.main-article-template__title {
+.default-article__page .main-article-template__title {
   margin: 0;
 }
 
-.main-article-template__title:not(:only-child) {
+.default-article__page .main-article-template__title:not(:only-child) {
   margin-bottom: 1rem;
 }
 
-.main-article-template__link {
+.default-article__page .main-article-template__link {
   font-size: 1.8rem;
   display: flex;
   justify-content: center;
@@ -59,54 +59,54 @@
   text-decoration: none;
 }
 
-.main-article-template__link .icon-wrap {
+.default-article__page .main-article-template__link .icon-wrap {
   margin-right: 1rem;
   transform: rotate(180deg);
 }
 
-.main-article-template__content {
+.default-article__page .main-article-template__content {
   margin-top: 3rem;
   margin-bottom: 6rem;
 }
 
-.main-article-template__social-sharing {
+.default-article__page .main-article-template__social-sharing {
   margin-top: 3rem;
 }
 
-.main-article-template__social-sharing + header, 
-.main-article-template__social-sharing + .main-article-template__content {
+.default-article__page .main-article-template__social-sharing + header, 
+.default-article__page .main-article-template__social-sharing + .main-article-template__content {
   margin-top: 1.5rem;
 }
 
-.main-article-template__comment-wrapper {
+.default-article__page .main-article-template__comment-wrapper {
   margin-top: 5rem;
 }
 
 @media screen and (min-width: 769px) {
-  .main-article-template__comment-wrapper {
+  .default-article__page .main-article-template__comment-wrapper {
     margin-top: 6rem;
   }
 }
 
-.main-article-template__comment-wrapper h2 {
+.default-article__page .main-article-template__comment-wrapper h2 {
   margin-top: 0;
 }
 
-.main-article-template__comments {
+.default-article__page .main-article-template__comments {
   margin-bottom: 5rem;
 }
 
 @media screen and (min-width: 769px) {
-  .main-article-template__comments {
+  .default-article__page .main-article-template__comments {
     margin-bottom: 7rem;
   }
 }
 
-.main-article-template__comments-fields {
+.default-article__page .main-article-template__comments-fields {
   margin-bottom: 4rem;
 }
 
-.main-article-template__comments-comment {
+.default-article__page .main-article-template__comments-comment {
   color: rgba(var(--color-foreground), 0.75);
   background-color: rgb(var(--color-background));
   margin-bottom: 1.5rem;
@@ -114,33 +114,33 @@
 }
 
 @media screen and (min-width: 769px) {
-  .main-article-template__comments-comment {
+  .default-article__page .main-article-template__comments-comment {
     padding: 2rem 2.5rem;
   }
 }
 
-.main-article-template__comments-comment p {
+.default-article__page .main-article-template__comments-comment p {
   margin: 0 0 1rem;
 }
 
-.main-article-template__comment-fields > * {
+.default-article__page .main-article-template__comment-fields > * {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 769px) {
-  .main-article-template__comment-fields {
+  .default-article__page .main-article-template__comment-fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
   }
 }
 
-.main-article-template__comment-warning {
+.default-article__page .main-article-template__comment-warning {
   margin: 2rem 0 2.5rem;
 }
 
 @media screen and (min-width: 990px) {
-  .main-article-template__comments .pagination-wrapper {
+  .default-article__page .main-article-template__comments .pagination-wrapper {
     margin: 5rem 0 8rem;
   }
 }
@@ -201,38 +201,38 @@
   font-weight: 500;
 }
 
-.main-article-template {
+.default-article__page .main-article-template {
   padding-bottom: 120px;
 }
 
-.main-article-social-sharing .list-social {
+.default-article__page .main-article-social-sharing .list-social {
   justify-content: flex-start;
   padding-bottom: 32px;
 }
 
-.main-article-social-sharing .list-social .list-social__item:first-child .list-social__link {
+.default-article__page .main-article-social-sharing .list-social .list-social__item:first-child .list-social__link {
   padding-left: 0;
 }
 
-.main-article-social-sharing .list-social .list-social__item .list-social__link  svg {
+.default-article__page .main-article-social-sharing .list-social .list-social__item .list-social__link  svg {
   width: 18px;
   height: 18px;
 }
 
-.main-article-social-sharing .list-social__item .list-social__link {
+.default-article__page .main-article-social-sharing .list-social__item .list-social__link {
   padding: 0 7.5px;
 }
 
-.main-article-template__hero-social .social-sharing .list-social__item svg {
+.default-article__page .main-article-template__hero-social .social-sharing .list-social__item svg {
   height: 18px;
   width: 18px;
 }
 
-.main-article-template__hero-social .social-sharing {
+.default-article__page .main-article-template__hero-social .social-sharing {
   justify-content: flex-end;
 }
 
-.main-article-template__hero-social .social-sharing .list-social__item .list-social__link {
+.default-article__page .main-article-template__hero-social .social-sharing .list-social__item .list-social__link {
   padding: 18px 7.5px;
 }
 
