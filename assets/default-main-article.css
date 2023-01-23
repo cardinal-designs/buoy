@@ -208,6 +208,7 @@
 .default-article__page .main-article-social-sharing .list-social {
   justify-content: flex-start;
   padding-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .default-article__page .main-article-social-sharing .list-social .list-social__item:first-child .list-social__link {
