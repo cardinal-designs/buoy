@@ -101,9 +101,11 @@ body, * {
 }
 
 @media screen and (min-width: 769px) {
+  
   .default-article__page .main-article-template__comments {
     margin-bottom: 7rem;
   }
+  
 }
 
 .default-article__page .main-article-template__comments-fields {
@@ -118,9 +120,11 @@ body, * {
 }
 
 @media screen and (min-width: 769px) {
+  
   .default-article__page .main-article-template__comments-comment {
     padding: 2rem 2.5rem;
   }
+  
 }
 
 .default-article__page .main-article-template__comments-comment p {
@@ -132,11 +136,13 @@ body, * {
 }
 
 @media screen and (min-width: 769px) {
+  
   .default-article__page .main-article-template__comment-fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
   }
+  
 }
 
 .default-article__page .main-article-template__comment-warning {
@@ -210,7 +216,7 @@ body, * {
 }
 
 .default-article__page .main-article-footer .main-article-footer-info a {
-  margin: 1.1rem;
+  margin: 0;
   font-size: 14px;
   font-weight: 500;
 }
