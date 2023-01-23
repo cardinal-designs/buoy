@@ -293,6 +293,10 @@ body, * {
 
 @media screen and (max-width: 768px) {
 
+  .default-article__page .main-article-template {
+    padding-bottom: 70px;  
+  }
+
   .default-article__page p, 
   .default-article__page span, 
   .default-article__page ul li, 
@@ -346,6 +350,11 @@ body, * {
   .default-article__page p {
     margin-bottom: 30px;
   }
+
+  .main-article-footer-info .caption {
+    margin-bottom: 0;
+  }
+  
   
 }
 
