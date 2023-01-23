@@ -41,6 +41,12 @@
   .default-article__page .main-article-template header {
     margin-top: 6.7rem;
   }
+
+  .default-article__page .page-width.page-width--narrow {
+    max-width: 1164px;
+    margin: auto;
+  }
+  
 }
 
 .default-article__page .main-article-template__title {
