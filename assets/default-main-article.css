@@ -259,6 +259,11 @@
   margin-top: 0;
 }
 
+.default-article__page ul {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
