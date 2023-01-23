@@ -248,7 +248,8 @@
   margin-bottom: 40px;
 }
  
-.default-article__page h5 {
+.default-article__page h5, 
+.default-article__page h6 {
   margin-top: 0;
   margin-bottom: 20px;
 }
