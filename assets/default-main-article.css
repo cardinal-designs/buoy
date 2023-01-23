@@ -253,9 +253,13 @@ body, * {
 
 .default-article__page h1, 
 .default-article__page h2, 
-.default-article__page h3, 
-.default-article__page h4 {
+.default-article__page h3 {
   margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.default-article__page h4 {
+  margin-top: 80px;
   margin-bottom: 40px;
 }
  
