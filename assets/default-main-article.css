@@ -232,6 +232,9 @@
   justify-content: flex-end;
 }
 
+.main-article-template__hero-social .social-sharing .list-social__item .list-social__link {
+  padding: 18px 7.5px;
+}
 
 @media screen and (max-width: 768px) {
 
