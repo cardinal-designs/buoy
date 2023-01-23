@@ -276,6 +276,10 @@ body, * {
   margin-bottom: 40px;
 }
 
+ .default-article__page a {
+   word-break: break-word;
+ }
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
