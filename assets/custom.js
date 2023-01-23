@@ -176,3 +176,7 @@ $('.Supplement_Side_Drawer .js-close-supplement-drawer').click(function(){
   $('body').removeClass('lock-scroll');
   $('.Supplement_Side_Drawer .drawer_header').removeClass('mobile-fixed-header');
 });
+
+$(window).on("orientationchange, resize", function(event) {
+  $('.related-blog-wrapper .article-card__title').matchHeight();
+});
