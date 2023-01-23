@@ -320,12 +320,12 @@ body, * {
   .default-article__page h4 {
     font-size: 25px;
     margin-top: 60px;
+    margin-bottom: 30px;
   }
   
   .default-article__page h1, 
   .default-article__page h2, 
-  .default-article__page h3, 
-  .default-article__page h4 {
+  .default-article__page h3 {
     margin-top: 0;
     margin-bottom: 30px;
   }
