@@ -236,6 +236,14 @@
   padding: 18px 7.5px;
 }
 
+.default-article__page h1,
+.default-article__page h2,
+.default-article__page h3, 
+.default-article__page h4, 
+.default-article__page h5 {
+  margin: 0  
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
