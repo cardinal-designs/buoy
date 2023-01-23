@@ -38,6 +38,7 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .default-article__page .main-article-template header {
     margin-top: 6.7rem;
   }
@@ -48,10 +49,6 @@
     margin-right: auto;
   }
   
-}
-
-.default-article__page .main-article-template__title {
-  margin-top: 0;
 }
 
 .default-article__page .main-article-template__link {
