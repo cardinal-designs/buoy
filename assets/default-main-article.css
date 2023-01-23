@@ -287,6 +287,10 @@ body, * {
   display: inline-block;
 }
 
+.default-article__page p img {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page p, 
