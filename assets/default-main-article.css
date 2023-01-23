@@ -232,6 +232,7 @@
 .default-article__page .main-article-template__hero-social .social-sharing {
   justify-content: flex-end;
   display: flex;
+  margin-bottom: 0;
 }
 
 .default-article__page .main-article-template__hero-social .social-sharing .list-social__item .list-social__link {
