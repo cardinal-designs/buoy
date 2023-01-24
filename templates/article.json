@@ -6,20 +6,25 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
+            "image_height": "adapt"
           }
         },
         "title": {
           "type": "title",
           "settings": {
-          }
-        },
-        "content": {
-          "type": "content",
-          "settings": {
+            "blog_show_read_time": true,
+            "blog_show_date": true,
+            "blog_show_author": false
           }
         },
         "share": {
           "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
           "settings": {
           }
         }
@@ -32,9 +37,37 @@
       ],
       "settings": {
       }
+    },
+    "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f": {
+      "type": "related-articles",
+      "settings": {
+        "bg_color": "#F8F1EB",
+        "title": "Related Articles",
+        "show_section_borders": true,
+        "show_excerpt": false,
+        "show_read_more": true,
+        "link_text": "See All Articles",
+        "link_url": ""
+      }
+    },
+    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/50-50_Image_MP4_or_Image.png",
+        "title": "Give your best self a squeeze",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "beige",
+        "link_label": "",
+        "link_link": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f",
+    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6"
   ]
 }
