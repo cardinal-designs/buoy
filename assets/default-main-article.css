@@ -102,6 +102,8 @@ body, * {
 
 .default-article__page .rte > * {
   word-break: break-word;
+  display: inline-block;
+  width: 100%;
 }
 
 @media screen and (min-width: 769px) {
