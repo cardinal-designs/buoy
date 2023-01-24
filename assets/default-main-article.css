@@ -206,6 +206,10 @@ body, * {
   margin-bottom: 20px  
 }
 
+.default-article__page .rte a {
+  text-decoration: underline;
+}
+
 .default-article__page .rte ol {
   list-style: auto;
   padding-left: 2rem;
