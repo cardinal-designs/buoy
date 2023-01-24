@@ -100,6 +100,10 @@ body, * {
   margin-bottom: 5rem;
 }
 
+.default-article__page .rte > * {
+  word-break: break-word;
+}
+
 @media screen and (min-width: 769px) {
   
   .default-article__page .main-article-template__comments {
