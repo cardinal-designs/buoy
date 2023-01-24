@@ -289,10 +289,10 @@ body, * {
   margin-top: 0;
 }
 
-.default-article__page p strong {
+/* .default-article__page p strong {
   margin-bottom: -35px;
   display: block;
-}
+} */
 
 .default-article__page ul,
 .default-article__page ol {
@@ -305,10 +305,10 @@ body, * {
   display: inline-block;
 }
 
-.default-article__page img {
+/* .default-article__page img {
   display: block;
   margin-bottom: 35px;
-}
+} */
 
 .default-article__page p img {
   display: block;
