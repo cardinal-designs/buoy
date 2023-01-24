@@ -17,6 +17,12 @@
             "blog_show_author": false
           }
         },
+        "abf79ccf-b5bf-46b3-b2ca-c78028877f18": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
         "content": {
           "type": "content",
           "settings": {
@@ -26,6 +32,7 @@
       "block_order": [
         "featured_image",
         "title",
+        "abf79ccf-b5bf-46b3-b2ca-c78028877f18",
         "content"
       ],
       "settings": {
