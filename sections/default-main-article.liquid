@@ -56,7 +56,7 @@
 
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-            {% if block.settings.blog_show_read_time %}
+            {% if block.settings.blog_show_read_time and article.metafields.custom.reading_time != blank %}
               <span class="caption">{{ article.metafields.custom.reading_time }}</span>
             {% endif %}
             <h1 class="main-article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
