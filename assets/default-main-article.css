@@ -320,7 +320,8 @@ body, * {
   display: block;
 }
 
-.default-article__page .rte strong {
+.default-article__page .rte strong,
+.default-article__page .rte b {
   font-weight: 500;
 }
 
