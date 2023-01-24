@@ -302,6 +302,7 @@ body, * {
 
 .default-article__page p img {
   display: block;
+  margin-bottom: 35px;
 }
 
 .share-button details .share-button__fallback {
@@ -385,8 +386,5 @@ body, * {
   .main-article-footer-info .caption {
     margin-bottom: 0;
   }
-  
-  
+   
 }
-
-
