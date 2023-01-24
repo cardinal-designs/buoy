@@ -3,7 +3,8 @@ body, * {
 }
 
 .default-article__page .main-article-template__hero-container {
-  max-width: 130rem;
+  max-width: 1286px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -327,6 +328,10 @@ body, * {
 
   .default-article__page .main-article-template {
     padding-bottom: 70px;  
+  }
+  
+  .default-article__page .main-article-template__hero-container {
+    padding: 0 27px;
   }
 
   .default-article__page .caption {
