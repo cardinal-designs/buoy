@@ -171,6 +171,10 @@ body, * {
   display: block;
 }
 
+.default-article__page header + .caption {
+  margin-bottom: 18px;
+}
+
 .default-article__page blockquote {
   background: #F8F1EB;
   margin: 60px 0 120px !important;
