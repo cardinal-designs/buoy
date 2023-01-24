@@ -313,6 +313,10 @@ body, * {
   font-family: inter,sans-serif !important; 
 }
 
+.main-article-template__hero-container .media {
+  border-radius: 17px; 
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page .main-article-template {
