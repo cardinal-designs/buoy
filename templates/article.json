@@ -13,8 +13,14 @@
           "type": "title",
           "settings": {
             "blog_show_read_time": true,
-            "blog_show_date": false,
-            "blog_show_author": false
+            "blog_show_date": true,
+            "blog_show_author": true
+          }
+        },
+        "15dce463-6824-460a-8149-ff956cbdaa4e": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         },
         "content": {
@@ -26,6 +32,7 @@
       "block_order": [
         "featured_image",
         "title",
+        "15dce463-6824-460a-8149-ff956cbdaa4e",
         "content"
       ],
       "settings": {
