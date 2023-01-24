@@ -391,6 +391,12 @@ body, * {
   .main-article-template__hero-container .media {
     border-radius: 0;
   }
+
+  .default-article__page .main-article-template__content p img, 
+  .default-article__page .main-article-template__content img {
+    display: block;
+    margin-bottom: 35px;
+  }
   
   
 }
