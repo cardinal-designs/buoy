@@ -320,6 +320,10 @@ body, * {
   display: block;
 }
 
+.default-article__page .rte strong {
+  font-weight: 500;
+}
+
 .main-article-template__hero-container .media {
   border-bottom-right-radius: 17px;
   border-bottom-left-radius: 17px;
