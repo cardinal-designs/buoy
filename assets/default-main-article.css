@@ -297,6 +297,7 @@ body, * {
 
 .default-article__page .main-article-template__content a {
   word-break: break-word;
+  display: inline-block;
 }
 
 .default-article__page p img {
