@@ -321,7 +321,8 @@ body, * {
 }
 
 .main-article-template__hero-container .media {
-  border-radius: 17px; 
+  border-bottom-right-radius: 17px;
+  border-bottom-left-radius: 17px;
 }
 
 @media screen and (max-width: 768px) {
