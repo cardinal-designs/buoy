@@ -304,6 +304,15 @@ body, * {
   display: block;
 }
 
+.share-button details .share-button__fallback {
+  background: #fff;
+  border: 1px solid #000;
+}
+
+.field { 
+  font-family: inter,sans-serif !important; 
+}
+
 @media screen and (max-width: 768px) {
 
   .default-article__page .main-article-template {
