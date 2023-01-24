@@ -13,14 +13,8 @@
           "type": "title",
           "settings": {
             "blog_show_read_time": true,
-            "blog_show_date": true,
+            "blog_show_date": false,
             "blog_show_author": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         },
         "content": {
@@ -32,7 +26,6 @@
       "block_order": [
         "featured_image",
         "title",
-        "share",
         "content"
       ],
       "settings": {
@@ -41,7 +34,7 @@
     "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f": {
       "type": "related-articles",
       "settings": {
-        "bg_color": "#F8F1EB",
+        "bg_color": "#f8f1eb",
         "title": "Related Articles",
         "show_section_borders": true,
         "show_excerpt": false,
