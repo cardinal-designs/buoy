@@ -300,8 +300,8 @@ body, * {
   display: inline-block;
 }
 
-.default-article__page p img, 
-.default-article__page img {
+.default-article__page .main-article-template__content p img, 
+.default-article__page .main-article-template__content img {
   display: block;
   margin-bottom: 35px;
 }
