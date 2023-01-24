@@ -1,6 +1,6 @@
-{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'default-main-article.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="main-article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -9,8 +9,8 @@
         </div>
       {%- when 'featured_image'-%}
         {%- if article.image -%}
-          <div class="article-template__hero-container" {{ block.shopify_attributes }}>
-            <div class="article-template__hero-{{ block.settings.image_height }} media"
+          <div class="main-article-template__hero-container" {{ block.shopify_attributes }}>
+            <div class="main-article-template__hero-{{ block.settings.image_height }} media {% if article.metafields.custom.article_mobile_image != blank %}hide-mobile{% endif %}"
               itemprop="image"
               {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
             >
@@ -28,29 +28,55 @@
                 height="{{ article.image.height }}"
                 alt="{{ article.image.alt | escape }}">
             </div>
+            {% if article.metafields.custom.article_mobile_image != blank %}
+            <div class="main-article-template__hero-{{ block.settings.image_height }} media hide-desktop"
+              itemprop="image"
+              {% if block.settings.image_height == 'adapt' and article.metafields.custom.article_mobile_image %} style="padding-bottom: 100%;"{% endif %}
+            >
+              <img
+                srcset="{% if article.metafields.custom.article_mobile_image.width >= 350 %}{{ article.metafields.custom.article_mobile_image | img_url: '350x' }} 350w,{% endif %}
+                  {% if article.metafields.custom.article_mobile_image.width >= 750 %}{{ article.metafields.custom.article_mobile_image | img_url: '750x' }} 750w,{% endif %}
+                  {% if article.metafields.custom.article_mobile_image.width >= 1100 %}{{article.metafields.custom.article_mobile_image | img_url: '1100x' }} 1100w,{% endif %}
+                  {% if article.metafields.custom.article_mobile_image.width >= 1500 %}{{ article.metafields.custom.article_mobile_image | img_url: '1500x' }} 1500w,{% endif %}
+                  {% if article.metafields.custom.article_mobile_image.width >= 2200 %}{{ article.metafields.custom.article_mobile_image | img_url: '2200x' }} 2200w,{% endif %}
+                  {% if article.metafields.custom.article_mobile_image.width >= 3000 %}{{ article.metafields.custom.article_mobile_image | img_url: '3000x' }} 3000w,{% endif %}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 769px) calc(100vw - 10rem), 100vw"
+                src="{{ article.metafields.custom.article_mobile_image | img_url: '1100x' }}"
+                loading="lazy"
+                width="{{ article.metafields.custom.article_mobile_image.width }}"
+                height="{{ article.metafields.custom.article_mobile_image.height }}"
+                alt="{{ article.metafields.custom.article_mobile_image.alt | escape }}">
+            </div>
+            {% endif %} 
+            <div class="main-article-template__hero-social">
+                {% render 'social-share', share_title: article.title, share_permalink: article.url, share_image: article.image %} 
+            </div>
           </div>
         {%- endif -%}
 
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+            {% if block.settings.blog_show_read_time and article.metafields.custom.reading_time != blank %}
+              <span class="caption">{{ article.metafields.custom.reading_time }}</span>
+            {% endif %}
+            <h1 class="main-article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
-              <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
+              <span class="circle-divider caption" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
             {%- endif -%}
             {%- if block.settings.blog_show_author -%}
-              <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="caption" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ article.author }}</span>
               </span>
             {%- endif -%}
           </header>
 
         {%- when 'content'-%}
-          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+          <div class="main-article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
           </div>
 
         {%- when 'share' -%}
-          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <div class="main-article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
                 {% render 'icon-share' %}
@@ -91,23 +117,30 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="element-margin center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-    </a>
+  <div class="main-article-footer page-width page-width--narrow">
+    <div class="main-article-social-sharing">
+       {% render 'social-share', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+    </div>
+    <div class="main-article-footer-info">
+      <a href="{{ blog.url }}" class="main-article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
+        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+        {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+      </a>
+      <span class="caption" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
+    </div>
   </div>
+  
   {%- if blog.comments_enabled? -%}
-    <div class="article-template__comment-wrapper background-secondary">
+    <div class="main-article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
 
           <h2 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
           {% paginate article.comments by 5 %}
-            <div class="article-template__comments">
+            <div class="main-article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
-                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                <article id="{{ comment.id }}" class="main-article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
@@ -116,7 +149,7 @@
               {%- endif -%}
 
               {%- for comment in article.comments -%}
-                <article id="{{ comment.id }}" class="article-template__comments-comment">
+                <article id="{{ comment.id }}" class="main-article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'month_year' }}</span>
@@ -243,88 +276,98 @@
   {%- endif -%}
 </article>
 
-
 {% schema %}
-{
-  "name": "t:sections.main-article.name",
-  "tag": "section",
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "featured_image",
-      "name": "t:sections.main-article.blocks.featured_image.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "image_height",
-          "options": [
-            {
-              "value": "adapt",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__3.label"
-            }
-          ],
-          "default": "adapt",
-          "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
-          "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
-        }
-      ]
-    },
-    {
-      "type": "title",
-      "name": "t:sections.main-article.blocks.title.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "blog_show_date",
-          "default": true,
-          "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "blog_show_author",
-          "default": false,
-          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
-        }
-      ]
-    },
-    {
-      "type": "content",
-      "name": "t:sections.main-article.blocks.content.name",
-      "limit": 1
-    },
-    {
-      "type": "share",
-      "name": "t:sections.main-article.blocks.share.name",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "text",
-          "id": "share_label",
-          "label": "t:sections.main-article.blocks.share.settings.text.label",
-          "default": "Share"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-article.blocks.share.settings.featured_image_info.content"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-article.blocks.share.settings.title_info.content"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Article Page",
+    "class": "default-article__page",
+    "settings": [],
+    "tag": "section",
+    "blocks": [
+      {
+        "type": "@app"
+      },
+      {
+        "type": "featured_image",
+        "name": "Featured image height",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "select",
+            "id": "image_height",
+            "options": [
+              {
+                "value": "adapt",
+                "label": "Adapt to image "
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              }
+            ],
+            "default": "adapt",
+            "label": "Featured image height",
+            "info": "For best results, use an image with a 16:9 aspect ratio"
+          }
+        ]
+      },
+      {
+        "type": "title",
+        "name": "Title",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "blog_show_read_time",
+            "default": true,
+            "label": "Show read time"
+          },
+          {
+            "type": "checkbox",
+            "id": "blog_show_date",
+            "default": true,
+            "label": "Show date"
+          },
+          {
+            "type": "checkbox",
+            "id": "blog_show_author",
+            "default": false,
+            "label": "Show author"
+          }
+        ]
+      },
+      {
+        "type": "content",
+        "name": "Content",
+        "limit": 1
+      },
+      {
+        "type": "share",
+        "name": "Share",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "share_label",
+            "label": "Text",
+            "default": "Share"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Article Page"
+      }
+    ]
+  }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
