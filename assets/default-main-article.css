@@ -168,7 +168,7 @@ body, * {
   line-height: 30px;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  display: block;
+  display: inline-block;
 }
 
 .default-article__page header + .caption {
