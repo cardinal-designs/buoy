@@ -289,11 +289,6 @@ body, * {
   margin-top: 0;
 }
 
-.default-article__page p strong {
-  margin-bottom: -35px;
-  display: block;
-}
-
 .default-article__page ul,
 .default-article__page ol {
   margin-top: 0;
@@ -302,17 +297,10 @@ body, * {
 
 .default-article__page .main-article-template__content a {
   word-break: break-word;
-  display: inline-block;
-}
-
-.default-article__page img {
-  display: block;
-  margin-bottom: 35px;
 }
 
 .default-article__page p img {
   display: block;
-  margin-bottom: 35px;
 }
 
 .share-button details .share-button__fallback {
@@ -396,5 +384,8 @@ body, * {
   .main-article-footer-info .caption {
     margin-bottom: 0;
   }
-   
+  
+  
 }
+
+
