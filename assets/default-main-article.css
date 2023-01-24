@@ -315,6 +315,11 @@ body, * {
   font-family: inter,sans-serif !important; 
 }
 
+.default-article__page .rte p strong {
+  margin-bottom: -30px;
+  display: block;
+}
+
 .main-article-template__hero-container .media {
   border-radius: 17px; 
 }
@@ -396,7 +401,6 @@ body, * {
   .default-article__page .main-article-template__content img {
     margin-bottom: 30px;
   }
-  
   
 }
 
