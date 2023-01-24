@@ -300,6 +300,11 @@ body, * {
   display: inline-block;
 }
 
+.default-article__page img {
+  display: block;
+  margin-bottom: 35px;
+}
+
 .default-article__page p img {
   display: block;
   margin-bottom: 35px;
