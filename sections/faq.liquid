@@ -1,0 +1,62 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }} 
+
+<div class="faq-section">
+  <div class="page-width">
+    <div class="faq-section__container">
+      <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
+      <p class="faq-section__text sh2">{{ section.settings.text }}</p>
+      {% for block in section.blocks %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh2 medium">{{ block.settings.title }}</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq_item",
+        "name": "FAQ Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,110 @@
+{{ 'section-text-two-blocks.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  {%  if section.blocks.size == 2 %}
+    .text-two-blocks__blocks {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  {% else %}
+    .text-two-blocks__blocks {
+      grid-template-columns: 1fr;
+    }
+  {% endif %}
+{% endstyle %}
+
+<div style="background: {{ section.settings.background }};" class="text-two-blocks__container">
+  <div style="color: {{ section.settings.color }};" class="page-width">
+    <h1>{{ section.settings.title }}</h1>
+    <h6 class="light">{{ section.settings.subtitle }}</h6>
+    <div class="text-two-blocks__blocks">
+    {% for block in section.blocks %}
+      <div class="text-two-blocks__block">
+        <div class="text-two-blocks__image">
+        {% render 'lazy-image' image: block.settings.image, classes: '' %}
+        </div>
+        <div class="text-two-blocks__inner">
+          <h4 class="medium">{{ block.settings.title }}</h4>
+          <p class="sh2 light">{{ block.settings.text }}</p>
+          <div class="learn-more-links">
+            <a class="button" href="{{ block.settings.btn_link }}">{{ block.settings.btn_text }}</a>
+            <a class="learn-more-link" href="{{ block.settings.link_link }}">{{ block.settings.link_text }}</a>
+          </div>
+        </div>           
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Two Blocks",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Style"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+          },
+          {
+            "type": "url",
+            "id": "link_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Two Blocks"
+      }
+    ]
+  }
+{% endschema %}

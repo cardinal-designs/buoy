@@ -1,0 +1,48 @@
+{{ 'section-hydration-text-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="hydration-text-hero">
+  <div class="page-width">
+    <div class="hydration-text-hero__container">
+      <div class="hydration-text-hero__svg">
+        {{ section.settings.text_svg }}
+      </div>
+    </div>
+    {% if section.settings.heading_text %}
+      <h1 class="h4 hydration-text-hero__title">{{ section.settings.heading_text }}</h1>
+    {% endif %}
+
+    {% if section.settings.text %}
+      <div class="body hydration-text-hero__text">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hydration Text Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Title"
+      },
+      {
+        "type": "html",
+        "id": "text_svg",
+        "label": "Text SVG"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hydration Text Hero"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,405 @@
+.Review_Video_Holder > video {
+  border: 2px solid #000;
+  border-radius: 15px;
+  vertical-align: middle;
+}
+
+.Review_Image_Title {
+  font-size: 22px;
+  line-height: 1.6em;
+  color: #1F2322;
+  margin: 18px 0 12px;
+  font-weight: normal;
+}
+
+.multicolumn-card__info h3 {
+  font-style: italic;
+  margin: 0 0 40px;
+}
+
+.multicolumn-card__info h3 b {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.Trusted_Reviews_Tags {
+  padding: 0;
+  margin: 18px 0 0;
+  list-style-type: none;
+}
+
+.Trusted_Reviews_Tags li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #1f2322;
+  color: #f8f1eb;
+  border-radius: 13px;
+  padding: 4px 14px;
+  font-family: inter,sans-serif;
+  font-weight: lighter;
+}
+
+.Review_Image_Content,
+.Review_Image_Name {
+  font-size: 14px;
+  line-height: 1.571em;
+  font-family: inter,sans-serif;
+}
+
+.Review_Image_Name {
+  margin: 22px 0 0;
+}
+
+.Reviews_Column_Left {
+  max-width: 37%;
+  flex: 0 0 37%;
+}
+
+.Reviews_Column_Right {
+  max-width: 63%;
+  flex: 0 0 63%;
+}
+
+.Reviews_Column_Right .slick-list {
+  padding-right: 42%;
+}
+
+.Trusted_Reviews_Slider .slick-track {
+  display: flex !important;
+}
+
+.Review_Video_Holder.Review_Data_Holder,
+.Review_Video_Holder.Review_Data_Holder video {
+  height: 100%;
+}
+
+.Review_Data_Holder video {
+  object-fit: cover;
+  height: 100%;
+}
+
+.Trusted_Reviews_List {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.Review_Image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Trusted_Reviews_List .slick-slide img {
+  max-width: 100%;
+}
+
+.Review_Data_Holder {
+  display: flex;
+  height: 100%;
+}
+
+.Review_Data_Holder > div {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.Trusted_Reviews_List .multicolumn-card__info {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Trusted_Reviews_List .multicolumn-card__info .Card-Info_Title {
+  padding-top: 44px;
+}
+
+.Link_Button {
+  font-size: 14px;
+  font-family: inter,sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-weight: 500;
+}
+
+.Trusted_Reviews_Wrapper {
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.Trusted_Reviews_Wrapper.top-border {
+  border-top: 1.5px solid var(--charcoal);
+}
+
+.Trusted_Reviews_Wrapper.bottom-border {
+  border-bottom: 1.5px solid var(--charcoal);
+}
+
+.Review_Video_Holder {
+  padding-right: 34px;
+}
+
+.Review_Image_Holder {
+  padding-right: 34px;
+}
+
+.Trusted_Reviews_Wrapper .page-width {
+  max-width: 100%;
+  padding: 0;
+}
+
+.Custom_Arrows button {
+  background-color: #fff;
+  padding: 10px 20px 8px 20px;
+  border: 2px solid #1F2322;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.Custom_Arrows button.Arrow_Previous:hover {
+  padding: 10px 30px 8px 10px;
+}
+
+.Custom_Arrows button.Arrow_Next:hover {
+  padding: 10px 10px 8px 30px;
+}
+
+.Custom_Arrows .Arrow_Previous {
+  border-radius: 17px 0px 0px 17px;  
+}
+
+.Arrow_Previous img {
+  transform: rotate(-180deg);
+}
+
+.Custom_Arrows .Arrow_Next {
+  border-radius: 0 17px 17px 0;
+  border-left: 0;
+}
+
+.Trusted_Reviews_Slider .slick-arrow {
+  display: none !important;
+}
+
+.Custom_Arrows button:hover {
+  transition: .2s ease;
+}
+
+.Trusted_Reviews_Wrapper.background--top {
+  background: linear-gradient(0deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
+}
+  
+.Trusted_Reviews_Wrapper.background--bottom {
+  background: linear-gradient(180deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
+}
+
+.Trusted_Reviews_Wrapper.background--bg_color {
+  background-color: #F8F1EB66;
+}
+
+.Hidden_Desktop {
+  display:none;
+}
+
+.Hidden_Phone {
+  display:block;
+}
+
+.Review_Video_Holder {
+  min-height: 494px;
+}
+
+.Review_Content.Hidden_Desktop {
+  display:none;
+}
+
+.Review_Content.Hidden_Phone {
+  display:block;
+}
+
+.Review_Emoji_Icon {
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.Review_Emoji {
+  display: block;
+  margin: 0 5px 10px;
+}
+
+.Review_Image {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.Review_Image .aspect-ratio {
+  border-radius: 13px;
+  z-index: -1;
+  --aspect-ratio: 1 !important;
+}
+
+
+.Trusted_Reviews_Slider .slick-track {
+  display: flex !important;
+}
+
+.Trusted_Reviews_Slider .slick-slide {
+  height: inherit !important;
+}
+@media screen and (max-width: 1599px) {
+
+  .Reviews_Column_Right .slick-list {
+    padding-right: 25%;
+  }
+  
+}
+
+@media screen and (max-width: 1440px) {
+
+  .Reviews_Column_Right .slick-list {
+    padding-right: 22%;
+  }
+  
+}
+
+@media screen and (max-width: 1199px) {
+
+  .Reviews_Column_Left,
+  .Reviews_Column_Right {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .Hidden_Phone {
+    display:none;
+  }
+
+  .Hidden_Desktop {
+    display: block;
+  }
+
+  .Review_Video_Holder,
+  .Review_Image_Holder {
+    padding-right: 16px;
+  }
+
+  .Arrow_Button_Mobile {
+    padding: 0 25px 0 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 60px 0 0;
+    align-items: center;
+  }
+
+  .Trusted_Reviews_Wrapper {
+    padding: 100px 0;
+  }
+
+  .Trusted_Reviews_List .multicolumn-card__info .Card-Info_Title {
+    padding-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  
+  .Trusted_Reviews_List {
+    padding-left: 60px !important;
+  }
+
+  .Arrow_Button_Mobile {
+    padding: 0 25px 0 60px;
+  }
+  
+}
+
+@media screen and (max-width: 989px) {
+  
+  .Trusted_Reviews_Wrapper {
+    padding: 80px 0;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+  .Trusted_Reviews_List {
+    padding-left: 27px !important;
+  }
+
+  .Arrow_Button_Mobile {
+    padding: 0 25px 0 27px;
+  }
+  
+}
+
+@media screen and (max-width: 567px) {
+
+  .Reviews_Column_Right .slick-list {
+    padding-right: 0;
+  }
+
+  .Review_Content.Hidden_Desktop {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .Review_Data_Holder {
+    flex-wrap: wrap;
+  }
+
+  .Trusted_Reviews_Wrapper {
+    padding: 95px 0 60px;
+  }
+
+  .multicolumn-card__info h3 {
+    margin: 0 0 30px;
+  }
+
+  .Review_Image_Name {
+    margin: 22px 0 0;
+  }
+
+  .Arrow_Button_Mobile {
+    margin: 50px 0 0;
+  }
+
+  .Custom_Arrows img {
+    width: 20px;
+  }
+
+  .Custom_Arrows button {
+    padding: 7px 20px;
+  }
+
+  .Custom_Arrows .Arrow_Previous {
+    border-radius: 11px 0 0 11px;
+  }
+
+  .Custom_Arrows .Arrow_Next {
+    border-radius: 0 11px 11px 0;
+  }
+
+  .Review_Image_Title {
+    margin: 35px 0 12px;
+  }
+
+  .Review_Content.Hidden_Desktop {
+    display:block;
+  }
+
+  .Review_Content.Hidden_Phone {
+    display:none;
+  }
+
+  .Review_Video_Holder {
+    min-height: 270px;
+  }
+  
+}

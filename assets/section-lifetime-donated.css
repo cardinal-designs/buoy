@@ -1,0 +1,478 @@
+#shopify-section-lifetime-donated .multicolumn {
+	position: relative;
+  overflow: hidden
+}
+
+.bg-img {
+  background-image: url(https://cdn.shopify.com/s/files/1/0267/3351/0727/files/New_Project_4.png?v=1633446779);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+}
+
+.spaced-section.m-0 {
+  margin: 0
+}
+
+.multicolumn.background-primary {
+  margin: 0;
+}
+
+@media screen and (min-width: 1700px) {
+
+  .bg-img {
+    background-size: 90% 2000px;
+    padding: 100px 0 150px;
+  }
+
+}
+
+.bg-img {
+  background-size: 90% auto;
+  padding: 50px 0 100px;
+  background-position: center top 20px;
+}
+
+.multicolumn .title {
+  margin: 0;
+}
+
+.multicolumn.no-heading .title {
+  display: none;
+}
+
+.text-shadow {
+  text-align: center;
+  font: normal normal normal 50px/59px Dela Gothic One;
+  letter-spacing: 0.9px;
+  color: #ffffff;
+  opacity: 1;
+  position: relative;
+  max-width: 600px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0 auto 20px;
+}
+
+.text-shadow span {
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: z-index;
+  text-align: center;
+  font: normal normal normal 50px/59px Dela Gothic One;
+  letter-spacing: 0.9px;
+  color: #b3cdce;
+  opacity: 1;
+  z-index: -1;
+  max-width: 100%;
+  right: 0;
+}
+
+.text-shadow + .h5 {
+  display: block;
+  width: 100%;
+}
+
+.partner .media img {
+  border: 1px solid #1f2322;
+}
+
+
+.shopify-section-lifetime-donated .title-wrapper-with-link {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1700px) {
+
+  .shopify-section-lifetime-donated .multicolumn:before {
+    right: 50px;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn .page-width:after {
+    left: 10px;
+  }
+
+}
+@media screen and (max-width: 1300px) {
+
+  .shopify-section-lifetime-donated .multicolumn:before {
+    width: 140px;
+    height: 300px;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn .page-width:after {
+    width: 140px;
+    height: 300px;
+    top: 100px;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:after {
+    width: 140px;
+    height: 240px;
+    bottom: -100px;
+  }
+  
+  .bg-img {
+    background-size: 100% auto;
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+
+  .shopify-section-lifetime-donated .multicolumn:before {
+    width: 120px;
+    height: 200px;
+    right: 0;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn .page-width:after {
+    width: 120px;
+    height: 200px;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:after {
+    width: 120px;
+    height: 200px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .multicolumn.no-heading.background-secondary {
+    padding-top: 5rem;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn .page-width {
+    background-image: url(https://cdn.shopify.com/s/files/1/0267/3351/0727/files/New_Project_1.png?v=1633443368);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+  }
+
+  .shopify-section-lifetime-donated .multicolumn:before, .shopify-section-lifetime-donated .multicolumn:after, .shopify-section-lifetime-donated .multicolumn .page-width:after {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+
+  .multicolumn.no-heading:not(.background-secondary) {
+    margin-top: 6rem;
+  }
+
+}
+
+
+.multicolumn.background-secondary .title-wrapper-with-link {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .multicolumn .title-wrapper-with-link {
+    margin-bottom: 3rem;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img {
+    background: none;
+  }
+
+}
+
+.multicolumn-card__image-wrapper--third-width {
+  width: 33%;
+}
+
+.multicolumn-card__image-wrapper--half-width {
+  width: 50%;
+}
+
+.multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width), .multicolumn-list__item:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.multicolumn .button {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+
+  .multicolumn .button {
+    margin-top: 4rem;
+  }
+
+}
+
+.multicolumn-list {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.multicolumn-list__item:only-child {
+  max-width: 72rem;
+}
+
+.multicolumn:not(.background-none) .multicolumn-card {
+  background: rgba(var(--color-foreground), 0.04);
+  height: 100%;
+}
+
+.multicolumn.background-secondary .multicolumn-card {
+  background: rgb(var(--color-background));
+}
+
+.multicolumn.background-secondary {
+  padding: 4rem 0 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .page-width {
+    padding: 10rem 18rem 6rem !important;
+  }
+  
+  .text-shadow {
+    margin: 0 auto 30px;
+  }
+  
+  .text-shadow, .text-shadow span {
+    font: normal normal normal 60px/69px Dela Gothic One;
+    max-width: 700px;
+  }
+  
+  .multicolumn-card__info {
+    padding: 2.5rem 8rem;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+  .shopify-section-lifetime-donated .title-wrapper-with-link {
+    margin-bottom: 0;
+    padding-top: 4rem;
+  }
+
+}
+
+.shopify-section-lifetime-donated .multicolumn:not(.background-secondary) {
+  margin: 0rem 0;
+  padding: 0;
+  border-top: 1px solid #1f2322;
+  border-bottom: 1px solid #1f2322;
+}
+
+.shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img {
+  padding: 1rem 0 10rem;
+}
+
+.multicolumn-card-spacing {
+  padding-top: 2.5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.multicolumn-card__info > :nth-child(2) {
+  margin-top: 1rem;
+}
+
+.multicolumn-list__item.center .media--adapt, .multicolumn-list__item .media--adapt img {
+  width: auto;
+}
+
+.multicolumn-list__item.center .media--adapt img {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 990px) {
+
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img {
+    padding: 1px 0 5rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .multicolumn .page-width {
+    padding: 0;
+  }
+
+  .multicolumn-list {
+    margin: 0;
+    width: 100%;
+  }
+
+  .multicolumn-list__item {
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  .multicolumn-list:not(.slider) {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .multicolumn-list.slider .multicolumn-list__item {
+    width: calc(100% - 3rem);
+  }
+
+  .multicolumn-list.slider .multicolumn-list__item + .multicolumn-list__item {
+    padding-left: 0.5rem;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn-card__info {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+  }
+
+  .partner .multicolumn-card__info {
+    padding: 20px 0;
+  }
+
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img {
+    padding: 0 0 0rem;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .page-width {
+    padding: 0 0 5rem;
+  }
+  
+  .text-shadow span, .text-shadow {
+    font: normal normal normal 33px/42px Dela Gothic One;
+    max-width: 260px;
+  }
+  
+  .shopify-section-lifetime-donated .title-wrapper-with-link {
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn-card__info > :nth-child(2) {
+    margin-top: 2rem;
+  }
+  
+  .shopify-section-lifetime-donated .text-shadow + .h5 {
+    font-size: 18px;
+  }
+  
+  .shopify-section-lifetime-donated .text-shadow {
+    margin-bottom: 10px;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img {
+    padding: 1px 0 0;
+  }
+
+}
+
+@media screen and (min-width: 990px) {
+
+  .shopify-section-lifetime-donated .multicolumn-card__info {
+    padding: 2.5rem 8rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .shopify-section-lifetime-donated .multicolumn-card__info > :nth-child(2) {
+    margin-top: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+
+  .multicolumn-list.slider, .multicolumn-list.grid--4-col-desktop {
+    padding: 0;
+  }
+
+  .multicolumn-list__item,
+  .grid--4-col-desktop .multicolumn-list__item {
+    padding-bottom: 0;
+  }
+
+  .grid--2-col-tablet .multicolumn-list__item {
+    margin-top: 1rem;
+    max-width: 50%;
+  }
+
+  .background-none .grid--2-col-tablet .multicolumn-list__item {
+    margin-top: 4rem;
+  }
+
+  .grid--2-col-tablet .multicolumn-list__item:nth-of-type(-n + 2) {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 990px) {
+
+  .grid--2-col-tablet.grid--4-col-desktop .multicolumn-list__item {
+    max-width: 50%;
+  }
+
+  .grid--2-col-tablet.grid--4-col-desktop .multicolumn-list__item:nth-of-type(-n + 4) {
+    margin-top: 0;
+  }
+
+}
+
+.background-none .multicolumn-card-spacing {
+  padding: 0;
+  margin: 0;
+}
+
+.multicolumn-card__info {
+  padding: 2.5rem 2.5rem;
+}
+
+.background-none .multicolumn-card__info {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {
+  padding-top: 2.5rem;
+}
+
+.background-none .slider .multicolumn-card__info {
+  padding-left: 0.5rem;
+}
+
+.background-none .slider .multicolumn-card__image-wrapper + .multicolumn-card__info {
+  padding-left: 1.5rem;
+}
+
+.background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media screen and (min-width: 769px) {
+
+  .background-none .multicolumn-card__image-wrapper {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .background-none .multicolumn-list .multicolumn-card__info, .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+}

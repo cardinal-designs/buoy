@@ -1,0 +1,135 @@
+{{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
+{{ 'section-pee-club-product-bar.css' | asset_url | stylesheet_tag }}
+
+
+<div class="hide-mobile product-bar product-bar-toggle pee-club-product-bar">
+  <div class="page-width">
+    <div class="product-bar__container">
+  
+      <div class="flex-buttons-bar">
+        <h5>{{ section.settings.title }}</h5>
+        {% if section.settings.check1 != blank %}
+          <p>{% render 'icon-checkmark' %} {{ section.settings.check1 }}</p>
+        {% endif %}
+        {% if section.settings.check2 != blank %}
+          <p>{% render 'icon-checkmark' %} {{ section.settings.check2 }}</p>
+        {% endif %}
+        {% if section.settings.check3 != blank %}
+          <p>{% render 'icon-checkmark' %} {{ section.settings.check3 }}</p>
+        {% endif %}
+      </div>
+      <div class="pee-club-product-bar-buttons">
+        <div>
+          <div class="pee-club-product-bar-dropdown-selected">
+            <div class="pee-club-dropdown-text">
+              <p class="title-text">{{ all_products[section.blocks[0].settings.product].title }}</p>
+              <i class="subtext">{{ section.blocks[0].settings.text }}</i>
+            </div>
+          {% render 'icon-caret' %}
+          </div>
+          <ul class="pee-club-product-bar-dropdown">
+            {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.product] %}
+              <li data-id="{{ forloop.index }}" data-title="{{ product.title }}" data-text="{{ block.settings.text }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        <button data-button="{{ forloop.index }}" style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
+                {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                data-id="{{ product.selected_or_first_available_variant.id }}" 
+                data-time="one-time">
+
+          {% if product.selected_or_first_available_variant.available == false %}
+          <span>Sold Out</span>
+          {% else %}
+          <span>Get Started</span> — 
+            <span data-id="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | json }}" class="hide-mobile">{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+            </span>
+          {% endif %}
+        </button>
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('.show-product-bar');
+    if ( $(window).width() > 768 ) {
+      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        $('.product-bar').addClass('scrolled');
+      } else {
+        $('.product-bar').removeClass('scrolled');
+      }
+    } else {
+      if ($scrollTop > 1200) {
+        $('.product-bar').addClass('scrolled');
+      } else {
+        $('.product-bar').removeClass('scrolled');
+      }
+	}
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Pee Club Product Bar",
+    "class": "product-bar-wrapper",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "check1",
+        "label": "Check 1"
+      },
+      {
+        "type": "text",
+        "id": "check2",
+        "label": "Check 2"
+      },
+      {
+        "type": "text",
+        "id": "check3",
+        "label": "Check 3"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Product Bar"
+      }
+    ]
+  }
+{% endschema %}  
+
+
+
+
+

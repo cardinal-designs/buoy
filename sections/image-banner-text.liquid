@@ -1,0 +1,96 @@
+{{ 'section-image-banner-text.css' | asset_url | stylesheet_tag }}
+
+<div class="image-banner-text" style="background-color: {{ section.settings.background_color }}">
+  <div class="image-banner-text__container{% if section.settings.longer_text %} longer-text{% endif %}{% if section.settings.image_top_mobile %} image-top-mobile{% endif %}">
+    <div class="image-banner-text__content">
+      {% if section.settings.title != blank %}
+        <h3>{{ section.settings.title }}</h3>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p class="sh2">{{ section.settings.text }}</p>
+      {% endif %}
+      {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+      {% endif %}
+    </div>
+    <div class="image-banner-text__image">
+      {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="img-fill">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+        {% if section.settings.mobile_image != blank %}
+          {% render 'lazy-image' image: section.settings.image, fade: true, classes: 'hide-mobile' %}
+          {% render 'lazy-image' image: section.settings.mobile_image, fade: true, classes: 'hide-desktop' %}
+        {% else %}
+          {% render 'lazy-image' image: section.settings.image, fade: true %}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Banner With Text",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "longer_text",
+        "label": "Longer Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_top_mobile",
+        "label": "Image on Top on Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Banner with Text"
+      }
+    ]
+  }
+{% endschema %}

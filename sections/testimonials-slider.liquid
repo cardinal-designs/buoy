@@ -1,0 +1,69 @@
+{{ 'section-testimonials-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="testimonials-slider">
+  <div class="testimonials-slider__img-slider-wrapper">
+    <div class="testimonials-slider__img-slider">
+      <div class="testimonials-slider__img-slide">
+        {%  if section.settings.image_mob != blank %}
+          {% render 'lazy-image' image: section.settings.image, classes: 'hide-mobile' %}
+          {% render 'lazy-image' image: section.settings.image_mob, classes: 'hide-desktop' %}
+        {% else %}
+          {% render 'lazy-image' image: section.settings.image %}
+        {% endif %}        
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials-slider__marquee">
+    <div class="testimonials-slider__marquee-container">
+      {% for block in section.blocks %}
+        <div class="testimonials-slider__marquee-item">
+          <h2>{{ block.settings.testimonial }}</h2>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="testimonials-slider__marquee-container">
+      {% for block in section.blocks %}
+        <div class="testimonials-slider__marquee-item">
+          <h2>{{ block.settings.testimonial }}</h2>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Testimonials Slider",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+	  {
+        "type": "image_picker",
+        "id": "image_mob",
+        "label": "Mobile Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "testimonial",
+            "label": "Testimonial"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials Slider"
+      }
+    ]
+  }
+{% endschema %}

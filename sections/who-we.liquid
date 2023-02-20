@@ -1,0 +1,47 @@
+{{ 'who-we.css' | asset_url | stylesheet_tag }}
+
+<div class="text-list">
+  <div class="page-width who-we">
+    <div class="text-list__container">
+      <h4 class="h5 left">{{ section.settings.text }}</h4>
+    </div>
+    <ul class="text-list__li">
+      {% for block in section.blocks %}
+      <li class=" sh2 light">{{ block.settings.text }}</li>
+      {% endfor %}
+    </ul>
+    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Who We Support",
+	"class": "who-we-text",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "list_item",
+        "name": "List Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Who We Support"
+      }
+    ]
+  }
+{% endschema %}

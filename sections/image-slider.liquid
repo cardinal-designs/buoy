@@ -1,0 +1,56 @@
+{{ 'section-image-slider.css' | asset_url | stylesheet_tag }} 
+
+<div style="{{ section.settings.background }}" class="image-slider__container"> 
+  <div class="page-width">
+    <h2 class="h3">{{ section.settings.title }}</h3>
+    <p class="image-slider__subtitle sh2">{{ section.settings.subtext }}</p>
+  </div>
+  <div class="image-slider__img-container hide-mobile">
+    <img id="image-slider__img-desktop" src="{{ section.settings.img }}"/>
+  </div>
+  <div class="image-slider__img-container-mobile hide-desktop">
+   <img id="image-slider__img-mobile" src="{{ section.settings.mobile_img }}"/>
+  </div>
+  <div class="image-slider__track">
+    <div class="image-slider__dot"></div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Image Slider",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "text",
+        "id": "img",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_img",
+        "label": "Mobile Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Slider"
+      }
+    ]
+  }
+{% endschema %}

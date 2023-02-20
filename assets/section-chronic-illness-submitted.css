@@ -1,0 +1,122 @@
+.chronic-submitted__container {
+  display: flex;
+  overflow: hidden;
+}
+
+.chronic-submitted__image-wrapper {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.chronic-submitted__text {
+  text-align: center;
+  padding: 0 28px;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 40px);
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.chronic-submitted__info, .chronic-submitted__image {
+  width: 50%;
+  position: relative;
+}
+
+.chronic-submitted__text .sh3 {
+  max-width: 563px;
+  margin: 0 auto 10px;
+  color: #545759;
+}
+
+.chronic-submitted__text .light {
+  max-width: 563px;
+  margin: 0 auto 50px
+}
+
+.chronic-submitted__text h2 {
+  max-width: 563px;
+  margin: 0 auto 30px
+}
+
+.chronic-submitted__info .marquee {
+  padding: 5px 0 7px;
+  position: absolute;
+  bottom: 0;
+  overflow-x: hidden;
+  display: flex;
+  z-index: 1;
+  border-top: 2px solid #1F2322;
+}
+
+.chronic-submitted__info .marquee__container {
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee__item {
+  margin: 0;
+  padding: 0 20px;
+  display: flex !important;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee__item svg {
+  width: 11px;
+  margin-top: 4px;
+  margin-right: 6px;
+}
+
+.chronic-submitted__info .marquee__item p {
+  margin: 0;
+  margin-top: 4px;
+  text-transform: unset;
+}
+
+@media (max-width: 1090px) {
+  .chronic-submitted__container {
+    flex-direction: column;
+  }
+
+  .chronic-submitted__image {
+    width: 100%;
+  }
+
+  .chronic-submitted__image-wrapper {
+    padding-bottom: 170px;
+  }
+
+  .chronic-submitted__image-wrapper img {
+      height: 170px;
+  }
+
+  .chronic-submitted__info {
+    width: 100%;
+  }
+  
+  .chronic-submitted__text {
+    position: relative;
+    left: unset;
+    top: unset;
+    width: unset;
+    transform: unset;
+    margin-top: 40px;
+    margin-bottom: 44px;
+    padding: 0 60px;
+  }
+  
+  .chronic-submitted__text .light {
+    margin: 0 auto 35px
+  }
+  
+  .chronic-submitted__text h2 {
+    margin: 0 auto 20px
+  }
+
+  .chronic-submitted__info .marquee {
+    position: relative;
+  } 
+}

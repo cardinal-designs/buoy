@@ -1,0 +1,164 @@
+
+.comparision-table{
+  padding: 70px 0;
+  text-align: center;
+}
+
+.table_header{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.table_details {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid;
+}
+
+.table_details:first-child{
+  border-top: 1px solid;
+}
+
+.table_items {
+  width: 100%;
+}
+
+.table_emoji,
+.table_head{
+  flex: 0 1 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_text,
+.table_head_empty{
+  flex: 0 1 70%;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  margin: 7px 0;
+}
+
+.table-slider__arrows{
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.table-slider__arrows button {
+  margin: 0 25px;
+  position: unset;
+  transform: none;
+  transition: transform .2s ease;
+}
+
+.table-slider__arrows button::before {
+  content: none;
+}
+
+.table-slider__arrows button.slick-next:hover{
+  transform: translateX(5px);
+}
+
+.table-slider__arrows button.slick-prev:hover{
+  transform: translateX(-5px);
+}
+
+.comparision-table__wrapper > p{
+  margin: 14px 0 0;
+  text-transform: initial;
+}
+
+@media (min-width: 768px) {
+  
+  .comparision-table{
+    padding: 120px 0;
+  }
+
+  .comparision-table .h1{
+    text-align: center;
+    line-height: 68px;
+    letter-spacing: 0.75px;
+    font-size: 50px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  
+  .table_text{
+    font-size: 12px;
+    line-height: 21px;
+  }
+
+  .comparision-table__wrapper>p{
+    max-width: 250px;
+    margin: 14px auto 0;
+  }
+    
+  .table_emoji,
+  .table_head{
+    padding-top: 3px;
+  }
+
+}
+
+
+.comparison-table-popup-wrapper {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(84, 87, 89, .5);
+  z-index: 999;
+  display: none;
+}
+
+.comparison-table-popup {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comparison-table-popup .table_items {
+  max-width: 1160px;
+  max-height: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: 0 60px 60px;
+  border: 1px solid black;
+  background: var(--beige-light);
+  position: relative;
+}
+
+.comparison-table-popup .body-xs {
+  margin: 30px 0 0;
+  text-align: center;
+  text-transform: unset;
+}
+
+.comparison-table-popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.comparison-table-popup__close svg {
+  height: 20px;
+  width: 20px;
+  stroke: black;
+  stroke-width: 0.5px;
+}

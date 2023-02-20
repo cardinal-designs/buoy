@@ -1,0 +1,50 @@
+.healthy-perks .how-to-2__content-point:before {
+  left: unset;
+  border-left: unset;
+}
+
+.healthy-perks .how-to-2__content-point {
+  padding-bottom: 12px;
+}
+
+.healthy-perks .how-to-2__content {
+  justify-content: center;
+  padding: 60px;
+}
+
+.how-to-2__content-container h2 {
+  font-size: 45px;
+  margin-bottom: 20px !important;
+}
+
+.healthy-perks .how-to-subtitle {
+  font-size: 18px;
+  margin: 0 0 40px;
+  line-height: 30px;
+}
+
+
+
+.healthy-perks .how-to-2__content-text h6 {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .how-to-2__content-container h2 {
+    font-size: 30px;
+  }
+
+  .healthy-perks .how-to-subtitle {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 30px;
+  }
+
+  .healthy-perks .how-to-2__content {
+    padding: 60px 27px;
+  }
+
+  .healthy-perks .how-to-2__content-text h6 {
+    font-size: 16px;
+  }
+}

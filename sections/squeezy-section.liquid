@@ -1,0 +1,203 @@
+<link rel="preload" href="{{ 'section-squeezy.css' | asset_url }}" as="style">
+{{ 'section-squeezy.css' | asset_url | stylesheet_tag }}
+
+{% capture image_area %}
+  <div class="Squeezy_Section_Image">
+    {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="img-fill">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% else %}
+      {% render 'lazy-image' image: section.settings.image, fade: true, classes: 'img-fill' %}
+    {% endif %}
+  </div>
+{% endcapture %}
+
+<div class="Squeezy_Section">
+  <div class="Squeezy_Section_Row Align-{{ section.settings.content_reverse }}
+  {% if section.settings.add_top_border %} top-border{% endif %}
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
+
+    {% if section.settings.content_reverse == 'right' %}
+      {{ image_area }}
+    {% endif %}
+    
+    <div class="Squeezy_Section_Content
+      background--{{ section.settings.background }}
+      ">
+      <div class="Squeezy_Section_Content-Container">
+        <div class="Section_Header">
+          <h2 class="h3 light">{{ section.settings.title }}</h2>
+          <h6 class="sh2 light">{{ section.settings.description }}</h6>
+        </div>
+        <div class="Squeezy_Section_Content-Points">
+          {% for block in section.blocks %}
+            <div class="Squeezy_Section_Content-Point">
+              <div class="Squeezy_Section_Content-Circle Animated_Emoji">
+                {{ block.settings.emoji }}
+              </div>
+              <div class="Squeezy_Section_Content-Text">
+                <h6 class="sh2">{{ block.settings.title }}</h6>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
+        {% endif %}
+        {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_link }}" class="body link">{{ section.settings.link_label }}</a>{% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.content_reverse == 'left' %}
+      {{ image_area }}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Squeezy Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL",
+        "info": "This will override image."
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "link_label",
+        "label": "Link Label"
+      },
+      {
+        "type": "url",
+        "id": "link_link",
+        "label": "Link Link"
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "select",
+        "id": "content_reverse",
+        "label": "Content Left/Right",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button style",
+        "options": [
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "beige",
+            "label": "Beige"
+          },
+          {
+            "value": "blue",
+            "label": "Blue"
+          }
+        ],
+        "default": "beige"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "point",
+        "name": "Point",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "emoji",
+            "label": "Emoji"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Squeezy Section"
+      }
+    ]
+  }
+{% endschema %}

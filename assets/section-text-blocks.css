@@ -1,0 +1,160 @@
+.Text_Block_Section {
+  padding: 160px 0 145px;
+}
+
+.Text_Block_Section.top-border {
+  border-top: 1.5px solid var(--charcoal);
+}
+
+.Text_Block_Section.bottom-border {
+  border-bottom: 1.5px solid var(--charcoal);
+}
+
+.Text_Block_Section .Text_Block_Row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px;
+}
+
+.Text_Block_Section .Text_Block_Row .Section_Header {
+  width: 43.557%;
+  padding: 0 30px;
+}
+
+.Text_Block_Section .Text_Block_Row .Section_Header .h4 {
+  margin: 0;
+  font-style: italic;
+}
+
+.Text_Block_Section .Text_Block_Row .Section_Header .h4 strong {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider {
+  width: 56.443%;
+  padding: 0 30px;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Text_Blocks_Inr_Slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Text_Blocks_Inr_Slider .slick-list {
+  margin: 0 -35px;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block {
+  flex: 50% 0 0;
+  max-width: 50%;
+  padding: 0 35px;
+  position: relative;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .h5 {
+  margin: 8px 0 25px;
+  font-size: 30px;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .body-small {
+  margin: 0 0 30px;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .text-slider__arrows {
+  margin-top: 15px;
+  display:none;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .text-slider__arrows .slick-arrow {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .Single_Block_Icon {
+  font-size: 24px;
+  font-family: Dela Gothic One,sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 1250px) {
+  
+  .Text_Block_Section {
+    padding: 100px 0;
+  }
+  
+}
+
+@media screen and (max-width: 989px) {
+  
+  .Text_Block_Section {
+    padding: 80px 0;
+  }
+  
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .h5 {
+    margin: 0 0 20px;
+  }
+  
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Text_Blocks_Inr_Slider .slick-list,
+  .Text_Block_Section .Text_Block_Row {
+    margin: 0 -15px;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block,
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider,
+  .Text_Block_Section .Text_Block_Row .Section_Header {
+    padding: 0 15px;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block {
+    padding: 0 15px 0 30px;
+  }
+    
+}
+
+@media screen and (max-width: 768px) {
+  
+  .Text_Block_Section {
+    padding: 70px 0;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Section_Header {
+    width: 100%;
+    margin-bottom: 80px;
+    padding: 0 25px;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider {
+    width: 100%;
+    padding: 0;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .text-slider__arrows {
+    display: none;
+  }
+  
+  .Text_Block_Section .page-width {
+    padding: 0;
+  }
+  
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider 
+  .Text_Blocks_Inr_Slider .slick-list, .Text_Block_Section .Text_Block_Row {
+    margin: 0;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Text_Blocks_Inr_Slider .slick-list {
+    padding: 0 33% 0 15px !important;
+  }
+
+  .Text_Block_Section .Text_Block_Row .Text_Blocks_Slider .Single_Block .h5 {
+    font-size: 26px;
+  }
+  
+}

@@ -1,0 +1,66 @@
+{{ 'section-three-quarter-text.css' | asset_url | stylesheet_tag }}
+
+<div style="background-color: {{ section.settings.background }};" class="three-quarter">
+  <div class="page-width">
+    <div class="three-quarter__text-container">
+      <div class="three-quarter__left">
+        <h2 class="h3 light" style="color: {{ section.settings.color }};" >{{ section.settings.title }}</h2>
+        <a href="{{ section.settings.link }}" class="hide-mobile button button--white">{{ section.settings.link_text }}</a>
+      </div>
+      <div class="three-quarter__right">
+        <p class="h6 light" style="color: {{ section.settings.color }};" >{{ section.settings.text }}</p>
+        <a href="{{ section.settings.link }}" class="hide-desktop button button--white">{{ section.settings.link_text }}</a>
+      </div>
+    </div>
+  </div>
+  <img src="{{ section.settings.img | img_url: "master" }}" />
+</div>
+
+
+{% schema %}
+  {
+    "name": "Three Quarter Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title "
+      },
+	  {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+	  {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Floating Image"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color"
+      },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Three Quarter Text"
+      }
+    ]
+  }
+{% endschema %}

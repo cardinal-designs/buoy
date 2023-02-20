@@ -1,0 +1,221 @@
+{{ 'section-product-slider.css' | asset_url | stylesheet_tag }}
+
+{%- capture text_block -%}
+  <h2 class="h3">{{ section.settings.title }}</h2>
+    <p class="h6 light">{{ section.settings.text }}</p>
+    <div class="product-slider__checks hide-mobile">
+      <div class="product-slider__check">
+        {% render 'icon-check' %}
+        <p class="body light">0 Sugar</p>
+      </div>
+      <div class="product-slider__check">
+        {% render 'icon-check' %}
+        <p class="body light">0 Calories</p>
+      </div>
+      <div class="product-slider__check">
+        {% render 'icon-check' %}
+        <p class="body light">0 Artificial Ingredients</p>
+      </div>
+      <div class="product-slider__check hide-mobile">
+        {% render 'icon-check' %}
+        <p class="body light">0 Sweeteners</p>
+      </div>
+    </div>
+    <a href="{{ section.settings.shop_all_link }}" class="button hide-mobile">Shop All</a>
+    {% if section.settings.promo_link_text != blank %}
+      <a class="body hide-mobile" href="{{ section.settings.promo_link }}">{{ section.settings.promo_link_text }} {% render 'icon-arrow-right' %}</a>
+    {% endif %}
+{%- endcapture -%}
+
+<div class="product-slider">
+  <div class="">
+    <div class="product-slider__container">
+      <div class="product-slider__text">
+        {{- text_block -}}
+      </div>
+      <div class="product-slider__slides">
+        {% for block in section.blocks %}
+          {% assign current_product = all_products[block.settings.product] %}
+          <div class="product-slider__slide">
+            <div class="product-slider__images">
+              <img
+                srcset="{%- if current_product.featured_media.width >= 165 -%}{{ current_product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if current_product.featured_media.width >= 360 -%}{{ current_product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if current_product.featured_media.width >= 533 -%}{{ current_product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
+                  {%- if current_product.featured_media.width >= 720 -%}{{ current_product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
+                  {%- if current_product.featured_media.width >= 940 -%}{{ current_product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
+                  {%- if current_product.featured_media.width >= 1066 -%}{{ current_product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
+                src="{{ current_product.featured_media | img_url: '533x' }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ current_product.featured_media.alt | escape }}"
+                loading="lazy"
+                class="motion-reduce img-fill"
+              >
+              {%- if block.settings.hover_gif != blank -%}
+                <img
+                  srcset="{%- if block.settings.hover_gif.width >= 165 -%}{{ block.settings.hover_gif | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if block.settings.hover_gif.width >= 360 -%}{{ block.settings.hover_gif | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if block.settings.hover_gif.width >= 533 -%}{{ block.settings.hover_gif | img_url: '533x' }} 533w,{%- endif -%}
+                    {%- if block.settings.hover_gif.width >= 720 -%}{{ block.settings.hover_gif | img_url: '720x' }} 720w,{%- endif -%}
+                    {%- if block.settings.hover_gif.width >= 940 -%}{{ block.settings.hover_gif | img_url: '940x' }} 940w,{%- endif -%}
+                    {%- if block.settings.hover_gif.width >= 1066 -%}{{ block.settings.hover_gif | img_url: '1066x' }} 1066w{%- endif -%}"
+                  src="{{ block.settings.hover_gif | img_url: '533x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ block.settings.hover_gif.alt | escape }}"
+                  loading="lazy"
+                  class="motion-reduce secondary img-fill"
+                >
+              {%- endif -%}
+            </div>
+            <div class="product-slider__content">
+              <h5>{{ current_product.title }}</h5>
+              <p class="body">{{ block.settings.subtext }}</p>
+              <p class="body light hide-desktop">{{ block.settings.description }}</p>
+              <a href="{{ product.url }}" class="button button--overlay">Shop Now</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="product-slider__arrow-container">
+      <div class="product-slider__arrows"></div>
+    </div>
+    {% if section.settings.promo_link_text != blank %}
+      <div class="product-slider__link hide-desktop">
+        <a class="body" href="{{ section.settings.promo_link }}">{{ section.settings.promo_link_text }} {% render 'icon-arrow-right' %}</a>
+      </div>
+    {% endif %}
+  </div>
+   <a href="{{ section.settings.shop_all_link }}" class="button hide-desktop">Shop All</a>
+</div>
+  
+{% schema %}
+  {
+    "name": "Product of sustainability",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "shop_all_link",
+        "label": "Shop All Link"
+      },
+      {
+        "type": "text",
+        "id": "promo_link_text",
+        "label": "Promo Link Text"
+      },
+      {
+        "type": "url",
+        "id": "promo_link",
+        "label": "Promo Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "hover_gif",
+            "label": "Gif Shown on Hover"
+          },
+          {
+            "type": "text",
+            "id": "subtext",
+            "label": "Subtext (Desktop Only)"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description (Mobile Only)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product of sustainability"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .page--sustainability #shopify-section-product-slider-sustainability {
+      display: block;
+    float: left;
+    width: 100%;
+    background: transparent linear-gradient(180deg, #ECD8C500 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
+  }
+  .page--sustainability .product-slider .page-width::before {
+  	display: none
+  }
+  .page--sustainability .product-slider__text{
+ 	 background: transparent;
+  }
+  .product-slider__container {
+  	padding-left: calc((100% - 1240px) / 2);
+  }
+  .product-slider__slides {
+  	overflow: hidden;
+  }
+  .product-slider__arrows {
+  width: 66%
+  }
+  
+@media screen and (max-width: 1560px) {
+
+  #shopify-section-product-slider-sustainability .product-slider__container {
+  padding-left: 100px
+  }
+
+  .product-slider__arrows {
+width: 50%;
+}
+}
+@media screen and (max-width: 1200px) {
+
+   #shopify-section-product-slider-sustainability .product-slider__container {
+  padding-left: 100px !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+
+   .product-slider__container {
+  padding-left: 60px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-slider {
+  text-align: center
+  }
+   #shopify-section-product-slider-sustainability .product-slider__container {
+  padding-left: 0px !important;
+  }
+  #shopify-section-product-slider-sustainability .product-slider__text {
+   padding-left: 27px;
+    padding-right: 27px;
+  }
+  .product-slider__text .h3 {
+  text-align : center
+  }
+  .product-slider > .button.hide-desktop {
+  margin: 30px auto
+  }
+}
+</style>

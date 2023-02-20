@@ -1,0 +1,173 @@
+{{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
+
+<div class="pee-club-products__container">
+  <div class="show-product-bar"></div>
+  <div class="pee-club-products__flex">
+    <div class="pee-club-products__text">
+     <h3>{{ section.settings.title }}</h3>
+      <p class="sh4 light">{{ section.settings.text }}</p>
+      <div class="pee-club-products__list">
+      {{ section.settings.text_bottom }}
+      </div>
+      <a class="hide-mobile" href="{{ section.settings.button_link }}">
+        <p class="medium">{{ section.settings.button_label }}</p>
+      </a>
+    </div>
+    <div class="pee-club-products__wrapper">
+      <div class="pee-club-products">
+      {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      <div style="{% if block.settings.recommend == false %}padding-top: 18px; margin-top: 37px;{% endif %}" class="pee-club-product">
+        {% render 'supplement-facts-drawer-grid',
+          product: product 
+        %}
+        {% unless forloop.index == 1 %}
+          <div class="pee-club-product-arrow">
+          {% render 'icon-caret' %}
+          </div>
+        {% endunless %}
+        {% if block.settings.recommend == true %}
+        <div class="pee-club-product-rec">
+          <p>WE RECOMMEND STARTING WITH</p>
+        </div>
+        {% endif %}
+        <div class="pee-club-products__image">
+          <p class="sale-sticker">{{ block.settings.sale_text }}</p>
+          <div class="media" style="padding-bottom: 100%;">
+            {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
+          </div>
+        </div>
+        <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+
+        <h5>{{ product.title }}</h5>
+        <p class="serving">{{ block.settings.servings }}</p>
+        <p class="light">{{ block.settings.text }}</p>
+        <div class="pee-club-product-info">
+          
+          <div  class="pee-club-product__list">
+            {% if block.settings.list_item1 != blank %}
+              <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item1 }}</span></div>
+            {% endif %}
+            {% if block.settings.list_item2 != blank %}
+              <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item2 }}</span></div>
+            {% endif %}
+            {% if block.settings.list_item3 != blank %}
+              <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item3 }}</span></div>
+            {% endif %}
+          </div>
+          <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{% if product.handle == 'wellness-kit' %}{{ product.selling_plan_groups[0].selling_plans[0].id }}{% else %}{{ product.selling_plan_groups[0].selling_plans[1].id }}{% endif %}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
+            <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              </span>
+          </button>
+          <span class="Link_Text Open_Drawer">Supplement Facts</span>
+        </div>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <a class="bottom-link hide-desktop" href="{{ section.settings.button_link }}">
+    <p>{{ section.settings.button_label }}</p>
+  </a>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Pee Club Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "text_bottom",
+        "label": "Bottom Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Style"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "recommend",
+            "label": "Recommend?",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "sale_text",
+            "label": "Sale Text"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "servings",
+            "label": "Servings Text"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "text"
+          },
+          {
+            "type": "text",
+            "id": "list_item1",
+            "label": "List Item 1"
+          },
+                    {
+            "type": "text",
+            "id": "list_item2",
+            "label": "List Item 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3",
+            "label": "List Item 3"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Products"
+      }
+    ]
+  }
+{% endschema %}

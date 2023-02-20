@@ -1,0 +1,118 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }} 
+{{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
+
+{% style %}
+  {% if section.settings.background != blank %}
+    .faq-text-above__container {
+      background: {{ section.settings.background }};
+    }
+  {% endif %}
+  
+  {% if section.settings.background_mobile != blank %} 
+    @media screen and (max-width: 768px) {
+      .faq-text-above__container {
+        background: {{ section.settings.background_mobile }};
+      }
+    }
+  {% endif %}
+{% endstyle %}
+
+{% if section.settings.suptitle != blank %}
+<div class="faq-suptext__container hide-desktop">
+  <p class="emoji">{{ section.settings.emoji }}</p>
+  <h5>{{ section.settings.suptitle }}</h5>
+  <p class="light">{{ section.settings.suptext }}</p>
+</div>
+{% endif %}
+<div class="faq-section faq-text-above__container">
+  <div class="page-width">
+    <div class="faq-section__container">
+      {% if section.settings.suptitle != blank %}
+      <div class="faq-suptext__container hide-mobile">
+        <p class="emoji">{{ section.settings.emoji }}</p>
+        <h5>{{ section.settings.suptitle }}</h5>
+        <p class="light">{{ section.settings.suptext }}</p>
+      </div>
+      {% endif %}
+      <h2 class="faq-section__title h3">{{ section.settings.title }}</h2>
+      <p class="faq-section__text sh2 light">{{ section.settings.text }}</p>
+      {% for block in section.blocks %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh2 medium">{{ block.settings.title }}</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ - Text Above",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "emoji",
+        "label": "Emoji"
+      },
+      {
+        "type": "text",
+        "id": "suptitle",
+        "label": "Suptitle"
+      },
+      {
+        "type": "textarea",
+        "id": "suptext",
+        "label": "Suptext"
+      },  
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Gradient (optional)"
+      },
+      {
+        "type": "textarea",
+        "id": "background_mobile",
+        "label": "Background Gradient - Mobile (optional)"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq_item",
+        "name": "FAQ Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ - Text Above"
+      }
+    ]
+  }
+{% endschema %}

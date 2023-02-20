@@ -1,0 +1,147 @@
+{{ 'image-text-section.css' | asset_url | stylesheet_tag }}
+
+{% capture content_area %}
+  <div class="Content_Area">
+    {% if section.settings.title != blank %}
+      <h3 class="h3">{{ section.settings.title }}</h3>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <div class="sh2">{{ section.settings.text }}</div>
+    {% endif %}
+    {% if section.settings.subtext != blank %}
+      <div class="body-xs">{{ section.settings.subtext }}</div>
+    {% endif %}
+    {% if section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+<div class="Image_Text_Section
+  {% if section.settings.add_top_border %} top-border{% endif %}
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
+  <div class="page-width">
+    <div class="Image_Text_Row Align-{{ section.settings.content_reverse }}">
+      {% if section.settings.content_reverse == 'left' %}
+        {{ content_area }}
+      {% endif %}
+      <div class="Image_Video_Area">
+        {% if section.settings.video_url != blank %}
+          <div class="Inr_Image">
+            <video autoplay loop muted playsinline>
+              <source src="{{ section.settings.video_url }}" type="video/mp4">
+            </video>
+          </div>
+        {% else %}
+          <div class="Inr_Image">
+            <img src="{{ section.settings.image | img_url: '530x630'}}">
+          </div>
+        {% endif %}
+      </div>
+      {% if section.settings.content_reverse == 'right' %}
+        {{ content_area }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Text Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "SubText"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "select",
+        "id": "content_reverse",
+        "label": "Content Left/Right",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button style",
+        "options": [
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "beige",
+            "label": "Beige"
+          },
+          {
+            "value": "blue",
+            "label": "Blue"
+          }
+        ],
+        "default": "beige"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Text Section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

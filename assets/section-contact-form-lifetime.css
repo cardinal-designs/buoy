@@ -1,0 +1,103 @@
+.flex--container.contact>div.info {
+	flex: 0 33%;
+	padding-right: 5%;
+}
+
+.flex--container.contact .sh3 {
+	text-transform: initial;
+	letter-spacing: 0;
+}
+
+.field__input {
+	background: #f8f1eb;
+	border-radius: 5px;
+	padding: 15px 20px;
+	height: 4.7rem;
+	font-size: 14px;
+	font-family: inter, sans-serif;
+	font-style: normal;
+}
+
+.flex--container.contact #ContactForm {
+	flex: 0 67%;
+}
+
+.contact__fields {
+	margin: 0 -8px;
+}
+
+.contact__fields>div {
+	padding: 0 8px;
+	width: 50%;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.field__label {
+	font-size: 14px;
+	font-family: inter, sans-serif;
+	left: 2.5rem;
+	top: 1.1rem;
+	letter-spacing: 0;
+}
+
+textarea+.field__label {
+	left: 2rem;
+}
+
+.contact__button {
+	text-align: right;
+	margin-top: 12px;
+	text-transform: capitalize;
+}
+
+.contact__button button {
+	border-bottom: 2px solid;
+	text-transform: capitalize;
+  color: black !important;
+}
+
+.contact__button button:hover {
+	color: #545759;
+	border-bottom: 2px solid #545759;
+}
+
+.contact.flex--container {
+	align-items: flex-start;
+	display: flex;
+}
+
+.contact.flex--container .sh2 {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+#ContactForm * {
+	font-family: inter, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  
+	#shopify-section-contact-form-lifetime .spaced-section,	#shopify-section-contact-form-lifetime.spaced-section {
+		margin-top: 0;
+	}
+	.flex--container.contact #ContactForm,
+	.flex--container.contact>div.info {
+		flex: 0 100%;
+		width: 100%;
+	}
+	.flex--container.contact>div.info {
+		padding-right: 0;
+		padding-bottom: 30px;
+	}
+	.contact__fields>div {
+		width: 100%;
+	}
+	.contact__button {
+		text-align: left;
+	}
+	.contact.flex--container {
+		flex-wrap: wrap;
+	}
+  
+}

@@ -1,0 +1,139 @@
+{{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
+{{ 'section-pee-club-half-image.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'pee-club-half-image.js' | asset_url }}" defer="defer"></script>
+
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="pee-club-half-image__container image-with-dropdowns__container
+  {% if section.settings.add_top_border %} top-border{% endif %}
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
+  <div class="show-product-bar"></div>
+  <div class="page-width">
+    <div class="image-with-dropdowns__image hide-desktop">
+      {% for block in section.blocks %}
+        {% if block.settings.video_url != blank %}
+          <div class="aspect-ratio">
+            <video autoplay loop muted playsinline>
+              <source src="{{ block.settings.video_url }}" type="video/mp4">
+            </video>
+          </div>
+        {% else %}
+            {% render 'lazy-image' image: block.settings.image, classes: '' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="image-with-dropdowns__image hide-mobile">
+      {% for block in section.blocks %}
+        {% if block.settings.video_url != blank %}
+          <div class="aspect-ratio">
+            <video autoplay loop muted playsinline>
+              <source src="{{ block.settings.video_url }}" type="video/mp4">
+            </video>
+          </div>
+        {% else %}
+            {% render 'lazy-image' image: block.settings.image, classes: '' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="image-with-dropdowns__content">
+      <p>{{ section.settings.text }}</p>
+      <h3>{{ section.settings.title }}</h3>
+      <div class="hide-desktop mobile-pee-club-toggle">
+        {% for block in section.blocks %}
+        <div data-id="{{ forloop.index }}" class="{% if forloop.index == 1 %}active{% endif %}">
+          <p>{{ block.settings.title }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="image-with-dropdowns__dropdown-desktop hide-mobile">
+        {% for block in section.blocks %}
+          <div data-id="{{ forloop.index }}" class="month-list">
+            <p class="list-title">{{ block.settings.title }}</p>            
+            {{ block.settings.list }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="image-with-dropdowns__dropdown-mobile hide-desktop">
+        {% for block in section.blocks %}
+          <div data-id="{{ forloop.index }}" class="month-list">
+            <p class="list-title">{{ block.settings.title }}</p>            
+            {{ block.settings.list }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Pee Club Half Image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Style"
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border",
+        "default": false
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "list",
+            "label": "List"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pee Club Half Image"
+      }
+    ]
+  }
+{% endschema %}

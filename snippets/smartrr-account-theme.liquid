@@ -1,0 +1,157 @@
+{% comment %}
+  This file is maintained by Smartrr. 
+  Use the "Theming" section of the Smartrr app to configure theme settings. 
+{% endcomment %}
+<script>
+if (!window.smartrr) {
+  window.smartrr = {};
+}
+window.smartrr.theme = {
+  "overrideCSS": ".smartrr-portal-manage-settings-text, .smartrr-portal-heading-2 > span, \n.smartrr-portal-heading-1,.smartrr-portal-delivery-group-button > div,\n.smartrr-portal-edit-subscription-delivery-frequency-section-inner,\n.smartrr-portal-edit-subscription-section, \n.smartrr-portal-edit-subscription-delivery-date-button,\n.smartrr-portal-delivery-addresses-edit-button-right,\n.smartrr-portal-apply-discount-button,\n.smartrr-portal-manage-subscriptions-subscription-edit-text-button,\n.smartrr-portal-delivery-addresses-address-header,\n.smartrr-portal-delivery-addresses-uneditable-button,\n.smartrr-portal-slide-panel-close {\n  color: #000000;\n}\n.smartrr-portal-tabs-header-container {\n   overflow: overlay;\n   border: solid 1px;\n   height: 38px;\n}\n.smartrr-portal-group-item-price-line > span {\n   font-size: 16px;\n}\n.smartrr-portal-delivery-frequency-select {\n  width:200px;\n  border: solid 1px;\n}\n.smartrr-portal-edit-subscription-apply-discount {\n  font-size: 16px;\n  border: solid 1px;\n  height: 32px;\n}\n.smartrr-portal-delivery-addresses-form-cell > .form-input {\n  color:#000000;\n  border-bottom: 1px solid #767572;\n}\n.smartrr-portal-tabs-header-container{\n  width:45%;\n}\n.smartrr-portal-delivery-addresses-form-cell select {\n  align-self: baseline;\n}\n.smartrr-portal-select-wrapper select {\n  width:100%;\n}",
+  "primaryColor": "#ECD8C5",
+  "secondaryColor": "#e6e9ea",
+  "mainContentBackgroundColor": "#F8F1EB",
+  "mainContentBorderRadius": 8,
+  "mainContentBorderColor": "#000000",
+  "mainContentBorderWidth": 1,
+  "loaderPrimaryColor": "#B7D7EA",
+  "loaderSecondaryColor": "#1F2322",
+  "bodyBackgroundColor": "#efefef",
+  "bodyTextFontFamily": "inter,       sans-serif",
+  "bodyTextFontWeight": "bold",
+  "bodyTextColor": "#1F2322",
+  "heading1TextFontFamily": "inter,       sans-serif",
+  "heading1TextFontSize": 22,
+  "heading1FontWeight": "bolder",
+  "heading1TextColor": "#1F2322",
+  "heading2TextFontFamily": "inter,       sans-serif",
+  "heading2TextFontSize": 16,
+  "heading2FontWeight": "normal",
+  "heading2TextColor": "#1F2322",
+  "heading3TextFontFamily": "inter,       sans-serif",
+  "heading3TextFontSize": 16,
+  "heading3FontWeight": "normal",
+  "heading3TextColor": "#1F2322",
+  "heading4TextFontFamily": "inter,       sans-serif",
+  "heading4TextFontSize": 16,
+  "heading4FontWeight": "normal",
+  "heading4TextColor": "#1F2322",
+  "buttonBackgroundColor": "#F6ECE1",
+  "buttonFontFamily": "inter,sans-serif",
+  "buttonFontSize": 16,
+  "buttonFontWeight": "normal",
+  "buttonTextColor": "#1F2322",
+  "buttonBorderRadius": 22,
+  "buttonBorderColor": "#040404",
+  "buttonBorderWidth": 0,
+  "dropdownBackgroundColor": "#F6ECE1",
+  "dropdownTextColor": "#1F2322",
+  "dropdownBorderRadius": 22,
+  "dropdownBorderColor": "#040404",
+  "dropdownBorderWidth": 0,
+  "dropdownFontFamily": "inter,       sans-serif",
+  "dropdownFontSize": 16,
+  "dropdownFontWeight": "normal",
+  "smallProductImageBorderRadius": 12,
+  "mediumProductImageBorderRadius": 14,
+  "largeProductImageBorderRadius": 16,
+  "purchasableThemes": []
+}
+</script>
+
+<style>
+body {
+  background-color: #efefef;
+  transition: background-color .15s ease-in-out;
+}
+
+#smartrr_account,
+#smartrr_slide_panel,
+#smartrr_toast_container {
+  box-sizing: border-box;
+
+  color: #1F2322;
+  font-family: inter,       sans-serif;
+  font-weight: bold;
+  background-color: #efefef;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+}
+
+#smartrr_account *,
+#smartrr_account *:before,
+#smartrr_account *:after,
+#smartrr_slide_panel *,
+#smartrr_slide_panel *:before,
+#smartrr_slide_panel *:after,
+#smartrr_toast_container *,
+#smartrr_toast_container *:before,
+#smartrr_toast_container *:after {
+  box-sizing: border-box;
+}
+
+#smartrr_toast_container {
+  z-index: 10000001;
+}
+
+#smartrr_toast_container .Toastify__toast-container {
+  z-index: 10000002;
+}
+
+.hide-in-customer-portal {
+  display: none;
+}
+
+#smartrr_account,
+#smartrr_slide_panel,
+#smartrr_toast_container {
+  
+--smartrr-primaryColor: #ECD8C5;
+--smartrr-secondaryColor: #e6e9ea;
+--smartrr-mainContentBackgroundColor: #F8F1EB;
+--smartrr-mainContentBorderRadius: 8px;
+--smartrr-mainContentBorderColor: #000000;
+--smartrr-mainContentBorderWidth: 1px;
+--smartrr-loaderPrimaryColor: #B7D7EA;
+--smartrr-loaderSecondaryColor: #1F2322;
+--smartrr-bodyBackgroundColor: #efefef;
+--smartrr-bodyTextFontFamily: inter,       sans-serif;
+--smartrr-bodyTextFontWeight: bold;
+--smartrr-bodyTextColor: #1F2322;
+--smartrr-heading1TextFontFamily: inter,       sans-serif;
+--smartrr-heading1TextFontSize: 22px;
+--smartrr-heading1FontWeight: bolder;
+--smartrr-heading1TextColor: #ECD8C5;
+--smartrr-heading2TextFontFamily: inter,       sans-serif;
+--smartrr-heading2TextFontSize: 16px;
+--smartrr-heading2FontWeight: normal;
+--smartrr-heading2TextColor: #1F2322;
+--smartrr-heading3TextFontFamily: inter,       sans-serif;
+--smartrr-heading3TextFontSize: 16px;
+--smartrr-heading3FontWeight: normal;
+--smartrr-heading3TextColor: #1F2322;
+--smartrr-heading4TextFontFamily: inter,       sans-serif;
+--smartrr-heading4TextFontSize: 16px;
+--smartrr-heading4FontWeight: normal;
+--smartrr-heading4TextColor: #1F2322;
+--smartrr-buttonBackgroundColor: #F6ECE1;
+--smartrr-buttonTextColor: #1F2322;
+--smartrr-buttonFontFamily: inter,sans-serif;
+--smartrr-buttonFontSize: 16px;
+--smartrr-buttonFontWeight: normal;
+--smartrr-buttonBorderRadius: 22px;
+--smartrr-dropdownBackgroundColor: #F6ECE1;
+--smartrr-dropdownTextColor: #1F2322;
+--smartrr-dropdownFontFamily: inter,       sans-serif;
+--smartrr-dropdownFontSize: 16px;
+--smartrr-dropdownFontWeight: normal;
+--smartrr-dropdownBorderRadius: 22px;
+--smartrr-buttonBorderColor: #040404;
+--smartrr-buttonBorderWidth: 0px;
+--smartrr-dropdownBorderColor: #040404;
+--smartrr-dropdownBorderWidth: 0px;
+--smartrr-smallProductImageBorderRadius: 12px;
+--smartrr-mediumProductImageBorderRadius: 14px;
+--smartrr-largeProductImageBorderRadius: 16px;
+}
+
+</style>

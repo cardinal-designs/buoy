@@ -1,0 +1,68 @@
+
+{{ 'section-press-logos.css' | asset_url | stylesheet_tag }}
+
+<div class="press-logos{% if section.settings.add_border %} add-border{% endif %}" style="background: {{ section.settings.background }}">
+  <div class="page-width">
+    <div class="press-logos__wrapper">
+      <div class="press-logos__container {% if section.settings.enable_marquee %}press-logo_marquee{% endif %}">
+        {% for block in section.blocks %}
+          <div class="press-logos__item">
+            <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" />
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.enable_marquee %}
+        <div class="press-logos__container press-logo_marquee hide-desktop ">
+          {% for block in section.blocks %}
+            <div class="press-logos__item">
+              <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" />
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Press Logos",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#ECD8C5"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_marquee",
+        "label": "Marquee for Mobile",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "add_border",
+        "label": "Add Border"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo (SVG)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Press Logos"
+      }
+    ]
+  }
+{% endschema %}

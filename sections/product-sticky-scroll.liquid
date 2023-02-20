@@ -1,0 +1,153 @@
+{{ 'section-product-sticky-scroll.css' | asset_url | stylesheet_tag }}
+
+<div class="product-sticky-scroll{% if section.settings.add_gradient %} add-gradient{% endif %} {% if section.settings.value_title != blank %}sticky-padding-top{% endif %}">
+  <div class="page-width">
+    {% if section.settings.value_title != blank %}
+    <div class="value-list">
+      <p class="value-title">{{ section.settings.value_title }}</p>
+      {% if section.settings.value_check1 != blank %}
+      <p class="value-list-item light">{{ section.settings.value_check1 }}</p>
+      {% endif %}
+      {% if section.settings.value_check2 != blank %}
+      <p class="value-list-item light">{{ section.settings.value_check2 }}</p>
+      {% endif %}
+      {% if section.settings.value_check3 != blank %}
+      <p class="value-list-item light">{{ section.settings.value_check3 }}</p>
+      {% endif %}
+      {% if section.settings.value_check2 != blank %}
+      <p class="value-list-item light">{{ section.settings.value_check4 }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="product-sticky-scroll__container">
+      <div class="product-sticky-scroll__image">
+        {% if section.settings.video_url != blank %}
+          <video autoplay loop muted playsinline class="video">
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          {% render 'lazy-image' image: section.settings.image, classes: 'img-fill' %}
+        {% endif %}
+      </div>
+      <div class="product-sticky-scroll__content">
+        <div class="product-sticky-scroll__content-container">
+          <div class="product-sticky-scroll__content-header">
+            <h3>{{ section.settings.title }}</h3>
+            {% if section.settings.text != blank %}
+              <p class="sh2">{{ section.settings.text }}</p>
+            {% endif %}
+          </div>
+          <div class="sticky-{{ product.title | handleize }}">
+            {% for block in section.blocks %}
+              <div class="product-sticky-scroll__content-item product-sticky-scroll-{{forloop.index}}">
+                <h6>{{ block.settings.title }}</h6>
+                <p class="sh4">{{ block.settings.text }}</p>
+                <p class="body-xs">{{ block.settings.subtext }}</p>
+              </div>
+            {% endfor %}
+          </div>
+          {% if section.settings.button_label != blank %}
+            <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Sticky Scroll",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "add_gradient",
+        "label": "Add Gradient"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "value_title",
+        "label": "Value list title"
+      },
+      {
+        "type": "text",
+        "id": "value_check1",
+        "label": "Value list item 1"
+      },
+      {
+        "type": "text",
+        "id": "value_check2",
+        "label": "Value list item 2"
+      },
+      {
+        "type": "text",
+        "id": "value_check3",
+        "label": "Value list item 3"
+      },
+      {
+        "type": "text",
+        "id": "value_check4",
+        "label": "Value list item 4"
+      }
+    ], 
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "textarea",
+            "id": "subtext",
+            "label": "Subtext"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Sticky Scroll"
+      }
+    ]
+  }
+{% endschema %}

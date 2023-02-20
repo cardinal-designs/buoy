@@ -1,0 +1,27 @@
+.profile-table__container {
+  margin: 0 auto;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.profile-table__container h2 {
+  margin-bottom: 70px;
+  margin-top: 0;
+}
+
+.profile-table__svg svg {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-table__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .profile-table__container h2 {
+    max-width: 254px;
+    margin: 0 auto 30px;
+  }
+}

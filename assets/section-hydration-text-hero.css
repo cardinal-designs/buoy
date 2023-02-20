@@ -1,0 +1,56 @@
+.hydration-text-hero {
+  padding: 120px 0;
+  background: transparent linear-gradient(180deg, #F8F1EB 0%, #F8F1EB00 85%) 0% 0% no-repeat padding-box;
+  text-align: center;
+}
+
+.hydration-text-hero__container {
+  position: relative;
+}
+
+.hydration-text-hero__svg {
+  max-width: 472px;
+  width: 100%;
+  margin: 0 auto 90px;
+}
+
+.hydration-text-hero__svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hydration-text-hero__title {
+  font-weight: 300;
+}
+
+.hydration-text-hero__text {
+  max-width: 768px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.hydration-text-hero__text p {
+  font-weight: 300;
+}
+
+.hydration-text-hero__text p strong {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .hydration-text-hero {
+    padding: 50px 0 70px;
+  }
+
+  .hydration-text-hero__svg {
+    margin-bottom: 50px;
+  }
+
+  .hydration-text-hero__title {
+    font-size: 22px;
+  }
+
+  .hydration-text-hero__text {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,219 @@
+.page-science-efficacy .hero{
+  margin: 16px 17px 0;
+  max-height: 600px;
+}
+
+.page-who-we-are .hero .page-width .hero__container{
+  padding: 40px 0;
+}
+
+@media (min-width: 769px) {
+  
+  .page-science-efficacy .hero{
+    margin: 16px 45px 0;
+  }
+  
+  .page-who-we-are .hero{
+    margin: 0 40px;
+  }
+
+  .page-who-we-are .hero .page-width{
+    padding: 0 60px;
+  }
+  
+  .page-who-we-are .hero .page-width .hero__container{
+    padding: 85px 0 50px;
+  }
+  
+  .page-who-we-are .hero .page-width {
+    padding: 0 32px;
+  }
+  
+}
+
+@media (max-width: 1366px) {
+
+  .page-who-we-are .hero{
+    height: 496px;
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 374px) {
+
+  .page-who-we-are .hero .page-width{
+    padding: 0 32px;
+  }
+
+}
+
+
+/*****************************************************************/
+
+.page-science-efficacy .textblock-slider.background-bg{
+  text-align: center;
+  padding: 80px 0;
+  overflow-x: hidden;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__content .sh3{
+  line-height: 21px;
+  text-transform: initial;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__slide:hover .product-slider__content p{
+  opacity: 1;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__slide{
+  background: #ffffff;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__content .body{
+  line-height: 21px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__text{
+  display: block;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__container{
+  margin-top: 80px;
+}
+
+.page-science-efficacy .textblock-slider .product-slider__arrow-container{
+  padding: 30px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.page-science-efficacy .textblock-slider .button{
+  margin-top: 40px;
+}
+
+@media (min-width: 769px) {
+  
+  .page-science-efficacy .textblock-slider .product-slider__content .sh3{
+    line-height: 27px;
+  }
+  
+  .page-science-efficacy .textblock-slider.background-bg{
+    padding: 100px 0 150px;
+  }
+  
+  .page-science-efficacy .textblock-slider .button{
+    margin-top: 60px;
+  }
+  
+  .page-science-efficacy .textblock-slider .product-slider__container{
+    margin-top: 80px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .page-science-efficacy .textblock-slider .product-slider__slide{
+    width: 236px;
+    min-height: 295px;
+    position: relative;
+    border-radius: 17px;
+    border: 1px solid var(--charcoal);
+    overflow: hidden;
+  }
+  
+  .page-science-efficacy .textblock-slider .product-slider__content .body{
+    font-size: 12px;
+  }
+  
+}
+
+/*****************************************************************/
+
+.page-science-efficacy .multicolumn  .bg-img,
+.page-science-efficacy .shopify-section-lifetime-donated .multicolumn:not(.background-secondary) .bg-img{
+  background-image:url(https://cdn.shopify.com/s/files/1/0267/3351/0727/files/cube-bg.png?v=1635842665);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.page-science-efficacy .shopify-section-lifetime-donated .multicolumn-card__info{
+  padding:0;
+  max-width: 768px;
+}
+
+.page-science-efficacy .title-wrapper-with-link .h3{
+  margin-bottom: 0;
+}
+
+.page-science-efficacy .multicolumn-list{
+  margin-top: 45px;
+}
+
+.page-science-efficacy .multicolumn-card__info p{
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.page-science-efficacy .shopify-section-lifetime-donated .multicolumn .button{
+  margin-top: 60px;
+}
+
+.page-science-efficacy .shopify-section-lifetime-donated .multicolumn:not(.background-secondary){
+  border: none;
+}
+
+@media (max-width: 768px) {
+  
+  .page-science-efficacy .shopify-section-lifetime-donated .multicolumn .page-width{
+    background-image: none;
+  }
+  
+  .page-science-efficacy .multicolumn-card__info p{
+    font-size: 16px;
+    line-height: 27px;
+  }
+  
+}
+
+
+/*****************************************************************/
+
+
+.page-science-efficacy .text-image-blocks{
+  padding: 28px 0 80px;
+}
+
+@media (min-width: 769px) {
+  .page-science-efficacy .text-image-blocks{
+    padding: 150px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .page-science-efficacy .text-image-blocks__container{
+    flex-direction: column-reverse !important;
+  }
+  
+  .page-science-efficacy .text-image-blocks__container.reversed .text-image-blocks__image{
+    padding-right: 0;
+  }
+
+}
+
+/*****************************************************************/
+
+
+@media (max-width: 768px) {
+  
+  .text-image-blocks__content-container{
+    text-align: center;
+  }
+  
+}
