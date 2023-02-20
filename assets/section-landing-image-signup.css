@@ -12,5 +12,10 @@
 }
 
 .landing-signup__container .page-width {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.landing-signup__image {
+  position: relative;
 }
