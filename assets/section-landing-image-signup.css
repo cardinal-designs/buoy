@@ -33,4 +33,10 @@
   .landing-signup__container .page-width {
     grid-template-columns: 1fr;
   }
+
+  .landing-signup__image {
+    position: relative;
+    margin-left: 0;
+    margin-top: 100px;
+  }
 }
