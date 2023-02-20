@@ -28,3 +28,9 @@
   height: unset;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .landing-signup__container .page-width {
+    grid-template-columns: 1fr;
+  }
+}
