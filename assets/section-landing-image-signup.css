@@ -1,3 +1,12 @@
 .landing-signup__container {
   background-color: #F8F1EB;
+  position: relative;
+  height: 840px;
+}
+
+.landing-signup__background {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
 }
