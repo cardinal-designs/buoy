@@ -20,3 +20,7 @@
 .landing-signup__image {
   position: relative;
 }
+
+.landing-signup__image img {
+  height: unset;
+}
