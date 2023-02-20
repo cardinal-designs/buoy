@@ -1,12 +1,33 @@
+{{ 'section-landing-image-signup.css' | asset_url | stylesheet_tag }} 
+
+
+<div class="page-width landing-signup__container">
+  <div class="landing-signup__signup">
+    <div class="klaviyo-form-U7pg8S"></div>
+  </div>
+  <div class="landing-signup__image">
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Landing Image Signup",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL (optional)"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image (optional)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Landing Image Signup"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
