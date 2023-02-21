@@ -100,4 +100,8 @@
   .klaviyo-form > div div:nth-child(1) p {
     line-height: 1.3 !important;
   }
+
+  .klaviyo-form > div div:nth-child(2) > div {
+    padding: 20px 0 40px !important;
+  }
 }
