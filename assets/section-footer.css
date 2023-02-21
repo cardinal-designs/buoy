@@ -904,4 +904,6 @@ noscript .localization-selector.link {
   
 }
 
-.page--hide-klaviyo-footer .
+.page--hide-klaviyo-footer #shopify-section-newsletter-footer {
+  display: none;
+}
