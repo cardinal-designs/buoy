@@ -44,6 +44,10 @@
   margin: 0 auto !important;
 }
 
+.klaviyo-form > div div:nth-child(4) p {
+  margin: 0 !important;
+}
+
 .klaviyo-form > div div:nth-child(3) > div:first-of-type {
   padding: 0 !important;
 }
