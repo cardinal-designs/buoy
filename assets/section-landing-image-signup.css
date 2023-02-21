@@ -72,7 +72,12 @@
     position: relative;
     margin-left: 0;
     margin-bottom: 100px;
-    grid-row: 1
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .landing-signup__image img {
+    width: 185px;
   }
 
   .landing-signup__signup {
