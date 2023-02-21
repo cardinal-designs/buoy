@@ -105,6 +105,10 @@
     padding: 20px 0 0px !important;
   }
 
+  .klaviyo-form > div div:nth-child(3) > div {
+    padding: 0px !important;
+  }
+
   .klaviyo-form > div div:nth-child(2) p {
     line-height: 27px !important;
   }
