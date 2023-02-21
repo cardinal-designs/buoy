@@ -64,6 +64,8 @@
 @media screen and (max-width: 768px) {
   .landing-signup__container .page-width {
     grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 
   .landing-signup__image {
