@@ -37,11 +37,11 @@
   position: relative !important;
 }
 
-.klaviyo-form > div div:nth-child(3) div:first-of-type {
+.klaviyo-form > div div:nth-child(3) > div:first-of-type {
   padding: 0 !important;
 }
 
-.klaviyo-form > div div:nth-child(3) div:last-of-type {
+.klaviyo-form > div div:nth-child(3) > div:last-of-type {
   position: absolute !important;
   right: 0 !important;
   top: 0 !important;
