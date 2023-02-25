@@ -1,0 +1,44 @@
+{{ 'section-pr-slider.css' | asset_url | stylesheet_tag }} 
+
+<div class="pr-slider">
+  <div class="page-width">
+    <div class="pr-slider__container">
+      {% for block in section.blocks %}
+        <div class="pr-slider__item">
+          <img src="{{ block.settings.image | img_url: 'master' }}"/>
+          <h6 class="light">{{ block.settings.text }}</h6>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "PR Slider",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "pr_slide",
+        "name": "PR Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "PR Slider"
+      }
+    ]
+  }
+{% endschema %}
