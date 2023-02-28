@@ -289,5 +289,9 @@
   .Squeezy_Section .Squeezy_Section_Row .Squeezy_Section_Content .Squeezy_Section_Content-Container .link {
     margin-top: 30px;
   }
+
+  .Squeezy_Section .Squeezy_Section_Row.top-border {
+    border-top: none;
+  }
   
 }
