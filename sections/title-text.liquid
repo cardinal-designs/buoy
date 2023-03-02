@@ -1,7 +1,8 @@
 {{ 'section-title-text.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.text }}</p>
 </div>
 
 {% schema %}
