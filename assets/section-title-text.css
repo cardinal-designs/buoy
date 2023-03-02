@@ -1,7 +1,6 @@
 .title-text__container {
   text-align: center;
   margin: 120px auto;
- 
 }
 
 .title-text__container h1 {
@@ -15,5 +14,6 @@
   color: #1F2322;
   font-size: 18px;
   line-height: 30px;
-  max-width: 1300px;
+  max-width: 950px;
+  margin: 0 auto;
 }
