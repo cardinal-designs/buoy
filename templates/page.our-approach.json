@@ -46,27 +46,82 @@
     },
     "b99ccd9b-f07f-4c5f-93c4-d3be41ce3d62": {
       "type": "text-block-section",
+      "blocks": {
+        "a1486e74-0bdc-4185-a8d7-a6e433b767eb": {
+          "type": "block",
+          "settings": {
+            "title": "85%",
+            "title_icon": "",
+            "text": "of Americans intake processed salt\n\nThe average American’s salt intake comes from the processed and refined nutrient sparse sources found in table salt and other electrolyte supplements. Proper sodium intake is at the core of hydration. Low or imbalanced electrolyte levels can present as feelings of anxiety, nervousness, sluggishness and brain fog. We only use real sea salt so you can replenish adequately and effectively.",
+            "link_label": "",
+            "link_link": ""
+          }
+        },
+        "61552543-04df-4ca4-a80d-c893dca205e2": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "title_icon": "",
+            "text": "",
+            "link_label": "",
+            "link_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a1486e74-0bdc-4185-a8d7-a6e433b767eb",
+        "61552543-04df-4ca4-a80d-c893dca205e2"
+      ],
       "settings": {
-        "section_title": "",
-        "add_top_border": false,
-        "add_bottom_border": false
+        "section_title": "We’re Focused on The Numbers",
+        "add_top_border": true,
+        "add_bottom_border": true
       }
     },
     "30fbcdd1-ba90-4e84-906b-07bf776ddb0a": {
       "type": "squeezy-section",
+      "blocks": {
+        "541b2cbb-8210-4e61-af93-5ced91d9b10c": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": "Clinical Studies (Coming Soon)"
+          }
+        },
+        "7d02988a-1fc2-4932-8439-c072bc988fe4": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": "Third-Party Testing"
+          }
+        },
+        "3774a1a4-521a-463a-965a-056ce50be06f": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": "Product Whitepapers"
+          }
+        }
+      },
+      "block_order": [
+        "541b2cbb-8210-4e61-af93-5ced91d9b10c",
+        "7d02988a-1fc2-4932-8439-c072bc988fe4",
+        "3774a1a4-521a-463a-965a-056ce50be06f"
+      ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Image_Section_4_D_2x_1cd9130c-445d-4e1b-ab3e-a70b0987c39a.png",
         "video_url": "",
-        "title": "",
-        "description": "",
+        "title": "Backed by Science",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "button_label": "",
         "button_link": "",
-        "link_label": "",
+        "link_label": "Read Whitepaper",
         "link_link": "",
-        "content_reverse": "left",
+        "content_reverse": "right",
         "button_style": "beige",
         "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "16390276435f9f6aac": {
