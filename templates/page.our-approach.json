@@ -5,6 +5,31 @@
       "settings": {
       }
     },
+    "b99ccd9b-f07f-4c5f-93c4-d3be41ce3d62": {
+      "type": "text-block-section",
+      "settings": {
+        "section_title": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "30fbcdd1-ba90-4e84-906b-07bf776ddb0a": {
+      "type": "squeezy-section",
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "link_label": "",
+        "link_link": "",
+        "content_reverse": "left",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
     "16390276435f9f6aac": {
       "type": "apps",
       "blocks": {
@@ -26,6 +51,8 @@
   },
   "order": [
     "main",
+    "b99ccd9b-f07f-4c5f-93c4-d3be41ce3d62",
+    "30fbcdd1-ba90-4e84-906b-07bf776ddb0a",
     "16390276435f9f6aac"
   ]
 }
