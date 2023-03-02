@@ -9,9 +9,38 @@
     },
     "5a427f0d-87a3-4e56-94c3-601a10480c61": {
       "type": "image-dropdowns",
+      "blocks": {
+        "0da7d937-822b-486f-bdc1-2af226abfc4d": {
+          "type": "block",
+          "settings": {
+            "title": "Unflavored Liquid Form Factor",
+            "text": "Our liquid form factor allows the body to absorb ingredients faster and easier than powders and tablets, making it 3x more bioavailable than competing products."
+          }
+        },
+        "62c91eff-73b5-476f-8399-45489b580031": {
+          "type": "block",
+          "settings": {
+            "title": "Naturally Balanced Sea Salt",
+            "text": ""
+          }
+        },
+        "c3a58c44-03d8-4310-87a0-d73121d9e5b4": {
+          "type": "block",
+          "settings": {
+            "title": "87 Ionic Trace Minerals",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "0da7d937-822b-486f-bdc1-2af226abfc4d",
+        "62c91eff-73b5-476f-8399-45489b580031",
+        "c3a58c44-03d8-4310-87a0-d73121d9e5b4"
+      ],
       "settings": {
         "video_url": "",
-        "title": "",
+        "image": "shopify:\/\/shop_images\/Image_Section_2_Oval_D_2x_61340c2a-0e4f-40cc-8b9e-0ab2cbbf259d.png",
+        "title": "<b>With More Benefits<\/b><i> In Every Drop<\/i>",
         "text_bottom": ""
       }
     },
