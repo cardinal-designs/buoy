@@ -72,7 +72,7 @@
         "50bf9d2c-cb37-49c5-a2c0-204937de399c"
       ],
       "settings": {
-        "section_title": "<b>We’re Focused on<\/b> The Numbers",
+        "section_title": "We’re Focused on The Numbers",
         "add_top_border": true,
         "add_bottom_border": true
       }
@@ -123,6 +123,56 @@
         "background": "bg_color"
       }
     },
+    "9ca3f7c8-adfa-4148-b75a-c62611a0985d": {
+      "type": "trusted-reviews-2",
+      "blocks": {
+        "4d64f3bf-3ce8-4505-af15-ebd22b89e5aa": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        },
+        "4547ca31-d463-4970-868c-71701f59edc3": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        },
+        "971da234-375e-44bb-bc66-f3d28e6bcf38": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        }
+      },
+      "block_order": [
+        "4d64f3bf-3ce8-4505-af15-ebd22b89e5aa",
+        "4547ca31-d463-4970-868c-71701f59edc3",
+        "971da234-375e-44bb-bc66-f3d28e6bcf38"
+      ],
+      "settings": {
+        "review_emoji": "",
+        "head-title": "Column",
+        "sub-text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "background": "none",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
     "16390276435f9f6aac": {
       "type": "apps",
       "blocks": {
@@ -147,6 +197,7 @@
     "5a427f0d-87a3-4e56-94c3-601a10480c61",
     "f137c4a8-dd27-4e04-b647-4b83e459b06f",
     "30fbcdd1-ba90-4e84-906b-07bf776ddb0a",
+    "9ca3f7c8-adfa-4148-b75a-c62611a0985d",
     "16390276435f9f6aac"
   ]
 }
