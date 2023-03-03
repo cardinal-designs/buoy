@@ -45,36 +45,34 @@
         "background": "transparent linear-gradient(0deg, #F8F1EB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;"
       }
     },
-    "b99ccd9b-f07f-4c5f-93c4-d3be41ce3d62": {
-      "type": "text-block-section",
+    "f137c4a8-dd27-4e04-b647-4b83e459b06f": {
+      "type": "text-block-section-2",
       "blocks": {
-        "a1486e74-0bdc-4185-a8d7-a6e433b767eb": {
-          "type": "block",
-          "settings": {
-            "title": "85%",
-            "title_icon": "",
-            "text": "of Americans intake processed salt\n\nThe average American’s salt intake comes from the processed and refined nutrient sparse sources found in table salt and other electrolyte supplements. Proper sodium intake is at the core of hydration. Low or imbalanced electrolyte levels can present as feelings of anxiety, nervousness, sluggishness and brain fog. We only use real sea salt so you can replenish adequately and effectively.",
-            "link_label": "",
-            "link_link": ""
-          }
-        },
-        "61552543-04df-4ca4-a80d-c893dca205e2": {
+        "b7ffd7f0-830c-49c0-8c6b-9ef17fb97261": {
           "type": "block",
           "settings": {
             "title": "",
             "title_icon": "",
-            "text": "",
-            "link_label": "",
-            "link_link": ""
+            "suptext": "",
+            "text": ""
+          }
+        },
+        "50bf9d2c-cb37-49c5-a2c0-204937de399c": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "title_icon": "",
+            "suptext": "",
+            "text": ""
           }
         }
       },
       "block_order": [
-        "a1486e74-0bdc-4185-a8d7-a6e433b767eb",
-        "61552543-04df-4ca4-a80d-c893dca205e2"
+        "b7ffd7f0-830c-49c0-8c6b-9ef17fb97261",
+        "50bf9d2c-cb37-49c5-a2c0-204937de399c"
       ],
       "settings": {
-        "section_title": "We’re Focused on The Numbers",
+        "section_title": "<b>We’re Focused on<\/b> The Numbers",
         "add_top_border": true,
         "add_bottom_border": true
       }
@@ -147,7 +145,7 @@
   "order": [
     "b81d713d-f2f5-45b1-8f2e-f71aa21f4eda",
     "5a427f0d-87a3-4e56-94c3-601a10480c61",
-    "b99ccd9b-f07f-4c5f-93c4-d3be41ce3d62",
+    "f137c4a8-dd27-4e04-b647-4b83e459b06f",
     "30fbcdd1-ba90-4e84-906b-07bf776ddb0a",
     "16390276435f9f6aac"
   ]
