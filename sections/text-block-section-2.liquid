@@ -1,7 +1,102 @@
+{{ 'section-text-blocks.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-text-blocks.js' | asset_url }}"></script>
+
+<div class="Text_Block_Section
+  {% if section.settings.add_top_border %} top-border{% endif %}
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
+  <div class="page-width">
+    <div class="Text_Block_Row">
+      <div class="Section_Header">
+        {% if section.settings.section_title != blank %}
+          <h2 class="h4 light">{{ section.settings.section_title }}</h2>
+        {% endif %}
+      </div>
+      <div class="Text_Blocks_Slider">
+        <div class="Text_Blocks_Inr_Slider">
+          {% for block in section.blocks %}
+            <div class="Single_Block">
+              <span class="Single_Block_Icon Custom_Emoji">{{ block.settings.title_icon }}</span>
+              {% if block.settings.title != blank %}
+                <h3 class="h5">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <h6 class="body-small">{{ block.settings.text }}</h6>
+              {% endif %}
+              {% if block.settings.link_label != blank %}
+                <a href="{{ block.settings.link_link }}" class="body link">{{ block.settings.link_label }}</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="text-slider__arrows"></div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Text Block Section 2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title"
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "title_icon",
+            "label": "Title Icon"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "link_label",
+            "label": "Link Label"
+          },
+          {
+            "type": "url",
+            "id": "link_link",
+            "label": "Link Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Block Section 2"
+      }
+    ]
   }
 {% endschema %}
 
