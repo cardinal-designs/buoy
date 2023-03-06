@@ -1,3 +1,4 @@
-.Trusted_Reviews_Slider2 .Review_Data_Holder > div {
-  flex: unset;
+.Trusted_Reviews_Slider2 .Review_Image_Holder {
+  flex: unset !important;
+  max-width: unset !important
 }
