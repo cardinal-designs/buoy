@@ -39,7 +39,12 @@ $('.Trusted_Reviews_Wrapper_2 .Trusted_Reviews_Slider').slick({
   slidesToScroll: 1,
   loop: true,
   responsive: [
-
+    {
+      breakpoint: 768, 
+      settings: {
+         slidesToShow: 1
+      }
+    }
   ]
 });
 
