@@ -158,19 +158,31 @@
             "reviewer_name": "Reviewer Name",
             "video": ""
           }
+        },
+        "b39d248d-c42e-427e-95e0-fd20e225dea7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
         }
       },
       "block_order": [
         "4547ca31-d463-4970-868c-71701f59edc3",
         "971da234-375e-44bb-bc66-f3d28e6bcf38",
-        "917a7d3d-66be-431b-8cf0-05b9ad4fe8bd"
+        "917a7d3d-66be-431b-8cf0-05b9ad4fe8bd",
+        "b39d248d-c42e-427e-95e0-fd20e225dea7"
       ],
       "settings": {
         "review_emoji": "",
         "head-title": "Trust the Experts",
         "sub-text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "Customer Reviews",
-        "button_link": "",
+        "button_link": "shopify:\/\/pages\/reviews",
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
