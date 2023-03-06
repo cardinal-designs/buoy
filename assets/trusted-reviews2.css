@@ -6,3 +6,10 @@
 .Trusted_Reviews_Slider2 .Review_Data_Holder { 
 max-width: 336px !important
 }
+
+
+@media screen and (max-width: 1599px) {}
+  .Reviews_Column_Right .slick-list {
+      padding-right: 5% !important;
+  }
+}
