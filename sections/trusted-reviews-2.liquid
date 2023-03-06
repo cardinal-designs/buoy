@@ -1,6 +1,4 @@
 {{ 'trusted-reviews.css' | asset_url | stylesheet_tag }}
-{{ 'trusted-reviews2.css' | asset_url | stylesheet_tag }}
-
 <script src="{{ 'trusted-reviews.js' | asset_url }}" defer="defer"></script>
 
 <div class="Trusted_Reviews_Wrapper Trusted_Reviews_Wrapper_2 background--{{ section.settings.background }}
@@ -33,7 +31,7 @@
         </li>
        
         <li class="Reviews_Column_Right">
-          <div class="Trusted_Reviews_Slider Trusted_Reviews_Slider2">
+          <div class="Trusted_Reviews_Slider">
             {%- for block in section.blocks -%}
               <div class="Review_Holder">
                 <div class="Review_Data_Holder">
@@ -53,7 +51,17 @@
                       </div>
                       <p class="Review_Image_Name">{{ block.settings.reviewer_name }}</p>
                     </div>
-                  </div>    
+                  </div>
+                  <div class="Review_Video_Holder">
+                    {%- if block.settings.video != blank -%}
+                      <video width="100%" controls loop muted playsinline {% if block.settings.video_poster != blank %}poster="{{ block.settings.video_poster |img_url: 'master'}}"{% endif %}>
+                        <source src="{{ block.settings.video }}" type="video/mp4">
+                        {% comment %}<source src="{{ block.settings.video }}" type="video/ogg">{% endcomment %}
+                      </video>
+                    {% else %}
+                       {% render 'lazy-image' image: block.settings.video_image %}
+                    {%- endif -%}
+                  </div>     
                   <div class="Review_Content Hidden_Desktop">
                     {%- if block.settings.tags != blank -%}
                       <ul class="Trusted_Reviews_Tags hide-mobile">
@@ -192,6 +200,25 @@
           "id": "reviewer_name",
           "label": "Reviewer Name",
           "default": "Reviewer Name"
+        },
+        {
+          "type": "header",
+          "content": "Video Column"
+        },
+        {
+          "type": "image_picker",
+          "id": "video_poster",
+          "label": "Video Poster"
+        },
+        {
+          "type": "text",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "image_picker",
+          "id": "video_image",
+          "label": "Image"
         }
 
       ]
