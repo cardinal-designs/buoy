@@ -42,12 +42,9 @@
                       {% render 'lazy-image' image: block.settings.image %}
                     </div>
                     <div class="Review_Content Hidden_Phone">
-                      {%- if block.settings.tags != blank -%}
-                        <ul class="Trusted_Reviews_Tags">
-                          {{ block.settings.tags }}
-                        </ul>
-                      {%- endif -%}
                       <h5 class="Review_Image_Title">{{ block.settings.title }}</h5>
+                      <p class="medium">{{ block.settings.title_name }}</p>
+                      <p class="light">{{ block.settings.title_location }}</p>
                       <div class="Review_Image_Content">
                         {{ block.settings.content }}
                       </div>
@@ -171,15 +168,22 @@
           "label": "Image"
         },
         {
-          "type": "textarea",
-          "id": "tags",
-          "label": "Tags"
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Name"
         },
         {
           "type": "text",
-          "id": "title",
+          "id": "title_person",
           "label": "Title",
           "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "title_location",
+          "label": "Location",
+          "default": "Location"
         },
         {
           "type": "textarea",
