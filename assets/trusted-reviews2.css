@@ -17,7 +17,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  .Reviews_Column_Right .slick-list {
+  .Trusted_Reviews_Wrapper_2 .Reviews_Column_Right .slick-list {
     padding-right: 0%;
+  }
+
+  .Trusted_Reviews_Wrapper_2 .Review_Image_Holder {
+    width: unset;
   }
 }
