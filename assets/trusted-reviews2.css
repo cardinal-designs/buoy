@@ -32,6 +32,11 @@
   border: none;
 }
 
+.Trusted_Reviews_Wrapper_2 .Review_Image_Content {
+  font-size: 13px;
+  line-height: 21px;
+}
+
 @media screen and (max-width: 768px) {
   .Trusted_Reviews_Wrapper_2 .Reviews_Column_Right .slick-list {
     padding-right: 0%;
