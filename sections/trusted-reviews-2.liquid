@@ -51,17 +51,7 @@
                       </div>
                       <p class="Review_Image_Name">{{ block.settings.reviewer_name }}</p>
                     </div>
-                  </div>
-                  <div class="Review_Video_Holder">
-                    {%- if block.settings.video != blank -%}
-                      <video width="100%" controls loop muted playsinline {% if block.settings.video_poster != blank %}poster="{{ block.settings.video_poster |img_url: 'master'}}"{% endif %}>
-                        <source src="{{ block.settings.video }}" type="video/mp4">
-                        {% comment %}<source src="{{ block.settings.video }}" type="video/ogg">{% endcomment %}
-                      </video>
-                    {% else %}
-                       {% render 'lazy-image' image: block.settings.video_image %}
-                    {%- endif -%}
-                  </div>     
+                  </div>    
                   <div class="Review_Content Hidden_Desktop">
                     {%- if block.settings.tags != blank -%}
                       <ul class="Trusted_Reviews_Tags hide-mobile">
@@ -200,25 +190,6 @@
           "id": "reviewer_name",
           "label": "Reviewer Name",
           "default": "Reviewer Name"
-        },
-        {
-          "type": "header",
-          "content": "Video Column"
-        },
-        {
-          "type": "image_picker",
-          "id": "video_poster",
-          "label": "Video Poster"
-        },
-        {
-          "type": "text",
-          "id": "video",
-          "label": "Video"
-        },
-        {
-          "type": "image_picker",
-          "id": "video_image",
-          "label": "Image"
         }
 
       ]
