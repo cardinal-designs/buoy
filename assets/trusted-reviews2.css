@@ -1,4 +1,8 @@
 .Trusted_Reviews_Slider2 .Review_Image_Holder {
   flex: unset !important;
-  max-width: unset !important
+  max-width: unset !important;
+}
+
+.Trusted_Reviews_Slider2 .Review_Data_Holder { 
+max-width: 336px !important
 }
