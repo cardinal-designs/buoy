@@ -52,13 +52,8 @@
                     </div>
                   </div>
                   <div class="Review_Content Hidden_Desktop">
-                    {%- if block.settings.tags != blank -%}
-                      <ul class="Trusted_Reviews_Tags hide-mobile">
-                        {{ block.settings.tags }}
-                      </ul>
-                    {%- endif -%}
                     <h5 class="Review_Image_Title">{{ block.settings.title }}</h5>
-                    <div class="Review_Image_Content">
+                    <div class="Review_Image_Content light">
                       {{ block.settings.content }}
                     </div>
                     <p class="Review_Image_Name">{{ block.settings.reviewer_name }}</p>
