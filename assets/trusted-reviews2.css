@@ -16,10 +16,15 @@
   width: 336px;
 }
 
-.Trusted_Reviews_Wrapper_2 .Review_Content .medium,
+.Trusted_Reviews_Wrapper_2 .Review_Content .medium {
+  font-size: 12px;
+  margin: 0;
+  line-height: 16px;
+}
+
 .Trusted_Reviews_Wrapper_2 .Review_Content .light {
   font-size: 12px;
-  margin: 0 0 20px;
+  margin: 20px;
   line-height: 16px;
 }
 
