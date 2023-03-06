@@ -35,7 +35,7 @@ $('.Trusted_Reviews_Slider2').slick({
   arrows: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 2,
+  slidesToShow: 1,
   slidesToScroll: 1,
   loop: true,
   responsive: [
