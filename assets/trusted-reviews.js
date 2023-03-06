@@ -12,23 +12,23 @@ $(window).on("load resize orientationchange", function(){
   $(".Trusted_Reviews_List").css("padding-left", f_a);
 });
 
-// $('.Trusted_Reviews_Wrapper .Trusted_Reviews_Slider').slick({
-//   dots: false,
-//   arrows: true,
-//   infinite: true,
-//   speed: 300,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   loop: true,
-//   responsive: [
-//     {
-//       breakpoint: 1440, 
-//       settings: {
-//          slidesToShow: 1
-//       }
-//     }
-//   ]
-// });
+$('.Trusted_Reviews_Wrapper_1 .Trusted_Reviews_Slider').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  loop: true,
+  responsive: [
+    {
+      breakpoint: 1440, 
+      settings: {
+         slidesToShow: 1
+      }
+    }
+  ]
+});
 
 $('.Trusted_Reviews_Wrapper_2 .Trusted_Reviews_Slider').slick({
   dots: false,
