@@ -37,6 +37,10 @@
   line-height: 21px;
 }
 
+.Trusted_Reviews_Wrapper_2 .Card-Info_Title {
+  max-width: 443px;
+}
+
 @media screen and (max-width: 768px) {
   .Trusted_Reviews_Wrapper_2 .Reviews_Column_Right .slick-list {
     padding-right: 15%;
