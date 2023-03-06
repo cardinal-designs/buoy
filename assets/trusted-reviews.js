@@ -30,12 +30,12 @@ $('.Trusted_Reviews_Slider').slick({
   ]
 });
 
-$('.Trusted_Reviews_Slider2').slick({
+$('.Trusted_Reviews_Wrapper_2 .Trusted_Reviews_Slider').slick({
   dots: false,
   arrows: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
   loop: true,
   responsive: [
