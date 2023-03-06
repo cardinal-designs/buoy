@@ -42,7 +42,7 @@ $('.Trusted_Reviews_Wrapper_2 .Trusted_Reviews_Slider').slick({
     {
       breakpoint: 768, 
       settings: {
-         slidesToShow: 1
+         slidesToShow: 2
       }
     }
   ]
