@@ -40,7 +40,7 @@ $('.Trusted_Reviews_Wrapper_2 .Trusted_Reviews_Slider').slick({
   loop: true,
   responsive: [
     {
-      breakpoint: 768, 
+      breakpoint: 560, 
       settings: {
          slidesToShow: 1
       }
