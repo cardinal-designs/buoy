@@ -30,6 +30,24 @@ $('.Trusted_Reviews_Slider').slick({
   ]
 });
 
+$('.Trusted_Reviews_Slider2').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  loop: true,
+  responsive: [
+    {
+      breakpoint: 1440, 
+      settings: {
+         slidesToShow: 1
+      }
+    }
+  ]
+});
+
 var $slider = $('.Trusted_Reviews_Slider');
 
 // Next slide button
