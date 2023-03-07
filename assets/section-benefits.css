@@ -27,6 +27,7 @@
   transition: rotate 1s;
 }
 
+
 .benefits__item h4 {
   margin: 0 14px 8px 0;
 }
@@ -38,10 +39,6 @@
 
 .benefits__info-item {
   display: none;
-}
-
-.benefits__info-item.active {
-  display: block;
 }
 
 @media screen and (max-width: 768px) {
