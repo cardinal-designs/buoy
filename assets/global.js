@@ -1411,6 +1411,7 @@ $('.pee-club-product-arrow').click(function() {
 })
 
 $('.benefits__item').click(function() {
+  console.log($('.benefits__item h4.active').parent())
    let num = $('.benefits__item h4.active').parent().data("id")
   $('.benefits__item h4.active').removeClass('active')
   console.log(num)
