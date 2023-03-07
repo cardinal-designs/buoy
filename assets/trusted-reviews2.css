@@ -46,6 +46,10 @@
   font-size: 14px;
 }
 
+.Trusted_Reviews_Wrapper_2 .multicolumn-card__info h3 {
+  margin: 0 0 24px;
+}
+
 @media screen and (max-width: 768px) {
   .Trusted_Reviews_Wrapper_2 .Reviews_Column_Right .slick-list {
     padding-right: 15%;
