@@ -25,6 +25,14 @@
   font-weight: 500;
 }
 
+.benefits__info-item {
+  display: none;
+}
+
+.benefits__info-item.active {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
 
 }
