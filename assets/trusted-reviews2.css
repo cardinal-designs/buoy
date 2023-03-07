@@ -44,7 +44,7 @@
 
 .Trusted_Reviews_Wrapper_2 .Card-Info_Title .suptitle {
   font-size: 14px;
-  margin: 0;
+  margin: 0 0 20px;;
 }
 
 .Trusted_Reviews_Wrapper_2 .Card-Info_Title .subtitle {
@@ -76,6 +76,10 @@
 
   .Trusted_Reviews_Wrapper_2 .Review_Content.Hidden_Desktop .Review_Image_Title {
     margin-top: 0;
+  }
+
+  .Trusted_Reviews_Wrapper_2 .Card-Info_Title .suptitle {
+    margin: 0 0 14px;;
   }
 
   .Trusted_Reviews_Wrapper_2 .Review_Image_Holder {
