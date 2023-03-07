@@ -2,6 +2,13 @@
   display: flex;
 }
 
+.benefits__info {
+  width: 50%;
+}
+
+.benefits__items {
+  width: 50%;
+}
 
 @media screen and (max-width: 768px) {
 
