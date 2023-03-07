@@ -1416,7 +1416,9 @@ $('.benefits__item').click(function() {
   $(this).find('h4').addClass('active')
 
   $('.benefits__info-item').fadeOut()
-  $(`.benefits__info-item[data-id="${num}"]`).fadeIn()
+  setTimeOut(function() {
+    $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
+  },1000)
 })
 
 
