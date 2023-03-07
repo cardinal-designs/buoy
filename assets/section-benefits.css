@@ -12,6 +12,12 @@
 
 .benefits__item {
   display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.benefits__item h4 {
+  margin: 0 14px 8px 0;
 }
 
 .benefits__item h4.active{
