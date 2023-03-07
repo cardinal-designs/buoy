@@ -14,3 +14,10 @@
 .Text_Block_Section2 .Text_Blocks_Slider .Single_Block p {
   margin: 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .Text_Block_Section2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
