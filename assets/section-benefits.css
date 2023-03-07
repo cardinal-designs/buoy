@@ -10,6 +10,19 @@
   width: 50%;
 }
 
+.benefits__item {
+  display: flex;
+}
+
+.benefits__item h4 {
+  
+}
+
+
+.benefits__item h4.active{
+  color: #ECD8C5;
+}
+
 @media screen and (max-width: 768px) {
 
 }
