@@ -13,7 +13,7 @@
     <div class="benefits__info">
       <h5>{{ section.settings.title }}</h5>
       {% for block in section.blocks %}
-        <div data-id="{{ forloop.index }}" class="benefits__info-item {% if forloop.index == 1 %}active{% endif %}">
+        <div style="{% if forloop.index == 1 %}display: block{% endif %}" data-id="{{ forloop.index }}" class="benefits__info-item">
           <p class="sh3">{{ block.settings.title }}</p>
           <p class="sh2 ligh">{{ block.settings.text }}</p>
         </div>
