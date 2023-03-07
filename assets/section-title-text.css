@@ -22,4 +22,12 @@
   .title-text__container {
     margin: 50px auto 0;
   }
+
+  .title-text__container h1 {
+    margin: 0 auto 20px;
+  }
+
+  .title-text__container p {
+    font-weight: 300;
+  }
 }
