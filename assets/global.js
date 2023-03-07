@@ -1411,10 +1411,10 @@ $('.pee-club-product-arrow').click(function() {
 })
 
 $('.benefits__item').click(function() {
-  $('.benefits__item h4.active').css({"rotate": "-225deg;", "transition": "rotate 1s;"})
+   let num = $('.benefits__item h4.active').data("id")
+  $('.benefits__item h4.active').removeClass('active')
+  $(`.benefits__item h4[data-id"${num}"]`).css({"rotate": "-225deg;", "transition": "rotate 1s;"})
   $(this).find('h4').addClass('active')
-  let num = $(this).data("id")
-  // $(`.benefits__item h4[data-id"${num}"]`).addClass('active')
 })
 
 
