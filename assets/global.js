@@ -1412,8 +1412,9 @@ $('.pee-club-product-arrow').click(function() {
 
 $('.benefits__item').click(function() {
   $('.benefits__item h4').removeClass('active')
+  $(this).find(h4).addClass('active')
   let num = $(this).data("id")
-  $(`.benefits__item h4[data-id"${num}"]`).addClass('active')
+  // $(`.benefits__item h4[data-id"${num}"]`).addClass('active')
 })
 
 
