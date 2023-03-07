@@ -1411,10 +1411,9 @@ $('.pee-club-product-arrow').click(function() {
 })
 
 $('.benefits__item').click(function() {
-  console.log($('.benefits__item h4.active').parent().data("id"))
    let num = $('.benefits__item h4.active').parent().data("id")
   $('.benefits__item h4.active').removeClass('active')
-  console.log(num)
+   console.log($(`.benefits__item[data-id="${num}"] svg`))
   $(`.benefits__item[data-id="${num}"] svg`).css({"rotate": "-225deg;", "transition": "rotate 1s;"})
   $(this).find('h4').addClass('active')
 })
