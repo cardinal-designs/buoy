@@ -24,4 +24,8 @@
   .Text_Block_Section2 .Text_Block_Row .Section_Header .h4 {
     max-width: 250px;
   }
+
+  .Text_Block_Section2 .Text_Block_Row .Section_Header {
+    margin-bottom: 30px;
+  }
 }
