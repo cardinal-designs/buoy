@@ -284,16 +284,16 @@ body.lock-scroll {
       transform:rotate(0deg);
   }
   to {
-      transform:rotate(45deg);
+      transform:rotate(270deg);
   }
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes spinsmall {
   from {
       transform:rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+      transform:rotate(270deg);
   }
 }
 
