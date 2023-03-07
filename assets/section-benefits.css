@@ -24,6 +24,7 @@
 
 .benefits__item h4 {
   margin: 0 14px 8px 0;
+  max-width: min-content;
 }
 
 .benefits__item h4.active{
