@@ -17,3 +17,9 @@
   max-width: 950px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 768px) {
+  .title-text__container {
+    margin: 50px auto 0;
+  }
+}
