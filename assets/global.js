@@ -1410,11 +1410,11 @@ $('.pee-club-product-arrow').click(function() {
   $(this).hide()
 })
 
-$('.benefits__item').click(function() {
-   let num = $('.benefits__item h4.active').data("id")
-  $('.benefits__item h4.active').removeClass('active')
-  $(`.benefits__item[data-id"${num}"] svg`).css({"rotate": "-225deg;", "transition": "rotate 1s;"})
-  $(this).find('h4').addClass('active')
-})
+// $('.benefits__item').click(function() {
+//    let num = $('.benefits__item h4.active').data("id")
+//   $('.benefits__item h4.active').removeClass('active')
+//   $(`.benefits__item[data-id"${num}"] svg`).css({"rotate": "-225deg;", "transition": "rotate 1s;"})
+//   $(this).find('h4').addClass('active')
+// })
 
 
