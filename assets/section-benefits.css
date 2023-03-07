@@ -23,8 +23,7 @@
 }
 
 .benefits__item h4.active + svg {
-/*   animation: 1s spinsmall; */
-  rotate: 45deg;
+  rotate: 270deg;
   transition: rotate 1s;
 }
 
