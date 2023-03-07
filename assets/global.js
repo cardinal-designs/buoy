@@ -1415,10 +1415,8 @@ $('.benefits__item').click(function() {
   $('.benefits__item h4.active').removeClass('active')
   $(this).find('h4').addClass('active')
 
-  $('.benefits__info-item').fadeOut()
-  setTimeOut(function() {
-    $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
-  },1000)
+  $('.benefits__info-item').hide()
+  $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
 })
 
 
