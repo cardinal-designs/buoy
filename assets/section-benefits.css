@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.benefits__item h4.active ~ svg {
+.benefits__item h4.active + svg {
   animation: 1s spinsmall;
 }
 
