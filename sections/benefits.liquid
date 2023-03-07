@@ -5,7 +5,7 @@
     <div class="benefits__items">
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item">
-        <h4 class="light {% if forloop.index == 1 %}active{% else %}still{% endif %}">{{ block.settings.title }}</h4>
+        <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
         {% include 'icon-x' %}
       </div>
       {% endfor %}
