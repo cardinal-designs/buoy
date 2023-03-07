@@ -15,7 +15,7 @@
       {% for block in section.blocks %}
         <div style="{% if forloop.index == 1 %}display: block{% endif %}" data-id="{{ forloop.index }}" class="benefits__info-item">
           <p class="sh3">{{ block.settings.title }}</p>
-          <p class="sh2 ligh">{{ block.settings.text }}</p>
+          <p class="sh2 light">{{ block.settings.text }}</p>
         </div>
       {% endfor %}
     </div>
