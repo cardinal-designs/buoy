@@ -13,11 +13,7 @@
         <li class="Reviews_Column_Left">
           <div class="multicolumn-card__info">
             <div class="Card-Info_Title">
-              <span class="Review_Emoji">
-                {%- for i in (i..4) -%}
-                  <span class="Review_Emoji_Icon">{{ section.settings.review_emoji }}</span>
-                {%- endfor -%}
-              </span>
+              <p class="sh3 suptitle">{{ section.settings.text }}</p>
               <h3 class="h3 light">{{ section.settings.head-title }}</h3>
               <p>{{ section.settings.sub-text }}</p>
               {%- if section.settings.button_label != blank -%}
@@ -88,8 +84,8 @@
   "settings": [
 	{
     "type": "text",
-      "id": "review_emoji",
-      "label": "Review Emoji"
+      "id": "text",
+      "label": "text"
     },
 	{
     "type": "text",
