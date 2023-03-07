@@ -27,11 +27,6 @@
   transition: rotate 1s;
 }
 
-.benefits__item h4.still + svg {
-  rotate: -45deg;
-  transition: rotate 1s;
-}
-
 .benefits__item h4 {
   margin: 0 14px 8px 0;
 }
