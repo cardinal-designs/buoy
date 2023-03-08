@@ -63,8 +63,29 @@
     margin: 0 auto;
   }
 
+  .benefits__item-mobile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .benefits__item-mobile h4 {
+    font-size: 30px;
+    margin: 4px 14px 4px 0;
+  }
+
   .benefits__item h4 {
     font-size: 30px;
+  }
+
+  .benefits__item-mobile h4.active + svg {
+    rotate: 225deg;
+    transition: rotate 1s;
+  }
+  
+  .benefits__item-mobile h4.active{
+    color: #ECD8C5;
+    font-weight: 500;
   }
 
   .benefits__container {

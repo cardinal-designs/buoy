@@ -14,7 +14,7 @@
     <div class="benefits__items hide-desktop">
       <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
       {% for block in section.blocks %}
-      <div data-id="{{ forloop.index }}" class="benefits__item">
+      <div data-id="{{ forloop.index }}" class="benefits__item-mobile">
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
         {% include 'icon-x' %}
       </div>
