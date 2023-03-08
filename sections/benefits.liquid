@@ -18,7 +18,7 @@
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
         {% include 'icon-x' %}
       </div>
-      <p class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
+      <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
       {% endfor %}
     </div>
     <div class="benefits__info hide-mobile">
