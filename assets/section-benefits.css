@@ -57,5 +57,7 @@
 }
 
 @media screen and (max-width: 768px) {
-
+  .benefits__items {
+    width: 100%;
+  }
 }
