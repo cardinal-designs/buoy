@@ -1,14 +1,9 @@
 {
   "sections": {
-    "d2abe09e-273c-4037-9f5a-3cfaa8122bb3": {
-      "type": "text-hero",
+    "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e": {
+      "type": "image-text-blocks",
       "settings": {
-        "title": "Your Order Status",
-        "text_svg": "",
-        "no_animation": false,
-        "text": "",
-        "button_label": "",
-        "button_link": ""
+        "title": "Your Order Status"
       }
     },
     "16784824710141f699": {
@@ -140,39 +135,119 @@
         "fairing-padding": 25
       }
     },
-    "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e": {
-      "type": "image-text-blocks",
-      "settings": {
-        "title": "Share Your Hydration Journey"
-      }
-    },
-    "1678486261d9b2d3c9": {
-      "type": "apps",
+    "9b7c7840-a53e-47ca-9e60-c20646010d6e": {
+      "type": "hydration-products",
       "blocks": {
-        "54432d15-c83b-48d7-849d-624e3c23fa37": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "f5b5b75c-5fc6-429c-8d9f-bb92560a0417": {
+          "type": "block",
           "settings": {
-            "product": ""
+            "product": "energy-drops"
+          }
+        },
+        "9831bec6-8fa4-4a47-85f6-89564a4349b8": {
+          "type": "block",
+          "settings": {
+            "product": "hydration-drops"
+          }
+        },
+        "0714d2a1-f27b-4d14-993e-adaaeb274a38": {
+          "type": "block",
+          "settings": {
+            "product": "immunity-drops"
+          }
+        },
+        "62770713-5490-4e91-8040-8c75f9716110": {
+          "type": "block",
+          "settings": {
+            "product": "wellness-kit"
           }
         }
       },
       "block_order": [
-        "54432d15-c83b-48d7-849d-624e3c23fa37"
+        "f5b5b75c-5fc6-429c-8d9f-bb92560a0417",
+        "9831bec6-8fa4-4a47-85f6-89564a4349b8",
+        "0714d2a1-f27b-4d14-993e-adaaeb274a38",
+        "62770713-5490-4e91-8040-8c75f9716110"
       ],
       "settings": {
-        "include_margins": true
+        "heading_text": "Stock Up On The Hydration",
+        "subtitle": "",
+        "background": "none",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "df6d8960-7489-4f3b-bb85-2628801d237f": {
+      "type": "image-grid",
+      "blocks": {
+        "427e960b-ba5d-4b60-8628-296eca61b43c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Alix_Earle_Borg.png",
+            "name": "",
+            "subtitle": "We made Alix Earle the #BORG she deserves #alixearle from her favorite store.",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy\/video\/7202443579136986414"
+          }
+        },
+        "6934a6fd-4169-4cf6-ac2c-e1452da46caa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/girl_with_POTS.png",
+            "name": "",
+            "subtitle": "I love me my Bouy 🤍I’m still trying to figure out how to deal with my POTS, anyone have any tips!!?",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.instagram.com\/reel\/Co085FjrDGm\/?utm_source=ig_web_copy_link"
+          }
+        },
+        "cdd6e4c2-9f2f-4e0a-bd12-b6e18c6488b6": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BORGS.png",
+            "name": "",
+            "subtitle": "Everything you need to know about BORGs (and how to make a healthier version) #BORG",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy\/video\/7200211135071800622"
+          }
+        },
+        "e33bb68e-1840-4c81-aac7-9b10db5c8a1c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nicole.png",
+            "name": "",
+            "subtitle": "Nicole shares her story with MS and navigating perception around chronic illnesses and identity...",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.instagram.com\/reel\/CmedWvworQc\/?utm_source=ig_web_copy_link"
+          }
+        }
+      },
+      "block_order": [
+        "427e960b-ba5d-4b60-8628-296eca61b43c",
+        "6934a6fd-4169-4cf6-ac2c-e1452da46caa",
+        "cdd6e4c2-9f2f-4e0a-bd12-b6e18c6488b6",
+        "e33bb68e-1840-4c81-aac7-9b10db5c8a1c"
+      ],
+      "settings": {
+        "color": "",
+        "title": "Share Your Hydration Journey",
+        "text": "Hang out with the rest of #ClearPeeClub on Instagram and Tiktok",
+        "link_label": "Follow Us On Tiktok",
+        "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy",
+        "text2": "@justaddbuoy",
+        "button_label": "Follow Us On Instagram",
+        "button_link": "https:\/\/www.tiktok.com\/@justaddbuoy"
       }
     }
   },
   "order": [
-    "d2abe09e-273c-4037-9f5a-3cfaa8122bb3",
+    "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e",
     "16784824710141f699",
     "40639e52-45ca-48b0-9f5f-52157852d9c8",
     "faq",
     "products",
     "rebuy",
     "fairing",
-    "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e",
-    "1678486261d9b2d3c9"
+    "9b7c7840-a53e-47ca-9e60-c20646010d6e",
+    "df6d8960-7489-4f3b-bb85-2628801d237f"
   ]
 }
