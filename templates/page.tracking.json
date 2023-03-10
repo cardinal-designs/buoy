@@ -1,112 +1,56 @@
 {
   "sections": {
-    "main": {
-      "type": "wonderment-banner-hero-image",
+    "16784824710141f699": {
+      "type": "apps",
       "blocks": {
-        "starter": {
-          "type": "starter",
+        "02f98519-b207-4700-9033-f419c78423c2": {
+          "type": "shopify:\/\/apps\/wonderment\/blocks\/wonderBlock\/89d63369-6ee7-4097-ac41-8229c6f90001",
           "settings": {
           }
         }
       },
       "block_order": [
-        "starter"
+        "02f98519-b207-4700-9033-f419c78423c2"
       ],
       "settings": {
-        "width_override": true,
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "rebuy": {
-      "type": "wonderment-rebuy",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "fairing": {
-      "type": "wonderment-fairing",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "products": {
-      "type": "wonderment-featured-collection",
-      "disabled": true,
-      "settings": {
+        "include_margins": true
       }
     },
     "faq": {
       "type": "wonderment-faq",
-      "disabled": true,
       "blocks": {
         "faq-getting-started": {
           "type": "section_heading",
           "settings": {
-            "title": "Getting started"
+            "title": "FAQs"
           }
         },
         "product-where-made-question": {
           "type": "question",
           "settings": {
-            "title": "Where are your products manufactured?",
-            "text": "<p>We are a local company and all merchandise is made with love here in Toronto, Canada.<\/p>"
+            "title": "How is my package being delivered?",
+            "text": "<p>Buoy offers free USPS Priority Mail shipping on all orders placed on our website within the United States.<br\/><br\/>Need more details about your order? Message us at hello@justaddbuoy.com!<\/p>"
           }
         },
         "sizes-question": {
           "type": "question",
           "settings": {
-            "title": "How do your sizes work?",
-            "text": "<p>Please take a look at our size chart for more information and how to take accurate measurements.<\/p>"
-          }
-        },
-        "shipping-heading": {
-          "type": "section_heading",
-          "settings": {
-            "title": "Shipping"
+            "title": "Can I get a refund?",
+            "text": "<p>If you're not 100% satisfied with your order, you can request a full refund from hello@justaddbuoy.com.<br\/><br\/>Orders placed within the last 30 days are eligible for a refund.<br\/><br\/>We accept returns for any order placed within 30 days. To start a return, you can email hello@justaddbuoy.com or reply to your order confirmation email.<\/p>"
           }
         },
         "when-shipping-question": {
           "type": "question",
           "settings": {
-            "title": "When will my order ship?",
-            "text": "<p>Usually in 1-2 business days<\/p>"
+            "title": "How do subscriptions work?",
+            "text": "<p>When you subscribe to Buoy, you’ll save 24% on every order of your favorite Buoy drops!<br\/><br\/>It’s risk-free and you can cancel at any time. Manage your Clear Pee Club membership by logging into your account.<\/p>"
           }
         },
         "when-arriving-question": {
           "type": "question",
           "settings": {
-            "title": "When will my order arrive?",
-            "text": "<p>Usually in 3-10 business days<\/p>"
-          }
-        },
-        "ship-international-question": {
-          "type": "question",
-          "settings": {
-            "title": "Do you ship internationally?",
-            "text": "<p>Currently we are only shipping to USA and Canada.<\/p>"
-          }
-        },
-        "shipping-cost-question": {
-          "type": "question",
-          "settings": {
-            "title": "How much is shipping?",
-            "text": "<p>If you spend over $100, shipping is always free. For any other purchases, shipping will be calculated at checkout.<\/p>"
-          }
-        },
-        "return-policy-question": {
-          "type": "question",
-          "settings": {
-            "title": "What is your return policy?",
-            "text": "<p>Merchandise that is unworn and in the original packaging can be returned within 30 days with the packing slip included with the product.<\/p>"
+            "title": "How do I get the most out of my order?",
+            "text": "<p>Hydration is a daily effort. You lose essential vitamins, electrolytes, and minerals from exercise, sleeping, and just being alive!<br\/><br\/>To get the most out of Buoy, squeeze it into your drinks 3-5 times a day!<br\/><br\/>Once you notice the powerful effects of hydration on your daily life, you’re free to subscribe to your Buoy faves for 24% off and risk-free automatic monthly deliveries.<\/p>"
           }
         }
       },
@@ -114,19 +58,69 @@
         "faq-getting-started",
         "product-where-made-question",
         "sizes-question",
-        "shipping-heading",
         "when-shipping-question",
-        "when-arriving-question",
-        "ship-international-question",
-        "shipping-cost-question",
-        "return-policy-question"
+        "when-arriving-question"
       ],
       "settings": {
+        "show_answers": false,
+        "text_size": 100,
+        "alignment": "center",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(184deg, rgba(255, 255, 255, 1) 7%, rgba(255, 255, 255, 1) 94%)",
+        "border_color": "#121212",
+        "base_width": 80,
+        "max_width": "",
+        "inner_padding": 100,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "products": {
+      "type": "wonderment-featured-collection",
+      "disabled": true,
+      "settings": {
+        "per_row": 3,
+        "show_arrows": true,
+        "show_product_title": true,
+        "show_product_price": true,
+        "show_product_label": true,
+        "text_size": 100,
+        "heading_color": "#121212",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(360deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "base_width": 95,
+        "max_width": "",
+        "inner_padding": 40,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "rebuy": {
+      "type": "wonderment-rebuy",
+      "disabled": true,
+      "settings": {
+        "rebuy-widget-id": ""
+      }
+    },
+    "fairing": {
+      "type": "wonderment-fairing",
+      "disabled": true,
+      "settings": {
+        "fairing-key": "",
+        "fairing-padding": 25
       }
     }
   },
   "order": [
-    "main",
+    "16784824710141f699",
     "faq",
     "products",
     "rebuy",
