@@ -27,6 +27,17 @@
         "include_margins": true
       }
     },
+    "40639e52-45ca-48b0-9f5f-52157852d9c8": {
+      "type": "custom-image-text",
+      "settings": {
+        "text": "Unlock exclusive discounts, insider access to product launches, and master hydration tips from our experts when you sign up for SMS!",
+        "title": "Share Your Hyrdation",
+        "button_label": "Join The Clear Pee Club",
+        "button_link": "",
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
+      }
+    },
     "faq": {
       "type": "wonderment-faq",
       "blocks": {
@@ -128,14 +139,43 @@
         "fairing-key": "",
         "fairing-padding": 25
       }
+    },
+    "79770cd7-7195-4ec3-b1bc-d70beb27cada": {
+      "type": "text-list",
+      "settings": {
+        "text": "Share Your Hydration Journey",
+        "button_label": "Follow us on Soical Media",
+        "button_link": "",
+        "show_divider": false
+      }
+    },
+    "1678486261d9b2d3c9": {
+      "type": "apps",
+      "blocks": {
+        "54432d15-c83b-48d7-849d-624e3c23fa37": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/media-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "54432d15-c83b-48d7-849d-624e3c23fa37"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "d2abe09e-273c-4037-9f5a-3cfaa8122bb3",
     "16784824710141f699",
+    "40639e52-45ca-48b0-9f5f-52157852d9c8",
     "faq",
     "products",
     "rebuy",
-    "fairing"
+    "fairing",
+    "79770cd7-7195-4ec3-b1bc-d70beb27cada",
+    "1678486261d9b2d3c9"
   ]
 }
