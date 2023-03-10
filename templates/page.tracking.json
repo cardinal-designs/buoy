@@ -1,5 +1,16 @@
 {
   "sections": {
+    "d2abe09e-273c-4037-9f5a-3cfaa8122bb3": {
+      "type": "text-hero",
+      "settings": {
+        "title": "Your Order Status",
+        "text_svg": "",
+        "no_animation": false,
+        "text": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "16784824710141f699": {
       "type": "apps",
       "blocks": {
@@ -120,6 +131,7 @@
     }
   },
   "order": [
+    "d2abe09e-273c-4037-9f5a-3cfaa8122bb3",
     "16784824710141f699",
     "faq",
     "products",
