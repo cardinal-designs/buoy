@@ -93,7 +93,6 @@
 }
 
 .Main_Menu_Bottom .account-link {
-  margin-top: 10px;
   display: inline-flex;
   align-items: center;
 }
@@ -187,6 +186,7 @@
 
 .Main_Menu_Bottom .account-link {
   font-size: 14px;
+  line-height: 21px;
 }
 
 .Main_Menu_Bottom .account-link svg {
