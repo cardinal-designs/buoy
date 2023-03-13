@@ -79,18 +79,14 @@
   flex-basis: 15.438%;
 }
 
+.Footer__Block .sh2 {
+  margin: 0 0 25px;
+  font-weight: 500;
+}
 
 .footer__logo-mascot svg {
   max-width: 220px;
   display: block;
-}
-
-.footer__content {
-  /*display: grid;
-  grid-template-columns: 50% calc(50% - 92px);
-  gap: 78px 92px;
-  justify-content: space-between;
-  padding-bottom: 8px;*/
 }
 
 .footer__content-blocks {
