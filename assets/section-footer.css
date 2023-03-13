@@ -812,10 +812,13 @@ noscript .localization-selector.link {
 
 /* Klaviyo forms */
 .newsletter-footer .email-form {
-  border: 2px solid #1F2322;
-  border-radius: 5px;
   max-width: 376px;
   margin: 0 auto 12px auto;
+}
+
+.newsletter-footer .email-form > .klaviyo-form {
+  border: 2px solid #1F2322;
+  border-radius: 5px;
 }
 
 .newsletter-footer .kl-private-reset-css-Xuajs1 {
