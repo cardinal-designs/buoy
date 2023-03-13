@@ -179,6 +179,14 @@
   .footer__content {
     gap: 34px;
   }
+
+  .footer__logo {
+    flex-basis: 15%;
+  }
+  
+  .Footer__Block--links {
+    flex-basis: calc(21.25% - 29px);
+  }
   
 }
 
