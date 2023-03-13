@@ -262,6 +262,16 @@
   max-width: 50%;
 }
 
+.main-menu__wrapper {
+  position: relative;
+}
+
+.Main_Menu_Bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
