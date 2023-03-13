@@ -3,13 +3,6 @@
 
 <div class="main-menu" aria-hidden="true">
   <button class="main-menu__close">Close</button>
-
-  {% if section.settings.arrow_link_label != blank %}
-    <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
-      {{ section.settings.arrow_link_label }}
-      {% render 'icon-arrow-right' %}
-    </a>
-  {% endif %}
   
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
@@ -55,13 +48,12 @@
   </div>
 
   <div class="Main_Menu_Bottom">
-    {% if section.settings.bottom_button_text != blank %}
-      <a href="{% if section.settings.bottom_button_url != blank %}{{ section.settings.bottom_button_url }}{% else %}#{% endif %}" class="button">{{ section.settings.bottom_button_text }}</a>
+    {% if section.settings.arrow_link_label != blank %}
+      <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
+        {{ section.settings.arrow_link_label }}
+        {% render 'icon-arrow-right' %}
+      </a>
     {% endif %}
-    <ul class="Bottom_List">
-      <li>{{ 'main_menu.free_shipping' | t }}</li>
-      <li>{{ 'main_menu.risk_free' | t }}</li>
-    </ul>
   </div>
   
 </div>
