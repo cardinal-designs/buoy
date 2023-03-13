@@ -827,6 +827,14 @@ noscript .localization-selector.link {
   .footer__content-dropdown-group:nth-child(2) {
     border: none;
   }
+  
+  .Footer__Block--social {
+    margin-top: 30px;
+  }
+  
+  .Footer__Block .sh2 {
+    margin: 0 0 20px;
+  }
 }
 
 /* Klaviyo forms */
