@@ -166,6 +166,10 @@
   justify-content: center;
 }
 
+.Footer__Block--social .list-social .list-social__item .list-social__link .icon {
+  transform: scale(1);
+}
+
 @media screen and (max-width: 1365px) {
   
   .footer__logo {
