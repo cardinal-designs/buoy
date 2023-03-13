@@ -23,8 +23,10 @@
             <a class="h6 light" href="{{ block.settings.link }}">
              <span class="visually-hidden">{{ shop.name }}</span>
               {% if section.settings.arrow_link_label != blank %}
-                <span class="Maine_Menu_Link_Image"><img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}"></span>
-                <span>{{ block.settings.title }}</span>
+                <span class="Maine_Menu_Link_Image">
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}">
+                  <span>{{ block.settings.title }}</span>
+                </span>
               {% endif %} 
              
               {% if block.settings.callout_text != blank %}
