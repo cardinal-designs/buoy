@@ -800,6 +800,7 @@ noscript .localization-selector.link {
     font-weight: 500;
     font-size: 18px;
     line-height: 1.667em;
+    text-transform: capitalize;
   }
 
   .footer__content-dropdown-header svg {
