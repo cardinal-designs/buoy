@@ -1904,6 +1904,14 @@ input[type='checkbox'] {
   
 }
 
+@media screen and (max-width: 375px) {
+
+  .Announcement_Button {
+    padding: 3.5px 14.5px;
+  }
+
+}
+
 /* section-header */
 header-container {
   position: sticky;
