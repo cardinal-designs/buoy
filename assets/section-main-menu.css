@@ -45,9 +45,6 @@
 }
 
 /* Main */
-.main-menu__main-links {
-  margin-bottom: 60px;
-}
 
 .main-menu__main-link {
   margin-bottom: 12px;
@@ -254,7 +251,7 @@
   display: flex;
   flex-wrap: wrap;
   flex: 0 0 37%;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .main-menu__main-link {
