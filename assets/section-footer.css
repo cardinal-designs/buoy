@@ -49,6 +49,9 @@
 
 .footer {
   padding: 60px 0 20px;
+}
+
+.footer .footer_container {
   display: grid;
   gap: 20px;
   grid-template-columns: calc(50% - 10px) calc(50% - 10px);
@@ -166,7 +169,7 @@
 
 @media screen and (max-width: 1250px) {
   
-  .footer {
+  .footer .footer_container {
     grid-template-columns: calc(35% - 10px) calc(65% - 10px);
   }
   
