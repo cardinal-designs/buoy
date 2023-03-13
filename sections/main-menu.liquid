@@ -58,24 +58,17 @@
 
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
-    $('.page-overlay').addClass('is-visible');
-    $('.page-overlay').addClass('Menu_Overlay');
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
+    $('.header-wrapper').addClass('active');
 
-    $('.page-overlay').click(function() {
-      $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible Menu_Overlay');
-      $('.Mobile_Menu_Close').hide();
-      $('.Hamburger_New').show();
-    });
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
-    $('.page-overlay').removeClass('is-visible Menu_Overlay');
     $('.Mobile_Menu_Close').hide();
     $('.Hamburger_New').show();
+    $('.header-wrapper').removeClass('active');
   }); 
 
 {% endjavascript %}
