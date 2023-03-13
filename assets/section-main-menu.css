@@ -276,6 +276,14 @@
   
 }
 
+@media only screen and (max-width: 959px) {
+
+  .main-menu {
+    top: 127px;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu__main-links {
