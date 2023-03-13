@@ -224,6 +224,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 
 .callout-text {
