@@ -184,6 +184,13 @@
 
 @media screen and (max-width: 990px) {
   
+  .footer__logo {
+    flex-basis: 100%;
+  }
+  
+  .Footer__Block--links {
+    flex-basis: calc(33.33% - 23px);
+  }
 }
 
 @media screen and (max-width: 768px) {
