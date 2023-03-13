@@ -2,6 +2,9 @@
   "sections": {
     "3771ae63-ab55-410c-ab85-3e3909a98abf": {
       "type": "text-two-blocks",
+      "custom_css": [
+        ".text-two-blocks__container h6 {margin: 0 auto 5px;}"
+      ],
       "settings": {
         "title": "Your Order Status",
         "subtitle": "View all your latest tracking updates",
