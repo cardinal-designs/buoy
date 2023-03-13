@@ -484,6 +484,10 @@
   .callout-text {
     display: inline-block;
   }
+
+  header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
+    top: 54px;
+  }
   
 }
 
