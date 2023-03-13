@@ -14,8 +14,6 @@
       <div class="klaviyo-form-UBnePi"></div>
     </div>
     {% endif %}
-    <p class="social-header body-xs">{{ section.settings.social_header }}</p>
-    {% render 'social' %}
   </div>
 </div>
 
@@ -34,16 +32,19 @@
         "label": "Text"
       },
       {
-        "type": "text",
-        "id": "social_header",
-        "label": "Social Icons Header",
-		"default": "HYDRATE YOUR FEED"
-      },
-      {
         "type": "checkbox",
         "id": "show_phone",
         "label": "Show Klaviyo Phone?",
 		"default": false
+      },
+      {
+        "type": "header",
+        "content": "Style"        
+      },
+      {
+        "type": "color",
+        "id": "section_bg",
+        "label": "Background Color"
       }
     ]
   }
