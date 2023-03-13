@@ -52,9 +52,9 @@
 }
 
 .footer .footer_container {
-  display: grid;
+  /*display: grid;
   gap: 20px;
-  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);*/
 }
 
 .footer__logo {
@@ -170,7 +170,7 @@
 @media screen and (max-width: 1250px) {
   
   .footer .footer_container {
-    grid-template-columns: calc(35% - 10px) calc(65% - 10px);
+    /*grid-template-columns: calc(35% - 10px) calc(65% - 10px);*/
   }
   
 }
