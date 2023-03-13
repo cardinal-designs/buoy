@@ -22,10 +22,6 @@
                   </span>
                   <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.title }}</span>
                 {% endif %} 
-               
-                {% if block.settings.callout_text != blank %}
-                  <span class="body light callout-text">{{ block.settings.callout_text }}</span>
-                {% endif %}
               </a>
               {% if block.settings.subtext != blank %}
                 <p class="body light subtext">{{ block.settings.subtext }}</p>
@@ -43,10 +39,11 @@
       <div class="main-menu__secondary-links Secondary_Link Mobile">
         {% for block in section.blocks %}
           {% if block.type == 'secondary_link_mobile' %}
-             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}</a>
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}
               {% if block.settings.callout_text != blank %}
                 <span class="body light callout-text">{{ block.settings.callout_text }}</span>
-              {% endif %}
+              {% endif %}            
+             </a>
           {% endif %}
         {% endfor %}
       </div>
