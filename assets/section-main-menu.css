@@ -149,7 +149,9 @@
   text-align: center;
   left: 0;
   right: 0;
-  background: linear-gradient(90deg, rgba(243,219,183,1) 0%, rgba(243,219,183,1) 9%, rgba(255,255,255,1) 100%);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background-color: #ffffff96;
   margin: 0 auto;
   border-radius: 30px;
   padding: 7px 0;
