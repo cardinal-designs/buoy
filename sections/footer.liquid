@@ -20,13 +20,13 @@
   <div class="page-width">
     <div class="footer_container">
       <div class="footer__content">
-        <div class="footer__logo">
+        <div class="Footer__Block Footer__Block--Logo footer__logo">
           {{ section.settings.logo }}
         </div>
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when 'text_block' -%}
-            <div class="footer__content-blocks">
+            <div class="Footer__Block Footer__Block--{{ block.type }} footer__content-blocks">
               {% if block.settings.link %}
                 <a href="{{ block.settings.link }}" class="arrow-link">
               {% endif %}
@@ -45,7 +45,7 @@
 
             {%- when 'links' -%}
               {%- assign linklist = linklists[block.settings.menu] -%}
-              <div class="footer__content-dropdown-group">
+              <div class="Footer__Block Footer__Block--{{ block.type }} footer__content-dropdown-group">
                 <button class="footer__content-dropdown-header hide-desktop">
                   <p class="body-xs">{{ linklist.title | escape }}</p>
                   {% render 'icon-chevron-down' %}
@@ -59,7 +59,7 @@
               </div>
 
             {%- when 'social' -%}
-              <div class="footer__content-blocks">
+              <div class="Footer__Block Footer__Block--{{ block.type }}">
                 <h3 class="sh2">{{ block.settings.title }}</h3>
                 {% render 'social' %}
               </div>
