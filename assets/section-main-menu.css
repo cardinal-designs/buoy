@@ -128,6 +128,10 @@
   
 }
 
+.page-overlay.is-visible.Menu_Overlay {
+  display: none !important;
+}
+
 /*** NEW MAIN MENU CSS START ***/
 
 .main-menu {
