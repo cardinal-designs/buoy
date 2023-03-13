@@ -23,9 +23,6 @@
         <div class="footer__logo-container">
           {{ section.settings.logo }}
         </div>
-        <div class="footer__logo-mascot">
-          {{ section.settings.pelican_svg }}
-        </div>
       </div>
     
       <div class="footer__content">
@@ -64,9 +61,6 @@
             <p class="body-xs">Pelican</p>
             {% render 'icon-chevron-down' %}
           </button>
-          <div class="footer__content-links footer__content-dropdown-content">
-            {{ section.settings.pelican_svg }}
-          </div>
         </div>
     
         <div class="footer__content-bottom">
@@ -192,11 +186,6 @@
       "type": "link_list",
       "id": "menu",
       "label": "Right Menu"
-    },
-    {
-      "type": "textarea",
-      "id": "pelican_svg",
-      "label": "Pelican (SVG)"
     },
     {
       "type": "header",
