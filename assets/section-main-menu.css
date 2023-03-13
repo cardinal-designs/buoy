@@ -440,6 +440,10 @@
     display: block;
     padding: 27px 0;
   }
+
+  .main-menu__secondary-links .sh4:last-child {
+    margin-bottom:0;
+  }
   
 }
 
