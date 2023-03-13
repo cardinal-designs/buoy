@@ -289,6 +289,10 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
     flex: 0 0 440px;
     max-width: 440px;
   }
+
+  .main-menu {
+    max-height: 574px;
+  }
   
 }
 
