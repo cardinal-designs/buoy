@@ -1928,7 +1928,7 @@ header-container {
   transition: background-color, border .3s ease;
 }
 
-.header-wrapper.wrapper {
+.header-wrapper.active {
   border-bottom: 1px solid transparent; 
 }
 
