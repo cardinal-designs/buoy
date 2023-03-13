@@ -21,9 +21,7 @@
     <div class="footer_container">
       <div class="footer__content">
         <div class="footer__logo">
-          <div class="footer__logo-container">
-            {{ section.settings.logo }}
-          </div>
+          {{ section.settings.logo }}
         </div>
         {% for block in section.blocks %}
           {%- case block.type -%}
