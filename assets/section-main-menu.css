@@ -410,6 +410,10 @@
   .main-menu__close {
     text-align: right;
   }
+
+  .main-menu__container {
+    display: block;
+  }
   
 }
 
