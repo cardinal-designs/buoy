@@ -20,15 +20,12 @@
                     <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}">
                     <span class="Main_Menu_Link_Desktop_Title">{{ block.settings.title }}</span>
                   </span>
-                  <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.title }}</span>
+                  <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.mobile_title }}</span>
                 {% endif %} 
                 {% if block.settings.callout_text != blank %}
                   <span class="body light callout-text">{{ block.settings.callout_text }}</span>
                 {% endif %}   
               </a>
-              {% if block.settings.subtext != blank %}
-                <p class="body light subtext">{{ block.settings.subtext }}</p>
-              {% endif %}
             </div>
           {% endif %}
        {% endfor %}
