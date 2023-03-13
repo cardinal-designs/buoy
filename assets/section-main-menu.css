@@ -293,6 +293,10 @@
   display: block;
 }
 
+.main-menu .main-menu__close {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
