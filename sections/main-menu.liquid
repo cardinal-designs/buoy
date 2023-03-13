@@ -35,8 +35,14 @@
       </div>
       
       <div class="main-menu__secondary-links">
-        {% for link in section.settings.secondary_menu.links %}
-          <a href="{{ link.url }}" class="sh4 light">{{ link.title }}</a>
+        {% for block in section.blocks %}
+          {% if block.type == 'secondary_link_mobile' %}
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.mobile_title }}
+              {% if block.settings.callout_text != blank %}
+                <span class="body light callout-text">{{ block.settings.callout_text }}</span>
+              {% endif %}            
+             </a>
+          {% endif %}
         {% endfor %}
       </div>
       <div class="main-menu__secondary-links Secondary_Link Mobile">
@@ -95,11 +101,6 @@
   {
     "name": "Main Menu",
     "settings": [
-      {
-        "type": "link_list",
-        "id": "secondary_menu",
-        "label": "Secondary Menu"
-      },
       {
         "type": "text",
         "id": "arrow_link_label",
