@@ -429,7 +429,8 @@
 
   .main-menu__wrapper {
     position: inherit;
-    height: 100%;
+    overflow: auto;
+    height: 100vh;
   }
 
   .main-menu__secondary-links {
