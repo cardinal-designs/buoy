@@ -748,7 +748,7 @@ noscript .localization-selector.link {
   }
 
   .footer {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 24px;
     display: block;
   }
@@ -821,6 +821,10 @@ noscript .localization-selector.link {
   
   .footer__content-bottom-links .body:last-child {
     margin-right: 0;
+  }
+  
+  .footer__content-dropdown-group:nth-child(2) {
+    border: none;
   }
 }
 
