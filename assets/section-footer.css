@@ -955,6 +955,10 @@ noscript .localization-selector.link {
   background: white !important;
 }
 
+.newsletter-footer .email-form .needsclick form.klaviyo-form {
+  background-color: transparent !important;
+}
+
 
 @media only screen and (max-width: 768px) {
   
