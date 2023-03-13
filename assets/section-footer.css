@@ -337,7 +337,6 @@
   
   .footer__content-bottom{
     flex-wrap: wrap;
-    margin-top: 88px;
   }
   
   .footer__content-bottom-links{
@@ -409,6 +408,7 @@
 @media screen and (min-width: 769px) {
   .footer__content-bottom {
     border-top-width: 0.1rem;
+    margin-top: 88px;
   }
 }
 
