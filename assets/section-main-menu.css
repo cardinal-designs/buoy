@@ -270,6 +270,10 @@
   display: none;
 }
 
+.main-menu__main-link .h6:hover .Main_Menu_Link_Image {
+  opacity: .8;
+}
+
 header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
   top: 80px;
 }
