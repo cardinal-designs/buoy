@@ -1924,7 +1924,7 @@ header-container {
   display: block;
   position: relative;
   background-color: white;
-  border-bottom: 1px solid var(--charcoal);
+  border-bottom: 1px solid transparent;
   transition: background-color, border .3s ease;
 }
 
