@@ -258,6 +258,20 @@
   display: none !important;
 }
 
+@media only screen and (max-width: 1024px) {
+
+  .main-menu__main-link {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+  
+  .main-menu__main-links {
+    flex: 0 0 440px;
+    max-width: 440px;
+  }
+  
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu__main-links {
@@ -426,21 +440,6 @@
   }
    
 }
-
-@media only screen and (max-width: 1024px) {
-
-  .main-menu__main-link {
-    flex: 0 0 200px;
-    max-width: 200px;
-  }
-  
-  .main-menu__main-links {
-    flex: 0 0 440px;
-    max-width: 440px;
-  }
-  
-}
-
 
 @media only screen and (max-width: 374px) {
 
