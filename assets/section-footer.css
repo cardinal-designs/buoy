@@ -51,6 +51,12 @@
   padding: 60px 0 20px;
 }
 
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
 .footer .footer_container {
   /*display: grid;
   gap: 20px;
