@@ -414,6 +414,11 @@
   .main-menu__container {
     display: block;
   }
+
+  .main-menu__main-link {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
   
 }
 
