@@ -191,6 +191,11 @@
   .Footer__Block--links {
     flex-basis: calc(33.33% - 23px);
   }
+
+  .Footer__Block--social {
+    flex-basis: 100%;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
