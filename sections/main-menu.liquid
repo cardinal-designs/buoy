@@ -39,7 +39,7 @@
       <div class="main-menu__secondary-links Secondary_Link Mobile">
         {% for block in section.blocks %}
           {% if block.type == 'secondary_link_mobile' %}
-             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.mobile_title }}
               {% if block.settings.callout_text != blank %}
                 <span class="body light callout-text">{{ block.settings.callout_text }}</span>
               {% endif %}            
@@ -144,7 +144,12 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Title"
+            "label": "Desktop Title"
+          },
+          {
+            "type": "text",
+            "id": "mobile_title",
+            "label": "Mobile Title"
           },
           {
             "type": "image_picker",
