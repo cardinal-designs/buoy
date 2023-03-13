@@ -13,8 +13,8 @@
 
 .newsletter-footer .newsletter-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
 .newsletter-footer__text h4 {
