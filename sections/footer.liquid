@@ -47,7 +47,7 @@
               {%- assign linklist = linklists[block.settings.menu] -%}
               <div class="Footer__Block Footer__Block--{{ block.type }} footer__content-dropdown-group">
                 <button class="footer__content-dropdown-header hide-desktop">
-                  <p class="body-xs medium">{{ linklist.title | escape }}</p>
+                  <p class="body-xs">{{ linklist.title | escape }}</p>
                   {% render 'icon-chevron-down' %}
                 </button>
                 <div class="footer__content-links footer__content-dropdown-content">
