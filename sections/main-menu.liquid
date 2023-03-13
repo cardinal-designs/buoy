@@ -22,6 +22,9 @@
                   </span>
                   <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.title }}</span>
                 {% endif %} 
+                {% if block.settings.callout_text != blank %}
+                  <span class="body light callout-text">{{ block.settings.callout_text }}</span>
+                {% endif %}   
               </a>
               {% if block.settings.subtext != blank %}
                 <p class="body light subtext">{{ block.settings.subtext }}</p>
