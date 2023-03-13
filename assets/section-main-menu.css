@@ -423,6 +423,13 @@
   .Main_Menu_Link_Desktop_Title {
     display:none;
   }
+
+  .main-menu__main-link a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
   
 }
 
