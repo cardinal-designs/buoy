@@ -258,6 +258,8 @@
 .main-menu__main-links {
   display: flex;
   flex-wrap: wrap;
+  flex: 0 0 37%;
+  justify-content: space-between;
 }
 
 .main-menu__main-link {
