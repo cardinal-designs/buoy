@@ -62,7 +62,7 @@
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
     $('.header-wrapper').addClass('active');
-
+    $(this).addClass('active');
   });
 
   $('.main-menu__close').click(function() {
@@ -70,6 +70,7 @@
     $('.Mobile_Menu_Close').hide();
     $('.Hamburger_New').show();
     $('.header-wrapper').removeClass('active');
+    $('[href="#menu"]').removeClass('active');
   }); 
 
 {% endjavascript %}
