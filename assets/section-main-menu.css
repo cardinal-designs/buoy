@@ -517,4 +517,12 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
 
 }
 
+@media only screen and (max-width: 358px) {
+  
+  .main-menu {
+    top: 135px;
+  }
+
+}
+
 /*** NEW MAIN MENU CSS END ***/
