@@ -19,6 +19,7 @@
   transition: .4s ease-in-out;
   max-height: 694px;
   box-shadow: 0px 10px 20px #00000008;
+  display: block;
 }
 
 .main-menu[aria-hidden="false"] {
@@ -224,10 +225,6 @@
 
 .main-menu__main-link:last-child {
   margin-bottom: 0;
-}
-
-.main-menu {
-  display: block;
 }
 
 .Main_Menu_Link_Title {
