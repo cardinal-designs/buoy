@@ -52,17 +52,6 @@
         "include_margins": false
       }
     },
-    "40639e52-45ca-48b0-9f5f-52157852d9c8": {
-      "type": "custom-image-text",
-      "settings": {
-        "text": "Unlock exclusive discounts, insider access to product launches, and master hydration tips from our experts when you sign up for SMS!",
-        "title": "Stay Updated",
-        "button_label": "Subscribe To Our Text Messages",
-        "button_link": "https:\/\/justaddbuoy.com\/pages\/sms-signup-page-for-email-campaigns-flows",
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
-      }
-    },
     "5039082d-1a37-485e-843c-557fb3ce0871": {
       "type": "landing-faq",
       "blocks": {
@@ -105,6 +94,17 @@
         "title": "Frequently Asked Questions",
         "text": "Need more help? We got you covered!",
         "video_url": ""
+      }
+    },
+    "40639e52-45ca-48b0-9f5f-52157852d9c8": {
+      "type": "custom-image-text",
+      "settings": {
+        "text": "Unlock exclusive discounts, insider access to product launches, and master hydration tips from our experts when you sign up for SMS!",
+        "title": "Stay Updated",
+        "button_label": "Subscribe To Our Text Messages",
+        "button_link": "https:\/\/justaddbuoy.com\/pages\/sms-signup-page-for-email-campaigns-flows",
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
       }
     },
     "faq": {
@@ -283,7 +283,7 @@
       ],
       "custom_css": [
         "h3,.h3 {font-family: inter, sans-serif; font-style: normal; font-weight: 500; font-size: 45px; letter-spacing: 0; line-height: 1.26;}",
-        "a.button{background-color: #F6ECE1;}"
+        "a.button {background-color: #f6ece1;}"
       ],
       "settings": {
         "color": "",
@@ -300,8 +300,8 @@
   "order": [
     "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e",
     "16784824710141f699",
-    "40639e52-45ca-48b0-9f5f-52157852d9c8",
     "5039082d-1a37-485e-843c-557fb3ce0871",
+    "40639e52-45ca-48b0-9f5f-52157852d9c8",
     "faq",
     "products",
     "rebuy",
