@@ -95,7 +95,7 @@
   font-weight: 500;
 }
 
-.mMain_Menu_Bottom .account-link {
+.Main_Menu_Bottom .account-link {
   margin-top: 10px;
   display: inline-flex;
   align-items: center;
@@ -194,12 +194,12 @@
   bottom: 12px;
 }
 
-.main-menu__secondary-links .account-link {
+.Main_Menu_Bottom .account-link {
   margin-top: 28px;
   font-size: 14px;
 }
 
-.main-menu__secondary-links .account-link svg {
+.Main_Menu_Bottom .account-link svg {
   height: 25px;
   width: 25px;
   margin-right: 10px;
