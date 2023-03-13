@@ -73,11 +73,11 @@
 }
 
 .footer__content {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 50% calc(50% - 92px);
   gap: 78px 92px;
   justify-content: space-between;
-  padding-bottom: 8px;
+  padding-bottom: 8px;*/
 }
 
 .footer__content-blocks {
@@ -705,9 +705,9 @@ noscript .localization-selector.link {
 @media only screen and (max-width: 989px) {
 
   .footer__content {
-    grid-template-columns: 62% calc(38% - 25px);
+    /* grid-template-columns: 62% calc(38% - 25px);
     justify-content: space-between;
-    gap: 55px 25px;
+    gap: 55px 25px; */
   }
   
 }
