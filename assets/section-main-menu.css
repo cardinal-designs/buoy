@@ -65,7 +65,7 @@
   font-weight: 500;
 }
 
-.main-menu__main-link .callout-text {
+.callout-text {
   margin-left: 14px;
   padding: 5px 18px;
   font-size: 12px;
@@ -127,7 +127,7 @@
   margin-bottom: 14px;
 }
 
-.main-menu__main-link .callout-text {
+.callout-text {
   margin-left: 8px;
   padding: 2.2px 8px;
   font-size: 12px;
@@ -197,10 +197,6 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-}
-
-.callout-text {
-  display: none;
 }
 
 .main-menu__main-links {
