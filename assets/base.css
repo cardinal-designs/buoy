@@ -1942,6 +1942,7 @@ header-container {
 }
 
 @media screen and (max-width: 768px) {
+  
   .header {
     padding: 10px 17px;
   }
@@ -1949,6 +1950,11 @@ header-container {
   .header .sh2:hover {
     font-weight: 700;
   }
+
+  .header-wrapper.active {
+    border-bottom: 1px solid transparent; 
+  }
+  
 }
 
 /* .header--scrolled .header {
