@@ -1831,6 +1831,15 @@ input[type='checkbox'] {
   transition: height .4s ease;
 }
 
+.Announcement_Button {
+  font-size: 14px;
+  line-height: 22px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 10px 40px;
+  font-family: 'inter';
+}
+
 .announcement-bar {
   position: relative;
   background: var(--beige-light);
