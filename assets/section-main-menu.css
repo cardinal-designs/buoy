@@ -245,9 +245,10 @@
 .main-menu__main-links {
   display: flex;
   flex-wrap: wrap;
-  flex: 0 0 50%;
+  flex: 0 0 490px;
   justify-content: end;
   column-gap: 14px;
+  max-width: 490px;
 }
 
 .main-menu__main-link {
