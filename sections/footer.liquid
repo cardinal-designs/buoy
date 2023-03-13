@@ -27,20 +27,20 @@
         </div>
         <div class="footer__content-blocks">
           {% for block in section.blocks %}
-          {% if block.settings.link %}
-          <a href="{{ block.settings.link }}" class="arrow-link">
-            {% endif %}
-            <div class="footer__content-block">
-              {% if block.settings.title %}
-              <p class="body-xs title">{{ block.settings.title }}{% if block.settings.link != blank %}{% if block.settings.show_icon %}{% render 'icon-arrow-right' %}{% endif %}{% endif %}</p>
-              {% endif %}
-              {% if block.settings.title %}
-              <p class="body">{{ block.settings.text }}</p>
-              {% endif %}
-            </div>
             {% if block.settings.link %}
-          </a>
-          {% endif %}
+            <a href="{{ block.settings.link }}" class="arrow-link">
+              {% endif %}
+              <div class="footer__content-block">
+                {% if block.settings.title %}
+                <p class="body-xs title">{{ block.settings.title }}{% if block.settings.link != blank %}{% if block.settings.show_icon %}{% render 'icon-arrow-right' %}{% endif %}{% endif %}</p>
+                {% endif %}
+                {% if block.settings.title %}
+                <p class="body">{{ block.settings.text }}</p>
+                {% endif %}
+              </div>
+              {% if block.settings.link %}
+            </a>
+            {% endif %}
           {% endfor %}
         </div>
         <div class="footer__content-dropdown-group">
