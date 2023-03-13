@@ -246,6 +246,13 @@
   margin: 0 auto;
 }
 
+.main-menu__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
 .callout-text {
   display: none;
 }
