@@ -98,6 +98,10 @@
     },
     "40639e52-45ca-48b0-9f5f-52157852d9c8": {
       "type": "custom-image-text",
+      "custom_css": [
+        ".how-to {margin: 0px 0;}",
+        ".custom-image-text__container {padding-top: 0px;}"
+      ],
       "settings": {
         "text": "Unlock exclusive discounts, insider access to product launches, and master hydration tips from our experts when you sign up for SMS!",
         "title": "Stay Updated",
