@@ -145,12 +145,6 @@
   right: 15px;
 }
 
-.Shop_Link {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-}
-
 .Main_Menu_Link_Image img {
   width: auto;
   vertical-align: middle;
@@ -319,10 +313,6 @@
 
   .main-menu {
     max-width: 100%;
-  }
-
-  .Shop_Link {
-    top: 21px;
   }
 
   .page-overlay.is-visible.Menu_Overlay {
