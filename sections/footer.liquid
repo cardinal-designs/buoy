@@ -53,7 +53,7 @@
                   {% render 'icon-chevron-down' %}
                 </button>
                 <div class="footer__content-links footer__content-dropdown-content">
-                  <h3 class="sh1 hide-mobile">{{ linklist.title | escape }}</h3>
+                  <h3 class="sh2 hide-mobile">{{ linklist.title | escape }}</h3>
                   {%- for link in linklist.links -%}
                     <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
                   {%- endfor -%}
@@ -61,7 +61,7 @@
               </div>
 
             {%- when 'social' -%}
-              <h3 class="sh1">{{ block.settings.title }}</h3>
+              <h3 class="sh2">{{ block.settings.title }}</h3>
               {% render 'social' %}
           {%- endcase -%}
         {% endfor %}
