@@ -821,6 +821,10 @@ noscript .localization-selector.link {
     display: block;
     max-width: 45%;
   }
+  
+  .footer__content-dropdown-header svg path {
+    stroke: #1F2322;
+  }
 
   .footer__content-bottom {
     display: block;
