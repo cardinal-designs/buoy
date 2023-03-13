@@ -61,7 +61,7 @@
               </div>
 
             {%- when 'social' -%}
-              <h3 class="sh1">{{ section.settings.title }}</h3>
+              <h3 class="sh1">{{ block.settings.title }}</h3>
               {% render 'social' %}
           {%- endcase -%}
         {% endfor %}
