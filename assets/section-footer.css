@@ -910,7 +910,7 @@ noscript .localization-selector.link {
   font-size: 14px !important;
   letter-spacing: 0 !important;
   line-height: 1.375em !important;
-  padding: 0 18px !important;
+  padding: 0 32px!important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -923,17 +923,8 @@ noscript .localization-selector.link {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   font-size: 0 !important;
+  background: #fff center/30px url(https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Arrow.png?v=1678703028) no-repeat !important;
 }
-
-.newsletter-footer .kl-private-reset-css-Xuajs1 button:before {
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.013' height='12.007' viewBox='0 0 29.013 12.007'%3E%3Cg id='Arrow' transform='translate(28.001 11.504) rotate(180)'%3E%3Cg id='Arrow-2' data-name='Arrow' transform='translate(271.17 1503) rotate(180)'%3E%3Cpath id='Path_3' data-name='Path 3' d='M4.98,11,0,5.5,4.98,0' transform='translate(271.17 1503) rotate(180)' fill='none' stroke='%231f2322' stroke-width='1.5'/%3E%3Cpath id='Path_4' data-name='Path 4' d='M249.357,1495.977h28' transform='translate(-6.188 1.523)' fill='none' stroke='%231f2322' stroke-width='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 29px;
-  height: 12px;
-}
-
 
 .newsletter-footer .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor span, .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor img, .kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1.kl-private-quill-wrapper-Lkqws1 .ql-editor a {
   font-family: inter, sans-serif !important;
