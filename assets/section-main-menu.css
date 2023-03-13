@@ -254,6 +254,10 @@
   display: none !important;
 }
 
+.main-menu__secondary-links.Secondary_Link.Mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .main-menu__main-link {
