@@ -46,17 +46,19 @@
             </div>
 
             {%- when 'links' -%}
-            <div class="footer__content-dropdown-group">
-              <button class="footer__content-dropdown-header hide-desktop">
-                <p class="body-xs">More</p>
-                {% render 'icon-chevron-down' %}
-              </button>
-              <div class="footer__content-links footer__content-dropdown-content">
-                {% for link in section.settings.menu.links %}
-                  <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
-                {% endfor %}
+              {%- assign linklist = linklists[block.settings.menu] -%}
+              <div class="footer__content-dropdown-group">
+                <button class="footer__content-dropdown-header hide-desktop">
+                  <p class="body-xs">{{ linklist.title | escape }}</p>
+                  {% render 'icon-chevron-down' %}
+                </button>
+                <div class="footer__content-links footer__content-dropdown-content">
+                  <h3 class="Footer__Title Heading sh3 accordion-title"></h3>
+                  {%- for link in linklist.links -%}
+                    <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
+                  {%- endfor -%}
+                </div>
               </div>
-            </div>
           {%- endcase -%}
         {% endfor %}
     
