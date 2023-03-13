@@ -61,8 +61,10 @@
               </div>
 
             {%- when 'social' -%}
-              <h3 class="sh2">{{ block.settings.title }}</h3>
-              {% render 'social' %}
+              <div class="footer__content-blocks">
+                <h3 class="sh2">{{ block.settings.title }}</h3>
+                {% render 'social' %}
+              </div>
           {%- endcase -%}
         {% endfor %}
     
