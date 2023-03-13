@@ -18,64 +18,66 @@
 
 <footer class="footer">
   <div class="page-width">
-    <div class="footer__logo">
-      <div class="footer__logo-container">
-        {{ section.settings.logo }}
-      </div>
-      <div class="footer__logo-mascot">
-        {{ section.settings.pelican_svg }}
-      </div>
-    </div>
-  
-    <div class="footer__content">
-      <div class="footer__content-blocks">
-        {% for block in section.blocks %}
-        {% if block.settings.link %}
-        <a href="{{ block.settings.link }}" class="arrow-link">
-          {% endif %}
-          <div class="footer__content-block">
-            {% if block.settings.title %}
-            <p class="body-xs title">{{ block.settings.title }}{% if block.settings.link != blank %}{% if block.settings.show_icon %}{% render 'icon-arrow-right' %}{% endif %}{% endif %}</p>
-            {% endif %}
-            {% if block.settings.title %}
-            <p class="body">{{ block.settings.text }}</p>
-            {% endif %}
-          </div>
-          {% if block.settings.link %}
-        </a>
-        {% endif %}
-        {% endfor %}
-      </div>
-      <div class="footer__content-dropdown-group">
-        <button class="footer__content-dropdown-header hide-desktop">
-          <p class="body-xs">More</p>
-          {% render 'icon-chevron-down' %}
-        </button>
-        <div class="footer__content-links footer__content-dropdown-content">
-          {% for link in section.settings.menu.links %}
-            <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
-          {% endfor %}
+    <div class="footer_container">
+      <div class="footer__logo">
+        <div class="footer__logo-container">
+          {{ section.settings.logo }}
         </div>
-      </div>
-  
-      <div class="footer__content-dropdown-group hide-desktop">
-        <button class="footer__content-dropdown-header">
-          <p class="body-xs">Pelican</p>
-          {% render 'icon-chevron-down' %}
-        </button>
-        <div class="footer__content-links footer__content-dropdown-content">
+        <div class="footer__logo-mascot">
           {{ section.settings.pelican_svg }}
         </div>
       </div>
-  
-      <div class="footer__content-bottom">
-        <div class="footer__content-bottom-copy">
-          <p class="body caps light">&copy;{{ 'now' | date: '%Y' }} Buoy. All Rights Reserved.</p>
-        </div>
-        <div class="footer__content-bottom-links">
-          {% for link in section.settings.right_menu.links %}
-            <a href="{{ link.url }}" class="body">{{ link.title }}</a>
+    
+      <div class="footer__content">
+        <div class="footer__content-blocks">
+          {% for block in section.blocks %}
+          {% if block.settings.link %}
+          <a href="{{ block.settings.link }}" class="arrow-link">
+            {% endif %}
+            <div class="footer__content-block">
+              {% if block.settings.title %}
+              <p class="body-xs title">{{ block.settings.title }}{% if block.settings.link != blank %}{% if block.settings.show_icon %}{% render 'icon-arrow-right' %}{% endif %}{% endif %}</p>
+              {% endif %}
+              {% if block.settings.title %}
+              <p class="body">{{ block.settings.text }}</p>
+              {% endif %}
+            </div>
+            {% if block.settings.link %}
+          </a>
+          {% endif %}
           {% endfor %}
+        </div>
+        <div class="footer__content-dropdown-group">
+          <button class="footer__content-dropdown-header hide-desktop">
+            <p class="body-xs">More</p>
+            {% render 'icon-chevron-down' %}
+          </button>
+          <div class="footer__content-links footer__content-dropdown-content">
+            {% for link in section.settings.menu.links %}
+              <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+    
+        <div class="footer__content-dropdown-group hide-desktop">
+          <button class="footer__content-dropdown-header">
+            <p class="body-xs">Pelican</p>
+            {% render 'icon-chevron-down' %}
+          </button>
+          <div class="footer__content-links footer__content-dropdown-content">
+            {{ section.settings.pelican_svg }}
+          </div>
+        </div>
+    
+        <div class="footer__content-bottom">
+          <div class="footer__content-bottom-copy">
+            <p class="body caps light">&copy;{{ 'now' | date: '%Y' }} Buoy. All Rights Reserved.</p>
+          </div>
+          <div class="footer__content-bottom-links">
+            {% for link in section.settings.right_menu.links %}
+              <a href="{{ link.url }}" class="body">{{ link.title }}</a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
