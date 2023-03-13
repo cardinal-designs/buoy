@@ -16,6 +16,7 @@
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   transition: .4s ease-in-out;
+  max-height: 694px;
 }
 
 .main-menu[aria-hidden="false"] {
