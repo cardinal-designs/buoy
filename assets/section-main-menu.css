@@ -309,6 +309,11 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
   .main-menu__secondary-links .sh4 {
     font-size: 26px;
   }
+
+  .main-menu__main-links {
+    flex: 0 0 380px;
+    max-width: 380px;
+  }
   
 }
 
