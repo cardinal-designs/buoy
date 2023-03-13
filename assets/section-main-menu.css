@@ -289,6 +289,10 @@
   display: none;
 }
 
+.header-wrapper.active .main-menu__close {
+  display: block;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
