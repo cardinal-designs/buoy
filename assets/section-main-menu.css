@@ -315,6 +315,11 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
     max-width: 380px;
   }
   
+  .main-menu__main-link {
+    flex: 0 0 160px;
+    max-width: 160px;
+  }
+  
 }
 
 @media only screen and (max-width: 959px) {
