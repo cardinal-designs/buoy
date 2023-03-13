@@ -59,6 +59,7 @@
 .main-menu__main-link .h6 {
   display: inline-flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .main-menu__main-link .h6:hover {
@@ -263,6 +264,10 @@
 
 .main-menu__secondary-links.Secondary_Link.Mobile {
   display: none;
+}
+
+.main-menu__main-link .h6:hover img {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1024px) {
