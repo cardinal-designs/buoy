@@ -257,6 +257,16 @@
   display: none;
 }
 
+.main-menu__main-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-menu__main-link {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
