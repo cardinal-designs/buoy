@@ -1928,6 +1928,10 @@ header-container {
   transition: background-color, border .3s ease;
 }
 
+.header-wrapper.wrapper {
+  border-bottom: 1px solid transparent; 
+}
+
 .header {
   padding: 22px 45px;
   display: grid;
