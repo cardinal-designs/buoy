@@ -2,7 +2,7 @@
 {{ 'section-main-menu.css' | asset_url | stylesheet_tag }} 
 
 <div class="main-menu" aria-hidden="true">
-  <button class="main-menu__close">{% render 'icon-close' %}</button>
+  <button class="main-menu__close">Close</button>
 
   {% if section.settings.arrow_link_label != blank %}
     <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
