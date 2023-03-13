@@ -138,7 +138,10 @@
 .main-menu__close {
   top: 15px;
   left: unset;
-  right: 15px;
+  right: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1F2322;
 }
 
 .Main_Menu_Link_Image img {
