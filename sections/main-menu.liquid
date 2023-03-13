@@ -36,8 +36,8 @@
       
       <div class="main-menu__secondary-links">
         {% for block in section.blocks %}
-          {% if block.type == 'secondary_link_mobile' %}
-             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.mobile_title }}
+          {% if block.type == 'secondary_link_desktop' %}
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}
               {% if block.settings.callout_text != blank %}
                 <span class="body light callout-text">{{ block.settings.callout_text }}</span>
               {% endif %}            
