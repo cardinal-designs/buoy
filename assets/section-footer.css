@@ -69,6 +69,17 @@
   justify-content: flex-start;
 }
 
+.Footer__Block--social .list-social .list-social__item {
+  padding: 0 12px 0 0;
+}
+
+.Footer__Block--social .list-social .list-social__item .list-social__link {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+}
+
 .footer__logo {
   flex-basis: 24.5296%;
 }
