@@ -82,10 +82,12 @@
 }
 
 /* Secondary */
+
 .main-menu__secondary-links .sh4 {
   margin: 0 0 12px;
   display: block;
-  line-height: 1.5em;
+  line-height: 1.2em;
+  font-size: 35px;
 }
 
 .main-menu__secondary-links .sh4:hover {
