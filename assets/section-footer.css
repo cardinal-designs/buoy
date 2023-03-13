@@ -29,20 +29,6 @@
   margin: 0;
 }
 
-.newsletter-footer__form .social-header {
-  margin-top: 25px;
-  margin-bottom: 0;
-  font-weight: 400;
-  color: #545759;
-}
-
-.newsletter-footer__form .list-social {
-  margin-top: 10px;
-  margin-left: -10px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .newsletter-footer__form .list-social a {
   padding: 0 10px;
 }
@@ -59,25 +45,6 @@
 
 .Footer__Block--text_block {
   flex-basis: 275px;
-}
-
-.Footer__Block--social {
-  flex-basis: 15.438%;
-}
-
-.Footer__Block--social .list-social {
-  justify-content: flex-start;
-}
-
-.Footer__Block--social .list-social .list-social__item {
-  padding: 0 12px 0 0;
-}
-
-.Footer__Block--social .list-social .list-social__item .list-social__link {
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  justify-content: center;
 }
 
 .footer__logo {
@@ -166,12 +133,6 @@
   margin: 0 0 0 16px;
 }
 
-.footer__content-top {
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-  display: block;
-}
-
 .footer__content-blocks .arrow-link:first-child .footer__content-block {
   display: flex;
   flex-direction: row-reverse;
@@ -182,15 +143,27 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1250px) {
-  
-  .footer .footer_container {
-    /*grid-template-columns: calc(35% - 10px) calc(65% - 10px);*/
-  }
-  
+.Footer__Block--social {
+  flex-basis: 15.438%;
+}
+
+.Footer__Block--social .list-social {
+  justify-content: flex-start;
+}
+
+.Footer__Block--social .list-social .list-social__item {
+  padding: 0 12px 0 0;
+}
+
+.Footer__Block--social .list-social .list-social__item .list-social__link {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
+  
   .footer .grid {
     display: block;
     margin-left: 0;
@@ -231,18 +204,6 @@
   
 }
 
-@media screen and (min-width: 769px) {
-  .footer__content-top .grid {
-    margin-left: -3rem;
-    row-gap: 6rem;
-    margin-bottom: 0;
-  }
-
-  .footer__content-top .grid__item {
-    padding-left: 3rem;
-  }
-}
-
 .footer__localization:empty + .footer__column--info {
   align-items: center;
 }
@@ -252,6 +213,7 @@
     padding-top: 1.5rem;
   }
 }
+
 .footer__column {
   width: 100%;
   align-items: flex-end;
