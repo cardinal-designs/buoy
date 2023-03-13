@@ -16,7 +16,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
-<footer class="footer">
+<footer class="footer" style="background-color: {{ section.settings.section_bg }};">
   <div class="page-width">
     <div class="footer_container">
       <div class="footer__content">
@@ -222,6 +222,16 @@
       "type": "link_list",
       "id": "right_menu",
       "label": "Right Menu"
+    },
+    {
+      "type": "header",
+      "content": "Style"        
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Background Color",
+      "default": "#F6ECE1"
     }
   ]
 }
