@@ -272,6 +272,10 @@
   transform: scale(1.1);
 }
 
+header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
+  top: 80px;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .main-menu__main-link {
