@@ -60,8 +60,53 @@
         "image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
       }
     },
+    "5039082d-1a37-485e-843c-557fb3ce0871": {
+      "type": "landing-faq",
+      "blocks": {
+        "a6b875b9-d4ae-4f3f-895e-42d809e51f3b": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How is my package being delivered?",
+            "answer": "Buoy offers free USPS Priority Mail shipping on all orders placed on our website within the United States. \n\nNeed more details about your order? Message us at hello@justaddbuoy.com!"
+          }
+        },
+        "05bdcbbb-0994-4ea2-a5c7-a65dbd850b4c": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Can I get a refund?",
+            "answer": "If you're not 100% satisfied with your order, you can request a full refund from hello@justaddbuoy.com.\n\nOrders placed within the last 30 days are eligible for a refund.\n\nWe accept returns for any order placed within 30 days. To start a return, you can email hello@justaddbuoy.com or reply to your order confirmation email."
+          }
+        },
+        "42cfb604-6c6f-4de1-99e1-641399c60e1f": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "answer": "When you subscribe to Buoy, you’ll save 24% on every order of your favorite Buoy drops!\n\nIt’s risk-free and you can cancel at any time. Manage your Clear Pee Club membership by logging in."
+          }
+        },
+        "96b0182f-c936-4de1-92b1-8c525c2a16d1": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How do I get the most out of my order?",
+            "answer": "Hydration is a daily effort. You lose essential vitamins, electrolytes, and minerals from exercise, sleeping, and just being alive!\n\nTo get the most out of Buoy, squeeze it into your drinks 3-5 times a day!\n\nOnce you notice the powerful effects of hydration on your daily life, you’re free to subscribe to your Buoy faves for 24% off and risk-free automatic monthly deliveries."
+          }
+        }
+      },
+      "block_order": [
+        "a6b875b9-d4ae-4f3f-895e-42d809e51f3b",
+        "05bdcbbb-0994-4ea2-a5c7-a65dbd850b4c",
+        "42cfb604-6c6f-4de1-99e1-641399c60e1f",
+        "96b0182f-c936-4de1-92b1-8c525c2a16d1"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "text": "Need more help? We got you covered!",
+        "video_url": ""
+      }
+    },
     "faq": {
       "type": "wonderment-faq",
+      "disabled": true,
       "blocks": {
         "faq-getting-started": {
           "type": "section_heading",
@@ -249,6 +294,7 @@
     "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e",
     "16784824710141f699",
     "40639e52-45ca-48b0-9f5f-52157852d9c8",
+    "5039082d-1a37-485e-843c-557fb3ce0871",
     "faq",
     "products",
     "rebuy",
