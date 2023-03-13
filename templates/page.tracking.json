@@ -2,6 +2,9 @@
   "sections": {
     "3a84a98e-6fd3-4e4d-b9f4-728c9699d61e": {
       "type": "image-text-blocks",
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "Your Order Status"
       }
@@ -15,21 +18,21 @@
           "settings": {
             "test-tracking-code": "preview-delivered",
             "tracking-status-color-default": "#e5e7e8",
-            "tracking-status-text-color-default": "#000",
+            "tracking-status-text-color-default": "#000000",
             "tracking-status-color-delivered": "#bbe5b3",
-            "tracking-status-text-color-delivered": "#000",
+            "tracking-status-text-color-delivered": "#000000",
             "tracking-status-color-transit": "#b4e1fa",
-            "tracking-status-text-color-transit": "#000",
+            "tracking-status-text-color-transit": "#000000",
             "tracking-status-color-returned": "#ffc107",
-            "tracking-status-text-color-returned": "#000",
+            "tracking-status-text-color-returned": "#000000",
             "tracking-status-color-failure": "#ff8a80",
-            "tracking-status-text-color-failure": "#000",
+            "tracking-status-text-color-failure": "#000000",
             "tracking-block-show-tracking-code": true,
             "banner-color": "#00bcd4",
             "banner-bg-color": "#ffffff",
             "tracking-block-border-radius": "0",
-            "button-bg-color": "#fff",
-            "button-color": "#000",
+            "button-bg-color": "#ffffff",
+            "button-color": "#000000",
             "button-border-radius": "0",
             "search-input-border-radius": "0",
             "custom-css": "\/* insert custom css here *\/"
@@ -46,7 +49,7 @@
         "02f98519-b207-4700-9033-f419c78423c2"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "40639e52-45ca-48b0-9f5f-52157852d9c8": {
@@ -279,7 +282,8 @@
         "e33bb68e-1840-4c81-aac7-9b10db5c8a1c"
       ],
       "custom_css": [
-        "h3, .h3 {font-family: inter,sans-serif; font-style: normal; font-weight: 500; font-size: 45px; letter-spacing: 0; line-height: 1.26;}"
+        "h3,.h3 {font-family: inter, sans-serif; font-style: normal; font-weight: 500; font-size: 45px; letter-spacing: 0; line-height: 1.26;}",
+        "a.button{background-color: #F6ECE1;}"
       ],
       "settings": {
         "color": "",
