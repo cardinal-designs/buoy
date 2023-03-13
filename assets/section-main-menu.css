@@ -140,13 +140,15 @@
 }
 
 .main-menu__close {
-  top: 15px;
+  top: 25px;
   left: unset;
   right: 40px;
   font-size: 14px;
   line-height: 21px;
-  color: #1F2322;
-  display:none;
+  color: #1f2322;
+  display: none;
+  padding: 0;
+  font-weight: 400;
 }
 
 .Main_Menu_Link_Image img {
