@@ -37,15 +37,15 @@
         {% for link in section.settings.secondary_menu.links %}
           <a href="{{ link.url }}" class="sh4 light">{{ link.title }}</a>
         {% endfor %}
-        {% if section.settings.show_account %}
-          <a href="/account" class="sh4 light account-link">
-            {% render 'icon-account-new' %}
-            Account
-          </a>
-        {% endif %}
       </div>
     </div>
     <div class="Main_Menu_Bottom">
+      {% if section.settings.show_account %}
+        <a href="/account" class="sh4 light account-link">
+          {% render 'icon-account-new' %}
+          Account
+        </a>
+      {% endif %}
       {% if section.settings.arrow_link_label != blank %}
         <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
           {{ section.settings.arrow_link_label }}
