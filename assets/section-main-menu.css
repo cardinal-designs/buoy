@@ -293,6 +293,10 @@
   display: none;
 }
 
+.header__menu-item.active {
+  opacity: .5;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
