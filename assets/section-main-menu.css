@@ -1,5 +1,6 @@
 .main-menu {
-  max-width: 400px;
+  max-width: 100%;
+  overflow: auto;
   width: 100%;
   padding: 50px 40px 35px;
   position: fixed;
@@ -17,6 +18,7 @@
   -webkit-transform: translateX(-100%);
   transition: .4s ease-in-out;
   max-height: 694px;
+  box-shadow: 0px 10px 20px #00000008;
 }
 
 .main-menu[aria-hidden="false"] {
@@ -133,11 +135,6 @@
 }
 
 /*** NEW MAIN MENU CSS START ***/
-
-.main-menu {
-  max-width: 100%;
-  overflow: auto;
-}
 
 .main-menu__close {
   top: 30px;
@@ -260,7 +257,7 @@
 .main-menu__main-links {
   display: flex;
   flex-wrap: wrap;
-  flex: 0 0 37%;
+  flex: 0 0 50%;
   justify-content: end;
   column-gap: 14px;
 }
