@@ -300,9 +300,6 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
 
   .callout-text {
     margin: 2px 0 0;
-    position: relative;
-    top: unset;
-    right: unset;
     text-align: center;
   }
 
@@ -332,6 +329,14 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
 
 @media only screen and (max-width: 768px) {
 
+  .callout-text {
+    margin: 2px 0 0;
+    position: relative;
+    top: unset;
+    right: unset;
+    text-align: center;
+  }
+  
   .main-menu__main-links {
     margin-bottom: 0;
     max-width: 100%;
