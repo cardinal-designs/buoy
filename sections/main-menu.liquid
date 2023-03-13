@@ -17,8 +17,9 @@
               {% if section.settings.arrow_link_label != blank %}
                 <span class="Main_Menu_Link_Image">
                   <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}">
-                  <span class="Main_Menu_Link_Title">{{ block.settings.title }}</span>
+                  <span class="Main_Menu_Link_Title Desktop_Title">{{ block.settings.title }}</span>
                 </span>
+                <span class="Main_Menu_Link_Title Mobile_Title">{{ block.settings.title }}</span>
               {% endif %} 
              
               {% if block.settings.callout_text != blank %}
