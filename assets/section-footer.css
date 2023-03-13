@@ -57,18 +57,16 @@
   gap: 40px;
 }
 
-.footer .footer_container {
-  /*display: grid;
-  gap: 20px;
-  grid-template-columns: calc(50% - 10px) calc(50% - 10px);*/
-}
-
 .Footer__Block--text_block {
   flex-basis: 275px;
 }
 
 .Footer__Block--social {
   flex-basis: 15.438%;
+}
+
+.Footer__Block--social .list-social {
+  justify-content: flex-start;
 }
 
 .footer__logo {
