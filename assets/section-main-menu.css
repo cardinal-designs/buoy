@@ -435,6 +435,11 @@
     position: absolute;
     right: 15px;
   }
+
+  .main-menu__wrapper {
+    position: inherit;
+    height: 100%;
+  }
    
 }
 
