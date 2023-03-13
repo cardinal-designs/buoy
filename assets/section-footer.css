@@ -346,10 +346,11 @@
   
   .footer__content-bottom{
     flex-wrap: wrap;
+    justify-content: center;
   }
   
   .footer__content-bottom-links {
-    justify-content: flex-start;
+    justify-content: center;
     flex: 0 1 100%;
   }
   
