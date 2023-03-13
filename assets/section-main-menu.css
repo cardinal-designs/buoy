@@ -154,6 +154,7 @@
 
 .Main_Menu_Link_Image {
   margin-right: 10px;
+  position: relative;
 }
 
 .main-menu__main-link {
@@ -172,12 +173,21 @@
   width: 14px;
 }
 
-.Main_Menu_Title {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #545759;
-  margin: 44px 0 30px;
+.Main_Menu_Link_Title {
+    font-size: 12px;
+  line-height: 21px;
+  position: absolute;
+  bottom: 0;
+  color: #1f2322;
+  width: 80%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(243,219,183,1) 0%, rgba(243,219,183,1) 9%, rgba(255,255,255,1) 100%);
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 7px 0;
+  bottom: 12px;
 }
 
 .main-menu__secondary-links .account-link {
