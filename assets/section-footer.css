@@ -335,10 +335,6 @@
     width: 180px;
   }
   
-  .footer__content{
-    gap: 75px 0;
-  }
-  
   .footer__content-block {
     max-width: 250px;
   }
@@ -347,7 +343,7 @@
     flex-wrap: wrap;
   }
   
-  .footer__content-bottom-links{
+  .footer__content-bottom-links {
     justify-content: flex-start;
     flex: 0 1 100%;
   }
@@ -363,6 +359,7 @@
   .footer__content-block .arrow-link{
     margin-top: 0;
   }
+  
 }
 
 .footer__list-social:empty,
