@@ -133,6 +133,8 @@
   display: block;
   top: -2px;
   right: -140px;
+  background-color:#ECD8C5;
+  border-radius: 30px;
 }
 
 .main-menu__close svg {
@@ -275,6 +277,18 @@
     max-width: 440px;
   }
   
+}
+
+@media only screen and (max-width: 991px) {
+
+  .callout-text {
+    margin: 2px 0 0;
+    position: relative;
+    top: unset;
+    right: unset;
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width: 959px) {
