@@ -95,19 +95,20 @@
   font-weight: 500;
 }
 
-.main-menu__secondary-links .account-link {
+.mMain_Menu_Bottom .account-link {
   margin-top: 10px;
   display: inline-flex;
   align-items: center;
 }
 
-.main-menu__secondary-links .account-link svg {
+.Main_Menu_Bottom .account-link svg {
   height: 16px;
   width: 16px;
   margin-right: 8px;
 }
 
 @media only screen and (max-width: 768px) {
+  
   .main-menu {
     padding: 30px;
   }
