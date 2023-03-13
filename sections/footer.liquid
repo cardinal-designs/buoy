@@ -53,12 +53,16 @@
                   {% render 'icon-chevron-down' %}
                 </button>
                 <div class="footer__content-links footer__content-dropdown-content">
-                  <h3 class="Footer__Title Heading sh3 accordion-title"></h3>
+                  <h3 class="sh1"></h3>
                   {%- for link in linklist.links -%}
                     <a href="{{ link.url }}" class="body medium">{{ link.title }}</a>
                   {%- endfor -%}
                 </div>
               </div>
+
+            {%- when 'social' -%}
+              <h3 class="sh1"></h3>
+        
           {%- endcase -%}
         {% endfor %}
     
@@ -182,7 +186,13 @@
       "type": "social",
       "name": "Social",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
     }
   ],
   "settings": [
