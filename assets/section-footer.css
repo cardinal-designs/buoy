@@ -727,15 +727,14 @@ noscript .localization-selector.link {
 
 @media only screen and (max-width: 768px) {
   
-  .newsletter-footer{
-    padding: 50px 0 52px;
-  }
-  
-  .newsletter-footer .newsletter-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .newsletter-footer {
+    padding: 60px 0 70px;
   }
 
+  .newsletter-footer__text .h3 {
+    font-size: 33px;
+  }
+  
   .newsletter-footer__form .list-social {
     margin-top: 16px;
   }
@@ -749,8 +748,8 @@ noscript .localization-selector.link {
   }
 
   .footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 24px;
     display: block;
   }
 
@@ -808,8 +807,7 @@ noscript .localization-selector.link {
   }
 
   .footer__content-bottom-copy {
-    margin-top: 36px;
-    margin-bottom: 10px;
+    margin: 40px 0 10px;
   }
 
   .footer__content-bottom-links {
