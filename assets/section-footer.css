@@ -72,10 +72,13 @@
 }
 
 .footer__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-basis: 22.605%;
 }
+
+.Footer__Block--links {
+  flex-basis: 20.797%;
+}
+
 
 .footer__logo-mascot svg {
   max-width: 220px;
