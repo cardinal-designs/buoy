@@ -271,7 +271,7 @@
 @media only screen and (max-width: 768px) {
 
   .main-menu__main-links {
-    margin-bottom: 80px;
+    margin-bottom: 0;
   }
 
   .main-menu__main-links .h6 {
@@ -300,10 +300,6 @@
   .main-menu {
     padding: 0;
     top: 54px;
-  }
-
-  .main-menu__main-links {
-    margin-bottom: 26px;
   }
 
   .main-menu__secondary-links .sh4 {
