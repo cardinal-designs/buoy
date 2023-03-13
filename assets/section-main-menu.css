@@ -127,6 +127,7 @@
     margin-bottom: 12px;
     font-size: 16px;
   }
+  
 }
 
 /*** NEW MAIN MENU CSS START ***/
@@ -260,8 +261,8 @@
 }
 
 .main-menu__main-link {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 230px;
+  max-width: 230px;
 }
 
 .main-menu__wrapper {
