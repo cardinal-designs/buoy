@@ -776,7 +776,6 @@ noscript .localization-selector.link {
 
   .footer__content-dropdown-group {
     margin-top: -1px;
-    border-top: 1.5px solid #545759;
     border-bottom: 1.5px solid #545759;
   }
 
@@ -846,11 +845,7 @@ noscript .localization-selector.link {
   .footer__content-bottom-links .body:last-child {
     margin-right: 0;
   }
-  
-  .footer__content-dropdown-group:nth-child(2) {
-    border: none;
-  }
-  
+    
   .Footer__Block--social {
     margin-top: 30px;
   }
