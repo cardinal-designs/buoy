@@ -277,6 +277,10 @@
 .header__menu-item.active {
   opacity: .5;
 }
+  
+.Mobile_Title {
+  display: none;
+}
 
 @media only screen and (max-width: 1024px) {
 
@@ -393,6 +397,14 @@
 
   .main-menu {
     max-height: 554px;
+  }
+  
+  .Desktop_Title {
+    display: none;
+  }
+    
+  .Mobile_Title {
+    display: block;
   }
   
 }
