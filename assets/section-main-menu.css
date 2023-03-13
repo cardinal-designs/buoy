@@ -278,7 +278,7 @@
   opacity: .5;
 }
   
-.Mobile_Title {
+.Main_Menu_Link_Desktop_Title {
   display: none;
 }
 
@@ -418,6 +418,10 @@
   .main-menu__main-link {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .Main_Menu_Link_Desktop_Title {
+    display:block;
   }
   
 }
