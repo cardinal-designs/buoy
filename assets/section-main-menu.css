@@ -154,8 +154,8 @@
   text-align: center;
   left: 0;
   right: 0;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
   background-color: #ffffff96;
   margin: 0 auto;
   border-radius: 30px;
