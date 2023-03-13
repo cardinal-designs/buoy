@@ -248,6 +248,10 @@
   margin: 0 auto;
 }
 
+.callout-text {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
 
   .main-menu {
