@@ -430,7 +430,7 @@
   .main-menu__wrapper {
     position: inherit;
     overflow: auto;
-    height: 100vh;
+    height: calc(100vh - 53px);
   }
 
   .main-menu__secondary-links {
