@@ -110,10 +110,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  
-  .main-menu {
-    padding: 30px;
-  }
 
   .main-menu__main-links {
     margin-bottom: 80px;
@@ -133,10 +129,6 @@
     font-size: 16px;
   }
   
-}
-
-.page-overlay.is-visible.Menu_Overlay {
-  display: none !important;
 }
 
 /*** NEW MAIN MENU CSS START ***/
@@ -281,6 +273,10 @@
   
 .Main_Menu_Link_Mobile_Title {
   display: none;
+}
+
+.page-overlay.is-visible.Menu_Overlay {
+  display: none !important;
 }
 
 @media only screen and (max-width: 1024px) {
