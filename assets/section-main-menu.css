@@ -306,6 +306,10 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
     text-align: center;
   }
 
+  .main-menu__secondary-links .sh4 {
+    font-size: 26px;
+  }
+  
 }
 
 @media only screen and (max-width: 959px) {
