@@ -278,7 +278,7 @@
   opacity: .5;
 }
   
-.Main_Menu_Link_Desktop_Title {
+.Main_Menu_Link_Mobile_Title {
   display: none;
 }
 
@@ -403,7 +403,7 @@
     display: none;
   }
     
-  .Mobile_Title {
+  .Main_Menu_Link_Mobile_Title {
     display: block;
   }
 
