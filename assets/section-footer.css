@@ -57,6 +57,14 @@
   grid-template-columns: calc(50% - 10px) calc(50% - 10px);*/
 }
 
+.Footer__Block--text_block {
+  flex-basis: 275px;
+}
+
+.Footer__Block--social {
+  flex-basis: 180px;
+}
+
 .footer__logo {
   display: flex;
   flex-direction: column;
