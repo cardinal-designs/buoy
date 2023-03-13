@@ -143,7 +143,6 @@
   font-size: 12px;
   line-height: 21px;
   position: absolute;
-  bottom: 0;
   color: #1f2322;
   width: 89.6%;
   text-align: center;
@@ -156,6 +155,7 @@
   border-radius: 30px;
   padding: 7px 0;
   bottom: 12px;
+  font-weight: 400;
 }
 
 .Main_Menu_Bottom .account-link {
