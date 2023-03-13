@@ -1834,6 +1834,9 @@ input[type='checkbox'] {
 .announcement-bar {
   position: relative;
   background: var(--beige-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .announcement-bar__link {
