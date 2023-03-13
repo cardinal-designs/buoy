@@ -712,8 +712,12 @@ noscript .localization-selector.link {
 }
 
 @media only screen and (max-width: 768px) {
-  .newsletter-footer .newsletter-container {
+  
+  .newsletter-footer{
     padding: 50px 0 52px;
+  }
+  
+  .newsletter-footer .newsletter-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
