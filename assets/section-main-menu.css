@@ -176,7 +176,7 @@
 }
 
 .Main_Menu_Link_Title {
-    font-size: 12px;
+  font-size: 12px;
   line-height: 21px;
   position: absolute;
   bottom: 0;
@@ -278,6 +278,15 @@
   align-items: center;
   justify-content: space-between;
   margin: 40px 0 0;
+}
+
+.header--transparent:not(.header--scrolled) .header-wrapper.active {
+  background-color: #ffffff;
+}
+
+.header-wrapper.active .header__shop-link,
+.header-wrapper.active .header__icon {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
