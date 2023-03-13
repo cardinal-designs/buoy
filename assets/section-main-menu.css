@@ -442,7 +442,15 @@
     position: inherit;
     height: 100%;
   }
-   
+
+  .main-menu__secondary-links {
+    display:none;
+  }
+
+  .main-menu__secondary-links.Secondary_Link.Mobile {
+    display: block;
+  }
+  
 }
 
 @media only screen and (max-width: 374px) {
