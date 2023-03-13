@@ -9,6 +9,32 @@
     "16784824710141f699": {
       "type": "apps",
       "blocks": {
+        "ba99f7e6-2f7c-429f-ae76-de554df7d0ed": {
+          "type": "shopify:\/\/apps\/wonderment\/blocks\/shipment\/89d63369-6ee7-4097-ac41-8229c6f90001",
+          "disabled": true,
+          "settings": {
+            "test-tracking-code": "preview-delivered",
+            "tracking-status-color-default": "#e5e7e8",
+            "tracking-status-text-color-default": "#000",
+            "tracking-status-color-delivered": "#bbe5b3",
+            "tracking-status-text-color-delivered": "#000",
+            "tracking-status-color-transit": "#b4e1fa",
+            "tracking-status-text-color-transit": "#000",
+            "tracking-status-color-returned": "#ffc107",
+            "tracking-status-text-color-returned": "#000",
+            "tracking-status-color-failure": "#ff8a80",
+            "tracking-status-text-color-failure": "#000",
+            "tracking-block-show-tracking-code": true,
+            "banner-color": "#00bcd4",
+            "banner-bg-color": "#ffffff",
+            "tracking-block-border-radius": "0",
+            "button-bg-color": "#fff",
+            "button-color": "#000",
+            "button-border-radius": "0",
+            "search-input-border-radius": "0",
+            "custom-css": "\/* insert custom css here *\/"
+          }
+        },
         "02f98519-b207-4700-9033-f419c78423c2": {
           "type": "shopify:\/\/apps\/wonderment\/blocks\/wonderBlock\/89d63369-6ee7-4097-ac41-8229c6f90001",
           "settings": {
@@ -16,6 +42,7 @@
         }
       },
       "block_order": [
+        "ba99f7e6-2f7c-429f-ae76-de554df7d0ed",
         "02f98519-b207-4700-9033-f419c78423c2"
       ],
       "settings": {
@@ -138,19 +165,20 @@
     "5f806039-19b8-4490-8ea9-7d488a09d711": {
       "type": "collection-group",
       "blocks": {
-        "1a8a0416-2116-4cc3-b1a0-085256abff09": {
+        "470d0d2a-fabd-4379-a6d8-872a5c2f0b8f": {
           "type": "block",
           "settings": {
-            "collection": "single-bottles",
+            "collection": "subscription-products",
             "title": "Stock Up On Hydration",
-            "text": "",
-            "show_spinner": false,
-            "spinner_text": ""
+            "text": "Purposefully unsweetened and unflavored wellness drops turn any drink into a hydrating, functional beverage. Made without sugar, sweeteners like stevia and dextrose, \"natural\" flavors, artificial ingredients, calories or carbs.",
+            "show_spinner": true,
+            "spinner_image": "shopify:\/\/shop_images\/CIP_D_Chronic_Illness_JPG_2x_4fdbc6c8-b7c8-4bdd-b342-abd616636314.png",
+            "spinner_text": "Stock Up On Hydration"
           }
         }
       },
       "block_order": [
-        "1a8a0416-2116-4cc3-b1a0-085256abff09"
+        "470d0d2a-fabd-4379-a6d8-872a5c2f0b8f"
       ],
       "settings": {
       }
