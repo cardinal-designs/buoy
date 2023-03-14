@@ -564,7 +564,7 @@ announcement-container.Fixed_Bar {
   top: 0;
 }
 
-.Show_Announcement_Bar + header-container {
+.Show_Announcement_Bar.Fixed_Bar + header-container {
   top: 49px;
 }
 
