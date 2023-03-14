@@ -274,6 +274,11 @@
   opacity: .8;
 }
 
+header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
+  top: 80px;
+}
+
+
 .Show_Announcement_Bar + header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
   top: 129px;
 }
@@ -554,6 +559,10 @@
 }
 
 /*** NEW MAIN MENU CSS END ***/
+
+.Hide_Announcement_Bar {
+  display: none;
+}
 
 announcement-container {
   position: sticky;
