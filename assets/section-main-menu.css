@@ -22,6 +22,10 @@
   display: block;
 }
 
+.Fixed_Bar.Show_Announcement_Bar .main-menu {
+  top: 129px; 
+}
+
 .main-menu[aria-hidden="false"] {
   visibility: visible;
   opacity: 1;
