@@ -677,6 +677,42 @@ class HeaderContainer extends HTMLElement {
 
 customElements.define('header-container', HeaderContainer);
 
+/* Announcement Bar On Scroll */
+class AnnouncementBar extends HTMLElement {
+  constructor() {
+    super();
+    this.onScrollHandler = this.onScroll.bind(this);
+    window.addEventListener('scroll', this.onScrollHandler, false);
+
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > 45) {
+      if (!this.classList.contains('announcement--scrolled')) {
+        this.classList.add('announcement--scrolled');
+      }
+    }
+  }
+
+  onScroll() {
+    if (this.classList.contains('Fixed_Bar')) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 45) {
+        if (!this.classList.contains('announcement--scrolled')) {
+          this.classList.add('announcement--scrolled');
+        }
+      } else{
+        if (this.classList.contains('announcement--scrolled')) {
+          this.classList.remove('announcement--scrolled');
+        }
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+  }
+}
+
+customElements.define('announcement-bar', AnnouncementBar);
+
 
 /* ---------- FUNCTIONS ---------- */
 // Cookies
