@@ -554,3 +554,9 @@ header-container.header--transparent.header--scrolled + #shopify-section-main-me
 }
 
 /*** NEW MAIN MENU CSS END ***/
+
+announcement-container {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
