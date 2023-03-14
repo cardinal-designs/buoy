@@ -22,10 +22,6 @@
   display: block;
 }
 
-.Show_Announcement_Bar + header-container + #shopify-section-main-menu .main-menu {
-  top: 129px; 
-}
-
 .main-menu[aria-hidden="false"] {
   visibility: visible;
   opacity: 1;
@@ -278,12 +274,15 @@
   opacity: .8;
 }
 
-header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
+.Show_Announcement_Bar + header-container + #shopify-section-main-menu .main-menu {
+  top: 80px; 
+}
+
+header-container + #shopify-section-main-menu .main-menu {
   top: 80px;
 }
 
-
-.Show_Announcement_Bar.Fixed_Bar + header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
+.Show_Announcement_Bar.Fixed_Bar + header-container + #shopify-section-main-menu .main-menu {
   top: 129px;
 }
 
