@@ -1919,6 +1919,10 @@ header-container {
   z-index: 4;
 }
 
+announcement-container + header-container {
+  top: 49px;
+}
+
 /* Main Header Layout */
 .header-wrapper {
   display: block;
