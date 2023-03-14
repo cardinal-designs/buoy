@@ -574,7 +574,7 @@ announcement-container.Fixed_Bar {
 
 @media only screen and (max-width: 768px) {
 
-  .Announcement_Shown.main-menu {
+  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
     top: 93px;
   }
 
@@ -586,7 +586,7 @@ announcement-container.Fixed_Bar {
 
 @media only screen and (max-width: 667px) {
 
-  .Announcement_Shown.main-menu {
+  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
     top: 114px;
   }
 
