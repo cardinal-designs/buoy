@@ -690,7 +690,7 @@ class AnnouncementBar extends HTMLElement {
   }
 
   onScroll() {
-    if (this.classList.contains('Fixed_Bar')) {
+    if (this.classList.contains('announcement--transparent')) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (scrollTop > 45) {
