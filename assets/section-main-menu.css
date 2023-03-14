@@ -571,3 +571,7 @@ header-container + #shopify-section-main-menu .main-menu {
 .Show_Announcement_Bar + header-container + #shopify-section-main-menu .main-menu {
   top: 129px; 
 }
+
+.Show_Announcement_Bar + header-container.header--scrolled + #shopify-section-main-menu .main-menu {
+  top: 80px;
+}
