@@ -236,7 +236,7 @@
 
     <div class="page-overlay"></div>
 
-    <announcement-container class="announcement--transparent">
+    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% endif %} announcement--transparent">
       {% section 'announcement-bar' %}
     </announcement-container>
     
