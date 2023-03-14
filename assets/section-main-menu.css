@@ -576,6 +576,10 @@ announcement-container.Fixed_Bar {
   top: 129px; 
 }
 
+.header--scrolled + .Announcement_Shown.main-menu {
+  top: 80px;
+}
+
 .Overflow_Hidden {
   overflow: hidden;
 }
