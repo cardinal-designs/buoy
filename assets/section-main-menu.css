@@ -567,8 +567,11 @@ header-container + #shopify-section-main-menu .main-menu {
   display: none;
 }
 
+announcement-container {
+  z-index: 11; 
+}
+
 announcement-container.Fixed_Bar {
   position: sticky;
   top: 0;
-  z-index: 11;
 }
