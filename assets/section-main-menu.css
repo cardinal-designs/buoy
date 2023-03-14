@@ -576,7 +576,7 @@ announcement-container.Fixed_Bar {
   top: 129px; 
 }
 
-.header--scrolled + .Announcement_Shown.main-menu {
+.header--scrolled + #shopify-section-main-menu .Announcement_Shown.main-menu {
   top: 80px;
 }
 
