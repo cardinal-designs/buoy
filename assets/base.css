@@ -1919,10 +1919,6 @@ header-container {
   z-index: 4;
 }
 
-.Show_Announcement_Bar.Fixed_Bar + header-container {
-  top: 49px;
-}
-
 /* Main Header Layout */
 .header-wrapper {
   display: block;
