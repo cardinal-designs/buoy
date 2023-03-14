@@ -664,7 +664,7 @@ class HeaderContainer extends HTMLElement {
         if (!this.classList.contains('header--scrolled')) {
           this.classList.add('header--scrolled');
         }
-      } else{
+      } else {
         if (this.classList.contains('header--scrolled')) {
           this.classList.remove('header--scrolled');
         }
