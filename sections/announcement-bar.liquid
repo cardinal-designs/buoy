@@ -1,4 +1,4 @@
-<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+<div class="{% if section.settings.fix_announcement %}Fix_bar{% endif %}announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
@@ -59,6 +59,12 @@
       "type": "checkbox",
       "id": "hide_mobile",
       "label": "Hide Announcement Bar on mobile?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "fix_announcement",
+      "label": "Fixed Announcement",
       "default": true
     }
   ]
