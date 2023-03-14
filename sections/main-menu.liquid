@@ -77,6 +77,7 @@
     $('.main-menu').attr('aria-hidden', false);
     $('.page-overlay').addClass('is-visible');
     $('.page-overlay').addClass('Menu_Overlay');
+    $('body').css('overflow', 'hidden');
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
     $('.header-wrapper').addClass('active');
@@ -87,6 +88,7 @@
     $('.main-menu').attr('aria-hidden', true);
     $('.page-overlay').removeClass('is-visible Menu_Overlay');
     $('.Mobile_Menu_Close').hide();
+    $('body').css('overflow', 'inherit');
     $('.Hamburger_New').show();
     $('.header-wrapper').removeClass('active');
     $('[href="#menu"]').removeClass('active');
