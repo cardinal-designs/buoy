@@ -506,10 +506,6 @@
     display: inline-block;
   }
 
-  header-container.header--transparent.header--scrolled + #shopify-section-main-menu .main-menu {
-    top: 54px;
-  }
-  
 }
 
 @media only screen and (max-width: 667px) {
@@ -570,6 +566,10 @@ announcement-container.Fixed_Bar {
 
 .header--scrolled + #shopify-section-main-menu .Announcement_Shown.main-menu {
   top: 80px;
+}
+
+.main-menu.Fixed_Announcement_Bar.Announcement_Shown {
+  top: 129px;
 }
 
 .Overflow_Hidden {
