@@ -1904,20 +1904,24 @@ input[type='checkbox'] {
   
 }
 
-@media screen and (max-width: 374px) {
-  
-  .announcement-bar__message {
-    font-size: 12px;
-  }
-
-}
-
 @media screen and (max-width: 375px) {
 
   .Announcement_Button {
     padding: 3.5px 14.5px;
   }
 
+}
+
+@media screen and (max-width: 374px) {
+  
+  .announcement-bar__message {
+    font-size: 12px;
+  }
+
+  .Announcement_Button {
+    font-size: 12px;
+  }
+  
 }
 
 /* section-header */
