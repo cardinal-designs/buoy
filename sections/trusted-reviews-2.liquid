@@ -14,7 +14,7 @@
           <div class="multicolumn-card__info">
             <div class="Card-Info_Title">
               <p class="sh3 suptitle">{{ section.settings.text }}</p>
-              <h3 class="h3 light">{{ section.settings.head-title }}</h3>
+              <h3 class="h3 light no-italic">{{ section.settings.head-title }}</h3>
               <p class="subtitle light">{{ section.settings.sub-text }}</p>
               {%- if section.settings.button_label != blank -%}
                 <a class="Link_Button Hidden_Phone medium" href="{{ section.settings.button_link }}">
@@ -88,7 +88,7 @@
       "label": "text"
     },
 	{
-    "type": "text",
+    "type": "textarea",
       "id": "head-title",
       "default": "Column",
         "label": "Heading"
