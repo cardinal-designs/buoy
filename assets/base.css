@@ -1919,7 +1919,7 @@ header-container {
   z-index: 4;
 }
 
-announcement-container.Show_Announcement_Bar + header-container {
+.Show_Announcement_Bar.Fixed_Bar + header-container {
   top: 49px;
 }
 
