@@ -859,6 +859,14 @@ noscript .localization-selector.link {
   }
 }
 
+@media only screen and (max-width: 374px) {
+  
+  .newsletter-footer__text .h3 {
+    font-size: 30px;
+  }
+
+}
+
 /* Klaviyo forms */
 .newsletter-footer .email-form {
   max-width: 376px;
