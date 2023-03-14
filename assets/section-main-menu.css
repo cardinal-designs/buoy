@@ -319,14 +319,6 @@
   
 }
 
-@media only screen and (max-width: 959px) {
-
-  .main-menu {
-    top: 127px;
-  }
-
-}
-
 @media only screen and (max-width: 768px) {
 
   .callout-text {
@@ -582,6 +574,14 @@ announcement-container.Fixed_Bar {
 
 .Overflow_Hidden {
   overflow: hidden;
+}
+
+@media only screen and (max-width: 959px) {
+
+  .main-menu {
+    top: 80px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
