@@ -586,6 +586,10 @@ announcement-container.Fixed_Bar {
 
 @media only screen and (max-width: 768px) {
 
+  .Announcement_Shown.main-menu {
+    top: 93px;
+  }
+  
   .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
     top: 93px;
   }
