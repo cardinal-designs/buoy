@@ -1,4 +1,4 @@
-<div class="{% if section.settings.fix_announcement %}Fix_bar{% endif %}announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+<div class="{% if section.settings.fix_announcement %}Fixed_Bar{% endif %} announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
