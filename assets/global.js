@@ -646,7 +646,7 @@ class HeaderContainer extends HTMLElement {
     window.addEventListener('scroll', this.onScrollHandler, false);
 
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 45) {
+    if (scrollTop > 10) {
       if (!this.classList.contains('header--scrolled')) {
         this.classList.add('header--scrolled');
       }
@@ -657,7 +657,7 @@ class HeaderContainer extends HTMLElement {
     if (this.classList.contains('header--transparent')) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > 45) {
+      if (scrollTop > 10) {
         if (!this.classList.contains('header--scrolled')) {
           this.classList.add('header--scrolled');
         }
@@ -682,7 +682,7 @@ class AnnouncementBar extends HTMLElement {
     window.addEventListener('scroll', this.onScrollHandler, false);
 
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 45) {
+    if (scrollTop > 10) {
       if (!this.classList.contains('announcement--scrolled')) {
         this.classList.add('announcement--scrolled');
       }
@@ -693,7 +693,7 @@ class AnnouncementBar extends HTMLElement {
     if (this.classList.contains('announcement--transparent')) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > 45) {
+      if (scrollTop > 10) {
         if (!this.classList.contains('announcement--scrolled')) {
           this.classList.add('announcement--scrolled');
         }
