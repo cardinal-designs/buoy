@@ -1,24 +1,22 @@
-<announcement-bar class="{% if section.settings.fix_announcement %}Fixed_Bar{% endif %} announcement-bar-main">
-  <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
-    {%- if section.settings.text != blank -%}
-      {%- if section.settings.link != blank -%}
-        <a href="{{ section.settings.link }}" class="announcement-bar__link">
-      {%- endif -%}
-          <p class="announcement-bar__message body">
-            {{ section.settings.text | escape }}
-          </p>
-      {%- if section.settings.link != blank -%}
-        </a>
-      {%- endif -%}
+<div class="announcement-bar {% if section.settings.fix_announcement %}Fixed_Bar{% endif %} announcement-bar-main" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+  {%- if section.settings.text != blank -%}
+    {%- if section.settings.link != blank -%}
+      <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
-    {% comment %}
-      <button class="announcement-bar__close">{% render 'icon-close' %}</button>
-    {% endcomment %}
-    {% if section.settings.btn_text != blank %}
-      <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
-    {% endif %}
-  </div>
-</announcement-bar>
+        <p class="announcement-bar__message body">
+          {{ section.settings.text | escape }}
+        </p>
+    {%- if section.settings.link != blank -%}
+      </a>
+    {%- endif -%}
+  {%- endif -%}
+  {% comment %}
+    <button class="announcement-bar__close">{% render 'icon-close' %}</button>
+  {% endcomment %}
+  {% if section.settings.btn_text != blank %}
+    <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+  {% endif %}
+</div>
 
 {% if section.settings.hide_mobile %}
 <style>
