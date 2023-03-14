@@ -642,9 +642,6 @@ customElements.define('variant-radios', VariantRadios);
 class HeaderContainer extends HTMLElement {
   constructor() {
     super();
-
-    console.log(this)
-
     this.onScrollHandler = this.onScroll.bind(this);
     window.addEventListener('scroll', this.onScrollHandler, false);
 
@@ -711,7 +708,7 @@ class AnnouncementBar extends HTMLElement {
   }
 }
 
-customElements.define('announcement-bar', AnnouncementBar);
+customElements.define('announcement-container', AnnouncementBar);
 
 
 /* ---------- FUNCTIONS ---------- */
