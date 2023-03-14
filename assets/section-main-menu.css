@@ -568,7 +568,7 @@ header-container + #shopify-section-main-menu .main-menu {
   top: 80px;
 }
 
-.Show_Announcement_Bar + header-container + #shopify-section-main-menu .main-menu {
+.Announcement_Shown.main-menu {
   top: 129px; 
 }
 
