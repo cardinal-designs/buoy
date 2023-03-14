@@ -572,29 +572,17 @@ announcement-container.Fixed_Bar {
   top: 129px; 
 }
 
-.Show_Announcement_Bar + header-container.header--scrolled + #shopify-section-main-menu .main-menu {
-  top: 80px;
-}
-
-.Show_Announcement_Bar.Fixed_Bar + header-container.header--scrolled + #shopify-section-main-menu .main-menu {
-  top: 129px;
-}
-
 @media only screen and (max-width: 768px) {
 
-  .Show_Announcement_Bar+header-container+#shopify-section-main-menu .main-menu {
+  .Show_Announcement_Bar+header-container + #shopify-section-main-menu .main-menu {
     top: 93px;
   }
 
-  .Show_Announcement_Bar+header-container.header--scrolled+#shopify-section-main-menu .main-menu {
-    top: 54px;
-  }
-  
 }
 
 @media only screen and (max-width: 667px) {
 
-  .Show_Announcement_Bar+header-container+#shopify-section-main-menu .main-menu {
+  .Show_Announcement_Bar+header-container + #shopify-section-main-menu .main-menu {
     top: 114px;
   }
 
@@ -602,7 +590,7 @@ announcement-container.Fixed_Bar {
 
 @media only screen and (max-width: 667px) {
 
-  .Show_Announcement_Bar+header-container+#shopify-section-main-menu .main-menu {
+  .Show_Announcement_Bar+header-container + #shopify-section-main-menu .main-menu {
     top: 135px;
   }
 
