@@ -1,3 +1,4 @@
+<anncouncemnt-bar>
 <div class="{% if section.settings.fix_announcement %}Fixed_Bar{% endif %} announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
@@ -17,6 +18,7 @@
     <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
   {% endif %}
 </div>
+</anncouncemnt-bar>
 
 {% if section.settings.hide_mobile %}
 <style>
