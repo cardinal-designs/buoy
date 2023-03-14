@@ -568,6 +568,10 @@ announcement-container.Fixed_Bar {
   top: 49px;
 }
 
+.Show_Announcement_Bar + header-container {
+  top: 0;
+}
+
 .Announcement_Shown.main-menu {
   top: 129px; 
 }
