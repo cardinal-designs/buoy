@@ -598,6 +598,10 @@ announcement-container.Fixed_Bar {
     top: 93px;
   }
 
+  .header--scrolled + #shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
+    top: 93px;
+  }
+
   .Show_Announcement_Bar + header-container {
     top: 0;
   }
