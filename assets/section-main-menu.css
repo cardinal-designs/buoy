@@ -22,7 +22,7 @@
   display: block;
 }
 
-.Show_Announcement_Bar + #shopify-section-main-menu .main-menu {
+.Show_Announcement_Bar + header-container + #shopify-section-main-menu .main-menu {
   top: 129px; 
 }
 
