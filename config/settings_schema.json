@@ -135,6 +135,12 @@
         "id": "show_announcement_bar",
         "label": "Show Announcement Bar",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "fix_announcement",
+        "label": "Fixed Announcement",
+        "default": true
       }
     ]
   }
