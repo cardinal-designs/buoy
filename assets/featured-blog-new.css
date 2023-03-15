@@ -225,5 +225,10 @@
   .Article_Title {
     margin: 0 0 30px;
   }
+
+  .Featured_Blog_Hero .slick-next,
+  .Featured_Blog_Hero .slick-prev {
+    bottom: -7px;
+  }
   
 }
