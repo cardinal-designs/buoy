@@ -1443,7 +1443,7 @@ $('.pee-club-product-arrow').click(function() {
   $(this).hide()
 })
 
-$('.Featured_Blog_Content').slick({
+$('.Featured_Blog_Hero').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
