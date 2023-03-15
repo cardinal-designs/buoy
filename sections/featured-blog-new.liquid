@@ -9,7 +9,7 @@
           <div class="Featured_Blog_Data_Inner">
             <div class="Featured_Label">Featured</div>
             <p class="Article_Time">
-              {{ article.created_at }} | 6 Min Read
+              {{ article.created_at }} | {% if article.metafields.custom.reading_time != blank%} {{ article.metafields.custom.reading_time }} {% endif %}
             </p>
             <h2 class="Article_Title">
               {{ article.title | escape }}
