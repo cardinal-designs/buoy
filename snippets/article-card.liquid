@@ -38,9 +38,9 @@
 
     <div class="article-card__info">
       <header class="article-card__header">
-        <h2 class="article-card__title" id="Article-{{ article.id }}">
+        <h5 class="article-card__title" id="Article-{{ article.id }}">
           {{ article.title | escape }}
-        </h2>
+        </h5>
         {%- if show_date -%}
           <span class="circle-divider caption-with-letter-spacing">
             {{- article.published_at | time_tag: format: 'month_year' -}}
