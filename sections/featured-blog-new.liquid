@@ -19,6 +19,10 @@
     <div class="Featured_Blog_Content_Inner">
       {% assign article = block.settings.article %}
         <div class="Featured_Blog_Content_Container">    
+          <p class="Featured_Label">Featured</p>
+          <div class="Article_Time">
+            {{ article.created_at }} | 6 Min Read
+          </div>
           <h2 class="Article_Title">
             {{ article.title | escape }}
           </h2>
