@@ -1833,11 +1833,16 @@ input[type='checkbox'] {
 
 .Announcement_Button {
   font-size: 14px;
-  line-height: 22px;
-  background-color: #ffffff;
+  line-height: 1;
+  background-color: #fff;
   border-radius: 30px;
-  padding: 3.5px 22.5px;
-  font-family: 'inter';
+  padding: 0;
+  font-family: inter;
+  width: 113px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .announcement-bar {
