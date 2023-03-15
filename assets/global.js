@@ -1463,7 +1463,7 @@ if (window.matchMedia('(min-width: 769px)').matches){
             elementList[i].style.display = 'block';
         }
     }
-    currentItems += 6;
+    currentItems += 3;
 
     // Load more button will be hidden after list fully loaded
     if (currentItems >= elementList.length) {
@@ -1473,7 +1473,7 @@ if (window.matchMedia('(min-width: 769px)').matches){
 }
 
 if (window.matchMedia('(max-width: 768px)').matches){
-  let currentItems = 1;
+  let currentItems = 3;
   loadmore.addEventListener('click', (e) => {
     const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
     for (let i = currentItems; i < currentItems + 3; i++) {
