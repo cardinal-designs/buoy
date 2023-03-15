@@ -4,3 +4,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.Featured_Blog_Content_Container {
+  order: 2;
+}
+
+.Featured_Blog_Image {
+  order: 1;
+}
