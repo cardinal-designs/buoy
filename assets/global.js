@@ -1451,3 +1451,20 @@ $('.Featured_Blog_Hero').slick({
   nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(28.001 11.504) rotate(180)"><g id="Arrow-2" data-name="Arrow" transform="translate(271.17 1503) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></g></svg></button>'
 });
 
+
+const loadmore = document.querySelector('#loadmore');
+  let currentItems = 3;
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.list .list-element')];
+    for (let i = currentItems; i < currentItems + 3; i++) {
+        if (elementList[i]) {
+            elementList[i].style.display = 'block';
+        }
+    }
+    currentItems += 2;
+
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+        event.target.style.display = 'none';
+    }
+  })
