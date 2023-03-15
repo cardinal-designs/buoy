@@ -73,6 +73,16 @@ button#Load_More svg {
     padding-top: 0;
   }
 
+  .blog-articles .blog-articles__article {
+    display: none; 
+  }
+  
+  .blog-articles .blog-articles__article:nth-child(1),
+  .blog-articles .blog-articles__article:nth-child(2),
+  .blog-articles .blog-articles__article:nth-child(3) {
+    display: block;
+  }
+    
 }
 
 @media screen and (min-width: 769px) {
