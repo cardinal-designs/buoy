@@ -48,6 +48,22 @@
   border: 1px solid #1F2322;
 }
 
+.Featured_Blog_Hero .slick-next {
+  cursor: pointer;
+  position: absolute;
+  right: calc(0% - 28px);
+  top: 43%;
+  transform: translate(-50%,-50%);
+}
+
+.Featured_Blog_Hero .slick-prev {
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 43%;
+  transform: translate(-50%,-50%);
+}
+
 .Featured_Blog_Hero .slick-dots li {
   display: inline-block;
 }
