@@ -64,10 +64,9 @@ button#Load_More svg {
     row-gap: 50px;
   }
 
-  .blog-articles .Load_More_Main {
+  .blog-articles + .Load_More_Main {
     border-bottom: 2px solid rgb(84 87 89 / 20%);
-    padding-bottom: 60px;
-    margin-top: 60px;
+    padding: 70px 0 20px;
   }
 
   .main-blog {
@@ -77,6 +76,7 @@ button#Load_More svg {
 }
 
 @media screen and (min-width: 769px) {
+  
   .blog-articles {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -87,4 +87,5 @@ button#Load_More svg {
   .blog-articles > *:last-child:nth-child(5) {
     text-align: left;
   }
+  
 }
