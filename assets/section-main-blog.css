@@ -4,6 +4,15 @@
   row-gap: 70px;
 }
 
+@media screen and (max-width: 991px) {
+  
+  .blog-articles {
+    column-gap: 15px;
+    row-gap: 40px;
+  }
+
+}
+
 @media screen and (min-width: 769px) {
   .blog-articles {
     grid-template-columns: 1fr 1fr 1fr;
