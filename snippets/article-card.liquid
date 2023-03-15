@@ -38,6 +38,9 @@
 
     <div class="article-card__info">
       <header class="article-card__header">
+        {% if article.metafields.custom.reading_time != blank%}
+          <span class="caption">{{ article.metafields.custom.reading_time }}</span>
+        {% endif %}
         <h5 class="article-card__title" id="Article-{{ article.id }}">
           {{ article.title | escape }}
         </h5>
