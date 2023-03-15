@@ -11,9 +11,13 @@
 
 {{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
 
+
+
 <div class="Featured_Blog_Hero">
   <div class="Featured_Blog_Content">
     {% for block in section.blocks %}
+      {% assign article = section.settings.article %}
+      {{ article.title | json }}
       <div class="Featured_Blog_Content_Container">    
         {{ block.article.title }}
       </div>
