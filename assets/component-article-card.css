@@ -2,6 +2,10 @@
   margin: 0 0 5rem 0;
 }
 
+.blog-articles .article-card__image {
+  border-radius: 17px;
+}
+
 @media screen and (min-width: 769px) {
   .articles-wrapper.grid {
     margin-bottom: 7rem;
