@@ -82,6 +82,12 @@ button#Load_More svg {
   .blog-articles .blog-articles__article:nth-child(3) {
     display: block;
   }
+
+  .blog-articles .blog-articles__article:nth-child(4),
+  .blog-articles .blog-articles__article:nth-child(5),
+  .blog-articles .blog-articles__article:nth-child(6) {
+    display: none; 
+  }
     
 }
 
