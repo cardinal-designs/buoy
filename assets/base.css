@@ -1905,16 +1905,16 @@ input[type='checkbox'] {
     width: 100%;
     padding: 0 15px;
   }
-
-  .Announcement_Button {
-    font-size: 12px;
-  }
   
 }
 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 450px) {
   
   .announcement-bar__message {
+    font-size: 12px;
+  }
+
+  .Announcement_Button {
     font-size: 12px;
   }
   
