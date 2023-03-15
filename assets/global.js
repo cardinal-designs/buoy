@@ -1455,7 +1455,7 @@ $('.Featured_Blog_Hero').slick({
 const loadmore = document.querySelector('#loadmore');
   let currentItems = 3;
   loadmore.addEventListener('click', (e) => {
-    const elementList = [...document.querySelectorAll('.list .list-element')];
+    const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
     for (let i = currentItems; i < currentItems + 3; i++) {
         if (elementList[i]) {
             elementList[i].style.display = 'block';
