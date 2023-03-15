@@ -1,16 +1,47 @@
 {
   "sections": {
-    "16428d94-b732-4ae6-8c8e-4936294f3c59": {
-      "type": "featured-blog",
+    "3bd2cc07-5f6c-4de7-b3c6-e4b64006700c": {
+      "type": "featured-blog-new",
+      "blocks": {
+        "30aceaf5-f750-4574-b085-2e5e4f92f96c": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/article-style-refrence"
+          }
+        },
+        "230993bd-9fb1-48b3-a0c8-3b5d02cd4a64": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/the-more-you-buy-the-more-we-give"
+          }
+        },
+        "ce0cbbdb-9291-4c82-8788-473f4971586a": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/hydrate-with-buoy-save-the-planet"
+          }
+        },
+        "172dd1cc-1fcb-4dd2-98a8-be7ddbce7436": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/stay-safe-during-hot-weather-workouts-with-proper-hydration"
+          }
+        },
+        "7d885619-e5f1-44fe-bc0d-9a1d4b4385df": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/why-rtd-beverage-companies-are-investing-in-functional-wellness"
+          }
+        }
+      },
+      "block_order": [
+        "30aceaf5-f750-4574-b085-2e5e4f92f96c",
+        "230993bd-9fb1-48b3-a0c8-3b5d02cd4a64",
+        "ce0cbbdb-9291-4c82-8788-473f4971586a",
+        "172dd1cc-1fcb-4dd2-98a8-be7ddbce7436",
+        "7d885619-e5f1-44fe-bc0d-9a1d4b4385df"
+      ],
       "settings": {
-        "heading": "Blog posts",
-        "blog": "hydration-station",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
       }
     },
     "main": {
@@ -23,7 +54,7 @@
     }
   },
   "order": [
-    "16428d94-b732-4ae6-8c8e-4936294f3c59",
+    "3bd2cc07-5f6c-4de7-b3c6-e4b64006700c",
     "main"
   ]
 }
