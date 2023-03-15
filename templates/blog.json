@@ -1,1 +1,52 @@
-{"sections":{"main":{"type":"main-blog","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_image": true,
+        "show_date": true,
+        "show_author": false
+      }
+    },
+    "affe44c8-40f6-451e-99d1-80ac6ad456f6": {
+      "type": "image-text-slider",
+      "blocks": {
+        "3730d538-ae5f-4b0f-86e8-b87b0c4a95c0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nicole_ea3d871a-3e0c-4f17-9777-32430c0b7f3f.png",
+            "svg_logo": "",
+            "slide_title": "",
+            "slide_desc": ""
+          }
+        },
+        "aa322b02-61aa-4792-b3e2-d37625752f5d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BORGS_9893c206-430a-48f8-9769-cf8f29a4f0a6.png",
+            "svg_logo": "",
+            "slide_title": "",
+            "slide_desc": ""
+          }
+        }
+      },
+      "block_order": [
+        "3730d538-ae5f-4b0f-86e8-b87b0c4a95c0",
+        "aa322b02-61aa-4792-b3e2-d37625752f5d"
+      ],
+      "settings": {
+        "is_reversed": false,
+        "title": "",
+        "description_top": "",
+        "description_bottom": "",
+        "text_link_label": "",
+        "text_link": "",
+        "checkbox_backgound": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "affe44c8-40f6-451e-99d1-80ac6ad456f6"
+  ]
+}
