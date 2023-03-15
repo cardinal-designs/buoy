@@ -6,14 +6,16 @@
       {% assign article = block.settings.article %}
       <div class="Featured_Blog_Content_Inner"> 
         <div class="Featured_Blog_Data">    
-          <div class="Featured_Label">Featured</div>
-          <p class="Article_Time">
-            {{ article.created_at }} | 6 Min Read
-          </p>
-          <h2 class="Article_Title">
-            {{ article.title | escape }}
-          </h2>
-          <a class="Article_Read_More" href="{{ article.url }}">Read More</a>
+          <div class="Featured_Blog_Data_Inner">
+            <div class="Featured_Label">Featured</div>
+            <p class="Article_Time">
+              {{ article.created_at }} | 6 Min Read
+            </p>
+            <h2 class="Article_Title">
+              {{ article.title | escape }}
+            </h2>
+            <a class="Article_Read_More" href="{{ article.url }}">Read More</a>
+          </div>
         </div>
         <div class="Featured_Blog_Image">
           <div class="article-card__image-wrapper">
