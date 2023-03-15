@@ -54,6 +54,7 @@
   right: 45px;
   bottom: 13%;
   transform: translate(-50%,-50%);
+  z-index: 1;
 }
 
 .Featured_Blog_Hero .slick-prev {
@@ -62,6 +63,7 @@
   left: 54%;
   bottom: 13%;
   transform: translate(-50%,-50%);
+  z-index: 1;
 }
 
 .Featured_Blog_Hero .slick-dots li {
