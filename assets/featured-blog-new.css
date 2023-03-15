@@ -42,3 +42,12 @@
   display: flex;
   justify-content: center;
 }
+
+.Featured_Blog_Hero .slick-dots li button {
+  font-size: 0;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
