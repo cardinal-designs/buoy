@@ -8,6 +8,19 @@
   padding-top: 90px;
 }
 
+.blog-articles .blog-articles__article {
+  display: none; 
+}
+
+.blog-articles .blog-articles__article:nth-child(1),
+.blog-articles .blog-articles__article:nth-child(2),
+.blog-articles .blog-articles__article:nth-child(3),
+.blog-articles .blog-articles__article:nth-child(4),
+.blog-articles .blog-articles__article:nth-child(5),
+.blog-articles .blog-articles__article:nth-child(6) {
+  display: block;
+}
+
 @media screen and (max-width: 991px) {
   
   .blog-articles {
