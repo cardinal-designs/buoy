@@ -53,3 +53,11 @@
 .Article_Title {
   margin: 0 0 40px;
 }
+
+.Article_Read_More {
+  font-size: 14px;
+  text-decoration: underline;
+  line-height: 45px;
+  display: inline-block;
+  text-underline-offset: 7px;
+}
