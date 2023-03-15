@@ -16,3 +16,10 @@
 .Featured_Blog_Content_Container * {
  font-family: 'inter'; 
 }
+
+.Featured_Blog_Content_Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
