@@ -18,7 +18,8 @@
         <div class="Featured_Blog_Image">
           <div class="article-card__image-wrapper">
             <div class="article-card__image media media--landscape">
-              {% if block.settings.article_image != blank %}
+              {% assign article_image = block.settings.article_image %}
+              {% if article_image != blank %}
                 <img
                   srcset="{%- if article_image.src.width >= 165 -%}{{ article_image.src | img_url: '165x' }} 165w,{%- endif -%}
                     {%- if article_image.src.width >= 360 -%}{{ article_image.src | img_url: '360x' }} 360w,{%- endif -%}
