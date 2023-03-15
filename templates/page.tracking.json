@@ -1,0 +1,323 @@
+{
+  "sections": {
+    "3771ae63-ab55-410c-ab85-3e3909a98abf": {
+      "type": "text-two-blocks",
+      "custom_css": [
+        ".text-two-blocks__container h6 {margin: 0 auto 5px;}"
+      ],
+      "settings": {
+        "title": "Your Order Status",
+        "subtitle": "View all your latest tracking updates",
+        "background": "transparent linear-gradient(180deg,#F8F1EB 0%,#F8F1EB00 85%) 0% 0% no-repeat padding-box;"
+      }
+    },
+    "16784824710141f699": {
+      "type": "apps",
+      "blocks": {
+        "ba99f7e6-2f7c-429f-ae76-de554df7d0ed": {
+          "type": "shopify:\/\/apps\/wonderment\/blocks\/shipment\/89d63369-6ee7-4097-ac41-8229c6f90001",
+          "disabled": true,
+          "settings": {
+            "test-tracking-code": "preview-delivered",
+            "tracking-status-color-default": "#e5e7e8",
+            "tracking-status-text-color-default": "#000000",
+            "tracking-status-color-delivered": "#bbe5b3",
+            "tracking-status-text-color-delivered": "#000000",
+            "tracking-status-color-transit": "#b4e1fa",
+            "tracking-status-text-color-transit": "#000000",
+            "tracking-status-color-returned": "#ffc107",
+            "tracking-status-text-color-returned": "#000000",
+            "tracking-status-color-failure": "#ff8a80",
+            "tracking-status-text-color-failure": "#000000",
+            "tracking-block-show-tracking-code": true,
+            "banner-color": "#00bcd4",
+            "banner-bg-color": "#ffffff",
+            "tracking-block-border-radius": "0",
+            "button-bg-color": "#ffffff",
+            "button-color": "#000000",
+            "button-border-radius": "0",
+            "search-input-border-radius": "0",
+            "custom-css": "\/* insert custom css here *\/"
+          }
+        },
+        "02f98519-b207-4700-9033-f419c78423c2": {
+          "type": "shopify:\/\/apps\/wonderment\/blocks\/wonderBlock\/89d63369-6ee7-4097-ac41-8229c6f90001",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "ba99f7e6-2f7c-429f-ae76-de554df7d0ed",
+        "02f98519-b207-4700-9033-f419c78423c2"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "5039082d-1a37-485e-843c-557fb3ce0871": {
+      "type": "landing-faq",
+      "blocks": {
+        "a6b875b9-d4ae-4f3f-895e-42d809e51f3b": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How is my package being delivered?",
+            "answer": "Buoy offers free USPS Priority Mail shipping on all orders placed on our website within the United States. \n\nNeed more details about your order? Message us at hello@justaddbuoy.com!"
+          }
+        },
+        "05bdcbbb-0994-4ea2-a5c7-a65dbd850b4c": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Can I get a refund?",
+            "answer": "If you're not 100% satisfied with your order, you can request a full refund from hello@justaddbuoy.com.\n\nOrders placed within the last 30 days are eligible for a refund.\n\nWe accept returns for any order placed within 30 days. To start a return, you can email hello@justaddbuoy.com or reply to your order confirmation email."
+          }
+        },
+        "42cfb604-6c6f-4de1-99e1-641399c60e1f": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "answer": "When you subscribe to Buoy, you’ll save 24% on every order of your favorite Buoy drops!\n\nIt’s risk-free and you can cancel at any time. Manage your Clear Pee Club membership by logging in."
+          }
+        },
+        "96b0182f-c936-4de1-92b1-8c525c2a16d1": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How do I get the most out of my order?",
+            "answer": "Hydration is a daily effort. You lose essential vitamins, electrolytes, and minerals from exercise, sleeping, and just being alive!\n\nTo get the most out of Buoy, squeeze it into your drinks 3-5 times a day!\n\nOnce you notice the powerful effects of hydration on your daily life, you’re free to subscribe to your Buoy faves for 24% off and risk-free automatic monthly deliveries."
+          }
+        }
+      },
+      "block_order": [
+        "a6b875b9-d4ae-4f3f-895e-42d809e51f3b",
+        "05bdcbbb-0994-4ea2-a5c7-a65dbd850b4c",
+        "42cfb604-6c6f-4de1-99e1-641399c60e1f",
+        "96b0182f-c936-4de1-92b1-8c525c2a16d1"
+      ],
+      "custom_css": [
+        ".faq-section {margin-top: 100px;}"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "text": "Need more help? We got you covered!",
+        "video_url": ""
+      }
+    },
+    "40639e52-45ca-48b0-9f5f-52157852d9c8": {
+      "type": "custom-image-text",
+      "custom_css": [
+        ".how-to {margin: 0px 0;}",
+        ".custom-image-text__container {padding-top: 20px !important;}"
+      ],
+      "settings": {
+        "text": "Unlock exclusive discounts, insider access to product launches, and master hydration tips from our experts when you sign up for SMS!",
+        "title": "Stay Updated",
+        "button_label": "Subscribe To Our Text Messages",
+        "button_link": "https:\/\/justaddbuoy.com\/pages\/sms-signup-page-for-email-campaigns-flows",
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
+      }
+    },
+    "faq": {
+      "type": "wonderment-faq",
+      "disabled": true,
+      "blocks": {
+        "faq-getting-started": {
+          "type": "section_heading",
+          "settings": {
+            "title": "FAQs"
+          }
+        },
+        "product-where-made-question": {
+          "type": "question",
+          "settings": {
+            "title": "How is my package being delivered?",
+            "text": "<p>Buoy offers free USPS Priority Mail shipping on all orders placed on our website within the United States.<br\/><br\/>Need more details about your order? Message us at hello@justaddbuoy.com!<\/p>"
+          }
+        },
+        "sizes-question": {
+          "type": "question",
+          "settings": {
+            "title": "Can I get a refund?",
+            "text": "<p>If you're not 100% satisfied with your order, you can request a full refund from hello@justaddbuoy.com.<br\/><br\/>Orders placed within the last 30 days are eligible for a refund.<br\/><br\/>We accept returns for any order placed within 30 days. To start a return, you can email hello@justaddbuoy.com or reply to your order confirmation email.<\/p>"
+          }
+        },
+        "when-shipping-question": {
+          "type": "question",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "text": "<p>When you subscribe to Buoy, you’ll save 24% on every order of your favorite Buoy drops!<br\/><br\/>It’s risk-free and you can cancel at any time. Manage your Clear Pee Club membership by logging into your account.<\/p>"
+          }
+        },
+        "when-arriving-question": {
+          "type": "question",
+          "settings": {
+            "title": "How do I get the most out of my order?",
+            "text": "<p>Hydration is a daily effort. You lose essential vitamins, electrolytes, and minerals from exercise, sleeping, and just being alive!<br\/><br\/>To get the most out of Buoy, squeeze it into your drinks 3-5 times a day!<br\/><br\/>Once you notice the powerful effects of hydration on your daily life, you’re free to subscribe to your Buoy faves for 24% off and risk-free automatic monthly deliveries.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-getting-started",
+        "product-where-made-question",
+        "sizes-question",
+        "when-shipping-question",
+        "when-arriving-question"
+      ],
+      "settings": {
+        "show_answers": false,
+        "text_size": 100,
+        "alignment": "center",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(184deg, rgba(255, 255, 255, 1) 7%, rgba(255, 255, 255, 1) 94%)",
+        "border_color": "#121212",
+        "base_width": 80,
+        "max_width": "",
+        "inner_padding": 100,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "products": {
+      "type": "wonderment-featured-collection",
+      "disabled": true,
+      "settings": {
+        "per_row": 3,
+        "show_arrows": true,
+        "show_product_title": true,
+        "show_product_price": true,
+        "show_product_label": true,
+        "text_size": 100,
+        "heading_color": "#121212",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(360deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "base_width": 95,
+        "max_width": "",
+        "inner_padding": 40,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "rebuy": {
+      "type": "wonderment-rebuy",
+      "disabled": true,
+      "settings": {
+        "rebuy-widget-id": ""
+      }
+    },
+    "fairing": {
+      "type": "wonderment-fairing",
+      "disabled": true,
+      "settings": {
+        "fairing-key": "",
+        "fairing-padding": 25
+      }
+    },
+    "5f806039-19b8-4490-8ea9-7d488a09d711": {
+      "type": "collection-group",
+      "blocks": {
+        "470d0d2a-fabd-4379-a6d8-872a5c2f0b8f": {
+          "type": "block",
+          "settings": {
+            "collection": "subscription-products",
+            "title": "Stock Up On Hydration",
+            "text": "Purposefully unsweetened and unflavored wellness drops turn any drink into a hydrating, functional beverage. Made without sugar, sweeteners like stevia and dextrose, \"natural\" flavors, artificial ingredients, calories or carbs.",
+            "show_spinner": false,
+            "spinner_image": "shopify:\/\/shop_images\/all-day-hydration.svg",
+            "spinner_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "470d0d2a-fabd-4379-a6d8-872a5c2f0b8f"
+      ],
+      "custom_css": [
+        ".collection-groups__item {margin: 70px 0 0px; padding-bottom: 100px; border-bottom: none;}"
+      ],
+      "settings": {
+      }
+    },
+    "df6d8960-7489-4f3b-bb85-2628801d237f": {
+      "type": "image-grid",
+      "blocks": {
+        "427e960b-ba5d-4b60-8628-296eca61b43c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Alix_Earle_Borg_e1916c87-7f6d-4c6b-8b12-efbb55a8cbf1.png",
+            "name": "",
+            "subtitle": "We made Alix Earle the #BORG she deserves #alixearle from her favorite store.",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy\/video\/7202443579136986414"
+          }
+        },
+        "6934a6fd-4169-4cf6-ac2c-e1452da46caa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/girl_with_POTS_d3c775c8-9399-4ac6-9aac-f06f0f8089ea.png",
+            "name": "",
+            "subtitle": "I love me my Bouy 🤍I’m still trying to figure out how to deal with my POTS, anyone have any tips!!?",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.instagram.com\/reel\/Co085FjrDGm\/?utm_source=ig_web_copy_link"
+          }
+        },
+        "cdd6e4c2-9f2f-4e0a-bd12-b6e18c6488b6": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BORGS_9893c206-430a-48f8-9769-cf8f29a4f0a6.png",
+            "name": "",
+            "subtitle": "Everything you need to know about BORGs (and how to make a healthier version) #BORG",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy\/video\/7200211135071800622"
+          }
+        },
+        "e33bb68e-1840-4c81-aac7-9b10db5c8a1c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nicole_ea3d871a-3e0c-4f17-9777-32430c0b7f3f.png",
+            "name": "",
+            "subtitle": "Nicole shares her story with MS and navigating perception around chronic illnesses and identity...",
+            "link_label": "See Post",
+            "link_url": "https:\/\/www.instagram.com\/reel\/CmedWvworQc\/?utm_source=ig_web_copy_link"
+          }
+        }
+      },
+      "block_order": [
+        "427e960b-ba5d-4b60-8628-296eca61b43c",
+        "6934a6fd-4169-4cf6-ac2c-e1452da46caa",
+        "cdd6e4c2-9f2f-4e0a-bd12-b6e18c6488b6",
+        "e33bb68e-1840-4c81-aac7-9b10db5c8a1c"
+      ],
+      "custom_css": [
+        "h3,.h3 {font-family: inter, sans-serif; font-style: normal; font-weight: 500; font-size: 45px; letter-spacing: 0; line-height: 1.26;}"
+      ],
+      "settings": {
+        "color": "transparent linear-gradient(180deg,#ecd8C500 0,#f8f1eb 100%) 0 0 no-repeat padding-box;",
+        "title": "Share Your Hydration Journey",
+        "text": "Hang out with the rest of #ClearPeeClub on Instagram and Tiktok",
+        "link_label": "Follow Us On Tiktok",
+        "link_url": "https:\/\/www.tiktok.com\/@justaddbuoy",
+        "text2": "@justaddbuoy",
+        "button_label": "Follow Us On Instagram",
+        "button_link": "https:\/\/www.tiktok.com\/@justaddbuoy"
+      }
+    }
+  },
+  "order": [
+    "3771ae63-ab55-410c-ab85-3e3909a98abf",
+    "16784824710141f699",
+    "5039082d-1a37-485e-843c-557fb3ce0871",
+    "40639e52-45ca-48b0-9f5f-52157852d9c8",
+    "faq",
+    "products",
+    "rebuy",
+    "fairing",
+    "5f806039-19b8-4490-8ea9-7d488a09d711",
+    "df6d8960-7489-4f3b-bb85-2628801d237f"
+  ]
+}

@@ -1,16 +1,8 @@
 
 {{ 'section-main-menu.css' | asset_url | stylesheet_tag }} 
 
-<div class="main-menu" aria-hidden="true">
-  <button class="main-menu__close">{% render 'icon-close' %}</button>
-
-  {% if section.settings.arrow_link_label != blank %}
-    <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
-      {{ section.settings.arrow_link_label }}
-      {% render 'icon-arrow-right' %}
-    </a>
-  {% endif %}
-  
+<div class="main-menu {% if settings.fix_announcement == true %}Fixed_Announcement_Bar{% endif %} {% if settings.show_announcement_bar == true %}Announcement_Shown{% endif %}" aria-hidden="true">  
+  <button class="main-menu__close">Close</button>
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
       <div class="main-menu__main-links">
@@ -19,85 +11,94 @@
         {% endif %}
           
         {% for block in section.blocks %}
-          <div class="main-menu__main-link">
-            <a class="h6 light" href="{{ block.settings.link }}">
-             <span class="visually-hidden">{{ shop.name }}</span>
-              {% if section.settings.arrow_link_label != blank %}
-                <span class="Maine_Menu_Link_Image"><img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}" height="42" width="42"></span>
-              {% endif %} 
-              <span>{{ block.settings.title }}</span>
-              {% if block.settings.callout_text != blank %}
-                <span class="body light callout-text">{{ block.settings.callout_text }}</span>
-              {% endif %}
-            </a>
-            {% if block.settings.subtext != blank %}
-              <p class="body light subtext">{{ block.settings.subtext }}</p>
-            {% endif %}
-          </div>
+          {% if block.type == 'menu_item' %}
+            <div class="main-menu__main-link">
+              <a class="h6 light" href="{{ block.settings.link }}">
+               <span class="visually-hidden">{{ shop.name }}</span>
+                {% if section.settings.arrow_link_label != blank %}
+                  <span class="Main_Menu_Link_Image">
+                    <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}">
+                    <span class="Main_Menu_Link_Desktop_Title">{{ block.settings.title }}</span>
+                  </span>
+                  <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.mobile_title }}</span>
+                {% endif %} 
+                {% if block.settings.callout_text != blank %}
+                  <span class="body light callout-text">{{ block.settings.callout_text }}</span>
+                {% endif %}   
+              </a>
+            </div>
+          {% endif %}
        {% endfor %}
       </div>
       
       <div class="main-menu__secondary-links">
-        {% for link in section.settings.secondary_menu.links %}
-          <a href="{{ link.url }}" class="sh4 light">{{ link.title }}</a>
+        {% for block in section.blocks %}
+          {% if block.type == 'secondary_link_desktop' %}
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}
+              {% if block.settings.callout_text != blank %}
+                <span class="body light callout-text">{{ block.settings.callout_text }}</span>
+              {% endif %}            
+             </a>
+          {% endif %}
         {% endfor %}
-        {% if section.settings.show_account %}
-          <a href="/account" class="sh4 light account-link">
-            {% render 'icon-account-new' %}
-            Account
-          </a>
-        {% endif %}
+      </div>
+      <div class="main-menu__secondary-links Secondary_Link Mobile">
+        {% for block in section.blocks %}
+          {% if block.type == 'secondary_link_mobile' %}
+             <a href="{{ block.settings.link }}" class="sh4 light">{{block.settings.title }}
+              {% if block.settings.callout_text != blank %}
+                <span class="body light callout-text">{{ block.settings.callout_text }}</span>
+              {% endif %}            
+             </a>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
+    <div class="Main_Menu_Bottom">
+      {% if section.settings.show_account %}
+        <a href="/account" class="sh4 light account-link">
+          {% render 'icon-account-new' %}
+          Account
+        </a>
+      {% endif %}
+      {% if section.settings.arrow_link_label != blank %}
+        <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
+          {{ section.settings.arrow_link_label }}
+          {% render 'icon-arrow-right' %}
+        </a>
+      {% endif %}
+    </div>
   </div>
-
-  <div class="Main_Menu_Bottom">
-    {% if section.settings.bottom_button_text != blank %}
-      <a href="{% if section.settings.bottom_button_url != blank %}{{ section.settings.bottom_button_url }}{% else %}#{% endif %}" class="button">{{ section.settings.bottom_button_text }}</a>
-    {% endif %}
-    <ul class="Bottom_List">
-      <li>{{ 'main_menu.free_shipping' | t }}</li>
-      <li>{{ 'main_menu.risk_free' | t }}</li>
-    </ul>
-  </div>
-  
 </div>
 
 {% javascript %}
 
   $('[href="#menu"]').click(function() {
     $('.main-menu').attr('aria-hidden', false);
-    $('.page-overlay').addClass('is-visible');
-    $('.page-overlay').addClass('Menu_Overlay');
+    $('.page-overlay').addClass('is-visible Menu_Overlay');
+    $('body').addClass('Overflow_Hidden');
     $('.Mobile_Menu_Close').show();
     $('.Hamburger_New').hide();
-
-    $('.page-overlay').click(function() {
-      $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible Menu_Overlay');
-      $('.Mobile_Menu_Close').hide();
-      $('.Hamburger_New').show();
-    });
+    $('.header-wrapper').addClass('active');
+    $(this).addClass('active');
   });
 
   $('.main-menu__close').click(function() {
     $('.main-menu').attr('aria-hidden', true);
     $('.page-overlay').removeClass('is-visible Menu_Overlay');
     $('.Mobile_Menu_Close').hide();
+    $('body').removeClass('Overflow_Hidden');
     $('.Hamburger_New').show();
+    $('.header-wrapper').removeClass('active');
+    $('[href="#menu"]').removeClass('active');
   }); 
-
+  
 {% endjavascript %}
 
 {% schema %}
   {
     "name": "Main Menu",
     "settings": [
-      {
-        "type": "link_list",
-        "id": "secondary_menu",
-        "label": "Secondary Menu"
-      },
       {
         "type": "text",
         "id": "arrow_link_label",
@@ -145,22 +146,59 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Title"
+            "label": "Desktop Title"
           },
           {
             "type": "text",
-            "id": "subtext",
-            "label": "Subtext"
-          },
-          {
-            "type": "text",
-            "id": "callout_text",
-            "label": "Callout Text"
+            "id": "mobile_title",
+            "label": "Mobile Title"
           },
           {
             "type": "image_picker",
             "id": "image",
             "label": "Add image"
+          }
+        ]
+      },
+      {
+        "type": "secondary_link_desktop",
+        "name": "Secondary Link Desktop",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "callout_text",
+            "label": "Callout Text"
+          }
+        ]
+      },
+      {
+        "type": "secondary_link_mobile",
+        "name": "Secondary Link Mobile",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "callout_text",
+            "label": "Callout Text"
           }
         ]
       }

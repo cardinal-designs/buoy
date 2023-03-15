@@ -1,21 +1,23 @@
-<div class="newsletter-footer">
-  <div class="newsletter-footer__text">
-    <div class="newsletter-footer__text-container">
-      <h4>{{ section.settings.title }}</h4>
-      <p>{{ section.settings.text }}</p>
+<div class="newsletter-footer" style="background-color: {{ section.settings.section_bg }};">
+  <div class="page-width">
+    <div class="newsletter-container">
+      <div class="newsletter-footer__text">
+        <div class="newsletter-footer__text-container">
+          <h3 class="h3">{{ section.settings.title }}</h3>
+          <p class="h6">{{ section.settings.text }}</p>
+        </div>
+      </div>
+      <div class="newsletter-footer__form">
+        <div class="klaviyo-form email-form">
+          <div class="klaviyo-form-SG46V2"></div>
+        </div>
+        {% if section.settings.show_phone %}
+        <div class="klaviyo-form sms-form">
+          <div class="klaviyo-form-UBnePi"></div>
+        </div>
+        {% endif %}
+      </div>
     </div>
-  </div>
-  <div class="newsletter-footer__form">
-    <div class="klaviyo-form email-form">
-      <div class="klaviyo-form-SG46V2"></div>
-    </div>
-    {% if section.settings.show_phone %}
-    <div class="klaviyo-form sms-form">
-      <div class="klaviyo-form-UBnePi"></div>
-    </div>
-    {% endif %}
-    <p class="social-header body-xs">{{ section.settings.social_header }}</p>
-    {% render 'social' %}
   </div>
 </div>
 
@@ -34,16 +36,20 @@
         "label": "Text"
       },
       {
-        "type": "text",
-        "id": "social_header",
-        "label": "Social Icons Header",
-		"default": "HYDRATE YOUR FEED"
-      },
-      {
         "type": "checkbox",
         "id": "show_phone",
         "label": "Show Klaviyo Phone?",
 		"default": false
+      },
+      {
+        "type": "header",
+        "content": "Style"        
+      },
+      {
+        "type": "color",
+        "id": "section_bg",
+        "label": "Background Color",
+        "default": "#F6ECE1"
       }
     ]
   }

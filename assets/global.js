@@ -642,9 +642,6 @@ customElements.define('variant-radios', VariantRadios);
 class HeaderContainer extends HTMLElement {
   constructor() {
     super();
-
-    console.log(this)
-
     this.onScrollHandler = this.onScroll.bind(this);
     window.addEventListener('scroll', this.onScrollHandler, false);
 
@@ -664,7 +661,7 @@ class HeaderContainer extends HTMLElement {
         if (!this.classList.contains('header--scrolled')) {
           this.classList.add('header--scrolled');
         }
-      } else{
+      } else {
         if (this.classList.contains('header--scrolled')) {
           this.classList.remove('header--scrolled');
         }
@@ -676,6 +673,42 @@ class HeaderContainer extends HTMLElement {
 }
 
 customElements.define('header-container', HeaderContainer);
+
+/* Announcement Bar On Scroll */
+class AnnouncementBar extends HTMLElement {
+  constructor() {
+    super();
+    this.onScrollHandler = this.onScroll.bind(this);
+    window.addEventListener('scroll', this.onScrollHandler, false);
+
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > 10) {
+      if (!this.classList.contains('announcement--scrolled')) {
+        this.classList.add('announcement--scrolled');
+      }
+    }
+  }
+
+  onScroll() {
+    if (this.classList.contains('announcement--transparent')) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 10) {
+        if (!this.classList.contains('announcement--scrolled')) {
+          this.classList.add('announcement--scrolled');
+        }
+      } else{
+        if (this.classList.contains('announcement--scrolled')) {
+          this.classList.remove('announcement--scrolled');
+        }
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+  }
+}
+
+customElements.define('announcement-container', AnnouncementBar);
 
 
 /* ---------- FUNCTIONS ---------- */
