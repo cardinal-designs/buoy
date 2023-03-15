@@ -152,6 +152,10 @@
   line-height: 21px;
 }
 
+.blog-articles .article-card__header {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 990px) {
   .article-card__link:not(:only-child) {
     margin-right: 4rem;
