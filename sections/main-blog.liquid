@@ -8,7 +8,7 @@
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
-          {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_description: section.settings.show_description -%}
+          {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt -%}
         </div>
       {%- endfor -%}
     </div>
@@ -50,9 +50,9 @@
     },
     {
       "type": "checkbox",
-      "id": "show_description",
+      "id": "show_excerpt",
       "default": false,
-      "label": "Show Description"
+      "label": "Show Excerpt"
     },
     {
       "type": "paragraph",
