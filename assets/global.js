@@ -1452,7 +1452,7 @@ $('.Featured_Blog_Hero').slick({
 });
 
 
-const loadmore = document.querySelector('#loadmore');
+const loadmore = document.querySelector('#Load_More');
   let currentItems = 6;
   loadmore.addEventListener('click', (e) => {
     const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
