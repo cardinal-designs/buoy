@@ -141,6 +141,10 @@
   padding: 18px 0 0;
 }
 
+.blog-articles .article-card__title {
+  margin: 20px 0;
+}
+
 @media screen and (min-width: 990px) {
   .article-card__link:not(:only-child) {
     margin-right: 4rem;
