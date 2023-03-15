@@ -5,6 +5,7 @@
 
 .Featured_Blog_Data {
   order: 2;
+  text-align: center;
 }
 
 .Featured_Blog_Image {
@@ -13,13 +14,6 @@
 
 .Featured_Blog_Data * {
  font-family: 'inter'; 
-}
-
-.Featured_Blog_Data {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .Article_Time {
