@@ -34,3 +34,11 @@
   order: 1;
   flex: 0 0 50%;
 }
+
+.Featured_Blog_Hero .slick-dots {
+  padding: 0!important;
+  margin: 40px 0 0!important;
+  text-align: center!important;
+  display: flex;
+  justify-content: center;
+}
