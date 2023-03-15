@@ -1,6 +1,7 @@
 .blog-articles {
   display: grid;
-  grid-gap: 33px;
+  column-gap: 33px;
+  row-gap: 70px;
 }
 
 @media screen and (min-width: 769px) {
