@@ -108,3 +108,12 @@
 .Featured_Blog_Image .media--landscape {
   padding-bottom: 100%;
 }
+
+.Featured_Blog_Data_Inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 80px;
+}
