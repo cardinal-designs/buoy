@@ -25,18 +25,6 @@
   margin: 30px 0 35px;
 }
 
-.Featured_Blog_Hero .slick-dots {
-  padding: 0!important;
-  margin: 0!important;
-  text-align: center!important;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 50%;
-  right: 0;
-  bottom: 9.5%;
-}
-
 .Featured_Blog_Hero .slick-dots li button:before {
   position: absolute;
   content: "";
@@ -120,6 +108,22 @@
 
 .Featured_Blog_Image .article-card__image img {
   border-radius: 0px 17px 17px 0px;
+}
+
+@media screen and (min-width: 769px) {
+
+  .Featured_Blog_Hero .slick-dots {
+    padding: 0!important;
+    margin: 0!important;
+    text-align: center!important;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 9.5%;
+  }
+
 }
 
 @media screen and (max-width: 1199px) {
