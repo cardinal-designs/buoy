@@ -153,7 +153,8 @@
   }
 
   .Featured_Blog_Content_Inner {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
   
 }
