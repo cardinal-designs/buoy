@@ -203,5 +203,9 @@
   .Featured_Blog_Image {
     padding: 20px 27px 0;
   }
+
+  .Featured_Blog_Image .article-card__image img {
+    border-radius: 17px;
+  }
   
 }
