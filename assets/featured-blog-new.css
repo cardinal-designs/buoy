@@ -20,8 +20,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex: 0 0 50%;
 }
 
 .Article_Time {
@@ -29,11 +27,6 @@
   line-height: 21px;
   font-weight: 300;
   flex: 0 0 100%;
-}
-
-.Featured_Blog_Image {
-  order: 1;
-  flex: 0 0 50%;
 }
 
 .Featured_Blog_Hero .slick-dots {
