@@ -121,3 +121,11 @@
 .Featured_Blog_Image .article-card__image img {
   border-radius: 0px 17px 17px 0px;
 }
+
+@media screen and (max-width: 1199px) {
+  
+.Featured_Blog_Data_Inner {
+  padding: 0 40px;
+}
+
+}
