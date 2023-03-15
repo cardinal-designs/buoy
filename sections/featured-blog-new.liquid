@@ -18,21 +18,39 @@
         <div class="Featured_Blog_Image">
           <div class="article-card__image-wrapper">
             <div class="article-card__image media media--landscape">
-              <img
-                srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
-                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
-                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | img_url: '533x' }} 533w,{%- endif -%}
-                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | img_url: '720x' }} 720w,{%- endif -%}
-                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | img_url: '1000x' }} 1000w,{%- endif -%}
-                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
-                src="{{ article.image.src | img_url: '533x' }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                alt="{{ article.image.src.alt | escape }}"
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-                loading="lazy"
-                class="motion-reduce"
-              >
+              {% if section.settings.article_image != blank %}
+                <img
+                  srcset="{%- if article_image.src.width >= 165 -%}{{ article_image.src | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if article_image.src.width >= 360 -%}{{ article_image.src | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if article_image.src.width >= 533 -%}{{ article_image.src | img_url: '533x' }} 533w,{%- endif -%}
+                    {%- if article_image.src.width >= 720 -%}{{ article_image.src | img_url: '720x' }} 720w,{%- endif -%}
+                    {%- if article_image.src.width >= 1000 -%}{{ article_image.src | img_url: '1000x' }} 1000w,{%- endif -%}
+                    {%- if article_image.src.width >= 1500 -%}{{ article_image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
+                  src="{{ article_image.src | img_url: '533x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ article_image.src.alt | escape }}"
+                  width="{{ article_image.width }}"
+                  height="{{ article_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              {% else %}
+                <img
+                  srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if article.image.src.width >= 533 -%}{{ article.image.src | img_url: '533x' }} 533w,{%- endif -%}
+                    {%- if article.image.src.width >= 720 -%}{{ article.image.src | img_url: '720x' }} 720w,{%- endif -%}
+                    {%- if article.image.src.width >= 1000 -%}{{ article.image.src | img_url: '1000x' }} 1000w,{%- endif -%}
+                    {%- if article.image.src.width >= 1500 -%}{{ article.image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
+                  src="{{ article.image.src | img_url: '533x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ article.image.src.alt | escape }}"
+                  width="{{ article.image.width }}"
+                  height="{{ article.image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >                
+              {% endif %}
             </div>
           </div>
         </div>
