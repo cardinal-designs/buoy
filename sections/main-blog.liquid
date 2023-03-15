@@ -13,9 +13,13 @@
       {%- endfor -%}
     </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
+    <button id="loadmore">Load More...</button>
+
+    {%- comment -%}
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    {%- endcomment -%}
   </div>
 {%- endpaginate -%}
 
