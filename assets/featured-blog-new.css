@@ -175,5 +175,9 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .Featured_Blog_Hero ul.slick-dots {
+    text-align: center;
+  }
   
 }
