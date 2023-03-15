@@ -24,3 +24,8 @@
   align-items: center;
   text-align: center;
 }
+
+.Featured_Label,
+.Article_Time {
+  flex: 0 0 100%;
+}
