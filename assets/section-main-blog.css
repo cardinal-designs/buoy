@@ -37,6 +37,10 @@ button#Load_More {
   cursor: pointer;
 }
 
+button#Load_More svg {
+  width: 12px;
+}
+
 @media screen and (max-width: 991px) {
   
   .blog-articles {
