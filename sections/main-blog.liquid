@@ -4,7 +4,7 @@
 
 
 {%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width">
+  <div class="main-blog page-width {% if section.settings.show_loadmore == true %}hide{% endif %}">
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
@@ -13,13 +13,13 @@
       {%- endfor -%}
     </div>
 
-    <button id="loadmore">Load More...</button>
+    {%- if section.settings.show_loadmore == true -%}
+      <button id="loadmore">Load More...</button>
+    {%- endif -%}
 
-    {%- comment -%}
-      {%- if paginate.pages > 1 -%}
-        {%- render 'pagination', paginate: paginate -%}
-      {%- endif -%}
-    {%- endcomment -%}
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
   </div>
 {%- endpaginate -%}
 
