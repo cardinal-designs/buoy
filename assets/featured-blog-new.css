@@ -1,0 +1,6 @@
+.Home_Hero_Section {
+  min-height: 100vh;
+  margin-top: -1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
