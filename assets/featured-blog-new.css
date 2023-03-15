@@ -2,6 +2,7 @@
   min-height: 100vh;
   margin-top: -1px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .Featured_Blog_Content_Container {
