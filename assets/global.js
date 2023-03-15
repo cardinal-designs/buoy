@@ -1453,6 +1453,8 @@ $('.Featured_Blog_Hero').slick({
 
 
 const loadmore = document.querySelector('#Load_More');
+
+if (window.matchMedia('(min-width: 769px)').matches){
   let currentItems = 6;
   loadmore.addEventListener('click', (e) => {
     const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
@@ -1468,3 +1470,22 @@ const loadmore = document.querySelector('#Load_More');
         event.target.style.display = 'none';
     }
   })
+}
+
+if (window.matchMedia('(max-width: 768px)').matches){
+  let currentItems = 1;
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
+    for (let i = currentItems; i < currentItems + 3; i++) {
+        if (elementList[i]) {
+            elementList[i].style.display = 'block';
+        }
+    }
+    currentItems += 3;
+
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+        event.target.style.display = 'none';
+    }
+  })
+}
