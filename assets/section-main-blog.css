@@ -17,6 +17,14 @@
 
 }
 
+@media screen and (max-width: 768px) {
+
+  .blog-articles {
+    row-gap: 50px;
+  }
+
+}
+
 @media screen and (min-width: 769px) {
   .blog-articles {
     grid-template-columns: 1fr 1fr 1fr;
