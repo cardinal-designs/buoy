@@ -16,40 +16,42 @@
 <div class="Featured_Blog_Hero">
   {% for block in section.blocks %}
     <div class="Featured_Blog_Content">
-      <div class="Featured_Blog_Content_Inner">
-    {% assign article = block.settings.article %}
-      <div class="Featured_Blog_Content_Container">    
-        <div class="Featured_Label">Featured</div>
-        <div class="Article_Time">
-          {{ article.created_at }} | 6 Min Read
-        </div>
-        <h2 class="Article_Title">
-          {{ article.title | escape }}
-        </h2>
-        <a href="{{ article.url }}">Read More</a>
-      </div>
-      <div class="Featured_Blog_Image">
-        <div class="article-card__image-wrapper">
-          <div class="article-card__image media media--landscape">
-            <img
-              srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
-                {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
-                {%- if article.image.src.width >= 533 -%}{{ article.image.src | img_url: '533x' }} 533w,{%- endif -%}
-                {%- if article.image.src.width >= 720 -%}{{ article.image.src | img_url: '720x' }} 720w,{%- endif -%}
-                {%- if article.image.src.width >= 1000 -%}{{ article.image.src | img_url: '1000x' }} 1000w,{%- endif -%}
-                {%- if article.image.src.width >= 1500 -%}{{ article.image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
-              src="{{ article.image.src | img_url: '533x' }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="{{ article.image.src.alt | escape }}"
-              width="{{ article.image.width }}"
-              height="{{ article.image.height }}"
-              loading="lazy"
-              class="motion-reduce"
-            >
+      <div class="Featured_Blog_Main">
+      {% assign article = block.settings.article %}
+        <div class="Featured_Blog_Content_Inner"> 
+          <div class="Featured_Blog_Content_Container">    
+            <div class="Featured_Label">Featured</div>
+            <div class="Article_Time">
+              {{ article.created_at }} | 6 Min Read
+            </div>
+            <h2 class="Article_Title">
+              {{ article.title | escape }}
+            </h2>
+            <a href="{{ article.url }}">Read More</a>
+          </div>
+          <div class="Featured_Blog_Image">
+            <div class="article-card__image-wrapper">
+              <div class="article-card__image media media--landscape">
+                <img
+                  srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if article.image.src.width >= 533 -%}{{ article.image.src | img_url: '533x' }} 533w,{%- endif -%}
+                    {%- if article.image.src.width >= 720 -%}{{ article.image.src | img_url: '720x' }} 720w,{%- endif -%}
+                    {%- if article.image.src.width >= 1000 -%}{{ article.image.src | img_url: '1000x' }} 1000w,{%- endif -%}
+                    {%- if article.image.src.width >= 1500 -%}{{ article.image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
+                  src="{{ article.image.src | img_url: '533x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ article.image.src.alt | escape }}"
+                  width="{{ article.image.width }}"
+                  height="{{ article.image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   {% endfor %}
 </div>
