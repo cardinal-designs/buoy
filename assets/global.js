@@ -1456,7 +1456,7 @@ const loadmore = document.querySelector('#loadmore');
   let currentItems = 6;
   loadmore.addEventListener('click', (e) => {
     const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
-    for (let i = currentItems; i < currentItems + 6; i++) {
+    for (let i = currentItems; i < currentItems + 3; i++) {
         if (elementList[i]) {
             elementList[i].style.display = 'block';
         }
