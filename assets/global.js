@@ -1453,15 +1453,15 @@ $('.Featured_Blog_Hero').slick({
 
 
 const loadmore = document.querySelector('#loadmore');
-  let currentItems = 3;
+  let currentItems = 6;
   loadmore.addEventListener('click', (e) => {
     const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
-    for (let i = currentItems; i < currentItems + 3; i++) {
+    for (let i = currentItems; i < currentItems + 6; i++) {
         if (elementList[i]) {
             elementList[i].style.display = 'block';
         }
     }
-    currentItems += 3;
+    currentItems += 6;
 
     // Load more button will be hidden after list fully loaded
     if (currentItems >= elementList.length) {
