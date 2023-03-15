@@ -34,6 +34,7 @@ button#Load_More {
   font-size: 14px;
   line-height: 21px;
   font-family: inter,sans-serif;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
