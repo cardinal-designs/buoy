@@ -11,6 +11,10 @@
     row-gap: 40px;
   }
 
+  .blog-articles .article-card__title {
+    font-size: 20px;
+  }
+
 }
 
 @media screen and (min-width: 769px) {
