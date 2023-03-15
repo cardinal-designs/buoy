@@ -195,5 +195,9 @@
   .Featured_Blog_Data {
     padding: 0 38px;
   }
-  
+
+  .Featured_Blog_Image {
+    flex: 0 0 100%;
+  }
+    
 }
