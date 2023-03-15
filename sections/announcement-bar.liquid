@@ -13,6 +13,9 @@
   {% comment %}
     <button class="announcement-bar__close">{% render 'icon-close' %}</button>
   {% endcomment %}
+  {% if section.settings.btn_text != blank %}
+    <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+  {% endif %}
 </div>
 
 {% if section.settings.hide_mobile %}
@@ -39,6 +42,17 @@
       "type": "url",
       "id": "link",
       "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "default": "Start Here",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
     },
     {
       "type": "checkbox",

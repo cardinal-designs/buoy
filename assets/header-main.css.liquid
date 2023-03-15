@@ -224,7 +224,7 @@ li:focus, :focus{
 /*** NEW HEADER CSS START ***/
 
 .header {
-  padding: 22px 40px
+  padding: 22px 40px;
 }
 
 .header__icon--cart .cart-count-bubble {
@@ -256,11 +256,6 @@ li:focus, :focus{
 .header__inline-menu {
   margin-left: 0;
 }
-/* 
-.header--transparent:not(.header--scrolled) .header-wrapper {
-  background-color: #fff;
-  border-color: inherit;
-} */
 
 .Mobile_Show.header__inline-menu {
   display: none;
@@ -357,8 +352,11 @@ header-drawer {
     padding: 8.8px 15px;
   }
 
+  .header--transparent:not(.header--scrolled) .header-wrapper.active {
+    border-bottom: 1px solid rgb(84 87 89 / 20%);    
+  }
+
   .header__svg-logo {
-    margin-left: -40px;
     max-width: 50px;
   }
     

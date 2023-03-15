@@ -367,8 +367,6 @@
         <li>
           <a href="#menu" class="Mobile_Hamburger header__menu-item header__menu-item list-menu__item link link--text focus-inset sh2">
             {% render 'icon-hamburger-new' %}
-            <button class="main-menu__close Mobile_Menu_Close">{% render 'icon-close' %}</button>
-            Menu
           </a>
         </li>
       </ul>
@@ -559,6 +557,7 @@
           {%- endif -%}
         </a>
       {% endif %}
+      <button class="main-menu__close">Close</button>
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>

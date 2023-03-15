@@ -236,7 +236,10 @@
 
     <div class="page-overlay"></div>
 
-    {% section 'announcement-bar' %}
+    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
+      {% section 'announcement-bar' %}
+    </announcement-container>
+    
     <header-container class="header--transparent">
       {% section 'header' %}
     </header-container>
@@ -255,10 +258,8 @@
     </main>
 
     <div class="footer-container">
-      <div class="page-width">
-        {% section 'newsletter-footer' %}
-        {% section 'footer' %}
-      </div>
+      {% section 'newsletter-footer' %}
+      {% section 'footer' %}
     </div>
 
     <ul hidden>
