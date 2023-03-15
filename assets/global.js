@@ -1461,7 +1461,7 @@ const loadmore = document.querySelector('#loadmore');
             elementList[i].style.display = 'block';
         }
     }
-    currentItems += 2;
+    currentItems += 3;
 
     // Load more button will be hidden after list fully loaded
     if (currentItems >= elementList.length) {
