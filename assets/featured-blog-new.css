@@ -110,6 +110,10 @@
   border-radius: 0px 17px 17px 0px;
 }
 
+.Featured_Blog_Image ul.slick-dots {
+  padding: 0;
+}
+
 @media screen and (min-width: 769px) {
 
   .Featured_Blog_Hero .slick-dots {
