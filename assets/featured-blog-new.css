@@ -179,5 +179,13 @@
   .Featured_Blog_Hero ul.slick-dots {
     text-align: center;
   }
+
+  .Featured_Blog_Hero .slick-prev {
+    left: 27px;
+  }
+
+  .Featured_Blog_Hero .slick-next {
+    right: 27px;
+  }
   
 }
