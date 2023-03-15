@@ -1443,5 +1443,20 @@ $('.pee-club-product-arrow').click(function() {
   $(this).hide()
 })
 
+$('.benefits__item').click(function() {
+  $('.benefits__item h4.active').removeClass('active')
+  $(this).find('h4').addClass('active')
+   let num = $('.benefits__item h4.active').parent().data("id")
+  $('.benefits__info-item').hide()
+  $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
+})
+
+$('.benefits__item-mobile').click(function() {
+  $('.benefits__item-mobile h4.active').removeClass('active')
+  $(this).find('h4').addClass('active')
+   let num = $('.benefits__item-mobile h4.active').parent().data("id")
+  $('.mobile-benefits-info').slideUp()
+  $(`.mobile-benefits-info[data-id="${num}"]`).slideDown() 
+})
 
 

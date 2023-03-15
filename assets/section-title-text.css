@@ -1,0 +1,35 @@
+.title-text__container {
+  text-align: center;
+  margin: 120px auto 0;
+}
+
+.title-text__container h1 {
+  margin: 0 auto 30px;
+  color: #1F2322;
+  max-width: 900px;
+}
+
+.title-text__container p {
+  letter-spacing: 0px;
+  color: #1F2322;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .title-text__container {
+    margin: 50px auto 0;
+  }
+
+  .title-text__container h1 {
+    margin: 0 auto 20px;
+  }
+
+  .title-text__container p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+  }
+}

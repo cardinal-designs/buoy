@@ -279,6 +279,24 @@ body.lock-scroll {
   }
 }
 
+@keyframes spinsmall {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(45deg);
+  }
+}
+
+@-webkit-keyframes spinsmall {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(45deg);
+  }
+}
+
 @keyframes wave {
   0%{
     transform: translateY(0em);
@@ -661,6 +679,10 @@ p,
 blockquote {
   font-style: italic;
   padding-left: 1rem;
+}
+
+.no-italic {
+  font-style: normal;
 }
 
 @media screen and (max-width: 768px) {

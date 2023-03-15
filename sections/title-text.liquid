@@ -1,0 +1,29 @@
+{{ 'section-title-text.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width title-text__container">
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.text }}</p>
+</div>
+
+{% schema %}
+  {
+    "name": "Title And Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Title And Text"
+      }
+    ]
+  }
+{% endschema %}

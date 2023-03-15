@@ -1,7 +1,7 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 {{ 'section-image-dropdowns.css' | asset_url | stylesheet_tag }}
 
-<div id="image-with-dropdowns__container" class="image-dropdowns__container image-with-dropdowns__container">
+<div id="image-with-dropdowns__container" style="background: {{ section.settings.background }}" class="image-dropdowns__container image-with-dropdowns__container">
   <div class="show-product-bar"></div>
   <div class="page-width">
     <div class="image-with-dropdowns__content">
@@ -60,7 +60,7 @@
         "label": "Image"
       },
       {
-        "type": "text",
+        "type": "textarea",
         "id": "title",
         "label": "Title"
       },
@@ -68,6 +68,11 @@
         "type": "textarea",
         "id": "text_bottom",
         "label": "Bottom Text"
+      },
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background (optional)"
       }
 	],
     "blocks": [
