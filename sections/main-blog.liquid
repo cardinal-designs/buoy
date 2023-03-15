@@ -14,7 +14,9 @@
     </div>
 
     {%- if section.settings.show_loadmore == true -%}
-      <button id="Load_More">Load More...</button>
+      <div class="Load_More_Main">
+        <button id="Load_More">Load More...</button>
+      </div>
     {%- endif -%}
 
     {%- if paginate.pages > 1 -%}
