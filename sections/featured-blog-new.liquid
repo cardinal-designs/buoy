@@ -9,72 +9,30 @@
 
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
-<div class="blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop">
-    <div class="title-wrapper-with-link{% if section.settings.heading == blank %} title-wrapper-with-link--no-heading{% endif %} title-wrapper--self-padded-tablet-down">
-      <h2 class="blog__title">{{ section.settings.heading | escape }}</h2>
+{{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
 
-      {%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
-        <a href="{{ section.settings.blog.url }}"
-          class="link underlined-link large-up-hide"
-        >
-          {{ 'sections.featured_blog.view_all' | t }}
-        </a>
-      {%- endif -%}
-    </div>
-    {%- liquid
-      if section.settings.post_limit <= section.settings.blog.articles_count
-        assign posts_exceed_limit = true
-      endif
-    -%}
-    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
-      <slider-component class="slider-mobile-gutter">
-        <ul id="Slider-{{ section.id }}"
-          class="blog__posts articles-wrapper grid grid--peek grid--2-col-tablet grid--3-col-desktop slider slider--tablet{% if posts_exceed_limit %} blog__posts--{{ section.settings.post_limit }}-items{% else %} blog__posts--{{ section.settings.blog.articles_count }}-items{% endif %}"
-          role="list"
-        >
-          {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-            <li class="blog__post grid__item article slider__slide slider__slide--full-width">
-              {% render 'article-card', blog: section.settings.blog, article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author %}
-            </li>
-          {%- endfor -%}
-        </ul>
-        {%- if posts_exceed_limit -%}
-          <div class="slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
-            <div class="slider-counter caption">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-              <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
-            </div>
-            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-            <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-          </div>
-        {%- endif -%}
-      </slider-component>
-
-      {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
-        <div class="blog__view-all center small-hide medium-hide">
-          <a href="{{ section.settings.blog.url }}" class="blog__button button">
-            {{ 'sections.featured_blog.view_all' | t }}
-          </a>
-        </div>
-      {%- endif -%}
-    {%- else -%}
-      <div class="blog-placeholder">
-        <div class="placeholder media media--landscape">
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-        </div>
-        <div class="blog-placeholder__content">
-          <h2>
-            {{ 'sections.featured_blog.onboarding_title' | t }}
-          </h2>
-          <p class="rte-width">
-            {{ 'sections.featured_blog.onboarding_content' | t }}
-          </p>
-        </div>
+<div class="Featured_Blog_Hero">
+  <div class="Featured_Blog_Content">
+    {% for block in section.blocks %}
+      <div class="Featured_Blog_Content_Container">    
+        {{ block.article.title }}
       </div>
-    {%- endif -%}
+      <div class="Featured_Blog_Image">
+        <img
+          srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+            {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+          src="{{ section.settings.image | img_url: '533x' }}"
+          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+          class="motion-reduce img-fill hide-mobile"
+        >
+      </div>
+    {% endfor %}
   </div>
 </div>
 
