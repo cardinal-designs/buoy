@@ -20,7 +20,6 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
-  flex: 0 0 100%;
 }
 
 .Featured_Blog_Hero .slick-dots {
@@ -41,9 +40,10 @@
 }
 
 .Featured_Label {
-  background-color: #ECD8C5;
+  background-color: #ecd8c5;
   font-size: 18px;
   line-height: 30px;
   padding: 2px 18px;
   border-radius: 30px;
+  display: inline-block;
 }
