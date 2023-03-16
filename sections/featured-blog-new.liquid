@@ -10,7 +10,7 @@
             <div class="Featured_Blog_Data_Inner">
               <div class="Featured_Label">Featured</div>
               <p class="Article_Time">
-               {{ article.published_at | date: "%a, %b %d, %Y" }}{% if article.metafields.custom.reading_time != blank%}<span class="Featured_Blog_Readin_Time"> | {{ article.metafields.custom.reading_time }} </span>{% endif %}
+               {{ article.published_at | date: "%b %d, %Y" }}{% if article.metafields.custom.reading_time != blank%}<span class="Featured_Blog_Readin_Time"> | {{ article.metafields.custom.reading_time }} </span>{% endif %}
               </p>
               <h2 class="Article_Title">
                 <a href="{{ article.url }}">
@@ -86,6 +86,11 @@
           "type": "image_picker",
           "id": "article_image",
           "label": "Alternate Image"
+        },
+        {
+          "type": "text",
+          "id": "video",
+          "label": "Video(Mp4)"
         }
       ]
     }
