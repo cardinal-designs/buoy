@@ -176,6 +176,10 @@
   padding: 3.5px 14.5px;
 }
 
+.article-card__image-wrapper {
+  position: relative;
+}
+
 @media screen and (min-width: 990px) {
   
   .article-card__link:not(:only-child) {
