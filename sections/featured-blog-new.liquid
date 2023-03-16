@@ -13,14 +13,16 @@
                {{- article.published_at | time_tag: format: 'month_year' -}}  {% if article.metafields.custom.reading_time != blank%}<span class="Featured_Blog_Readin_Time"> | {{ article.metafields.custom.reading_time }} </span>{% endif %}
               </p>
               <h2 class="Article_Title">
-                {{ article.title | escape }}
+                <a href="{{ article.url }}">
+                  {{ article.title | escape }}
+                </a>
               </h2>
               <a class="Article_Read_More" href="{{ article.url }}">Read More</a>
             </div>
           </div>
           <div class="Featured_Blog_Image">
             <div class="article-card__image-wrapper">
-              <div class="article-card__image media media--landscape">
+              <a href="{{ article.url }}" class="article-card__image media media--landscape">
                 {% assign article_image = block.settings.article_image %}
                 {% if article_image != blank %}
                   <img
@@ -55,7 +57,7 @@
                     class="motion-reduce"
                   >                
                 {% endif %}
-              </div>
+              </a>
             </div>
           </div>
         </div>
