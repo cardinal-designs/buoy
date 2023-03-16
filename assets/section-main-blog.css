@@ -44,7 +44,9 @@ button#Load_More {
 }
 
 button#Load_More svg {
-  width: 12px;
+  width: 14px;
+  display: inline-block;
+  margin: 0 0px 0 4px;
 }
 
 @media screen and (max-width: 991px) {
