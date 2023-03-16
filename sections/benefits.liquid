@@ -23,6 +23,9 @@
       </div>
       <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
       {% endfor %}
+      {% if section.settings.link_text != blank %}
+        <a href="{{ section.settings.link }}" class="benefits_link">{{ section.settings.link_text }}</a>
+      {% endif %}
     </div>
     <div class="benefits__info hide-mobile">
       <h5 class="benefits__info-title light">{{ section.settings.title }}</h5>
