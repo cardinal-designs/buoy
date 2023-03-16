@@ -10,6 +10,9 @@
         {% include 'icon-x' %}
       </div>
       {% endfor %}
+      {% if section.settings.link != blank %}
+        <p class="benefits_learn">{{ section.settings.link }}</p>
+      {% endif %}
     </div>
     <div class="benefits__items hide-desktop">
       <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
