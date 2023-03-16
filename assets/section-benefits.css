@@ -36,6 +36,17 @@
   font-family: inter,sans-serif;
 }
 
+.benefits_link {
+  font-size: 14px;
+  text-decoration: underline;
+  line-height: 1;
+  display: inline-block;
+  text-underline-offset: 7px;
+  font-weight: 500;
+  margin-top: 40px;
+  font-family: inter,sans-serif;
+}
+
 .benefits__item h4.active + svg {
   rotate: 225deg;
   transition: rotate 1s;
