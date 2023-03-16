@@ -50,12 +50,20 @@
       "settings": {
         "show_image": true,
         "show_date": false,
-        "show_author": false
+        "show_author": false,
+        "show_excerpt": false
+      }
+    },
+    "f945263b-16bd-4749-8f6e-b9bd1cc172dc": {
+      "type": "love-to-learn",
+      "settings": {
+        "title": "Love to learn? Check out these popular topics."
       }
     }
   },
   "order": [
     "3bd2cc07-5f6c-4de7-b3c6-e4b64006700c",
-    "main"
+    "main",
+    "f945263b-16bd-4749-8f6e-b9bd1cc172dc"
   ]
 }
