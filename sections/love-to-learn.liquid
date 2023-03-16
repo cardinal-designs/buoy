@@ -1,5 +1,6 @@
 <div class="Love_To_Learn">
   {%- if section.settings.title != blank -%}
+    <h2>{{ section.settings.title }}</h2>
     <h2>{{ section.settings.title }}<span class="Blank_Space"></span></h2>
   {% endif %}
 </div>
@@ -14,6 +15,11 @@
       "type": "text",
       "id": "title",
       "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "blank_title",
+      "label": "Blank Space Text"
     }
   ],
   "presets": [
