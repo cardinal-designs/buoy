@@ -1,12 +1,25 @@
+<div class="Love_To_Learn">
+  {%- if section.settings.title != blank -%}
+    <h2>{{ section.settings.title }}<span class="Blank_Space"></span></h2>
+  {% endif %}
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Love to learn",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Love to learn"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
