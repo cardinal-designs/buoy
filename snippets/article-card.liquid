@@ -16,6 +16,9 @@
   <a href="{{ article.url }}" class="article-content motion-reduce">
     {%- if show_image == true and article.image -%}
       <div class="article-card__image-wrapper">
+        {% if article.metafields.custom.article_tag != blank%}
+          <span class="caption">{{ article.metafields.custom.article_tag }}</span>
+        {% endif %}
         <div class="article-card__image media media--landscape">
           <img
             srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
