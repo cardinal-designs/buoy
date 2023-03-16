@@ -2,7 +2,8 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-  <div class="main-blog page-width">
+<div class="main-blog page-width">
+  <div class="Main_Blog_Inner">
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
@@ -10,7 +11,7 @@
         </div>
       {%- endfor -%}
     </div>
-
+  
     <div class="Load_More_Main">
       <button id="Load_More">Load More
         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -19,13 +20,8 @@
         </svg>
       </button>
     </div>
-
-    {% comment %}
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-    {% endcomment %}
   </div>
+</div>
 
 {% schema %}
 {
