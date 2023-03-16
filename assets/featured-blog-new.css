@@ -114,7 +114,8 @@
   padding: 0 74px;
 }
 
-.Featured_Blog_Image .article-card__image img {
+.Featured_Blog_Image .article-card__image img,
+.Featured_Blog_Image .article-card__image video {
   border-radius: 0px 17px 17px 0px;
 }
 
@@ -211,7 +212,8 @@
     padding: 20px 27px 0;
   }
 
-  .Featured_Blog_Image .article-card__image img {
+  .Featured_Blog_Image .article-card__image img,
+  .Featured_Blog_Image .article-card__image video {
     border-radius: 17px;
   }
 
