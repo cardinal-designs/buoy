@@ -1,0 +1,72 @@
+{{ 'section-benefits.css' | asset_url | stylesheet_tag }}
+
+<div class="benefits__container">
+  <div class="page-width benefits__flex">
+    <div class="benefits__items hide-mobile">
+      <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
+      {% for block in section.blocks %}
+      <div data-id="{{ forloop.index }}" class="benefits__item">
+        <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
+        {% include 'icon-x' %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="benefits__items hide-desktop">
+      <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
+      {% for block in section.blocks %}
+      <div data-id="{{ forloop.index }}" class="benefits__item-mobile">
+        <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
+        {% include 'icon-x' %}
+      </div>
+      <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
+      {% endfor %}
+    </div>
+    <div class="benefits__info hide-mobile">
+      <h5 class="benefits__info-title light">{{ section.settings.title }}</h5>
+      {% for block in section.blocks %}
+        <div style="{% if forloop.index == 1 %}display: block{% endif %}" data-id="{{ forloop.index }}" class="benefits__info-item">
+          <p class="sh3">{{ block.settings.title }}</p>
+          <p class="sh2 light">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Benefits",
+  "class": "spaced-section--full-width",
+  "tag": "section",
+  "settings": [
+	{
+    "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+   "presets": [
+      {
+        "name": "Benefits"
+      }
+    ]
+}
+{% endschema %}
