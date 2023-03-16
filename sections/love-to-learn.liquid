@@ -1,8 +1,10 @@
 <div class="Love_To_Learn">
-  {%- if section.settings.title != blank -%}
-    <h2>{{ section.settings.title }}</h2>
-    <h2>{{ section.settings.blank_title }}<span class="Blank_Space"></span></h2>
-  {% endif %}
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2>{{ section.settings.title }}</h2>
+      <h2>{{ section.settings.blank_title }}<span class="Blank_Space"></span></h2>
+    {% endif %}
+  </div>
 </div>
 
 {% schema %}
