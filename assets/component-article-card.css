@@ -164,6 +164,18 @@
   margin-bottom: 0;
 }
 
+.Article_Tag {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-family: inter;
+  background-color: #F8F1EB;
+  border-radius: 25px;
+  padding: 3.5px 14.5px;
+}
+
 @media screen and (min-width: 990px) {
   
   .article-card__link:not(:only-child) {
