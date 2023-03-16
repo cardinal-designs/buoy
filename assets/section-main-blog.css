@@ -43,6 +43,10 @@ button#Load_More {
   font-weight:500;
 }
 
+button#Load_More:hover {
+  opacity:.7;
+}
+
 button#Load_More svg {
   width: 14px;
   display: inline-block;
