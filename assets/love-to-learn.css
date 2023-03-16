@@ -21,6 +21,10 @@
   letter-spacing: 0.68px;
 }
 
-.Blank_Space {
-  width: 214px;
+@media screen and (max-width: 768px) {
+
+  .Blank_Space {
+    width: 214px;
+  }
+
 }
