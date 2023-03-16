@@ -252,5 +252,9 @@
   .Featured_Blog {
     padding-bottom: 20px;
   }
+
+  .Featured_Blog_Image .media--landscape {
+    padding-bottom: 100%;
+  }
   
 }
