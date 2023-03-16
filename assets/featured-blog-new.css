@@ -224,6 +224,8 @@
 
   .Article_Title {
     margin: 0 0 30px;
+    line-height: 1.37;
+    font-size: 25px;
   }
 
   .Featured_Blog_Hero .slick-next,
@@ -241,10 +243,6 @@
 
   .Featured_Blog {
     padding-bottom: 20px;
-  }
-  
-  .Article_Title {
-    font-size: 25px;
   }
   
 }
