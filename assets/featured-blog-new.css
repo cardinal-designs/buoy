@@ -180,6 +180,10 @@
     transform: none;
   }
 
+  .blog-articles .article-card__title {
+    font-size: 22px;
+  }
+
   .Featured_Blog_Content_Inner {
     display: flex;
     flex-wrap: wrap;
