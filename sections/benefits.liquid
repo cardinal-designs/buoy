@@ -15,7 +15,9 @@
       {% endif %}
     </div>
     <div class="benefits__items hide-desktop">
+      {% if section.settings.title != blank %}
       <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
+      {% endif %}
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item-mobile">
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
