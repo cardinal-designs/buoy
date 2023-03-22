@@ -97,7 +97,10 @@
           <p class="h6">{{ section.settings.text }}</p>
       </span>
       <div class="hero-button-link__container">
-        {% if section.settings.button_label  != blank %}
+        {% if section.settings.button_label  != blank and section.settings.button_label_mobile  != blank %}
+          <a href="{{ section.settings.button_link_mobile }}" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          <a href="{{ section.settings.button_link }}" class="hide-mobile button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+        {% elsif section.settings.button_label_mobile  != blank %}
           <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
         {% endif %}
   
@@ -167,6 +170,11 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "url",
+      "id": "button_link_mobile",
+      "label": "Mobile Button Link"
     },
     {
       "type": "textarea",
