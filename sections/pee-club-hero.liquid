@@ -98,10 +98,20 @@
       </span>
       <div class="hero-button-link__container">
         {% if section.settings.button_link_mobile != blank and section.settings.button_link != blank %}
-          <a href="#subscribe" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
-          <a href="{{ section.settings.button_link }}" class="hide-mobile button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          {% if section.settings.button_link == '' %}
+            {% assign mobile_link = '#subscribe' %}
+          {% else %}
+            {% assign normal_link = section.settings.button_link %}
+          {% endif %}
+          {% if section.settings.button_link_mobile == '' %}
+            {% assign mobile_link = '#pee-product-anchor' %}
+          {% else %}
+            {% assign mobile_link = section.settings.button_link %}
+          {% endif %}
+          <a href="{{ mobile_link }}" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          <a href="{{ normal_link }}" class="hide-mobile button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
         {% elsif section.settings.button_link_mobile  != blank %}
-          <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          <a href="{{ normal_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
         {% endif %}
   
         {% if section.settings.link_label  != blank %}
