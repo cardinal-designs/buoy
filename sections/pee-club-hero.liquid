@@ -99,7 +99,7 @@
       <div class="hero-button-link__container">
         {% if section.settings.button_link_mobile != blank and section.settings.button_link != blank %}
           {% if section.settings.button_link == 'https://justaddbuoy.com/pages/clear-pee-club-1#subscribe' %}
-            {% assign mobile_link = '#subscribe' %}
+            {% assign normal_link = '#subscribe' %}
           {% else %}
             {% assign normal_link = section.settings.button_link %}
           {% endif %}
