@@ -98,7 +98,7 @@
       </span>
       <div class="hero-button-link__container">
         {% if section.settings.button_link_mobile != blank and section.settings.button_link != blank %}
-          <a href="{{ section.settings.button_link_mobile }}" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          <a href="#subscribe" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
           <a href="{{ section.settings.button_link }}" class="hide-mobile button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
         {% elsif section.settings.button_link_mobile  != blank %}
           <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
