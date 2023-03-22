@@ -1930,6 +1930,12 @@ input[type='checkbox'] {
   
 }
 
+@media screen and (max-width: 667px) {
+  .announcement-bar {
+    height: 60px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   
   .announcement-bar__message {
