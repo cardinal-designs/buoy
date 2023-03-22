@@ -95,15 +95,15 @@
           {% endif %}
         {% endif %}
           <p class="h6">{{ section.settings.text }}</p>
-      </span>
+      </span>      
       <div class="hero-button-link__container">
         {% if section.settings.button_link_mobile != blank and section.settings.button_link != blank %}
-          {% if section.settings.button_link == '' %}
+          {% if section.settings.button_link == 'https://justaddbuoy.com/pages/clear-pee-club-1#subscribe' %}
             {% assign mobile_link = '#subscribe' %}
           {% else %}
             {% assign normal_link = section.settings.button_link %}
           {% endif %}
-          {% if section.settings.button_link_mobile == '' %}
+          {% if section.settings.button_link_mobile == 'https://justaddbuoy.com/pages/clear-pee-club-1#pee-product-anchor' %}
             {% assign mobile_link = '#pee-product-anchor' %}
           {% else %}
             {% assign mobile_link = section.settings.button_link %}
