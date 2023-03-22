@@ -33,13 +33,13 @@
         {% endif %}
         <div class="pee-club-products__image">
           <p class="sale-sticker">{{ block.settings.sale_text }}</p>
-          <div class="media" style="padding-bottom: 100%;">
+          <div {% if forloop.index0 == 0 %}id="pee-product-anchor"{% endif %} class="media" style="padding-bottom: 100%;">
             {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
           </div>
         </div>
         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
-        <h5 {% if forloop.index0 == 0 %}id="pee-product-anchor"{% endif %}>{{ product.title }}</h5>
+        <h5>{{ product.title }}</h5>
         <p class="serving">{{ block.settings.servings }}</p>
         <p class="light">{{ block.settings.text }}</p>
         <div class="pee-club-product-info">
