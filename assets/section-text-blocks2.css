@@ -1,0 +1,40 @@
+.Text_Block_Section2 {
+  padding-top: 140px;
+  padding-bottom: 130px;
+}
+
+.Text_Block_Section2 .Text_Blocks_Slider h2 {
+  margin: 0 0 4px;
+}
+
+.Text_Block_Section .Text_Block_Row .Section_Header .h4.text-block__title {
+  font-style: normal;
+}
+
+.Text_Block_Section2 .Text_Blocks_Slider h5 {
+  margin: 0 0 35px;
+}
+
+.Text_Block_Section2 .Text_Blocks_Slider .Single_Block p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .Text_Block_Section2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .Text_Block_Section2 .Text_Block_Row .Section_Header .h4 {
+    max-width: 250px;
+  }
+
+  .Text_Block_Section2 .Text_Block_Row .Section_Header {
+    margin-bottom: 30px;
+    padding: 0 40px;
+  }
+
+  .Text_Block_Section2 .Text_Blocks_Slider h5 {
+    margin: 0 0 25px;
+  }
+}

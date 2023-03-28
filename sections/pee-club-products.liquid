@@ -1,6 +1,6 @@
 {{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
 
-<div class="pee-club-products__container">
+<div class="pee-club-products__container" id="subscribe">
   <div class="show-product-bar"></div>
   <div class="pee-club-products__flex">
     <div class="pee-club-products__text">
@@ -37,7 +37,7 @@
             {% render 'lazy-image' image: product.featured_media, fade: true, classes: 'img-fill' %}
           </div>
         </div>
-        <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+        <div {% if forloop.index0 == 0 %}id="pee-product-anchor"{% endif %} data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
         <h5>{{ product.title }}</h5>
         <p class="serving">{{ block.settings.servings }}</p>

@@ -95,10 +95,23 @@
           {% endif %}
         {% endif %}
           <p class="h6">{{ section.settings.text }}</p>
-      </span>
+      </span>      
       <div class="hero-button-link__container">
-        {% if section.settings.button_label  != blank %}
-          <a href="{{ section.settings.button_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+        {% if section.settings.button_link_mobile != blank and section.settings.button_link != blank %}
+          {% if section.settings.button_link == 'https://justaddbuoy.com/pages/clear-pee-club-1#subscribe' %}
+            {% assign normal_link = '#subscribe' %}
+          {% else %}
+            {% assign normal_link = section.settings.button_link %}
+          {% endif %}
+          {% if section.settings.button_link_mobile == 'https://justaddbuoy.com/pages/clear-pee-club-1#pee-product-anchor' %}
+            {% assign mobile_link = '#pee-product-anchor' %}
+          {% else %}
+            {% assign mobile_link = section.settings.button_link %}
+          {% endif %}
+          <a href="{{ mobile_link }}" class="hide-desktop button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+          <a href="{{ normal_link }}" class="hide-mobile button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
+        {% elsif section.settings.button_link_mobile  != blank %}
+          <a href="{{ normal_link }}" class="button {% if section.settings.video_url != blank %}button--white{% endif %}">{{ section.settings.button_label }}</a>
         {% endif %}
   
         {% if section.settings.link_label  != blank %}
@@ -167,6 +180,11 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "url",
+      "id": "button_link_mobile",
+      "label": "Mobile Button Link"
     },
     {
       "type": "textarea",
