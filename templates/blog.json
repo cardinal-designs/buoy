@@ -1,1 +1,104 @@
-{"sections":{"main":{"type":"main-blog","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "3bd2cc07-5f6c-4de7-b3c6-e4b64006700c": {
+      "type": "featured-blog-new",
+      "blocks": {
+        "30aceaf5-f750-4574-b085-2e5e4f92f96c": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/article-style-refrence",
+            "article_image": "shopify:\/\/shop_images\/Featured_Image_D.png",
+            "video_url": ""
+          }
+        },
+        "230993bd-9fb1-48b3-a0c8-3b5d02cd4a64": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/the-more-you-buy-the-more-we-give",
+            "video_url": ""
+          }
+        },
+        "ce0cbbdb-9291-4c82-8788-473f4971586a": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/hydrate-with-buoy-save-the-planet",
+            "video_url": ""
+          }
+        },
+        "172dd1cc-1fcb-4dd2-98a8-be7ddbce7436": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/stay-safe-during-hot-weather-workouts-with-proper-hydration",
+            "video_url": ""
+          }
+        },
+        "7d885619-e5f1-44fe-bc0d-9a1d4b4385df": {
+          "type": "article",
+          "settings": {
+            "article": "hydration-station\/why-rtd-beverage-companies-are-investing-in-functional-wellness",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "30aceaf5-f750-4574-b085-2e5e4f92f96c",
+        "230993bd-9fb1-48b3-a0c8-3b5d02cd4a64",
+        "ce0cbbdb-9291-4c82-8788-473f4971586a",
+        "172dd1cc-1fcb-4dd2-98a8-be7ddbce7436",
+        "7d885619-e5f1-44fe-bc0d-9a1d4b4385df"
+      ],
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": false
+      }
+    },
+    "f945263b-16bd-4749-8f6e-b9bd1cc172dc": {
+      "type": "love-to-learn",
+      "settings": {
+        "title": "Love to learn? Check out these popular topics.",
+        "blank_title": "Hydration and"
+      }
+    },
+    "4774720b-812e-4345-800f-a93794be0dec": {
+      "type": "benefits",
+      "blocks": {
+        "c793d1db-cd28-48f9-b3ff-fdcc98cc6546": {
+          "type": "block",
+          "settings": {
+            "title": "Sex",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n<br><br>\n<a class=\"benefits_learn\" href=\"\/\">Keep Learning<\/a>"
+          }
+        },
+        "6c19de2e-a8f3-49d9-b8df-e0ba39fb64c7": {
+          "type": "block",
+          "settings": {
+            "title": "Pregnancy",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n<br><br>\n<a class=\"benefits_learn\" href=\"\/\">Keep Learning<\/a>"
+          }
+        }
+      },
+      "block_order": [
+        "c793d1db-cd28-48f9-b3ff-fdcc98cc6546",
+        "6c19de2e-a8f3-49d9-b8df-e0ba39fb64c7"
+      ],
+      "settings": {
+        "title": "",
+        "link_text": "View All Topics",
+        "link": "shopify:\/\/blogs\/hydration-station"
+      }
+    }
+  },
+  "order": [
+    "3bd2cc07-5f6c-4de7-b3c6-e4b64006700c",
+    "main",
+    "f945263b-16bd-4749-8f6e-b9bd1cc172dc",
+    "4774720b-812e-4345-800f-a93794be0dec"
+  ]
+}

@@ -1,0 +1,37 @@
+{{ 'love-to-learn.css' | asset_url | stylesheet_tag }}
+
+<div class="Love_To_Learn">
+  <div class="page-width">
+    <div class="Love_To_Learn_Text">
+      {%- if section.settings.title != blank -%}
+        <h2>{{ section.settings.title }}</h2>
+        <h2>{{ section.settings.blank_title }}<span class="Blank_Space"></span>.</h2>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Love to learn",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "blank_title",
+      "label": "Blank Space Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Love to learn"
+    }
+  ]
+}
+{% endschema %}

@@ -1,18 +1,119 @@
 .blog-articles {
   display: grid;
-  grid-gap: 1rem;
+  column-gap: 33px;
+  row-gap: 70px;
+}
+
+.main-blog {
+  padding-top: 90px;
+}
+
+.Main_Blog_Inner {
+  border-bottom: 2px solid rgb(84 87 89 / 20%); 
+}
+
+.blog-articles .blog-articles__article {
+  display: none; 
+}
+
+.blog-articles .blog-articles__article:nth-child(1),
+.blog-articles .blog-articles__article:nth-child(2),
+.blog-articles .blog-articles__article:nth-child(3),
+.blog-articles .blog-articles__article:nth-child(4),
+.blog-articles .blog-articles__article:nth-child(5),
+.blog-articles .blog-articles__article:nth-child(6) {
+  display: block;
+}
+
+.main-blog.hide .pagination-wrapper {
+  display: none;
+}
+
+.Load_More_Main {
+  text-align: center;
+  padding: 100px 0 120px;
+}
+
+button#Load_More {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: inter,sans-serif;
+  cursor: pointer;
+  color: #1F2322;
+  font-weight:500;
+}
+
+button#Load_More:hover {
+  opacity:.7;
+}
+
+button#Load_More svg {
+  width: 14px;
+  display: inline-block;
+  margin: 0 0px 0 4px;
+}
+
+@media screen and (max-width: 991px) {
+  
+  .blog-articles {
+    column-gap: 15px;
+    row-gap: 40px;
+  }
+
+  .blog-articles .article-card__title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .main-blog {
+    padding-top: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  .blog-articles {
+    row-gap: 50px;
+  }
+
+  .blog-articles + .Load_More_Main {
+    padding: 70px 0 70px;
+  }
+
+  .main-blog {
+    padding-top: 0;
+  }
+
+  .blog-articles .blog-articles__article {
+    display: none; 
+  }
+  
+  .blog-articles .blog-articles__article:nth-child(1),
+  .blog-articles .blog-articles__article:nth-child(2),
+  .blog-articles .blog-articles__article:nth-child(3) {
+    display: block;
+  }
+
+  .blog-articles .blog-articles__article:nth-child(4),
+  .blog-articles .blog-articles__article:nth-child(5),
+  .blog-articles .blog-articles__article:nth-child(6) {
+    display: none; 
+  }
+    
 }
 
 @media screen and (min-width: 769px) {
+  
   .blog-articles {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .blog-articles > *:first-child,
   .blog-articles > *:nth-child(4),
   .blog-articles > *:last-child:nth-child(2),
   .blog-articles > *:last-child:nth-child(5) {
-    grid-column: span 2;
-    text-align: center;
+    text-align: left;
   }
+  
 }

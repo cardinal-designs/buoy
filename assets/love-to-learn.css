@@ -1,0 +1,42 @@
+.Love_To_Learn_Text {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Love_To_Learn {
+  padding: 70px 0 85px;
+}
+
+.Blank_Space {
+  width: 240px;
+  display: inline-block;
+  height: 2.5px;
+  background-color: #1F2322;
+  margin: 0 8px;
+}
+
+.Love_To_Learn_Text h2 {
+  margin: 0;
+  letter-spacing: 0.68px;
+}
+
+.Love_To_Learn_Text h2:nth-child(2) {
+  margin: 30px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .Blank_Space {
+    width: 214px;
+  }
+
+  .Love_To_Learn {
+    padding: 20px 0 50px;
+  }
+
+  .Love_To_Learn_Text h2 {
+    letter-spacing: 0.49px;
+  }
+
+}

@@ -16,6 +16,9 @@
   <a href="{{ article.url }}" class="article-content motion-reduce">
     {%- if show_image == true and article.image -%}
       <div class="article-card__image-wrapper">
+        {% if article.metafields.custom.article_tag != blank%}
+          <span class="Article_Tag">{{ article.metafields.custom.article_tag }}</span>
+        {% endif %}
         <div class="article-card__image media media--landscape">
           <img
             srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
@@ -38,9 +41,12 @@
 
     <div class="article-card__info">
       <header class="article-card__header">
-        <h2 class="article-card__title" id="Article-{{ article.id }}">
+        {% if article.metafields.custom.reading_time != blank%}
+          <span class="caption">{{ article.metafields.custom.reading_time }}</span>
+        {% endif %}
+        <h5 class="article-card__title" id="Article-{{ article.id }}">
           {{ article.title | escape }}
-        </h2>
+        </h5>
         {%- if show_date -%}
           <span class="circle-divider caption-with-letter-spacing">
             {{- article.published_at | time_tag: format: 'month_year' -}}
@@ -50,14 +56,16 @@
           <span class="caption-with-letter-spacing">{{ article.author -}}</span>
         {%- endif -%}
       </header>
-      {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-        <p class="article-card__excerpt rte-width">
-          {%- if article.excerpt.size > 0 -%}
-            {{ article.excerpt | strip_html | truncatewords: 30 }}
-          {%- else -%}
-            {{ article.content | strip_html | truncatewords: 30 }}
-          {%- endif -%}
-        </p>
+      {%- if show_excerpt -%}
+        {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+          <p class="article-card__excerpt rte-width">
+            {%- if article.excerpt.size > 0 -%}
+              {{ article.excerpt | strip_html | truncatewords: 30 }}
+            {%- else -%}
+              {{ article.content | strip_html | truncatewords: 30 }}
+            {%- endif -%}
+          </p>
+        {%- endif -%}
       {%- endif -%}
       <div class="article-card__footer">
         {%- if article.comments_count > 0 and blog.comments_enabled? -%}

@@ -22,6 +22,31 @@
   cursor: pointer;
 }
 
+.template-blog .benefits__container {
+  padding-top: 0px;
+}
+
+.benefits_learn {
+  font-size: 14px;
+  text-decoration: underline;
+  line-height: 1;
+  display: inline-block;
+  text-underline-offset: 7px;
+  font-weight: 500;
+  font-family: inter,sans-serif;
+}
+
+.benefits_link {
+  font-size: 14px;
+  text-decoration: underline;
+  line-height: 1;
+  display: inline-block;
+  text-underline-offset: 7px;
+  font-weight: 500;
+  margin-top: 40px;
+  font-family: inter,sans-serif;
+}
+
 .benefits__item h4.active + svg {
   rotate: 225deg;
   transition: rotate 1s;
@@ -39,7 +64,7 @@
 
 .benefits__info-item .sh3 {
   padding-bottom: 25px;
-  border-bottom: 2px solid #1F2322;
+  border-bottom: 1px solid #1F2322;
   margin: 0;
 }
 

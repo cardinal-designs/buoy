@@ -2,25 +2,26 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-
-{%- paginate blog.articles by 6 -%}
-
-  <div class="main-blog page-width">
-    <h1 class="title--primary">{{ blog.title | escape }}</h1>
-
+<div class="main-blog page-width">
+  <div class="Main_Blog_Inner">
     <div class="blog-articles">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
-          {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+          {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt -%}
         </div>
       {%- endfor -%}
     </div>
-
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
+  
+    <div class="Load_More_Main">
+      <button id="Load_More">Load More
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+          </path>
+        </svg>
+      </button>
+    </div>
   </div>
-{%- endpaginate -%}
+</div>
 
 {% schema %}
 {
@@ -50,6 +51,12 @@
       "id": "show_author",
       "default": false,
       "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": false,
+      "label": "Show Excerpt"
     },
     {
       "type": "paragraph",
