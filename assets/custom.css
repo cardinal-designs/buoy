@@ -290,9 +290,9 @@ input[type="radio"]:checked::before {
 }
 
 .Badge_Grid p {
-  font-size: 14px;
-  margin: 0 0 0;
-  font-weight: lighter;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
 }
 
 .Badge_Grid span {
