@@ -284,18 +284,6 @@
           <div class="faq-section">
             <div class="faq-section__container">
 
-              {% if product.metafields.my_fields.health_benefits != blank %}
-                <div class="faq__item">
-                  <button class="faq__header">
-                    <p class="sh4 medium">Health Benefits</p>
-                    {% render 'icon-caret' %}
-                  </button>
-                  <div class="faq__content">
-                    <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
-                  </div>
-                </div>
-              {% endif %}   
-
               {% if product.metafields.custom.new_ingredients_tab != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -308,6 +296,18 @@
                   </div>
                 </div>
               {% endif %} 
+              
+              {% if product.metafields.my_fields.health_benefits != blank %}
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Health Benefits</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
+                  </div>
+                </div>
+              {% endif %}   
 
               {% if product.metafields.my_fields.how_to_use != blank %}
                 <div class="faq__item">
