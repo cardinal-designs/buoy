@@ -64,10 +64,12 @@
                                     <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
                                   {%- endif -%}
                                   <div>
-                                    {%- if block.settings.purchase_type_img != blank -%}
+                                    {%- if block.settings.purchase_type_text != blank -%}
                                       <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
                                     {%- endif -%}
-                                    <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+                                    {%- if block.settings.purchase_type_subtext != blank -%}
+                                      <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+                                    {%- endif -%}
                                   </div>
                                 </div>
                               {% endcase %}
