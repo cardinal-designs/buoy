@@ -314,6 +314,7 @@ input[type="radio"]:checked::before {
   width: 40px;
   margin: 0 auto 20px;
 }
+
 .Badge_Grid_Item img {
   width: auto;
   height: 40px;
@@ -853,9 +854,17 @@ span#rtx_one_price_save,
     padding: 8px 26px;
   }
 
+  .Badge_Grid_Container {
+    justify-content: center;
+    margin-top: 40px;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+  }
+  
   .Badge_Grid p {
     font-size: 12px;
     max-width: 76px;
+    margin: 0 auto;
   }
 
   .pdp-faq .faq__header {
