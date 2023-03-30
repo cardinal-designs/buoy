@@ -971,6 +971,15 @@ fieldset.product-form__input .form__label {
   color: var(--charcoal-light)
 }
 
+.Why_This-Matters span {
+  background-color: #F8F1EB;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 23px;
+  border-radius: 20px;
+  color: #1F2322 !important;
+}
+
 @media screen and (max-width: 768px) {
   .smartrr-purchase-options [data-smartrr-selling-plan-groups] {
     margin: 0 !important;
