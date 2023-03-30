@@ -35,6 +35,7 @@
                         {% for block in section.blocks %}
                           {% case block.type %}
                           {% when 'onetime_block' %}
+                            {%- if block.settings.onetime_purchase_type_img != blank or block.settings.onetime_purchase_type_subtext or block.settings.onetime_purchase_type_text %}
                             <div class="One_Time_Info">
                               {%- if block.settings.onetime_purchase_type_img != blank -%}
                                 <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
@@ -44,6 +45,7 @@
                                 <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
                               </div>
                             </div>
+                            {%- endif -%}
                           {% endcase %}
                         {% endfor %}
                       </label>
