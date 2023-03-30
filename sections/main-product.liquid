@@ -28,6 +28,12 @@
         </h1>
 
         <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>       
+
+        <div class="Product_Tags">
+          {%- for tag in product.tags -%}
+            <span>{{ tag }}</span>
+          {%- endfor -%}
+        </div>
         
         <div class="product__description sh4 light">
           {{ product.description }}
