@@ -206,6 +206,10 @@ p.Label_Sub_Text {
   font-size: 14px !important;
 }
 
+.template-product .subscribe-item_info p.Label_Sub_Text {
+  line-height: 24px; 
+}
+ 
 .Label_Sub_Text {
   color: #545759 !important;
   font-weight: lighter;
