@@ -485,8 +485,9 @@ input[type="radio"]:checked::before {
   position: relative;
 }
 
-span#rtx_one_price_save {
-  font-weight: 400;
+span#rtx_one_price_save,
+.rtx_one_time_price {
+  font-weight: 500;
 }
 
 .template-product .Multi_Price {
