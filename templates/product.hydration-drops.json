@@ -3,26 +3,25 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
+          "type": "onetime_block",
+          "settings": {
+            "onetime_purchase_type_text": "",
+            "onetime_purchase_type_subtext": ""
+          }
+        },
         "c722ed3c-e21b-4d49-9c95-1195071825ad": {
           "type": "block",
           "settings": {
-            "purchase_type_text": "3 Bottles Delivered Monthly",
-            "purchase_type_subtext": "120 Servings · (1 Month Supply)"
+            "purchase_type_text": "Delivered Monthly",
+            "purchase_type_subtext": ""
           }
         },
         "61dd9d3a-1bbb-4a75-89ac-5d0e1e6c5f35": {
           "type": "block",
           "settings": {
-            "purchase_type_text": "Clear Pee Club Welcome Box",
-            "purchase_type_subtext": "FREE With First Month’s Delivery"
-          }
-        },
-        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
-          "type": "onetime_block",
-          "settings": {
-            "onetime_purchase_type_img": "shopify:\/\/shop_images\/0343-127_WF_796f46d9-bdd4-4cc2-9c8e-4051e0997540.png",
-            "onetime_purchase_type_text": "3 Bottles",
-            "onetime_purchase_type_subtext": "120 Servings · (1 Month Supply)"
+            "purchase_type_text": "",
+            "purchase_type_subtext": ""
           }
         },
         "b807a726-d1e0-4fb9-96ca-01c7806619c6": {
@@ -62,9 +61,9 @@
         }
       },
       "block_order": [
+        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90",
         "c722ed3c-e21b-4d49-9c95-1195071825ad",
         "61dd9d3a-1bbb-4a75-89ac-5d0e1e6c5f35",
-        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90",
         "b807a726-d1e0-4fb9-96ca-01c7806619c6",
         "006c54ae-0968-491b-aa76-79e4de6d7031",
         "d6b99130-55e3-4ed2-b8da-f13041c6ec7d",
