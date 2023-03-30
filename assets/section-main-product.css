@@ -62,10 +62,6 @@
   line-height: 1.375em;
 }
 
-.product__subtitle {
-  margin: 0 0 8px;
-}
-
 .product__title {
   font-size: 45px;
   margin: 0 0 12px;
@@ -80,6 +76,7 @@
   text-transform: inherit;
   font-weight: 400;
   margin: 0 0 16px;
+  line-height: 30px;
 }
 
 .product__description {
