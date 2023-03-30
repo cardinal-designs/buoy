@@ -453,6 +453,10 @@ input[type="radio"]:checked::before {
   opacity: .4;
 }
 
+.Subscribe_Box.active .rtx_option_heading {
+  opacity: 1;  
+}
+
 .template-product .rtx_option_heading #rtx_one_price {
   display: none;
 }
