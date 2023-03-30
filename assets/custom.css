@@ -266,6 +266,9 @@ input[type="radio"]:checked::before {
 
 .template-product .rtx_sub_container .subscribe-item_info {
   margin-left: 0 !important;
+  font-size: 12px;
+  line-height: 21px;
+  margin-top: 0;
 }
 
 .Badge_Grid_Container {
