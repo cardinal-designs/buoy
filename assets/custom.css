@@ -405,6 +405,8 @@ input[type="radio"]:checked::before {
 
 .template-product .product__info-wrapper {
   padding-right: 106px;
+  flex: 0 0 44%;
+  max-width: 44%;
 }
 
 .template-product .product__description p {
