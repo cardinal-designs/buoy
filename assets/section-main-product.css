@@ -524,7 +524,7 @@ fieldset.product-form__input .form__label {
 @media screen and (min-width: 769px) {  
   
   .product__media-wrapper {
-    margin-top: 40px;
+    margin-top: 0;
     flex: 0 0 50.2%;
     max-width: 50.2%;
   }
