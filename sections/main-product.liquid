@@ -320,38 +320,7 @@
                   </div>
                 </div>
               {% endif %} 
-              {% if true %}
-                <div class="faq__item Shipping_Tab">
-                  <button class="faq__header">
-                    <p class="sh4 medium">Reviews</p>
-                    {% render 'icon-caret' %}
-                  </button>
-                  <div class="faq__content">
-                    <div class="Testimonials_Main">
-                      <div class="Testimonials_Slider">
-                        {%- for block in section.blocks -%}
-                          {%- case block.type -%}
-                            {%- when 'testimonials' -%}
-                               <div class="Testimonials_Wrapper">
-                                 {% if block.settings.testimonial_text != blank %}
-                                   <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
-                                 {% endif %}
-                            
-                                 {% if block.settings.testimonial_text != blank %}
-                                   <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
-                                 {% endif %}
-                               </div>
-                          {%- endcase -%}
-                        {%- endfor -%}
-                      </div>
-                      {% if section.settings.testimonial_btn_txt != blank %}
-                        <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">{{ section.settings.testimonial_btn_txt }}</a>
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              {% endif %}       
-              
+               
               {% if product.metafields.my_fields.highlights_tab != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
