@@ -917,12 +917,15 @@ span#rtx_one_price_save,
   .product__media-item .product-spinner {
     right: 13px;
   }
+  
   .drawer_header {
     border-bottom: solid 1px #ddd;
   }
+  
   .drawer_header {
     padding-bottom: 4px;
   }
+  
   .drawer_header {
     position: relative;
     top: 0;
@@ -930,9 +933,15 @@ span#rtx_one_price_save,
     left: 0;
     background: #fff;
   }
+  
   .icons--with-title .badge_drawer_inner .emoji_img {
     height: 80px;
   }
+
+  .pdp-faq .faq-section {
+    margin: 44px 0 30px!important;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
