@@ -814,6 +814,8 @@ span#rtx_one_price_save,
 
   .template-product .product__info-wrapper {
     padding-right: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .Badge_Grid span {
