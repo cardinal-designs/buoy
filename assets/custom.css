@@ -171,6 +171,10 @@ input[type="radio"]:checked::before {
   display: none;
 }
 
+p.Label_Sub_Text {
+  margin: 13px 0 0;
+}
+
 .product-form #rtx_option_sub input[type=radio]:checked + label .Subscribe_Info {
   display: block;
 }
