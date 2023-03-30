@@ -319,11 +319,9 @@ input[type="radio"]:checked::before {
   font-family: inter,sans-serif;
   font-size: 12px;
   display: inline-block;
-  border-right: 1px solid #1F2322;
   line-height: normal;
   padding: 0 10px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .Risk_Free li:last-child {
