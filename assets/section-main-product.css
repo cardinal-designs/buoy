@@ -763,6 +763,11 @@ fieldset.product-form__input .form__label {
     font-size: 14px;
   }
 
+  .template-product .product__description p {
+    line-height: 24px;
+    margin-top: 20px;
+  }
+  
   .product__tabs-header-wrapper {
     margin: 0 -27px;
     overflow-x: scroll;
