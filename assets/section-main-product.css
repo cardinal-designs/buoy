@@ -4,8 +4,8 @@
 
 .product {
   padding-top: 70px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product__media-wrapper * {
