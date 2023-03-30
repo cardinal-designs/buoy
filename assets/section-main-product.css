@@ -525,8 +525,6 @@ fieldset.product-form__input .form__label {
   
   .product__media-wrapper {
     margin-top: 0;
-    flex: 0 0 50.2%;
-    max-width: 50.2%;
   }
   
   .product-section {
@@ -546,8 +544,6 @@ fieldset.product-form__input .form__label {
   
   .product__info-wrapper {
     padding-right: 50px;
-/*     max-height: 700px;
-    overflow-y: scroll; */
   }
 
   .product__media-list:not(.slick-initialized) .product__media-item {
@@ -573,6 +569,16 @@ fieldset.product-form__input .form__label {
   .product__media-list .deferred-media {
     display: block;
   }
+}
+
+@media screen and (min-width: 991px) {  
+
+  .product__media-wrapper {
+    margin-top: 0;
+    flex: 0 0 50.2%;
+    max-width: 50.2%;
+  }
+
 }
 
 .product__media-list .deferred-media,
