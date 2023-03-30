@@ -900,6 +900,11 @@ span#rtx_one_price_save,
     padding: 0 6px;
   }
 
+  .Badge_Grid_Item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
   .template-product .Multi_Price span {
     display: block;
     text-align: right;
