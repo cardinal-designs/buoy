@@ -321,7 +321,7 @@ input[type="radio"]:checked::before {
   font-size: 12px;
   display: inline-block;
   line-height: normal;
-  padding: 0 10px;
+  padding: 0;
   font-weight: 400;
 }
 
