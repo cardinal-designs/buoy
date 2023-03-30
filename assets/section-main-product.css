@@ -1187,3 +1187,17 @@ fieldset.product-form__input .form__label {
 .smartrr-otp [data-smartrr-selling-plan-group-input] + .smartrr-selling-plan-group-input-display {
   margin-top: 3px;
 }
+
+/* PDP START */
+
+.Product_Tags span {
+  font-size: 12px;
+  font-family: inter,sans-serif;
+  line-height: 21px;
+  color: #1F2322;
+  border: 1px solid #1F2322;
+  border-radius: 4px;
+  padding: 2.5px 10px;
+}
+
+/* PDP END */
