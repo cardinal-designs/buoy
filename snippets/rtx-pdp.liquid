@@ -23,6 +23,31 @@
         <input type='hidden' name="selling_plan" id="selling_plan_{{ product.id }}" value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
         <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
             <div class="rtx_container" data-product='{{ product | json }}'>
+              {% unless product.requires_selling_plan %}
+                <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
+                    <div class="rtx_option_selector">
+                        <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
+                        <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
+                        <div class="rtx_option_heading">
+                            One-Time Purchase
+                           <span class="rtx_one_time_price">{{ product.price | money }}</span>
+                        </div>
+                        {% for block in section.blocks %}
+                          {% case block.type %}
+                          {% when 'onetime_block' %}
+                            <div class="One_Time_Info">
+                              <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
+                              <div>
+                                <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
+                                <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
+                              </div>
+                            </div>
+                          {% endcase %}
+                        {% endfor %}
+                      </label>
+                    </div>
+                  </div>
+              {% endunless %}  
               <div id='rtx_sands_block' class="Subscribe_Box active">
                 <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub" >
                   <div class="rtx_option_selector">
@@ -87,32 +112,7 @@
                         </label>
                      </div>
                     </div>
-                </div>
-                {% unless product.requires_selling_plan %}
-                  <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
-                      <div class="rtx_option_selector">
-                          <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
-                          <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
-                          <div class="rtx_option_heading">
-                              One-Time Purchase
-                             <span class="rtx_one_time_price">{{ product.price | money }}</span>
-                          </div>
-                          {% for block in section.blocks %}
-                            {% case block.type %}
-                            {% when 'onetime_block' %}
-                              <div class="One_Time_Info">
-                                <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
-                                <div>
-                                  <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
-                                  <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
-                                </div>
-                              </div>
-                            {% endcase %}
-                          {% endfor %}
-                        </label>
-                      </div>
-                    </div>
-                {% endunless %}              
+                </div>            
             </div>
         </div>
     {% endif %}
