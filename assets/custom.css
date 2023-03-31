@@ -1029,7 +1029,15 @@ span#rtx_one_price_save,
     font-size: 18px;
     line-height: 30px;
   }
-  
+
+  .Testimonials_Main .slick-prev {
+    left: -10px;
+  }
+ 
+  .Testimonials_Main .slick-next {
+    right: -10px;
+  }
+   
 }
 
 @media screen and (max-width: 500px) {
