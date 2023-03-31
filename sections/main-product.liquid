@@ -221,13 +221,13 @@
         
         <ul class="Risk_Free">
           <li>
-            SHIPS FREE <strong>tomorrow</strong> if ordered within the United States in the next <strong>5hrs 13min</strong>
-          </li>           
-        </ul>
-        <div id="timer">
+            SHIPS FREE <strong>tomorrow</strong> if ordered within the United States in the next <strong><span id="timer">
           <span id="hours"></span><span class="Date_Colon"></span>
           <span id="minutes"></span><span class="Date_Colon"></span>
-        </div>
+        </span></strong>
+          </li>           
+        </ul>
+
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
