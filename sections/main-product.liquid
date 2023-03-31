@@ -767,8 +767,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 <script>
 
   function addZero(number){
-    let number = number.toString();
-    let newNumber = number;
+    var number = number.toString();
+    var newNumber = number;
     if(number.length == 1){
       newNumber = `0${number}`;
     }
