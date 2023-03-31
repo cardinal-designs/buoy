@@ -985,7 +985,11 @@ span#rtx_one_price_save,
   .template-product .rtx_one_time_price s {
     font-size: 16px;
   }
-  
+
+  .product-form input[type=radio] {
+    margin-top: 3px!important;
+  }
+    
 }
 
 @media screen and (max-width: 768px) {
