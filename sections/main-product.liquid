@@ -773,10 +773,12 @@ function makeTimer() {
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
+  console.log(`EndDate :: ${endDate}\ntomorrowDate:: ${tomorrowDate}`)
+  
   if(endDate.getTime() <= tomorrowDate.getTime()){
-    console.log('ifff');
+    // console.log('ifff');
   }else{
-    console.log('else');
+    // console.log('else');
   }
 
   
