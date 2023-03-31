@@ -219,7 +219,7 @@
           {%- endform -%}
         </product-form>
         
-        <ul class="Risk_Free">
+        <ul class="Risk_Free js-date-wrapper">
           <li>
             {{ section.settings.timer_text }} 
             <strong>
@@ -810,6 +810,7 @@ function makeTimer() {
   if (seconds < "10") { seconds = "0" + seconds; }
 
   // $("#days").html((days) + "<span>Days</span>");
+  $(".js-date-wrapper").find('date').html(dateString);
   $("#hours").html((parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
   $("#minutes").html(minutes + "<span>min</span>");
   $("#seconds").html(seconds + "<span>Seconds</span>");		
