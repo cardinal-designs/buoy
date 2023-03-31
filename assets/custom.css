@@ -941,7 +941,7 @@ span#rtx_one_price_save,
   }
 
   .template-product .Multi_Price span {
-    display: block;
+    display: inline-block;
     text-align: right;
     line-height: normal;
   }
