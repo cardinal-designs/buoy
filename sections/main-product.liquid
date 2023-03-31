@@ -769,6 +769,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 function makeTimer() {
   var endTime = new Date("{{ section.settings.timer }}");	
   endTime = (Date.parse(endTime) / 1000);
+  console.log(new Date("{{ section.settings.timer }}"))
 
   var now = new Date();
   now = (Date.parse(now) / 1000);
