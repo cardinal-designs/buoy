@@ -769,7 +769,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 function makeTimer() {
   var currentDate = new Date(),
       endCmsDate = new Date("{{ section.settings.timer }}"),
-      endDate = new Date(`${endCmsDate.getFullYear()}-${endCmsDate.getMonth()}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`);
+      endDate = new Date(`${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`);
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
