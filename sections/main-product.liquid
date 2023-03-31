@@ -770,6 +770,12 @@ function makeTimer() {
   var endDate = new Date("{{ section.settings.timer }}");
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+
+  if(endDate.getTime() <= tomorrowDate.getTime()){
+    console.log('Date End Tomorrow');
+  }else{
+    console.log('long Dtae ;;;;')
+  }
   
   var endTime = new Date("{{ section.settings.timer }}");	
   endTime = (Date.parse(endTime) / 1000);
