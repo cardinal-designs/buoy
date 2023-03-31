@@ -363,6 +363,10 @@ input[type="radio"]:checked::before {
   font-weight: 400;
 }
 
+span#timer strong {
+  font-weight: 500;
+}
+
 .template-product .pdp-faq .faq__header.active .sh4 {
   opacity: .3;
 }
