@@ -765,11 +765,20 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% endschema %}
 
 <script>
+
+  function addZero(number){
+    let number = number.toString();
+    let newNumber = number;
+    if(number.length == 1){
+      newNumber = `0${number}`;
+    }
+    return newNumber;
+  }
   
 function makeTimer() {
   var currentDate = new Date(),
       endCmsDate = new Date("{{ section.settings.timer }}"),
-      endDate = new Date(`${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`);
+      endDate = new Date(`${endCmsDate.getFullYear()}-${addZero(endCmsDate.getMonth() + 1)}-${addZero(endCmsDate.getDate())}T${addZero(currentDate.getHours())}:${addZero(currentDate.getMinutes())}:${addZero(currentDate.getSeconds())}`);
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
