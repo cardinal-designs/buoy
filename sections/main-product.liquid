@@ -756,7 +756,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 <script>
 
 function makeTimer() {
-  var endTime = new Date("2023-04-23T23:59:59");	
+  var endTime = new Date("{{ section.settings.timer }}");	
   
   endTime = (Date.parse(endTime) / 1000);
 
