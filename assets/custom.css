@@ -291,10 +291,16 @@ input[type="radio"]:checked::before {
 
 .Badge_Grid_Container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   margin-top: 40px;
   padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.Badge_Grid_Item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
 }
 
 .Badge_Grid {
