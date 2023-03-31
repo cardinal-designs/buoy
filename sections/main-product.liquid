@@ -221,10 +221,13 @@
         
         <ul class="Risk_Free">
           <li>
-            SHIPS FREE <strong>tomorrow</strong> if ordered within the United States in the next <strong><span id="timer">
-          <span id="hours"></span><span class="Date_Colon"></span>
-          <span id="minutes"></span><span class="Date_Colon"></span>
-        </span></strong>
+            {{ section.settings.timer_text }} 
+            <strong>
+              <span id="timer">
+                <span id="hours"></span><span class="Date_Colon"></span>
+                <span id="minutes"></span><span class="Date_Colon"></span>
+              </span>
+            </strong>
           </li>           
         </ul>
 
@@ -684,6 +687,12 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
         },
+        {
+          "type" : "textarea",
+          "id" : "timer_text",
+          "label" : "Add Date Format - 2023-04-23T23:59:59",
+          "default" : "2023-04-23T23:59:59"
+        } ,
         {
           "type" : "text",
           "id" : "timer",
