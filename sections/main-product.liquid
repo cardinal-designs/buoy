@@ -782,12 +782,12 @@ function makeTimer() {
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
-  console.log(`EndDate :: ${endDate}\ntomorrowDate:: ${tomorrowDate}`,`\n${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`)
+  // console.log(`EndDate :: ${endDate}\ntomorrowDate:: ${tomorrowDate}`,`\n${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`)
   
   if(endDate.getTime() <= tomorrowDate.getTime()){
-    console.log('ifff');
+    // console.log('ifff');
   }else{
-    console.log('else');
+    // console.log('else');
   }
 
   
