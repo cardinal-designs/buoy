@@ -171,7 +171,8 @@ input[type="radio"]:checked::before {
 .One_Time_Info {
   display: none;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0;
+  margin-left: 35px;
 }
 
 .product-form input[type=radio]:checked + label .One_Time_Info {
