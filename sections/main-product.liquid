@@ -798,7 +798,7 @@ function makeTimer() {
   if (seconds < "10") { seconds = "0" + seconds; }
 
   $("#days").html((days) + "<span>Days</span>");
-  $("#hours").html((hours + (days * 24)) + "<span>hrs</span>");
+  $("#hours").html(parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
   $("#minutes").html(minutes + "<span>min</span>");
   $("#seconds").html(seconds + "<span>Seconds</span>");		
 }
