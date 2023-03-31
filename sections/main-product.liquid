@@ -224,6 +224,12 @@
             SHIPS FREE <strong>tomorrow</strong> if ordered within the United States in the next <strong>5hrs 13min</strong>
           </li>           
         </ul>
+        <div id="timer">
+          <div id="days"></div><span class="Date_Colon">:</span>
+          <div id="hours"></div><span class="Date_Colon">:</span>
+          <div id="minutes"></div><span class="Date_Colon">:</span>
+          <div id="seconds"></div>
+        </div>
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
