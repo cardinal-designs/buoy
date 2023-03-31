@@ -771,12 +771,12 @@ function makeTimer() {
   var tomorrowDate = new Date();
   tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
-  console.log(endDate,tomorrowDate)
+  // console.log(endDate,tomorrowDate)
   
   if(endDate.getTime() <= tomorrowDate.getTime()){
-    console.log('Date End Tomorrow');
+    // console.log('Date End Tomorrow');
   }else{
-    console.log('long Dtae ;;;;')
+    // console.log('long Dtae ;;;;')
   }
   
   var endTime = new Date("{{ section.settings.timer }}");	
