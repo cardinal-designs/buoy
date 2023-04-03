@@ -1314,10 +1314,6 @@ fieldset.product-form__input .form__label {
   opacity: .4;
 }
 
-.Variant_Blocks input[type=radio] + label {
-  
-}
-
 .product-form__input .Variant_Blocks input[type=radio]:checked + label > * {
   opacity: 1;
 }
@@ -1359,17 +1355,14 @@ fieldset.product-form__input .form__label {
     left: 13px;
   }
 
-  .product-form__input .Variant_Blocks input[type=radio]:checked+label:before {
+  .product-form__input .Variant_Blocks input[type=radio]:checked + label:before {
     content: "";
     left: 20px;
+    top: 18px;
   }
 
   .product-form__input .Variant_Blocks input[type=radio]+label:after {
     top: 14px;
-  }
-
-  .product-form__input .Variant_Blocks input[type=radio]:checked+label:before {
-    top: 19px;
   }
   
 }
