@@ -131,7 +131,10 @@
                       {{ value }}
                     </label>
                     {%- if my_fields.servings != blank -%}
-                      <span>{{ my_fields.servings }}</span>
+                      <span class="Varian_Servings">{{ my_fields.servings }}</span>
+                    {%- endif -%}
+                    {%- if my_fields.supply_time  != blank -%}
+                      <span class="Supply_Time">{{ my_fields.supply_time }}</span>
                     {%- endif -%}
                   </span>
                 {%- endunless -%}
