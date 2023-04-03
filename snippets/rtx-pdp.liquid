@@ -82,6 +82,7 @@
                         </div>
                         <div class="Subscribe_Info">
                           <div class="rtx_sub_container">
+                            {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
                             {% for block in section.blocks %}
                               {%- case block.type -%}
                               {%- when 'block' -%}
@@ -90,8 +91,13 @@
                                     <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
                                   {%- endif -%}
                                   <div>
-                                    {%- if block.settings.purchase_type_text != blank -%}
-                                      <p class="Label_Text">{{block.settings.purchase_type_text }}</p>
+
+                                    {%- if my_fields.supply_time != blank -%}
+                                      <p class="Label_Text js-label-text">{{my_fields.supply_time}}</p>
+                                    {%- else -%}
+                                      {%- if block.settings.purchase_type_text != blank -%}
+                                        <p class="Label_Text">{{block.settings.purchase_type_text }}</p>
+                                      {%- endif -%}
                                     {%- endif -%}
                                     {%- if block.settings.purchase_type_subtext != blank -%}
                                       <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
