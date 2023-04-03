@@ -1298,15 +1298,16 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 2px;
-  left: 9px;
-  width: 6px;
-  height: 14px;
+  top: 20px;
+  left: 24px;
+  width: 5px;
+  height: 11px;
   border: solid #FFFFFF;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+  z-index: 11;
 }
 
 .product-form__input .Variant_Blocks input[type=radio] + label::after {
