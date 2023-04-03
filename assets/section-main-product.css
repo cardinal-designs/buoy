@@ -1327,6 +1327,8 @@ fieldset.product-form__input .form__label {
 
 .product__info-wrapper .product-form__input {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Best_Value {
@@ -1341,6 +1343,7 @@ fieldset.product-form__input .form__label {
   top: 18px;
   font-weight: 400;
 }
+
   
 @media screen and (max-width: 768px) {
 
