@@ -1278,7 +1278,14 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked+label::after {
-  content: '';
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #1F2322;
+  top: 16px;
+  left: 16px;
 }
 
 /* PDP END */
