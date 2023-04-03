@@ -530,11 +530,9 @@ class VariantSelects extends HTMLElement {
         meta_subscription_text = Array.from(selectOption.options).filter(option => {
           return (option.getAttribute('value') == currentVar.id);
         })[0].dataset.subscription_text || null;
-    if(meta_subscription_text != null){
-      document.querySelectorAll('.js-label-text').forEach(element => {
-        element.innerHTML = meta_subscription_text;
-      })
-    }
+    document.querySelectorAll('.js-label-text').forEach(element => {
+      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : '';
+    });
   }
   
   updateMasterId() {
