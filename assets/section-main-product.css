@@ -1344,6 +1344,13 @@ fieldset.product-form__input .form__label {
   font-weight: 400;
 }
 
+@media screen and (max-width: 1365px) {
+
+  .Best_Value {
+    top: -9px;
+  }
+
+}
   
 @media screen and (max-width: 768px) {
 
