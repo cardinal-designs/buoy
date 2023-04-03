@@ -88,31 +88,6 @@
           {%- form 'product', product, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
-            {% comment %}
-            <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
-              {%- for option in product.options_with_values -%}
-              <fieldset class="js product-form__input">
-                {%- for value in option.values -%}
-                  <span class="Variant_Blocks">
-                    <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                       name="{{ option.name }}"
-                       value="{{ value | escape }}"
-                       form="product-form-{{ section.id }}"
-                       {% if option.selected_value == value %}checked{% endif %}
-                       >
-                    <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                      {{ value }}
-                    </label>
-                  </span>
-                {%- endfor -%}
-              </fieldset>
-              {%- endfor -%}
-              <script type="application/json">
-                {{ product.variants | json }}
-              </script>
-            </variant-radios>
-            {% endcomment %}
-          
           {% assign my_fields = product.variant.metafields.custom %}
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
@@ -135,7 +110,7 @@
                       {% if option.selected_value == value %}checked{% endif %}
                     >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                      {{ value }}
+                      <span>{{ value }}</span>
                       {%- if my_fields.supply_time  != blank -%}
                         <span class="Supply_Time">{{ my_fields.supply_time }}</span>
                       {%- endif -%}
