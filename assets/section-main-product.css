@@ -1219,11 +1219,16 @@ fieldset.product-form__input .form__label {
 }
 
 .Variant_Blocks {
-  background-color: #F8F1EB;
+  background-color: #f8f1eb;
   border: 1px solid #545759;
   border-radius: 17px;
   padding: 18px;
   margin-right: 10px;
+  display: inline-block;
+}
+
+span.Variant_Blocks span {
+    display: block;
 }
 
 .Variant_Blocks:last-child {
