@@ -1323,6 +1323,10 @@ fieldset.product-form__input .form__label {
   .Variant_Blocks label {
     font-size: 16px!important;
   }
+
+  .product__info-wrapper .product-form__input {
+    flex-wrap: wrap;
+  }
   
 }
 /* PDP END */
