@@ -1327,6 +1327,24 @@ fieldset.product-form__input .form__label {
   .product__info-wrapper .product-form__input {
     flex-wrap: wrap;
   }
+
+  .Variant_Blocks {
+    margin-right: 10px;
+    display: inline-block;
+    min-width: auto;
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .Variant_Blocks input[type=radio]+label {
+    padding: 14px;
+  }
+
+  .product-form__input .Variant_Blocks input[type=radio]+label:after {
+    left: 13px;
+  }
   
 }
+
 /* PDP END */
