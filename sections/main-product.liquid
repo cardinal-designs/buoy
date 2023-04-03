@@ -95,6 +95,9 @@
                   <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                     {{ value }}
                   </label>
+                  <div class="">
+                      {{ product.variant.metafields.custom.servings }}
+                  </div>
                 </span>
               {%- endfor -%}
             </fieldset>
