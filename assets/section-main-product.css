@@ -1275,6 +1275,9 @@ fieldset.product-form__input .form__label {
   height: 100%;
   text-align: left;
   margin: 0;
+  background-color: #f8f1eb;
+  border-radius: 17px;
+  border: 1px solid #545759;
 }
 
 .product-form__input .Variant_Blocks input[type=radio] + label::after {
