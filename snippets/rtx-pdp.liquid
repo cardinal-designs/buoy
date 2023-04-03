@@ -92,10 +92,7 @@
                                   {%- endif -%}
                                   <div>
 
-                                      <p class="Label_Text js-label-text">{{my_fields.subscription_text}}</p>
-                                      {%- if block.settings.purchase_type_text != blank -%}
-                                        <p class="Label_Text">{{block.settings.purchase_type_text }}</p>
-                                      {%- endif -%}
+                                        <p class="Label_Text js-label-text">{{ my_fields.subscription_text | default:block.settings.purchase_type_text }}</p>
                                     {%- if block.settings.purchase_type_subtext != blank -%}
                                       <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
                                     {%- endif -%}
