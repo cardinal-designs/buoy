@@ -81,65 +81,65 @@
           {%- form 'product', product, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
-          <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
-            {%- for option in product.options_with_values -%}
-            <fieldset class="js product-form__input">
-              {%- for value in option.values -%}
-                <span class="Variant_Blocks">
-                  <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                         name="{{ option.name }}"
-                         value="{{ value | escape }}"
-                         form="product-form-{{ section.id }}"
-                         {% if option.selected_value == value %}checked{% endif %}
-                         >
-                  <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                    {{ value }}
-                  </label>
-                  <span class="">
-                      {{ product.variant.metafields.custom.servings }}
+            <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+              {%- for option in product.options_with_values -%}
+              <fieldset class="js product-form__input">
+                {%- for value in option.values -%}
+                  <span class="Variant_Blocks">
+                    <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                           name="{{ option.name }}"
+                           value="{{ value | escape }}"
+                           form="product-form-{{ section.id }}"
+                           {% if option.selected_value == value %}checked{% endif %}
+                           >
+                    <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                      {{ value }}
+                    </label>
+                    <span class="">
+                        {{ product.variant.metafields.custom.servings }}
+                    </span>
                   </span>
-                </span>
+                {%- endfor -%}
+              </fieldset>
               {%- endfor -%}
-            </fieldset>
-            {%- endfor -%}
-            <script type="application/json">
-                    {{ product.variants | json }}
-            </script>
-          </variant-radios>
+              <script type="application/json">
+                {{ product.variants | json }}
+              </script>
+            </variant-radios>
           {%- else -%}
-          <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-            {%- for option in product.options_with_values -%}
-            <div class="product-form__input product-form__input--dropdown">
-              <div class="select">
-                <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
-                        class="select__select body"
-                        name="options[{{ option.name | escape }}]"
-                        form="product-form-{{ section.id }}"
-                        >
-                  {%- for value in option.values -%}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }} 
-                    {% if value == 'Single' %}
-                    — 40 Servings (1 week supply)
-                    {% elsif value == '3 Pack' %}
-                    — 120 Servings (1 month supply)
-                    {% elsif value == '6 Pack' %}
-                    — 240 Servings (2 month supply)
-                    {% elsif value == '12 Pack' %}
-                    — 480 Servings (4 month supply)
-                    {% endif %}
-                  </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
+            <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+              {%- for option in product.options_with_values -%}
+              <div class="product-form__input product-form__input--dropdown">
+                <div class="select">
+                  <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="select__select body"
+                          name="options[{{ option.name | escape }}]"
+                          form="product-form-{{ section.id }}"
+                          >
+                    {%- for value in option.values -%}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }} 
+                      {% if value == 'Single' %}
+                      — 40 Servings (1 week supply)
+                      {% elsif value == '3 Pack' %}
+                      — 120 Servings (1 month supply)
+                      {% elsif value == '6 Pack' %}
+                      — 240 Servings (2 month supply)
+                      {% elsif value == '12 Pack' %}
+                      — 480 Servings (4 month supply)
+                      {% endif %}
+                    </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
               </div>
-            </div>
-            {%- endfor -%}
-
-            <script type="application/json">
-                    {{ product.variants | json }}
-            </script>
-          </variant-selects>
+              {%- endfor -%}
+  
+              <script type="application/json">
+                      {{ product.variants | json }}
+              </script>
+            </variant-selects>
           {%- endif -%}
           {%- endunless -%}
 
