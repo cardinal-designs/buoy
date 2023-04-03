@@ -1350,6 +1350,10 @@ fieldset.product-form__input .form__label {
     content: "";
     left: 20px;
   }
+
+  .product-form__input .Variant_Blocks input[type=radio]+label:after {
+    top: 14px;
+  }
   
 }
 
