@@ -1226,6 +1226,10 @@ fieldset.product-form__input .form__label {
   margin-right: 10px;
 }
 
+.Variant_Blocks:last-child {
+  margin-right: 0;
+}
+
 .Variant_Blocks label {
   font-family: inter,sans-serif;
   font-size: 18px !important;
