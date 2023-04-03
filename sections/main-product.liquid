@@ -87,11 +87,11 @@
                 {%- for value in option.values -%}
                   <span class="Variant_Blocks">
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                           name="{{ option.name }}"
-                           value="{{ value | escape }}"
-                           form="product-form-{{ section.id }}"
-                           {% if option.selected_value == value %}checked{% endif %}
-                           >
+                       name="{{ option.name }}"
+                       value="{{ value | escape }}"
+                       form="product-form-{{ section.id }}"
+                       {% if option.selected_value == value %}checked{% endif %}
+                       >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                       {{ value }}
                     </label>
