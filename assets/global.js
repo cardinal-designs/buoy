@@ -527,12 +527,12 @@ class VariantSelects extends HTMLElement {
   updateMetafieldText(){
     let selectOption = this.querySelector('.js-variant-metafield'),
         currentVar = this.currentVariant,
-        meta_supply_time = Array.from(selectOption.options).filter(option => {
+        meta_subscription_text = Array.from(selectOption.options).filter(option => {
           return (option.getAttribute('value') == currentVar.id);
-        })[0].dataset.supply_time || null;
-    if(meta_supply_time != null){
+        })[0].dataset.subscription_text || null;
+    if(meta_subscription_text != null){
       document.querySelectorAll('.js-label-text').forEach(element => {
-        element.innerHTML = meta_supply_time;
+        element.innerHTML = meta_subscription_text;
       })
     }
   }
