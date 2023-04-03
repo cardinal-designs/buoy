@@ -1310,6 +1310,14 @@ fieldset.product-form__input .form__label {
   z-index: 11;
 }
 
+.product-form__input .Variant_Blocks input[type=radio] + label > * {
+  opacity: .4;
+}
+
+.product-form__input .Variant_Blocks input[type=radio]:checked + label > * {
+  opacity: 1;
+}
+
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
   background-color: #1F2322;
 }
