@@ -506,6 +506,7 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(false, '', false, this.currentVariant.price);
     this.updatePickupAvailability();
+    this.updateMetafieldText();
 
 
     if (!this.currentVariant) {
@@ -523,6 +524,10 @@ class VariantSelects extends HTMLElement {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
 
+  updateMetafieldText(){
+    console.log("updateMetafieldText :: ",this.currentVariant)
+  }
+  
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
