@@ -1307,6 +1307,9 @@ fieldset.product-form__input .form__label {
   border: solid #FFFFFF;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.product-form__input .Variant_Blocks input[type=radio] + label::after {
   background-color: #1F2322;
 }
 
