@@ -1214,4 +1214,8 @@ fieldset.product-form__input .form__label {
   display: inline-block;
 }
 
+.product__info-wrapper .product-form__input {
+  border: 0;
+}
+
 /* PDP END */
