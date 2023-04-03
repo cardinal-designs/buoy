@@ -1289,6 +1289,10 @@ fieldset.product-form__input .form__label {
   border: 1px solid #1F2322;
 }
 
+.product-form__input .Variant_Blocks input[type=radio]+label:hover {
+  border: 1px solid #545759;  
+}
+
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
   display: block;
   position: absolute;
