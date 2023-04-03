@@ -129,13 +129,13 @@
                     >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                       {{ value }}
+                      {%- if my_fields.supply_time  != blank -%}
+                        <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+                      {%- endif -%}
+                      {%- if my_fields.servings != blank -%}
+                        <span class="Variant_Servings">{{ my_fields.servings }}</span>
+                      {%- endif -%}
                     </label>
-                    {%- if my_fields.supply_time  != blank -%}
-                      <span class="Supply_Time">{{ my_fields.supply_time }}</span>
-                    {%- endif -%}
-                    {%- if my_fields.servings != blank -%}
-                      <span class="Variant_Servings">{{ my_fields.servings }}</span>
-                    {%- endif -%}
                   </span>
                 {%- endunless -%}
               {%- endfor -%}
