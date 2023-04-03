@@ -1327,6 +1327,7 @@ fieldset.product-form__input .form__label {
   .product__info-wrapper .product-form__input {
     flex-wrap: wrap;
     display: flex;
+    column-gap: 10px;
   }
 
   .Variant_Blocks {
