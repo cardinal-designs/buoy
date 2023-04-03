@@ -87,46 +87,20 @@
               {%- for value in option.values -%}
                 <span class="Variant_Blocks">
                   <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                     name="{{ option.name }}"
-                     value="{{ value | escape }}"
-                     form="product-form-{{ section.id }}"
-                     {% if option.selected_value == value %}checked{% endif %}
-                     >
+                         name="{{ option.name }}"
+                         value="{{ value | escape }}"
+                         form="product-form-{{ section.id }}"
+                         {% if option.selected_value == value %}checked{% endif %}
+                         >
                   <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                     {{ value }}
                   </label>
                   <span class="">
-                    {{ product.option.values }}
-                    {{ product.variants.metafields.custom.servings }}
+                      {{ product.variant.metafields.custom.servings }}
                   </span>
                 </span>
               {%- endfor -%}
             </fieldset>
-            {%- endfor -%}
-        
-           {% assign values = "" %}
-            {%- for variant in product.variants -%}
-              {% assign value = variant.options[optionIndex] %}
-              {%- unless values contains value -%}
-                {% assign values = values | join:',' %}
-                {% assign values = values | append:',' | append:value %}
-                {% assign values = values | split:',' %}
-      
-                 {% assign my_fields = variant.metafields.custom %}
-                  <input id="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch__Radio" type="radio" name="option-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}" {% if value == option.selected_value %}checked="checked"{% endif %} data-option-position="{{ option.position }}">
-                  <li class="Choose_Product_Item">
-                    <label for="option-{{ section.id }}-{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" class="SizeSwatch">{{ value }}</label>
-
-                    <div class="Choose_Product_Content">   
-                      {%- if my_fields.variant_label.value != blank -%}
-                        <h5 class="Box_Title" style="color:{{ my_fields.variant_label_text_color.value }};background-color:{{ my_fields.variant_label_background_color }}">
-                         {{- my_fields.variant_label.value -}}
-                        </h5>
-                      {%- endif -%}
-                    </div>
-                  </li>
-                
-              {%- endunless -%}
             {%- endfor -%}
             <script type="application/json">
                     {{ product.variants | json }}
