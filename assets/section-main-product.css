@@ -1228,8 +1228,8 @@ fieldset.product-form__input .form__label {
   min-width: 233px;
 }
 
-span.Variant_Blocks span {
-    display: block;
+.Variant_Blocks span {
+  display: block;
 }
 
 .Variant_Blocks:last-child {
@@ -1241,6 +1241,14 @@ span.Variant_Blocks span {
   font-size: 18px !important;
   color: #1F2322 !important;
   font-weight: 300 !important;
+}
+
+.Supply_Time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1F2322;
+  font-family: inter,sans-serif;
+  line-height: normal;
 }
 
 /* PDP END */
