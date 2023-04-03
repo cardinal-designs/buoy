@@ -1277,15 +1277,20 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
-.product-form__input .Variant_Blocks input[type=radio]:checked+label::after {
+.product-form__input .Variant_Blocks input[type=radio] label::after {
   content: "";
   position: absolute;
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #1F2322;
+  background-color: transparent;
   top: 16px;
   left: 16px;
+  border: 1px solid #1F2322;
+}
+
+.product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
+  background-color: #1F2322;
 }
 
 /* PDP END */
