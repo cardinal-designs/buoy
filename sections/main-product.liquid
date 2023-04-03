@@ -95,9 +95,6 @@
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                       {{ value }}
                     </label>
-                    <span class="">
-                        {{ product.variant.metafields.custom.servings }}
-                    </span>
                   </span>
                 {%- endfor -%}
               </fieldset>
@@ -109,6 +106,8 @@
             
           {% assign my_fields = product.variant.metafields.custom %}
             <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+            {%- for option in product.options_with_values -%}
+             {% assign optionIndex = forloop.index0 %}
              {% assign values = "" %}
               {%- for variant in product.variants -%}
                 {% assign value = variant.options[optionIndex] %}
@@ -132,6 +131,8 @@
                   {%- endif -%}
                 {%- endunless -%}
               {%- endfor -%}
+              {%- endfor -%}
+            
              </variant-radios>
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
