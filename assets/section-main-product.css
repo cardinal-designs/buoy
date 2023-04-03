@@ -1277,4 +1277,8 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
+.product-form__input .Variant_Blocks input[type=radio]:checked+label::after {
+  content: '';
+}
+
 /* PDP END */
