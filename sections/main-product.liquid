@@ -118,15 +118,17 @@
                 {% assign values = values | split:',' %}
 
                  {% assign my_fields = variant.metafields.custom %}
-                  <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                    name="{{ option.name }}"
-                    value="{{ value | escape }}"
-                    form="product-form-{{ section.id }}"
-                    {% if option.selected_value == value %}checked{% endif %}
-                  >
-                  <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                    {{ value }}
-                  </label>
+                  <span class="Variant_Blocks">
+                    <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      form="product-form-{{ section.id }}"
+                      {% if option.selected_value == value %}checked{% endif %}
+                    >
+                    <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                      {{ value }}
+                    </label>
+                  </span>
                   {%- if my_fields.servings != blank -%}
                     {{ my_fields.servings }}
                   {%- endif -%}
