@@ -532,7 +532,7 @@ class VariantSelects extends HTMLElement {
         })[0].dataset.subscription_text || null;
     console.log(meta_subscription_text);
     document.querySelectorAll('.js-label-text').forEach(element => {
-      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : '';
+      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
     });
   }
   
