@@ -541,6 +541,7 @@ class VariantSelects extends HTMLElement {
     const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
 //     const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
     const parent = newMedia.parentElement;
+    console.log(parent,parent.querySelector('li.product__media-item'))
     if (parent.firstChild == newMedia) return;
 //     modalContent.prepend(newMediaModal);
     parent.prepend(newMedia);
