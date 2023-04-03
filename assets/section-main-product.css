@@ -1389,4 +1389,15 @@ fieldset.product-form__input .form__label {
   
 }
 
+@media screen and (max-width: 374px) {
+
+  .product__rtx-tooltip {
+    position: absolute;
+    top: -28px;
+    left: -40px;
+    right: 0;
+  }
+
+}
+
 /* PDP END */
