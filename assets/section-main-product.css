@@ -1344,6 +1344,11 @@ fieldset.product-form__input .form__label {
   .product-form__input .Variant_Blocks input[type=radio]+label:after {
     left: 13px;
   }
+
+  .product-form__input .Variant_Blocks input[type=radio]:checked+label:before {
+    content: "";
+    left: 20px;
+  }
   
 }
 
