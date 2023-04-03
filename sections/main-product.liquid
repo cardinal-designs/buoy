@@ -106,6 +106,33 @@
                 {{ product.variants | json }}
               </script>
             </variant-radios>
+            
+          {% assign my_fields = product.variant.metafields.custom %}
+            <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+             {% assign values = "" %}
+              {%- for variant in product.variants -%}
+                {% assign value = variant.options[optionIndex] %}
+                {%- unless values contains value -%}
+                {% assign values = values | join:',' %}
+                {% assign values = values | append:',' | append:value %}
+                {% assign values = values | split:',' %}
+        
+                 {% assign my_fields = variant.metafields.custom %}
+                  <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="product-form-{{ section.id }}"
+                    {% if option.selected_value == value %}checked{% endif %}
+                  >
+                  <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                    {{ value }}
+                  </label>
+                  {%- if my_fields.servings != blank -%}
+                    {{ my_fields.servings }}
+                  {%- endif -%}
+                {%- endunless -%}
+              {%- endfor -%}
+             </variant-radios>
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
