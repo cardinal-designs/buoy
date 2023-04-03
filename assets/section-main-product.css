@@ -1314,6 +1314,10 @@ fieldset.product-form__input .form__label {
   opacity: .4;
 }
 
+.Variant_Blocks input[type=radio] + label {
+  
+}
+
 .product-form__input .Variant_Blocks input[type=radio]:checked + label > * {
   opacity: 1;
 }
