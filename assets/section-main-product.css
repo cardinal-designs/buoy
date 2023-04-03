@@ -1226,6 +1226,7 @@ fieldset.product-form__input .form__label {
   margin-right: 10px;
   display: inline-block;
   min-width: 233px;
+  position: relative;
 }
 
 .Variant_Blocks span {
@@ -1257,6 +1258,15 @@ fieldset.product-form__input .form__label {
   color: #1F2322;
   line-height: normal;
   font-family: inter,sans-serif;
+}
+
+.Variant_Blocks .product-form__input input[type=radio] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 !important;
 }
 
 /* PDP END */
