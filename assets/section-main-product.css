@@ -1293,7 +1293,7 @@ fieldset.product-form__input .form__label {
   border: 1px solid #545759;  
 }
 
-.product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
+.product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
   display: block;
   position: absolute;
   top: 2px;
