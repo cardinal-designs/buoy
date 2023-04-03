@@ -1300,7 +1300,7 @@ fieldset.product-form__input .form__label {
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 23px;
   left: 24px;
   width: 5px;
   height: 11px;
