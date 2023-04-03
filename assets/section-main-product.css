@@ -1290,6 +1290,15 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
   background-color: #1F2322;
 }
 
