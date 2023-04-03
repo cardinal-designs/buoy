@@ -1220,8 +1220,8 @@ fieldset.product-form__input .form__label {
 
 .Variant_Blocks {
   display: inline-block;
-  min-width: 233px;
   position: relative;
+  flex: 0 0 calc(50% - 5px);
 }
 
 .Variant_Blocks span {
