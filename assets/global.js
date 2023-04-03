@@ -525,7 +525,12 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMetafieldText(){
-    console.log("updateMetafieldText :: ",this.currentVariant)
+    let selectOption = this.querySelector('.js-variant-metafield'),
+        currentVar = this.currentVariant,
+        meta_supply_time = Array.from(selectOption.options).filter(option => {
+          return (option.getAttribute('value') == currentVar.id);
+        });
+    console.log(meta_supply_time)
   }
   
   updateMasterId() {
