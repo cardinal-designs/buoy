@@ -81,6 +81,7 @@
           {%- form 'product', product, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
+            {% comment %}
             <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
               {%- for option in product.options_with_values -%}
               <fieldset class="js product-form__input">
@@ -103,9 +104,10 @@
                 {{ product.variants | json }}
               </script>
             </variant-radios>
+            {% endcomment %}
             
           {% assign my_fields = product.variant.metafields.custom %}
-            <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+          <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
              {% assign optionIndex = forloop.index0 %}
              {% assign values = "" %}
@@ -136,8 +138,10 @@
               {%- endfor -%}
               </fieldset>
               {%- endfor -%}
-            
-             </variant-radios>
+              <script type="application/json">
+                {{ product.variants | json }}
+              </script>
+           </variant-radios>
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
