@@ -1326,6 +1326,18 @@ fieldset.product-form__input .form__label {
 .product__info-wrapper .product-form__input {
   padding: 0;
 }
+
+.Best_Value {
+  font-size: 12px;
+  background-color: #C6DB76;
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  right: 20px;
+  border-radius: 10px;
+  padding: 4px 10px;
+  top: 18px;
+}
   
 @media screen and (max-width: 768px) {
 
