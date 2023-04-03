@@ -78,7 +78,7 @@
         {% endcomment %}
 
           {% capture variantMetafield %}
-            <select class="js-variant-metafield">
+            <select class="js-variant-metafield hidden">
               {% for variant in product.variants %}
                 <option value="{{ variant.id }}" data-supply_time="{{ variant.metafields.custom.supply_time }}"></option>
               {% endfor %}
