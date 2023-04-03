@@ -80,7 +80,7 @@
           {% capture variantMetafield %}
             <select class="js-variant-metafield hidden">
               {% for variant in product.variants %}
-                <option value="{{ variant.id }}" data-supply_time="{{ variant.metafields.custom.supply_time }}"></option>
+                <option value="{{ variant.id }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
               {% endfor %}
             </select>
           {% endcapture %}
