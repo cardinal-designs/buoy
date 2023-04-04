@@ -638,7 +638,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         } else {
           orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
         }
-      } else if( currentHours > 13 ) {
+      } else if( currentHours < 13 ) {
          orderWithin = `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${14 - currentHours} hr ${currentMinutes} mins</span>`;
       } else {
          orderWithin = `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${14 + ( 23 - currentHours )} hr ${currentMinutes} mins</span>`;
