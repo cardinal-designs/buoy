@@ -609,6 +609,53 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
 {% endjavascript %}
 
+          <script>
+  window.Order_Within = function(){
+    const date = new Date();
+    var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getHours()
+    var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getMinutes()
+    
+    var today = new Date();
+    var tomorrow =  new Date()
+    tomorrow.setDate(today.getDate() + 1)
+     
+    var options = {day: "numeric",month: "long"}
+    
+    var sDay = today.toLocaleDateString("en-US", options);
+    var tDay = tomorrow.toLocaleDateString("en-US", options);
+    var orderWithin; 
+    console.log('aaaaaaaa',today,today.getDay())
+    if(today.getDay() == 0 || today.getDay() == 5 || today.getDay() == 6) {
+      orderWithin =  `Ships <span>Monday</span`;
+    } else {
+      if (currentMinutes != 0) {
+        currentMinutes = 60 - currentMinutes
+      }
+      
+      if (currentHours >= 13 && currentHours < 14) {
+        if (currentMinutes == 0) {
+          orderWithin =  `Ships <span>Today, ${sDay}</span> If Ordered Within <span>60 mins</span>`;
+        } else {
+          orderWithin =  `Ships <span>Today, ${sDay}</span> If Ordered Within <span>${currentMinutes} mins</span>`;
+        }
+      } else if( currentHours < 13 ) {
+         orderWithin = `Ships <span>Today, ${sDay}</span> If Ordered Within <span>${14 - currentHours} hr ${currentMinutes} mins</span>`;
+      } else {
+         orderWithin = `Ships <span>Tomorrow, ${tDay}</span> If Ordered Within <span>${14 + ( 23 - currentHours )} hr ${currentMinutes} mins</span>`;
+      }
+    }
+    let Order_Within = document.querySelectorAll('.Order_Within');
+
+    if(Order_Within.length > 0){
+      Order_Within.forEach(function(e){
+        console.log('Element :: ',e)
+        e.innerHTML = orderWithin;
+      })
+    }
+  }
+  window.Order_Within();
+</script>
+
 {% schema %}
   {
     "name": "t:sections.main-product.name",
