@@ -632,13 +632,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         currentMinutes = 60 - currentMinutes
       }
       
-      if (currentHours >= 12 && currentHours < 13) {
+      if (currentHours >= 10 && currentHours < 13) {
         if (currentMinutes == 0) {
           orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>60 mins</span>`;
         } else {
           orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
         }
-      } else if( currentHours < 12 ) {
+      } else if( currentHours < 10 ) {
          orderWithin = `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${10 - currentHours} hr ${currentMinutes} mins</span>`;
       } else {
          orderWithin = `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${10 + ( 23 - currentHours )} hr ${currentMinutes} mins</span>`;
