@@ -612,8 +612,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 <script>
   window.Order_Within = function(){
     const date = new Date();
-    var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getHours()
-    var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getMinutes()
+    var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getHours()
+    var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getMinutes()
     console.log("currentHours",currentHours,currentMinutes)
     var today = new Date();
     var tomorrow =  new Date()
