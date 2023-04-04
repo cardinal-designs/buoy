@@ -625,7 +625,17 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     var tDay = tomorrow.toLocaleDateString("en-US", options);
     var orderWithin; 
   
-    if(today.getDay() == 0 || today.getDay() == 5 || today.getDay() == 6) {
+   if(today.getDay() == 0 || today.getDay() == 6) {
+      if(today.getDay() == 5 && currentHours >= 10 && currentHours < 12){
+          if (currentMinutes == 0) {
+          orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>60 mins</span>`;
+        } else {
+          orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
+        }
+      }
+      else{
+          orderWithin =  `Free US Shipping | Ships <span>Monday morning</span> if ordered now`;
+      }
       orderWithin =  `Free US Shipping | Ships <span>Monday morning</span> if ordered now`;
     } else {
       if (currentMinutes != 0) {
