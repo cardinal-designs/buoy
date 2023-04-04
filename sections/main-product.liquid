@@ -647,7 +647,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span>`;
         } else {
           if(currentHours == 10 && currentMinutes > 0 ){
-             orderWithin =  `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
+             orderWithin =  `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${23 - currentHours } hr ${currentMinutes} mins</span>`;
           }
           else{
              orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
