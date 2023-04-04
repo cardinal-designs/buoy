@@ -614,7 +614,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     const date = new Date();
     var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getHours()
     var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/New_York',})).getMinutes()
-    
+    console.log("currentHours",currentHours,currentMinutes)
     var today = new Date();
     var tomorrow =  new Date()
     tomorrow.setDate(today.getDate() + 1)
