@@ -210,15 +210,17 @@
           </div>
           {%- endform -%}
         </product-form>
-        
-        <ul class="Risk_Free">
+
+          {% comment %}
+          <ul class="Risk_Free">
           <li>
             {{ 'main_menu.free_shipping' | t }}
           </li><li>
             {{ 'main_menu.risk_free' | t }}
           </li>            
-        </ul>
-
+          </ul>
+          {% endcomment %}
+          
            {% if settings.show_shipping_countdown != blank %}
           <div id="Order_Within" class="Order_Within Risk_Free">
              {{ settings.order_within_text }}
