@@ -250,18 +250,11 @@
           {%- endform -%}
         </product-form>
         
-        <ul class="Risk_Free js-date-wrapper">
-          <li>
-            {{ section.settings.timer_text }} 
-            <strong>
-              <span id="timer">
-                <span id="days"></span><span class="Date_Colon"></span>
-                <span id="hours"></span><span class="Date_Colon"></span>
-                <span id="minutes"></span><span class="Date_Colon"></span>
-              </span>
-            </strong>
-          </li>           
-        </ul>
+        {% if settings.show_shipping_countdown != blank %}
+          <div id="Order_Within" class="Order_Within Risk_Free">
+             {{ settings.order_within_text }}
+          </div>
+        {% endif %}
 
 
         {% assign my_fields = product.metafields.my_fields %}
@@ -634,6 +627,72 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
 
 {% endjavascript %}
+
+
+<script>
+  window.Order_Within = function(){
+    const date = new Date();
+    var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getHours()
+    var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getMinutes()
+    console.log("currentHours",currentHours,currentMinutes)
+    var today = new Date();
+    var tomorrow =  new Date()
+    tomorrow.setDate(today.getDate() + 1)
+     
+    var options = {day: "numeric",month: "long"}
+    var sDay = today.toLocaleDateString("en-US", options);
+    var tDay = tomorrow.toLocaleDateString("en-US", options);
+    var orderWithin; 
+  
+   if(today.getDay() == 0 || today.getDay() == 6) {
+      if(today.getDay() == 5 && currentHours >= 10 && currentHours < 12){
+          if (currentMinutes == 0) {
+          orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>60 mins</span>`;
+        } else {
+          orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
+        }
+      }
+      else{
+          orderWithin =  `Free US Shipping | Ships <span>Monday morning</span> if ordered now`;
+      }
+      orderWithin =  `Free US Shipping | Ships <span>Monday morning</span> if ordered now`;
+    } else {
+      if (currentMinutes != 0) {
+        currentMinutes = 60 - currentMinutes
+      }
+      if (currentHours >= 10 && currentHours < 12) {
+        if (currentMinutes == 0) {
+          orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span>`;
+        } else {
+          if(today.getDay() != 5){
+            if(currentHours == 10 && currentMinutes > 0  ){
+             orderWithin =  `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${24 - currentHours } hr ${currentMinutes} mins</span>`;
+          }
+          else {
+             orderWithin =  `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span>${currentMinutes} mins</span>`;
+          }
+          }
+          else {
+             orderWithin =  `Free US Shipping | Ships <span>Monday morning</span> if ordered now`;
+          }
+        }
+      } else if( currentHours < 10  ) {
+         orderWithin = `Free US Shipping | Ships <span>Today, ${sDay}</span> If Ordered in the next <span> ${currentMinutes} mins</span>`;
+      } else {
+         orderWithin = `Free US Shipping | Ships <span>Tomorrow, ${tDay}</span> If Ordered in the next <span>${23 - currentHours } hr ${currentMinutes} mins</span>`;
+      }
+    }
+    let Order_Within = document.querySelectorAll('.Order_Within');
+
+    if(Order_Within.length > 0){
+      Order_Within.forEach(function(e){
+        console.log('Element :: ',e)
+        e.innerHTML = orderWithin;
+      })
+    }
+  }
+  window.Order_Within();
+</script>
 
 {% schema %}
   {
