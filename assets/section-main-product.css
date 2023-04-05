@@ -1038,6 +1038,7 @@ fieldset.product-form__input .form__label {
   
   
 /*========== new pdp edits ==========*/
+
 .pdp-faq .faq-section {
   margin: 30px 0;
 }
@@ -1448,3 +1449,121 @@ fieldset.product-form__input .form__label {
 }
 
 /* PDP END */
+
+/***** Testimonails Start ******/
+
+.Testimonials_Title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: #1f2322;
+  margin: 0 auto 4px;
+  max-width: 390px;
+  font-family: inter,sans-serif;
+}
+
+.Testimonials_Author {
+  font-family: inter,sans-serif;
+  font-size: 12px;
+  line-height: 1.75em;
+  font-weight: 300;
+}
+
+.Testimonials_Wrapper {
+  text-align: center;
+}
+
+.Testimonials_Main .slick-dots {
+  padding: 0 !important;
+  margin: 0 0 0 !important;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+}
+
+.Testimonials_Main .slick-prev {
+  z-index: 999;
+}
+
+.Testimonials_Main .slick-dots li {
+  display: inline-block;
+}
+
+.Testimonials_Main .slick-dots li button {
+  font-size: 0;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.Testimonials_Main .slick-dots li button::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  border: 1px solid #1F2322;
+}
+
+.Testimonials_Main .slick-dots li.slick-active button::before {
+  background: #1F2322;
+}
+
+.Testimonials_Main {
+  margin-top: 52px;
+  margin-bottom: 30px;
+}
+
+.Testimonials_Main .slick-prev {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+
+.Testimonials_Main .slick-next {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+
+.Testimonials_Main .slick-next svg,
+.Testimonials_Main .slick-prev svg {
+  width: 20px;
+  color: #1f2322;
+  height: unset;
+  transition: transform .3s ease;
+}
+
+.Testimonials_Rating {
+  background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FAD16F%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: 82px 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position: center;
+  margin-bottom: 26px;
+}
+
+.All_Reviews {
+  display: block;
+  text-align: center;
+  font-family: inter,sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  margin-top: 32px;
+  font-weight: 500;
+}
+
+.All_Reviews:hover {
+  opacity:.7;
+}
+
+/***** Testimonails End ******/
