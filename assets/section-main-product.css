@@ -2028,4 +2028,109 @@ span#rtx_one_price_save,
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  .template-product .product-section .page-width {
+    padding: 0 27px;
+  }
+
+  .Badge_Grid_Container {
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+  
+  .Badge_Grid p {
+    font-size: 16px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .pdp-faq .faq__header {
+    padding: 0;
+  }
+
+  .Testimonials_Main {
+    margin-top: 42px;
+    margin-bottom: 40px;
+  }
+
+  .Testimonials_Main .slick-dots {
+    margin: 0;
+  }
+
+  .All_Reviews {
+    margin-top: 30px;
+  }
+
+  .product__media-item .product-spinner {
+    width: 60px;
+  }
+
+  .clear_tag {
+    font-size: 12px;
+  }
+
+  .product__media-wrapper .sticky-images {
+    margin-bottom: 6px !important;
+  }
+
+  .Risk_Free li {
+    padding: 0 20px;
+  }
+
+  .Badge_Grid_Item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .template-product .Multi_Price span {
+    display: inline-block;
+    text-align: right;
+    line-height: normal;
+  }
+
+  .template-product .product-form__buttons {
+    margin-top: 20px;
+  }
+
+  .template-product .rtx_sub_container .Label_Text {
+    line-height: 16px;
+  }
+
+  .product__media-item .product-spinner {
+    right: 13px;
+  }
+  
+  .drawer_header {
+    border-bottom: solid 1px #ddd;
+  }
+  
+  .drawer_header {
+    padding-bottom: 4px;
+  }
+  
+  .drawer_header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: #fff;
+  }
+
+  .pdp-faq .faq-section {
+    margin: 44px 0 30px!important;
+  }
+
+  .template-product .rtx_one_time_price s {
+    font-size: 16px;
+  }
+
+  .product-form input[type=radio] {
+    margin-top: 3px!important;
+  }
+    
+}
+
 /* PDP NEW END */
