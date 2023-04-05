@@ -250,19 +250,6 @@
           {%- endform -%}
         </product-form>
 
-        <ul class="Risk_Free js-date-wrapper">
-          <li>
-            {{ section.settings.timer_text }} 
-            <strong>
-              <span id="timer">
-                <span id="days"></span><span class="Date_Colon"></span>
-                <span id="hours"></span><span class="Date_Colon"></span>
-                <span id="minutes"></span><span class="Date_Colon"></span>
-              </span>
-            </strong>
-          </li>           
-        </ul>
-        
         {% if settings.show_shipping_countdown != blank %}
           <div id="Order_Within" class="Order_Within Risk_Free">
              {{ settings.order_within_text }}
@@ -790,19 +777,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "url",
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
-        },
-        {
-          "type" : "textarea",
-          "id" : "timer_text",
-          "label" : "Timer Text",
-          "default" : "SHIPS FREE <strong>tomorrow</strong> if ordered within the United States in the next"
-        } ,
-        {
-          "type" : "text",
-          "id" : "timer",
-          "label" : "Add Date Format - 2023-04-23T23:59:59",
-          "default" : "2023-04-23T23:59:59"
-        }   
+        }
       ],
       "blocks": [
         {
