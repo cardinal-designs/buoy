@@ -997,6 +997,7 @@ input[type="radio"]:checked::before {
 #mCSB_1_scrollbar_vertical {
   display: none !important;
 }
+
 .Order_Within {
   font-family: inter,sans-serif;
   font-style: normal;
@@ -1009,5 +1010,5 @@ input[type="radio"]:checked::before {
 }
 
 .Order_Within span {
-    font-weight: 700;
+  font-weight: 700;
 }
