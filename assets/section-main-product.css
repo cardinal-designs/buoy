@@ -972,6 +972,42 @@ fieldset.product-form__input .form__label {
   color: var(--charcoal-light)
 }
 
+/***New***/
+
+.pdp-faq .faq__content ul li {
+  list-style-type: none;
+  font-family: inter,sans-serif;
+}
+
+.pdp-faq .faq__content * {
+  font-family: inter,sans-serif;
+  color: #545759;
+}
+
+.pdp-faq .faq__content ul,
+.pdp-faq .faq__content ol {
+  padding: 0;
+  margin: 0;
+}
+
+.pdp-faq .faq__content ul {
+  padding: 0;
+  margin: 0 0 15px;
+  margin-bottom: 15px;
+}
+
+.pdp-faq .faq__content label {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.pdp-faq .Shipping_Tab .faq__content p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 768px) {
   .smartrr-purchase-options [data-smartrr-selling-plan-groups] {
     margin: 0 !important;
