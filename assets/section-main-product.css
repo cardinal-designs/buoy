@@ -1995,5 +1995,37 @@ span#rtx_one_price_save,
   margin: 40px 0 20px;
 }
 
+@media screen and (max-width: 1199px) {
+
+  .template-product .product-section .page-width {
+    padding: 0 40px;
+  }
+
+  .template-product .product__info-wrapper {
+    padding-right: 30px;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .product {
+    padding-top: 10px !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .template-product .product__info-wrapper {
+    padding-right: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .Badge_Grid span {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+  }
+}
 
 /* PDP NEW END */
