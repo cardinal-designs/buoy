@@ -998,13 +998,16 @@ input[type="radio"]:checked::before {
   display: none !important;
 }
 .Order_Within {
-    
-    font-size: 12px;
-    text-align: center;
-    color: #000;
-    margin: 14px 0 -10px;
-    display: block;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  margin: 14px 0 -10px;
+  display: block;
 }
+
 .Order_Within span {
     font-weight: 700;
 }
