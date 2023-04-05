@@ -2130,7 +2130,21 @@ span#rtx_one_price_save,
   .product-form input[type=radio] {
     margin-top: 3px!important;
   }
-    
+
+  .Testimonials_Title {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 300px;
+  }
+
+  .Testimonials_Main .slick-prev {
+    left: -10px;
+  }
+ 
+  .Testimonials_Main .slick-next {
+    right: -10px;
+  }
+   
 }
 
 /* PDP NEW END */
