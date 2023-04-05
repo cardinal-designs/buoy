@@ -164,7 +164,7 @@
   height: 12px;
 }
 
-input[type="radio"]:checked::before {
+.product-form input[type="radio"]:checked::before {
   background: #1F2322;
 }
 
