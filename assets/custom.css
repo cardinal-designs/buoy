@@ -1121,13 +1121,12 @@ span#rtx_one_price_save,
 
 .Order_Within {
   font-family: inter,sans-serif;
-  font-style: normal;
-  font-weight: 100;
   font-size: 12px;
-  text-align: center;
-  color: #000;
-  margin: 14px 0 -10px;
-  display: block;
+  display: inline-block;
+  line-height: normal;
+  padding: 0;
+  font-weight: 300;
+  color: #545759;
 }
 
 .Order_Within span {
