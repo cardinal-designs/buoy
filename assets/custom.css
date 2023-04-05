@@ -1118,3 +1118,18 @@ span#rtx_one_price_save,
 #mCSB_1_scrollbar_vertical {
   display: none !important;
 }
+
+.Order_Within {
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  margin: 14px 0 -10px;
+  display: block;
+}
+
+.Order_Within span {
+  font-weight: 700;
+}
