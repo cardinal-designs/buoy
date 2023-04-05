@@ -94,6 +94,22 @@
     ]
   },
   {
+    "name": "Product Shipping Message",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_shipping_countdown",
+        "label": "Show Shipping Countdown?",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "order_within_text",
+        "label": "Shipping Countdown Text"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.favicon.name",
     "settings": [
       {
