@@ -1929,4 +1929,71 @@ span#rtx_one_price_save,
   right: 0;
 }
 
+.template-product .product__description {
+  margin: 0 0 20px;
+}
+
+.template-product .product-form {
+  margin-top: 40px;
+}
+
+.product__media-item .product-spinner {
+  top: 29px;
+  right: 29px;
+  z-index: 1;
+  left: unset !important;
+  width: 90px;
+}
+
+.product__media-arrows .slick-arrow:hover.slick-prev {
+  transform: translate(0) !important;
+}
+
+.product__media-arrows .slick-arrow:hover.slick-next{
+  transform: translate(0) !important;
+}
+
+.product__media-arrows .slick-arrow:hover.slick-prev svg {
+  transform: translate(-5px) !important;
+}
+
+.product__media-arrows .slick-arrow svg {
+  transition: transform .2s ease;
+}
+
+.product__media-arrows .slick-arrow:hover.slick-next svg {
+  transform: translate(5px);
+}
+
+.okeReviews-reviewsSummary-ratingCount span {
+  font-weight: 300 !important;
+}
+
+.pdp-faq .faq__content ul li {
+  display: flex;
+}
+
+.pdp-faq .faq-section {
+  margin: 55px 0 30px !important;
+}
+
+.Why_This_Matters a {
+  background-color: #f8f1eb;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 24px;
+  border-radius: 20px;
+  color: #1f2322!important;
+}
+
+.Why_This_Matters span img {
+  max-width: 12px;
+  margin: 0px 0 -1px 3px;
+}
+
+.Why_This_Matters {
+  margin: 40px 0 20px;
+}
+
+
 /* PDP NEW END */
