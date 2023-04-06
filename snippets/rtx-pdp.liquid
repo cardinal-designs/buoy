@@ -30,7 +30,7 @@
                         <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
                         <div class="rtx_option_heading">
                             One-Time Purchase
-                           <span class="rtx_one_time_price">{{ product.price | money }}</span>
+                           <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
                         </div>
                         {% for block in section.blocks %}
                           {% case block.type %}
