@@ -644,9 +644,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
    if(today.getDay() == 0 || today.getDay() == 6) {
       if(today.getDay() == 5 && currentHours >= 10 && currentHours < 12){
           if (currentMinutes == 0) {
-          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span>60 mins</span>`;
+          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">60 mins</span>`;
         } else {
-          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span>${currentMinutes} mins</span>`;
+          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes} mins</span>`;
         }
       }
       else{
@@ -663,10 +663,10 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         } else {
           if(today.getDay() != 5){
             if(currentHours == 10 && currentMinutes > 0  ){
-             orderWithin =  `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span>${24 - currentHours } hr ${currentMinutes} mins</span>`;
+             orderWithin =  `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span style="color: #C6DB76">${24 - currentHours } hr ${currentMinutes} mins</span>`;
           }
           else {
-             orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span>${currentMinutes} mins</span>`;
+             orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes} mins</span>`;
           }
           }
           else {
@@ -674,9 +674,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           }
         }
       } else if( currentHours < 10  ) {
-         orderWithin = `Ships <span>today, ${sDay}</span> If ordered in the next <span> ${currentMinutes} mins</span>`;
+         orderWithin = `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76"> ${currentMinutes} mins</span>`;
       } else {
-         orderWithin = `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span>${23 - currentHours } hr ${currentMinutes} mins</span>`;
+         orderWithin = `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span style="color: #C6DB76">${23 - currentHours } hr ${currentMinutes} mins</span>`;
       }
     }
     let Order_Within = document.querySelectorAll('.Order_Within');
