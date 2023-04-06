@@ -52,7 +52,6 @@
 //             var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
            var el = e.target.value;
             if(el === 'subsave') {
-                console.log('ave',subPrice)
                 document.getElementById(`rtx_one_price_save`).innerText = {{ subPrice | json }};
             } else if (el === 'onetime') {
                 document.getElementsByClassName('rtx_one_time_price').innerText = {{ onePrice | json }};
