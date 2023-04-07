@@ -173,9 +173,11 @@ $(window).on("orientationchange, resize", function(event) {
 });
 
 /* okendo review replce string on PDP */
-var text = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
-document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = text.replace('out of', '/');
+setTimeout(function(){
+var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
+document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
 
-var text = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText;
-document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${text}`;
+var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText;
+document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
+},500)
 /* end okendo review replce string on PDP */
