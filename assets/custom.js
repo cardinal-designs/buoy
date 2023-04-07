@@ -183,10 +183,10 @@ let myInterval = setInterval(timer, 1000);
 function timer() {
 console.log(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span'))
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
-    clearInterval(myInterval);
 // console.log(document.querySelector('.product__info-container').querySelector('.js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText)
     let ratingText = document.querySelector('.product__info-container').querySelector('.js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText
     document.querySelector('.product__info-container').querySelector('.js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText = `out of ${ratingText}`;
+    clearInterval(myInterval);
   }
 }
 /* end okendo review replce string on PDP */
