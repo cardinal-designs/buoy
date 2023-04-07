@@ -837,7 +837,7 @@ function slickOnMobile(slider, settings){
 };
 
 function slickOnDesktop(slider, settings){
-  $(window).on('load resize', function() {
+  $(window).on('load', function() {
     if (!slider.hasClass('slick-initialized')) {
       return slider.slick(settings);
     }
