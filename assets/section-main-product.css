@@ -1725,7 +1725,8 @@ fieldset.product-form__input .form__label {
 }
 
 .Badge_Grid {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .Badge_Grid p {
