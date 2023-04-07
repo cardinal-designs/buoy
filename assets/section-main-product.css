@@ -1455,16 +1455,31 @@ fieldset.product-form__input .form__label {
   border-bottom: 1px solid rgb(31 35 34 / 10%);
 }
 
-.product-form input[type="radio"] {
+.product-form input[type=radio] {
   height: 20px;
   width: 20px;
-  margin-top: 5px !important;
+  margin-top: 5px!important;
+  position: relative;
 }
 
-.product-form input[type="radio"]::before {
-  width: 12px;
-  margin: 2px auto 0;
-  height: 12px;
+.product-form input[type=radio]:before {
+  width: 18px;
+  margin: -1px -1px;
+  height: 18px;
+}
+
+.product-form input[type=radio]:checked:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  width: 5px;
+  height: 11px;
+  border: solid #FFFFFF;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  z-index: 11111;
+  display: block;
 }
 
 .product-form input[type="radio"]:checked::before {
