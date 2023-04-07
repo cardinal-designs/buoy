@@ -178,7 +178,7 @@ var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-star
 document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
 
 setTimeout(function(){
-var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML;
-document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
+  var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerHTML
+  document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
 },3000)
 /* end okendo review replce string on PDP */
