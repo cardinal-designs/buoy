@@ -1592,6 +1592,7 @@ width: 4.5px;
 
 .Testimonials_Main .slick-prev {
   z-index: 999;
+  cursor: pointer;
 }
 
 .Testimonials_Main .slick-dots li {
@@ -1638,6 +1639,7 @@ width: 4.5px;
   position: absolute;
   right: 0;
   top: 40%;
+  cursor: pointer;
 }
 
 .Testimonials_Main .slick-next svg,
