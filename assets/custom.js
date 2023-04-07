@@ -181,11 +181,11 @@ document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .oke
 const myInterval = setInterval(myTimer, 1000);
 
 function myTimer() {
-  clearInterval(myInterval);
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
-    
-    var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerHTML
-    document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
+    clearInterval(myInterval);
+console.log(document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerHTML)
+    // var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerHTML;
+    // document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
   }
 }
 /* end okendo review replce string on PDP */
