@@ -852,7 +852,7 @@ function slickOnDesktop(slider, settings){
 
 // FAQ
 $('.faq__header').click(function() {
-  $(this).parent('.faq__item').siblings('.faq__item').children('.faq__item').removeClass('active');
+  $(this).parent('.faq__item').siblings('.faq__item').children('.faq__header').removeClass('active');
   $(this).parent('.faq__item').siblings('.faq__item').children('.faq__item').siblings('.faq__content').slideUp(300);
   $(this).toggleClass('active');
   $(this).siblings('.faq__content').slideToggle(300);
