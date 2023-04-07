@@ -856,6 +856,11 @@ $('.faq__header').click(function() {
   $(this).parent('.faq__item').siblings('.faq__item').children('.faq__header').siblings('.faq__content').slideUp(300);
   $(this).toggleClass('active');
   $(this).siblings('.faq__content').slideToggle(300);
+  setTimeout(() => {
+    $('body, html').animate({
+      scrollTop: $(this).offset().top
+     }, 500)
+  }, 400)
 });
 
 
