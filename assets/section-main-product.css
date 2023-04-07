@@ -2206,7 +2206,11 @@ span#rtx_one_price_save,
   .Testimonials_Main .slick-next {
     right: -10px;
   }
-   
+
+  .product-form input[type=radio]:checked:after {
+    top: 2px;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
