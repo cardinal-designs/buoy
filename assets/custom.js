@@ -178,14 +178,14 @@ var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-star
 document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
 
 
-const myInterval = setInterval(myTimer, 1000);
+let myInterval = setInterval(myTimer, 1000);
 
 function myTimer() {
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
     clearInterval(myInterval);
 console.log(document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText)
-    let ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText
-    document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText = `out of ${ratingText}`;
+    // let ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText
+    // document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText = `out of ${ratingText}`;
   }
 }
 /* end okendo review replce string on PDP */
