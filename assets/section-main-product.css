@@ -576,7 +576,7 @@ fieldset.product-form__input .form__label {
   .product__media-wrapper {
     margin-top: 0;
     flex: 0 0 50.2%;
-    max-width: 50.2%;
+    max-width: 100%;
   }
 
 }
@@ -1844,6 +1844,7 @@ span#timer strong {
 
 .template-product .product__info-wrapper {
   padding-right: 106px;
+  max-width: 100%;
 }
 
 .template-product .product__description p {
