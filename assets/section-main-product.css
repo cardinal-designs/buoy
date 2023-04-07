@@ -2062,9 +2062,9 @@ span#rtx_one_price_save,
 @media screen and (max-width: 991px) {
 
   .product {
-    padding-top: 10px !important;
-    display: flex !important;
-    flex-direction: column-reverse !important;
+    padding-top: 10px!important;
+    display: flex!important;
+    flex-direction: unset !IMPORTANT;
   }
 
   .template-product .product__info-wrapper {
