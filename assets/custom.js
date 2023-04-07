@@ -184,7 +184,7 @@ function myTimer() {
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
     clearInterval(myInterval);
 console.log(document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText)
-    var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText;
+    var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText
     document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText = `out of ${ratingText}`;
   }
 }
