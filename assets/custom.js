@@ -179,5 +179,5 @@ document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .oke
 
 var ratingText = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML;
 document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${ratingText}`;
-},1000)
+},2000)
 /* end okendo review replce string on PDP */
