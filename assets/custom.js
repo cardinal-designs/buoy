@@ -177,13 +177,9 @@ $(window).on("orientationchange, resize", function(event) {
 var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
 document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
 
-
 let myInterval = setInterval(timer, 1000);
-
 function timer() {
-console.log(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span'))
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
-// console.log(document.querySelector('.product__info-container').querySelector('.js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount span').innerText)
     let ratingText = document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span').innerText
     document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span').innerText = `out of ${ratingText}`;
     clearInterval(myInterval);
