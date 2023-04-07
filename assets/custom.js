@@ -171,3 +171,6 @@ $('.Supplement_Side_Drawer .js-close-supplement-drawer').click(function(){
 $(window).on("orientationchange, resize", function(event) {
   $('.related-blog-wrapper .article-card__title').matchHeight();
 });
+
+var text = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
+document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = text.replace('out of', '/');
