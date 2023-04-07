@@ -172,5 +172,10 @@ $(window).on("orientationchange, resize", function(event) {
   $('.related-blog-wrapper .article-card__title').matchHeight();
 });
 
+/* okendo review replce string on PDP */
 var text = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
 document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = text.replace('out of', '/');
+
+var text = document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerText;
+document.querySelector('.product__info-container .js-okeReviews-reviewsSummary.is-okeReviews-clickable .okeReviews-reviewsSummary-ratingCount [aria-hidden="true"]').innerHTML = `out of ${text}`;
+/* end okendo review replce string on PDP */
