@@ -1712,12 +1712,13 @@ fieldset.product-form__input .form__label {
 
 .Badge_Grid_Container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   margin-top: 40px;
   padding: 0;
   flex-wrap: wrap;
   row-gap: 30px;
+  padding: 0 20px;
 }
 
 .Badge_Grid {
