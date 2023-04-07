@@ -1474,12 +1474,11 @@ fieldset.product-form__input .form__label {
   position: absolute;
   top: 1px;
   left: 6px;
-width: 4.5px;
+  width: 4.5px;
   height: 10px;
   border: solid #FFFFFF;
   border-width: 0 1px 1px 0;
   transform: rotate(45deg);
-  z-index: 11111;
   display: block;
 }
 
