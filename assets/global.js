@@ -858,7 +858,7 @@ $('.faq__header').click(function() {
   $(this).siblings('.faq__content').slideToggle(300);
   setTimeout(() => {
     $('body, html').animate({
-      scrollTop: $(this).offset().top
+      scrollTop: $(this).offset().top + 100
      }, 500)
   }, 400)
 });
