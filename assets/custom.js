@@ -178,7 +178,7 @@ var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-star
 document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
 
 
-let myInterval = setInterval(timer, 2000);
+let myInterval = setInterval(timer, 2500);
 
 function timer() {
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
