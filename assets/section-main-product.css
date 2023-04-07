@@ -4,8 +4,8 @@
 
 .product {
   padding-top: 70px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product__media-wrapper * {
@@ -15,12 +15,12 @@
 
 .product__media-wrapper .sticky-images {
   position: sticky;
-  top: 120px;
+  top: 140px;
   margin-bottom: 50px;
 }
 
 .product__info-wrapper {
-  padding: 30px 100px 70px 0;
+  padding: 0 100px 70px 0;
   background: white;
   position: relative;
   z-index: 2;
@@ -37,7 +37,7 @@
 }
 
 .product__info-wrapper .okeReviews {
-  margin-bottom: 8px !important;
+  margin-bottom: 20px !important;
 }
 
 .product__info-wrapper .okeReviews .okeReviews-starRating--small {
@@ -57,27 +57,25 @@
   font-family: inter, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0;
   line-height: 1.375em;
-}
-
-.product__subtitle {
-  margin: 0 0 8px;
 }
 
 .product__title {
   font-size: 45px;
   margin: 0 0 12px;
+  font-weight: 400;
+  line-height: 57px;
 }
 
 .product__subtitle {
   font-size: 18px;
-  line-height: normal;
   letter-spacing: 0;
   text-transform: inherit;
-  font-weight: 400;
-  margin: 0 0 16px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  line-height: 30px;
 }
 
 .product__description {
@@ -526,7 +524,7 @@ fieldset.product-form__input .form__label {
 @media screen and (min-width: 769px) {  
   
   .product__media-wrapper {
-    margin-top: 40px;
+    margin-top: 0;
   }
   
   .product-section {
@@ -546,8 +544,6 @@ fieldset.product-form__input .form__label {
   
   .product__info-wrapper {
     padding-right: 50px;
-/*     max-height: 700px;
-    overflow-y: scroll; */
   }
 
   .product__media-list:not(.slick-initialized) .product__media-item {
@@ -573,6 +569,16 @@ fieldset.product-form__input .form__label {
   .product__media-list .deferred-media {
     display: block;
   }
+}
+
+@media screen and (min-width: 991px) {  
+
+  .product__media-wrapper {
+    margin-top: 0;
+    flex: 0 0 50.2%;
+    max-width: 50.2%;
+  }
+
 }
 
 .product__media-list .deferred-media,
@@ -711,6 +717,7 @@ fieldset.product-form__input .form__label {
     scroll-padding: 0px 1000px;
     scroll-snap-type: x mandatory;
     cursor: grabbing;
+    order: 1;
   }
   
   .product__media-wrapper .sticky-images {
@@ -743,7 +750,9 @@ fieldset.product-form__input .form__label {
   }
 
   .product__title {
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 36px;
+    margin: 0 0 14px;
   }
 
   .product__subtitle {
@@ -753,9 +762,14 @@ fieldset.product-form__input .form__label {
   .template-product .product__description,
   .template-product .product__description p,
   .template-product .product__description span {
-    font-size: 14px;
+    font-size: 16px;
   }
 
+  .template-product .product__description p {
+    line-height: 24px;
+    margin-top: 25px;
+  }
+  
   .product__tabs-header-wrapper {
     margin: 0 -27px;
     overflow-x: scroll;
@@ -1009,10 +1023,6 @@ fieldset.product-form__input .form__label {
 .pdp-faq .faq__content {
   padding-bottom: 20px;
 }
-
-.pdp-faq .faq__content .sh4 {
-  margin: 0;
-}
   
 .info-grid__container {
   display: grid;
@@ -1096,7 +1106,7 @@ fieldset.product-form__input .form__label {
 }
   
 .subscribe-item_info p:first-of-type {
-  margin-bottom: 3px;
+  margin: 3px 0;
 }
   
 .subscribe-item_info p:last-of-type {
@@ -1158,8 +1168,9 @@ fieldset.product-form__input .form__label {
   }
 
   .pdp-faq .faq__header {
-    padding: 5px 0; 
+    padding: 0; 
   }
+  
 }
   
 .subscribe-tooltip__flex {
