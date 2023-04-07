@@ -837,7 +837,13 @@ function slickOnMobile(slider, settings){
 };
 
 function slickOnDesktop(slider, settings){
-  $(window).on('load', function() {
+  $(window).on('load resize', function() {
+    if ($(window).width() < 769) {
+      if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+      }
+      return
+    }
     if (!slider.hasClass('slick-initialized')) {
       return slider.slick(settings);
     }
