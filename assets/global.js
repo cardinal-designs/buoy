@@ -506,7 +506,6 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(false, '', false, this.currentVariant.price);
     this.updatePickupAvailability();
-    this.updateMetafieldText();
 
 
     if (!this.currentVariant) {
@@ -524,18 +523,6 @@ class VariantSelects extends HTMLElement {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
 
-  updateMetafieldText(){
-    let selectOption = this.querySelector('.js-variant-metafield'),
-        currentVar = this.currentVariant,
-        meta_subscription_text = Array.from(selectOption.options).filter(option => {
-          return (option.getAttribute('value') == currentVar.id);
-        })[0].dataset.subscription_text || null;
-    console.log(meta_subscription_text);
-    document.querySelectorAll('.js-label-text').forEach(element => {
-      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
-    });
-  }
-  
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
@@ -559,9 +546,7 @@ class VariantSelects extends HTMLElement {
     parent.prepend(newMedia);
     this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
     this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-    if(parent.querySelector('li.product__media-item')){
-      window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
-    }
+    window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
   }
 
   updateURL() {
@@ -1469,42 +1454,40 @@ $('.Featured_Blog_Hero').slick({
 
 const loadmore = document.querySelector('#Load_More');
 
-if(loadmore){
-  if (window.matchMedia('(min-width: 769px)').matches){
-    let currentItems = 6;
-    loadmore.addEventListener('click', (e) => {
-      const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
-      for (let i = currentItems; i < currentItems + 3; i++) {
-          if (elementList[i]) {
-              elementList[i].style.display = 'block';
-          }
-      }
-      currentItems += 3;
-  
-      // Load more button will be hidden after list fully loaded
-      if (currentItems >= elementList.length) {
-          event.target.style.display = 'none';
-      }
-    })
-  }
-  
-  if (window.matchMedia('(max-width: 768px)').matches){
-    let currentItems = 3;
-    loadmore.addEventListener('click', (e) => {
-      const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
-      for (let i = currentItems; i < currentItems + 3; i++) {
-          if (elementList[i]) {
-              elementList[i].style.display = 'block';
-          }
-      }
-      currentItems += 3;
-  
-      // Load more button will be hidden after list fully loaded
-      if (currentItems >= elementList.length) {
-          event.target.style.display = 'none';
-      }
-    })
-  }
+if (window.matchMedia('(min-width: 769px)').matches){
+  let currentItems = 6;
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
+    for (let i = currentItems; i < currentItems + 3; i++) {
+        if (elementList[i]) {
+            elementList[i].style.display = 'block';
+        }
+    }
+    currentItems += 3;
+
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+        event.target.style.display = 'none';
+    }
+  })
+}
+
+if (window.matchMedia('(max-width: 768px)').matches){
+  let currentItems = 3;
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.blog-articles .blog-articles__article')];
+    for (let i = currentItems; i < currentItems + 3; i++) {
+        if (elementList[i]) {
+            elementList[i].style.display = 'block';
+        }
+    }
+    currentItems += 3;
+
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+        event.target.style.display = 'none';
+    }
+  })
 }
 
 $('.benefits__item').click(function() {
