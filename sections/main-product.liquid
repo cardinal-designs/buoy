@@ -28,12 +28,20 @@
         </h1>
 
         <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>       
+
+        <div class="Product_Tags">
+          {%- for tag in product.tags -%}
+            <span>{{ tag }}</span>
+          {%- endfor -%}
+        </div>
         
         <div class="product__description sh4 light">
           {{ product.description }}
         </div>
         
+        {% comment %}
         <a class="Link_Text js-open-supplement-drawer" href="javascript:void(0);">{{ section.settings.supplement_fact_text }}</a>
+        {% endcomment %}
         
         {% comment %}
          {% if section.settings.supplement_fact_text != blank %}
@@ -69,64 +77,95 @@
         </div>
         {% endcomment %}
 
+          {% capture variantMetafield %}
+            <select class="js-variant-metafield hidden">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
+              {% endfor %}
+            </select>
+          {% endcapture %}
         <product-form class="product-form">
           {%- form 'product', product, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
+          {% assign my_fields = product.variant.metafields.custom %}
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
-            <fieldset class="js product-form__input">
-              {%- for value in option.values -%}
-              <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                     name="{{ option.name }}"
-                     value="{{ value | escape }}"
-                     form="product-form-{{ section.id }}"
-                     {% if option.selected_value == value %}checked{% endif %}
-                     >
-              <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                {{ value }}
-              </label>
-              {%- endfor -%}
-            </fieldset>
-            {%- endfor -%}
-            <script type="application/json">
-                    {{ product.variants | json }}
-            </script>
-          </variant-radios>
-          {%- else -%}
-          <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-            {%- for option in product.options_with_values -%}
-            <div class="product-form__input product-form__input--dropdown">
-              <div class="select">
-                <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
-                        class="select__select body"
-                        name="options[{{ option.name | escape }}]"
-                        form="product-form-{{ section.id }}"
-                        >
-                  {%- for value in option.values -%}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }} 
-                    {% if value == 'Single' %}
-                    — 40 Servings (1 week supply)
-                    {% elsif value == '3 Pack' %}
-                    — 120 Servings (1 month supply)
-                    {% elsif value == '6 Pack' %}
-                    — 240 Servings (2 month supply)
-                    {% elsif value == '12 Pack' %}
-                    — 480 Servings (4 month supply)
-                    {% endif %}
-                  </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-            </div>
-            {%- endfor -%}
+             {% assign optionIndex = forloop.index0 %}
+             {% assign values = "" %}
+              <fieldset class="js product-form__input">
+              {%- for variant in product.variants -%}
+                {% assign value = variant.options[optionIndex] %}
+                {%- unless values contains value -%}
+                {% assign values = values | join:',' %}
+                {% assign values = values | append:',' | append:value %}
+                {% assign values = values | split:',' %}
 
-            <script type="application/json">
-                    {{ product.variants | json }}
-            </script>
-          </variant-selects>
+                 {% assign my_fields = variant.metafields.custom %}
+                  <span class="Variant_Blocks">
+                    <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      form="product-form-{{ section.id }}"
+                      {% if option.selected_value == value %}checked{% endif %}
+                    >
+                    <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                      <span class="Variant_Title">{{ value }}</span>
+                      {%- if my_fields.best_value  != blank -%}
+                        <span class="Best_Value">{{ my_fields.best_value }}</span>
+                      {%- endif -%}
+                      {%- if my_fields.supply_time  != blank -%}
+                        <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+                      {%- endif -%}
+                      {%- if my_fields.servings != blank -%}
+                        <span class="Variant_Servings">{{ my_fields.servings }}</span>
+                      {%- endif -%}
+                    </label>
+                  </span>
+                {%- endunless -%}
+              {%- endfor -%}
+              </fieldset>
+              {%- endfor -%}
+              <script type="application/json">
+                {{ product.variants | json }}
+              </script>
+            {{ variantMetafield }}
+           </variant-radios>
+          {%- else -%}
+            <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+              {%- for option in product.options_with_values -%}
+              <div class="product-form__input product-form__input--dropdown">
+                <div class="select">
+                  <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="select__select body"
+                          name="options[{{ option.name | escape }}]"
+                          form="product-form-{{ section.id }}"
+                          >
+                    {%- for value in option.values -%}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }} 
+                      {% if value == 'Single' %}
+                      — 40 Servings (1 week supply)
+                      {% elsif value == '3 Pack' %}
+                      — 120 Servings (1 month supply)
+                      {% elsif value == '6 Pack' %}
+                      — 240 Servings (2 month supply)
+                      {% elsif value == '12 Pack' %}
+                      — 480 Servings (4 month supply)
+                      {% endif %}
+                    </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+              {%- endfor -%}
+  
+              <script type="application/json">
+                      {{ product.variants | json }}
+              </script>
+            {{ variantMetafield }}
+            </variant-selects>
           {%- endif -%}
           {%- endunless -%}
 
@@ -210,14 +249,12 @@
           </div>
           {%- endform -%}
         </product-form>
-        
-        <ul class="Risk_Free">
-          <li>
-            {{ 'main_menu.free_shipping' | t }}
-          </li><li>
-            {{ 'main_menu.risk_free' | t }}
-          </li>            
-        </ul>
+
+        {% if settings.show_shipping_countdown != blank %}
+          <div id="Order_Within" class="Order_Within Risk_Free">
+             {{ settings.order_within_text }}
+          </div>
+        {% endif %}
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
@@ -275,23 +312,9 @@
         {% endif %}
         {% endcomment %}
 
-
         <div class="pdp-faq">
           <div class="faq-section">
             <div class="faq-section__container">
-
-              {% if product.metafields.my_fields.health_benefits != blank %}
-                <div class="faq__item">
-                  <button class="faq__header">
-                    <p class="sh4 medium">Health Benefits</p>
-                    {% render 'icon-caret' %}
-                  </button>
-                  <div class="faq__content">
-                    <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
-                  </div>
-                </div>
-              {% endif %}   
-
               {% if product.metafields.custom.new_ingredients_tab != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -300,10 +323,25 @@
                   </button>
                   <div class="faq__content">
                     <div class="sh4 single_line_text_field">{{ product.metafields.custom.new_ingredients_tab }}</div>
-                      <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Ingredients List</a>
+                    <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+                    <div class="Why_This_Matters">
+                      <a href="#Dropdowns_Container">{{ 'products.general.matters' | t }} <span><img src="{{ 'down-arrow.png' | asset_url }}"</span></a>
+                    </div>
                   </div>
                 </div>
               {% endif %} 
+              
+              {% if product.metafields.my_fields.health_benefits != blank %}
+                <div class="faq__item">
+                  <button class="faq__header">
+                    <p class="sh4 medium">Benefits</p>
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="faq__content">
+                    <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
+                  </div>
+                </div>
+              {% endif %}   
 
               {% if product.metafields.my_fields.how_to_use != blank %}
                 <div class="faq__item">
@@ -316,42 +354,7 @@
                   </div>
                 </div>
               {% endif %} 
-              {% if true %}
-                <div class="faq__item Shipping_Tab">
-                  <button class="faq__header">
-                    <p class="sh4 medium">Reviews</p>
-                    {% render 'icon-caret' %}
-                  </button>
-                    {% comment %}
-                    <div class="sh4 single_line_text_field">{{ section.settings.ship_text }}</div>
-                    {% endcomment %}
-                <div class="faq__content">
-                    <div class="Testimonials_Main">
-                      <div class="Testimonials_Slider">
-                        {%- for block in section.blocks -%}
-                          {%- case block.type -%}
-                            {%- when 'testimonials' -%}
-                               <div class="Testimonials_Wrapper">
-                                 {% if block.settings.testimonial_text != blank %}
-                                   <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
-                                 {% endif %}
-                            
-                                 {% if block.settings.testimonial_text != blank %}
-                                   <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
-                                 {% endif %}
-                               </div>
-                          {%- endcase -%}
-                        {%- endfor -%}
-                      </div>
-                      {% if section.settings.testimonial_btn_txt != blank %}
-                        <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">{{ section.settings.testimonial_btn_txt }}</a>
-                      {% endif %}
-                    </div>
-                    
-                </div>
-                </div>
-              {% endif %}       
-              
+               
               {% if product.metafields.my_fields.highlights_tab != blank %}
                 <div class="faq__item">
                   <button class="faq__header">
@@ -407,7 +410,28 @@
             </div>
           </div>
         </div>
-
+        <div class="Testimonials_Main">
+          <div class="Testimonials_Slider">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'testimonials' -%}
+                   <div class="Testimonials_Wrapper">
+                     <span class="Testimonials_Rating"></span>
+                     {% if block.settings.testimonial_text != blank %}
+                       <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
+                     {% endif %}
+                
+                     {% if block.settings.testimonial_text != blank %}
+                       <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
+                     {% endif %}
+                   </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          {% if section.settings.testimonial_btn_txt != blank %}
+            <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">{{ section.settings.testimonial_btn_txt }}</a>
+          {% endif %}
+        </div>
         {% if section.settings.shop_more_text1 != blank or section.settings.shop_more_text2 != blank %}
           <div class="product__links">
             {% if section.settings.shop_more_text1 != blank %}
@@ -601,6 +625,72 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
 {% endjavascript %}
 
+
+<script>
+  window.Order_Within = function(){
+    const date = new Date();
+    var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getHours()
+    var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getMinutes()
+    console.log("currentHours",currentHours,currentMinutes)
+    var today = new Date();
+    var tomorrow =  new Date()
+    tomorrow.setDate(today.getDate() + 1)
+     
+    var options = {day: "numeric",month: "long"}
+    var sDay = today.toLocaleDateString("en-US", options);
+    var tDay = tomorrow.toLocaleDateString("en-US", options);
+    var orderWithin; 
+  
+   if(today.getDay() == 0 || today.getDay() == 6) {
+      if(today.getDay() == 5 && currentHours >= 10 && currentHours < 12){
+          if (currentMinutes == 0) {
+          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">60 mins</span>`;
+        } else {
+          orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes} mins</span>`;
+        }
+      }
+      else{
+          orderWithin =  `Ships <span>Monday morning</span> if ordered now`;
+      }
+      orderWithin =  `Ships <span>Monday morning</span> if ordered now`;
+    } else {
+      if (currentMinutes != 0) {
+        currentMinutes = 60 - currentMinutes
+      }
+      if (currentHours >= 10 && currentHours < 12) {
+        if (currentMinutes == 0) {
+          orderWithin =  `Ships <span>today, ${sDay}</span>`;
+        } else {
+          if(today.getDay() != 5){
+            if(currentHours == 10 && currentMinutes > 0  ){
+             orderWithin =  `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span style="color: #C6DB76">${24 - currentHours } hr ${currentMinutes} mins</span>`;
+          }
+          else {
+             orderWithin =  `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes} mins</span>`;
+          }
+          }
+          else {
+             orderWithin =  `Ships <span>Monday morning</span> if ordered now`;
+          }
+        }
+      } else if( currentHours < 10  ) {
+         orderWithin = `Ships <span>today, ${sDay}</span> If ordered in the next <span style="color: #C6DB76"> ${currentMinutes} mins</span>`;
+      } else {
+         orderWithin = `Ships <span>tomorrow, ${tDay}</span> If ordered in the next <span style="color: #C6DB76">${23 - currentHours } hr ${currentMinutes} mins</span>`;
+      }
+    }
+    let Order_Within = document.querySelectorAll('.Order_Within');
+
+    if(Order_Within.length > 0){
+      Order_Within.forEach(function(e){
+        console.log('Element :: ',e)
+        e.innerHTML = orderWithin;
+      })
+    }
+  }
+  window.Order_Within();
+</script>
+
 {% schema %}
   {
     "name": "t:sections.main-product.name",
@@ -684,7 +774,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "url",
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
-        }      
+        }
       ],
       "blocks": [
         {
@@ -702,7 +792,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
               "label": "Subscription text"
             },
             {
-              "type": "text",
+              "type": "textarea",
               "id": "purchase_type_subtext",
               "label": "Subscription subtext"
             }
@@ -748,3 +838,58 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       ]
   }
 {% endschema %}
+
+<script>
+  
+function makeTimer() {
+  function addZero(number){
+    var number = number.toString();
+    var newNumber = number;
+    if(number.length == 1){
+      newNumber = `0${number}`;
+    }
+    return newNumber;
+  }
+  
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  var currentDate = new Date(),
+      endCmsDate = new Date("{{ section.settings.timer }}"),
+      endDate = new Date(`${endCmsDate.getFullYear()}-${addZero(endCmsDate.getMonth() + 1)}-${addZero(endCmsDate.getDate())}T${addZero(currentDate.getHours())}:${addZero(currentDate.getMinutes())}:${addZero(currentDate.getSeconds())}`);
+  var tomorrowDate = new Date();
+  tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+
+  // console.log(`EndDate :: ${endDate}\ntomorrowDate:: ${tomorrowDate}`,`\n${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`)
+
+  var dateString = `${endCmsDate.getDate()} ${monthNames[endCmsDate.getMonth()]} ${endCmsDate.getFullYear()}`
+  
+  if(endDate.getTime() <= tomorrowDate.getTime()){
+    dateString = 'tomorrow';
+  }
+
+  
+  var endTime = new Date("{{ section.settings.timer }}");	
+  endTime = (Date.parse(endTime) / 1000);
+
+  var now = new Date();
+  now = (Date.parse(now) / 1000);
+
+  var timeLeft = endTime - now;
+  var days = Math.floor(timeLeft / 86400); 
+  var hours = Math.floor((timeLeft - (days * 86400)) / 3600) ;
+  var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+  var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+  if (hours < "10") { hours = "0" + hours; }
+  if (minutes < "10") { minutes = "0" + minutes; }
+  if (seconds < "10") { seconds = "0" + seconds; }
+
+  // $("#days").html((days) + "<span>Days</span>");
+  $(".js-date-wrapper").find('date').html(dateString);
+  $("#hours").html((parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
+  $("#minutes").html(minutes + "<span>min</span>");
+  $("#seconds").html(seconds + "<span>Seconds</span>");		
+}
+
+setInterval(function() { makeTimer(); }, 1000);
+</script>

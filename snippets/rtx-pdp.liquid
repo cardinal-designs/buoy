@@ -23,6 +23,35 @@
         <input type='hidden' name="selling_plan" id="selling_plan_{{ product.id }}" value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
         <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
             <div class="rtx_container" data-product='{{ product | json }}'>
+              {% unless product.requires_selling_plan %}
+                <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
+                    <div class="rtx_option_selector">
+                        <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
+                        <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
+                        <div class="rtx_option_heading">
+                            One-Time Purchase
+                           <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
+                        </div>
+                        {% for block in section.blocks %}
+                          {% case block.type %}
+                          {% when 'onetime_block' %}
+                            {%- if block.settings.onetime_purchase_type_img != blank or block.settings.onetime_purchase_type_subtext != blank or block.settings.onetime_purchase_type_text != blank %}
+                            <div class="One_Time_Info">
+                              {%- if block.settings.onetime_purchase_type_img != blank -%}
+                                <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
+                              {%- endif -%}
+                              <div>
+                                <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
+                                <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
+                              </div>
+                            </div>
+                            {%- endif -%}
+                          {% endcase %}
+                        {% endfor %}
+                      </label>
+                    </div>
+                  </div>
+              {% endunless %}  
               <div id='rtx_sands_block' class="Subscribe_Box active">
                 <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub" >
                   <div class="rtx_option_selector">
@@ -31,13 +60,10 @@
                       <div class="rtx-tooltip__flex">
 
                         <div class="rtx_option_heading">
-                          {% comment %}
-                          {{rtx_selling_plan.name}}
-                          {% endcomment %}
                           Subscribe
                           <div class="Multi_Price">
-                            <span id="rtx_one_price_save">{{ first_selling_plan_allocation.price | money }}</span>
-                             <span class="rtx_one_time_price"><s>{{ product.price | money }}</s></span>
+                            <span class="rtx_one_time_price"><s>{{ product.price | money_without_trailing_zeros }}</s></span>
+                            <span id="rtx_one_price_save">{{ first_selling_plan_allocation.price | money_without_trailing_zeros }}</span>
                           </div>
                         </div>
                           <div class="product__rtx-tooltip">
@@ -56,56 +82,39 @@
                         </div>
                         <div class="Subscribe_Info">
                           <div class="rtx_sub_container">
+                            {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
                             {% for block in section.blocks %}
                               {%- case block.type -%}
                               {%- when 'block' -%}
                                 <div class="subscribe-item_info">
-                                  <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
+                                  {%- if block.settings.purchase_type_img != blank -%}
+                                    <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}"/>
+                                  {%- endif -%}
                                   <div>
-                                    <p class="Label_Text"><span>{% render 'icon-shipping' %}</span>{{block.settings.purchase_type_text }}</p>
-                                    <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+
+                                        <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.purchase_type_text }}">{{ my_fields.subscription_text | default:block.settings.purchase_type_text }}</p>
+                                    {%- if block.settings.purchase_type_subtext != blank -%}
+                                      <p class="Label_Sub_Text">{{block.settings.purchase_type_subtext }}</p>
+                                    {%- endif -%}
                                   </div>
                                 </div>
                               {% endcase %}
                             {% endfor %}
                             </div>
-                          <div class="Usp_Wrapper">
-                            <ul>
-                              <li><span class="Usp_Tick">✓</span> {{ 'usp.free_shipping' | t }}</li>
-                              <li><span class="Usp_Tick">✓</span> {{ 'usp.cancel' | t }}</li>
-                              <li><span class="Usp_Tick">✓</span> {{ 'usp.money_back' | t }}</li>
-                            </ul>
-                          </div>
+                          {% comment %}
+                            <div class="Usp_Wrapper">
+                              <ul>
+                                <li><span class="Usp_Tick">✓</span> {{ 'usp.free_shipping' | t }}</li>
+                                <li><span class="Usp_Tick">✓</span> {{ 'usp.cancel' | t }}</li>
+                                <li><span class="Usp_Tick">✓</span> {{ 'usp.money_back' | t }}</li>
+                              </ul>
+                            </div>
+                          {% endcomment %}
                         </div>
                         </label>
                      </div>
                     </div>
-                </div>
-                {% unless product.requires_selling_plan %}
-                  <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
-                      <div class="rtx_option_selector">
-                          <input type="radio" id='radio_one_{{ product.id }}' class="radio_rtx" value="onetime" name="selling_plan_select" data-product_id="{{ product.id }}">
-                          <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
-                          <div class="rtx_option_heading">
-                              One-Time Purchase
-                             <span class="rtx_one_time_price">{{ product.price | money }}</span>
-                          </div>
-                          {% for block in section.blocks %}
-                            {% case block.type %}
-                            {% when 'onetime_block' %}
-                              <div class="One_Time_Info">
-                                <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}"/>
-                                <div>
-                                  <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
-                                  <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
-                                </div>
-                              </div>
-                            {% endcase %}
-                          {% endfor %}
-                        </label>
-                      </div>
-                    </div>
-                {% endunless %}              
+                </div>            
             </div>
         </div>
     {% endif %}
@@ -158,7 +167,7 @@
       font-weight: 400;
       color: #1F2322;
       margin: 0 auto !important;
-      padding: 2px 8px;
+      padding: 0px 12.5px;
     }
 
     .rtx-tooltip__flex{
@@ -177,17 +186,12 @@
         margin-left: 35px;
         margin-bottom: 40px;
     }
-  
-    .rtx_option_selector{
-        margin-top: 5px;
-    }
-
-  
+    
     .rtx_option_heading {
-        font-size: 16px;
+        font-size: 18px;
         font-family: inter,sans-serif;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         letter-spacing: 0;
         line-height: 1.5em;
     }
@@ -245,11 +249,11 @@
     .clear_button{
         cursor: pointer;
         position: relative;
-		margin-left: 10px;
-        margin-top: 0;
+		margin-left: 7px;
+        margin-top: 4px;
         background: #C6DB76;
         border-radius: 14px;
-        padding: 3px;
+        padding: 0px;
         animation: gradient 3s ease infinite;
         background-size: 400% 400%; 
         display: flex;
@@ -298,6 +302,7 @@
     .clear_tag .save24{
       color: #1F2322;
       font-weight: 400;
+      font-size: 12px;
     }
 
   @media only screen and (max-width: 500px) {
@@ -311,9 +316,5 @@
 
   }
 
-    
-    
 </style>
-  
-  
   

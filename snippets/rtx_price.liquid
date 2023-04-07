@@ -1,6 +1,6 @@
 {% assign first_selling_plan_allocation = product.variants.first.selling_plan_allocations[0] %}
-{% assign subPrice = first_selling_plan_allocation.price | money %}
-{% assign onePrice = product.price | money %}
+{% assign subPrice = first_selling_plan_allocation.price | money_without_trailing_zeros %}
+{% assign onePrice = product.price | money_without_trailing_zeros %}
 
 <div id='rtx_prod_price'>
     Add to Cart —
