@@ -45,8 +45,10 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
     $( ".Product_Bar_Variants .Product_Bar_Variant" ).each(function() {
       var index1 = $(this).index();
       if(index == index1) {
-        $(".Product_Bar_Variants .Product_Bar_Variant").removeClass('show');
-        $(".Product_Bar_Variants .Product_Bar_Variant").eq(index).addClass('show');
+        $(".Product_Bar_Variants .Product_Bar_Variants").removeClass('show');
+        $(".Product_Bar_Variants .Product_Bar_Variants").eq(index).addClass('show');
+        $(".Product_Bar_Variants .Product_Bar_Variants").find('input').prop( "checked", false );
+        $(".Product_Bar_Variants .Product_Bar_Variants").eq(index).find('input').prop( "checked", true );
       }
     });
 
