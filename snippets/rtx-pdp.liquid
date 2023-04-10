@@ -326,12 +326,14 @@
     };
     const subscriptionBoxShow = () => {
       elementSubscriptionBox.classList.add('is-visible');
+      sellingPlan.disabled = false;
     };
     const subscriptionGiftShow = () => {
       elementGiftBox.classList.add('is-visible');
     };
     const subscriptionGiftHide = () => {
       elementGiftBox.classList.remove('is-visible');
+      sellingPlan.disabled = true;
     };
     const sellingPlanQueryUpdate = () => {
       const queryParams = queryParamsGet();
