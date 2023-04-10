@@ -2289,11 +2289,13 @@ label[for=subscriptionGift] {
   font-size: 14px;
   color: #1f2322;
   font-family: inter,sans-serif;
-  text-align: center;
   line-height: 17px;
   text-underline-offset: 3px;
   font-weight: 500;
   margin: 30px 0 0;
+  width: 100%;
+  text-align: center;
+  display: block;
 }
 
 label[for=subscriptionGift] span {
