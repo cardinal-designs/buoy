@@ -18,6 +18,7 @@
       <div class="product-bar__title">
         <h5>{{ product.title }}</h5>
       </div>
+      <span class="Product_Bar_Variants">
       {%- for variant in product.variants -%}
         <span class="Product_Bar_Variant">
           <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
@@ -25,6 +26,7 @@
           </label>
         </span>
       {%- endfor -%}
+      </span>
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form">
           <div class="product-quick-add__form-item one-time">
