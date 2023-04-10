@@ -12,7 +12,7 @@
 {% endif %} 
   {% assign num = 0 %}
 
-<div data='{{product.variants | json }}' class="product-bar product-bar-toggle js-sticky--wrapper">
+<div data='{{product.variants | json }}' class="product-bar product-bar-toggle section--{{ section.id }}">
   <div class="page-width">
     <div class="product-bar__container">
       <div class="product-bar__title">
@@ -115,7 +115,8 @@
 {% endjavascript %}
 
 <script type="text/javascript">
-  
+  let section = document.querySelector('.section--{{ section.id }}');
+  console.log(section);
 </script>
 
 {% schema %}
