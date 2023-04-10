@@ -41,7 +41,7 @@ $('#rtx_option_one_time').click(function() {
 
 $( ".product-form__input .Variant_Blocks" ).each(function() {
  $(this).on("click", function(){
-    var index = $(this).html();
+    var index = $(this).index();
     console.log(index);
   });
 }); 
