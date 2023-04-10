@@ -2291,10 +2291,14 @@ label[for=subscriptionGift] {
   font-family: inter,sans-serif;
   text-align: center;
   line-height: 17px;
-  text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
   margin: 30px 0 0;
+}
+
+label[for=subscriptionGift] span {
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 input#subscriptionGift {
