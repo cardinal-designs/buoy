@@ -2254,3 +2254,15 @@ span#rtx_one_price_save,
   border-radius: 0;
   border: 0;
 }
+
+.rtx-subscription-box input {
+  width: 100%;
+  padding: 16px!important;
+  border: 1px solid black;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+}
