@@ -31,7 +31,6 @@ $( document ).ready(function() {
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
 
-
 $('.Testimonials_Slider').slick({
   dots: true,
   arrows: true,
