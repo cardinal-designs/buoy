@@ -46,7 +46,7 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
        var index1 = $(this).index();
        // console.log(index1);
        // console.log(index);
-        if(index == index) {
+        if(index == index1) {
           $(this).addClass('show');
         }
     });
