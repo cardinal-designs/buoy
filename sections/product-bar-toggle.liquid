@@ -42,7 +42,7 @@
             {% assign values = values | split:',' %}
 
              {% assign my_fields = variant.metafields.custom %}
-              <span class="Variant_Blocks Product_Bar_Variants" data-id={{ variant.id }}>
+              <span class="Product_Bar_Variants" data-id={{ variant.id }}>
                 <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                   name="{{ option.name }}"
                   value="{{ value | escape }}"
