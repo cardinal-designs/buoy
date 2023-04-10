@@ -47,7 +47,7 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
        // console.log(index1);
        // console.log(index);
         if(index == index1) {
-          $(this).addClass('show');
+          $(".Product_Bar_Variants .Product_Bar_Variant").eq(index).addClass('show');
         }
     });
   });
