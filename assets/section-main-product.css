@@ -2255,7 +2255,8 @@ span#rtx_one_price_save,
   border: 0;
 }
 
-.rtx-subscription-box input {
+.rtx-subscription-box input,
+#subscriptionMessage {
   width: 100%;
   padding: 16px!important;
   border: 1px solid black;
