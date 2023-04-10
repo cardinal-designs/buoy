@@ -416,8 +416,8 @@
           subscriptionBoxHide();
           sellingPlan.disabled = true;
         }
-        console.log(elementGiftBox,elementGiftBox.querySelectorAll('input'))
-        elementGiftBox.querySelectorAll('input').forEach(input => {
+        console.log(elementGiftBox,elementGiftBox.querySelectorAll('[name*="properties"]'))
+        elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
         input.disabled = (!elValue === 'purchaseTypeSubscription');
         })
         sellingPlanUpdate();
