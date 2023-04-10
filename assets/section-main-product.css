@@ -1463,13 +1463,13 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
-.product-form input[type=radio]:before {
+.product-form .rtx_option_selector input[type=radio]:before {
   width: 18px;
   margin: -1px -1px;
   height: 18px;
 }
 
-.product-form input[type=radio]:checked:after {
+.product-form .rtx_option_selector input[type=radio]:checked:after {
   content: "";
   position: absolute;
   top: 2px;
@@ -1482,7 +1482,7 @@ fieldset.product-form__input .form__label {
   display: block;
 }
 
-.product-form input[type="radio"]:checked::before {
+.product-form .rtx_option_selector input[type="radio"]:checked::before {
   background: #1F2322;
 }
 
