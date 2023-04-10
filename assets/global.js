@@ -109,6 +109,8 @@ const serializeForm = form => {
   for (const key of formData.keys()) {
     obj[key] = formData.get(key);
   }
+  console.log(Array.from(formData.keys()))
+  return;
   return JSON.stringify(obj);
 };
 
