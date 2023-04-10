@@ -119,12 +119,11 @@
       mainProduct = document.querySelector('.shopify-section.product-section');
   section.querySelectorAll('.js-sticky-variants input[type="radio"]').forEach(radio => {
     radio.addEventListener('change',function(){
-      let labelid = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`).id;
-      mainProduct.querySelector(`label[for="${labelid}"]`).click();
-      // let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
-      // console.log(radio)
-      // radio.checked = true;
-      // radio.dispatchEvent(new Event('change'));
+      // let labelid = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`).id;
+      // mainProduct.querySelector(`label[for="${labelid}"]`).click();
+      let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
+      radio.checked = true;
+      mainProduct.querySelector(`variant-radios`).dispatchEvent(new Event('change'));
     })
   });
 </script>
