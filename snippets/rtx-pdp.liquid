@@ -329,13 +329,10 @@
       elementSubscriptionBox.classList.add('is-visible');
     };
     const subscriptionGiftShow = () => {
-      sellingPlan.disabled = true;
       elementGiftBox.classList.add('is-visible');
     };
     const subscriptionGiftHide = () => {
-      console.log('subscriptionGiftHide')
       elementGiftBox.classList.remove('is-visible');
-      sellingPlan.disabled = true;
     };
     const sellingPlanQueryUpdate = () => {
       const queryParams = queryParamsGet();
@@ -413,8 +410,10 @@
       el.addEventListener('change', e => {
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
+          sellingPlan.disabled = false;
         } else {
           subscriptionBoxHide();
+          sellingPlan.disabled = true;
         }
         sellingPlanUpdate();
       });
