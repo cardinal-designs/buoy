@@ -25,6 +25,7 @@
       <div class="product-bar__title">
         <h5>{{ product.title }}</h5>
       </div>
+      {% unless product.has_only_default_variant %}
       <span class="Product_Bar_Variant">
 
       {% comment %}
@@ -63,6 +64,8 @@
         </fieldset>
         {%- endfor -%}
       </span>
+      {% endunless %}
+      
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
