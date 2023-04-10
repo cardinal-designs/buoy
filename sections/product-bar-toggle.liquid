@@ -12,6 +12,13 @@
 {% endif %} 
   {% assign num = 0 %}
 
+  {%- liquid
+    assign currentVariant = variant | default: product.selected_or_first_available_variant
+    assign requiresPlan = product.requires_selling_plan
+    assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+    assign currentAllocations = currentVariant.selling_plan_allocations
+  -%}
+
 <div data='{{product.variants | json }}' class="product-bar product-bar-toggle section--{{ section.id }}">
   <div class="page-width">
     <div class="product-bar__container">
@@ -59,7 +66,7 @@
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form js-subscription-btns">
           <div class="product-quick-add__form-item one-time">
-            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" checked>
+            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" {% if selectedAllocation == blank %} checked {% endif %}>
             <label class="body" for="one-time--{{ section.id }}">
               <span>One-time</span>
               <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
@@ -67,7 +74,7 @@
             </label>
           </div>
           <div class="product-quick-add__form-item subscription">
-            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}">
+            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}" {% if selectedAllocation != blank %} checked {% endif %}>
             <label class="body" for="subscription--{{ section.id }}">
               <span>Subscribe & Save</span>
               <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
