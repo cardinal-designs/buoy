@@ -412,11 +412,12 @@
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
+          document.querySelector('.js-sticky-subscription-btns input[value="subscription"]').checked = true;
         } else {
           subscriptionBoxHide();
           sellingPlan.disabled = true;
+          document.querySelector('.js-sticky-subscription-btns input[value="one-time"]').checked = true;
         }
-        console.log(elementGiftBox,elementGiftBox.querySelectorAll('[name*="properties"]'))
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
           input.disabled = (elValue != 'purchaseTypeSubscription');
         })
