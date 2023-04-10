@@ -68,8 +68,13 @@
             {% endfor %}
           </div>
         </div>
-        <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
-        <label for="purchaseTypeSbubscription">Subscription Purchase</label>
+
+        <div id="rtx_sands_block" class="Subscribe_Box active">
+          <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub">
+            <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
+            <label for="purchaseTypeSbubscription">Subscription Purchase</label>
+          </div>
+        </div>
       </div>
     {%- endunless -%}
 
