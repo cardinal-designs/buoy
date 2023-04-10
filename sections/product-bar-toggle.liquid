@@ -26,6 +26,34 @@
           </label>
         </span>
       {%- endfor -%}
+
+              {%- for option in product.options_with_values -%}
+             {% assign optionIndex = forloop.index0 %}
+             {% assign values = "" %}
+              <fieldset class="js product-form__input">
+              {%- for variant in product.variants -%}
+                {% assign value = variant.options[optionIndex] %}
+                {%- unless values contains value -%}
+                {% assign values = values | join:',' %}
+                {% assign values = values | append:',' | append:value %}
+                {% assign values = values | split:',' %}
+
+                 {% assign my_fields = variant.metafields.custom %}
+                  <span class="Variant_Blocks" data-id={{ variant.id }}>
+                    <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      form="product-form-{{ section.id }}"
+                      {% if option.selected_value == value %}checked{% endif %}
+                    >
+                    <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                      <span class="Variant_Title">{{ value }}</span>
+                    </label>
+                  </span>
+                {%- endunless -%}
+              {%- endfor -%}
+              </fieldset>
+              {%- endfor -%}
       </span>
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form">
