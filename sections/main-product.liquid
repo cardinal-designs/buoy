@@ -756,7 +756,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
-  const elementSubscriptionBox = elementRoot.querySelector('[data-retextion-subscription-box]');
+  const elementSubscriptionBox = productForm.querySelector('[data-retextion-subscription-box]');
   const elementGiftBox = productForm.querySelector('[data-retextion-gift-box]');
   const elementGiftCheckbox = productForm.querySelector('[name="properties[_gifted-subscription]"]');
   const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
