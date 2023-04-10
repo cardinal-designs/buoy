@@ -2285,14 +2285,11 @@ span#rtx_one_price_save,
   margin: 2rem 0 0;
 }
 
-label[for=subscriptionGift] span {
+label[for=subscriptionGift] {
   font-size: 14px;
   color: #1f2322;
-  text-transform: uppercase;
   font-family: inter,sans-serif;
   text-align: center;
-  width: 100%;
-  display: block;
   line-height: 17px;
   text-decoration: underline;
   text-underline-offset: 3px;
