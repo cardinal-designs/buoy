@@ -29,7 +29,7 @@
     value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}"
   >
   <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
-    <div class="rtx_container" data-product="{{ product | json }}">
+    <div class="rtx_container" data-product='{{ product | json }}'>
       {% unless product.requires_selling_plan %}
         <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
           <div class="rtx_option_selector">
