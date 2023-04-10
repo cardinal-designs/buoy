@@ -1,250 +1,353 @@
-{%- if product.selling_plan_groups.size > 0 -%}
-  {%- comment -%} Shorthand Variables {%- endcomment -%}
-  {%- liquid
-    assign currentVariant = variant | default: product.selected_or_first_available_variant
-    assign requiresPlan = product.requires_selling_plan
-    assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
-    assign currentAllocations = currentVariant.selling_plan_allocations
-  -%}
-  {%- comment -%} Buy Box Styles {%- endcomment -%}
-  <style type="text/css">
-  .rtx-subscription-box {
-    display: none;
-  }
-  .rtx-subscription-box.is-visible {
-    display: block;
-  }
-  .rtx-gift-box {
-    display: none;
-  }
-  .rtx-gift-box.is-visible {
-    display: block;
-  }
-  </style>
-  
-  <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
-    {%- comment -%} Subscription type toggle {%- endcomment -%}
-    {%- unless requiresPlan -%}
-      <div>
-        <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
-        <label for="purchaseTypeOneTime">One Time Purchase</label>
-        <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
-        <label for="purchaseTypeSbubscription">Subscription Purchase</label>
-      </div>
-    {%- endunless -%}
+{% comment %}
+ v1.0.0
+{% endcomment %}
 
-    {%- comment -%} Subscription Box {%- endcomment -%}
-    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
-      <p>Subscription</p>
-      {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
-      <div>
-        <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
-        <label for="subscriptionGift">Gift Subscription</label>
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
+  assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+
+  if current_selling_plan_allocation == null and current_variant.requires_selling_plan
+    assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+  endif
+  assign popuptext = '<Strong>How Subscriptions Work</strong><br> Make healthy your habit. Save money, save<br> time and get healthy. Your custom MANTRA <br>ubscription is automatically delivered on<br>your schedule, right to your door. No<br>obligation, modify or cancel your<br>subscription anytime.'
+-%}
+{% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
+{% for selling_plan in product.selling_plan_groups %}
+  {% if selling_plan.app_id == '5859381' %}
+    {% assign rtx_selling_plan = selling_plan %}
+  {% endif %}
+{% endfor %}
+{% assign first_selling_plan_allocation = product.variants.first.selling_plan_allocations[0] %}
+{% assign subPrice = first_selling_plan_allocation.price | money %}
+
+{% if product.selling_plan_groups[0].name %}
+  <input type="hidden" name="id" id="variant_{{ product.id }}" value="{{ current_variant.id }}">
+  <input
+    type="hidden"
+    name="selling_plan"
+    id="selling_plan_{{ product.id }}"
+    value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}"
+  >
+  <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
+    <div class="rtx_container" data-product="{{ product | json }}">
+      {% unless product.requires_selling_plan %}
+        <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
+          <div class="rtx_option_selector">
+            <input
+              type="radio"
+              id="radio_one_{{ product.id }}"
+              class="radio_rtx"
+              value="onetime"
+              name="selling_plan_select"
+              data-product_id="{{ product.id }}"
+            >
+            <label for="product_onetime_{{ product.id }}" class="rtx_option_label">
+              <div class="rtx_option_heading">
+                One-Time Purchase
+                <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
+              </div>
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'onetime_block' %}
+                    {%- if block.settings.onetime_purchase_type_img != blank
+                      or block.settings.onetime_purchase_type_subtext != blank
+                      or block.settings.onetime_purchase_type_text != blank
+                    %}
+                      <div class="One_Time_Info">
+                        {%- if block.settings.onetime_purchase_type_img != blank -%}
+                          <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}">
+                        {%- endif -%}
+                        <div>
+                          <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
+                          <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                {% endcase %}
+              {% endfor %}
+            </label>
+          </div>
+        </div>
+      {% endunless %}
+      <div id="rtx_sands_block" class="Subscribe_Box active">
+        <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub">
+          <div class="rtx_option_selector">
+            <input
+              type="radio"
+              id="radio_sub_{{ product.id }}"
+              class="radio_rtx"
+              value="subsave"
+              name="selling_plan_select"
+              data-product_id="{{ product.id }}"
+              checked
+            >
+            <label for="product_subsave_{{ product.id }}" class="rtx_option_label">
+              <div class="rtx-tooltip__flex">
+                <div class="rtx_option_heading">
+                  Subscribe
+                  <div class="Multi_Price">
+                    <span class="rtx_one_time_price"
+                      ><s>{{ product.price | money_without_trailing_zeros }}</s></span
+                    >
+                    <span id="rtx_one_price_save">
+                      {{- first_selling_plan_allocation.price | money_without_trailing_zeros -}}
+                    </span>
+                  </div>
+                </div>
+                <div class="product__rtx-tooltip">
+                  <div class="rtx_popup">
+                    <div class="clear_button">
+                      <p class="clear_tag"><span class="save24">Save 24%</span></p>
+                    </div>
+                    <div class="rtx_popup_content">
+                      <blockquote class="rtx_text">
+                        <p>You’re the boss.</p>
+                        <p>
+                          ✓ Free Shipping<br>
+                          ✓ 30 Day Guarantee<br>
+                          ✓ Cancel after your first order or make it a habit
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Subscribe_Info">
+                <div class="rtx_sub_container">
+                  {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
+                  {% for block in section.blocks %}
+                    {%- case block.type -%}
+                      {%- when 'block' -%}
+                        <div class="subscribe-item_info">
+                          {%- if block.settings.purchase_type_img != blank -%}
+                            <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}">
+                          {%- endif -%}
+                          <div>
+                            <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.purchase_type_text }}">
+                              {{ my_fields.subscription_text | default: block.settings.purchase_type_text }}
+                            </p>
+                            {%- if block.settings.purchase_type_subtext != blank -%}
+                              <p class="Label_Sub_Text">{{ block.settings.purchase_type_subtext }}</p>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                    {% endcase %}
+                  {% endfor %}
+                </div>
+                {% comment %}
+                  <div class="Usp_Wrapper">
+                    <ul>
+                      <li><span class="Usp_Tick">✓</span> {{ 'usp.free_shipping' | t }}</li>
+                      <li><span class="Usp_Tick">✓</span> {{ 'usp.cancel' | t }}</li>
+                      <li><span class="Usp_Tick">✓</span> {{ 'usp.money_back' | t }}</li>
+                    </ul>
+                  </div>
+                {% endcomment %}
+              </div>
+            </label>
+          </div>
+        </div>
       </div>
-      {%- comment -%} Gift Box {%- endcomment -%}
-  
-      <div data-retextion-gift-box class="rtx-gift-box">
-        <div>
-          <label for="subscriptionEmail">Recipient's Email</label>
-          <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]" placeholder="Enter the recipient's email">
-        </div>
-        <div>
-          <label for="subscriptionName">Recipient's Name</label>
-          <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]" placeholder="Enter the recipient's name">
-        </div>
-        <div>
-          <label for="subscriptionMessage">Gift Message</label>
-          <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024" placeholder="Enter a short message"></textarea>
-        </div>
-        <p>You will provide the shipping information during checkout.</p>
-      </div>
-      {%- comment -%} Selling Plan Options {%- endcomment -%}
-  
-      <select name="selling_plan">
-        {%- liquid
-          for allocation in currentAllocations
-            assign plan = allocation.selling_plan
-            echo '<option'
-            if plan.selected or sellectedAllocation == blank and forloop .first
-              echo ' selected'
-            endif
-            echo ' value="' | append: plan.id | append: '">'
-            echo plan.name | escape
-            echo '</option>'
-          endfor
-        -%}
-      </select>
     </div>
   </div>
+{% endif %}
 
-  <script type="text/javascript">
-  ((api) => { 
-  const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
-  const boxProduct = {{ product | json }};
-  const elementRoot = document.querySelector('[data-rtxsubscription-' + boxId + ']');
-  const productForm = elementRoot.closest('form[action="/cart/add "]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
-  const elementSubscriptionBox = elementRoot.querySelector('[dataretextion-subscription-box]');
-  const elementGiftBox = elementRoot.querySelector('[dataretextion-gift-box]');
-  const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted - subscription]"]');
-  const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
-  const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
-  const elementsPurcahseTypeRadio = elementRoot.querySelectorAll('[name="purchaseType"]');
-  const elementsVariantSelectors = productForm.querySelectorAll('[name="id"]');
-  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, datalist, optgroup ');
-  let selectedVariantId = {{ currentVariant.id | json }};
-  const queryParamsGet = () => {
-    let [origin, searchAndHash] = window.location.toString().split('?');
-    searchAndHash = searchAndHash || "";
-    let [search] = searchAndHash.split('#');
-    return (search || '').split('&').reduce((o, e) => {
-      let [key, value] = e.split('=').map(x =>
-        decodeURIComponent(x));
-        if (!key || !value) return o;
-        o[key] = value;
-      return o;
-    }, {});
-  };
-    const queryParamsGenerate = (qp) => { 
-      qp = qp || {};
-      //Remove undefined
-      Object.keys(qp).forEach(key => {
-        if (typeof qp[key] !== typeof undefined) return;
-        delete qp[key];
-      });
-      return Object.keys(qp).reduce((x, key, i) => {
-        let value = qp[key];
-        if (i != 0) x += '&';
-        return x += encodeURIComponent(key) + '=' + encodeURIComponent(value);
-      }, '');
-    };
-    const subscriptionBoxHide = () => {
-      elementSubscriptionBox.classList.remove('is-visible');
-    };
-    const subscriptionBoxShow = () => {
-      elementSubscriptionBox.classList.add('is-visible');
-    };
-    const subscriptionGiftShow = () => {
-      elementGiftBox.classList.add('is-visible');
-    };
-    const subscriptionGiftHide = () => {
-      elementGiftBox.classList.remove('is-visible');
-    };
-    const sellingPlanQueryUpdate = () => {
-      const queryParams = queryParamsGet();
-      if (elementSubscriptionBox.classList.contains('is-visible')) {
-        queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
-      } else {
-        delete queryParams['selling_plan'];
-      }
-      const qs = queryParamsGenerate(queryParams);
-      try {
-        let hash;
-        hash = (hash = window.location.toString().split('#')).length > 1 ? hash[1] : null;
-        const url = window.location.toString().split('?')[0] + '?' + qs + (hash ? '#' + hash : '');
-        history.pushState(queryParams, '', url);
-      } catch (e) {
-        // Catching since older browsers and iOS can have issues
-        console.error(e);
-      }
-    };
-    const sellingPlanSelectionGet = () => {
-      return parseInt(elementSellingPlan.value);
-    };
-    const sellingPlanSelectionSet = (sellingPlan) => {
-      sellingPlan = sellingPlan && sellingPlan.id ? sellingPlan.id : sellingPlan;
-      elementSellingPlan.value = sellingPlan.toString();
-    };
-    const sellingPlanPropertiesGet = () => {
-      const formData = new FormData(productForm);
-      return Array.from(formData.entries());
-    };
-    const sellingPlanUrlGenerate = () => {
-      const props = sellingPlanPropertiesGet();
-      let strProperties = '';
-      sellingPlanPropertiesGet().forEach(prop => {
-        const key = prop[0];
-        if (!key.startsWith('properties[')) return;
-        const val = prop[1];
-        if (!val || !val.toString().length) return;
-        strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
-      });
-      return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
-    };
-    const sellingPlanUpdate = () => {
-      sellingPlanQueryUpdate();
-      console.log(sellingPlanUrlGenerate());
-    };
-    const sellingPlanUpdateVariant = () => {
-      const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
-      let newOptions = '';
-      // Determine the selected option
-      let selected = sellingPlanSelectionGet();
-      if (!variant.selling_plan_allocations.some(spa => {
-        return spa.selling_plan_id == selected;
-      })) {
-        selected = variant.selling_plan_allocations[0].selling_plan_id;
-      }
-      // Generate new options
-      variant.selling_plan_allocations.forEach((spa, i) => {
-        const sellingGroup = boxProduct.selling_plan_groups.find(spg => spg.id === spa.selling_plan_group_id);
-        const sellingPlan = sellingGroup.selling_plans.find(sp => sp.id === spa.selling_plan_id);
-        const opt = document.createElement('option');
-        if (sellingPlan.id == selected) {
-          opt.setAttribute('selected', 'selected');
-        }
-        opt.value = sellingPlan.id;
-        opt.textContent = sellingPlan.name;
-        newOptions += opt.outerHTML;
-      });
-      // Update select
-      elementSellingPlan.innerHTML = newOptions;
-      sellingPlanUpdate();
-    };
-    // Event Listeners
-    elementsPurcahseTypeRadio.forEach(el => {
-      el.addEventListener('change', e => {
-        if (el.value === 'purchaseTypeSubscription') {
-          subscriptionBoxShow();
-        } else {
-          subscriptionBoxHide();
-        }
-        sellingPlanUpdate();
-      });
-    }); 
-    elementGiftCheckbox.addEventListener('change', e => {
-      if (e.target.checked) {
-        subscriptionGiftShow();
-      } else {
-        subscriptionGiftHide();
-      }
-      sellingPlanUpdate();
-    }); 
-    elementSellingPlan.addEventListener('change', e => {
-      sellingPlanUpdate();
-    }); 
-    elementsVariantSelectors.forEach(vs => {
-      vs.addEventListener('change', e => {
-        selectedVariantId = e.target.value;
-        sellingPlanUpdateVariant();
-      });
+<script>
+  
+    var product = {{ product | json }}
+    var rtxSPG = {{ rtx_selling_plan | json }}
+    var currentProductId = "{{ product.id }}";
+
+    document.querySelectorAll(`#rtx_buy_box_${currentProductId} .rtx_option_${currentProductId}`).forEach((div) => {      
+        div.addEventListener('click', function (e) {
+//             var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
+ 			   var el = e.target.value;
+            if(el === 'subsave'){ 
+                if(product.handle === 'wellness-kit'){
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[0].id
+                } else {
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[1].id
+                }
+                var rad1 = document.getElementById(`radio_one_${currentProductId}`)
+                const noClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                yesClickBtn.checked = true; 
+              
+            } else if (el === 'onetime') {
+
+                const noClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                yesClickBtn.checked = true;
+
+                var spgOneTimeValue = "";
+                document.querySelector(`#selling_plan_${currentProductId}`).value = spgOneTimeValue;
+            }
+        });
     });
-    elementsInputs.forEach(inp => {
-      inp.addEventListener('change', e => { 
-        sellingPlanUpdate();
-      });
-    });
-    // Public API
-    return Object.assign(api, {
-      [boxId]: {
-        boxId,
-        boxProduct,
-        subscriptionBoxHide,
-        subscriptionBoxShow,
-        subscriptionGiftShow,
-        subscriptionGiftHide,
-        sellingPlanUrlGenerate
-      }
-    });
-  })((window.retextionBuyBox = {}));
-  </script>
-{%- endif -%}
+   
+       
+
+
+</script>
+
+<style>
+    .clear_svg {
+        margin-top: 2px;
+        margin-left: 6px;
+        margin-right: 10px;
+    }
+    .clear_tag {
+      font-weight: 400;
+      color: #1F2322;
+      margin: 0 auto !important;
+      padding: 0px 12.5px;
+    }
+
+    .rtx-tooltip__flex{
+        display: flex;
+    }
+
+    .one_sub_text {
+        color: rgba(0,0,0,0.4);
+        margin: 0;
+        font-size: 12px !important;
+        margin-left: 33px;
+        margin-top: 5px;
+    }
+
+    .rtx_sub_container {
+        margin-left: 35px;
+        margin-bottom: 40px;
+    }
+
+    .rtx_option_heading {
+        font-size: 18px;
+        font-family: inter,sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 1.5em;
+    }
+
+    .rtx_option_plans {
+        margin-bottom: 15px
+    }
+
+
+    .rtx_option_subheading {
+        font-size: .875rem;
+        line-height: 1.428572;
+        width: 90%;
+        margin-left: 28px;
+        margin-top: 4px;
+    }
+
+    .rtx_option {
+        margin-top: 10px;
+        width: fit-content;
+    }
+
+
+    input[type='radio'] {
+        float: left;
+        appearance: none;
+        margin-top: 3px;
+        margin-right: 10px;
+        background: transparent !important;
+        border: 2px solid #000;
+        border-radius: 100%;
+        content: " ";
+        height: 1.75rem;
+        width: 1.7rem;
+    }
+
+    input[type='radio']:before {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 70%;
+        margin: 15% auto;
+        border-radius: 50%;
+    }
+
+   input[type='radio']:checked {
+        background: white;
+        -webkit-box-shadow: inset 0 0 1 8px black;
+    }
+
+    input[type='radio']:checked:before {
+        background: black;
+    }
+
+    .clear_button{
+        cursor: pointer;
+        position: relative;
+  margin-left: 7px;
+        margin-top: 4px;
+        background: #C6DB76;
+        border-radius: 14px;
+        padding: 0px;
+        animation: gradient 3s ease infinite;
+        background-size: 400% 400%;
+        display: flex;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .rtx_text {
+        position: absolute;
+        left: 160px;
+        bottom: -155px;
+        background:	#696969;
+        font-size: 12px;
+        z-index: 2;
+        padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+        min-width: 338px;
+        color: white;
+    }
+
+    .rtx_popup_content {
+        display: none;
+        position: relative;
+    }
+
+
+    .rtx_popup {
+        width: fit-content;
+    }
+
+    .rtx_sub_script {
+        margin-left: 45px;
+        width: fit-content;
+        font-size: small;
+    }
+
+
+  .rtx_question_icon {
+        margin-top: -2px;
+        position: absolute;
+        margin-left: 19px;
+    }
+    .clear_button:hover ~ .rtx_popup_content {
+        display: inline !important;
+    }
+    .clear_tag .save24{
+      color: #1F2322;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+  @media only screen and (max-width: 500px) {
+    .rtx-tooltip__flex{
+      flex-direction: column;
+    }
+
+    .clear_button {
+     margin-left: 0;
+    }
+
+  }
+</style>
