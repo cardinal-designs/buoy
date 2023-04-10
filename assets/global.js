@@ -528,7 +528,6 @@ class VariantSelects extends HTMLElement {
     this.currentVariant.options.forEach(function (option,index) {
       console.log(document.querySelector(`.js-sticky-variants input[data-option="option-${index}"][value="${option}"]`));
       document.querySelector(`.js-sticky-variants input[data-option="option-${index}"][value="${option}"]`).checked = true;
-      document.querySelector(`.js-sticky-variants input[data-option="option-${index}"][value="${option}"]`).dispatchEvent(new Event('change'));
     });
   }
   
