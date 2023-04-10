@@ -416,6 +416,9 @@
           subscriptionBoxHide();
           sellingPlan.disabled = true;
         }
+        elementGiftBox.quertSelectorAll('input').forEach(input => {
+        input.disabled = (!el.value === 'purchaseTypeSubscription');
+        })
         sellingPlanUpdate();
       });
     }); 
