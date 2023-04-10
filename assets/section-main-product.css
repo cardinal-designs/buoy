@@ -2299,3 +2299,9 @@ label[for=subscriptionGift] {
   font-weight: 500;
   margin: 30px 0 0;
 }
+
+input#subscriptionGift {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
