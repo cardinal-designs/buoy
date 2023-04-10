@@ -197,3 +197,11 @@
   margin: 0;
   text-transform: unset;
 }
+
+.Product_Bar_Variants {
+  display: none;
+}
+
+.Product_Bar_Variants.show {
+  display: block;
+}
