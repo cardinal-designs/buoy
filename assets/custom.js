@@ -40,11 +40,10 @@ $('#rtx_option_one_time').click(function() {
 }); 
 
 $( ".product-form__input .Variant_Blocks" ).each(function() {
-  var this = $(this);
-  this.click(function() {
-    var index = this.index();
+ $(this).on("click", function(){
+    var index = $(this).html();
     console.log(index);
-  }); 
+  });
 }); 
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
