@@ -287,7 +287,7 @@
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
   const elementSubscriptionBox = productForm.querySelector('[data-retextion-subscription-box]');
-  const elementGiftBox = productForm.querySelector('[data-retextion-gift-box]');
+  const elementGiftBox = elementRoot.querySelector('[data-retextion-gift-box]');
   const elementGiftCheckbox = productForm.querySelector('[name="properties[_gifted-subscription]"]');
   const elementSellingPlan = productForm.querySelector('[name="selling_plan"]');
   const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
