@@ -242,48 +242,7 @@
       </div>
     {%- endunless -%}
 
-    {%- comment -%} Subscription Box {%- endcomment -%}
-    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
-      <p>Subscription</p>
-      {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
-      <div>
-        <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
-        <label for="subscriptionGift">Gift Subscription</label>
-      </div>
-      {%- comment -%} Gift Box {%- endcomment -%}
-  
-      <div data-retextion-gift-box class="rtx-gift-box">
-        <div>
-          <label for="subscriptionEmail">Recipient's Email</label>
-          <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]" placeholder="Enter the recipient's email">
-        </div>
-        <div>
-          <label for="subscriptionName">Recipient's Name</label>
-          <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]" placeholder="Enter the recipient's name">
-        </div>
-        <div>
-          <label for="subscriptionMessage">Gift Message</label>
-          <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024" placeholder="Enter a short message"></textarea>
-        </div>
-        <p>You will provide the shipping information during checkout.</p>
-      </div>
-      {%- comment -%} Selling Plan Options {%- endcomment -%}
-  
-      <select name="selling_plan">
-        {%- liquid
-          for allocation in currentAllocations
-            assign plan = allocation.selling_plan
-            echo '<option'
-            if plan.selected or sellectedAllocation == blank and forloop.first
-              echo ' selected'
-            endif
-            echo ' value="' | append: plan.id | append: '">'
-            echo plan.name | escape
-            echo '</option>'
-          endfor
-        -%}
-      </select>
-    </div>
+    
   </div>
 
   <script type="text/javascript">
@@ -295,6 +254,7 @@
   const elementSubscriptionBox = elementRoot.querySelector('[data-retextion-subscription-box]');
   const elementGiftBox = elementRoot.querySelector('[data-retextion-gift-box]');
   const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted-subscription]"]');
+  console.log("elementGiftCheckbox",elementGiftCheckbox)
   const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
   const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
   const elementsPurcahseTypeRadio = elementRoot.querySelectorAll('[name="purchaseType"]');
