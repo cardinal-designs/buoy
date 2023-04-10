@@ -350,7 +350,46 @@
       }
     });
   })((window.retextionBuyBox = {}));
-  </script>
+</script>
+
+<script>
+  
+    var product = {{ product | json }}
+    var rtxSPG = {{ rtx_selling_plan | json }}
+    var currentProductId = "{{ product.id }}";
+
+    document.querySelectorAll(`#rtx_buy_box_${currentProductId} .rtx_option_${currentProductId}`).forEach((div) => {      
+        div.addEventListener('click', function (e) {
+//             var el = e.path[2].querySelectorAll('input[type="radio"]')[0];
+ 			   var el = e.target.value;
+            if(el === 'subsave'){ 
+                if(product.handle === 'wellness-kit'){
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[0].id
+                } else {
+                    document.querySelector(`#selling_plan_${product.id}`).value = rtxSPG.selling_plans[1].id
+                }
+                var rad1 = document.getElementById(`radio_one_${currentProductId}`)
+                const noClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                yesClickBtn.checked = true; 
+              
+            } else if (el === 'onetime') {
+
+                const noClickBtn = document.getElementById(`radio_sub_${currentProductId}`);
+                noClickBtn.checked = false; 
+                const yesClickBtn = document.getElementById(`radio_one_${currentProductId}`);
+                yesClickBtn.checked = true;
+
+                var spgOneTimeValue = "";
+                document.querySelector(`#selling_plan_${currentProductId}`).value = spgOneTimeValue;
+            }
+        });
+    });
+
+</script>
+
+  
 {%- endif -%}
 
 <style>
