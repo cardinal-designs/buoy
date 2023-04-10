@@ -408,6 +408,7 @@
     // Event Listeners
     elementsPurcahseTypeRadio.forEach(el => {
       el.addEventListener('change', e => {
+        console.log('change');
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
