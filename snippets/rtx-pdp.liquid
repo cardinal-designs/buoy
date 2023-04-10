@@ -171,68 +171,73 @@
               </div>
           </label>
         </div>
-        <div id="rtx_sands_block" >
-          <div class="rtx_option_selector">
-            <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
-            <label for="purchaseTypeSbubscription" class="rtx_option_label">
-              <div class="rtx-tooltip__flex">
-      
-                <div class="rtx_option_heading">
-                  Subscribe
-                  <div class="Multi_Price">
-                    <span class="rtx_one_time_price"><s>{{ product.price | money_without_trailing_zeros }}</s></span>
-                    <span id="rtx_one_price_save">
-                      {{- currentAllocations[0].price | money_without_trailing_zeros -}}
-                    </span>
-                  </div>
-                </div>
-      
-                <div class="product__rtx-tooltip">
-                  <div class="rtx_popup">
-                    <div class="clear_button">
-                      <p class="clear_tag"><span class="save24">Save 24%</span></p>
-                    </div>
-                    <div class="rtx_popup_content">
-                      <blockquote class="rtx_text">
-                        <p>You’re the boss.</p>
-                        <p>
-                          ✓ Free Shipping<br>
-                          ✓ 30 Day Guarantee<br>
-                          ✓ Cancel after your first order or make it a habit
-                        </p>
-                      </blockquote>
+        <div id="rtx_sands_block">
+          <div id="rtx_option_sub">
+            <div class="rtx_option_selector">
+              <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
+              <label for="purchaseTypeSbubscription" class="rtx_option_label">
+                <div class="rtx-tooltip__flex">
+        
+                  <div class="rtx_option_heading">
+                    Subscribe
+                    <div class="Multi_Price">
+                      <span class="rtx_one_time_price"><s>{{ product.price | money_without_trailing_zeros }}</s></span>
+                      <span id="rtx_one_price_save">
+                        {{- currentAllocations[0].price | money_without_trailing_zeros -}}
+                      </span>
                     </div>
                   </div>
+        
+                  <div class="product__rtx-tooltip">
+                    <div class="rtx_popup">
+                      <div class="clear_button">
+                        <p class="clear_tag"><span class="save24">Save 24%</span></p>
+                      </div>
+                      <div class="rtx_popup_content">
+                        <blockquote class="rtx_text">
+                          <p>You’re the boss.</p>
+                          <p>
+                            ✓ Free Shipping<br>
+                            ✓ 30 Day Guarantee<br>
+                            ✓ Cancel after your first order or make it a habit
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+        
                 </div>
-      
-              </div>
-      
-              <div class="Subscribe_Info">
-                <div class="rtx_sub_container">
-                  {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
-                  {% for block in section.blocks %}
-                    {%- case block.type -%}
-                      {%- when 'block' -%}
-                        <div class="subscribe-item_info">
-                          {%- if block.settings.purchase_type_img != blank -%}
-                            <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}">
-                          {%- endif -%}
-                          <div>
-                            <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.purchase_type_text }}">
-                              {{ my_fields.subscription_text | default: block.settings.purchase_type_text }}
-                            </p>
-                            {%- if block.settings.purchase_type_subtext != blank -%}
-                              <p class="Label_Sub_Text">{{ block.settings.purchase_type_subtext }}</p>
+        
+                <div class="Subscribe_Info">
+                  <div class="rtx_sub_container">
+                    {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
+                    {% for block in section.blocks %}
+                      {%- case block.type -%}
+                        {%- when 'block' -%}
+                          <div class="subscribe-item_info">
+                            {%- if block.settings.purchase_type_img != blank -%}
+                              <img src="{{ block.settings.purchase_type_img | img_url: 'master' }}">
                             {%- endif -%}
+                            <div>
+                              <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.purchase_type_text }}">
+                                {{ my_fields.subscription_text | default: block.settings.purchase_type_text }}
+                              </p>
+                              {%- if block.settings.purchase_type_subtext != blank -%}
+                                <p class="Label_Sub_Text">{{ block.settings.purchase_type_subtext }}</p>
+                              {%- endif -%}
+                            </div>
                           </div>
-                        </div>
-                    {% endcase %}
-                  {% endfor %}
+                      {% endcase %}
+                    {% endfor %}
+                  </div>
                 </div>
-              </div>
-      
-            </label>
+        
+              </label>
+            </div>
           </div>
+      
+
+      
         </div>
       </div>
     {%- endunless -%}
