@@ -83,14 +83,14 @@
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
-  const elementSubscriptionBox = elementRoot.querySelector('[dataretextion-subscription-box]');
-  const elementGiftBox = elementRoot.querySelector('[dataretextion-gift-box]');
-  const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted - subscription]"]');
+  const elementSubscriptionBox = elementRoot.querySelector('[data-retextion-subscription-box]');
+  const elementGiftBox = elementRoot.querySelector('[data-retextion-gift-box]');
+  const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted-subscription]"]');
   const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
   const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
   const elementsPurcahseTypeRadio = elementRoot.querySelectorAll('[name="purchaseType"]');
   const elementsVariantSelectors = productForm.querySelectorAll('[name="id"]');
-  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, datalist, optgroup ');
+  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, data-list, optgroup ');
   let selectedVariantId = {{ currentVariant.id | json }};
   const queryParamsGet = () => {
     let [origin, searchAndHash] = window.location.toString().split('?');
