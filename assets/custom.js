@@ -24,11 +24,20 @@ $( document ).ready(function() {
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
     document.querySelector('.rtx_option_selector input:checked').click();
-    $('.product-quick-add__form-item.subscription').find('input').prop( "checked", true );
   });
 
   document.querySelector('.rtx_option_selector input:checked').click();
 });
+
+$('#rtx_sands_block').click(function() {
+  $('.product-quick-add__form-item.subscription').find('input').prop( "checked", true );  
+  $('.product-quick-add__form-item.one-time').find('input').prop( "checked", false );  
+});
+ 
+$('#rtx_option_one_time').click(function() {
+  $('.product-quick-add__form-item.subscription').find('input').prop( "checked", false );  
+  $('.product-quick-add__form-item.one-time').find('input').prop( "checked", true );  
+}); 
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
 
