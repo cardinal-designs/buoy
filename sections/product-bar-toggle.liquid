@@ -19,6 +19,8 @@
         <h5>{{ product.title }}</h5>
       </div>
       <span class="Product_Bar_Variants">
+
+      {% comment %}
       {%- for variant in product.variants -%}
         <span class="Product_Bar_Variant">
           <label data-id={{ variant.id }} for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
@@ -26,7 +28,8 @@
           </label>
         </span>
       {%- endfor -%}
-
+      {% endcomment %}
+      
         {%- for option in product.options_with_values -%}
          {% assign optionIndex = forloop.index0 %}
          {% assign values = "" %}
