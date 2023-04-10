@@ -2296,12 +2296,14 @@ label[for=subscriptionGift] {
   width: 100%;
   text-align: center;
   display: block;
+  font-style: italic;
 }
 
 label[for=subscriptionGift] span {
   text-transform: uppercase;
   text-decoration: underline;
   cursor: pointer;
+  font-style: normal;
 }
 
 input#subscriptionGift {
