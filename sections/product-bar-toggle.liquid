@@ -77,7 +77,8 @@
             </label>
           </div>
         </div>
-        <button class="button js-add-to-cart" 
+        <button class="button js-sticky-add-to-cart" 
+                type="button"
                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                 data-id="{{ product.selected_or_first_available_variant.id }}" 
                 data-time="one-time">
