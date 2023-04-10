@@ -2294,4 +2294,6 @@ label[for="subscriptionGift"] {
   width: 100%;
   display: block;
   line-height: 17px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
