@@ -49,6 +49,9 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
         $(".Product_Bar_Variants .Product_Bar_Variant").eq(index).addClass('show');
       }
     });
+
+   var variant_id = $(this).attr('data-id');
+    console.log(variant_id);
   });
 }); 
 
