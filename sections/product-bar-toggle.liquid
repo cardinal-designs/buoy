@@ -19,7 +19,7 @@
         <h5>{{ product.title }}</h5>
       </div>
       {%- for variant in product.variants -%}
-        <span class="Product_Bar_Variant" style="display: none">
+        <span class="Product_Bar_Variant">
           <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
             <span class="">{{ variant.title }}</span>
           </label>
