@@ -27,7 +27,9 @@
     {%- unless requiresPlan -%}
       <div>
         <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
-        <label for="purchaseTypeOneTime">One Time Purchase</label>
+        <label for="purchaseTypeOneTime">
+      <div class="rtx_option_heading">One Time Purchase
+      </div></label>
         <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
         <label for="purchaseTypeSbubscription">Subscription Purchase</label>
       </div>
