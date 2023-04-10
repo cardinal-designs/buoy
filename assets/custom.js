@@ -42,7 +42,7 @@ $('#rtx_option_one_time').click(function() {
 $( ".product-form__input .Variant_Blocks" ).each(function() {
  $(this).on("click", function(){
     var index = $(this).index();
-    $( ".Product_Bar_Variants .Product_Bar_Variant" ).each(function() {
+    $( ".Product_Bar_Variants" ).each(function() {
       var index1 = $(this).index();
       if(index == index1) {
         $(".Product_Bar_Variants").removeClass('show');
