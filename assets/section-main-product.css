@@ -1456,7 +1456,7 @@ fieldset.product-form__input .form__label {
   border-bottom: 1px solid rgb(31 35 34 / 10%);
 }
 
-.product-form input[type=radio] {
+.product-form .rtx_option_selector input[type=radio] {
   height: 20px;
   width: 20px;
   margin-top: 5px!important;
