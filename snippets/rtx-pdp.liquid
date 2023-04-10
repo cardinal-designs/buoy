@@ -408,7 +408,7 @@
     // Event Listeners
     elementsPurcahseTypeRadio.forEach(el => {
       el.addEventListener('change', e => {
-        console.log('change');
+        let elValue = el.value
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
@@ -418,7 +418,7 @@
         }
         console.log(elementGiftBox,elementGiftBox.querySelectorAll('input'))
         elementGiftBox.querySelectorAll('input').forEach(input => {
-        input.disabled = (!el.value === 'purchaseTypeSubscription');
+        input.disabled = (!elValue === 'purchaseTypeSubscription');
         })
         sellingPlanUpdate();
       });
