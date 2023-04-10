@@ -44,9 +44,8 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
     var index = $(this).index();
     $( ".Product_Bar_Variants .Product_Bar_Variant" ).each(function() {
        var index1 = $(this).index();
-       // console.log(index1);
-       // console.log(index);
         if(index == index1) {
+          $(".Product_Bar_Variants .Product_Bar_Variant").removeClass('show');
           $(".Product_Bar_Variants .Product_Bar_Variant").eq(index).addClass('show');
         }
     });
