@@ -18,6 +18,36 @@
       <div class="product-bar__title">
         <h5>{{ product.title }}</h5>
       </div>
+        {%- for variant in product.variants -%}
+          {% assign value = variant.options[optionIndex] %}
+          {%- unless values contains value -%}
+          {% assign values = values | join:',' %}
+          {% assign values = values | append:',' | append:value %}
+          {% assign values = values | split:',' %}
+
+           {% assign my_fields = variant.metafields.custom %}
+            <span class="Variant_Blocks">
+              <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                name="{{ option.name }}"
+                value="{{ value | escape }}"
+                form="product-form-{{ section.id }}"
+                {% if option.selected_value == value %}checked{% endif %}
+              >
+              <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                <span class="Variant_Title">{{ value }}</span>
+                {%- if my_fields.best_value  != blank -%}
+                  <span class="Best_Value">{{ my_fields.best_value }}</span>
+                {%- endif -%}
+                {%- if my_fields.supply_time  != blank -%}
+                  <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+                {%- endif -%}
+                {%- if my_fields.servings != blank -%}
+                  <span class="Variant_Servings">{{ my_fields.servings }}</span>
+                {%- endif -%}
+              </label>
+            </span>
+          {%- endunless -%}
+        {%- endfor -%}
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form">
           <div class="product-quick-add__form-item one-time">
