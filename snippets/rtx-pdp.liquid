@@ -82,7 +82,8 @@
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
-  const productForm = elementRoot.closest('form[action="/cart/add "]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
+  console.log(elementRoot.closest('form[action="/cart/add"]'))
+  const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
   const elementSubscriptionBox = elementRoot.querySelector('[dataretextion-subscription-box]');
   const elementGiftBox = elementRoot.querySelector('[dataretextion-gift-box]');
   const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted - subscription]"]');
