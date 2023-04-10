@@ -65,7 +65,7 @@
           for allocation in currentAllocations
             assign plan = allocation.selling_plan
             echo '<option'
-            if plan.selected or sellectedAllocation == blank and forloop .first
+            if plan.selected or sellectedAllocation == blank and forloop.first
               echo ' selected'
             endif
             echo ' value="' | append: plan.id | append: '">'
