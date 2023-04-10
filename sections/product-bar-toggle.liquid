@@ -120,7 +120,8 @@
       mainProduct = document.querySelector('.shopify-section.product-section'),
       subscriptionWrapper = section.querySelector('.js-subscription-btns'),
     variantRadio = mainProduct.querySelector(`variant-radios`),
-    variantSelect = mainProduct.querySelector(`variant-selects`);
+    variantSelect = mainProduct.querySelector(`variant-selects`),
+    productForm = mainProduct.querySelector('product-form');
   section.querySelectorAll('.js-sticky-variants input[type="radio"]').forEach(radio => {
     radio.addEventListener('change',function(){
       let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
@@ -140,7 +141,9 @@
       variantSelect.dispatchEvent(new Event('change'));
     });
   });
-  
+  productForm.onclick = function(){
+    console.log("click")
+  }
 </script>
 
 {% schema %}
