@@ -39,6 +39,10 @@ $('#rtx_option_one_time').click(function() {
   $('.product-quick-add__form-item.one-time').find('input').prop( "checked", true );  
 }); 
 
+$('.product-form__input .Variant_Blocks').each(function(i) {
+  $(this).html();
+})
+
 $('.related-blog-wrapper .article-card__title').matchHeight();
 
 $('.Testimonials_Slider').slick({
