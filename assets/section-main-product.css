@@ -2314,8 +2314,10 @@ input#subscriptionGift {
   opacity:1;
 }
 
-select[name="selling_plan"] {
+select[name=selling_plan] {
   font-size: 12px;
   border-radius: 0;
   padding: 5px 20px;
+  margin: 0 auto;
+  display: block;
 }
