@@ -122,6 +122,7 @@
       let labelid = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`).id;
       // mainProduct.querySelector(`label[for="${labelid}"]`).click();
       let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
+      console.log(radio)
       radio.checked = true;
       radio.dispatchEvent(new Event('change'));
     })
