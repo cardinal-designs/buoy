@@ -23,10 +23,10 @@ $( document ).ready(function() {
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
-    document.querySelector('.rtx_option_selector input:checked').click();
+    if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
   });
 
-  document.querySelector('.rtx_option_selector input:checked').click();
+  if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
 });
 
 $('#rtx_sands_block').click(function() {
