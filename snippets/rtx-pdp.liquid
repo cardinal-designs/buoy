@@ -36,8 +36,6 @@
     <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
     {%- comment -%} Subscription type toggle {%- endcomment -%}
     {%- unless requiresPlan -%}
-      <div>
-
         <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
           <div class="rtx_option_selector">
             <input class="radio_rtx" type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
@@ -131,7 +129,6 @@
             </div>
           </div>
         </div>
-      </div>
     {%- endunless -%}
 
     {%- comment -%} Subscription Box {%- endcomment -%}
