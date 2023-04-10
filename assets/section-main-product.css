@@ -2284,3 +2284,14 @@ span#rtx_one_price_save,
 .rtx-gift-box > div {
   margin: 2rem 0 0;
 }
+
+label[for="subscriptionGift"] {
+  font-size: 14px;
+  color: #1F2322;
+  text-transform: uppercase;
+  font-family: inter,sans-serif;
+  text-align: center;
+  width: 100%;
+  display: block;
+  line-height: 17px;
+}
