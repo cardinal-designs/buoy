@@ -203,8 +203,11 @@ $(window).on("orientationchange, resize", function(event) {
 
 /* okendo review replce string on PDP */
 
-var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
-document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
+var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
+if(ratingCount){
+  ratingCount.innerText;
+  document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
+}
 
 let myInterval = setInterval(timer, 1000);
 function timer() {
