@@ -2301,6 +2301,7 @@ label[for=subscriptionGift] {
 label[for=subscriptionGift] span {
   text-transform: uppercase;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 input#subscriptionGift {
