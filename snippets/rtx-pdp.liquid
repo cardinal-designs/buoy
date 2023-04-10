@@ -1,3 +1,7 @@
+{% assign first_selling_plan_allocation = product.variants.first.selling_plan_allocations[0] %}
+{% assign subPrice = first_selling_plan_allocation.price | money %}
+
+
 {%- if product.selling_plan_groups.size > 0 -%}
   {%- comment -%} Shorthand Variables {%- endcomment -%}
   {%- liquid
