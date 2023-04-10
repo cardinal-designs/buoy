@@ -137,7 +137,7 @@
         mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').checked = true;
       }
       mainProduct.querySelector('[name="purchaseType"]').dispatchEvent(new Event('change'));
-      variantSelect.dispatchEvent(new Event('change'));
+      // variantSelect.dispatchEvent(new Event('change'));
     });
   });
   section.querySelector('.js-sticky-add-to-cart').onclick = function(){
