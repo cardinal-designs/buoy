@@ -72,37 +72,37 @@
         <div id="rtx_sands_block" class="Subscribe_Box active">
           <div class="rtx_option_{{ product.id }} rtx_option_sub" id="rtx_option_sub">
             <div class="rtx_option_selector">
-            <input class="radio_rtx" type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
-            <label class="rtx_option_label" for="purchaseTypeSbubscription">
+              <input class="radio_rtx" type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
+              <label class="rtx_option_label" for="purchaseTypeSbubscription">
               <div class="rtx-tooltip__flex">
-                  <div class="rtx_option_heading">
-                    Subscribe
-                    <div class="Multi_Price">
-                      <span class="rtx_one_time_price"
-                        ><s>{{ product.price | money_without_trailing_zeros }}</s></span
-                      >
-                      <span id="rtx_one_price_save">
-                        {{- first_selling_plan_allocation.price | money_without_trailing_zeros -}}
-                      </span>
-                    </div>
-                    <div class="product__rtx-tooltip">
-                      <div class="rtx_popup">
-                        <div class="clear_button">
-                          <p class="clear_tag"><span class="save24">Save 24%</span></p>
-                        </div>
-                        <div class="rtx_popup_content">
-                          <blockquote class="rtx_text">
-                            <p>You’re the boss.</p>
-                            <p>
-                              ✓ Free Shipping<br>
-                              ✓ 30 Day Guarantee<br>
-                              ✓ Cancel after your first order or make it a habit
-                            </p>
-                          </blockquote>
-                        </div>
-                      </div>
-                    </div>      
+                <div class="rtx_option_heading">
+                  Subscribe
+                  <div class="Multi_Price">
+                    <span class="rtx_one_time_price"
+                      ><s>{{ product.price | money_without_trailing_zeros }}</s></span
+                    >
+                    <span id="rtx_one_price_save">
+                      {{- first_selling_plan_allocation.price | money_without_trailing_zeros -}}
+                    </span>
                   </div>
+                  <div class="product__rtx-tooltip">
+                    <div class="rtx_popup">
+                      <div class="clear_button">
+                        <p class="clear_tag"><span class="save24">Save 24%</span></p>
+                      </div>
+                      <div class="rtx_popup_content">
+                        <blockquote class="rtx_text">
+                          <p>You’re the boss.</p>
+                          <p>
+                            ✓ Free Shipping<br>
+                            ✓ 30 Day Guarantee<br>
+                            ✓ Cancel after your first order or make it a habit
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>      
+                </div>
                 </div>
                 <div class="Subscribe_Info">
                   <div class="rtx_sub_container">
