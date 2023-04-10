@@ -81,7 +81,7 @@
   ((api) => { 
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
   const boxProduct = {{ product | json }};
-  const elementRoot = document.querySelector('[data-rtxsubscription-' + boxId + ']');
+  const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   console.log("elementRoot :: ",elementRoot)
   const productForm = elementRoot.closest('form[action="/cart/add "]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
   const elementSubscriptionBox = elementRoot.querySelector('[dataretextion-subscription-box]');
