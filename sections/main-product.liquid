@@ -9,7 +9,7 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-<section data="{{product | json}}" class="page-width">
+<section data='{{product | json}}' class="page-width">
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
      
     {% render 'supplement-facts-drawer' %}
