@@ -40,7 +40,11 @@ $('#rtx_option_one_time').click(function() {
 }); 
 
 $( ".product-form__input .Variant_Blocks" ).each(function() {
-  $( this ).addClass( "foo" );
+  var this = $(this);
+  this.click(function() {
+    var index = this.index();
+    console.log(index);
+  }); 
 }); 
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
