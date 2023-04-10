@@ -165,7 +165,10 @@
         <div class="rtx_option_selector">
           <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
           <label for="purchaseTypeOneTime">
-              <div class="rtx_option_heading"> One Time Purchase </div>
+              <div class="rtx_option_heading">
+                One Time Purchase 
+                <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
+              </div>
           </label>
         </div>
         <div class="rtx_option_selector">
