@@ -49,7 +49,7 @@
             {% assign values = values | append:',' | append:value %}
             {% assign values = values | split:',' %}
               <span class="Product_Bar_Variants" data-id={{ variant.id }}>
-                <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                <input type="radio" data-option="option-{{ optionIndex }}" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                   name="{{ option.name }}"
                   value="{{ value | escape }}"
                   form="product-form-{{ section.id }}"
