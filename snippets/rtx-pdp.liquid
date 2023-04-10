@@ -21,13 +21,54 @@
     display: block;
   }
   </style>
-  
-  <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
+
+  {% if product.selling_plan_groups[0].name %}
+  <input type="hidden" name="id" id="variant_{{ product.id }}" value="{{ current_variant.id }}">
+  <input
+    type="hidden"
+    name="selling_plan"
+    id="selling_plan_{{ product.id }}"
+    value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}"
+  >
+
+  <div class="rtx_buy_box" id="rtx_buy_box_{{ product.id }}">
+    <div class="rtx_container" data-product='{{ product | json }}'>
+    <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
     {%- comment -%} Subscription type toggle {%- endcomment -%}
     {%- unless requiresPlan -%}
       <div>
-        <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
-        <label for="purchaseTypeOneTime">One Time Purchase</label>
+
+        <div class="rtx_option_{{ product.id }} rtx_option_one_time Subscribe_Box 456" id="rtx_option_one_time">
+          <div class="rtx_option_selector">
+            <input class="radio_rtx" type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+            <label class="rtx_option_label" for="purchaseTypeOneTime">
+              <div class="rtx_option_heading">
+                One-Time Purchase
+                <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
+              </div>
+            </label>
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'onetime_block' %}
+                  {%- if block.settings.onetime_purchase_type_img != blank
+                    or block.settings.onetime_purchase_type_subtext != blank
+                    or block.settings.onetime_purchase_type_text != blank
+                  %}
+                    <div class="One_Time_Info">
+                      {%- if block.settings.onetime_purchase_type_img != blank -%}
+                        <img src="{{ block.settings.onetime_purchase_type_img | img_url: '60x' }}">
+                      {%- endif -%}
+                      <div>
+                        <p class="one_sub_text">{{ block.settings.onetime_purchase_type_text }}</p>
+                        <p class="one_sub_text_new">{{ block.settings.onetime_purchase_type_subtext }}</p>
+                      </div>
+                    </div>
+                  {%- endif -%}
+              {% endcase %}
+            {% endfor %}
+          </div>
+
+        </div>
         <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
         <label for="purchaseTypeSbubscription">Subscription Purchase</label>
       </div>
@@ -76,6 +117,8 @@
       </select>
     </div>
   </div>
+ </div>
+{%- endif -%}
 
   <script type="text/javascript">
   ((api) => { 
