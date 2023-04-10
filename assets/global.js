@@ -106,11 +106,11 @@ function debounce(fn, wait) {
 const serializeForm = form => {
   const obj = {};
   const formData = new FormData(form);
+  let properties = {};
   for (const key of formData.keys()) {
-    obj[key] = formData.get(key);
+    (key.includes('properties')) ? properties[key] =  formData.get(key) : obj[key] = formData.get(key);
   }
-  console.log(Array.from(formData.keys()))
-  return;
+  console.log(properties)
   return JSON.stringify(obj);
 };
 
