@@ -249,6 +249,11 @@
             {%- endif -%}
           </div>
 
+          {% if settings.show_shipping_countdown != blank %}
+          <div id="Order_Within" class="Order_Within Risk_Free">
+             {{ settings.order_within_text }}
+          </div>
+        {% endif %}
 
     {%- if product.selling_plan_groups.size > 0 -%}
       {%- liquid
@@ -303,12 +308,6 @@
           
           {%- endform -%}
         </product-form>
-
-        {% if settings.show_shipping_countdown != blank %}
-          <div id="Order_Within" class="Order_Within Risk_Free">
-             {{ settings.order_within_text }}
-          </div>
-        {% endif %}
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
