@@ -177,7 +177,6 @@
               <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
               <label for="purchaseTypeSbubscription" class="rtx_option_label">
                 <div class="rtx-tooltip__flex">
-        
                   <div class="rtx_option_heading">
                     Subscribe
                     <div class="Multi_Price">
@@ -187,7 +186,6 @@
                       </span>
                     </div>
                   </div>
-        
                   <div class="product__rtx-tooltip">
                     <div class="rtx_popup">
                       <div class="clear_button">
@@ -205,9 +203,7 @@
                       </div>
                     </div>
                   </div>
-        
                 </div>
-        
                 <div class="Subscribe_Info">
                   <div class="rtx_sub_container">
                     {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
@@ -235,13 +231,9 @@
               </label>
             </div>
           </div>
-      
 
-      
         </div>
       </div>
     {%- endunless -%}
-
-    
   </div>
 {%- endif -%}
