@@ -325,12 +325,12 @@
       elementSubscriptionBox.classList.remove('is-visible');
     };
     const subscriptionBoxShow = () => {
+      sellingPlan.disabled = false;
       elementSubscriptionBox.classList.add('is-visible');
     };
     const subscriptionGiftShow = () => {
-  console.log('subscriptionGiftShow')
+      sellingPlan.disabled = true;
       elementGiftBox.classList.add('is-visible');
-  sellingPlan.disabled = false;
     };
     const subscriptionGiftHide = () => {
       console.log('subscriptionGiftHide')
