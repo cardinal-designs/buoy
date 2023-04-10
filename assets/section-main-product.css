@@ -2307,6 +2307,7 @@ input#subscriptionGift {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  width: auto;
 }
 
 .product-form .rtx_option_selector input[type=radio]:checked + .rtx_option_label .rtx_option_heading {
