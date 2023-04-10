@@ -133,10 +133,11 @@
     radio.addEventListener('change',function(){
       if(this.value == "one-time"){
         mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').checked = true;
+        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').dispatchEvent(new Event('change'));
       }else{
         mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').checked = true;
+        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').dispatchEvent(new Event('change'));
       }
-      mainProduct.querySelector('[name="purchaseType"]').dispatchEvent(new Event('change'));
       // variantSelect.dispatchEvent(new Event('change'));
     });
   });
