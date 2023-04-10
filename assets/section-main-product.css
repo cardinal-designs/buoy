@@ -2312,3 +2312,9 @@ input#subscriptionGift {
 .product-form .rtx_option_selector input[type=radio]:checked + .rtx_option_label .rtx_option_heading {
   opacity:1;
 }
+
+select[name="selling_plan"] {
+  font-size: 12px;
+  border-radius: 0;
+  padding: 5px 20px;
+}
