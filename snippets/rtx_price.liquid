@@ -33,14 +33,14 @@
       })
 
 
-    // $('.Subscribe_Box').click(function() {
-    //   var el = $(this).find('input').val()
-    //   if(el === 'subsave') {
-    //     document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
-    //   } else if (el === 'onetime') {
-    //     document.getElementById(`rtx_one_price`).innerText = {{ onePrice | json }};
-    //   }
-    // })
+    $('.Subscribe_Box').click(function() {
+      var el = $(this).find('input').val()
+      if(el === 'subsave') {
+        document.getElementById(`rtx_one_price`).innerText = {{ subPrice | json }};
+      } else if (el === 'onetime') {
+        document.getElementById(`rtx_one_price`).innerText = {{ onePrice | json }};
+      }
+    })
    
        
   </script>
