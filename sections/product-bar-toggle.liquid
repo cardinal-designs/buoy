@@ -119,7 +119,7 @@
       mainProduct = document.querySelector('.shopify-section.product-section');
   section.querySelectorAll('.js-sticky-variants input[type="radio"]').forEach(radio => {
     radio.addEventListener('change',function(){
-      console.log(mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`));
+      console.log(mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`).id);
     })
   });
 </script>
