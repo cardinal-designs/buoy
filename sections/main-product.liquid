@@ -250,6 +250,13 @@
           </div>
 
 
+    {%- if product.selling_plan_groups.size > 0 -%}
+      {%- liquid
+        assign currentVariant = variant | default: product.selected_or_first_available_variant
+        assign requiresPlan = product.requires_selling_plan
+        assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+        assign currentAllocations = currentVariant.selling_plan_allocations
+      -%}
   {%- comment -%} Subscription Box {%- endcomment -%}
     <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
       <p>Subscription</p>
@@ -292,7 +299,7 @@
         -%}
       </select>
     </div>
-  
+  {%- endif -%}
           
           
           {%- endform -%}
