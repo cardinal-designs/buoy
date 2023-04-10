@@ -52,6 +52,8 @@ $( ".product-form__input .Variant_Blocks" ).each(function() {
 
    var variant_id = $(this).attr('data-id');
     console.log(variant_id);
+
+   $('.product-bar__container .js-add-to-cart').attr('data-id', variant_id);
   });
 }); 
 
