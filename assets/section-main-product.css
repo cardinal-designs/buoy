@@ -2266,3 +2266,16 @@ span#rtx_one_price_save,
   letter-spacing: 0;
   line-height: 1.375em;
 }
+
+.rtx-gift-box label {
+  margin-bottom: 5px;
+  position: unset;
+  display: block;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+  text-align: left;
+}
