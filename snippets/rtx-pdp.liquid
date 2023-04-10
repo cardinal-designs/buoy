@@ -418,7 +418,8 @@
         }
         console.log(elementGiftBox,elementGiftBox.querySelectorAll('[name*="properties"]'))
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
-        input.disabled = (!elValue == 'purchaseTypeSubscription');
+          console.log((!elValue == 'purchaseTypeSubscription'));
+          input.disabled = (!elValue == 'purchaseTypeSubscription');
         })
         sellingPlanUpdate();
       });
