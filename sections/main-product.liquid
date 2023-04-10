@@ -752,7 +752,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   console.log(elementRoot,productForm);
   const elementSubscriptionBox = elementRoot.querySelector('[data-retextion-subscription-box]');
   const elementGiftBox = elementRoot.querySelector('[data-retextion-gift-box]');
-  const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted-subscription]"]');
+  const elementGiftCheckbox = productForm.querySelector('[name="properties[_gifted-subscription]"]');
   console.log("elementGiftCheckbox",elementGiftCheckbox)
   const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
   const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
