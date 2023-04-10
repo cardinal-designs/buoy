@@ -64,7 +64,7 @@
         {%- endfor -%}
       </span>
       <div class="flex-buttons-bar">
-        <div class="product-quick-add__form js-subscription-btns">
+        <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
             <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" {% if selectedAllocation == blank %} checked {% endif %}>
             <label class="body" for="one-time--{{ section.id }}">
@@ -125,7 +125,7 @@
 <script type="text/javascript">
   let section = document.querySelector('.section--{{ section.id }}'),
       mainProduct = document.querySelector('.shopify-section.product-section'),
-      subscriptionWrapper = section.querySelector('.js-subscription-btns'),
+      subscriptionWrapper = section.querySelector('.js-sticky-subscription-btns'),
     variantRadio = mainProduct.querySelector(`variant-radios`),
     variantSelect = mainProduct.querySelector(`variant-selects`) || mainProduct.querySelector(`variant-radios`),
     productForm = mainProduct.querySelector('product-form');
