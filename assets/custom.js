@@ -24,6 +24,7 @@ $( document ).ready(function() {
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
     document.querySelector('.rtx_option_selector input:checked').click();
+    ('.product-quick-add__form-item.subscription').prop( "checked", true );
   });
 
   document.querySelector('.rtx_option_selector input:checked').click();
