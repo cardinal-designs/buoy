@@ -520,8 +520,14 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
     }
+
+    this.updateSticky();
   }
 
+  updateSticky(){
+    console.log(this.currentVariant);
+  }
+  
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
