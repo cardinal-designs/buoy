@@ -1,0 +1,250 @@
+{%- if product.selling_plan_groups.size > 0 -%}
+  {%- comment -%} Shorthand Variables {%- endcomment -%}
+  {%- liquid
+    assign currentVariant = variant | default: product.selected_or_first_available_variant
+    assign requiresPlan = product.requires_selling_plan
+    assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+    assign currentAllocations = currentVariant.selling_plan_allocations
+  -%}
+  {%- comment -%} Buy Box Styles {%- endcomment -%}
+  <style type="text/css">
+  .rtx-subscription-box {
+    display: none;
+  }
+  .rtx-subscription-box.is-visible {
+    display: block;
+  }
+  .rtx-gift-box {
+    display: none;
+  }
+  .rtx-gift-box.is-visible {
+    display: block;
+  }
+  </style>
+  
+  <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
+    {%- comment -%} Subscription type toggle {%- endcomment -%}
+    {%- unless requiresPlan -%}
+      <div>
+        <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+        <label for="purchaseTypeOneTime">One Time Purchase</label>
+        <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
+        <label for="purchaseTypeSbubscription">Subscription Purchase</label>
+      </div>
+    {%- endunless -%}
+
+    {%- comment -%} Subscription Box {%- endcomment -%}
+    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
+      <p>Subscription</p>
+      {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
+      <div>
+        <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
+        <label for="subscriptionGift">Gift Subscription</label>
+      </div>
+      {%- comment -%} Gift Box {%- endcomment -%}
+  
+      <div data-retextion-gift-box class="rtx-gift-box">
+        <div>
+          <label for="subscriptionEmail">Recipient's Email</label>
+          <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]" placeholder="Enter the recipient's email">
+        </div>
+        <div>
+          <label for="subscriptionName">Recipient's Name</label>
+          <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]" placeholder="Enter the recipient's name">
+        </div>
+        <div>
+          <label for="subscriptionMessage">Gift Message</label>
+          <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024" placeholder="Enter a short message"></textarea>
+        </div>
+        <p>You will provide the shipping information during checkout.</p>
+      </div>
+      {%- comment -%} Selling Plan Options {%- endcomment -%}
+  
+      <select name="selling_plan">
+        {%- liquid
+          for allocation in currentAllocations
+            assign plan = allocation.selling_plan
+            echo '<option'
+            if plan.selected or sellectedAllocation == blank and forloop.first
+              echo ' selected'
+            endif
+            echo ' value="' | append: plan.id | append: '">'
+            echo plan.name | escape
+            echo '</option>'
+          endfor
+        -%}
+      </select>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  ((api) => { 
+  const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
+  const boxProduct = {{ product | json }};
+  const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
+  const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
+  const elementSubscriptionBox = elementRoot.querySelector('[data-retextion-subscription-box]');
+  const elementGiftBox = elementRoot.querySelector('[data-retextion-gift-box]');
+  const elementGiftCheckbox = elementRoot.querySelector('[name="properties[_gifted-subscription]"]');
+  const elementSellingPlan = elementRoot.querySelector('[name="selling_plan"]');
+  const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
+  const elementsPurcahseTypeRadio = elementRoot.querySelectorAll('[name="purchaseType"]');
+  const elementsVariantSelectors = productForm.querySelectorAll('[name="id"]');
+  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, data-list, optgroup ');
+  let selectedVariantId = {{ currentVariant.id | json }};
+  const queryParamsGet = () => {
+    let [origin, searchAndHash] = window.location.toString().split('?');
+    searchAndHash = searchAndHash || "";
+    let [search] = searchAndHash.split('#');
+    return (search || '').split('&').reduce((o, e) => {
+      let [key, value] = e.split('=').map(x =>
+        decodeURIComponent(x));
+        if (!key || !value) return o;
+        o[key] = value;
+      return o;
+    }, {});
+  };
+    const queryParamsGenerate = (qp) => { 
+      qp = qp || {};
+      //Remove undefined
+      Object.keys(qp).forEach(key => {
+        if (typeof qp[key] !== typeof undefined) return;
+        delete qp[key];
+      });
+      return Object.keys(qp).reduce((x, key, i) => {
+        let value = qp[key];
+        if (i != 0) x += '&';
+        return x += encodeURIComponent(key) + '=' + encodeURIComponent(value);
+      }, '');
+    };
+    const subscriptionBoxHide = () => {
+      elementSubscriptionBox.classList.remove('is-visible');
+    };
+    const subscriptionBoxShow = () => {
+      elementSubscriptionBox.classList.add('is-visible');
+    };
+    const subscriptionGiftShow = () => {
+      elementGiftBox.classList.add('is-visible');
+    };
+    const subscriptionGiftHide = () => {
+      elementGiftBox.classList.remove('is-visible');
+    };
+    const sellingPlanQueryUpdate = () => {
+      const queryParams = queryParamsGet();
+      if (elementSubscriptionBox.classList.contains('is-visible')) {
+        queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
+      } else {
+        delete queryParams['selling_plan'];
+      }
+      const qs = queryParamsGenerate(queryParams);
+      try {
+        let hash;
+        hash = (hash = window.location.toString().split('#')).length > 1 ? hash[1] : null;
+        const url = window.location.toString().split('?')[0] + '?' + qs + (hash ? '#' + hash : '');
+        history.pushState(queryParams, '', url);
+      } catch (e) {
+        // Catching since older browsers and iOS can have issues
+        console.error(e);
+      }
+    };
+    const sellingPlanSelectionGet = () => {
+      return parseInt(elementSellingPlan.value);
+    };
+    const sellingPlanSelectionSet = (sellingPlan) => {
+      sellingPlan = sellingPlan && sellingPlan.id ? sellingPlan.id : sellingPlan;
+      elementSellingPlan.value = sellingPlan.toString();
+    };
+    const sellingPlanPropertiesGet = () => {
+      const formData = new FormData(productForm);
+      return Array.from(formData.entries());
+    };
+    const sellingPlanUrlGenerate = () => {
+      const props = sellingPlanPropertiesGet();
+      let strProperties = '';
+      sellingPlanPropertiesGet().forEach(prop => {
+        const key = prop[0];
+        if (!key.startsWith('properties[')) return;
+        const val = prop[1];
+        if (!val || !val.toString().length) return;
+        strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
+      });
+      return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
+    };
+    const sellingPlanUpdate = () => {
+      sellingPlanQueryUpdate();
+      console.log(sellingPlanUrlGenerate());
+    };
+    const sellingPlanUpdateVariant = () => {
+      const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
+      let newOptions = '';
+      // Determine the selected option
+      let selected = sellingPlanSelectionGet();
+      if (!variant.selling_plan_allocations.some(spa => {
+        return spa.selling_plan_id == selected;
+      })) {
+        selected = variant.selling_plan_allocations[0].selling_plan_id;
+      }
+      // Generate new options
+      variant.selling_plan_allocations.forEach((spa, i) => {
+        const sellingGroup = boxProduct.selling_plan_groups.find(spg => spg.id === spa.selling_plan_group_id);
+        const sellingPlan = sellingGroup.selling_plans.find(sp => sp.id === spa.selling_plan_id);
+        const opt = document.createElement('option');
+        if (sellingPlan.id == selected) {
+          opt.setAttribute('selected', 'selected');
+        }
+        opt.value = sellingPlan.id;
+        opt.textContent = sellingPlan.name;
+        newOptions += opt.outerHTML;
+      });
+      // Update select
+      elementSellingPlan.innerHTML = newOptions;
+      sellingPlanUpdate();
+    };
+    // Event Listeners
+    elementsPurcahseTypeRadio.forEach(el => {
+      el.addEventListener('change', e => {
+        if (el.value === 'purchaseTypeSubscription') {
+          subscriptionBoxShow();
+        } else {
+          subscriptionBoxHide();
+        }
+        sellingPlanUpdate();
+      });
+    }); 
+    elementGiftCheckbox.addEventListener('change', e => {
+      if (e.target.checked) {
+        subscriptionGiftShow();
+      } else {
+        subscriptionGiftHide();
+      }
+      sellingPlanUpdate();
+    }); 
+    elementSellingPlan.addEventListener('change', e => {
+      sellingPlanUpdate();
+    }); 
+    elementsVariantSelectors.forEach(vs => {
+      vs.addEventListener('change', e => {
+        selectedVariantId = e.target.value;
+        sellingPlanUpdateVariant();
+      });
+    });
+    elementsInputs.forEach(inp => {
+      inp.addEventListener('change', e => { 
+        sellingPlanUpdate();
+      });
+    });
+    // Public API
+    return Object.assign(api, {
+      [boxId]: {
+        boxId,
+        boxProduct,
+        subscriptionBoxHide,
+        subscriptionBoxShow,
+        subscriptionGiftShow,
+        subscriptionGiftHide,
+        sellingPlanUrlGenerate
+      }
+    });
+  })((window.retextionBuyBox = {}));
+  </script>
+{%- endif -%}
