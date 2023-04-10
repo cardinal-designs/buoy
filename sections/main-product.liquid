@@ -254,56 +254,6 @@
              {{ settings.order_within_text }}
           </div>
         {% endif %}
-
-    {%- if product.selling_plan_groups.size > 0 -%}
-      {%- liquid
-        assign currentVariant = variant | default: product.selected_or_first_available_variant
-        assign requiresPlan = product.requires_selling_plan
-        assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
-        assign currentAllocations = currentVariant.selling_plan_allocations
-      -%}
-  {%- comment -%} Subscription Box {%- endcomment -%}
-    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
-      {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
-      <div>
-        <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
-        <label for="subscriptionGift">or <span>SEND BUOY AS A GIFT</span></label>
-      </div>
-      {%- comment -%} Gift Box {%- endcomment -%}
-  
-      <div data-retextion-gift-box class="rtx-gift-box">
-        <div>
-          <label for="subscriptionEmail">Recipient's Email</label>
-          <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]" placeholder="Enter the recipient's email">
-        </div>
-        <div>
-          <label for="subscriptionName">Recipient's Name</label>
-          <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]" placeholder="Enter the recipient's name">
-        </div>
-        <div>
-          <label for="subscriptionMessage">Gift Message</label>
-          <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024" placeholder="Enter a short message"></textarea>
-        </div>
-        <p>You will provide the shipping information during checkout.</p>
-      </div>
-      {%- comment -%} Selling Plan Options {%- endcomment -%}
-  
-      <select name="selling_plan">
-        {%- liquid
-          for allocation in currentAllocations
-            assign plan = allocation.selling_plan
-            echo '<option'
-            if plan.selected or sellectedAllocation == blank and forloop.first
-              echo ' selected'
-            endif
-            echo ' value="' | append: plan.id | append: '">'
-            echo plan.name | escape
-            echo '</option>'
-          endfor
-        -%}
-      </select>
-    </div>
-  {%- endif -%}
           
           
           {%- endform -%}
