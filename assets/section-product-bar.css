@@ -194,6 +194,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .product-bar-toggle .product-quick-add__form-item label {
+    text-align: left;
+  }
   
   .product-bar {
     padding-top: 10px;
