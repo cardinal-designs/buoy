@@ -631,6 +631,8 @@ class VariantSelects extends HTMLElement {
       }
     }
 
+    addButton.dataset.available = disable;
+
     if (disable) {
       addButton.setAttribute('disabled', true);
       if (text) addButton.textContent = text;
