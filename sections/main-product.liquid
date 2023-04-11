@@ -221,7 +221,7 @@
                     name="add"
                     style="flex-direction: column; padding: 12px 10px;"
                     data-available="{{ product.selected_or_first_available_variant.available }}"
-                    class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     data-subscription-price = "{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                     >
