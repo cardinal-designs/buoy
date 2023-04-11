@@ -63,16 +63,16 @@
 }
 
 .product-bar-toggle .product-quick-add__form-item label::after {
-  content: '';
-  height: 10px;
-  width: 10px;
+  content: "";
   position: absolute;
-  top: 5px;
-  left: 4px;
-  border-radius: 100%;
-  background: transparent;
-  transform: scale(.3);
-  transition: .2s ease;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 11px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  z-index: 11;
 }
 
 .product-bar-toggle .product-quick-add__form-item input:checked + label::after {
