@@ -2316,6 +2316,10 @@ select[name=selling_plan] {
   .product-form input[type=radio]:checked:after {
     top: 2px;
   }
+
+  select[name=selling_plan] {
+    background-size: 3%;
+  }
   
 }
 
