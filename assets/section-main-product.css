@@ -1278,7 +1278,8 @@ fieldset.product-form__input .form__label {
   border: 1px solid #545759;
 }
 
-.product-form__input .Variant_Blocks input[type=radio] + label::after {
+.product-form__input .Variant_Blocks input[type=radio] + label::after,
+.Product_Bar_Variant .product-form__input input[type=radio] + label::after  {
   content: "";
   position: absolute;
   height: 20px;
@@ -1298,7 +1299,8 @@ fieldset.product-form__input .form__label {
   background-color: #F8F1EB;
 }
 
-.product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
+.product-form__input .Variant_Blocks input[type=radio]:checked + label::before,
+.Product_Bar_Variant .product-form__input input[type=radio]:checked + label::before {
   content: "";
   position: absolute;
   top: 23px;
