@@ -123,6 +123,31 @@
   left: 9.5px;
 }
 
+.Product_Bar_Variant .product-form__input input[type=radio] + label::after  {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  top: 19px;
+  left: 16px;
+  border: 1px solid #1F2322;
+}
+
+.Product_Bar_Variant .product-form__input input[type=radio]:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 24px;
+  width: 5px;
+  height: 11px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  z-index: 11;
+}
+
 @media screen and (max-width: 1137px) {
   .product-bar-toggle  .product-quick-add__form {
     flex-direction: column;
