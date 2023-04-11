@@ -226,10 +226,13 @@
                     >
               <div style="display: flex;">
                 {%- if product.selected_or_first_available_variant.available -%}
-                  {% render 'rtx_price'%}
-                 
-                {% comment %} Add to Cart —&nbsp; {% endcomment %}
-                {%comment%} {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%endcomment%}
+                 Add to Cart —&nbsp; 
+                {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                  {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                {% else %}
+                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                {% endif %}
+                {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
                   <span data-smartrr-compare-price></span>
                   <span data-smartrr-regular-price></span>
