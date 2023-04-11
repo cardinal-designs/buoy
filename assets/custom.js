@@ -29,36 +29,6 @@ $( document ).ready(function() {
   if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
 });
 
-// $('#rtx_sands_block').click(function() {
-//   $('.product-quick-add__form-item.subscription').find('input').prop( "checked", true );  
-//   $('.product-quick-add__form-item.one-time').find('input').prop( "checked", false );  
-// });
- 
-// $('#rtx_option_one_time').click(function() {
-//   $('.product-quick-add__form-item.subscription').find('input').prop( "checked", false );  
-//   $('.product-quick-add__form-item.one-time').find('input').prop( "checked", true );  
-// }); 
-
-// $( ".product-form__input .Variant_Blocks" ).each(function() {
-//  $(this).on("click", function(){
-//     var index = $(this).index();
-//     $(".Product_Bar_Variants" ).each(function() {
-//       var index1 = $(this).index();
-//       if(index == index1) {
-//         $(".Product_Bar_Variants").removeClass('show');
-//         $(".Product_Bar_Variants").eq(index).addClass('show');
-//         $(".Product_Bar_Variants").find('input').prop( "checked", false );
-//         $(".Product_Bar_Variants").eq(index).find('input').prop( "checked", true );
-//       }
-//     });
-
-//     var variant_id = $(this).attr('data-id');
-//     console.log(variant_id);
-
-//     $('.product-bar__container .js-add-to-cart').attr('data-id', variant_id);
-//   });
-// }); 
-
 $('.related-blog-wrapper .article-card__title').matchHeight();
 
 $('.Testimonials_Slider').slick({
