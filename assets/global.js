@@ -621,16 +621,22 @@ class VariantSelects extends HTMLElement {
   toggleAddButton(disable = true, text, modifyClass = true, price) {
     const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]');
 
-    console.log(addButton);
-
     if (!addButton) return;
+
+    let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
+    let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
+    if(subscriptionOption){
+      if(subscriptionOption.value == "purchaseTypeSubscription"){
+        addToCartText = `Add to Cart - ${addButton.dataset.subscriptionPrice}`;
+      }
+    }
 
     if (disable) {
       addButton.setAttribute('disabled', true);
       if (text) addButton.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.textContent = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
+      addButton.textContent = addToCartText;
     }
 
     if (!modifyClass) return;
@@ -1328,10 +1334,10 @@ $(document).on('click', '.cart-drawer__radio-container label' , function() {
   $('.slideout-button span').text(price);
 })
 
-$(document).on('change', '.product-quick-add__form-item input' , function() {
-  let price = $(this).data('price')
-  $('.button-money').text(price)
-})
+// $(document).on('change', '.product-quick-add__form-item input' , function() {
+//   let price = $(this).data('price')
+//   $('.button-money').text(price)
+// })
 
 
 
