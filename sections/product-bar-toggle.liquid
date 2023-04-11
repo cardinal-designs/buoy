@@ -72,7 +72,7 @@
             <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" {% if selectedAllocation == blank %} checked {% endif %}>
             <label class="body" for="one-time--{{ section.id }}">
               <span>One-time</span>
-              <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              <span class="hide-mobile">&nbsp;|&nbsp;</span>
               <span class="hide-mobile">{{ product.price | money_without_trailing_zeros  }}</span>
             </label>
           </div>
