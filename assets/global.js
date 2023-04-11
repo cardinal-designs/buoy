@@ -621,6 +621,8 @@ class VariantSelects extends HTMLElement {
   toggleAddButton(disable = true, text, modifyClass = true, price) {
     const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]');
 
+    console.log(addButton);
+
     if (!addButton) return;
 
     if (disable) {
