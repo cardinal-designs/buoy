@@ -10,6 +10,7 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <section data='{{product | json}}' class="page-width">
+  <input type="hidden" id='current_variant_price' value="{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
      
     {% render 'supplement-facts-drawer' %}
