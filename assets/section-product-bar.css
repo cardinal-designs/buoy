@@ -107,6 +107,7 @@
 .Product_Bar_Variant .product-form__input input[type=radio] + label {
   position: relative;
   padding: 0 0 0 30px;
+  font-family: inter,sans-serif;
 }
 
 .Product_Bar_Variant .product-form__input input[type=radio] + label:after {
