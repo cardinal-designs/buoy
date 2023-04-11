@@ -418,8 +418,8 @@
           sellingPlan.disabled = false;
           document.querySelector('.js-sticky-subscription-btns input[value="subscription"]').checked = true;
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerText = `Add to Cart -- ${mainProductButton.dataset.subscriptionPrice}`;
-            stickyButton.innerText = `Add to Cart -- ${mainProductButton.dataset.subscriptionPrice}`;
+            mainProductButton.innerText = `Add to Cart —&nbsp; ${mainProductButton.dataset.subscriptionPrice}`;
+            stickyButton.innerText = `Add to Cart —&nbsp; ${mainProductButton.dataset.subscriptionPrice}`;
           }
         } else {
           subscriptionBoxHide();
@@ -427,8 +427,8 @@
           document.querySelector('.js-sticky-subscription-btns input[value="one-time"]').checked = true;
           
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerText = `Add to Cart -- ${document.querySelector('#current_variant_price').value}`;
-            stickyButton.innerText = `Add to Cart -- ${document.querySelector('#current_variant_price').value}`;
+            mainProductButton.innerText = `Add to Cart —&nbsp; ${document.querySelector('#current_variant_price').value}`;
+            stickyButton.innerText = `Add to Cart —&nbsp; ${document.querySelector('#current_variant_price').value}`;
           }
         }
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
