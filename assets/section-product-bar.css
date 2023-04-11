@@ -197,6 +197,10 @@
   .Product_Bar_Variant .product-form__input input[type=radio]+label:after {
     top: -1px;
   }
+
+  .Product_Bar_Variant .product-form__input input[type=radio]:checked+label:before {
+    top: 2px;
+  }
   
 }
 
