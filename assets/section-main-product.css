@@ -1347,6 +1347,10 @@ fieldset.product-form__input .form__label {
   font-weight: 400;
 }
 
+.Product_Bar_Variant .product-form__input input[type=radio]+label {
+  position: relative;
+}
+
 @media screen and (max-width: 1365px) {
 
   .Best_Value {
