@@ -612,6 +612,8 @@ class VariantSelects extends HTMLElement {
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
+        document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
+
         document.getElementById('price-' + this.dataset.section)?.classList.remove('visibility-hidden');
         console.log(this.currentVariant)
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut, this.currentVariant.price);
