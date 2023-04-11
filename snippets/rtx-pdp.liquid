@@ -410,15 +410,26 @@
     // Event Listeners
     elementsPurcahseTypeRadio.forEach(el => {
       el.addEventListener('change', e => {
-        let elValue = el.value
+        let elValue = el.value;
+        let mainProductButton = document.querySelector('.js-mainproduct-submit'),
+            stickyButton = document.querySelector('.js-sticky-add-to-cart'),;
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
           document.querySelector('.js-sticky-subscription-btns input[value="subscription"]').checked = true;
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerText = `Add to Cart -- ${mainProductButton.dataset.subscriptionPrice}`;
+            stickyButton.innerText = `Add to Cart -- ${mainProductButton.dataset.subscriptionPrice}`;
+          }
         } else {
           subscriptionBoxHide();
           sellingPlan.disabled = true;
           document.querySelector('.js-sticky-subscription-btns input[value="one-time"]').checked = true;
+          
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerText = `Add to Cart -- ${document.querySelector('#current_variant_price').value}`;
+            stickyButton.innerText = `Add to Cart -- ${document.querySelector('#current_variant_price').value}`;
+          }
         }
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
           input.disabled = (elValue != 'purchaseTypeSubscription');
