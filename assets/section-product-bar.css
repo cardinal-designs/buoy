@@ -119,6 +119,11 @@
   background-color: #1f2322;
 }
 
+.Product_Bar_Variant .product-form__input input[type=radio]:checked+label:before {
+  top: 1px;
+  left: 9px;
+}
+
 @media screen and (max-width: 1137px) {
   .product-bar-toggle  .product-quick-add__form {
     flex-direction: column;
