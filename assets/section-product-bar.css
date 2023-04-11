@@ -176,6 +176,10 @@
     display: block;
   }
 
+  .product-bar__title h5 {
+    font-size: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
