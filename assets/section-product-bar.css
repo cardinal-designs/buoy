@@ -137,8 +137,8 @@
 .Product_Bar_Variant .product-form__input input[type=radio]:checked + label::before {
   content: "";
   position: absolute;
-  top: 23px;
-  left: 24px;
+  top: 0px;
+  left: 13px;
   width: 5px;
   height: 11px;
   border: solid #FFFFFF;
