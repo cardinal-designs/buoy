@@ -58,6 +58,10 @@
   border: 1px solid var(--charcoal);
 }
 
+.product-bar-toggle .product-quick-add__form-item input:checked + label::before {
+  background: #1F2322;  
+}
+
 .product-bar-toggle .product-quick-add__form-item label::after {
   content: '';
   height: 10px;
