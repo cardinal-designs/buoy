@@ -179,6 +179,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .product-bar {
     padding-top: 10px;
     top: unset;
@@ -241,6 +242,12 @@
     gap: 30px;
     flex-direction: row;
   }
+
+  .Product_Bar_Variants {
+    display: inline-block;
+    margin: 0 0 20px;
+  }
+  
 }
 
 .product-bar-illness__flex {
