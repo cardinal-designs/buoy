@@ -171,7 +171,11 @@
   .product-bar-toggle .flex-buttons-bar {
     gap: 20px;
   }
-  
+
+  .Product_Bar_Variants {
+    display: block;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
