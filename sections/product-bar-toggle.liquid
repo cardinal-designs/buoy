@@ -13,7 +13,7 @@
   {% assign num = 0 %}
 
   {%- liquid
-    assign currentVariant = variant | default: product.selected_or_first_available_variant
+    assign currentVariant = product.selected_or_first_available_variant
     assign requiresPlan = product.requires_selling_plan
     assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
     assign currentAllocations = currentVariant.selling_plan_allocations
@@ -69,36 +69,36 @@
       <div class="flex-buttons-bar">
         <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
-            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ product.price | money_without_trailing_zeros }}" {% if selectedAllocation == blank %} checked {% endif %}>
+            <input type="radio" id="one-time--{{ section.id }}" value="one-time" name="form-{{ section.id }}" data-price="{{ currentVariant.price | money_without_trailing_zeros }}" {% if selectedAllocation == blank %} checked {% endif %}>
             <label class="body" for="one-time--{{ section.id }}">
               <span>One-time</span>
               <span class="hide-mobile">&nbsp;|&nbsp;</span>
-              <span class="hide-mobile">{{ product.price | money_without_trailing_zeros  }}</span>
+              <span class="hide-mobile">{{ currentVariant.price | money_without_trailing_zeros  }}</span>
             </label>
           </div>
           <div class="product-quick-add__form-item subscription">
-            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}" {% if selectedAllocation != blank %} checked {% endif %}>
+            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}" {% if selectedAllocation != blank %} checked {% endif %}>
             <label class="body" for="subscription--{{ section.id }}">
               <span>Subscribe & Save</span>
               <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-              <span data-id="{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | json }}" class="hide-mobile">
-                  {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              <span data-id="{{ currentVariant.selling_plan_allocations[0].price | json }}" class="hide-mobile">
+                  {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </label>
           </div>
         </div>
         <button class="button js-sticky-add-to-cart" 
                 type="button"
-                {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                data-id="{{ product.selected_or_first_available_variant.id }}" 
+                {% if currentVariant.available == false %}disabled{% endif %}
+                data-id="{{ currentVariant.id }}" 
                 data-time="one-time">
 
-          {% if product.selected_or_first_available_variant.available == false %}
+          {% if currentVariant.available == false %}
           <span>Sold Out</span>
           {% else %}
           <span>Add to Cart</span> — 
-          <span class="button-money">{{ product.price | money_without_trailing_zeros }}</span>
+          <span class="button-money">{{ currentVariant.price | money_without_trailing_zeros }}</span>
           {% endif %}
         </button>
       </div>
