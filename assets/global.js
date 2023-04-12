@@ -106,9 +106,11 @@ function debounce(fn, wait) {
 const serializeForm = form => {
   const obj = {};
   const formData = new FormData(form);
+  let properties = {};
   for (const key of formData.keys()) {
-    obj[key] = formData.get(key);
+    (key.includes('properties')) ? properties[key.replace('properties[','').replace(']','')] =  formData.get(key) : obj[key] = formData.get(key);
   }
+  if(Object.keys(properties).length != 0) obj.properties = properties;
   return JSON.stringify(obj);
 };
 
@@ -518,8 +520,16 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
     }
+
+    this.updateSticky();
   }
 
+  updateSticky(){
+    this.currentVariant.options.forEach(function (option,index) {
+      document.querySelector(`.js-sticky-variants input[data-option="option-${index}"][value="${option}"]`).checked = true;
+    });
+  }
+  
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
@@ -601,6 +611,8 @@ class VariantSelects extends HTMLElement {
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
+        document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
+
         document.getElementById('price-' + this.dataset.section)?.classList.remove('visibility-hidden');
         console.log(this.currentVariant)
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut, this.currentVariant.price);
@@ -608,16 +620,38 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]');
+    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]'),
+          stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
+    let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText);
+
+    let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
+    let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
+    if(subscriptionOption){
+      if(subscriptionOption.value == "purchaseTypeSubscription"){
+        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id].subscription_price}`;
+      }
+    }
+
+    document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price').forEach(element => {
+      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : variantJson[this.currentVariant.id].subscription_price;
+    });
+
+    addButton.dataset.available = (!disable);
 
     if (disable) {
       addButton.setAttribute('disabled', true);
       if (text) addButton.textContent = text;
+      
+      stickyButton.setAttribute('disabled', true);
+      if (text) stickyButton.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.textContent = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
+      addButton.textContent = addToCartText;
+      
+      stickyButton.removeAttribute('disabled');
+      stickyButton.textContent = addToCartText;
     }
 
     if (!modifyClass) return;
@@ -1315,10 +1349,10 @@ $(document).on('click', '.cart-drawer__radio-container label' , function() {
   $('.slideout-button span').text(price);
 })
 
-$(document).on('change', '.product-quick-add__form-item input' , function() {
-  let price = $(this).data('price')
-  $('.button-money').text(price)
-})
+// $(document).on('change', '.product-quick-add__form-item input' , function() {
+//   let price = $(this).data('price')
+//   $('.button-money').text(price)
+// })
 
 
 

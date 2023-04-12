@@ -1345,6 +1345,10 @@ fieldset.product-form__input .form__label {
   font-weight: 400;
 }
 
+.Product_Bar_Variant .product-form__input input[type=radio]+label {
+  position: relative;
+}
+
 @media screen and (max-width: 1365px) {
 
   .Best_Value {
@@ -1456,33 +1460,33 @@ fieldset.product-form__input .form__label {
   border-bottom: 1px solid rgb(31 35 34 / 10%);
 }
 
-.product-form input[type=radio] {
+.product-form .rtx_option_selector input[type=radio] {
   height: 20px;
   width: 20px;
   margin-top: 5px!important;
   position: relative;
 }
 
-.product-form input[type=radio]:before {
+.product-form .rtx_option_selector input[type=radio]:before {
   width: 18px;
   margin: -1px -1px;
   height: 18px;
 }
 
-.product-form input[type=radio]:checked:after {
+.product-form .rtx_option_selector input[type=radio]:checked:after {
   content: "";
   position: absolute;
   top: 2px;
   left: 6px;
-  width: 4.5px;
-  height: 10px;
+  width: 5px;
+  height: 11px;
   border: solid #FFFFFF;
-  border-width: 0 1px 1px 0;
+  border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  display: block;
+  z-index: 11;
 }
 
-.product-form input[type="radio"]:checked::before {
+.product-form .rtx_option_selector input[type="radio"]:checked::before {
   background: #1F2322;
 }
 
@@ -2004,7 +2008,7 @@ span#rtx_one_price_save,
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
   height: 100%!important;
   clip: inherit!important;
-  right: -44px;
+  right: -75px;
   font-family: inter,sans-serif;
   font-style: normal;
   font-weight: 500!important;
@@ -2017,7 +2021,7 @@ span#rtx_one_price_save,
 }
 
 .product__info-container .okeReviews-reviewsSummary-ratingCount {
-  left: 44px;
+  left: 74px;
 }
 
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text{
@@ -2055,6 +2059,107 @@ span#rtx_one_price_save,
 
 .Order_Within span {
   font-weight: 700;
+}
+
+
+.Product_Bar_Variants .Variant_Blocks input[type=radio]+label {
+  padding: 0;
+  width: auto;
+  height: auto;
+  text-align: left;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+}
+
+.rtx-subscription-box input,
+#subscriptionMessage {
+  width: 100%;
+  padding: 16px!important;
+  border: 1px solid black;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+}
+
+.rtx-gift-box label {
+  margin-bottom: 5px;
+  position: unset;
+  display: block;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.375em;
+  text-align: left;
+}
+
+.rtx-gift-box > div {
+  margin: 2rem 0 0;
+}
+
+label[for=subscriptionGift] {
+  font-size: 14px;
+  color: #1f2322;
+  font-family: inter,sans-serif;
+  line-height: 17px;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-style: italic;
+}
+
+label[for=subscriptionGift] span {
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  font-style: normal;
+  margin: 0px 0px 0 3px;
+}
+
+input#subscriptionGift {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: auto;
+}
+
+.product-form .rtx_option_selector input[type=radio]:checked + .rtx_option_label .rtx_option_heading {
+  opacity:1;
+}
+
+select[name=selling_plan] {
+  font-size: 14px;
+  display: block;
+  padding: 14.5px 10px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 17px;
+  border: 1px solid #545759;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.98561 4.8066L8.80576 1.10922C9.06475 0.862723 9.06475 0.431362 8.80576 0.184869C8.54676 -0.0616231 8.09352 -0.0616231 7.83453 0.184869L4.53237 3.45089L1.16547 0.246492C0.906475 -7.45058e-08 0.453237 -1.04308e-07 0.194245 0.246492C-0.0647482 0.492984 -0.0647482 0.924346 0.194245 1.17084L4.07914 4.86822C4.33813 5.05309 4.72662 5.05309 4.98561 4.8066Z' fill='%23222727'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 2%;
+  background-position: 98% 50%;
+}
+
+.product-bar__container .product-form__input {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -2190,7 +2295,7 @@ span#rtx_one_price_save,
     font-size: 16px;
   }
 
-  .product-form input[type=radio] {
+  .product-form .rtx_option_selector input[type=radio] {
     margin-top: 3px!important;
   }
 
@@ -2210,6 +2315,10 @@ span#rtx_one_price_save,
 
   .product-form input[type=radio]:checked:after {
     top: 2px;
+  }
+
+  select[name=selling_plan] {
+    background-size: 3%;
   }
   
 }

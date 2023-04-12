@@ -23,14 +23,13 @@ $( document ).ready(function() {
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
     $(this).siblings('.Subscribe_Box').removeClass('active');
-    document.querySelector('.rtx_option_selector input:checked').click();
+    if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
   });
 
-  document.querySelector('.rtx_option_selector input:checked').click();
+  if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
 });
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
-
 
 $('.Testimonials_Slider').slick({
   dots: true,
@@ -174,8 +173,11 @@ $(window).on("orientationchange, resize", function(event) {
 
 /* okendo review replce string on PDP */
 
-var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText;
-document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/');
+var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
+if(ratingCount){
+  ratingCount.innerText;
+  document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
+}
 
 let myInterval = setInterval(timer, 1000);
 function timer() {

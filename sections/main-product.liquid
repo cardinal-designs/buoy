@@ -9,7 +9,8 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-<section data="{{product | json}}" class="page-width">
+<section data='{{product | json}}' class="page-width">
+  <input type="hidden" id='current_variant_price' value="{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
      
     {% render 'supplement-facts-drawer' %}
@@ -102,7 +103,7 @@
                 {% assign values = values | split:',' %}
 
                  {% assign my_fields = variant.metafields.custom %}
-                  <span class="Variant_Blocks">
+                  <span class="Variant_Blocks" data-id={{ variant.id }}>
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                       name="{{ option.name }}"
                       value="{{ value | escape }}"
@@ -193,6 +194,7 @@
 
           {% comment %} {% render 'smartrr-product' %} {% endcomment %}
           {% render 'rtx-pdp' %}
+          {% # render 'rtx-pdp--old' %}
 
           {% comment %}
             {% if product.metafields.my_fields.product_grid_1 != blank %}
@@ -219,15 +221,20 @@
                     type="submit"
                     name="add"
                     style="flex-direction: column; padding: 12px 10px;"
-                    class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    data-available="{{ product.selected_or_first_available_variant.available }}"
+                    class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    data-subscription-price = "{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                     >
               <div style="display: flex;">
                 {%- if product.selected_or_first_available_variant.available -%}
-                  {% render 'rtx_price'%}
-                 
-                {% comment %} Add to Cart —&nbsp; {% endcomment %}
-                {%comment%} {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}{%endcomment%}
+                 Add to Cart —&nbsp; 
+                {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                  {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                {% else %}
+                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                {% endif %}
+                {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
                   <span data-smartrr-compare-price></span>
                   <span data-smartrr-regular-price></span>
@@ -247,14 +254,16 @@
             </div>
             {%- endif -%}
           </div>
-          {%- endform -%}
-        </product-form>
 
-        {% if settings.show_shipping_countdown != blank %}
+          {% if settings.show_shipping_countdown != blank %}
           <div id="Order_Within" class="Order_Within Risk_Free">
              {{ settings.order_within_text }}
           </div>
         {% endif %}
+          
+          
+          {%- endform -%}
+        </product-form>
 
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
@@ -557,6 +566,16 @@
 </div>
 
 <div class="show-product-bar"></div>
+<script type="application/json" id="js-product-variant-json">
+  {
+    {% for variant in product.variants %}
+      "{{ variant.id }}":{
+        "price":"{{ variant.price | money_without_trailing_zeros }}",
+        "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
 
 {% comment %}
 {% unless product.type == 'Bundle' %}
