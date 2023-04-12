@@ -99,8 +99,7 @@
           {% else %}
           <span>Add to Cart</span> — 
           <span class="button-money">
-            -----{{ selectedAllocation[0].price }}
-            {{ selectedAllocation[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
           </span>
           {% endif %}
         </button>
