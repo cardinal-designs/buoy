@@ -82,7 +82,7 @@
               <span>Subscribe & Save</span>
               <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
               <span data-id="{{ currentVariant.selling_plan_allocations[0].price | json }}" class="hide-mobile">
-                  <label class="js-subscription-price">{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}</label>
+                <span class="js-subscription-price">{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}</span>
                 <span class="discount-price js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </label>
