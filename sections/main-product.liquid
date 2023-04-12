@@ -566,6 +566,15 @@
 </div>
 
 <div class="show-product-bar"></div>
+<script type="application/json" id="js-product-variant-json">
+  {
+    {% for variant in product.variants %}
+      "{{ variant.id }}":{
+        "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
 
 {% comment %}
 {% unless product.type == 'Bundle' %}
