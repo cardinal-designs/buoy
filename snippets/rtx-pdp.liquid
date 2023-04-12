@@ -167,7 +167,7 @@
           <label for="purchaseTypeOneTime" class="rtx_option_label">
               <div class="rtx_option_heading">
                 One-Time Purchase 
-                <span class="rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
+                <span class="rtx_one_time_price js-rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</span>
               </div>
           </label>
         </div>
@@ -180,8 +180,8 @@
                   <div class="rtx_option_heading">
                     Subscribe
                     <div class="Multi_Price">
-                      <span class="rtx_one_time_price"><s>{{ product.price | money_without_trailing_zeros }}</s></span>
-                      <span id="rtx_one_price_save">
+                      <span class="rtx_one_time_price"><s class="js-rtx_one_time_price">{{ product.price | money_without_trailing_zeros }}</s></span>
+                      <span id="rtx_one_price_save js-subscription-price">
                         {{- currentAllocations[0].price | money_without_trailing_zeros -}}
                       </span>
                     </div>
