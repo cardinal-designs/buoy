@@ -621,15 +621,17 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]');
+    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]'),
+          stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
+    let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText);
 
     let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
     let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart —  ${addButton.dataset.subscriptionPrice}`;
+        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id]}`;
       }
     }
 
@@ -638,9 +640,15 @@ class VariantSelects extends HTMLElement {
     if (disable) {
       addButton.setAttribute('disabled', true);
       if (text) addButton.textContent = text;
+      
+      stickyButton.setAttribute('disabled', true);
+      if (text) stickyButton.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
       addButton.textContent = addToCartText;
+      
+      stickyButton.removeAttribute('disabled');
+      stickyButton.textContent = addToCartText;
     }
 
     if (!modifyClass) return;
