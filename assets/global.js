@@ -636,7 +636,7 @@ class VariantSelects extends HTMLElement {
     }
 
     document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price').forEach(element => {
-      element.innerText = (element.classList.contains(js-rtx_one_time_price)) ? variantJson[this.currentVariant.id].price : variantJson[this.currentVariant.id].subscription_price;
+      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : variantJson[this.currentVariant.id].subscription_price;
     });
 
     addButton.dataset.available = (!disable);
