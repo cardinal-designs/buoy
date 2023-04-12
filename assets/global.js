@@ -631,7 +631,7 @@ class VariantSelects extends HTMLElement {
     let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id]}`;
+        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id].subscription_price}`;
       }
     }
 
