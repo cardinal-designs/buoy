@@ -285,6 +285,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .product-bar-toggle .product-quick-add__form-item label:after {
+    top: 15px;
+  }
   
 }
 
