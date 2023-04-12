@@ -414,7 +414,7 @@
         let mainProductButton = document.querySelector('.js-mainproduct-submit'),
             stickyButton = document.querySelector('.js-sticky-add-to-cart');
         let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
-            currentVariant = productForm,productForm.id.value;
+            currentVariant = productForm.id.value;
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
