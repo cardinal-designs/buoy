@@ -77,12 +77,12 @@
             </label>
           </div>
           <div class="product-quick-add__form-item subscription">
-            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}" {% if selectedAllocation != blank %} checked {% endif %}>
+            <input type="radio" id="subscription--{{ section.id }}" value="subscription" data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}" name="form-{{ section.id }}" data-price="{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}" {% if selectedAllocation != blank %} checked {% endif %}>
             <label class="body" for="subscription--{{ section.id }}">
               <span>Subscribe & Save</span>
               <span class="hide-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-              <span data-id="{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | json }}" class="hide-mobile">
-                  {{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+              <span data-id="{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | json }}" class="hide-mobile">
+                  {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                 <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
               </span>
             </label>
