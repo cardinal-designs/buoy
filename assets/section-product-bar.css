@@ -47,15 +47,16 @@
 }
 
 .product-bar-toggle .product-quick-add__form-item label::before {
-  content: '';
+  content: "";
   height: 18px;
   width: 18px;
   position: absolute;
-  top: 1px;
+  top: 50%;
   left: 0;
   border-radius: 100%;
   background: white;
   border: 1px solid var(--charcoal);
+  transform: translateY(-50%);
 }
 
 .product-bar-toggle .product-quick-add__form-item input:checked + label::before {
