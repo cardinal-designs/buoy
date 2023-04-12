@@ -413,15 +413,15 @@
         let elValue = el.value;
         let mainProductButton = document.querySelector('.js-mainproduct-submit'),
             stickyButton = document.querySelector('.js-sticky-add-to-cart');
-        let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText);
-        console.log(productForm,productForm.id)
+        let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
+            currentVariant = productForm,productForm.id.value;
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
           document.querySelector('.js-sticky-subscription-btns input[value="subscription"]').checked = true;
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${mainProductButton.dataset.subscriptionPrice}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp; ${mainProductButton.dataset.subscriptionPrice}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant.subscription_price]}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant.subscription_price]}`;
           }
         } else {
           subscriptionBoxHide();
@@ -429,8 +429,8 @@
           document.querySelector('.js-sticky-subscription-btns input[value="one-time"]').checked = true;
           
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${document.querySelector('#current_variant_price').value}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp; ${document.querySelector('#current_variant_price').value}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant.price]}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant.price]}`;
           }
         }
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
