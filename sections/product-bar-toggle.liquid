@@ -98,7 +98,9 @@
           <span>Sold Out</span>
           {% else %}
           <span>Add to Cart</span> — 
-          <span class="button-money">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+          <span class="button-money">
+            {{ selectedAllocation[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+          </span>
           {% endif %}
         </button>
       </div>
