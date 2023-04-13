@@ -235,6 +235,26 @@
         </div>
       </div>
     {%- endunless -%}
+
+  {%- comment -%} Subscription Box {%- endcomment -%}
+    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
+  
+      <select name="selling_plan">
+        {%- liquid
+          for allocation in currentAllocations
+            assign plan = allocation.selling_plan
+            echo '<option'
+            if plan.selected or sellectedAllocation == blank and forloop.first
+              echo ' selected'
+            endif
+            echo ' value="' | append: plan.id | append: '">'
+            echo plan.name | escape
+            echo '</option>'
+          endfor
+        -%}
+      </select>
+  
+    </div>
   
   </div>
   
