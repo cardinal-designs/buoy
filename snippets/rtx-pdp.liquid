@@ -237,6 +237,7 @@
     {%- endunless -%}
 
   {%- comment -%} Subscription Box {%- endcomment -%}
+  {% comment %}
     <div style="display: none !important;" data-retextion-subscription-box class="rtx-subscription-box {% comment %}{% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}{% endcomment %}">
   
       <select name="selling_plan">
@@ -276,7 +277,7 @@
         </div>
         <p>You will provide the shipping information during checkout.</p>
       </div>
- 
+ {% endcomment %}
       {%- comment -%} Selling Plan Options {%- endcomment -%}
   
     </div>
