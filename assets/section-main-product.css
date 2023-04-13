@@ -2320,6 +2320,10 @@ select[name=selling_plan] {
   select[name=selling_plan] {
     background-size: 3%;
   }
+
+  label[for=subscriptionGift] {
+    margin: 24px 0 10px;
+  }
   
 }
 
