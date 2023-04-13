@@ -237,7 +237,7 @@
     {%- endunless -%}
 
   {%- comment -%} Subscription Box {%- endcomment -%}
-    <div data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
+    <div style="display: none;" data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
   
       <select name="selling_plan">
         {%- liquid
