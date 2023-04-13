@@ -371,6 +371,9 @@
                     <div class="sh4 single_line_text_field">{{ product.metafields.custom.new_ingredients_tab }}</div>
                     <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
                     <div class="Why_This_Matters">
+                      {% if product.metafields.custom.why_matters_text != blank %}
+                       <p>{{ product.metafields.custom.why_matters_text }}</p>
+                      {% endif %}
                       <a href="#Dropdowns_Container">{{ 'products.general.matters' | t }} <span><img src="{{ 'down-arrow.png' | asset_url }}"</span></a>
                     </div>
                   </div>
