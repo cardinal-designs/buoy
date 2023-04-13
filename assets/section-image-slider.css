@@ -52,7 +52,8 @@
 
 .image-slider__subtitle {
   margin: 30px auto 58px;
-  font-weight: lighter;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
