@@ -196,7 +196,7 @@
                       </p>
                     {% endcomment %}
                       <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
-                        {{ my_fields.subscription_text | default: block.settings.onetime_purchase_type_text }}
+                        {{ my_fields.one_time_purchase_subtext | default: block.settings.onetime_purchase_type_text }}
                       </p>
                       {%- if block.settings.onetime_purchase_type_subtext != blank -%}
                         <p class="Label_Sub_Text">{{ block.settings.onetime_purchase_type_subtext | newline_to_br }}</p>
