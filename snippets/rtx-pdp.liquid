@@ -174,7 +174,7 @@
                 {% assign my_fields = product.selected_or_first_available_variant.metafields.custom %}
                 {% for block in section.blocks %}
                   {%- case block.type -%}
-                    {%- when 'block' -%}
+                    {%- when 'onetime_block' -%}
                       <div class="subscribe-item_info">
                         {%- if block.settings.onetime_purchase_type_img != blank -%}
                           <img src="{{ block.settings.onetime_purchase_type_img | img_url: 'master' }}">
