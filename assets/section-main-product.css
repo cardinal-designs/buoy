@@ -2372,6 +2372,10 @@ select[name=selling_plan] {
   .template-product .subscribe-item_info p {
     font-size: 12px !important;
   }
+
+  .Badge_Grid_Container {
+    padding: 0;
+  }
   
 }
 
