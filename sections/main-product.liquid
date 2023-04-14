@@ -1038,6 +1038,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         {
           "type": "block",
           "name": "Subscribe Block",
+          "limit":1,
           "settings": [
             {
               "type": "image_picker",
@@ -1053,22 +1054,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
               "type": "textarea",
               "id": "purchase_type_subtext",
               "label": "Subscription subtext"
-            },
-            {
-              "type": "text",
-              "id": "three_bottle_text",
-              "label": "3 Bottle Text"
-            },
-            {
-              "type": "text",
-              "id": "nine_bottle_text",
-              "label": "9 Bottle Text"
             }
           ]
         },
         {
           "type": "onetime_block",
           "name": "OneTime Block",
+          "limit":1,
           "settings": [
             {
               "type": "image_picker",
