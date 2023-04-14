@@ -191,10 +191,11 @@
                           {{ block.settings.three_bottle_text }}
                         </p>
                       {%- endif -%}
-                      <p class="Label_Text js-label-text Nine_Bottle_Text_Onetime" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
-                        {{ my_fields.subscription_text | default: block.settings.onetime_purchase_type_text }}
-                      </p>                    
-                    
+                      {%- if block.settings.nine_bottle_text != blank -%}
+                        <p class="Label_Text js-label-text Nine_Bottle_Text_Onetime" data-cms-text="{{ block.settings.nine_bottle_text }}">
+                          {{ block.settings.nine_bottle_text }}
+                        </p>                    
+                      {%- endif -%}
                       </div>
                     </div>
                   {% endcase %}
