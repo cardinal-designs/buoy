@@ -537,12 +537,14 @@ class VariantSelects extends HTMLElement {
   updateMetafieldText(){
     let selectOption = this.querySelector('.js-variant-metafield'),
         currentVar = this.currentVariant,
-        meta_subscription_text = Array.from(selectOption.options).filter(option => {
+        hiddenOption = Array.from(selectOption.options).filter(option => {
           return (option.getAttribute('value') == currentVar.id);
-        })[0].dataset.subscription_text || null;
-    console.log(meta_subscription_text);
+        })[0];
     document.querySelectorAll('.js-label-text').forEach(element => {
-      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
+      element.innerHTML = (element.classlist.contains('js-subscription')) ? (hiddenOption.dataset.subscription_text != "") ? hiddenOption : element.dataset.cmsText : (hiddenOption.dataset.otpText != "") ? hiddenOption : element.dataset.cmsText ;
+        
+        
+        //(meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
     });
   }
   
