@@ -1513,7 +1513,7 @@ fieldset.product-form__input .form__label {
   display: block;
 }
 
-.product-form #purchaseTypeOneTime input[type=radio]:checked + label .Subscribe_Info {
+.product-form .rtx_option_selector input[type=radio]:checked + label .Subscribe_Info {
   display: block;
 }
 
