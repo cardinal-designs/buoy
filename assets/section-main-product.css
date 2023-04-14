@@ -2175,6 +2175,14 @@ select[name=selling_plan] {
   border: 0;
 }
 
+@media screen and (max-width: 1280px) {
+
+  .Badge_Grid p {
+    font-size: 15px;
+  }
+
+}
+
 @media screen and (max-width: 1199px) {
 
   .template-product .product-section .page-width {
