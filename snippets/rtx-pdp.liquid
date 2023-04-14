@@ -186,6 +186,15 @@
                       {%- if block.settings.onetime_purchase_type_subtext != blank -%}
                         <p class="Label_Sub_Text">{{ block.settings.onetime_purchase_type_subtext }}</p>
                       {%- endif -%}
+                      {%- if block.settings.three_bottle_text != blank -%}
+                        <p class="Label_Text js-label-text Three_Bottle_Text_Onetime" data-cms-text="{{ block.settings.three_bottle_text }}">
+                          {{ block.settings.three_bottle_text }}
+                        </p>
+                      {%- endif -%}
+                      <p class="Label_Text js-label-text Nine_Bottle_Text_Onetime" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
+                        {{ my_fields.subscription_text | default: block.settings.onetime_purchase_type_text }}
+                      </p>                    
+                    
                       </div>
                     </div>
                   {% endcase %}
