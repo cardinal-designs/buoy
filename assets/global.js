@@ -541,10 +541,9 @@ class VariantSelects extends HTMLElement {
           return (option.getAttribute('value') == currentVar.id);
         })[0];
     document.querySelectorAll('.js-label-text').forEach(element => {
-      element.innerHTML = (element.classList.contains('js-subscription')) ? (hiddenOption.dataset.subscription_text != "") ? hiddenOption.dataset.subscription_text : element.dataset.cmsText : (hiddenOption.dataset.otpText != "") ? hiddenOption.dataset.otpText : element.dataset.cmsText ;
-        
-        
-        //(meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
+      element.innerHTML = (element.classList.contains('js-subscription')) ? 
+        ((hiddenOption.dataset.subscription_text != "") ? hiddenOption.dataset.subscription_text : element.dataset.cmsText) :
+        ((hiddenOption.dataset.otpText != "") ? hiddenOption.dataset.otpText : element.dataset.cmsText) ;
     });
   }
   
