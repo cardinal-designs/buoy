@@ -1755,8 +1755,10 @@ fieldset.product-form__input .form__label {
 } 
 
 .Badge_Grid_Item {
-  flex: 0 0 31.33%;
-  max-width: 31.33%;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  display: flex;
+  justify-content: center;
 }
 
 .Risk_Free {
