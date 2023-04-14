@@ -2376,6 +2376,10 @@ select[name=selling_plan] {
   .Badge_Grid_Container {
     padding: 0;
   }
+
+  .Badge_Grid p {
+    font-size: 14px;
+  }
   
 }
 
