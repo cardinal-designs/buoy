@@ -1720,6 +1720,13 @@ fieldset.product-form__input .form__label {
   top: 21px !important;
 }
 
+@media screen and (max-width: 768px) {
+  .three-x-text {
+    font-size: 24px !important;
+    top: 15px !important;
+  }
+}
+
 .template-product .rtx_sub_container .subscribe-item_info {
   margin-left: 35px !important;
   font-size: 12px;
