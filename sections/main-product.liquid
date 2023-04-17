@@ -584,6 +584,10 @@
                   <div class="fixed_badge_center">
                     🛡
                   </div>
+                 {% elsif media_alt == 'more-bioavailable' %}
+                  <div class="fixed_badge_center">
+                    3x
+                  </div>
                 {% endif %} 
                 <div class="rotet_badge_svg">
                   <img src="{{ media_alt | append:'.svg' | file_url }}"/>
