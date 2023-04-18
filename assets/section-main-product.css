@@ -37,8 +37,8 @@
 }
 
 .present {
-  font-style: normal;
-  text-decoration: none;
+  font-style: normal !important;
+  text-decoration: none !important;
 }
 
 .product__info-wrapper .okeReviews {
