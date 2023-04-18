@@ -36,7 +36,8 @@
   background: white;
 }
 
-.Why_This_Matters p:first-of-type {
+.Why_This_Matters p:first-of-type,
+.Why_This_Matters p:first-of-type label {
   margin-bottom: 0 !important;
 }
 
