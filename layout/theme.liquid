@@ -222,10 +222,14 @@
   
   {% render 'shogun-head' %}
 
-{% if template contains 'wpm@' %}
-<meta name="robots" content="noindex"/>
+{% if template contains 'search' %}
+<meta name="robots" content="noindex">
 {% endif %}
 
+  {% if template contains 'sample-page' %}
+<meta name="robots" content="noindex">
+{% endif %}
+  
 </head>
 
   <body class="{% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
