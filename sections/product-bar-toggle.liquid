@@ -71,7 +71,7 @@
          {%- for option in product.options_with_values -%}
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
-            <select class="js product-form__input--dropdown js-sticky-variants">
+            <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
             {%- for variant in product.variants -%}
               {% assign value = variant.options[optionIndex] %}
               {%- unless values contains value -%}
