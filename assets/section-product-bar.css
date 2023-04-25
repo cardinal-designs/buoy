@@ -314,6 +314,21 @@
   .product-bar-toggle .product-quick-add__form-item label:after {
     top: 15px;
   }
+
+  .product-bar-toggle .flex-buttons-bar {
+    max-width: 375px;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    column-gap: 7px!important;
+    row-gap: 10px !important;
+  }
+  
+  .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
+    min-width: auto;
+    width: 100%;
+  }
   
 }
 
