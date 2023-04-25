@@ -166,10 +166,9 @@
     variantSelect = mainProduct.querySelector(`variant-selects`) || mainProduct.querySelector(`variant-radios`),
     productForm = mainProduct.querySelector('product-form');
   section.querySelector('.js-sticky-variants').addEventListener('change',function(){
-    console.log('---',this.value)
-    // let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
-    // radio.checked = true;
-    // variantRadio.dispatchEvent(new Event('change'));
+    let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
+    radio.checked = true;
+    variantRadio.dispatchEvent(new Event('change'));
   });
   subscriptionWrapper.querySelectorAll('[type="radio"]').forEach(radio => {
     radio.addEventListener('change',function(){
