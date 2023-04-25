@@ -892,7 +892,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
-          document.querySelector('.js-sticky-subscription-btns input[value="subscription"]').checked = true;
+          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].subscription_price}`;
             stickyButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].subscription_price}`;
@@ -900,7 +900,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         } else {
           subscriptionBoxHide();
           sellingPlan.disabled = true;
-          document.querySelector('.js-sticky-subscription-btns input[value="one-time"]').checked = true;
+          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
           
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].price}`;
