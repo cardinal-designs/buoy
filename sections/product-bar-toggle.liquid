@@ -170,17 +170,15 @@
     radio.checked = true;
     variantRadio.dispatchEvent(new Event('change'));
   });
-  subscriptionWrapper.querySelectorAll('[type="radio"]').forEach(radio => {
-    radio.addEventListener('change',function(){
-      if(this.value == "one-time"){
-        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').checked = true;
-        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').dispatchEvent(new Event('change'));
-      }else{
-        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').checked = true;
-        mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').dispatchEvent(new Event('change'));
-      }
-      // variantSelect.dispatchEvent(new Event('change'));
-    });
+  subscriptionWrapper.addEventListener('change',function(){
+    if(this.value == "one-time"){
+      mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').checked = true;
+      mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeOneTime"]').dispatchEvent(new Event('change'));
+    }else{
+      mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').checked = true;
+      mainProduct.querySelector('[name="purchaseType"][value="purchaseTypeSubscription"]').dispatchEvent(new Event('change'));
+    }
+    // variantSelect.dispatchEvent(new Event('change'));
   });
   section.querySelector('.js-sticky-add-to-cart').onclick = function(){
     productForm.querySelector('[type="submit"]').click();
