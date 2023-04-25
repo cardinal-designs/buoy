@@ -92,7 +92,7 @@
             data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
             >
             <option value="one-time">One-time</option>
-            <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe & Save</option>
+            <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe</option>
           </select>
         {% endif %}
         {% comment %}
