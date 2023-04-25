@@ -631,7 +631,7 @@ class VariantSelects extends HTMLElement {
     let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id].subscription_price}`;
+        addToCartText = `Add to Cart —  <s>${variantJson[this.currentVariant.id].price}</s> ${variantJson[this.currentVariant.id].subscription_price}`;
       }
     }
 
@@ -643,16 +643,16 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', true);
-      if (text) addButton.textContent = text;
+      if (text) addButton.innerHTML = text;
       
       stickyButton.setAttribute('disabled', true);
-      if (text) stickyButton.textContent = text;
+      if (text) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.textContent = addToCartText;
+      addButton.innerHTML = addToCartText;
       
       stickyButton.removeAttribute('disabled');
-      stickyButton.textContent = addToCartText;
+      stickyButton.innerHTML = addToCartText;
     }
 
     if (!modifyClass) return;
