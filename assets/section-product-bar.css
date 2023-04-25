@@ -151,6 +151,11 @@
 
 .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
   min-width: 300px;
+  color: #1F2322;
+}
+
+.product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart .button-money s {
+  font-weight: 300;
 }
 
 .js-sticky-add-to-cart {
