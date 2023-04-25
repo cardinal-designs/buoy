@@ -149,6 +149,10 @@
   z-index: 11;
 }
 
+.product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
+  min-width: 300px;
+}
+
 .js-sticky-add-to-cart {
   cursor: pointer;
 }
