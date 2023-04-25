@@ -325,6 +325,11 @@
     row-gap: 10px !important;
   }
   
+  .product-bar-toggle .flex-buttons-bar .product-form__input--dropdown {
+    width: calc(50% - 4px);
+    min-width: auto;
+  }
+  
   .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
     min-width: auto;
     width: 100%;
