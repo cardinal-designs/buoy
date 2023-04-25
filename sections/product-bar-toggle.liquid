@@ -25,10 +25,9 @@
       <div class="product-bar__title">
         <h5>{{ product.title }}</h5>
       </div>
-      {% unless product.has_only_default_variant %}
-      <span class="Product_Bar_Variant">
 
       {% comment %}
+      <span class="Product_Bar_Variant">
       {%- for variant in product.variants -%}
         <span class="Product_Bar_Variant">
           <label data-id={{ variant.id }} for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
@@ -64,28 +63,28 @@
           {%- endfor -%}
         </fieldset>
         {%- endfor -%}
-        {% endcomment %}
-        
-        {%- for option in product.options_with_values -%}
-         {% assign optionIndex = forloop.index0 %}
-         {% assign values = "" %}
-          <select class="js product-form__input--dropdown js-sticky-variants">
-          {%- for variant in product.variants -%}
-            {% assign value = variant.options[optionIndex] %}
-            {%- unless values contains value -%}
-            {% assign values = values | join:',' %}
-            {% assign values = values | append:',' | append:value %}
-            {% assign values = values | split:',' %}
-              <option value="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
-            {%- endunless -%}
-          {%- endfor -%}
-          </select>
-        {%- endfor -%}
-        
       </span>
-      {% endunless %}
+        {% endcomment %}
       
       <div class="flex-buttons-bar">
+        {% unless product.has_only_default_variant %}
+         {%- for option in product.options_with_values -%}
+           {% assign optionIndex = forloop.index0 %}
+           {% assign values = "" %}
+            <select class="js product-form__input--dropdown js-sticky-variants">
+            {%- for variant in product.variants -%}
+              {% assign value = variant.options[optionIndex] %}
+              {%- unless values contains value -%}
+              {% assign values = values | join:',' %}
+              {% assign values = values | append:',' | append:value %}
+              {% assign values = values | split:',' %}
+                <option value="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
+              {%- endunless -%}
+            {%- endfor -%}
+            </select>
+          {%- endfor -%}
+        {% endunless %}
+        
         {% if product.selling_plan_groups.size > 0 %}
           <select class="product-form__input--dropdown js-sticky-subscription-btns"
             data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
