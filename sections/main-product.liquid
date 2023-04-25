@@ -903,8 +903,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           document.querySelector('.js-sticky-subscription-btns').value = "one-time";
           
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp;  <s>${variantJson[currentVariant].price}</s> &nbsp; ${variantJson[currentVariant].price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;  <s>${variantJson[currentVariant].price}</s> &nbsp; ${variantJson[currentVariant].price}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].price}`;
           }
         }
         /*elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
