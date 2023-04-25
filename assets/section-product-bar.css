@@ -193,10 +193,6 @@
     padding: 0px 30px;
   }
 
-  .product-bar-toggle .flex-buttons-bar {
-    gap: 20px;
-  }
-
   .Product_Bar_Variants {
     display: block;
   }
@@ -220,6 +216,14 @@
 
   .Product_Bar_Variant .product-form__input input[type=radio]:checked+label:before {
     top: 2px;
+  }
+
+  .product-bar-toggle .flex-buttons-bar .product-form__input--dropdown {
+    min-width: 170px;
+  }
+  
+  .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
+    min-width: 200px;
   }
   
 }
