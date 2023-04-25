@@ -37,7 +37,8 @@
         </span>
       {%- endfor -%}
       {% endcomment %}
-      
+
+        {% comment %}
         {%- for option in product.options_with_values -%}
          {% assign optionIndex = forloop.index0 %}
          {% assign values = "" %}
@@ -63,6 +64,24 @@
           {%- endfor -%}
         </fieldset>
         {%- endfor -%}
+        {% endcomment %}
+        
+        {%- for option in product.options_with_values -%}
+         {% assign optionIndex = forloop.index0 %}
+         {% assign values = "" %}
+          <select class="js product-form__input js-sticky-variants">
+          {%- for variant in product.variants -%}
+            {% assign value = variant.options[optionIndex] %}
+            {%- unless values contains value -%}
+            {% assign values = values | join:',' %}
+            {% assign values = values | append:',' | append:value %}
+            {% assign values = values | split:',' %}
+              <option value="{{ variant.id }}" data-option="option-{{ optionIndex }}">{{ value }}</option>
+            {%- endunless -%}
+          {%- endfor -%}
+          </select>
+        {%- endfor -%}
+        
       </span>
       {% endunless %}
       
