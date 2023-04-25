@@ -78,7 +78,7 @@
               {% assign values = values | join:',' %}
               {% assign values = values | append:',' | append:value %}
               {% assign values = values | split:',' %}
-                <option value="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
+                <option value="{{ value }}" data-id="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
               {%- endunless -%}
             {%- endfor -%}
             </select>
