@@ -216,7 +216,7 @@
   }
 
   .product-bar-toggle .flex-buttons-bar .product-form__input--dropdown {
-    min-width: 165px;
+    min-width: 168px;
   }
   
   .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
@@ -226,6 +226,10 @@
 }
 
 @media screen and (max-width: 959px) {
+  
+  .page-width.Product_Bar_Container {
+    padding: 0 27px;
+  }
   
 }
 
