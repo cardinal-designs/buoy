@@ -268,11 +268,11 @@
                                     {{ block.settings.nine_bottle_text }}
                                   </p>                    
                                 {%- endif -%}                        
-                              {% endcomment %}
                               {% assign subscriptionSubtext = product.metafields.custom.subscribe_subtext.value | default:block.settings.purchase_type_subtext %}
                               {%- if subscriptionSubtext != blank -%}
                                 <p class="Label_Sub_Text">{{ subscriptionSubtext | newline_to_br }}</p>
                               {%- endif -%}
+                              {% endcomment %}
                             </div>
                           </div>
                       {% endcase %}
