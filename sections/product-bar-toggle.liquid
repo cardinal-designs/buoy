@@ -165,7 +165,7 @@
     variantRadio = mainProduct.querySelector(`variant-radios`),
     variantSelect = mainProduct.querySelector(`variant-selects`) || mainProduct.querySelector(`variant-radios`),
     productForm = mainProduct.querySelector('product-form');
-  section.querySelectorAll('.js-sticky-variants').addEventListener('change',function(){
+  section.querySelector('.js-sticky-variants').addEventListener('change',function(){
     console.log('---',this.value)
     // let radio = mainProduct.querySelector(`variant-radios [type="radio"][value="${this.value}"]`);
     // radio.checked = true;
