@@ -1,7 +1,9 @@
 {{ 'section-title-text.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width title-text__container">
-  <h1>{{ section.settings.title }}</h1>
+  <h1>{{ section.settings.title }}
+  {% if section.settings.italic_title != blank %} <span>{{ section.settings.italic_title }}</span>{% endif %}
+  </h1>
   <p>{{ section.settings.text }}</p>
 </div>
 
@@ -13,6 +15,11 @@
         "type": "text",
         "id": "title",
         "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "italic_title",
+        "label": "Italic Title (optional)"
       },
       {
         "type": "textarea",
