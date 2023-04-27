@@ -167,6 +167,13 @@
           <label for="purchaseTypeOneTime" class="rtx_option_label">
             <div class="rtx_option_heading">
               One-Time Purchase 
+
+              <div class="Multi_Price">
+                <span class="rtx_one_time_price"><s class="js-rtx_one_time_price">{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s></span>
+                <span class="rtx_one_time_price js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+              </div>
+
+      
               <span class="rtx_one_time_price js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
             </div>
             <div class="Subscribe_Info">
