@@ -3,7 +3,7 @@
     "text_color": "#1f2322",
     "social_twitter_link": "",
     "social_facebook_link": "",
-    "social_instagram_link": "https:\/\/www.instagram.com\/justaddbuoy",
+    "social_instagram_link": "https:\/\/www.instagram.com\/justaddbuoy\/",
     "social_tiktok_link": "https:\/\/tiktok.com\/@justaddbuoy",
     "social_spotify_link": "",
     "show_shipping_countdown": true,
@@ -369,16 +369,16 @@
       },
       "15885745614559378752": {
         "type": "shopify:\/\/apps\/accessibly\/blocks\/app-embed\/4b59303e-1141-4c8a-945f-bf4adb516864",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "themeColor": "#1f2322",
           "iconColor": "#1f2322",
           "showLogo": false,
           "topBottomPosition": 10,
-          "rightLeftPosition": 10,
-          "iconSize": "large",
-          "iconCustomSize": 64,
-          "position": "top-left"
+          "rightLeftPosition": 5,
+          "iconSize": "custom",
+          "iconCustomSize": 30,
+          "position": "middle-right"
         }
       }
     }
