@@ -169,10 +169,10 @@
               One-Time Purchase 
 
               <div class="Multi_Price">
-      {% comment %}
+                {% unless currentVariant.compare_at_price == currentVariant.price %}
                 <span class="rtx_one_time_price"><s class="js-rtx_one_time_price">{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s></span>
-               {% endcomment %}
-      <span class="rtx_one_time_price js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+                {% endunless %}
+                <span class="rtx_one_time_price js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </div>
 
       
