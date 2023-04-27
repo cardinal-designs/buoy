@@ -16,11 +16,14 @@
 .dropdowns__container .h3 {
   margin: 0 0 30px;
   color: #1F2322;
+  font-weight: 400;
 }
 
 .dropdowns__subtitle {
   margin: 0 0 52px;
   color: #545759;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .dropdown-ind-container {
@@ -73,6 +76,7 @@
 .dropdown-ind p {
   color: #1F2322;
   margin-top: 16px;
+  font-weight: 300;
   display: none;
 }
 

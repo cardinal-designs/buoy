@@ -526,7 +526,7 @@ class VariantSelects extends HTMLElement {
 
   updateSticky(){
     this.currentVariant.options.forEach(function (option,index) {
-      document.querySelector(`.js-sticky-variants input[data-option="option-${index}"][value="${option}"]`).checked = true;
+      document.querySelector(`.js-sticky-variants[data-option="option-${index}"]`).value = option;
     });
   }
   
@@ -537,12 +537,13 @@ class VariantSelects extends HTMLElement {
   updateMetafieldText(){
     let selectOption = this.querySelector('.js-variant-metafield'),
         currentVar = this.currentVariant,
-        meta_subscription_text = Array.from(selectOption.options).filter(option => {
+        hiddenOption = Array.from(selectOption.options).filter(option => {
           return (option.getAttribute('value') == currentVar.id);
-        })[0].dataset.subscription_text || null;
-    console.log(meta_subscription_text);
+        })[0];
     document.querySelectorAll('.js-label-text').forEach(element => {
-      element.innerHTML = (meta_subscription_text != null) ? meta_subscription_text : element.dataset.cmsText;
+      element.innerHTML = (element.classList.contains('js-subscription')) ? 
+        ((hiddenOption.dataset.subscription_text != "") ? hiddenOption.dataset.subscription_text : element.dataset.cmsText) :
+        ((hiddenOption.dataset.otpText != "") ? hiddenOption.dataset.otpText : element.dataset.cmsText) ;
     });
   }
   
@@ -630,7 +631,7 @@ class VariantSelects extends HTMLElement {
     let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart —  ${variantJson[this.currentVariant.id].subscription_price}`;
+        addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].subscription_price}`;
       }
     }
 
@@ -642,16 +643,16 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', true);
-      if (text) addButton.textContent = text;
+      if (text) addButton.innerHTML = text;
       
       stickyButton.setAttribute('disabled', true);
-      if (text) stickyButton.textContent = text;
+      if (text) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.textContent = addToCartText;
+      addButton.innerHTML = addToCartText;
       
       stickyButton.removeAttribute('disabled');
-      stickyButton.textContent = addToCartText;
+      stickyButton.innerHTML = addToCartText;
     }
 
     if (!modifyClass) return;

@@ -10,11 +10,13 @@
 .faq-section__title {
   margin: 0 0 40px;
   text-align: center;
+  font-weight: 400;
 }
 
 .faq-section__text {
   margin: 0 0 60px;
   text-align: center;
+  font-weight: 300;
 }
 
 /* FAQ */
@@ -38,6 +40,7 @@
   text-align: left;
   margin: 0;
   padding-right: 30px;
+  font-weight: 400;
 }
 
 .faq__header svg {
@@ -57,6 +60,7 @@
 
 .faq__content .sh4 {
   margin: -6px 0 30px;
+  font-weight: 300;
 }
 
 .faq-video__container {

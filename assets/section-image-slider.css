@@ -10,6 +10,7 @@
 
 .image-slider__container .h3 {
   margin: 0;
+  font-weight: 400;
 }
 
 .image-slider__img-container, .image-slider__img-container-mobile {
@@ -51,7 +52,8 @@
 
 .image-slider__subtitle {
   margin: 30px auto 58px;
-  font-weight: lighter;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
