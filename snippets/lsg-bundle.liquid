@@ -40,6 +40,7 @@
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in collections.all.products %}
     {% assign productSubID = productSub.id | strip %}
+  {{ productSubID  }}
     {% if sub_bundle_products contains productSubID %}111
         {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
     {% endif %}
