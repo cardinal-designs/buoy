@@ -2,6 +2,34 @@
   "sections": {
     "1663729574e4516faa": {
       "type": "lsg-bundle-builder",
+      "blocks": {
+        "a44cd682-01be-430f-997d-f461a76395de": {
+          "type": "bundle",
+          "settings": {
+            "product": "wellness-kit",
+            "title": "Daily Wellness Bundle"
+          }
+        },
+        "e1776c4e-f3e5-4ee6-a6c4-dd1cd8fe5495": {
+          "type": "bundle",
+          "settings": {
+            "product": "energy-drops",
+            "title": "Energy Drops"
+          }
+        },
+        "eaeee886-d303-450e-b9a7-e2c8efd1d9b0": {
+          "type": "bundle",
+          "settings": {
+            "product": "energy-drops-bulk",
+            "title": "Energy Drops 1"
+          }
+        }
+      },
+      "block_order": [
+        "a44cd682-01be-430f-997d-f461a76395de",
+        "e1776c4e-f3e5-4ee6-a6c4-dd1cd8fe5495",
+        "eaeee886-d303-450e-b9a7-e2c8efd1d9b0"
+      ],
       "settings": {
         "setUrl": true,
         "bundle_select_heading": "Select your pack",
