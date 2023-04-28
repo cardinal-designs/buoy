@@ -57,6 +57,9 @@
     {% endfor %}
 {% endfor %}
 
+sub_bundle_products_count :: {{ sub_bundle_products_count }}<br />
+sub_bundle_variants_count :: {{ sub_bundle_variants_count }}<br />
+
 <div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %}"
     data-bundle-product="{{ product.id }}"
     data-bundle-index="{{ bundleIndex }}"
