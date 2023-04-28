@@ -229,6 +229,7 @@
               <div style="display: flex;">
                 {%- if product.selected_or_first_available_variant.available -%}
                  Add to Cart —&nbsp; 
+                {% if currentVariant.compare_at_price > currentVariant.price %}<s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s> {% endif %}
                 {% if product.selected_or_first_available_selling_plan_allocation != blank %}
                   {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                 {% else %}
