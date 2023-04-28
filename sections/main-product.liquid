@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
+{% assign currentVariant = product.selected_or_first_available_variant %}
 <section data='{{product | json}}' class="page-width">
-  <input type="hidden" id='current_variant_price' value="{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" >
+  <input type="hidden" id='current_variant_price' value="{{ currentVariant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
      
     {% render 'supplement-facts-drawer' %}
@@ -177,7 +177,7 @@
                 <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
                   {%- for variant in product.variants -%}
                   <option
-                          {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                          {% if variant == currentVariant %}selected="selected"{% endif %}
                           {% if variant.available == false %}disabled{% endif %}
                           value="{{ variant.id }}"
                           >
@@ -215,24 +215,25 @@
             {% endif %}
           {% endcomment %}
             
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
                     type="submit"
                     name="add"
-                    style="flex-direction: column; padding: 12px 10px;"
-                    data-available="{{ product.selected_or_first_available_variant.available }}"
+                    style="flex-direction: initial; padding: 12px 10px;"
+                    data-available="{{ currentVariant.available }}"
                     class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                    data-subscription-price = "{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                    {% if currentVariant.available == false %}disabled{% endif %}
+                    data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                     >
               <div style="display: flex;">
-                {%- if product.selected_or_first_available_variant.available -%}
+                {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
                 {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                  {{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                  <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                 {% else %}
-                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                  <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
+                  {{ currentVariant.price | money_without_trailing_zeros }}
                 {% endif %}
                 {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
@@ -262,7 +263,7 @@
         {% endif %}
 
 {%- liquid
-    assign currentVariant = product.selected_or_first_available_variant
+    assign currentVariant = currentVariant
     assign requiresPlan = product.requires_selling_plan
     assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
     assign currentAllocations = currentVariant.selling_plan_allocations
@@ -507,8 +508,8 @@
         <div class="product__media-list">
           {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
           {% comment %}
-          {%- if product.selected_or_first_available_variant.featured_media != null -%}
-          {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+          {%- if currentVariant.featured_media != null -%}
+          {%- assign media = currentVariant.featured_media -%}
           <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
             {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
           </div>
@@ -615,6 +616,7 @@
     {% for variant in product.variants %}
       "{{ variant.id }}":{
         "price":"{{ variant.price | money_without_trailing_zeros }}",
+        "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}""{% endif %},
         "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -894,8 +896,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           sellingPlan.disabled = false;
           document.querySelector('.js-sticky-subscription-btns').value = "subscription";
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].subscription_price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;  <s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
           }
         } else {
           subscriptionBoxHide();
@@ -903,8 +905,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           document.querySelector('.js-sticky-subscription-btns').value = "one-time";
           
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp; ${variantJson[currentVariant].price}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
           }
         }
         /*elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
