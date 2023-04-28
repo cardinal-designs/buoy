@@ -299,6 +299,9 @@
     },
     "2595d164-b496-43d3-98ff-86a4d91bbb2b": {
       "type": "product-reviews",
+      "custom_css": [
+        ".product-reviews{margin-top: 50px;}"
+      ],
       "settings": {
         "product": "hydration-drops"
       }
