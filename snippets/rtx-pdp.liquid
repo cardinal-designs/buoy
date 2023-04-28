@@ -168,7 +168,7 @@
             <div class="rtx_option_heading">
               One-Time Purchase 
               <span class="rtx_one_time_price">
-                {% if currentVariant.compare_at_price > currentVariant.price %}<s class="js-main-compare-price">{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s> {% endif %}
+                <s class="js-main-compare-price">{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>
                 <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </div>
