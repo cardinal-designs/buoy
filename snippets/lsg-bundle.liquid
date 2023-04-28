@@ -38,24 +38,26 @@
 
 {% assign sub_bundle_products_count = 0 %}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
-{{ sub_bundle_products | json }}<br />
-{% for productSub in collections.all.products %}
-    {% assign productSubID = productSub.id | strip %}
-  {{ productSubID  }}
-    {% if sub_bundle_products contains productSubID %}111
-        {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
-    {% endif %}
+{% for collection in collections %}
+  {% for productSub in collections.products %}
+      {% assign productSubID = productSub.id | strip %}
+      {% if sub_bundle_products contains productSubID %}
+          {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
+      {% endif %}
+  {% endfor %}
 {% endfor %}
 
 {% assign sub_bundle_variants_count = 0 %}
 {% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
-{% for productSub in collections.all.products %}
-    {% for variantSub in productSub.variants %}
-        {% assign variantSubID = variantSub.id | strip %}
-        {% if sub_bundle_variants contains variantSubID %}
-            {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
-        {% endif %}
-    {% endfor %}
+{% for collection in collections %}
+  {% for productSub in collections.products %}
+      {% for variantSub in productSub.variants %}
+          {% assign variantSubID = variantSub.id | strip %}
+          {% if sub_bundle_variants contains variantSubID %}
+              {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
+          {% endif %}
+      {% endfor %}
+  {% endfor %}
 {% endfor %}
 
 sub_bundle_products_count :: {{ sub_bundle_products_count }}<br />
