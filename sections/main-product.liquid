@@ -615,6 +615,7 @@
     {% for variant in product.variants %}
       "{{ variant.id }}":{
         "price":"{{ variant.price | money_without_trailing_zeros }}",
+        "compare_price":{% if variant.compare_at_price != 0 %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}null{% endif %},
         "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
