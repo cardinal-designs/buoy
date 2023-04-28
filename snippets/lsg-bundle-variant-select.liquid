@@ -30,7 +30,7 @@
         </button>
         <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
         <div class="lsg-bundle-product-select-quantity-input-display">0</div>
-        <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" disabled>
+        <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" {% # disabled %}>
             <svg aria-labelledby="plusIconTitle" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 10 10" fill="none">
                 <title id="plusIconTitle">plus</title>
                     <path d="M10 5L-1.04308e-07 5" stroke="black" stroke-width="2.5"/>
