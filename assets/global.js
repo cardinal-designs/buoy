@@ -635,9 +635,11 @@ class VariantSelects extends HTMLElement {
       }
     }
 
-    document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price').forEach(element => {
-      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : variantJson[this.currentVariant.id].subscription_price;
+    document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
+      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) variantJson[this.currentVariant.id].compare_price ? : variantJson[this.currentVariant.id].subscription_price;
     });
+
+    
 
     addButton.dataset.available = (!disable);
 
