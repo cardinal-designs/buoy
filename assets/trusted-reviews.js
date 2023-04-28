@@ -12,7 +12,7 @@ $(window).on("load resize orientationchange", function(){
   $(".Trusted_Reviews_List").css("padding-left", f_a);
 });
 
-$('.Trusted_Reviews_Wrapper_1 .Trusted_Reviews_Slider').slick({
+$('.Trusted_Reviews_Wrapper .Trusted_Reviews_Slider').slick({
   dots: false,
   arrows: true,
   infinite: true,
