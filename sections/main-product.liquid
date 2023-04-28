@@ -232,7 +232,8 @@
                 {% if product.selected_or_first_available_selling_plan_allocation != blank %}
                   {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                 {% else %}
-                  {% if currentVariant.compare_at_price > currentVariant.price %}<s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s> {% endif %} {{ currentVariant.price | money_without_trailing_zeros }}
+                  <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s> 
+                  {{ currentVariant.price | money_without_trailing_zeros }}
                 {% endif %}
                 {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
