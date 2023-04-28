@@ -40,7 +40,7 @@
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for collection in collections %}
   {% paginate collection.products by 1000 %}
-    {% for productSub in collections.products %}
+    {% for productSub in collection.products %}
         {% assign productSubID = productSub.id | strip %}
         {% if sub_bundle_products contains productSubID %}
             {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
@@ -53,7 +53,7 @@
 {% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
 {% for collection in collections %}
   {% paginate collection.products by 1000 %}
-    {% for productSub in collections.products %}
+    {% for productSub in collection.products %}
         {% for variantSub in productSub.variants %}
             {% assign variantSubID = variantSub.id | strip %}
             {% if sub_bundle_variants contains variantSubID %}
@@ -63,9 +63,6 @@
     {% endfor %}
   {% endpaginate %}
 {% endfor %}
-
-sub_bundle_products_count :: {{ sub_bundle_products_count }}<br />
-sub_bundle_variants_count :: {{ sub_bundle_variants_count }}<br />
 
 <div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %}"
     data-bundle-product="{{ product.id }}"
@@ -83,7 +80,7 @@ sub_bundle_variants_count :: {{ sub_bundle_variants_count }}<br />
                     {% if sub_bundle_products_count > 0 %}
                       {% for collection in collections %}
                         {% paginate collection.products by 1000 %}
-                          {% for productSub in collections.products %}
+                          {% for productSub in collection.products %}
                               {% assign productSubID = productSub.id | strip %}
                               {% if sub_bundle_products contains productSubID %}
                                   {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
