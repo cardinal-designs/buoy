@@ -632,7 +632,7 @@ class VariantSelects extends HTMLElement {
     let addToCartText = `Add to Cart — ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s> &nbsp;` : ``} ${variantJson[this.currentVariant.id].price}`;
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].subscription_price}`;
+        addToCartText = `Add to Cart — &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
       }
     }
 
