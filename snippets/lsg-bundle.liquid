@@ -1,4 +1,4 @@
-
+-----{{ product.metafields.rtxn }}
 {% assign otp_bundle_min = nil %}
 {% assign otp_bundle_max = nil %}
 {% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
@@ -38,7 +38,6 @@
 {% endunless %}
 
 {% assign sub_bundle_products_count = 0 %}
------{{ product.metafields.rtxn }}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in collections.all.products %}
     {% assign productSubID = productSub.id | strip %}
