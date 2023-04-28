@@ -39,25 +39,29 @@
 {% assign sub_bundle_products_count = 0 %}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for collection in collections %}
-  {% for productSub in collections.products %}
-      {% assign productSubID = productSub.id | strip %}
-      {% if sub_bundle_products contains productSubID %}
-          {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
-      {% endif %}
-  {% endfor %}
+  {% paginate collection.products by 1000 %}
+    {% for productSub in collections.products %}
+        {% assign productSubID = productSub.id | strip %}
+        {% if sub_bundle_products contains productSubID %}
+            {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+  {% endpaginate %}
 {% endfor %}
 
 {% assign sub_bundle_variants_count = 0 %}
 {% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
 {% for collection in collections %}
-  {% for productSub in collections.products %}
-      {% for variantSub in productSub.variants %}
-          {% assign variantSubID = variantSub.id | strip %}
-          {% if sub_bundle_variants contains variantSubID %}
-              {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
-          {% endif %}
-      {% endfor %}
-  {% endfor %}
+  {% paginate collection.products by 1000 %}
+    {% for productSub in collections.products %}
+        {% for variantSub in productSub.variants %}
+            {% assign variantSubID = variantSub.id | strip %}
+            {% if sub_bundle_variants contains variantSubID %}
+                {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+  {% endpaginate %}
 {% endfor %}
 
 sub_bundle_products_count :: {{ sub_bundle_products_count }}<br />
@@ -77,22 +81,30 @@ sub_bundle_variants_count :: {{ sub_bundle_variants_count }}<br />
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
                 <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list" data-lsg-bundle-product-sub-list>
                     {% if sub_bundle_products_count > 0 %}
-                        {% for productSub in collections.all.products %}
-                            {% assign productSubID = productSub.id | strip %}
-                            {% if sub_bundle_products contains productSubID %}
-                                {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
-                            {% endif %}
-                        {% endfor %}
+                      {% for collection in collections %}
+                        {% paginate collection.products by 1000 %}
+                          {% for productSub in collections.products %}
+                              {% assign productSubID = productSub.id | strip %}
+                              {% if sub_bundle_products contains productSubID %}
+                                  {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
+                              {% endif %}
+                          {% endfor %}
+                        {% endpaginate %}
+                      {% endfor %}
                     {% endif %}
                     {% if sub_bundle_variants_count > 0 %}
-                        {% for productSub in collections.all.products %}
-                            {% for variantSub in productSub.variants %}
-                                {% assign variantSubID = variantSub.id | strip %}
-                                {% if sub_bundle_variants contains variantSubID %}
-                                    {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endfor %}
+                      {% for collection in collections %}
+                        {% paginate collection.products by 1000 %}
+                          {% for productSub in collections.all.products %}
+                              {% for variantSub in productSub.variants %}
+                                  {% assign variantSubID = variantSub.id | strip %}
+                                  {% if sub_bundle_variants contains variantSubID %}
+                                      {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min %}
+                                  {% endif %}
+                              {% endfor %}
+                          {% endfor %}
+                        {% endpaginate %}
+                      {% endfor %}
                     {% endif %}
                 </div>
             {% elsif product.metafields.bundle.products %}
