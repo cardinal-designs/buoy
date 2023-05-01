@@ -22,10 +22,434 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b": {
+      "type": "home-hero",
+      "settings": {
+        "video_url": "",
+        "mobile_video_url": "",
+        "review": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "beige",
+        "link_label": "",
+        "link_link": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
+      "type": "title-text",
+      "settings": {
+        "title": "",
+        "italic_title": "",
+        "text": ""
+      }
+    },
+    "304f34df-6587-4eb2-a832-96b49eef9918": {
+      "type": "product-slider-2",
+      "blocks": {
+        "915598b8-73ba-4440-9c78-70b475eb492a": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "hover_video": ""
+          }
+        },
+        "475664b0-eea5-49a4-9521-d603009b918d": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "hover_video": ""
+          }
+        },
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "hover_video": ""
+          }
+        },
+        "9d231586-a60b-42ac-9721-d7ea47797c99": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "hover_video": ""
+          }
+        }
+      },
+      "block_order": [
+        "915598b8-73ba-4440-9c78-70b475eb492a",
+        "475664b0-eea5-49a4-9521-d603009b918d",
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
+        "9d231586-a60b-42ac-9721-d7ea47797c99"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "shop_all_label": "Shop All Products",
+        "shop_all_link": "",
+        "promo_link_text": "",
+        "promo_link": "",
+        "background": "none",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "31e36676-5821-47f9-a328-6c162b259d29": {
+      "type": "pee-club-products",
+      "blocks": {
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "",
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "button_text": ""
+          }
+        },
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "",
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "button_text": ""
+          }
+        },
+        "a55a48cb-e8fe-4147-b872-04281d92e180": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "",
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "button_text": ""
+          }
+        },
+        "8939123e-4123-47d7-a631-21ea009a79ce": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "",
+            "product": "",
+            "servings": "",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "56552880-d878-401c-b38e-f4f0c4cc485e",
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59",
+        "a55a48cb-e8fe-4147-b872-04281d92e180",
+        "8939123e-4123-47d7-a631-21ea009a79ce"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_bottom": "",
+        "button_label": "",
+        "button_link": "",
+        "background": ""
+      }
+    },
+    "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6": {
+      "type": "squeezy-section",
+      "blocks": {
+        "11f7c914-2ada-4f38-8a2a-49181ebfe76e": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        },
+        "e5f34ab2-b853-42e2-9c79-1e0fef178946": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        },
+        "bdcbb088-dd05-41ca-9335-784c3ef1e5b0": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "11f7c914-2ada-4f38-8a2a-49181ebfe76e",
+        "e5f34ab2-b853-42e2-9c79-1e0fef178946",
+        "bdcbb088-dd05-41ca-9335-784c3ef1e5b0"
+      ],
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "link_label": "",
+        "link_link": "",
+        "content_reverse": "left",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "965a1bfd-1b86-4e84-bf91-e3d7d2889ba5": {
+      "type": "squeezy-section",
+      "blocks": {
+        "805097f0-05b9-47fa-a52c-4cecc5326cbe": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        },
+        "a51d5970-78ed-4db4-8516-7a9ad0095e1e": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        },
+        "4ded3f27-630a-436a-9551-87b0114de92e": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "805097f0-05b9-47fa-a52c-4cecc5326cbe",
+        "a51d5970-78ed-4db4-8516-7a9ad0095e1e",
+        "4ded3f27-630a-436a-9551-87b0114de92e"
+      ],
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "link_label": "",
+        "link_link": "",
+        "content_reverse": "left",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
+      "type": "pee-club-half-image",
+      "settings": {
+        "title": "",
+        "text": "",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "2b58d871-898a-4cf3-a300-d9d18a617d50": {
+      "type": "image-text-section",
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "text": "",
+        "subtext": "",
+        "button_label": "",
+        "button_link": "",
+        "content_reverse": "left",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
+      "type": "image-dropdowns",
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "text_bottom": "",
+        "background": ""
+      }
+    },
+    "a09de49d-45af-40d0-969c-1445290cd3be": {
+      "type": "image-with-dropdowns",
+      "settings": {
+        "video_url": "",
+        "title": "",
+        "text": "",
+        "text_bottom": "",
+        "button_label": "",
+        "button_link": "",
+        "background": ""
+      }
+    },
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
+      "type": "give-back-blocks",
+      "settings": {
+        "title": ""
+      }
+    },
+    "271bbc88-ee3e-4299-aee5-2c393d4bf363": {
+      "type": "pee-club-value-props",
+      "settings": {
+        "text": "",
+        "no_background": false,
+        "add_top_padding": false,
+        "add_bottom_padding": false
+      }
+    },
+    "3d1bc448-92e7-4492-9be8-476355c98af5": {
+      "type": "faq-text-above",
+      "settings": {
+        "title": "",
+        "text": "",
+        "emoji": "",
+        "suptitle": "",
+        "suptext": "",
+        "background": "",
+        "background_mobile": ""
+      }
+    },
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "settings": {
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "517df923-ac36-43bd-9898-b875c67e1be2": {
+      "type": "profile-table",
+      "settings": {
+        "title": "",
+        "desktop_svg": "",
+        "mobile_svg": ""
+      }
+    },
+    "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40": {
+      "type": "benefits",
+      "settings": {
+        "title": "",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
+      "type": "text-block-section-2",
+      "settings": {
+        "section_title": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
+      "type": "image-slider",
+      "settings": {
+        "background": "",
+        "title": "",
+        "subtext": "",
+        "img": "",
+        "mobile_img": ""
+      }
+    },
+    "2b7564eb-8f3d-425b-9a73-e9499130b312": {
+      "type": "press-logos",
+      "settings": {
+        "background": "#ECD8C5",
+        "enable_marquee": false,
+        "add_border": false
+      }
+    },
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
+      "type": "pr-slider",
+      "settings": {
+      }
+    },
+    "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
+      "type": "trusted-reviews",
+      "settings": {
+        "review_emoji": "",
+        "head-title": "Column",
+        "sub-text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "background": "none",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "97b52c19-9232-4b33-a84e-be1d55a585da": {
+      "type": "trusted-reviews-2",
+      "settings": {
+        "text": "",
+        "head-title": "Column",
+        "sub-text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "background": "none",
+        "background_color": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "19f84cc7-e91f-487d-a62c-2e8944758d96": {
+      "type": "faq",
+      "settings": {
+        "title": "",
+        "text": ""
+      }
     }
   },
   "order": [
     "main",
-    "16390276435f9f6aac"
+    "16390276435f9f6aac",
+    "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "304f34df-6587-4eb2-a832-96b49eef9918",
+    "31e36676-5821-47f9-a328-6c162b259d29",
+    "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
+    "965a1bfd-1b86-4e84-bf91-e3d7d2889ba5",
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
+    "2b58d871-898a-4cf3-a300-d9d18a617d50",
+    "dece096c-1bc4-4b53-9b54-698c55f6a86f",
+    "a09de49d-45af-40d0-969c-1445290cd3be",
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
+    "271bbc88-ee3e-4299-aee5-2c393d4bf363",
+    "3d1bc448-92e7-4492-9be8-476355c98af5",
+    "50df382c-255c-4272-b876-eca398cca73a",
+    "517df923-ac36-43bd-9898-b875c67e1be2",
+    "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45",
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
+    "2b7564eb-8f3d-425b-9a73-e9499130b312",
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
+    "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
+    "97b52c19-9232-4b33-a84e-be1d55a585da",
+    "19f84cc7-e91f-487d-a62c-2e8944758d96"
   ]
 }
