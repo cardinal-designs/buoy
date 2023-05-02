@@ -1,10 +1,10 @@
 {{ 'section-title-text.css' | asset_url | stylesheet_tag }}
 
 <div class="title-text__container
-      {% if section.settings.add_top_border %} top-border{% endif %}
-    {% if section.settings.add_bottom_border %} bottom-border{% endif %}">
-<div class="page-width "
-    style="{% if section.settings.add_background %}background: #FCF9F8;{% endif %}">
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}"
+   style="{% if section.settings.add_background %}background: #FCF9F8;{% endif %}">
+<div class="page-width">
   <h1>{{ section.settings.title }}
   {% if section.settings.italic_title != blank %} <span>{{ section.settings.italic_title }}</span>{% endif %}
   </h1>
