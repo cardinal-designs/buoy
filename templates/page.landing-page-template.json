@@ -243,7 +243,7 @@
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
-        "title": "<strong>Optimized for function, <\/strong> not flavor",
+        "title": "Optimized for function,  not flavor",
         "text": "<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nSugar Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nStevia & Sweetener Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNo Flavors\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nVegan\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNon-GMO\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \n3x More Bioavailable Form Factor\n<\/p>",
         "subtext": "",
         "button_label": "Learn More",
@@ -251,11 +251,56 @@
         "content_reverse": "right",
         "button_style": "beige",
         "add_top_border": false,
-        "add_bottom_border": true
+        "add_bottom_border": true,
+        "background": "none"
       }
     },
     "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
       "type": "image-dropdowns",
+      "blocks": {
+        "2f43efe1-ad3b-4f4d-a788-5f9b10a12e2c": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "567d47d4-055a-4540-b107-674adf874ee1": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "4326ad19-ec24-4b0a-840d-9a17b0914868": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "c8221bc7-1128-47ef-aa8c-bc586af3f7f1": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "5f47316e-27b9-4429-98e9-3784e2e203a7": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "2f43efe1-ad3b-4f4d-a788-5f9b10a12e2c",
+        "567d47d4-055a-4540-b107-674adf874ee1",
+        "4326ad19-ec24-4b0a-840d-9a17b0914868",
+        "c8221bc7-1128-47ef-aa8c-bc586af3f7f1",
+        "5f47316e-27b9-4429-98e9-3784e2e203a7"
+      ],
       "settings": {
         "video_url": "",
         "title": "",
