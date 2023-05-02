@@ -1,6 +1,10 @@
 {{ 'section-dropdowns.css' | asset_url | stylesheet_tag }} 
 
-<div class="dropdowns__container" id="Dropdowns_Container"> 
+<div class="dropdowns__container
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %}background--{{ section.settings.background }}{% endif %}
+  " id="Dropdowns_Container"> 
   <div class="page-width">
   <h2 class="h3">{{ section.settings.title }}</h3>
   <p class="dropdowns__subtitle sh4">{{ section.settings.subtext }}</p>
@@ -41,6 +45,40 @@
         "type": "textarea",
         "id": "subtext",
         "label": "Subtext"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
       }
     ],
     "blocks": [
