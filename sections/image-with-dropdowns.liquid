@@ -1,6 +1,9 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 
-<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container">
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container
+  {% if section.settings.add_top_border %} top-border{% endif %}
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  ">
   <div class="show-product-bar"></div>
   <div class="page-width">
     <div class="image-with-dropdowns__image">
@@ -94,6 +97,16 @@
         "type": "textarea",
         "id": "background",
         "label": "Background Style"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
       }
 	],
     "blocks": [
