@@ -58,6 +58,7 @@
 .give-back__item {
   display: flex;
   flex-direction: column;
+  z-index: 9;
 }
 
 .give-back-image__container {
