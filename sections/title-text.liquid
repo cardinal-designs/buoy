@@ -2,9 +2,9 @@
 
 <div class="title-text__container
    {% if section.settings.add_top_border %} top-border{% endif %}
-   {% if section.settings.add_bottom_border %} bottom-border{% endif %}"
-   style="{% if section.settings.add_background %}background: #FCF9F8; padding-bottom: 100px;{% endif %}
-   {% if section.settings.add_bottom_border %}padding-bottom: 100px;{% endif %}">
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %}background--{{ section.settings.background }}{% endif %}
+  ">
 <div class="page-width">
   <h1>{{ section.settings.title }}
   {% if section.settings.italic_title != blank %} <span>{{ section.settings.italic_title }}</span>{% endif %}
