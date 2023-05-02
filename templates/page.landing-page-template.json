@@ -385,11 +385,50 @@
         "text_bottom": "Get Buoy's <span style=\"font-weight: 100\">lifetime discount of 35% off<\/span> when managing a chronic illness. Applying is easy and takes less than 2 minutes.",
         "button_label": "Get Your Discount",
         "button_link": "#chronic",
-        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;"
+        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
       "type": "give-back-blocks",
+      "blocks": {
+        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "title": "",
+            "text": "",
+            "link": "",
+            "link_text": ""
+          }
+        },
+        "cb342647-8792-4891-8a6c-718b91cb7587": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "title": "",
+            "text": "",
+            "link": "",
+            "link_text": ""
+          }
+        },
+        "65881b14-1267-4676-a9aa-1bb942915aa4": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "title": "",
+            "text": "",
+            "link": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "db928337-6fc0-4c06-805b-d823af2f4c1b",
+        "cb342647-8792-4891-8a6c-718b91cb7587",
+        "65881b14-1267-4676-a9aa-1bb942915aa4"
+      ],
       "settings": {
         "title": ""
       }
