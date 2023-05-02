@@ -16,7 +16,8 @@
         "link_label": "",
         "link_link": "",
         "add_top_border": false,
-        "add_bottom_border": false
+        "add_bottom_border": false,
+        "add_background": false
       }
     },
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
@@ -24,7 +25,10 @@
       "settings": {
         "title": "Optimized for function,",
         "italic_title": "not flavor",
-        "text": "In collaboration with our board of medical professionals, we created clean and efficient hydration supplements to restore electrolyte and mineral gaps in the American diet—starting at the cellular level."
+        "text": "In collaboration with our board of medical professionals, we created clean and efficient hydration supplements to restore electrolyte and mineral gaps in the American diet—starting at the cellular level.",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "add_background": true
       }
     },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
@@ -314,7 +318,7 @@
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
       "type": "press-logos",
       "settings": {
-        "background": "#ECD8C5",
+        "background": "#ecd8c5",
         "enable_marquee": false,
         "add_border": false
       }
