@@ -120,11 +120,11 @@ body.lock-scroll {
 }
 
 .top-border {
-  border-top: 1.5px solid var(--charcoal);
+  border-top: 1.5px solid var(--charcoal) !important;
 }
 
 .bottom-border {
-  border-bottom: 1.5px solid var(--charcoal);
+  border-bottom: 1.5px solid var(--charcoal) !important;
 }
 
 @media screen and (max-width: 550px) {
