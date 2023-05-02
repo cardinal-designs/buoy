@@ -2,15 +2,16 @@
 {{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
 {{ 'section-text-above.css' | asset_url | stylesheet_tag }} 
 
-
-<div class="faq-suptext__container
+<div class="faq-suptext
    {% if section.settings.add_top_border %} top-border{% endif %}
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
-   {% if section.settings.background %}background--{{ section.settings.background }}{% endif %}
-   ">
-  <p class="emoji">{{ section.settings.emoji }}</p>
-  <h5>{{ section.settings.suptitle }}</h5>
-  <p class="light">{{ section.settings.suptext }}</p>
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}"
+  >
+  <div class="faq-suptext__container">
+    <p class="emoji">{{ section.settings.emoji }}</p>
+    <h5>{{ section.settings.suptitle }}</h5>
+    <p class="light">{{ section.settings.suptext }}</p>
+  </div>
 </div>
 
 
