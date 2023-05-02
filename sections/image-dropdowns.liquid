@@ -1,10 +1,10 @@
 {{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
 {{ 'section-image-dropdowns.css' | asset_url | stylesheet_tag }}
 
-<div id="image-with-dropdowns__container
+<div id="image-with-dropdowns__container"
+  style="background: {{ section.settings.background }}" class="image-dropdowns__container image-with-dropdowns__container 
   {% if section.settings.add_top_border %} top-border{% endif %}
-  {% if section.settings.add_bottom_border %} bottom-border{% endif %}"
-  style="background: {{ section.settings.background }}" class="image-dropdowns__container image-with-dropdowns__container">
+  {% if section.settings.add_bottom_border %} bottom-border{% endif %}">
   <div class="show-product-bar"></div>
   <div class="page-width">
     <div class="image-with-dropdowns__content">
