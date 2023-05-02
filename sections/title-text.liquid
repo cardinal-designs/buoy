@@ -43,9 +43,28 @@
         "label": "Add Bottom Border"
       },
       {
-        "type": "checkbox",
-        "id": "add_background",
-        "label": "Add Background"
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
       }
     ],
     "presets": [
