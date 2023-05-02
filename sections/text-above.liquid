@@ -1,12 +1,46 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }} 
+{{ 'section-faq-text-above.css' | asset_url | stylesheet_tag }} 
+
+<div class="faq-suptext__container
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %}background--{{ section.settings.background }}{% endif %}
+   ">
+  <p class="emoji">{{ section.settings.emoji }}</p>
+  <h5>{{ section.settings.suptitle }}</h5>
+  <p class="light">{{ section.settings.suptext }}</p>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Text Above",
+    "settings": [
+      {
+        "type": "text",
+        "id": "emoji",
+        "label": "Emoji"
+      },
+      {
+        "type": "text",
+        "id": "suptitle",
+        "label": "Suptitle"
+      },
+      {
+        "type": "textarea",
+        "id": "suptext",
+        "label": "Suptext"
+      },  
+      {
+        "type": "textarea",
+        "id": "background",
+        "label": "Background Gradient (optional)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Above"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
