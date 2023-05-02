@@ -104,27 +104,27 @@ body.lock-scroll {
 .background--top {
   margin-top: 0;
   padding-top: 100px;
-  background: linear-gradient(0deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(0deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box !important;
 }
   
 .background--bottom {
   margin-bottom: 0;
   padding-bottom: 100px;
-  background: linear-gradient(180deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(180deg, white 0%, #F8F1EB 100%) 0% 0% no-repeat padding-box !important;
 }
 
 .background--bg_color {
   margin: 0;
   padding: 100px 0;
-  background-color: #F8F1EB66;
+  background-color: #F8F1EB66 !important;
 }
 
 .top-border {
-  border-top: 1.5px solid var(--charcoal);
+  border-top: 1.5px solid var(--charcoal) !important;
 }
 
 .bottom-border {
-  border-bottom: 1.5px solid var(--charcoal);
+  border-bottom: 1.5px solid var(--charcoal) !important;
 }
 
 @media screen and (max-width: 550px) {
