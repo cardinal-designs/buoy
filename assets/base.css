@@ -101,6 +101,14 @@ body.lock-scroll {
   display: none !important;
 }
 
+.top-border {
+  border-top: 1.5px solid var(--charcoal);
+}
+
+.bottom-border {
+  border-bottom: 1.5px solid var(--charcoal);
+}
+
 @media screen and (max-width: 550px) {
   .break-550 {
     display: block !important;
