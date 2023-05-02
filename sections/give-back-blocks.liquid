@@ -1,6 +1,10 @@
 {{ 'section-give-back-blocks.css' | asset_url | stylesheet_tag }}
 
-<div class="give-back__container">
+<div class="give-back__container
+    {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %}background--{{ section.settings.background }}{% endif %}
+   ">
   <div class="page-width">
     <h3>{{ section.settings.title }}</h3>
     <div class="give-back-block__container">
@@ -37,6 +41,40 @@
         "type": "text",
         "id": "title",
         "label": "Title"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
       }
 	],
     "blocks": [
