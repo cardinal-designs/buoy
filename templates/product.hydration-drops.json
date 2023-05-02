@@ -206,7 +206,9 @@
         "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
         "title": "Sip on functional benefits",
         "text_bottom": "Buoy’s benefits go beyond peak hydration. Refresh, revitalize and restore with the electrolytes and minerals our bodies need to function optimally day after day.",
-        "background": ""
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "755d6fdb-322b-4169-af92-fe0a6988e43a": {
@@ -253,7 +255,10 @@
       ],
       "settings": {
         "title": "Ingredients your body can actually absorb",
-        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>"
+        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bottom"
       }
     },
     "8b9c24a7-0d88-4279-a771-d04362368955": {
