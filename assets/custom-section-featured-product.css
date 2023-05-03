@@ -295,5 +295,9 @@
   .product.Custom_Featured_Product {
     margin-bottom: 53px !important;
   }
+
+  .Custom_Featured_Product .rtx_option_selector_main {
+    display: block;
+  }
   
 }
