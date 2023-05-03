@@ -69,7 +69,13 @@
                 {{ 'onboarding.product_title' | t }}
               {%- endif -%}
             </h4>
-
+          
+            {%- if section.settings.show_price -%}
+              <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              </div>
+            {%- endif -%}
+            
             {%- if product.metafields.my_fields.subtitle != blank -%}
               <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>  
             {%- endif -%}
@@ -80,12 +86,8 @@
               {{ product.description }}
             </div>
               
-            {%- if section.settings.show_price -%}
-              <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-              </div>
-            {%- endif -%}
-              
+            {% render 'rtx-pdp' %}
+            
             {%- if product != blank -%}
               <div {{ block.shopify_attributes }}>
                 {%- form 'product', product -%}
