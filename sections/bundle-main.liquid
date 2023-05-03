@@ -113,15 +113,12 @@
             </div>
           {% endif %}
         </div>
-      {{ sub_bundle_products | join:'<br />' }} --- {{ collections.size }}
         <div class="collection-groups__grid">
           {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
             {% if sub_bundle_products_count > 0 %}
                 {% for collection in collections %}
-                  <br />{{ collection.title }}<br />
                   
                   {% for productSub in collection.products %}
-                    {{ productSub.id }}<br />
                       {% assign productSubID = productSub.id | strip %}
                       {% if sub_bundle_products contains productSubID %}
                         {% for variant in productSub.variants %}
