@@ -121,6 +121,7 @@
                   {% for productSub in collection.products %}
                       {% assign productSubID = productSub.id | strip %}
                       {% if sub_bundle_products contains productSubID %}
+                        --{{ productSub.id }}
                         {% render 'product-card'
                             product_card_product: productSub,
                             show_secondary_image: true,
