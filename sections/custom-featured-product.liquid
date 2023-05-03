@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- assign product = section.settings.product -%}
+{% assign currentVariant = product.selected_or_first_available_variant %}
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
@@ -217,7 +218,9 @@
                 <product-form class="product-form">
                   {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                    {% render 'rtx-pdp', product: product %}
+                    
+                    {% render 'rtx-pdp', product: product, currentVariant: currentVariant %}
+                    
                     <div class="product-form__buttons">
                       <button
                         type="submit"
