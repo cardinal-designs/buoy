@@ -231,7 +231,11 @@
 
 .Custom_Featured_Product div#rtx_sands_block,
 .Custom_Featured_Product .rtx_option_selector {
- flex: 0 0 calc(50% - 15px);
+  flex: 0 0 calc(50% - 15px);
+}
+
+.Custom_Featured_Product .clear_button {
+  margin-top: 0px;
 }
 
 @media only screen and (max-width: 991px) {
