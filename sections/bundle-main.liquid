@@ -122,16 +122,14 @@
                   
                   {% for productSub in collection.products %}
                     {{ productSub.id }}<br />
-          {% comment %}
                       {% assign productSubID = productSub.id | strip %}
                       {% if sub_bundle_products contains productSubID %}
-                        {% render 'product-card'
+                        {% render 'bundle-product-card'
                             product_card_product: productSub,
                             show_secondary_image: true,
                             hover_video: block.settings.hover_video,
                             show_shop_button: true %}
                       {% endif %}
-                  {% endcomment %}
                     {% endfor %}
                 {% endfor %}
             {% endif %}
