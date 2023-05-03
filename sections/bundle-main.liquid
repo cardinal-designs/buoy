@@ -115,7 +115,7 @@
           </div>
             {% assign productCount = 0 %}
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
-              <div class="collection-groups__grid" data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" data-lsg-bundle-product-sub-list>
+              <div class="collection-groups__grid lsg-bundle-product-set-list" data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" data-lsg-bundle-product-sub-list>
                 {% if sub_bundle_products_count > 0 %}
                   {% assign breakLoop = false %}
                   {% for productSub in collections.bundle.products %}
@@ -163,7 +163,7 @@
                 {% endif %}
               </div>
           {% elsif product.metafields.bundle.products %}
-              <div class="collection-groups__grid" data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" data-lsg-bundle-product-sub-list>
+              <div class="collection-groups__grid lsg-bundle-product-set-list" data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" data-lsg-bundle-product-sub-list>
                 {% assign loopOffset = 0 %}
                 {% assign looplimit = 3 %}
                 {% if blockIndex == 2 %}
