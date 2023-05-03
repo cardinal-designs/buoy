@@ -74,9 +74,12 @@
                 {%- endif -%}
               </h1>
 
-              <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-              </div>
+              {%- if section.settings.show_price -%}
+                <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                  {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                </div>
+              {%- endif -%}
+              
               {%- if product != blank -%}
                 <div {{ block.shopify_attributes }}>
                   {%- form 'product', product -%}
