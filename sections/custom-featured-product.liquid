@@ -247,7 +247,13 @@
                 </div>
               {%- endif -%}
             </div>
-
+          
+            {% if settings.show_shipping_countdown != blank %}
+              <div id="Order_Within" class="Order_Within Risk_Free">
+                 {{ settings.order_within_text }}
+              </div>
+            {% endif %}
+            
             {%- if section.settings.show_view_details -%}
               <a href="{{ product.url }}" class="link product__view-details animate-arrow">
                 {{ 'products.product.view_full_details' | t }}
