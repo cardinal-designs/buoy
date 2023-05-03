@@ -30,7 +30,7 @@
 
   <div class="card card--product" tabindex="-1">
     <div class="card__inner">
-      <a href="{{ product_card_product.product.url }}" class="full-unstyled-link">
+      <a href="{{ card_product.url }}" class="full-unstyled-link">
         <div class="media" style="padding-bottom: 125%;">
           
           {% render 'lazy-image', image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
@@ -53,7 +53,7 @@
       </a>
       
       <div class="card__buttons hide-mobile">
-        <a href="{{ product_card_product.product.url | default: '#' }}" class="button learn-more">
+        <a href="{{ card_product.url | default: '#' }}" class="button learn-more">
           <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
       </div>
       
@@ -71,21 +71,27 @@
         {% endif %}
         </div>
 
-        <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
-          <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
+        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
+          <div class="h5 card-information__title">{{ card_product.title | escape }}</div>
         {% comment %}
           <h5 class="card-information__title">
             {{ product_card_product.title | escape }}
           </h5>
           {% endcomment %}
         </a>
-        
-        {% if product_card_product.metafields.my_fields.product_card_text != blank %}
-          <p class="card-information__text light">{{ product_card_product.metafields.my_fields.product_card_text }}</p>
+
+        {% if is_variant == false %}
+          {% if product_card_product.metafields.my_fields.product_card_text != blank %}
+            <p class="card-information__text light">{{ product_card_product.metafields.my_fields.product_card_text }}</p>
+          {% endif %}
+        {% else %}
+          {% if product_card_product.product.metafields.my_fields.product_card_text != blank %}
+            <p class="card-information__text light">{{ product_card_product.product.metafields.my_fields.product_card_text }}</p>
+          {% endif %}
         {% endif %}
 
         {% if show_shop_button %}
-          <a href="{{ product_card_product.url | default: '#' }}" class="shop-btn button button--beige">Shop Now</a>
+          <a href="{{ card_product.url | default: '#' }}" class="shop-btn button button--beige">Shop Now</a>
         {% endif %}
       </div>
     </div>
