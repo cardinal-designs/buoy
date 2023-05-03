@@ -375,3 +375,11 @@
   }
   
 }
+
+@media only screen and (max-width: 500px) {
+
+  .Custom_Featured_Product .rtx-tooltip__flex {
+    flex-direction: row;
+  }
+
+}
