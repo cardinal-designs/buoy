@@ -1,3 +1,11 @@
 .Custom_Featured_Product .product__media-list .slick-list {
   overflow: hidden;
 }
+
+.js-ingredients-open {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  margin: 25px 0 8px;
+  display: block;
+  color: #1f2322;
+}
