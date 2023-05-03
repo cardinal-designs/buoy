@@ -369,5 +369,10 @@
   .product.Custom_Featured_Product {
     margin-bottom: 53px !important;
   }
+
+  .Custom_Featured_Product .product-form__input select,
+  .Featured_Variant_Values .Supply_Time {
+    font-size: 15px;
+  }
   
 }
