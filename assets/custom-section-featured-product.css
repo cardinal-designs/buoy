@@ -50,8 +50,14 @@
   text-align: center;
 }
 
-.Sub_Text_New.body {
+.Sub_Text_New {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.Sub_Text_New li {
+  font-size: 14px;
+  color: #1F2322;
+  font-weight: 300;
 }
