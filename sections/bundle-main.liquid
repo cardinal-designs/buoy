@@ -1,8 +1,78 @@
+
+{% assign otp_bundle_min = nil %}
+{% assign otp_bundle_max = nil %}
+{% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
+    {% assign otp_bundle_min = product.metafields.bundle.min %}
+    {% assign otp_bundle_max = product.metafields.bundle.max %}
+{% endif %}
+
+{% assign sub_bundle_min = nil %}
+{% assign sub_bundle_max = nil %}
+{% assign sub_bundle_quantities = product.metafields.rtxn.bundle_quantities | split: '|' %}
+{% if sub_bundle_quantities.size > 0 %}
+    {% assign sub_bundle_min = sub_bundle_quantities[0] %}
+    {% assign sub_bundle_max = sub_bundle_quantities[1] %}
+{% endif %}
+
+{% assign bundle_min = 0 %}
+{% assign bundle_max = 0 %}
+{% if sub_bundle_max %}
+    {% assign bundle_max = sub_bundle_max | plus: 0 %}
+{% elsif otp_bundle_max %}
+    {% assign bundle_max = otp_bundle_max | plus: 0 %}
+{% endif %}
+{% assign bundle_max_index0 = bundle_max | minus: 1 %}
+
+{% unless otp_bundle_max %}
+    {% assign otp_bundle_max = bundle_max %}
+{% endunless %}
+
+{% if sub_bundle_min %}
+    {% assign bundle_min = sub_bundle_min | plus: 0 %}
+{% elsif otp_bundle_min %}
+    {% assign bundle_min = otp_bundle_min | plus: 0 %}
+{% endif %}
+
+{% unless otp_bundle_min %}
+    {% assign otp_bundle_min = bundle_min %}
+{% endunless %}
+
+{% assign sub_bundle_products_count = 0 %}
+{% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
+{% for collection in collections %}
+  {% for productSub in collection.products %}
+      {% assign productSubID = productSub.id | strip %}
+      {% if sub_bundle_products contains productSubID %}
+          {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
+      {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign sub_bundle_variants_count = 0 %}
+{% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
+{% for collection in collections %}
+  {% for productSub in collection.products %}
+    {% for variantSub in productSub.variants %}
+        {% assign variantSubID = variantSub.id | strip %}
+        {% if sub_bundle_variants contains variantSubID %}
+            {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
 {{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<div class="collection-groups">
+<div class="collection-groups {% if bundleFirst %} lsg-bundle-block-active{% endif %}" 
+    data-bundle-product="{{ product.id }}"
+    data-bundle-index="{{ bundleIndex }}"
+    data-otp-bundle-min="{{ otp_bundle_min }}"
+    data-otp-bundle-max="{{ otp_bundle_max }}"
+    data-sub-bundle-min="{{ sub_bundle_min }}"
+    data-sub-bundle-max="{{ sub_bundle_max }}"
+    data-product-base-price="{{ product.price }}">
   <div class="collection-groups__marquee">
     <div class="collection-groups__marquee-container">
       <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
@@ -44,14 +114,22 @@
           {% endif %}
         </div>
         <div class="collection-groups__grid">
-          {% assign currect_collection = collections[block.settings.collection] %}
-          {% for current_product in currect_collection.products %}
-            {% render 'product-card'
-              product_card_product: current_product,
-              show_secondary_image: true,
-              hover_video: block.settings.hover_video,
-              show_shop_button: true %}
-          {% endfor %}
+          {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
+            {% if sub_bundle_products_count > 0 %}
+                {% for collection in collections %}
+                  {% for productSub in collection.products %}
+                      {% assign productSubID = productSub.id | strip %}
+                      {% if sub_bundle_products contains productSubID %}
+                        {% render 'product-card'
+                            product_card_product: productSub,
+                            show_secondary_image: true,
+                            hover_video: block.settings.hover_video,
+                            show_shop_button: true %}
+                      {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+          {% endif %}
         </div>
       </div>
     {% endfor %}
