@@ -148,10 +148,10 @@
                   {% for variantSub in productSub.variants %}
                     {% assign variantSubID = variantSub.id | strip %}
                     {% if sub_bundle_variants contains variantSubID %}
-                      {% assign productCount = productCount | plus:1 %}
                       {% if section.blocks.size == 2 and blockIndex == 1 and productCount < 3 %}
                         {% continue %}
                       {% endif %}
+                      {% assign productCount = productCount | plus:1 %}
                         {% render 'bundle-product-card',
                         is_variant:true,
                         product_card_product: variantSub,
