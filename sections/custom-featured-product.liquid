@@ -13,10 +13,6 @@
       background: #f8f1eb66!important
     }
   {% endif %}}
-
-  .product__info-wrapper.background--bg_color {
-    background-color: #f8f1eb !important;
-  }
         
 {% endstyle %}
 
@@ -75,9 +71,7 @@
           </button>
         {%- endif -%}
       </div>
-      <div class="product__info-wrapper
-        {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
-        ">
+      <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb !important;"{% endif %}>
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
             {% render 'okendo-reviews-product-rating-summary', product: product %}
