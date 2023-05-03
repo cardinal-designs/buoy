@@ -9,10 +9,10 @@
     <div class="Reviews_Slider_Container">
       {% for block in section.blocks %}
         <div class="Reviews_Slider_Item">
-          <h6 class="light">{{ block.settings.text }}</h6>
-          <div class="Reviews_Slider_Content">
+          <h6 class="Reviews_Slider_Content">
             {{ block.settings.content }}
-          </div>
+          </h6>
+          <h6 class="light">{{ block.settings.text }}</h6>
         </div>
       {% endfor %}
     </div>
