@@ -378,7 +378,15 @@
   .Custom_Featured_Product .product__info-wrapper .product-form__input {
     margin-bottom: 28px;
   }
-  
+
+  .Custom_Featured_Product .clear_tag {
+    padding: 1px 12.5px;
+  }
+
+  .Custom_Featured_Product .clear_button {
+    margin-top: -2px;
+  }
+    
 }
 
 @media only screen and (max-width: 500px) {
