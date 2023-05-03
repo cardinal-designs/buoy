@@ -486,7 +486,6 @@ function mirrorQuantityDisplay(input) {
 function updateQuantityDisplay(input) {
     const inputWrap = input.closest('.lsg-bundle-product-select-quantity-wrap'),
           cardWrapper = input.closest('.js-bundle-product-card--wrapper');
-  console.log("teQuantityDisplay",input,input.value);
     if (input.value <= 0) {
       inputWrap.classList.add('no-quantity');
       cardWrapper.classList.remove('js-added');
@@ -755,7 +754,8 @@ document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   button.addEventListener('click',function(e) {
    let cardWrapper = this.closest('.js-bundle-product-card--wrapper');
     let qtyInput = cardWrapper.querySelector('.lsg-bundle-product-select-quantity-input');
-    qtyInput.setAttribute('value',1);
+    // qtyInput.setAttribute('value',1);
+    qtyInput.value = 1;
     qtyInput.dispatchEvent(new Event('change'));
   });
 });
