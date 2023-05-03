@@ -108,6 +108,11 @@
 
 .Custom_Featured_Product .slick-dots li button {
   font-size: 0;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 0 3px;
 }
 
 .Custom_Featured_Product .slick-dots li button:before {
