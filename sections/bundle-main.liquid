@@ -119,9 +119,10 @@
             {% if sub_bundle_products_count > 0 %}
                 {% for collection in collections %}
                   <br />{{ collection.title }}<br />
-          {% comment %}
+                  
                   {% for productSub in collection.products %}
-                    {{ productSub.id }}
+                    {{ productSub.id }}<br />
+          {% comment %}
                       {% assign productSubID = productSub.id | strip %}
                       {% if sub_bundle_products contains productSubID %}
                         {% render 'product-card'
@@ -130,8 +131,8 @@
                             hover_video: block.settings.hover_video,
                             show_shop_button: true %}
                       {% endif %}
-                    {% endfor %}
                   {% endcomment %}
+                    {% endfor %}
                 {% endfor %}
             {% endif %}
           {% endif %}
