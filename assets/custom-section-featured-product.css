@@ -9,3 +9,11 @@
   display: block;
   color: #1f2322;
 }
+
+.Custom_Featured_Product .product-form__input select {
+  font-family: inter,sans-serif;
+  font-size: 18px;
+  color: #1f2322;
+  font-weight: 300;
+  padding: 0;
+}
