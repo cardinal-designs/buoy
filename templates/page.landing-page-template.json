@@ -960,6 +960,31 @@
     },
     "97206ebb-5675-431f-84c6-198ca5d14d9a": {
       "type": "reviews-slider",
+      "blocks": {
+        "62471d0c-640a-4904-9a5d-1d41e9ae4e4a": {
+          "type": "pr_slide",
+          "settings": {
+            "text": ""
+          }
+        },
+        "caa8be8a-9d7f-44c8-b862-321cb6681927": {
+          "type": "pr_slide",
+          "settings": {
+            "text": ""
+          }
+        },
+        "4ef4d774-a7c1-4f48-8861-f1b2be8c6591": {
+          "type": "pr_slide",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "62471d0c-640a-4904-9a5d-1d41e9ae4e4a",
+        "caa8be8a-9d7f-44c8-b862-321cb6681927",
+        "4ef4d774-a7c1-4f48-8861-f1b2be8c6591"
+      ],
       "settings": {
         "add_top_border": false,
         "add_bottom_border": false,
