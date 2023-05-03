@@ -118,7 +118,7 @@
           {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
             {% if sub_bundle_products_count > 0 %}
                 {% for collection in collections %}
-                  {{ collection.title }}<br />
+                  <br />{{ collection.title }}<br />
                   {% for productSub in collection.products %}
                     {{ productSub.id }}
                       {% assign productSubID = productSub.id | strip %}
