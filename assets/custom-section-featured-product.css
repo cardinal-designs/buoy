@@ -80,8 +80,8 @@
   display: block;
 }
 
-.product__info-wrapper {
-  padding: 0 52px 0 0;
+.Custom_Featured_Product .product__info-wrapper {
+  padding: 0 52px 0 0 !important;
   text-align: left;
 }
 
@@ -212,11 +212,11 @@
   }
 
   .Custom_Featured_Product .product__info-wrapper {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .Custom_Featured_Product .product__info-wrapper .okeReviews {
-    margin-bottom: 10px!important;
+    margin-bottom: 10px !important;
   }
   
 }
