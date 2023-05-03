@@ -18,6 +18,9 @@
         </div>
       {% endfor %}
     </div>
+    {% if section.settings.reviews_btn_txt != blank %}
+      <a href="{{ section.settings.reviews_btn_link }}" class="All_Reviews">{{ section.settings.reviews_btn_txt }}</a>
+    {% endif %}
   </div>
 </div>
 
@@ -58,6 +61,16 @@
           }
         ],
         "default": "none"
+      },
+      {
+        "type" : "text",
+        "id" : "reviews_btn_txt",
+        "label" : "Reviews button text"
+      },
+      {
+        "type" : "url",
+        "id" : "reviews_btn_link",
+        "label" : "Reviews button url"
       }
     ],
     "blocks": [
