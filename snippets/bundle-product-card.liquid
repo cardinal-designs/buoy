@@ -92,7 +92,7 @@
           {% endif %}
         {% endif %}
 
-        <button type="button" class="shop-btn button button--beige">Add - {{ card_product.price | money_without_trailing_zeros }}</a>
+        <button type="button" class="shop-btn button button--beige" {% if card_product.available == false %}disabled{% endif %}>Add - {{ card_product.price | money_without_trailing_zeros }}</button>
         {% comment %}
         {% if show_shop_button %}
           <a href="{{ card_product.url | default: '#' }}" class="shop-btn button button--beige">Shop Now</a>
