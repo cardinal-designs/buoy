@@ -8,7 +8,7 @@ document.querySelectorAll('.lsg-bundle-block').forEach(() => {
 
 const buildSelectedProductArray = (trigger) => {
     const method = (trigger.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (trigger.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
-    const triggeredProductWrapper = trigger.closest('.lsg-bundle-product-select-wrapper');
+    const triggeredProductWrapper = trigger.closest('.lsg-bundle-product-select-wrapper') || trigger.closest('.js-bundle-product-card--wrapper');
     const variantID = triggeredProductWrapper.getAttribute('data-lsg-bundle-variant-select-id');
     const productTitle = triggeredProductWrapper.querySelector('.lsg-bundle-product-select-title').innerHTML;
     const bundleBlock = getBundleBlock(trigger);
