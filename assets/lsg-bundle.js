@@ -770,7 +770,6 @@ document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEa
 
 document.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
     input.addEventListener('change', function(e){
-      console.log('change');
         inputChangeSubProduct(e.currentTarget);
         incrementEnableValidation(e.currentTarget);
         checkoutEnableValidation(e.currentTarget);
