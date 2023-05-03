@@ -1,6 +1,9 @@
 {{ 'section-image-slider.css' | asset_url | stylesheet_tag }} 
 
-<div style="{{ section.settings.background }}" class="image-slider__container"> 
+<div style="{{ section.settings.background }}" class="image-slider__container
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+  "> 
   <div class="page-width">
     <h2 class="h3">{{ section.settings.title }}</h3>
     <p class="image-slider__subtitle sh2">{{ section.settings.subtext }}</p>
@@ -25,6 +28,16 @@
         "type": "textarea",
         "id": "background",
         "label": "Background"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
       },
       {
         "type": "text",
