@@ -22,7 +22,7 @@ $( document ).ready(function() {
 $('.Featured_product__media-list').slick({
   dots: true,
   arrows: true,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
