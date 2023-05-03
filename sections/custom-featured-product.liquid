@@ -4,6 +4,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {{ 'custom-section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-title-text.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -17,6 +18,11 @@
 {%- endif -%}
 
 <section class="{% if section.settings.secondary_background %}background-secondary{% else %}spaced-section{% endif %}">
+<div class="title-text__container
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">  
   <div class="page-width">
     <div class="Custom_Featured_Product featured-product product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
@@ -361,6 +367,7 @@
       </div>
     </product-modal>
   </div>
+  </div>                  
 </section>
 
 {% javascript %}
