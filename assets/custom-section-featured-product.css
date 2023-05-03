@@ -194,6 +194,11 @@
   display: none !important;
 }
 
+.Custom_Featured_Product .rtx_option_selector {
+  border: 2px solid #545759;
+  border-radius: 25px;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
