@@ -753,7 +753,6 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
 document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   button.addEventListener('click',function(e) {
    let cardWrapper = this.closest('.js-bundle-product-card--wrapper');
-    cardWrapper.classList.add('js-added');
     let qtyInput = cardWrapper.querySelector('.lsg-bundle-product-select-quantity-input');
     qtyInput.setAttribute('value',1);
     qtyInput.dispatchEvent(new Event('change'));
