@@ -117,9 +117,10 @@
             </h1>
             <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
         </div>
+      {{ bundleIndex }}
         {% if bundleIndex > 0 %}
-            {% if section.settings.bundle_select_heading %}
-                <div class="lsg-bundle-size-select-heading">{{ section.settings.bundle_select_heading }}</div>
+            {% if settings.bundle_select_heading %}
+                <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
             {% endif %}
             <div class="lsg-bundle-size-select">
                 {% for bundle in bundles %}
