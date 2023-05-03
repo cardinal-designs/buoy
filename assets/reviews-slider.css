@@ -68,6 +68,10 @@
   background: #1F2322;
 }
 
+.Reviews_Slider_Content {
+  margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
   
   .Reviews_Slider_Container .slick-prev {
