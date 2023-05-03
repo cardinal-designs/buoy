@@ -228,7 +228,7 @@
   
 </head>
 
-  <body class="{% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
+  <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTCBJP4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
