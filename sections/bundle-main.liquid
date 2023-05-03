@@ -113,7 +113,7 @@
             </div>
           {% endif %}
         </div>
-      {{ sub_bundle_products | join:'<br />' }}
+      {{ sub_bundle_products | join:'<br />' }} --- {{ collections.size }}
         <div class="collection-groups__grid">
           {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
             {% if sub_bundle_products_count > 0 %}
