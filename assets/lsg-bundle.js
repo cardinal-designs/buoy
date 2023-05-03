@@ -179,6 +179,7 @@ function setUrl(trigger) {
         return false;
     }
     const bundleBlock = getBundleBlock(trigger);
+  console.log(bundleBlock)
     const quantityInput = bundleBlock.querySelectorAll('.lsg-bundle-product-select-quantity-input');
     let url = '?';
     let paramName = 'bundle';
