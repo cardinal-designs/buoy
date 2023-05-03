@@ -53,7 +53,7 @@
       </a>
       
       <div class="card__buttons hide-mobile">
-        <a href="{{ product_card_product.url | default: '#' }}" class="button learn-more">
+        <a href="{{ product_card_product.product.url | default: '#' }}" class="button learn-more">
           <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
       </div>
       
@@ -63,7 +63,13 @@
     <div class="card-information">
       <div class="card-information__wrapper">
 
-        <div data-oke-reviews-product-listing-rating>{{ product_card_product.metafields.okendo.ProductListingSnippet }}</div>
+        <div data-oke-reviews-product-listing-rating>
+        {% if is_variant == false %}
+          {{ product_card_product.metafields.okendo.ProductListingSnippet }}
+        {% else %}
+          {{ product_card_product.product.metafields.okendo.ProductListingSnippet }}
+        {% endif %}
+        </div>
 
         <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
           <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
