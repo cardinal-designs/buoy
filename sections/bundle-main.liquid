@@ -120,8 +120,8 @@
                   
                   {% for productSub in collection.products %}
                       {% assign productSubID = productSub.id | strip %}
+                      ---{{ productSub.has_only_default_variant }}
                       {% if sub_bundle_products contains productSubID %}
-                        ---{{ productSub.has_only_default_variant }}
                         {% for variant in productSub.variants %}
                           {% render 'bundle-product-card'
                               product_card_product: variant,
