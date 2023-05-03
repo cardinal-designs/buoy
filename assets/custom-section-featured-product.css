@@ -318,7 +318,7 @@ label.rtx_option_label {
   }
 
   .Custom_Featured_Product .product-form #rtx_sands_block .rtx_option_selector {
-    padding-bottom: 13px;
+    padding-bottom: 11px;
   }
   
 }
@@ -390,7 +390,11 @@ label.rtx_option_label {
   .Custom_Featured_Product .clear_button {
     margin-top: -2px;
   }
-    
+
+  .Custom_Featured_Product .product-form #rtx_sands_block .rtx_option_selector {
+    padding-bottom: 11px;
+  }
+  
 }
 
 @media only screen and (max-width: 500px) {
