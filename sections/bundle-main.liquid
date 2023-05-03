@@ -165,7 +165,11 @@
             </div>
         {% elsif product.metafields.bundle.products %}
             <div class="collection-groups__grid" data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" data-lsg-bundle-product-sub-list>
-              {% for listProduct in product.metafields.bundle.products.value %}
+              {% assign loopOffset = 1 %}
+              {% if blockIndex == 2 %}
+                {% assign loopOffset = 3 %}
+              {% endif %}
+              {% for listProduct in product.metafields.bundle.products.value offset:loopOffset %}
                 {% assign productCount = productCount | plus:1 %}
                 {% render 'bundle-product-card',
                   is_variant:false,
