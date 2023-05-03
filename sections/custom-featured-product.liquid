@@ -61,13 +61,13 @@
       <div class="product__info-wrapper grid__item">
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
-            <h1 class="product__title" {{ block.shopify_attributes }}>
+            <h4 class="product__title" {{ block.shopify_attributes }}>
               {%- if product.title != blank -%}
                 {{ product.title | escape }}
               {%- else -%}
                 {{ 'onboarding.product_title' | t }}
               {%- endif -%}
-            </h1>
+            </h4>
 
             {%- if section.settings.show_price -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
