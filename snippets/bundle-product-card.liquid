@@ -14,12 +14,22 @@
 {% endcomment %}
 
 <div class="card-wrapper">
-  {% if product_card_product.available == false %}
-    {% render 'spinner-sold-out' %}
-  {% elsif product_card_product.metafields.my_fields.show_trending_product_card == true %}
-    {% render 'spinner-trending' %}
-  {% elsif product_card_product.metafields.my_fields.show_most_popular_product_card == true %}
-    {% render 'spinner-most-popular' %}
+  {% if is_variant == true %}
+    {% if product_card_product.available == false %}
+      {% render 'spinner-sold-out' %}
+    {% elsif product_card_product.product.metafields.my_fields.show_trending_product_card == true %}
+      {% render 'spinner-trending' %}
+    {% elsif product_card_product.product.metafields.my_fields.show_most_popular_product_card == true %}
+      {% render 'spinner-most-popular' %}
+    {% endif %}
+  {% else %}
+    {% if product_card_product.available == false %}
+      {% render 'spinner-sold-out' %}
+    {% elsif product_card_product.metafields.my_fields.show_trending_product_card == true %}
+      {% render 'spinner-trending' %}
+    {% elsif product_card_product.metafields.my_fields.show_most_popular_product_card == true %}
+      {% render 'spinner-most-popular' %}
+    {% endif %}
   {% endif %}
 
   <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
