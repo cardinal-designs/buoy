@@ -626,7 +626,7 @@
          if(document.querySelector('.js-sticky-subscription-btns')) document.querySelector('.js-sticky-subscription-btns').value = "subscription";
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            if(stickyButton) stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
           }
         } else {
           subscriptionBoxHide();
@@ -635,7 +635,7 @@
           
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            if(stickyButton) stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
           }
         }
         /*elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
