@@ -92,9 +92,11 @@
           {% endif %}
         {% endif %}
 
+        {% comment %}
         {% if show_shop_button %}
           <a href="{{ card_product.url | default: '#' }}" class="shop-btn button button--beige">Shop Now</a>
         {% endif %}
+        {% endcomment %}
       </div>
     </div>
 </div>
