@@ -1,3 +1,8 @@
+.Custom_Featured_Product .product__subtitle,
+.Custom_Featured_Product .product-form__input select {
+  font-weight: 500;  
+}
+
 .Custom_Featured_Product .product__media-list .slick-list {
   overflow: hidden;
 }
