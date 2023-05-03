@@ -5,7 +5,8 @@
 {% endif %}
 
 
-<div class="product-reviews page-width" id="Product_Reviews">
+<div class="product-reviews" id="Product_Reviews">
+  <div class="page-width">
   {% if product1.metafields.okendo.summaryData.reviewCount > 0 %}
           <div data-oke-reviews-version="2.11.0" class="okeReviews okeReviews--theme okeReview-custom-aggregate">
               <div class="okeReviews-reviewsSummary js-okeReviews-reviewsSummary" data-oke-ga-click-action="Star Rating Summary Click">
@@ -22,10 +23,11 @@
               </div>
           </div>
   {% endif %}
-  <div data-oke-reviews-widget-holder data-oke-reviews-product-id="shopify-{{ product1.id }}">
-      <div data-oke-reviews-nav-bar></div>
-      <div data-oke-reviews-widget>{{ product1.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
-      <div data-oke-reviews-qanda></div>
+    <div data-oke-reviews-widget-holder data-oke-reviews-product-id="shopify-{{ product1.id }}">
+        <div data-oke-reviews-nav-bar></div>
+        <div data-oke-reviews-widget>{{ product1.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+        <div data-oke-reviews-qanda></div>
+    </div>
   </div>
 </div>
 
