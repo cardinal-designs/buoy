@@ -260,6 +260,10 @@
     display: block;
   }
 
+  div#rtx_sands_block {
+    margin: 10px 0 0;
+  }
+  
 }
 
 @media only screen and (max-width: 991px) {
@@ -310,10 +314,6 @@
 
   .product.Custom_Featured_Product {
     margin-bottom: 53px !important;
-  }
-
-  div#rtx_sands_block {
-    margin: 10px 0 0;
   }
   
 }
