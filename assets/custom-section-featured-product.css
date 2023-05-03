@@ -208,6 +208,11 @@
   font-size: 14px;
 }
 
+.Custom_Featured_Product .product-form .rtx_option_selector input[type=radio]:before {
+  width: 20px;
+  height: 20px;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
