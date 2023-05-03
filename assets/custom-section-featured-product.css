@@ -71,6 +71,6 @@
   z-index: 11;  
 }
 
-.featured-product .Custom_Featured_Product .product__media-item:not(:first-child) {
+.featured-product.Custom_Featured_Product .product__media-item:not(:first-child) {
   display: block;
 }
