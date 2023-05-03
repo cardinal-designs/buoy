@@ -110,7 +110,23 @@
                   <path d="M12 2L0 2" stroke="black" stroke-width="3"/>
               </svg>
             </button>
-            <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-bundle-product-select-quantity-input" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
+            {% if is_variant == false %}
+            <input autocomplete="false" type="number" value="0" min="0" 
+              max="{% if product_card_product.selected_or_first_available_variant.inventory_policy == 'deny' and product_card_product.selected_or_first_available_variant.inventory_management != nil %}{{ product_card_product.selected_or_first_available_variant.inventory_quantity }}{% else %}999{% endif %}" 
+              class="lsg-bundle-product-select-quantity-input" 
+              data-price="{{ product_card_product.selected_or_first_available_variant.price }}" 
+              data-price-formatted="{{ product_card_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" 
+              data-product="{{ product_card_product.selected_or_first_available_variant.id }}" 
+              aria-label="quantity">
+            {% else %}
+              <input autocomplete="false" type="number" value="0" min="0" 
+              max="{% if product_card_product.inventory_policy == 'deny' and product_card_product.inventory_management != nil %}{{ product_card_product.inventory_quantity }}{% else %}999{% endif %}" 
+              class="lsg-bundle-product-select-quantity-input" 
+              data-price="{{ product_card_product.price }}" 
+              data-price-formatted="{{ product_card_product.price | money_without_trailing_zeros }}" 
+              data-product="{{ product_card_product.id }}" 
+              aria-label="quantity">
+            {% endif %}
             <div class="lsg-bundle-product-select-quantity-input-display lsg-hidden">0</div>
             <button type="button">
               <svg aria-labelledby="plusIconTitle" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 10 10" fill="none">
