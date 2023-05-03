@@ -74,6 +74,8 @@
 
 .Reviews_Slider_Container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Reviews_Slider_Item {
