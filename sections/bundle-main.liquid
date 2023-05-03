@@ -1,12 +1,110 @@
+{{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-groups">
+  <div class="collection-groups__marquee">
+    <div class="collection-groups__marquee-container">
+      <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+      <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+    </div>
+    <div class="collection-groups__marquee-container">
+      <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+      <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+    </div>
+  </div>
+  <div class="page-width">
+  	{% for block in section.blocks %}
+      <div class="collection-groups__item">
+        <div class="collection-groups__header">
+          <div class="collection-groups__header-content">
+            <h2 class="h1">{{ block.settings.title }}</h2>
+            <p class="sh2 light">{{ block.settings.text }}</p>
+          </div>
+          {% if block.settings.show_spinner %}
+          	<div class="collection-groups__header-spinner">
+              <div class="collection-groups__header-spinner-wrapper">
+                <div class="collection-groups__header-spinner-image">
+                  <img
+                    srcset="{%- if block.settings.spinner_image.width >= 165 -%}{{ block.settings.spinner_image | img_url: '165x' }} 165w,{%- endif -%}
+                      {%- if block.settings.spinner_image.width >= 360 -%}{{ block.settings.spinner_image | img_url: '360x' }} 360w,{%- endif -%}
+                      {%- if block.settings.spinner_image.width >= 533 -%}{{ block.settings.spinner_image | img_url: '533x' }} 533w{%- endif -%}"
+                    src="{{ block.settings.spinner_image | img_url: '533x' }}"
+                    sizes="500px"
+                    alt="{{ block.settings.spinner_image.alt | escape }}"
+                    loading="lazy"
+                    class="motion-reduce img-fill"
+                  >
+                </div>
+                <div class="collection-groups__header-spinner-svg-container">
+                  {{ block.settings.spinner_text }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="collection-groups__grid">
+          {% assign currect_collection = collections[block.settings.collection] %}
+          {% for current_product in currect_collection.products %}
+            {% render 'product-card'
+              product_card_product: current_product,
+              show_secondary_image: true,
+              hover_video: block.settings.hover_video,
+              show_shop_button: true %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Collection Groups",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_spinner",
+            "label": "Show Spinner"
+          },
+          {
+            "type": "image_picker",
+            "id": "spinner_image",
+            "label": "Spinner Image"
+          },
+          {
+            "type": "textarea",
+            "id": "spinner_text",
+            "label": "Spinner Text (SVG)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Groups"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
