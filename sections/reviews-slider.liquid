@@ -9,7 +9,6 @@
     <div class="Reviews_Slider_Container">
       {% for block in section.blocks %}
         <div class="Reviews_Slider_Item">
-          <img src="{{ block.settings.image | img_url: 'master' }}"/>
           <h6 class="light">{{ block.settings.text }}</h6>
         </div>
       {% endfor %}
