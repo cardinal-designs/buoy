@@ -414,6 +414,200 @@
   <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 {%- endif -%}
 
+
+<script type="text/javascript">
+  ((api) => { 
+  const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
+  const boxProduct = {{ product | json }};
+  const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
+  const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
+  const elementSubscriptionBox = productForm.querySelector('[data-retextion-subscription-box]');
+  const elementGiftBox = productForm.querySelector('[data-retextion-gift-box]');
+  const elementGiftCheckbox = productForm.querySelector('[name="properties[_gifted-subscription]"]');
+  const elementSellingPlan = productForm.querySelector('[name="selling_plan"]');
+  const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
+  const elementsPurcahseTypeRadio = productForm.querySelectorAll('[name="purchaseType"]');
+  const elementsVariantSelectors = productForm.querySelectorAll('[name="id"]');
+  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, data-list, optgroup ');
+  const sellingPlan = productForm.querySelector('[name="selling_plan"]');
+  let selectedVariantId = {{ currentVariant.id | json }};
+  const queryParamsGet = () => {
+    let [origin, searchAndHash] = window.location.toString().split('?');
+    searchAndHash = searchAndHash || "";
+    let [search] = searchAndHash.split('#');
+    return (search || '').split('&').reduce((o, e) => {
+      let [key, value] = e.split('=').map(x =>
+        decodeURIComponent(x));
+        if (!key || !value) return o;
+        o[key] = value;
+      return o;
+    }, {});
+  };
+    const queryParamsGenerate = (qp) => { 
+      qp = qp || {};
+      //Remove undefined
+      Object.keys(qp).forEach(key => {
+        if (typeof qp[key] !== typeof undefined) return;
+        delete qp[key];
+      });
+      return Object.keys(qp).reduce((x, key, i) => {
+        let value = qp[key];
+        if (i != 0) x += '&';
+        return x += encodeURIComponent(key) + '=' + encodeURIComponent(value);
+      }, '');
+    };
+    const subscriptionBoxHide = () => {
+      elementSubscriptionBox.classList.remove('is-visible');
+    };
+    const subscriptionBoxShow = () => {
+      sellingPlan.disabled = false;
+      elementSubscriptionBox.classList.add('is-visible');
+    };
+    const subscriptionGiftShow = () => {
+      elementGiftBox.classList.add('is-visible');
+    };
+    const subscriptionGiftHide = () => {
+      elementGiftBox.classList.remove('is-visible');
+    };
+    const sellingPlanQueryUpdate = () => {
+      const queryParams = queryParamsGet();
+      if (elementSubscriptionBox.classList.contains('is-visible')) {
+        queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
+      } else {
+        delete queryParams['selling_plan'];
+      }
+      const qs = queryParamsGenerate(queryParams);
+      try {
+        let hash;
+        hash = (hash = window.location.toString().split('#')).length > 1 ? hash[1] : null;
+        const url = window.location.toString().split('?')[0] + '?' + qs + (hash ? '#' + hash : '');
+        history.pushState(queryParams, '', url);
+      } catch (e) {
+        // Catching since older browsers and iOS can have issues
+        console.error(e);
+      }
+    };
+    const sellingPlanSelectionGet = () => {
+      return parseInt(elementSellingPlan.value);
+    };
+    const sellingPlanSelectionSet = (sellingPlan) => {
+      sellingPlan = sellingPlan && sellingPlan.id ? sellingPlan.id : sellingPlan;
+      elementSellingPlan.value = sellingPlan.toString();
+    };
+    const sellingPlanPropertiesGet = () => {
+      const formData = new FormData(productForm);
+      return Array.from(formData.entries());
+    };
+    const sellingPlanUrlGenerate = () => {
+      const props = sellingPlanPropertiesGet();
+      let strProperties = '';
+      sellingPlanPropertiesGet().forEach(prop => {
+        const key = prop[0];
+        if (!key.startsWith('properties[')) return;
+        const val = prop[1];
+        if (!val || !val.toString().length) return;
+        strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
+      });
+      return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
+    };
+    const sellingPlanUpdate = () => {
+      sellingPlanQueryUpdate();
+      console.log(sellingPlanUrlGenerate());
+    };
+    const sellingPlanUpdateVariant = () => {
+      const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
+      let newOptions = '';
+      // Determine the selected option
+      let selected = sellingPlanSelectionGet();
+      if (!variant.selling_plan_allocations.some(spa => {
+        return spa.selling_plan_id == selected;
+      })) {
+        selected = variant.selling_plan_allocations[0].selling_plan_id;
+      }
+      // Generate new options
+      variant.selling_plan_allocations.forEach((spa, i) => {
+        const sellingGroup = boxProduct.selling_plan_groups.find(spg => spg.id === spa.selling_plan_group_id);
+        const sellingPlan = sellingGroup.selling_plans.find(sp => sp.id === spa.selling_plan_id);
+        const opt = document.createElement('option');
+        if (sellingPlan.id == selected) {
+          opt.setAttribute('selected', 'selected');
+        }
+        opt.value = sellingPlan.id;
+        opt.textContent = sellingPlan.name;
+        newOptions += opt.outerHTML;
+      });
+      // Update select
+      elementSellingPlan.innerHTML = newOptions;
+      sellingPlanUpdate();
+    };
+    // Event Listeners
+    elementsPurcahseTypeRadio.forEach(el => {
+      el.addEventListener('change', e => {
+        let elValue = el.value;
+        let mainProductButton = document.querySelector('.js-mainproduct-submit'),
+            stickyButton = document.querySelector('.js-sticky-add-to-cart');
+        let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
+            currentVariant = productForm.id.value;
+        if (el.value === 'purchaseTypeSubscription') {
+          subscriptionBoxShow();
+          sellingPlan.disabled = false;
+          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+          }
+        } else {
+          subscriptionBoxHide();
+          sellingPlan.disabled = true;
+          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+          
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+          }
+        }
+        /*elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
+          input.disabled = (elValue != 'purchaseTypeSubscription');
+        });*/
+        sellingPlanUpdate();
+      });
+    }); 
+    elementGiftCheckbox.addEventListener('change', e => {
+      if (e.target.checked) {
+        subscriptionGiftShow();
+      } else {
+        subscriptionGiftHide();
+      }
+      sellingPlanUpdate();
+    }); 
+    elementSellingPlan.addEventListener('change', e => {
+      sellingPlanUpdate();
+    }); 
+    elementsVariantSelectors.forEach(vs => {
+      vs.addEventListener('change', e => {
+        selectedVariantId = e.target.value;
+        sellingPlanUpdateVariant();
+      });
+    });
+    elementsInputs.forEach(inp => {
+      inp.addEventListener('change', e => { 
+        sellingPlanUpdate();
+      });
+    });
+    // Public API
+    return Object.assign(api, {
+      [boxId]: {
+        boxId,
+        boxProduct,
+        subscriptionBoxHide,
+        subscriptionBoxShow,
+        subscriptionGiftShow,
+        subscriptionGiftHide,
+        sellingPlanUrlGenerate
+      }
+    });
+  })((window.retextionBuyBox = {}));
+  </script>
 {% schema %}
 {
   "name": "t:sections.featured-product.name",
