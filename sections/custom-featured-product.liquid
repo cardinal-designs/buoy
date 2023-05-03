@@ -164,7 +164,7 @@
                             </option>
                           {%- endfor -%}
                         </select>
-                         {% assign my_fields = product.variant.metafields.custom %}
+                        {% assign my_fields = product.variant.metafields.custom %}
                         {%- if my_fields.supply_time  != blank -%}
                           <span class="Supply_Time">{{ my_fields.supply_time }}</span>
                         {%- endif -%}
