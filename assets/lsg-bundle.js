@@ -486,9 +486,9 @@ function mirrorQuantityDisplay(input) {
 function updateQuantityDisplay(input) {
     const inputWrap = input.closest('.lsg-bundle-product-select-quantity-wrap');
     if (input.value <= 0) {
-        $(inputWrap).addClass('no-quantity');
+      inputWrap.classList.add('no-quantity')
     } else {
-        $(inputWrap).removeClass('no-quantity');
+      inputWrap.classList.remove('no-quantity')
     }
     const inputDisplay = input.parentNode.querySelector('.lsg-bundle-product-select-quantity-input-display');
     if(inputDisplay) {
