@@ -238,6 +238,10 @@
   justify-content: space-between;
 }
 
+.Custom_Featured_Product .rtx_one_time_price {
+  display: none;
+}
+
 .Custom_Featured_Product div#rtx_sands_block,
 .Custom_Featured_Product .rtx_option_selector {
   flex: 0 0 calc(50% - 5px);
