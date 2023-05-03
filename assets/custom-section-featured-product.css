@@ -225,11 +225,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 15px;
+  column-gap: 10px;
 }
 
 .Custom_Featured_Product div#rtx_sands_block,
 .Custom_Featured_Product .rtx_option_selector {
-  flex: 0 0 50%;
+ flex: 0 0 calc(50% - 15px);
 }
 
 @media only screen and (max-width: 991px) {
