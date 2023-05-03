@@ -139,22 +139,24 @@
                   {% endif %}
                 {% endfor %}
               {% endif %}
-              
-              {% if sub_bundle_variants_count > 0 %}
-                {% for productSub in collections.bundle.products %}
-                  {% for variantSub in productSub.variants %}
-                    {% assign variantSubID = variantSub.id | strip %}
-                    {% if sub_bundle_variants contains variantSubID %}
-                      {% assign productCount = productCount | plus:1 %}
-                        {% render 'bundle-product-card',
-                        is_variant:true,
-                        product_card_product: variantSub,
-                        show_secondary_image: true,
-                        hover_video: block.settings.hover_video,
-                        show_shop_button: true %}
-                    {% endif %}
+            
+              {% if blockIndex == 1 and productCount < 3 %}
+                {% if sub_bundle_variants_count > 0 %}
+                  {% for productSub in collections.bundle.products %}
+                    {% for variantSub in productSub.variants %}
+                      {% assign variantSubID = variantSub.id | strip %}
+                      {% if sub_bundle_variants contains variantSubID %}
+                        {% assign productCount = productCount | plus:1 %}
+                          {% render 'bundle-product-card',
+                          is_variant:true,
+                          product_card_product: variantSub,
+                          show_secondary_image: true,
+                          hover_video: block.settings.hover_video,
+                          show_shop_button: true %}
+                      {% endif %}
+                    {% endfor %}
                   {% endfor %}
-                {% endfor %}
+                {% endif %}
               {% endif %}
             </div>
         {% elsif product.metafields.bundle.products %}
