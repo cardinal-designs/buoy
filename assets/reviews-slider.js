@@ -11,10 +11,10 @@ $(function(){
       adaptiveHeight: false,
       responsive: [
         {
-          breakpoint: 769,
+          breakpoint: 768,
           settings : {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: ,
           }
         }
       ]
