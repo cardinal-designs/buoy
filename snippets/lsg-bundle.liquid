@@ -97,7 +97,7 @@
                         {% endfor %}
                     {% endif %}
                 </div>
-            {% elsif product.metafields.bundle.products %}
+            {% elsif product.metafields.bundle.products %}111
                 <div data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-otp-list" data-lsg-bundle-product-sub-list>
                     {% for listProduct in product.metafields.bundle.products.value %}
                         {% render 'lsg-bundle-product-select', product: listProduct, min: otp_bundle_min %}
