@@ -248,9 +248,9 @@
               {%- endif -%}
             </div>
           
-            {% if settings.show_shipping_countdown != blank %}
-              <div id="Order_Within" class="Order_Within Risk_Free">
-                 {{ settings.order_within_text }}
+            {% if section.settings.free_shipping_text != blank %}
+              <div class="Risk_Free">
+                 {{ section.settings.free_shipping_textt }}
               </div>
             {% endif %}
             
