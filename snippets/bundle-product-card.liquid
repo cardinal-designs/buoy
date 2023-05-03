@@ -51,11 +51,13 @@
           {% endif %}
         </div>
       </a>
-      
+
+      {% comment %}
       <div class="card__buttons hide-mobile">
         <a href="{{ card_product.url | default: '#' }}" class="button learn-more">
           <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
       </div>
+      {% endcomment %}
       
     </div>
   </div>
