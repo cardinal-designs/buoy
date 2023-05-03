@@ -130,7 +130,7 @@
                           product_card_product: variant,
                           show_secondary_image: true,
                           hover_video: block.settings.hover_video,
-                          show_shop_button: false %}
+                          show_shop_button: true %}
                       {% if section.blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
                         {% assign breakLoop = true %}
                         {% break %}
@@ -157,7 +157,7 @@
                         product_card_product: variantSub,
                         show_secondary_image: true,
                         hover_video: block.settings.hover_video,
-                        show_shop_button: false %}
+                        show_shop_button: true %}
                     {% endif %}
                   {% endfor %}
                 {% endfor %}
@@ -178,7 +178,7 @@
                   product_card_product: variant,
                   show_secondary_image: true,
                   hover_video: block.settings.hover_video,
-                  show_shop_button: false %}
+                  show_shop_button: true %}
               {% endfor %}
             </div>
         {% endif %}
