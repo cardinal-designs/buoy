@@ -7,6 +7,13 @@
 {{ 'custom-section-featured-product.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+{% style %}
+  {% if section.settings.background == 'bg_color' %}
+    .product__info-wrapper:before {
+      background: #f8f1eb66!important
+    }
+  {% endif %}}
+{% endstyle %}
 
 {%- assign product = section.settings.product -%}
 {% assign currentVariant = product.selected_or_first_available_variant %}
@@ -754,14 +761,6 @@
       "id": "background",
       "label": "Background",
       "options": [
-        {
-          "value": "top",
-          "label": "Gradient Top to Bottom"
-        },
-        {
-          "value": "bottom",
-          "label": "Gradient Bottom to Top"
-        },
         {
           "value": "bg_color",
           "label": "Background Color"
