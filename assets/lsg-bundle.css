@@ -636,7 +636,7 @@ button:not([disabled]) {
 
 /* New Custom CSS Start */
 
-.js-added .product-qty--wrapper{
+.js-added .button.product-qty--wrapper{
   display: flex;
 }
 
@@ -644,7 +644,7 @@ button:not([disabled]) {
   display:none;
 }
 
-.product-qty--wrapper {  
+.button.product-qty--wrapper {  
   display: none;
   flex-direction: row;
   justify-content: center;
