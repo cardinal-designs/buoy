@@ -1,12 +1,83 @@
+{{ 'section-pr-slider.css' | asset_url | stylesheet_tag }} 
+
+<div class="pr-slider
+    {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">
+  <div class="page-width">
+    <div class="pr-slider__container">
+      {% for block in section.blocks %}
+        <div class="pr-slider__item">
+          <img src="{{ block.settings.image | img_url: 'master' }}"/>
+          <h6 class="light">{{ block.settings.text }}</h6>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "PR Slider",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "pr_slide",
+        "name": "PR Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reviews Slider"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
