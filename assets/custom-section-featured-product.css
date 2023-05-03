@@ -200,6 +200,10 @@
   padding: 15px;
 }
 
+.Custom_Featured_Product .product-form .rtx_option_selector input[type=radio] {
+  margin: 4px 10px 0 0 !important;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
