@@ -488,11 +488,11 @@ function updateQuantityDisplay(input) {
           cardWrapper = input.closest('.js-bundle-product-card--wrapper');
   console.log("teQuantityDisplay",input,input.value);
     if (input.value <= 0) {
-      inputWrap.classList.add('no-quantity')
-      cardWrapper.classList.add('js-added');
-    } else {
-      inputWrap.classList.remove('no-quantity')
+      inputWrap.classList.add('no-quantity');
       cardWrapper.classList.remove('js-added');
+    } else {
+      cardWrapper.classList.add('js-added');
+      inputWrap.classList.remove('no-quantity')
     }
     const inputDisplay = input.parentNode.querySelector('.lsg-bundle-product-select-quantity-input-display');
     if(inputDisplay) {
