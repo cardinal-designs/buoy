@@ -751,10 +751,61 @@
         "3a944d2e-08e6-4382-b541-79f7dbb279f3"
       ],
       "settings": {
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
       "type": "trusted-reviews",
+      "blocks": {
+        "038404e6-07ff-4263-843c-2cc50033bfd5": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        },
+        "23a5c523-2b5a-4ebe-a612-0c0050ccfa43": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        },
+        "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        },
+        "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3": {
+          "type": "image",
+          "settings": {
+            "tags": "",
+            "title": "Title",
+            "content": "Content",
+            "reviewer_name": "Reviewer Name",
+            "video": ""
+          }
+        }
+      },
+      "block_order": [
+        "038404e6-07ff-4263-843c-2cc50033bfd5",
+        "23a5c523-2b5a-4ebe-a612-0c0050ccfa43",
+        "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4",
+        "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3"
+      ],
       "settings": {
         "review_emoji": "",
         "head-title": "Column",
