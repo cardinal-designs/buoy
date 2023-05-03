@@ -957,6 +957,42 @@
         "add_bottom_border": true,
         "background": "bg_color"
       }
+    },
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
+      "type": "reviews-slider",
+      "blocks": {
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "",
+            "content": "\"Skeptical at first but I noticed changes in my skin\""
+          }
+        },
+        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "",
+            "content": "\"Skeptical at first but I noticed changes in my skin\""
+          }
+        },
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "",
+            "content": "\"Skeptical at first but I noticed changes in my skin\""
+          }
+        }
+      },
+      "block_order": [
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
+        "0fff71db-dfa8-49eb-9726-ec3517079f19",
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e"
+      ],
+      "settings": {
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
     }
   },
   "order": [
@@ -983,6 +1019,7 @@
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
-    "c78dfd33-b08e-4f3e-890a-4741ce2985fa"
+    "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2"
   ]
 }
