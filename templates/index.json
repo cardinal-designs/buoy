@@ -16,7 +16,8 @@
         "link_label": "",
         "link_link": "",
         "add_top_border": false,
-        "add_bottom_border": false
+        "add_bottom_border": false,
+        "add_background": false
       }
     },
     "16318238207c8b14a8": {
@@ -49,7 +50,8 @@
       "settings": {
         "background": "#ffffff",
         "enable_marquee": false,
-        "add_border": true
+        "add_top_border": true,
+        "add_bottom_border": true
       }
     },
     "6484e2d1-6529-43c4-975f-4a239d15a19e": {
@@ -65,7 +67,8 @@
         "content_reverse": "right",
         "button_style": "beige",
         "add_top_border": false,
-        "add_bottom_border": true
+        "add_bottom_border": true,
+        "background": "none"
       }
     },
     "1643601523d98d2b70": {
@@ -157,6 +160,9 @@
         "89a4446e-ae15-4708-a7e9-4824c3ada963"
       ],
       "settings": {
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "3f3689d9-a926-45ad-91b2-23c9c322a354": {
