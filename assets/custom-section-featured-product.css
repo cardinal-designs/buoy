@@ -229,11 +229,12 @@
   flex-wrap: wrap;
   margin: 0 0 15px;
   column-gap: 10px;
+  justify-content: space-between;
 }
 
 .Custom_Featured_Product div#rtx_sands_block,
 .Custom_Featured_Product .rtx_option_selector {
-  flex: 0 0 calc(50% - 15px);
+  flex: 0 0 calc(50% - 5px);
 }
 
 .Custom_Featured_Product .product-form__submit s {
