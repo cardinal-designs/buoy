@@ -124,11 +124,13 @@
                     {{ productSub.id }}<br />
                       {% assign productSubID = productSub.id | strip %}
                       {% if sub_bundle_products contains productSubID %}
-                        {% render 'bundle-product-card'
-                            product_card_product: productSub,
-                            show_secondary_image: true,
-                            hover_video: block.settings.hover_video,
-                            show_shop_button: true %}
+                        {% for variant in productSub.variants %}
+                          {% render 'bundle-product-card'
+                              product_card_product: variant,
+                              show_secondary_image: true,
+                              hover_video: block.settings.hover_video,
+                              show_shop_button: true %}
+                        {% endfor %}
                       {% endif %}
                     {% endfor %}
                 {% endfor %}
