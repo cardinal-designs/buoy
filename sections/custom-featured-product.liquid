@@ -255,8 +255,10 @@
             {%- endif -%}
             
             {%- if section.settings.subscription_benefits != blank -%}
-              <h6>SUBSCRIPTION BENEFITS</h6>
-              <ul class="Sub_Text_New body">{{ section.settings.subscription_benefits }}</ul>
+              <div class="Subscription_Benefits">
+                <p>SUBSCRIPTION BENEFITS</p>
+                <ul class="Sub_Text_New body">{{ section.settings.subscription_benefits }}</ul>
+              </div>
             {%- endif -%}
             
             {%- if section.settings.show_view_details -%}
