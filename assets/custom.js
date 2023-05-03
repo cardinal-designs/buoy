@@ -196,10 +196,10 @@ let reviewOutOf = setInterval(replaceOutOf, 1000);
 function replaceOutOf() {
   var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
   if(ratingCount){
-console.log(ratingCount)
+clearInterval(reviewOutOf);
     ratingCount.innerText;
     document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
-    clearInterval(reviewOutOf);
+    
   }
 }
 
