@@ -133,7 +133,7 @@
                     {% assign variantSubID = variantSub.id | strip %}
                     {% if sub_bundle_variants contains variantSubID %}
                         {% render 'bundle-product-card'
-                        product_card_product: variant,
+                        product_card_product: variantSub,
                         show_secondary_image: true,
                         hover_video: block.settings.hover_video,
                         show_shop_button: true %}
