@@ -170,14 +170,14 @@
                         </select>
                         {%- for variant in product.variants -%}
                           {% assign my_fields = variant.metafields.custom %}
-                          (<div class="Featured_Variant_Values">
+                          <div class="Featured_Variant_Values">
                             {%- if my_fields.supply_time  != blank -%}
                               <span class="Supply_Time">{{ my_fields.supply_time }}</span>
                             {%- endif -%} / 
                             {%- if my_fields.servings != blank -%}
                               <span class="Variant_Servings">{{ my_fields.servings }}</span>
                             {%- endif -%}
-                          </div>)
+                          </div>
                         {%- endfor -%}
                       </div>
                     </div>
