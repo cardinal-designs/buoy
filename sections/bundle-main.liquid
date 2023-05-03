@@ -116,6 +116,7 @@
           {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
             <div class="collection-groups__grid" data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" data-lsg-bundle-product-sub-list>
               {% if sub_bundle_products_count > 0 %}
+                {% assign breakLoop = false %}
                 {% for productSub in collections.bundle.products %}
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
@@ -127,14 +128,12 @@
                           show_secondary_image: true,
                           hover_video: block.settings.hover_video,
                           show_shop_button: true %}
-                      {{ section.blocks.size }}
+                      {{ section.blocks.size }}--{{ productCount }}
                       {% if section.blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                        {% assign breakLoop = true %}
                         {% break %}
                       {% endif %}
                     {% endfor %}
-                  {% endif %}
-                  {% if section.blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
-                    {% break %}
                   {% endif %}
                 {% endfor %}
               {% endif %}
