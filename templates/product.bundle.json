@@ -32,10 +32,57 @@
         "sub_atc_text": "Free Shipping over $49 | 100% Happiness Guarantee",
         "otp_interval_prefix": "Your bundle:"
       }
+    },
+    "3f3689d9-a926-45ad-91b2-23c9c322a354": {
+      "type": "squeezy-section",
+      "blocks": {
+        "cef5da02-c2b9-4859-97d5-20d9daba2900": {
+          "type": "point",
+          "settings": {
+            "emoji": "<span>☕️<\/span>\n<span>🍺<\/span>\n<span>🍵<\/span>\n<span>🍷<\/span>\n<span>🧋<\/span>\n<span>🧃<\/span>\n<span>🍹<\/span>\n<span>🫖<\/span>",
+            "title": "Grab your favorite beverage"
+          }
+        },
+        "7b342d7a-534a-4dbf-b407-eba5967fe647": {
+          "type": "point",
+          "settings": {
+            "emoji": "🤏",
+            "title": "Add one light squeeze"
+          }
+        },
+        "f7a1c81f-4160-4ae7-9e35-8b33949f7005": {
+          "type": "point",
+          "settings": {
+            "emoji": "😋",
+            "title": "Enjoy your enhanced beverage"
+          }
+        }
+      },
+      "block_order": [
+        "cef5da02-c2b9-4859-97d5-20d9daba2900",
+        "7b342d7a-534a-4dbf-b407-eba5967fe647",
+        "f7a1c81f-4160-4ae7-9e35-8b33949f7005"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Squeezy-Image.jpg",
+        "video_url": "",
+        "title": "<strong>It’s Easy<\/strong> Squeezy",
+        "description": "Essential electrolytes, 87 trace minerals and vitamins delivered in their most bioavailable form factor for fast-acting hydration and wellness.",
+        "button_label": "Start Squeezing",
+        "button_link": "shopify:\/\/collections\/all",
+        "link_label": "",
+        "link_link": "",
+        "content_reverse": "right",
+        "button_style": "beige",
+        "add_top_border": true,
+        "add_bottom_border": false,
+        "background": "none"
+      }
     }
   },
   "order": [
     "bundle-main",
-    "1663729574e4516faa"
+    "1663729574e4516faa",
+    "3f3689d9-a926-45ad-91b2-23c9c322a354"
   ]
 }
