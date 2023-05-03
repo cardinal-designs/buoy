@@ -119,6 +119,7 @@
             {% if sub_bundle_products_count > 0 %}
                 {% for collection in collections %}
                   <br />{{ collection.title }}<br />
+          {% comment %}
                   {% for productSub in collection.products %}
                     {{ productSub.id }}
                       {% assign productSubID = productSub.id | strip %}
@@ -130,6 +131,7 @@
                             show_shop_button: true %}
                       {% endif %}
                     {% endfor %}
+                  {% endcomment %}
                 {% endfor %}
             {% endif %}
           {% endif %}
