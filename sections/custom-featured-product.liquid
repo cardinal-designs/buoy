@@ -68,6 +68,7 @@
       <div class="product__info-wrapper">
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
+            {% render 'okendo-reviews-product-rating-summary', product: product %}
             <h4 class="product__title" {{ block.shopify_attributes }}>
               {%- if product.title != blank -%}
                 {{ product.title | escape }}
