@@ -383,3 +383,14 @@
   }
 
 }
+
+@media only screen and (max-width: 374px) {
+  
+  .Custom_Featured_Product .product__rtx-tooltip {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: 0;
+  }
+
+}
