@@ -111,12 +111,14 @@
           {% endif %}
         </div>
           {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
+            {% assign productCount = 0 %}
             <div class="collection-groups__grid" data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" data-lsg-bundle-product-sub-list>
               {% if sub_bundle_products_count > 0 %}
                 {% for productSub in collections.bundle.products %}
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
                     {% for variant in productSub.variants %}
+                      {% assign productCount = productCount | plus:1 %}
                       {% render 'bundle-product-card',
                           is_variant:true,
                           product_card_product: variant,
@@ -133,6 +135,7 @@
                   {% for variantSub in productSub.variants %}
                     {% assign variantSubID = variantSub.id | strip %}
                     {% if sub_bundle_variants contains variantSubID %}
+                      {% assign productCount = productCount | plus:1 %}
                         {% render 'bundle-product-card',
                         is_variant:true,
                         product_card_product: variantSub,
@@ -143,6 +146,7 @@
                   {% endfor %}
                 {% endfor %}
               {% endif %}
+            {{ productCount }}
             </div>
         {% elsif product.metafields.bundle.products %}
             <div class="collection-groups__grid" data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" data-lsg-bundle-product-sub-list>
