@@ -79,7 +79,6 @@
                           {% for productSub in collection.products %}
                               {% assign productSubID = productSub.id | strip %}
                               {% if sub_bundle_products contains productSubID %}
-                                {{ productSub.title }}
                                   {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
                               {% endif %}
                             {% endfor %}
