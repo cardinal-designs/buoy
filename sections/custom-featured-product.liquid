@@ -18,7 +18,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="{% if section.settings.secondary_background %}background-secondary{% else %}spaced-section{% endif %}">
+<section id="Custom_Featured_Section" class="{% if section.settings.secondary_background %}background-secondary{% else %}spaced-section{% endif %}">
 <div class="Featured_Product_Container
    {% if section.settings.add_top_border %} top-border{% endif %}
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
