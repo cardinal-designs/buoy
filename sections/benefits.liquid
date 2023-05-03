@@ -1,6 +1,10 @@
 {{ 'section-benefits.css' | asset_url | stylesheet_tag }}
 
-<div class="benefits__container">
+<div class="benefits__container
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">
   <div class="page-width benefits__flex">
     <div class="benefits__items hide-mobile">
       <h5 class="benefits__info-title light hide-desktop">{{ section.settings.title }}</h5>
@@ -63,7 +67,41 @@
     "type": "url",
       "id": "link",
       "label": "Link"
-    }
+    },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      }
   ],
   "blocks": [
     {
