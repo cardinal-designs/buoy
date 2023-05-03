@@ -17,7 +17,7 @@
   {% assign card_product = product_card_product.product %}
 {% endif %}
   
-<div class="card-wrapper">
+<div class="card-wrapper js-bundle-product-card--wrapper">
   {% if card_product.available == false %}
     {% render 'spinner-sold-out' %}
   {% elsif card_product.metafields.my_fields.show_trending_product_card == true %}
