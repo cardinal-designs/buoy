@@ -64,7 +64,11 @@
 
 .Sub_Text_New {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .Featured_product__media-list {
