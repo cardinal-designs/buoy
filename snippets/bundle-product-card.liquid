@@ -26,18 +26,6 @@
     {% render 'spinner-most-popular' %}
   {% endif %}
 
-  <span class="visually-hidden">
-    {% if is_variant == true %}
-      {% if product_card_product.title == "Default Title" %}
-        {{ product_card_product.product.title }}
-      {% else %}
-        {{ product_card_product.product.title }} - {{ product_card_product.title }}
-      {% endif %}
-    {% else %}
-      {{ card_product.title }}
-    {% endif %}
-  </span>
-
   <div class="card card--product" tabindex="-1">
     <div class="card__inner">
       <a href="{{ card_product.url }}" class="full-unstyled-link">
@@ -84,7 +72,17 @@
         </div>
 
         <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
-          <div class="h5 card-information__title">{{ card_product.title | escape }}</div>
+          <div class="h5 card-information__title lsg-bundle-product-select-title">
+            {% if is_variant == true %}
+              {% if product_card_product.title == "Default Title" %}
+                {{ product_card_product.product.title }}
+              {% else %}
+                {{ product_card_product.product.title }} - {{ product_card_product.title }}
+              {% endif %}
+            {% else %}
+              {{ card_product.title }}
+            {% endif %}
+          </div>
         {% comment %}
           <h5 class="card-information__title">
             {{ product_card_product.title | escape }}
