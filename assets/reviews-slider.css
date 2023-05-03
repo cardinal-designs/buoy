@@ -72,9 +72,14 @@
   margin: 0;
 }
 
+.Reviews_Slider_Container {
+  display: flex;
+}
+
 .Reviews_Slider_Item {
   text-align: center;
   padding: 0 40px;
+  flex: 0 0 33.33%;
 }
 
 @media only screen and (max-width: 768px) {
