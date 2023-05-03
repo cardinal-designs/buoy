@@ -2,7 +2,7 @@ $(function(){
   function slickOnResize() {
     $(".Reviews_Slider_Container").not('.slick-initialized').slick({
       lazyLoad: 'progressive',
-     dots: true,
+      dots: true,
       arrows: true,
       infinite: true,
       speed: 300,
