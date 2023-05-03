@@ -200,7 +200,7 @@ function replaceOutOf() {
 // clearInterval(reviewOutOf);
 console.log(ratingCount)
     // ratingCount.innerText;
-    document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
+    document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').replace('out of', '/'); 
     
   }
 }
