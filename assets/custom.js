@@ -110,17 +110,23 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-    closeNav();
-  });
+  if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
+    document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+      closeNav();
+    });
+  }
 
-  document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
-    closeNav();
-  });
+  if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
+    document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
+      closeNav();
+    });
+  }
 
-  document.querySelector(selectors.closeContinue).addEventListener('click', function(){
-    closeNav();
-  });
+  if (document.querySelector(selectors.closeContinue) != 'undefined' && document.querySelector(selectors.closeContinue) != null) {
+    document.querySelector(selectors.closeContinue).addEventListener('click', function(){
+      closeNav();
+    });
+  }
 
   function openNav() {
     document.getElementById("supplementSideDrawer").style.right = "0";
