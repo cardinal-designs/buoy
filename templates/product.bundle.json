@@ -1,5 +1,10 @@
 {
   "sections": {
+    "bundle-main": {
+      "type": "bundle-main",
+      "settings": {
+      }
+    },
     "1663729574e4516faa": {
       "type": "lsg-bundle-builder",
       "settings": {
@@ -15,6 +20,7 @@
     }
   },
   "order": [
+    "bundle-main",
     "1663729574e4516faa"
   ]
 }
