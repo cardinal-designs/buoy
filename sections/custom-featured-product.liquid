@@ -86,7 +86,8 @@
               {{ product.description }}
             </div>
             {% render 'rtx-pdp' %}
-            
+
+            {%- comment -%}
             {%- if product != blank -%}
               <div {{ block.shopify_attributes }}>
                 {%- form 'product', product -%}
@@ -95,6 +96,7 @@
                 {%- endform -%}
               </div>
             {%- endif -%}
+            {%- endcomment -%}
 
             {%- if section.settings.show_quantity -%}
               <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
