@@ -71,7 +71,7 @@
           </button>
         {%- endif -%}
       </div>
-      <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb !important;"{% endif %}>
+      <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb10 !important;"{% endif %}>
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
             {% render 'okendo-reviews-product-rating-summary', product: product %}
