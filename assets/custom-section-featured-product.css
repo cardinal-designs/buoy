@@ -290,6 +290,14 @@
     width: auto;
     top: -8px;
   }
+
+  .Custom_Featured_Product label.rtx_option_label {
+    position: relative;
+  }
+
+  .Custom_Featured_Product .product-form #rtx_sands_block .rtx_option_selector {
+    padding-bottom: 16px;
+  }
   
 }
 
