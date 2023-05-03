@@ -85,6 +85,11 @@
   flex: 0 0 33.33%;
 }
 
+.Reviews_Slider_Main .Testimonials_Rating {
+  height: 16px;
+  background-size: contain;
+}
+
 @media only screen and (max-width: 768px) {
   
   .Reviews_Slider_Container .slick-prev {
