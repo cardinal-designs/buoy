@@ -66,7 +66,8 @@
         <div data-oke-reviews-product-listing-rating>
         {% if is_variant == false %}
           {{ product_card_product.metafields.okendo.ProductListingSnippet }}
-        {% else %}111
+        {% else %}
+          {{ product_card_product.product.title }}
           {{ product_card_product.product.metafields.okendo.ProductListingSnippet }}
         {% endif %}
         </div>
