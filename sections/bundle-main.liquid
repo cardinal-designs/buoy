@@ -187,7 +187,60 @@
 {% schema %}
   {
     "name": "Bundle Main",
-    "settings": [],
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "setUrl",
+        "label": "Update URL",
+        "default": false,
+        "info": "Dynamically update URL for preloading bundles"
+      },
+      {
+        "type": "text",
+        "id": "bundle_select_heading",
+        "label": "Bundle Select Heading"
+      },
+      {
+        "type": "text",
+        "id": "frequency_heading",
+        "label": "Frequency Select Heading",
+        "default": "Select your plan"
+      },
+      {
+        "type": "text",
+        "id": "frequency_otp",
+        "label": "Frequency One-Time Purchase Label",
+        "default": "One-time purchase"
+      },
+      {
+        "type": "text",
+        "id": "frequency_sub",
+        "label": "Frequency Subscription Label",
+        "default": "Subscribe & Save"
+      },
+      {
+        "type": "text",
+        "id": "atc_text",
+        "label": "Add to Cart Text",
+        "default": "Add to Cart"
+      },
+      {
+        "type": "text",
+        "id": "sub_atc_text",
+        "label": "Sub-ATC Disclaimer",
+        "default": "Free Shipping over $49 | 100% Happiness Guarantee"
+      },
+      {
+        "type": "header",
+        "content": "One-Time Only"
+      },
+      {
+        "type": "text",
+        "id": "otp_interval_prefix",
+        "label": "Interval/Price Prefix",
+        "default": "Your bundle:"
+      }
+    ],
     "blocks": [
       {
         "type": "block",
