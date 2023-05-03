@@ -136,7 +136,7 @@
               </svg>
             </button>
           </div>
-          <button type="button" class="product-atc-btn shop-btn button button--beige" {% if card_product.available == false %}disabled{% endif %}>Add - {{ card_product.price | money_without_trailing_zeros }}</button>
+          <button type="button" class="product-atc-btn js-product-atb-btn shop-btn button button--beige" {% if card_product.available == false %}disabled{% endif %}>Add - {{ card_product.price | money_without_trailing_zeros }}</button>
         </div>
         {% comment %}
         {% if show_shop_button %}
