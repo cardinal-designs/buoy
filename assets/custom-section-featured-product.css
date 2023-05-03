@@ -213,6 +213,10 @@
   height: 20px;
 }
 
+.Custom_Featured_Product .Multi_Price {
+  display: none;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
