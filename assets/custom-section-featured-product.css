@@ -65,9 +65,9 @@
 
 .Sub_Text_New {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
   flex-wrap: wrap;
   padding: 0;
 }
