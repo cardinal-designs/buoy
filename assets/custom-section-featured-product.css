@@ -181,6 +181,10 @@
   padding-top: 120px;
 }
 
+.Custom_Featured_Product .product-form .Label_Sub_Text {
+  display: none;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
