@@ -158,11 +158,11 @@
   padding: 0;
 }
 
-.product__description {
+.Custom_Featured_Product .product__description {
   margin:28px 0 16px;
 }
 
-.product__description p {
+.Custom_Featured_Product .product__description p {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0;
@@ -171,6 +171,10 @@
 
 .featured-product-section .title-text__container {
   padding-bottom: 70px;
+}
+
+.Custom_Featured_Product .product__media-wrapper {
+  margin: 0;
 }
 
 @media only screen and (max-width: 991px) {
