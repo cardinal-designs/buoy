@@ -747,6 +747,16 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
     });
 });
 
+document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
+  button.addEventListener('click',function(e) {
+   let cardWrapper = this.closest('.js-bundle-product-card--wrapper');
+    cardWrapper.classList.add('js-added');
+    let qtyInput = cardWrapper.querySelector('.lsg-bundle-product-select-quantity-inpu');
+    qtyInput.value = 1;
+    qtyInput.dispatchEvent(new Event('change'));
+  });
+});
+
 document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEach(function(incrementButton){
     incrementButton.addEventListener('click', function(e){
         e.preventDefault();
@@ -757,6 +767,7 @@ document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEa
         setUrl(e.currentTarget);
     })
 });
+
 document.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
     input.addEventListener('change', function(e){
         inputChangeSubProduct(e.currentTarget);
@@ -764,6 +775,7 @@ document.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(f
         checkoutEnableValidation(e.currentTarget);
     })
 });
+
 document.querySelectorAll('.lsg-bundle-interval-select input[name^="bundle_interval_select_"]').forEach(function(intervalSelector){
     intervalSelector.addEventListener('change', function(e){
         updateInterval(e.currentTarget);
