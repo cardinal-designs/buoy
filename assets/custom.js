@@ -197,7 +197,7 @@ $(window).on("orientationchange, resize", function(event) {
 var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
 if(ratingCount){
   ratingCount.innerText;
-  // document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
+  document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
 }
 
 let myInterval = setInterval(timer, 1000);
