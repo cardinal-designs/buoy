@@ -81,6 +81,21 @@
   text-align: left;
 }
 
+.Custom_Featured_Product button.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.Custom_Featured_Product button.slick-prev.slick-arrow {
+  left: 39px;
+}
+
+.Custom_Featured_Product button.slick-next.slick-arrow {
+  right: 39px;
+}
+
 .Sub_Text_New .Tick {
   margin: 0;
 }
