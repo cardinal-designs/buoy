@@ -226,6 +226,11 @@
   flex-wrap: wrap;
 }
 
+.Custom_Featured_Product div#rtx_sands_block,
+.Custom_Featured_Product .rtx_option_selector {
+  flex: 0 0 50%;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
