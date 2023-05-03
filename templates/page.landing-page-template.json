@@ -818,7 +818,7 @@
       ],
       "settings": {
         "review_emoji": "⭐️",
-        "head-title": "3,000 +<br><b>trusted reviews<\/b>",
+        "head-title": "3,000 +trusted reviews",
         "sub-text": "",
         "button_label": "Read All Reviews",
         "button_link": "shopify:\/\/pages\/reviews",
@@ -829,6 +829,40 @@
     },
     "97b52c19-9232-4b33-a84e-be1d55a585da": {
       "type": "trusted-reviews-2",
+      "blocks": {
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f": {
+          "type": "image",
+          "settings": {
+            "title": "Name",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "Content"
+          }
+        },
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe": {
+          "type": "image",
+          "settings": {
+            "title": "Name",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "Content"
+          }
+        },
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5": {
+          "type": "image",
+          "settings": {
+            "title": "Name",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "Content"
+          }
+        }
+      },
+      "block_order": [
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f",
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe",
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5"
+      ],
       "settings": {
         "text": "",
         "head-title": "Column",
