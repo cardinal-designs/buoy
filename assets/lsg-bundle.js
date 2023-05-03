@@ -175,6 +175,7 @@ function checkParameter() {
 
 function setUrl(trigger) {
     const bundleBlockWrapper = trigger.closest('.lsg-bundle-wrapper');
+  console.log(bundleBlockWrapper)
     if (bundleBlockWrapper && !bundleBlockWrapper.hasAttribute('data-lsg-bundle-set-url')) {
         return false;
     }
