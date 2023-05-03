@@ -5,12 +5,9 @@
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
   ">
-<div class="page-width">
-  <h1>{{ section.settings.title }}
-  {% if section.settings.italic_title != blank %} <span>{{ section.settings.italic_title }}</span>{% endif %}
-  </h1>
-  <p>{{ section.settings.text }}</p>
-</div>
+  <div class="page-width">
+    <a href="{{ section.settings.url }}" class="button">{{ section.settings.text }}</a>
+  </div>
 </div>
 
 {% schema %}
@@ -19,18 +16,13 @@
     "settings": [
       {
         "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "italic_title",
-        "label": "Italic Title (optional)"
-      },
-      {
-        "type": "textarea",
         "id": "text",
-        "label": "Text"
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button URL"
       },
       {
         "type": "checkbox",
