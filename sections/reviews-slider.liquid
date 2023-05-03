@@ -7,20 +7,22 @@
    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
   ">
   <div class="page-width">
-    <div class="Reviews_Slider_Container">
-      {% for block in section.blocks %}
-        <div class="Reviews_Slider_Item">
-          <span class="Testimonials_Rating"></span>
-          <h6 class="Reviews_Slider_Content">
-            {{ block.settings.content }}
-          </h6>
-          <h6 class="Testimonials_Author">{{ block.settings.text }}</h6>
-        </div>
-      {% endfor %}
+    <div class="Reviews_Slider_Main">
+      <div class="Reviews_Slider_Container">
+        {% for block in section.blocks %}
+          <div class="Reviews_Slider_Item">
+            <span class="Testimonials_Rating"></span>
+            <h6 class="Reviews_Slider_Content">
+              {{ block.settings.content }}
+            </h6>
+            <h6 class="Testimonials_Author">{{ block.settings.text }}</h6>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.reviews_btn_txt != blank %}
+        <a href="{{ section.settings.reviews_btn_link }}" class="All_Reviews">{{ section.settings.reviews_btn_txt }}</a>
+      {% endif %}
     </div>
-    {% if section.settings.reviews_btn_txt != blank %}
-      <a href="{{ section.settings.reviews_btn_link }}" class="All_Reviews">{{ section.settings.reviews_btn_txt }}</a>
-    {% endif %}
   </div>
 </div>
 
