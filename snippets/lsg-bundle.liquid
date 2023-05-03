@@ -75,11 +75,11 @@
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
                 <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list" data-lsg-bundle-product-sub-list>
                     {% if sub_bundle_products_count > 0 %}
-                      {{ sub_bundle_products | join:"<br />" }}
                         {% for collection in collections %}
                           {% for productSub in collection.products %}
                               {% assign productSubID = productSub.id | strip %}
                               {% if sub_bundle_products contains productSubID %}
+                                {{ productSub.title }}
                                   {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
                               {% endif %}
                             {% endfor %}
