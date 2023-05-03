@@ -190,7 +190,7 @@ $(window).on("orientationchange, resize", function(event) {
 
 /* okendo review replce string on PDP */
 
-let reviewOutOf = setInterval(replaceOutOf, 1000);
+let reviewOutOf = setInterval(replaceOutOf, 2000);
 
 
 function replaceOutOf() {
