@@ -783,6 +783,7 @@ document.querySelectorAll('.lsg-bundle-interval-select input[name^="bundle_inter
         setUrl(e.currentTarget);
     });
 });
+
 document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(function(frequencySelect){
     frequencySelect.addEventListener('change', function(e){
         const trigger = e.currentTarget;
@@ -790,6 +791,7 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
         setUrl(e.currentTarget);
     })
 });
+
 document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
     bundleATC.addEventListener('click', function(e){
         e.preventDefault();
@@ -805,6 +807,7 @@ document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
         }
     })
 })
+
 document.querySelectorAll('.lsg-bundle-size-select-el').forEach(function(bundleSelector){
     bundleSelector.addEventListener('click', function(e){
         e.preventDefault();
