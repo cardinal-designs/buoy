@@ -175,11 +175,9 @@ function checkParameter() {
 
 function setUrl(trigger) {
     const bundleBlockWrapper = trigger.closest('.lsg-bundle-wrapper');
-  console.log(bundleBlockWrapper)
     if (bundleBlockWrapper && !bundleBlockWrapper.hasAttribute('data-lsg-bundle-set-url')) {
         return false;
     }
-  console.log('hiii')
     const bundleBlock = getBundleBlock(trigger);
     const quantityInput = bundleBlock.querySelectorAll('.lsg-bundle-product-select-quantity-input');
     let url = '?';
