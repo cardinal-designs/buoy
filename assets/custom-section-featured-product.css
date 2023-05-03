@@ -115,6 +115,10 @@
   margin: 0 3px;
 }
 
+.Custom_Featured_Product .slick-dots li.slick-active button:before {
+  background: #1F2322;
+}
+
 .Custom_Featured_Product .slick-dots li button:before {
   position: absolute;
   content: "";
