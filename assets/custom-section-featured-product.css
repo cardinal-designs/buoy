@@ -26,3 +26,11 @@
 .Featured_Variant_Values {
   display: inline-block;
 }
+
+.Featured_Variant_Values .Variant_Servings,
+.Featured_Variant_Values .Supply_Time {
+  font-size: 16px;
+  color: #1f2322;
+  font-family: inter,sans-serif;
+  font-weight: 300;
+}
