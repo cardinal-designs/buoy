@@ -239,6 +239,10 @@
   justify-content: space-between;
 }
 
+.Custom_Featured_Product .product-form__buttons .button {
+  height: 50px;
+}
+
 .Custom_Featured_Product .rtx_one_time_price {
   display: none;
 }
