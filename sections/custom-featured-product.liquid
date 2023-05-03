@@ -164,13 +164,15 @@
                             </option>
                           {%- endfor -%}
                         </select>
-                        {% assign my_fields = product.variant.metafields.custom %}
-                        {%- if my_fields.supply_time  != blank -%}
-                          <span class="Supply_Time">{{ my_fields.supply_time }}</span>
-                        {%- endif -%}
-                        {%- if my_fields.servings != blank -%}
-                          <span class="Variant_Servings">{{ my_fields.servings }}</span>
-                        {%- endif -%}                    
+                        {%- for variant in product.variants -%}
+                          {% assign my_fields = variant.metafields.custom %}
+                          {%- if my_fields.supply_time  != blank -%}
+                            <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+                          {%- endif -%}
+                          {%- if my_fields.servings != blank -%}
+                            <span class="Variant_Servings">{{ my_fields.servings }}</span>
+                          {%- endif -%}                                
+                        {%- endfor -%}
                       </div>
                     </div>
                   {%- endfor -%}
