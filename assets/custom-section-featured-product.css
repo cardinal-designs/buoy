@@ -110,6 +110,18 @@
   font-size: 0;
 }
 
+.Custom_Featured_Product .slick-dots li button:before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  border: 1px solid #1F2322;
+}
+
 .Sub_Text_New .Tick {
   margin: 0;
 }
