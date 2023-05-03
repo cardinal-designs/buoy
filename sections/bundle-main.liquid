@@ -19,9 +19,9 @@
         <div class="collection-groups__header">
           <div class="collection-groups__header-content">
             <h2 class="h1">{{ block.settings.title }}</h2>
-            <p class="sh2 light">{{ block.settings.text }}</p>
+            <p class="sh2 light">{{ block.settings.text | newline_to_br }}</p>
           </div>
-          {% if block.settings.show_spinner %}
+          {% if block.settings.show_spinner and  block.settings.spinner_image != blank %}
           	<div class="collection-groups__header-spinner">
               <div class="collection-groups__header-spinner-wrapper">
                 <div class="collection-groups__header-spinner-image">
