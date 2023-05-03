@@ -121,6 +121,9 @@
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
                     {% for variant in productSub.variants %}
+                      {% if section.blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                        {% continue %}
+                      {% endif %}
                       {% assign productCount = productCount | plus:1 %}
                       {% render 'bundle-product-card',
                           is_variant:true,
@@ -140,7 +143,7 @@
                 {% endfor %}
               {% endif %}
             
-              {% if blockIndex == 1 and productCount < 3 %}
+              {% if section.blocks.size == 2 and blockIndex == 1 and productCount < 3 %}
                 {% if sub_bundle_variants_count > 0 %}
                   {% for productSub in collections.bundle.products %}
                     {% for variantSub in productSub.variants %}
