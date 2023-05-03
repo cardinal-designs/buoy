@@ -254,6 +254,10 @@
               </div>
             {%- endif -%}
             
+            {%- if section.settings.subscription_benefits != blank -%}
+              <p class="Label_Sub_Text">{{ section.settings.subscription_benefits }}</p>
+            {%- endif -%}
+            
             {%- if section.settings.show_view_details -%}
               <a href="{{ product.url }}" class="link product__view-details animate-arrow">
                 {{ 'products.product.view_full_details' | t }}
@@ -449,6 +453,11 @@
       "id": "show_view_details",
       "default": false,
       "label": "Show View Details Link"
+    },
+    {
+      "type": "text",
+      "id": "subscription_benefits",
+      "label": "Subscription Benefits"
     }
   ],
   "blocks": [
