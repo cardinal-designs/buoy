@@ -248,11 +248,11 @@
               {%- endif -%}
             </div>
           
-            {% if section.settings.free_shipping_text != blank %}
+            {%- if section.settings.free_shipping_text != blank -%}
               <div class="Risk_Free">
                  {{ section.settings.free_shipping_textt }}
               </div>
-            {% endif %}
+            {%- endif -%}
             
             {%- if section.settings.show_view_details -%}
               <a href="{{ product.url }}" class="link product__view-details animate-arrow">
