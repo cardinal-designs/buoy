@@ -254,6 +254,14 @@
   
 }
 
+@media only screen and (max-width: 1024px) {
+
+  .Custom_Featured_Product .rtx_option_selector_main {
+    display: block;
+  }
+
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
@@ -302,10 +310,6 @@
 
   .product.Custom_Featured_Product {
     margin-bottom: 53px !important;
-  }
-
-  .Custom_Featured_Product .rtx_option_selector_main {
-    display: block;
   }
 
   div#rtx_sands_block {
