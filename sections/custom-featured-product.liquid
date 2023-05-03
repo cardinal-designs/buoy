@@ -75,7 +75,11 @@
             {%- endif -%}
 
             <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-          
+
+            <div class="product__description sh4 light">
+              {{ product.description }}
+            </div>
+              
             {%- if section.settings.show_price -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
