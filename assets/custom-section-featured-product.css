@@ -190,6 +190,10 @@
   display: none;
 }
 
+.Custom_Featured_Product .Subscribe_Info {
+  display: none;
+}
+
 @media only screen and (max-width: 991px) {
 
   .product.Custom_Featured_Product {
