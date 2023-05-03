@@ -33,6 +33,16 @@
     },
     "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
       "type": "custom-featured-product",
+      "blocks": {
+        "4d721814-8798-46f0-a216-d198a35aff8f": {
+          "type": "title",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "4d721814-8798-46f0-a216-d198a35aff8f"
+      ],
       "settings": {
         "product": "hydration-drops",
         "secondary_background": false,
@@ -78,7 +88,7 @@
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
       "settings": {
-        "title": "<strong>Meet the<\/strong> Drops",
+        "title": "Meet the Drops",
         "text": "Add electrolytes, 87 ionic trace minerals, vitamins and antioxidants to any beverage.",
         "shop_all_label": "Shop All",
         "shop_all_link": "shopify:\/\/collections\/all",
