@@ -270,6 +270,10 @@
   margin-bottom: 10px !important;
 }
 
+label.rtx_option_label {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1279px) {
 
   .Custom_Featured_Product .product__info-wrapper {
