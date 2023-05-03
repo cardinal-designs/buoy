@@ -72,6 +72,10 @@
   margin: 0;
 }
 
+.Reviews_Slider_Item {
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   
   .Reviews_Slider_Container .slick-prev {
