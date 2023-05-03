@@ -600,7 +600,7 @@
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
-          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+         if(document.querySelector('.js-sticky-subscription-btns')) document.querySelector('.js-sticky-subscription-btns').value = "subscription";
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
             stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
@@ -608,7 +608,7 @@
         } else {
           subscriptionBoxHide();
           sellingPlan.disabled = true;
-          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+          if(document.querySelector('.js-sticky-subscription-btns')) document.querySelector('.js-sticky-subscription-btns').value = "one-time";
           
           if(mainProductButton.dataset.available == "true"){
             mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
