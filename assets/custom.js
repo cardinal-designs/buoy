@@ -197,7 +197,7 @@ function replaceOutOf() {
   
   if(document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText')){
     var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
-// clearInterval(reviewOutOf);
+clearInterval(reviewOutOf);
 console.log(ratingCount)
     // ratingCount.innerText;
     document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.innerText.replace('out of', '/'); 
