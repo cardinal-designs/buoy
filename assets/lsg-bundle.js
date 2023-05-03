@@ -484,11 +484,14 @@ function mirrorQuantityDisplay(input) {
 }
 
 function updateQuantityDisplay(input) {
-    const inputWrap = input.closest('.lsg-bundle-product-select-quantity-wrap');
+    const inputWrap = input.closest('.lsg-bundle-product-select-quantity-wrap'),
+          cardWrapper = input.closest('.js-bundle-product-card--wrapper');
     if (input.value <= 0) {
       inputWrap.classList.add('no-quantity')
+      cardWrapper.classList.add('js-added');
     } else {
       inputWrap.classList.remove('no-quantity')
+      cardWrapper.classList.remove('js-added');
     }
     const inputDisplay = input.parentNode.querySelector('.lsg-bundle-product-select-quantity-input-display');
     if(inputDisplay) {
