@@ -90,7 +90,7 @@
             <div class="product__description sh4 light">
               {{ product.description }}
             </div>
-            {% render 'rtx-pdp' %}
+           
 
             {%- comment -%}
             {%- if product != blank -%}
@@ -239,6 +239,42 @@
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
+                    {%- liquid
+                      assign currentVariant = currentVariant
+                      assign requiresPlan = product.requires_selling_plan
+                      assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+                      assign currentAllocations = currentVariant.selling_plan_allocations
+                    -%}
+                  
+                  {%- comment -%} Subscription Box {%- endcomment -%}
+                      <div class="rtx-subscription-box">
+                    
+                        {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
+                        <div>
+                          <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
+                          <label for="subscriptionGift">or<span>SEND BUOY AS A GIFT </span><span class="present">🎁</span> </label>
+                        </div>
+                        {%- comment -%} Gift Box {%- endcomment -%}
+                    
+                        <div data-retextion-gift-box class="rtx-gift-box">
+                          <div>
+                            <label for="subscriptionEmail">Recipient's Email</label>
+                            <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]">
+                          </div>
+                          <div>
+                            <label for="subscriptionName">Recipient's Name</label>
+                            <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]">
+                          </div>
+                          <div>
+                            <label for="subscriptionMessage">Gift Message</label>
+                            <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024"></textarea>
+                          </div>
+                          <p>You will provide the shipping information during checkout.</p>
+                        </div>
+                        {%- comment -%} Selling Plan Options {%- endcomment -%}
+                    
+                      </div>
+                              
                   {%- endform -%}
                 </product-form>
               {%- else -%}
