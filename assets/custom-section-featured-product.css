@@ -74,3 +74,7 @@
 .featured-product.Custom_Featured_Product .product__media-item:not(:first-child) {
   display: block;
 }
+
+.product__info-wrapper {
+  padding: 0 !important;
+}
