@@ -12,24 +12,18 @@
     Usage:
     {% render 'product-card', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
-
+{% assign card_product = product_card_product %}
+{% if is_variant == false %}
+  {% assign card_product = product_card_product.product %}
+{% endif %}
+  
 <div class="card-wrapper">
-  {% if is_variant == true %}
-    {% if product_card_product.available == false %}
-      {% render 'spinner-sold-out' %}
-    {% elsif product_card_product.product.metafields.my_fields.show_trending_product_card == true %}
-      {% render 'spinner-trending' %}
-    {% elsif product_card_product.product.metafields.my_fields.show_most_popular_product_card == true %}
-      {% render 'spinner-most-popular' %}
-    {% endif %}
-  {% else %}
-    {% if product_card_product.available == false %}
-      {% render 'spinner-sold-out' %}
-    {% elsif product_card_product.metafields.my_fields.show_trending_product_card == true %}
-      {% render 'spinner-trending' %}
-    {% elsif product_card_product.metafields.my_fields.show_most_popular_product_card == true %}
-      {% render 'spinner-most-popular' %}
-    {% endif %}
+  {% if card_product.available == false %}
+    {% render 'spinner-sold-out' %}
+  {% elsif card_product.metafields.my_fields.show_trending_product_card == true %}
+    {% render 'spinner-trending' %}
+  {% elsif card_product.metafields.my_fields.show_most_popular_product_card == true %}
+    {% render 'spinner-most-popular' %}
   {% endif %}
 
   <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
