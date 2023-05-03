@@ -194,12 +194,13 @@ let reviewOutOf = setInterval(replaceOutOf, 2000);
 
 
 function replaceOutOf() {
-  var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
-  if(ratingCount){
+  
+  if(document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText')){
+    var ratingCount = document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
 clearInterval(reviewOutOf);
 console.log(ratingCount)
-    ratingCount.innerText;
-    // document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
+    // ratingCount.innerText;
+    document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.replace('out of', '/'); 
     
   }
 }
