@@ -273,7 +273,6 @@ function checkoutEnableValidation(trigger) {
       addToCartButton.disabled = false;
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
-      bundleBlock.classList.add('bundle-checkout-enabled');
       addMoreLabel.innerHTML = "";
     } else {
       addToCartButton.classList.add('disabled');
@@ -282,6 +281,12 @@ function checkoutEnableValidation(trigger) {
       addMoreText.classList.remove('hidden');
       addMoreQuantity.innerHTML = quantityToAdd;
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add ${quantityToAdd} more item to continue` : `Add ${quantityToAdd} more items to continue`;
+    }
+
+    if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+      bundleBlock.classList.add('bundle-checkout-enabled');
+      // addMoreLabel.innerHTML = `Add ${quantityToAdd} more item to continue`;
+    }else{
       bundleBlock.classList.remove('bundle-checkout-enabled');
     }
   });
