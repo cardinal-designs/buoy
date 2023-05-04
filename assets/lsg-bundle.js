@@ -364,6 +364,7 @@ function addToCart(trigger) {
           button.disabled = false;
           button.classList.remove('disabled');
         }
+      return response.json();
     }).then(cart => {
       console.log(cart)
       drawer.renderContent(cart.sections);
