@@ -211,7 +211,7 @@
     {% endif %}
     {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0 %}
     {% if sub_bundle_products_count > 0 %}
-      {% render 'lsg-bundle-interval-select', product: product, settings: settings, bundleIndex: bundleIndex %}
+      {% render 'lsg-bundle-interval-select', product: product, settings: section.settings, bundleIndex: bundleIndex %}
     {% elsif product.metafields.bundle.products %}
       <div class="lsg-bundle-interval-only-otp">
           <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
