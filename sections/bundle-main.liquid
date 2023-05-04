@@ -84,7 +84,8 @@
     </div>
     <div class="page-width">
       {% assign blockIndex = 0 %}
-    	{% for block in section.blocks %}
+      {% assign blocks = section.blocks | where:'type','block' %}
+    	{% for block in blocks %}
         {% assign blockIndex = forloop.index %}
         <div class="collection-groups__item">
           <div class="collection-groups__header">
@@ -124,7 +125,7 @@
                     {% if sub_bundle_products contains productSubID %}
                       {% for variant in productSub.variants %}
                         {% assign productCount = productCount | plus:1 %}
-                        {% if section.blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                        {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
                           {% continue %}
                         {% endif %}
                         {% render 'bundle-product-card',
@@ -132,7 +133,7 @@
                             product_card_product: variant,
                             show_secondary_image: true,
                             hover_video: block.settings.hover_video %}
-                        {% if section.blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                        {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
                           {% assign breakLoop = true %}
                           {% break %}
                         {% endif %}
@@ -149,7 +150,7 @@
                     {% for variantSub in productSub.variants %}
                       {% assign variantSubID = variantSub.id | strip %}
                       {% if sub_bundle_variants contains variantSubID %}
-                        {% if section.blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                        {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
                           {% continue %}
                         {% endif %}
                         {% assign productCount = productCount | plus:1 %}
