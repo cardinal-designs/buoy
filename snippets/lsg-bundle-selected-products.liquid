@@ -2,7 +2,7 @@
   {% for i in (0..bundle_max_index0) %}
     <div class="bundle-builder__selected-product" data-bundle-builder-selected-variant-id data-index="{{ i }}">
       <div class="bundle-builder__selected-product-img-wrapper">
-        <div class="bundle-builder__selected-product-placeholder" data-bundle-builder-selected-placeholder-placeholder>
+        <div class="bundle-builder__selected-product-placeholder" data-bundle-builder-selected-placeholder-placeholder style="background-color:{{ blocks[forloop.index0].settings.color }};">
           {{ blocks[forloop.index0].settings.title }}
         </div>
         <img src="" alt="" class="bundle-builder__selected-product-image" data-bundle-builder-selected-product-image>
