@@ -261,13 +261,6 @@ function checkoutEnableValidation(trigger) {
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
   const quantityToAdd = bundleMin - bundleQuantity;
 
-  let subtotal = 0;
-  console.log(bundleBlock);
-  Array.from(bundleBlock.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).forEach(input => {
-    let totalPrice = input.value * parseInt(input.dataset.price);
-    subtotal += totalPrice;
-  });
-
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
     const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
@@ -636,7 +629,6 @@ function updateBundlePrice(trigger) {
         el.innerHTML = currencyFormatter.format(subSubtotal / 100);
     });
     curPriceEls.forEach(function(el){
-      console.log(otpSubtotal);
         if (interval == 'otp') {
             el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
         } else {
