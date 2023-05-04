@@ -667,12 +667,12 @@ function getBundleQuantity(trigger) {
             quantity = quantity + parseInt(input.value);
         });
     }
+  console.log(quantity)
     return quantity;
 }
 
 function getBundleQuantityByChild(trigger){
     const productSetList = trigger.closest('.lsg-bundle-product-set-list');
-  console.log(productSetList)
     let quantity = -1;
     if(productSetList){
         quantity = 0;
