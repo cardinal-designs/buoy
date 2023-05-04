@@ -309,14 +309,17 @@ button:not([disabled]) {
     object-position: center;
 }
 .bundle-builder__selected-product-placeholder {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 3px dashed #555;
-    background-color: #f1f1f1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px dashed #555;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bundle-builder__selected-product-placeholder:after,
+/* .bundle-builder__selected-product-placeholder:after,
 .bundle-builder__selected-product-placeholder:before {
     content: '';
     width: calc(100% / 9);
@@ -327,7 +330,7 @@ button:not([disabled]) {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 .bundle-builder__selected-product-placeholder:after {
     transform: translate(-50%, -50%) rotate(90deg);
 }
