@@ -1,3 +1,17 @@
+.title--wrapper .lsg-bundle-buybox-product-name {
+  border-right: 1px solid #000;
+  padding-left: 0;
+}
+.title--wrapper > * {
+  padding: 0 10px;
+}
+.title--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+}
 .hidden {
     display: none;
 }
