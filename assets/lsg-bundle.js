@@ -302,6 +302,9 @@ function addToCart(trigger) {
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
     const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
     const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
+    const button = trigger;
+    button.disabled = true;
+    button.classList.add('disabled');
     let bundleCart = {
         'items': []
     };
@@ -353,6 +356,8 @@ function addToCart(trigger) {
         if(response.status == 200) {
             // window.location.href = "/cart";
             // lsgSlideCartOpen();
+          button.disabled = false;
+          button.classList.remove('disabled');
           document.querySelector('cart-drawer').open();
         }
     }).catch((error) => {
