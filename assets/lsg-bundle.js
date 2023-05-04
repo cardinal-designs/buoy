@@ -677,10 +677,10 @@ function getBundleQuantityByChild(trigger){
     if(productSetList){
         quantity = 0;
         productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-          console.log(parseInt(input.value));
             quantity = quantity + parseInt(input.value);
         });
     }
+  console.log(quantity)
     return quantity;
 }
 
