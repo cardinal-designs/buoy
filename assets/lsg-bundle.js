@@ -52,7 +52,6 @@ const updateSelectedProductGUI = (trigger) => {
     const selectedProductsWrappers = bundleBlock.querySelectorAll('[data-bundle-builder-selected-products]');
     selectedProductsWrappers.forEach((selectedProductsWrapper) => {
         const selectedProductWrappers = selectedProductsWrapper.querySelectorAll('[data-bundle-builder-selected-variant-id]');
-      console.log("selectedProductWrappers :: ",selectedProductWrappers)
     
         selectedProductWrappers.forEach((productWrapper, i) => {
             const selectedProductData = selectedProducts[bundleIndex0][i];
