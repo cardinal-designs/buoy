@@ -120,7 +120,7 @@
                   <aside class="right-side">
                     <div class="cart-section">
                         {% if template != 'cart' %}
-                          <button class="header__icon header__icon--cart link link--text focus-inset"  aria-label="Open Cart Drawer">
+                          <button class="header__icon header__icon--cart link link--text focus-inset"  aria-label="Open Cart Drawer" onclick="document.querySelector('cart-drawer').open()">
                             <div class="cart-count-bubble hide-mobile sh1">
                               {{ cart.item_count }}
                             </div>
