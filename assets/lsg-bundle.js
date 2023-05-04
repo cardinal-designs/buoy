@@ -38,6 +38,7 @@ const buildSelectedProductArray = (trigger) => {
             break;
     }
     updateSelectedProductGUI(trigger);
+  console.log(selectedProducts)
 }
 
 const updateSelectedProductGUI = (trigger) => {
