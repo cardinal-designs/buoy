@@ -22,9 +22,17 @@
     width: 51%;
     padding: 0 20px;
 }
-.lsg-bundle-summary-block {
+/* .lsg-bundle-summary-block {
     width: 43%;
     padding: 0 20px;
+} */
+.lsg-bundle-summary-block {
+  width: 100%;
+  padding: 0 20px;
+  position: sticky;
+  bottom: 0;
+  background: #FFF;
+  z-index: 2;
 }
 .lsg-bundle-buybox-product-info {
     margin-bottom: 1rem;
