@@ -1,4 +1,4 @@
-
+{% render 'bundle-product-quick-view-drawer' %}
 {% assign otp_bundle_min = nil %}
 {% assign otp_bundle_max = nil %}
 {% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
@@ -62,8 +62,6 @@
 {{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
-<a href="#shop" class="button">test</a>
 
 <div class="lsg-bundle-wrapper" data-lsg-bundle-wrapper {% if section.settings.setUrl %}data-lsg-bundle-set-url{% endif %}>
   <div class="collection-groups lsg-bundle-block lsg-bundle-block-active" 
