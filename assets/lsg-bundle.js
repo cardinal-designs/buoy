@@ -263,7 +263,10 @@ function checkoutEnableValidation(trigger) {
 
   let subtotal = 0;
   console.log(bundleBlock);
-  // Array.from();
+  Array.from(bundleBlock.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).forEach(input => {
+    let totalPrice = input.value * parseInt(input.dataset.price);
+    subtotal += totalPrice;
+  });
 
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
@@ -633,6 +636,7 @@ function updateBundlePrice(trigger) {
         el.innerHTML = currencyFormatter.format(subSubtotal / 100);
     });
     curPriceEls.forEach(function(el){
+      console.log(otpSubtotal);
         if (interval == 'otp') {
             el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
         } else {
