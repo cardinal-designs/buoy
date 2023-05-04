@@ -285,7 +285,7 @@ function checkoutEnableValidation(trigger) {
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       bundleBlock.classList.add('bundle-checkout-enabled');
-      // addMoreLabel.innerHTML = `Add ${quantityToAdd} more item to continue`;
+      if(bundleQuantity == bundleMin)  addMoreLabel.innerHTML = `Add <span>1 more<span> item to 20% off`;
     }else{
       bundleBlock.classList.remove('bundle-checkout-enabled');
     }
