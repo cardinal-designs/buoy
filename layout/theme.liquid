@@ -245,7 +245,6 @@
     </a>
 
     <div class="page-overlay is-visible"></div>
-    {% render 'product-quick-view-drawer' %}
    {% unless template.name == 'product' %} 
     <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
       {% section 'announcement-bar' %}
