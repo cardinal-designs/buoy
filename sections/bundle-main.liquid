@@ -213,7 +213,11 @@
             {% endfor %}
           </div>
         {% endif %}
-        {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0 %}
+        {% assign placeholderBlock = section.blocks | where:'type','placeholder' %}
+        {% render 'lsg-bundle-selected-products',
+            bundle_max_index0: bundle_max_index0,
+            blocks: placeholderBlock
+        %}
       </div>
       <div class="bundle-actions--wrapper">
       {% if sub_bundle_products_count > 0 %}
