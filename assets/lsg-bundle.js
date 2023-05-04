@@ -309,20 +309,6 @@ function addToCart(trigger) {
         'items': []
     };
     let bundleProductQuantity = 0;
-    {
-        let cartItem = {
-            id: bundleProductID,
-            quantity: 1,
-            properties: {
-              "bundle_id": bundleID,
-              "bundle_parent": true,
-            },
-        };
-        if (interval == 'sub') {
-            cartItem["selling_plan"] = bundleSellingPlan;
-        }
-        bundleCart.items.push(cartItem);
-    }
     bundleProductListInputs.forEach(function(bundleProductInput){
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
@@ -339,6 +325,22 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
+
+    {
+      let cartItem = {
+          id: bundleProductID,
+          quantity: 1,
+          properties: {
+            "bundle_id": bundleID,
+            "bundle_parent": true,
+          },
+      };
+      if (interval == 'sub') {
+          cartItem["selling_plan"] = bundleSellingPlan;
+      }
+      bundleCart.items.push(cartItem);
+    }
+  
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
         //quantity is not within bundle size
         return false;
