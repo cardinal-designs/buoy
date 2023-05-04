@@ -268,7 +268,7 @@ function checkoutEnableValidation(trigger) {
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
 
-    if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
       addToCartText.classList.remove('hidden');
