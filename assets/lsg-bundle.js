@@ -664,6 +664,7 @@ function getBundleQuantity(trigger) {
     if(productList){
         quantity = 0;
         productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
+          console.log(parseInt(input.value))
             quantity = quantity + parseInt(input.value);
         });
     }
