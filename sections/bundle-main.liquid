@@ -64,7 +64,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
 <div class="lsg-bundle-wrapper" data-lsg-bundle-wrapper {% if section.settings.setUrl %}data-lsg-bundle-set-url{% endif %}>
-  <div class="collection-groups lsg-bundle-block lsg-bundle-block-active lsg-bundle--sub-selected" 
+  <div class="collection-groups lsg-bundle-block lsg-bundle-block-active {% # lsg-bundle--sub-selected %} lsg-bundle--otp-selected" 
       data-bundle-product="{{ product.id }}"
       data-bundle-index="{{ bundleIndex }}"
       data-otp-bundle-min="{{ otp_bundle_min }}"
