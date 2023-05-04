@@ -672,6 +672,7 @@ function getBundleQuantity(trigger) {
 
 function getBundleQuantityByChild(trigger){
     const productSetList = trigger.closest('.lsg-bundle-product-set-list');
+  console.log(productSetList)
     let quantity = -1;
     if(productSetList){
         quantity = 0;
