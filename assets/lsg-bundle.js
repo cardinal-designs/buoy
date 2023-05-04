@@ -794,16 +794,17 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
 document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
     bundleATC.addEventListener('click', function(e){
         e.preventDefault();
-        if(e.currentTarget.classList.contains('disabled')) {
+        addToCart(e.currentTarget);
+        /*if(e.currentTarget.classList.contains('disabled')) {
             //scroll to top of the bundle block
             const announcementOffset = parseInt(document.body.style.getPropertyValue('--announcement-offset').replace('px', '')) || 0;
             const headerOffset = parseInt(document.body.style.getPropertyValue('--header-offset').replace('px', '')) || 0;
             const offset = announcementOffset + headerOffset;
             const bundleBlock = getBundleBlock(e.currentTarget);
-            // window.scrollTo({ top: bundleBlock.offsetTop - offset, behavior: 'smooth' });
+            window.scrollTo({ top: bundleBlock.offsetTop - offset, behavior: 'smooth' });
         } else {
             addToCart(e.currentTarget);
-        }
+        }*/
     })
 })
 
