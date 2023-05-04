@@ -188,14 +188,16 @@
     <div class="lsg-bundle-summary-block">
       <div class="bundle-selected-products--wrapper">
         <div class="lsg-bundle-buybox-product-info">
-          <span class="lsg-bundle-buybox-product-name">
-              {% if product.metafields.buybox.alt_title %}
-                  {{ product.metafields.buybox.alt_title }}
-              {% else %}
-                  {{ product.title }}
-              {% endif %}
-          </span>
-          <span>SELECT A MINIMUM OF {{ otp_bundle_min }}</span>
+          <div class="title--wrapper">
+            <span class="lsg-bundle-buybox-product-name">
+                {% if product.metafields.buybox.alt_title %}
+                    {{ product.metafields.buybox.alt_title }}
+                {% else %}
+                    {{ product.title }}
+                {% endif %}
+            </span>
+            <span class="min-info">SELECT A MINIMUM OF {{ otp_bundle_min }}</span>
+          </div>
           <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
         </div>
         {% if bundleIndex > 0 %}
