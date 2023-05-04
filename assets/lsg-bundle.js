@@ -261,7 +261,6 @@ function checkoutEnableValidation(trigger) {
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
     const quantityToAdd = bundleMin - bundleQuantity;
 
-  console.log('bundleQuantity ---',bundleQuantity);
     //checkout button enable/disable
     addToCartButtons.forEach(function(addToCartButton){
         const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
