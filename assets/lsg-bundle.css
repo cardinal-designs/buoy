@@ -717,4 +717,8 @@ button:not([disabled]) {
   background: #FFF;
 }
 
+[data-add-more-label] span {
+  color: #9AC847;
+}
+
 /* New Custom CSS End */
