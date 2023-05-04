@@ -800,7 +800,7 @@ document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
             const headerOffset = parseInt(document.body.style.getPropertyValue('--header-offset').replace('px', '')) || 0;
             const offset = announcementOffset + headerOffset;
             const bundleBlock = getBundleBlock(e.currentTarget);
-            window.scrollTo({ top: bundleBlock.offsetTop - offset, behavior: 'smooth' });
+            // window.scrollTo({ top: bundleBlock.offsetTop - offset, behavior: 'smooth' });
         } else {
             addToCart(e.currentTarget);
         }
