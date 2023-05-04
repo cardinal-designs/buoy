@@ -63,14 +63,17 @@
   .lsg-bundle-summary-block .bundle-selected-products--wrapper,
   .lsg-bundle-summary-block .bundle-actions--wrapper {
     width: 100%;
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .lsg-bundle-summary-block .bundle-selected-products--wrapper,
+  .lsg-bundle-summary-block .bundle-actions--wrapper {
+    width: 50%;
+    padding: 0 40px;
   }
 }
 
-.lsg-bundle-summary-block .bundle-selected-products--wrapper,
-.lsg-bundle-summary-block .bundle-actions--wrapper {
-  width: 50%;
-  padding: 0 40px;
-}
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
 .bundle-products-and-actions--wrapper .bundle-actions--wrapper {
