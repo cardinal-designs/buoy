@@ -11,8 +11,6 @@
   assign selling_plan_initial_id = current_selling_plan_allocation.selling_plan.id | default: ''
 -%}
 
---{{ filtered_selling_plan_groups | json }}--{{ current_selling_plan_allocation }}--{{ current_variant.id }}
-
 <div class="lsg-bundle-interval-frequency-group-wrap">
     {% for group in filtered_selling_plan_groups %}
         <div class="lsg-bundle-interval-select-heading">{{ group.options[0].name }}</div>
