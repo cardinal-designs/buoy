@@ -302,7 +302,7 @@ button:not([disabled]) {
   border-radius: 50%;
   border: 1px solid #000;
 }
-.bundle-builder__selected-product-remove-button:before,
+/* .bundle-builder__selected-product-remove-button:before, */
 .bundle-builder__selected-product-remove-button:after {
     content: '';
     display: block;
