@@ -402,6 +402,7 @@ function updateInterval(trigger) {
             break;
     }
 
+  console.log(bundleBlock)
     updateBundlePrice(trigger);
     updateSellingPlan(trigger);
 }
