@@ -266,6 +266,7 @@ function checkoutEnableValidation(trigger) {
     const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
     const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
+    const addMoreLabel = addToCartButton.querySelector('[data-add-more-label]');
 
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
@@ -273,12 +274,14 @@ function checkoutEnableValidation(trigger) {
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
       bundleBlock.classList.add('bundle-checkout-enabled');
+      addMoreLabel.innerHTML = "";
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       addMoreQuantity.innerHTML = quantityToAdd;
+      addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add ${quantityToAdd} more item to continue` : `Add ${quantityToAdd} more items to continue`;
       bundleBlock.classList.remove('bundle-checkout-enabled');
     }
   });
