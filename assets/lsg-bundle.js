@@ -273,7 +273,7 @@ function checkoutEnableValidation(trigger) {
       addToCartButton.disabled = false;
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
-      addMoreLabel.innerHTML = `Add <span>1 more<span> item to 20% off`;
+      addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more<span> item to 20% off` : "";
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
