@@ -344,6 +344,11 @@ function addToCart(trigger) {
         return false;
     }
 
+  let drawer = document.querySelector('cart-drawer');
+
+  bundleCart.sections = drawer.getSectionsToRender().map((section) => section.section);
+  bundleCart.sections_url = window.location.pathname
+
     fetch('/cart/add.js', {
         method: 'POST',
         headers: {
@@ -358,9 +363,12 @@ function addToCart(trigger) {
             // lsgSlideCartOpen();
           button.disabled = false;
           button.classList.remove('disabled');
-          document.querySelector('cart-drawer').open();
         }
-    }).catch((error) => {
+    }).then(cart => {
+      drawer.renderContent(cart.sections);
+      drawer.open();
+    })
+    .catch((error) => {
         console.error(error);
     });
 }
