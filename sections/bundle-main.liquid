@@ -185,45 +185,43 @@
     </div>
     
     <div class="lsg-bundle-summary-block">
-      <div class="lsg-bundle-buybox-product-info">
-        <h1 class="lsg-bundle-buybox-product-name">
-            {% if product.metafields.buybox.alt_title %}
-                {{ product.metafields.buybox.alt_title }}
-            {% else %}
-                {{ product.title }}
-            {% endif %}
-        </h1>
-        <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
-      </div>
-      <div class="bundle-products-and-actions--wrapper">
-        <div class="bundle-selected-products--wrapper">
-          {% assign bundleIndex = 0 %}
-          {% if bundleIndex > 0 %}
-            {% if settings.bundle_select_heading %}
-              <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
-            {% endif %}
-            <div class="lsg-bundle-size-select">
-              {% for bundle in bundles %}
-                {% assign bundleOption = bundle | split: '|:|' %}
-                {% assign bundleButtonIndex = bundleOption[1] | plus: 0 %}
-                <button type="button" class="lsg-bundle-size-select-el{% if bundleButtonIndex == bundleIndex %} lsg-bundle-size-select-el--selected{% endif %}" data-bundle-index="{{ bundleButtonIndex }}">{{ bundleOption[0] }}</button>
-              {% endfor %}
-            </div>
-          {% endif %}
-          {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0 %}
+      <div class="bundle-selected-products--wrapper">
+        <div class="lsg-bundle-buybox-product-info">
+          <h1 class="lsg-bundle-buybox-product-name">
+              {% if product.metafields.buybox.alt_title %}
+                  {{ product.metafields.buybox.alt_title }}
+              {% else %}
+                  {{ product.title }}
+              {% endif %}
+          </h1>
+          <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
         </div>
-        <div class="bundle-actions--wrapper">
-        {% if sub_bundle_products_count > 0 %}
-          {% render 'lsg-bundle-interval-select', product: product, settings: section.settings, bundleIndex: bundleIndex %}
-        {% elsif product.metafields.bundle.products %}
-          <div class="lsg-bundle-interval-only-otp">
-              <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
-              <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
+        {% assign bundleIndex = 0 %}
+        {% if bundleIndex > 0 %}
+          {% if settings.bundle_select_heading %}
+            <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
+          {% endif %}
+          <div class="lsg-bundle-size-select">
+            {% for bundle in bundles %}
+              {% assign bundleOption = bundle | split: '|:|' %}
+              {% assign bundleButtonIndex = bundleOption[1] | plus: 0 %}
+              <button type="button" class="lsg-bundle-size-select-el{% if bundleButtonIndex == bundleIndex %} lsg-bundle-size-select-el--selected{% endif %}" data-bundle-index="{{ bundleButtonIndex }}">{{ bundleOption[0] }}</button>
+            {% endfor %}
           </div>
         {% endif %}
-        {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
+        {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0 %}
       </div>
-      </div>
+      <div class="bundle-actions--wrapper">
+      {% if sub_bundle_products_count > 0 %}
+        {% render 'lsg-bundle-interval-select', product: product, settings: section.settings, bundleIndex: bundleIndex %}
+      {% elsif product.metafields.bundle.products %}
+        <div class="lsg-bundle-interval-only-otp">
+            <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
+            <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
+        </div>
+      {% endif %}
+      {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
+    </div>
     </div>
     
   </div>
