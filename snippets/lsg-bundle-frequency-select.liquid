@@ -6,7 +6,7 @@
     assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
   endif
 
-  assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "5859381"
+  assign filtered_selling_plan_groups = product.selling_plan_groups
 
   assign selling_plan_initial_id = current_selling_plan_allocation.selling_plan.id | default: ''
 -%}
