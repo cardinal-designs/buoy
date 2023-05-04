@@ -39,6 +39,16 @@
   z-index: 2;
   box-shadow: 5px 5px 20px 0px #000;
 }
+
+.bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
+.bundle-products-and-actions--wrapper .bundle-actions--wrapper {
+  width: 50%;
+  padding: 20px;
+  background: #FFF;
+  height: 100%;
+  display: block;
+}
+
 .lsg-bundle-buybox-product-info {
     margin-bottom: 1rem;
 }
