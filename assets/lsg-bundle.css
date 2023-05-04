@@ -318,7 +318,7 @@ button:not([disabled]) {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 .bundle-builder__selected-product-remove-button:after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(358deg);
 }
 .bundle-builder__selected-product-title {
     display: block;
