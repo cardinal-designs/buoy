@@ -8,13 +8,13 @@
 .lsg-bundle-block input[type="number"] {
     -moz-appearance: textfield;
 }
-.lsg-bundle-block {
+/* .lsg-bundle-block {
     display: flex;
     max-width: 1320px;
     margin: auto;
     justify-content: space-between;
     padding: 50px 0 80px;
-}
+} */
 .lsg-bundle-block:not(.lsg-bundle-block-active) {
     display: none;
 }
