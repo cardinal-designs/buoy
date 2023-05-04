@@ -253,33 +253,35 @@ function incrementEnableValidation(trigger) {
 }
 
 function checkoutEnableValidation(trigger) {
-    const bundleBlock = getBundleBlock(trigger);
-    const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
-    const bundleQuantity = getBundleQuantity(trigger);
-    const interval = getBundleInterval(trigger);
-    const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
-    const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-    const quantityToAdd = bundleMin - bundleQuantity;
+  const bundleBlock = getBundleBlock(trigger);
+  const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
+  const bundleQuantity = getBundleQuantity(trigger);
+  const interval = getBundleInterval(trigger);
+  const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
+  const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
+  const quantityToAdd = bundleMin - bundleQuantity;
 
-    //checkout button enable/disable
-    addToCartButtons.forEach(function(addToCartButton){
-        const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
-        const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
-        const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
+  //checkout button enable/disable
+  addToCartButtons.forEach(function(addToCartButton){
+    const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
+    const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
+    const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
 
-        if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
-            addToCartButton.classList.remove('disabled');
-            addToCartText.classList.remove('hidden');
-            addMoreText.classList.add('hidden');
-            bundleBlock.classList.add('bundle-checkout-enabled');
-        } else {
-            addToCartButton.classList.add('disabled');
-            addToCartText.classList.add('hidden');
-            addMoreText.classList.remove('hidden');
-            addMoreQuantity.innerHTML = quantityToAdd;
-            bundleBlock.classList.remove('bundle-checkout-enabled');
-        }
-    });
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+      addToCartButton.classList.remove('disabled');
+      addToCartButton.disabled = false;
+      addToCartText.classList.remove('hidden');
+      addMoreText.classList.add('hidden');
+      bundleBlock.classList.add('bundle-checkout-enabled');
+    } else {
+      addToCartButton.classList.add('disabled');
+      addToCartButton.disabled = true;
+      addToCartText.classList.add('hidden');
+      addMoreText.classList.remove('hidden');
+      addMoreQuantity.innerHTML = quantityToAdd;
+      bundleBlock.classList.remove('bundle-checkout-enabled');
+    }
+  });
 }
 
 function addToCart(trigger) {
