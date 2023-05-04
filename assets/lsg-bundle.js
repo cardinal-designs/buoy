@@ -680,7 +680,6 @@ function getBundleQuantityByChild(trigger){
             quantity = quantity + parseInt(input.value);
         });
     }
-  console.log(quantity)
     return quantity;
 }
 
