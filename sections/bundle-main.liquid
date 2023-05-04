@@ -220,6 +220,7 @@
         %}
       </div>
       <div class="bundle-actions--wrapper">
+        <label data-add-more-label></label>
       {% if sub_bundle_products_count > 0 %}
         {% render 'lsg-bundle-interval-select', product: product, settings: section.settings, bundleIndex: bundleIndex %}
       {% elsif product.metafields.bundle.products %}
