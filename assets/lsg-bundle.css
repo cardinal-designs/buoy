@@ -26,7 +26,11 @@
     width: 43%;
     padding: 0 20px;
 } */
-.lsg-bundle-summary-block {
+.lsg-bundle-summary-block{
+  display:none;
+}
+.has-selected-product .lsg-bundle-summary-block {
+  display:block;
   width: 100%;
   padding: 0 20px;
   position: sticky;
