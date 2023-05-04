@@ -661,6 +661,7 @@ function getBundleQuantity(trigger) {
     let bundleBlock = getBundleBlock(trigger);
     let quantity = -1;
     let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+  console.log(bundleBlock,productList)
     if(productList){
         quantity = 0;
         productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
