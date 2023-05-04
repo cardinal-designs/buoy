@@ -352,7 +352,8 @@ function addToCart(trigger) {
     }).then((response) => {
         if(response.status == 200) {
             // window.location.href = "/cart";
-            lsgSlideCartOpen();
+            // lsgSlideCartOpen();
+          document.querySelector('cart-drawer').open();
         }
     }).catch((error) => {
         console.error(error);
