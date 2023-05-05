@@ -1,3 +1,75 @@
+<div class="product__media-wrapper no-scrollbar drag-scroll">
+  <div class="sticky-images">
+    <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+      {{ "accessibility.skip_to_product_info" | t }}
+    </a>
+    <div class="product__media-list">
+      {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+      {%- for media in product.media -%}
+      <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+        
+       {% assign media_alt = media.preview_image.alt | handle %}
+       {% assign media_alt_icon = media_alt | append:'-icon' %}
+        {% if media.preview_image.alt != blank %}
+          <div class="product-spinner badge_animat_cls">
+            {% if media_alt == 'all-day-hydration' %}
+              <div class="fixed_badge_center">
+                ⚡
+              </div>  
+            {% elsif media_alt == 'clean-pure' %}
+              <div class="fixed_badge_center">
+                💦
+              </div>
+            {% elsif media_alt == 'vegan-nongmo' %}
+              <div class="fixed_badge_center">
+                🌱
+              </div>
+            {% elsif media_alt == '100-pcr-bottles' %}
+              <div class="fixed_badge_center">
+                ♻️
+              </div>
+            {% elsif media_alt == 'unsweetened-unflavored' %}
+              <div class="fixed_badge_center">
+                👅
+              </div>
+            {% elsif media_alt == 'add-to-any-drink' %}
+              <div class="fixed_badge_center">
+                🍺
+              </div>
+            {% elsif media_alt == 'all-day-energy' %}
+              <div class="fixed_badge_center">
+                🔋
+              </div>
+            {% elsif media_alt == 'no-crashes' %}
+              <div class="fixed_badge_center">
+                📉
+              </div>
+            {% elsif media_alt == 'plant-powered-antioxidants' %}
+              <div class="fixed_badge_center">
+                🫐
+              </div>
+            {% elsif media_alt == 'fortifying-minerals' %}
+              <div class="fixed_badge_center">
+                🛡
+              </div>
+             {% elsif media_alt == 'more-bioavailable' %}
+              <div class="fixed_badge_center three-x-text">
+                3x
+              </div>
+            {% endif %} 
+            <div class="rotet_badge_svg">
+              <img src="{{ media_alt | append:'.svg' | file_url }}"/>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% render 'product-thumbnail', media: media, position: forloop.index, loop: true, modal_id: section.id, xr_button: true %}
+      </div>
+      {%- endfor -%}
+    </div>
+    <div class="product__media-arrows hide-mobile"></div>
+  </div>
+</div>
 {% schema %}
   {
     "name": "Section name",
