@@ -271,7 +271,8 @@ function checkoutEnableValidation(trigger) {
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-      minInfoText.innerHTML = "You’ve Reached 20% Off";
+      // minInfoText.innerHTML = "You’ve Reached 20% Off";
+      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
