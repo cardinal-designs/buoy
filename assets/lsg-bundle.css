@@ -1,3 +1,5 @@
+/* BUNDLE GENRAL CSS */
+
 .title--wrapper .lsg-bundle-buybox-product-name {
   border-right: 1px solid #000;
   padding-left: 0;
@@ -37,15 +39,17 @@
   padding: 0 20px;
 }
 
-.lsg-bundle-summary-block{
-  display:none;
-}
+/* PRODUCT CARD */
 
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
   text-align: left;
 }
 
 /* ADD BUNDLE BOX START */
+
+.lsg-bundle-summary-block {
+  display:none;
+}
 
 .has-selected-product .lsg-bundle-summary-block {
   display: flex;
