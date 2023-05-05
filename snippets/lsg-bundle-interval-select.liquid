@@ -17,7 +17,7 @@
         {% for variantSub in productSub.variants %}
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
-            {% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:true %}
+            {% render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
           {% endif %}
         {% endfor %}
       {% endfor %}
