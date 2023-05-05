@@ -800,7 +800,8 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     let atbButton = this.querySelector('.js-product-atb-btn');
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
     atbButton.onclick = () => {
-      console.log("hiii")
+      this.classList.add('js-added');
+      gridElement.querySelector('.js-product-atb-btn').click();
     }
   }
 })
