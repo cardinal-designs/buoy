@@ -752,6 +752,10 @@ function getGuid() {
 function productQuickView(url,bundleWrapper,id) {
   let productHTML = document.createElement('div'),
       productButton = document.createElement('drawer-action-button');
+  productButton.setAttribute('data-id',id);
+  // productHTML.innerHTML = bundleWrapper.querySelector('.js-product-htmldata').innerText;
+  // productButton.insertAdjacentElement('afterbegin',productHTML.querySelector('.product-actions--wrapper'));
+  // productButton.querySelector('.js-product-atb-btn').innerText = productButton.querySelector('.js-product-atb-btn').innerText.replace('Add - ','Add to Bundle - ');
   
   let drawer = document.querySelector('.js-product-quick-view-drawer');
   fetch(url)
@@ -789,7 +793,6 @@ function productQuickView(url,bundleWrapper,id) {
 customElements.define('drawer-action-button',class drawerActionButton extends HTMLElement{
   constructor(){
     super();
-    console.log(this)
     let gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
     if(!gridElement) return;
   }
