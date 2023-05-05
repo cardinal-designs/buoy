@@ -874,7 +874,9 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
 
 document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   button.addEventListener('click',function(e) {
-    this.closest('.js-bundle-product-card--wrapper').querySelector('.lsg-bundle-product-select-quantity-plus').click();
+    let wrapper = this.closest('.js-bundle-product-card--wrapper');
+    wrapper.classList.add('js-added');
+    wrapper.querySelector('.lsg-bundle-product-select-quantity-plus').click();
   });
 });
 
