@@ -329,8 +329,9 @@
   -webkit-transform: translateX(0);
 }
 
-.product-quick-view-slide-out--wrapper .loading-overlay-wrapper{
-  display: none;
+.product-quick-view-slide-out--wrapper:not(.loading) .loading-overlay-wrapper{
+  opacity:0;
+  visibility:hidden;
 }
 
 .product-quick-view-slide-out--wrapper.loading .loading-overlay-wrapper{
