@@ -536,36 +536,6 @@ button:not([disabled]) {
   flex-grow: 1;
 }
 
-.lsg-bundle-interval-el:before {
-  position: absolute;
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  left: 10px;
-  top: 50%;
-  transform: translate(0, -50%);
-  content: '';
-  border: 1px solid #555;
-}
-
-.lsg-bundle-interval-el:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translate(0,-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^="bundleIntervalSelectOTP_"]:after,
-.lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^="bundleIntervalSelectSub_"]:after {
-  background-color: #555;
-}
-
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-select-pod-bottom {
   display: none;
 }
