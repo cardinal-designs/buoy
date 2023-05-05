@@ -330,7 +330,6 @@ function addToCart(trigger) {
       bundleProductQuantity += parseInt(ele.value);
     });
 
-  console.log(bundleBlock)
   
     bundleProductListInputs.forEach(function(bundleProductInput){
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
@@ -357,8 +356,6 @@ function addToCart(trigger) {
         }
     });
 
-  console.log(bundleCart)
-  return;
     {
       let cartItem = {
           id: bundleProductID,
