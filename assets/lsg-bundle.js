@@ -753,8 +753,8 @@ function productQuickView(url,bundleWrapper) {
   let productHTML = document.createElement('div'),
       productButton = document.createElement('drawer-action-button');
   productHTML.innerHTML = bundleWrapper.querySelector('.js-product-htmldata').innerText;
-  productButton.querySelector('.js-product-atb-btn').innerText.replace('Add - ','Add to Bundle - ');
   productButton.insertAdjacentElement('afterbegin',productHTML.querySelector('.product-actions--wrapper'));
+  productButton.querySelector('.js-product-atb-btn').innerText.replace('Add - ','Add to Bundle - ');
   
   let drawer = document.querySelector('.js-product-quick-view-drawer');
   fetch(url)
