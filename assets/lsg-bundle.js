@@ -793,7 +793,8 @@ function productQuickView(url,bundleWrapper,id) {
 customElements.define('drawer-action-button',class drawerActionButton extends HTMLElement{
   constructor(){
     super();
-    console.log(this);
+    let gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
+    console.log(gridElement);
   }
 })
 if (document.addEventListener) {
