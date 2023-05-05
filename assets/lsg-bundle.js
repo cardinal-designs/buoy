@@ -593,7 +593,10 @@ function updateBundlePrice(trigger) {
       // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
       productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
         let productId = productGrid.dataset.productId;
-        console.log(document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`))
+        let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
+            price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
+        console.log(price,qty)
+        subSubtotal += (parseInt(price * qty));
       });
       
         /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
