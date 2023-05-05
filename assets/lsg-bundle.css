@@ -508,9 +508,7 @@ button:not([disabled]) {
 
 
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:after, 
-.lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after,
-.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_0]:after
-.lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_0]:after{
+.lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after{
   content: "";
   position: absolute;
   top: 9px;
