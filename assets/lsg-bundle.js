@@ -786,7 +786,10 @@ document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
 
 document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
   button.addEventListener('click',function(e) {
-    console.log('click')
+    let drawer = document.querySelector('.js-product-quick-view-drawer'),
+        overlay = document.querySelector('.page-overlay');
+    overlay.classList.add('is-visible');
+    drawer.classList.add('active');
   });
 });
 
