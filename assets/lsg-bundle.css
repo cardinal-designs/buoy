@@ -187,9 +187,9 @@
 
 .bundle-builder__selected-product-title {
   display: block;
-  font-family: var(--font-head-font);
+  font-family: inter,sans-serif;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
   text-align: center;
 }
