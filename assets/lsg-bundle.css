@@ -96,6 +96,10 @@
   padding: 0 40px 0 0;
 }
 
+.lsg-bundle-buybox-product-info {
+  margin-bottom: 1rem;
+}
+
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info span {
   font-family: inter,sans-serif;
 }
@@ -425,7 +429,6 @@
   border-radius: 0;
 }
 
-
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
@@ -435,10 +438,6 @@
   background: #FFF;
   height: 100%;
   display: block;
-}
-
-.lsg-bundle-buybox-product-info {
-  margin-bottom: 1rem;
 }
 
 .lsg-bundle-buybox-product-rating {
