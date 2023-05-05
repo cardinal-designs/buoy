@@ -280,7 +280,7 @@ function checkoutEnableValidation(trigger) {
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       addMoreQuantity.innerHTML = quantityToAdd;
-      addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add ${quantityToAdd} more item to continue` : `Add ${quantityToAdd} more items to continue`;
+      addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <span>${quantityToAdd} more</span> item to continue` : `Add <span>${quantityToAdd} more</span> items to continue`;
     }
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {

@@ -380,12 +380,12 @@
 }
 
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before {
-  background-color: #000;
+  background-color: #1F2322;
 }
 
 .lsg-bundle-interval-el:before {
   position: absolute;
-  border: 1px solid #555;
+  border: 1px solid #1F2322;
   content: '';
   display: block;
   border-radius: 50%;
