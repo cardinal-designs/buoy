@@ -2,7 +2,7 @@
 {% else %}
   {{ product.title }}<br />
   {% for variant in product.variants %}
-    pp{{ variant.id }}
+    --{{ variant.selected_selling_plan_allocation }}
     {% for selling_plan in variant.selling_plan_allocations %}
       {{ selling_plan.id }}--{{ selling_plan.name }}<br />
     {% endfor %}
