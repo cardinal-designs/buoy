@@ -1,4 +1,14 @@
-{% render 'bundle-product-quick-view-drawer' %}
+<div class="product-quick-view-slide-out--wrapper">
+  <div class="shop-slide-out__inner">
+    <div class="shop-slide-out__header">
+      <button class="shop-slide-out__close">
+        {% render 'icon-arrow-left' %}
+      </button>
+    </div>
+    <div class="shop-slide-out__content">
+    </div>
+  </div>
+</div>
 {% assign otp_bundle_min = nil %}
 {% assign otp_bundle_max = nil %}
 {% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
