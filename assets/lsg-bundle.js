@@ -622,11 +622,12 @@ function updateBundlePrice(trigger) {
         });*/
     }
 
-    if (otpSubtotal > 0) {
+    /*if (otpSubtotal > 0) {
         otpSubtotal = otpSubtotal + productBasePrice;
     }
     if (subSubtotal > 0) {
-        const discountType = frequency.dataset.discountType;
+        // const discountType = frequency.dataset.discountType;
+        const discountType = 'discountType';
         const discountValue = frequency.dataset.discountValue;
         let discount = 0;
         switch(discountType){
@@ -642,7 +643,7 @@ function updateBundlePrice(trigger) {
             }
         if(discount < 0) { discount = 0; }
         subSubtotal = subSubtotal + (productBasePrice - discount);
-    }
+    }*/
 
     const currencyFormatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
