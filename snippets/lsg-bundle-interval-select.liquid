@@ -18,7 +18,7 @@
         {% for variantSub in productSub.variants %}
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
-            {% assign varaintProducts = varaintProducts | split:',' %}
+            {% # assign varaintProducts = varaintProducts | split:',' %}
             {% unless varaintProducts contains productSub.id %}
               {% assign varaintProducts = varaintProducts | join:',' %}
               {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
