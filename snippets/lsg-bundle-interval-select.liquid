@@ -36,7 +36,7 @@
             Tile :: {{ product.title }}
           {% endif %}
         {% endfor %}
-        ID :: {{ collections.bundle.products | where:'id',id }}<br />
+        ID :: {{ collections.bundle.products | where:'id',prodId }}<br />
       {% endfor %}
 
       {% # render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
