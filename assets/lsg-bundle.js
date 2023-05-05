@@ -410,18 +410,14 @@ function updateInterval(trigger) {
         case 'otp':
             bundleBlock.classList.remove('lsg-bundle--sub-selected');
             bundleBlock.classList.add('lsg-bundle--otp-selected');
-            sellingPlanInput.value = '';
             break;
         case 'sub':
             bundleBlock.classList.remove('lsg-bundle--otp-selected');
             bundleBlock.classList.add('lsg-bundle--sub-selected');
-            sellingPlanInput.value = frequencySelect.value;
             break;
     }
-
-  console.log(bundleBlock)
-    updateBundlePrice(trigger);
-    updateSellingPlan(trigger);
+  updateBundlePrice(trigger);
+  updateSellingPlan(trigger);
 }
 
 function updateSellingPlan(trigger) {
