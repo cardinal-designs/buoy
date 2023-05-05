@@ -365,9 +365,9 @@ function addToCart(trigger) {
             "bundle_parent": true,
           },
       };
-      if (interval == 'sub') {
-          cartItem["selling_plan"] = bundleSellingPlan;
-      }
+      // if (interval == 'sub') {
+      //     cartItem["selling_plan"] = bundleSellingPlan;
+      // }
       bundleCart.items.push(cartItem);
     }
 
