@@ -30,6 +30,7 @@
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
         {% assign product = collections.bundle.products | where:'id',prodId %}
+        {{ product }}
         {% if product %}
           {% render 'lsg-bundle-frequency-select', product: product, isDuplicate: isDuplicate,is_variant:true %}
         {% endif %}
