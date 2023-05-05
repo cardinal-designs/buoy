@@ -795,7 +795,6 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     super();
     this.gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
     if(!this.gridElement) return;
-    this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')));
     this.insertAdjacentElement('afterbegin',this.gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
     let atbButton = this.querySelector('.js-product-atb-btn'),
         plusBtn = this.querySelector('.lsg-bundle-product-select-quantity-plus'),
@@ -822,7 +821,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     }
   }
   updateInputValue(){
-    console.log(this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input'))
+    this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')));
     this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
   }
 })
