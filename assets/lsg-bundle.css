@@ -53,7 +53,7 @@
   text-align: left;
 }
 
-/* ADD BUNDLE BOX */
+/* ADD BUNDLE BOX START */
 
 .has-selected-product .lsg-bundle-summary-block {
   display: flex;
@@ -77,6 +77,9 @@
   width: 56%;
   padding: 0 40px 0 0;
 }
+
+/* ADD BUNDLE BOX END */
+
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
 .bundle-products-and-actions--wrapper .bundle-actions--wrapper {
