@@ -429,6 +429,23 @@
   flex-direction: unset;
 }
 
+.lsg-bundle-interval-el {
+  --label-color: #212121;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+  color: var(--label-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56;
+  gap: 8px;
+  padding: 2px 16px 2px 32px;
+  flex-grow: 1;
+}
+
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el>div {
   text-align: left;
   display: block;
@@ -470,6 +487,7 @@
   z-index: 11;
   border-radius: 0;
 }
+
 
 /* ADD BUNDLE BOX END */
 
@@ -562,23 +580,6 @@ button:not([disabled]) {
 .lsg-bundle-interval-select-pod-top {
   display: flex;
   flex-direction: column;
-}
-
-.lsg-bundle-interval-el {
-  --label-color: #212121;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  cursor: pointer;
-  color: var(--label-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.56;
-  gap: 8px;
-  padding: 2px 16px 2px 32px;
-  flex-grow: 1;
 }
 
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-select-pod-bottom {
@@ -679,7 +680,7 @@ button:not([disabled]) {
   border-bottom-right-radius: 100px;
 }
 
-/* Sticky Bar */
+/* STICKY BAR START */
 
 .lsg-bundle-sticky-bar {
   position: fixed;
@@ -739,6 +740,8 @@ button:not([disabled]) {
 .lsg-bundle-sticky-bar .lsg-bundle-sub-atc {
   margin-top: 15px;
 }
+
+/* STICKY BAR END */
 
 @media (max-width: 767px) {
   
