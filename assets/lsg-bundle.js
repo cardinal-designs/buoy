@@ -755,7 +755,9 @@ function productQuickView(url) {
     return responce.text();
   })
   .then(data => {
-    console.log(data);
+    let fakeElement = document.createElement('div');
+    fakeElement.innerHTML = data;
+    console.log(fakeElement);
   })
 }
 
