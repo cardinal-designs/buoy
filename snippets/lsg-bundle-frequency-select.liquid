@@ -1,5 +1,3 @@
-{% if is_variant == true %}
-{% else %}
   {{ product.title }}<br />
   {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
   {% for group in filtered_selling_plan_groups %}
@@ -9,6 +7,9 @@
       {% endfor %}
     {% endif %}
   {% endfor %}
+{% if is_variant == true %}
+{% else %}
+
 {% endif %}
 {% comment %}
 {%- liquid
