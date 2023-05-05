@@ -366,8 +366,8 @@
 .product-quick-view-slide-out--wrapper .shop-slide-out__close{
   width:15px;
   height:15px;
-  right:0;
-  
+  right:20px;
+  left:unset
 }
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__header{
