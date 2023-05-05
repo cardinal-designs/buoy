@@ -590,6 +590,7 @@ function updateBundlePrice(trigger) {
     if(productList && interval == 'sub') {
         // const discountType = frequency.dataset.discountType;
         // const discountValue = frequency.dataset.discountValue;
+      console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
       productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
         let productId = productGrid.dataset.productId;
         console.log(productId)
