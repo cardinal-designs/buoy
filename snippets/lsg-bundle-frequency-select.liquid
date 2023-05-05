@@ -2,7 +2,7 @@
   {% for variant in product.variants %}
     {% for selling_plan in variant.selling_plan_allocations %}
       {% if selling_plan.selling_plan.options[0].name == 'Bundle Frequency' %}
-      <option value="{{ selling_plan.selling_plan.name | handleize }}" data-selling-id="{{ selling_plan.selling_plan.id }}" data-selling-price="{{ selling_plan.price }}" data-price="{{ variant.price }}"></option>
+      <option daya-variant-id="{{ variant.id }}" value="{{ selling_plan.selling_plan.name | handleize }}" data-selling-id="{{ selling_plan.selling_plan.id }}" data-selling-price="{{ selling_plan.price }}" data-price="{{ variant.price }}"></option>
       {% endif %}
     {% endfor %}
   {% endfor %}
