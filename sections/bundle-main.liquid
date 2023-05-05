@@ -230,9 +230,12 @@
       </div>
       <div class="bundle-actions--wrapper">
         <label data-add-more-label></label>
-      {% if sub_bundle_products_count > 0 %}
-        {% render 'lsg-bundle-interval-select', product: product, settings: section.settings, bundleIndex: bundleIndex %}
-      {% elsif product.metafields.bundle.products %}
+      {% render 'lsg-bundle-interval-select',
+        product: product, settings: section.settings,
+        bundleIndex: bundleIndex,
+        sub_bundle_products_count: sub_bundle_products_count,
+        sub_bundle_variants_count: sub_bundle_variants_count %}
+      {% if product.metafields.bundle.products %}
         <div class="lsg-bundle-interval-only-otp">
             <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
             <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
