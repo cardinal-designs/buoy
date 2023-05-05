@@ -12,38 +12,32 @@
   justify-content: flex-start;
   align-content: center;
 }
+
 .hidden {
-    display: none;
+  display: none;
 }
+
 .lsg-bundle-block input[type="number"]::-webkit-inner-spin-button,
 .lsg-bundle-block input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
+
 .lsg-bundle-block input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
-/* .lsg-bundle-block {
-    display: flex;
-    max-width: 1320px;
-    margin: auto;
-    justify-content: space-between;
-    padding: 50px 0 80px;
-} */
+
 .lsg-bundle-block:not(.lsg-bundle-block-active) {
-    display: none;
+  display: none;
 }
+
 .lsg-bundle-buybox-block {
-    width: 51%;
-    padding: 0 20px;
+  width: 51%;
+  padding: 0 20px;
 }
-/* .lsg-bundle-summary-block {
-    width: 43%;
-    padding: 0 20px;
-} */
+
 .lsg-bundle-summary-block{
   display:none;
 }
-
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper {
   border-right: 1px solid #d1d1d1;
@@ -79,7 +73,6 @@
 }
 
 /* ADD BUNDLE BOX END */
-
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
 .bundle-products-and-actions--wrapper .bundle-actions--wrapper {
