@@ -326,7 +326,7 @@ function addToCart(trigger) {
         'items': []
     };
     let bundleProductQuantity = 0;
-    bundleProductList.querySelector('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
+    bundleProductList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
       bundleProductQuantity += ele.value;
     })
   console.log(bundleProductQuantity);
