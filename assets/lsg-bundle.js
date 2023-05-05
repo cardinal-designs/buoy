@@ -373,10 +373,10 @@ function addToCart(trigger) {
 
   console.log('222')
   
-    if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
-        //quantity is not within bundle size
-        return false;
-    }
+    // if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
+    //     //quantity is not within bundle size
+    //     return false;
+    // }
 
   console.log('hiiii')
 
