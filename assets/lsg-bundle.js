@@ -750,9 +750,11 @@ function getGuid() {
 }
 
 function productQuickView(url,bundleWrapper) {
-  let productHTML = document.createElement('div');
+  let productHTML = document.createElement('div'),
+      productButton = document.createElement('drawer-action-button');
   productHTML.innerHTML = bundleWrapper.querySelector('.js-product-htmldata').innerText;
-  console.log(productHTML)
+  productButton.insertAdjacentElement('afterbegin',productHTML.querySelector('.product-actions--wrapper'));
+  
   let drawer = document.querySelector('.js-product-quick-view-drawer');
   fetch(url)
   .then(responce => {
