@@ -329,4 +329,18 @@
   -webkit-transform: translateX(0);
 }
 
+.product-quick-view-slide-out--wrapper.active.loading .shop-slide-out__inner:after {
+  animation: loading var(--duration-long) infinite linear;
+  border: .5rem solid rgba(0,0,0,.4);
+  border-left: .5rem solid rgb(0,0,0);
+  border-radius: 100%;
+  box-sizing: content-box;
+  content: "";
+  display: block;
+  height: 2rem;
+  position: absolute;
+  width: 2rem;
+  top: 0;
+}
+
 /* Bundle Product Quickview Drawer CSS End */
