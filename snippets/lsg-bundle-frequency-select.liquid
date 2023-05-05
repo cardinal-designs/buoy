@@ -1,12 +1,12 @@
 {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
 
-  {% for group in filtered_selling_plan_groups %}
-    {% if group.options[0].name == "Bundle Frequency" %}
-      {% for selling_plan in group.selling_plans %}
-        {{ selling_plan.name | handleize }} -- {{ selling_plan.id }} -- {{ selling_plan.price_adjustments | json }}<br />
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
+{% for group in filtered_selling_plan_groups %}
+  {% if group.options[0].name == "Bundle Frequency" %}
+    {% for selling_plan in group.selling_plans %}
+      {{ selling_plan.name | handleize }} -- {{ selling_plan.id }} -- {{ selling_plan.price_adjustments | json }}<br />
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
 
 {% comment %}
