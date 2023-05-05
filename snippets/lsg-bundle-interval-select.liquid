@@ -31,9 +31,7 @@
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
         {% for prod in collections.bundle.product %}
-          {% if prod.id == prodId %}
-            Tile :: {{ product.title }}
-          {% endif %}
+          {{ product.id }} -- {{ prodId }}<br />
         {% endfor %}
         ID :: {{ collections.bundle.products | where:'id',id }}<br />
       {% endfor %}
