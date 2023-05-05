@@ -593,7 +593,7 @@ function updateBundlePrice(trigger) {
       // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
       productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
         let productId = productGrid.dataset.productId;
-        console.log(productId,document.querySelector(`.lsg-bundle-interval-select-pod-bottom[data-product="${productId}"]`));
+        console.log(productId,document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"]`));
       });
       
         /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
