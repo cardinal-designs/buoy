@@ -271,8 +271,11 @@ function checkoutEnableValidation(trigger) {
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-      // minInfoText.innerHTML = "You’ve Reached 20% Off";
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
+    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
+      minInfoText.innerHTML = "You’ve Reached 20% Off";
+    }else if (bundleQuantity == (bundleMax)){
+      minInfoText.innerHTML = "You’ve Reached 25% Off";
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
