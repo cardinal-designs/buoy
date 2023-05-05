@@ -750,7 +750,11 @@ function getGuid() {
 }
 
 function productQuickView(url) {
-  console.log(url)
+  fetch(url)
+  .then(responce => return responce.json())
+  .then(data => {
+    console.log(data);
+  })
 }
 
 //Event Listeners
