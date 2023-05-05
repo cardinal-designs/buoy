@@ -347,8 +347,9 @@ function addToCart(trigger) {
                     "bundle_id": bundleID,
                 },
             };
+          console.log(interval);
             if (interval == 'sub') {
-                if(sellingId) cartItem["selling_plan"] = bundleSellingPlan;
+                if(sellingId) cartItem["selling_plan"] = sellingId;
             }
             bundleCart.items.push(cartItem);
         }
