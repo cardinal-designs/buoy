@@ -327,7 +327,7 @@ function addToCart(trigger) {
     };
     let bundleProductQuantity = 0;
     bundleProductList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
-      bundleProductQuantity += ele.value;
+      bundleProductQuantity += parseInt(ele.value);
     })
   console.log(bundleProductQuantity);
   return;
