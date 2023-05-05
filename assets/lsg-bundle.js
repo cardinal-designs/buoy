@@ -817,8 +817,8 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     this.querySelector('.product-qty--wrapper').classList.toggle('no-quantity',(this.gridElement.querySelector('.product-qty--wrapper').classList.contains('no-quantity')));
     this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')));
     this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
-    plusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').disabled;
-    minusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').disabled;
+    this.plusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').disabled;
+    this.minusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').disabled;
   }
 })
 if (document.addEventListener) {
