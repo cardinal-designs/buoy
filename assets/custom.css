@@ -363,11 +363,11 @@
   top: 0;
 }
 
-.product-quick-view-slide-out--wrapper .shop-slide-out__close{
-  width:15px;
-  height:15px;
-  right:20px;
-  left:unset
+.product-quick-view-slide-out--wrapper .quick-view__close {
+  width: 15px;
+  height: 15px;
+  right: 20px;
+  position: absolute;
 }
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__header{
