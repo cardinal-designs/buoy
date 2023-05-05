@@ -489,8 +489,7 @@ button:not([disabled]) {
   color: #1F2322;
 }
 
-.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before,
-.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_0]:before {
+.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before {
   background-color: #1F2322;
 }
 
