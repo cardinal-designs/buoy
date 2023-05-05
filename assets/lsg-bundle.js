@@ -796,33 +796,31 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     this.gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
     if(!this.gridElement) return;
     this.insertAdjacentElement('afterbegin',this.gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
-    let atbButton = this.querySelector('.js-product-atb-btn'),
-        plusBtn = this.querySelector('.lsg-bundle-product-select-quantity-plus'),
-        minusBtn = this.querySelector('.lsg-bundle-product-select-quantity-minus');
+    this.atbButton = this.querySelector('.js-product-atb-btn');
+    this.plusBtn = this.querySelector('.lsg-bundle-product-select-quantity-plus');
+    this.minusBtn = this.querySelector('.lsg-bundle-product-select-quantity-minus');
     minusBtn.disabled = false;
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
-    atbButton.onclick = () => {
+    this.atbButton.onclick = () => {
       this.classList.add('js-added');
       this.gridElement.querySelector('.js-product-atb-btn').click();
       if(this.querySelector('.product-qty--wrapper.no-quantity')) this.querySelector('.product-qty--wrapper.no-quantity').remove('no-quantity');
       this.updateInputValue();
     }
-    plusBtn.onclick = () => {
-      let gridPlusBtn = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus');
-      gridPlusBtn.click();
+    this.plusBtn.onclick = () => {
+      this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').click();;
       this.updateInputValue();
-      plusBtn.disabled = gridPlusBtn.disabled;
     }
-    minusBtn.onclick = () => {
-      let gridMinusBtn = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus');
-      gridMinusBtn.click();
+    this.minusBtn.onclick = () => {
+      this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').click();
       this.updateInputValue();
-      minusBtn.disabled = gridMinusBtn.disabled;
     }
   }
   updateInputValue(){
     this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')));
     this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
+    plusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').disabled;
+    minusBtn.disabled = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus');.disabled;
   }
 })
 if (document.addEventListener) {
