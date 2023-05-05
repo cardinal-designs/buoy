@@ -332,7 +332,7 @@
   display: none;
 }
 
-.lsg-bundle-summary-block .bundle-actions--wrapper label {
+.lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label] {
   display: block;
   width: 100%;
   text-align: center;
