@@ -795,6 +795,8 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     super();
     let gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
     if(!gridElement) return;
+    this.insertAdjacentElement('afterbegin',gridElement.querySelector('.product-actions--wrapper'));
+    console.log(this.querySelector('.js-product-atb-btn'))
   }
 })
 if (document.addEventListener) {
