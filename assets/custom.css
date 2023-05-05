@@ -329,7 +329,7 @@
   -webkit-transform: translateX(0);
 }
 
-.product-quick-view-slide-out--wrapper.active.loading .shop-slide-out__inner,
+.product-quick-view-slide-out--wrapper.active.loading .product-content--wrapper,
 .product-quick-view-slide-out--wrapper .loading-overlay-wrapper{
   display: none;
 }
