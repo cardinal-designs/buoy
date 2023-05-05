@@ -7,7 +7,7 @@
       {% for productSub in collections.bundle.products %}
         {% assign productSubID = productSub.id | strip %}
         {% if sub_bundle_products contains productSubID %}
-          {% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:false %}
+          {% # render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:false %}
         {% endif %}
       {% endfor %}
     {% endif %}
