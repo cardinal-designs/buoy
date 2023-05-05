@@ -29,8 +29,9 @@
 
       {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
       {% for id in splitvariantProducts %}
+        {% assign prodId = id | times:1 %}
         {% for prod in collections.bundle.product %}
-          {% if prod.id == id %}
+          {% if prod.id == prodId %}
             Tile :: {{ product.title }}
           {% endif %}
         {% endfor %}
