@@ -13,7 +13,7 @@
 
 <div class="lsg-bundle-interval-frequency-group-wrap">
     {% for group in filtered_selling_plan_groups %}
-        <div class="lsg-bundle-interval-select-heading">{{ group.options[0].name }}</div>
+        <div class="lsg-bundle-interval-select-heading">{{ product.title }}--{{ group.options[0].name }}</div>
         <div class="lsg-bundle-interval-frequency-select-wrap">
             <select class="lsg-bundle-interval-frequency-select {% if isDuplicate %}is-duplicate{% endif %}" data-group-id="{{ group.id }}">
                 {% for selling_plan in group.selling_plans %}
