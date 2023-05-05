@@ -790,6 +790,12 @@ function productQuickView(url,bundleWrapper,id) {
 }
 
 //Event Listeners
+customElements.define('drawer-action-button',class drawerActionButton extends HTMLElement{
+  constructor(){
+    super();
+    console.log(this);
+  }
+})
 if (document.addEventListener) {
     window.addEventListener('pageshow', function (event) {
       if (event.persisted || performance.getEntriesByType("navigation")[0].type === 'back_forward') {
