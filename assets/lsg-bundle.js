@@ -335,11 +335,9 @@ function addToCart(trigger) {
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
           let sellingId = null;
-          console.log(bundleProductQuantity)
-          console.log(document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId)
+        
           if(bundleProductQuantity >= (parseInt(bundleMin) + 1)){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-            console.log("-->>",sellingId)
           }
           if(bundleProductQuantity == parseInt(bundleMax)){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
@@ -360,7 +358,6 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
-  return;
 
     {
       let cartItem = {
