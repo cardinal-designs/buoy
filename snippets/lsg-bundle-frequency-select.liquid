@@ -5,7 +5,7 @@
   {% for group in filtered_selling_plan_groups %}
     {% if group.options[0].name == "Bundle Frequency" %}
       {% for selling_plan in group.selling_plans %}
-        --{{ selling_plan.id }}--{{ selling_plan.name }}<br />
+        --{{ selling_plan.id }}--{{ selling_plan.name | handleize }}<br />
       {% endfor %}
     {% endif %}
   {% endfor %}
