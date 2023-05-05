@@ -314,7 +314,7 @@ function addToCart(trigger) {
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
     const bundleSellingPlan = bundleForm.querySelector('input[name="selling_plan"]').value;
-    const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected') == '' ? 'otp' : 'sub');
+    const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
     const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
     const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
