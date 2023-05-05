@@ -7,7 +7,7 @@
       {% for productSub in collections.bundle.products %}
         {% assign productSubID = productSub.id | strip %}
         {% if sub_bundle_products contains productSubID %}
-          ---{% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate %}
+          {% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:false %}
         {% endif %}
       {% endfor %}
     {% endif %}
@@ -17,7 +17,7 @@
         {% for variantSub in productSub.variants %}
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
-            ==={% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate %}
+            {% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:true %}
           {% endif %}
         {% endfor %}
       {% endfor %}
@@ -25,7 +25,7 @@
     
   {% elsif product.metafields.bundle.products %}
     {% for listProduct in product.metafields.bundle.products.value %}
-      111{% render 'lsg-bundle-frequency-select', product: listProduct, isDuplicate: isDuplicate %}
+      {% render 'lsg-bundle-frequency-select', product: listProduct, isDuplicate: isDuplicate,is_variant:false %}
     {% endfor %}
   {% endif %}
   
