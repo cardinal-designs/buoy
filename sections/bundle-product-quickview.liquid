@@ -223,7 +223,7 @@
   </div>
 {% endif %}
 
-<button class="button">Add to bundle - {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</button>
+<button class="button" type="button">Add to bundle - {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</button>
 
 <a class="js-product-details-link" href="{{ product.url }}">View Full Details</a>
 
