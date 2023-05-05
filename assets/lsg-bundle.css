@@ -776,6 +776,7 @@ button:not([disabled]) {
   z-index: 15;
   background: white;
   overflow: hidden;
+  padding-left: 40px;
 }
 
 .product-quick-view-slide-out--wrapper.active {
