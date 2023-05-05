@@ -27,7 +27,7 @@
         {% endfor %}
       {% endfor %}
 
-      {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
+      {% assign splitvariantProducts = varaintProducts | split:',' %}
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
         {% for prod in collections.bundle.product %}
