@@ -205,13 +205,7 @@
       <div class="bundle-selected-products--wrapper">
         <div class="lsg-bundle-buybox-product-info">
           <div class="title--wrapper">
-            <span class="lsg-bundle-buybox-product-name">
-                {% if product.metafields.buybox.alt_title %}
-                    {{ product.metafields.buybox.alt_title }}
-                {% else %}
-                    {{ product.title }}
-                {% endif %}
-            </span>
+            <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
             <span class="min-info" data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}" data-min-info-text>SELECT A MINIMUM OF {{ otp_bundle_min }}</span>
           </div>
           <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
