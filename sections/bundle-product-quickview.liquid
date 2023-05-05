@@ -70,6 +70,108 @@
     <div class="product__media-arrows hide-mobile"></div>
   </div>
 </div>
+<div class="pdp-faq">
+  <div class="faq-section">
+    <div class="faq-section__container">
+      {% if product.metafields.custom.new_ingredients_tab != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Ingredients</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <div class="sh4 single_line_text_field">{{ product.metafields.custom.new_ingredients_tab }}</div>
+            <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+            <div class="Why_This_Matters">
+              {% if product.metafields.custom.why_matters_text != blank %}
+               <p>{{ product.metafields.custom.why_matters_text }}</p>
+              {% endif %}
+              <a href="#Dropdowns_Container">{{ 'products.general.matters' | t }} <span><img src="{{ 'down-arrow.png' | asset_url }}"</span></a>
+            </div>
+          </div>
+        </div>
+      {% endif %} 
+      
+      {% if product.metafields.my_fields.health_benefits != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Benefits</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
+          </div>
+        </div>
+      {% endif %}   
+  
+      {% if product.metafields.my_fields.how_to_use != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">How to Use</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.how_to_use }}</div>
+          </div>
+        </div>
+      {% endif %} 
+       
+      {% if product.metafields.my_fields.highlights_tab != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Details</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.highlights_tab }}</p>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if product.metafields.my_fields.ingredients_tab != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Ingredients</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4 single_line_text_field">
+              {{ product.metafields.my_fields.ingredients_tab }}
+              
+              <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Ingredients List</a>                      
+            </p>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if product.metafields.my_fields.greatfor_tab != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Great For</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.greatfor_tab }}</p>
+          </div>
+        </div>
+      {% endif %}
+      
+      {% if product.metafields.my_fields.sustainability_tab != blank %}
+        <div class="faq__item">
+          <button class="faq__header">
+            <p class="sh4 medium">Sustainability</p>
+            {% render 'icon-caret' %}
+          </button>
+          <div class="faq__content">
+            <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.sustainability_tab }}</p>
+          </div>
+        </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Section name",
