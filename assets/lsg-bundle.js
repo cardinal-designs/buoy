@@ -257,8 +257,8 @@ function checkoutEnableValidation(trigger) {
   const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
   const bundleQuantity = getBundleQuantity(trigger);
   const interval = getBundleInterval(trigger);
-  const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
-  const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
+  const bundleMin = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin));
+  const bundleMax = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax));
   const quantityToAdd = bundleMin - bundleQuantity;
 
   //checkout button enable/disable
