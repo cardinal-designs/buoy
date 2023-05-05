@@ -796,7 +796,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     let gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
     if(!gridElement) return;
     this.classList.add('js-added',(gridElement.classList.contains('js-added')))
-    this.insertAdjacentElement('afterbegin',gridElement.querySelector('.product-actions--wrapper'));
+    this.insertAdjacentElement('afterbegin',gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
     let atbButton = this.querySelector('.js-product-atb-btn');
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
     atbButton.onclick = () => {
