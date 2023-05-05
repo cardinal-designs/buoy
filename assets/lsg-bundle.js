@@ -809,7 +809,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
   updateInputValue(){
     setTimeout(() => {
       this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
-    },10)
+    },100)
   }
 })
 if (document.addEventListener) {
