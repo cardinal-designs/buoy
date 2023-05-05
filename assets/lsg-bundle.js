@@ -749,7 +749,7 @@ function getGuid() {
     });
 }
 
-function productQuickView(url) {
+function productQuickView(url,bundleWrapper) {
   let drawer = document.querySelector('.js-product-quick-view-drawer');
   fetch(url)
   .then(responce => {
@@ -826,7 +826,7 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
     if(drawer.dataset.url != this.dataset.url){
       drawer.setAttribute('data-url',this.dataset.url); 
       drawer.classList.add('loading');
-      productQuickView(productUrl)
+      productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'))
     }
   });
 });
