@@ -809,6 +809,10 @@ button:not([disabled]) {
   margin: 40px 0 30px!important;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .Badge_Grid_Container {
+  margin: 40px 0;
+}
+
 .product-quick-view-slide-out--wrapper.active {
   visibility: visible;
   opacity: 1;

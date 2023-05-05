@@ -13,14 +13,22 @@
     {% endif %}
     
     {% if sub_bundle_variants_count > 0 %}
+      {% assign varaintProducts = blank %}
       {% for productSub in collections.bundle.products %}
         {% for variantSub in productSub.variants %}
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
-            {% render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
+            {% assign varaintProducts = varaintProducts | split:',' %}
+            {% unless varaintProducts contains productSub.id %}
+              {% assign varaintProducts = varaintProducts | join:',' %}
+              {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
       {% endfor %}
+
+      {{ productSub }}
+      {% render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
     {% endif %}
     
   {% elsif product.metafields.bundle.products %}
