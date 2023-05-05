@@ -793,6 +793,10 @@ button:not([disabled]) {
   height: 60px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper [data-oke-reviews-product-listing-rating] {
+  margin-bottom: 10px;
+}
+
 .product-quick-view-slide-out--wrapper.active {
   visibility: visible;
   opacity: 1;
