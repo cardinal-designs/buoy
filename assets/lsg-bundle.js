@@ -657,7 +657,7 @@ function updateBundlePrice(trigger) {
         if (interval == 'otp') {
             el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
         } else {
-            el.innerHTML = `<s>${otpSubtotal}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
+            el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
         }
     });
 }
