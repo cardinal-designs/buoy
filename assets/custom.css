@@ -333,6 +333,9 @@
   opacity:0;
   visibility:hidden;
 }
+.product-quick-view-slide-out--wrapper.loading .product-content--wrapper{
+  display:none;
+}
 
 .product-quick-view-slide-out--wrapper.loading .loading-overlay-wrapper{
   display: flex;
