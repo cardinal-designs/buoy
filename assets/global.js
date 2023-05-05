@@ -875,7 +875,6 @@ function slickOnMobile(slider, settings){
 };
 
 function slickOnDesktop(slider, settings){
-  console.log('hiiii',slider,settings)
   $(window).on('resize', function() {
     if ($(window).width() < 769) {
       if (slider.hasClass('slick-initialized')) {
