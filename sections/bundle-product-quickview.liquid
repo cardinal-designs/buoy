@@ -194,6 +194,35 @@
   </div>
 </div>
 
+{% assign my_fields = product.metafields.my_fields %}
+{% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
+  <div class="Badge_Grid_Container">
+    {% if my_fields.badge_one != blank %}
+      <div class="Badge_Grid_Item">
+        <span class="Badge_Grid">{{ my_fields.badge_one }}</span>
+      </div>
+    {%- endif -%}
+
+    {% if my_fields.badge_two != blank %}
+      <div class="Badge_Grid_Item">
+        <span class="Badge_Grid">{{ my_fields.badge_two }}</span>
+      </div>
+    {%- endif -%}
+
+    {% if my_fields.badge_three != blank %}
+      <div class="Badge_Grid_Item">
+        <span class="Badge_Grid">{{ my_fields.badge_three }}</span>
+      </div>
+    {%- endif -%}
+
+    {% if my_fields.badge_four != blank %}
+      <div class="Badge_Grid_Item">
+        <span class="Badge_Grid">{{ my_fields.badge_four }}</span>
+      </div>
+    {%- endif -%}
+  </div>
+{% endif %}
+
 {% schema %}
   {
     "name": "Section name",
