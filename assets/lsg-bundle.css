@@ -400,8 +400,8 @@
 .lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 6px;
+  top: 20px;
+  left: 17px;
   width: 5px;
   height: 11px;
   border: solid #FFFFFF;
