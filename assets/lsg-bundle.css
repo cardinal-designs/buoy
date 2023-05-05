@@ -72,6 +72,31 @@
   padding: 0 40px 0 0;
 }
 
+.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
+  text-align: left;
+}
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper {
+  width: 56%;
+  padding: 0 40px 0 0;
+}
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info span {
+  font-family: inter,sans-serif;
+}
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .lsg-bundle-buybox-product-name {
+  font-size: 14px;
+  line-height: 1.500em;
+  font-weight: 500;
+}
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info {
+  font-size: 12px;
+  line-height: 1.750em;
+  color: #545759;
+}
+
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
