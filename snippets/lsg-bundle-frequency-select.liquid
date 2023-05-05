@@ -12,12 +12,12 @@
 
 {% for variant in product.variants %}
   {% for selling_plan in variant.selling_plan_allocations %}
+    {% if selling_plan.selling_plan.options[0] == 'Bundle Frequency' %}
     {{ variant.id }}--{{ selling_plan.selling_plan.id }}--{{ selling_plan.selling_plan.name }}--{{ selling_plan.price }}<br />
+    {% endif %}
   {% endfor %}
 {% endfor %}
 
-{% comment %}
-{% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
 <select data-product="{{ product.id }}">
   {% for group in filtered_selling_plan_groups %}
     {% if group.options[0].name == "Bundle Frequency" %}
@@ -27,6 +27,8 @@
     {% endif %}
   {% endfor %}
 </select>
+{% comment %}
+{% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
   assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
