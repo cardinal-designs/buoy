@@ -137,6 +137,9 @@
   align-items: center;
   justify-content: center;
   transform: scale(0.9);
+  font-size: 12px;
+  font-family: inter,sans-serif;
+  color: #1F2322;
 }
 
 .bundle-builder__selected-product-placeholder:before {
