@@ -31,7 +31,7 @@
         {% assign prodId = id | times:1 %}
         {% assign product = collections.bundle.products | where:'id',prodId %}
         {{ product }}
-        {% if product %}
+        {% if product != empty %}111
           {% render 'lsg-bundle-frequency-select', product: product, isDuplicate: isDuplicate,is_variant:false %}
         {% endif %}
       {% endfor %}
