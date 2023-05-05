@@ -354,6 +354,8 @@ function addToCart(trigger) {
         }
     });
 
+  console.log(bundleCart)
+  return;
     {
       let cartItem = {
           id: bundleProductID,
