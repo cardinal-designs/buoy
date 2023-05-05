@@ -1,5 +1,6 @@
 {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
 
+{% comment %}
 {% for group in filtered_selling_plan_groups %}
   {% if group.options[0].name == "Bundle Frequency" %}
     {% for selling_plan in group.selling_plans %}
@@ -7,9 +8,12 @@
     {% endfor %}
   {% endif %}
 {% endfor %}
+{% endcomment %}
 
 {% for variant in product.variants %}
-  ----{{ variant.selling_plan_allocations }}
+  {% for selling_plan in variant.selling_plan_allocations %}
+    {{ variant.id }}--{{ selling_plan.id }}--{{ selling_plan.name }}--{{ selling_plan.price }}<br />
+  {% endfor %}
 {% endfor %}
 
 {% comment %}
