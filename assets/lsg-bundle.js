@@ -587,7 +587,11 @@ function updateBundlePrice(trigger) {
     if(productList && frequency && interval == 'sub') {
         const discountType = frequency.dataset.discountType;
         const discountValue = frequency.dataset.discountValue;
-      console.log(productList);;
+      productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
+        let productId = productGrid.dataset.productId;
+        console.log(productId)
+      });
+      
         /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
             let quantity = parseInt(subProductInput.value);
             let price = parseInt(subProductInput.dataset.price);
