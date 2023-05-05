@@ -333,19 +333,23 @@
 .product-quick-view-slide-out--wrapper .loading-overlay-wrapper{
   display: none;
 }
+
 .product-quick-view-slide-out--wrapper.loading .loading-overlay-wrapper{
-  display:block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-.product-quick-view-slide-out--wrapper.active.loading .loading-overlay-wrapper .loader {
+.product-quick-view-slide-out--wrapper.loading .loading-overlay-wrapper .loader {
   animation: loading var(--duration-long) infinite linear;
-  border: .5rem solid rgba(0,0,0,.4);
-  border-left: .5rem solid rgb(0,0,0);
+  border: .3rem solid rgba(0,0,0,.4);
+  border-left: .3rem solid rgb(0,0,0);
   border-radius: 100%;
   box-sizing: content-box;
-  display: block;
   height: 2rem;
-  position: absolute;
+  position: relative;
   width: 2rem;
   top: 0;
 }
