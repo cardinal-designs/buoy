@@ -587,7 +587,8 @@ function updateBundlePrice(trigger) {
     if(productList && frequency && interval == 'sub') {
         const discountType = frequency.dataset.discountType;
         const discountValue = frequency.dataset.discountValue;
-        productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
+      console.log(productList);;
+        /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
             let quantity = parseInt(subProductInput.value);
             let price = parseInt(subProductInput.dataset.price);
             let discount = 0;
@@ -607,7 +608,7 @@ function updateBundlePrice(trigger) {
             if(productList && hasIntervalSelect) {
                 otpSubtotal = otpSubtotal + (quantity * price);
             }
-        });
+        });*/
     }
 
     if (otpSubtotal > 0) {
