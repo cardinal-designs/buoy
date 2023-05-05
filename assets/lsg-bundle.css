@@ -352,6 +352,10 @@
   display: none;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner {
+  margin-bottom: 24px;
+}
+
 [data-add-more-label] span {
   color: #9AC847;
   font-weight: 500;
