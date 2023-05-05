@@ -281,10 +281,12 @@ function checkoutEnableValidation(trigger) {
     }
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+      addToCartButton.classList.add('subscription-enabled');
       bundleBlock.classList.add('bundle-checkout-enabled');
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
     }else{
+      addToCartButton.classList.remove('subscription-enabled');
       bundleBlock.classList.remove('bundle-checkout-enabled');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');

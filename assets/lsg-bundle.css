@@ -76,6 +76,29 @@
   height: 100%;
 }
 
+.lsg-bundle-product-select-quantity-wrap {
+  display: flex;
+}
+
+.lsg-bundle-product-select-quantity-input,
+.lsg-bundle-product-select-quantity-input-display {
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: inherit;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+.lsg-hidden {
+  display: none !important;
+}
+
 
 /* ADD BUNDLE BOX START */
 
@@ -486,6 +509,32 @@
   border-radius: 0;
 }
 
+.lsg-bundle-frequency-heading {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.lsg-bundle-interval-select-inner {
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.lsg-bundle-interval-select-pod-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-select-pod-bottom {
+  display: none;
+}
+
+.lsg-bundle-interval-select-pod-bottom {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
 
 /* ADD BUNDLE BOX END */
 
@@ -538,55 +587,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.lsg-bundle-product-select-quantity-wrap {
-  display: flex;
-}
-
-.lsg-bundle-product-select-quantity-input,
-.lsg-bundle-product-select-quantity-input-display {
-  background: none;
-  border: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.2;
-  font-family: inherit;
-}
-
-button:not([disabled]) {
-  cursor: pointer;
-}
-
-.lsg-hidden {
-  display: none !important;
-}
-
-.lsg-bundle-frequency-heading {
-  color: #212121;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: .5rem;
-}
-
-.lsg-bundle-interval-select-inner {
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.lsg-bundle-interval-select-pod-top {
-  display: flex;
-  flex-direction: column;
-}
-
-.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-select-pod-bottom {
-  display: none;
-}
-
-.lsg-bundle-interval-select-pod-bottom {
-  margin-top: .5rem;
-  margin-bottom: 1rem;
 }
 
 .lsg-bundle-interval-select-heading {
