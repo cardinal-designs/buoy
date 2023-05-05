@@ -29,7 +29,7 @@
       {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
-        {% assign clallproduct = collections.bundle.products | where:'id',prodId %}
+        {% assign clallproduct = collections.bundle.products | where:'id',prodId | first %}
         {% if clallproduct != empty %}
         {{ clallproduct.title }}
           {% render 'lsg-bundle-frequency-select', product: clallproduct, isDuplicate: isDuplicate,is_variant:false %}
