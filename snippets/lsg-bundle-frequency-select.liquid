@@ -12,6 +12,7 @@
 -%}
 
 <div class="lsg-bundle-interval-frequency-group-wrap">
+  {{ filtered_selling_plan_groups.size }}
     {% for group in filtered_selling_plan_groups %}
         <div class="lsg-bundle-interval-select-heading">{{ product.title }}--{{ group.options[0].name }}</div>
         <div class="lsg-bundle-interval-frequency-select-wrap">
