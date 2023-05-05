@@ -30,16 +30,12 @@
       {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
-        {% for prod in collections.bundle.products %}
-          {{ prod.id }} == {{ id }}<br />
-          {% if prod.id == prodId %}
-            Tile :: {{ product.title }}
-          {% endif %}
-        {% endfor %}
-        ID :: {{ collections.bundle.products | where:'id',prodId }}<br />
+        {% assign product = collections.bundle.products | where:'id',prodId %}
+        {% if product %}
+          {% render 'lsg-bundle-frequency-select', product: product, isDuplicate: isDuplicate,is_variant:true %}
+        {% endif %}
       {% endfor %}
-
-      {% # render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
+      
     {% endif %}
     
   {% elsif product.metafields.bundle.products %}
