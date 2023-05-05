@@ -335,6 +335,7 @@ function addToCart(trigger) {
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
           let sellingId = null;
+          console.log(bundleProductQuantity)
           console.log(document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId)
           if(bundleProductQuantity >= (bundleMin + 1)){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
