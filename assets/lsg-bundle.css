@@ -374,6 +374,38 @@
   font-weight: 500;
 }
 
+.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before {
+  background-color: #000;
+}
+
+.lsg-bundle-interval-el:before {
+  position: absolute;
+  border: 1px solid #555;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 18px;
+  margin: -1px;
+  height: 18px;
+  left: 0;
+  top: 8px;
+}
+
+.lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:after, 
+.lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  width: 5px;
+  height: 11px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  z-index: 11;
+  border-radius: 0;
+}
+
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
