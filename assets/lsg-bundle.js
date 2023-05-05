@@ -274,11 +274,13 @@ function checkoutEnableValidation(trigger) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
       addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : "";
+      minInfoText.innerText = "KEEP ADDING FOR DISCOUNTS";
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
       addMoreQuantity.innerHTML = quantityToAdd;
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <span>${quantityToAdd} more</span> item to continue` : `Add <span>${quantityToAdd} more</span> items to continue`;
+      minInfoText.innerText = minInfoText.dataset.cmsText;
     }
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
@@ -287,14 +289,12 @@ function checkoutEnableValidation(trigger) {
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
       bundleSubText.classList.remove('hidden');
-      minInfoText.innerText = "KEEP ADDING FOR DISCOUNTS";
     }else{
       addToCartButton.classList.remove('subscription-enabled');
       bundleBlock.classList.remove('bundle-checkout-enabled');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       bundleSubText.classList.add('hidden');
-      minInfoText.innerText = minInfoText.dataset.cmsText;
     }
     
   });
