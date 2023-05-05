@@ -121,6 +121,7 @@
               data-price="{{ product_card_product.selected_or_first_available_variant.price }}" 
               data-price-formatted="{{ product_card_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" 
               data-product="{{ product_card_product.selected_or_first_available_variant.id }}" 
+              data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}"
               aria-label="quantity">
             {% else %}
               <input autocomplete="false" type="number" value="0" min="0" 
@@ -129,6 +130,7 @@
               data-price="{{ product_card_product.price }}" 
               data-price-formatted="{{ product_card_product.price | money_without_trailing_zeros }}" 
               data-product="{{ product_card_product.id }}" 
+              data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}"
               aria-label="quantity">
             {% endif %}
             <div class="lsg-bundle-product-select-quantity-input-display lsg-hidden">0</div>
