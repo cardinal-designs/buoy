@@ -477,13 +477,7 @@ button:not([disabled]) {
     line-height: 1.2;
     gap: 20px;
 }
-.lsg-bundle-product-list,
-.bundle-builder__selected-products {
-    margin-top: 30px;
-}
-.bundle-builder__selected-products {
-    margin-bottom: 20px;
-}
+
 .lsg-bundle-submit-button {
     font-size: 20px;
     line-height: 1.2;
