@@ -812,6 +812,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
       this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').click();
       this.updateInputValue();
     }
+    this.updateInputValue();
   }
   updateInputValue(){
     this.querySelector('.product-qty--wrapper').classList.toggle('no-quantity',(this.gridElement.querySelector('.product-qty--wrapper').classList.contains('no-quantity')));
