@@ -3,7 +3,7 @@
   {{ product.title }}<br />
   {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
   {% for group in filtered_selling_plan_groups %}
-    --{{ group.options | json }}<br />
+    --{{ group.options | map:'name','Bundle Frequency' | json }}<br />
   {% endfor %}
 {% endif %}
 {% comment %}
