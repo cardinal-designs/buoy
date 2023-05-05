@@ -328,14 +328,18 @@ function addToCart(trigger) {
     let bundleProductQuantity = 0;
     bundleProductList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
       bundleProductQuantity += parseInt(ele.value);
-    })
-  console.log(bundleProductQuantity);
-  return;
+    });
+  
     bundleProductListInputs.forEach(function(bundleProductInput){
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
-          
-          let sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product=${bundleProductInput.dataset.productId}] [daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
+          let sellingId = null
+          if(bundleProductQuantity == (bundleMin + 1)){
+            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product=${bundleProductInput.dataset.productId}] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
+          }
+          if(bundleProductQuantity == bundleMax){
+            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product=${bundleProductInput.dataset.productId}] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
+          }
             let cartItem = {
                 id: bundleProductInput.dataset.product,
                 quantity: parseInt(bundleProductInput.value),
@@ -344,7 +348,7 @@ function addToCart(trigger) {
                 },
             };
             if (interval == 'sub') {
-                cartItem["selling_plan"] = bundleSellingPlan;
+                if(sellingId) cartItem["selling_plan"] = bundleSellingPlan;
             }
             bundleCart.items.push(cartItem);
         }
