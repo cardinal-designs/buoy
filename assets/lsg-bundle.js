@@ -287,12 +287,14 @@ function checkoutEnableValidation(trigger) {
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
       bundleSubText.classList.remove('hidden');
+      minInfoText.innerText = "KEEP ADDING FOR DISCOUNTS";
     }else{
       addToCartButton.classList.remove('subscription-enabled');
       bundleBlock.classList.remove('bundle-checkout-enabled');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       bundleSubText.classList.add('hidden');
+      minInfoText.innerText = minInfoText.dataset.cmsText;
     }
     
   });
