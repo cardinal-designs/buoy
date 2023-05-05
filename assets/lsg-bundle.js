@@ -799,7 +799,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     this.atbButton = this.querySelector('.js-product-atb-btn');
     this.plusBtn = this.querySelector('.lsg-bundle-product-select-quantity-plus');
     this.minusBtn = this.querySelector('.lsg-bundle-product-select-quantity-minus');
-    this.atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
+    this.atbButton.innerText = this.atbButton.innerText.replace('Add - ','Add to Bundle - ');
     this.atbButton.onclick = () => {
       this.gridElement.querySelector('.js-product-atb-btn').click();
       this.updateInputValue();
