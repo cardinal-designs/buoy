@@ -339,7 +339,7 @@ function addToCart(trigger) {
           console.log(document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId)
           if(bundleProductQuantity >= (bundleMin + 1)){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-            console.log(sellingId)
+            console.log("-->>",sellingId)
           }
           if(bundleProductQuantity == bundleMax){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
