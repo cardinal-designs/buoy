@@ -806,7 +806,9 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     }
   }
   updateInputValue(){
-    this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
+    setTimeout(() => {
+      this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
+    },10)
   }
 })
 if (document.addEventListener) {
