@@ -29,7 +29,7 @@
 
       {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
       {% for id in splitvariantProducts %}
-        {{ id }}<br />
+        ---{{ id }}<br />
       {% endfor %}
 
       {% # render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
