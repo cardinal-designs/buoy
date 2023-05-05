@@ -591,9 +591,10 @@ function updateBundlePrice(trigger) {
         // const discountType = frequency.dataset.discountType;
         // const discountValue = frequency.dataset.discountValue;
       // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
-      productList.querySelectorAll('.js-bundle-product-card--wrapper').forEach(function (productGrid) {
+      productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
         let productId = productGrid.dataset.productId;
-        console.log(productGrid.classList.value)
+        console.log(productId);
+        
       });
       
         /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
