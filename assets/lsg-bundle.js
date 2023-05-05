@@ -672,21 +672,21 @@ function initializeBundle() {
             switch(selectedInterval.value){
                 case 'otp':
                     bundleBlock.classList.add('lsg-bundle--otp-selected');
-                    sellingPlanInput.value = '';
+                    // sellingPlanInput.value = '';
                     break;
                 case 'sub':
                     bundleBlock.classList.add('lsg-bundle--sub-selected');
-                    sellingPlanInput.value = frequencySelect.value;
+                    // sellingPlanInput.value = frequencySelect.value;
                     break;
             }
         } else if (onlyOTP) {
             //has only otp options
             bundleBlock.classList.add('lsg-bundle--only-otp');
-            sellingPlanInput.value = '';
+            // sellingPlanInput.value = '';
         } else if (onlySub) {
             //has only sub options
             bundleBlock.classList.add('lsg-bundle--only-sub');
-            sellingPlanInput.value = frequencySelect.value;
+            // sellingPlanInput.value = frequencySelect.value;
         }
 
         //intial enable/disable for quantity increments and submit button
