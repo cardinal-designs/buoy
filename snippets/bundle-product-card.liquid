@@ -105,6 +105,7 @@
           {% endif %}
         {% endif %}
 
+        {% capture productActionHtml %}
         <div class="product-actions--wrapper">
           <div class="button product-qty--wrapper lsg-bundle-product-select-quantity-wrap">
             <button type="button" class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus">
@@ -141,12 +142,11 @@
           </div>
           <button type="button" class="product-atc-btn js-product-atb-btn shop-btn button button--beige" {% if card_product.available == false %}disabled{% endif %}>Add - {{ card_product.price | money_without_trailing_zeros }}</button>
         </div>
-        {% comment %}
-        {% if show_shop_button %}
-          <a href="{{ card_product.url | default: '#' }}" class="shop-btn button button--beige">Shop Now</a>
-        {% endif %}
-        {% endcomment %}
+        {% endcapture %}
+        {{ productActionHtml }}
       </div>
     </div>
-  <script type=""></script>
+  <script type="text/html">
+    {{ productActionHtml }}
+  </script>
 </div>
