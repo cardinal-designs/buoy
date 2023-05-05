@@ -59,6 +59,11 @@
 .lsg-bundle-summary-block .bundle-selected-products--wrapper {
   border-right: 1px solid #d1d1d1;
 }
+
+.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information {
+  text-align: left;
+}
+
 @media (max-width: 1023px) {
   .lsg-bundle-summary-block .bundle-selected-products--wrapper,
   .lsg-bundle-summary-block .bundle-actions--wrapper {
