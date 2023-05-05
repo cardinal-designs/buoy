@@ -348,6 +348,10 @@
   margin-top: 8px;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-frequency-heading {
+  display: none;
+}
+
 [data-add-more-label] span {
   color: #9AC847;
   font-weight: 500;
