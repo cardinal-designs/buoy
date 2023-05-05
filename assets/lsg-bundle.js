@@ -798,6 +798,9 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     this.insertAdjacentElement('afterbegin',gridElement.querySelector('.product-actions--wrapper'));
     let atbButton = this.querySelector('.js-product-atb-btn');
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
+    atbButton.onclick = () => {
+      console.log("hiii")
+    }
   }
 })
 if (document.addEventListener) {
