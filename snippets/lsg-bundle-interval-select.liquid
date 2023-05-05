@@ -22,13 +22,16 @@
             {% unless varaintProducts contains productSub.id %}11
               {% assign varaintProducts = varaintProducts | join:',' %}
               {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
-              varaintProducts : {{ varaintProducts }}<br />
             {% endunless %}
           {% endif %}
         {% endfor %}
       {% endfor %}
 
-      ----{{ varaintProducts }}
+      {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
+      {% for id in splitvariantProducts %}
+        {{ id }}<br />
+      {% endfor %}
+
       {% # render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
     {% endif %}
     
