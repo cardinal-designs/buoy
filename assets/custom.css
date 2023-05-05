@@ -374,4 +374,9 @@
   border:none;
 }
 
+.product-content--wrapper {
+  overflow: auto;
+  height: 100%;
+}
+
 /* Bundle Product Quickview Drawer CSS End */
