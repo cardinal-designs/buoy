@@ -29,9 +29,10 @@
       {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
       {% for id in splitvariantProducts %}
         {% assign prodId = id | times:1 %}
-        {% assign product = collections.bundle.products | where:'id',prodId %}
-        {% if product != empty %}
-          {% render 'lsg-bundle-frequency-select', product: product, isDuplicate: isDuplicate,is_variant:false %}
+        {% assign clallproduct = collections.bundle.products | where:'id',prodId %}
+        {% if clallproduct != empty %}
+        {{ clallproduct }}
+          {% render 'lsg-bundle-frequency-select', product: clallproduct, isDuplicate: isDuplicate,is_variant:false %}
         {% endif %}
       {% endfor %}
       
