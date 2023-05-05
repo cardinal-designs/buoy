@@ -593,7 +593,7 @@ function updateBundlePrice(trigger) {
       // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
       productList.querySelectorAll('.js-bundle-product-card--wrapper').forEach(function (productGrid) {
         let productId = productGrid.dataset.productId;
-        console.log(productId.classList)
+        console.log(productGrid.classList)
       });
       
         /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
