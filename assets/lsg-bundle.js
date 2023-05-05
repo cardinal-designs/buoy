@@ -784,6 +784,12 @@ document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   });
 });
 
+document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
+  button.addEventListener('click',function(e) {
+    console.log('click')
+  });
+});
+
 document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEach(function(incrementButton){
     incrementButton.addEventListener('click', function(e){
         e.preventDefault();
