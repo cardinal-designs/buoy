@@ -785,16 +785,12 @@ button:not([disabled]) {
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .product__media-arrows {
   margin-top: -92px;
-  right: -19px;
+  right: -18px;
 }
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .slick-arrow {
   width: 60px;
   height: 60px;
-}
-
-.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .slick-prev {
-  margin-right: 21px;
 }
 
 .product-quick-view-slide-out--wrapper.active {
