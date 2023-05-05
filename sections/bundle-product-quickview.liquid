@@ -70,6 +70,28 @@
     <div class="product__media-arrows hide-mobile"></div>
   </div>
 </div>
+
+{% render 'okendo-reviews-product-rating-summary', product: product %}
+
+<h1 class="product__title h4">
+  {{ product.title | escape }}
+  {% if product.metafields.custom.curved_icon == true %}
+    {% include 'curved-hydrated' %}
+  {% endif %}
+</h1>
+
+<p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>       
+
+<div class="Product_Tags">
+  {%- for tag in product.tags -%}
+    <span>{{ tag }}</span>
+  {%- endfor -%}
+</div>
+
+<div class="product__description sh4 light">
+  {{ product.description }}
+</div>
+
 <div class="pdp-faq">
   <div class="faq-section">
     <div class="faq-section__container">
