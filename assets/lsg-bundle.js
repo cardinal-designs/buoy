@@ -268,6 +268,7 @@ function checkoutEnableValidation(trigger) {
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
+    const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
@@ -285,11 +286,13 @@ function checkoutEnableValidation(trigger) {
       bundleBlock.classList.add('bundle-checkout-enabled');
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
+      bundleSubText.classList.remove('hidden');
     }else{
       addToCartButton.classList.remove('subscription-enabled');
       bundleBlock.classList.remove('bundle-checkout-enabled');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
+      bundleSubText.classList.add('hidden');
     }
     
   });
