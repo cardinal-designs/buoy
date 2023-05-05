@@ -560,29 +560,29 @@ function updateBundlePrice(trigger) {
     let otpSubtotal = 0;
     let subSubtotal = 0;
 
-    if(productList && interval == 'otp') {
-        productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(otpProductInput){
-            let quantity = parseInt(otpProductInput.value);
-            let price = parseInt(otpProductInput.dataset.price);
-            otpSubtotal = otpSubtotal + (quantity * price);
-            if(productList && frequency && hasIntervalSelect) {
-                const discountType = frequency.dataset.discountType;
-                const discountValue = frequency.dataset.discountValue;
-                let discount = 0;
-                switch(discountType){
-                    case 'percentage':
-                        discount = (price * parseInt(discountValue)) / 100;
-                        break;
-                    case 'fixed_amount':
-                        discount = parseInt(discountValue);
-                        break;
-                    case 'price':
-                        discount = price - parseInt(discountValue);
-                        break;
-                }
-                subSubtotal = subSubtotal + (quantity * (price - discount));
+    productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(otpProductInput){
+        let quantity = parseInt(otpProductInput.value);
+        let price = parseInt(otpProductInput.dataset.price);
+        otpSubtotal = otpSubtotal + (quantity * price);
+        if(productList && frequency && hasIntervalSelect) {
+            const discountType = frequency.dataset.discountType;
+            const discountValue = frequency.dataset.discountValue;
+            let discount = 0;
+            switch(discountType){
+                case 'percentage':
+                    discount = (price * parseInt(discountValue)) / 100;
+                    break;
+                case 'fixed_amount':
+                    discount = parseInt(discountValue);
+                    break;
+                case 'price':
+                    discount = price - parseInt(discountValue);
+                    break;
             }
-        });
+            subSubtotal = subSubtotal + (quantity * (price - discount));
+        }
+    });
+    if(productList && interval == 'otp') {
     }
 
 
@@ -657,7 +657,7 @@ function updateBundlePrice(trigger) {
         if (interval == 'otp') {
             el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
         } else {
-            el.innerHTML = currencyFormatter.format(subSubtotal / 100);
+            el.innerHTML = `<s>${otpSubtotal}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
         }
     });
 }
