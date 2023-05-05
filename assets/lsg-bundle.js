@@ -802,7 +802,11 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     atbButton.onclick = () => {
       this.classList.add('js-added');
       gridElement.querySelector('.js-product-atb-btn').click();
+      this.updateInputValue();
     }
+  }
+  updateInputValue(){
+    this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
   }
 })
 if (document.addEventListener) {
