@@ -876,7 +876,7 @@ function slickOnMobile(slider, settings){
 
 function slickOnDesktop(slider, settings){
   console.log('hiiii',slider,settings)
-  $(window).on('load resize', function() {
+  $(window).on('resize', function() {
     if ($(window).width() < 769) {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
@@ -887,6 +887,9 @@ function slickOnDesktop(slider, settings){
       return slider.slick(settings);
     }
   });
+  if (!slider.hasClass('slick-initialized')) {
+    return slider.slick(settings);
+  }
 };
 
 // FAQ
