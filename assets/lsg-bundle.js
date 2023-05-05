@@ -270,17 +270,23 @@ function checkoutEnableValidation(trigger) {
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
+    if(bundleQuantity >= bundleMin){
+      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
+    }else if(bundleQuantity == (bundleMin + 1)){
+      minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 20% Off</span>`;
+    }else{
+      minInfoText.innerHTML = minInfoText.dataset.cmsText;
+    }
+    
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
       addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : "";
-      minInfoText.innerText = "KEEP ADDING FOR DISCOUNTS";
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
       addMoreQuantity.innerHTML = quantityToAdd;
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <span>${quantityToAdd} more</span> item to continue` : `Add <span>${quantityToAdd} more</span> items to continue`;
-      minInfoText.innerText = minInfoText.dataset.cmsText;
     }
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
