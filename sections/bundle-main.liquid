@@ -1,7 +1,7 @@
 <div class="product-quick-view-slide-out--wrapper js-product-quick-view-drawer">
   <div class="shop-slide-out__inner">
     <div class="shop-slide-out__header">
-      <button class="quick-view__close">
+      <button class="quick-view__close" onclick="document.querySelector('.js-product-quick-view-drawer').classList.remove('active');document.querySelector('.page-overlay').classList.remove('is-visible');">
         {% render 'icon-close' %}
       </button>
     </div>
