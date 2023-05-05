@@ -370,11 +370,15 @@ function addToCart(trigger) {
       }
       bundleCart.items.push(cartItem);
     }
+
+  console.log('222')
   
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
         //quantity is not within bundle size
         return false;
     }
+
+  console.log('hiiii')
 
   let drawer = document.querySelector('cart-drawer');
 
