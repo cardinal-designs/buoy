@@ -797,6 +797,14 @@ button:not([disabled]) {
   margin-bottom: 10px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__description p {
+  margin-top: 30px;
+}
+
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .pdp-faq .faq-section {
+  margin: 40px 0 30px!important;
+}
+
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__subtitle {
   font-weight: 500;
 }
