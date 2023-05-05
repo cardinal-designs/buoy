@@ -32,7 +32,7 @@
         {% assign prodId = id | times:1 %}
         {% for prod in collections.bundle.products %}
           {{ prod.id }} == {{ id }}<br />
-          {% if prod.id == id %}
+          {% if prod.id == prodId %}
             Tile :: {{ product.title }}
           {% endif %}
         {% endfor %}
