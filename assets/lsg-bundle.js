@@ -822,8 +822,12 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
         overlay = document.querySelector('.page-overlay'),
         productUrl = this.dataset.url + "?section_id=bundle-product-quickview";
     overlay.classList.add('is-visible');
-    drawer.classList.add('active','loading');
-    productQuickView(productUrl)
+    drawer.classList.add('active');
+    if(drawer.dataset.url != this.dataset.url){
+      drawer.setAttribute('data-url',this.dataset.url); 
+      drawer.classList.add('loading');
+      productQuickView(productUrl)
+    }
   });
 });
 
