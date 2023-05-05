@@ -749,11 +749,12 @@ function getGuid() {
     });
 }
 
-function productQuickView(url,bundleWrapper) {
+function productQuickView(url,bundleWrapper,id) {
   let productHTML = document.createElement('div'),
       productButton = document.createElement('drawer-action-button');
   productHTML.innerHTML = bundleWrapper.querySelector('.js-product-htmldata').innerText;
   productButton.insertAdjacentElement('afterbegin',productHTML.querySelector('.product-actions--wrapper'));
+  productButton.setAttribute('data-id',id);
   productButton.querySelector('.js-product-atb-btn').innerText = productButton.querySelector('.js-product-atb-btn').innerText.replace('Add - ','Add to Bundle - ');
   
   let drawer = document.querySelector('.js-product-quick-view-drawer');
@@ -833,7 +834,7 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
     if(drawer.dataset.url != this.dataset.url){
       drawer.setAttribute('data-url',this.dataset.url); 
       drawer.classList.add('loading');
-      productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'))
+      productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'),this.dataset.id)
     }
   });
 });
