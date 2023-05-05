@@ -797,7 +797,10 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
     if(!this.gridElement) return;
     this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')));
     this.insertAdjacentElement('afterbegin',this.gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
-    let atbButton = this.querySelector('.js-product-atb-btn');
+    let atbButton = this.querySelector('.js-product-atb-btn'),
+        plusBtn = this.querySelector('.lsg-bundle-product-select-quantity-plus'),
+        minusBtn = this.querySelector('.lsg-bundle-product-select-quantity-minus');
+    minusBtn.disabled = false;
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
     atbButton.onclick = () => {
       this.classList.add('js-added');
@@ -805,11 +808,11 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
       if(this.querySelector('.product-qty--wrapper.no-quantity')) this.querySelector('.product-qty--wrapper.no-quantity').remove('no-quantity');
       this.updateInputValue();
     }
-    this.querySelector('.lsg-bundle-product-select-quantity-plus').onclick = () => {
+    plusBtn.onclick = () => {
       this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').click();
       this.updateInputValue();
     }
-    this.querySelector('.lsg-bundle-product-select-quantity-minus').onclick = () => {
+    minusBtn.onclick = () => {
       this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').click();
       this.updateInputValue();
     }
