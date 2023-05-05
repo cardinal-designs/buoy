@@ -329,6 +329,8 @@ function addToCart(trigger) {
     bundleProductList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
       bundleProductQuantity += parseInt(ele.value);
     });
+
+  console.log(bundleBlock)
   
     bundleProductListInputs.forEach(function(bundleProductInput){
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
