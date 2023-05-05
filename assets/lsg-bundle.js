@@ -270,6 +270,7 @@ function checkoutEnableValidation(trigger) {
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
+    console.log(bundleQuantity,bundleMin,bundleMax)
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
     }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
