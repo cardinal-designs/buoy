@@ -267,17 +267,16 @@ function checkoutEnableValidation(trigger) {
     const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
+    const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
 
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
-      addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
       addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : "";
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
-      addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       addMoreQuantity.innerHTML = quantityToAdd;
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <span>${quantityToAdd} more</span> item to continue` : `Add <span>${quantityToAdd} more</span> items to continue`;
@@ -285,9 +284,12 @@ function checkoutEnableValidation(trigger) {
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       bundleBlock.classList.add('bundle-checkout-enabled');
+      addToCartText.classList.remove('hidden');
     }else{
       bundleBlock.classList.remove('bundle-checkout-enabled');
+      addToCartText.classList.add('hidden');
     }
+    
   });
 }
 
