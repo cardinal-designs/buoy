@@ -12,7 +12,7 @@
 
 {% for variant in product.variants %}
   {% for selling_plan in variant.selling_plan_allocations %}
-    {{ variant.id }}--{{ selling_plan.id }}--{{ selling_plan.name }}--{{ selling_plan.price }}<br />
+    {{ variant.id }}--{{ selling_plan.selling_plan.id }}--{{ selling_plan.selling_plan.name }}--{{ selling_plan.price }}<br />
   {% endfor %}
 {% endfor %}
 
