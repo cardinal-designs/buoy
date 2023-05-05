@@ -805,6 +805,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
       if(this.querySelector('.product-qty--wrapper.no-quantity')) this.querySelector('.product-qty--wrapper.no-quantity').remove('no-quantity');
       this.updateInputValue();
     }
+    this.querySelector('.lsg-bundle-product-select-quantity-plus').onclick = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').click();
   }
   updateInputValue(){
     console.log(this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input'))
