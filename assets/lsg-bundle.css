@@ -43,6 +43,18 @@
 .lsg-bundle-summary-block{
   display:none;
 }
+
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper {
+  border-right: 1px solid #d1d1d1;
+}
+
+.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
+  text-align: left;
+}
+
+/* ADD BUNDLE BOX */
+
 .has-selected-product .lsg-bundle-summary-block {
   display: flex;
   width: 100%;
@@ -56,29 +68,15 @@
   align-items: center;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper {
+  width: 44%;
+  padding: 0 0 0 40px;
+}
+
 .lsg-bundle-summary-block .bundle-selected-products--wrapper {
-  border-right: 1px solid #d1d1d1;
+  width: 56%;
+  padding: 0 40px 0 0;
 }
-
-.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
-  text-align: left;
-}
-
-@media (max-width: 1023px) {
-  .lsg-bundle-summary-block .bundle-selected-products--wrapper,
-  .lsg-bundle-summary-block .bundle-actions--wrapper {
-    width: 100%;
-    padding: 0 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .lsg-bundle-summary-block .bundle-selected-products--wrapper,
-  .lsg-bundle-summary-block .bundle-actions--wrapper {
-    width: 50%;
-    padding: 0 40px;
-  }
-}
-
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
 .bundle-products-and-actions--wrapper .bundle-actions--wrapper {
