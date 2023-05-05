@@ -585,7 +585,6 @@ function updateBundlePrice(trigger) {
         });
     }
 
-  console.log('interval :',interval)
 
     if(productList && interval == 'sub') {
         // const discountType = frequency.dataset.discountType;
@@ -595,7 +594,6 @@ function updateBundlePrice(trigger) {
         let productId = productGrid.dataset.productId;
         let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
             price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
-        console.log(price,qty)
         subSubtotal += (parseInt(price * qty));
       });
       
