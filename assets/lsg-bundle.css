@@ -424,6 +424,11 @@ button:not([disabled]) {
   padding: 13px 24px 14px 24px;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button.subscription-enabled {
+  background-color: #F6ECE1;
+  border-color: #1F2322;
+}
+
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-sub-atc {
   font-family: inter,sans-serif;
   color: #1F2322;
