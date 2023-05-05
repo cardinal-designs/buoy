@@ -360,6 +360,7 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
+  return;
 
     {
       let cartItem = {
