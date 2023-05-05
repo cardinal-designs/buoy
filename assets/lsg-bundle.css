@@ -813,6 +813,16 @@ button:not([disabled]) {
   margin: 40px 0;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .js-product-details-link {
+  margin-top: 30px;
+  display: block;
+  font-family: inter,sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
 .product-quick-view-slide-out--wrapper.active {
   visibility: visible;
   opacity: 1;
