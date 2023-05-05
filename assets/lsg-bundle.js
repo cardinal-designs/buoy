@@ -845,11 +845,9 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
         productUrl = this.dataset.url + "?section_id=bundle-product-quickview";
     overlay.classList.add('is-visible');
     drawer.classList.add('active');
-    if(drawer.dataset.url != this.dataset.url){
       drawer.setAttribute('data-url',this.dataset.url); 
       drawer.classList.add('loading');
       productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'),this.dataset.id)
-    }
   });
 });
 
