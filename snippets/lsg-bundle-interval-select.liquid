@@ -19,16 +19,17 @@
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
             {% assign varaintProducts = varaintProducts | split:',' %}
-            {% unless varaintProducts contains productSub.id %}
+            {% unless varaintProducts contains productSub.id %}11
               {% assign varaintProducts = varaintProducts | join:',' %}
               {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
+              {{ varaintProducts }}
             {% endunless %}
           {% endif %}
         {% endfor %}
       {% endfor %}
 
       ----{{ productSub }}
-      {% render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
+      {% # render 'lsg-bundle-frequency-select', product: variantSub, isDuplicate: isDuplicate,is_variant:true %}
     {% endif %}
     
   {% elsif product.metafields.bundle.products %}
