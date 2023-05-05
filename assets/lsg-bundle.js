@@ -749,6 +749,10 @@ function getGuid() {
     });
 }
 
+function productQuickView(url) {
+  console.log(url)
+}
+
 //Event Listeners
 if (document.addEventListener) {
     window.addEventListener('pageshow', function (event) {
@@ -787,9 +791,11 @@ document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
 document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
   button.addEventListener('click',function(e) {
     let drawer = document.querySelector('.js-product-quick-view-drawer'),
-        overlay = document.querySelector('.page-overlay');
+        overlay = document.querySelector('.page-overlay'),
+        productUrl = this.dataset.url + "?section_id=bundle-product-quickview";
     overlay.classList.add('is-visible');
     drawer.classList.add('active','loading');
+    productQuickView(productUrl)
   });
 });
 
