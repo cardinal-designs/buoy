@@ -98,13 +98,10 @@
 }
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
-  margin: 24px 0 0 0;
-}
-
-.bundle-builder__selected-products {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin: 24px 0 0 0;
 }
 
 .bundle-builder__selected-product {
