@@ -751,7 +751,9 @@ function getGuid() {
 
 function productQuickView(url) {
   fetch(url)
-  .then(responce => return responce.json())
+  .then(responce => {
+    return responce.text();
+  })
   .then(data => {
     console.log(data);
   })
