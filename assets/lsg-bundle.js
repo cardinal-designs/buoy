@@ -775,7 +775,9 @@ function productQuickView(url) {
         }
       ]
     };
-    slickOnDesktop($productMediaSlider, productMediaSlider);
+    setTimeout(function (params) {
+      slickOnDesktop($productMediaSlider, productMediaSlider);
+    },1000)
     
     drawer.classList.remove('loading');
   })
