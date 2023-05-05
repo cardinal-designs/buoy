@@ -788,7 +788,7 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
   button.addEventListener('click',function(e) {
     let drawer = document.querySelector('.js-product-quick-view-drawer'),
         overlay = document.querySelector('.page-overlay');
-    overlay.classList.add('is-visible');
+    overlay.classList.add('is-visible','loading');
     drawer.classList.add('active');
   });
 });
