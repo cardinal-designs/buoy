@@ -329,7 +329,15 @@
   -webkit-transform: translateX(0);
 }
 
-.product-quick-view-slide-out--wrapper.active.loading .shop-slide-out__inner:after {
+.product-quick-view-slide-out--wrapper.active.loading .shop-slide-out__inner,
+.product-quick-view-slide-out--wrapper .loading-overlay-wrapper{
+  display: none;
+}
+.product-quick-view-slide-out--wrapper.loading .loading-overlay-wrapper{
+  display:block;
+}
+
+.product-quick-view-slide-out--wrapper.active.loading .loading-overlay-wrapper:after {
   animation: loading var(--duration-long) infinite linear;
   border: .5rem solid rgba(0,0,0,.4);
   border-left: .5rem solid rgb(0,0,0);
