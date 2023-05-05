@@ -19,7 +19,7 @@
           {% assign variantSubID = variantSub.id | strip %}
           {% if sub_bundle_variants contains variantSubID %}
             {% assign varaintProducts = varaintProducts | split:',' %}
-            {% unless varaintProducts contains productSub.id %}11
+            {% unless varaintProducts contains productSub.id %}
               {% assign varaintProducts = varaintProducts | join:',' %}
               {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
             {% endunless %}
