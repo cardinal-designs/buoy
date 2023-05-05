@@ -8,6 +8,9 @@
   {% endif %}
 {% endfor %}
 
+{% for variant in product.variants %}
+  ----{{ variant.selling_plan_allocations }}
+{% endfor %}
 
 {% comment %}
 {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
