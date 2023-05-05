@@ -779,6 +779,10 @@ button:not([disabled]) {
   padding-left: 40px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper {
+  max-width: 343px;
+}
+
 .product-quick-view-slide-out--wrapper.active {
   visibility: visible;
   opacity: 1;
