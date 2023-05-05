@@ -348,6 +348,11 @@
   margin-top: 22px;
 }
 
+[data-add-more-label] span {
+  color: #9AC847;
+  font-weight: 500;
+}
+
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
@@ -678,10 +683,6 @@ button:not([disabled]) {
   align-items: center;
   flex-wrap: nowrap;
   background: #FFF;
-}
-
-[data-add-more-label] span {
-  color: #9AC847;
 }
 
 .card__inner .media .quick-view-button {
