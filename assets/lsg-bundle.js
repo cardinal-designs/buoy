@@ -326,9 +326,16 @@ function addToCart(trigger) {
         'items': []
     };
     let bundleProductQuantity = 0;
+    bundleProductList.querySelector('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input').forEach(ele => {
+      bundleProductQuantity += ele.value;
+    })
+  console.log(bundleProductQuantity);
+  return;
     bundleProductListInputs.forEach(function(bundleProductInput){
         bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
+          
+          let sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product=${bundleProductInput.dataset.productId}] [daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
             let cartItem = {
                 id: bundleProductInput.dataset.product,
                 quantity: parseInt(bundleProductInput.value),
