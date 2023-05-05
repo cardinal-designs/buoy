@@ -1,6 +1,7 @@
 {% if is_variant == true %}
 {% else %}
   {{ product.title }}<br />
+  {{ product.selling_plan_groups | where: 'app_id', '5859381' }}
   {% for variant in product.variants %}
     --{{ variant.selected_selling_plan_allocation }}
     {% for selling_plan in variant.selling_plan_allocations %}
