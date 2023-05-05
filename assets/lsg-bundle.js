@@ -340,7 +340,6 @@ function addToCart(trigger) {
           if(bundleProductQuantity == bundleMax){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
           }
-          return;
             let cartItem = {
                 id: bundleProductInput.dataset.product,
                 quantity: parseInt(bundleProductInput.value),
