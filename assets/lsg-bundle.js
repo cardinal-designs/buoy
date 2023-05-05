@@ -481,6 +481,7 @@ function incrementSubProduct(trigger) {
     const input = trigger.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
     const bundleMax = trigger.closest('.lsg-bundle-product-set-list').dataset.bundleMax;
     const bundleQuantity = getBundleQuantity(trigger);
+  updateQuantityDisplay(input);
 
     switch(method) {
         case 'plus':
@@ -507,7 +508,6 @@ function incrementSubProduct(trigger) {
             updateBundlePrice(trigger);
             break;
     }
-    updateQuantityDisplay(input);
     mirrorQuantityDisplay(input);
 }
 
