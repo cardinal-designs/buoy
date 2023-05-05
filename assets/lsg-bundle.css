@@ -554,53 +554,62 @@ button:not([disabled]) {
 /* Sticky Bar */
 
 .lsg-bundle-sticky-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 16px;
-    z-index: 998;
-    transition: all .4s ease-in;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 16px;
+  z-index: 998;
+  transition: all .4s ease-in;
 }
+
 .lsg-bundle-block:not(.is-initialized) .lsg-bundle-sticky-bar {
-    display: none;
+  display: none;
 }
+
 .lsg-bundle-block.summary-is-below:not(.has-selected-product) .lsg-bundle-sticky-bar,
 .lsg-bundle-block.summary-is-visible .lsg-bundle-sticky-bar,
 .lsg-bundle-block.is-scroll-bottom .lsg-bundle-sticky-bar {
-    opacity: 0;
-    touch-action: none;
-    pointer-events: none;
+  opacity: 0;
+  touch-action: none;
+  pointer-events: none;
 }
+
 .lsg-bundle-block:not(.bundle-checkout-enabled) .lsg-bundle-sticky-selected-products,
 .lsg-bundle-block:not(.bundle-checkout-enabled) .lsg-bundle-sticky-atc .lsg-bundle-sub-atc {
-    display: none;
+  display: none;
 }
+
 .lsg-bundle-sticky-inner {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1280px;
-    margin: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
 }
+
 .lsg-bundle-sticky-bar .bundle-builder__selected-products {
-    margin: 0;
-    row-gap: 20px;
+  margin: 0;
+  row-gap: 20px;
 }
+
 .lsg-bundle-sticky-summary-block .bundle-builder__selected-product.active .bundle-builder__selected-product-title {
-    margin-top: 10px;
+  margin-top: 10px;
 }
+
 .lsg-bundle-sticky-bar .lsg-bundle-interval-select-inner {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 .lsg-bundle-sticky-bar .lsg-bundle-interval-select-pod-bottom {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 .lsg-bundle-sticky-bar .lsg-bundle-sub-atc {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 /* New Custom CSS Start */
