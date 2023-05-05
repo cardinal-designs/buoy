@@ -585,6 +585,8 @@ function updateBundlePrice(trigger) {
         });
     }
 
+  console.log('interval :',interval)
+
     if(productList && frequency && interval == 'sub') {
         const discountType = frequency.dataset.discountType;
         const discountValue = frequency.dataset.discountValue;
