@@ -430,20 +430,18 @@
 }
 
 .lsg-bundle-interval-el {
-  --label-color: #212121;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
   cursor: pointer;
-  color: var(--label-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.56;
   gap: 8px;
   padding: 2px 16px 2px 32px;
   flex-grow: 1;
+  color: #1F2322;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el>div {
