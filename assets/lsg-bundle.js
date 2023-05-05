@@ -775,6 +775,7 @@ function productQuickView(url) {
           }
         ]
       }
+    slickOnDesktop($productMediaSlider, productMediaSlider);
     
     drawer.classList.remove('loading');
   })
