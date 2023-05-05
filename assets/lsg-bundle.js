@@ -809,12 +809,16 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
       this.updateInputValue();
     }
     plusBtn.onclick = () => {
-      this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus').click();
+      let gridPlusBtn = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-plus');
+      gridPlusBtn.click();
       this.updateInputValue();
+      plusBtn.disabled = gridPlusBtn.disabled;
     }
     minusBtn.onclick = () => {
-      this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus').click();
+      let gridMinusBtn = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-minus');
+      gridMinusBtn.click();
       this.updateInputValue();
+      minusBtn.disabled = gridMinusBtn.disabled;
     }
   }
   updateInputValue(){
