@@ -4,7 +4,9 @@
   {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
   {% for group in filtered_selling_plan_groups %}
     {% if group.options[0].name == "Bundle Frequency" %}
-    --{{ group.options | json }}<br />
+      {% for selling_plan in group.selling_plans %}
+        --{{ selling_plan.id }}--{{ selling_plan.name }}<br />
+      {% endfor %}
     {% endif %}
   {% endfor %}
 {% endif %}
