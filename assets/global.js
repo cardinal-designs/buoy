@@ -1026,7 +1026,7 @@ var productMediaSlider = {
   ]
 }
 
-// slickOnDesktop($productMediaSlider, productMediaSlider);
+slickOnDesktop($productMediaSlider, productMediaSlider);
 
 // People
 $('.people-slider__drink-slider--1').slick({
