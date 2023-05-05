@@ -793,23 +793,22 @@ function productQuickView(url,bundleWrapper,id) {
 customElements.define('drawer-action-button',class drawerActionButton extends HTMLElement{
   constructor(){
     super();
-    let gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
-    if(!gridElement) return;
-    this.classList.toggle('js-added',(gridElement.classList.contains('js-added')))
-    this.insertAdjacentElement('afterbegin',gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
+    this.gridElement = document.querySelector(`.js-bundle-product-card--wrapper[data-lsg-bundle-variant-select-id="${this.dataset.id}"]`);
+    if(!this.gridElement) return;
+    this.classList.toggle('js-added',(this.gridElement.classList.contains('js-added')))
+    this.insertAdjacentElement('afterbegin',this.gridElement.querySelector('.product-actions--wrapper').cloneNode(true));
     let atbButton = this.querySelector('.js-product-atb-btn');
     atbButton.innerText = atbButton.innerText.replace('Add - ','Add to Bundle - ');
     atbButton.onclick = () => {
       this.classList.add('js-added');
-      gridElement.querySelector('.js-product-atb-btn').click();
+      this.gridElement.querySelector('.js-product-atb-btn').click();
       if(this.querySelector('.product-qty--wrapper.no-quantity')) this.querySelector('.product-qty--wrapper.no-quantity').remove('no-quantity');
       this.updateInputValue();
     }
   }
   updateInputValue(){
-    setTimeout(() => {
+    console.log(this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input'))
       this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
-    },100)
   }
 })
 if (document.addEventListener) {
