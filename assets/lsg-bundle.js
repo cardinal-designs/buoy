@@ -750,6 +750,7 @@ function getGuid() {
 }
 
 function productQuickView(url) {
+  let drawer = document.querySelector('.js-product-quick-view-drawer');
   fetch(url)
   .then(responce => {
     return responce.text();
@@ -757,7 +758,8 @@ function productQuickView(url) {
   .then(data => {
     let fakeElement = document.createElement('div');
     fakeElement.innerHTML = data;
-    console.log(fakeElement);
+    drawer.querySelector('.js-product-content').innerHTML = fakeElement.querySelector('#shopify-section-bundle-product-quickview').innerHTML;
+    drawer.classList.remove('loading');
   })
 }
 
