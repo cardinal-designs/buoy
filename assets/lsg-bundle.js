@@ -808,7 +808,7 @@ customElements.define('drawer-action-button',class drawerActionButton extends HT
   }
   updateInputValue(){
     console.log(this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input'))
-      this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
+    this.querySelector('.lsg-bundle-product-select-quantity-input').value = this.gridElement.querySelector('.lsg-bundle-product-select-quantity-input').value;
   }
 })
 if (document.addEventListener) {
