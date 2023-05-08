@@ -194,19 +194,6 @@ button:not([disabled]) {
   position: relative;
 }
 
-.lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
-  content: '';
-  width: 1px;
-  height: 115%;
-  position: absolute;
-  right: 0;
-  background-color: #545759;
-  opacity: 0.5;
-  display: block;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
   text-align: left;
 }
@@ -1047,6 +1034,19 @@ button:not([disabled]) {
     line-height: 1.1;
   }
 
+  .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
+    content: '';
+    width: 1px;
+    height: 115%;
+    position: absolute;
+    right: 0;
+    background-color: #545759;
+    opacity: 0.5;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
   /* Sticky Bar */
 
   .mobile-toggle-btn--wrapper {
