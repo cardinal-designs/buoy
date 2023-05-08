@@ -1469,6 +1469,7 @@ button:not([disabled]) {
     font-family: inter,sans-serif;
     letter-spacing: 0;
     padding-left: 0;
+    font-weight: 300;
   }
 
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info {
