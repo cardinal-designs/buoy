@@ -574,12 +574,12 @@ function updateBundlePrice(trigger) {
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
   console.log(interval)
 
-  let interval = ''
+  /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
       interval = 'otp';
   } else if (bundleBlock.classList.contains('lsg-bundle--only-sub') || bundleBlock.classList.contains('lsg-bundle--sub-selected')) {
       interval = 'sub';
-  }
+  }*/
   let otpSubtotal = 0;
   let subSubtotal = 0;
 
