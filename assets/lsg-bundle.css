@@ -1216,8 +1216,13 @@ button:not([disabled]) {
 @media (max-width: 768px) {
 
   /* Sticky Bar */
-  .lsg-bundle-sticky-bar-frequency-select {
+  .lsg-bundle-sticky-bar-frequency-select,
+  .lsg-bundle-buybox-product-info{
     display: none;
+  }
+  
+  .lsg-bundle-buybox-product-info {
+    text-align: center;
   }
 
   .mobile-toggle-btn--wrapper {
@@ -1239,10 +1244,6 @@ button:not([disabled]) {
   
   .lsg-bundle-product-select-wrapper {
     width: calc(50% - 10px);
-  }
-  
-  .lsg-bundle-buybox-product-info {
-    text-align: center;
   }
   
   .lsg-bundle-buybox-product-name {
