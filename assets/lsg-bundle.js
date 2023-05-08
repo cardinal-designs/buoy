@@ -853,11 +853,12 @@ function productQuickView(url,bundleWrapper,id) {
     $productMediaSlider.slick(productMediaSlider);
     
     $(window).on('resize', function() {
-      if ($productMediaSlider.hasClass('slick-initialized')) {
-        $productMediaSlider.slick('unslick');
-        $productMediaSlider.slick(productMediaSlider); 
+      if ($(window).width() < 769) {
+        if ($productMediaSlider.hasClass('slick-initialized')) {
+          $productMediaSlider.slick('unslick');
+        }
       }else{
-       return $productMediaSlider.slick(productMediaSlider); 
+        $productMediaSlider.slick(productMediaSlider); 
       }
     });
     
