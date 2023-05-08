@@ -1080,6 +1080,10 @@ button:not([disabled]) {
   .bundle-builder__selected-product {
     width: calc(22% - 52px);
   }
+
+  .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el>div {
+    font-size: 16px;
+  }
   
 }
 
