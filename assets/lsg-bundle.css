@@ -518,6 +518,7 @@ button:not([disabled]) {
   padding: 13px 24px 14px 24px;
   display: flex;
   align-items: center;
+  transition: .2s ease;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button s {
@@ -527,6 +528,10 @@ button:not([disabled]) {
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button.subscription-enabled {
   background-color: #F6ECE1;
   border-color: #1F2322;
+}
+
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button:hover {
+  box-shadow: 6px 6px 0 0 var(--charcoal);
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-sub-atc {
