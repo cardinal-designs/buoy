@@ -261,6 +261,7 @@ function checkoutEnableValidation(trigger) {
   const bundleMax = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax));
   const quantityToAdd = bundleMin - bundleQuantity;
   const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
+  const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
 
 
   titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
@@ -283,7 +284,6 @@ function checkoutEnableValidation(trigger) {
     const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
-    const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
     
     
