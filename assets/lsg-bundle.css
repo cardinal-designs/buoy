@@ -1191,16 +1191,8 @@ button:not([disabled]) {
     max-width: 100%;
   }
   
-  .lsg-bundle-summary-block .bundle-selected-products--wrapper {
-    width: 50%;
-  }
-  
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
     height: 105%;
-  }
-  
-  .lsg-bundle-summary-block .bundle-actions--wrapper {
-    width: 50%;
   }
   
   .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top {
@@ -1219,6 +1211,11 @@ button:not([disabled]) {
   .lsg-bundle-sticky-bar-frequency-select,
   .lsg-bundle-buybox-product-info{
     display: none;
+  }
+
+  .lsg-bundle-summary-block .bundle-actions--wrapper,
+  .lsg-bundle-summary-block .bundle-selected-products--wrapper{
+    width: 100%;
   }
   
   .lsg-bundle-buybox-product-info {
