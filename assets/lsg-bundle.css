@@ -1218,12 +1218,12 @@ button:not([disabled]) {
     bottom:-470px;
   }
   
-  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper:before{
-    content:unset;
-  }
-  
   .bundle-checkout-enabled.has-selected-product .lsg-bundle-summary-block{
     bottom:-630px;
+  }
+
+  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper:before{
+    content:unset;
   }
 
   .has-selected-product .lsg-bundle-summary-block.open .title--wrapper {
