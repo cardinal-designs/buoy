@@ -262,6 +262,8 @@ function checkoutEnableValidation(trigger) {
   const quantityToAdd = bundleMin - bundleQuantity;
   const titleWrapper = bundleBlock.querySelectorAll('.title--wrapper');
 
+  bundleBlock.querySelector('.js-item-count-badge').innerText = bundleQuantity;
+
   titleWrapper.forEach((wrapper) => {
     const titleDiscountBadge = wrapper.querySelector('[title-discount-badge]');
     const minInfoText = wrapper.querySelector('[data-min-info-text]');
