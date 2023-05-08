@@ -176,6 +176,11 @@ button:not([disabled]) {
   color: #545759;
 }
 
+.lsg-bundle-product-select-quantity-increment svg {
+  width: 8px;
+  height: 8px;
+}
+
 /* ADD BUNDLE BOX START */
 
 .lsg-bundle-summary-block--wrapper {
