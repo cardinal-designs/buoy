@@ -1019,6 +1019,10 @@ button:not([disabled]) {
   height: 100%;
 }
 
+.lsg-bundle-submit-button.subscription-enabled .subtotal-text {
+  display: none;
+}
+
 /* Bundle Product Quickview Drawer CSS End */
 
 /* REVIEW CARD CSS START */
