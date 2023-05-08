@@ -1095,6 +1095,14 @@ button:not([disabled]) {
   
 }
 
+@media (max-width: 959px) {
+  
+  .has-selected-product .lsg-bundle-summary-block {
+    padding: 25px 27px;
+  }
+  
+}
+
 @media (max-width: 768px) {
 
   /* Sticky Bar */
