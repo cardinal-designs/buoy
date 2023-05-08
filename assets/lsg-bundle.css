@@ -1557,5 +1557,10 @@ button:not([disabled]) {
   .lsg-bundle-product-set-list .collection-content p:last-child {
     margin-bottom: 0;
   }
+
+  .lsg-bundle-product-set-list .collection-groups__item:last-child {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
   
 }
