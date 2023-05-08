@@ -234,14 +234,14 @@ button:not([disabled]) {
   font-family: inter,sans-serif;
 }
 
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .min-info .discount-badge,
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .title--wrapper.show-discount-widget .min-info .into-text,
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .title--wrapper.hide-info .min-info{
+.lsg-bundle-summary-block .title--wrapper .min-info .discount-badge,
+.lsg-bundle-summary-block .title--wrapper.show-discount-widget .min-info .into-text,
+.lsg-bundle-summary-block .title--wrapper.hide-info .min-info{
   display: none;
 }
 
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .title--wrapper.show-discount-widget .min-info .discount-badge,
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .title--wrapper:not(.show-discount-widget) .min-info .into-text{
+.lsg-bundle-summary-block .title--wrapper.show-discount-widget .min-info .discount-badge,
+.lsg-bundle-summary-block .title--wrapper:not(.show-discount-widget) .min-info .into-text{
   display: block;
 }
 
