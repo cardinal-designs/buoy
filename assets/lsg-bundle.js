@@ -332,7 +332,7 @@ function addToCart(trigger) {
 
   
     bundleProductListInputs.forEach(function(bundleProductInput){
-        bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
+        // bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
           let sellingId = null;
         
