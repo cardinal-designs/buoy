@@ -1242,11 +1242,11 @@ button:not([disabled]) {
     content:unset !important;
   }
 
-  .has-selected-product .lsg-bundle-summary-block.open .min-info {
+  .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block .min-info {
     width: 100%;
   }
 
-  .has-selected-product .lsg-bundle-summary-block.open .icon.icon-caret {
+  .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
     transform: rotate(180deg);
   }
 
@@ -1257,7 +1257,7 @@ button:not([disabled]) {
   
   .lsg-bundle-sticky-bar-frequency-select,
   .lsg-bundle-buybox-product-info,
-  .has-selected-product .lsg-bundle-summary-block.open .count-badge{
+  .lsg-bundle-summary-block--wrapper.open .count-badge{
     display: none;
   }
 
