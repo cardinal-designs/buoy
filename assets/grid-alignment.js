@@ -4,7 +4,6 @@ customElements.define(
     constructor() {
       super();
       this.init();
-      this.init();
     }
     init(){
       let productGrids = this.querySelectorAll('product-grid-height'),
@@ -50,8 +49,14 @@ customElements.define(
     }
   });
 
-window.onresize = () => {
+function reinitAllGrids(params) {
   document.querySelectorAll('grid-alignment-wrapper').forEach(ele => {
     ele.init();
-  })
+  });
+}
+window.onresize = () => {
+  reinitAllGrids();
+}
+window.onload = () => {
+  reinitAllGrids();
 }
