@@ -1222,6 +1222,10 @@ button:not([disabled]) {
     bottom: 0;
   }
 
+  .has-selected-product .lsg-bundle-summary-block.open .icon.icon-caret {
+    transform: rotate(180deg);
+  }
+
   .mobile-toggle-btn--wrapper .icon--wrapper {
     width: 30px;
     height: 30px;
