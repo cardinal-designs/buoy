@@ -200,12 +200,15 @@ button:not([disabled]) {
   color: #545759;
 }
 
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info .discount-badge {
+  margin-left: -10px;
+}
+
 .lsg-bundle-summary-block .discount-badge {
   background-color: #C6DB76;
   padding: 3px 10px;
   border-radius: 18px;
   color: #1F2322;
-  margin-left: -10px;
 }
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
