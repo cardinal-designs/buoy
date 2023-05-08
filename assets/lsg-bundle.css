@@ -4,6 +4,10 @@ body.open-bundle-info {
   overflow: hidden;
 }
 
+.lsg-bundle-block .collection-groups__marquee {
+  display: none;
+}
+
 .page-template--product-bundle .header--transparent:not(.header--scrolled) .header-wrapper {
   border-color: var(--charcoal);
 }
