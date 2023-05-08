@@ -1215,6 +1215,9 @@ button:not([disabled]) {
   /* Sticky Bar */
 
   .has-selected-product .lsg-bundle-summary-block{
+    bottom:-470px;
+  }
+  .bundle-checkout-enabled .has-selected-product .lsg-bundle-summary-block{
     bottom:-630px;
   }
   
