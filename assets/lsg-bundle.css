@@ -1214,6 +1214,15 @@ button:not([disabled]) {
 
   /* Sticky Bar */
 
+  .count-badge {
+    background: #ECD8C5;
+    border-radius: 100%;
+    color: #000;
+  }
+  .bundle-checkout-enabled .count-badge{
+    background: #C6DB76;
+  }
+
   .has-selected-product .lsg-bundle-summary-block{
     bottom:-470px;
   }
