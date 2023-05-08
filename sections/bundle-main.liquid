@@ -150,8 +150,8 @@
             {% endif %}
           </div>
           {% assign productCount = 0 %}
-          <div class="collection-groups__grid">
         <grid-alignment-wrapper>
+          <div class="collection-groups__grid">
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
               {% if sub_bundle_products_count > 0 %}
                 {% assign breakLoop = false %}
@@ -217,7 +217,6 @@
                 %}
               {% endfor %}
             {% endif %}
-        </grid-alignment-wrapper>
             {% if forloop.index == 1 %}
               <div class="card-wrapper Review_Card_Wrapper">
                 {% for block in section.blocks %}
@@ -235,6 +234,7 @@
               </div>
             {% endif %}
           </div>
+          </grid-alignment-wrapper>
         </div>
       {% endfor %}
     </div>
