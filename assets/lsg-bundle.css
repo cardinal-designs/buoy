@@ -1240,7 +1240,7 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-summary-block--wrapper .title--wrapper .lsg-bundle-buybox-product-name:before {
-    content: unset !important;
+    display: none;
   }
 
   .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block .min-info {
