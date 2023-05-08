@@ -531,8 +531,9 @@ button:not([disabled]) {
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-sub-atc {
   font-family: inter,sans-serif;
-  color: #1F2322;
   margin-top: 8px;
+  color: #545759;
+  font-weight: 300;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-frequency-heading {
