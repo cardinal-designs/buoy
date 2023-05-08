@@ -1568,5 +1568,10 @@ button:not([disabled]) {
     margin-bottom: 40px;
     padding-bottom: 40px;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .lsg-bundle-buybox-product-name {
+    font-size: 25px;
+    line-height: 1.360em;
+  }
   
 }

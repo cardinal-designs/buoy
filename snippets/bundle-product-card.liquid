@@ -60,7 +60,11 @@
           {% else %}
             {% assign tags = product_card_product.product.tags %}
           {% endif %}
-          ---{{ tags }}
+          {% for tag in tags %}
+            {% if tag contains 'label_' %}
+              <label>{{ tag | replace:'label_' }}</label>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
 
