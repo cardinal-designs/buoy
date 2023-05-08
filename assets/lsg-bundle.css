@@ -1553,5 +1553,9 @@ button:not([disabled]) {
   .Review_Card_Wrapper .Review_Box {
     margin-bottom: 30px;
   }
+
+  .lsg-bundle-product-set-list .collection-content p:last-child {
+    margin-bottom: 0;
+  }
   
 }
