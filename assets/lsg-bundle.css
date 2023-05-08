@@ -3,7 +3,7 @@
 .title--wrapper .lsg-bundle-buybox-product-name{
   padding-left: 0;
 }
-.title--wrapper:not(.show-discount-widget) .lsg-bundle-buybox-product-name {
+.title--wrapper:not(.show-discount-widget):not(.hide-info) .lsg-bundle-buybox-product-name {
   border-right: 1px solid #000;
 }
 
