@@ -1429,4 +1429,15 @@ button:not([disabled]) {
     margin-bottom: 8px;
     font-family: inter,sans-serif;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inter,sans-serif;
+    font-size: 14px;
+    color: #1F2322;
+  }
 }
