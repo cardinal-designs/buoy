@@ -1223,7 +1223,7 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-summary-block .title--wrapper .lsg-bundle-buybox-product-name:before{
-    content:unset;
+    content:unset !important;
   }
 
   .has-selected-product .lsg-bundle-summary-block.open .min-info {
