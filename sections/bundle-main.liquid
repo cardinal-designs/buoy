@@ -239,7 +239,7 @@
       {% endfor %}
     </div>
 
-    <div class="lsg-bundle-summary-block">
+    <div class="lsg-bundle-summary-block--wrapper">
       <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open')">
         <div class="title--wrapper">
           <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
@@ -253,59 +253,63 @@
         </div>
         <div class="icon--wrapper">{% render 'icon-caret' %}</div>
       </div>
-      <div class="bundle-selected-products--wrapper">
-        <div class="lsg-bundle-buybox-product-info">
-          <div class="title--wrapper">
-            <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
-            <span class="min-info">
-              <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
-                >SELECT A MINIMUM OF {{ otp_bundle_min -}}
+
+      <div class="lsg-bundle-summary-block">
+        <div class="bundle-selected-products--wrapper">
+          <div class="lsg-bundle-buybox-product-info">
+            <div class="title--wrapper">
+              <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
+              <span class="min-info">
+                <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
+                  >SELECT A MINIMUM OF {{ otp_bundle_min -}}
+                </span>
+                <span class="discount-badge" title-discount-badge></span>
               </span>
-              <span class="discount-badge" title-discount-badge></span>
-            </span>
+            </div>
+            {% comment %}
+            <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
+            {% endcomment %}
           </div>
-          {% comment %}
-          <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
-          {% endcomment %}
-        </div>
-        {% if bundleIndex > 0 %}
-          {% if settings.bundle_select_heading %}
-            <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
+          {% if bundleIndex > 0 %}
+            {% if settings.bundle_select_heading %}
+              <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
+            {% endif %}
+            <div class="lsg-bundle-size-select">
+              {% for bundle in bundles %}
+                {% assign bundleOption = bundle | split: '|:|' %}
+                {% assign bundleButtonIndex = bundleOption[1] | plus: 0 %}
+                <button
+                  type="button"
+                  class="lsg-bundle-size-select-el{% if bundleButtonIndex == bundleIndex %} lsg-bundle-size-select-el--selected{% endif %}"
+                  data-bundle-index="{{ bundleButtonIndex }}"
+                >
+                  {{ bundleOption[0] }}
+                </button>
+              {% endfor %}
+            </div>
           {% endif %}
-          <div class="lsg-bundle-size-select">
-            {% for bundle in bundles %}
-              {% assign bundleOption = bundle | split: '|:|' %}
-              {% assign bundleButtonIndex = bundleOption[1] | plus: 0 %}
-              <button
-                type="button"
-                class="lsg-bundle-size-select-el{% if bundleButtonIndex == bundleIndex %} lsg-bundle-size-select-el--selected{% endif %}"
-                data-bundle-index="{{ bundleButtonIndex }}"
-              >
-                {{ bundleOption[0] }}
-              </button>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% assign placeholderBlock = section.blocks | where: 'type', 'placeholder' %}
-        {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0, blocks: placeholderBlock %}
+          {% assign placeholderBlock = section.blocks | where: 'type', 'placeholder' %}
+          {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0, blocks: placeholderBlock %}
+        </div>
+        <div class="bundle-actions--wrapper">
+          <label data-add-more-label></label>
+          {% render 'lsg-bundle-interval-select',
+            product: product,
+            settings: section.settings,
+            bundleIndex: bundleIndex,
+            sub_bundle_products_count: sub_bundle_products_count,
+            sub_bundle_variants_count: sub_bundle_variants_count
+          %}
+          {% if product.metafields.bundle.products %}
+            <div class="lsg-bundle-interval-only-otp">
+              <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
+              <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
+            </div>
+          {% endif %}
+          {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
+        </div>
       </div>
-      <div class="bundle-actions--wrapper">
-        <label data-add-more-label></label>
-        {% render 'lsg-bundle-interval-select',
-          product: product,
-          settings: section.settings,
-          bundleIndex: bundleIndex,
-          sub_bundle_products_count: sub_bundle_products_count,
-          sub_bundle_variants_count: sub_bundle_variants_count
-        %}
-        {% if product.metafields.bundle.products %}
-          <div class="lsg-bundle-interval-only-otp">
-            <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
-            <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
-          </div>
-        {% endif %}
-        {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
-      </div>
+      
     </div>
   </div>
 </div>
