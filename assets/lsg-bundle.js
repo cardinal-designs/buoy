@@ -572,7 +572,6 @@ function updateBundlePrice(trigger) {
   const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-  console.log(interval)
 
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
@@ -612,11 +611,20 @@ function updateBundlePrice(trigger) {
   if(productList && interval == 'sub') {
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
-    // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
+    // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
+
+    let totalQty = Array.from(productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).map(input => {
+      return parseInt(input.value)
+    }).reduce(function(a, b){
+      return a + b;
+    });
+    
     productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
       let productId = productGrid.dataset.productId;
+      let discount = 20;
+      if(totalQty == bundleMax) discount = 25
       let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
-          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
+          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
       subSubtotal += (parseInt(price * qty));
     });
     
