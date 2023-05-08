@@ -1048,6 +1048,10 @@ button:not([disabled]) {
   }
 
   /* Sticky Bar */
+
+  .mobile-toggle-btn--wrapper {
+    display: none;
+  }
   
   .lsg-bundle-sticky-inner {
     flex-direction: row;
@@ -1334,9 +1338,4 @@ button:not([disabled]) {
     overflow-y: scroll;
   }
   
-}
-
-
-.mobile-toggle-btn--wrapper {
-  display: none;
 }
