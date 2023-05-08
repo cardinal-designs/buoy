@@ -1452,4 +1452,9 @@ button:not([disabled]) {
     font-family: inter,sans-serif;
     letter-spacing: 0;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info {
+    width: 100%;
+    padding: 8px 0 0;
+  }
 }
