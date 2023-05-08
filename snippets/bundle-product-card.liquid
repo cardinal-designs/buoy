@@ -69,8 +69,7 @@
     <div class="card-information">
       <div class="card-information__wrapper">
 
-        <div class="info-wrapper js-height">
-        <div data-oke-reviews-product-listing-rating>
+        <div data-oke-reviews-product-listing-rating class="js-height">
         {% if is_variant == false %}
           {{ product_card_product.metafields.okendo.ProductListingSnippet }}
         {% else %}
@@ -78,7 +77,7 @@
         {% endif %}
         </div>
 
-        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
+        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link js-height">
           <div class="h5 card-information__title lsg-bundle-product-select-title">
             {% if is_variant == true %}
               {% if product_card_product.title == "Default Title" %}
@@ -97,13 +96,14 @@
           {% endcomment %}
         </a>
 
+        <p class="card-information__text light js-height">
         {% if is_variant == false %}
-          <p class="card-information__text light">{{ product_card_product.metafields.my_fields.product_card_text }}</p>
+          {{ product_card_product.metafields.my_fields.product_card_text }}
         {% else %}
-          <p class="card-information__text light">{{ product_card_product.product.metafields.my_fields.product_card_text }}</p>
+          {{ product_card_product.product.metafields.my_fields.product_card_text }}
         {% endif %}
+        </p>
 
-        </div>
 
         {% capture productActionHtml %}
         <div class="product-actions--wrapper">
