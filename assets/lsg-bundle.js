@@ -849,8 +849,10 @@ function productQuickView(url,bundleWrapper,id) {
         }
       ]
     };
-    
-    $productMediaSlider.slick(productMediaSlider);
+
+    if ($(window).width() > 768) {
+      $productMediaSlider.slick(productMediaSlider);
+    }
     
     $(window).on('resize', function() {
       if ($(window).width() < 769) {
