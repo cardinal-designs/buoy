@@ -1071,6 +1071,16 @@ button:not([disabled]) {
   left: 12px;
 }
 
+.lsg-bundle-product-set-list .collection-groups__item .product-badge label {
+  background-color: #1F2322;
+  color: #fff;
+  font-family: inter,sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 18px;
+  padding: 2px 10px 3px 10px;
+}
+
 @media (min-width: 769px) {
   
   .lsg-bundle-wrapper h1 {
