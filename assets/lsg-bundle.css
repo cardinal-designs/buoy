@@ -142,6 +142,7 @@ body.open-bundle-info {
   margin: 7px 8px 0 auto;
   right: 0;
   display: block;
+  z-index: 1;
 }
 
 .card__inner .media .quick-view-button svg {
