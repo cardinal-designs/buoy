@@ -7,8 +7,13 @@
 .title--wrapper .lsg-bundle-buybox-product-name{
   padding-left: 0;
 }
+
 .title--wrapper:not(.show-discount-widget):not(.hide-info) .lsg-bundle-buybox-product-name {
   border-right: 1px solid #000;
+}
+
+.lsg-bundle-product-set-list .collection-groups__item .collection-groups__header-content .sh2 {
+  line-height: 1.667em;
 }
 
 .title--wrapper > * {
