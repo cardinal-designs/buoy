@@ -1075,6 +1075,14 @@ button:not([disabled]) {
   
 }
 
+@media (max-width: 1250px) {
+  
+  .bundle-builder__selected-product {
+    width: calc(22% - 52px);
+  }
+  
+}
+
 @media (max-width: 768px) {
 
   /* Sticky Bar */
