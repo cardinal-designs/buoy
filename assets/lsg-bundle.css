@@ -200,7 +200,8 @@ button:not([disabled]) {
   height: 115%;
   position: absolute;
   right: 0;
-  background-color: #d1d1d1;
+  background-color: #545759;
+  opacity: 0.5;
   display: block;
   top: 50%;
   transform: translateY(-50%);
