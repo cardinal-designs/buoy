@@ -255,6 +255,7 @@ button:not([disabled]) {
   border-radius: 18px;
   color: #1F2322;
   font-size: 12px;
+  width:fit-content;
 }
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
