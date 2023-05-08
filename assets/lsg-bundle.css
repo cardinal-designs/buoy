@@ -1118,6 +1118,10 @@ button:not([disabled]) {
     width: 50%;
   }
   
+  .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
+    height: 105%;
+  }
+  
   .lsg-bundle-summary-block .bundle-actions--wrapper {
     width: 50%;
   }
