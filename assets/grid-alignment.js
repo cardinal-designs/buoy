@@ -9,7 +9,6 @@ customElements.define(
       this.init();
     }
     init(){
-      console.log('resize')
       let productGrids = this.querySelectorAll('product-grid-height'),
           gridPositions = [],
           positionGrids = [];
