@@ -1385,5 +1385,15 @@ button:not([disabled]) {
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
+    height: 0;
+    padding: 0;
+  }
+  
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
+    height: 100%;
+    padding: 25px 27px;
+  }
   
 }
