@@ -261,8 +261,9 @@ function checkoutEnableValidation(trigger) {
   const bundleMax = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax));
   const quantityToAdd = bundleMin - bundleQuantity;
   const titleWrapper = bundleBlock.querySelectorAll('.title--wrapper');
+  const itemCountBadge = bundleBlock.querySelector('.js-item-count-badge');
 
-  bundleBlock.querySelector('.js-item-count-badge').innerText = bundleQuantity;
+  itemCountBadge.innerText = bundleQuantity;
 
   titleWrapper.forEach((wrapper) => {
     const titleDiscountBadge = wrapper.querySelector('[title-discount-badge]');
