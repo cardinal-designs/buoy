@@ -261,6 +261,21 @@ function checkoutEnableValidation(trigger) {
   const bundleMax = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax));
   const quantityToAdd = bundleMin - bundleQuantity;
 
+
+  titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
+  
+  if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
+    minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
+  }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
+    minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 20% Off</span>`;
+    titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
+  }else if (bundleQuantity == (bundleMax)){
+    minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 25% Off</span>`;
+    titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
+  }else{
+    minInfoText.innerHTML = minInfoText.dataset.cmsText;
+  }
+  
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
     const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
@@ -270,21 +285,7 @@ function checkoutEnableValidation(trigger) {
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
     const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
-
-    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
     
-
-    if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
-    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
-      minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 20% Off</span>`;
-      titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
-    }else if (bundleQuantity == (bundleMax)){
-      minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 25% Off</span>`;
-      titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
-    }else{
-      minInfoText.innerHTML = minInfoText.dataset.cmsText;
-    }
     
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
