@@ -1225,6 +1225,10 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block.open .title--wrapper .lsg-bundle-buybox-product-name:before{
     content:unset;
   }
+
+  .has-selected-product .lsg-bundle-summary-block.open .min-info {
+    width: 100%;
+  }
   
   .has-selected-product .lsg-bundle-summary-block.open {
     bottom: 0;
