@@ -1406,5 +1406,9 @@ button:not([disabled]) {
     background-color: #fff;
     border-top: 1px solid #000;
   }
+
+  .product-quick-view-slide-out--wrapper .product-actions--wrapper .product-atc-btn {
+    width: 100%;
+  }
   
 }
