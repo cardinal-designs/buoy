@@ -4,6 +4,7 @@ customElements.define(
     constructor() {
       super();
       this.init();
+      this.init();
     }
     init(){
       let productGrids = this.querySelectorAll('product-grid-height'),
