@@ -560,8 +560,8 @@ function updateQuantityDisplay(input) {
 
 function updateBundlePrice(trigger) {
     //updates OTP/Sub pricing
-  console.log('updateBundlePrice');
     const bundleBlock = getBundleBlock(trigger);
+  console.log('updateBundlePrice',bundleBlock);
     const otpPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-otp-price');
     const subPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-sub-price');
     const curPriceEls = bundleBlock.querySelectorAll('[data-bundle-total]');
