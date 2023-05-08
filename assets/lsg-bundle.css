@@ -911,6 +911,46 @@ button:not([disabled]) {
 
 /* Bundle Product Quickview Drawer CSS End */
 
+/* REVIEW CARD CSS START */
+
+.Review_Card_Wrapper {
+  background-color: #F6ECE1;
+  border-radius: 17px;
+  text-align: center;
+  padding: 40px 18px;
+}
+
+.Review_Card_Wrapper .Review_Box {
+  margin-bottom: 35px;
+}
+
+.Review_Card_Wrapper .Review_Box .Review_Star svg path {
+  fill: #FAD16F;
+}
+
+.Review_Card_Wrapper .Review_Box .Review_Star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Review_Card_Wrapper .Review_Box .sh2 {
+  color: #1F2322;
+  margin: 15px 0;
+  line-height: 1.444em;
+}
+
+.Review_Card_Wrapper .Review_Box  .body-xs {
+  text-transform: capitalize;
+  color: #1F2322;
+}
+
+.Review_Card_Wrapper .Review_Box:last-child {
+  margin-bottom: 0;
+}
+
+/* REVIEW CARD CSS END */
+
 @media (max-width: 767px) {
   
   .lsg-bundle-block {
