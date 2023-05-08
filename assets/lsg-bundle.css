@@ -1,6 +1,6 @@
 /* BUNDLE GENRAL CSS */
 
-.title--wrapper .lsg-bundle-buybox-product-name {
+.title--wrapper:not(.show-discount-widget) .lsg-bundle-buybox-product-name {
   border-right: 1px solid #000;
   padding-left: 0;
 }
