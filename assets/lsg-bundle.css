@@ -1222,7 +1222,7 @@ button:not([disabled]) {
     bottom:-630px;
   }
 
-  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper .lsg-bundle-buybox-product-name:before{
+  .lsg-bundle-summary-block .title--wrapper .lsg-bundle-buybox-product-name:before{
     content:unset;
   }
 
