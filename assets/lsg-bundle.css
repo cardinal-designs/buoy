@@ -170,15 +170,18 @@ button:not([disabled]) {
   display:none;
 }
 
+.has-selected-product .lsg-bundle-summary-block--wrapper{
+  position: sticky;
+  box-shadow: 0px -10px 20px #00000014;
+}
+
 .has-selected-product .lsg-bundle-summary-block {
   display: flex;
   width: 100%;
   padding: 42px 40px;
-  position: sticky;
   bottom: 0;
   background: #FFF;
   z-index: 2;
-  box-shadow: 0px -10px 20px #00000014;
   flex-wrap: wrap;
   align-items: center;
   transition:0.5s;
