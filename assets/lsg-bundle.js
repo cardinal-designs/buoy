@@ -267,8 +267,10 @@ function checkoutEnableValidation(trigger) {
   if(interval == "otp"){
     titleDiscountBadge.closest('.title--wrapper').classList.remove('show-discount-widget');
   }else{
-    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
+    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity == bundleMax) ? 'Save 25%' : (bundleQuantity > bundleMin) ? 'Save 20%' : '' ); 
   }
+
+bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity > bundleMin)
   
   if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
     minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
