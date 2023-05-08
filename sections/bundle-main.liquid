@@ -6,7 +6,7 @@
     <div class="shop-slide-out__header">
       <button
         class="quick-view__close"
-        onclick="document.querySelector('.js-product-quick-view-drawer').classList.remove('active');document.querySelector('.page-overlay').classList.remove('is-visible');"
+        onclick="document.querySelector('.js-product-quick-view-drawer').classList.remove('active');document.querySelector('.page-overlay').classList.remove('is-visible');document.body.classList.remove('open-bundle-info');"
       >
         {% render 'drawer-icon-close' %}
       </button>
