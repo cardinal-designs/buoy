@@ -872,6 +872,7 @@ function productQuickView(url,bundleWrapper,id) {
     });
 
     var ratingCount = drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
+    console.log(ratingCount)
       if(ratingCount){
         drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.innerText.replace('out of', '/'); 
       }
