@@ -1498,10 +1498,15 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-product-set-list .collection-groups__item {
-    margin: 50px 0;
+    margin: 50px 0 60px;
+    padding-bottom: 80px;
   }
 
   .lsg-bundle-product-set-list .collection-groups__item .collection-groups__header-content .h1 {
     margin: 0 0 24px;
+  }
+
+  .lsg-bundle-product-set-list .collection-groups__item .collection-groups__header {
+    margin-bottom: 60px;
   }
 }
