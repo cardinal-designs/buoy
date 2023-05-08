@@ -1183,4 +1183,8 @@ button:not([disabled]) {
     margin: 30px 0 20px!important;
   }
   
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info {
+    padding: 0 28px 0 18px;
+  }
+  
 }
