@@ -849,7 +849,7 @@ function productQuickView(url,bundleWrapper,id) {
         }
       ]
     };
-    slickOnDesktop($productMediaSlider, productMediaSlider);
+    $productMediaSlider.slick(productMediaSlider);
     
     drawer.classList.remove('loading');
   })
