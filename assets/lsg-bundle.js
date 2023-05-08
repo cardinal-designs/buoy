@@ -271,7 +271,7 @@ function checkoutEnableValidation(trigger) {
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
     const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
 
-    titleDiscountBadge.parentElement.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
+    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
     
 
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
