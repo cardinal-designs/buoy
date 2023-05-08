@@ -1230,7 +1230,11 @@ button:not([disabled]) {
     text-transform: uppercase;
   }
 
-  .has-selected-product .lsg-bundle-summary-block{
+  .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
+    bottom: 0;
+  }
+  
+  .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block{
     bottom:-470px;
   }
 
@@ -1240,10 +1244,6 @@ button:not([disabled]) {
 
   .has-selected-product .lsg-bundle-summary-block.open .min-info {
     width: 100%;
-  }
-  
-  .has-selected-product .lsg-bundle-summary-block.open {
-    bottom: 0;
   }
 
   .has-selected-product .lsg-bundle-summary-block.open .icon.icon-caret {
