@@ -1239,8 +1239,8 @@ button:not([disabled]) {
     bottom: 0;
   }
 
-  .lsg-bundle-summary-block .title--wrapper .lsg-bundle-buybox-product-name:before{
-    content:unset !important;
+  .lsg-bundle-summary-block--wrapper .title--wrapper .lsg-bundle-buybox-product-name:before {
+    content: unset !important;
   }
 
   .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block .min-info {
