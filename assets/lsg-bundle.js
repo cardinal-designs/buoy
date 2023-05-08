@@ -263,10 +263,11 @@ function checkoutEnableValidation(trigger) {
   const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
   const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
 
+  titleDiscountBadge.closest('.title--wrapper').classList.toggle('hide-info',(bundleQuantity > bundleMin && interval == "otp")); 
   if(interval == "otp"){
     titleDiscountBadge.closest('.title--wrapper').classList.remove('show-discount-widget');
   }else{
-   titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
+    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
   }
   
   if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
