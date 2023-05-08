@@ -179,7 +179,7 @@ button:not([disabled]) {
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info .discount-badge,
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .title--wrapper.show-discount-widget .min-info .into-text,
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info.hide-info .title--wrapper.show-discount-widget .min-info{
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .title--wrapper.hide-info .min-info{
   display: none;
 }
 
