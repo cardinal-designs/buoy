@@ -83,6 +83,13 @@
   border: none;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info .okeReviews-reviewsSummary-ratingCount, 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info .okeReviews-reviewsSummary-ratingCount span {
+  font-size: 12px;
+  font-weight: 500 !important;
+  color: #1F2322;
+}
+
 /* PRODUCT CARD */
 
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
