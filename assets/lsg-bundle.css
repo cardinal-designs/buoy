@@ -12,8 +12,14 @@
   border-right: 1px solid #000;
 }
 
-.lsg-bundle-product-set-list .collection-groups__item .collection-groups__header-content .sh2 {
+.lsg-bundle-product-set-list .collection-content p {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
   line-height: 1.667em;
+  margin: 0 0 20px;
 }
 
 .title--wrapper > * {
