@@ -269,16 +269,17 @@ function checkoutEnableValidation(trigger) {
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
+    const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
 
-    minInfoText.parentElement.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
+    titleDiscountBadge.parentElement.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
     
 
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
     }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
-      minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 20% Off</span>`;
+      titleDiscountBadge.innerHTML = `<span class="discount-badge">You’ve Reached 20% Off</span>`;
     }else if (bundleQuantity == (bundleMax)){
-      minInfoText.innerHTML = `<span class="discount-badge">You’ve Reached 25% Off</span>`;
+      titleDiscountBadge.innerHTML = `<span class="discount-badge">You’ve Reached 25% Off</span>`;
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
