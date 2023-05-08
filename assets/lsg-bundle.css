@@ -181,6 +181,7 @@ button:not([disabled]) {
   box-shadow: 0px -10px 20px #00000014;
   flex-wrap: wrap;
   align-items: center;
+  transition:0.5s;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper {
@@ -1212,6 +1213,14 @@ button:not([disabled]) {
 @media (max-width: 768px) {
 
   /* Sticky Bar */
+
+  .has-selected-product .lsg-bundle-summary-block{
+    bottom:-470px;
+  }
+  .has-selected-product .lsg-bundle-summary-block.open {
+    bottom: 0;
+  }
+  
   .lsg-bundle-sticky-bar-frequency-select,
   .lsg-bundle-buybox-product-info{
     display: none;
