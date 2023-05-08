@@ -579,7 +579,7 @@ function updateBundlePrice(trigger) {
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
 
-  bundleBlock.querySelector('.lsg-bundle-buybox-product-info .title--wrapper').classList.toggle('show-discount-widget', (interval == "otp"))
+  bundleBlock.querySelector('.lsg-bundle-buybox-product-info .title--wrapper').classList.toggle('show-discount-widget', (interval == "otp"));
   
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
