@@ -578,12 +578,6 @@ function updateBundlePrice(trigger) {
   const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-
-  if(interval == "otp"){
-    bundleBlock.querySelector('.lsg-bundle-buybox-product-info .title--wrapper').classList.remove('show-discount-widget');
-  }else{
-    bundleBlock.querySelector('.lsg-bundle-buybox-product-info .title--wrapper').classList.add('show-discount-widget');
-  }
   
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
