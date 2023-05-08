@@ -1420,11 +1420,13 @@ button:not([disabled]) {
     height: 0;
     padding: 0;
     transition: unset;
+    display: none;
   }
   
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
     height: 100%;
     padding: 25px 18px 18px 18px;
+    display: block;
   }
 
   .product-quick-view-slide-out--wrapper .product-actions--wrapper {
@@ -1482,10 +1484,6 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info {
     width: 100%;
     padding: 8px 0 0;
-  }
-
-  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info .discount-badge {
-    
   }
   
   .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
