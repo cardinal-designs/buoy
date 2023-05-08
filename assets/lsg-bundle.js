@@ -870,6 +870,20 @@ function productQuickView(url,bundleWrapper,id) {
         $productMediaSlider.slick(productMediaSlider); 
       }
     });
+
+    var ratingCount = drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
+      if(ratingCount){
+        drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.innerText.replace('out of', '/'); 
+      }
+      
+      let myInterval = setInterval(timer, 1000);
+      function timer() {
+        ifdrawerdocument.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
+          let ratingText = drawer.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span').innerText
+          drawer.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span').innerText = `out of ${ratingText}`;
+          clearInterval(myInterval);
+        }
+      }
     
     drawer.classList.remove('loading');
   })
