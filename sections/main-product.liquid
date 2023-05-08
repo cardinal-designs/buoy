@@ -119,7 +119,7 @@
                         <span class="Supply_Time">{{ my_fields.supply_time }}</span>
                       {%- endif -%}
                       {%- if my_fields.servings != blank -%}
-                        <span class="Variant_Servings">{{ my_fields.servings }}</span>
+                        <span class="Variant_Servings">({{ my_fields.servings }})</span>
                       {%- endif -%}
                     </label>
                   </span>
@@ -360,7 +360,7 @@
         {% endcomment %}
 
         <div class="pdp-faq">
-          <div class="faq-section">
+          <div class="faq-section pdp-faq-section">
             <div class="faq-section__container">
               {% if product.metafields.custom.new_ingredients_tab != blank %}
                 <div class="faq__item">

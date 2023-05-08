@@ -1,5 +1,5 @@
-.faq-section {
-  margin: 150px 0;
+.faq-section:not(.pdp-faq-section) {
+  padding: 150px 0;
 }
 
 .faq-section__container {
@@ -76,9 +76,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .faq-section {
-    margin: 80px 0;
-  }
 
   .faq-section__title {
     margin: 0 0 20px;

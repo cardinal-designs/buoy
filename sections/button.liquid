@@ -1,39 +1,28 @@
-{{ 'section-profile-table.css' | asset_url | stylesheet_tag }}
+{{ 'section-button.css' | asset_url | stylesheet_tag }} 
 
-<div class="profile-table__container
+<div class="button-section__container
    {% if section.settings.add_top_border %} top-border{% endif %}
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
   ">
   <div class="page-width">
-    <h2 class="h4">{{ section.settings.title }}</h2>
-    <div class="profile-table__svg hide-mobile">
-      {{ section.settings.desktop_svg }}
-    </div>
-    <div class="profile-table__svg hide-desktop">
-      {{ section.settings.mobile_svg }}
-    </div>
+    <a href="{{ section.settings.url }}" class="button">{{ section.settings.text }}</a>
   </div>
 </div>
 
 {% schema %}
   {
-    "name": "Profile Table",
+    "name": "Button",
     "settings": [
       {
         "type": "text",
-        "id": "title",
-        "label": "Title"
+        "id": "text",
+        "label": "Button Text"
       },
       {
-        "type": "textarea",
-        "id": "desktop_svg",
-        "label": "Desktop SVG"
-      },
-      {
-        "type": "textarea",
-        "id": "mobile_svg",
-        "label": "Mobile SVG"
+        "type": "url",
+        "id": "url",
+        "label": "Button URL"
       },
       {
         "type": "checkbox",
@@ -72,7 +61,7 @@
     ],
     "presets": [
       {
-        "name": "Profile Table"
+        "name": "Button"
       }
     ]
   }

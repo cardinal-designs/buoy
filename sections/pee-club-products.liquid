@@ -1,6 +1,8 @@
 {{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
 
-<div class="pee-club-products__container" id="subscribe">
+<div class="pee-club-products__container
+  {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}" id="subscribe">
   <div class="show-product-bar"></div>
   <div class="pee-club-products__flex">
     <div class="pee-club-products__text">
@@ -108,6 +110,16 @@
         "type": "textarea",
         "id": "background",
         "label": "Background Style"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
       }
 	],
     "blocks": [

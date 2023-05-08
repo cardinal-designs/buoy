@@ -1,7 +1,11 @@
 
 {{ 'section-press-logos.css' | asset_url | stylesheet_tag }}
 
-<div class="press-logos{% if section.settings.add_border %} add-border{% endif %}" style="background: {{ section.settings.background }}">
+<div class="press-logos
+   {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">
   <div class="page-width">
     <div class="press-logos__wrapper">
       <div class="press-logos__container {% if section.settings.enable_marquee %}press-logo_marquee{% endif %}">
@@ -29,10 +33,28 @@
     "name": "Press Logos",
     "settings": [
       {
-        "type": "color",
+        "type": "select",
         "id": "background",
         "label": "Background",
-        "default": "#ECD8C5"
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
       },
       {
         "type": "checkbox",
@@ -42,8 +64,13 @@
       },
       {
         "type": "checkbox",
-        "id": "add_border",
-        "label": "Add Border"
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
       }
     ],
     "blocks": [
