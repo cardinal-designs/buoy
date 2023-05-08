@@ -1282,7 +1282,7 @@ button:not([disabled]) {
   
   .lsg-bundle-block {
     flex-direction: column;
-    padding: 20px 0 30px;
+    padding: 20px 0 0;
   }
   
   .lsg-bundle-gallery-block, .lsg-bundle-buybox-block, .lsg-bundle-summary-block {
