@@ -342,24 +342,20 @@ function addToCart(trigger) {
           if(bundleProductQuantity == parseInt(bundleMax)){
             sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
           }
-          
-          console.log(sellingId,bundleProductQuantity,parseInt(bundleMax),parseInt(bundleMin));
-            let cartItem = {
-                id: bundleProductInput.dataset.product,
-                quantity: parseInt(bundleProductInput.value),
-                properties: {
-                    "bundle_id": bundleID,
-                },
-            };
+          let cartItem = {
+              id: bundleProductInput.dataset.product,
+              quantity: parseInt(bundleProductInput.value),
+              properties: {
+                  "bundle_id": bundleID,
+              },
+          };
           console.log(interval);
-            if (interval == 'sub') {
-                if(sellingId) cartItem["selling_plan"] = sellingId;
-            }
-            bundleCart.items.push(cartItem);
+          if (interval == 'sub') {
+              if(sellingId) cartItem["selling_plan"] = sellingId;
+          }
+          bundleCart.items.push(cartItem);
         }
     });
-
-  return;
 
     {
       let cartItem = {
