@@ -1389,6 +1389,7 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
     height: 0;
     padding: 0;
+    transition: unset;
   }
   
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
