@@ -1488,6 +1488,13 @@ button:not([disabled]) {
     bottom: 0;
     transform: translateY(-50%);
   }
-
+  
+  .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el>div {
+    font-size: 18px;
+  }
+  
+  .lsg-bundle-product-set-list .collection-groups__item .button.product-qty--wrapper {
+    padding: 8px 20px 9px;
+  }
   
 }
