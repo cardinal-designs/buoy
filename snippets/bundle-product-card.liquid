@@ -77,8 +77,8 @@
         {% endif %}
         </div>
 
-        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link js-height">
-          <div class="h5 card-information__title lsg-bundle-product-select-title">
+        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
+          <div class="h5 card-information__title lsg-bundle-product-select-title js-height">
             {% if is_variant == true %}
               {% if product_card_product.title == "Default Title" %}
                 {{ product_card_product.product.title }}
