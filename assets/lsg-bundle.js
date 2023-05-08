@@ -849,7 +849,17 @@ function productQuickView(url,bundleWrapper,id) {
         }
       ]
     };
+    
     $productMediaSlider.slick(productMediaSlider);
+    
+    $(window).on('resize', function() {
+      if ($productMediaSlider.hasClass('slick-initialized')) {
+        $productMediaSlider.slick('unslick');
+        $productMediaSlider.slick(productMediaSlider); 
+      }else{
+       return $productMediaSlider.slick(productMediaSlider); 
+      }
+    });
     
     drawer.classList.remove('loading');
   })
