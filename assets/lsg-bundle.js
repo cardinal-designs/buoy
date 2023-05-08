@@ -270,7 +270,7 @@ function checkoutEnableValidation(trigger) {
     const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
-    minInfoText.perentElement.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
+    minInfoText.parentElement.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin));
     
 
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
