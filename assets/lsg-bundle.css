@@ -1549,5 +1549,9 @@ button:not([disabled]) {
     font-size: 14px;
     line-height: 1.357em;
   }
+
+  .Review_Card_Wrapper .Review_Box {
+    margin-bottom: 30px;
+  }
   
 }
