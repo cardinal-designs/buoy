@@ -1540,5 +1540,9 @@ button:not([disabled]) {
     font-size: 12px;
     width: fit-content;
   }
+
+  .Review_Card_Wrapper .Review_Box:last-child {
+    display: none;
+  }
   
 }
