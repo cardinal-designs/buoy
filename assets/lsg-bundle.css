@@ -1374,7 +1374,7 @@ button:not([disabled]) {
   }
   
   .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info {
-    padding: 0 28px 0 18px;
+    padding: 0 28px 86px 18px;
   }
   
   .product-quick-view-slide-out--wrapper .shop-slide-out__header {
@@ -1395,6 +1395,16 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
     height: 100%;
     padding: 25px 27px;
+  }
+
+  .product-quick-view-slide-out--wrapper .product-actions--wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #000;
   }
   
 }
