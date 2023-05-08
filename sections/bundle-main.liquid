@@ -123,7 +123,7 @@
           <div class="collection-groups__header">
             <div class="collection-groups__header-content">
               <h2 class="h1">{{ block.settings.title }}</h2>
-              <div class="sh2 light">{{ block.settings.text | newline_to_br }}</div>
+              <div class="collection-content">{{ block.settings.text | newline_to_br }}</div>
             </div>
             {% if block.settings.show_spinner and block.settings.spinner_image != blank %}
               <div class="collection-groups__header-spinner">
