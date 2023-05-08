@@ -22,6 +22,22 @@
   margin: 0 0 20px;
 }
 
+.lsg-bundle-product-set-list .collection-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lsg-bundle-product-set-list .collection-content ul li {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  margin-bottom: 6px;
+}
+
 .title--wrapper > * {
   padding: 0 10px;
 }
