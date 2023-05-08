@@ -178,6 +178,7 @@
                     {% endfor %}
                   {% endfor %}
                 {% endif %}
+                {% if forloop.index == 1 %}
                 <div class="card-wrapper">
                   {% for block in section.blocks %}
                     {%- case block.type -%}
@@ -191,6 +192,7 @@
                     {%- endcase -%}
                   {% endfor %}
                 </div>
+                {% endif %}
               </div>
           {% elsif product.metafields.bundle.products %}
               <div class="collection-groups__grid">
