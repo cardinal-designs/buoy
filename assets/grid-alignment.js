@@ -58,5 +58,6 @@ window.onresize = () => {
   reinitAllGrids();
 }
 window.onload = () => {
+  console.log('kkkkk')
   reinitAllGrids();
 }
