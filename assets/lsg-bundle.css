@@ -1220,8 +1220,14 @@ button:not([disabled]) {
     border-radius: 100%;
     color: #000;
   }
+  
   .bundle-checkout-enabled .count-badge{
     background: #C6DB76;
+  }
+
+  .has-selected-product .lsg-bundle-summary-block:not(.open) .min-info .discount-badge {
+    background: transparent;
+    text-transform: uppercase;
   }
 
   .has-selected-product .lsg-bundle-summary-block{
