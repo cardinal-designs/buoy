@@ -1599,6 +1599,12 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .count-badge {
     display: none;
   }
+
+  .lsg-bundle-product-set-list .collection-content p {
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 1.688em;
+  }
   
   
 }
