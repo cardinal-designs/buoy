@@ -1192,7 +1192,8 @@ button:not([disabled]) {
   }
 
   .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper {
-    overflow: unset;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
   
 }
