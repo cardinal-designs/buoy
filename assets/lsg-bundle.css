@@ -665,6 +665,25 @@ button:not([disabled]) {
   margin-bottom: 1rem;
 }
 
+.product-quick-view-slide-out--wrapper .okeReviews-starRating--small span.okeReviews-a11yText {
+  height: 100%!important;
+  clip: inherit!important;
+  right: -75px;
+  font-family: inter,sans-serif;
+  font-style: normal;
+  font-weight: 500!important;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 21px!important;
+  width: auto!important;
+  overflow: hidden;
+  top: 2px;
+}
+
+.product-quick-view-slide-out--wrapper .okeReviews-reviewsSummary-ratingCount {
+  left: 74px;
+}
+
 
 /* ADD BUNDLE BOX END */
 
