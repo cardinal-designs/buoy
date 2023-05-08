@@ -1162,4 +1162,8 @@ button:not([disabled]) {
     display: none;
   }
   
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper {
+    max-width: unset;
+  }
+  
 }
