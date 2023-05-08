@@ -1218,7 +1218,7 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-summary-block > *{
-    width:100%;
+    width:100% !important;
   }
   
   .lsg-bundle-buybox-product-info {
