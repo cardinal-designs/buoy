@@ -2232,7 +2232,7 @@ details[open] > .search-modal {
 }
 
 button:disabled {
-  cursor: disabled;
+  cursor: not-allowed;
 }
 
 /* Header menu drawer */
