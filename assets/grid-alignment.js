@@ -3,9 +3,6 @@ customElements.define(
   class gridAlignmentWrapper extends HTMLElement {
     constructor() {
       super();
-      window.onresize = () => {
-        this.init();
-      }
       this.init();
     }
     init(){
@@ -53,3 +50,9 @@ customElements.define(
       });
     }
   });
+
+window.onresize = () => {
+  document.querySelectorAll('grid-alignment-wrapper').forEach(ele => {
+    ele.init();
+  })
+}
