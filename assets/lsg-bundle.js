@@ -560,124 +560,129 @@ function updateQuantityDisplay(input) {
 
 function updateBundlePrice(trigger) {
     //updates OTP/Sub pricing
-    const bundleBlock = getBundleBlock(trigger);
-  console.log('updateBundlePrice',bundleBlock);
-    const otpPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-otp-price');
-    const subPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-sub-price');
-    const curPriceEls = bundleBlock.querySelectorAll('[data-bundle-total]');
-    const frequency = bundleBlock.querySelector('.lsg-bundle-interval-frequency-select:not(.is-duplicate) option:checked');
-    const productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
-    const hasIntervalSelect = bundleBlock.classList.contains('lsg-bundle--has-interval-select');
-    const productBasePrice = parseInt(bundleBlock.dataset.productBasePrice);
-    let interval = ''
-    if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
-        interval = 'otp';
-    } else if (bundleBlock.classList.contains('lsg-bundle--only-sub') || bundleBlock.classList.contains('lsg-bundle--sub-selected')) {
-        interval = 'sub';
-    }
-    let otpSubtotal = 0;
-    let subSubtotal = 0;
+  console.log('updateBundlePrice');
+  const bundleBlock = getBundleBlock(trigger);
+  const otpPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-otp-price');
+  const subPriceEls = bundleBlock.querySelectorAll('.lsg-bundle-interval-sub-price');
+  const curPriceEls = bundleBlock.querySelectorAll('[data-bundle-total]');
+  const frequency = bundleBlock.querySelector('.lsg-bundle-interval-frequency-select:not(.is-duplicate) option:checked');
+  const productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+  const hasIntervalSelect = bundleBlock.classList.contains('lsg-bundle--has-interval-select');
+  const productBasePrice = parseInt(bundleBlock.dataset.productBasePrice);
+  const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
+  const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
+  const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
+  console.log(interval)
 
-    productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(otpProductInput){
-        let quantity = parseInt(otpProductInput.value);
-        let price = parseInt(otpProductInput.dataset.price);
-        otpSubtotal = otpSubtotal + (quantity * price);
-        if(productList && frequency && hasIntervalSelect) {
-            const discountType = frequency.dataset.discountType;
-            const discountValue = frequency.dataset.discountValue;
-            let discount = 0;
-            switch(discountType){
-                case 'percentage':
-                    discount = (price * parseInt(discountValue)) / 100;
-                    break;
-                case 'fixed_amount':
-                    discount = parseInt(discountValue);
-                    break;
-                case 'price':
-                    discount = price - parseInt(discountValue);
-                    break;
-            }
-            subSubtotal = subSubtotal + (quantity * (price - discount));
-        }
+  let interval = ''
+  if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
+      interval = 'otp';
+  } else if (bundleBlock.classList.contains('lsg-bundle--only-sub') || bundleBlock.classList.contains('lsg-bundle--sub-selected')) {
+      interval = 'sub';
+  }
+  let otpSubtotal = 0;
+  let subSubtotal = 0;
+
+  productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(otpProductInput){
+      let quantity = parseInt(otpProductInput.value);
+      let price = parseInt(otpProductInput.dataset.price);
+      otpSubtotal = otpSubtotal + (quantity * price);
+      if(productList && frequency && hasIntervalSelect) {
+          const discountType = frequency.dataset.discountType;
+          const discountValue = frequency.dataset.discountValue;
+          let discount = 0;
+          switch(discountType){
+              case 'percentage':
+                  discount = (price * parseInt(discountValue)) / 100;
+                  break;
+              case 'fixed_amount':
+                  discount = parseInt(discountValue);
+                  break;
+              case 'price':
+                  discount = price - parseInt(discountValue);
+                  break;
+          }
+          subSubtotal = subSubtotal + (quantity * (price - discount));
+      }
+  });
+  if(productList && interval == 'otp') {
+  }
+
+
+  if(productList && interval == 'sub') {
+      // const discountType = frequency.dataset.discountType;
+      // const discountValue = frequency.dataset.discountValue;
+    // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
+    productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
+      let productId = productGrid.dataset.productId;
+      let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
+          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
+      subSubtotal += (parseInt(price * qty));
     });
-    if(productList && interval == 'otp') {
-    }
+    
+      /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
+          let quantity = parseInt(subProductInput.value);
+          let price = parseInt(subProductInput.dataset.price);
+          let discount = 0;
+          switch(discountType){
+              case 'percentage':
+                  discount = (price * parseInt(discountValue)) / 100;
+                  break;
+              case 'fixed_amount':
+                  discount = parseInt(discountValue);
+                  break;
+              case 'price':
+                  discount = price - parseInt(discountValue);
+                  break;
+          }
+          subSubtotal = subSubtotal + (quantity * (price - discount));
 
+          if(productList && hasIntervalSelect) {
+              otpSubtotal = otpSubtotal + (quantity * price);
+          }
+      });*/
+  }
 
-    if(productList && interval == 'sub') {
-        // const discountType = frequency.dataset.discountType;
-        // const discountValue = frequency.dataset.discountValue;
-      // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'))
-      productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
-        let productId = productGrid.dataset.productId;
-        let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
-            price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
-        subSubtotal += (parseInt(price * qty));
-      });
-      
-        /*productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(subProductInput){
-            let quantity = parseInt(subProductInput.value);
-            let price = parseInt(subProductInput.dataset.price);
-            let discount = 0;
-            switch(discountType){
-                case 'percentage':
-                    discount = (price * parseInt(discountValue)) / 100;
-                    break;
-                case 'fixed_amount':
-                    discount = parseInt(discountValue);
-                    break;
-                case 'price':
-                    discount = price - parseInt(discountValue);
-                    break;
-            }
-            subSubtotal = subSubtotal + (quantity * (price - discount));
+  /*if (otpSubtotal > 0) {
+      otpSubtotal = otpSubtotal + productBasePrice;
+  }
+  if (subSubtotal > 0) {
+      // const discountType = frequency.dataset.discountType;
+      const discountType = 'discountType';
+      const discountValue = frequency.dataset.discountValue;
+      let discount = 0;
+      switch(discountType){
+          case 'percentage':
+              discount = (productBasePrice * parseInt(discountValue)) / 100;
+              break;
+          case 'fixed_amount':
+              discount = parseInt(discountValue);
+              break;
+              case 'price':
+              discount = productBasePrice - parseInt(discountValue);
+              break;
+          }
+      if(discount < 0) { discount = 0; }
+      subSubtotal = subSubtotal + (productBasePrice - discount);
+  }*/
 
-            if(productList && hasIntervalSelect) {
-                otpSubtotal = otpSubtotal + (quantity * price);
-            }
-        });*/
-    }
-
-    /*if (otpSubtotal > 0) {
-        otpSubtotal = otpSubtotal + productBasePrice;
-    }
-    if (subSubtotal > 0) {
-        // const discountType = frequency.dataset.discountType;
-        const discountType = 'discountType';
-        const discountValue = frequency.dataset.discountValue;
-        let discount = 0;
-        switch(discountType){
-            case 'percentage':
-                discount = (productBasePrice * parseInt(discountValue)) / 100;
-                break;
-            case 'fixed_amount':
-                discount = parseInt(discountValue);
-                break;
-                case 'price':
-                discount = productBasePrice - parseInt(discountValue);
-                break;
-            }
-        if(discount < 0) { discount = 0; }
-        subSubtotal = subSubtotal + (productBasePrice - discount);
-    }*/
-
-    const currencyFormatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    });
-    otpPriceEls.forEach(function(el){
-        el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
-    });
-    subPriceEls.forEach(function(el){
-        el.innerHTML = currencyFormatter.format(subSubtotal / 100);
-    });
-    curPriceEls.forEach(function(el){
-        if (interval == 'otp') {
-            el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
-        } else {
-            el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
-        }
-    });
+  const currencyFormatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+  });
+  otpPriceEls.forEach(function(el){
+      el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
+  });
+  subPriceEls.forEach(function(el){
+      el.innerHTML = currencyFormatter.format(subSubtotal / 100);
+  });
+  curPriceEls.forEach(function(el){
+      if (interval == 'otp') {
+          el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
+      } else {
+          el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
+      }
+  });
 }
 
 function initializeBundle() {
