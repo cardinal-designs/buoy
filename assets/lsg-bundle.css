@@ -1258,6 +1258,9 @@ button:not([disabled]) {
   .mobile-toggle-btn--wrapper .icon--wrapper {
     width: 14px;
     height: auto;
+    position: absolute;
+    right: 18px;
+    top: 8px;
   }
   
   .mobile-toggle-btn--wrapper .icon--wrapper svg {
