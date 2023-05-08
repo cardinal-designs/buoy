@@ -871,10 +871,11 @@ function productQuickView(url,bundleWrapper,id) {
       }
     });
 
-    // var ratingCount = drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
-    // if(ratingCount){
-    //   ratingCount.innerText = ratingCount.innerText.replace('out of', '/'); 
-    // }
+    var ratingCount = drawer.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText');
+    if(ratingCount){
+      ratingCount.innerText = ratingCount.innerText.replace('out of', '/').trim(); 
+      ratingCount.innerText = ratingCount.innerText.replace('Rated', '/').trim(); 
+    }
       
       let myInterval = setInterval(timer, 1000);
       function timer() {
