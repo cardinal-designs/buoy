@@ -1217,7 +1217,7 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block{
     bottom:-470px;
   }
-  .bundle-checkout-enabled .has-selected-product .lsg-bundle-summary-block{
+  .bundle-checkout-enabled.has-selected-product .lsg-bundle-summary-block{
     bottom:-630px;
   }
   
