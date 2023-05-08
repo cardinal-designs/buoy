@@ -1416,5 +1416,9 @@ button:not([disabled]) {
   .product-quick-view-slide-out--wrapper .product-actions--wrapper .button.product-qty--wrapper {
     width: 100%;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper {
+    padding: 11px 18px;
+  }
   
 }
