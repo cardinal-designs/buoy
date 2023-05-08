@@ -1496,5 +1496,9 @@ button:not([disabled]) {
   .lsg-bundle-product-set-list .collection-groups__item .button.product-qty--wrapper {
     padding: 8px 20px 9px;
   }
+
+  .lsg-bundle-product-set-list .collection-groups__item {
+    margin: 50px 0;
+  }
   
 }
