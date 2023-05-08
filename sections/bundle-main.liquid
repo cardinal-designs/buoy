@@ -217,6 +217,7 @@
                 %}
               {% endfor %}
             {% endif %}
+        {% comment %}
             {% if forloop.index == 1 %}
               <div class="card-wrapper Review_Card_Wrapper">
                 {% for block in section.blocks %}
@@ -233,6 +234,7 @@
                 {% endfor %}
               </div>
             {% endif %}
+        {% endcomment %}
           </div>
           </grid-alignment-wrapper>
         </div>
