@@ -694,7 +694,6 @@ button:not([disabled]) {
   left: 74px;
 }
 
-
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
@@ -1110,8 +1109,6 @@ button:not([disabled]) {
     transform: translateY(-50%);
   }
   
-  /* Sticky Bar */
-
   .mobile-toggle-btn--wrapper {
     display: none;
   }
@@ -1265,8 +1262,6 @@ button:not([disabled]) {
 }
 
 @media (max-width: 768px) {
-
-  /* Sticky Bar */
 
   .count-badge {
     background: #ECD8C5;
@@ -1609,6 +1604,5 @@ button:not([disabled]) {
     letter-spacing: 0px;
     line-height: 1.688em;
   }
-  
-  
+   
 }
