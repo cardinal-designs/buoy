@@ -1,5 +1,9 @@
 /* BUNDLE GENRAL CSS */
 
+.page-template--product-bundle .header--transparent:not(.header--scrolled) .header-wrapper {
+  border-color: var(--charcoal);
+}
+
 .title--wrapper .lsg-bundle-buybox-product-name{
   padding-left: 0;
 }
