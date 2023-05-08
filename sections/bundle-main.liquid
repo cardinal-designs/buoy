@@ -131,85 +131,85 @@
             {% endif %}
           </div>
             {% assign productCount = 0 %}
-              <div class="collection-groups__grid">
+            <div class="collection-groups__grid">
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
-                {% if sub_bundle_products_count > 0 %}
-                  {% assign breakLoop = false %}
-                  {% for productSub in collections.bundle.products %}
-                    {% assign productSubID = productSub.id | strip %}
-                    {% if sub_bundle_products contains productSubID %}
-                      {% for variant in productSub.variants %}
-                        {% assign productCount = productCount | plus:1 %}
-                        {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
-                          {% continue %}
-                        {% endif %}
-                        {% render 'bundle-product-card',
-                            is_variant:true,
-                            product_card_product: variant,
-                            show_secondary_image: true,
-                            hover_video: block.settings.hover_video %}
-                        {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
-                          {% assign breakLoop = true %}
-                          {% break %}
-                        {% endif %}
-                      {% endfor %}
+            {% if sub_bundle_products_count > 0 %}
+              {% assign breakLoop = false %}
+              {% for productSub in collections.bundle.products %}
+                {% assign productSubID = productSub.id | strip %}
+                {% if sub_bundle_products contains productSubID %}
+                  {% for variant in productSub.variants %}
+                    {% assign productCount = productCount | plus:1 %}
+                    {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                      {% continue %}
                     {% endif %}
-                    {% if breakLoop == true %}
+                    {% render 'bundle-product-card',
+                        is_variant:true,
+                        product_card_product: variant,
+                        show_secondary_image: true,
+                        hover_video: block.settings.hover_video %}
+                    {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                      {% assign breakLoop = true %}
                       {% break %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}
+                {% if breakLoop == true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
               
-                {% if sub_bundle_variants_count > 0 %}
-                  {% for productSub in collections.bundle.products %}
-                    {% for variantSub in productSub.variants %}
-                      {% assign variantSubID = variantSub.id | strip %}
-                      {% if sub_bundle_variants contains variantSubID %}
-                        {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
-                          {% continue %}
-                        {% endif %}
-                        {% assign productCount = productCount | plus:1 %}
-                          {% render 'bundle-product-card',
-                          is_variant:true,
-                          product_card_product: variantSub,
-                          show_secondary_image: true,
-                          hover_video: block.settings.hover_video %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endfor %}
-                {% endif %}
-          {% elsif product.metafields.bundle.products %}
-                {% assign loopOffset = 0 %}
-                {% assign looplimit = 3 %}
-                {% if blockIndex == 2 %}
-                  {% assign loopOffset = 2 %}
-                  {% assign looplimit = product.metafields.bundle.products.size %}
-                {% endif %}
-                {% for listProduct in product.metafields.bundle.products.value limit:looplimit offset:loopOffset %}
-                  {% assign productCount = productCount | plus:1 %}
-                  {% render 'bundle-product-card',
-                    is_variant:false,
-                    product_card_product: variant,
-                    show_secondary_image: true,
-                    hover_video: block.settings.hover_video %}
+            {% if sub_bundle_variants_count > 0 %}
+              {% for productSub in collections.bundle.products %}
+                {% for variantSub in productSub.variants %}
+                  {% assign variantSubID = variantSub.id | strip %}
+                  {% if sub_bundle_variants contains variantSubID %}
+                    {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                      {% continue %}
+                    {% endif %}
+                    {% assign productCount = productCount | plus:1 %}
+                      {% render 'bundle-product-card',
+                      is_variant:true,
+                      product_card_product: variantSub,
+                      show_secondary_image: true,
+                      hover_video: block.settings.hover_video %}
+                  {% endif %}
                 {% endfor %}
+              {% endfor %}
+            {% endif %}
+          {% elsif product.metafields.bundle.products %}
+            {% assign loopOffset = 0 %}
+            {% assign looplimit = 3 %}
+            {% if blockIndex == 2 %}
+              {% assign loopOffset = 2 %}
+              {% assign looplimit = product.metafields.bundle.products.size %}
+            {% endif %}
+            {% for listProduct in product.metafields.bundle.products.value limit:looplimit offset:loopOffset %}
+              {% assign productCount = productCount | plus:1 %}
+              {% render 'bundle-product-card',
+                is_variant:false,
+                product_card_product: variant,
+                show_secondary_image: true,
+                hover_video: block.settings.hover_video %}
+            {% endfor %}
           {% endif %}
-          {% if forloop.index == 1 %}
-                <div class="card-wrapper">
-                  {% for block in section.blocks %}
-                    {%- case block.type -%}
-                      {%- when 'review' -%}
-                        <div class="Review_Box">
-                          <div class="Review_Box_Inr">
-                            <p class="sh2">{{ block.settings.review }}</p>
-                            <span class="body-xs">{{ block.settings.author }}</span>
-                          </div>
+            {% if forloop.index == 1 %}
+              <div class="card-wrapper">
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when 'review' -%}
+                      <div class="Review_Box">
+                        <div class="Review_Box_Inr">
+                          <p class="sh2">{{ block.settings.review }}</p>
+                          <span class="body-xs">{{ block.settings.author }}</span>
                         </div>
-                    {%- endcase -%}
-                  {% endfor %}
-                </div>
-                {% endif %}
+                      </div>
+                  {%- endcase -%}
+                {% endfor %}
               </div>
+            {% endif %}
+          </div>
         </div>
       {% endfor %}
     </div>
