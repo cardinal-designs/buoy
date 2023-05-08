@@ -364,7 +364,7 @@ function addToCart(trigger) {
               id: bundleProductInput.dataset.product,
               quantity: parseInt(bundleProductInput.value),
               properties: {
-                  "bundle_id": bundleID,
+                  "_bundle_id": bundleID,
               },
           };
           console.log(interval);
@@ -380,8 +380,8 @@ function addToCart(trigger) {
           id: bundleProductID,
           quantity: 1,
           properties: {
-            "bundle_id": bundleID,
-            "bundle_parent": true,
+            "_bundle_id": bundleID,
+            "_bundle_parent": true,
           },
       };
       // if (interval == 'sub') {
