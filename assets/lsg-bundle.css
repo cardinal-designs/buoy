@@ -1108,7 +1108,12 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block {
     padding: 25px 27px;
   }
-    
+  
+  .bundle-builder__selected-product {
+    width: calc(33.33% - 20px);
+    max-width: 100%;
+  }
+  
 }
 
 @media (max-width: 768px) {
