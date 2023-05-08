@@ -1574,5 +1574,9 @@ button:not([disabled]) {
     font-size: 25px;
     line-height: 1.360em;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .count-badge {
+    display: none;
+  }
   
 }
