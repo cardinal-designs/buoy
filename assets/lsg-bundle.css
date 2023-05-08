@@ -1254,10 +1254,15 @@ button:not([disabled]) {
   .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
     transform: rotate(180deg);
   }
-
+  
   .mobile-toggle-btn--wrapper .icon--wrapper {
-    width: 30px;
-    height: 30px;
+    width: 14px;
+    height: auto;
+  }
+  
+  .mobile-toggle-btn--wrapper .icon--wrapper svg {
+    width: 100%;
+    height: 100%;
   }
   
   .lsg-bundle-sticky-bar-frequency-select,
