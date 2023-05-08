@@ -514,6 +514,10 @@ button:not([disabled]) {
   color: #1F2322;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top label {
+  text-transform: capitalize;
+}
+
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before {
   background-color: #1F2322;
 }
