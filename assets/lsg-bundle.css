@@ -1296,6 +1296,10 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-summary-block--wrapper .icon.icon-caret {
+    transform: rotate(0deg);
+  }
+
+  .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
     transform: rotate(180deg);
   }
   
