@@ -1190,5 +1190,9 @@ button:not([disabled]) {
   .product-quick-view-slide-out--wrapper .shop-slide-out__header {
     height: 55px;
   }
+
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper {
+    overflow: unset;
+  }
   
 }
