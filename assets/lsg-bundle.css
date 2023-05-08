@@ -1254,7 +1254,8 @@ button:not([disabled]) {
   }
   
   .lsg-bundle-sticky-bar-frequency-select,
-  .lsg-bundle-buybox-product-info{
+  .lsg-bundle-buybox-product-info,
+  .has-selected-product .lsg-bundle-summary-block.open .count-badge{
     display: none;
   }
 
