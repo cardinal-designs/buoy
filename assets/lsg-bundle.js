@@ -260,27 +260,31 @@ function checkoutEnableValidation(trigger) {
   const bundleMin = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin));
   const bundleMax = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax));
   const quantityToAdd = bundleMin - bundleQuantity;
-  const titleDiscountBadge = bundleBlock.querySelector('[title-discount-badge]');
-  const minInfoText = bundleBlock.querySelector('[data-min-info-text]');
+  const titleWrapper = bundleBlock.querySelectorAll('.title--wrapper');
 
-  titleDiscountBadge.closest('.title--wrapper').classList.toggle('hide-info',(bundleQuantity > bundleMin && interval == "otp")); 
-  if(interval == "otp"){
-    titleDiscountBadge.closest('.title--wrapper').classList.remove('show-discount-widget');
-  }else{
-    titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
-  }
+  titleWrapper.forEach((wrapper) => {
+    const titleDiscountBadge = wrapper.querySelector('[title-discount-badge]');
+    const minInfoText = wrapper.querySelector('[data-min-info-text]');
 
-bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity == bundleMax) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
-  
-  if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-    minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
-  }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
-    titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
-  }else if (bundleQuantity == (bundleMax)){
-    titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
-  }else{
-    minInfoText.innerHTML = minInfoText.dataset.cmsText;
-  }
+    wrapper.classList.toggle('hide-info',(bundleQuantity > bundleMin && interval == "otp")); 
+    if(interval == "otp"){
+      wrapper.classList.remove('show-discount-widget');
+    }else{
+      wrapper.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
+    }
+    
+    if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
+      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
+    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
+      titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
+    }else if (bundleQuantity == (bundleMax)){
+      titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
+    }else{
+      minInfoText.innerHTML = minInfoText.dataset.cmsText;
+    }
+  });
+
+  bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity == bundleMax) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
   
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
