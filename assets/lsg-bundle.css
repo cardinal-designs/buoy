@@ -1217,8 +1217,18 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block{
     bottom:-470px;
   }
+  
+  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper:before{
+    content:unset;
+  }
+  
   .bundle-checkout-enabled.has-selected-product .lsg-bundle-summary-block{
     bottom:-630px;
+  }
+
+  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .has-selected-product .lsg-bundle-summary-block.open {
