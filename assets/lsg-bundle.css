@@ -988,9 +988,10 @@ button:not([disabled]) {
   line-height: 1.444em;
 }
 
-.Review_Card_Wrapper .Review_Box  .body-xs {
+.Review_Card_Wrapper .Review_Box .body-xs {
   text-transform: capitalize;
   color: #1F2322;
+  letter-spacing: 0;
 }
 
 .Review_Card_Wrapper .Review_Box:last-child {
