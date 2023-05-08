@@ -1221,6 +1221,11 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block.open {
     bottom: 0;
   }
+
+  .mobile-toggle-btn--wrapper .icon--wrapper {
+    width: 30px;
+    height: 30px;
+  }
   
   .lsg-bundle-sticky-bar-frequency-select,
   .lsg-bundle-buybox-product-info{
@@ -1236,7 +1241,9 @@ button:not([disabled]) {
   }
 
   .mobile-toggle-btn--wrapper {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .lsg-bundle-block {
