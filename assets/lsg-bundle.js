@@ -266,7 +266,7 @@ function checkoutEnableValidation(trigger) {
   if(interval == "otp"){
     titleDiscountBadge.closest('.title--wrapper').classList.remove('show-discount-widget');
   }else{
-   titleDiscountBadge.closest('.title--wrapper').classList.add('show-discount-widget'); 
+   titleDiscountBadge.closest('.title--wrapper').classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
   }
   
   if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
