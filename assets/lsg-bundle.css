@@ -518,6 +518,12 @@ button:not([disabled]) {
   text-transform: capitalize;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el .subscription-info {
+  line-height: 1;
+  margin-top: 5px;
+  display: block;
+}
+
 .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:before {
   background-color: #1F2322;
 }
