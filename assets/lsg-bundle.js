@@ -950,10 +950,11 @@ document.querySelectorAll('.js-quick-view-button').forEach(function(button) {
         overlay = document.querySelector('.page-overlay'),
         productUrl = this.dataset.url + "?section_id=bundle-product-quickview";
     overlay.classList.add('is-visible');
+    document.body.classList.add('open-bundle-info');
     drawer.classList.add('active');
-      drawer.setAttribute('data-url',this.dataset.url); 
-      drawer.classList.add('loading');
-      productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'),this.dataset.id)
+    drawer.setAttribute('data-url',this.dataset.url); 
+    drawer.classList.add('loading');
+    productQuickView(productUrl,this.closest('.js-bundle-product-card--wrapper'),this.dataset.id)
   });
 });
 
