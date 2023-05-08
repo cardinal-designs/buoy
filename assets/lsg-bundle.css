@@ -1296,11 +1296,11 @@ button:not([disabled]) {
   }
 
   .lsg-bundle-summary-block--wrapper .icon.icon-caret {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 
   .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
   }
   
   .mobile-toggle-btn--wrapper .icon--wrapper {
