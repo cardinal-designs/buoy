@@ -1466,4 +1466,8 @@ button:not([disabled]) {
     padding: 0;
   }
   
+  .lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label] {
+    font-size: 18px;
+  }
+  
 }
