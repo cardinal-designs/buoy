@@ -289,6 +289,21 @@
         {% endif %}
         {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
       </div>
+      <div class="lsg-bundle-sticky-bar">
+        <div class="lsg-bundle-sticky-inner">
+          <div class="lsg-bundle-sticky-summary-block">
+              {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0 %}
+          </div>
+          <div class="lsg-bundle-sticky-selected-products">
+              {% if sub_bundle_products_count > 0 %}
+                  {% render 'lsg-bundle-interval-select', product: product, settings: settings, bundleIndex: bundleIndex, isDuplicate: true %}
+              {% endif %}
+          </div>
+          <div class="lsg-bundle-sticky-atc">
+              {% render 'lsg-bundle-atc', product: product, settings: settings, isDuplicate: true %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
