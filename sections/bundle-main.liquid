@@ -178,6 +178,18 @@
                     {% endfor %}
                   {% endfor %}
                 {% endif %}
+                <div class="card-wrapper">
+                  {% for block in section.blocks %}
+                    {%- case block.type -%}
+                      {%- when 'review' -%}
+                        <div class="Review_Box">
+                          <div class="Review_Box_Inr">
+                            
+                          </div>
+                        </div>
+                    {%- endcase -%}
+                  {% endfor %}
+                </div>
               </div>
           {% elsif product.metafields.bundle.products %}
               <div class="collection-groups__grid">
