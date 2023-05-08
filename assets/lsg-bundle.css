@@ -1,11 +1,10 @@
 /* BUNDLE GENRAL CSS */
 
-.title--wrapper:not(.show-discount-widget){
-  border-right: 1px solid #000;
-}
-
-.title--wrapper .lsg-bundle-buybox-product-name {
+.title--wrapper .lsg-bundle-buybox-product-name{
   padding-left: 0;
+}
+.title--wrapper:not(.show-discount-widget) .lsg-bundle-buybox-product-name {
+  border-right: 1px solid #000;
 }
 
 .title--wrapper > * {
