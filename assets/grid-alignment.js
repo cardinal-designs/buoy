@@ -10,8 +10,6 @@ customElements.define(
           gridPositions = [],
           positionGrids = [];
       if(productGrids.length == 0) return;
-
-      console.log(productGrids)
       
       productGrids.forEach(function(grid) {
         if(gridPositions.indexOf(grid.offsetTop) == -1) gridPositions.push(grid.offsetTop);
