@@ -520,6 +520,10 @@ button:not([disabled]) {
   align-items: center;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button s {
+  color: #545759;
+}
+
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button.subscription-enabled {
   background-color: #F6ECE1;
   border-color: #1F2322;
