@@ -1440,4 +1440,11 @@ button:not([disabled]) {
     font-size: 14px;
     color: #1F2322;
   }
+
+  .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .min-info {
+    color: #545759;
+    font-size: 12px;
+    font-family: inter,sans-serif;
+    letter-spacing: 0;
+  }
 }
