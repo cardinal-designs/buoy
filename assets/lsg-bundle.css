@@ -1166,5 +1166,13 @@ button:not([disabled]) {
     max-width: unset;
     padding-left: 15px;
   }
+
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info .Product_Tags span {
+    margin-bottom: 5px;
+  }
+  
+  .product-quick-view-slide-out--wrapper {
+    padding: 0 0 0 20px;
+  }
   
 }
