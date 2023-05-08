@@ -1521,4 +1521,9 @@ button:not([disabled]) {
   .lsg-bundle-product-set-list .collection-groups__item .collection-groups__header {
     margin-bottom: 60px;
   }
+
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__description p {
+    line-height: 1.500em;
+  }
+  
 }
