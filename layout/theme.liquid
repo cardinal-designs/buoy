@@ -72,8 +72,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" ></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'grid-alignment.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
+    {% if template.suffix == "bundle" %}
+      <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
+      <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
 
     {{ content_for_header }}
 
@@ -228,7 +234,7 @@
   
 </head>
 
-  <body class="{% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
+  <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTCBJP4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -240,6 +246,7 @@
     </a>
 
     <div class="page-overlay"></div>
+    
    {% unless template.name == 'product' %} 
     <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
       {% section 'announcement-bar' %}

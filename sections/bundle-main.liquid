@@ -1,0 +1,451 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="product-quick-view-slide-out--wrapper js-product-quick-view-drawer" data-url>
+  <div class="shop-slide-out__inner">
+    <div class="shop-slide-out__header">
+      <button
+        class="quick-view__close"
+        onclick="document.querySelector('.js-product-quick-view-drawer').classList.remove('active');document.querySelector('.page-overlay').classList.remove('is-visible');document.body.classList.remove('open-bundle-info');"
+      >
+        {% render 'drawer-icon-close' %}
+      </button>
+    </div>
+    <div class="shop-slide-out__content">
+      <div class="loading-overlay-wrapper"><span class="loader"></span></div>
+      <div class="product-content--wrapper js-product-content"></div>
+    </div>
+  </div>
+</div>
+
+{% assign otp_bundle_min = null %}
+{% assign otp_bundle_max = null %}
+{% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
+  {% assign otp_bundle_min = product.metafields.bundle.min %}
+  {% assign otp_bundle_max = product.metafields.bundle.max %}
+{% endif %}
+
+{% assign sub_bundle_min = null %}
+{% assign sub_bundle_max = null %}
+{% assign sub_bundle_quantities = product.metafields.rtxn.bundle_quantities | split: '|' %}
+{% if sub_bundle_quantities.size > 0 %}
+  {% assign sub_bundle_min = sub_bundle_quantities[0] %}
+  {% assign sub_bundle_max = sub_bundle_quantities[1] %}
+{% endif %}
+
+{% assign bundle_min = 0 %}
+{% assign bundle_max = 0 %}
+{% if sub_bundle_max %}
+  {% assign bundle_max = sub_bundle_max | plus: 0 %}
+{% elsif otp_bundle_max %}
+  {% assign bundle_max = otp_bundle_max | plus: 0 %}
+{% endif %}
+{% assign bundle_max_index0 = bundle_max | minus: 1 %}
+
+{% unless otp_bundle_max %}
+  {% assign otp_bundle_max = bundle_max %}
+{% endunless %}
+
+{% if sub_bundle_min %}
+  {% assign bundle_min = sub_bundle_min | plus: 0 %}
+{% elsif otp_bundle_min %}
+  {% assign bundle_min = otp_bundle_min | plus: 0 %}
+{% endif %}
+
+{% unless otp_bundle_min %}
+  {% assign otp_bundle_min = bundle_min %}
+{% endunless %}
+
+{% assign sub_bundle_products_count = 0 %}
+{% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
+{% for productSub in collections.bundle.products %}
+  {% assign productSubID = productSub.id | strip %}
+  {% if sub_bundle_products contains productSubID %}
+    {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign sub_bundle_variants_count = 0 %}
+{% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
+
+{% for productSub in collections.bundle.products %}
+  {% for variantSub in productSub.variants %}
+    {% assign variantSubID = variantSub.id | strip %}
+    {% if sub_bundle_variants contains variantSubID %}
+      {% assign sub_bundle_variants_count = sub_bundle_variants_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign bundleIndex = 0 %}
+
+{{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="lsg-bundle-wrapper"
+  data-lsg-bundle-wrapper
+  {% if section.settings.setUrl %}
+    data-lsg-bundle-set-url
+  {% endif %}
+>
+  <div
+    class="collection-groups lsg-bundle-block lsg-bundle-block-active"
+    data-bundle-product="{{ product.id }}"
+    data-bundle-index="{{ bundleIndex }}"
+    data-otp-bundle-min="{{ otp_bundle_min }}"
+    data-otp-bundle-max="{{ otp_bundle_max }}"
+    data-sub-bundle-min="{{ sub_bundle_min }}"
+    data-sub-bundle-max="{{ sub_bundle_max }}"
+    data-product-base-price="{{ product.price }}"
+  >
+    <div class="collection-groups__marquee">
+      <div class="collection-groups__marquee-container">
+        <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+        <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+      </div>
+      <div class="collection-groups__marquee-container">
+        <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+        <p class="body-xs">Electrolytes of 13 Sports Drinks in Each Bottle</p>
+      </div>
+    </div>
+    <div
+      class="page-width lsg-bundle-product-set-list"
+      data-bundle-min="{{ sub_bundle_min }}"
+      data-bundle-max="{{ sub_bundle_max }}"
+      data-lsg-bundle-product-sub-list
+    >
+      {% assign blockIndex = 0 %}
+      {% assign blocks = section.blocks | where: 'type', 'block' %}
+      {% for block in blocks %}
+        {% assign blockIndex = forloop.index %}
+        <div class="collection-groups__item">
+          <div class="collection-groups__header">
+            <div class="collection-groups__header-content">
+              <h2 class="h1">{{ block.settings.title }}</h2>
+              <div class="collection-content">{{ block.settings.text | newline_to_br }}</div>
+            </div>
+            {% if block.settings.show_spinner and block.settings.spinner_image != blank %}
+              <div class="collection-groups__header-spinner">
+                <div class="collection-groups__header-spinner-wrapper">
+                  <div class="collection-groups__header-spinner-image">
+                    <img
+                      srcset="
+                        {%- if block.settings.spinner_image.width >= 165 -%}{{ block.settings.spinner_image | img_url: '165x' }} 165w,{%- endif -%}
+                        {%- if block.settings.spinner_image.width >= 360 -%}{{ block.settings.spinner_image | img_url: '360x' }} 360w,{%- endif -%}
+                        {%- if block.settings.spinner_image.width >= 533 -%}{{ block.settings.spinner_image | img_url: '533x' }} 533w{%- endif -%}
+                      "
+                      src="{{ block.settings.spinner_image | img_url: '533x' }}"
+                      sizes="500px"
+                      alt="{{ block.settings.spinner_image.alt | escape }}"
+                      loading="lazy"
+                      class="motion-reduce img-fill"
+                    >
+                  </div>
+                  <div class="collection-groups__header-spinner-svg-container">
+                    {{ block.settings.spinner_text }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+          {% assign productCount = 0 %}
+        <grid-alignment-wrapper>
+          <div class="collection-groups__grid">
+            {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
+              {% if sub_bundle_products_count > 0 %}
+                {% assign breakLoop = false %}
+                {% for productSub in collections.bundle.products %}
+                  {% assign productSubID = productSub.id | strip %}
+                  {% if sub_bundle_products contains productSubID %}
+                    {% for variant in productSub.variants %}
+                      {% assign productCount = productCount | plus: 1 %}
+                      {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                        {% continue %}
+                      {% endif %}
+                      {% render 'bundle-product-card',
+                        is_variant: true,
+                        product_card_product: variant,
+                        show_secondary_image: true,
+                        hover_video: block.settings.hover_video
+                      %}
+                      {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                        {% assign breakLoop = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                  {% if breakLoop == true %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              {% if sub_bundle_variants_count > 0 %}
+                {% for productSub in collections.bundle.products %}
+                  {% for variantSub in productSub.variants %}
+                    {% assign variantSubID = variantSub.id | strip %}
+                    {% if sub_bundle_variants contains variantSubID %}
+                      {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                        {% continue %}
+                      {% endif %}
+                      {% assign productCount = productCount | plus: 1 %}
+                      {% render 'bundle-product-card',
+                        is_variant: true,
+                        product_card_product: variantSub,
+                        show_secondary_image: true,
+                        hover_video: block.settings.hover_video
+                      %}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+            {% elsif product.metafields.bundle.products %}
+              {% assign loopOffset = 0 %}
+              {% assign looplimit = 3 %}
+              {% if blockIndex == 2 %}
+                {% assign loopOffset = 2 %}
+                {% assign looplimit = product.metafields.bundle.products.size %}
+              {% endif %}
+              {% for listProduct in product.metafields.bundle.products.value limit: looplimit offset: loopOffset %}
+                {% assign productCount = productCount | plus: 1 %}
+                {% render 'bundle-product-card',
+                  is_variant: false,
+                  product_card_product: variant,
+                  show_secondary_image: true,
+                  hover_video: block.settings.hover_video
+                %}
+              {% endfor %}
+            {% endif %}
+            {% if forloop.index == 1 %}
+              <div class="card-wrapper Review_Card_Wrapper">
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when 'review' -%}
+                      <div class="Review_Box">
+                        <div class="Review_Box_Inr">
+                          <div class="Review_Star">{% render 'icon-five-star' %}</div>
+                          <p class="sh2">{{ block.settings.review }}</p>
+                          <span class="body-xs">{{ block.settings.author }}</span>
+                        </div>
+                      </div>
+                  {%- endcase -%}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          </grid-alignment-wrapper>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="lsg-bundle-summary-block--wrapper">
+      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open')">
+        <div class="title--wrapper">
+          <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
+          <div class="count-badge js-item-count-badge"></div>
+          <span class="min-info">
+            <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
+              >SELECT A MINIMUM OF {{ otp_bundle_min -}}
+            </span>
+            <span class="discount-badge" title-discount-badge></span>
+          </span>
+        </div>
+        <div class="icon--wrapper">{% render 'icon-caret' %}</div>
+      </div>
+
+      <div class="lsg-bundle-summary-block">
+        <div class="bundle-selected-products--wrapper">
+          <div class="lsg-bundle-buybox-product-info">
+            <div class="title--wrapper">
+              <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
+              <span class="min-info">
+                <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
+                  >SELECT A MINIMUM OF {{ otp_bundle_min -}}
+                </span>
+                <span class="discount-badge" title-discount-badge></span>
+              </span>
+            </div>
+            {% comment %}
+            <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
+            {% endcomment %}
+          </div>
+          {% if bundleIndex > 0 %}
+            {% if settings.bundle_select_heading %}
+              <div class="lsg-bundle-size-select-heading">{{ settings.bundle_select_heading }}</div>
+            {% endif %}
+            <div class="lsg-bundle-size-select">
+              {% for bundle in bundles %}
+                {% assign bundleOption = bundle | split: '|:|' %}
+                {% assign bundleButtonIndex = bundleOption[1] | plus: 0 %}
+                <button
+                  type="button"
+                  class="lsg-bundle-size-select-el{% if bundleButtonIndex == bundleIndex %} lsg-bundle-size-select-el--selected{% endif %}"
+                  data-bundle-index="{{ bundleButtonIndex }}"
+                >
+                  {{ bundleOption[0] }}
+                </button>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% assign placeholderBlock = section.blocks | where: 'type', 'placeholder' %}
+          {% render 'lsg-bundle-selected-products', bundle_max_index0: bundle_max_index0, blocks: placeholderBlock %}
+        </div>
+        <div class="bundle-actions--wrapper">
+          <label data-add-more-label></label>
+          {% render 'lsg-bundle-interval-select',
+            product: product,
+            settings: section.settings,
+            bundleIndex: bundleIndex,
+            sub_bundle_products_count: sub_bundle_products_count,
+            sub_bundle_variants_count: sub_bundle_variants_count
+          %}
+          {% if product.metafields.bundle.products %}
+            <div class="lsg-bundle-interval-only-otp">
+              <div class="lsg-bundle-internval-only-otp-heading">{{ settings.otp_interval_prefix }}</div>
+              <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price">$0.00</div>
+            </div>
+          {% endif %}
+          {% render 'lsg-bundle-atc', product: product, settings: section.settings %}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle Main",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "setUrl",
+      "label": "Update URL",
+      "default": false,
+      "info": "Dynamically update URL for preloading bundles"
+    },
+    {
+      "type": "text",
+      "id": "frequency_heading",
+      "label": "Frequency Select Heading",
+      "default": "Select your plan"
+    },
+    {
+      "type": "text",
+      "id": "frequency_otp",
+      "label": "Frequency One-Time Purchase Label",
+      "default": "One-time purchase"
+    },
+    {
+      "type": "text",
+      "id": "frequency_sub",
+      "label": "Frequency Subscription Label",
+      "default": "Subscribe & Save"
+    },
+    {
+      "type": "text",
+      "id": "atc_text",
+      "label": "Add to Cart Text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "text",
+      "id": "sub_atc_text",
+      "label": "Sub-ATC Disclaimer",
+      "default": "Free Shipping over $49 | 100% Happiness Guarantee"
+    },
+    {
+      "type": "header",
+      "content": "One-Time Only"
+    },
+    {
+      "type": "text",
+      "id": "otp_interval_prefix",
+      "label": "Interval/Price Prefix",
+      "default": "Your bundle:"
+    },
+    {
+      "type": "header",
+      "content": "Subscribe "
+    },
+    {
+      "type": "text",
+      "id": "subscribe_text",
+      "label": "Subscribe Info"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"placeholder",
+      "name":"Selected Placeholder",
+      "settings": [
+        {
+          "type":"text",
+          "label":"Title",
+          "id":"title"
+        },
+        {
+          "type":"color_background",
+          "label":"Background color",
+          "id":"color"
+        }
+      ]
+    },
+    {
+      "type": "block",
+      "name": "Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_spinner",
+          "label": "Show Spinner"
+        },
+        {
+          "type": "image_picker",
+          "id": "spinner_image",
+          "label": "Spinner Image"
+        },
+        {
+          "type": "textarea",
+          "id": "spinner_text",
+          "label": "Spinner Text (SVG)"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

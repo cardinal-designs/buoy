@@ -1,0 +1,94 @@
+{% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
+{% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
+
+{% capture frequency_select %}
+  {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
+    {% if sub_bundle_products_count > 0 %}
+      {% for productSub in collections.bundle.products %}
+        {% assign productSubID = productSub.id | strip %}
+        {% if sub_bundle_products contains productSubID %}
+          {% render 'lsg-bundle-frequency-select', product: productSub, isDuplicate: isDuplicate,is_variant:false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    
+    {% if sub_bundle_variants_count > 0 %}
+      {% assign varaintProducts = blank %}
+      {% for productSub in collections.bundle.products %}
+        {% for variantSub in productSub.variants %}
+          {% assign variantSubID = variantSub.id | strip %}
+          {% if sub_bundle_variants contains variantSubID %}
+            {% unless varaintProducts contains productSub.id %}
+              {% assign varaintProducts = varaintProducts | join:',' %}
+              {% assign varaintProducts = varaintProducts | append:',' | append:productSub.id %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      {% assign splitvariantProducts = varaintProducts | remove_first:',' | split:',' %}
+      {% for id in splitvariantProducts %}
+        {% assign prodId = id | times:1 %}
+        {% assign clallproduct = collections.bundle.products | where:'id',prodId | first %}
+        {% if clallproduct != empty %}
+          {% render 'lsg-bundle-frequency-select', product: clallproduct, isDuplicate: isDuplicate,is_variant:false %}
+        {% endif %}
+      {% endfor %}
+      
+    {% endif %}
+    
+  {% elsif product.metafields.bundle.products %}
+    {% for listProduct in product.metafields.bundle.products.value %}
+      {% render 'lsg-bundle-frequency-select', product: listProduct, isDuplicate: isDuplicate,is_variant:false %}
+    {% endfor %}
+  {% endif %}
+  
+{% endcapture %}
+<div class="lsg-bundle-interval-select {% if isDuplicate %}is-duplicate{% endif %}" data-lsg-bundle-interval-select>
+  {% if settings.frequency_heading %}
+    <div class="lsg-bundle-frequency-heading">{{ settings.frequency_heading }}</div>
+  {% endif %}
+  <div class="lsg-bundle-interval-select-inner">
+    {% unless isDuplicate %}
+      <input
+        type="radio"
+        name="bundle_interval_select_{{ bundleIndex }}"
+        id="bundleIntervalSelectOTP_{{ bundleIndex }}"
+        value="otp"
+        class="lsg-hidden"
+      >
+      <input
+        type="radio"
+        name="bundle_interval_select_{{ bundleIndex }}"
+        id="bundleIntervalSelectSub_{{ bundleIndex }}"
+        value="sub"
+        class="lsg-hidden"
+        checked
+      >
+    {% endunless %}
+    <div class="lsg-bundle-interval-select-pod-top">
+      <label for="bundleIntervalSelectOTP_{{ bundleIndex }}" class="lsg-bundle-interval-el lsg-bundle-interval-otp-el">
+        <div class="lsg-bundle-interval-name">{{ settings.frequency_otp }}</div>
+        <div class="lsg-bundle-interval-price lsg-bundle-interval-otp-price hidden">$0.00</div>
+      </label>
+      <label for="bundleIntervalSelectSub_{{ bundleIndex }}" class="lsg-bundle-interval-el lsg-bundle-interval-sub-el">
+        {% assign filtered_selling_plan_groups = product.selling_plan_groups | where: 'app_id', '5859381' %}
+        {% assign group = filtered_selling_plan_groups | first %}
+        <div class="lsg-bundle-interval-name">{{ group.name | default: settings.frequency_sub }} <span class="discount-badge">Save 20%</span></div>
+        <div class="lsg-bundle-interval-price lsg-bundle-interval-sub-price hidden">$0.00</div>
+        <div class="subscription-info">
+          <label class="body-xs">{{ product.selected_or_first_available_variant.metafields.custom.subscription_text }}</label>
+          <label class="body-xs">{{ section.settings.subscribe_text }}</label>
+        </div>
+        {% if isDuplicate %}
+          <div class="lsg-bundle-sticky-bar-frequency-select">
+            {{ frequency_select }}
+          </div>
+        {% endif %}
+      </label>
+    </div>
+    <div class="lsg-bundle-interval-select-pod-bottom">
+      {{ frequency_select }}
+    </div>
+  </div>
+</div>

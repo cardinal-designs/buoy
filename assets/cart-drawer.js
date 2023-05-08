@@ -115,13 +115,7 @@ class CartDrawer extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
-        this.getSectionsToRender().forEach((section => {
-          const elementToReplace =  document.getElementById(section.id);
-          elementToReplace.innerHTML =
-            this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
-          
-        }));
-        
+        this.renderContent(parsedState.sections);
       })
   }
 
@@ -216,6 +210,16 @@ class CartDrawer extends HTMLElement {
     evt.preventDefault();
     this.open();
   }
+
+  renderContent(sections){
+    this.getSectionsToRender().forEach((section => {
+      const elementToReplace =  document.getElementById(section.id);
+      elementToReplace.innerHTML =
+        this.getSectionInnerHTML(sections[section.section], section.selector);
+      
+    }));
+  }
+  
 }
 
 /* cart button on click - add class to the body - Start */

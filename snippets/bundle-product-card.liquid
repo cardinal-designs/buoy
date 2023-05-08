@@ -1,0 +1,164 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - product_card_product: {Object} Product Liquid object (optional)
+    - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+    - add_image_padding: {Boolean} Enables padding on the image to space out the grid
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+    - show_image_outline: {Boolean} Show card outline. Default: true (optional)
+
+    Usage:
+    {% render 'product-card', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+{% assign card_product = product_card_product %}
+{% if is_variant == false %}
+  {% assign card_product = product_card_product.product %}
+{% endif %}
+  
+  <product-grid-height>
+<div class="card-wrapper js-bundle-product-card--wrapper" data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}" data-lsg-bundle-variant-select-id="{% if is_variant == false %}{{ product_card_product.selected_or_first_available_variant.id }}{% else %}{{ product_card_product.id }}{% endif %}">
+  {% if card_product.available == false %}
+    {% render 'spinner-sold-out' %}
+  {% elsif card_product.metafields.my_fields.show_trending_product_card == true %}
+    {% render 'spinner-trending' %}
+  {% elsif card_product.metafields.my_fields.show_most_popular_product_card == true %}
+    {% render 'spinner-most-popular' %}
+  {% endif %}
+
+  <div class="card card--product" tabindex="-1">
+    <div class="card__inner">
+      <div class="media" style="padding-bottom: 125%;">
+        <a href="{{ card_product.url }}" class="full-unstyled-link">
+        
+        {% render 'lazy-image', image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
+
+        {% if show_secondary_image %}
+          {% assign images = product_card_product.product.media[1] %}
+          {% if is_variant == false %}
+            {% assign images = product_card_product.product.media[1] %}
+          {% endif %}
+          {% if images != nil and hover_video == blank %}
+            {% render 'lazy-image', image: images, fade: true , classes: 'img-fill'%}
+          {% elsif hover_video != blank %}
+            <video autoplay loop muted playsinline class="img-fill">
+              <source src="{{ hover_video }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          {% endif %}
+        {% endif %}
+        </a>
+        <button class="quick-view-button js-quick-view-button" data-id="{{ card_product.id }}" type="button" data-url="{% if is_variant == false %}{{ product_card_product.url }}{% else %}{{ product_card_product.product.url }}{% endif %}">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+            <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"></path>
+          </svg>
+        </button>
+        <div class="product-badge">
+          {% if is_variant == false %}
+            {% assign tags = product_card_product.tags %}
+          {% else %}
+            {% assign tags = product_card_product.product.tags %}
+          {% endif %}
+          {% for tag in tags %}
+            {% if tag contains 'label_' %}
+              <label>{{ tag | replace:'label_' }}</label>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% comment %}
+      <div class="card__buttons hide-mobile">
+        <a href="{{ card_product.url | default: '#' }}" class="button learn-more">
+          <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
+      </div>
+      {% endcomment %}
+      
+    </div>
+  </div>
+
+    <div class="card-information">
+      <div class="card-information__wrapper">
+
+        <div data-oke-reviews-product-listing-rating class="js-height">
+        {% if is_variant == false %}
+          {{ product_card_product.metafields.okendo.ProductListingSnippet }}
+        {% else %}
+          {{ product_card_product.product.metafields.okendo.ProductListingSnippet }}
+        {% endif %}
+        </div>
+
+        <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
+          <div class="h5 card-information__title lsg-bundle-product-select-title js-height">
+            {% if is_variant == true %}
+              {% if product_card_product.title == "Default Title" %}
+                {{ product_card_product.product.title }}
+              {% else %}
+                {{ product_card_product.product.title }} - {{ product_card_product.title }}
+              {% endif %}
+            {% else %}
+              {{ card_product.title }}
+            {% endif %}
+          </div>
+        {% comment %}
+          <h5 class="card-information__title">
+            {{ product_card_product.title | escape }}
+          </h5>
+          {% endcomment %}
+        </a>
+
+        <p class="card-information__text light js-height">
+        {% if is_variant == false %}
+          {{ product_card_product.metafields.my_fields.product_card_text }}
+        {% else %}
+          {{ product_card_product.product.metafields.my_fields.product_card_text }}
+        {% endif %}
+        </p>
+
+
+        {% capture productActionHtml %}
+        <div class="product-actions--wrapper">
+          <div class="button product-qty--wrapper lsg-bundle-product-select-quantity-wrap">
+            <button type="button" class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus">
+              <svg aria-labelledby="minusIconTitle" xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 12 4" fill="none">
+                  <title id="minusIconTitle">minus</title>
+                  <path d="M12 2L0 2" stroke="black" stroke-width="3"></path>
+              </svg>
+            </button>
+            {% if is_variant == false %}
+            <input autocomplete="false" type="number" value="0" min="0" 
+              max="{% if product_card_product.selected_or_first_available_variant.inventory_policy == 'deny' and product_card_product.selected_or_first_available_variant.inventory_management != nil %}{{ product_card_product.selected_or_first_available_variant.inventory_quantity }}{% else %}999{% endif %}" 
+              class="lsg-bundle-product-select-quantity-input" 
+              data-price="{{ product_card_product.selected_or_first_available_variant.price }}" 
+              data-price-formatted="{{ product_card_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}" 
+              data-product="{{ product_card_product.selected_or_first_available_variant.id }}" 
+              data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}"
+              aria-label="quantity">
+            {% else %}
+              <input autocomplete="false" type="number" value="0" min="0" 
+              max="{% if product_card_product.inventory_policy == 'deny' and product_card_product.inventory_management != nil %}{{ product_card_product.inventory_quantity }}{% else %}999{% endif %}" 
+              class="lsg-bundle-product-select-quantity-input" 
+              data-price="{{ product_card_product.price }}" 
+              data-price-formatted="{{ product_card_product.price | money_without_trailing_zeros }}" 
+              data-product="{{ product_card_product.id }}" 
+              data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}"
+              aria-label="quantity">
+            {% endif %}
+            <div class="lsg-bundle-product-select-quantity-input-display lsg-hidden">0</div>
+            <button type="button" class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus">
+              <svg aria-labelledby="plusIconTitle" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 10 10" fill="none">
+                  <title id="plusIconTitle">plus</title>
+                  <path d="M10 5L-1.04308e-07 5" stroke="black" stroke-width="2.5"></path>
+                  <path d="M5 0L5 10" stroke="black" stroke-width="2.5"></path>
+              </svg>
+            </button>
+          </div>
+          <button type="button" class="product-atc-btn js-product-atb-btn shop-btn button button--beige" {% if card_product.available == false %}disabled{% endif %}>Add - {{ card_product.price | money_without_trailing_zeros }}</button>
+        </div>
+        {% endcapture %}
+        {{ productActionHtml }}
+      </div>
+    </div>
+</div>
+  </product-grid-height>

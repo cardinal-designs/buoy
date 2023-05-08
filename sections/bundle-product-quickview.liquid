@@ -1,0 +1,244 @@
+<div class="product__media-wrapper no-scrollbar drag-scroll">
+  <div class="sticky-images">
+    <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+      {{ "accessibility.skip_to_product_info" | t }}
+    </a>
+    <div class="product__media-list">
+      {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+      {%- for media in product.media -%}
+      <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+        
+       {% assign media_alt = media.preview_image.alt | handle %}
+       {% assign media_alt_icon = media_alt | append:'-icon' %}
+        {% if media.preview_image.alt != blank %}
+          <div class="product-spinner badge_animat_cls">
+            {% if media_alt == 'all-day-hydration' %}
+              <div class="fixed_badge_center">
+                ⚡
+              </div>  
+            {% elsif media_alt == 'clean-pure' %}
+              <div class="fixed_badge_center">
+                💦
+              </div>
+            {% elsif media_alt == 'vegan-nongmo' %}
+              <div class="fixed_badge_center">
+                🌱
+              </div>
+            {% elsif media_alt == '100-pcr-bottles' %}
+              <div class="fixed_badge_center">
+                ♻️
+              </div>
+            {% elsif media_alt == 'unsweetened-unflavored' %}
+              <div class="fixed_badge_center">
+                👅
+              </div>
+            {% elsif media_alt == 'add-to-any-drink' %}
+              <div class="fixed_badge_center">
+                🍺
+              </div>
+            {% elsif media_alt == 'all-day-energy' %}
+              <div class="fixed_badge_center">
+                🔋
+              </div>
+            {% elsif media_alt == 'no-crashes' %}
+              <div class="fixed_badge_center">
+                📉
+              </div>
+            {% elsif media_alt == 'plant-powered-antioxidants' %}
+              <div class="fixed_badge_center">
+                🫐
+              </div>
+            {% elsif media_alt == 'fortifying-minerals' %}
+              <div class="fixed_badge_center">
+                🛡
+              </div>
+             {% elsif media_alt == 'more-bioavailable' %}
+              <div class="fixed_badge_center three-x-text">
+                3x
+              </div>
+            {% endif %} 
+            <div class="rotet_badge_svg">
+              <img src="{{ media_alt | append:'.svg' | file_url }}"/>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% render 'product-thumbnail', media: media, position: forloop.index, loop: true, modal_id: section.id, xr_button: true %}
+      </div>
+      {%- endfor -%}
+    </div>
+    <div class="product__media-arrows hide-mobile"></div>
+  </div>
+</div>
+
+<div class="drawer-product--info">
+  
+  {% render 'okendo-reviews-product-rating-summary', product: product %}
+  
+  <h1 class="product__title h4">
+    {{ product.title | escape }}
+    {% if product.metafields.custom.curved_icon == true %}
+      {% include 'curved-hydrated' %}
+    {% endif %}
+  </h1>
+  
+  <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>       
+  
+  <div class="Product_Tags">
+    {%- for tag in product.tags -%}
+      <span>{{ tag }}</span>
+    {%- endfor -%}
+  </div>
+  
+  <div class="product__description sh4 light">
+    {{ product.description }}
+  </div>
+  
+  <div class="pdp-faq">
+    <div class="faq-section">
+      <div class="faq-section__container">
+        {% if product.metafields.custom.new_ingredients_tab != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Ingredients</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <div class="sh4 single_line_text_field">{{ product.metafields.custom.new_ingredients_tab }}</div>
+              <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+              <div class="Why_This_Matters">
+                {% if product.metafields.custom.why_matters_text != blank %}
+                 <p>{{ product.metafields.custom.why_matters_text }}</p>
+                {% endif %}
+                <a href="#Dropdowns_Container">{{ 'products.general.matters' | t }} <span><img src="{{ 'down-arrow.png' | asset_url }}"</span></a>
+              </div>
+            </div>
+          </div>
+        {% endif %} 
+        
+        {% if product.metafields.my_fields.health_benefits != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Benefits</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.health_benefits }}</div>
+            </div>
+          </div>
+        {% endif %}   
+    
+        {% if product.metafields.my_fields.how_to_use != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">How to Use</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <div class="sh4 single_line_text_field">{{ product.metafields.my_fields.how_to_use }}</div>
+            </div>
+          </div>
+        {% endif %} 
+         
+        {% if product.metafields.my_fields.highlights_tab != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Details</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.highlights_tab }}</p>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if product.metafields.my_fields.ingredients_tab != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Ingredients</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <p class="sh4 single_line_text_field">
+                {{ product.metafields.my_fields.ingredients_tab }}
+                
+                <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Ingredients List</a>                      
+              </p>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if product.metafields.my_fields.greatfor_tab != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Great For</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.greatfor_tab }}</p>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if product.metafields.my_fields.sustainability_tab != blank %}
+          <div class="faq__item">
+            <button class="faq__header">
+              <p class="sh4 medium">Sustainability</p>
+              {% render 'icon-caret' %}
+            </button>
+            <div class="faq__content">
+              <p class="sh4 single_line_text_field">{{ product.metafields.my_fields.sustainability_tab }}</p>
+            </div>
+          </div>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+  
+  {% assign my_fields = product.metafields.my_fields %}
+  {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
+    <div class="Badge_Grid_Container">
+      {% if my_fields.badge_one != blank %}
+        <div class="Badge_Grid_Item">
+          <span class="Badge_Grid">{{ my_fields.badge_one }}</span>
+        </div>
+      {%- endif -%}
+  
+      {% if my_fields.badge_two != blank %}
+        <div class="Badge_Grid_Item">
+          <span class="Badge_Grid">{{ my_fields.badge_two }}</span>
+        </div>
+      {%- endif -%}
+  
+      {% if my_fields.badge_three != blank %}
+        <div class="Badge_Grid_Item">
+          <span class="Badge_Grid">{{ my_fields.badge_three }}</span>
+        </div>
+      {%- endif -%}
+  
+      {% if my_fields.badge_four != blank %}
+        <div class="Badge_Grid_Item">
+          <span class="Badge_Grid">{{ my_fields.badge_four }}</span>
+        </div>
+      {%- endif -%}
+    </div>
+  {% endif %}
+  
+  <div data-product-action-button></div>
+  
+  <a class="js-product-details-link" href="{{ product.url }}">View Full Details</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

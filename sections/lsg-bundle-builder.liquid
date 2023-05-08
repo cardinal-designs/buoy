@@ -1,0 +1,123 @@
+
+{% assign bundlesCount = 0 %}
+{% assign bundlesList = '' %}
+{% for block in section.blocks %}
+    {% if block.type == 'bundle' %}
+        {% assign bundlesCount = bundlesCount | plus: 1 %}
+        {% assign bundlesList = bundlesList | append: block.settings.title | append: '|:|' | append: bundlesCount | append: '|;|' %}
+    {% endif %}
+{% endfor %}
+
+{% assign bundlesArray = bundlesList | split: '|;|' %}
+
+<div class="lsg-bundle-wrapper" data-lsg-bundle-wrapper {% if section.settings.setUrl %}data-lsg-bundle-set-url{% endif %}>
+    {% assign bundleFirst = true %}
+    {% if bundlesCount > 0 %}
+        {% assign bundleLoopCount = 0 %}
+        {% for block in section.blocks %}
+            {% if block.type == 'bundle' %}
+                {% assign bundleProduct = all_products[block.settings.product] %}
+                {% if bundleProduct %}
+                    {% assign bundleLoopCount = bundleLoopCount | plus: 1 %}
+                    {% render 'lsg-bundle', settings: section.settings, product:bundleProduct, bundleIndex: bundleLoopCount, bundles: bundlesArray, bundleFirst: bundleFirst, bundleTitle: block.settings.title %}
+                    {% assign bundleFirst = false %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% render 'lsg-bundle', settings: section.settings, product:product, bundleIndex: 0, bundleFirst: bundleFirst %}
+        {% assign bundleFirst = false %}
+    {% endif %}
+</div>
+
+
+{% schema %}
+{
+  "name": "LSG Bundle",
+  "tag": "section",
+  "class": "section lsg-bundle-section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+        "type": "bundle",
+        "name": "LSG Bundle",
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Bundle Product"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Bundle Title"
+            }
+        ]
+    }
+  ],
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "setUrl",
+        "label": "Update URL",
+        "default": false,
+        "info": "Dynamically update URL for preloading bundles"
+    },
+    {
+        "type": "text",
+        "id": "bundle_select_heading",
+        "label": "Bundle Select Heading"
+    },
+    {
+        "type": "text",
+        "id": "frequency_heading",
+        "label": "Frequency Select Heading",
+        "default": "Select your plan"
+    },
+    {
+        "type": "text",
+        "id": "frequency_otp",
+        "label": "Frequency One-Time Purchase Label",
+        "default": "One-time purchase"
+    },
+    {
+        "type": "text",
+        "id": "frequency_sub",
+        "label": "Frequency Subscription Label",
+        "default": "Subscribe & Save"
+    },
+    {
+        "type": "text",
+        "id": "atc_text",
+        "label": "Add to Cart Text",
+        "default": "Add to Cart"
+    },
+    {
+        "type": "text",
+        "id": "sub_atc_text",
+        "label": "Sub-ATC Disclaimer",
+        "default": "Free Shipping over $49 | 100% Happiness Guarantee"
+    },
+    {
+        "type": "header",
+        "content": "One-Time Only"
+    },
+    {
+        "type": "text",
+        "id": "otp_interval_prefix",
+        "label": "Interval/Price Prefix",
+        "default": "Your bundle:"
+    }
+  ],
+  "presets": [
+    {
+        "name": "LSG Bundle"
+    }
+  ],
+  "templates": [
+    "product"
+  ]
+}
+{% endschema %}

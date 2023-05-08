@@ -2258,7 +2258,8 @@ details[open] > .search-modal {
 }
 
 button:disabled {
-  cursor: disabled;
+  cursor: not-allowed;
+  opacity:0.5;
 }
 
 /* Header menu drawer */
