@@ -288,7 +288,7 @@ function checkoutEnableValidation(trigger) {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
       addMoreQuantity.innerHTML = quantityToAdd;
-      addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <span>${quantityToAdd} more</span> item to continue` : `Add <span>${quantityToAdd} more</span> items to continue`;
+      addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <b>${quantityToAdd} more</b> item to continue` : `Add <b>${quantityToAdd} more</b> items to continue`;
     }
 
     if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
