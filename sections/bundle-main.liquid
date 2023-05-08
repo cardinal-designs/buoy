@@ -241,6 +241,7 @@
       <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open')">
         <div class="title--wrapper">
           <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
+          <div class="count-badge js-item-count-badge"></div>
           <span class="min-info">
             <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
               >SELECT A MINIMUM OF {{ otp_bundle_min -}}
@@ -248,7 +249,6 @@
             <span class="discount-badge" title-discount-badge></span>
           </span>
         </div>
-        <div class="count-badge js-item-count-badge"></div>
         <div class="icon--wrapper">{% render 'icon-caret' %}</div>
       </div>
       <div class="bundle-selected-products--wrapper">
