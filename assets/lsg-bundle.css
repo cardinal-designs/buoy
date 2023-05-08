@@ -1472,6 +1472,10 @@ button:not([disabled]) {
     padding: 8px 0 0;
   }
 
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info .discount-badge {
+    
+  }
+  
   .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
     margin: 0 0 35px;
   }
@@ -1526,6 +1530,15 @@ button:not([disabled]) {
   .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__description p {
     line-height: 1.500em;
     margin-top: 25px;
+  }
+  
+  .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .min-info .discount-badge {
+    background-color: #c6db76;
+    padding: 3px 10px;
+    border-radius: 18px;
+    color: #1f2322;
+    font-size: 12px;
+    width: fit-content;
   }
   
 }
