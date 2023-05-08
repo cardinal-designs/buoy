@@ -175,6 +175,16 @@ button:not([disabled]) {
   font-family: inter,sans-serif;
 }
 
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info .discount-badge,
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info.show-discount-widget .into-text {
+  display: none;
+}
+
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info.show-discount-widget .discount-badge,
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .min-info:not(.show-discount-widget) .into-text{
+  display: block;
+}
+
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info .lsg-bundle-buybox-product-name {
   font-size: 14px;
   line-height: 1.500em;
