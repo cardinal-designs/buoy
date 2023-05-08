@@ -77,7 +77,7 @@
         <div class="lsg-bundle-interval-name">{{ group.name | default: settings.frequency_sub }} <span class="discount-badge">Save 20%</span></div>
         <div class="lsg-bundle-interval-price lsg-bundle-interval-sub-price hidden">$0.00</div>
         <div class="subscription-info">
-          <label>{{ product.selected_or_first_available_variant.metafields.custom.subscription_text }}</label>
+          <label class="body-xs">{{ product.selected_or_first_available_variant.metafields.custom.subscription_text }}</label>
         </div>
         {% if isDuplicate %}
           <div class="lsg-bundle-sticky-bar-frequency-select">
