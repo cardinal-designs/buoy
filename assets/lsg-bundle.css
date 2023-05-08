@@ -1225,11 +1225,6 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block.open .title--wrapper .lsg-bundle-buybox-product-name:before{
     content:unset;
   }
-
-  .has-selected-product .lsg-bundle-summary-block.open .title--wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
   
   .has-selected-product .lsg-bundle-summary-block.open {
     bottom: 0;
