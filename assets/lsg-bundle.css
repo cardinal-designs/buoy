@@ -1215,6 +1215,10 @@ button:not([disabled]) {
   .lsg-bundle-sticky-bar-frequency-select {
     display: none;
   }
+
+  .mobile-toggle-btn--wrapper {
+    display: black;
+  }
   
   .lsg-bundle-block {
     flex-direction: column;
@@ -1330,4 +1334,9 @@ button:not([disabled]) {
     overflow-y: scroll;
   }
   
+}
+
+
+.mobile-toggle-btn--wrapper {
+  display: none;
 }
