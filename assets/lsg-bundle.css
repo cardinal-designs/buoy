@@ -1217,6 +1217,7 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block{
     bottom:-470px;
   }
+  
   .has-selected-product .lsg-bundle-summary-block.open {
     bottom: 0;
   }
