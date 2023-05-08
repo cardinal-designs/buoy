@@ -1066,6 +1066,11 @@ button:not([disabled]) {
 
 /* REVIEW CARD CSS END */
 
+.lsg-bundle-product-set-list .collection-groups__item .product-badge {
+  top: 10px;
+  left: 12px;
+}
+
 @media (min-width: 769px) {
   
   .lsg-bundle-wrapper h1 {
@@ -1578,5 +1583,6 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper .title--wrapper .count-badge {
     display: none;
   }
+  
   
 }
