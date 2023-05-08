@@ -1187,4 +1187,8 @@ button:not([disabled]) {
     padding: 0 28px 0 18px;
   }
   
+  .product-quick-view-slide-out--wrapper .shop-slide-out__header {
+    height: 55px;
+  }
+  
 }
