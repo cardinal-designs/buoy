@@ -238,7 +238,17 @@
     </div>
 
     <div class="lsg-bundle-summary-block">
-      <div class="mobile-toggle-btn--wrapper"></div>
+      <div class="mobile-toggle-btn--wrapper">
+        <div class="title--wrapper">
+          <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
+          <span class="min-info">
+            <span class="into-text" data-min-info-text data-cms-text="SELECT A MINIMUM OF {{ otp_bundle_min }}"
+              >SELECT A MINIMUM OF {{ otp_bundle_min -}}
+            </span>
+            <span class="discount-badge" title-discount-badge></span>
+          </span>
+        </div>
+      </div>
       <div class="bundle-selected-products--wrapper">
         <div class="lsg-bundle-buybox-product-info">
           <div class="title--wrapper">
@@ -250,7 +260,9 @@
               <span class="discount-badge" title-discount-badge></span>
             </span>
           </div>
+          {% comment %}
           <div class="lsg-bundle-buybox-description">{{ product.description }}</div>
+          {% endcomment %}
         </div>
         {% if bundleIndex > 0 %}
           {% if settings.bundle_select_heading %}
