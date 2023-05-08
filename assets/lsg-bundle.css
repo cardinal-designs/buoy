@@ -1,5 +1,9 @@
 /* BUNDLE GENRAL CSS */
 
+body.open-bundle-info {
+  overflow: hidden;
+}
+
 .page-template--product-bundle .header--transparent:not(.header--scrolled) .header-wrapper {
   border-color: var(--charcoal);
 }
