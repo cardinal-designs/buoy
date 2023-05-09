@@ -140,7 +140,7 @@ body.open-bundle-info {
   position: absolute;
   width: 20px;
   height: 20px;
-  margin: 7px 8px 0 auto;
+  margin: 11px 8px 0 auto;
   right: 0;
   display: block;
   z-index: 1;
@@ -1076,7 +1076,7 @@ button:not([disabled]) {
 /* REVIEW CARD CSS END */
 
 .lsg-bundle-product-set-list .collection-groups__item .product-badge {
-  top: 10px;
+  top: 7px;
   left: 12px;
 }
 
