@@ -214,6 +214,6 @@ function timer() {
 }
 /* end okendo review replce string on PDP */
 document.querySelector('.page-blury-overlay').onclick = function() {
-  document.body.classList.remove('overflow-hidden');
   if(document.querySelector('.mobile-toggle-btn--wrapper')) document.querySelector('.mobile-toggle-btn--wrapper').click();
+  document.body.classList.remove('overflow-hidden');
 }
