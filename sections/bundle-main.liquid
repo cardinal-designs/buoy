@@ -158,7 +158,6 @@
                 {% for productSub in collections.bundle.products %}
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
-                    {{ productSub.variants.size }}
                     {% for variant in productSub.variants %}
                       {% assign productCount = productCount | plus: 1 %}
                       {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
