@@ -82,6 +82,10 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
+----{{ product.metafields.rtxn.bundle_products.value.size }}
+{% for appProduct in product.metafields.rtxn.bundle_products.value %}
+  {{ appProduct }}
+{% endfor %}
 <div
   class="lsg-bundle-wrapper"
   data-lsg-bundle-wrapper
