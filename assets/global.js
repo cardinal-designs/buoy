@@ -886,9 +886,11 @@ function slickOnDesktop(slider, settings){
       return slider.slick(settings);
     }
   });
-  if (!slider.hasClass('slick-initialized')) {
-    return slider.slick(settings);
-  }
+   if ($(window).width() > 769) {
+    if (!slider.hasClass('slick-initialized')) {
+      return slider.slick(settings);
+    }
+   }
 };
 
 // FAQ
