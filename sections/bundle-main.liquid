@@ -155,6 +155,15 @@
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
               {% if sub_bundle_products_count > 0 %}
                 {% assign breakLoop = false %}
+
+                {% for appProduct in sub_bundle_products %}
+                  {% for productSub in collections.bundle.products %}
+                    {% if productSub.id == appProduct %}
+                      {{ productSub }}<br />
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                {% comment %}
                 {% for productSub in collections.bundle.products %}
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
@@ -179,6 +188,7 @@
                     {% break %}
                   {% endif %}
                 {% endfor %}
+                {% endcomment %}
               {% endif %}
 
               {% if sub_bundle_variants_count > 0 %}
