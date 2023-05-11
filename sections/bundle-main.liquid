@@ -173,6 +173,21 @@
                         {% assign breakLoop = true %}
                         {% break %}
                       {% endif %}
+                    {% else %}
+                      {% assign productCount = productCount | plus: 1 %}
+                      {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                        {% continue %}
+                      {% endif %}
+                      {% render 'bundle-product-card',
+                        is_variant: true,
+                        product_card_product: variant,
+                        show_secondary_image: true,
+                        hover_video: block.settings.hover_video
+                      %}
+                      {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                        {% assign breakLoop = true %}
+                        {% break %}
+                      {% endif %}
                     {% endfor %}
                   {% endif %}
                   {% if breakLoop == true %}
