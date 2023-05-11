@@ -156,9 +156,9 @@
               {% if sub_bundle_products_count > 0 %}
                 {% assign breakLoop = false %}
                 {% for appProduct in sub_bundle_products %}
-                  {% assign appProduct = appProduct | plus:0 %}
+                  {% assign appProductId = appProduct | plus:0 %}
                   {% for productSub in collections.bundle.products %}
-                    {% if productSub.id == appProduct %}
+                    {% if productSub.id == appProductId %}
                       {{ productSub }}<br />
                     {% endif %}
                   {% endfor %}
