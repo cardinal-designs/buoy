@@ -159,7 +159,6 @@
                   {% assign appProductId = appProduct | plus:0 %}
                   {% for productSub in collections.bundle.products %}
                     {% if productSub.id == appProductId %}
-
                       {% for variant in productSub.variants %}
                         {% assign productCount = productCount | plus: 1 %}
                         {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
