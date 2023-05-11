@@ -32,7 +32,7 @@
       <div class="media" style="padding-bottom: 125%;">
         <a href="{{ card_product.url }}" class="full-unstyled-link">
         
-        {% render 'lazy-image', image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
+        {% render 'lazy-image', image: card_product.featured_media, fade: true, classes: 'img-fill' %}
 
         {% if show_secondary_image %}
           {% assign images = product_card_product.product.media[1] %}
