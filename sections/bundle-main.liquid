@@ -185,23 +185,28 @@
               {% endif %}
 
               {% if sub_bundle_variants_count > 0 %}
-                {% for productSub in collections.bundle.products %}
-                  {% for variantSub in productSub.variants %}
-                    {% assign variantSubID = variantSub.id | strip %}
-                    {% if sub_bundle_variants contains variantSubID %}
-                      {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
-                        {% continue %}
+
+                {% for appVarirant in sub_bundle_variants %}
+                  {% assign appVarirantId = appVarirant | plus:0 %}
+                  {% for productSub in collections.bundle.products %}
+                    {% for variantSub in productSub.variants %}
+                      {% if variantSub.id == appVarirant %}
+                        {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                          {% continue %}
+                        {% endif %}
+                        {% assign productCount = productCount | plus: 1 %}
+                        {% render 'bundle-product-card',
+                          is_variant: true,
+                          product_card_product: variantSub,
+                          show_secondary_image: true,
+                          hover_video: block.settings.hover_video
+                        %}
+                        {% break %}
                       {% endif %}
-                      {% assign productCount = productCount | plus: 1 %}
-                      {% render 'bundle-product-card',
-                        is_variant: true,
-                        product_card_product: variantSub,
-                        show_secondary_image: true,
-                        hover_video: block.settings.hover_video
-                      %}
-                    {% endif %}
+                    {% endfor %}
                   {% endfor %}
                 {% endfor %}
+                
               {% endif %}
             {% elsif product.metafields.bundle.products %}
               {% assign loopOffset = 0 %}
