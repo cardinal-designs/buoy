@@ -155,7 +155,7 @@
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
               {% if sub_bundle_products_count > 0 %}
                 {% assign breakLoop = false %}
-
+                ---{{ sub_bundle_products }}
                 {% for appProduct in sub_bundle_products %}
                   {% assign appProduct = appProduct | times:1 %}
                   {% for productSub in collections.bundle.products %}
