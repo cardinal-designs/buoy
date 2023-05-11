@@ -93,7 +93,8 @@
   <div class="product__description sh4 light">
     {{ product.description }}
   </div>
-  
+
+  {% if product.metafields.custom.new_ingredients_tab != blank or product.metafields.my_fields.health_benefits != blank or product.metafields.my_fields.how_to_use != blank or product.metafields.my_fields.highlights_tab != blank or product.metafields.my_fields.ingredients_tab != blank or product.metafields.my_fields.greatfor_tab != blank or product.metafields.my_fields.sustainability_tab != blank %}
   <div class="pdp-faq">
     <div class="faq-section">
       <div class="faq-section__container">
@@ -195,6 +196,7 @@
       </div>
     </div>
   </div>
+{% endif %}
   
   {% assign my_fields = product.metafields.my_fields %}
   {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
