@@ -163,7 +163,6 @@
                       {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
                         {% continue %}
                       {% endif %}
-                      {{ productCount }}
                       {% render 'bundle-product-card',
                         is_variant: true,
                         product_card_product: variant,
