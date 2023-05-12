@@ -159,7 +159,7 @@
                   {% assign productSubID = productSub.id | strip %}
                   {% if sub_bundle_products contains productSubID %}
                     {% for variant in productSub.variants %}
-                      {% if variant.metafields.custom.hide_bundle.value == false %}
+                      {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
                         {% assign productCount = productCount | plus: 1 %}
                         {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
                           {% continue %}
@@ -188,7 +188,7 @@
                   {% for variantSub in productSub.variants %}
                     {% assign variantSubID = variantSub.id | strip %}
                     {% if sub_bundle_variants contains variantSubID %}
-                      {% if variant.metafields.custom.hide_bundle.value == false %}
+                      {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
                         {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
                           {% continue %}
                         {% endif %}
