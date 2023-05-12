@@ -155,11 +155,11 @@
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
               {% if sub_bundle_products_count > 0 %}
                 {% assign breakLoop = false %}
-                {% for productSub in collections.bundle.products %}
-                  {% assign productSubID = productSub.id | strip %}
-                  {% if sub_bundle_products contains productSubID %}
-                    {% for variant in productSub.variants %}
-                      {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
+                {% for appProduct in sub_bundle_products %}
+                  {% assign appProductId = appProduct | plus:0 %}
+                  {% for productSub in collections.bundle.products %}
+                    {% if productSub.id == appProductId %}
+                      {% for variant in productSub.variants %}
                         {% assign productCount = productCount | plus: 1 %}
                         {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
                           {% continue %}
@@ -174,9 +174,10 @@
                           {% assign breakLoop = true %}
                           {% break %}
                         {% endif %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
+                      {% endfor %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
                   {% if breakLoop == true %}
                     {% break %}
                   {% endif %}
@@ -184,11 +185,12 @@
               {% endif %}
 
               {% if sub_bundle_variants_count > 0 %}
-                {% for productSub in collections.bundle.products %}
-                  {% for variantSub in productSub.variants %}
-                    {% assign variantSubID = variantSub.id | strip %}
-                    {% if sub_bundle_variants contains variantSubID %}
-                      {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
+
+                {% for appVarirant in sub_bundle_variants %}
+                  {% assign appVarirantId = appVarirant | plus:0 %}
+                  {% for productSub in collections.bundle.products %}
+                    {% for variantSub in productSub.variants %}
+                      {% if variantSub.id == appVarirant %}
                         {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
                           {% continue %}
                         {% endif %}
@@ -199,10 +201,12 @@
                           show_secondary_image: true,
                           hover_video: block.settings.hover_video
                         %}
+                        {% break %}
                       {% endif %}
-                    {% endif %}
+                    {% endfor %}
                   {% endfor %}
                 {% endfor %}
+                
               {% endif %}
             {% elsif product.metafields.bundle.products %}
               {% assign loopOffset = 0 %}
@@ -244,7 +248,7 @@
     </div>
 
     <div class="lsg-bundle-summary-block--wrapper">
-      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open');document.querySelector('.page-blury-overlay').classList.toggle('is-visible');document.body.classList.toggle('overflow-hidden')">
+      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open')">
         <div class="title--wrapper">
           <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
           <div class="count-badge js-item-count-badge"></div>
