@@ -160,19 +160,21 @@
                   {% for productSub in collections.bundle.products %}
                     {% if productSub.id == appProductId %}
                       {% for variant in productSub.variants %}
-                        {% assign productCount = productCount | plus: 1 %}
-                        {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
-                          {% continue %}
-                        {% endif %}
-                        {% render 'bundle-product-card',
-                          is_variant: true,
-                          product_card_product: variant,
-                          show_secondary_image: true,
-                          hover_video: block.settings.hover_video
-                        %}
-                        {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
-                          {% assign breakLoop = true %}
-                          {% break %}
+                        {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
+                          {% assign productCount = productCount | plus: 1 %}
+                          {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                            {% continue %}
+                          {% endif %}
+                          {% render 'bundle-product-card',
+                            is_variant: true,
+                            product_card_product: variant,
+                            show_secondary_image: true,
+                            hover_video: block.settings.hover_video
+                          %}
+                          {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                            {% assign breakLoop = true %}
+                            {% break %}
+                          {% endif %}
                         {% endif %}
                       {% endfor %}
                       {% break %}
@@ -191,17 +193,19 @@
                   {% for productSub in collections.bundle.products %}
                     {% for variantSub in productSub.variants %}
                       {% if variantSub.id == appVarirant %}
-                        {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
-                          {% continue %}
+                        {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
+                          {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                            {% continue %}
+                          {% endif %}
+                          {% assign productCount = productCount | plus: 1 %}
+                          {% render 'bundle-product-card',
+                            is_variant: true,
+                            product_card_product: variantSub,
+                            show_secondary_image: true,
+                            hover_video: block.settings.hover_video
+                          %}
+                          {% break %}
                         {% endif %}
-                        {% assign productCount = productCount | plus: 1 %}
-                        {% render 'bundle-product-card',
-                          is_variant: true,
-                          product_card_product: variantSub,
-                          show_secondary_image: true,
-                          hover_video: block.settings.hover_video
-                        %}
-                        {% break %}
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
