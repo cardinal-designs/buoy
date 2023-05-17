@@ -937,6 +937,26 @@ button:not([disabled]) {
   height: 60px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .badge_animat_cls .rotet_badge_svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 92px;
+  height: 92px;
+}
+
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .badge_animat_cls .fixed_badge_center {
+  position: absolute;
+  right: 0;
+  width: 92px;
+  height: 92px;
+  top: -3px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px !important;
+}
+
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info {
   padding-right: 40px;
 }
