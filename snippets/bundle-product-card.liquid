@@ -113,6 +113,10 @@
           </h5>
           {% endcomment %}
         </a>
+        {% assign saingDescription = product_card_product.metafields.custom.bundle_saving_description | default: product_card_product.product.metafields.custom.bundle_saving_description %}
+        {% if saingDescription != blank %}
+        <p>{{ saingDescription }}</p>
+        {% endif %}
 
         <p class="card-information__text light js-height">
         {% if is_variant == false %}
