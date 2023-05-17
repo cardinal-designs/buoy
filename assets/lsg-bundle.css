@@ -1128,6 +1128,14 @@ button:not([disabled]) {
   padding: 2px 10px 3px 10px;
 }
 
+@media (min-width: 1201px) {
+
+  .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
+    height: 115%;
+  }
+  
+}
+
 @media (min-width: 769px) {
   
   .lsg-bundle-wrapper h1 {
@@ -1139,7 +1147,7 @@ button:not([disabled]) {
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
     content: '';
     width: 1px;
-    height: 115%;
+    height: 105%;
     position: absolute;
     right: 0;
     background-color: #545759;
