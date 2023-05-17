@@ -1641,6 +1641,12 @@ button:not([disabled]) {
     width: 82px;
     height: 82px;
   }
+  
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .badge_animat_cls .fixed_badge_center {
+    font-size: 24px!important;
+    top: -7px!important;
+    right: -5px;
+  }
    
 }
 .open-bundle-info .has-selected-product .lsg-bundle-summary-block--wrapper{
