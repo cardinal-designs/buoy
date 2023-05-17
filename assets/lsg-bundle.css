@@ -279,12 +279,13 @@ button:not([disabled]) {
 }
 
 .lsg-bundle-summary-block .discount-badge {
-  background-color: #C6DB76;
-  padding: 3px 10px;
+  background-color: #c6db76;
+  padding: 4px 10px;
   border-radius: 18px;
-  color: #1F2322;
+  color: #1f2322;
   font-size: 12px;
-  width:fit-content;
+  line-height: 1;
+  min-width: 160px;
 }
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper .bundle-builder__selected-products {
