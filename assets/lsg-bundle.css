@@ -1286,6 +1286,10 @@ button:not([disabled]) {
     padding: 0 0 0 25px;
   }
   
+  .bundle-builder__selected-product-placeholder {
+    font-size: 10px;
+  }
+  
 }
 
 @media (max-width: 959px) {
@@ -1314,6 +1318,10 @@ button:not([disabled]) {
   .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:after, 
   .lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after {
     top: 8px;
+  }
+
+  .bundle-builder__selected-product-placeholder {
+    font-size: 12px;
   }
   
 }
