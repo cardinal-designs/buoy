@@ -1273,6 +1273,7 @@ button:not([disabled]) {
   
   .has-selected-product .lsg-bundle-summary-block {
     padding: 25px 40px;
+    min-height: 34vh;
   }
   
 }
