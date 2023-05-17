@@ -838,7 +838,7 @@ function productQuickView(url,bundleWrapper,id) {
   .then(data => {
     let fakeElement = document.createElement('div');
     fakeElement.innerHTML = data;
-    fakeElement.querySelector('[data-product-action-button]').replaceWith(productButton);
+    // fakeElement.querySelector('[data-product-action-button]').replaceWith(productButton);
     drawer.querySelector('.js-product-content').innerHTML = fakeElement.querySelector('#shopify-section-bundle-product-quickview').innerHTML;
 
     let $productMediaSlider = $(drawer).find('.js-product-content .product__media-list');
