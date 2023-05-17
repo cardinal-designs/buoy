@@ -526,6 +526,10 @@ button:not([disabled]) {
   margin-bottom: 22px;
 }
 
+.lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label] b {
+  font-weight: 500;
+}
+
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-atc-wrapper .lsg-bundle-atc-wrapper .lsg-bundle-submit-button {
   border: 1.5px solid #1F2322;
   background-color: transparent;
