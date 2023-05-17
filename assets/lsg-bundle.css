@@ -1306,6 +1306,15 @@ button:not([disabled]) {
   .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el {
     margin-top: 15px;
   }
+
+  .lsg-bundle-interval-el:before {
+    top: 5px;
+  }
+  
+  .lsg-bundle-block.lsg-bundle--otp-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectOTP_]:after, 
+  .lsg-bundle-block.lsg-bundle--sub-selected .lsg-bundle-interval-el[for^=bundleIntervalSelectSub_]:after {
+    top: 8px;
+  }
   
 }
 
