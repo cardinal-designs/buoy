@@ -230,18 +230,20 @@
             {% endif %}
             {% if forloop.index == 1 %}
               <div class="card-wrapper Review_Card_Wrapper">
-                {% for block in section.blocks %}
-                  {%- case block.type -%}
-                    {%- when 'review' -%}
-                      <div class="Review_Box">
-                        <div class="Review_Box_Inr">
-                          <div class="Review_Star">{% render 'icon-five-star' %}</div>
-                          <p class="sh2">{{ block.settings.review }}</p>
-                          <span class="body-xs">{{ block.settings.author }}</span>
+                <div class="Review_Card_Wrapper_Inr">
+                  {% for block in section.blocks %}
+                    {%- case block.type -%}
+                      {%- when 'review' -%}
+                        <div class="Review_Box">
+                          <div class="Review_Box_Inr">
+                            <div class="Review_Star">{% render 'icon-five-star' %}</div>
+                            <p class="sh2">{{ block.settings.review }}</p>
+                            <span class="body-xs">{{ block.settings.author }}</span>
+                          </div>
                         </div>
-                      </div>
-                  {%- endcase -%}
-                {% endfor %}
+                    {%- endcase -%}
+                  {% endfor %}
+                </div>
               </div>
             {% endif %}
           </div>
