@@ -224,6 +224,10 @@ button:not([disabled]) {
   position: relative;
 }
 
+.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info {
+  margin-bottom: 33px;
+}
+
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
   text-align: left;
 }
