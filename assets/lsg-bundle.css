@@ -211,7 +211,6 @@ button:not([disabled]) {
   flex-wrap: wrap;
   align-items: center;
   transition:0.5s;
-  min-height: 39vh;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper {
@@ -1273,7 +1272,6 @@ button:not([disabled]) {
   
   .has-selected-product .lsg-bundle-summary-block {
     padding: 25px 40px;
-    min-height: 34vh;
   }
   
 }
@@ -1302,7 +1300,6 @@ button:not([disabled]) {
   
   .has-selected-product .lsg-bundle-summary-block {
     padding: 25px 27px;
-    min-height: 56vh;
   }
   
   .bundle-builder__selected-product {
@@ -1516,7 +1513,6 @@ button:not([disabled]) {
     height: 100%;
     padding: 25px 18px 18px 18px;
     display: block;
-    min-height: auto;
   }
 
   .product-quick-view-slide-out--wrapper .product-actions--wrapper {
