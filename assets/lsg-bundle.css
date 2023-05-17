@@ -1157,7 +1157,7 @@ button:not([disabled]) {
     transform: translateY(-50%);
   }
   
-  .mobile-toggle-btn--wrapper {
+  .mobile-toggle-btn--wrapper.title--wrapper {
     display: none;
   }
   
