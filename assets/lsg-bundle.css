@@ -112,6 +112,10 @@ body.open-bundle-info {
   top: 1px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info .okeReviews-reviewsSummary-ratingCount {
+  left: 40px;
+}
+
 /* PRODUCT CARD */
 
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
@@ -680,7 +684,7 @@ button:not([disabled]) {
 .product-quick-view-slide-out--wrapper .okeReviews-starRating--small span.okeReviews-a11yText {
   height: 100%!important;
   clip: inherit!important;
-  right: -75px;
+  right: -43px;
   font-family: inter,sans-serif;
   font-style: normal;
   font-weight: 500!important;
