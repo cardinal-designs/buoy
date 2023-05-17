@@ -937,6 +937,11 @@ button:not([disabled]) {
   height: 60px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .product__media-item .product-spinner {
+  top: 14px;
+  right: 14px;
+}
+
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .product__media-wrapper .badge_animat_cls .rotet_badge_svg {
   position: absolute;
   top: 0;
