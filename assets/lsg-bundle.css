@@ -1516,6 +1516,7 @@ button:not([disabled]) {
     height: 100%;
     padding: 25px 18px 18px 18px;
     display: block;
+    min-height: auto;
   }
 
   .product-quick-view-slide-out--wrapper .product-actions--wrapper {
