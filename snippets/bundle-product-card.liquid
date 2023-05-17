@@ -18,6 +18,7 @@
 {% endif %}
   
   <product-grid-height>
+  </product-grid-height>
 <div class="card-wrapper js-bundle-product-card--wrapper" data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}" data-lsg-bundle-variant-select-id="{% if is_variant == false %}{{ product_card_product.selected_or_first_available_variant.id }}{% else %}{{ product_card_product.id }}{% endif %}">
   {% if card_product.available == false %}
     {% render 'spinner-sold-out' %}
@@ -171,4 +172,3 @@
       </div>
     </div>
 </div>
-  </product-grid-height>
