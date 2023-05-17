@@ -1113,6 +1113,10 @@ button:not([disabled]) {
   margin-bottom: 0;
 }
 
+.open-bundle-info .has-selected-product .lsg-bundle-summary-block--wrapper {
+  position:unset;
+}
+
 /* REVIEW CARD CSS END */
 
 .lsg-bundle-product-set-list .collection-groups__item .product-badge {
@@ -1691,8 +1695,4 @@ button:not([disabled]) {
     right: -5px;
   }
    
-}
-
-.open-bundle-info .has-selected-product .lsg-bundle-summary-block--wrapper {
-  position:unset;
 }
