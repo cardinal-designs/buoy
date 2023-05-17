@@ -985,6 +985,9 @@ button:not([disabled]) {
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .Badge_Grid_Container {
   margin: 40px 0;
+  justify-content: flex-start;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .js-product-details-link {
