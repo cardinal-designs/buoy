@@ -1079,6 +1079,9 @@ button:not([disabled]) {
   border-radius: 17px;
   text-align: center;
   padding: 40px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Review_Card_Wrapper .Review_Box {
