@@ -200,7 +200,6 @@ button:not([disabled]) {
   display:block;
   background: #FFF;
   z-index: 11;
-  min-height: 39vh;
 }
 
 .has-selected-product .lsg-bundle-summary-block {
@@ -212,6 +211,7 @@ button:not([disabled]) {
   flex-wrap: wrap;
   align-items: center;
   transition:0.5s;
+  min-height: 39vh;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper {
