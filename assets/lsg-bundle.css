@@ -515,7 +515,7 @@ button:not([disabled]) {
 }
 
 .lsg-bundle-interval-select,
-.make-add-to-cart-action [data-add-more-label]{
+.make-add-to-cart-action .lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label]{
   display: none;
 }
 
