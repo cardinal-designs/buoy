@@ -1193,7 +1193,7 @@ button:not([disabled]) {
 }
 
 .make-add-to-cart-action [type="submit"].lsg-bundle-submit-button {
-  display:flex;
+  display:flex !important;
 }
 
 @media (min-width: 1201px) {
