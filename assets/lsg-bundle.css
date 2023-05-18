@@ -1205,7 +1205,6 @@ button:not([disabled]) {
   display:flex !important;
 }
 
-
 .is-visible.page-blury-overlay {
   display: block;
 }
@@ -1220,6 +1219,15 @@ button:not([disabled]) {
   right: 0;
   z-index: 4;
   cursor:pointer;
+}
+
+
+.lsg-bundle-summary-block--wrapper .icon.icon-caret {
+  transform: rotate(180deg);
+}
+
+.lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
+  transform: rotate(0deg);
 }
 
 @media (min-width: 1201px) {
@@ -1502,14 +1510,6 @@ button:not([disabled]) {
 
   .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block .min-info {
     width: 100%;
-  }
-
-  .lsg-bundle-summary-block--wrapper .icon.icon-caret {
-    transform: rotate(180deg);
-  }
-
-  .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
-    transform: rotate(0deg);
   }
   
   .lsg-bundle-sticky-bar-frequency-select,
