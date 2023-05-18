@@ -292,11 +292,11 @@ function checkoutEnableValidation(trigger) {
 
   ContainueButtons.forEach(function(button) {
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
-      addToCartButton.classList.remove('disabled');
-      addToCartButton.disabled = false;
+      button.classList.remove('disabled');
+      button.disabled = false;
     } else {
-      addToCartButton.classList.add('disabled');
-      addToCartButton.disabled = true;
+      button.classList.add('disabled');
+      button.disabled = true;
     }
   });
   
