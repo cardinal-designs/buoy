@@ -1204,6 +1204,23 @@ button:not([disabled]) {
   display:flex !important;
 }
 
+
+.is-visible.page-blury-overlay {
+  display: block;
+}
+
+.page-blury-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  cursor:pointer;
+}
+
 @media (min-width: 1201px) {
 
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
@@ -1213,6 +1230,10 @@ button:not([disabled]) {
 }
 
 @media (min-width: 769px) {
+
+  .page-blury-overlay{
+    background-color: transparent;
+  }
   
   .lsg-bundle-wrapper h1 {
     font-size: 30px;
@@ -1410,6 +1431,11 @@ button:not([disabled]) {
 
 @media (max-width: 768px) {
 
+  .page-blury-overlay{
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
   .has-selected-product .lsg-bundle-summary-block:not(.open) .min-info .discount-badge {
     background: transparent;
     text-transform: uppercase;
