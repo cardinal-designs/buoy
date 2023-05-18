@@ -224,10 +224,6 @@ button:not([disabled]) {
   position: relative;
 }
 
-.lsg-bundle-summary-block .bundle-selected-products--wrapper .lsg-bundle-buybox-product-info {
-  margin-bottom: 50px;
-}
-
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
   text-align: left;
 }
@@ -244,7 +240,7 @@ button:not([disabled]) {
 
 .lsg-bundle-summary-block .bundle-selected-products--wrapper {
   width: 56%;
-  padding: 0 40px 0 0;
+  padding: 12px 40px 0 0;
 }
 
 .lsg-bundle-buybox-product-info {
