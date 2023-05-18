@@ -1802,5 +1802,10 @@ button:not([disabled]) {
     top: -7px!important;
     right: -5px;
   }
+
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .Badge_Grid_Container .Badge_Grid_Item {
+    width: calc(50% - 3px);
+    justify-content: flex-start;
+  }
    
 }
