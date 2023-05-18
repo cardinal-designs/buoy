@@ -1183,8 +1183,17 @@ button:not([disabled]) {
   color: #000;
 }
 
-.bundle-checkout-enabled .count-badge{
+.bundle-checkout-enabled .count-badge {
   background: #C6DB76;
+}
+
+
+[type="submit"].lsg-bundle-submit-button {
+  display:none;
+}
+
+.make-add-to-cart-action [type="submit"].lsg-bundle-submit-button {
+  display:none;
 }
 
 @media (min-width: 1201px) {
