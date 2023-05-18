@@ -16,8 +16,6 @@
 {% if is_variant == false %}
   {% assign card_product = product_card_product.product %}
 {% endif %}
-  
-  <product-grid-height>
 <div class="card-wrapper js-bundle-product-card--wrapper" data-product-id="{% if is_variant == false %}{{ product_card_product.id }}{% else %}{{ product_card_product.product.id }}{% endif %}" data-lsg-bundle-variant-select-id="{% if is_variant == false %}{{ product_card_product.selected_or_first_available_variant.id }}{% else %}{{ product_card_product.id }}{% endif %}">
   {% if card_product.available == false %}
     {% render 'spinner-sold-out' %}
@@ -87,7 +85,7 @@
     <div class="card-information">
       <div class="card-information__wrapper">
 
-        <div data-oke-reviews-product-listing-rating class="js-height">
+        <div data-oke-reviews-product-listing-rating class="">
         {% if is_variant == false %}
           {{ product_card_product.metafields.okendo.ProductListingSnippet }}
         {% else %}
@@ -96,7 +94,7 @@
         </div>
 
         <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
-          <div class="h5 card-information__title lsg-bundle-product-select-title js-height">
+          <div class="h5 card-information__title lsg-bundle-product-select-title ">
             {% if is_variant == true %}
               {% if product_card_product.title == "Default Title" %}
                 {{ product_card_product.product.title }}
@@ -118,7 +116,7 @@
         <p>{{ saingDescription }}</p>
         {% endif %}
 
-        <p class="card-information__text light js-height">
+        <p class="card-information__text light ">
         {% if is_variant == false %}
           {{ product_card_product.metafields.my_fields.product_card_text }}
         {% else %}
@@ -171,4 +169,3 @@
       </div>
     </div>
 </div>
-  </product-grid-height>
