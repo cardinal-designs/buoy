@@ -332,13 +332,13 @@ function checkoutEnableValidation(trigger) {
       bundleBlock.classList.add('bundle-checkout-enabled');
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
-      bundleSubText.classList.remove('hidden');
+      // bundleSubText.classList.remove('hidden');
     }else{
       addToCartButton.classList.remove('subscription-enabled');
       bundleBlock.classList.remove('bundle-checkout-enabled','make-add-to-cart-action');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
-      bundleSubText.classList.add('hidden');
+      // bundleSubText.classList.add('hidden');
     }
     
   });
