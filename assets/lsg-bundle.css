@@ -514,7 +514,7 @@ button:not([disabled]) {
   font-weight: 400;
 }
 
-.lsg-bundle-block:not(.bundle-checkout-enabled):not(.make-add-to-cart-action) .lsg-bundle-interval-select {
+.lsg-bundle-block.make-add-to-cart-action:not(.bundle-checkout-enabled) .lsg-bundle-interval-select {
   display: none;
 }
 
