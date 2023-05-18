@@ -938,7 +938,7 @@ if (document.addEventListener) {
 }
 
 document.querySelectorAll('[data-bundle-builder-selected-variant-id]').forEach(function(product){
-  product.addEventListener('click',() => {
+  product.querySelector('.bundle-builder__selected-product-img-wrapper').addEventListener('click',() => {
     if(product.classList.contains('active')) return;
     product.closest('.lsg-bundle-summary-block--wrapper ').querySelector('.mobile-toggle-btn--wrapper').click();
     window.scrollTo({
