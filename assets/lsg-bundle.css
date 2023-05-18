@@ -586,6 +586,7 @@ button:not([disabled]) {
 [data-add-more-label] span {
   color: #9AC847;
   font-weight: 500;
+  display: inline-block;
 }
 
 .lsg-bundle-summary-block .bundle-actions--wrapper .lsg-bundle-interval-select .lsg-bundle-interval-select-inner .lsg-bundle-interval-select-pod-top .lsg-bundle-interval-el {
