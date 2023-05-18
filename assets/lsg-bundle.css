@@ -1160,6 +1160,10 @@ button:not([disabled]) {
   display: none;
 }
 
+.bundle-builder__selected-product:not(.active) {
+  cursor: pointer;
+}
+
 @media (min-width: 1201px) {
 
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
