@@ -255,6 +255,7 @@ function incrementEnableValidation(trigger) {
 function checkoutEnableValidation(trigger) {
   const bundleBlock = getBundleBlock(trigger);
   const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc]');
+  const ContainueButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-containue-btn]');
   const bundleQuantity = getBundleQuantity(trigger);
   const interval = getBundleInterval(trigger);
   const bundleMin = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin));
@@ -288,6 +289,16 @@ function checkoutEnableValidation(trigger) {
   });
 
   bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity == bundleMax) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
+
+  ContainueButtons.forEach(function(button) {
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+      addToCartButton.classList.remove('disabled');
+      addToCartButton.disabled = false;
+    } else {
+      addToCartButton.classList.add('disabled');
+      addToCartButton.disabled = true;
+    }
+  });
   
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
