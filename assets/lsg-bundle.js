@@ -311,7 +311,8 @@ function checkoutEnableValidation(trigger) {
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
-    
+
+    console.log('hiii')
     
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
