@@ -1377,6 +1377,10 @@ button:not([disabled]) {
     display: none !important;
   }
   
+  .lsg-bundle-summary-block--wrapper.open .title--wrapper .lsg-bundle-buybox-product-name:before {
+    display: block !important;
+  }
+  
   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .min-info {
     color: #545759;
     font-size: 12px;
