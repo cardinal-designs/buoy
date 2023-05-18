@@ -1151,6 +1151,7 @@ button:not([disabled]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor:pointer;
 }
 
 .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
