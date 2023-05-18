@@ -1177,6 +1177,16 @@ button:not([disabled]) {
   margin-right: 10px;
 }
 
+.count-badge {
+  background: #ECD8C5;
+  border-radius: 100%;
+  color: #000;
+}
+
+.bundle-checkout-enabled .count-badge{
+  background: #C6DB76;
+}
+
 @media (min-width: 1201px) {
 
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
@@ -1382,16 +1392,6 @@ button:not([disabled]) {
 }
 
 @media (max-width: 768px) {
-
-  .count-badge {
-    background: #ECD8C5;
-    border-radius: 100%;
-    color: #000;
-  }
-  
-  .bundle-checkout-enabled .count-badge{
-    background: #C6DB76;
-  }
 
   .has-selected-product .lsg-bundle-summary-block:not(.open) .min-info .discount-badge {
     background: transparent;
