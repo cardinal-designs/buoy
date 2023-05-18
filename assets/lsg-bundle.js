@@ -254,7 +254,7 @@ function incrementEnableValidation(trigger) {
 
 function checkoutEnableValidation(trigger) {
   const bundleBlock = getBundleBlock(trigger);
-  const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
+  const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc]');
   const bundleQuantity = getBundleQuantity(trigger);
   const interval = getBundleInterval(trigger);
   const bundleMin = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin));
