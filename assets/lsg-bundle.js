@@ -321,7 +321,7 @@ function checkoutEnableValidation(trigger) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
       addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : 
-        (bundleQuantity == (bundleMin + 1)) ? "Add <span>2 more</span> item to <span>25% off</span>" : 
+        (bundleQuantity == (bundleMin + 1)) ? `${congText_20}Add <span>2 more</span> item to <span>25% off</span>` : 
         (bundleQuantity == (bundleMin + 2)) ? `${congText_20}Add <span>1 more</span> item to <span>25% off</span>` : `${congText_25}Click on containue Buton and make checkout.` ;
       
     } else {
