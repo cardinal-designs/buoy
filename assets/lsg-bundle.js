@@ -937,6 +937,12 @@ if (document.addEventListener) {
     false);
 }
 
+document.querySelectorAll('[data-bundle-builder-selected-variant-id]').forEach(function(product){
+  product.addEventListener('click',() => {
+    if(product.classList.contains('active')) return;
+    product.cosest('.lsg-bundle-summary-block--wrapper ').querySelector('.mobile-toggle-btn--wrapper').click();
+  });
+});
 document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]').forEach(function(removeButton){
     removeButton.addEventListener('click', function(e){
         e.preventDefault();
@@ -950,6 +956,8 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
         bundleProductDecrement.click();
     });
 });
+
+
 
 document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   button.addEventListener('click',function(e) {
