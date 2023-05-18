@@ -299,6 +299,7 @@ function checkoutEnableValidation(trigger) {
       button.disabled = true;
     }
     button.onclick = () =>{
+      console.log('hiii')
       bundleBlock.classList.toggle('make-add-to-cart-action');
     }
   });
