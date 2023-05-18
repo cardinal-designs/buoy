@@ -515,11 +515,13 @@ button:not([disabled]) {
 }
 
 .lsg-bundle-interval-select,
-.make-add-to-cart-action .lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label]{
+.make-add-to-cart-action .lsg-bundle-summary-block .bundle-actions--wrapper label[data-add-more-label],
+.lsg-bundle-sub-atc {
   display: none;
 }
 
-.lsg-bundle-block.bundle-checkout-enabled.make-add-to-cart-action .lsg-bundle-interval-select {
+.lsg-bundle-block.bundle-checkout-enabled.make-add-to-cart-action .lsg-bundle-interval-select,
+.make-add-to-cart-action .lsg-bundle-sub-atc {
   display: block;
 }
 
