@@ -298,7 +298,7 @@ function checkoutEnableValidation(trigger) {
       button.classList.add('disabled');
       button.disabled = true;
     }
-    button.onclick = () =>{
+    button.onclick = () => {
       console.log('hiii')
       bundleBlock.classList.toggle('make-add-to-cart-action');
     }
