@@ -941,6 +941,10 @@ document.querySelectorAll('[data-bundle-builder-selected-variant-id]').forEach(f
   product.addEventListener('click',() => {
     if(product.classList.contains('active')) return;
     product.closest('.lsg-bundle-summary-block--wrapper ').querySelector('.mobile-toggle-btn--wrapper').click();
+    window.scrollTo({
+      top: (document.querySelector('.collection-groups__grid').offsetTop - document.querySelector('header-container').offsetHeight - 20),
+      behavior: "smooth",
+    });
   });
 });
 document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]').forEach(function(removeButton){
