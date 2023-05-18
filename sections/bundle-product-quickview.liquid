@@ -57,8 +57,6 @@
                 3x
               </div>
             {% endif %} 
-            {% assign imageName = media_alt | append:'.svg' %}
-            --{{ images[image] }}
             <div class="rotet_badge_svg">
               <img src="{{ media_alt | append:'.svg' | file_url }}"/>
             </div>
