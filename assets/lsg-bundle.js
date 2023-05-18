@@ -332,7 +332,7 @@ function checkoutEnableValidation(trigger) {
       bundleSubText.classList.remove('hidden');
     }else{
       addToCartButton.classList.remove('subscription-enabled');
-      bundleBlock.classList.remove('bundle-checkout-enabled');
+      bundleBlock.classList.remove('bundle-checkout-enabled','make-add-to-cart-action');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
       bundleSubText.classList.add('hidden');
