@@ -316,7 +316,10 @@ function checkoutEnableValidation(trigger) {
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
-      addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : "";
+      addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : 
+        (bundleQuantity == (bundleMin + 1)) ? "Congratulation You got <span>20% off</span><br />Add <span>2 more</span> item to <span>25% off</span>" : 
+        (bundleQuantity == (bundleMin + 2)) ? "Congratulation You got <span>20% off</span><br />Add <span>1 more</span> item to <span>25% off</span>" : "Congratulation You got <span>25% off</span><br />Click on containue Buton and make checkout." ;
+      
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
