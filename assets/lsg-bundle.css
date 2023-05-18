@@ -717,6 +717,10 @@ button:not([disabled]) {
   left: 74px;
 }
 
+.product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .Badge_Grid_Container .Badge_Grid_Item span.Badge_Grid p br {
+  display: none;
+}
+
 /* ADD BUNDLE BOX END */
 
 .bundle-products-and-actions--wrapper .bundle-selected-products--wrapper,
