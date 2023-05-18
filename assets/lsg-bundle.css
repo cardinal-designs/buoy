@@ -1188,7 +1188,7 @@ button:not([disabled]) {
 }
 
 
-[type="submit"].lsg-bundle-submit-button {
+[type="submit"].lsg-bundle-submit-button,
 .make-add-to-cart-action [type="button"].lsg-bundle-submit-button {
   display:none !important;
 }
