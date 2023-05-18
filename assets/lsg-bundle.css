@@ -1165,6 +1165,18 @@ button:not([disabled]) {
   cursor: pointer;
 }
 
+.has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inter,sans-serif;
+  font-size: 14px;
+  color: #1F2322;
+  margin-right: 10px;
+}
+
 @media (min-width: 1201px) {
 
   .lsg-bundle-summary-block .bundle-selected-products--wrapper:before {
@@ -1564,18 +1576,6 @@ button:not([disabled]) {
     margin-bottom: 8px;
     font-family: inter,sans-serif;
     color: #1F2322;
-  }
-
-  .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: inter,sans-serif;
-    font-size: 14px;
-    color: #1F2322;
-    margin-right: 10px;
   }
 
   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .min-info {
