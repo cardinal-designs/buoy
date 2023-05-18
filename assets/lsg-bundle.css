@@ -1809,3 +1809,11 @@ button:not([disabled]) {
   }
    
 }
+
+@media (max-width: 479px) {
+  
+  .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .Badge_Grid_Container .Badge_Grid_Item {
+    width: 100%;
+  }
+  
+}
