@@ -1020,7 +1020,7 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
     })
 });
 
-document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
+document.querySelectorAll('[type="submit"][data-lsg-bundle-atc]').forEach((bundleATC) => {
     bundleATC.addEventListener('click', function(e){
         e.preventDefault();
         addToCart(e.currentTarget);
