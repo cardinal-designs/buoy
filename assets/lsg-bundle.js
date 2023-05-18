@@ -315,13 +315,14 @@ function checkoutEnableValidation(trigger) {
     const checkPurchaseType = bundleBlock.querySelector('.lsg-bundle-interval-select-inner [type="radio"]:checked'),
           congText_20 = (checkPurchaseType.value == "sub") ? "Congratulation You got <span>20% off</span><br />" : "",
           congText_25 = (checkPurchaseType.value == "sub") ? "Congratulation You got <span>25% off</span><br />" : "";
+    console.log(checkPurchaseType.value)
     
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
       addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : 
         (bundleQuantity == (bundleMin + 1)) ? "Add <span>2 more</span> item to <span>25% off</span>" : 
-        (bundleQuantity == (bundleMin + 2)) ? ${congText_20}`Add <span>1 more</span> item to <span>25% off</span>` : `${congText_25}Click on containue Buton and make checkout.` ;
+        (bundleQuantity == (bundleMin + 2)) ? `${congText_20}Add <span>1 more</span> item to <span>25% off</span>` : `${congText_25}Click on containue Buton and make checkout.` ;
       
     } else {
       addToCartButton.classList.add('disabled');
