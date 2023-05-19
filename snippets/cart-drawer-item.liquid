@@ -91,7 +91,6 @@
         {%- endfor -%}
       </div>
       <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-      {{ item | json }}
         {% if item.selling_plan_allocation.selling_plan %}
           {% render 'icon-calendar' %} 
           {{ item.selling_plan_allocation.selling_plan.options[0].value }} :
