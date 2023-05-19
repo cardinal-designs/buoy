@@ -97,7 +97,7 @@
         {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
             One-Time Purchase: 
         {% endif %}
-          {{ item.product.variant_title| json }}
+          {{ item.variant.title| json }}
         {% if item.variant.metafields.custom.servings != blank %}
           {{ item.selling_plan_allocation.selling_plan.name }} - {{ item.variant.metafields.custom.servings }}
         {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
