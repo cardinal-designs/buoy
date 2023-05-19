@@ -98,7 +98,9 @@
             One-Time Purchase: 
         {% endif %}
 
-        {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+        {% if item.variant.metafields.custom.servings != blank %}
+          {{ item.variant.metafields.custom.servings }}
+        {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
           3 Bottles—120 servings
         {% else %}
           {{ item.selling_plan_allocation.selling_plan.name }}
