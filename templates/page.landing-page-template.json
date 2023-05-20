@@ -66,25 +66,8 @@
         "add_bottom_border": false
       }
     },
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
-      "type": "custom-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": true,
-        "free_shipping_text": "Free Shipping  |  Try Risk Free",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
-    },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
       "type": "product-slider-2",
-      "disabled": true,
       "blocks": {
         "915598b8-73ba-4440-9c78-70b475eb492a": {
           "type": "block",
@@ -122,15 +105,32 @@
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
       "settings": {
-        "title": "Meet the Drops",
+        "title": "<strong>The new way to hydrate<\/strong>",
         "text": "Add electrolytes, 87 ionic trace minerals, vitamins and antioxidants to any beverage.",
         "shop_all_label": "Shop All",
         "shop_all_link": "shopify:\/\/collections\/all",
         "promo_link_text": "",
         "promo_link": "",
         "background": "bg_color",
-        "add_top_border": false,
+        "add_top_border": true,
         "add_bottom_border": false
+      }
+    },
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
+      "type": "custom-featured-product",
+      "disabled": true,
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": true,
+        "free_shipping_text": "Free Shipping  |  Try Risk Free",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
@@ -982,8 +982,8 @@
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "304f34df-6587-4eb2-a832-96b49eef9918",
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
