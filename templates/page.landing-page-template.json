@@ -240,6 +240,50 @@
         "background": "bottom"
       }
     },
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
+      "type": "pr-slider",
+      "blocks": {
+        "20f2efcc-4640-43b7-9239-3abd290c09ca": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
+            "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
+          }
+        },
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
+            "text": "“Best electrolytes for daily use\""
+          }
+        },
+        "70b64ff0-82c1-4a54-8203-afe718ed3640": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
+            "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
+          }
+        },
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Quality_Edit_logo_2x_d3a1fa36-558e-4e9c-a4d2-6b7e536eba68.png",
+            "text": "“Newer brands are earning cachet and consumer attention via select…”"
+          }
+        }
+      },
+      "block_order": [
+        "20f2efcc-4640-43b7-9239-3abd290c09ca",
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80",
+        "70b64ff0-82c1-4a54-8203-afe718ed3640",
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3"
+      ],
+      "settings": {
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
       "type": "title-text",
       "settings": {
@@ -274,14 +318,14 @@
         "2a6bd8e3-7b04-400d-a28b-a3a907955de4": {
           "type": "block",
           "settings": {
-            "title": "Sports Drinks 👎",
+            "title": "Sports Drink 👎",
             "text": "You lose electrolytes from basically existing. Even if you’re drinking the recommended half-gallon of water every day, you need electrolytes to make the most of the water you’re intaking."
           }
         },
         "7d0679b9-e537-4027-af9f-ddebb9b41e54": {
           "type": "block",
           "settings": {
-            "title": "Electrolyte Drinks 👍",
+            "title": "Electrolyte Drink 👍",
             "text": "Buoy lets you make your own electrolyte drink in just a squeeze"
           }
         }
@@ -294,6 +338,56 @@
         "title": "<strong>Which is better?<\/strong><br><span class=\"medium\">Electrolyte Drinks<\/span> <i>vs. <\/i><span class=\"medium\">Sports Drinks<\/span>",
         "link_text": "Shop Now",
         "link": "",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "blocks": {
+        "b46d22a2-dc4c-4952-920e-df027e14433e": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Salt Source",
+            "text": "Hand harvested, seawater electrolytes from protected marine sea salt in the South of France. Preserved in their naturally-occurring, balanced ratios for deep hydration your cells crave.",
+            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+          }
+        },
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Principle Electrolytes",
+            "text": "87 ionically charged trace minerals and biological elements from the deep ocean that revitalize, restore and rebuild at the cellular level.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+          }
+        },
+        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Trace Minerals",
+            "text": "Soothe the daily inflammation that depletes electrolyte and mineral levels faster than your body naturally would with plant-powered antioxidants.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+          }
+        },
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
+          "type": "dropdown",
+          "settings": {
+            "title": "B Vitamins",
+            "text": "A curated blend of plant-powered B vitamins that support routine electrolyte function and facilitate energy production.",
+            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+          }
+        }
+      },
+      "block_order": [
+        "b46d22a2-dc4c-4952-920e-df027e14433e",
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
+        "07c66f31-6bda-4e4c-9097-b51e4c178122",
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
+      ],
+      "settings": {
+        "title": "<strong>Key Ingredients<\/strong> <br><i>to consider<\/i>",
+        "subtext": "What to look for in an electrolyte drink",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bg_color"
@@ -685,56 +779,6 @@
         "background": "bg_color"
       }
     },
-    "50df382c-255c-4272-b876-eca398cca73a": {
-      "type": "dropdowns",
-      "blocks": {
-        "b46d22a2-dc4c-4952-920e-df027e14433e": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Seawater Electrolytes",
-            "text": "Hand harvested, seawater electrolytes from protected marine sea salt in the South of France. Preserved in their naturally-occurring, balanced ratios for deep hydration your cells crave.",
-            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
-          }
-        },
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Deep Ocean Trace Minerals",
-            "text": "87 ionically charged trace minerals and biological elements from the deep ocean that revitalize, restore and rebuild at the cellular level.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
-          }
-        },
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
-          "type": "dropdown",
-          "settings": {
-            "title": "B Vitamins",
-            "text": "A curated blend of plant-powered B vitamins that support routine electrolyte function and facilitate energy production.",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
-          }
-        },
-        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Antioxidants",
-            "text": "Soothe the daily inflammation that depletes electrolyte and mineral levels faster than your body naturally would with plant-powered antioxidants.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
-          }
-        }
-      },
-      "block_order": [
-        "b46d22a2-dc4c-4952-920e-df027e14433e",
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b",
-        "07c66f31-6bda-4e4c-9097-b51e4c178122"
-      ],
-      "settings": {
-        "title": "Ingredients your body can actually absorb",
-        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
-    },
     "517df923-ac36-43bd-9898-b875c67e1be2": {
       "type": "profile-table",
       "settings": {
@@ -756,50 +800,6 @@
         "subtext": "Add a fast-acting electrolyte and mineral replenishment to all your favorite drinks.",
         "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
         "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
-      }
-    },
-    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
-      "type": "pr-slider",
-      "blocks": {
-        "20f2efcc-4640-43b7-9239-3abd290c09ca": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
-            "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
-          }
-        },
-        "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
-            "text": "“Best electrolytes for daily use\""
-          }
-        },
-        "70b64ff0-82c1-4a54-8203-afe718ed3640": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
-            "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
-          }
-        },
-        "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Quality_Edit_logo_2x_d3a1fa36-558e-4e9c-a4d2-6b7e536eba68.png",
-            "text": "“Newer brands are earning cachet and consumer attention via select…”"
-          }
-        }
-      },
-      "block_order": [
-        "20f2efcc-4640-43b7-9239-3abd290c09ca",
-        "1a5f176f-d949-477e-a735-f63ba2c6bd80",
-        "70b64ff0-82c1-4a54-8203-afe718ed3640",
-        "3a944d2e-08e6-4382-b541-79f7dbb279f3"
-      ],
-      "settings": {
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "none"
       }
     },
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
@@ -986,9 +986,11 @@
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
+    "50df382c-255c-4272-b876-eca398cca73a",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "31e36676-5821-47f9-a328-6c162b259d29",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
@@ -998,10 +1000,8 @@
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
-    "50df382c-255c-4272-b876-eca398cca73a",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
-    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "19f84cc7-e91f-487d-a62c-2e8944758d96"
