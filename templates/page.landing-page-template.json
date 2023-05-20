@@ -803,7 +803,7 @@
           "type": "faq_item",
           "settings": {
             "title": "What is your return policy?",
-            "answer": ""
+            "answer": "Buoy offers a 30 day money back guarantee on all of our products purchased through our website so you can try it risk free in your routine to see if it's a good fit.<br><br>If it's not for you, get a full refund no questions asked."
           }
         }
       },
@@ -831,9 +831,9 @@
       "settings": {
         "title": "Ask us the tough ones",
         "text": "Our exceptional team of healthcare professionals and scientists have answers.",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "bg_color"
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
       }
     },
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa": {
@@ -847,8 +847,60 @@
         "background": "none"
       }
     },
+    "97b52c19-9232-4b33-a84e-be1d55a585da": {
+      "type": "trusted-reviews-2",
+      "blocks": {
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
+            "title": "Dr. Lianli Li, Ph.D.",
+            "title_person": "President",
+            "title_location": "President Gateway Pharmaceutical, St. Louis, Missouri",
+            "content": "“Most of us are living our lives under the optimal hydration level. Buoy gives consumers the proper hydration they need, without having to reach for a sugary, artificial sports drink.”"
+          }
+        },
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
+            "title": "Martha Rosenau",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "“My patients with gastrointestinal disease are truly benefiting from Buoy. They are feeling more vibrant and energetic with this amazing blend of electrolytes. Since it’s free of both sugars and zero-calorie sweetener, it’s the perfect way to rehydrate without further aggravating the gastrointestinal tract. Thank you for creating a dietitian’s dream - the perfectly balanced electrolyte replenisher, free of any form of sweetener.”"
+          }
+        },
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
+            "title": "Melissa Nohr, JD, BCHHP, CBNP",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "“I was diagnosed with POTS a year ago and they make a point to help make daily hydration easier and more accessible to those with chronic illnesses. After using Buoy for one year as a customer, I asked to personally invest in the company.”"
+          }
+        }
+      },
+      "block_order": [
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f",
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe",
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5"
+      ],
+      "settings": {
+        "text": "BOARD OF HEALTH PROFESSIONALS",
+        "head-title": "<span class=\"medium no-italic\">Trust the<\/span> Experts",
+        "sub-text": "Consisting of scientists, researchers, pharmaceutical experts, and health professionals, our board of health professionals continue to challenge and uphold us and our products to the highest standards.",
+        "button_label": "Customer Reviews",
+        "button_link": "#shopify-section-template--18635850055980__16390276435f9f6aac",
+        "background": "bg_color",
+        "background_color": "#f8f1eb",
+        "add_top_border": true,
+        "add_bottom_border": true
+      }
+    },
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6": {
       "type": "squeezy-section",
+      "disabled": true,
       "blocks": {
         "11f7c914-2ada-4f38-8a2a-49181ebfe76e": {
           "type": "point",
@@ -895,6 +947,7 @@
     },
     "4f22c796-1d64-4f0e-869e-2c8eb4574863": {
       "type": "image-text-section",
+      "disabled": true,
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
@@ -912,6 +965,7 @@
     },
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
       "type": "give-back-blocks",
+      "disabled": true,
       "blocks": {
         "db928337-6fc0-4c06-805b-d823af2f4c1b": {
           "type": "block",
@@ -961,6 +1015,7 @@
     },
     "271bbc88-ee3e-4299-aee5-2c393d4bf363": {
       "type": "pee-club-value-props",
+      "disabled": true,
       "blocks": {
         "5a2a67c2-83da-4780-bba7-ee2e6e76d21b": {
           "type": "value_prop",
@@ -1022,6 +1077,7 @@
     },
     "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
       "type": "text-above",
+      "disabled": true,
       "settings": {
         "emoji": "💗",
         "suptitle": "Giving back, order after order",
@@ -1029,57 +1085,6 @@
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
-      }
-    },
-    "97b52c19-9232-4b33-a84e-be1d55a585da": {
-      "type": "trusted-reviews-2",
-      "blocks": {
-        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
-            "title": "Dr. Lianli Li, Ph.D.",
-            "title_person": "President",
-            "title_location": "President Gateway Pharmaceutical, St. Louis, Missouri",
-            "content": "“Most of us are living our lives under the optimal hydration level. Buoy gives consumers the proper hydration they need, without having to reach for a sugary, artificial sports drink.”"
-          }
-        },
-        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
-            "title": "Martha Rosenau",
-            "title_person": "Title",
-            "title_location": "Location",
-            "content": "“My patients with gastrointestinal disease are truly benefiting from Buoy. They are feeling more vibrant and energetic with this amazing blend of electrolytes. Since it’s free of both sugars and zero-calorie sweetener, it’s the perfect way to rehydrate without further aggravating the gastrointestinal tract. Thank you for creating a dietitian’s dream - the perfectly balanced electrolyte replenisher, free of any form of sweetener.”"
-          }
-        },
-        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
-            "title": "Melissa Nohr, JD, BCHHP, CBNP",
-            "title_person": "Title",
-            "title_location": "Location",
-            "content": "“I was diagnosed with POTS a year ago and they make a point to help make daily hydration easier and more accessible to those with chronic illnesses. After using Buoy for one year as a customer, I asked to personally invest in the company.”"
-          }
-        }
-      },
-      "block_order": [
-        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f",
-        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe",
-        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5"
-      ],
-      "settings": {
-        "text": "BOARD OF HEALTH PROFESSIONALS",
-        "head-title": "<span class=\"medium no-italic\">Trust the<\/span> Experts",
-        "sub-text": "Consisting of scientists, researchers, pharmaceutical experts, and health professionals, our board of health professionals continue to challenge and uphold us and our products to the highest standards.",
-        "button_label": "Customer Reviews",
-        "button_link": "#shopify-section-template--18635850055980__16390276435f9f6aac",
-        "background": "bg_color",
-        "background_color": "#f8f1eb",
-        "add_top_border": true,
-        "add_bottom_border": true
       }
     }
   },
@@ -1103,11 +1108,11 @@
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
+    "97b52c19-9232-4b33-a84e-be1d55a585da",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
-    "97b52c19-9232-4b33-a84e-be1d55a585da"
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953"
   ]
 }
