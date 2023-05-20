@@ -71,17 +71,6 @@
         "add_bottom_border": true
       }
     },
-    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
-      "type": "title-text",
-      "settings": {
-        "title": "Best electrolytes",
-        "italic_title": "for leg cramps",
-        "text": "Say goodbye to leg cramps for good with Buoy's natural electrolyte drops that enhance any drink with fast-acting hydration.",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
-    },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
       "type": "press-logos",
       "blocks": {
@@ -114,23 +103,6 @@
         "enable_marquee": false,
         "add_top_border": false,
         "add_bottom_border": false
-      }
-    },
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
-      "type": "custom-featured-product",
-      "disabled": true,
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": true,
-        "free_shipping_text": "Free Shipping  |  Try Risk Free",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
       }
     },
     "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
@@ -175,10 +147,38 @@
         "video_url": "",
         "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
         "title": "<strong>The importance of electrolytes<\/strong><br>in active lifestyles",
-        "text_bottom": "Losing just 2% of fluids and key electrolytes can significantly impair physical performance. When you exercise, you lose 6 to 10%. Restoring these electrolytes and fluids can improve performance and may even boost it above your baseline.",
+        "text_bottom": "Losing just 2% of fluids and key electrolytes can significantly impair physical performance. When you exercise, you lose 6 to 10%. Restoring these electrolytes and fluids can improve performance and may even boost it above your baseline.<br><br><strong>Here's how Buoy helps 👇<\/strong>",
         "background": "",
-        "add_top_border": false,
+        "add_top_border": true,
         "add_bottom_border": false
+      }
+    },
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
+      "type": "title-text",
+      "settings": {
+        "title": "Best electrolytes",
+        "italic_title": "for leg cramps",
+        "text": "Say goodbye to leg cramps for good with Buoy's natural electrolyte drops that enhance any drink with fast-acting hydration.",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
+      "type": "custom-featured-product",
+      "disabled": true,
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": true,
+        "free_shipping_text": "Free Shipping  |  Try Risk Free",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40": {
@@ -981,10 +981,10 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "304f34df-6587-4eb2-a832-96b49eef9918",
-    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "31e36676-5821-47f9-a328-6c162b259d29",
