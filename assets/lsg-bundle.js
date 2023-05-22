@@ -655,6 +655,7 @@ function updateBundlePrice(trigger) {
 
 console.log(totalAddedQty);
   if(productList && interval == 'sub' && totalAddedQty > bundleMin) {
+    console.log('hiiii')
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
     // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
