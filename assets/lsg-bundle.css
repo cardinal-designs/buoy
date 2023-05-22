@@ -124,10 +124,11 @@ body.open-bundle-info {
   margin: 0 0 10px;
 }
 
-.lsg-bundle-product-set-list .collection-groups__item p:not(.card-information__text) {
+.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-information p:not(.card-information__text) {
   margin: 10px 0 12px;
   color: #545759;
   font-size: 12px;
+  font-weight: 300;
   line-height: 1.750em;
 }
 
@@ -1512,7 +1513,7 @@ button:not([disabled]) {
     margin: 0 0 8px;
   }
   
-  .lsg-bundle-product-set-list .collection-groups__item p:not(.card-information__text) {
+  .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-information p:not(.card-information__text) {
     margin: 8px 0 14px;
     font-size: 10px;
   }
