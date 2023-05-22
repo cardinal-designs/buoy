@@ -383,7 +383,7 @@ function addToCart(trigger) {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
           });
 
-          console.log(sellingId,sellingSelectElement,Array.from(sellingSelectElement.options))
+          console.log(sellingId,sellingSelectElement,Array.from(sellingSelectElement.options),discount)
           //[0].dataset.sellingId
           
           let cartItem = {
