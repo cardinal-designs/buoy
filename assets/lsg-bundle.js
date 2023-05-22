@@ -665,7 +665,7 @@ function updateBundlePrice(trigger) {
       let productId = productGrid.dataset.productId;
       let discount = (totalQty <= bundleMin) ? 0 : (totalQty == bundleMax) ? 25 : 20;
       let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
-          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
+          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][data-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
       subSubtotal += (parseInt(price * qty));
     });
     
