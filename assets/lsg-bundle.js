@@ -377,14 +377,12 @@ function addToCart(trigger) {
     bundleProductListInputs.forEach(function(bundleProductInput){
         // bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
-          let sellingId = null;
-        
-          if(bundleProductQuantity >= (parseInt(bundleMin) + 1)){
-            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-          }
-          if(bundleProductQuantity == parseInt(bundleMax)){
-            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-          }
+          let sellingSelectElement = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"]`);
+          let discount = (bundleProductQuantity <= (parseInt(bundleMin)) ? 0 : (bundleProductQuantity == parseInt(bundleMax) ? 25 : 20;
+          let sellingId = Array.from(sellingSelectElement.options).filter(option => {
+            return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
+          })[0].dataset.sellingId;
+          
           let cartItem = {
               id: bundleProductInput.dataset.product,
               quantity: parseInt(bundleProductInput.value),
@@ -392,7 +390,7 @@ function addToCart(trigger) {
                   "_bundle_id": bundleID,
               },
           };
-          console.log(interval);
+          // console.log(interval);
           if (interval == 'sub') {
               if(sellingId) cartItem["selling_plan"] = sellingId;
           }
