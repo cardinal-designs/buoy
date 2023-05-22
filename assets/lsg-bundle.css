@@ -1231,13 +1231,16 @@ button:not([disabled]) {
   cursor:pointer;
 }
 
-
 .lsg-bundle-summary-block--wrapper .icon.icon-caret {
   transform: rotate(180deg);
 }
 
 .lsg-bundle-summary-block--wrapper.open .icon.icon-caret {
   transform: rotate(0deg);
+}
+
+.discount-badge:empty {
+  display: none;
 }
 
 @media (min-width: 1201px) {
