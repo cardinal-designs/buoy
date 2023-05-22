@@ -731,12 +731,10 @@ function updateBundlePrice(trigger) {
       el.innerHTML = currencyFormatter.format(subSubtotal / 100);
   });
   curPriceEls.forEach(function(el){
-      if (interval == 'otp' && totalAddedQty <= bundleMin) {
-        console.log('hooo')
+      if (interval == 'otp') {
           el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
       } else {
-        console.log('hiii')
-          el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
+          el.innerHTML = (totalAddedQty <= bundleMin) ? currencyFormatter.format(otpSubtotal / 100) :`<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
       }
   });
 }
