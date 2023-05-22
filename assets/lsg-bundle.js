@@ -615,6 +615,9 @@ function updateBundlePrice(trigger) {
   const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
+  const totalAddedQty = Array.from(document.querySelectorAll('.lsg-bundle-product-select-quantity-input')).map(e => {
+    return parseInt(e.value);
+  }).reduce((a,b) => a + b);
   
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
@@ -651,7 +654,7 @@ function updateBundlePrice(trigger) {
   }
 
 
-  if(productList && interval == 'sub') {
+  if(productList && interval == 'sub' && totalAddedQty > bundleMin) {
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
     // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
