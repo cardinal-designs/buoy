@@ -335,7 +335,7 @@ function checkoutEnableValidation(trigger) {
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <b>${quantityToAdd} more</b> item to continue` : `Add <b>${quantityToAdd} more</b> items to continue`;
     }
 
-    if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.add('subscription-enabled');
       bundleBlock.classList.add('bundle-checkout-enabled');
       addToCartText.classList.remove('hidden');
