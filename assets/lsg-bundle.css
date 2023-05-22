@@ -1660,9 +1660,10 @@ button:not([disabled]) {
   }
   
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
-    height: 100%;
+    min-height: 80vh;
     padding: 25px 18px 18px 18px;
     display: block;
+    overflow-y: auto;
   }
 
   .product-quick-view-slide-out--wrapper .product-actions--wrapper {
