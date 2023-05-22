@@ -615,9 +615,11 @@ function updateBundlePrice(trigger) {
   const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-  const totalAddedQty = Array.from(document.querySelectorAll('.lsg-bundle-product-select-quantity-input')).map(e => {
-    return parseInt(e.value);
-  }).reduce((a,b) => a + b);
+  let totalQty = Array.from(productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).map(input => {
+      return parseInt(input.value)
+    }).reduce(function(a, b){
+      return a + b;
+    });
   
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
@@ -654,21 +656,13 @@ function updateBundlePrice(trigger) {
   }
 
   if(productList && interval == 'sub') {
-    console.log('hiiii')
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
     // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
-
-    let totalQty = Array.from(productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).map(input => {
-      return parseInt(input.value)
-    }).reduce(function(a, b){
-      return a + b;
-    });
     
     productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
       let productId = productGrid.dataset.productId;
-      let discount = 20;
-      if(totalQty == bundleMax) discount = 25
+      let discount = (totalQty <= bundleMin) ? 0 : (totalQty == bundleMax) ? 25 : 20;
       let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
           price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
       subSubtotal += (parseInt(price * qty));
@@ -734,7 +728,7 @@ function updateBundlePrice(trigger) {
       if (interval == 'otp') {
           el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
       } else {
-          el.innerHTML = (totalAddedQty <= bundleMin) ? currencyFormatter.format(otpSubtotal / 100) :`<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
+          el.innerHTML = (totalQty <= bundleMin) ? currencyFormatter.format(otpSubtotal / 100) :`<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
       }
   });
 }
