@@ -211,6 +211,7 @@ button:not([disabled]) {
   display:block;
   background: #FFF;
   z-index: 8;
+  overflow-y: auto;
 }
 
 .has-selected-product .lsg-bundle-summary-block {
