@@ -194,8 +194,10 @@ button:not([disabled]) {
 }
 
 .has-selected-product .lsg-bundle-summary-block--wrapper{
-  position: sticky;
+  position: fixed;
   box-shadow: 0px -10px 20px #00000014;
+  left:0;
+  right:0;
   bottom: 0;
   display:block;
   background: #FFF;
