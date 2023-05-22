@@ -283,7 +283,7 @@ function checkoutEnableValidation(trigger) {
     
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
-    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
+    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax + 3)){
       titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
     }else if (bundleQuantity >= (bundleMax + 3)){
       titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
