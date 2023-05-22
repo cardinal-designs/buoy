@@ -1504,6 +1504,15 @@ button:not([disabled]) {
     backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.4);
   }
+
+  .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
+    margin: 0 0 8px;
+  }
+  
+  .lsg-bundle-product-set-list .collection-groups__item p:not(.card-information__text) {
+    margin: 8px 0 14px;
+    font-size: 10px;
+  }
   
   .has-selected-product .lsg-bundle-summary-block:not(.open) .min-info .discount-badge {
     background: transparent;
