@@ -285,7 +285,7 @@ function checkoutEnableValidation(trigger) {
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
     }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
       titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
-    }else if (bundleQuantity == (bundleMax)){
+    }else if (bundleQuantity >= (bundleMax + 3)){
       titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
