@@ -281,7 +281,7 @@ function checkoutEnableValidation(trigger) {
       wrapper.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
     }
 
-    titleDiscountBadge.innerHTML = (bundleQuantity >= (bundleMin + 3) ? `You’ve Reached 25% Off` :  `You’ve Reached 20% Off`;
+    titleDiscountBadge.innerHTML = (bundleQuantity >= (bundleMin + 3)) ? `You’ve Reached 25% Off` :  `You’ve Reached 20% Off`;
     
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
       minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";

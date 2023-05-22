@@ -1157,7 +1157,7 @@ button:not([disabled]) {
   height: auto;
   position: absolute;
   right: 18px;
-  top: 12px;
+  top: 18px;
 }
 
 .mobile-toggle-btn--wrapper .icon--wrapper svg {
@@ -1682,10 +1682,6 @@ button:not([disabled]) {
   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper {
     padding: 17px 36px 17px 18px;
     border-top: 1px solid #1F2322;
-  }
-
-  .mobile-toggle-btn--wrapper .icon--wrapper {
-    top: 18px;
   }
 
   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .lsg-bundle-buybox-product-name {
