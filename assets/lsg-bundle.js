@@ -382,8 +382,6 @@ function addToCart(trigger) {
           let sellingId = Array.from(sellingSelectElement.options).filter(option => {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
           })[0].dataset.sellingId;
-
-          console.log(sellingId,sellingSelectElement,Array.from(sellingSelectElement.options),discount)
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
@@ -422,14 +420,12 @@ function addToCart(trigger) {
     //     return false;
     // }
 
-  console.log('hiiii')
 
   let drawer = document.querySelector('cart-drawer');
 
   bundleCart.sections = drawer.getSectionsToRender().map((section) => section.section);
   bundleCart.sections_url = window.location.pathname
 
-  return;
     fetch('/cart/add.js', {
         method: 'POST',
         headers: {
