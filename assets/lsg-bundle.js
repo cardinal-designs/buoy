@@ -292,7 +292,7 @@ function checkoutEnableValidation(trigger) {
     }
   });
 
-  bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity == bundleMax) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
+  bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity >= (bundleMin + 3)) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
 
   ContainueButtons.forEach(function(button) {
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
