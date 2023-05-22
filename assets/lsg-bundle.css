@@ -121,6 +121,13 @@ body.open-bundle-info {
 .lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
   text-align: left;
   text-transform: capitalize;
+  margin: 0 0 10px;
+}
+
+.lsg-bundle-product-set-list .collection-groups__item p:not(.card-information__text) {
+  margin: 10px 0 12px;
+  color: #545759;
+  font-size: 12px;
 }
 
 .js-added .button.product-qty--wrapper{
@@ -224,10 +231,6 @@ button:not([disabled]) {
   width: 56%;
   padding: 0 35px 0 0;
   position: relative;
-}
-
-.lsg-bundle-product-set-list .collection-groups__item .collection-groups__grid .card-wrapper .card-information .card-information__title {
-  text-align: left;
 }
 
 .lsg-bundle-product-select-title {
