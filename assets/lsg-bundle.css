@@ -1684,6 +1684,10 @@ button:not([disabled]) {
     border-top: 1px solid #1F2322;
   }
 
+  .mobile-toggle-btn--wrapper .icon--wrapper {
+    top: 18px;
+  }
+
   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .lsg-bundle-buybox-product-name {
     margin: 0 !important;
     font-size: 14px;
