@@ -192,7 +192,7 @@
                   {% for productSub in collections.bundle.products %}
                     {% for variantSub in productSub.variants %}
                       {% if variantSub.id == appVarirant %}
-                        {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank %}
+                        {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank and variant.price > 0 %}
                           {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
                             {% continue %}
                           {% endif %}
