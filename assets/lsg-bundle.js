@@ -385,7 +385,6 @@ function addToCart(trigger) {
 
           console.log(sellingId)
           //[0].dataset.sellingId
-          return;
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
@@ -431,6 +430,7 @@ function addToCart(trigger) {
   bundleCart.sections = drawer.getSectionsToRender().map((section) => section.section);
   bundleCart.sections_url = window.location.pathname
 
+  return;
     fetch('/cart/add.js', {
         method: 'POST',
         headers: {
