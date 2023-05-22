@@ -218,7 +218,9 @@ document.querySelector('.page-blury-overlay').onclick = function() {
 
   function bundle_box() {
     var accord_height = jQuery('.has-selected-product .lsg-bundle-summary-block--wrapper').height(); 
-    jQuery(".has-selected-product .lsg-bundle-summary-block--wrapper").css('height', accord_height);    
+    var toggle_height = jQuery('.has-selected-product .lsg-bundle-summary-block--wrapper.open .mobile-toggle-btn--wrapper').height(); 
+    var temp = accord_height - toggle_height;
+    jQuery(".has-selected-product .lsg-bundle-summary-block--wrapper").css('height', temp);    
   }
   bundle_box();
   jQuery(window).on('load resize orientationchange', bundle_box);
