@@ -202,8 +202,6 @@ if(ratingCount){
   document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.innerText.replace('out of', '/'); 
 }
 
-
-
 let myInterval = setInterval(timer, 1000);
 function timer() {
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
@@ -217,3 +215,12 @@ document.querySelector('.page-blury-overlay').onclick = function() {
   if(document.querySelector('.mobile-toggle-btn--wrapper')) document.querySelector('.mobile-toggle-btn--wrapper').click();
   document.body.classList.remove('overflow-hidden');
 }
+
+  function bundle_box() {
+    var accord_height = jQuery('.has-selected-product .lsg-bundle-summary-block--wrapper').height(); 
+    jQuery(".has-selected-product .lsg-bundle-summary-block--wrapper").css('min-height', accord_height);    
+  }
+  bundle_box();
+  jQuery(window).on('load resize orientationchange', bundle_box);
+  
+
