@@ -653,7 +653,7 @@ function updateBundlePrice(trigger) {
   if(productList && interval == 'otp') {
   }
 
-
+console.log(totalAddedQty);
   if(productList && interval == 'sub' && totalAddedQty > bundleMin) {
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
