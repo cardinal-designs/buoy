@@ -653,8 +653,7 @@ function updateBundlePrice(trigger) {
   if(productList && interval == 'otp') {
   }
 
-console.log(totalAddedQty);
-  if(productList && interval == 'sub' && totalAddedQty > bundleMin) {
+  if(productList && interval == 'sub') {
     console.log('hiiii')
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
@@ -732,7 +731,7 @@ console.log(totalAddedQty);
       el.innerHTML = currencyFormatter.format(subSubtotal / 100);
   });
   curPriceEls.forEach(function(el){
-      if (interval == 'otp') {
+      if (interval == 'otp' && totalAddedQty <= bundleMin) {
           el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
       } else {
           el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
