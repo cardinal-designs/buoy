@@ -658,6 +658,7 @@ function updateBundlePrice(trigger) {
     productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
       let productId = productGrid.dataset.productId;
       let discount = (totalQty <= bundleMin) ? 0 : (totalQty >= (bundleMin + 3)) ? 25 : 20;
+      console.log(discount);
       let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
           price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][data-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
       subSubtotal += (parseInt(price * qty));
