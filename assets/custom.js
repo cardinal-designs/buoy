@@ -218,7 +218,7 @@ document.querySelector('.page-blury-overlay').onclick = function() {
 
   function bundle_box() {
     var accord_height = jQuery('.has-selected-product .lsg-bundle-summary-block--wrapper').height(); 
-    jQuery(".has-selected-product .lsg-bundle-summary-block--wrapper").css('min-height', accord_height);    
+    jQuery(".has-selected-product .lsg-bundle-summary-block--wrapper").css('height', accord_height);    
   }
   bundle_box();
   jQuery(window).on('load resize orientationchange', bundle_box);
