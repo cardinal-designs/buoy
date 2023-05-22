@@ -45,8 +45,10 @@ const updateSelectedProductGUI = (trigger) => {
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
+        bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
     } else {
         bundleBlock.classList.remove('has-selected-product');
+        bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('open');
     }
 
     const selectedProductsWrappers = bundleBlock.querySelectorAll('[data-bundle-builder-selected-products]');
