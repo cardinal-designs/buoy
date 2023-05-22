@@ -317,8 +317,8 @@ function checkoutEnableValidation(trigger) {
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
 
     const checkPurchaseType = bundleBlock.querySelector('.lsg-bundle-interval-select-inner [type="radio"]:checked'),
-          congText_20 = (checkPurchaseType.value == "sub") ? "Congratulation You got <span>20% off</span><br />" : "",
-          congText_25 = (checkPurchaseType.value == "sub") ? "Congratulation You got <span>25% off</span><br />" : "";
+          congText_20 = (checkPurchaseType.value == "sub") ? "Congratulation, you have <span>20% off.</span><br />" : "",
+          congText_25 = (checkPurchaseType.value == "sub") ? "Congratulation, you have <span>25% off.</span><br />" : "";
     console.log(checkPurchaseType.value)
     
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
