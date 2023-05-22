@@ -381,7 +381,11 @@ function addToCart(trigger) {
           let discount = (bundleProductQuantity <= parseInt(bundleMin)) ? 0 : (bundleProductQuantity == parseInt(bundleMax)) ? 25 : 20;
           let sellingId = Array.from(sellingSelectElement.options).filter(option => {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
-          })[0].dataset.sellingId;
+          });
+
+          console.log(sellingId)
+          //[0].dataset.sellingId
+          return;
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
