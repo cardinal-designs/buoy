@@ -46,9 +46,11 @@ const updateSelectedProductGUI = (trigger) => {
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
         bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
+        document.querySelector('.page-blury-overlay').classList.add('is-visible');
     } else {
         bundleBlock.classList.remove('has-selected-product');
         bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('open');
+      document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     }
 
     const selectedProductsWrappers = bundleBlock.querySelectorAll('[data-bundle-builder-selected-products]');
