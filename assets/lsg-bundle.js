@@ -655,6 +655,7 @@ function updateBundlePrice(trigger) {
       // const discountValue = frequency.dataset.discountValue;
     // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
     
+      console.log(totalQty)
     productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
       let productId = productGrid.dataset.productId;
       let discount = (totalQty <= bundleMin) ? 0 : (totalQty >= (bundleMin + 3)) ? 25 : 20;
