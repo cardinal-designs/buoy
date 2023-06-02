@@ -3,7 +3,7 @@
   {%- assign ex_frmpool_id = article.id | append: '"' | prepend: '"' -%}
 
 {%- assign ex_tags = "" | split: "," -%}
-{%- assign no_post_display = 3 -%}
+{%- assign no_post_display = 2 -%}
 
 {%- assign b_id = blog.id  -%}
 
@@ -64,17 +64,10 @@
       {%- endif -%}
       {%- endfor -%}
 
-      {%- assign t_flag = "false" -%}
-      {%- for tag in current_post_tags -%}
-      {%- if article.tags contains tag -%}
-      {%- assign t_flag = "true" -%}
-      {%- break -%}
+      {%- if flag == "true" -%}
+      {%- assign related_posts = related_posts | append:article.id | append : "," -%}
       {%- endif -%}
-      {%- endfor -%}
 
-      {%- if t_flag == "true"  or article_author ==  article.author or flag == "true" -%}
-      {%- assign related_posts = related_posts | append:article.id | append : ","-%}
-      {%- endif -%}
     
     {%- endunless -%}
     {%- endfor -%}
@@ -181,6 +174,109 @@
     {%- endfor -%}
     </ul>    {%- else -%}
 
+    
+      {%- assign all_articleids = "" -%}
+
+      {%- for blog in blog_handle_arr -%}
+      {%- assign blog_temp = blog -%}
+      {%- for article in blogs[blog_temp].articles -%}
+      {%- unless article.id == article_temp -%}
+      {%- assign all_articleids = all_articleids | append:article.id | append : "," -%}
+      {%- endunless -%}
+      {%- endfor -%}
+      {%- endfor -%}
+
+      {%- assign tsl = timestamp | slice : -1,1 | times:1 -%}
+
+      {%- assign rids = all_articleids | split: ',' -%}
+
+
+      {%- assign rindex = tsl -%}
+
+      {%- if tsl > rids.size or tsl < 0 -%}
+      {%- assign time_arr = timestamp | split: '' -%}
+      {%- for t in time_arr reversed -%}
+      {%- assign ti = t | times:1 -%}
+      {%- if ti < rids.size -%}
+      {%- assign rindex = forloop.index -%}
+      {%- break -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- endif -%}
+
+      {%- if rindex == rids.size -%}
+      {%- assign rindex = rindex | minus : 1-%}
+      {%- endif -%}
+
+      {%- assign articleids = '' -%}
+      {%- for rid in rids offset:rindex -%}
+      {%- assign articleids = articleids | append:rid | append : "," -%}
+      {%- endfor -%}
+
+      {%- assign rsize = articleids | split:","  -%}
+
+      {%- if rsize.size < no_post_display -%}
+      {%- for rid in rids -%}
+      {%- unless articleids contains rid -%}
+      {%- assign articleids = articleids | append:rid | append : "," -%}
+      {%- endunless -%}
+      {%- endfor -%}
+      {%- endif -%}
+
+      {%- assign rsize = articleids | size | minus:1 -%}
+      {%- assign articleids = articleids | slice: 0, rsize | split:"," -%}
+
+      <h3>Related Posts</h3>      <ul>      {%- assign count = 0 -%}
+      {%- for aid in articleids -%}
+      {%- assign rflag = "false" -%}
+      {%- for blog in blog_handle_arr -%}
+      {%- assign blog_temp = blog -%}
+
+      {%- for article in blogs[blog_temp].articles -%}
+      {%- if count == no_post_display -%}
+      {%- break -%}
+      {%- endif -%}
+      {%- if aid contains article.id -%}
+
+      {%- assign ex_frmpool_tags = "" | split: "," -%}
+      {%- assign ex_frmpool_main_flag = "true" -%}
+      {%- for tag in ex_frmpool_tags -%}
+      {%- assign ex_frmpool_ex_tags_temp = tag | strip -%}
+      {%- if article.tags contains ex_frmpool_ex_tags_temp -%}
+      {%- assign ex_frmpool_main_flag = "false" -%}
+      {%- endif -%}
+      {%- endfor -%}
+
+      {%- if ex_frmpool_main_flag == "true" -%}
+
+      <li>              {%- if article.image -%}
+        <div class="rb_image_wrap">
+          <img class="rb_image" src="{{ article.image.src | img_url: '' }}" alt="{{ article.title }}" />
+        </div>
+        {%- else -%}
+        <div class="rb_no_image"></div>
+        {%- endif -%}
+      
+      <div class="rb_contents">
+        <h5 class="rb_title"><a href='{{ article.url }}'>{{ article.title }}</a></h5>
+
+                  {%- if article.content != "" -%}
+          <p>{{ article.content | strip_html | strip | truncate: 120 }}</p>
+          {%- endif -%}
+              </div>
+      </li>      {%- endif -%}
+
+      {%- assign rflag = "true" -%}
+      {%- assign count = count | plus:1 -%}
+      {%- break -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- if rflag == "true" -%}
+      {%- break -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- endfor -%}
+      </ul>
     
     {%- endif -%}
 
