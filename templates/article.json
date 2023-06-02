@@ -63,11 +63,28 @@
         "link_label": "Shop All",
         "link_link": "shopify:\/\/collections\/all"
       }
+    },
+    "1685743432e9021ecd": {
+      "type": "apps",
+      "blocks": {
+        "31c51858-6ec5-45de-81a1-f028d8e7f012": {
+          "type": "shopify:\/\/apps\/related-blog-posts-pro\/blocks\/app-block\/7e18cab2-c869-4042-bc07-288e9bb4e22d",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "31c51858-6ec5-45de-81a1-f028d8e7f012"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f",
-    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6"
+    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6",
+    "1685743432e9021ecd"
   ]
 }
