@@ -3,7 +3,7 @@
   {%- assign ex_frmpool_id = article.id | append: '"' | prepend: '"' -%}
 
 {%- assign ex_tags = "" | split: "," -%}
-{%- assign no_post_display = 2 -%}
+{%- assign no_post_display = 3 -%}
 
 {%- assign b_id = blog.id  -%}
 
@@ -55,26 +55,10 @@
     {%- unless ex_frmpool_id contains article.id -%}
 
     
-      {%- assign atitle_temp = article.title | remove : " " | split: "" -%}
-      {%- assign flag = "false" -%}
-      {%- for word in atitle_temp -%}
-      {%- if article_title_arr contains word -%}
-      {%- assign flag = "true" -%}
-      {%- break -%}
-      {%- endif -%}
-      {%- endfor -%}
-
-      {%- assign t_flag = "false" -%}
-      {%- for tag in current_post_tags -%}
-      {%- if article.tags contains tag -%}
-      {%- assign t_flag = "true" -%}
-      {%- break -%}
-      {%- endif -%}
-      {%- endfor -%}
-
-      {%- if t_flag == "true"  or article_author ==  article.author or flag == "true" -%}
+      {%- if article_author ==  article.author -%}
       {%- assign related_posts = related_posts | append:article.id | append : ","-%}
       {%- endif -%}
+
     
     {%- endunless -%}
     {%- endfor -%}
