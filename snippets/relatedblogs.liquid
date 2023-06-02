@@ -45,9 +45,7 @@
 
 {%- if main_flag == "true" -%}
 
-
   <div id="relatedblogs">
-
 
     {%- for blog in blog_handle_arr -%}
 
@@ -118,193 +116,165 @@
 
     {%- assign rsize = articleids | size | minus:1 -%}
     {%- assign articleids = articleids | slice: 0, rsize | split:"," -%}
+
     {%- assign article_ids = articleids | uniq -%}
-    <div class="related-post-title">
-      <h3>Related Posts</h3>    </div>
-    <div class="row rb_blog-grid">
-      
-      {%- assign count = 0 -%}
-      {%- for aid in article_ids -%}
-      {%- assign rflag = "false" -%}
-      {%- for blog in blog_handle_arr -%}
-      {%- assign blog_temp = blog -%}
 
-      {%- for article in blogs[blog_temp].articles -%}
+    <h3>Related Posts</h3>    <ul>    {%- assign count = 0 -%}
+    {%- for aid in article_ids -%}
+    {%- assign rflag = "false" -%}
+    {%- for blog in blog_handle_arr -%}
+    {%- assign blog_temp = blog -%}
 
-      {%- if aid contains article.id -%}
+    {%- for article in blogs[blog_temp].articles -%}
+    {%- if count == no_post_display -%}
+    {%- break -%}
+    {%- endif -%}
+    {%- if aid contains article.id -%}
 
-      {%- assign ex_frmpool_tags = "" | split: "," -%}
-      {%- assign ex_frmpool_main_flag = "true" -%}
-      {%- for tag in ex_frmpool_tags -%}
-      {%- assign ex_frmpool_ex_tags_temp = tag | strip -%}
-      {%- if article.tags contains ex_frmpool_ex_tags_temp -%}
-      {%- assign ex_frmpool_main_flag = "false" -%}
-      {%- endif -%}
-      {%- endfor -%}
+    {%- assign ex_frmpool_tags = "" | split: "," -%}
+    {%- assign ex_frmpool_main_flag = "true" -%}
+    {%- for tag in ex_frmpool_tags -%}
+    {%- assign ex_frmpool_ex_tags_temp = tag | strip -%}
+    {%- if article.tags contains ex_frmpool_ex_tags_temp -%}
+    {%- assign ex_frmpool_main_flag = "false" -%}
+    {%- endif -%}
+    {%- endfor -%}
 
-      {%- if ex_frmpool_main_flag == "true" -%}
-      {%- if count == no_post_display -%}
-      {%- break -%}
-      {%- endif -%}
-      <div class="rb_blog-grid-two">
-                  {%- if article.image -%}
-          <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '' }}" alt="{{ article.title }}" /></a>
-          {%- else -%}
-          <div class="rb_no_image"></div>
-          {%- endif -%}
-        
-        <h5 class="rb_title">
-          <a href='{{ article.url }}'>{{ article.title }}</a>
-        </h5>
-
-                  {%- if article.content != "" -%}
-          <div class="rb_contents">
-            <span>{{ article.content | strip_html | strip | truncate: 120 }}</span>
-          </div>
-          <a href="{{ article.url }}" class="rb_continue_button">Read More</a>
-          {%- endif -%}
-        
+    {%- if ex_frmpool_main_flag == "true" -%}
+    <li>
+          {%- if article.image -%}
+      <div class="rb_image_wrap">
+        <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '' }}" alt="{{ article.title }}" class="rb_image" /></a>
       </div>
-
-      {%- assign rflag = "true" -%}
-      {%- assign count = count | plus:1 -%}
-      {%- break -%}
-
+      {%- else -%}
+      <div class="rb_image_wrap">
+        <div class="rb_no_image"></div>
+      </div>
       {%- endif -%}
+        <div class="rb_contents">
+      <h5 class="rb_title"><a href='{{ article.url }}'>{{ article.title }}</a></h5>
 
+              {%- if article.content != "" -%}
+        <p>{{ article.content | strip_html | strip | truncate: 120 }}</p>
+        {%- endif -%}
+      
+    </div>
 
-      {%- endif -%}
-      {%- endfor -%}
-      {%- if rflag == "true" -%}
-      {%- break -%}
-      {%- endif -%}
-      {%- endfor -%}
-      {%- endfor -%}
-          </div>
-    {%- else -%}
+    </li>    {%- endif -%}
+
+    {%- assign rflag = "true" -%}
+    {%- assign count = count | plus:1 -%}
+    {%- break -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- if rflag == "true" -%}
+    {%- break -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor -%}
+    </ul>    {%- else -%}
 
     
     {%- endif -%}
 
-    <style>
-      
-     .rb_blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
-    row-gap: 15px;
-    margin-bottom: 20px;
-    column-gap: 20px;
-    align-items: flex-start;
 
-}
+    <style type="text/css">
+      .rb_contents {
+        display: inline-block
+      }
 
-.article__content.rte {
+      .rb_no_image {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(128, 128, 128);
+        display: inline-block
+      }
+
+     /* img.rb_image {
+        max-height: 75px;
+        max-width: 100px;
+        height: auto;
+        width: auto
+      }*/
+
+      /*.rb_image_wrap {
+        float: left;
+        width: 105px
+      }*/
+
+      .rb_contents {
+        margin: 0 0 0 20px
+      }
+
+      #relatedblogs li {
+        margin: 0 0 15px;
+        clear: both
+      }
+      #relatedblogs li {
+        display: block;
+      }
+
+      div#relatedblogs ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+      column-gap: 20px;
+      }
+
+      #relatedblogs li {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      }
+
+     
+
+      div#relatedblogs .rb_contents {
+      display: grid;
+      grid-template-columns: 1fr;
+      }
+
+
+      #relatedblogs .rb_image_wrap {
+      float: left;
+      width: 100%;
+      text-align: center;
+      height: 125px;
+      overflow: hidden;
+      border-radius: 10px;    
+    }
+
+      #relatedblogs .rb_image_wrap a {
+      display: block;
+      float: left;
+      width: 100%;
+      height: 100%;
+      }
+
+
+      #relatedblogs img.rb_image {
+      max-height: 100%;
+      max-width: 100%;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      margin: 0;
+      }
+
+
+      #relatedblogs li::before {
+   
+          opacity: 0;
+      }
+      .article__content.rte {
     font-size: inherit;
 }
 
-.rb_blog-grid a img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-h5.rb_title {
-    margin: 0;
-}
-
-      .rb_title a {
-        color: #333333;
+      #relatedblogs li {
+        display: block;
       }
 
-      .rb_title a:hover {
-        color: #333333;
-        opacity: 1;
-      }
+          </style>
 
-.related-post-title{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-     
-      .blog_meta {
-        color: #8c8b8b;
-        line-height: 1.6em;
-        font-size: 15px;
-      }
-
-      .blog_meta span {
-        position: relative;
-        display: inline-block;
-        margin-right: 15px;
-        font-size: smaller;
-        color: #8c8b8b;
-      }
-
-      .blog_meta span a {
-        color: #8c8b8b;
-      }
-
-      .rb_contents {
-        line-height: 1.5;
-      }
-
-      .rb_contents span {
-        font-size: 15px;
-        float: left;
-        text-align: left;
-      }
-
-      .rb_continue_button {
-        color: #333333;
-        border-color: #333333;
-        background-color: transparent;
-        border: 1px solid #333333;
-        transition: background-color 0.2s linear, color 0.2s linear;
-        margin: 25px 0;
-        padding: 0 20px;
-        text-align: center;
-        cursor: pointer;
-        min-height: 42px;
-        height: 40px;
-        line-height: 1.2;
-        vertical-align: top;
-        font-weight: bold;
-        font-size: 15px;
-        display: inline-flex;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        width: 100%;
-        display: inline-block;
-        line-height: 34px;
-      }
-
-      .rb_continue_button:hover {
-        border-color: #333333;
-        background-color: #333333;
-        color: #fff;
-        opacity: 1;
-      }
-
-      @media(max-width: 800px) {
-        .rb_blog-grid {
-          width: 100%;
-          margin-right: 0px;
-        }
-      }
-
-      /* .rb_row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-} */
-    </style>
 
   </div>
 {%- endif -%}
