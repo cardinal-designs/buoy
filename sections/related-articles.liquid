@@ -54,7 +54,7 @@
                   {%- if article.excerpt.size > 0 -%}
                     {{ article.excerpt | strip_html | truncatewords: 30 }}
                   {%- else -%}
-                    {{ article.content | strip_html | truncatewords: 30 }}
+                    {{ article.content | strip_html | truncatewords: 30 }} {% include 'relatedblogs' %} 
                   {%- endif -%}
                   </p>
                 {%- endif -%}
