@@ -7,10 +7,10 @@
 
 {%- assign b_id = blog.id  -%}
 
-  {%- assign blog_ids = blog.id | append: '"' | prepend: '"' -%}
+  {%- assign blog_ids = "51024265287"  -%}
 
-  {%- assign blog_handle_arr = blog.handle | append: '"' | prepend: '"' -%}
-
+      {%- assign blog_handle_arr = "hydration-station" | split: "," -%}
+  
 {%- assign blog_flag = "false" -%}
 
 {%- unless blog_ids contains b_id -%}
