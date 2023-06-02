@@ -64,10 +64,17 @@
       {%- endif -%}
       {%- endfor -%}
 
-      {%- if flag == "true" -%}
-      {%- assign related_posts = related_posts | append:article.id | append : "," -%}
+      {%- assign t_flag = "false" -%}
+      {%- for tag in current_post_tags -%}
+      {%- if article.tags contains tag -%}
+      {%- assign t_flag = "true" -%}
+      {%- break -%}
       {%- endif -%}
+      {%- endfor -%}
 
+      {%- if t_flag == "true"  or article_author ==  article.author or flag == "true" -%}
+      {%- assign related_posts = related_posts | append:article.id | append : ","-%}
+      {%- endif -%}
     
     {%- endunless -%}
     {%- endfor -%}
