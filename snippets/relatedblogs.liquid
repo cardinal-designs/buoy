@@ -3,7 +3,7 @@
   {%- assign ex_frmpool_id = article.id | append: '"' | prepend: '"' -%}
 
 {%- assign ex_tags = "" | split: "," -%}
-{%- assign no_post_display = 3 -%}
+{%- assign no_post_display = 6 -%}
 
 {%- assign b_id = blog.id  -%}
 
@@ -66,17 +66,10 @@
       {%- endif -%}
       {%- endfor -%}
 
-      {%- assign t_flag = "false" -%}
-      {%- for tag in current_post_tags -%}
-      {%- if article.tags contains tag -%}
-      {%- assign t_flag = "true" -%}
-      {%- break -%}
+      {%- if flag == "true" -%}
+      {%- assign related_posts = related_posts | append:article.id | append : "," -%}
       {%- endif -%}
-      {%- endfor -%}
 
-      {%- if t_flag == "true"  or article_author ==  article.author or flag == "true" -%}
-      {%- assign related_posts = related_posts | append:article.id | append : ","-%}
-      {%- endif -%}
     
     {%- endunless -%}
     {%- endfor -%}
@@ -154,6 +147,11 @@
       {%- break -%}
       {%- endif -%}
       <div class="rb_blog-grid-two">
+                  {%- if article.image -%}
+          <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '' }}" alt="{{ article.title }}" /></a>
+          {%- else -%}
+          <div class="rb_no_image"></div>
+          {%- endif -%}
         
         <h5 class="rb_title">
           <a href='{{ article.url }}'>{{ article.title }}</a>
