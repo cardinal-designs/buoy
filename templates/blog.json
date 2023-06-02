@@ -61,6 +61,7 @@
     },
     "f945263b-16bd-4749-8f6e-b9bd1cc172dc": {
       "type": "love-to-learn",
+      "disabled": true,
       "settings": {
         "title": "Love to learn? Check out these popular topics.",
         "blank_title": "Hydration and"
@@ -68,6 +69,7 @@
     },
     "4774720b-812e-4345-800f-a93794be0dec": {
       "type": "benefits",
+      "disabled": true,
       "blocks": {
         "c793d1db-cd28-48f9-b3ff-fdcc98cc6546": {
           "type": "block",
@@ -91,7 +93,10 @@
       "settings": {
         "title": "",
         "link_text": "View All Topics",
-        "link": "shopify:\/\/blogs\/hydration-station"
+        "link": "shopify:\/\/blogs\/hydration-station",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     }
   },
