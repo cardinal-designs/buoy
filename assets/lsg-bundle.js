@@ -424,6 +424,7 @@ function addToCart(trigger) {
     //     return false;
     // }
 
+  return;
 
   let drawer = document.querySelector('cart-drawer');
 
