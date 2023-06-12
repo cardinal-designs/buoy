@@ -74,15 +74,20 @@ class CartDrawer extends HTMLElement {
     
   }
 
-  updateQuantity(line, quantity, name) {
+  updateQuantity(line, quantity, name,updateData = null,action = null) {
     this.enableLoading(line);
 
-    const body = JSON.stringify({
+    let body = JSON.stringify({
       line,
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
+    
+    if(updateData != null && action == 'update'){
+      console.log(updateData,action);
+      return
+    }
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
