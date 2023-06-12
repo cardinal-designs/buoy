@@ -104,8 +104,6 @@ class CartDrawer extends HTMLElement {
         sections_url: window.location.pathname
       };
     }
-    console.log(body)
-    return;
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
