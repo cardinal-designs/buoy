@@ -1,9 +1,13 @@
 {% assign isMainBundleProduct = item.properties._bundle_parent %}
 {% assign subProductKeys = blank %}
+{% assign bundeOriginal_price = 0 %}
+{% assign bundeFinal_price = 0 %}
 {% if isMainBundleProduct != blank %}
   {% for line_item in cart.items %}
     {% assign subBundleId = line_item.properties._bundle_id | split:'|' %}
     {% if subBundleId[0] == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
+      {% assign bundeOriginal_price = bundeOriginal_price | plus:line_item.original_price %}
+      {% assign bundeFinal_price = bundeFinal_price | plus:line_item.final_price %}
       {% assign UpdateData = line_item.key | append:'|' | append:subBundleId[1] | append:'|' | append:line_item.product.title %}
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
     {% endif %}
@@ -34,6 +38,27 @@
     <h4 class="cart-drawer__item-title sh3">{{ item.product.title }}</h4>
 
     <div class="cart-drawer__item-price sh4">
+      {% if isMainBundleProduct != blank %}
+        {% if bundeOriginal_price != bundeFinal_price %}
+        <dl class="cart-item__discounted-prices">
+          <dd>
+            <s class="cart-item__old-price price price--end">
+              {{ bundeOriginal_price | money }}
+            </s>
+          </dd>
+          <dt class="visually-hidden">
+            {{ 'products.product.price.sale_price' | t }}
+          </dt>
+          <dd class="price price--end">
+            {{ bundeFinal_price | money }}
+          </dd>
+        </dl>
+        {% else %}
+          <span class="price price--end">
+            {{ bundeOriginal_price | money }}
+          </span>
+        {% endif %}
+      {% else %}
         {%- if item.original_price != item.final_price -%}
           <dl class="cart-item__discounted-prices">
             <dt class="visually-hidden">
@@ -69,6 +94,7 @@
             {{ item.original_price | money }}
           </span>
         {%- endif -%}
+      {%- endif -%}
       </div>
 
     {% comment %} CHANGE {% endcomment %}
