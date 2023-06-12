@@ -388,7 +388,7 @@ function addToCart(trigger) {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
           })[0].dataset.sellingId;
 
-          mainProperties[`product_${count}`] = bundleProductInput.dataset.title;
+          mainProperties[`product_${count}`] = `${bundleProductInput.dataset.title} | ${bundleProductInput.value}`;
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
@@ -411,6 +411,7 @@ function addToCart(trigger) {
           quantity: 1,
           properties:mainProperties
       };
+      
       // if (interval == 'sub') {
       //     cartItem["selling_plan"] = bundleSellingPlan;
       // }
@@ -424,7 +425,6 @@ function addToCart(trigger) {
     //     return false;
     // }
 
-  return;
 
   let drawer = document.querySelector('cart-drawer');
 
