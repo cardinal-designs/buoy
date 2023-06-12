@@ -394,7 +394,7 @@ function addToCart(trigger) {
               id: bundleProductInput.dataset.product,
               quantity: parseInt(bundleProductInput.value),
               properties: {
-                  "_bundle_id": bundleID,
+                  "_bundle_id": `${bundleID}|${bundleProductInput.value}`,
               },
           };
           // console.log(interval);
