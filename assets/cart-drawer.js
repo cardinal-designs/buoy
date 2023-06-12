@@ -85,7 +85,12 @@ class CartDrawer extends HTMLElement {
     });
     
     if(updateData != null && action == 'update'){
-      
+      let update = {};
+      for (let key of updateData) {
+        let data = key.split('|')
+        update[data[0]] = (parseInt(data[1]) * quantity);
+      }
+      console.log(update)
     }
 
     console.log('Out ');
