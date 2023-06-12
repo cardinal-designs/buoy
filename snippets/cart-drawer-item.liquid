@@ -1,3 +1,13 @@
+{% assign isMainBundleProduct = item.properties._bundle_parent %}
+{% assign subProductKeys = blank %}
+{% if isMainBundleProduct != blank %}
+  {% for line_item in cart.items %}
+    {% if line_item.properties._bundle_id == item.properties._bundle_id %}
+      {% assign subProductKeys = subProductKeys | append:',' | append:line_item.key %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+---{{ subProductKeys }}
 <div class="cart-drawer__item">
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
     <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
