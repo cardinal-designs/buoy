@@ -172,8 +172,7 @@ class CartDrawer extends HTMLElement {
       }
 
       for (let i=0;i<data.items.length;i++) {
-        if (data.items[i].product_type != 'Sample') {
-
+        if (data.items[i].product_type != 'Sample' && data.items[i].properties._bundle_id == undefined) {
           only_singles = false;
           break;
         }
