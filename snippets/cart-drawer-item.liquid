@@ -2,7 +2,7 @@
 {% assign subProductKeys = blank %}
 {% if isMainBundleProduct != blank %}
   {% for line_item in cart.items %}
-    {% if line_item.properties._bundle_id == item.properties._bundle_id %}
+    {% if line_item.properties._bundle_id == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
       {% assign UpdateData = line_item.key | append:'|' | append:line_item.quantity %}
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
     {% endif %}
