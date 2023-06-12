@@ -202,7 +202,7 @@ button:not([disabled]) {
   display:none;
 }
 
-.lsg-bundle-summary-block--wrapper{
+.has-selected-product .lsg-bundle-summary-block--wrapper{
   position: fixed;
   box-shadow: 0px -10px 20px #00000014;
   left:0;
@@ -216,7 +216,7 @@ button:not([disabled]) {
   transition: all 0.3s;
 }
 
-.lsg-bundle-summary-block--wrapper.open {
+.has-selected-product .lsg-bundle-summary-block--wrapper.open {
   transform: translateY(0);
 }
 
