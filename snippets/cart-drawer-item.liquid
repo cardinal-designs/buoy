@@ -143,4 +143,15 @@
       </div>
     </div>
   </div>
+  {% if isMainBundleProduct != blank %}
+  <script type="application/json" id="item-data">
+    {
+      "propertest":{
+        {% for prop in item.properties %}
+          "{{ prop.first }}" :{{ prop.last }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      }
+    }
+  </script>
+  {% endif %}
 </div>
