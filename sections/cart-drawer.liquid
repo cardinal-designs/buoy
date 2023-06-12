@@ -231,7 +231,7 @@
           </div>
           <div class="cart-drawer__items" id="cart-drawer-items">
             {% for item in cart.items %}
-              {% if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
+              {% comment %}{%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}{% endcomment %}
               {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
 
