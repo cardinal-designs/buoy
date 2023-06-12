@@ -99,11 +99,11 @@ class CartDrawer extends HTMLElement {
       }
       updates[mainProduct[0]] = parseInt(quantity);
       
-      body = {
+      body = JSON.stringify({
         updates,
         sections: this.getSectionsToRender().map((section) => section.section),
         sections_url: window.location.pathname
-      };
+      });
       fetchUrl = routes.cart_update_url;
     }
 
