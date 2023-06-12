@@ -4,7 +4,7 @@ class CartDrawerRemoveButton extends HTMLElement {
     this.addEventListener('click', (event) => {
       event.preventDefault();
       if(this.closest('[data-bundle-items]')){
-        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems,'update',this.closest('[data-bundle-items]').querySelector('.item-data').innerText);
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems,'bundle',this.closest('[data-bundle-items]').querySelector('.item-data').innerText);
       }else{
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
       }
@@ -70,13 +70,17 @@ class CartDrawer extends HTMLElement {
   onChange(event) {
     if(event.target.value !== 'on') {
       if(event.target.closest('[data-bundle-items]')){
-        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'update',event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText);
+        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'bundle',event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText);
       }else{
         this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
       }
     }
   }
 
+  bundleUpdateAction(){
+    
+  }
+  
   updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null) {
     this.enableLoading(line);
 
@@ -88,7 +92,7 @@ class CartDrawer extends HTMLElement {
     });
 
     let fetchUrl = routes.cart_change_url;
-    if(updateData != null && action == 'update'){
+    if(updateData != null && action == 'bundle'){
       
       let updates = {},
           splitData = updateData.split('=='),
@@ -99,16 +103,17 @@ class CartDrawer extends HTMLElement {
         let data = key.split('|');
         updates[data[0]] = (parseInt(data[1]) * quantity);
       }
-
-      let mainProductData = {}
-      
       updates[mainProduct[0]] = parseInt(quantity);
-      
-      body = JSON.stringify({
-        updates,
-        sections: this.getSectionsToRender().map((section) => section.section),
-        sections_url: window.location.pathname
-      });
+
+      if(quantity == 0){
+        
+      }else{
+        body = JSON.stringify({
+          updates,
+          sections: this.getSectionsToRender().map((section) => section.section),
+          sections_url: window.location.pathname
+        });
+      }
       
       fetchUrl = routes.cart_update_url;
     }
