@@ -77,7 +77,7 @@ class CartDrawer extends HTMLElement {
     }
   }
 
-  updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null,itemData = null) {
+  updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null,itemDataJSON = null) {
     this.enableLoading(line);
 
     let body = JSON.stringify({
@@ -92,8 +92,11 @@ class CartDrawer extends HTMLElement {
       
       let updates = {},
           splitData = updateData.split('=='),
-          mainProduct = splitData[1].split('|');
-      return;
+          mainProduct = splitData[1].split('|'),
+          jsonItemData = JSON.parse(itemDataJSON);
+
+      console.log(jsonItemData)
+      return
       for (let key of splitData[0].split(',')) {
         let data = key.split('|');
         updates[data[0]] = (parseInt(data[1]) * quantity);
