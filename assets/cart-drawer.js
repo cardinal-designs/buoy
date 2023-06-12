@@ -3,7 +3,11 @@ class CartDrawerRemoveButton extends HTMLElement {
     super();
     this.addEventListener('click', (event) => {
       event.preventDefault();
-      this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
+      if(this.closest('[data-bundle-items]')){
+        console.log(this.closest('[data-bundle-items]'))
+      }else{
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
+      }
     });
   }
 }
