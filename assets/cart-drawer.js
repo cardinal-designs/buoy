@@ -88,21 +88,23 @@ class CartDrawer extends HTMLElement {
     });
     
     if(updateData != null && action == 'update'){
-      let update = {},
+      let updates = {},
           splitData = updateData.split('=='),
           mainProduct = splitData[1].split('|');
       
       for (let key of splitData[0].split(',')) {
         let data = key.split('|');
-        update[data[0]] = (parseInt(data[1]) * quantity);
+        updates[data[0]] = (parseInt(data[1]) * quantity);
       }
-
-    console.log(mainProduct[0],splitData)
-      update[mainProduct[0]] = parseInt(quantity);
-      console.log(update,splitData[1])
+      updates[mainProduct[0]] = parseInt(quantity);
+      
+      body = {
+        updates,
+        sections: this.getSectionsToRender().map((section) => section.section),
+        sections_url: window.location.pathname
+      };
     }
-
-    console.log('Out ');
+    console.log(body)
     return;
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
