@@ -105,7 +105,7 @@ class CartDrawer extends HTMLElement {
       }
       updates[mainProduct[0]] = parseInt(quantity);
 
-      if(quantity == 0){
+      if(quantity != 0){
         
       }else{
         body = JSON.stringify({
