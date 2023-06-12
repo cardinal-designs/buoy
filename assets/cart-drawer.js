@@ -4,7 +4,7 @@ class CartDrawerRemoveButton extends HTMLElement {
     this.addEventListener('click', (event) => {
       event.preventDefault();
       if(this.closest('[data-bundle-items]')){
-        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems,'update');
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems,'update',this.closest('[data-bundle-items]').querySelector('.item-data').innerText);
       }else{
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
       }
@@ -70,14 +70,14 @@ class CartDrawer extends HTMLElement {
   onChange(event) {
     if(event.target.value !== 'on') {
       if(event.target.closest('[data-bundle-items]')){
-        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'update');
+        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'update',event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText);
       }else{
         this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
       }
     }
   }
 
-  updateQuantity(line, quantity, name,updateData = null,action = null) {
+  updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null,itemData = null) {
     this.enableLoading(line);
 
     let body = JSON.stringify({
@@ -89,10 +89,14 @@ class CartDrawer extends HTMLElement {
 
     let fetchUrl = routes.cart_change_url;
     if(updateData != null && action == 'update'){
+      
       let updates = {},
           splitData = updateData.split('=='),
-          mainProduct = splitData[1].split('|');
-      
+          mainProduct = splitData[1].split('|'),
+          jsonItemData = JSON.parse(itemData);
+
+      console.log(jsonItemData)
+      return;
       for (let key of splitData[0].split(',')) {
         let data = key.split('|');
         updates[data[0]] = (parseInt(data[1]) * quantity);
