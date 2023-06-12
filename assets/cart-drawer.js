@@ -4,7 +4,7 @@ class CartDrawerRemoveButton extends HTMLElement {
     this.addEventListener('click', (event) => {
       event.preventDefault();
       if(this.closest('[data-bundle-items]')){
-        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems.split(','),'update');
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems,'update');
       }else{
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
       }
@@ -70,7 +70,7 @@ class CartDrawer extends HTMLElement {
   onChange(event) {
     if(event.target.value !== 'on') {
       if(event.target.closest('[data-bundle-items]')){
-        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems.split(','),'update');
+        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'update');
       }else{
         this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
       }
