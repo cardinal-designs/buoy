@@ -92,10 +92,7 @@ class CartDrawer extends HTMLElement {
       
       let updates = {},
           splitData = updateData.split('=='),
-          mainProduct = splitData[1].split('|'),
-          jsonItemData = JSON.parse(itemData);
-
-      console.log(jsonItemData)
+          mainProduct = splitData[1].split('|');
       return;
       for (let key of splitData[0].split(',')) {
         let data = key.split('|');
