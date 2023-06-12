@@ -212,6 +212,12 @@ button:not([disabled]) {
   background: #FFF;
   z-index: 8;
   overflow-y: auto;
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+
+.has-selected-product .lsg-bundle-summary-block--wrapper.open {
+  transform: translateY(0);
 }
 
 .has-selected-product .lsg-bundle-summary-block {
