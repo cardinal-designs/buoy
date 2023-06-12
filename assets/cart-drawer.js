@@ -99,6 +99,7 @@ class CartDrawer extends HTMLElement {
         let data = key.split('|');
         updates[data[0]] = (parseInt(data[1]) * quantity);
       }
+      let 
       updates[mainProduct[0]] = parseInt(quantity);
       
       body = JSON.stringify({
@@ -106,6 +107,7 @@ class CartDrawer extends HTMLElement {
         sections: this.getSectionsToRender().map((section) => section.section),
         sections_url: window.location.pathname
       });
+      
       fetchUrl = routes.cart_update_url;
     }
 
