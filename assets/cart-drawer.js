@@ -4,6 +4,8 @@ class CartDrawerRemoveButton extends HTMLElement {
     this.addEventListener('click', (event) => {
       event.preventDefault();
       if(this.closest('[data-bundle-items]')){
+        console.log(this.closest('[data-bundle-items]').dataset.bundleItems.split(','),'update');
+        return;
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,'',this.closest('[data-bundle-items]').dataset.bundleItems.split(','),'update');
       }else{
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
@@ -77,7 +79,7 @@ class CartDrawer extends HTMLElement {
   updateQuantity(line, quantity, name,updateData = null,action = null) {
     this.enableLoading(line);
 
-    console.log('updateQuantity')
+    console.log('updateQuantity',updateData = null,action = null)
 
     let body = JSON.stringify({
       line,
