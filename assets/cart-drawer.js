@@ -77,10 +77,6 @@ class CartDrawer extends HTMLElement {
   updateQuantity(line, quantity, name,updateData = null,action = null) {
     this.enableLoading(line);
 
-    console.log('updateQuantity',updateData ,action )
-    
-    return;
-
     let body = JSON.stringify({
       line,
       quantity,
@@ -89,9 +85,12 @@ class CartDrawer extends HTMLElement {
     });
     
     if(updateData != null && action == 'update'){
-      console.log(updateData,action);
+      console.log('iff ' ,updateData,action);
       return
     }
+
+    console.log('Out ');
+    return;
 
     fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
