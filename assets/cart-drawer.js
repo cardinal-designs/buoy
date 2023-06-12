@@ -4,7 +4,7 @@ class CartDrawerRemoveButton extends HTMLElement {
     this.addEventListener('click', (event) => {
       event.preventDefault();
       if(this.closest('[data-bundle-items]')){
-        console.log(this.closest('[data-bundle-items]'))
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0,this.closest('[data-bundle-items]').split(','),'update');
       }else{
         this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
       }
