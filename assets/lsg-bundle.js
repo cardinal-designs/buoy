@@ -371,15 +371,24 @@ function addToCart(trigger) {
       bundleProductQuantity += parseInt(ele.value);
     });
 
+    let mainProperties = {
+        "_bundle_id": bundleID,
+        "_bundle_parent": true,
+      },
+      count = 0;
   
     bundleProductListInputs.forEach(function(bundleProductInput){
         // bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
+          count++;
+          
           let sellingSelectElement = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"]`);
           let discount = (bundleProductQuantity <= parseInt(bundleMin)) ? 0 : (bundleProductQuantity >=( parseInt(bundleMin) + 3)) ? 25 : 20;
           let sellingId = Array.from(sellingSelectElement.options).filter(option => {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
           })[0].dataset.sellingId;
+
+          mainProperties[`product_${count}`] = bundleProductInput.dataset.title;
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
@@ -400,10 +409,7 @@ function addToCart(trigger) {
       let cartItem = {
           id: bundleProductID,
           quantity: 1,
-          properties: {
-            "_bundle_id": bundleID,
-            "_bundle_parent": true,
-          },
+          properties:mainProperties
       };
       // if (interval == 'sub') {
       //     cartItem["selling_plan"] = bundleSellingPlan;
