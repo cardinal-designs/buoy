@@ -231,7 +231,11 @@
           </div>
           <div class="cart-drawer__items" id="cart-drawer-items">
             {% for item in cart.items %}
-            {% render 'cart-drawer-item' item: item, idx: forloop.index %}
+              {% if item.product_id._bundle_parent != blank %}
+                
+              {% endif %}
+              {% if item.product_id._bundle_parent == blank and item.product_id._bundle_id != blank %}{% continue %}{% endif %}
+              {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
 
             <div class="cart-content">
