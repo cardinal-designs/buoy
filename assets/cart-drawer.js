@@ -86,7 +86,8 @@ class CartDrawer extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
-    
+
+    let fetchUrl = routes.cart_change_url;
     if(updateData != null && action == 'update'){
       let updates = {},
           splitData = updateData.split('=='),
@@ -103,9 +104,10 @@ class CartDrawer extends HTMLElement {
         sections: this.getSectionsToRender().map((section) => section.section),
         sections_url: window.location.pathname
       };
+      fetchUrl = routes.cart_update_url;
     }
 
-    fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
+    fetch(`${fetchUrl}`, {...fetchConfig(), ...{ body }})
       .then((response) => {
         return response.text();
       })
