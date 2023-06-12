@@ -4,7 +4,7 @@
   {% for line_item in cart.items %}
     {% assign subBundleId = line_item.properties._bundle_id | split:'|' %}
     {% if subBundleId[0] == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
-      {% assign UpdateData = line_item.key | append:'|' | append:subBundleId[1] %}
+      {% assign UpdateData = line_item.key | append:'|' | append:subBundleId[1] | append:line_item.product.title %}
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
     {% endif %}
   {% endfor %}
