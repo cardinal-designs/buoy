@@ -85,8 +85,7 @@ class CartDrawer extends HTMLElement {
     });
     
     if(updateData != null && action == 'update'){
-      console.log('iff ' ,updateData,action);
-      return
+      
     }
 
     console.log('Out ');
