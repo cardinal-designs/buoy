@@ -7,9 +7,10 @@
     {% assign subBundleId = line_item.properties._bundle_id | split:'|' %}
     {% if subBundleId[0] == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
       {% assign original_price = line_item.original_price | times:line_item.quantity %}
+      {{ line_item.final_price | times:line_item.quantity }}
       {% assign final_price = line_item.final_price | times:line_item.quantity %}
       {% assign bundeOriginal_price = bundeOriginal_price | plus:original_price %}
-      {% assign bundeFinal_price = bundeFinal_price | plus:final_prices %}
+      {% assign bundeFinal_price = bundeFinal_price | plus:final_price %}
       {% assign UpdateData = line_item.key | append:'|' | append:subBundleId[1] | append:'|' | append:line_item.product.title %}
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
     {% endif %}
