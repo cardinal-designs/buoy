@@ -3,11 +3,13 @@
 {% if isMainBundleProduct != blank %}
   {% for line_item in cart.items %}
     {% if line_item.properties._bundle_id == item.properties._bundle_id %}
-      {% assign subProductKeys = subProductKeys | append:',' | append:line_item.key %}
+      {% assign UpdateData = line_item.key | append:'|' | append:line_item.quantity %}
+      {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
     {% endif %}
   {% endfor %}
 {% endif %}
-<div class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | append:',' | append:item.key | remove_first:',' }}'{% endif %}>
+{% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
+<div class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | append:',' | append:mainUpdateData | remove_first:',' }}'{% endif %}>
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
     <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
       {% comment %}{% render 'icon-trash' %}{% endcomment %}
