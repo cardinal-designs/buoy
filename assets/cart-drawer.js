@@ -97,7 +97,7 @@ class CartDrawer extends HTMLElement {
         update[data[0]] = (parseInt(data[1]) * quantity);
       }
 
-    console.log(mainProduct[0])
+    console.log(mainProduct[0],splitData)
       update[mainProduct[0]] = quantity;
       console.log(update,splitData[1])
     }
