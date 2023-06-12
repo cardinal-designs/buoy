@@ -388,7 +388,7 @@ function addToCart(trigger) {
             return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
           })[0].dataset.sellingId;
 
-          mainProperties[`product_${count}`] = `${bundleProductInput.dataset.title} | ${bundleProductInput.value}`;
+          mainProperties[`Product_${count}`] = `${bundleProductInput.dataset.title} | ${bundleProductInput.value}`;
           
           let cartItem = {
               id: bundleProductInput.dataset.product,
