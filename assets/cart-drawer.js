@@ -155,8 +155,6 @@ class CartDrawer extends HTMLElement {
         mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
       }
 
-      updates.push(mainProductData);
-
       this.bundleUpdateAction(mainProductData,updates);
       
     }else{
