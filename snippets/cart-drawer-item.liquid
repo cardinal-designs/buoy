@@ -116,7 +116,7 @@
           {%- for option in item.options_with_values -%}
             {%- unless option.name == 'Title' -%}
               <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                {{ option.name }}:{{ option.value }}
+                {{ option.name }}:&nbsp;{{ option.value }}
               </h6>
             {%- endunless -%}
           {%- endfor -%}
