@@ -94,6 +94,50 @@
     {{ product.description }}
   </div>
 
+  {% assign my_fields = product.variant.metafields.custom %}
+  <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+    {%- for option in product.options_with_values -%}
+     {% assign optionIndex = forloop.index0 %}
+     {% assign values = "" %}
+      <fieldset class="js product-form__input">
+      {%- for variant in product.variants -%}
+        {% assign value = variant.options[optionIndex] %}
+        {%- unless values contains value -%}
+        {% assign values = values | join:',' %}
+        {% assign values = values | append:',' | append:value %}
+        {% assign values = values | split:',' %}
+
+         {% assign my_fields = variant.metafields.custom %}
+          <span class="Variant_Blocks" data-id={{ variant.id }}>
+            <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+              name="{{ option.name }}"
+              value="{{ value | escape }}"
+              form="product-form-{{ section.id }}"
+              {% if option.selected_value == value %}checked{% endif %}
+            >
+            <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+              <span class="Variant_Title">{{ value }}</span>
+              {%- if my_fields.best_value  != blank -%}
+                <span class="Best_Value">{{ my_fields.best_value }}</span>
+              {%- endif -%}
+              {%- if my_fields.supply_time  != blank -%}
+                <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+              {%- endif -%}
+              {%- if my_fields.servings != blank -%}
+                <span class="Variant_Servings">({{ my_fields.servings }})</span>
+              {%- endif -%}
+            </label>
+          </span>
+        {%- endunless -%}
+      {%- endfor -%}
+      </fieldset>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    {{ variantMetafield }}
+   </variant-radios>
+
   {% if product.metafields.custom.new_ingredients_tab != blank or product.metafields.my_fields.health_benefits != blank or product.metafields.my_fields.how_to_use != blank or product.metafields.my_fields.highlights_tab != blank or product.metafields.my_fields.ingredients_tab != blank or product.metafields.my_fields.greatfor_tab != blank or product.metafields.my_fields.sustainability_tab != blank %}
   <div class="pdp-faq">
     <div class="faq-section">
