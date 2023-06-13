@@ -92,18 +92,15 @@ class CartDrawer extends HTMLElement {
   }
 
   bundleUpdateAction(mainProductData,updates){
-    let body = JSON.stringify(mainProductData);
-    let updateData = JSON.stringify({
-      updates,
-      sections: this.getSectionsToRender().map((section) => section.section),
-      sections_url: window.location.pathname
+    let body = JSON.stringify({
+      updates
     });
-    fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
+    fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
     .then((response) => {
       return response.text();
     })
     .then((state) => {
-      this.fetchAction(routes.cart_update_url,updateData);
+      this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
     })
   }
   
@@ -121,7 +118,10 @@ class CartDrawer extends HTMLElement {
     if(updateData != null && action == 'bundle'){
       
       let updates = {},
-          mainProductData = {},
+          mainProductData = {
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname
+          },
           splitData = updateData.split('=='),
           keys = splitData[0].split(','),
           mainProduct = splitData[1].split('|'),
