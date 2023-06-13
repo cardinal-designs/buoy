@@ -3,7 +3,18 @@ class CartRemoveButton extends HTMLElement {
     super();
     this.addEventListener('click', (event) => {
       event.preventDefault();
-      this.closest('cart-items').updateQuantity(this.dataset.index, 0);
+      if(this.closest('[data-bundle-items]')){
+        this.closest('cart-items').updateQuantity(
+          this.dataset.index,
+          0,
+          '',
+          this.closest('[data-bundle-items]').dataset.bundleItems,
+          'bundle',
+          this.closest('[data-bundle-items]').querySelector('.item-data').innerText
+        );
+      }else{
+        this.closest('cart-items').updateQuantity(this.dataset.index, 0);
+      }
     });
   }
 }
@@ -27,7 +38,18 @@ class CartItems extends HTMLElement {
   }
 
   onChange(event) {
-    this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
+    if(event.target.closest('[data-bundle-items]')){
+      this.updateQuantity(
+        event.target.dataset.index,
+        event.target.value,
+        document.activeElement.getAttribute('name'),
+        event.target.closest('[data-bundle-items]').dataset.bundleItems,
+        'bundle',
+        event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText
+      );
+    }else{
+      this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
+    }
   }
 
   getSectionsToRender() {
@@ -55,7 +77,18 @@ class CartItems extends HTMLElement {
     ];
   }
 
-  updateQuantity(line, quantity, name) {
+  async bundleUpdateAction(mainProductData,updates){
+
+    for (let item of updates) {
+      let body = JSON.stringify(item);
+      const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
+      const data = await response.json();
+      // console.log(data); 
+    }
+    this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
+  }
+
+  updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null) {
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -90,6 +123,9 @@ class CartItems extends HTMLElement {
         document.getElementById('cart-errors').textContent = window.cartStrings.error;
         this.disableLoading();
       });
+  }
+  
+  fetchAction(fetchUrl,body){
   }
 
   updateLiveRegions(line, itemCount) {
