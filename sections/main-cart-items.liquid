@@ -48,6 +48,8 @@
               {% assign subProductKeys = blank %}
               {% assign bundeOriginal_price = 0 %}
               {% assign bundeFinal_price = 0 %}
+              {% assign bundeOriginalLinePrice = 0 %}
+              {% assign bundeFinalLinePrice = 0 %}
               {% assign discountTitle = blank %}
               {% assign itemFrequency = blank %}
               {% comment %}
@@ -59,10 +61,13 @@
                 {% for line_item in cart.items %}
                   {% assign subBundleId = line_item.properties._bundle_id %}
                   {% if subBundleId == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
-                    {% assign original_price = line_item.original_price | times:line_item.quantity %}
-                    {% assign final_price = line_item.final_price | times:line_item.quantity %}
+                    {% assign original_price = line_item.original_price %}
+                    {% assign final_price = line_item.final_price %}
                     {% assign bundeOriginal_price = bundeOriginal_price | plus:original_price %}
                     {% assign bundeFinal_price = bundeFinal_price | plus:final_price %}
+                    {% assign bundeOriginalLinePrice = bundeOriginalLinePrice | plus:line_item.original_line_price %}
+                    {% assign bundeFinalLinePrice = bundeFinalLinePrice | plus:line_item.final_line_price %}
+                    
                     {% assign UpdateData = line_item.key | append:'|' | append:line_item.properties._original_qty | append:'|' | append:line_item.product.title %}
                     {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
                     {%- for discount in line_item.discounts -%}
@@ -249,19 +254,36 @@
                     </div>
 
                     <div class="cart-item__price-wrapper medium-up">
-                      {%- if item.original_line_price != item.final_line_price -%}
-                        <dl class="cart-item__discounted-prices">
-                          <dt class="visually-hidden">
-                            {{ 'products.product.price.sale_price' | t }}
-                          </dt>
-                          <dd class="price price--end">
-                            {{ item.final_line_price | money }}
-                          </dd>
-                        </dl>
-                      {%- else -%}
-                        <span class="price price--end">
-                          {{ item.original_line_price | money }}
-                        </span>
+                      {% if isMainBundleProduct != blank %}
+                        {%- if bundeOriginalLinePrice != bundeFinalLinePrice -%}
+                          <dl class="cart-item__discounted-prices">
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.sale_price' | t }}
+                            </dt>
+                            <dd class="price price--end">
+                              {{ bundeFinalLinePrice | money }}
+                            </dd>
+                          </dl>
+                        {%- else -%}
+                          <span class="price price--end">
+                            {{ bundeOriginalLinePrice | money }}
+                          </span>
+                        {%- endif -%}
+                      {% else %}
+                        {%- if item.original_line_price != item.final_line_price -%}
+                          <dl class="cart-item__discounted-prices">
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.sale_price' | t }}
+                            </dt>
+                            <dd class="price price--end">
+                              {{ item.final_line_price | money }}
+                            </dd>
+                          </dl>
+                        {%- else -%}
+                          <span class="price price--end">
+                            {{ item.original_line_price | money }}
+                          </span>
+                        {%- endif -%}
                       {%- endif -%}
                     </div>
 
