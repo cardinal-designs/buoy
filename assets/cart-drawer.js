@@ -134,6 +134,7 @@ class CartDrawer extends HTMLElement {
 
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
 
+      return;
       if(quantity != 0){
         
         mainProductData.id = mainProduct[0];
