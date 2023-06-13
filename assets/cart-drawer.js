@@ -92,6 +92,9 @@ class CartDrawer extends HTMLElement {
   }
 
   bundleUpdateAction(mainProductData,updates){
+
+    console.log(mainProductData,updates)
+    return;
     let body = JSON.stringify({
       updates
     });
@@ -101,7 +104,7 @@ class CartDrawer extends HTMLElement {
     })
     .then((state) => {
       this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
-    })
+    });
   }
   
   updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null) {
@@ -117,7 +120,7 @@ class CartDrawer extends HTMLElement {
     let fetchUrl = routes.cart_change_url;
     if(updateData != null && action == 'bundle'){
       
-      let updates = {},
+      let updates = [],
           mainProductData = {
             sections: this.getSectionsToRender().map((section) => section.section),
             sections_url: window.location.pathname
@@ -128,38 +131,29 @@ class CartDrawer extends HTMLElement {
           jsonItemData = JSON.parse(itemData);
 
       for (let key of keys) {
-        let data = key.split('|');
-        updates[data[0]] = (parseInt(data[1]) * quantity);
+        let data = key.split('|'),
+            tmp = {};
+        tmp.key = data[0];
+        tmp.quantity = (parseInt(data[1]) * quantity)
+        updates.push(tmp);
       }
 
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
 
       // return;
-      if(quantity != 0){
-        
-        mainProductData.id = mainProduct[0];
-        mainProductData.quantity = parseInt(quantity);
-        mainProductData.properties = jsonItemData.properties;
-  
-        for (let index = 0; index < keys.length ; index++) {
-          let splitData = keys[index].split('|');
-          mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
-        }
+      mainProductData.id = mainProduct[0];
+      mainProductData.quantity = parseInt(quantity);
+      mainProductData.properties = jsonItemData.properties;
 
-        this.bundleUpdateAction(mainProductData,updates);
-        
-      }else{
-        updates[mainProduct[0]] = parseInt(quantity);
-        
-        body = JSON.stringify({
-          updates,
-          sections: this.getSectionsToRender().map((section) => section.section),
-          sections_url: window.location.pathname
-        });
-        
-        fetchUrl = routes.cart_update_url;
-        this.fetchAction(fetchUrl,body);
+      for (let index = 0; index < keys.length ; index++) {
+        let splitData = keys[index].split('|');
+        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
       }
+
+      updates.push(mainProductData);
+
+      this.bundleUpdateAction(mainProductData,updates);
+      
     }else{
      this.fetchAction(fetchUrl,body); 
     }
