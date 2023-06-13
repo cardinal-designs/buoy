@@ -212,15 +212,11 @@ button:not([disabled]) {
   background: #FFF;
   z-index: 8;
   overflow-y: auto;
+  transform: translateY(calc(100% - 59px));
+  transition: all 0.3s;
 }
 
-.has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
-  transform: translateY(100%);
-  transition: all .3s !important;
-    display: flex !important;
-}
-
-.has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
+.lsg-bundle-summary-block--wrapper.open {
   transform: translateY(0);
 }
 
