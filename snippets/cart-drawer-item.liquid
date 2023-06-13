@@ -3,6 +3,7 @@
 {% assign bundeOriginal_price = 0 %}
 {% assign bundeFinal_price = 0 %}
 {% assign discountTitle = blank %}
+{% assign itemFrequency = blank %}
 {% comment %}
   <li class="discounts__discount">
     {%- render 'icon-discount' -%}
@@ -20,7 +21,10 @@
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
       {%- for discount in line_item.discounts -%}
         {% assign discountTitle = discountTitle | append:',' | append:discount.title %}
-    {%- endfor -%}
+      {%- endfor -%}
+      {% if line_item.selling_plan_allocation.selling_plan.name != blank %}
+        {% assign itemFrequency = itemFrequency | append:',' | append:line_item.selling_plan_allocation.selling_plan.name %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% endif %}
