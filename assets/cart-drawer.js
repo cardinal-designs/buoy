@@ -141,10 +141,10 @@ class CartDrawer extends HTMLElement {
         mainProductData.quantity = parseInt(quantity);
         mainProductData.properties = jsonItemData.properties;
   
-        for (let index = 0; index < keys.length ; index++) {
-          let splitData = keys[index].split('|');
-          mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
-        }
+        // for (let index = 0; index < keys.length ; index++) {
+        //   let splitData = keys[index].split('|');
+        //   mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
+        // }
 
         this.bundleUpdateAction(mainProductData,updates);
         
