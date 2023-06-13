@@ -92,6 +92,8 @@ class CartDrawer extends HTMLElement {
   }
 
   bundleUpdateAction(mainProductData,updates){
+    console.log(updates);
+    return;
     let body = JSON.stringify({
       updates
     });
