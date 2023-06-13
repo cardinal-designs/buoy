@@ -151,6 +151,30 @@
 
                   <td class="cart-item__prices right">
                     <div class="cart-item__price-wrapper">
+                    {% if isMainBundleProduct != blank %}
+                      {%- if bundeOriginal_price != bundeFinal_price -%}
+                        <dl class="cart-item__discounted-prices">
+                          <dt class="visually-hidden">
+                            {{ 'products.product.price.regular_price' | t }}
+                          </dt>
+                          <dd>
+                            <s class="cart-item__old-price price price--end">
+                              {{ bundeOriginal_price | money }}
+                            </s>
+                          </dd>
+                          <dt class="visually-hidden">
+                            {{ 'products.product.price.sale_price' | t }}
+                          </dt>
+                          <dd class="price price--end">
+                            {{ bundeFinal_price | money }}
+                          </dd>
+                        </dl>
+                      {%- else -%}
+                        <span class="price price--end">
+                          {{ bundeOriginal_price | money }}
+                        </span>
+                      {%- endif -%}
+                    {% else %}
                       {%- if item.original_price != item.final_price -%}
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
@@ -186,6 +210,7 @@
                           {{ item.original_price | money }}
                         </span>
                       {%- endif -%}
+                    {% endif %}
                     </div>
                   </td>
 
