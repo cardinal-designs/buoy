@@ -1658,12 +1658,12 @@ button:not([disabled]) {
     overflow-y: scroll;
   }
 
-  .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
+/*   .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
     height: 0;
     padding: 0;
     transition: unset;
     display: none;
-  }
+  } */
   
   .has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
     min-height: 80vh;
