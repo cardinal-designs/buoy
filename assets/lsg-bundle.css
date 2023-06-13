@@ -1180,12 +1180,12 @@ button:not([disabled]) {
   cursor:pointer;
 }
 
-.has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
+/* .has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
   height: 0;
   padding: 0;
   transition: unset;
   display: none;
-}
+} */
 
 .bundle-builder__selected-product:not(.active) {
   cursor: pointer;
