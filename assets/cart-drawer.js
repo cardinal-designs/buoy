@@ -95,7 +95,13 @@ class CartDrawer extends HTMLElement {
     let body = JSON.stringify({
       updates
     });
-    fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
+    fetch(`${routes.cart_update_url}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      }, 
+      ...{ body }
+    })
     .then((response) => {
       return response.text();
     })
