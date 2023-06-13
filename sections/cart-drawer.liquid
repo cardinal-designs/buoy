@@ -372,19 +372,19 @@
               <h4 class="body light">Subtotal</h4>
               <div class="cart-drawer__loading-container">
                 <h4 class="cart-drawer__subtotal body medium">{{ cart.total_price | money }}</h4>
-                <div class="loading-overlay hidden" id="cart-drawer-loading">
-                    <div class="loading-overlay__spinner">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </div>
                 </div>
               </div>
               <a href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
               <span class="car-notes body-xs">{{ section.settings.cart_notes }}</span>
             </div>
           {%- endif -%}
+          <div class="loading-overlay" id="cart-drawer-loading"> 
+            <div class="loading-overlay__spinner">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </form> 
