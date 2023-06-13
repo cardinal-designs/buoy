@@ -129,7 +129,7 @@ class CartDrawer extends HTMLElement {
       for (let key of keys) {
         let data = key.split('|'),
             tmp = {};
-        tmp.key = data[0];
+        tmp.id = data[0];
         tmp.quantity = (parseInt(data[1]) * quantity)
         updates.push(tmp);
       }
