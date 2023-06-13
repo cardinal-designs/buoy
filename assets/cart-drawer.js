@@ -97,7 +97,7 @@ class CartDrawer extends HTMLElement {
     });
     fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
     .then((response) => {
-      return response.text();
+      return response.json();
     })
     .then((state) => {
       this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
