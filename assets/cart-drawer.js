@@ -193,14 +193,14 @@ class CartDrawer extends HTMLElement {
       sections_url: window.location.pathname
     });
 
-    fetch('/cart/clear.js', {...fetchConfig(), ...{ body }})
-      .then((response) => {
-        return response.text();
-      })
-      .then((state) => {
-        const parsedState = JSON.parse(state);
-        this.renderContent(parsedState.sections);
-      })
+    // fetch('/cart/clear.js', {...fetchConfig(), ...{ body }})
+    //   .then((response) => {
+    //     return response.text();
+    //   })
+    //   .then((state) => {
+    //     const parsedState = JSON.parse(state);
+    //     this.renderContent(parsedState.sections);
+    //   })
   }
 
   getSectionsToRender() {
