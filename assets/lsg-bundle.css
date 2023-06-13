@@ -214,12 +214,12 @@ button:not([disabled]) {
   overflow-y: auto;
 }
 
-.lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
+.has-selected-product .lsg-bundle-summary-block--wrapper .lsg-bundle-summary-block {
   transform: translateY(100%);
   transition: all 0.3s;
 }
 
-.lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
+.has-selected-product .lsg-bundle-summary-block--wrapper.open .lsg-bundle-summary-block {
   transform: translateY(0);
 }
 
