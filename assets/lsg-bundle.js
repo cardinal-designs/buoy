@@ -351,7 +351,7 @@ function checkoutEnableValidation(trigger) {
 
 function addToCart(trigger) {
     const bundleID = getGuid();
-    const uniqID = new Date().getTime();
+    const uniqID = new Date().getTime().toString();
     const bundleBlock = getBundleBlock(trigger);
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
