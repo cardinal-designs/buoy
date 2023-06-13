@@ -83,7 +83,6 @@ class CartItems extends HTMLElement {
       let body = JSON.stringify(item);
       const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
       const data = await response.json();
-      // console.log(data); 
     }
     this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
   }
@@ -120,10 +119,7 @@ class CartItems extends HTMLElement {
         updates.push(tmp);
         keyQty[data[0]] = (parseInt(data[1]) * quantity);
       }
-
-      // console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
-
-      // return;
+      
       mainProductData.id = mainProduct[0];
       mainProductData.quantity = parseInt(quantity);
       mainProductData.properties = jsonItemData.properties;
