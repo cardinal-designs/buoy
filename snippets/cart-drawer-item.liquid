@@ -149,7 +149,17 @@
           </li>
         {%- endfor -%}
       </ul>
+    {% else %}
+      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+        {%- for discount in item.discounts -%}
+          <li class="discounts__discount">
+            {%- render 'icon-discount' -%}
+            {{ discount.title }}
+          </li>
+        {%- endfor -%}
+      </ul>
     {% endif %}
+      
       <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
         {% if item.selling_plan_allocation.selling_plan %}
           {% render 'icon-calendar' %} Monthly: 
