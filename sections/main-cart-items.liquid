@@ -44,6 +44,7 @@
             <tbody>
               {%- for item in cart.items -%}
 
+                {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
               {% assign isMainBundleProduct = item.properties._bundle_parent %}
               {% assign subProductKeys = blank %}
               {% assign bundeOriginal_price = 0 %}
@@ -80,7 +81,6 @@
                 {% endfor %}
               {% endif %}
               {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
-               
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
                   <td class="cart-item__media">
                     {% if item.image %}
