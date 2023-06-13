@@ -95,7 +95,7 @@
   </div>
 
   {% assign my_fields = product.variant.metafields.custom %}
-  <drawer-variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+  <drawer-variant-radios class="no-js-hidden" data-product-id="{{ product.id }}">
     {%- for option in product.options_with_values -%}
      {% assign optionIndex = forloop.index0 %}
      {% assign values = "" %}
