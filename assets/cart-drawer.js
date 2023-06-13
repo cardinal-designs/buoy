@@ -118,26 +118,29 @@ class CartDrawer extends HTMLElement {
       fetchUrl = routes.cart_update_url;
     }
 
+    this.fetchAction(fetchUrl,body);
+  }
+
+  fetchAction(fetchUrl,body){
     fetch(`${fetchUrl}`, {...fetchConfig(), ...{ body }})
-      .then((response) => {
-        return response.text();
-      })
-      .then((state) => {
-        const parsedState = JSON.parse(state);
-        this.getSectionsToRender().forEach((section => {
-          const elementToReplace =
-            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-            
-          elementToReplace.innerHTML =
-            this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+    .then((response) => {
+      return response.text();
+    })
+    .then((state) => {
+      const parsedState = JSON.parse(state);
+      this.getSectionsToRender().forEach((section => {
+        const elementToReplace =
+          document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+          
+        elementToReplace.innerHTML =
+          this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
 
-        }));
-        
-        this.disableLoading();  
-      }).catch(() => {
-        this.disableLoading();
-      });
-
+      }));
+      
+      this.disableLoading();  
+    }).catch(() => {
+      this.disableLoading();
+    });
   }
   
   
