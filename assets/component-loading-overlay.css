@@ -66,3 +66,17 @@
   pointer-events: none;
   cursor: default;
 }
+
+.cart-drawer__content .loading-overlay {
+  width: 100%;
+  background: #FFF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.cart-drawer__content .loading-overlay .path {
+  stroke: #000;
+}
