@@ -1608,10 +1608,6 @@ button:not([disabled]) {
     line-height: 1.2;
   }
 
-  .has-selected-product .lsg-bundle-summary-block--wrapper{
-    transform: translateY(calc(100% - 65px));
-  }
-  
   .bundle-builder__selected-products {
     margin-top: 20px;
     gap: 10px;
