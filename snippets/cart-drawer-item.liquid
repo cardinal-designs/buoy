@@ -16,7 +16,7 @@
   {% endfor %}
 {% endif %}
 {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
-  {{ item.properties._bundle_id }}
+  {{ item.properties._bundle_id }} -- {{ item.key }}
   {% if isMainBundleProduct %}
     {{ subProductKeys | remove_first:',' | split:',' | join:'<br />' }}
   {% endif %}
