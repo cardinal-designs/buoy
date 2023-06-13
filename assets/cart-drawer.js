@@ -94,10 +94,12 @@ class CartDrawer extends HTMLElement {
   async bundleUpdateAction(mainProductData,updates){
 
     updates.forEach(item => {
-      let body = item;
-      console.log(item)
-      // const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
+      let body = JSON.parse(item);
+      const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
+      const data = await response.json();
+      console.log(data);
     });
+    this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
     
     return;
     let body = JSON.stringify({
