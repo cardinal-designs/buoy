@@ -109,7 +109,7 @@ class CartDrawer extends HTMLElement {
       mainProductData.quantity = parseInt(quantity);
       
 
-      console.log(updates,mainProductData,jsonItemData,splitData[0])
+      console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
 
       return;
       if(quantity != 0){
