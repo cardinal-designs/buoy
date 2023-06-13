@@ -100,7 +100,7 @@ class CartDrawer extends HTMLElement {
       return response.text();
     })
     .then((state) => {
-      // this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
+      this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
     })
   }
   
