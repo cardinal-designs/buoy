@@ -114,34 +114,6 @@
 
     {% comment %} CHANGE {% endcomment %}
 
-    {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
-      <div class="cart-drawer__item-variant">
-        {%- if item.product.has_only_default_variant == false -%}
-          {%- for option in item.options_with_values -%}
-            {%- unless option.name == 'Title' -%}
-              <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                {{ option.name }}:&nbsp;{{ option.value }}
-              </h6>
-            {%- endunless -%}
-          {%- endfor -%}
-        {%- endif -%}
-
-        {%- for property in item.properties -%}
-          {%- assign property_first_char = property.first | slice: 0 -%}
-          {%- if property.last != blank and property_first_char != '_' -%}
-            <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-              {{ property.first }}: &nbsp;
-              {%- if property.last contains '/uploads/' -%}
-                <a href="{{ property.last }}" target="_blank">
-                  {{ property.last | split: '/' | last }}
-                </a>
-              {%- else -%}
-                {{ property.last }}
-              {%- endif -%}
-              </h6>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
     {% if isMainBundleProduct != blank %}
       {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
@@ -152,32 +124,71 @@
           </li>
         {%- endfor -%}
       </ul>
-    {% else %}
-      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-        {%- for discount in item.discounts -%}
-          <li class="discounts__discount">
-            {%- render 'icon-discount' -%}
-            {{ discount.title }}
-          </li>
-        {%- endfor -%}
-      </ul>
+    {% if itemFrequency != blank %}
+      {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+      {% for frequency in splitFrequency %}
+        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+          {% render 'icon-calendar' %} Monthly: {{ frequency }}
+        </p>
+      {% endfor %}
     {% endif %}
+    {% else %}
+      {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+        <div class="cart-drawer__item-variant">
+          {%- if item.product.has_only_default_variant == false -%}
+            {%- for option in item.options_with_values -%}
+              {%- unless option.name == 'Title' -%}
+                <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
+                  {{ option.name }}:&nbsp;{{ option.value }}
+                </h6>
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endif -%}
+  
+          {%- for property in item.properties -%}
+            {%- assign property_first_char = property.first | slice: 0 -%}
+            {%- if property.last != blank and property_first_char != '_' -%}
+              <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
+                {{ property.first }}: &nbsp;
+                {%- if property.last contains '/uploads/' -%}
+                  <a href="{{ property.last }}" target="_blank">
+                    {{ property.last | split: '/' | last }}
+                  </a>
+                {%- else -%}
+                  {{ property.last }}
+                {%- endif -%}
+                </h6>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
       
-      <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-        {% if item.selling_plan_allocation.selling_plan %}
-          {% render 'icon-calendar' %} Monthly: 
-        {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-            One-Time Purchase: 
-        {% endif %}
-
-        {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-          3 Bottles—120 servings
-        {% else %}
-          {{ item.selling_plan_allocation.selling_plan.name }}
-        {% endif %}
-      </p>
-
-    {%- endif -%}
+        <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+          {%- for discount in item.discounts -%}
+            <li class="discounts__discount">
+              {%- render 'icon-discount' -%}
+              {{ discount.title }}
+            </li>
+          {%- endfor -%}
+        </ul>
+        
+        
+        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+          {% if item.selling_plan_allocation.selling_plan %}
+            {% render 'icon-calendar' %} Monthly: 
+          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+              One-Time Purchase: 
+          {% endif %}
+  
+          {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+            3 Bottles—120 servings
+          {% else %}
+            {{ item.selling_plan_allocation.selling_plan.name }}
+          {% endif %}
+        </p>
+  
+      {%- endif -%}
+    {% endif %}
+    
 
     <div class="cart-drawer__item-bottom">
 
