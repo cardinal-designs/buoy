@@ -110,7 +110,7 @@ class CartDrawer extends HTMLElement {
       mainProductData.quantity = parseInt(quantity);
       mainProductData.properties = jsonItemData.properties;
 
-      for (let index = 1; index <= keys.length ; index++) {
+      for (let index = 0; index < keys.length ; index++) {
         console.log(keys[index])
       }
 
