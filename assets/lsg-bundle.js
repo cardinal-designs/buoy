@@ -1123,6 +1123,9 @@ if (subFooter) {
 customElements.define('drawer-variant-radios',class drawerVariantRadios extends HTMLElement {
   constructor(params) {
     super();
-    console.log(this);
+    let id = this.dataset.productId;
+    let variantId = document.querySelector(`.js-bundle-product-card--wrapper[data-product-id="${id}"]`).querySelector('.lsg-bundle-product-select-quantity-input').dataset.product;
+    consoe.log(variantId)
+    
   }
 })
