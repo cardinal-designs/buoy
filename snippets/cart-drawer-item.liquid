@@ -16,6 +16,7 @@
   {% endfor %}
 {% endif %}
 {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
+  {{ item.key }}
 <div class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
     <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
