@@ -131,8 +131,15 @@
                         {%- endfor -%}
                       </dl>
 
-                      <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                     {%- endif -%}
+                {% if isMainBundleProduct and itemFrequency != blank %}
+                  {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+                  {% for frequency in splitFrequency %}
+                    <p class="product-option">{{ frequency }}</p>
+                  {% endfor %}
+                {% else %}
+                      <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                {% endif %}
 
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                       {% if isMainBundleProduct != blank %}
