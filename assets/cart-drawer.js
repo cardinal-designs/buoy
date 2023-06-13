@@ -135,20 +135,21 @@ class CartDrawer extends HTMLElement {
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
 
       // return;
-      if(quantity != 0){
+      // if(quantity != 0){
         
-        mainProductData.id = mainProduct[0];
-        mainProductData.quantity = parseInt(quantity);
-        mainProductData.properties = jsonItemData.properties;
+      //   mainProductData.id = mainProduct[0];
+      //   mainProductData.quantity = parseInt(quantity);
+      //   mainProductData.properties = jsonItemData.properties;
   
-        // for (let index = 0; index < keys.length ; index++) {
-        //   let splitData = keys[index].split('|');
-        //   mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
-        // }
+      //   // for (let index = 0; index < keys.length ; index++) {
+      //   //   let splitData = keys[index].split('|');
+      //   //   mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
+      //   // }
 
-        this.bundleUpdateAction(mainProductData,updates);
+      //   this.bundleUpdateAction(mainProductData,updates);
         
-      }else{
+      // }else{
+      // }
         updates[mainProduct[0]] = parseInt(quantity);
         
         body = JSON.stringify({
@@ -159,7 +160,6 @@ class CartDrawer extends HTMLElement {
         
         fetchUrl = routes.cart_update_url;
         this.fetchAction(fetchUrl,body);
-      }
     }else{
      this.fetchAction(fetchUrl,body); 
     }
