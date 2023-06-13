@@ -78,7 +78,9 @@ class CartDrawer extends HTMLElement {
   }
 
   bundleUpdateAction(mainProductData,updates){
-    let body = JSON.stringify(updates);
+    let body = JSON.stringify({
+      updates
+    });
     fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
     .then((response) => {
       return response.text();
