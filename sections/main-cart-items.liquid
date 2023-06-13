@@ -135,12 +135,22 @@
                     {%- endif -%}
 
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in item.discounts -%}
-                        <li class="discounts__discount">
-                          {%- render 'icon-discount' -%}
-                          {{ discount.title }}
-                        </li>
-                      {%- endfor -%}
+                      {% if isMainBundleProduct != blank %}
+                        {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
+                        {%- for discount in discounts -%}
+                          <li class="discounts__discount">
+                            {%- render 'icon-discount' -%}
+                            {{ discount }}
+                          </li>
+                        {%- endfor -%}
+                      {% else %}
+                        {%- for discount in item.discounts -%}
+                          <li class="discounts__discount">
+                            {%- render 'icon-discount' -%}
+                            {{ discount.title }}
+                          </li>
+                        {%- endfor -%}
+                      {% endif %}
                     </ul>
 
                     <p class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}">
