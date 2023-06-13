@@ -94,7 +94,6 @@ class CartDrawer extends HTMLElement {
   async bundleUpdateAction(mainProductData,updates){
 
     for (let item of updates) {
-      console.log(item)
       let body = JSON.stringify(item);
       const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
       const data = await response.json();
