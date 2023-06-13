@@ -25,7 +25,6 @@
   {% endfor %}
 {% endif %}
 {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
-  --{{ discountTitle | remove_first:',' | split:',' | uniq }}
 <div class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
     <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
@@ -140,6 +139,17 @@
           {%- endif -%}
         {%- endfor -%}
       </div>
+    {% if isMainBundleProduct != blank %}
+      {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
+      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+        {%- for discount in discounts -%}
+          <li class="discounts__discount">
+            {%- render 'icon-discount' -%}
+            {{ discount }}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {% endif %}
       <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
         {% if item.selling_plan_allocation.selling_plan %}
           {% render 'icon-calendar' %} Monthly: 
