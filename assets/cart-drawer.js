@@ -111,7 +111,8 @@ class CartDrawer extends HTMLElement {
       mainProductData.properties = jsonItemData.properties;
 
       for (let index = 0; index < keys.length ; index++) {
-        console.log(keys[index])
+        let splitData = keys[index].split('|');
+        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[1]]}`
       }
 
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
