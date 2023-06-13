@@ -117,6 +117,7 @@ class CartDrawer extends HTMLElement {
     if(updateData != null && action == 'bundle'){
       
       let updates = [],
+          keyQty = {},
           mainProductData = {
             sections: this.getSectionsToRender().map((section) => section.section),
             sections_url: window.location.pathname
@@ -130,8 +131,9 @@ class CartDrawer extends HTMLElement {
         let data = key.split('|'),
             tmp = {};
         tmp.id = data[0];
-        tmp.quantity = (parseInt(data[1]) * quantity)
+        tmp.quantity = (parseInt(data[1]) * quantity);
         updates.push(tmp);
+        keyQty[data[0]] = (parseInt(data[1]) * quantity);
       }
 
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
@@ -143,7 +145,7 @@ class CartDrawer extends HTMLElement {
 
       for (let index = 0; index < keys.length ; index++) {
         let splitData = keys[index].split('|');
-        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
+        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${keyQty[splitData[0]]}`
       }
 
       this.bundleUpdateAction(mainProductData,updates);
