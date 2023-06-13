@@ -95,7 +95,7 @@ class CartDrawer extends HTMLElement {
 
     for (let item of updates) {
       console.log(item)
-      let body = JSON.parse(item);
+      let body = JSON.stringify(item);
       const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
       const data = await response.json();
       console.log(data); 
