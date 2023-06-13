@@ -2,6 +2,12 @@
 {% assign subProductKeys = blank %}
 {% assign bundeOriginal_price = 0 %}
 {% assign bundeFinal_price = 0 %}
+{% assign discountTitle = blank %}
+{% comment %}
+  <li class="discounts__discount">
+    {%- render 'icon-discount' -%}
+  </li>
+  {% endcomment %}
 {% if isMainBundleProduct != blank %}
   {% for line_item in cart.items %}
     {% assign subBundleId = line_item.properties._bundle_id %}
@@ -12,6 +18,9 @@
       {% assign bundeFinal_price = bundeFinal_price | plus:final_price %}
       {% assign UpdateData = line_item.key | append:'|' | append:line_item.properties._original_qty | append:'|' | append:line_item.product.title %}
       {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
+      {%- for discount in line_item.discounts -%}
+        {% assign discountTitle = discountTitle | append:',' | append:discount.title %}
+    {%- endfor -%}
     {% endif %}
   {% endfor %}
 {% endif %}
@@ -24,6 +33,8 @@
     </a>
   </cart-drawer-remove-button>
 
+  --{{ discountTitle }}
+    
   <div class="cart-drawer__item-image-wrapper">
     {% if item.image %}
       <img class="cart-drawer__item-image img-fill"
