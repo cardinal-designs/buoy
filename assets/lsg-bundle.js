@@ -1125,7 +1125,9 @@ customElements.define('drawer-variant-radios',class drawerVariantRadios extends 
     super();
     let id = this.dataset.productId;
     let variantId = document.querySelector(`.js-bundle-product-card--wrapper[data-product-id="${id}"]`).querySelector('.lsg-bundle-product-select-quantity-input').dataset.product;
-    console.log(variantId)
-    
+    this.querySelectorAll('input[type="radio"]').forEach(radio => this._radioAction(radio))
+  }
+  _radioAction(radio){
+    console.log(radio)
   }
 })
