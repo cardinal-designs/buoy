@@ -77,8 +77,15 @@ class CartDrawer extends HTMLElement {
     }
   }
 
-  bundleUpdateAction(){
-    
+  bundleUpdateAction(mainProductData,updates){
+    let body = updates;
+    fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }})
+    .then((response) => {
+      return response.text();
+    })
+    .then((state) => {
+      this.fetchAction(routes.cart_change_url,mainProductData);
+    })
   }
   
   updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null) {
@@ -95,7 +102,10 @@ class CartDrawer extends HTMLElement {
     if(updateData != null && action == 'bundle'){
       
       let updates = {},
-          mainProductData = {},
+          mainProductData = {
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname
+          },
           splitData = updateData.split('=='),
           keys = splitData[0].split(','),
           mainProduct = splitData[1].split('|'),
@@ -106,32 +116,36 @@ class CartDrawer extends HTMLElement {
         updates[data[0]] = (parseInt(data[1]) * quantity);
       }
 
-      mainProductData.id = mainProduct[0];
-      mainProductData.quantity = parseInt(quantity);
-      mainProductData.properties = jsonItemData.properties;
-
-      for (let index = 0; index < keys.length ; index++) {
-        let splitData = keys[index].split('|');
-        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
-      }
-
       console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
 
-      return;
       if(quantity != 0){
         
+        mainProductData.id = mainProduct[0];
+        mainProductData.quantity = parseInt(quantity);
+        mainProductData.properties = jsonItemData.properties;
+  
+        for (let index = 0; index < keys.length ; index++) {
+          let splitData = keys[index].split('|');
+          mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${updates[splitData[0]]}`
+        }
+
+        this.bundleUpdateAction(mainProductData,updates);
+        
       }else{
+        updates[mainProduct[0]] = parseInt(quantity);
+        
         body = JSON.stringify({
           updates,
           sections: this.getSectionsToRender().map((section) => section.section),
           sections_url: window.location.pathname
         });
+        
+        fetchUrl = routes.cart_update_url;
+        this.fetchAction(fetchUrl,body);
       }
-      
-      fetchUrl = routes.cart_update_url;
+    }else{
+     this.fetchAction(fetchUrl,body); 
     }
-
-    this.fetchAction(fetchUrl,body);
   }
 
   fetchAction(fetchUrl,body){
