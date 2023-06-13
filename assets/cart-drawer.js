@@ -95,6 +95,7 @@ class CartDrawer extends HTMLElement {
     if(updateData != null && action == 'bundle'){
       
       let updates = {},
+          mainProductData = {},
           splitData = updateData.split('=='),
           mainProduct = splitData[1].split('|'),
           jsonItemData = JSON.parse(itemData);
@@ -103,8 +104,14 @@ class CartDrawer extends HTMLElement {
         let data = key.split('|');
         updates[data[0]] = (parseInt(data[1]) * quantity);
       }
-      updates[mainProduct[0]] = parseInt(quantity);
 
+      mainProductData.id = mainProduct[0];
+      mainProductData.quantity = parseInt(quantity);
+      
+
+      console.log(updateData,mainProductData)
+
+      return;
       if(quantity != 0){
         
       }else{
