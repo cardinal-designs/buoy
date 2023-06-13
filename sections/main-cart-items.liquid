@@ -43,7 +43,40 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+
+              {% assign isMainBundleProduct = item.properties._bundle_parent %}
+              {% assign subProductKeys = blank %}
+              {% assign bundeOriginal_price = 0 %}
+              {% assign bundeFinal_price = 0 %}
+              {% assign discountTitle = blank %}
+              {% assign itemFrequency = blank %}
+              {% comment %}
+                <li class="discounts__discount">
+                  {%- render 'icon-discount' -%}
+                </li>
+                {% endcomment %}
+              {% if isMainBundleProduct != blank %}
+                {% for line_item in cart.items %}
+                  {% assign subBundleId = line_item.properties._bundle_id %}
+                  {% if subBundleId == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
+                    {% assign original_price = line_item.original_price | times:line_item.quantity %}
+                    {% assign final_price = line_item.final_price | times:line_item.quantity %}
+                    {% assign bundeOriginal_price = bundeOriginal_price | plus:original_price %}
+                    {% assign bundeFinal_price = bundeFinal_price | plus:final_price %}
+                    {% assign UpdateData = line_item.key | append:'|' | append:line_item.properties._original_qty | append:'|' | append:line_item.product.title %}
+                    {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
+                    {%- for discount in line_item.discounts -%}
+                      {% assign discountTitle = discountTitle | append:',' | append:discount.title %}
+                    {%- endfor -%}
+                    {% if line_item.selling_plan_allocation.selling_plan.name != blank %}
+                      {% assign itemFrequency = itemFrequency | append:',' | append:line_item.selling_plan_allocation.selling_plan.name %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
+               
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
                   <td class="cart-item__media">
                     {% if item.image %}
                       <img class="cart-item__image"
@@ -213,6 +246,17 @@
                       </a>
                     </cart-remove-button>
                   </td>
+                  {% if isMainBundleProduct != blank %}
+                  <script type="application/json" class="item-data">
+                    {
+                      "properties":{
+                        {% for prop in item.properties %}
+                          "{{ prop.first }}" : "{{ prop.last }}"{% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                      }
+                    }
+                  </script>
+                  {% endif %}
                 </tr>
               {%- endfor -%}
             </tbody>
