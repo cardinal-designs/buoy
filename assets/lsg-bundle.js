@@ -351,6 +351,7 @@ function checkoutEnableValidation(trigger) {
 
 function addToCart(trigger) {
     const bundleID = getGuid();
+    const uniqID = new Date().getTime();
     const bundleBlock = getBundleBlock(trigger);
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
@@ -372,8 +373,9 @@ function addToCart(trigger) {
     });
 
     let mainProperties = {
-        "_bundle_id": bundleID,
-        "_bundle_parent": "true",
+        _bundle_id: bundleID,
+        _bundle_parent: "true",
+        _uniq_id:uniqID
       },
       count = 0;
   
@@ -394,8 +396,9 @@ function addToCart(trigger) {
               id: bundleProductInput.dataset.product,
               quantity: parseInt(bundleProductInput.value),
               properties: {
-                  "_bundle_id": bundleID,
-                  "_original_qty": bundleProductInput.value
+                _bundle_id: bundleID,
+                _original_qty: bundleProductInput.value,
+                _uniq_id:uniqID
               },
           };
           // console.log(interval);
