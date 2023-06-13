@@ -77,7 +77,14 @@ class CartDrawer extends HTMLElement {
   onChange(event) {
     if(event.target.value !== 'on') {
       if(event.target.closest('[data-bundle-items]')){
-        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'),event.target.closest('[data-bundle-items]').dataset.bundleItems,'bundle',event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText);
+        this.updateQuantity(
+          event.target.dataset.index,
+          event.target.value,
+          document.activeElement.getAttribute('name'),
+          event.target.closest('[data-bundle-items]').dataset.bundleItems,
+          'bundle',
+          event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText
+        );
       }else{
         this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
       }
