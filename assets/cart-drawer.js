@@ -221,6 +221,7 @@ class CartDrawer extends HTMLElement {
   }
 
   enableLoading() {
+    console.log(document.getElementById('cart-drawer-loading'));
     if (!!document.getElementById('cart-drawer-loading')) {
      document.getElementById('cart-drawer-loading').classList.remove('hidden');
     }  
