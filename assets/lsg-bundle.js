@@ -1124,10 +1124,13 @@ customElements.define('drawer-variant-radios',class drawerVariantRadios extends 
   constructor(params) {
     super();
     let id = this.dataset.productId;
-    let variantId = document.querySelector(`.js-bundle-product-card--wrapper[data-product-id="${id}"]`).querySelector('.lsg-bundle-product-select-quantity-input').dataset.product;
+    this.mainInput = document.querySelector(`.js-bundle-product-card--wrapper[data-product-id="${id}"]`).querySelector('.lsg-bundle-product-select-quantity-input')
     this.querySelectorAll('input[type="radio"]').forEach(radio => this._radioAction(radio))
   }
   _radioAction(radio){
-    console.log(radio)
+    if(radio.dataset.variantId == this.mainInput.dataset.product) radio.checked = true;
+    radio.onchange = () => {
+      this.mainInput.dataset.product = radio.dataset.variantId;
+    }
   }
 })
