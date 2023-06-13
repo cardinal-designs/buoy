@@ -373,7 +373,7 @@ function addToCart(trigger) {
 
     let mainProperties = {
         "_bundle_id": bundleID,
-        "_bundle_parent": true,
+        "_bundle_parent": "true",
       },
       count = 0;
   
