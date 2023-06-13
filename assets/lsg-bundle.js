@@ -1119,3 +1119,11 @@ const subFooter = document.querySelector('.io-sub-footer');
 if (subFooter) {
     bottomObserver.observe(subFooter);
 }
+
+
+customElements.define('drawer-variant-radios',class drawerVariantRadios extends HTMLElement {
+  constructor(params) {
+    super();
+    console.log(this);
+  }
+})
