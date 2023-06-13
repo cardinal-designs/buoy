@@ -196,8 +196,9 @@ class CartItems extends HTMLElement {
   }
 
   enableLoading(line) {
+    console.log([line - 1]);
     document.getElementById('main-cart-items').classList.add('cart__items--disabled');
-    this.querySelectorAll('.loading-overlay')[parseInt(line) - 1].classList.remove('hidden');
+    this.querySelectorAll('.loading-overlay')[line - 1].classList.remove('hidden');
     document.activeElement.blur();
     this.lineItemStatusElement.setAttribute('aria-hidden', false);
   }
