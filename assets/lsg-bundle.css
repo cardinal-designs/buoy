@@ -1856,18 +1856,18 @@ button:not([disabled]) {
   /* The animation code */
   @keyframes example {
     0% {
-      top: 0;
       opacity: 1;
+      transform: scale(0);
     }
     100% {
-      top: -30px;
       opacity: 0;
+      transform:scale(1.5);
     }
   }
   
   /* The element to apply the animation to */
-/*   .count-badge.animating { */
-  .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge{
+/*   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge{ */
+  .count-badge.animating {
     animation-name: example;
     animation-duration: 5s;
   }
