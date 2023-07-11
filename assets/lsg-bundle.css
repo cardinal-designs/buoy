@@ -202,7 +202,7 @@ button:not([disabled]) {
   display:none;
 } */
 
-.lsg-bundle-block.has-selected-product .lsg-bundle-summary-block--wrapper{
+.lsg-bundle-block.has-selected-product .lsg-bundle-summary-block--wrapper:not(.open){
   transform:translateY(calc(100% - 60px));
 }
 .lsg-bundle-summary-block--wrapper{
