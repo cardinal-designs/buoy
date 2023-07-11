@@ -1865,8 +1865,6 @@ button:not([disabled]) {
     }
   }
   
-  /* The element to apply the animation to */
-/*   .has-selected-product .lsg-bundle-summary-block--wrapper .mobile-toggle-btn--wrapper .count-badge{ */
   .count-badge.animating {
     animation-name: example;
     animation-duration: 1s;
