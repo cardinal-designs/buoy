@@ -16,11 +16,11 @@ body.open-bundle-info {
   padding-left: 0;
 }
 
-.title--wrapper:not(.show-discount-widget):not(.hide-info) .lsg-bundle-buybox-product-name {
+.title--wrapper:not(.show-discount-widget) .lsg-bundle-buybox-product-name {
   position: relative;
 }
 
-.title--wrapper:not(.show-discount-widget):not(.hide-info) .lsg-bundle-buybox-product-name:before {
+.title--wrapper:not(.show-discount-widget) .lsg-bundle-buybox-product-name:before {
   background: #000;
   content: '';
   width: 1px;
