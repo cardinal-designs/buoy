@@ -1144,7 +1144,8 @@ button:not([disabled]) {
 }
 
 .open-bundle-info .has-selected-product .lsg-bundle-summary-block--wrapper {
-  position:unset;
+/*   position:unset; */
+  transform: translateY(100%);
 }
 
 /* REVIEW CARD CSS END */
