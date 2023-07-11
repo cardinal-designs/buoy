@@ -45,8 +45,15 @@ const updateSelectedProductGUI = (trigger) => {
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
-        bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
-        document.querySelector('.page-blury-overlay').classList.add('is-visible');
+        if(window.matchMedia('(max-width: 768px)').matches == true){
+          if(selectedProducts.length ==1){
+            document.querySelector('.page-blury-overlay').classList.add('is-visible');
+            bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
+          }
+        }else{
+          document.querySelector('.page-blury-overlay').classList.add('is-visible');
+          bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
+        }
     } else {
         bundleBlock.classList.remove('has-selected-product');
         bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('open');
