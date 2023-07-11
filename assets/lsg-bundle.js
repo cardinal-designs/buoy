@@ -50,14 +50,17 @@ const updateSelectedProductGUI = (trigger) => {
           if(selectedProducts[bundleIndex0].length == 1){
             // document.querySelector('.page-blury-overlay').classList.add('is-visible');
             bundleSummaryWrapper.classList.add('open');
+            bundleSummaryWrapper.classList.remove('closed');
           }
         }else{
           // document.querySelector('.page-blury-overlay').classList.add('is-visible');
           bundleSummaryWrapper.classList.add('open');
+          bundleSummaryWrapper.classList.remove('closed');
         }
     } else {
         bundleBlock.classList.remove('has-selected-product');
         bundleSummaryWrapper.classList.remove('open');
+      bundleSummaryWrapper.classList.add('closed');
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     }
 
