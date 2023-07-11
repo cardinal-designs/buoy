@@ -210,7 +210,7 @@ button:not([disabled]) {
   bottom: 0;
   opacity:0;
   visibility:hidden;
-  display:block;
+/*   display:block; */
   background: #FFF;
   z-index: 8;
   overflow-y: auto;
