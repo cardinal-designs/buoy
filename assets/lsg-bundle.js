@@ -45,7 +45,6 @@ const updateSelectedProductGUI = (trigger) => {
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
     const bundleSummaryWrapper = bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper');
     if (selectedProducts[bundleIndex0].length > 0) {
-      bundleSummaryWrapper.classList.remove('hidden');
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
           if(selectedProducts[bundleIndex0].length == 1){
