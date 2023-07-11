@@ -1147,3 +1147,7 @@ customElements.define('drawer-variant-radios',class drawerVariantRadios extends 
 window.onload = () => {
   document.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('hidden');
 }
+
+document.querySelector('.js-item-count-badge').onanimationend = (e) => {
+  e.currentTarget.classList.remove('animating');
+}
