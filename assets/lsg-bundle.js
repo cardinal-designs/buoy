@@ -899,14 +899,15 @@ function productQuickView(url,bundleWrapper,id) {
     }
     
     $(window).on('resize', function() {
-      if($productMediaSlider.slick){
-        console.log($productMediaSlider.slick);
+      let $mediaSlider = $(drawer).find('.js-product-content .product__media-list');
+      if($mediaSlider.slick){
+        console.log($mediaSlider.slick);
         if ($(window).width() < 769) {
-          if ($productMediaSlider.hasClass('slick-initialized')) {
-            $productMediaSlider.slick('unslick');
+          if ($mediaSlider.hasClass('slick-initialized')) {
+            $mediaSlider.slick('unslick');
           }
         }else{
-          $productMediaSlider.slick(productMediaSlider); 
+          $mediaSlider.slick(productMediaSlider); 
         }
       }
     });
