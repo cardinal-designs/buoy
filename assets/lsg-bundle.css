@@ -1515,9 +1515,9 @@ button:not([disabled]) {
 
 @media (max-width: 768px) {
 
-  .lsg-bundle-summary-block--wrapper { 
+/*   .lsg-bundle-summary-block--wrapper { 
     transform: translateY(calc(100% - 59px));
-  }
+  } */
 
   .page-blury-overlay{
     backdrop-filter: blur(2px);
