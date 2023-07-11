@@ -213,7 +213,7 @@ button:not([disabled]) {
   z-index: 8;
   overflow-y: auto;
   transform: translateY(calc(100% - 59px));
-  transition: all 0.3s;
+  transition: all 0.4s ease-in-out;
 }
 
 .lsg-bundle-summary-block--wrapper.open {
