@@ -291,7 +291,7 @@ function checkoutEnableValidation(trigger) {
     titleDiscountBadge.innerHTML = (bundleQuantity >= (bundleMin + 3)) ? `You’ve Reached 25% Off` :  `You’ve Reached 20% Off`;
     
     if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
+      minInfoText.innerHTML = "Keep Adding For Discounts";
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
