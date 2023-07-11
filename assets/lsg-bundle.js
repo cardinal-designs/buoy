@@ -900,6 +900,7 @@ function productQuickView(url,bundleWrapper,id) {
     
     $(window).on('resize', function() {
       if($productMediaSlider.slick){
+        console.log($productMediaSlider.slick);
         if ($(window).width() < 769) {
           if ($productMediaSlider.hasClass('slick-initialized')) {
             $productMediaSlider.slick('unslick');
