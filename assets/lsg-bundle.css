@@ -1206,6 +1206,7 @@ button:not([disabled]) {
   font-size: 14px;
   color: #1F2322;
   margin-right: 10px;
+  position:relative;
 }
 
 .count-badge {
