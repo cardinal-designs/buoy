@@ -47,11 +47,11 @@ const updateSelectedProductGUI = (trigger) => {
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
           if(selectedProducts[bundleIndex0].length == 1){
-            document.querySelector('.page-blury-overlay').classList.add('is-visible');
+            // document.querySelector('.page-blury-overlay').classList.add('is-visible');
             bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
           }
         }else{
-          document.querySelector('.page-blury-overlay').classList.add('is-visible');
+          // document.querySelector('.page-blury-overlay').classList.add('is-visible');
           bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
         }
     } else {
