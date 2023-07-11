@@ -43,20 +43,22 @@ const buildSelectedProductArray = (trigger) => {
 const updateSelectedProductGUI = (trigger) => {
     const bundleBlock = getBundleBlock(trigger);
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
+    const bundleSummaryWrapper = bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper');
     if (selectedProducts[bundleIndex0].length > 0) {
+      bundleSummaryWrapper.classList.remove('hidden');
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
           if(selectedProducts[bundleIndex0].length == 1){
             // document.querySelector('.page-blury-overlay').classList.add('is-visible');
-            bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
+            bundleSummaryWrapper.classList.add('open');
           }
         }else{
           // document.querySelector('.page-blury-overlay').classList.add('is-visible');
-          bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
+          bundleSummaryWrapper.classList.add('open');
         }
     } else {
         bundleBlock.classList.remove('has-selected-product');
-        bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('open');
+        bundleSummaryWrapper.classList.remove('open');
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     }
 
