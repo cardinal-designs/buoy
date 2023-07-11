@@ -46,7 +46,8 @@ const updateSelectedProductGUI = (trigger) => {
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
-          if(selectedProducts.length ==1){
+          console.log('ifff',selectedProducts.length)
+          if(selectedProducts.length == 1){
             document.querySelector('.page-blury-overlay').classList.add('is-visible');
             bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
           }
