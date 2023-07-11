@@ -1868,7 +1868,7 @@ button:not([disabled]) {
   /* The element to apply the animation to */
   .count-badge.animating {
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 5s;
   }
 }
 @media (max-width: 479px) {
