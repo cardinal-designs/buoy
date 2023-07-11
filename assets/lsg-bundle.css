@@ -208,9 +208,7 @@ button:not([disabled]) {
   left:0;
   right:0;
   bottom: 0;
-  opacity:0;
-  visibility:hidden;
-/*   display:block; */
+  display:block;
   background: #FFF;
   z-index: 8;
   overflow-y: auto;
@@ -219,8 +217,6 @@ button:not([disabled]) {
 }
 
 .lsg-bundle-summary-block--wrapper.open {
-  opacity:1;
-  visibility:visible;
   transform: translateY(0);
 }
 
