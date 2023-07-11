@@ -1857,7 +1857,7 @@ button:not([disabled]) {
   @keyframes example {
     0% {
       opacity: 1;
-      transform: scale(0);
+      transform: scale(unset);
     }
     100% {
       opacity: 0;
