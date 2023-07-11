@@ -208,9 +208,10 @@ button:not([disabled]) {
   left:0;
   right:0;
   bottom: 0;
+  opacity:0;
+  visibility:hidden;
   display:block;
   background: #FFF;
-  opacity:0;
   z-index: 8;
   overflow-y: auto;
   transform: translateY(100%);
@@ -219,6 +220,7 @@ button:not([disabled]) {
 
 .lsg-bundle-summary-block--wrapper.open {
   opacity:1;
+  visibility:visible;
   transform: translateY(0);
 }
 
