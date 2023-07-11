@@ -276,7 +276,7 @@ function checkoutEnableValidation(trigger) {
   const titleWrapper = bundleBlock.querySelectorAll('.title--wrapper');
   const itemCountBadge = bundleBlock.querySelector('.js-item-count-badge');
 
-  if(bundleQuantity > 1) itemCountBadge.classList.add('animating');
+  if(bundleQuantity > 1 && window.matchMedia('(max-width: 768px)').matches == true) itemCountBadge.classList.add('animating');
   itemCountBadge.innerText = bundleQuantity;
 
   titleWrapper.forEach((wrapper) => {
