@@ -43,6 +43,7 @@ const buildSelectedProductArray = (trigger) => {
 const updateSelectedProductGUI = (trigger) => {
     const bundleBlock = getBundleBlock(trigger);
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
+  console.log(selectedProducts)
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
