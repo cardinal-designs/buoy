@@ -901,7 +901,7 @@ function productQuickView(url,bundleWrapper,id) {
     $(window).on('resize', function() {
       let $mediaSlider = $(drawer).find('.js-product-content .product__media-list');
       if($mediaSlider.slick){
-        console.log($mediaSlider.slick);
+        console.log($mediaSlider);
         if ($(window).width() < 769) {
           if ($mediaSlider.hasClass('slick-initialized')) {
             $mediaSlider.slick('unslick');
