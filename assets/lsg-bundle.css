@@ -270,8 +270,9 @@ button:not([disabled]) {
 }
 
 .lsg-bundle-summary-block--wrapper .title--wrapper .min-info .discount-badge,
-.lsg-bundle-summary-block--wrapper .title--wrapper.show-discount-widget .min-info .into-text,
-.lsg-bundle-summary-block--wrapper .title--wrapper.hide-info .min-info{
+.lsg-bundle-summary-block--wrapper .title--wrapper.show-discount-widget .min-info .into-text
+/* ,.lsg-bundle-summary-block--wrapper .title--wrapper.hide-info .min-info */
+{
   display: none;
 }
 
