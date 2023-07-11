@@ -895,20 +895,19 @@ function productQuickView(url,bundleWrapper,id) {
     };
 
     if ($(window).width() > 768) {
-      if($productMediaSlider.slick) $productMediaSlider.slick(productMediaSlider);
+      $productMediaSlider.slick(productMediaSlider);
     }
     
     $(window).on('resize', function() {
-      let $mediaSlider = $(drawer).find('.js-product-content .product__media-list');
-      if($mediaSlider.slick){
-        console.log($mediaSlider);
-        if ($(window).width() < 769) {
-          if ($mediaSlider.hasClass('slick-initialized')) {
-            $mediaSlider.slick('unslick');
-          }
-        }else{
-          $mediaSlider.slick(productMediaSlider); 
+      if ($(window).width() < 769) {
+        if ($productMediaSlider.hasClass('slick-initialized')) {
+          $productMediaSlider.slick('unslick');
         }
+      }else{
+        if($productMediaSlider.hasClass('slick-initialized')){
+          $productMediaSlider.slick('unslick');
+        }
+        $productMediaSlider.slick(productMediaSlider); 
       }
     });
 
