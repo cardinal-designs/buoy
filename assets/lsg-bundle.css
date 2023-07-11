@@ -1854,7 +1854,7 @@ button:not([disabled]) {
 
 @media (max-width: 769px) {
   /* The animation code */
-  @keyframes example {
+  @keyframes countBlinkAnimation {
     0% {
       opacity: 1;
       transform: scale(unset);
@@ -1866,7 +1866,7 @@ button:not([disabled]) {
   }
   
   .count-badge.animating {
-    animation-name: example;
+    animation-name: countBlinkAnimation;
     animation-duration: 1s;
   }
 }
