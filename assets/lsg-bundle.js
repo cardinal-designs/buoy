@@ -1142,4 +1142,8 @@ customElements.define('drawer-variant-radios',class drawerVariantRadios extends 
       this.mainInput.dataset.product = radio.dataset.variantId;
     }
   }
-})
+});
+
+window.onload = () => {
+  document.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('hidden');
+}
