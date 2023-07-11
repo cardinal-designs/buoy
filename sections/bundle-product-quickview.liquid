@@ -86,6 +86,7 @@
   
   <div class="Product_Tags">
     {%- for tag in product.tags -%}
+      {% if tag contains "label_" %}{% continue %}{% endif %}
       <span>{{ tag }}</span>
     {%- endfor -%}
   </div>
