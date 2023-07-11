@@ -895,16 +895,18 @@ function productQuickView(url,bundleWrapper,id) {
     };
 
     if ($(window).width() > 768) {
-      $productMediaSlider.slick(productMediaSlider);
+      if($productMediaSlider.slick) $productMediaSlider.slick(productMediaSlider);
     }
     
     $(window).on('resize', function() {
-      if ($(window).width() < 769) {
-        if ($productMediaSlider.hasClass('slick-initialized')) {
-          $productMediaSlider.slick('unslick');
+      if($productMediaSlider.slick){
+        if ($(window).width() < 769) {
+          if ($productMediaSlider.hasClass('slick-initialized')) {
+            $productMediaSlider.slick('unslick');
+          }
+        }else{
+          $productMediaSlider.slick(productMediaSlider); 
         }
-      }else{
-        $productMediaSlider.slick(productMediaSlider); 
       }
     });
 
