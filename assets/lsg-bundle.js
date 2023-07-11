@@ -43,12 +43,10 @@ const buildSelectedProductArray = (trigger) => {
 const updateSelectedProductGUI = (trigger) => {
     const bundleBlock = getBundleBlock(trigger);
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
-  console.log(selectedProducts)
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
         if(window.matchMedia('(max-width: 768px)').matches == true){
-          console.log('ifff',selectedProducts.length)
-          if(selectedProducts.length == 1){
+          if(selectedProducts[bundleIndex0].length == 1){
             document.querySelector('.page-blury-overlay').classList.add('is-visible');
             bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper').classList.add('open');
           }
