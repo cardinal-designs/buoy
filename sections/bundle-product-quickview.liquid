@@ -96,6 +96,7 @@
   </div>
 
   {% assign my_fields = product.variant.metafields.custom %}
+  {% unless product.has_only_default_variant %}
   <drawer-variant-radios class="no-js-hidden" data-product-id="{{ product.id }}">
     {%- for option in product.options_with_values -%}
      {% assign optionIndex = forloop.index0 %}
@@ -139,6 +140,7 @@
       </script>
     {{ variantMetafield }}
    </drawer-variant-radios>
+  {% endunless %}
 
   {% if product.metafields.custom.new_ingredients_tab != blank or product.metafields.my_fields.health_benefits != blank or product.metafields.my_fields.how_to_use != blank or product.metafields.my_fields.highlights_tab != blank or product.metafields.my_fields.ingredients_tab != blank or product.metafields.my_fields.greatfor_tab != blank or product.metafields.my_fields.sustainability_tab != blank %}
   <div class="pdp-faq">
