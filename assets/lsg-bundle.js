@@ -900,13 +900,9 @@ function productQuickView(url,bundleWrapper,id) {
     
     $(window).on('resize', function() {
       if ($(window).width() < 769) {
-        if ($productMediaSlider.hasClass('slick-initialized')) {
-          $productMediaSlider.slick('unslick');
-        }
+        if ($productMediaSlider.hasClass('slick-initialized')) $productMediaSlider.slick('unslick');
       }else{
-        if($productMediaSlider.hasClass('slick-initialized')){
-          $productMediaSlider.slick('unslick');
-        }
+        if($productMediaSlider.hasClass('slick-initialized')) $productMediaSlider.slick('unslick');
         $productMediaSlider.slick(productMediaSlider); 
       }
     });
