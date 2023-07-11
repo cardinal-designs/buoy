@@ -252,7 +252,8 @@
     </div>
 
     <div class="lsg-bundle-summary-block--wrapper">
-      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open');document.querySelector('.page-blury-overlay').classList.toggle('is-visible')">
+      {% comment %}document.querySelector('.page-blury-overlay').classList.toggle('is-visible'){% endcomment %}
+      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open');">
         <div class="title--wrapper">
           <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
           <div class="count-badge js-item-count-badge"></div>
