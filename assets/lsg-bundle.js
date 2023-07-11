@@ -292,7 +292,7 @@ function checkoutEnableValidation(trigger) {
 
     //&& bundleQuantity < (bundleMin + 1)
     if(bundleQuantity >= bundleMin){
-      minInfoText.innerHTML = "Keep Adding For Discounts";
+      minInfoText.innerHTML = (bundleQuantity < bundleMax) ? "Keep Adding For Discounts" : "";
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
