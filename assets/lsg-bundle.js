@@ -43,10 +43,22 @@ const buildSelectedProductArray = (trigger) => {
 const updateSelectedProductGUI = (trigger) => {
     const bundleBlock = getBundleBlock(trigger);
     const bundleIndex0 = Array.from(bundleBlock.parentNode.children).indexOf(bundleBlock);
+    const bundleSummaryWrapper = bundleBlock.querySelector('.lsg-bundle-summary-block--wrapper');
     if (selectedProducts[bundleIndex0].length > 0) {
         bundleBlock.classList.add('has-selected-product');
+        if(window.matchMedia('(max-width: 768px)').matches == true){
+          if(selectedProducts[bundleIndex0].length == 1){
+            // document.querySelector('.page-blury-overlay').classList.add('is-visible');
+            bundleSummaryWrapper.classList.add('open');
+          }
+        }else{
+          // document.querySelector('.page-blury-overlay').classList.add('is-visible');
+          bundleSummaryWrapper.classList.add('open');
+        }
     } else {
         bundleBlock.classList.remove('has-selected-product');
+        bundleSummaryWrapper.classList.remove('open');
+      document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     }
 
     const selectedProductsWrappers = bundleBlock.querySelectorAll('[data-bundle-builder-selected-products]');
@@ -254,7 +266,8 @@ function incrementEnableValidation(trigger) {
 
 function checkoutEnableValidation(trigger) {
   const bundleBlock = getBundleBlock(trigger);
-  const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
+  const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc]');
+  const ContainueButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-containue-btn]');
   const bundleQuantity = getBundleQuantity(trigger);
   const interval = getBundleInterval(trigger);
   const bundleMin = parseInt((interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin));
@@ -263,6 +276,7 @@ function checkoutEnableValidation(trigger) {
   const titleWrapper = bundleBlock.querySelectorAll('.title--wrapper');
   const itemCountBadge = bundleBlock.querySelector('.js-item-count-badge');
 
+  if(bundleQuantity > 1 && window.matchMedia('(max-width: 768px)').matches == true) itemCountBadge.classList.add('animating');
   itemCountBadge.innerText = bundleQuantity;
 
   titleWrapper.forEach((wrapper) => {
@@ -275,19 +289,31 @@ function checkoutEnableValidation(trigger) {
     }else{
       wrapper.classList.toggle('show-discount-widget',(bundleQuantity > bundleMin)); 
     }
-    
-    if(bundleQuantity >= bundleMin && bundleQuantity < (bundleMin + 1)){
-      minInfoText.innerHTML = "KEEP ADDING FOR DISCOUNTS";
-    }else if (bundleQuantity >= (bundleMin + 1) && bundleQuantity < (bundleMax)){
-      titleDiscountBadge.innerHTML = `You’ve Reached 20% Off`;
-    }else if (bundleQuantity == (bundleMax)){
-      titleDiscountBadge.innerHTML = `You’ve Reached 25% Off`;
+
+    titleDiscountBadge.innerHTML = (bundleQuantity >= (bundleMin + 3)) ? `You’ve Reached 25% Off` :  `You’ve Reached 20% Off`;
+
+    //&& bundleQuantity < (bundleMin + 1)
+    if(bundleQuantity >= bundleMin){
+      minInfoText.innerHTML = (bundleQuantity < bundleMax) ? "Keep Adding For Discounts" : "";
     }else{
       minInfoText.innerHTML = minInfoText.dataset.cmsText;
     }
   });
 
-  bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity == bundleMax) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
+  bundleBlock.querySelector('.lsg-bundle-interval-name .discount-badge').innerText = (bundleQuantity >= (bundleMin + 3)) ? "Save 25%" : (bundleQuantity > bundleMin) ? "Save 20%" : "";
+
+  ContainueButtons.forEach(function(button) {
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+      button.classList.remove('disabled');
+      button.disabled = false;
+    } else {
+      button.classList.add('disabled');
+      button.disabled = true;
+    }
+    button.onclick = () => {
+      bundleBlock.classList.toggle('make-add-to-cart-action');
+    }
+  });
   
   //checkout button enable/disable
   addToCartButtons.forEach(function(addToCartButton){
@@ -296,12 +322,19 @@ function checkoutEnableValidation(trigger) {
     const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
     const addMoreLabel = bundleBlock.querySelector('[data-add-more-label]');
     const bundleSubText = bundleBlock.querySelector('.lsg-bundle-sub-atc');
-    
+
+    const checkPurchaseType = bundleBlock.querySelector('.lsg-bundle-interval-select-inner [type="radio"]:checked'),
+          congText_20 = (checkPurchaseType.value == "sub") ? "Congratulation, you have <span>20% off.</span><br />" : "",
+          congText_25 = (checkPurchaseType.value == "sub") ? "Congratulation, you have <span>25% off.</span><br />" : "";
+    console.log(checkPurchaseType.value)
     
     if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.remove('disabled');
       addToCartButton.disabled = false;
-      addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : "";
+      addMoreLabel.innerHTML = (bundleQuantity == bundleMin) ? `Add <span>1 more</span> item to <span>20% off</span>` : 
+        (bundleQuantity == (bundleMin + 1)) ? `${congText_20}Add <span>2 more</span> item to <span>25% off</span>` : 
+        (bundleQuantity == (bundleMin + 2)) ? `${congText_20}Add <span>1 more</span> item to <span>25% off</span>` : `${congText_25}Click Continue to make checkout` ;
+      
     } else {
       addToCartButton.classList.add('disabled');
       addToCartButton.disabled = true;
@@ -309,18 +342,18 @@ function checkoutEnableValidation(trigger) {
       addMoreLabel.innerHTML = (quantityToAdd == 1) ? `Add <b>${quantityToAdd} more</b> item to continue` : `Add <b>${quantityToAdd} more</b> items to continue`;
     }
 
-    if(bundleQuantity > bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
+    if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
       addToCartButton.classList.add('subscription-enabled');
-      bundleBlock.classList.add('bundle-checkout-enabled');
+      bundleBlock.classList.add('bundle-checkout-enabled','make-add-to-cart-action');
       addToCartText.classList.remove('hidden');
       addMoreText.classList.add('hidden');
-      bundleSubText.classList.remove('hidden');
+      // bundleSubText.classList.remove('hidden');
     }else{
       addToCartButton.classList.remove('subscription-enabled');
-      bundleBlock.classList.remove('bundle-checkout-enabled');
+      bundleBlock.classList.remove('bundle-checkout-enabled','make-add-to-cart-action');
       addToCartText.classList.add('hidden');
       addMoreText.classList.remove('hidden');
-      bundleSubText.classList.add('hidden');
+      // bundleSubText.classList.add('hidden');
     }
     
   });
@@ -328,6 +361,7 @@ function checkoutEnableValidation(trigger) {
 
 function addToCart(trigger) {
     const bundleID = getGuid();
+    const uniqID = new Date().getTime().toString();
     const bundleBlock = getBundleBlock(trigger);
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
@@ -348,26 +382,36 @@ function addToCart(trigger) {
       bundleProductQuantity += parseInt(ele.value);
     });
 
+    let mainProperties = {
+        _bundle_id: bundleID,
+        _bundle_parent: "true",
+        _uniq_id:uniqID
+      },
+      count = 0;
   
     bundleProductListInputs.forEach(function(bundleProductInput){
         // bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
         if(parseInt(bundleProductInput.value) > 0) {
-          let sellingId = null;
-        
-          if(bundleProductQuantity >= (parseInt(bundleMin) + 1)){
-            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="20"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-          }
-          if(bundleProductQuantity == parseInt(bundleMax)){
-            sellingId = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"] [value="25"][daya-variant-id="${bundleProductInput.dataset.product}"]`).dataset.sellingId;
-          }
+          count++;
+          
+          let sellingSelectElement = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${bundleProductInput.dataset.productId}"]`);
+          let discount = (bundleProductQuantity <= parseInt(bundleMin)) ? 0 : (bundleProductQuantity >=( parseInt(bundleMin) + 3)) ? 25 : 20;
+          let sellingId = Array.from(sellingSelectElement.options).filter(option => {
+            return (parseInt(option.getAttribute('value')) == discount && option.dataset.variantId == bundleProductInput.dataset.product);
+          })[0].dataset.sellingId;
+
+          mainProperties[`Product_${count}`] = `${bundleProductInput.dataset.title} | ${bundleProductInput.value}`;
+          
           let cartItem = {
               id: bundleProductInput.dataset.product,
               quantity: parseInt(bundleProductInput.value),
               properties: {
-                  "_bundle_id": bundleID,
+                _bundle_id: bundleID,
+                _original_qty: bundleProductInput.value,
+                _uniq_id:uniqID
               },
           };
-          console.log(interval);
+          // console.log(interval);
           if (interval == 'sub') {
               if(sellingId) cartItem["selling_plan"] = sellingId;
           }
@@ -379,11 +423,9 @@ function addToCart(trigger) {
       let cartItem = {
           id: bundleProductID,
           quantity: 1,
-          properties: {
-            "_bundle_id": bundleID,
-            "_bundle_parent": true,
-          },
+          properties:mainProperties
       };
+      
       // if (interval == 'sub') {
       //     cartItem["selling_plan"] = bundleSellingPlan;
       // }
@@ -397,7 +439,6 @@ function addToCart(trigger) {
     //     return false;
     // }
 
-  console.log('hiiii')
 
   let drawer = document.querySelector('cart-drawer');
 
@@ -590,6 +631,11 @@ function updateBundlePrice(trigger) {
   const interval = (bundleBlock.classList.contains('lsg-bundle--otp-selected')) ? 'otp' : 'sub';
   const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
   const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
+  let totalQty = Array.from(productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).map(input => {
+      return parseInt(input.value)
+    }).reduce(function(a, b){
+      return a + b;
+    });
   
   /*let interval = ''
   if(bundleBlock.classList.contains('lsg-bundle--only-otp') || bundleBlock.classList.contains('lsg-bundle--otp-selected')) {
@@ -625,24 +671,17 @@ function updateBundlePrice(trigger) {
   if(productList && interval == 'otp') {
   }
 
-
   if(productList && interval == 'sub') {
       // const discountType = frequency.dataset.discountType;
       // const discountValue = frequency.dataset.discountValue;
     // console.log(productList.querySelectorAll('.js-bundle-product-card--wrapper'));
-
-    let totalQty = Array.from(productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added .lsg-bundle-product-select-quantity-input')).map(input => {
-      return parseInt(input.value)
-    }).reduce(function(a, b){
-      return a + b;
-    });
     
     productList.querySelectorAll('.js-bundle-product-card--wrapper.js-added').forEach(function (productGrid) {
       let productId = productGrid.dataset.productId;
-      let discount = 20;
-      if(totalQty == bundleMax) discount = 25
+      let discount = (totalQty <= parseInt(bundleMin)) ? 0 : (totalQty >= (parseInt(bundleMin) + 3)) ? 25 : 20;
+      console.log(discount);
       let qty = productGrid.querySelector('.lsg-bundle-product-select-quantity-input').value,
-          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][daya-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
+          price = document.querySelector(`.lsg-bundle-interval-select-pod-bottom [data-product="${productId}"] [value="${discount}"][data-variant-id="${productGrid.dataset.lsgBundleVariantSelectId}"]`).dataset.sellingPrice;
       subSubtotal += (parseInt(price * qty));
     });
     
@@ -706,7 +745,7 @@ function updateBundlePrice(trigger) {
       if (interval == 'otp') {
           el.innerHTML = currencyFormatter.format(otpSubtotal / 100);
       } else {
-          el.innerHTML = `<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
+          el.innerHTML = (totalQty <= bundleMin) ? currencyFormatter.format(otpSubtotal / 100) :`<s>${currencyFormatter.format(otpSubtotal / 100)}</s> <span>${currencyFormatter.format(subSubtotal / 100)}</span>`;
       }
   });
 }
@@ -836,9 +875,8 @@ function productQuickView(url,bundleWrapper,id) {
     return responce.text();
   })
   .then(data => {
-    let fakeElement = document.createElement('div');
-    fakeElement.innerHTML = data;
-    fakeElement.querySelector('[data-product-action-button]').replaceWith(productButton);
+    let fakeElement = new DOMParser().parseFromString(data, 'text/html');
+    // fakeElement.querySelector('[data-product-action-button]').replaceWith(productButton);
     drawer.querySelector('.js-product-content').innerHTML = fakeElement.querySelector('#shopify-section-bundle-product-quickview').innerHTML;
 
     let $productMediaSlider = $(drawer).find('.js-product-content .product__media-list');
@@ -863,10 +901,9 @@ function productQuickView(url,bundleWrapper,id) {
     
     $(window).on('resize', function() {
       if ($(window).width() < 769) {
-        if ($productMediaSlider.hasClass('slick-initialized')) {
-          $productMediaSlider.slick('unslick');
-        }
+        if ($productMediaSlider.hasClass('slick-initialized')) $productMediaSlider.slick('unslick');
       }else{
+        if($productMediaSlider.hasClass('slick-initialized')) $productMediaSlider.slick('unslick');
         $productMediaSlider.slick(productMediaSlider); 
       }
     });
@@ -937,6 +974,16 @@ if (document.addEventListener) {
     false);
 }
 
+document.querySelectorAll('[data-bundle-builder-selected-variant-id]').forEach(function(product){
+  product.querySelector('.bundle-builder__selected-product-img-wrapper').addEventListener('click',() => {
+    if(product.classList.contains('active')) return;
+    product.closest('.lsg-bundle-summary-block--wrapper ').querySelector('.mobile-toggle-btn--wrapper').click();
+    window.scrollTo({
+      top: (document.querySelector('.collection-groups__grid').offsetTop - document.querySelector('header-container').offsetHeight - 20),
+      behavior: "smooth",
+    });
+  });
+});
 document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]').forEach(function(removeButton){
     removeButton.addEventListener('click', function(e){
         e.preventDefault();
@@ -950,6 +997,8 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
         bundleProductDecrement.click();
     });
 });
+
+
 
 document.querySelectorAll('.js-product-atb-btn').forEach(function(button) {
   button.addEventListener('click',function(e) {
@@ -1008,7 +1057,7 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
     })
 });
 
-document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
+document.querySelectorAll('[type="submit"][data-lsg-bundle-atc]').forEach((bundleATC) => {
     bundleATC.addEventListener('click', function(e){
         e.preventDefault();
         addToCart(e.currentTarget);
@@ -1077,4 +1126,28 @@ const bottomObserver = new IntersectionObserver(([entry]) => {
 const subFooter = document.querySelector('.io-sub-footer');
 if (subFooter) {
     bottomObserver.observe(subFooter);
+}
+
+
+customElements.define('drawer-variant-radios',class drawerVariantRadios extends HTMLElement {
+  constructor(params) {
+    super();
+    let id = this.dataset.productId;
+    this.mainInput = document.querySelector(`.js-bundle-product-card--wrapper[data-product-id="${id}"]`).querySelector('.lsg-bundle-product-select-quantity-input')
+    this.querySelectorAll('input[type="radio"]').forEach(radio => this._radioAction(radio))
+  }
+  _radioAction(radio){
+    if(radio.dataset.variantId == this.mainInput.dataset.product) radio.checked = true;
+    radio.onchange = () => {
+      this.mainInput.dataset.product = radio.dataset.variantId;
+    }
+  }
+});
+
+window.onload = () => {
+  document.querySelector('.lsg-bundle-summary-block--wrapper').classList.remove('hidden');
+}
+
+document.querySelector('.js-item-count-badge').onanimationend = (e) => {
+  e.currentTarget.classList.remove('animating');
 }

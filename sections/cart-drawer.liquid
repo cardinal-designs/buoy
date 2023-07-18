@@ -4,6 +4,7 @@
 {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
 {{ 'section-text-hero.css' | asset_url | stylesheet_tag }}
 {{ 'section-shop-slide-out.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
 <cart-drawer>
   <div class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-modal="true" aria-label="Cart Drawer" role="dialog" tabindex="-1">
@@ -27,7 +28,7 @@
           </button>
           
         </div>
-        <div class="cart-drawer__content" id="cart-drawer__content" data-id="{{ section.id }}">
+        <div class="cart-drawer__content 111" id="cart-drawer__content" data-id="{{ section.id }}">
 
           {% if section.settings.e_marquee_1 != blank %}
           <div class="shop-slide-out__marquee">
@@ -231,7 +232,8 @@
           </div>
           <div class="cart-drawer__items" id="cart-drawer-items">
             {% for item in cart.items %}
-            {% render 'cart-drawer-item' item: item, idx: forloop.index %}
+              {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
+              {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
 
             <div class="cart-content">
@@ -371,19 +373,19 @@
               <h4 class="body light">Subtotal</h4>
               <div class="cart-drawer__loading-container">
                 <h4 class="cart-drawer__subtotal body medium">{{ cart.total_price | money }}</h4>
-                <div class="loading-overlay hidden" id="cart-drawer-loading">
-                    <div class="loading-overlay__spinner">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </div>
                 </div>
               </div>
               <a href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
               <span class="car-notes body-xs">{{ section.settings.cart_notes }}</span>
             </div>
           {%- endif -%}
+          <div class="loading-overlay hidden" id="cart-drawer-loading"> 
+            <div class="loading-overlay__spinner">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </form> 

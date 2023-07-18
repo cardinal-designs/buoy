@@ -3,7 +3,18 @@ class CartDrawerRemoveButton extends HTMLElement {
     super();
     this.addEventListener('click', (event) => {
       event.preventDefault();
-      this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
+      if(this.closest('[data-bundle-items]')){
+        this.closest('cart-drawer').updateQuantity(
+          this.dataset.index,
+          0,
+          '',
+          this.closest('[data-bundle-items]').dataset.bundleItems,
+          'bundle',
+          this.closest('[data-bundle-items]').querySelector('.item-data').innerText
+        );
+      }else{
+        this.closest('cart-drawer').updateQuantity(this.dataset.index, 0);
+      }
     });
   }
 }
@@ -65,41 +76,104 @@ class CartDrawer extends HTMLElement {
 
   onChange(event) {
     if(event.target.value !== 'on') {
-      this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
+      if(event.target.closest('[data-bundle-items]')){
+        this.updateQuantity(
+          event.target.dataset.index,
+          event.target.value,
+          document.activeElement.getAttribute('name'),
+          event.target.closest('[data-bundle-items]').dataset.bundleItems,
+          'bundle',
+          event.target.closest('[data-bundle-items]').querySelector('.item-data').innerText
+        );
+      }else{
+        this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
+      }
     }
-    
   }
 
-  updateQuantity(line, quantity, name) {
+  async bundleUpdateAction(mainProductData,updates){
+
+    for (let item of updates) {
+      let body = JSON.stringify(item);
+      const response = await fetch(routes.cart_change_url,{...fetchConfig(), ...{ body }});
+      const data = await response.json();
+      // console.log(data); 
+    }
+    this.fetchAction(routes.cart_change_url,JSON.stringify(mainProductData));
+  }
+  
+  updateQuantity(line, quantity, name,updateData = null,action = null,itemData = null) {
     this.enableLoading(line);
 
-    const body = JSON.stringify({
+    let body = JSON.stringify({
       line,
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
 
-    fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
-      .then((response) => {
-        return response.text();
-      })
-      .then((state) => {
-        const parsedState = JSON.parse(state);
-        this.getSectionsToRender().forEach((section => {
-          const elementToReplace =
-            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-            
-          elementToReplace.innerHTML =
-            this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+    let fetchUrl = routes.cart_change_url;
+    if(updateData != null && action == 'bundle'){
+      
+      let updates = [],
+          keyQty = {},
+          mainProductData = {
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname
+          },
+          splitData = updateData.split('=='),
+          keys = splitData[0].split(','),
+          mainProduct = splitData[1].split('|'),
+          jsonItemData = JSON.parse(itemData);
 
-        }));
-        
-        this.disableLoading();  
-      }).catch(() => {
-        this.disableLoading();
-      });
+      for (let key of keys) {
+        let data = key.split('|'),
+            tmp = {};
+        tmp.id = data[0];
+        tmp.quantity = (parseInt(data[1]) * quantity);
+        updates.push(tmp);
+        keyQty[data[0]] = (parseInt(data[1]) * quantity);
+      }
 
+      // console.log(updates,mainProductData,jsonItemData,splitData[0].split(','))
+
+      // return;
+      mainProductData.id = mainProduct[0];
+      mainProductData.quantity = parseInt(quantity);
+      mainProductData.properties = jsonItemData.properties;
+
+      for (let index = 0; index < keys.length ; index++) {
+        let splitData = keys[index].split('|');
+        mainProductData.properties[`Product_${index + 1}`] = `${splitData[2]} | ${keyQty[splitData[0]]}`
+      }
+
+      this.bundleUpdateAction(mainProductData,updates);
+      
+    }else{
+     this.fetchAction(fetchUrl,body); 
+    }
+  }
+
+  fetchAction(fetchUrl,body){
+    fetch(`${fetchUrl}`, {...fetchConfig(), ...{ body }})
+    .then((response) => {
+      return response.text();
+    })
+    .then((state) => {
+      const parsedState = JSON.parse(state);
+      this.getSectionsToRender().forEach((section => {
+        const elementToReplace =
+          document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+          
+        elementToReplace.innerHTML =
+          this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+
+      }));
+      
+      this.disableLoading();  
+    }).catch(() => {
+      this.disableLoading();
+    });
   }
   
   
@@ -109,14 +183,14 @@ class CartDrawer extends HTMLElement {
       sections_url: window.location.pathname
     });
 
-    fetch('/cart/clear.js', {...fetchConfig(), ...{ body }})
-      .then((response) => {
-        return response.text();
-      })
-      .then((state) => {
-        const parsedState = JSON.parse(state);
-        this.renderContent(parsedState.sections);
-      })
+    // fetch('/cart/clear.js', {...fetchConfig(), ...{ body }})
+    //   .then((response) => {
+    //     return response.text();
+    //   })
+    //   .then((state) => {
+    //     const parsedState = JSON.parse(state);
+    //     this.renderContent(parsedState.sections);
+    //   })
   }
 
   getSectionsToRender() {
@@ -147,6 +221,7 @@ class CartDrawer extends HTMLElement {
   }
 
   enableLoading() {
+    console.log(document.getElementById('cart-drawer-loading'));
     if (!!document.getElementById('cart-drawer-loading')) {
      document.getElementById('cart-drawer-loading').classList.remove('hidden');
     }  
@@ -172,8 +247,7 @@ class CartDrawer extends HTMLElement {
       }
 
       for (let i=0;i<data.items.length;i++) {
-        if (data.items[i].product_type != 'Sample') {
-
+        if (data.items[i].product_type != 'Sample' && data.items[i].properties._bundle_id != undefined) {
           only_singles = false;
           break;
         }

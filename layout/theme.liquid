@@ -75,7 +75,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" ></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'grid-alignment.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 
@@ -249,6 +248,7 @@
     </a>
 
     <div class="page-overlay"></div>
+    <div class="page-blury-overlay"></div>
     
    {% unless template.name == 'product' %} 
     <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">

@@ -117,7 +117,7 @@ const serializeForm = form => {
 function fetchConfig(type = 'json') {
   return {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': `application/${type}` }
+    headers: { 'Content-Type': 'application/json', 'Accept': `application/${type}`,'X-Requested-With': 'XMLHttpRequest' }
   };
 }
 

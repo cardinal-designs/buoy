@@ -202,8 +202,6 @@ if(ratingCount){
   document.querySelector('.okeReviews-starRating.okeReviews-starRating--small .okeReviews-a11yText').innerText = ratingCount.innerText.replace('out of', '/'); 
 }
 
-
-
 let myInterval = setInterval(timer, 1000);
 function timer() {
   if(document.querySelector('.product__info-container .okeReviews-reviewsSummary.js-okeReviews-reviewsSummary .okeReviews-reviewsSummary-ratingCount span')){
@@ -213,3 +211,7 @@ function timer() {
   }
 }
 /* end okendo review replce string on PDP */
+document.querySelector('.page-blury-overlay').onclick = function() {
+  if(document.querySelector('.mobile-toggle-btn--wrapper')) document.querySelector('.mobile-toggle-btn--wrapper').click();
+  document.body.classList.remove('overflow-hidden');
+}

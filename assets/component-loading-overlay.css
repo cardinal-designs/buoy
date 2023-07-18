@@ -39,7 +39,8 @@
   stroke-dasharray: 280;
   stroke-dashoffset: 0;
   transform-origin: center;
-  stroke: rgb(var(--color-foreground));
+/*   stroke: rgb(var(--color-foreground)); */
+  stroke: #000000;
   animation: dash 1.4s ease-in-out infinite;
 }
 
@@ -65,4 +66,18 @@
 .loading-overlay:not(.hidden) ~ cart-remove-button {
   pointer-events: none;
   cursor: default;
+}
+
+.cart-drawer__content .loading-overlay {
+  width: 100%;
+  background: #FFF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.cart-drawer__content .loading-overlay .path {
+  stroke: #000;
 }

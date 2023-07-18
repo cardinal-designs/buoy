@@ -150,7 +150,6 @@
             {% endif %}
           </div>
           {% assign productCount = 0 %}
-        <grid-alignment-wrapper>
           <div class="collection-groups__grid">
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
               {% if sub_bundle_products_count > 0 %}
@@ -160,19 +159,21 @@
                   {% for productSub in collections.bundle.products %}
                     {% if productSub.id == appProductId %}
                       {% for variant in productSub.variants %}
-                        {% assign productCount = productCount | plus: 1 %}
-                        {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
-                          {% continue %}
-                        {% endif %}
-                        {% render 'bundle-product-card',
-                          is_variant: true,
-                          product_card_product: variant,
-                          show_secondary_image: true,
-                          hover_video: block.settings.hover_video
-                        %}
-                        {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
-                          {% assign breakLoop = true %}
-                          {% break %}
+                        {% if variant.metafields.custom.hide_bundle.value == false or variant.metafields.custom.hide_bundle.value == blank and variant.price > 0 %}
+                          {% assign productCount = productCount | plus: 1 %}
+                          {% if blocks.size == 2 and productCount <= 3 and blockIndex == 2 %}
+                            {% continue %}
+                          {% endif %}
+                          {% render 'bundle-product-card',
+                            is_variant: true,
+                            product_card_product: variant,
+                            show_secondary_image: true,
+                            hover_video: block.settings.hover_video
+                          %}
+                          {% if blocks.size == 2 and productCount == 3 and blockIndex == 1 %}
+                            {% assign breakLoop = true %}
+                            {% break %}
+                          {% endif %}
                         {% endif %}
                       {% endfor %}
                       {% break %}
@@ -191,17 +192,19 @@
                   {% for productSub in collections.bundle.products %}
                     {% for variantSub in productSub.variants %}
                       {% if variantSub.id == appVarirant %}
-                        {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
-                          {% continue %}
+                        {% if variantSub.metafields.custom.hide_bundle.value == false or variantSub.metafields.custom.hide_bundle.value == blank and variantSub.price > 0 %}
+                          {% if blocks.size == 2 and blockIndex == 1 and productCount <= 3 %}
+                            {% continue %}
+                          {% endif %}
+                          {% assign productCount = productCount | plus: 1 %}
+                          {% render 'bundle-product-card',
+                            is_variant: true,
+                            product_card_product: variantSub,
+                            show_secondary_image: true,
+                            hover_video: block.settings.hover_video
+                          %}
+                          {% break %}
                         {% endif %}
-                        {% assign productCount = productCount | plus: 1 %}
-                        {% render 'bundle-product-card',
-                          is_variant: true,
-                          product_card_product: variantSub,
-                          show_secondary_image: true,
-                          hover_video: block.settings.hover_video
-                        %}
-                        {% break %}
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
@@ -227,28 +230,30 @@
             {% endif %}
             {% if forloop.index == 1 %}
               <div class="card-wrapper Review_Card_Wrapper">
-                {% for block in section.blocks %}
-                  {%- case block.type -%}
-                    {%- when 'review' -%}
-                      <div class="Review_Box">
-                        <div class="Review_Box_Inr">
-                          <div class="Review_Star">{% render 'icon-five-star' %}</div>
-                          <p class="sh2">{{ block.settings.review }}</p>
-                          <span class="body-xs">{{ block.settings.author }}</span>
+                <div class="Review_Card_Wrapper_Inr">
+                  {% for block in section.blocks %}
+                    {%- case block.type -%}
+                      {%- when 'review' -%}
+                        <div class="Review_Box">
+                          <div class="Review_Box_Inr">
+                            <div class="Review_Star">{% render 'icon-five-star' %}</div>
+                            <p class="sh2">{{ block.settings.review }}</p>
+                            <span class="body-xs">{{ block.settings.author }}</span>
+                          </div>
                         </div>
-                      </div>
-                  {%- endcase -%}
-                {% endfor %}
+                    {%- endcase -%}
+                  {% endfor %}
+                </div>
               </div>
             {% endif %}
           </div>
-          </grid-alignment-wrapper>
         </div>
       {% endfor %}
     </div>
 
-    <div class="lsg-bundle-summary-block--wrapper">
-      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open')">
+    <div class="lsg-bundle-summary-block--wrapper hidden">
+      {% comment %}document.querySelector('.page-blury-overlay').classList.toggle('is-visible'){% endcomment %}
+      <div class="mobile-toggle-btn--wrapper" onclick="this.parentElement.classList.toggle('open');">
         <div class="title--wrapper">
           <span class="lsg-bundle-buybox-product-name">Your Bundle</span>
           <div class="count-badge js-item-count-badge"></div>
