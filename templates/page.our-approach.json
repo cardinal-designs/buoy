@@ -5,7 +5,10 @@
       "settings": {
         "title": "Optimized for function,",
         "italic_title": "not flavor",
-        "text": "In collaboration with our board of medical professionals, we created clean and efficient hydration supplements to restore electrolyte and mineral gaps in the American diet—starting at the cellular level."
+        "text": "In collaboration with our board of medical professionals, we created clean and efficient hydration supplements to restore electrolyte and mineral gaps in the American diet—starting at the cellular level.",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "5a427f0d-87a3-4e56-94c3-601a10480c61": {
@@ -51,7 +54,9 @@
         "image": "shopify:\/\/shop_images\/Image_Section_2_Oval_D_2x_61340c2a-0e4f-40cc-8b9e-0ab2cbbf259d.png",
         "title": "More Benefits <i style=\"font-weight: 300;\">In Every Drop<\/i>",
         "text_bottom": "",
-        "background": "transparent linear-gradient(0deg, #F8F1EB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;"
+        "background": "transparent linear-gradient(0deg, #F8F1EB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "f137c4a8-dd27-4e04-b647-4b83e459b06f": {
@@ -81,7 +86,8 @@
       "settings": {
         "section_title": "<span class=\"medium\">We’re Focused on<\/span> <i>The Numbers<\/i>",
         "add_top_border": true,
-        "add_bottom_border": true
+        "add_bottom_border": true,
+        "background": "none"
       }
     },
     "30fbcdd1-ba90-4e84-906b-07bf776ddb0a": {
@@ -243,7 +249,10 @@
       "settings": {
         "title": "<span class=\"medium\">Squeeze Into<\/span> <i>Any Lifestyle<\/i>",
         "link_text": "",
-        "link": ""
+        "link": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "9ca3f7c8-adfa-4148-b75a-c62611a0985d": {
@@ -263,9 +272,9 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
-            "title": "Martha Rosenau",
-            "title_person": "Title",
-            "title_location": "Location",
+            "title": "Martha Rosenau, RD",
+            "title_person": "Board Member",
+            "title_location": "",
             "content": "“My patients with gastrointestinal disease are truly benefiting from Buoy. They are feeling more vibrant and energetic with this amazing blend of electrolytes. Since it’s free of both sugars and zero-calorie sweetener, it’s the perfect way to rehydrate without further aggravating the gastrointestinal tract. Thank you for creating a dietitian’s dream - the perfectly balanced electrolyte replenisher, free of any form of sweetener.”"
           }
         },
@@ -274,8 +283,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
             "title": "Melissa Nohr, JD, BCHHP, CBNP",
-            "title_person": "Title",
-            "title_location": "Location",
+            "title_person": "Board Member",
+            "title_location": "",
             "content": "“I was diagnosed with POTS a year ago and they make a point to help make daily hydration easier and more accessible to those with chronic illnesses. After using Buoy for one year as a customer, I asked to personally invest in the company.”"
           }
         }
@@ -300,7 +309,7 @@
     "2595d164-b496-43d3-98ff-86a4d91bbb2b": {
       "type": "product-reviews",
       "custom_css": [
-        ".product-reviews{margin-top: 50px;}"
+        ".product-reviews {margin-top: 50px;}"
       ],
       "settings": {
         "product": "hydration-drops"

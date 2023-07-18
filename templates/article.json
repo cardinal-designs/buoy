@@ -1,1 +1,88 @@
-{"sections":{"main":{"type":"main-article","blocks":{"featured_image":{"type":"featured_image","settings":{"image_height":"adapt"}},"title":{"type":"title","settings":{"blog_show_read_time":true,"blog_show_date":true,"blog_show_author":true}},"15dce463-6824-460a-8149-ff956cbdaa4e":{"type":"share","settings":{"share_label":"Share"}},"content":{"type":"content","settings":{}}},"block_order":["featured_image","title","15dce463-6824-460a-8149-ff956cbdaa4e","content"],"settings":{}},"31ffd4b8-7c36-4608-8cae-fa72eff2dd9f":{"type":"related-articles","settings":{"bg_color":"#f8f1eb","title":"Related Articles","show_section_borders":true,"show_excerpt":false,"show_read_more":true,"link_text":"See All Articles","link_url":"shopify:\/\/blogs\/hydration-station"}},"99f383e2-cb87-4a6e-a62a-8aeaacfe02f6":{"type":"custom-image-with-text","settings":{"video_url":"","image":"shopify:\/\/shop_images\/50-50_Image_MP4_or_Image.png","title":"Give your best self a squeeze","text":"A healthier, hydrated, and clear-minded you is only a squeeze away with <a href=\"#\">Buoy Hydration.<\/a>","button_label":"Shop Hydration","button_link":"shopify:\/\/collections\/all","button_style":"white","link_label":"Shop All","link_link":"shopify:\/\/collections\/all"}}},"order":["main","31ffd4b8-7c36-4608-8cae-fa72eff2dd9f","99f383e2-cb87-4a6e-a62a-8aeaacfe02f6"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_read_time": true,
+            "blog_show_date": true,
+            "blog_show_author": true
+          }
+        },
+        "15dce463-6824-460a-8149-ff956cbdaa4e": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
+        "138ab240-dac8-45af-a8f5-f14725cde987": {
+          "type": "shopify:\/\/apps\/related-blog-posts-pro\/blocks\/app-block\/7e18cab2-c869-4042-bc07-288e9bb4e22d",
+          "disabled": true,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "15dce463-6824-460a-8149-ff956cbdaa4e",
+        "content",
+        "138ab240-dac8-45af-a8f5-f14725cde987"
+      ],
+      "settings": {
+      }
+    },
+    "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f": {
+      "type": "related-articles",
+      "settings": {
+        "bg_color": "#f8f1eb",
+        "title": "Related Articles",
+        "show_section_borders": true,
+        "show_excerpt": false,
+        "show_read_more": false,
+        "link_text": "See All Articles",
+        "link_url": "shopify:\/\/blogs\/hydration-station"
+      }
+    },
+    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/50-50_Image_MP4_or_Image.png",
+        "title": "Give your best self a squeeze",
+        "text": "A healthier, hydrated, and clear-minded you is only a squeeze away with <a href=\"#\">Buoy Hydration.<\/a>",
+        "button_label": "Shop Hydration",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_style": "white",
+        "link_label": "Shop All",
+        "link_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "1685743432e9021ecd": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "31ffd4b8-7c36-4608-8cae-fa72eff2dd9f",
+    "99f383e2-cb87-4a6e-a62a-8aeaacfe02f6",
+    "1685743432e9021ecd"
+  ]
+}
