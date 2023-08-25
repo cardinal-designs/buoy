@@ -1443,6 +1443,7 @@ $('.image-with-dropdowns__q').click(function () {
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  console.log(anchor)
 if(anchor.getAttribute('href') !== '#recover' || anchor.getAttribute('href') !== '#login'){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
