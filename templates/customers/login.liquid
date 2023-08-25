@@ -46,7 +46,7 @@
         {{ 'customer.login_page.submit' | t }}
       </button>
 
-      <a class="body" href="#login">
+      <a class="body js-cancle-password" href="javascript:void(0)">
         {{ 'customer.login_page.cancel' | t }}
       </a>
     {%- endform -%}
@@ -118,7 +118,7 @@
         </div>
          
 
-        <a class="body forgot-password" href="#recover">
+        <a href="javascript:void(0)" class="body forgot-password js-recover-password">
           {{ 'customer.login_page.forgot_password' | t }}
         </a>
       {%- endif -%}

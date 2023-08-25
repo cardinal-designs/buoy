@@ -1441,7 +1441,9 @@ $('.image-with-dropdowns__q').click(function () {
   $(this).toggleClass('active');
 })
 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
@@ -1456,8 +1458,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           top: offsetPosition
         });
     });
+}
 });
 
+if(document.querySelector('.js-recover-password')){
+  document.querySelector('.js-recover-password').addEventListener('click',function(ele){
+    window.location.href = '#recover'
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0
+    });
+  });
+}
+
+if(document.querySelector('.js-cancle-password')){
+  document.querySelector('.js-cancle-password').addEventListener('click',function(ele){
+    window.location.href = '#login'
+    window.scrollTo({
+          behavior: 'smooth',
+          top: 0
+      });
+  });
+}
 
 // Close supplement drawer on page-overlay click
 $('.js-open-supplement-drawer').click(function() {
