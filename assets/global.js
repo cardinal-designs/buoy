@@ -1443,7 +1443,7 @@ $('.image-with-dropdowns__q').click(function () {
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-console.log(anchor.getAttribute('href'))
+if(anchor.getAttribute('href') !== '#recover'){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
@@ -1458,6 +1458,7 @@ console.log(anchor.getAttribute('href'))
           top: offsetPosition
         });
     });
+}
 });
 
 
