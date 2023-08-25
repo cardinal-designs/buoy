@@ -1443,7 +1443,7 @@ $('.image-with-dropdowns__q').click(function () {
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-if(anchor.getAttribute('href') !== '#recover,#login'){
+if(anchor.getAttribute('href') !== '#recover','#login'){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
