@@ -1441,7 +1441,9 @@ $('.image-with-dropdowns__q').click(function () {
   $(this).toggleClass('active');
 })
 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+console.log(anchor)
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
