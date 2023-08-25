@@ -356,6 +356,11 @@
   font-size: 1.6rem;
 }
 
+.login .forgot-password {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 #customer_login_guest button {
   margin-top: 0;
 }
@@ -806,9 +811,4 @@ li[data-address] > h2 {
 
 #recover:target + div p {
   margin-top: 30px;
-}
-
-.login .forgot-password {
-  margin-left: 0;
-  margin-right: 0;
 }
