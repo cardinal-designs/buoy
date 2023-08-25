@@ -1443,6 +1443,15 @@ $('.image-with-dropdowns__q').click(function () {
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+if(anchor.getAttribute('href') == '#recover' && anchor.getAttribute('href') == '#login' ){
+  anchor.addEventListener('click', function (e) {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0
+    });
+  })
+}
+
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
