@@ -1461,9 +1461,17 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
 }
 });
 
-document.querySelector('.js-recover-password').addEventListener('click',function(ele){
-  console.log(ele)
-})
+if(document.querySelector('.js-recover-password')){
+  document.querySelector('.js-recover-password').addEventListener('click',function(ele){
+    window.location.href = '#recover'
+  });
+}
+
+if(document.querySelector('.js-cancle-password')){
+  document.querySelector('.js-cancle-password').addEventListener('click',function(ele){
+    window.location.href = '#login'
+  });
+}
 
 // Close supplement drawer on page-overlay click
 $('.js-open-supplement-drawer').click(function() {
