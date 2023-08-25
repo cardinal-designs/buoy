@@ -807,3 +807,8 @@ li[data-address] > h2 {
 #recover:target + div p {
   margin-top: 30px;
 }
+
+.login .forgot-password {
+  margin-left: 0;
+  margin-right: 0;
+}
