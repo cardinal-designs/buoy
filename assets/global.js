@@ -1464,12 +1464,20 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
 if(document.querySelector('.js-recover-password')){
   document.querySelector('.js-recover-password').addEventListener('click',function(ele){
     window.location.href = '#recover'
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0
+    });
   });
 }
 
 if(document.querySelector('.js-cancle-password')){
   document.querySelector('.js-cancle-password').addEventListener('click',function(ele){
     window.location.href = '#login'
+    window.scrollTo({
+          behavior: 'smooth',
+          top: 0
+      });
   });
 }
 
