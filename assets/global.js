@@ -1444,7 +1444,6 @@ $('.image-with-dropdowns__q').click(function () {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
-console.log('inn')
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
@@ -1462,6 +1461,9 @@ console.log('inn')
 }
 });
 
+document.querySelector('.js-recover-password').addEventListener('click',function(ele){
+  console.log(ele)
+})
 
 // Close supplement drawer on page-overlay click
 $('.js-open-supplement-drawer').click(function() {
