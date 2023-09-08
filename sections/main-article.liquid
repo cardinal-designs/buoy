@@ -59,7 +59,7 @@
             {% if block.settings.blog_show_read_time and article.metafields.custom.reading_time != blank %}
               <span class="caption">{{ article.metafields.custom.reading_time }}</span>
             {% endif %}
-            <h2 class="main-article-template__title" itemprop="headline">{{ article.title | escape }}</h2>
+            <h1 class="main-article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
             {%- endif -%}
