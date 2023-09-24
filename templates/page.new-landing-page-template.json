@@ -421,7 +421,7 @@
         "video_url": "",
         "title": "<strong>How To Use Buoy's Electrolytes During Fasting<\/strong>",
         "description": "Essential electrolytes, 87 ionic trace minerals and vitamins delivered in their most bioavailable form factor for fast-acting hydration.<br><br>— One Serving = One Short Squeeze<br>— 40 Servings Per Bottle",
-        "button_label": "Electrify Your Fast With Buoy's Drops",
+        "button_label": "Fast Better With Buoy's Electrolyte Drops",
         "button_link": "shopify:\/\/products\/hydration-drops",
         "link_label": "",
         "link_link": "",
@@ -430,6 +430,56 @@
         "add_top_border": true,
         "add_bottom_border": false,
         "background": "none"
+      }
+    },
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "blocks": {
+        "b46d22a2-dc4c-4952-920e-df027e14433e": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Salt Source",
+            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
+            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+          }
+        },
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Naturally-Balanced Electrolytes",
+            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+          }
+        },
+        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Ionic Trace Minerals",
+            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+          }
+        },
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
+          "type": "dropdown",
+          "settings": {
+            "title": "B Vitamins",
+            "text": "Did you know some vitamins can help you hydrate better?<br><br>Buoy's curated blend of plant-powered B vitamins that support routine electrolyte function.",
+            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+          }
+        }
+      },
+      "block_order": [
+        "b46d22a2-dc4c-4952-920e-df027e14433e",
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
+        "07c66f31-6bda-4e4c-9097-b51e4c178122",
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
+      ],
+      "settings": {
+        "title": "Electrify Your Fast With Nature's Original Mineral Boost",
+        "subtext": "Premium electrolytes and minerals from one of nature's most powerful ingredient sources: the deep ocean.",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
@@ -564,56 +614,6 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": false
-      }
-    },
-    "50df382c-255c-4272-b876-eca398cca73a": {
-      "type": "dropdowns",
-      "blocks": {
-        "b46d22a2-dc4c-4952-920e-df027e14433e": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Salt Source",
-            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
-            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
-          }
-        },
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Naturally-Balanced Electrolytes",
-            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
-          }
-        },
-        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Ionic Trace Minerals",
-            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
-          }
-        },
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
-          "type": "dropdown",
-          "settings": {
-            "title": "B Vitamins",
-            "text": "Did you know some vitamins can help you hydrate better?<br><br>Buoy's curated blend of plant-powered B vitamins that support routine electrolyte function.",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
-          }
-        }
-      },
-      "block_order": [
-        "b46d22a2-dc4c-4952-920e-df027e14433e",
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
-        "07c66f31-6bda-4e4c-9097-b51e4c178122",
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
-      ],
-      "settings": {
-        "title": "Electrify Your Fast With Nature's Original Mineral Boost",
-        "subtext": "Premium electrolytes and minerals from one of nature's most powerful ingredient sources: the deep ocean.",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "bg_color"
       }
     },
     "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
@@ -1129,11 +1129,11 @@
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
+    "50df382c-255c-4272-b876-eca398cca73a",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
-    "50df382c-255c-4272-b876-eca398cca73a",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
