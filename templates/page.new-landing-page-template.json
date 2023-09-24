@@ -270,22 +270,6 @@
         "add_bottom_border": true
       }
     },
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
-      "type": "custom-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": true,
-        "free_shipping_text": "Free Shipping  |  Try Risk Free",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
-    },
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
       "type": "trusted-reviews",
       "blocks": {
@@ -348,13 +332,30 @@
       ],
       "settings": {
         "review_emoji": "⭐️",
-        "head-title": "3,000 +trusted reviews",
-        "sub-text": "",
+        "head-title": "",
+        "sub-text": "Ddddd",
         "button_label": "Read All Reviews",
         "button_link": "shopify:\/\/pages\/reviews",
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": false
+      }
+    },
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
+      "type": "custom-featured-product",
+      "disabled": true,
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": true,
+        "free_shipping_text": "Free Shipping  |  Try Risk Free",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
@@ -1123,8 +1124,8 @@
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "304f34df-6587-4eb2-a832-96b49eef9918",
-    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
