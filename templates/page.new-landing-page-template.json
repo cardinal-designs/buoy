@@ -493,15 +493,48 @@
         "background": "none"
       }
     },
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
-      "type": "text-above",
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
+      "type": "pr-slider",
+      "blocks": {
+        "20f2efcc-4640-43b7-9239-3abd290c09ca": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
+            "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
+          }
+        },
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
+            "text": "“Best electrolytes for daily use\""
+          }
+        },
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Daily_Mail_1.svg",
+            "text": "\"Enter Buoy hydration drops, the easy-to-use formula that’s designed to give you a big boost of the electrolytes and trace minerals that you need every day to feel your best.\""
+          }
+        },
+        "70b64ff0-82c1-4a54-8203-afe718ed3640": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
+            "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
+          }
+        }
+      },
+      "block_order": [
+        "20f2efcc-4640-43b7-9239-3abd290c09ca",
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80",
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3",
+        "70b64ff0-82c1-4a54-8203-afe718ed3640"
+      ],
       "settings": {
-        "emoji": "👀",
-        "suptitle": "Even \"Popular\" Zero-Sugar Electrolyte Powders May Break Your Fast",
-        "suptext": "One of the reasons Buoy is so effective is because of it's purposefully unflavored and unsweetened, naturally-soruced and unprocessed electrolyte and mineral profile. <br><br>Even without sugar, sweeteners and \"natural\" flavors may spike blood sugar and spark metabolic reactions in your body that can undermine, or even break, a fast.",
-        "add_top_border": true,
-        "add_bottom_border": false,
-        "background": "bg_color"
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "none"
       }
     },
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40": {
@@ -616,6 +649,17 @@
         "add_bottom_border": false
       }
     },
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
+      "type": "text-above",
+      "settings": {
+        "emoji": "👀",
+        "suptitle": "Even \"Popular\" Zero-Sugar Electrolyte Powders May Break Your Fast",
+        "suptext": "One of the reasons Buoy is so effective is because of it's purposefully unflavored and unsweetened, naturally-soruced and unprocessed electrolyte and mineral profile. <br><br>Even without sugar, sweeteners and \"natural\" flavors may spike blood sugar and spark metabolic reactions in your body that can undermine, or even break, a fast.",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
     "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
       "type": "pee-club-half-image",
       "blocks": {
@@ -642,6 +686,7 @@
         "7408eeea-301f-442d-a916-b380c5201277",
         "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3"
       ],
+      "disabled": true,
       "settings": {
         "title": "How to Use Buoy's Electrolytes During Fasting",
         "text": "",
@@ -708,52 +753,9 @@
         "background": "bg_color"
       }
     },
-    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
-      "type": "pr-slider",
-      "blocks": {
-        "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Daily_Mail_1.svg",
-            "text": "\"Enter Buoy hydration drops, the easy-to-use formula that’s designed to give you a big boost of the electrolytes and trace minerals that you need every day to feel your best.\""
-          }
-        },
-        "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
-            "text": "“Best electrolytes for daily use\""
-          }
-        },
-        "20f2efcc-4640-43b7-9239-3abd290c09ca": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
-            "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
-          }
-        },
-        "70b64ff0-82c1-4a54-8203-afe718ed3640": {
-          "type": "pr_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
-            "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
-          }
-        }
-      },
-      "block_order": [
-        "3a944d2e-08e6-4382-b541-79f7dbb279f3",
-        "1a5f176f-d949-477e-a735-f63ba2c6bd80",
-        "20f2efcc-4640-43b7-9239-3abd290c09ca",
-        "70b64ff0-82c1-4a54-8203-afe718ed3640"
-      ],
-      "settings": {
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "none"
-      }
-    },
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
       "type": "image-slider",
+      "disabled": true,
       "settings": {
         "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
         "add_top_border": true,
@@ -1131,13 +1133,13 @@
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
     "50df382c-255c-4272-b876-eca398cca73a",
     "517df923-ac36-43bd-9898-b875c67e1be2",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
-    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
