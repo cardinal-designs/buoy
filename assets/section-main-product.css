@@ -447,7 +447,6 @@ fieldset.product-form__input .form__label {
   top: 24px;
   left: 24px;
   z-index: 2;
-  display: none;
 }
 
 .product__media-arrows {
@@ -2007,6 +2006,7 @@ span#timer strong {
   z-index: 1;
   left: unset !important;
   width: 90px;
+  display: none;
 }
 
 .product__media-arrows .slick-arrow:hover.slick-prev {
