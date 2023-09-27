@@ -442,13 +442,6 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
-.product__media-item .product-spinner {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  z-index: 2;
-}
-
 .product__media-arrows {
   padding-top: 30px;
   display: flex;
