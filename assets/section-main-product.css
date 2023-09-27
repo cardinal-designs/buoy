@@ -442,6 +442,14 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
+.product__media-item .product-spinner {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  visibility: hidden;
+}
+
 .product__media-arrows {
   padding-top: 30px;
   display: flex;
@@ -1999,7 +2007,7 @@ span#timer strong {
   z-index: 1;
   left: unset !important;
   width: 90px;
-  display: none;
+  visibility: hidden;
 }
 
 .product__media-arrows .slick-arrow:hover.slick-prev {
