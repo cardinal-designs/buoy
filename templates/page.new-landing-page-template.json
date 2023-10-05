@@ -102,6 +102,10 @@
         "aca99b1c-2e36-45dc-8c71-d752f8937b59",
         "8939123e-4123-47d7-a631-21ea009a79ce"
       ],
+      "custom_css": [
+        "\/* CSS for desktop screens (screens wider than 768px) *\/.section-to-hide {display: block; \/* or any other desired style *\/}",
+        "\/* CSS for mobile screens (screens 768px and below) *\/@media (max-width: 768px) {.section-to-hide {display: none; \/* Hide the section on mobile *\/ }}"
+      ],
       "settings": {
         "title": "Best Electrolytes for Fasting",
         "text": "Support healthy, prolonged fasts with the latest innovation in electrolyte supplementation. \n<br><br>Electrolytes are crucial to fasting, yet <strong>most electrolyte options actually break your fast<\/strong>.<br><br>Electrify your fasting journey with Buoy's unflavored and unsweetened hydration drops perfectly formulated for Intermittent Fasting (IF), Keto and prolonged fasts.",
