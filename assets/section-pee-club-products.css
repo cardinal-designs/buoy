@@ -6,11 +6,11 @@
 
 .pee-club-products__flex {
   display: flex;
+  justify-content: center;
 }
 
 .pee-club-products__wrapper {
   cursor: pointer;
-  width: calc(100% - 588px);
   display: flex;
   overflow: auto;
   position: relative;
