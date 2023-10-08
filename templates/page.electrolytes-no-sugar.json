@@ -150,6 +150,75 @@
         "add_bottom_border": false
       }
     },
+    "a09de49d-45af-40d0-969c-1445290cd3be": {
+      "type": "image-with-dropdowns",
+      "blocks": {
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
+          "type": "block",
+          "settings": {
+            "title": "Why Sugar-Free Hydration Solutions?",
+            "emoji": "🍩",
+            "subtitle": "LOWER LDL & TOTAL CHOLESTEROL",
+            "text": "A recent study linked alternate day fasting to lower levels of key heart health markers like triglycerides, total cholesterol and the \"bad\" LDL cholesterol."
+          }
+        },
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
+          "type": "block",
+          "settings": {
+            "title": "Do we really need sugar with our electrolytes?",
+            "emoji": "🤨",
+            "subtitle": "COGNITION BOOSTER",
+            "text": "While animals have only been studied thus far for links to brain health, the results have been overwhelmingly positive for cognitive performance.<br><br>Fasting can reduce inflammation which may lead to neurodegenerative disorders like  Alzheimer’s disease and Parkinson’s, it may also enhance cognitive function by increasing the generation of nerve cells in the brain."
+          }
+        },
+        "c3ba0924-90f1-4215-a807-52f05df73ae2": {
+          "type": "block",
+          "settings": {
+            "title": "The Sodium Blood Barrier",
+            "emoji": "🧠",
+            "subtitle": "METABOLISM BOOSTER",
+            "text": "Not only does fasting limit your total calories consumed, but it also revs your metabolism.<br><br>Studies link consistent use of Intermittent Fasting to effective reductions in weight by many dieters."
+          }
+        },
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
+          "type": "block",
+          "settings": {
+            "title": "Sugar Undermines Effective Hydration In Long Run",
+            "emoji": "📉",
+            "subtitle": "REDUCED INSULIN RESISTANCE",
+            "text": "Even doing intermittent fasting just three times a week can help your body transport glucose from your blood to your cells more efficiently, lowering your risk of Type 2 Diabetes."
+          }
+        },
+        "a8857c10-0308-470e-9fda-843eda7c0033": {
+          "type": "block",
+          "settings": {
+            "title": "Other Sodium Co-Transporters",
+            "emoji": "⏩",
+            "subtitle": "",
+            "text": "A 2022 study showed that moderate intermittent fasting practices reduced key markers of inflammation like lower levels of C-reactive proteins."
+          }
+        }
+      },
+      "block_order": [
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d",
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155",
+        "c3ba0924-90f1-4215-a807-52f05df73ae2",
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
+        "a8857c10-0308-470e-9fda-843eda7c0033"
+      ],
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/3072EB09-084B-4E75-9990-03356D72CD9B_62e27288-a8b1-421d-9fd5-a5787dd0ce96.JPG",
+        "title": "Health Benefits of Fasting",
+        "text": "There's some science behind the hype—even intermittent fasting is linked to lasting health benefits from brain health to weight loss.",
+        "text_bottom": "",
+        "button_label": "",
+        "button_link": "shopify:\/\/products\/hydration-drops",
+        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
     "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
       "type": "image-dropdowns",
       "blocks": {
@@ -163,28 +232,28 @@
         "c8221bc7-1128-47ef-aa8c-bc586af3f7f1": {
           "type": "block",
           "settings": {
-            "title": "🤨 Do we really need sugar with our electrolytes?",
+            "title": "",
             "text": ""
           }
         },
         "4326ad19-ec24-4b0a-840d-9a17b0914868": {
           "type": "block",
           "settings": {
-            "title": "🧠 The Sodium Blood Barrier",
+            "title": "",
             "text": ""
           }
         },
         "fb2ab3c5-1181-492a-b42a-9fd5a63b05c7": {
           "type": "block",
           "settings": {
-            "title": "📉 Sugar Undermines Effective Hydration In Long Run",
+            "title": "",
             "text": ""
           }
         },
         "9f4620ee-431f-4744-b64d-edef2430ff0e": {
           "type": "block",
           "settings": {
-            "title": "⏩ Other Sodium Co-Transporters",
+            "title": "",
             "text": ""
           }
         }
@@ -254,75 +323,6 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
-      }
-    },
-    "a09de49d-45af-40d0-969c-1445290cd3be": {
-      "type": "image-with-dropdowns",
-      "blocks": {
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
-          "type": "block",
-          "settings": {
-            "title": "Heart Health",
-            "emoji": "🫀",
-            "subtitle": "LOWER LDL & TOTAL CHOLESTEROL",
-            "text": "A recent study linked alternate day fasting to lower levels of key heart health markers like triglycerides, total cholesterol and the \"bad\" LDL cholesterol."
-          }
-        },
-        "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
-          "type": "block",
-          "settings": {
-            "title": "Cognitive Protection",
-            "emoji": "🧠",
-            "subtitle": "COGNITION BOOSTER",
-            "text": "While animals have only been studied thus far for links to brain health, the results have been overwhelmingly positive for cognitive performance.<br><br>Fasting can reduce inflammation which may lead to neurodegenerative disorders like  Alzheimer’s disease and Parkinson’s, it may also enhance cognitive function by increasing the generation of nerve cells in the brain."
-          }
-        },
-        "c3ba0924-90f1-4215-a807-52f05df73ae2": {
-          "type": "block",
-          "settings": {
-            "title": "Weight Loss",
-            "emoji": "🔥",
-            "subtitle": "METABOLISM BOOSTER",
-            "text": "Not only does fasting limit your total calories consumed, but it also revs your metabolism.<br><br>Studies link consistent use of Intermittent Fasting to effective reductions in weight by many dieters."
-          }
-        },
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
-          "type": "block",
-          "settings": {
-            "title": "Blood Sugar Control",
-            "emoji": "🍩",
-            "subtitle": "REDUCED INSULIN RESISTANCE",
-            "text": "Even doing intermittent fasting just three times a week can help your body transport glucose from your blood to your cells more efficiently, lowering your risk of Type 2 Diabetes."
-          }
-        },
-        "a8857c10-0308-470e-9fda-843eda7c0033": {
-          "type": "block",
-          "settings": {
-            "title": "Soothe Inflammation",
-            "emoji": "🧊",
-            "subtitle": "REDUCED LEVELS OF C-REACTIVE PROTEIN",
-            "text": "A 2022 study showed that moderate intermittent fasting practices reduced key markers of inflammation like lower levels of C-reactive proteins."
-          }
-        }
-      },
-      "block_order": [
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d",
-        "e0101db3-4644-4c02-8d36-dccdb9a7c155",
-        "c3ba0924-90f1-4215-a807-52f05df73ae2",
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
-        "a8857c10-0308-470e-9fda-843eda7c0033"
-      ],
-      "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/3072EB09-084B-4E75-9990-03356D72CD9B_62e27288-a8b1-421d-9fd5-a5787dd0ce96.JPG",
-        "title": "Health Benefits of Fasting",
-        "text": "There's some science behind the hype—even intermittent fasting is linked to lasting health benefits from brain health to weight loss.",
-        "text_bottom": "",
-        "button_label": "",
-        "button_link": "shopify:\/\/products\/hydration-drops",
-        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
-        "add_top_border": false,
-        "add_bottom_border": false
       }
     },
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
@@ -1046,9 +1046,9 @@
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "31e36676-5821-47f9-a328-6c162b259d29",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
+    "a09de49d-45af-40d0-969c-1445290cd3be",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "304f34df-6587-4eb2-a832-96b49eef9918",
-    "a09de49d-45af-40d0-969c-1445290cd3be",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
