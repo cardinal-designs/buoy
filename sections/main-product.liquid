@@ -31,9 +31,7 @@
 
         <div class="Product_Tags">
           {%- for tag in product.tags -%}
-            {% unless tag contains 'product-type' %}
             <span>{{ tag }}</span>
-            {% endunless %}
           {%- endfor -%}
         </div>
         
