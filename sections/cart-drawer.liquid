@@ -254,7 +254,6 @@
               <div class="sub-upsell__container-scroll">
               {% assign include_incart = false %}
                 {% for item in cart.items %}
-                  {{ item.product.metafields.custom.cart_item_type }}
                   {% if item.product.metafields.custom.cart_item_type == upsell1.metafields.custom.cart_item_type %}
                       {% assign include_incart = true %}
                   {% endif %}
