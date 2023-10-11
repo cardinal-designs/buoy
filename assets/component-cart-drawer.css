@@ -424,6 +424,8 @@
 
 .sub-products__text.sub {
   display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .sub-products__text p {
