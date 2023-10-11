@@ -260,12 +260,10 @@
                   </div>
                   <div class="cart-upsell__container-atc">
                     <h6>{{upsell1.title}}</h6>
-                    <button data-subid="{{upsell1.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell1.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">Add to Cart</button>
+                    <button data-subid="{{upsell1.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell1.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add -- {{upsell1.price | money }}{{upsell1.compare_at_price | money }}</button>
                   </div>
                 </div>
                 <div class="cart-upsell__container-right">
-                  <p class="sh2">{{upsell1.price | money }}</p>
-                  <p class="cart-upsell__sale-price">{{upsell1.compare_at_price | money }}</p>
                 </div>
               </div>
               {% endif %}
