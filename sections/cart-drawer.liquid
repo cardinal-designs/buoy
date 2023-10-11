@@ -244,14 +244,10 @@
             {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
             {% if section.settings.upsell_subproduct1 != blank %}
             <div class="sub-upsell__container">
-              <div class="sub-products__text no-sub">
-                <p class="sh1">{{section.settings.sub_title}}</p>
-                <p class="body-xs">{{section.settings.sub_text}}</p>
-              </div>
               <div class="sub-products__text sub">
-                <p class="body-xs">Need more? Add single bottles:</p>
+                <p class="body-xs">{{section.settings.sub_title}}</p>
                 <div class="green_button">
-                  <p class="green_text">Save 23%</p>
+                  <p class="green_text">{{section.settings.sub_text}}</p>
                 </div>
               </div>
               <div class="sub-upsell__container-scroll">
