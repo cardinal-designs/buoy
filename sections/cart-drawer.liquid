@@ -243,38 +243,10 @@
                 {{ section.settings.cart_content }}
               </div>
             </div>
-
-           
-            <div class="sub-upsell__container">
-              <div class="sub-products__text no-sub">
-                <p class="sh1">{{section.settings.sub_title}}</p>
-                <p class="body-xs">{{section.settings.sub_text}}</p>
-              </div>
-              <div class="sub-products__text sub">
-                <p class="body-xs">Need more? Add single bottles:<br><i>Add-On bottles only available with a 3 pack in cart</i></p>
-              </div>
-              <div class="sub-upsell__container-scroll">
-               {% for prod in section.settings.collection.products %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img src="{{prod.media[0].src | img_url: '95x' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <h6>{{prod.title}}</h6>
-                      <p class="single-bottle">Single Bottle</p>
-                      <button data-id="{{prod.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">Add to Cart - {{ prod.selected_or_first_available_variant.price | money }}</button>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-            </div>
           
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
             {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
-            {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
             {% if section.settings.upsell_subproduct1 != blank %}
             <div class="sub-upsell__container">
               <div class="sub-products__text no-sub">
@@ -338,7 +310,6 @@
               {% endif %}
               </div>
             </div>
-  
             {% endif %}
           
           </div>
