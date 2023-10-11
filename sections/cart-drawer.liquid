@@ -238,7 +238,7 @@
             {% endfor %}
           </div>
            <div class="cart-drawer__footer">
-
+            {% if section.settings.upsell_subproduct1 != blank %}
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
             {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
@@ -314,6 +314,7 @@
                 </div>
               </div>
             </div>
+            {% endif %}
             {% endif %}
           
             <div class="cart-drawer__shipping-wrapper" id="cart-drawer-subtotal">
