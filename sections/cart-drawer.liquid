@@ -236,13 +236,6 @@
               {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
               {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
-
-            <div class="cart-content">
-              <h4 class="body">{{ section.settings.content_title }}</h4>
-              <div class="description body-small">
-                {{ section.settings.cart_content }}
-              </div>
-            </div>
           
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
@@ -368,16 +361,6 @@
     {
       "type": "header",
       "content": "Cart Content"
-    },
-    {
-      "type": "text",
-      "id": "content_title",
-      "label": "Content Title"      
-    },
-    {
-      "type": "textarea",
-      "id": "cart_content",
-      "label": "Cart Content"
     },
     {
       "type": "header",
