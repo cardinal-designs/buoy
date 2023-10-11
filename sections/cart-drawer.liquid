@@ -273,7 +273,7 @@
                   <div class="cart-upsell__container-atc">
                     <p class="sh3">{{upsell1.title}}</p>
                     <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-subid="{{upsell1.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell1.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add - {{upsell1.price | money_without_trailing_zeros }}{{upsell1.compare_at_price | money_without_trailing_zeros }}</button>
+                    <button data-subid="{{upsell1.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell1.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
                   </div>
                 </div>
               </div>
@@ -287,7 +287,7 @@
                   <div class="cart-upsell__container-atc">
                     <p class="sh3">{{upsell2.title}}</p>
                     <div data-oke-reviews-product-listing-rating>{{ upsell2.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-subid="{{upsell2.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell2.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add - {{upsell2.price | money_without_trailing_zeros }}{{upsell2.compare_at_price | money_without_trailing_zeros }}</button>
+                    <button data-subid="{{upsell2.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell2.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell2.price | money_without_trailing_zeros }} <s>{{upsell2.compare_at_price | money_without_trailing_zeros }}</s></button>
                   </div>
                 </div>
               </div>
