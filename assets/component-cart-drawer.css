@@ -443,6 +443,19 @@
   white-space: nowrap;
 }
 
+.clear_tag {
+  font-weight: 400;
+  color: #1F2322;
+  margin: 0 auto !important;
+  padding: 0px 12.5px;
+}
+
+.clear_tag .save24 {
+  color: #1F2322;
+  font-weight: 400;
+  font-size: 12px;
+}
+
 .sub-upsell__container-scroll-wrapper {
   overflow-x: scroll;
   font-size: 0px;
