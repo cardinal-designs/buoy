@@ -435,6 +435,15 @@
   text-align: center;
 }
 
+.money-back__container {
+  display: flex;
+}
+
+.money-back__container img {
+  width: 20px;
+  height: 20px;
+}
+
 .sub-products__text .body-xs {
   margin: 0;
   padding: 0;
