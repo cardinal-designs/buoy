@@ -254,11 +254,9 @@
               <div class="sub-upsell__container-scroll">
               {% assign include_incart = false %}
                 {% for item in cart.items %}
-                  {% for tag in item.tags %}
-                   {% if tag contains 'product-type' and tag contains upsell1.title %}
-                     {% assign include_incart = true %}
-                   {% endif %}
-                  {% endfor %}
+                  {% if upsell1.title contains item.title %}
+                      {% assign include_incart = false %}
+                  {% endif %}
                 {% endfor %}
               {{ include_incart }}
               {% if section.settings.upsell_subproduct1 != blank %}
