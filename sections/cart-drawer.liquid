@@ -273,12 +273,8 @@
                   </div>
                   <div class="cart-upsell__container-atc">
                     <h6>{{upsell2.title}}</h6>
-                    <button data-subid="{{upsell2.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell2.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">Add to Cart</button>
+                    <button data-subid="{{upsell2.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell2.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add - {{upsell2.price | money }}{{upsell2.compare_at_price | money }}</button>
                   </div>
-                </div>
-                <div class="cart-upsell__container-right">
-                  <p class="sh2">{{upsell2.price | money }}</p>
-                  <p class="cart-upsell__sale-price">{{upsell2.compare_at_price | money }}</p>
                 </div>
               </div>
               {% endif %}
@@ -290,12 +286,8 @@
                   </div>
                   <div class="cart-upsell__container-atc">
                     <h6>{{upsell3.title}}</h6>
-                    <button data-subid="{{upsell3.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell3.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">Add to Cart</button>
+                    <button data-subid="{{upsell3.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell3.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add - {{upsell3.price | money }}{{upsell3.compare_at_price | money }}</button>
                   </div>
-                </div>
-                <div class="cart-upsell__container-right">
-                  <p class="sh2">{{upsell3.price | money }}</p>
-                  <p class="cart-upsell__sale-price">{{upsell3.compare_at_price | money }}</p>
                 </div>
               </div>
               {% endif %}
