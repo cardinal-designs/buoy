@@ -247,6 +247,7 @@
 .cart-drawer__footer .button {
   margin-left: 20px;
   margin-right: 20px;
+  width: calc(100% - 40px);
 }
 
 .cart-drawer__loading-container .loading-overlay {
@@ -259,9 +260,6 @@
   background: white;
 }
 
-.cart-drawer__footer .button {
-  width: 100%;
-}
 
 .cart-drawer__footer .button svg {
   margin: 0 5px -3px 0;
