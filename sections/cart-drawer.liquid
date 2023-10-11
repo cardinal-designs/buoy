@@ -258,6 +258,7 @@
                       {% assign include_incart = true %}
                   {% endif %}
                 {% endfor %}
+              {{ item | json }}
               1
               {{ item.metafields.custom.cart_item_type }}
               2
