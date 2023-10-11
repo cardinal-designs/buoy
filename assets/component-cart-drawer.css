@@ -412,7 +412,9 @@
 }
 
 .sub-upsell__container {
-  padding: 0 20px 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
 }
 
 .sub-products__text p {
