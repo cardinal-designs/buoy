@@ -252,10 +252,15 @@
                 <p class="body-xs">Need more? Add single bottles:</p>
               </div>
               <div class="sub-upsell__container-scroll">
+              {% assign include_incart = false %}
                 {% for item in cart.items %}
-                 
+                  {% for tag in item.tags %}
+                   {% if tag contains 'product-type' and tag contains upsell1.title %}
+                     {% assign include_incart = true %}
+                   {% endif %}
+                  {% endfor %}
                 {% endfor %}
-              {{ upsell1.tags }}
+              {{ include_incart }}
               {% if section.settings.upsell_subproduct1 != blank %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
