@@ -259,14 +259,7 @@
                       {% assign include_incart = true %}
                   {% endif %}
                 {% endfor %}
-             
-              1
-              
-              2
-              {{ upsell1.metafields.custom.cart_item_type }}
-              3
-              {{ include_incart }}
-              {% if section.settings.upsell_subproduct1 != blank %}
+              {% if section.settings.upsell_subproduct1 != blank and include_incart == false %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
