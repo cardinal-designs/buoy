@@ -439,7 +439,7 @@
   animation: gradient 3s ease infinite;
   background-size: 400% 400%;
   display: flex;
-  width: 100%;
+  width: fit-content;
   white-space: nowrap;
 }
 
