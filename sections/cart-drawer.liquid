@@ -245,9 +245,9 @@
             {% if section.settings.upsell_subproduct1 != blank %}
             <div class="sub-upsell__container">
               <div class="sub-products__text sub">
-                <p class="body-xs">{{section.settings.sub_title}}</p>
+                <p class="body-xs">{{section.settings.upsell_title}}</p>
                 <div class="green_button">
-                  <p class="green_text">{{section.settings.sub_text}}</p>
+                  <p class="green_text">{{section.settings.upsell_button}}</p>
                 </div>
               </div>
               <div class="sub-upsell__container-scroll">
@@ -427,6 +427,16 @@
       "type": "text",
       "id": "e_marquee_3",
       "label": "Marquee"
+    },
+    {
+      "type": "text",
+      "id": "upsell_title",
+      "label": "Upsell Title"
+    },
+    {
+      "type": "text",
+      "id": "upsell_button",
+      "label": "Upsell Button Text"
     },
     {
       "type": "product",
