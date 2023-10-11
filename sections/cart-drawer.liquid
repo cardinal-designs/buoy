@@ -237,6 +237,7 @@
               {% render 'cart-drawer-item' item: item, idx: forloop.index %}
             {% endfor %}
           </div>
+           <div class="cart-drawer__footer">
 
    {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
@@ -308,7 +309,7 @@
 
 
           
-          <div class="cart-drawer__footer">
+         
             <div class="cart-drawer__shipping-wrapper" id="cart-drawer-subtotal">
               <h4 class="body light">Promo Code</h4>
               <h4 class="body light">Applied at Checkout</h4>
