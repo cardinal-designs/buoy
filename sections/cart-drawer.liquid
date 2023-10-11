@@ -258,8 +258,11 @@
                       {% assign include_incart = true %}
                   {% endif %}
                 {% endfor %}
+              1
               {{ item.metafields.custom.cart_item_type }}
+              2
               {{ upsell1.metafields.custom.cart_item_type }}
+              3
               {{ include_incart }}
               {% if section.settings.upsell_subproduct1 != blank %}
               <div class="cart-upsell__container">
