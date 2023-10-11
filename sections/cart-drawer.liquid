@@ -252,13 +252,19 @@
                 <p class="body-xs">Need more? Add single bottles:</p>
               </div>
               <div class="sub-upsell__container-scroll">
-              {% assign include_incart = false %}
+              {% assign include_incart1 = false %}
+              {% assign include_incart2 = false %}
+              {% assign include_incart3 = false %}
                 {% for item in cart.items %}
                   {% if item.product.metafields.custom.cart_item_type == upsell1.metafields.custom.cart_item_type %}
-                      {% assign include_incart = true %}
+                    {% assign include_incart1 = true %}
+                  {% elsif item.product.metafields.custom.cart_item_type == upsell2.metafields.custom.cart_item_type %}
+                    {% assign include_incart2 = true %}
+                  {% elsif item.product.metafields.custom.cart_item_type == upsell3.metafields.custom.cart_item_type %}
+                    {% assign include_incart3 = true %}
                   {% endif %}
                 {% endfor %}
-              {% if section.settings.upsell_subproduct1 != blank and include_incart == false %}
+              {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
@@ -272,7 +278,7 @@
                 </div>
               </div>
               {% endif %}
-              {% if section.settings.upsell_subproduct2 != blank %}
+              {% if section.settings.upsell_subproduct2 != blank and include_incart2 == false %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
@@ -286,7 +292,7 @@
                 </div>
               </div>
               {% endif %}
-              {% if section.settings.upsell_subproduct3 != blank %}
+              {% if section.settings.upsell_subproduct3 != blank and include_incart3 == false %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
