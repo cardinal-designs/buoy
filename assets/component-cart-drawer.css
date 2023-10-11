@@ -216,6 +216,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .cart-drawer__subtotal-wrapper .body {
@@ -240,6 +242,11 @@
 
 .cart-drawer__loading-container.loading h4 {
   opacity: 0;
+}
+
+.cart-drawer__footer .button {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .cart-drawer__loading-container .loading-overlay {
