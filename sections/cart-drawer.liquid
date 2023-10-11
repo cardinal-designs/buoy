@@ -252,6 +252,9 @@
                 <p class="body-xs">Need more? Add single bottles:</p>
               </div>
               <div class="sub-upsell__container-scroll">
+                {% for item in cart.items %}
+                 
+                {% endfor %}
               {% if section.settings.upsell_subproduct1 != blank %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
