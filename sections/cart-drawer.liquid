@@ -256,8 +256,7 @@
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
-                {{ upsell1.images[0].src | json }}
-                    <img src="{{upsell1.media[0].src | img_url: '95x' }}"/>
+                    <img src="{{upsell1.images[0].src  | img_url: '95x' }}"/>
                   </div>
                   <div class="cart-upsell__container-atc">
                     <h6>{{upsell1.title}}</h6>
