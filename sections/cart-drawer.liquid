@@ -368,7 +368,14 @@
                 <h4 class="cart-drawer__subtotal body medium">{{ cart.total_price | money }}</h4>
                 </div>
               </div>
-              <a href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
+              {% assign disable_checkout = true %}
+              {% for item in cart.items %}
+                {% if item.product.type != 'add on' %}
+                  {% assign disable_checkout = false %}
+                {% endif %}
+              {% endfor %}
+             
+              <a {% if disable_checkout == true %}style="pointer-events: none; opacity: 0.5;"{% endif %} href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
               <span class="car-notes body-xs">{{ section.settings.cart_notes }}</span>
             </div>
           {%- endif -%}
