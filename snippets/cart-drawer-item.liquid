@@ -125,12 +125,16 @@
         {%- endfor -%}
       </ul>
     {% if itemFrequency != blank %}
-      {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
-      {% for frequency in splitFrequency %}
-        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-          {% render 'icon-calendar' %} Monthly: {{ frequency }}
-        </p>
-      {% endfor %}
+      {% if product.title contains '1 bottle' %}
+      1 Bottles—40 servings
+      {% else %}
+        {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+        {% for frequency in splitFrequency %}
+          <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+            {% render 'icon-calendar' %} Monthly: {{ frequency }}
+          </p>
+        {% endfor %}
+      {% endif %}
     {% endif %}
     {% else %}
       {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
