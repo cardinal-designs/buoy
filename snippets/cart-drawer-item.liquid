@@ -156,7 +156,7 @@
                 {{ property.first }}: &nbsp;
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
-                  ffa  {{ property.last | split: '/' | last }}
+                 {{ property.last | split: '/' | last }}
                   </a>
                 {%- else -%}
                   {{ property.last }}
@@ -184,7 +184,7 @@
           {% endif %}
   
           {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-            3 Bottles—120 servings
+         afaf   3 Bottles—120 servings
           {% else %}
             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
