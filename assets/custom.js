@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
 $('.related-blog-wrapper .article-card__title').matchHeight();
 
-$('.supplement-container').slick({
+$('.supplement-facts-form-image').slick({
   dots: false,
   arrows: true,
   infinite: true,
