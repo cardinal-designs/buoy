@@ -131,7 +131,7 @@
         {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
         {% for frequency in splitFrequency %}
           <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-         f   {% render 'icon-calendar' %} Monthly: {{ frequency }}
+          {% render 'icon-calendar' %} Monthly: {{ frequency }}
           </p>
         {% endfor %}
       {% endif %}
@@ -143,7 +143,7 @@
             {%- for option in item.options_with_values -%}
               {%- unless option.name == 'Title' -%}
                 <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                 ff {{ option.name }}:&nbsp;{{ option.value }}
+                  {{ option.name }}:&nbsp;{{ option.value }}
                 </h6>
               {%- endunless -%}
             {%- endfor -%}
@@ -156,7 +156,7 @@
                 {{ property.first }}: &nbsp;
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
-                    {{ property.last | split: '/' | last }}
+                  ffa  {{ property.last | split: '/' | last }}
                   </a>
                 {%- else -%}
                   {{ property.last }}
