@@ -120,6 +120,22 @@
   /* padding-left: 50px; */
 }
 
+.drawer_cover_cls .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 999999999999;
+  width: 25px;
+  right: 0;
+}
+
+.drawer_cover_cls .slick-prev {
+  position: absolute;
+  top: 50%;
+  z-index: 999999999999;
+  width: 25px;
+  left: 0;
+}
+
 .supplement-side-drawer .drawer_header p {
   font-size: 14px;
   margin: 0;
