@@ -242,6 +242,9 @@
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
             {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
+            {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
+            {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
+              
             {% if section.settings.upsell_subproduct1 != blank %}
             <div class="sub-upsell__container">
               <div class="sub-products__text sub">
@@ -254,6 +257,8 @@
               {% assign include_incart1 = false %}
               {% assign include_incart2 = false %}
               {% assign include_incart3 = false %}
+              {% assign include_incart4 = false %}
+              {% assign include_incart5 = false %}
                 {% for item in cart.items %}
                   {% if item.product.metafields.custom.cart_item_type == upsell1.metafields.custom.cart_item_type %}
                     {% assign include_incart1 = true %}
@@ -261,6 +266,10 @@
                     {% assign include_incart2 = true %}
                   {% elsif item.product.metafields.custom.cart_item_type == upsell3.metafields.custom.cart_item_type %}
                     {% assign include_incart3 = true %}
+                  {% elsif item.product.metafields.custom.cart_item_type == upsell4.metafields.custom.cart_item_type %}
+                    {% assign include_incart4 = true %}
+                  {% elsif item.product.metafields.custom.cart_item_type == upsell5.metafields.custom.cart_item_type %}
+                    {% assign include_incart5 = true %}
                   {% endif %}
                 {% endfor %}
               {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
@@ -301,6 +310,34 @@
                     <p class="sh3">{{upsell3.title}}</p>
                     <div data-oke-reviews-product-listing-rating>{{ upsell3.metafields.okendo.ProductListingSnippet }}</div>
                     <button data-subid="{{upsell3.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell3.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell3.price | money_without_trailing_zeros }} <s>{{upsell3.compare_at_price | money_without_trailing_zeros }}</s></button>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if section.settings.upsell_subproduct4 != blank and include_incart4 == false %}
+              <div class="cart-upsell__container">
+                <div class="cart-upsell__container-left">
+                  <div class="cart-upsell__img">
+                    <img class="img-fill" src="{{upsell4.images[0].src  | img_url: 'master' }}"/>
+                  </div>
+                  <div class="cart-upsell__container-atc">
+                    <p class="sh3">{{upsell4.title}}</p>
+                    <div data-oke-reviews-product-listing-rating>{{ upsell4.metafields.okendo.ProductListingSnippet }}</div>
+                    <button data-subid="{{upsell4.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell4.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell4.price | money_without_trailing_zeros }} <s>{{upsell4.compare_at_price | money_without_trailing_zeros }}</s></button>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if section.settings.upsell_subproduct5 != blank and include_incart5 == false %}
+              <div class="cart-upsell__container">
+                <div class="cart-upsell__container-left">
+                  <div class="cart-upsell__img">
+                    <img class="img-fill" src="{{upsell5.images[0].src  | img_url: 'master' }}"/>
+                  </div>
+                  <div class="cart-upsell__container-atc">
+                    <p class="sh3">{{upsell5.title}}</p>
+                    <div data-oke-reviews-product-listing-rating>{{ upsell5.metafields.okendo.ProductListingSnippet }}</div>
+                    <button data-subid="{{upsell5.selling_plan_groups[0].selling_plans[0].id}}" data-id="{{upsell5.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell5.price | money_without_trailing_zeros }} <s>{{upsell5.compare_at_price | money_without_trailing_zeros }}</s></button>
                   </div>
                 </div>
               </div>
