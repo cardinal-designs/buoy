@@ -125,9 +125,6 @@
         {%- endfor -%}
       </ul>
     {% if itemFrequency != blank %}
-      {% if item.product.title contains '1 Bottle' %}
-      1 Bottles—40 servings
-      {% else %}
         {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
         {% for frequency in splitFrequency %}
           <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
@@ -135,7 +132,6 @@
           </p>
         {% endfor %}
       {% endif %}
-    {% endif %}
     {% else %}
       {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
         <div class="cart-drawer__item-variant">
@@ -182,9 +178,11 @@
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
               One-Time Purchase: 
           {% endif %}
-  
-          {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-         afaf   3 Bottles—120 servings
+
+          {% if item.product.title contains '1 Bottle' %}
+             1 Bottles—40 servings
+          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+             3 Bottles—120 servings
           {% else %}
             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
