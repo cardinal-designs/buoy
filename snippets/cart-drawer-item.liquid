@@ -125,7 +125,7 @@
         {%- endfor -%}
       </ul>
     {% if itemFrequency != blank %}
-      {% if product.title contains '1 bottle' %}
+      {% if product.title contains '1 Bottle' %}
       1 Bottles—40 servings
       {% else %}
         {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
