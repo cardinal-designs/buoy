@@ -2,16 +2,15 @@
   "sections": {
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b": {
       "type": "home-hero",
-      "disabled": true,
       "settings": {
-        "video_url": "",
-        "mobile_video_url": "",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
         "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
         "review": "Over 3,000 Trusted Reviews",
-        "title": "Add Functional Benefits To Any Drink",
-        "text": "Unflavored Hydration Drops",
-        "button_label": "Start Squeezing",
+        "title": "Buoy's Biggest Sale Ever",
+        "text": "Get <strong>30% OFF<\/strong> your healthiest habit yet",
+        "button_label": "Unlock Offer",
         "button_link": "shopify:\/\/collections\/all",
         "button_style": "beige",
         "link_label": "",
@@ -21,16 +20,54 @@
         "add_background": false
       }
     },
-    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
-      "type": "title-text",
-      "disabled": true,
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "blocks": {
+        "b46d22a2-dc4c-4952-920e-df027e14433e": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Energy",
+            "text": "Ionic ocean electrolytes and trace minerals for cellular hydration and natural energy.",
+            "img": "shopify:\/\/shop_images\/Email_SMS_Oval_Image_D_3_2x_a0cc4caa-76c8-45b2-af3f-80e2db32c067.png"
+          }
+        },
+        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Brain Function",
+            "text": "Brain-activating minerals reduce brain fog and mental fatigue while boosting memory and focus.",
+            "img": "shopify:\/\/shop_images\/Image_Section_New.jpg"
+          }
+        },
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Gut Health",
+            "text": "Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.",
+            "img": "shopify:\/\/shop_images\/Image_Section_2_Oval_D_2x_61340c2a-0e4f-40cc-8b9e-0ab2cbbf259d.png"
+          }
+        },
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Radiant Skin",
+            "text": "Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.",
+            "img": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
+          }
+        }
+      },
+      "block_order": [
+        "b46d22a2-dc4c-4952-920e-df027e14433e",
+        "07c66f31-6bda-4e4c-9097-b51e4c178122",
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b",
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281"
+      ],
       "settings": {
-        "title": "Unsweetened Electrolytes <br><br><i>Buy Electrolytes With No Sugar<\/i>",
-        "italic_title": "",
-        "text": "New to fasting or just getting started?<br><br>",
-        "add_top_border": true,
+        "title": "Long-lasting benefits that build with time",
+        "subtext": "Adding Buoy's <strong>purposefully unflavored<\/strong> ionic ocean electrolytes, trace minerals and vitamins is the easiest thing you can do to support your health on a daily basis.",
+        "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bg_color"
+        "background": "bottom"
       }
     },
     "31e36676-5821-47f9-a328-6c162b259d29": {
@@ -40,14 +77,14 @@
           "type": "block",
           "settings": {
             "recommend": true,
-            "sale_text": "Sugar And Sweetener Free ⚡️",
+            "sale_text": "<strong>Limited Time<\/strong> — 30% OFF",
             "product": "hydration-drops",
             "servings": "3 BOTTLES · 120 SERVINGS",
-            "text": "The easiest and healthiest way to get your electrolytes and minerals in without the sugar, sweeteners or flavors.",
+            "text": "The cleanest electrolytes and minerals from Earth's most healing source: <strong>the deep ocean<\/strong>.",
             "list_item1": "One Month Supply",
-            "list_item2": "Ocean Electrolytes + 87 Ionic Trace Minerals",
-            "list_item3": "Hydrate for less than $1\/day + 100% Money Back Guarantee",
-            "button_text": "Hydrate Without Sugar"
+            "list_item2": "Electrolytes, 87 Ionic Trace Minerals + Vitamins",
+            "list_item3": "Hydrate for less than $1\/day + <br>100% Money Back Guarantee",
+            "button_text": "Try Clean Hydration"
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -106,14 +143,95 @@
 
       ],
       "settings": {
-        "title": "Unflavored Electrolytes: <br><u>Buy Electrolytes With No Sugar<\/u>",
-        "text": "Sugar consumption undermines health and longevity. The problem: it’s in everything from salad dressings to your favorite non dairy milk alternative to kombucha.\n<br><br>When it comes to electrolytes, <strong>sugar mitigates effective hydration in the long run<\/strong>. And its far-reaching negative impacts are linked to declines in physical and mental health.<br><br>The effort to eliminate sugar from your daily habits is worth it—and see how easy cutting out the sweet stuff can be with the cutting-edge pbrands on the market.<br><br>",
-        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Why Shift Away From Sugar<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> What \"Clean\" Formulas Look Like<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Health Implications Of Sugar<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Benefits of Cutting Out Sugar<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Our Unflavored Electrolyte Solution<br><br>Plus, a sneak peek of our favorite sugar-free electrolyte to use that supports whole-body health!<\/p>",
+        "title": "Start a healthy habit",
+        "text": "<strong>Risk Free | 100% Money Back Guarantee <\/strong>",
+        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> No Sugar, Sweeteners, Flavors<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 3x More Bioavailable Form Factor<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Add To Any Drink<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> One Squeeze 4-7\/x Daily<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 3 Clinical Studies in 2023<\/p>",
         "button_label": "",
         "button_link": "#shopify-section-template--17817534824748__74a67b66-5d60-41fe-b3b9-b73374644bbe",
         "background": "",
         "add_top_border": false,
         "add_bottom_border": true
+      }
+    },
+    "a09de49d-45af-40d0-969c-1445290cd3be": {
+      "type": "image-with-dropdowns",
+      "blocks": {
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
+          "type": "block",
+          "settings": {
+            "title": "Ocean Electrolytes",
+            "emoji": "⚡️",
+            "subtitle": "SODIUM | CHLORIDE | POTASSIUM | MAGNESIUM",
+            "text": "Naturally-balanced ratios that have nourished our bodies for centuries before modern society for cellular hydration and natural energy."
+          }
+        },
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
+          "type": "block",
+          "settings": {
+            "title": "87+ Trace Minerals",
+            "emoji": "✨",
+            "subtitle": "BORON | MANGANESE | SILICA | MORE",
+            "text": "Essential trace minerals that fuels every cell and system, now hard to find because of modern agricultural practices."
+          }
+        },
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
+          "type": "block",
+          "settings": {
+            "title": "B Vitamin Complex",
+            "emoji": "🅱️",
+            "subtitle": "B1 | B5 | B6",
+            "text": "Simply put: most electrolyte products optimize around taste and flavor, not function.\n<br><br>\nIf sodium absorption is your end goal, then the form factor and salt source should be a part of the conversation. Traditional electrolyte products are delivered in powder and tablet form which don’t evenly dissolve may be harder on sensitive stomachs to absorb. \n<br><br>\nLiquid electrolytes, like Buoy’s Hydration Drops, can be up to three times more bioavailable than traditional supplement forms like pills, powders and dissolving tablets.\n<br><br>\nFurthermore, most electrolyte products use cheaply manufactured and processed forms of salt like table salt, sodium bicarbonate (baking soda), sodium chloride (road and rock salt) and sodium benzoate (a known carcinogen), all of which negatively impact our ability to absorb and use the sodium we’re intaking whether we have any sugar or glucose in our systems."
+          }
+        },
+        "c3ba0924-90f1-4215-a807-52f05df73ae2": {
+          "type": "block",
+          "settings": {
+            "title": "Sugar undermines effective hydration",
+            "emoji": "📉",
+            "subtitle": "MORE DEHYDRATED THAN BEFORE",
+            "text": "Focusing on sugar is an easy selling-point: it tastes good and provides a nice dopamine hit. But the optimal benefits and functions electrolyte supplements support are often mitigated by sugar intake: lower energy, less motivation, worse moods, brain fog and even worse skin.\n<br><br>\nIn excess, sugar consumption can make these symptoms persistent and chronic and will make any of the benefits you experience from hydration products short-lived."
+          }
+        },
+        "a8857c10-0308-470e-9fda-843eda7c0033": {
+          "type": "block",
+          "settings": {
+            "title": "Other Sodium Co-Transporters",
+            "emoji": "⏩",
+            "subtitle": "POTASSIUM AND B VITAMINS",
+            "text": "When looking for electrolyte supplements, look beyond just the sugar count and focus on the host of other molecules that will help the primary electrolyte sodium ease its way into every cell and system quickly.\n<br><br>\nFor those cutting back or eliminating sugar from their electrolyte intake should focus on getting the key sodium transporters like potassium and specific B vitamin complexes into their diet to expedite your body’s ability to use sodium."
+          }
+        }
+      },
+      "block_order": [
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d",
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155",
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
+        "c3ba0924-90f1-4215-a807-52f05df73ae2",
+        "a8857c10-0308-470e-9fda-843eda7c0033"
+      ],
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/WATER-4x5.gif",
+        "title": "Ingredients your body can actually absorb",
+        "text": "Liquid Drops are up to <strong>3x more bioavailable<\/strong> than traditional supplement forms like pills, powders and tablets.",
+        "text_bottom": "",
+        "button_label": "",
+        "button_link": "shopify:\/\/products\/hydration-drops",
+        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
+      "type": "title-text",
+      "disabled": true,
+      "settings": {
+        "title": "Unsweetened Electrolytes <br><br><i>Buy Electrolytes With No Sugar<\/i>",
+        "italic_title": "",
+        "text": "New to fasting or just getting started?<br><br>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
@@ -148,75 +266,6 @@
         "enable_marquee": false,
         "add_top_border": false,
         "add_bottom_border": true
-      }
-    },
-    "a09de49d-45af-40d0-969c-1445290cd3be": {
-      "type": "image-with-dropdowns",
-      "blocks": {
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
-          "type": "block",
-          "settings": {
-            "title": "Why Sugar-Free Hydration Solutions?",
-            "emoji": "🥴",
-            "subtitle": "UNDERMINE ELECTROLYTE FUNCTION",
-            "text": "When we consume sugar, a plethora of metabolic reactions take place that ultimately undermine the optimal hydration benefits you're looking for in an electrolyte supplement. \n<br><br>\nOur cells begin to transfer water from other places that cues more frequent urination, leading to lower fluid and electrolyte levels than before.\n<br><br>\nFurthermore, the energy spike from sugar is short-lived and when your blood sugar drops, the fatigue, brain fog and mood disturbances set in—all of which can be counteracted with sugar-free hydration and electrolyte products."
-          }
-        },
-        "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
-          "type": "block",
-          "settings": {
-            "title": "Do we need sugar with our electrolytes?",
-            "emoji": "🤨",
-            "subtitle": "CLARITY ON SODIUM ABSORPTION",
-            "text": "No.\n\nWhile proponents of sugar and electrolytes together will cite how glucose helps the absorption of sodium in our bodies, the amount of glucose needed is actually miniscule and most people often have enough stored up in their bodies from their diet to suffice.\n<br><br>\nA lot of this knowledge stems from brands whose hero product contains 11g of sugar in every serving—or, by weight, 69% of the stick itself.\n<br><br>\nFurthermore, there are other elements like potassium and vitamins like B1, B5, and B6—all of which are present in Buoy’s electrolyte offerings—that support routine electrolyte function."
-          }
-        },
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
-          "type": "block",
-          "settings": {
-            "title": "Electrolytes Unmasked",
-            "emoji": "⚡️",
-            "subtitle": "THE BITTERSWEET TRUTH",
-            "text": "Simply put: most electrolyte products optimize around taste and flavor, not function.\n<br><br>\nIf sodium absorption is your end goal, then the form factor and salt source should be a part of the conversation. Traditional electrolyte products are delivered in powder and tablet form which don’t evenly dissolve may be harder on sensitive stomachs to absorb. \n<br><br>\nLiquid electrolytes, like Buoy’s Hydration Drops, can be up to three times more bioavailable than traditional supplement forms like pills, powders and dissolving tablets.\n<br><br>\nFurthermore, most electrolyte products use cheaply manufactured and processed forms of salt like table salt, sodium bicarbonate (baking soda), sodium chloride (road and rock salt) and sodium benzoate (a known carcinogen), all of which negatively impact our ability to absorb and use the sodium we’re intaking whether we have any sugar or glucose in our systems."
-          }
-        },
-        "c3ba0924-90f1-4215-a807-52f05df73ae2": {
-          "type": "block",
-          "settings": {
-            "title": "Sugar undermines effective hydration",
-            "emoji": "📉",
-            "subtitle": "MORE DEHYDRATED THAN BEFORE",
-            "text": "Focusing on sugar is an easy selling-point: it tastes good and provides a nice dopamine hit. But the optimal benefits and functions electrolyte supplements support are often mitigated by sugar intake: lower energy, less motivation, worse moods, brain fog and even worse skin.\n<br><br>\nIn excess, sugar consumption can make these symptoms persistent and chronic and will make any of the benefits you experience from hydration products short-lived."
-          }
-        },
-        "a8857c10-0308-470e-9fda-843eda7c0033": {
-          "type": "block",
-          "settings": {
-            "title": "Other Sodium Co-Transporters",
-            "emoji": "⏩",
-            "subtitle": "POTASSIUM AND B VITAMINS",
-            "text": "When looking for electrolyte supplements, look beyond just the sugar count and focus on the host of other molecules that will help the primary electrolyte sodium ease its way into every cell and system quickly.\n<br><br>\nFor those cutting back or eliminating sugar from their electrolyte intake should focus on getting the key sodium transporters like potassium and specific B vitamin complexes into their diet to expedite your body’s ability to use sodium."
-          }
-        }
-      },
-      "block_order": [
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d",
-        "e0101db3-4644-4c02-8d36-dccdb9a7c155",
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
-        "c3ba0924-90f1-4215-a807-52f05df73ae2",
-        "a8857c10-0308-470e-9fda-843eda7c0033"
-      ],
-      "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/Featured_Image_D.png",
-        "title": "The Sugarless Shift",
-        "text": "If it feels like everyone is talking about sugar-free alternatives, it's because the evidence linking sugar intake to negative health impacts couldn't be more clear.<br><br>When it comes to hydration, however, reducing sugar intake is more challenging but the effort to cut sugar out of your electrolytes is worth it.",
-        "text_bottom": "",
-        "button_label": "",
-        "button_link": "shopify:\/\/products\/hydration-drops",
-        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
-        "add_top_border": false,
-        "add_bottom_border": false
       }
     },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
@@ -314,56 +363,6 @@
         "background": "none",
         "reviews_btn_txt": "",
         "reviews_btn_link": ""
-      }
-    },
-    "50df382c-255c-4272-b876-eca398cca73a": {
-      "type": "dropdowns",
-      "blocks": {
-        "b46d22a2-dc4c-4952-920e-df027e14433e": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Ocean Electrolytes",
-            "text": "Get the highest quality sodium, chloride, potassium and magnesium earth has to offer with Buoy.<br><br>\n⚖️ Naturally-Balanced<br>🧪 Third Party Tested<br>🌊 Hand Harvested<br>🌞 Solar Evaporated",
-            "img": "shopify:\/\/shop_images\/seaside-ocean-pools.jpg"
-          }
-        },
-        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
-          "type": "dropdown",
-          "settings": {
-            "title": "87+ Ionic Trace Minerals",
-            "text": "Infuse your beverages with hard-to-find but essential trace minerals like Boron, Selenium, Silica, Manganese and more to support every cell and system.<br><br>⚡️ Ionically Charged<br>⚖️ Naturally Balanced Ratios<br>🌊 Deep Ocean Sourced",
-            "img": "shopify:\/\/shop_images\/ocean-ice-breaking.jpg"
-          }
-        },
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Plant-Powered B Vitamins",
-            "text": "Certain vitamins can help you hydrate better.<br><br>Buoy's curated blend of plant-powered B vitamins support routine electrolyte function without the presence of glucose.<br>✅ Vitamin B1<br>✅ Vitamin B5<br>✅ Vitamin B6",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
-          }
-        },
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Naturally-Balanced Ratios",
-            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for centuries before modern society.",
-            "img": "shopify:\/\/shop_images\/rippled-ocean-beach-sand.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "b46d22a2-dc4c-4952-920e-df027e14433e",
-        "07c66f31-6bda-4e4c-9097-b51e4c178122",
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b",
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281"
-      ],
-      "settings": {
-        "title": "<strong>Nature's Best<\/strong>,<br> Nothing Less",
-        "subtext": "Buoy's premium electrolytes and minerals tap into one of nature's most powerful ingredient sources: the deep ocean.",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "bottom"
       }
     },
     "517df923-ac36-43bd-9898-b875c67e1be2": {
@@ -1004,13 +1003,13 @@
   },
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
-    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "50df382c-255c-4272-b876-eca398cca73a",
     "31e36676-5821-47f9-a328-6c162b259d29",
-    "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "a09de49d-45af-40d0-969c-1445290cd3be",
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
-    "50df382c-255c-4272-b876-eca398cca73a",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
