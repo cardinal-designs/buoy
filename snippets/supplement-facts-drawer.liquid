@@ -90,10 +90,6 @@
           {% endif %}
         </div>
           
-        {% comment %}
-        <div class="image_form">
-          {% render 'lazy-image' image: supplement_facts_form_image, fade: true, classes: '' %}
-        </div>  
         {% if supplement_facts_form_image_2 %}
         <div class="image_form">
           {% render 'lazy-image' image: supplement_facts_form_image_2, fade: true, classes: '' %}
@@ -104,7 +100,7 @@
           {% render 'lazy-image' image: supplement_facts_form_image_3, fade: true, classes: '' %}
         </div>  
         {% endif %}
-        {% endcomment %}
+    
       </div>
       <div class="hide-desktop mobile-supplement-continue">
         <a href="javascript:void(0)" class="button button--full-width">Continue Shopping</a>        

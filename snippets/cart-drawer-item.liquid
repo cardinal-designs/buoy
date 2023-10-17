@@ -125,13 +125,13 @@
         {%- endfor -%}
       </ul>
     {% if itemFrequency != blank %}
-      {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
-      {% for frequency in splitFrequency %}
-        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+        {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+        {% for frequency in splitFrequency %}
+          <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
           {% render 'icon-calendar' %} Monthly: {{ frequency }}
-        </p>
-      {% endfor %}
-    {% endif %}
+          </p>
+        {% endfor %}
+      {% endif %}
     {% else %}
       {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
         <div class="cart-drawer__item-variant">
@@ -152,7 +152,7 @@
                 {{ property.first }}: &nbsp;
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
-                    {{ property.last | split: '/' | last }}
+                 {{ property.last | split: '/' | last }}
                   </a>
                 {%- else -%}
                   {{ property.last }}
@@ -178,9 +178,11 @@
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
               One-Time Purchase: 
           {% endif %}
-  
-          {% if item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-            3 Bottles—120 servings
+
+          {% if item.product.title contains '1 Bottle' %}
+             1 Bottles—40 servings
+          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+             3 Bottles—120 servings
           {% else %}
             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}

@@ -59,7 +59,14 @@
                   </button>
                 </noscript>
 
-                <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+                {% assign disable_checkout = true %}
+                {% for item in cart.items %}
+                  {% if item.product.type != 'add on' %}
+                    {% assign disable_checkout = false %}
+                  {% endif %}
+                {% endfor %}
+
+                <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty or disable_checkout == true %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>

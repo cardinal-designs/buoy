@@ -1234,6 +1234,7 @@ function getSectionInnerHTML(html, selector) {
 
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
+  console.log('aadedded') 
   e.preventDefault();
   let add_items;
   let id = Number($(this).data('id'));
@@ -1335,6 +1336,11 @@ function atcGetSectionsToRender() {
       id: 'cart-icon-bubble',
       section: 'cart-icon-bubble',
       selector: '.shopify-section'
+    },
+    {
+      id: 'cart-drawer__header',
+      section: document.getElementById('cart-drawer__header').dataset.id,
+      selector: '.cart-drawer__header',
     }
   ];
 }
