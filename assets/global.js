@@ -1340,7 +1340,7 @@ function atcGetSectionsToRender() {
     {
       id: 'cart-drawer__header',
       section: document.getElementById('cart-drawer__header').dataset.id,
-      selector: '.cart-drawer__title'
+      selector: '.shopify-section'
     }
   ];
 }
