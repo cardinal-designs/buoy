@@ -1336,10 +1336,6 @@ function atcGetSectionsToRender() {
       id: 'cart-icon-bubble',
       section: 'cart-icon-bubble',
       selector: '.shopify-section'
-    },
-    {
-      id: 'cart-drawer__title',
-      section: document.getElementById('cart-drawer__title').dataset.id
     }
   ];
 }
