@@ -259,21 +259,21 @@
               {% assign include_incart3 = false %}
               {% assign include_incart4 = false %}
               {% assign include_incart5 = false %}
-                {% comment %}
+        
                 {% for item in cart.items %}
-                  {% if item.product.metafields.custom.cart_item_type == upsell1.metafields.custom.cart_item_type %}
+                  {% if item.product.id == upsell1.id %}
                     {% assign include_incart1 = true %}
-                  {% elsif item.product.metafields.custom.cart_item_type == upsell2.metafields.custom.cart_item_type %}
+                  {% elsif item.product.id == upsell2.id %}
                     {% assign include_incart2 = true %}
-                  {% elsif item.product.metafields.custom.cart_item_type == upsell3.metafields.custom.cart_item_type %}
+                  {% elsif item.product.id == upsell3.id %}
                     {% assign include_incart3 = true %}
-                  {% elsif item.product.metafields.custom.cart_item_type == upsell4.metafields.custom.cart_item_type %}
+                  {% elsif item.product.id == upsell4.id %}
                     {% assign include_incart4 = true %}
-                  {% elsif item.product.metafields.custom.cart_item_type == upsell5.metafields.custom.cart_item_type %}
+                  {% elsif item.product.id == upsell5.id %}
                     {% assign include_incart5 = true %}
                   {% endif %}
                 {% endfor %}
-              {% endcomment %}
+            
               {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
               <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
