@@ -1338,8 +1338,8 @@ function atcGetSectionsToRender() {
       selector: '.shopify-section'
     },
     {
-      id: 'cart-drawer__header',
-      section: document.getElementById('cart-drawer__header').dataset.id,
+      id: 'cart-drawer__title',
+      section: document.getElementById('cart-drawer__title').dataset.id,
       selector: '.shopify-section'
     }
   ];
