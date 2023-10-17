@@ -1336,6 +1336,11 @@ function atcGetSectionsToRender() {
       id: 'cart-icon-bubble',
       section: 'cart-icon-bubble',
       selector: '.shopify-section'
+    },
+    {
+      id: 'cart-drawer__header',
+      section: 'cart-drawer__header',
+      selector: '.shopify-section'
     }
   ];
 }
