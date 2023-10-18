@@ -208,8 +208,8 @@ class CartDrawer extends HTMLElement {
       },
       {
         id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
-        selector: '.shopify-section'
+        section: document.getElementById('cart-icon-bubble').dataset.id,
+        selector: '.cart-icon-bubble'
       }
     ];
   }
