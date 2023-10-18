@@ -534,7 +534,7 @@
 
       {% if template != 'cart' %}
         <button class="js-open-cart header__icon header__icon--cart link link--text focus-inset {% if cart.item_count > 0 %} active{% endif %}" id="cart-icon-bubble"  aria-label="Open Cart Drawer">
-          <div class="cart-count-bubble sh1">
+          <div class="1 cart-count-bubble sh1">
             {{ cart.item_count }}
           </div>
           {% render 'icon-cart-new' %}
@@ -549,7 +549,7 @@
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {% comment %}
           {%- if cart != empty -%}
-            <div class="cart-count-bubble">
+            <div class="2 cart-count-bubble">
               {%- if cart.item_count < 100 -%}
                 <span aria-hidden="true">{{ cart.item_count }}</span>
               {%- endif -%}
