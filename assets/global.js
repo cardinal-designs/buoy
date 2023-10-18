@@ -1333,9 +1333,9 @@ function atcGetSectionsToRender() {
     },
     {
       id: 'cart-icon-bubble',
-      section: 'cart-icon-bubble',
-      selector: '.shopify-section'
-    },
+      section: document.getElementById('cart-icon-bubble').dataset.id,
+      selector: '.cart-icon-bubble'
+    }
     {
       id: 'cart-drawer__header',
       section: document.getElementById('cart-drawer__header').dataset.id,
