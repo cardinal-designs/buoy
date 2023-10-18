@@ -15,14 +15,7 @@ class CartRemoveButton extends HTMLElement {
       }else{
         this.closest('cart-items').updateQuantity(this.dataset.index, 0);
       }
-
-            this.getSectionsToRender().forEach((section => {
-        const elementToReplace =
-          document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-
-        elementToReplace.innerHTML =
-          this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
-      }));
+      
     });
   }
 }
