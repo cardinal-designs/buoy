@@ -1234,7 +1234,6 @@ function getSectionInnerHTML(html, selector) {
 
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
-  console.log('aadedded') 
   e.preventDefault();
   let add_items;
   let id = Number($(this).data('id'));
