@@ -1,0 +1,9 @@
+.sticky-footer__container {
+  position: sticky;
+  width: 100%
+  padding: 20px 0;
+}
+
+.sticky-footer__container a {
+  margin: 0 auto;
+}
