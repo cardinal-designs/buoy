@@ -5,6 +5,26 @@
   <a href="{{ section.settings.button_link }}" class="button button--beige">{{ section.settings.button_text }}</a>
 </div>
 
+{% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('.show-product-bar');
+    if ( $(window).width() > 768 ) {
+      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        $('.sticky-footer__container').addClass('scrolled');
+      } else {
+        $('.sticky-footer__container').removeClass('scrolled');
+      }
+    } else {
+      if ($scrollTop > 1200) {
+        $('.sticky-footer__container').addClass('scrolled');
+      } else {
+        $('.sticky-footer__container').removeClass('scrolled');
+      }
+	}
+  });
+{% endjavascript %}
+
 {% schema %}
   {
     "name": "Sticky Footer",
