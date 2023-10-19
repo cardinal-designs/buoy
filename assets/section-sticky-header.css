@@ -13,6 +13,7 @@
   visibility: hidden;
   transform: translateY(-100%);
   transition: transform .3s ease;
+  height: fit-content;
 }
 
 .sticky-header__container a {
