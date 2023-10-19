@@ -765,18 +765,6 @@
         "background": "bottom"
       }
     },
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
-      "type": "text-above",
-      "disabled": true,
-      "settings": {
-        "emoji": "🤝",
-        "suptitle": "Buoy's Commitment: <br><u>Function, Not Flavor<\/u>.",
-        "suptext": "We won't add sugar in. Even the zero sugar options are loaded with stevia.",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
-    },
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
       "type": "pr-slider",
       "blocks": {
@@ -995,6 +983,13 @@
         "add_bottom_border": true,
         "background": "none"
       }
+    },
+    "560d8eaf-11d6-47e9-88a1-bf082340d891": {
+      "type": "sticky-footer",
+      "settings": {
+        "button_text": "",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -1016,12 +1011,12 @@
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb"
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
+    "560d8eaf-11d6-47e9-88a1-bf082340d891"
   ]
 }
