@@ -2,13 +2,16 @@
   width: 100%;
   padding: 14px 0;
   position: fixed;
-  bottom: 80px;
+  bottom: 0px;
   left: 0;
   background: white;
   border-top: 1px solid var(--charcoal);
   z-index: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .sticky-footer__container a {
   margin: 0 auto;
+  width: fit-content;
 }
