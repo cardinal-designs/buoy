@@ -1,12 +1,29 @@
+{{ 'section-sticky-footer.css' | asset_url | stylesheet_tag }} 
+
+
+<div class="sticky-footer__container">
+  <a href="{{ section.settings.button_text }}" class="button button--beige">{{ section.settings.button_link }}</a>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Sticky Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sticky Footer"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
