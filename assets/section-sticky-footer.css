@@ -1,7 +1,12 @@
 .sticky-footer__container {
-  position: sticky;
   width: 100%;
-  padding: 20px 0;
+  padding: 14px 0;
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  background: white;
+  border-top: 1px solid var(--charcoal);
+  z-index: 3;
 }
 
 .sticky-footer__container a {
