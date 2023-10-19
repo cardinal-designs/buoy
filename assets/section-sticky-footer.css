@@ -9,9 +9,15 @@
   z-index: 3;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 .sticky-footer__container a {
   margin: 0 auto;
   width: fit-content;
+}
+
+.sticky-footer__container.scrolled {
+  transform: translateY(0);
+  visibility: visible;
 }
