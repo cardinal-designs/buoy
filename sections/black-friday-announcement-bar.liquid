@@ -4,7 +4,7 @@
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
         <p class="announcement-bar__message body">
-          {{ section.settings.text | escape }}
+          {{ section.settings.text }}
         </p>
     {%- if section.settings.link != blank -%}
       </a>
