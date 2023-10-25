@@ -10,7 +10,7 @@
       </div>
     {% endfor %}
   </div>
-  <div class="marquee__container">
+  <div class="hide-desktop marquee__container">
     {% for block in section.blocks %}
       <div class="marquee__item">
         <img src="{{ block.settings.image | img_url: 'master' }}" />
