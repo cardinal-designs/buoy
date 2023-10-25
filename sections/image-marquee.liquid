@@ -3,7 +3,7 @@
 
 
 <div class="marquee image-marquee">
-  <div class="marquee__container">
+  <div class="hide-mobile marquee__container">
     {% for block in section.blocks limit: 3 %}
       <div class="marquee__item">
         <img src="{{ block.settings.image | img_url: 'master' }}" />
