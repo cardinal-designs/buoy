@@ -9,6 +9,10 @@
   padding: 100px 0 60px !important;
 }
 
+.image-marquee .marquee__container.hide-mobile {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 769px) {  
   .image-marquee .marquee__container {
     animation: none;
