@@ -27,12 +27,6 @@
             {% include 'curved-hydrated' %}
           {% endif %}
         </h1>       
-
-        <div class="Product_Tags">
-          {%- for tag in product.tags -%}
-            <span>{{ tag }}</span>
-          {%- endfor -%}
-        </div>
         
         <div class="product__description sh4 light">
           {{ product.description }}
@@ -41,6 +35,12 @@
         <div class="product__drawer-triggers">
           <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
           <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
+        </div>
+
+        <div class="Product_Tags">
+          {%- for tag in product.tags -%}
+            <span>{{ tag }}</span>
+          {%- endfor -%}
         </div>
         
         {% comment %}
