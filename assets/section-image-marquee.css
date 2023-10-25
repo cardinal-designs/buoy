@@ -13,4 +13,8 @@
   .image-marquee .marquee__container {
     animation: none;
   }
+
+  .marquee__container:nth-child(0),.marquee__container:nth-child(1),.marquee__container:nth-child(2) {
+    display: none;
+  }
 }
