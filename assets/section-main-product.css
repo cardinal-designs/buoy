@@ -2413,6 +2413,14 @@ select[name=selling_plan] {
   gap: 21px;
 }
 
+.product__drawer-triggers a {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  margin: 25px 0 8px;
+  display: block;
+  color: #1f2322;
+}
+
 
 
 
