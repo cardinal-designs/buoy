@@ -13,7 +13,6 @@
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item">
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
-        {% include 'icon-x' %}
       </div>
       {% endfor %}
       {% if section.settings.link_text != blank %}
@@ -27,7 +26,6 @@
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item-mobile">
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
-        {% include 'icon-x' %}
       </div>
       <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
       {% endfor %}
