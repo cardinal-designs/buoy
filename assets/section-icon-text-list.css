@@ -26,5 +26,6 @@
   .icon-text__container {
     grid-template-columns: 1fr;
     gap: 14px;
+    width: fit-content;
   }
 }
