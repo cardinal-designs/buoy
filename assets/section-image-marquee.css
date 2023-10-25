@@ -14,7 +14,7 @@
     animation: none;
   }
 
-  .marquee__container:nth-child(0),.marquee__container:nth-child(1),.marquee__container:nth-child(2) {
+  .marquee__item:nth-child(0),.marquee__item:nth-child(1),.marquee__item:nth-child(2) {
     display: none;
   }
 }
