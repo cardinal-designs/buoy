@@ -76,6 +76,79 @@
         "testimonial_btn_link": "#Product_Reviews"
       }
     },
+    "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff": {
+      "type": "icon-text-list",
+      "blocks": {
+        "1083faa0-a895-49d0-b79a-995556c1a851": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Deep Ocean Minerals"
+          }
+        },
+        "4cb0a6cc-78b4-4bf3-97f4-836b009452f3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/psychiatry_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Vegan"
+          }
+        },
+        "48445f51-5b78-409f-8df6-c40635aebfa3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/verified_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Non-GMO Project Verified"
+          }
+        },
+        "da9577ec-04dd-466c-87e8-66511f10d1bc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "3x Bioavailable Form Factor"
+          }
+        },
+        "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_5.png",
+            "title": "Gluten & Major Allergen Free"
+          }
+        },
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nutrition_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Keto & Paleo Approved"
+          }
+        },
+        "9d38c763-6f85-46a2-9f99-07f2e5b38186": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/labs_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Third Party Tested"
+          }
+        },
+        "f094a7d8-7384-4dc5-a296-de548c44952f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lab_profile_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "White Papers & Clinical Trials"
+          }
+        }
+      },
+      "block_order": [
+        "1083faa0-a895-49d0-b79a-995556c1a851",
+        "4cb0a6cc-78b4-4bf3-97f4-836b009452f3",
+        "48445f51-5b78-409f-8df6-c40635aebfa3",
+        "da9577ec-04dd-466c-87e8-66511f10d1bc",
+        "11e0a190-5f45-4a12-aeb9-6c17f945d66d",
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98",
+        "9d38c763-6f85-46a2-9f99-07f2e5b38186",
+        "f094a7d8-7384-4dc5-a296-de548c44952f"
+      ],
+      "settings": {
+      }
+    },
     "78ecde29-5caf-40ad-b926-8c84cae46127": {
       "type": "image-slider",
       "settings": {
@@ -260,7 +333,8 @@
         "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bottom"
+        "background": "bottom",
+        "hide_supp": false
       }
     },
     "8b9c24a7-0d88-4279-a771-d04362368955": {
@@ -416,6 +490,7 @@
   },
   "order": [
     "main",
+    "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff",
     "78ecde29-5caf-40ad-b926-8c84cae46127",
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200",
     "6983854f-d9de-42d9-a4db-eb7be2a46441",
