@@ -3,3 +3,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 18px 32px;
 }
+
+.icon-text__block img {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-text__block {
+  display: flex;
+  gap: 10px;
+}
