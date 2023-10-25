@@ -4,8 +4,15 @@
 
 <div class="marquee image-marquee">
   <div class="marquee__container">
+    {% for block in section.blocks limit: 3 %}
+      <div class="hide-desktop marquee__item">
+        <img src="{{ block.settings.image | img_url: 'master' }}" />
+      </div>
+    {% endfor %}
+  </div>
+  <div class="marquee__container">
     {% for block in section.blocks %}
-      <div class="marquee__item">
+      <div class="hide-desktop marquee__item">
         <img src="{{ block.settings.image | img_url: 'master' }}" />
       </div>
     {% endfor %}
