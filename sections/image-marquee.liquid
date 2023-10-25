@@ -4,7 +4,7 @@
 
 <div class="marquee image-marquee">
   <div class="hide-mobile marquee__container">
-    {% for block in section.blocks limit: 3 %}
+    {% for block in section.blocks limit: section.settings.show_images %}
       <div class="marquee__item">
         <img src="{{ block.settings.image | img_url: 'master' }}" />
       </div>
@@ -29,7 +29,13 @@
 {% schema %}
   {
     "name": "Image Marquee",
-    "settings": [],
+    "settings": [   
+      {
+        "type": "number",
+        "id": "show_images",
+        "label": "Show First X Image(s)"
+      }
+    ],
     "blocks": [
       {
         "type": "marquee_item",
