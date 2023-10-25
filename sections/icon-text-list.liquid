@@ -2,8 +2,9 @@
 
 <div class="page-width icon-text__container">
   {% for block in section.blocks %}
-  <div>
-
+  <div class="icon-text__block">
+    <img src="{{ block.settings.image | img_url: 'master' }}" />
+    <p>{{ block.settings.title }}</p>
   </div>
   {% endfor %}
 </div>
