@@ -3,15 +3,15 @@
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b": {
       "type": "home-hero",
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
-        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
-        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
+        "video_url": "",
+        "mobile_video_url": "",
+        "image": "shopify:\/\/shop_images\/Homepage_D_Hero_1.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Homepage_M_Hero_1_V1.jpg",
         "review": "Over 72,000+ people add Buoy",
         "title": "30% OFF a healthy habit",
         "text": "Save on Buoy's <u>biggest sale<\/u> ever!",
         "button_label": "Unlock Offer",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29",
         "button_style": "beige",
         "link_label": "",
         "link_link": "",
@@ -67,7 +67,8 @@
         "subtext": "Adding Buoy's <strong>purposefully unflavored<\/strong> ionic ocean electrolytes, trace minerals and vitamins is the easiest thing you can do to support your health on a daily basis.",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "top"
+        "background": "top",
+        "hide_supp": true
       }
     },
     "31e36676-5821-47f9-a328-6c162b259d29": {
@@ -256,7 +257,7 @@
         "head-title": "Their words, not ours",
         "sub-text": "Sweet Success Stories: Hear from those embracing the no-sugar electrolyte solutions.",
         "button_label": "Try Buoy For Yourself",
-        "button_link": "shopify:\/\/pages\/reviews",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29",
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
@@ -315,7 +316,7 @@
         "text": "Liquid Drops are up to <strong>3x more bioavailable<\/strong> than traditional supplement forms like pills, powders and tablets.",
         "text_bottom": "",
         "button_label": "Make Any Drink More Hydrating",
-        "button_link": "shopify:\/\/products\/hydration-drops",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29",
         "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
         "add_top_border": false,
         "add_bottom_border": false
@@ -357,7 +358,7 @@
         "title": "<strong>The easiest thing you can do for your health<\/strong>",
         "description": "",
         "button_label": "Ditch The Sugar With Buoy",
-        "button_link": "shopify:\/\/products\/hydration-drops",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29",
         "link_label": "",
         "link_link": "",
         "content_reverse": "right",
@@ -411,7 +412,7 @@
         "head-title": "<span class=\"medium no-italic\">Buoy's Scientific Advisory Board<\/span>",
         "sub-text": "From sugar-laden to sugar-free, Buoy's hydration formula stems from scientists, researchers, pharmaceutical experts, and health professionals that continue to challenge and uphold hydration to higher standards.<br><br>\n✓ Third Party Tested<br>\n✓ NonGMO Project Certified<br>\n✓ Vegan<br>\n✓ Gluten and Major Allergen Free<br>\n✓ 3x More Bioavailable Form Factor<br>\n✓ Product White Papers<br>\n✓ 3 Clinical Studies Started in 2023<br>",
         "button_label": "Try Science-Backed Hydration",
-        "button_link": "#shopify-section-template--18635850055980__16390276435f9f6aac",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29",
         "background": "bg_color",
         "background_color": "#f8f1eb",
         "add_top_border": true,
@@ -655,24 +656,6 @@
         "background": "none"
       }
     },
-    "4f22c796-1d64-4f0e-869e-2c8eb4574863": {
-      "type": "image-text-section",
-      "disabled": true,
-      "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/3Bottles_All_2.jpg",
-        "title": "Why Choose Buoy",
-        "text": "Gone are the days of blue raspberry electrolytes.<br><br>Buoy's new approach to hydration prioritizes health and function over taste and flavor.<br><br>Try enhancing your beverages with Buoy's unflavored electrolytes for a month, 100% risk free. If you don't like it, get a full refund.<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nSugar Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nStevia & Sweetener Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNo Flavors\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNo Calories or Carbohydrates\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNonGMO & Vegan\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \n3x More Bioavailable Form Factor\n<\/p>",
-        "subtext": "MONEY BACK GUARANTEE | 20% OFF FIRST ORDER",
-        "button_label": "Try Buoy For A Month Risk Free",
-        "button_link": "shopify:\/\/products\/hydration-drops",
-        "content_reverse": "right",
-        "button_style": "beige",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
-    },
     "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
       "type": "image-dropdowns",
       "blocks": {
@@ -762,18 +745,6 @@
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bottom"
-      }
-    },
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
-      "type": "text-above",
-      "disabled": true,
-      "settings": {
-        "emoji": "🤝",
-        "suptitle": "Buoy's Commitment: <br><u>Function, Not Flavor<\/u>.",
-        "suptext": "We won't add sugar in. Even the zero sugar options are loaded with stevia.",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
       }
     },
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
@@ -883,41 +854,6 @@
         "add_bottom_padding": false
       }
     },
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
-      "type": "pee-club-half-image",
-      "blocks": {
-        "7408eeea-301f-442d-a916-b380c5201277": {
-          "type": "block",
-          "settings": {
-            "title": "How Much To Dose",
-            "list": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> \nOne Small Squeeze = One Serving<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 40 Servings Per Bottle<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 7 - 10 Servings During Fasting<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 4 - 7 Servings Outside of Fasting<\/p><p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Add To Any Beverage<\/p>",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/WATER-4x5.gif"
-          }
-        },
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
-          "type": "block",
-          "settings": {
-            "title": "When To Dose",
-            "list": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> \n3 Bottles Delivered Monthly<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Change frequencies, swap products<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Free, Carbon Neutral Shipping<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Get rewarded<\/p><p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Cancel or pause anytime<\/p>",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_6.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "7408eeea-301f-442d-a916-b380c5201277",
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "How to Use Buoy's Electrolytes During Fasting",
-        "text": "",
-        "background": "",
-        "add_top_border": false,
-        "add_bottom_border": false
-      }
-    },
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
       "type": "image-slider",
       "disabled": true,
@@ -994,6 +930,13 @@
         "add_bottom_border": true,
         "background": "none"
       }
+    },
+    "560d8eaf-11d6-47e9-88a1-bf082340d891": {
+      "type": "sticky-footer",
+      "settings": {
+        "button_text": "Try Buoy Risk Free",
+        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29"
+      }
     }
   },
   "order": [
@@ -1011,16 +954,14 @@
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
-    "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb"
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
+    "560d8eaf-11d6-47e9-88a1-bf082340d891"
   ]
 }

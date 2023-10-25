@@ -1,0 +1,49 @@
+{{ 'section-sticky-footer.css' | asset_url | stylesheet_tag }} 
+
+
+<div class="sticky-footer__container">
+  <a href="{{ section.settings.button_link }}" class="button button--beige">{{ section.settings.button_text }}</a>
+</div>
+
+{% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('.show-sticky-footer');
+    if ( $(window).width() > 768 ) {
+      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        $('.sticky-footer__container').addClass('scrolled');
+      } else {
+        $('.sticky-footer__container').removeClass('scrolled');
+      }
+    } else {
+      if ($scrollTop > 1200) {
+        $('.sticky-footer__container').addClass('scrolled');
+      } else {
+        $('.sticky-footer__container').removeClass('scrolled');
+      }
+	}
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Sticky Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sticky Footer"
+      }
+    ]
+  }
+{% endschema %}

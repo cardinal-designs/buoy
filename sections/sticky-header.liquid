@@ -1,0 +1,55 @@
+{{ 'section-sticky-header.css' | asset_url | stylesheet_tag }} 
+
+
+<div class="page-width sticky-header__container">
+  <p>{{ section.settings.header_text }}</p>
+  <a href="{{ section.settings.button_link }}" class="button button--beige">{{ section.settings.button_text }}</a>
+</div>
+
+{% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('.show-sticky-header');
+    if ( $(window).width() > 768 ) {
+      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        $('.sticky-header__container').addClass('scrolled');
+      } else {
+        $('.sticky-header__container').removeClass('scrolled');
+      }
+    } else {
+      if ($scrollTop > 1200) {
+        $('.sticky-header__container').addClass('scrolled');
+      } else {
+        $('.sticky-header__container').removeClass('scrolled');
+      }
+	}
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Sticky Header",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "header_text",
+        "label": "header Text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sticky Header"
+      }
+    ]
+  }
+{% endschema %}

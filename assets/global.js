@@ -1296,7 +1296,7 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
     }
   })
   
-  add_items = [{id: id, quantity: 1, selling_plan: subid}]
+  add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST'}]
 
   
   const body = JSON.stringify({
