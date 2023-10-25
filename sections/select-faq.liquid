@@ -7,10 +7,10 @@
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
   ">
+  {% if section.settings.title != blank %}
+    <h5 class="benefits__info-title light">{{ section.settings.title }}</h5>
+  {% endif %}
   <div class="page-width benefits__flex">
-    {% if section.settings.title != blank %}
-      <h5 class="benefits__info-title light">{{ section.settings.title }}</h5>
-    {% endif %}
     <div class="benefits__items hide-mobile">
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item">
