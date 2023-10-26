@@ -82,6 +82,7 @@
   .select-faq__container .benefits__items.hide-desktop {
     margin: unset;
     max-width: 100%;
+    border-bottom: 1px solid #BBBCBC;
   }
 
   .select-faq__container .benefits__flex {
