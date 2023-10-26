@@ -5,6 +5,7 @@
 .select-faq__list-item {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 
 .select-faq__list-item svg {
