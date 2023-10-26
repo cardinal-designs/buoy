@@ -38,18 +38,20 @@
           {% if block.settings.text != blank %} 
             <p class="sh3">{{ block.settings.text }}</p>
           {%  endif %}
-          {% if block.settings.title1 != blank %}
-            <p class="medium caps select-faq__titles">{{ block.settings.title1 }}</p>
-          {%  endif %}
-          {% if block.settings.text1 != blank %}
-            <p class="select-faq__texts">{{ block.settings.text1 }}</p>
-          {%  endif %}
-          {% if block.settings.title2 != blank %}
-            <p class="medium caps select-faq__titles">{{ block.settings.title2 }}</p>
-          {%  endif %}
-          {% if block.settings.text2 != blank %}
-            <p class="select-faq__texts">{{ block.settings.text2 }}</p>
-          {%  endif %}
+          <div  class="select-faq__titles-container">
+            {% if block.settings.title1 != blank %}
+              <p class="medium caps select-faq__titles">{{ block.settings.title1 }}</p>
+            {%  endif %}
+            {% if block.settings.text1 != blank %}
+              <p class="select-faq__texts">{{ block.settings.text1 }}</p>
+            {%  endif %}
+            {% if block.settings.title2 != blank %}
+              <p class="medium caps select-faq__titles">{{ block.settings.title2 }}</p>
+            {%  endif %}
+            {% if block.settings.text2 != blank %}
+              <p class="select-faq__texts">{{ block.settings.text2 }}</p>
+            {%  endif %}
+          </div>
           {% if block.settings.list_item1 != blank %}
             <div class="select-faq__list-item">
               {% include 'icon-x2' %}
