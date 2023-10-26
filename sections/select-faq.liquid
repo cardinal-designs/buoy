@@ -28,9 +28,50 @@
       </div>
       <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
       {% endfor %}
-      {% if section.settings.link_text != blank %}
-        <a href="{{ section.settings.link }}" class="benefits_link">{{ section.settings.link_text }}</a>
-      {% endif %}
+  <div  class="select-faq__titles-container">
+            {% if block.settings.title1 != blank %}
+              <p class="medium caps select-faq__titles">{{ block.settings.title1 }}</p>
+            {%  endif %}
+            {% if block.settings.text1 != blank %}
+              <p class="select-faq__texts">{{ block.settings.text1 }}</p>
+            {%  endif %}
+            {% if block.settings.title2 != blank %}
+              <p class="medium caps select-faq__titles">{{ block.settings.title2 }}</p>
+            {%  endif %}
+            {% if block.settings.text2 != blank %}
+              <p class="select-faq__texts">{{ block.settings.text2 }}</p>
+            {%  endif %}
+          </div>
+          {% if block.settings.list_item1 != blank %}
+            <div class="select-faq__list-item">
+              {% include 'icon-x2' %}
+              <p class="sh2">{{ block.settings.list_item1 }}</p>
+            </div>
+          {%  endif %}
+          {% if block.settings.list_item2 != blank %}
+            <div class="select-faq__list-item">
+              {% include 'icon-x2' %}
+              <p class="sh2">{{ block.settings.list_item2 }}</p>
+            </div>
+          {%  endif %}
+          {% if block.settings.list_item3 != blank %}
+            <div class="select-faq__list-item">
+              {% include 'icon-x2' %}
+              <p class="sh2">{{ block.settings.list_item3 }}</p>
+            </div>
+          {%  endif %}
+          {% if block.settings.list_item4 != blank %}
+            <div class="select-faq__list-item">
+              {% include 'icon-x2' %}
+              <p class="sh2">{{ block.settings.list_item4 }}</p>
+            </div>
+          {%  endif %}
+          {% if block.settings.list_item5 != blank %}
+            <div class="select-faq__list-item">
+              {% include 'icon-x2' %}
+              <p class="sh2">{{ block.settings.list_item5 }}</p>
+            </div>
+          {%  endif %}
     </div>
     <div class="benefits__info hide-mobile">
       {% for block in section.blocks %}
