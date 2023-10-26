@@ -111,6 +111,24 @@
     right: 20px;
     transition: transform .3s ease;
   }
+
+  .select-faq__x:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    border-right: 1px solid var(--charcoal);
+  }
+
+  .select-faq__x:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--charcoal);
+  }
 }
 
 
