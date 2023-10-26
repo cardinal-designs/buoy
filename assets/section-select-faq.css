@@ -74,6 +74,10 @@
      margin-top: 41px;
      margin-bottom: 41px;
   }
+
+  .select-faq__container .benefits__items.hide-desktop {
+    margin: unset;
+  }
 }
 
 
