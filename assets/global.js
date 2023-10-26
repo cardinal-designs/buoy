@@ -1609,8 +1609,8 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
-  $(this).find('h4').addClass('active')
-   let num = $('.select-faq__container .benefits__item-mobile h4.active').parent().data("id")
+  $(this).find('h3').addClass('active')
+   let num = $('.select-faq__container .benefits__item-mobile h3.active').parent().data("id")
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
