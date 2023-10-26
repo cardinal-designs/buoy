@@ -106,8 +106,8 @@
 
   .select-faq__x {
     display: block;
-    height: 13px;
-    width: 13px;
+    height: 17px;
+    width: 17px;
     position: relative;
   }
 
@@ -116,14 +116,14 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 6px;
+    left: 0px;
     border-right: 1px solid var(--charcoal);
   }
 
   .select-faq__x:after {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0px;
     left: 0;
     right: 0;
     border-bottom: 1px solid var(--charcoal);
