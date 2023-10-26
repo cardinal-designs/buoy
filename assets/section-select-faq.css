@@ -78,6 +78,10 @@
   .select-faq__container .benefits__items.hide-desktop {
     margin: unset;
   }
+
+  .select-faq__container .benefits__flex {
+    padding: 0 !important;
+  }
 }
 
 
