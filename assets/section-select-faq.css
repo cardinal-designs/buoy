@@ -69,6 +69,11 @@
   .select-faq__container {
     padding-top: 30px;
   }
+
+  .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile {
+     margin-top: 41px;
+     margin-bottom: 41px;
+  }
 }
 
 
