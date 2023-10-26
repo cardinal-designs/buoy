@@ -75,8 +75,10 @@
   }
 
   .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile {
-     padding-top: 41px;
-     padding-bottom: 41px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile h3 {
@@ -106,10 +108,7 @@
     display: block;
     height: 13px;
     width: 13px;
-    position: absolute;
-    bottom: 50%;
-    right: 20px;
-    transition: transform .3s ease;
+    position: relative;
   }
 
   .select-faq__x:before {
