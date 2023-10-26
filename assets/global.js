@@ -1608,9 +1608,10 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 })
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
- 
+  $('.select-faq__x').removeClass('minus')
   $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
   $(this).find('h3').addClass('active')
+  $(this).find('.select-faq__x').addClass('minus')
    let num = $(this).data("id")
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
