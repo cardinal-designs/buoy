@@ -14,7 +14,7 @@
     <div class="benefits__items hide-mobile">
       {% for block in section.blocks %}
       <div data-id="{{ forloop.index }}" class="benefits__item">
-        <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
+        <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
       </div>
       {% endfor %}
       {% if section.settings.link_text != blank %}
