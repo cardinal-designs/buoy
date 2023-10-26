@@ -5,7 +5,7 @@
 .select-faq__list-item {
   display: flex;
   gap: 6px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .select-faq__list-item svg {
