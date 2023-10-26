@@ -1,3 +1,13 @@
 .benefits__info-title2 {
   margin-bottom: 70px;
 }
+
+.select-faq__list-item {
+  display: flex;
+  gap: 6px;
+}
+
+.select-faq__list-item svg {
+  width: 25px;
+  height: 25px;
+}
