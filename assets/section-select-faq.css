@@ -58,6 +58,10 @@
   margin-bottom: 34px;
 }
 
+.select-faq__x {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .benefits__info-title2 {
     text-align: center;
@@ -96,6 +100,17 @@
    .select-faq__container .mobile-benefits-info .sh2 {
      margin: 0;
    }
+
+
+  .select-faq__x {
+    display: block;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: transform .3s ease;
+  }
 }
 
 
