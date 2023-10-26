@@ -1608,7 +1608,7 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 })
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
-  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+  $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
   $(this).find('h3').addClass('active')
    let num = $('.select-faq__container .benefits__item-mobile h3.active').parent().data("id")
   console.log(num)
