@@ -35,8 +35,34 @@
     <div class="benefits__info hide-mobile">
       {% for block in section.blocks %}
         <div style="{% if forloop.index == 1 %}display: block{% endif %}" data-id="{{ forloop.index }}" class="benefits__info-item">
-          <p class="sh3">{{ block.settings.title }}</p>
-          <p class="sh2 light">{{ block.settings.text }}</p>
+          <p class="sh3">{{ block.settings.text }}</p>
+          {% if block.settings.title1 != blank %}
+            <p class="sh2 light">{{ block.settings.title1 }}</p>
+          {%  endif %}
+          {% if block.settings.text1 != blank %}
+            <p class="sh2 light">{{ block.settings.text1 }}</p>
+          {%  endif %}
+          {% if block.settings.title2 != blank %}
+            <p class="sh2 light">{{ block.settings.title2 }}</p>
+          {%  endif %}
+          {% if block.settings.text2 != blank %}
+            <p class="sh2 light">{{ block.settings.text2 }}</p>
+          {%  endif %}
+          {% if block.settings.list_item1 != blank %}
+            <p class="sh2 light">{{ block.settings.list_item1 }}</p>
+          {%  endif %}
+          {% if block.settings.list_item2 != blank %}
+            <p class="sh2 light">{{ block.settings.list_item2 }}</p>
+          {%  endif %}
+          {% if block.settings.list_item3 != blank %}
+            <p class="sh2 light">{{ block.settings.list_item3 }}</p>
+          {%  endif %}
+          {% if block.settings.list_item4 != blank %}
+            <p class="sh2 light">{{ block.settings.list_item4 }}</p>
+          {%  endif %}
+          {% if block.settings.list_item5 != blank %}
+            <p class="sh2 light">{{ block.settings.list_item5 }}</p>
+          {%  endif %}
         </div>
       {% endfor %}
     </div>
