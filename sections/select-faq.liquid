@@ -36,7 +36,7 @@
       {% for block in section.blocks %}
         <div style="{% if forloop.index == 1 %}display: block{% endif %}" data-id="{{ forloop.index }}" class="benefits__info-item">
           {% if block.settings.text != blank %} 
-            <p class="select-faq__container-title">{{ block.settings.text }}</p>
+            <p class="select-faq__container-title sh4">{{ block.settings.text }}</p>
           {%  endif %}
           <div  class="select-faq__titles-container">
             {% if block.settings.title1 != blank %}
