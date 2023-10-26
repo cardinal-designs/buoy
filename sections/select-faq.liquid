@@ -26,8 +26,8 @@
       <div data-id="{{ forloop.index }}" class="benefits__item-mobile">
         <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
       </div>
-      <p data-id="{{ forloop.index }}" class="mobile-benefits-info sh2 light hide-desktop">{{ block.settings.text }}</p>
-     
+      <div data-id="{{ forloop.index }}" class="mobile-benefits-info">
+      <p class=" sh2 light hide-desktop">{{ block.settings.text }}</p>
        <div  class="select-faq__titles-container">
         {% if block.settings.title1 != blank %}
           <p class="medium caps select-faq__titles">{{ block.settings.title1 }}</p>
@@ -72,6 +72,7 @@
           <p class="sh2">{{ block.settings.list_item5 }}</p>
         </div>
       {% endif %}
+      </div>
       {% endfor %}
     </div>
     <div class="benefits__info hide-mobile">
