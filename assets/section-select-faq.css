@@ -61,7 +61,9 @@
 @media (max-width: 768px) {
   .benefits__info-title2 {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #BBBCBC;
   }
 }
 
