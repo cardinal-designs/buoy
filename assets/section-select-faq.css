@@ -45,9 +45,17 @@
 
 .select-faq__container .benefits__item h3 {
   margin: 0;
+  color: #797B7A;
+  font-weight: 300;
+}
+
+.select-faq__container .benefits__item h3.active {
+  font-weight: 400;
 }
 
 .select-faq__container .benefits__item {
   margin-bottom: 34px;
 }
+
+
 
