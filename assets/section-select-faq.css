@@ -70,8 +70,12 @@
   }
 
   .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile {
-     margin-top: 41px;
-     margin-bottom: 41px;
+     padding-top: 41px;
+     padding-bottom: 41px;
+  }
+
+  .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile h3 {
+     margin: 0;
   }
 
   .select-faq__container .benefits__items.hide-desktop {
