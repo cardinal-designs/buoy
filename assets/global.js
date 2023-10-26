@@ -1591,6 +1591,14 @@ $('.benefits__item').click(function() {
   $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
 })
 
+$('.select-faq__container .benefits__item').click(function() {
+  $('.benefits__item h3.active').removeClass('active')
+  $(this).find('h3').addClass('active')
+   let num = $('.benefits__item h3.active').parent().data("id")
+  $('.benefits__info-item').hide()
+  $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
+})
+
 $('.benefits__item-mobile').click(function() {
   $('.benefits__item-mobile h4.active').removeClass('active')
   $(this).find('h4').addClass('active')
