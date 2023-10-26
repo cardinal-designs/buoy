@@ -27,7 +27,7 @@
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
       </div>
       <div data-id="{{ forloop.index }}" class="page-width mobile-benefits-info" {% if forloop.index0 == 0 %}style="display: block;"{% endif %}>
-      <p class=" sh2 light hide-desktop">{{ block.settings.text }}</p>
+      <p class="sh2 hide-desktop">{{ block.settings.text }}</p>
        <div  class="select-faq__titles-container">
         {% if block.settings.title1 != blank %}
           <p class="medium caps select-faq__titles">{{ block.settings.title1 }}</p>
