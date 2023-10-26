@@ -76,7 +76,7 @@
 
   .select-faq__container .benefits__items.hide-desktop {
     margin: unset;
-    width: 100%;
+    max-width: 100%;
   }
 
   .select-faq__container .benefits__flex {
