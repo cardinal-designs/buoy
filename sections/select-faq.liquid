@@ -51,24 +51,34 @@
             <p class="sh2 light">{{ block.settings.text2 }}</p>
           {%  endif %}
           {% if block.settings.list_item1 != blank %}
-            {% include 'icon-x' %}
-            <p class="sh2 light">{{ block.settings.list_item1 }}</p>
+            <div class="select-faq__list-item">
+              {% include 'icon-x' %}
+              <p class="sh2 light">{{ block.settings.list_item1 }}</p>
+            </div>
           {%  endif %}
           {% if block.settings.list_item2 != blank %}
-            {% include 'icon-x' %}
-            <p class="sh2 light">{{ block.settings.list_item2 }}</p>
+            <div class="select-faq__list-item">
+              {% include 'icon-x' %}
+              <p class="sh2 light">{{ block.settings.list_item2 }}</p>
+            </div>
           {%  endif %}
           {% if block.settings.list_item3 != blank %}
-            {% include 'icon-x' %}
-            <p class="sh2 light">{{ block.settings.list_item3 }}</p>
+            <div class="select-faq__list-item">
+              {% include 'icon-x' %}
+              <p class="sh2 light">{{ block.settings.list_item3 }}</p>
+            </div>
           {%  endif %}
           {% if block.settings.list_item4 != blank %}
-            {% include 'icon-x' %}
-            <p class="sh2 light">{{ block.settings.list_item4 }}</p>
+            <div class="select-faq__list-item">
+              {% include 'icon-x' %}
+              <p class="sh2 light">{{ block.settings.list_item4 }}</p>
+            </div>
           {%  endif %}
           {% if block.settings.list_item5 != blank %}
-            {% include 'icon-x' %}
-            <p class="sh2 light">{{ block.settings.list_item5 }}</p>
+            <div class="select-faq__list-item">
+              {% include 'icon-x' %}
+              <p class="sh2 light">{{ block.settings.list_item5 }}</p>
+            </div>
           {%  endif %}
         </div>
       {% endfor %}
