@@ -322,16 +322,27 @@
         "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
           "type": "block",
           "settings": {
-            "text": "",
-            "new_product": false,
+            "text": "Complete your hydration ritual with our Rescue Salt.",
+            "new_product": true,
             "image": "shopify:\/\/shop_images\/IMG_8852_2b07d359-b091-4556-bf52-0fc986a6aa57.jpg",
             "product": "rescue-salts",
             "add_to_cart": true
           }
+        },
+        "73e9c2ba-6884-470f-a719-177359344c65": {
+          "type": "block",
+          "settings": {
+            "text": "Want to try them all?  Build a custom bundle.",
+            "new_product": false,
+            "image": "shopify:\/\/shop_images\/3Bottles_All_2.jpg",
+            "product": "byob",
+            "add_to_cart": false
+          }
         }
       },
       "block_order": [
-        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac"
+        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac",
+        "73e9c2ba-6884-470f-a719-177359344c65"
       ],
       "settings": {
         "title": "Round out your routine"
