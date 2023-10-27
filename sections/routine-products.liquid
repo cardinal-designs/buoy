@@ -15,7 +15,7 @@
       </div>
       {% endif %}
       <img src="{{ block.settings.image | img_url: 'master' }}"/>
-      <h4>{{ routineProduct.title }}</h4>
+      <h4>{{ block.settings.bottom_text }}</h4>
       <div class="okeReviews-reviewsSummary-starRating">
         <span class="okeReviews-starRating okeReviews-starRating--large">
             <span class="okeReviews-a11yText">{{ routineProduct.metafields.okendo.summaryData.reviewAverageValue | default: 0 }} out of 5</span>
@@ -74,6 +74,11 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "bottom_text",
+          "label": "Bottom Text"
         },
         {
           "type": "checkbox",
