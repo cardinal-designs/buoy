@@ -30,4 +30,8 @@
   .routine-products__products {
     flex-direction: column;
   }
+
+  .routine-products__product {
+    align-self: center;
+  }
 }
