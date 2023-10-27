@@ -1,6 +1,12 @@
 .routine-products__products {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.routine-products__product {
+  background: #f8f8f8;
+  border-radius: 50px;
 }
 
 .routine-products__product img {
