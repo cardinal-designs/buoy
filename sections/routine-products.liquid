@@ -25,6 +25,13 @@
             </span>
         </span>
       </div>
+      {% if block.settings.add_to_cart == true %}
+      <button class="button">Add To Cart</button>
+      {% else %}
+      <a href="{{ routineProduct.url }}">
+      <button class="button">Start Bundling</button>
+      </a>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
