@@ -24,3 +24,10 @@
 .routine-products__product button {
   width: 100%;
 }
+
+
+@media (max-width: 768px) {
+  .routine-products__products {
+    flex-direction: column;
+  }
+}
