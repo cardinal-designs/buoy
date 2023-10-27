@@ -18,10 +18,10 @@
       <h4>{{ block.settings.bottom_text }}</h4>
      <div data-oke-reviews-product-listing-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
       {% if block.settings.add_to_cart == true %}
-      <button class="button">Add To Cart</button>
+      <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Add To Cart</button>
       {% else %}
       <a href="{{ routineProduct.url }}">
-      <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Start Bundling</button>
+      <button class="button">Start Bundling</button>
       </a>
       {% endif %}
     </div>
