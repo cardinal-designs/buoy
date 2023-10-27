@@ -1,7 +1,7 @@
 .routine-products__products {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .routine-products__product {
