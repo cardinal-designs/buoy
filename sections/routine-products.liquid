@@ -9,11 +9,9 @@
       {% if block.settings.text != blank %}
       <h5>{{ block.settings.text }}</h5>
       {% endif %}
-      {% if block.settings.new_product == true %}
-      <div>
+      <div style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
         <span>New Product</span>
       </div>
-      {% endif %}
       <img src="{{ block.settings.image | img_url: 'master' }}"/>
       <h4>{{ block.settings.bottom_text }}</h4>
       <div data-oke-reviews-product-listing-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
