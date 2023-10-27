@@ -4,8 +4,16 @@
   <h2>{{ section.settings.title }}</h2>
   <div class="routine-products__products">
     {% for block in section.blocks %}
+    {% assign routineProduct = all_products[ block.settings.product ] %}
     <div class="routine-products__product">
-    
+      {% if block.settings.text != blank %}
+      <h5>{{ block.settings.text }}</h5>
+      {% endif %}
+      {% if block.settings.new_product == true %}
+      <div>
+        <span>New Product</span>
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
@@ -38,6 +46,11 @@
           "id": "new_product",
           "label": "New Product?",
           "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
         },
         {
           "type": "product",
