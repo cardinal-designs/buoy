@@ -21,7 +21,7 @@
       <button class="button">Add To Cart</button>
       {% else %}
       <a href="{{ routineProduct.url }}">
-      <button class="button">Start Bundling</button>
+      <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Start Bundling</button>
       </a>
       {% endif %}
     </div>
