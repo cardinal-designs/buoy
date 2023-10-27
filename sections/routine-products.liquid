@@ -1,7 +1,14 @@
 {{ 'section-routine-products.css' | asset_url | stylesheet_tag }}
 
-<div class="routine-products__container ">
-
+<div class="routine-products__container">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="routine-products__products">
+    {% for block in section.blocks %}
+    <div class="routine-products__product">
+    
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
@@ -22,14 +29,26 @@
       "name": "Block",
       "settings": [
         {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
           "type": "textarea",
           "id": "text",
-          "label": "Main Text"
+          "label": "Top Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "new_product",
+          "label": "New Product?",
+          "default": false
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "add_to_cart",
+          "label": "Add To Cart?",
+          "default": false
         }
       ]
     }
