@@ -1,7 +1,14 @@
 /* Rhymes */
 @font-face {
-  font-family: Rhymes;
+  font-family: Rhymes-Italic;
   src: url('{{ 'Rhymes-Text-Light-Italic.ttf' | asset_url }}');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Rhymes;
+  src: url('{{ 'Rhymes-Text-Light.ttf' | asset_url }}');
   font-style: normal;
   font-weight: 300;
 }
@@ -34,7 +41,7 @@ h4 {
 }
 
 h5.rhymes-italic {
-  font-family: Rhymes;
+  font-family: Rhymes-Italic;
   font-size: 20px;
   font-style: italic;
   font-weight: 300;
