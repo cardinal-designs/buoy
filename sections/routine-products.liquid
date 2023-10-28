@@ -7,7 +7,7 @@
     {% assign routineProduct = all_products[ block.settings.product ] %}
     <div class="routine-products__product">
       {% if block.settings.text != blank %}
-      <h5>{{ block.settings.text }}</h5>
+      <h5 class="rhymes">{{ block.settings.text }}</h5>
       {% endif %}
       <div class="routine-products__new" style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
         <p>New Product</p>
