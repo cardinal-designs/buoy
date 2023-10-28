@@ -9,8 +9,8 @@
       {% if block.settings.text != blank %}
       <h5>{{ block.settings.text }}</h5>
       {% endif %}
-      <div style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
-        <span>New Product</span>
+      <div class="routine-products__new" style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
+        <p>New Product</p>
       </div>
       <img src="{{ block.settings.image | img_url: 'master' }}"/>
       <h4>{{ block.settings.bottom_text }}</h4>
