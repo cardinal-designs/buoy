@@ -14,7 +14,7 @@
       </div>
       <img src="{{ block.settings.image | img_url: 'master' }}"/>
       <h4>{{ block.settings.bottom_text }}</h4>
-      <div data-oke-reviews-product-listing-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
+      <div style="{% if routineProduct.metafields.okendo.ProductListingSnippet != blank %}visibility: visible;{% else %}visibility: hidden;{% endif %}" data-oke-reviews-product-listing-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
       {% if block.settings.add_to_cart == true %}
       <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Add To Cart</button>
       {% else %}
