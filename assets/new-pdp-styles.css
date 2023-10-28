@@ -1,3 +1,12 @@
+/* Rhymes */
+@font-face {
+  font-family: Rhymes;
+  src: url('{{ 'Rhymes-Text-Light-Italic.ttf' | asset_url }}');
+  font-style: normal;
+  font-weight: 300;
+}
+
+
 h2 {
   font-family: Inter;
   font-size: 40px;
