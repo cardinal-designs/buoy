@@ -7,7 +7,7 @@
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 0px 10px;
   width: fit-content;
   margin: 0 auto;
 }
