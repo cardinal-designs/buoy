@@ -41,6 +41,12 @@
   width: 100%;
 }
 
+.routine-products__bottom {
+  display: flex;
+  flex-diection: column;
+  justify-content: space-between;
+}
+
 
 @media (max-width: 768px) {
   .routine-products__products {
