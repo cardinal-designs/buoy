@@ -162,6 +162,7 @@
   <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
     {%- comment -%} Subscription type toggle {%- endcomment -%}
     {%- unless requiresPlan -%}
+      <p class="product-form__text-label">Choose Payment Option</p>
       <div class="rtx_option_selector_main">
         <div class="rtx_option_selector">
           <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
