@@ -123,10 +123,7 @@
                         <span class="Best_Value">{{ my_fields.best_value }}</span>
                       {%- endif -%}
                       {%- if my_fields.supply_time  != blank -%}
-                        <span class="Supply_Time">{{ my_fields.supply_time }}</span>
-                      {%- endif -%}
-                      {%- if my_fields.servings != blank -%}
-                        <span class="Variant_Servings">({{ my_fields.servings }})</span>
+                        <span class="Supply_Time">{{ my_fields.supply_time }} / {{ my_fields.servings }}</span>
                       {%- endif -%}
                     </label>
                   </span>
