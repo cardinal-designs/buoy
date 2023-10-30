@@ -1964,7 +1964,7 @@ span#timer strong {
   padding-top: 30px;
   z-index: 111111111;
   position: relative;
-  margin-top: -102px;
+  margin-top: -30px;
   z-index: 1;
   text-align: right;
   position: relative;
@@ -1983,8 +1983,6 @@ span#timer strong {
   padding-right: 0 !important;
   margin-right: 20px;
   border-radius: 17px 0px;
-  border-left: 2px solid #1F2322;
-  border-top: 2px solid #1F2322;
 }
 
 .rtx_option_selector_main {
@@ -1995,8 +1993,6 @@ span#timer strong {
 
 .product__media-arrows .slick-next {
   border-radius: 0 17px;
-  border-right: 2px solid #1F2322;
-  border-top: 2px solid #1F2322;
 }
 
 .pdp-faq .Shipping_Tab .faq__content p.small {
