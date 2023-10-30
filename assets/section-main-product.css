@@ -2268,6 +2268,42 @@ select[name=selling_plan] {
   border: 0;
 }
 
+
+
+.discount-bubble {
+  background: #fff;
+  float: left;
+  border: 1px solid #d0cfd2;
+  padding: 15px;
+  box-shadow: 0px 0px 2px #000;
+  border-radius:3px;
+  height: auto;
+  width: 324px;
+  margin: 50px 150px;
+  position: relative;
+}
+
+.discount-bubble:after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(51, 51, 51, 0.19);
+  border-color: white transparent;
+  border-width: 0 13px 12px 13px;
+  top: -12px;
+  left: 45%;
+}
+
+.discount-bubble:before {
+  content: '';
+  position: absolute;
+  border: 1px solid #333;
+  border-color: #999 transparent;
+  border-width: 0 13px 11px 13px;
+  top: -13px;
+  left: 45%;
+}
+
+
 @media screen and (max-width: 1280px) {
 
   .Badge_Grid p {
