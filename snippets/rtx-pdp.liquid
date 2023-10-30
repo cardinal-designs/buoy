@@ -275,7 +275,7 @@
                               {% endcomment %}
                               {% assign subscriptionSubtext = block.settings.purchase_type_subtext %}
                               {%- if subscriptionSubtext != blank -%}
-                                <p class="Label_Sub_Text">{{ subscriptionSubtext | newline_to_br }}</p>
+                                <p class="Label_Sub_Text">{{ subscriptionSubtext }}</p>
                               {%- endif -%}
                             </div>
                           </div>
