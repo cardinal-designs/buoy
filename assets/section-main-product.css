@@ -36,6 +36,10 @@
   background: white;
 }
 
+.product-reviews .okeReviews.okeReviews--theme.okeReview-custom-aggregate .okeReviews-reviewsSummary-ratingCount {
+  font-weight: 400 !important;
+}
+
 .Why_This_Matters p:first-of-type,
 .Why_This_Matters p:first-of-type label {
   margin-bottom: 0 !important;
