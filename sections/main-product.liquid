@@ -43,7 +43,18 @@
 
         <div class="Product_Tags">
           {%- for tag in product.tags -%}
-            <span>{{ tag }}</span>
+            <div>
+              {% if product.metafields.custom.tag_icon1 and forloop.index == 1 %}
+              <img src="{{ product.metafields.custom.tag_icon1 }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon2 and forloop.index == 2 %}
+              <img src="{{ product.metafields.custom.tag_icon2 }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon3 and forloop.index == 3 %}
+              <img src="{{ product.metafields.custom.tag_icon3 }}"/>
+              {% endif %}
+              <span>{{ tag }}</span>
+            </div>
           {%- endfor -%}
         </div>
         
