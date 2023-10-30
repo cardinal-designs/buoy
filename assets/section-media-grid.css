@@ -18,3 +18,9 @@
 .media-grid__item {
   max-width: 280px;
 }
+
+@media (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
