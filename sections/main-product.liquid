@@ -35,6 +35,10 @@
             {% if variant.price < lowest_price %}
               {% assign lowest_price = variant.price %}
             {% endif %}
+            {% if variant.compare_at_price < lowest_price %}
+              {% assign lowest_price = variant.compare_at_price %}
+            {% endif %}
+            
           {% endif %}
         {% endfor %}
 
