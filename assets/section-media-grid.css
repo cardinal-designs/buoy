@@ -1,9 +1,11 @@
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .media-grid img, .media-grid video {
   width: 280px;
   height: 280px;
+  border-radius: 20px;
 }
