@@ -490,6 +490,21 @@
           </div>
         </div>
          {% endcomment %}
+
+        <div class="product-listblock__container">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'list_block' -%}
+             <div class class="product-listblock">
+               <div>              
+                 <img src="{{ block.settings.list_block_type_img }}"/>
+                 <p>{{ block.settings.list_block_type_text }}</p>
+               </div>
+               <p>{{ block.settings.list_block_type_subtext }}</p>
+             </div>
+          {%- endcase -%}
+        {%- endfor -%}
+        </div>
         <div class="Testimonials_Main">
           <p class="Testimonials_Main_Title">Reviews</p>
           <div class="Testimonials_Slider">
@@ -1126,7 +1141,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           ]
         },
         {
-          "type": "List_block",
+          "type": "list_block",
           "name": "List Block",
           "limit":3,
           "settings": [
