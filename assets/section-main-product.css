@@ -1338,6 +1338,10 @@ fieldset.product-form__input .form__label {
   gap: 17px;
 }
 
+.product__info-wrapper .product-form__input img {
+  max-width: 212px;
+}
+
 .Best_Value {
   font-size: 12px;
   background-color: #C6DB76;
