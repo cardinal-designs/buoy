@@ -38,7 +38,7 @@
           {% endif %}
         {% endfor %}
 
-        <p>Starting At {{ product.lowest_rice | money_without_trailing_zeros }}</p>
+        <p>Starting At {{ product.lowest_price | money_without_trailing_zeros }}</p>
         
         <div class="product__description sh4 light">
           {{ product.description }}
