@@ -1661,6 +1661,10 @@ fieldset.product-form__input .form__label {
   flex: 1 1 0px;
 }
 
+.Testimonials_Wrapper p {
+  margin: 0;
+}
+
 .Testimonials_Wrapper img, .Testimonials_Wrapper video {
   width: 100%;
   border-radius: 10px;
@@ -1753,7 +1757,7 @@ fieldset.product-form__input .form__label {
   height: 20px;
   display: block;
   background-repeat: no-repeat;
-  margin: 3px auto 6px;
+  margin: 3px auto 0px;
   background-position: left;
 }
 
