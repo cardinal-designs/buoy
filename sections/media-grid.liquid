@@ -6,6 +6,7 @@
   <p class="sh2">{{ section.settings.text }}</p>
   <div class="media-grid">
   {% for block in section.blocks %}
+    <div>
     {% if block.settings.video != blank %}
     <video autoplay muted loop>
       <source src="{{ block.settings.video }}" type="video/mp4">
@@ -13,6 +14,7 @@
     {% elsif block.settings.image != blank %}
     <img src="{{ block.settings.image |img_url:'master' }}"/>
     {% endif %}
+    </div>
   {% endfor %}
   </div>
 </div>
