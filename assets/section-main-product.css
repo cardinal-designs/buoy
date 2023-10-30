@@ -2527,6 +2527,10 @@ select[name=selling_plan] {
   height: auto;
 }
 
+.Product_Tags div {
+  margin: 0 14px;
+}
+
 .Product_Tags div:nth-child(2) {
   border-left: 1px solid #E9E9E9;
   border-right: 1px solid #E9E9E9;
