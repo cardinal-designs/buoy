@@ -271,6 +271,12 @@
             </div>
             {%- endif -%}
           </div>
+ff
+          {% if product.metafields.custom.discount_bubble != blank %}
+          <div class="discount-bubble">
+            <p>{{ product.metafields.custom.discount_bubble }}</p>
+          </div>
+          {% endif %}
 
 {%- liquid
     assign currentVariant = currentVariant
