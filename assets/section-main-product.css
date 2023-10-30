@@ -375,7 +375,7 @@ fieldset.product-form__input .form__label {
   justify-content: center;
   align-items: center;
   background: #DEF647;
-  border: none;
+  border: none !important;
 }
 
 /* Overrides */
