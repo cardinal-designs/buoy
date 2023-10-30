@@ -2522,6 +2522,11 @@ select[name=selling_plan] {
   display: flex;
 }
 
+.Product_Tags img {
+  width: 15px;
+  height: auto;
+}
+
 .Product_Tags div:nth-child(2) {
   border-left: 1px solid #E9E9E9;
   border-right: 1px solid #E9E9E9;
