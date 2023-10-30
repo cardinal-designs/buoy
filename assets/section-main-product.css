@@ -2523,7 +2523,8 @@ select[name=selling_plan] {
 }
 
 .Product_Tags div:nth-child(2) {
- border: 0 1px 0 1px solid;
+  border-left: 1px solid #E9E9E9;
+  border-right: 1px solid #E9E9E9;
 } 
 
 
