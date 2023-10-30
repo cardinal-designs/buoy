@@ -1814,6 +1814,10 @@ fieldset.product-form__input .form__label {
   height: fit-content;
 }
 
+.product-listblock:nth-child(1) {
+  margin-bottom: 30px;
+}
+
 .product-listblock__text {
   margin: 2px 0 5px;
 }
