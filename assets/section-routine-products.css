@@ -76,4 +76,12 @@
   .routine-products__bottom h4 {
     font-size: 24px;
   }
+
+  .routine-products__container {
+    margin-top: 90px;
+  }
+
+  .routine-products__container > h2 {
+    margin-top: 0;
+  }
 }
