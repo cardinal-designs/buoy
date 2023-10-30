@@ -40,6 +40,10 @@
   border-bottom: 1px solid;
 }
 
+.product-reviews .okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-large .okeReviews-review-primary, .product-reviews .okeReviews-review-side {
+  padding-top: 60px;
+}
+
 .okeReviews.okeReviews--theme .okeReviews-widgetNavBar-item {
   font-size: 14px;
   font-weight: 400;
