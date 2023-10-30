@@ -2273,7 +2273,8 @@ select[name=selling_plan] {
 .discount-bubble {
   background: #fff;
   float: left;
-  border: 1px solid #d0cfd2;
+  border: 1px solid #398200;
+  background: #398200;
   padding: 15px;
   box-shadow: 0px 0px 2px #000;
   border-radius:3px;
@@ -2283,23 +2284,13 @@ select[name=selling_plan] {
   position: relative;
 }
 
-.discount-bubble:after {
-  content: '';
-  position: absolute;
-  border: 1px solid rgba(51, 51, 51, 0.19);
-  border-color: white transparent;
-  border-width: 0 13px 12px 13px;
-  top: -12px;
-  left: 45%;
-}
-
 .discount-bubble:before {
   content: '';
   position: absolute;
   border: 1px solid #333;
-  border-color: #999 transparent;
+  border-color: #398200 transparent;
   border-width: 0 13px 11px 13px;
-  top: -13px;
+  top: -12px;
   left: 45%;
 }
 
