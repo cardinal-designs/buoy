@@ -2522,7 +2522,7 @@ select[name=selling_plan] {
   display: flex;
 }
 
-.Product_Tags:nth-child(2) {
+.Product_Tags div:nth-child(2) {
  border: 0 1px 0 1px solid;
 } 
 
