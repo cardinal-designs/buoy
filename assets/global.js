@@ -1012,8 +1012,8 @@ $('.chronic-multicolumn__slider').slick({
 // PDP main slider
 $productMediaSlider = $('.product__media-list');
 var productMediaSlider = {
-  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(272.182 1503.504) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(28.001 11.504) rotate(180)"><g id="Arrow-2" data-name="Arrow" transform="translate(271.17 1503) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></g></svg></button>',
+  prevArrow: '<button type="button" class="slick-prev"><svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.46667" y1="10.5569" x2="23" y2="10.5569" stroke="#1F2322"/><path d="M10.2227 20L0.722667 10.5L10.2227 1.00002" stroke="#1F2322"/></svg></button>',
+  nextArrow: '<button type="button" class="slick-next"><svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="21.5333" y1="10.4431" x2="1.33514e-05" y2="10.4431" stroke="#1F2322"/><path d="M12.7773 1L22.2773 10.5L12.7773 20" stroke="#1F2322"/></svg></button>',
   appendArrows: '.product__media-arrows',
   responsive: [
     {
