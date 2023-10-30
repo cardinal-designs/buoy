@@ -26,7 +26,9 @@
           {% if product.metafields.custom.curved_icon == true %}
             {% include 'curved-hydrated' %}
           {% endif %}
-        </h1>       
+        </h1>     
+
+        <p>Starting At {{ product.compare_at_price }}</p>
         
         <div class="product__description sh4 light">
           {{ product.description }}
