@@ -37,6 +37,14 @@ h2 {
 }
 
 
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+
+
 h3 {
   font-family: Inter;
   font-size: 30px;
