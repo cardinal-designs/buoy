@@ -34,6 +34,9 @@
   width: 2000px;
   bottom: 0;
   background: white;
+
+.product-reviews .okeReviews .okeReviews-select {
+  border-radius: 50px;
 }
 
 .product-reviews .okeReviews.okeReviews--theme.okeReview-custom-aggregate .okeReviews-reviewsSummary-ratingCount {
