@@ -44,14 +44,14 @@
         <div class="Product_Tags">
           {%- for tag in product.tags -%}
             <div>
-              {% if product.metafields.custom.tag_icon1 and forloop.index == 1 %}
-              <img src="{{ product.metafields.custom.tag_icon1 }}"/>
+              {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
+              <img src="{{ product.metafields.custom.tag_icon_1 }}"/>
               {% endif %}
-              {% if product.metafields.custom.tag_icon2 and forloop.index == 2 %}
-              <img src="{{ product.metafields.custom.tag_icon2 }}"/>
+              {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
+              <img src="{{ product.metafields.custom.tag_icon_2 }}"/>
               {% endif %}
-              {% if product.metafields.custom.tag_icon3 and forloop.index == 3 %}
-              <img src="{{ product.metafields.custom.tag_icon3 }}"/>
+              {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
+              <img src="{{ product.metafields.custom.tag_icon_3 }}"/>
               {% endif %}
               <span>{{ tag }}</span>
             </div>
