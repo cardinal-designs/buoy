@@ -8,7 +8,7 @@
   {% for block in section.blocks %}
     {% if block.settings.video != blank %}
     <video autoplay muted loop>
-      <source src="{{ block.seettings.video }}" type="video/mp4">
+      <source src="{{ block.settings.video }}" type="video/mp4">
     </video>
     {% elsif block.settings.image != blank %}
     <img src="{{ block.settings.image |img_url:'master' }}"/>
