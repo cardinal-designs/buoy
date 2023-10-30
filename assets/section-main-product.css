@@ -1660,6 +1660,12 @@ fieldset.product-form__input .form__label {
   text-align: center;
 }
 
+.Testimonials_Wrapper img, .Testimonials_Wrapper video {
+  text-align: center;
+  width: 186px;
+  height: 186px;
+}
+
 .Testimonials_Main .slick-dots {
   padding: 0 !important;
   margin: 0 0 0 !important;
