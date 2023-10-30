@@ -51,7 +51,7 @@
               <img src="{{ product.metafields.custom.tag_icon_2 }}"/>
               {% endif %}
               {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
-              <img src="{{ product.metafields.custom.tag_icon_3.src }}"/>
+              <img src="{{ product.metafields.custom.tag_icon_3 | image_url: 'master' }}"/>
               {% endif %}
               <span>{{ tag }}</span>
             </div>
