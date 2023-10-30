@@ -1,12 +1,54 @@
+{{ 'section-media-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width media-grid__container">
+  <p class="sh3">{{ section.settings.suptitle }}</p>
+  <h1>{{ section.settings.title }}</h1>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Media Grid",
+  "class": "spaced-section--full-width",
+  "tag": "section",
+  "settings": [
+	{
+    "type": "text",
+      "id": "suptitle",
+      "label": "Suptitle"
+    },
+	{
+    "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+    "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "video",
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+   "presets": [
+      {
+        "name": "Media Grid"
+      }
+    ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
