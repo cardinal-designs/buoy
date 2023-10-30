@@ -21,10 +21,26 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+h1.rhymes-italic {
+ font-size: 50px;
+ font-family: Rhymes-Italic;
+ font-style: italic;
+ font-weight: 300;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
     line-height: 47px;
+  }
+
+  h1.rhymes-italic {
+    font-family: Rhymes-Italic;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 47px;
+    letter-spacing: -0.02em;
   }
 }
 
