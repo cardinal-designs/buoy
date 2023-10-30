@@ -28,22 +28,7 @@
           {% endif %}
         </h1>
 
-        {% assign lowest_price = product.first_available_variant.price %}
-
-        {% for variant in product.variants %}
-          {{ variant.compare_at_price}}
-          {% if variant.available %}
-            {% if variant.price < lowest_price %}
-              {% assign lowest_price = variant.price %}
-            {% endif %}
-            {% if variant.compare_at_price < lowest_price %}
-              {% assign lowest_price = variant.compare_at_price %}
-            {% endif %}
-            
-          {% endif %}
-        {% endfor %}
-
-        <p>Starting At {{ lowest_price | money_without_trailing_zeros }}</p>
+        <p>Starting At {{ section.settings.lowest_price }}</p>
         
         <div class="product__description sh4 light">
           {{ product.description }}
@@ -1059,6 +1044,11 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "url",
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
+        },
+        {
+          "type" : "text",
+          "id" : "lowest_price",
+          "label" : "Starting At Price"
         }
       ],
       "blocks": [
