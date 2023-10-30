@@ -1804,6 +1804,16 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
+.product-listblock {
+  display: flex;
+  gap: 8px;
+}
+
+.product-listblock img {
+  width: 28px;
+  height: fit-content;
+}
+
 .three-x-text {
   font-family: 'Dela Gothic One', sans-serif;
   font-style: normal;
