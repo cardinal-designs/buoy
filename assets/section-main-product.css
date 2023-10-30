@@ -1380,7 +1380,8 @@ fieldset.product-form__input .form__label {
 
 .product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Title,
 .product-form__input .Variant_Blocks input[type=radio] + label > .Supply_Time,
-.product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Servings {
+.product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Servings,
+.product-form__input .Variant_Blocks input[type=radio] + label > .Serving_Cost {
   opacity: .4;
   text-align: center;
 }
