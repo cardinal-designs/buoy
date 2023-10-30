@@ -36,6 +36,10 @@
   background: white;
 }
 
+.okeReviews.okeReviews--theme .okeReviews-widgetNavBar-item[aria-selected='true'] {
+  border-bottom: 1px solid;
+}
+
 .product-reviews .okeReviews .okeReviews-select {
   border-radius: 50px;
 }
