@@ -16,7 +16,11 @@
       <div class="routine-products__bottom">
         <h4>{{ block.settings.bottom_text }}</h4>
         <div>
+          {% if routineProduct.metafields.okendo.ProductListingSnippet != blank %}
           <div data-oke-star-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
+          {% else %}
+          <div class="okendo_placeholder"></div>
+          {% endif %}
           {% if block.settings.add_to_cart == true %}
             <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Add To Cart</button>
           {% else %}
