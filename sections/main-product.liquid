@@ -496,17 +496,16 @@
               {%- case block.type -%}
                 {%- when 'testimonials' -%}
                    <div class="Testimonials_Wrapper">
-                     <span class="Testimonials_Rating"></span>
-                     {% if block.settings.testimonial_text != blank %}
-                       <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
-                     {% endif %}
-                
                      {% if block.settings.testimonial_video != blank %}
                       <video controls muted loop>
                         <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
                       </video>
                      {% elsif block.settings.testimonial_image != blank %}
                        <img src="{{ block.settings.testimonial_image | img_url: 'master' }}"/>
+                     {% endif %}
+                     <span class="Testimonials_Rating"></span>
+                     {% if block.settings.testimonial_text != blank %}
+                       <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
                      {% endif %}
                    </div>
               {%- endcase -%}
