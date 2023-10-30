@@ -1675,6 +1675,10 @@ fieldset.product-form__input .form__label {
   justify-content: center;
 }
 
+.Testimonials_Slider {
+  display: flex;
+}
+
 .Testimonials_Main .slick-prev {
   z-index: 999;
   cursor: pointer;
