@@ -225,7 +225,11 @@
               </div>
             {% endif %}
           {% endcomment %}
-            
+           {% if settings.show_shipping_countdown != blank %}
+            <div id="Order_Within" class="Order_Within Risk_Free">
+               {{ settings.order_within_text }}
+            </div>
+          {% endif %}
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
@@ -266,12 +270,6 @@
             </div>
             {%- endif -%}
           </div>
-
-          {% if settings.show_shipping_countdown != blank %}
-          <div id="Order_Within" class="Order_Within Risk_Free">
-             {{ settings.order_within_text }}
-          </div>
-        {% endif %}
 
 {%- liquid
     assign currentVariant = currentVariant
