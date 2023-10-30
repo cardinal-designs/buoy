@@ -1335,8 +1335,7 @@ fieldset.product-form__input .form__label {
 .product__info-wrapper .product-form__input {
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 10px;
+  gap: 17px;
 }
 
 .Best_Value {
