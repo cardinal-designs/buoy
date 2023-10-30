@@ -468,7 +468,7 @@
             </div>
           </div>
         </div>
-         {% endcomment %}
+       
         <div class="Testimonials_Main">
           <div class="Testimonials_Slider">
             {%- for block in section.blocks -%}
@@ -491,6 +491,7 @@
             <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">{{ section.settings.testimonial_btn_txt }}</a>
           {% endif %}
         </div>
+        {% endcomment %}
         {% if section.settings.shop_more_text1 != blank or section.settings.shop_more_text2 != blank %}
           <div class="product__links">
             {% if section.settings.shop_more_text1 != blank %}
