@@ -1346,7 +1346,7 @@ fieldset.product-form__input .form__label {
 
 .Best_Value {
   font-size: 12px;
-  background-color: #C6DB76;
+  background-color: #398200;
   display: inline-block;
   width: auto;
   position: absolute;
@@ -1355,6 +1355,7 @@ fieldset.product-form__input .form__label {
   padding: 4px 10px;
   top: -8px;
   font-weight: 400;
+  color: white;
 }
 
 .Product_Bar_Variant .product-form__input input[type=radio]+label {
