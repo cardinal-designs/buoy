@@ -28,7 +28,9 @@
           {% endif %}
         </h1>
 
-        <p>Starting At {{ section.settings.lowest_price }}</p>
+        {% if section.settings.lowest_price != blank %}
+          <p>Starting At {{ section.settings.lowest_price }}</p>
+        {% endif %}
         
         <div class="product__description sh4 light">
           {{ product.description }}
