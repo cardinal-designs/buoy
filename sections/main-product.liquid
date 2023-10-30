@@ -501,8 +501,12 @@
                        <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
                      {% endif %}
                 
-                     {% if block.settings.testimonial_text != blank %}
-                       <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
+                     {% if block.settings.testimonial_video != blank %}
+                      <video controls muted loop>
+                        <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
+                      </video>
+                     {% elsif block.settings.testimonial_image != blank %}
+                       <img src="{{ block.settings.testimonial_image }}"/>
                      {% endif %}
                    </div>
               {%- endcase -%}
@@ -1132,8 +1136,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             },
             {
               "type": "text",
-              "id": "testimonial_author",
-              "label": "Testimonial author"
+              "id": "testimonial_video",
+              "label": "Testimonial Video URL"
+            },
+            {
+              "type": "image_picker",
+              "id": "testimonial_image",
+              "label": "Testimonial Image"
             }
           ]
         }
