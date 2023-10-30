@@ -45,10 +45,10 @@
           {%- for tag in product.tags -%}
             <div>
               {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
-              <img src="{{ product.metafields.custom.tag_icon_1 }}"/>
+              <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
               {% endif %}
               {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
-              <img src="{{ product.metafields.custom.tag_icon_2 }}"/>
+              <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
               {% endif %}
               {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
               <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
