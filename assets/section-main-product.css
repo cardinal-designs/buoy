@@ -1323,6 +1323,7 @@ fieldset.product-form__input .form__label {
 .product-form__input .Variant_Blocks input[type=radio] + label > .Supply_Time,
 .product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Servings {
   opacity: .4;
+  text-align: center;
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label > * {
