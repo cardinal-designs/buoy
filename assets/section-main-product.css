@@ -1311,7 +1311,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
-  background-color: #F8F1EB;
+  background-color: #F8F8F8;
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
@@ -1329,7 +1329,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
-  background-color: #1F2322;
+  background-color: #F8F8F8;
 }
 
 .product__info-wrapper .product-form__input {
