@@ -19,7 +19,8 @@
 }
 
 .routine-products__product h5 {
-  margin-bottom: 0;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .routine-products__product img {
