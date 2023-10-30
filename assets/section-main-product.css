@@ -1658,12 +1658,12 @@ fieldset.product-form__input .form__label {
 
 .Testimonials_Wrapper {
   text-align: center;
+  max-width: 186px;
 }
 
 .Testimonials_Wrapper img, .Testimonials_Wrapper video {
   text-align: center;
-  width: 186px;
-  height: 186px;
+  width: 100%;
   border-radius: 10px;
 }
 
