@@ -17,7 +17,6 @@
         <h4>{{ block.settings.bottom_text }}</h4>
         <div>
           <div data-oke-star-rating>{{ routineProduct.metafields.okendo.ProductListingSnippet }}</div>
-          {% render 'okendo-reviews-product-rating-summary' %}
           {% if block.settings.add_to_cart == true %}
             <button class="js-add-to-cart button" data-id="{{ routineProduct.selected_or_first_available_variant.id }}">Add To Cart</button>
           {% else %}
