@@ -2519,6 +2519,7 @@ select[name=selling_plan] {
 
 .Product_Tags {
   margin: 55px 0;
+  display: flex;
 }
 
 .Product_Tags:nth-child(2) {
