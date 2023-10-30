@@ -97,6 +97,7 @@
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
           {% assign my_fields = product.variant.metafields.custom %}
+          <p class="product-form__text-label">Choose Quantity</p>
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
              {% assign optionIndex = forloop.index0 %}
