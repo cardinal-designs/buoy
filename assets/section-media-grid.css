@@ -1,0 +1,9 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.media-grid img, .media-grid video {
+  width: 280px;
+  height: 280px;
+}
