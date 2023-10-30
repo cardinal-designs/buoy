@@ -495,12 +495,12 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'list_block' -%}
-             <div class class="product-listblock">
-               <div>              
-                 <img src="{{ block.settings.list_block_type_img }}"/>
-                 <p>{{ block.settings.list_block_type_text }}</p>
+             <div class="product-listblock">          
+               <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/>
+               <div>  
+                 <p class="product-listblock__text">{{ block.settings.list_block_type_text }}</p> 
+                 <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
                </div>
-               <p>{{ block.settings.list_block_type_subtext }}</p>
              </div>
           {%- endcase -%}
         {%- endfor -%}
