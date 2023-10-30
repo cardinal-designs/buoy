@@ -310,6 +310,7 @@
           {%- endform -%}
         </product-form>
 
+          {% comment %}
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
           <div class="Badge_Grid_Container">
@@ -339,7 +340,7 @@
           </div>
         {% endif %}
         
-        {% comment %}
+      
         {% if product.type == 'Subscription' or product.type == 'Bundle' %}
         <div class="product__subscription-tooltip">
           <button class="product__subscription-tooltip-text">
