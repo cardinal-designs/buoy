@@ -78,7 +78,7 @@
           "type": "block",
           "settings": {
             "recommend": true,
-            "sale_text": "<strong>Limited Time<\/strong> — 30% OFF",
+            "sale_text": "Limited Time — 30% OFF",
             "product": "hydration-drops",
             "servings": "3 BOTTLES · 120 SERVINGS",
             "text": "The cleanest electrolytes and minerals from Earth's most healing source: <strong>the deep ocean<\/strong>.",
@@ -86,6 +86,20 @@
             "list_item2": "Electrolytes, 87 Ionic Trace Minerals + Vitamins",
             "list_item3": "No Sugar, Sweeteners, Flavors, Artificial Ingredients, Additives",
             "button_text": "Try Clean Hydration"
+          }
+        },
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "NEW PRODUCT LAUNCH",
+            "product": "ocean-electrolyte-kit",
+            "servings": "3 HYDRATION DROPS · 1 RESCUE SALT",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "button_text": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -134,6 +148,7 @@
       },
       "block_order": [
         "56552880-d878-401c-b38e-f4f0c4cc485e",
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1",
         "a55a48cb-e8fe-4147-b872-04281d92e180",
         "aca99b1c-2e36-45dc-8c71-d752f8937b59",
         "8939123e-4123-47d7-a631-21ea009a79ce"
