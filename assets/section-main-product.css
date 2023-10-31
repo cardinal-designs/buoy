@@ -1474,11 +1474,11 @@ fieldset.product-form__input .form__label {
   }
   
   .Best_Value {
-    right: -4%;
+    right: unset;
     border-radius: 10px;
-    padding: 4px 10px;
     top: 0;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
   
 }
