@@ -82,3 +82,9 @@
   border: 1px #797B7A solid;
   background: #F8F8F8;
 }
+
+@media (max-width: 768px) {
+  .image-with-dropdowns__container-2 .page-width {
+    grid-template-columns: 1fr;
+  }
+}
