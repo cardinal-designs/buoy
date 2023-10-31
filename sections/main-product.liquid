@@ -266,7 +266,7 @@
     assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
     assign currentAllocations = currentVariant.selling_plan_allocations
   -%}
-{{ selectedAllocation | json }} {{ currentAllocations | json }}
+
 {%- comment -%} Subscription Box {%- endcomment -%}
     <div class="rtx-subscription-box">
   
