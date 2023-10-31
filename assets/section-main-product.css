@@ -2615,6 +2615,10 @@ select[name=selling_plan] {
   .product-listblock__container {
     margin: 50px 0;
   }
+
+  .product-listblock__text {
+    font-size: 18px;
+  }
 }
 
 
