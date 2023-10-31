@@ -36,11 +36,13 @@
 .image-with-dropdowns__container-2 .image-with-dropdowns__content-point {
   border-radius: 10px 10px 0 0;
   border-top: 1px #797B7A solid;
+  border-left: 1px #797B7A solid;
+  border-right: 1px #797B7A solid;
   padding: 30px;
 }
 
 .image-with-dropdowns__container-2 .image-with-dropdowns__dropdown {
   border-radius: 10px;
-  border: 1px #797B7A solid;
+  border-bottom: 1px #797B7A solid;
   background: #F8F8F8;
 }
