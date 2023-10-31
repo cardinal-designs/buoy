@@ -39,6 +39,10 @@
   padding: 30px;
 }
 
+.image-with-dropdowns__container-2 .image-with-dropdowns__content-point:nth-child(1) {
+  border-top: none;
+}
+
 .image-with-dropdowns__container-2 .image-with-dropdowns__dropdown {
   border-radius: 10px;
   border: 1px #797B7A solid;
