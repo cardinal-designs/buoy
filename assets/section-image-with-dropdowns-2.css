@@ -8,6 +8,11 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.image-with-dropdowns__container-2 .image-with-dropdowns__image .aspect-ratio img, .image-with-dropdowns__image .aspect-ratio video {
+  border-radius: 0;
+  border: none;
+}
+
 .image-with-dropdowns__list-item img {
   width: 25px;
   height: 25px;
