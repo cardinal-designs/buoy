@@ -88,10 +88,6 @@
   background: #F8F8F8;
 }
 
-.image-with-dropdowns__q.active svg {
-  transform: rotate(180deg);
-}
-
 .image-with-dropdowns__q {
   display: block;
   height: 17px;
@@ -117,7 +113,7 @@
   border-right: none;
 }
 
-.image-with-dropdowns__q.active:after {
+.image-with-dropdowns__q:after {
   content: "";
   position: absolute;
   top: 7.5px;
