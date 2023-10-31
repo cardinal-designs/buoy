@@ -58,11 +58,15 @@
             {% endif %}
           </div>
           {% if block.settings.checkout_link != blank %}
-          <a href="{{ section.settings.checkout_link }}">
+          <a href="{{ block.settings.checkout_link }}">
           <button style="width: 100%;" class=" button">{{ block.settings.button_text }} - 
+           {% if block.settings.button_price != blank and block.settings.button_discount_price != blank %}
+            <span>{{block.settings.button_discount_price }}<span class="discount-price">{{ block.settings.button_price }}</span></span>
+            {% else %}
             <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
-                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
-              </span>
+              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+            </span>
+            {% endif %}
           </button>
           </a>
           {% else %}
@@ -187,6 +191,16 @@
             "type": "text",
             "id": "checkout_link",
             "label": "Straight To Checkout Discount Link"
+          },
+          {
+            "type": "text",
+            "id": "button_price",
+            "label": "Button Price (optional)"
+          },
+          {
+            "type": "text",
+            "id": "button_discount_price",
+            "label": "Button Discount Price (optional)"
           }
         ]
       }
