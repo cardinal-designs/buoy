@@ -1,12 +1,109 @@
+{{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-with-dropdowns-2.css' | asset_url | stylesheet_tag }}
+
+
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container">
+  <div class="page-width">
+    <div class="image-with-dropdowns__image">
+      {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="video">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+      {% render 'lazy-image' image: section.settings.image, classes: '' %}
+      {% endif %}    
+    </div>
+    <div class="image-with-dropdowns__content">
+      <h3>{{ section.settings.title }}</h3>
+      <p class="sh2 light">{{ section.settings.text }}</p>
+      <div class="image-with-dropdowns__dropdown">
+        {% for block in section.blocks %}
+        <div class="image-with-dropdowns__content-point">
+          <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__content-circle">
+              <h5>{{ block.settings.emoji }}</h5>
+            </div>
+            <div class="image-with-dropdowns__content-text">
+              <h6>{{ block.settings.title }}</h6>
+            </div>
+            {% render 'icon-caret' %}
+          </div>
+          <div class="image-with-dropdowns__a">
+            <p class="light">{{ block.settings.subtitle }}</p>
+            <p class="sh4 light">{{ block.settings.text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.button_label != blank or section.settings.text_bottom != blank %}
+      <div class="image-with-dropdowns__bottom-text">
+        {% if section.settings.text_bottom != blank %}
+        <p class="sh2 light">{{ section.settings.text_bottom }}</p>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Image With Dropdowns 2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "emoji",
+            "label": "Emoji"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image With Dropdowns 2"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
