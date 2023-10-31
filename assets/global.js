@@ -1444,6 +1444,7 @@ $(window).on('resize scroll', function() {
 $('.image-with-dropdowns__q').click(function () {
   $(this).next().slideToggle()
   $(this).toggleClass('active');
+  $(this).parent().toggleClass('active');
 })
 
 
