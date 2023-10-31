@@ -19,7 +19,7 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {% render 'okendo-reviews-product-rating-summary', product: product %}
-
+{{ product.selling_plan_groups[0].selling_plans[0].id }}
         <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}
