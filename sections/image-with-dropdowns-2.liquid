@@ -19,9 +19,6 @@
         {% for block in section.blocks %}
         <div class="image-with-dropdowns__content-point">
           <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-            <div class="image-with-dropdowns__content-circle">
-              <h5>{{ block.settings.emoji }}</h5>
-            </div>
             <div class="image-with-dropdowns__content-text">
               <h6>{{ block.settings.title }}</h6>
             </div>
