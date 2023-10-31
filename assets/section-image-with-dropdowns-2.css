@@ -22,6 +22,10 @@
   height: 25px;
 }
 
+.image-with-dropdowns__content {
+  border-radius: 10px;
+}
+
 .image-with-dropdowns__list-item {
   display: flex;
   gap: 6px;
