@@ -149,6 +149,11 @@
       font-weight: 400;
       font-size: 12px;
     }
+
+    .product__rtx-tooltip.hide-desktop .clear_button {
+      margin: 16px 0 0 0;
+    }
+  
     @media only screen and (max-width: 500px) {
       .rtx-tooltip__flex{
         flex-direction: column;
@@ -157,6 +162,8 @@
          margin-left: 0;
       }
     }
+
+  
   </style>
   
   <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
