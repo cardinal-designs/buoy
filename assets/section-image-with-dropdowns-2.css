@@ -25,7 +25,7 @@
 .image-with-dropdowns__list-item {
   display: flex;
   gap: 6px;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 8px;
 }
 
