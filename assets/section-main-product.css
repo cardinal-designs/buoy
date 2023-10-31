@@ -1436,6 +1436,10 @@ fieldset.product-form__input .form__label {
   
 @media screen and (max-width: 768px) {
 
+  .template-product .product-form .rtx_option_selector {
+    padding: 10px 0 30px;
+  }
+
   .product__info-wrapper .product-form__input {
     flex-wrap: wrap;
     display: flex;
