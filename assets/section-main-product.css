@@ -2601,14 +2601,11 @@ select[name=selling_plan] {
 @media screen and (max-width: 768px) {
   .Product_Tags div {
     align-items: unset;
+    flex-direction: column;
   }
 
   .Product_Tags div span {
     padding-left: 0;
-  }
-
-  .Product_Tags {
-    flex-direction: column;
   }
 }
 
