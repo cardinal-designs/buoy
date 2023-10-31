@@ -19,7 +19,6 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {% render 'okendo-reviews-product-rating-summary', product: product %}
-{{ product.selling_plan_groups[0].selling_plans[0].id }}
         <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}
@@ -267,7 +266,7 @@
     assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
     assign currentAllocations = currentVariant.selling_plan_allocations
   -%}
-
+{{ selectedAllocation }} {{ currentAllocations }}
 {%- comment -%} Subscription Box {%- endcomment -%}
     <div class="rtx-subscription-box">
   
