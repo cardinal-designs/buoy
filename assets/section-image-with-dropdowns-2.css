@@ -28,3 +28,7 @@
 .image-with-dropdowns__a p {
   margin-left: 0;
 }
+
+.image-with-dropdowns__container-2 .image-with-dropdowns__content-point:before {
+  display: none;
+}
