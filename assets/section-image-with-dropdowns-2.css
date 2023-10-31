@@ -1,0 +1,10 @@
+.image-with-dropdowns__list-item img {
+  width: 25px;
+  height: 25px;
+}
+
+.image-with-dropdowns__list-item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
