@@ -6,7 +6,7 @@
   <div class="show-product-bar"></div>
   <div class="pee-club-products__flex">
     <div class="pee-club-products__text">
-     <h3>{{ section.settings.title }}</h3>feafewa
+     <h3>{{ section.settings.title }}</h3>
       <p class="sh4 light">{{ section.settings.text }}</p>
       <div class="pee-club-products__list">
       {{ section.settings.text_bottom }}
@@ -57,11 +57,21 @@
               <div>{% render 'icon-checkmark' %} <span class="light">{{ block.settings.list_item3 }}</span></div>
             {% endif %}
           </div>
+          {% if block.settings.checkout_link != blank %}
+          <a href="{{ section.settings.checkout_link }}">
+          <button style="width: 100%;" class=" button">{{ block.settings.button_text }} - 
+            <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              </span>
+          </button>
+          </a>
+          {% else %}
           <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{{ product.selling_plan_groups[0].selling_plans[0].id }}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
             <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
                 <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
               </span>
           </button>
+          {% endif %}
           <span class="Link_Text Open_Drawer">Supplement Facts</span>
         </div>
       </div>
@@ -172,6 +182,11 @@
             "type": "text",
             "id": "button_text",
             "label": "Button Text"
+          },
+          {
+            "type": "text",
+            "id": "checkout_link",
+            "label": "Straight To Checkout Discount Link"
           }
         ]
       }
