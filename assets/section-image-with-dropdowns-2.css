@@ -88,14 +88,14 @@
   background: #F8F8F8;
 }
 
-.image-with-dropdowns__q {
+.image-with-dropdowns__x {
   display: block;
   height: 17px;
   width: 17px;
   position: relative;
 }
 
-.image-with-dropdowns__q:before {
+.image-with-dropdowns__x:before {
   content: "";
   position: absolute;
   top: 0;
@@ -104,7 +104,7 @@
   border-right: 2px solid var(--charcoal);
 }
 
-.image-with-dropdowns__q.active:before {
+ .image-with-dropdowns__q.active .image-with-dropdowns__x:before {
   content: "";
   position: absolute;
   top: 0;
@@ -113,7 +113,7 @@
   border-right: none;
 }
 
-.image-with-dropdowns__q:after {
+.image-with-dropdowns__x:after {
   content: "";
   position: absolute;
   top: 7.5px;
