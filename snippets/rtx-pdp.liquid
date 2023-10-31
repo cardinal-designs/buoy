@@ -230,7 +230,7 @@
                       </span>
                     </div>
                   </div>
-                  <div class="product__rtx-tooltip">
+                  <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
                       <div class="clear_button">
                         <p class="clear_tag"><span class="save24">Save 23%</span></p>
@@ -274,6 +274,23 @@
                                   </p>                    
                                 {%- endif -%}                        
                               {% endcomment %}
+                              <div class="product__rtx-tooltip hide-desktop">
+                                <div class="rtx_popup">
+                                  <div class="clear_button">
+                                    <p class="clear_tag"><span class="save24">Save 23%</span></p>
+                                  </div>
+                                  <div class="rtx_popup_content">
+                                    <blockquote class="rtx_text">
+                                      <p>You’re the boss.</p>
+                                      <p>
+                                        ✓ Free Shipping<br>
+                                        ✓ 30 Day Guarantee<br>
+                                        ✓ Cancel after your first order or make it a habit
+                                      </p>
+                                    </blockquote>
+                                  </div>
+                                </div>
+                              </div>
                               {% assign subscriptionSubtext = block.settings.purchase_type_subtext %}
                               {%- if subscriptionSubtext != blank -%}
                                 <p class="Label_Sub_Text">{{ subscriptionSubtext }}</p>
