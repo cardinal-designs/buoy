@@ -2520,16 +2520,8 @@ select[name=selling_plan] {
 
 @media screen and (max-width: 500px) {
 
-  .template-product .subscribe-item_info p {
-    font-size: 14px !important;
-  }
-
   .template-product .rtx-tooltip__flex {
     flex-direction: row;
-  }
-
-  .template-product .rtx_option_heading {
-    font-size: 16px;
   }
 
   .clear_button {
