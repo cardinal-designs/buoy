@@ -1436,10 +1436,6 @@ fieldset.product-form__input .form__label {
   
 @media screen and (max-width: 768px) {
 
-  .Variant_Blocks label {
-    font-size: 16px!important;
-  }
-
   .product__info-wrapper .product-form__input {
     flex-wrap: wrap;
     display: flex;
