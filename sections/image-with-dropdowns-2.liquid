@@ -25,22 +25,15 @@
             {% render 'icon-caret' %}
           </div>
           <div class="image-with-dropdowns__a">
-            <p class="light">{{ block.settings.subtitle }}</p>
-            <p class="sh4 light">{{ block.settings.text }}</p>
+            <p class="light">{{ block.settings.text }}</p>
+            <p class="sh4 light">{{ block.settings.list_item1 }}</p>
+            <p class="sh4 light">{{ block.settings.list_item2 }}</p>
+            <p class="sh4 light">{{ block.settings.list_item3 }}</p>
+            <p class="sh4 light">{{ block.settings.list_item4 }}</p>
           </div>
         </div>
         {% endfor %}
       </div>
-      {% if section.settings.button_label != blank or section.settings.text_bottom != blank %}
-      <div class="image-with-dropdowns__bottom-text">
-        {% if section.settings.text_bottom != blank %}
-        <p class="sh2 light">{{ section.settings.text_bottom }}</p>
-        {% endif %}
-        {% if section.settings.button_label != blank %}
-        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
-        {% endif %}
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -83,14 +76,29 @@
             "label": "Image"
           },
           {
-            "type": "text",
-            "id": "subtitle",
-            "label": "Subtitle"
-          },
-          {
             "type": "textarea",
             "id": "text",
             "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "list_item1",
+            "label": "List Item 1"
+          },
+          {
+            "type": "text",
+            "id": "list_item2",
+            "label": "List Item 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3",
+            "label": "List Item 3"
+          },
+          {
+            "type": "text",
+            "id": "list_item4",
+            "label": "List Item 4"
           }
         ]
       }
