@@ -3,6 +3,11 @@
   padding-bottom: 120px;
 }
 
+.image-with-dropdowns__container-2 .page-width {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .image-with-dropdowns__list-item img {
   width: 25px;
   height: 25px;
