@@ -224,6 +224,7 @@
                     {% if currentVariant.available == false %}disabled{% endif %}
                     data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                     >
+            {{ product.selected_or_first_available_selling_plan_allocation }}
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
