@@ -2603,6 +2603,7 @@ select[name=selling_plan] {
   .Product_Tags div {
     align-items: unset;
     flex-direction: column;
+    padding: 0 22px;
   }
 
   .Product_Tags div span {
