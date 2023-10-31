@@ -3,7 +3,7 @@
 
 
 <div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container-2">
-  <h1>{{ section.settings.title }}</h1>
+  <h1 class="hide-mobile">{{ section.settings.title }}</h1>
   <div class="page-width"> 
     <div class="image-with-dropdowns__image">
       {% if section.settings.video_url != blank %}
@@ -15,6 +15,7 @@
       {% render 'lazy-image' image: section.settings.image, classes: '' %}
       {% endif %}    
     </div>
+    <h1 class="hide-desktop">{{ section.settings.title }}</h1>
     <div class="image-with-dropdowns__content">
       <div class="image-with-dropdowns__dropdown">
         {% for block in section.blocks %}
