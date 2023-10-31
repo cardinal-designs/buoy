@@ -1848,6 +1848,16 @@ fieldset.product-form__input .form__label {
     font-size: 24px !important;
     top: 15px !important;
   }
+
+  .Testimonial_Slider {
+    overflow-x: auto;
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .Testimonial_Wrapper {
+    min-width: 186px;
+  }
 }
 
 .template-product .rtx_sub_container .subscribe-item_info {
