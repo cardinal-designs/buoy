@@ -1579,19 +1579,16 @@ fieldset.product-form__input .form__label {
   display: flex;
 }
 
-.Subscribe_Info {
-  display: none;
-}
 
 .subscribe-item_info p.Label_Sub_Text {
   margin: 13px 0 0;
 }
 
-.product-form #rtx_option_sub input[type=radio]:checked + label .Subscribe_Info {
+.product-form #rtx_option_sub input[type=radio] + label .Subscribe_Info {
   display: block;
 }
 
-.product-form .rtx_option_selector input[type=radio]:checked + label .Subscribe_Info {
+.product-form .rtx_option_selector input[type=radio] + label .Subscribe_Info {
   display: block;
 }
 
