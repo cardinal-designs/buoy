@@ -2611,6 +2611,10 @@ select[name=selling_plan] {
   .Product_Tags {  
     justify-content: space-between;
   }
+
+  .Variant_Blocks input[type=radio]+label {
+    padding: 24px 14px 20px;
+  }
 }
 
 
