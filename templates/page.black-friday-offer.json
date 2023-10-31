@@ -74,10 +74,24 @@
     "31e36676-5821-47f9-a328-6c162b259d29": {
       "type": "pee-club-products",
       "blocks": {
-        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
           "type": "block",
           "settings": {
             "recommend": true,
+            "sale_text": "NEW — Save 30%",
+            "product": "ocean-electrolyte-kit",
+            "servings": "3 HYDRATION DROPS + <br>1  RESCUE SALT",
+            "text": "<strong>The Ocean's Best™<\/strong> — Our best-selling ionic ocean electrolyte drops with our <strong>new Rescue Salt<\/strong> for energy, brain function, gut health and skin form the deep ocean.",
+            "list_item1": "One Month Supply",
+            "list_item2": "Electrolytes and 87 Trace Minerals + Elements for vitality",
+            "list_item3": "No Sugar, Sweeteners, Flavors, Processing or Addtives",
+            "button_text": "Try Risk Free"
+          }
+        },
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
             "sale_text": "Limited Time — 30% OFF",
             "product": "hydration-drops",
             "servings": "3 BOTTLES · 120 SERVINGS",
@@ -86,20 +100,6 @@
             "list_item2": "Electrolytes, 87 Ionic Trace Minerals + Vitamins",
             "list_item3": "No Sugar, Sweeteners, Flavors, Artificial Ingredients, Additives",
             "button_text": "Try Clean Hydration"
-          }
-        },
-        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
-          "type": "block",
-          "settings": {
-            "recommend": false,
-            "sale_text": "NEW — Save 30%",
-            "product": "ocean-electrolyte-kit",
-            "servings": "3 HYDRATION DROPS + 1 NEW RESCUE SALT",
-            "text": "<strong>The Ocean's Best™<\/strong> — Our best-selling ionic ocean electrolyte drops with our <strong>new Rescue Salt<\/strong> for energy, brain function, gut health and skin form the deep ocean.",
-            "list_item1": "One Month Supply",
-            "list_item2": "Electrolytes and 87 Trace Minerals + Elements for vitality",
-            "list_item3": "No Sugar, Sweeteners, Flavors, Processing or Addtives",
-            "button_text": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -147,8 +147,8 @@
         }
       },
       "block_order": [
-        "56552880-d878-401c-b38e-f4f0c4cc485e",
         "220f0253-c4d6-4374-8cda-c34b6b9d90a1",
+        "56552880-d878-401c-b38e-f4f0c4cc485e",
         "a55a48cb-e8fe-4147-b872-04281d92e180",
         "aca99b1c-2e36-45dc-8c71-d752f8937b59",
         "8939123e-4123-47d7-a631-21ea009a79ce"
