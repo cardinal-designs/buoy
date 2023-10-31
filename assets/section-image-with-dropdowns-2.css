@@ -92,6 +92,13 @@
   transform: rotate(180deg);
 }
 
+.image-with-dropdowns__q {
+  display: block;
+  height: 17px;
+  width: 17px;
+  position: relative;
+}
+
 .image-with-dropdowns__q:before {
   content: "";
   position: absolute;
