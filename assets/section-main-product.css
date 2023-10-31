@@ -2611,6 +2611,10 @@ select[name=selling_plan] {
   .Label_Sub_Text {
     line-height: 26px;
   }
+
+  .product-listblock__container {
+    margin: 50px 0;
+  }
 }
 
 
