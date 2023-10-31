@@ -2598,6 +2598,16 @@ select[name=selling_plan] {
 }
 
 
+@media screen and (max-width: 768px) {
+  .Product_Tags div {
+    align-items: unset;
+  }
+
+  .Product_Tags {
+    flex-direction: column;
+  }
+}
+
 
 
 
