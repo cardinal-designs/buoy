@@ -300,7 +300,7 @@
                               </div>
                               {% assign subscriptionSubtext = block.settings.purchase_type_subtext %}
                               {%- if subscriptionSubtext != blank -%}
-                                <p class="Label_Sub_Text">1{{ subscriptionSubtext }}</p>
+                                <p class="Label_Sub_Text">{{ subscriptionSubtext }}</p>
                               {%- endif -%}
                             </div>
                           </div>
@@ -313,7 +313,14 @@
           </div>
         </div>
       {% if product.metafields.custom.subscription_widget_subtext %}
-        <p class="Label_Sub_Text">2{{ product.metafields.custom.subscription_widget_subtext.value  }}</p>
+        <p class="Label_Sub_Text hide-mobile">{{ product.metafields.custom.subscription_widget_subtext.value  }}</p>
+
+        {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' • ' -%}
+        <p class="Label_Sub_Text hide-desktop">{
+          {% for word in title_words -%}
+            •&nbsp;{{ word }}
+          {%- endfor %}
+         </p>
       {% endif %}
       </div>
     {%- endunless -%}
