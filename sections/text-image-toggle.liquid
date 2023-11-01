@@ -1,7 +1,7 @@
 {{ 'section-select-faq.css' | asset_url | stylesheet_tag }}
 
 
-<div {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %} class="text-image-toggle__container">
+<div {% if section.settings.background != blank %}style="color: {{ section.settings.background }};"{% endif %} class="text-image-toggle__container">
  <div class="page-width">
    <div class="text-image-toggle__text">
      <h1>{{ section.settings.title }}</h1>
@@ -43,9 +43,28 @@
       "default": true
     },
     {
-      "type": "color",
+      "type": "select",
       "id": "background",
-      "label": "Background" 
+      "label": "Background",
+      "options": [
+        {
+          "value": "top",
+          "label": "Gradient Top to Bottom"
+        },
+        {
+          "value": "bottom",
+          "label": "Gradient Bottom to Top"
+        },
+        {
+          "value": "bg_color",
+          "label": "Background Color"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
     }
   ],
   "blocks": [
