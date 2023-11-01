@@ -21,7 +21,8 @@
 
 .text-image-toggle__buttons {
   display: flex;
-  gap: 10px;
+  gap: 4px 10px;
+  flex-wrap: wrap;
 }
 
 .text-image-toggle__button {
