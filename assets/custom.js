@@ -122,7 +122,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openIngredients).addEventListener('click', function(){
       openNav();
-      console.log('test');
     }); 
   }
 
@@ -158,7 +157,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   function openNav() {
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
-    document.querySelector('.page-overlay').classList.add('is-visible');
+    document.querySelector('.supplement-drawer-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
     if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
   }
