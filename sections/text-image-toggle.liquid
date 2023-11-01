@@ -18,9 +18,18 @@
    </div>
    <div class="text-image-toggle__images">
      {% for block in section.blocks %}
-       <div data-id="{{ forloop.index0 }}" class="text-image-toggle__image">
-         <img src="{{ block.settings.image | asset_url }}" / >
-       </div>
+       {% if block.settings.mobile_image != blank and block.settings.image != blank %}
+         <div data-id="{{ forloop.index0 }}" class="hide-mobile text-image-toggle__image">
+           <img src="{{ block.settings.image | asset_url }}" / >
+         </div>
+        <div data-id="{{ forloop.index0 }}" class="hide-desktop text-image-toggle__image">
+           <img src="{{ block.settings.mobile_image | asset_url }}" / >
+         </div>
+      {% else %}
+         <div data-id="{{ forloop.index0 }}" class="text-image-toggle__image">
+           <img src="{{ block.settings.image | asset_url }}" / >
+         </div>
+      {% endif %}
      {% endfor %}
    </div>
    {% if section.settings.supplements == true %}
@@ -71,6 +80,11 @@
           "type": "text",
           "id": "image",
           "label": "Table SVG Filename"
+        },
+        {
+          "type": "text",
+          "id": "mobile_image",
+          "label": "Mobile Table SVG Filename"
         }
       ]
     }
