@@ -128,13 +128,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
       openNav();
-      console.log('test');
     });
   }
 
   if (document.querySelector(selectors.openDrawer) != 'undefined' && document.querySelector(selectors.openDrawer) != null) {
     document.querySelector(selectors.openDrawer).addEventListener('click', function(){
       openNav();
+      console.log('test');
     });
   }
 
