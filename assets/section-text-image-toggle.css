@@ -28,6 +28,8 @@
   font-family: Inter;
   font-weight: 400;
   line-height: 21px;
+  width: fit-content;
+  border-radius: 30px;
 }
 
 .text-image-toggle__button.active {
