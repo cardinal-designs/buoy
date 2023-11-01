@@ -11,6 +11,9 @@
         <span>{{ block.settings.title }}</span>
       </div>
      {% endfor %} 
+     {% if section.settings.supplements == true %}
+      <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+     {% endif %}%}
    </div>
    <div class="text-image-toggle__images">
      {% for block in section.blocks %}
