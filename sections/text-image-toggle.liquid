@@ -1,6 +1,6 @@
 {{ 'section-text-image-toggle.css' | asset_url | stylesheet_tag }}
 
-
+{% render 'supplement-facts-drawer' %}
 <div {% if section.settings.background != blank %}style="background-color: {{ section.settings.background }};"{% endif %} class="text-image-toggle__container">
  <div class="page-width">
    <div class="text-image-toggle__text">
@@ -13,7 +13,7 @@
      {% endfor %} 
      {% if section.settings.supplements == true %}
       <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-     {% endif %}%}
+     {% endif %}
    </div>
    <div class="text-image-toggle__images">
      {% for block in section.blocks %}
