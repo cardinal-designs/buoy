@@ -1531,7 +1531,7 @@ $('.pee-club-product-bar-dropdown li').click(function() {
 
 $('.pee-club-product').click(function() {
   $(this).find('.pee-club-product-info').slideDown()
-  $(this).hide()
+  $(this).find('.pee-club-product-arrow').hide()
 })
 
 $('.Featured_Blog_Hero').slick({
