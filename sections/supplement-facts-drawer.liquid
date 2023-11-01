@@ -8,13 +8,13 @@
       <a href="javascript:void(0)" class="js-close-supplement-drawer">&times;</a>
     </div>  
     <div class="drawer_title-wrapper">
-      <div class="drawer_product-name">{{ ss.product_name }}</div>
-      <div class="drawer_title">{{ ss.title }}</div>
+      {%- if ss.product_name != blank -%}
+        <div class="drawer_product-name">{{ ss.product_name }}</div>
+      {%- endif -%}
+      {%- if ss.title != blank -%}
+        <div class="drawer_title">{{ ss.title }}</div>
+      {%- endif -%}
     </div>
-
-
-
-
     <div class="mobile-supplement-continue">
       <a href="javascript:void(0)" class="button button--full-width">Keep Shopping</a>        
     </div>
