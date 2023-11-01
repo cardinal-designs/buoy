@@ -23,6 +23,10 @@
   display: block;
 }
 
+.text-image-toggle__image img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .text-image-toggle__container .page-width {
     flex-direction: column
