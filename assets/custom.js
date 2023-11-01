@@ -229,7 +229,7 @@ document.querySelector('.page-blury-overlay').onclick = function() {
 $('.text-image-toggle__button').click(function() {
   let id = $(this).data('id')
   $('.text-image-toggle__image').hide()
-  $(`.text-image-toggle__image[data-id='${id}']`).show()
+  $(`.text-image-toggle__image[data-id='${id}']`).addClass('active').show()
 })
 
 
