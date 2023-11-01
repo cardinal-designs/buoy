@@ -24,7 +24,7 @@
     <div class="benefits__items hide-desktop">
       {% for block in section.blocks %}
       {% case block.type %}
-       {% when 'type1' %}
+      {% when 'type1' %}
       <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
@@ -77,7 +77,7 @@
       {% endif %}
       </div>
       {% when 'type2' %}
-              <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
+      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
       </div>
@@ -128,7 +128,8 @@
         </div>
       {% endif %}
       </div>
-      {% when 'type3' %}      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
+      {% when 'type3' %}     
+      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
       </div>
@@ -180,7 +181,7 @@
       {% endif %}
       </div>
       {% when 'type4' %}
-              <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
+      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
       </div>
