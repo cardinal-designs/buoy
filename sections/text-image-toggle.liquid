@@ -1,12 +1,94 @@
+{{ 'section-select-faq.css' | asset_url | stylesheet_tag }}
+
+
+<div class="text-image-toggle__container
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">
+ <div class="page-width">
+   <div class="text-image-toggle__text">
+     <h1>{{ section.settings.title }}</h1>
+     <p>{{ section.settings.subtitle }}</p>
+     {% for block in section.blocks %}
+      
+     {% endfor %} 
+   </div>
+   <div class="text-image-toggle__images">
+     {% for block in section.blocks %}
+      <img src="{{ block.settings.image | img_url: 'master' }}"/>
+     {% endfor %} 
+   </div>
+ </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Select FAQ",
+  "class": "spaced-section--full-width",
+  "tag": "section",
+  "settings": [
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "checkbox",
+      "id": "supplements",
+      "label": "Show Supplments Link?",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background",
+      "options": [
+        {
+          "value": "top",
+          "label": "Gradient Top to Bottom"
+        },
+        {
+          "value": "bottom",
+          "label": "Gradient Bottom to Top"
+        },
+        {
+          "value": "bg_color",
+          "label": "Background Color"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+   "presets": [
+      {
+        "name": "Text Image Toggle"
+      }
+    ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
