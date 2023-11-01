@@ -26,6 +26,9 @@
 
 .text-image-toggle__text a {
   margin-top: 60px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1F2322;
+  width: fit-content;
 }
 
 .text-image-toggle__buttons {
