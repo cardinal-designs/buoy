@@ -13,8 +13,9 @@
      {% endfor %} 
    </div>
    <div class="text-image-toggle__images">
-     <img src="{{ 'PDP_Chart_Powder Packet.svg' | asset_url }}" / >
-
+     {% for block in block.settings %}
+     <img src="{{ block.settings.image | asset_url }}" / >
+      {% endfor %}
    </div>
  </div>
 </div>
