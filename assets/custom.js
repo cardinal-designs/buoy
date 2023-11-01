@@ -122,6 +122,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openIngredients).addEventListener('click', function(){
       openNav();
+      console.log('test');
     }); 
   }
 
@@ -134,7 +135,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawer) != 'undefined' && document.querySelector(selectors.openDrawer) != null) {
     document.querySelector(selectors.openDrawer).addEventListener('click', function(){
       openNav();
-      console.log('test');
     });
   }
 
