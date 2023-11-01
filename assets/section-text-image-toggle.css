@@ -27,8 +27,8 @@
 .text-image-toggle__button {
   padding: 3px 10px;
   background: white;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid #1F2322;
+  color: #1F2322;
   font-size: 14px;
   font-family: Inter;
   font-weight: 400;
@@ -39,7 +39,7 @@
 
 .text-image-toggle__button.active {
   color: white;
-  background: black;
+  background: #1F2322;
 }
 
 .text-image-toggle__text h1 {
