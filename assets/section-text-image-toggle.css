@@ -22,3 +22,17 @@
 .text-image-toggle__image:nth-child(1) {
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .text-image-toggle__container .page-width {
+    flex-direction: column
+  }
+  
+  .text-image-toggle__images {
+    width: 100%;
+  }
+  
+  .text-image-toggle__text {
+    width: 100%;
+  }
+}
