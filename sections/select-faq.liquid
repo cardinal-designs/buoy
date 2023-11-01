@@ -23,6 +23,8 @@
     </div>
     <div class="benefits__items hide-desktop">
       {% for block in section.blocks %}
+      {% case block.type %}
+       {% when 'type1' %}
       <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h3 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h3>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
@@ -74,7 +76,11 @@
         </div>
       {% endif %}
       </div>
-      {% endfor %}
+      {% when 'type2' %}
+      {% when 'type3' %}
+      {% when 'type4' %}
+      {% endcase %}
+   {% endfor %}
     </div>
     <div class="benefits__info hide-mobile">
       {% for block in section.blocks %}
@@ -180,8 +186,191 @@
   ],
   "blocks": [
     {
-      "type": "block",
-      "name": "Block",
+      "type": "type1",
+      "name": "Type 1",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Main Text"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Title 1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text 1"
+        },
+                {
+          "type": "text",
+          "id": "title2",
+          "label": "Title 2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item1",
+          "label": "List Item 1"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item2",
+          "label": "List Item 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item3",
+          "label": "List Item 3"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item4",
+          "label": "List Item 4"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item5",
+          "label": "List Item 5"
+        }
+      ]
+    },
+    {
+      "type": "type2",
+      "name": "Type 2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Main Text"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Title 1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text 1"
+        },
+                {
+          "type": "text",
+          "id": "title2",
+          "label": "Title 2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item1",
+          "label": "List Item 1"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item2",
+          "label": "List Item 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item3",
+          "label": "List Item 3"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item4",
+          "label": "List Item 4"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item5",
+          "label": "List Item 5"
+        }
+      ]
+    },
+    {
+      "type": "type3",
+      "name": "Type 3",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Main Text"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Title 1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text 1"
+        },
+                {
+          "type": "text",
+          "id": "title2",
+          "label": "Title 2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item1",
+          "label": "List Item 1"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item2",
+          "label": "List Item 2"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item3",
+          "label": "List Item 3"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item4",
+          "label": "List Item 4"
+        },
+        {
+          "type": "textarea",
+          "id": "list_item5",
+          "label": "List Item 5"
+        }
+      ]
+    },
+    {
+      "type": "type4",
+      "name": "Type 4",
       "settings": [
         {
           "type": "text",
