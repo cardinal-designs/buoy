@@ -1,0 +1,13 @@
+.supplement-side-drawer {
+  height: 100%;
+  width: 768px;
+  position: fixed;
+  z-index: 99;
+  top: 80.5px;
+  right: -100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 25px;
+}
+
