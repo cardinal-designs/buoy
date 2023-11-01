@@ -6,11 +6,13 @@
    <div class="text-image-toggle__text">
      <h1>{{ section.settings.title }}</h1>
      <p>{{ section.settings.subtitle }}</p>
+     <div class="text-image-toggle__buttons">
      {% for block in section.blocks %}
       <div data-id="{{ forloop.index0 }}" class="text-image-toggle__button {% if forloop.index0 == 0 %}active{% endif %}">
         <span>{{ block.settings.title }}</span>
       </div>
      {% endfor %} 
+     </div>
      {% if section.settings.supplements == true %}
       <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
      {% endif %}
