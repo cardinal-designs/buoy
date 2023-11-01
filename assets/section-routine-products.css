@@ -72,11 +72,11 @@ routine-products__container {
 @media (max-width: 768px) {
   .routine-products__products {
     flex-direction: column;
-    padding: 20px;
   }
 
   .routine-products__product {
     align-self: center;
+    padding: 20px;
   }
 
   .routine-products__bottom h4 {
