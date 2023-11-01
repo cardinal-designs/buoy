@@ -46,11 +46,12 @@ body.lock-scroll {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(246, 236, 225, .85);
+  /* background: rgba(246, 236, 225, .85); */
   z-index: 9;
   visibility: hidden;
   opacity: 0;
   transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+  filter: blur(5px);
 }
 
 .page-overlay.is-visible {
