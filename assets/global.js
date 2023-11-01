@@ -1529,8 +1529,8 @@ $('.pee-club-product-bar-dropdown li').click(function() {
   $('.pee-club-product-bar-dropdown').toggle()
 })
 
-$('.pee-club-product-arrow').click(function() {
-  $(this).parent().find('.pee-club-product-info').slideDown()
+$('.pee-club-product').click(function() {
+  $(this).find('.pee-club-product-info').slideDown()
   $(this).hide()
 })
 
