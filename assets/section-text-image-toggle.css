@@ -1,3 +1,15 @@
+.text-image-toggle__container .page-width {
+  display: flex;
+}
+
+.text-image-toggle__images {
+  width: 60%;
+}
+
+.text-image-toggle__text {
+  width: 40%;
+}
+
 .text-image-toggle__image {
   display: none;
 }
