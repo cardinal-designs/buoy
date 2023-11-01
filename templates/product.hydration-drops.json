@@ -180,6 +180,7 @@
           "type": "block",
           "settings": {
             "title": "Form Factor",
+            "video_url": "",
             "image": "shopify:\/\/shop_images\/Buoy_Shot2_186_isolated_1.png",
             "text": "Liquid Drops are up to <span class=\"green-outline\">3x more<\/span> bioavailable than traditional <span class=\"green-outline\">supplement<\/span> forms like pills, powders and tablets.",
             "list_item1": "Fast-acting",
@@ -192,6 +193,7 @@
           "type": "block",
           "settings": {
             "title": "Health Benefits",
+            "video_url": "",
             "text": "",
             "list_item1": "",
             "list_item2": "",
@@ -203,6 +205,7 @@
           "type": "block",
           "settings": {
             "title": "Ingredients",
+            "video_url": "",
             "text": "",
             "list_item1": "",
             "list_item2": "",
@@ -214,6 +217,7 @@
           "type": "block",
           "settings": {
             "title": "Sourcing & Formulation",
+            "video_url": "",
             "text": "",
             "list_item1": "",
             "list_item2": "",
@@ -292,6 +296,40 @@
         "text": "Elevate the drinks you’re already drinking by adding  <span class=\"green-outline\">one quick squeeze<\/span> 4–7 times per day."
       }
     },
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": ""
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": ""
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "supplements": true,
+        "background": "none"
+      }
+    },
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff": {
       "type": "image-marquee",
       "blocks": {
@@ -346,112 +384,6 @@
     },
     "dfda59f4-3498-4216-bf73-0eef810f3c0e": {
       "type": "select-faq",
-      "blocks": {
-        "6b6ba6ea-1d0e-4ee2-8558-6b9f6cbcc3dd": {
-          "type": "block",
-          "settings": {
-            "title": "Why should I subscribe?",
-            "text": "Transformative health benefits come with consistent habits. Our flexible, sustainable subscription plan supports whole-body, at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today, 100% Risk Free.",
-            "title1": "Short-term relief",
-            "text1": "Energy",
-            "title2": "Long-term Health Benefits",
-            "text2": "Alkalize Body",
-            "list_item1": "Save 24% on every order",
-            "list_item2": "Free monthly shipping",
-            "list_item3": "Cancel or pause anytime<br><span class=\"rhymes-subtitle\">Even after your first order<\/span>",
-            "list_item4": "Swap prodcuts",
-            "list_item5": "Unlock milestone rewards"
-          }
-        },
-        "aa1bf1d9-8cec-43bc-b9db-f985853c5355": {
-          "type": "block",
-          "settings": {
-            "title": "Is it really flavorless?",
-            "text": "",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "f957cb8c-1ad3-45e3-903c-c1164b35f21e": {
-          "type": "block",
-          "settings": {
-            "title": "Will Buoy break my fast?",
-            "text": "",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "7d214e78-a2ef-405a-94f3-581a23f4565d": {
-          "type": "block",
-          "settings": {
-            "title": "How long until you see results?",
-            "text": "",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "52856704-8046-43f4-b3fd-55f8a89b3d67": {
-          "type": "block",
-          "settings": {
-            "title": "Are your B vitamins methylated?",
-            "text": "",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "efa299df-1158-43f8-b190-3e05bf3d82ed": {
-          "type": "block",
-          "settings": {
-            "title": "Do your products have caffeine?",
-            "text": "",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        }
-      },
-      "block_order": [
-        "6b6ba6ea-1d0e-4ee2-8558-6b9f6cbcc3dd",
-        "aa1bf1d9-8cec-43bc-b9db-f985853c5355",
-        "f957cb8c-1ad3-45e3-903c-c1164b35f21e",
-        "7d214e78-a2ef-405a-94f3-581a23f4565d",
-        "52856704-8046-43f4-b3fd-55f8a89b3d67",
-        "efa299df-1158-43f8-b190-3e05bf3d82ed"
-      ],
       "settings": {
         "title": "We want you to ask questions",
         "add_top_border": false,
@@ -844,6 +776,7 @@
     "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff",
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a",
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4",
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff",
     "dfda59f4-3498-4216-bf73-0eef810f3c0e",
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e",
