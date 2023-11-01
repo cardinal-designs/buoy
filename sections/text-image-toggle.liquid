@@ -7,14 +7,16 @@
      <h1>{{ section.settings.title }}</h1>
      <p>{{ section.settings.subtitle }}</p>
      {% for block in section.blocks %}
-      <div class="text-image-toggle__button">
+      <div data-id="{{ forloop.index0 }}" class="text-image-toggle__button">
         <span>{{ block.settings.title }}</span>
       </div>
      {% endfor %} 
    </div>
    <div class="text-image-toggle__images">
      {% for block in section.blocks %}
-       <img src="{{ block.settings.image | asset_url }}" / >
+       <div data-id="{{ forloop.index0 }}" class="text-image-toggle__image">
+         <img src="{{ block.settings.image | asset_url }}" / >
+       </div>
      {% endfor %}
    </div>
  </div>
