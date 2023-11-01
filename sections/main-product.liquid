@@ -4,6 +4,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-ingredient-drawer.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -224,7 +225,6 @@
                     {% if currentVariant.available == false %}disabled{% endif %}
                     data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                     >
-            {{ product.selected_or_first_available_selling_plan_allocation }}
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
