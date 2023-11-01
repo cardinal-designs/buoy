@@ -1,9 +1,7 @@
 {{ 'section-text-image-toggle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 
-{% render 'supplement-facts-drawer-grid',
-  product: product 
-%}
+
 <div {% if section.settings.background != blank %}style="background-color: {{ section.settings.background }};"{% endif %} class="text-image-toggle__container">
  <div class="page-width">
    <div class="text-image-toggle__text">
@@ -17,7 +15,7 @@
      {% endfor %} 
      </div>
      {% if section.settings.supplements == true %}
-       <span class="Link_Text Open_Drawer">Supplement Facts</span>
+      <a href="javascript:void(0);" class="tabs-label body medium js-open-supplement-drawer supplement-section-link">Full Supplement Facts</a>
      {% endif %}
    </div>
    <div class="text-image-toggle__images">
