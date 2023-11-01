@@ -1,4 +1,5 @@
 {{ 'section-text-image-toggle.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 
 {% render 'supplement-facts-drawer' %}
 <div {% if section.settings.background != blank %}style="background-color: {{ section.settings.background }};"{% endif %} class="text-image-toggle__container">
