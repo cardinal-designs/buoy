@@ -94,6 +94,7 @@
   justify-content: space-between;
   padding: 0 20px;
   z-index: 9999;
+  background: #f6ece180;
 }
 
 .supplement-side-drawer .closebtn {
@@ -221,6 +222,7 @@
 
 .mobile-fixed-header {
   position: relative;
+  background-color: #f6ece180 !important;
 }
 
 @media screen and (max-width: 1024px){
