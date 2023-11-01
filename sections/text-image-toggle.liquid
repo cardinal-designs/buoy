@@ -13,7 +13,7 @@
      {% endfor %} 
    </div>
    <div class="text-image-toggle__images">
-     {% for block in block.settings %}
+     {% for block in settings.block %}
      <img src="{{ block.settings.image | asset_url }}" / >
       {% endfor %}
    </div>
