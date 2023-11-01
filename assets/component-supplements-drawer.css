@@ -12,6 +12,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .supplement-side-drawer {
     top: 0;
   }
@@ -43,6 +44,13 @@
 .drawer_product-name {
   font-size: 24px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+
+  .drawer_product-name {
+    font-size: 20px;
+  }
 }
 
 .mobile-supplement-continue {
