@@ -14,7 +14,7 @@
   <input type="hidden" id='current_variant_price' value="{{ currentVariant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
      
-    {% comment %} {% render 'supplement-facts-drawer' %} {% endcomment %}
+    {% render 'supplement-facts-drawer' %}
     <div class="product__info-wrapper">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
