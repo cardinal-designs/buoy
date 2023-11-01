@@ -92,6 +92,10 @@
   border-top: none;
 }
 
+.image-with-dropdowns__container-2 .image-with-dropdowns__content-point:last-child {
+  border-radius: 10px;
+}
+
 .image-with-dropdowns__container-2 .image-with-dropdowns__dropdown {
   border-radius: 10px 10px 0 0;
   border: 1px #797B7A solid;
