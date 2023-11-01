@@ -19,6 +19,11 @@
   justify-content: center;
 }
 
+.text-image-toggle__buttons {
+  dislay: flex;
+  gap: 10px;
+}
+
 .text-image-toggle__button {
   padding: 3px 10px;
   background: white;
