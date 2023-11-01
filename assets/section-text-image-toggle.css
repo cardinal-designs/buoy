@@ -19,6 +19,22 @@
   justify-content: center;
 }
 
+.text-image-toggle__button {
+  padding: 6px 10px;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.text-image-toggle__button.active {
+  color: white;
+  background: black;
+}
+
 .text-image-toggle__text h1 {
   margin: 0;
 }
