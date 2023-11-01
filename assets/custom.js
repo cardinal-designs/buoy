@@ -225,3 +225,13 @@ document.querySelector('.page-blury-overlay').onclick = function() {
   if(document.querySelector('.mobile-toggle-btn--wrapper')) document.querySelector('.mobile-toggle-btn--wrapper').click();
   document.body.classList.remove('overflow-hidden');
 }
+
+$('.text-image-toggle__button').click(function() {
+  let id = $(this).data('id')
+  $('.text-image-toggle__image').hide()
+  $(`.text-image-toggle__image[data-id='${id}']`).show()
+})
+
+
+
+
