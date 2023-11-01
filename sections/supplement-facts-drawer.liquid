@@ -17,6 +17,12 @@
     </div>
     {%- for block in section.blocks -%}
       {%- assign bs = block.settings -%}
+      {%- if block.type == 'serving' -%}
+        <div>
+          <img class="" src="{{ product.featured_image.src | img_url: 'master' }}"  alt="{{ product.featured_image.alt }}"
+            >
+        </div>
+      {%- endif -%}
 
     {%- endfor -%}
     <div class="mobile-supplement-continue">
@@ -51,11 +57,6 @@
             "type": "image_picker",
             "id": "icon_serving",
             "label": "Icon Serving"
-          },
-          {
-            "type": "image_picker",
-            "id": "icon_bottle",
-            "label": "Icon Bottle"
           }
         ]
       }
