@@ -21,7 +21,7 @@
   text-decoration: none;
   font-size: 40px;
   line-height: 1.5;
-  color: black;
+  color: #000;
   display: block;
   transition: 0.3s;
   text-align: right;
@@ -42,7 +42,7 @@
 
 .mobile-supplement-continue {
   width: 100%;
-  background: white;
+  background: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
   position: sticky;
