@@ -15,6 +15,10 @@
         <div class="drawer_title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
+    {%- for block in section.blocks -%}
+      {%- assign bs = block.settings -%}
+
+    {%- endfor -%}
     <div class="mobile-supplement-continue">
       <a href="javascript:void(0)" class="button button--full-width">Keep Shopping</a>        
     </div>
@@ -40,7 +44,7 @@
     "max_blocks": 2,
     "blocks": [
       {
-        "type": "block",
+        "type": "serving",
         "name": "Serving",
         "settings": [
           {
