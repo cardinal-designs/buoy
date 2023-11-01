@@ -21,6 +21,11 @@
 
 .text-image-toggle__text p {
   margin: 60px 0 28px;
+  font-size: 18px;
+}
+
+.text-image-toggle__text a {
+  margin-top: 60px;
 }
 
 .text-image-toggle__buttons {
