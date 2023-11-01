@@ -176,23 +176,10 @@
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a": {
       "type": "image-with-dropdowns-2",
       "blocks": {
-        "14dfcaa3-21d5-4b26-975a-833cdc8c9a66": {
-          "type": "block",
+        "df99ddc8-70c7-4a68-b11b-284f77a35416": {
+          "type": "type1",
           "settings": {
-            "title": "Form Factor",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Buoy_Shot2_186_isolated_1.png",
-            "text": "Liquid Drops are up to <span class=\"green-outline\">3x more<\/span> bioavailable than traditional <span class=\"green-outline\">supplement<\/span> forms like pills, powders and tablets.",
-            "list_item1": "Fast-acting",
-            "list_item2": "Easier on stomach",
-            "list_item3": "Dissolves instantly and evenly",
-            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup"
-          }
-        },
-        "ce03bfa3-9114-4fd5-9911-0ad3b6cd3940": {
-          "type": "block",
-          "settings": {
-            "title": "Health Benefits",
+            "title": "",
             "video_url": "",
             "text": "",
             "list_item1": "",
@@ -201,10 +188,10 @@
             "list_item4": ""
           }
         },
-        "cc86d2db-5072-4b78-ab97-b01614f03a86": {
-          "type": "block",
+        "6da36b77-d8ff-4636-9463-71aae7e3657e": {
+          "type": "type2",
           "settings": {
-            "title": "Ingredients",
+            "title": "",
             "video_url": "",
             "text": "",
             "list_item1": "",
@@ -213,10 +200,22 @@
             "list_item4": ""
           }
         },
-        "de00565f-db8e-4c0e-9e73-05f19ffe4a4d": {
-          "type": "block",
+        "cb7221f0-8478-4596-bd94-8a4f7aa0ba83": {
+          "type": "type3",
           "settings": {
-            "title": "Sourcing & Formulation",
+            "title": "",
+            "video_url": "",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": ""
+          }
+        },
+        "aabbf8b6-7cb9-4f6c-984c-492c48db0a03": {
+          "type": "type4",
+          "settings": {
+            "title": "",
             "video_url": "",
             "text": "",
             "list_item1": "",
@@ -227,15 +226,15 @@
         }
       },
       "block_order": [
-        "14dfcaa3-21d5-4b26-975a-833cdc8c9a66",
-        "ce03bfa3-9114-4fd5-9911-0ad3b6cd3940",
-        "cc86d2db-5072-4b78-ab97-b01614f03a86",
-        "de00565f-db8e-4c0e-9e73-05f19ffe4a4d"
+        "df99ddc8-70c7-4a68-b11b-284f77a35416",
+        "6da36b77-d8ff-4636-9463-71aae7e3657e",
+        "cb7221f0-8478-4596-bd94-8a4f7aa0ba83",
+        "aabbf8b6-7cb9-4f6c-984c-492c48db0a03"
       ],
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55424_1x1_8.png",
-        "title": "A <span class=\"rhyme-italic\">Next-Generation<\/span> Supplement"
+        "title": "A Next-Generation Supplement"
       }
     },
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
@@ -303,21 +302,24 @@
           "type": "block",
           "settings": {
             "title": "Powder Packets",
-            "image": "PDP_Chart_Powder_Packet.svg"
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": ""
           }
         },
         "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
           "type": "block",
           "settings": {
             "title": "Sports Drinks",
-            "image": "PDP_Chart_Sports_Drink.svg"
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": ""
           }
         },
         "f75e4649-78ab-4807-ae2c-31b0c6994095": {
           "type": "block",
           "settings": {
             "title": "Tablets",
-            "image": "PDP_Chart_Tablet.svg"
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": ""
           }
         }
       },
@@ -508,7 +510,6 @@
           "settings": {
             "text": "Complete your hydration ritual with our Rescue Salt.",
             "new_product": true,
-            "image": "shopify:\/\/shop_images\/IMG_8852_2b07d359-b091-4556-bf52-0fc986a6aa57.jpg",
             "product": "rescue-salts",
             "bottom_text": "Rescue Salt",
             "add_to_cart": true
