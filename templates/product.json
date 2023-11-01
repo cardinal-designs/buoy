@@ -11,7 +11,7 @@
         "shop_more_link1": "",
         "shop_more_text2": "",
         "shop_more_link2": "",
-        "one_time_text": "",
+        "one_time_text": "Free Shipping",
         "testimonial_btn_txt": "",
         "testimonial_btn_link": ""
       }
@@ -488,7 +488,8 @@
       "settings": {
         "background": "#ecd8c5",
         "enable_marquee": false,
-        "add_border": false
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "1636344367d21ce97f": {
@@ -531,7 +532,10 @@
       ],
       "settings": {
         "title": "Ask us the tough ones",
-        "text": "Our exceptional team of healthcare professionals and scientists have answers."
+        "text": "Our exceptional team of healthcare professionals and scientists have answers.",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "1637720233f9199bd5": {
