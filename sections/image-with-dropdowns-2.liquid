@@ -262,7 +262,9 @@
               </div>
               {% endif %}
               {% if block.settings.link != blank %}
-              <a class="image-with-dropdowns2__bottom-link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                <div class="image-with-dropdowns2__bottom-link">
+                  <a href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                </div>
               {% endif %}
             </div>
           </div>
