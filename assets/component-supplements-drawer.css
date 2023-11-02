@@ -18,14 +18,14 @@
   }
 }
 
-.drawer_header {
+.drawer__header {
   display: flex;
   justify-content: flex-end;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.drawer_close {
+.drawer__close {
   font-size: 12px;
   font-family: Inter;
 }
