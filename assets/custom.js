@@ -113,7 +113,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
-      closeContinue: '.mobile-supplement-continue',
+      closeContinue: '.drawer__mobile-continue',
       pageOverlay: '.page-overlay'
   }
 
