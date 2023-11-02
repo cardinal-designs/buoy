@@ -72,36 +72,28 @@
             <div class="image-with-dropdowns__x"></div>
           </div>
           <div class="image-with-dropdowns__a">
-            {% if section.settings.video_url != blank %}
-            <video autoplay loop muted playsinline class="video">
-              <source src="{{ block.settings.video_url }}" type="video/mp4">
-            </video>
-            {% else %}
-            {% render 'lazy-image' image: block.settings.image, classes: '' %}
-            {% endif %} 
-            <p class="sh2">{{ block.settings.text }}</p>
-            {% if block.settings.list_item1 != blank %}
+            {% if block.settings.icon_image_1 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item1 }}</p>
+              <img src="{{ block.settings.icon_1 }}"/>
+              <p class="sh4">{{ block.settings.icon_image_1 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.list_item2 != blank %}
+            {% if block.settings.icon_image_2 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item2 }}</p>
+              <img src="{{ block.settings.icon_2 }}"/>
+              <p class="sh4">{{ block.settings.icon_image_2 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.list_item3 != blank %}
+            {% if block.settings.icon_image_3 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item3 }}</p>
+              <img src="{{ block.settings.icon_3 }}"/>
+              <p class="sh4">{{ block.settings.icon_image_3 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.list_item4 != blank %}
+            {% if block.settings.icon_image_4 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item4 }}</p>
+              <img src="{{ block.settings.icon_4 }}"/>
+              <p class="sh4">{{ block.settings.icon_image_4 }}</p>
             </div>
             {% endif %}
           </div>
