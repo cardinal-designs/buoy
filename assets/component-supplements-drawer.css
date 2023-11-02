@@ -220,6 +220,13 @@
   line-height: 21px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__ingredients-content {
+    font-size: 12px;
+  }
+}
+
 .drawer__line {
   width: 100%;
   height: 1px;
