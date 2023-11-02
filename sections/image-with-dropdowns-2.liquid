@@ -178,10 +178,11 @@
               <p class="sh4">{{ block.settings.list_item4 }}</p>
             </div>
             {% endif %}
+            {% if block.settings.show_ingredients == true %}
+              <a href="javascript:void(0);" class="hide-mobile tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+            {% endif %}
           </div>
-          {% if block.settings.show_ingredients == true %}
-            <a href="javascript:void(0);" class="hide-mobile tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-          {% endif %}
+
         </div>
         {% when 'type4' %}
         <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
