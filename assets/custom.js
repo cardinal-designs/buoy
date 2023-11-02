@@ -159,6 +159,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
+    if (document.querySelector('.page-blury-overlay').classList.contains('is-visible')) {
+      console.log('hey');
+    }
     if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
   }
   
