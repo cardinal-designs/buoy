@@ -160,7 +160,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
     if (document.querySelector('.page-blury-overlay').classList.contains('is-visible')) {
-      console.log('hey');
+      console.log(document.querySelector('header-container'));
     }
     if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
   }
