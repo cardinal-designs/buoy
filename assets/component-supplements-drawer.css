@@ -71,6 +71,15 @@
   padding-top: 25px;
 }
 
+.drawer__serving-title {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter;
+  color: #797b7a;
+  text-transform: uppercase;
+
+}
+
 .drawer__serving-list {
   margin-top: 10px;
 }
