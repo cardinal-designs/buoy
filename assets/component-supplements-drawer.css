@@ -27,6 +27,14 @@
   padding-bottom: 30px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .drawer__close {
   font-size: 12px;
   font-weight: 500;
