@@ -67,6 +67,15 @@
       {%- endfor -%}
     </div>
 
+    <div class="drawer__table">
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        {%- if block.type == 'table' -%}
+          <img class="" src="{{ bs.table_image | img_url: 'master' }}"  alt="{{ bs.table_image.alt }}">
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
     <div class="mobile-supplement-continue">
       <a href="javascript:void(0)" class="button button--full-width">Keep Shopping</a>        
     </div>
