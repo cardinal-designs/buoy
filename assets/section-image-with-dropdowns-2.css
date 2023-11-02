@@ -156,6 +156,14 @@
   font-weight: 400;
 }
 
+.icon-image-block3 li {
+font-size: 14px;
+font-family: Rhymes Text;
+font-style: italic;
+font-weight: 300;
+line-height: 20px;
+}
+
 @media (max-width: 768px) {
   .image-with-dropdowns__container-2 .page-width {
     grid-template-columns: 1fr;
