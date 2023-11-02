@@ -192,24 +192,24 @@ setTimeout(function(){
 
 $('.Open_Drawer').click(function(){
   $(this).parent('.pee-club-product-info').siblings('.Supplement_Side_Drawer').css('right','0');
-  $('.page-blury-overlay').addClass('is-visible');
+  $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
   $('.Supplement_Side_Drawer .drawer_header').addClass('mobile-fixed-header');
 });
 
-$('.page-blury-overlay').click(function(){
+$('.page-overlay').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
-  $('.page-blury-overlay').removeClass('is-visible');
+  $('.page-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
-  $('.Supplement_Side_Drawer .drawer__header').removeClass('mobile-fixed-header');
+  $('.Supplement_Side_Drawer .drawer_header').removeClass('mobile-fixed-header');
 });
 
 $('.Supplement_Side_Drawer .js-close-supplement-drawer').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
-  $('.page-blury-overlay').removeClass('is-visible');
+  $('.page-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
-  $('.Supplement_Side_Drawer .drawer__header').removeClass('mobile-fixed-header');
+  $('.Supplement_Side_Drawer .drawer_header').removeClass('mobile-fixed-header');
 });
 
 $(window).on("orientationchange, resize", function(event) {
