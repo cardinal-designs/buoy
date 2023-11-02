@@ -113,8 +113,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
-      closeContinue: '.mobile-supplement-continue',
-      pageOverlay: '.page-overlay'
+      closeContinue: '.drawer__mobile-continue',
+      closeContinueDesktop: '.drawer__desktop-continue',
+      pageOverlay: '.page-blury-overlay'
   }
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
@@ -155,18 +156,28 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
+    if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
+    document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
+      closeNav();
+    });
+  }
+
   function openNav() {
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
-    document.querySelector('.page-overlay').classList.add('is-visible');
+    document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
-    if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.add('mobile-fixed-header');
+    document.querySelector('header-container').style.zIndex = 10;
+
+    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
   
   function closeNav() {
     if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-    document.querySelector('.page-overlay').classList.remove('is-visible');
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
+    document.querySelector('header-container').style.zIndex = 3;
+    
+    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
 setTimeout(function(){
