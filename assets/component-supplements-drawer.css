@@ -79,3 +79,16 @@
 .mobile-supplement-continue a {
   width: 100%;
 }
+
+.page-blury-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
