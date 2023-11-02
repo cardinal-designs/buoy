@@ -53,7 +53,7 @@
           {%- if block.type == 'recommended' -%}
             <div class="drawer__recommended-heading">{{ bs.heading }}</div>
             <div class="drawer__recommended-title">{{ bs.title }}</div>
-            <div class="drawer__recommended-subtitle">Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.</div>
+            <div class="drawer__recommended-subtitle">{{ bs.sub_title }}</div>
             <p class="drawer__recommended-content">Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed. Increase daily servings if exercising, living in a hot climate or drinking alcohol.</p>
           {%- endif -%}
       {%- endfor -%}
@@ -126,6 +126,11 @@
             "type": "text",
             "id": "title",
             "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Subtitle"
           }
         ]
       }
