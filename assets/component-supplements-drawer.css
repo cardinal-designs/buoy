@@ -71,6 +71,13 @@
   padding-top: 25px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__serving-wrapper {
+    flex-direction: column;
+  }
+}
+
 .drawer__serving-title {
   font-size: 14px;
   font-weight: 500;
