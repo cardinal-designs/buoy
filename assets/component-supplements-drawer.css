@@ -237,6 +237,8 @@
 .drawer__info-list {
   list-style-type: none;
   padding-left: 0;
+  max-width: 300px;
+  width: 100%;
 }
 
 .drawer__info-list-item {
