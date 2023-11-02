@@ -7,12 +7,12 @@
     <div class="drawer__header">
       <a href="javascript:void(0)" class="drawer__close js-close-supplement-drawer">Close</a>
     </div>  
-    <div class="drawer_title-wrapper">
+    <div class="drawer__title-wrapper">
       {%- if ss.product_name != blank -%}
-        <div class="drawer_product-name">{{ ss.product_name }}</div>
+        <div class="drawer__product-name">{{ ss.product_name }}</div>
       {%- endif -%}
       {%- if ss.title != blank -%}
-        <div class="drawer_title">{{ ss.title }}</div>
+        <div class="drawer__title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
     {%- for block in section.blocks -%}
