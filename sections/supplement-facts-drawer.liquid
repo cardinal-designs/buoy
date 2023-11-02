@@ -20,7 +20,9 @@
       {%- assign bs = block.settings -%}
       {%- if block.type == 'serving' -%}
         <div class="drawer__serving-wrapper">
-          <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
+          {%- if bs.icon_serving !=blank -%}
+            <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
+          {%- endif -%}
           <div>ONE SERVING</div>
         </div>
       {%- endif -%}
@@ -58,6 +60,11 @@
             "type": "image_picker",
             "id": "icon_serving",
             "label": "Icon Serving"
+          },
+          {
+            "type": "text",
+            "id": "serving_title",
+            "label": "Serving Title"
           }
         ]
       }
