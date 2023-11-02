@@ -19,7 +19,7 @@
     {%- for block in section.blocks -%}
       {%- assign bs = block.settings -%}
       {%- if block.type == 'serving' -%}
-        <div>
+        <div class="drawer__serving-wrapper">
           <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
           <div>ONE SERVING</div>
         </div>
