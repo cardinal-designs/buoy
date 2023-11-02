@@ -107,7 +107,9 @@
             <div class="image-with-dropdowns__x"></div>
           </div>
           <div class="image-with-dropdowns__a image-with-dropdowns__a_3">
+           {% if block.settings.suptext != blank %}
             <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+            {% endif %}
             <p class="sh2">{{ block.settings.text }}</p>
            <div class="icon-image-block3">
             {% if block.settings.icon_image_text_1 != blank %}
@@ -202,6 +204,9 @@
             {% else %}
             {% render 'lazy-image' image: block.settings.image, classes: '' %}
             {% endif %} 
+            {% if block.settings.suptext != blank %}
+            <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+            {% endif %}
             <p class="sh2">{{ block.settings.text }}</p>
             {% if block.settings.list_item1 != blank %}
             <div class="image-with-dropdowns__list-item">
@@ -506,6 +511,11 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+           {
+            "type": "text",
+            "id": "suptext",
+            "label": "Suptext"
           },
           {
             "type": "textarea",
