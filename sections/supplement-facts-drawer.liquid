@@ -72,7 +72,7 @@
         {%- assign bs = block.settings -%}
         {%- if block.type == 'table' -%}
           <div class="drawer__table-image">
-            {% render 'lazy-image' image: bs.table_image, fade: true, classes: '' %}
+            {% render 'lazy-image' image: bs.table_image, fade: true %}
           </div>
           {% comment %} <img class="" src="{{ bs.table_image | img_url: 'master' }}"  alt="{{ bs.table_image.alt }}"> {% endcomment %}
         {%- endif -%}
