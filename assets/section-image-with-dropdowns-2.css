@@ -144,6 +144,10 @@
   margin-bottom: 16px;
 }
 
+.image-with-dropdowns__a_2 .image-with-dropdowns__list-item .sh4 {
+  line-height: 20px;
+}
+
 @media (max-width: 768px) {
   .image-with-dropdowns__container-2 .page-width {
     grid-template-columns: 1fr;
