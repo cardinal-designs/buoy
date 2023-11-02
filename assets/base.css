@@ -52,7 +52,7 @@ body.lock-scroll {
   opacity: 0;
   transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
   backdrop-filter: blur(2px);
-  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .page-overlay.is-visible {
