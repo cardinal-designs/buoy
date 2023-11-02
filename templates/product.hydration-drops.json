@@ -426,10 +426,21 @@
             "serving_item_two": "Electrolytes of ⅓ Sports Drink",
             "serving_item_three": "Immune Support of ⅓ Multivitamin"
           }
+        },
+        "f059af42-3cac-4d86-9f6c-70972613e65d": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "ONE BOTTLE",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+            "serving_item_three": "Immune Support of 13+ Multivitamins"
+          }
         }
       },
       "block_order": [
-        "e2ab3fda-1992-4964-b241-ccbe7fe9f6a0"
+        "e2ab3fda-1992-4964-b241-ccbe7fe9f6a0",
+        "f059af42-3cac-4d86-9f6c-70972613e65d"
       ],
       "settings": {
         "product_name": "HYDRATION DROPS",
