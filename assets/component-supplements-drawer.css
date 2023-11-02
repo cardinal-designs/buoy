@@ -76,6 +76,13 @@
   padding-top: 25px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__serving-wrapper {
+    gap: 5px;
+  }
+}
+
 .drawer__serving-title {
   font-size: 14px;
   font-weight: 500;
