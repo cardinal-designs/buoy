@@ -75,10 +75,6 @@ body.lock-scroll {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.page-blury-overlay.header-container {
-  z-index: 10;
-}
-
 .page-blury-overlay.is-visible {
   visibility: visible;
   opacity: 1;
