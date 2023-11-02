@@ -64,6 +64,11 @@
   }
 }
 
+.drawer__serving {
+  max-width: 320px;
+  width: 100%;
+}
+
 .drawer__serving-wrapper {
   display: flex;
   align-items: center;
