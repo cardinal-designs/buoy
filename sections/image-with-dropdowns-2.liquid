@@ -261,6 +261,9 @@
                 <p class="sh4">{{ block.settings.list_item4_2 }}</p>
               </div>
               {% endif %}
+              {% if block.settings.link != blank %}
+              <a class="image-with-dropdowns2__bottom-link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+              {% endif %}
             </div>
           </div>
         </div>
