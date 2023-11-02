@@ -164,6 +164,10 @@ font-weight: 300;
 line-height: 20px;
 }
 
+.icon-image-block3 ul {
+  padding-left: 0;
+}
+
 @media (max-width: 768px) {
   .image-with-dropdowns__container-2 .page-width {
     grid-template-columns: 1fr;
