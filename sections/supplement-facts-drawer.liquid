@@ -108,6 +108,12 @@
                   <span>{{ bs.icon_info_one }}</span>
                 </li>
               {%- endif -%}
+              {%- if bs.icon_image_two != blank and bs.icon_info_two != blank -%}
+                <li class="drawer__info-list-item">
+                  <img class="" src="{{ bs.icon_image_two | img_url: 'master' }}"  alt="{{ bs.icon_image_two.alt }}">
+                  <span>{{ bs.icon_info_two }}</span>
+                </li>
+              {%- endif -%}
             </ul>
           {%- endif -%}
       {%- endfor -%}
