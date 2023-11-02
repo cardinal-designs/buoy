@@ -151,6 +151,9 @@
             </div>
             {% endif %}
           </div>
+          {% if block.settings.suptext2 != blank %}
+          <p class="image-with-dropdowns__suptext">{{ block.settings.suptext2 }}</p>
+          {% endif %}
           {% if block.settings.list_item1 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
@@ -445,6 +448,11 @@
             "type": "textarea",
             "id": "icon_image_list_4",
             "label": "Icon Image List 4"
+          },
+          {
+            "type": "text",
+            "id": "suptext2",
+            "label": "Suptext 2"
           },
           {
             "type": "text",
