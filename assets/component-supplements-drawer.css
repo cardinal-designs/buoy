@@ -30,6 +30,10 @@
   font-size: 12px;
   font-weight: 500;
   font-family: Inter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .drawer__product-name {
