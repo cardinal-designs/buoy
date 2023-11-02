@@ -23,7 +23,7 @@
           {%- if bs.icon_serving != blank -%}
             <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
           {%- endif -%}
-          {%- if bsserving_title != blank -%}
+          {%- if bs.serving_title != blank -%}
             <div>{{ bs.serving_title }}</div>
           {%- endif -%}
         </div>
