@@ -64,6 +64,12 @@
   }
 }
 
+.drawer__serving-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .mobile-supplement-continue {
   width: 100%;
   background: #fff;
