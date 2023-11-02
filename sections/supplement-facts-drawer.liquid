@@ -51,10 +51,18 @@
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
           {%- if block.type == 'recommended' -%}
-            <div class="drawer__recommended-heading">{{ bs.heading }}</div>
-            <div class="drawer__recommended-title">{{ bs.title }}</div>
-            <div class="drawer__recommended-subtitle">{{ bs.sub_title }}</div>
-            <div class="drawer__recommended-content">{{ bs.content }}</div>
+            {%- if bs.heading != blank -%}
+              <div class="drawer__recommended-heading">{{ bs.heading }}</div>
+            {%- endif -%}
+            {%- if bs.title != blank -%}
+              <div class="drawer__recommended-title">{{ bs.title }}</div>
+            {%- endif -%}
+            {%- if bs.sub_title != blank -%}
+              <div class="drawer__recommended-subtitle">{{ bs.sub_title }}</div>
+            {%- endif -%}
+            {%- if bs.content != blank -%}
+              <div class="drawer__recommended-content">{{ bs.content }}</div>
+            {%- endif -%}
           {%- endif -%}
       {%- endfor -%}
     </div>
