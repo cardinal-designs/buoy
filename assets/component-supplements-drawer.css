@@ -237,3 +237,9 @@
 .drawer__info-list {
   list-style-type: none;
 }
+
+.drawer__info-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
