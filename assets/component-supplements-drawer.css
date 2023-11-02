@@ -182,6 +182,10 @@
   margin-top: 50px;
 }
 
+.drawer__table-image {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
   .drawer__table {

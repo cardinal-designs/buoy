@@ -76,9 +76,9 @@
         {%- assign bs = block.settings -%}
         {%- if block.type == 'table' -%}
           {%- if bs.table_image != blank -%}
-            <div class="drawer__table-image">
+            <div class="drawer__table-image-wrapper">
               {% comment %} {% render 'lazy-image' image: bs.table_image, fade: true %} {% endcomment %}
-              <img class="" src="{{ bs.table_image | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
+              <img class="drawer__table-image" src="{{ bs.table_image | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
             </div>
           {%- endif -%}
         {%- endif -%}
