@@ -120,6 +120,12 @@
                   <span>{{ bs.icon_info_three }}</span>
                 </li>
               {%- endif -%}
+              {%- if bs.icon_image_four != blank and bs.icon_info_four != blank -%}
+                <li class="drawer__info-list-item">
+                  <img class="" src="{{ bs.icon_image_four | img_url: 'master' }}"  alt="{{ bs.icon_image_four.alt }}">
+                  <span>{{ bs.icon_info_four }}</span>
+                </li>
+              {%- endif -%}
             </ul>
           {%- endif -%}
       {%- endfor -%}
@@ -261,6 +267,16 @@
             "type": "text",
             "id": "icon_info_three",
             "label": "Icon Content Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_image_four",
+            "label": "Icon Four"
+          },
+          {
+            "type": "text",
+            "id": "icon_info_four",
+            "label": "Icon Content Four"
           }
         ]
       }
