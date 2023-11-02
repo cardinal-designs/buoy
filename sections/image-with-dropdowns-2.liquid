@@ -72,28 +72,28 @@
             <div class="image-with-dropdowns__x"></div>
           </div>
           <div class="image-with-dropdowns__a">
-            {% if block.settings.icon_image_1 != blank %}
+            {% if block.settings.icon_image_text_1 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_1 }}"/>
-              <p class="sh4">{{ block.settings.icon_image_1 }}</p>
+              <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.icon_image_2 != blank %}
+            {% if block.settings.icon_image_text_2 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_2 }}"/>
-              <p class="sh4">{{ block.settings.icon_image_2 }}</p>
+              <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.icon_image_3 != blank %}
+            {% if block.settings.icon_image_text_3 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_3 }}"/>
-              <p class="sh4">{{ block.settings.icon_image_3 }}</p>
+              <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
             </div>
             {% endif %}
-            {% if block.settings.icon_image_4 != blank %}
+            {% if block.settings.icon_image_text_4 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_4 }}"/>
-              <p class="sh4">{{ block.settings.icon_image_4 }}</p>
+              <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
             </div>
             {% endif %}
           </div>
@@ -270,39 +270,44 @@
             "label": "Title"
           },
           {
-            "type": "text",
-            "id": "video_url",
-            "label": "Video URL"
-          },
-          {
             "type": "image_picker",
-            "id": "image",
-            "label": "Image"
+            "id": "icon_1",
+            "label": "Icon Image 1"
           },
           {
             "type": "textarea",
-            "id": "text",
-            "label": "Text"
+            "id": "icon_image_text_1",
+            "label": "Icon Image Text 1"
+          },          
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon Image 2"
           },
           {
-            "type": "text",
-            "id": "list_item1",
-            "label": "List Item 1"
+            "type": "textarea",
+            "id": "icon_image_text_2",
+            "label": "Icon Image Text 2"
           },
           {
-            "type": "text",
-            "id": "list_item2",
-            "label": "List Item 2"
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon Image 3"
           },
           {
-            "type": "text",
-            "id": "list_item3",
-            "label": "List Item 3"
+            "type": "textarea",
+            "id": "icon_image_text_3",
+            "label": "Icon Image Text 3"
           },
           {
-            "type": "text",
-            "id": "list_item4",
-            "label": "List Item 4"
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon Image 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_4",
+            "label": "Icon Image Text 4"
           }
         ]
       },
