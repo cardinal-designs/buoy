@@ -91,6 +91,13 @@
   color: #1F2322;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__serving-item {
+    font-size: 14px;
+  }
+}
+
 .drawer__serving-list {
   margin-top: 10px;
 }
