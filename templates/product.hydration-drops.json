@@ -416,6 +416,17 @@
     },
     "30d2cd33-59dd-41e6-803b-07e4a56cd043": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "e2ab3fda-1992-4964-b241-ccbe7fe9f6a0": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg"
+          }
+        }
+      },
+      "block_order": [
+        "e2ab3fda-1992-4964-b241-ccbe7fe9f6a0"
+      ],
       "settings": {
         "product_name": "HYDRATION DROPS",
         "title": "Supplement Facts"
