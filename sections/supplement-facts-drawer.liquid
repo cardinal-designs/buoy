@@ -104,7 +104,7 @@
             <ul class="drawer__info-list">
               <li class="drawer__info-list-item">
                 <img class="" src="{{ bs.icon_image | img_url: 'master' }}"  alt="{{ bs.icon_image.alt }}">
-                <span>No Sugar, Sweeteners or Flavors</span>
+                <span>{{ bs.icon_info_one }}</span>
               </li>
             </ul>
           {%- endif -%}
@@ -225,7 +225,7 @@
           },
           {
             "type": "text",
-            "id": "icon_info",
+            "id": "icon_info_one",
             "label": "Icon Content"
           }
         ]
