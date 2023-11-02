@@ -193,7 +193,8 @@
   }
 }
 
-.drawer__mobile-continue {
+.drawer__mobile-continue,
+.drawer__desktop-continue {
   padding-top: 20px;
   padding-bottom: 20px;
 }
