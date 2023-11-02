@@ -115,7 +115,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openIngredients: '.js-ingredients-open',
       closeContinue: '.drawer__mobile-continue',
       closeContinueDesktop: '.drawer__desktop-continue',
-      pageOverlay: '.page-overlay'
+      pageOverlay: '.page-blury-overlay'
   }
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
