@@ -77,7 +77,8 @@
         {%- if block.type == 'table' -%}
           {%- if bs.table_image != blank -%}
             <div class="drawer__table-image">
-              {% render 'lazy-image' image: bs.table_image, fade: true %}
+              {% comment %} {% render 'lazy-image' image: bs.table_image, fade: true %} {% endcomment %}
+              <img class="" src="{{ bs.table_image | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
             </div>
           {%- endif -%}
         {%- endif -%}
@@ -85,6 +86,7 @@
     </div>
 
     <div class="drawer__ingredients">
+      <p>OTHER INGREDIENTS: Purified Water, Non-GMO Citric Acid (From Limes), Proprietary Wild Harvested Antioxidant Blend: Organic Blood Orange, Organic Acacia, Organic Rosemary, Organic Star Anise.</p>
     </div>
 
     <div class="mobile-supplement-continue">
