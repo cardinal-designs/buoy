@@ -107,15 +107,40 @@
             <div class="image-with-dropdowns__x"></div>
           </div>
           <div class="image-with-dropdowns__a image-with-dropdowns__a_3">
-            {% if section.settings.video_url != blank %}
-            <video autoplay loop muted playsinline class="video">
-              <source src="{{ block.settings.video_url }}" type="video/mp4">
-            </video>
-            {% else %}
-            {% render 'lazy-image' image: block.settings.image, classes: '' %}
-            {% endif %} 
             <p class="sh2">{{ block.settings.text }}</p>
-            {% if block.settings.list_item1 != blank %}
+            
+          
+           <div class="image-with-dropdowns__a image-with-dropdowns__a_2-type2">
+            {% if block.settings.icon_image_text_1 != blank %}
+            <div class="image-with-dropdowns__list-item">
+              <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+              <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+            </div>
+            {% endif %}
+            {% if block.settings.icon_image_text_2 != blank %}
+            <div class="image-with-dropdowns__list-item">
+              <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+              <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+            </div>
+            {% endif %}
+            {% if block.settings.icon_image_text_3 != blank %}
+            <div class="image-with-dropdowns__list-item">
+              <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+              <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+            </div>
+            {% endif %}
+            {% if block.settings.icon_image_text_4 != blank %}
+            <div class="image-with-dropdowns__list-item">
+              <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+              <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+            </div>
+            {% endif %}
+          </div>
+          
+          
+          
+          
+          {% if block.settings.list_item1 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
               <p class="sh4">{{ block.settings.list_item1 }}</p>
@@ -321,19 +346,49 @@
             "label": "Title"
           },
           {
-            "type": "text",
-            "id": "video_url",
-            "label": "Video URL"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
             "type": "textarea",
             "id": "text",
             "label": "Text"
+          },
+                    {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon Image 1"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_1",
+            "label": "Icon Image Text 1"
+          },          
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon Image 2"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_2",
+            "label": "Icon Image Text 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon Image 3"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_3",
+            "label": "Icon Image Text 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon Image 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_4",
+            "label": "Icon Image Text 4"
           },
           {
             "type": "text",
