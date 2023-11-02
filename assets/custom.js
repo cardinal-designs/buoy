@@ -169,6 +169,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
+    if (document.querySelector('.page-blury-overlay').classList.contains('is-visible')) {
+      document.querySelector('header-container').style.zIndex = 'initial';
+    }
     if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
   }
 
