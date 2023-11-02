@@ -77,7 +77,13 @@
   font-family: Inter;
   color: #797b7a;
   text-transform: uppercase;
+}
 
+.drawer__serving-item {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Inter;
+  color: #1F2322;
 }
 
 .drawer__serving-list {
