@@ -232,6 +232,9 @@
 
 .drawer__info {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .drawer__info-list {
