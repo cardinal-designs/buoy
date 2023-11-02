@@ -462,14 +462,17 @@
           "type": "info",
           "settings": {
             "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
-            "icon_info_one": "No Sugar, Sweeteners or Flavors"
+            "icon_info_one": "No Sugar, Sweeteners or Flavors",
+            "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+            "icon_info_two": "Non-GMO Project Verified"
           }
         },
         "a748600a-dc86-4552-a9b5-9923e91c67ac": {
           "type": "info",
           "settings": {
             "icon_image": "shopify:\/\/shop_images\/vegan.svg",
-            "icon_info_one": "Vegan"
+            "icon_info_one": "Vegan",
+            "icon_info_two": ""
           }
         }
       },
