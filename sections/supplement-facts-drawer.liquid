@@ -4,6 +4,7 @@
 
 <div id="supplementSideDrawer" class="supplement-side-drawer">
   <div class="drawer__wrapper-main">
+    
     <div class="drawer__header">
       <a href="javascript:void(0)" class="drawer__close js-close-supplement-drawer">
         <span>Close</span> {% render 'icon-close-drawer' %}</a>
@@ -16,6 +17,7 @@
         <div class="drawer__title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
+
     <div class="drawer__serving-container">
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
@@ -36,6 +38,7 @@
         {%- endif -%}
       {%- endfor -%}
     </div>
+
     <div class="mobile-supplement-continue">
       <a href="javascript:void(0)" class="button button--full-width">Keep Shopping</a>        
     </div>
