@@ -100,15 +100,6 @@
   left: 0;
 }
 
-.supplement-side-drawer .drawer_header p {
-  font-size: 14px;
-  margin: 0;
-  line-height: 30px;
-  color: #1F2322;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 .drawer_cover_cls .drawer_left h3 {
   font-size: 35px;
   margin: 0 0 12px 0;
@@ -243,21 +234,6 @@
   .mobile-fixed-header {
     position: sticky;
     top: -10px;
-  }
-
-  .supplement-side-drawer {
-    width: 100%;
-  }
-  
+  }  
 }
 
-@media screen and (max-height: 450px) {
-  
-  .supplement-side-drawer {
-    padding-top: 15px;
-  }
-  .supplement-side-drawer a {
-    font-size: 18px;
-  }
-  
-}
