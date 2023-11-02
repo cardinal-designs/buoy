@@ -244,3 +244,11 @@
   align-items: center;
   gap: 10px;
 }
+
+.drawer__info-list-item span {
+  color: #1f2322;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
