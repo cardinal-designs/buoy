@@ -181,6 +181,13 @@
   margin-top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__table {
+    margin-top: 10px;
+  }
+}
+
 
 
 .mobile-supplement-continue {
