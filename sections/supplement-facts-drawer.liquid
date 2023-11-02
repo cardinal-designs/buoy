@@ -4,7 +4,7 @@
 
 <div id="supplementSideDrawer" class="supplement-side-drawer">
   <div class="drawer__wrapper-main">
-    
+
     <div class="drawer__header">
       <a href="javascript:void(0)" class="drawer__close js-close-supplement-drawer">
         <span>Close</span> {% render 'icon-close-drawer' %}</a>
@@ -22,19 +22,21 @@
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
         {%- if block.type == 'serving' -%}
-          <div class="drawer__serving-wrapper">
-            {%- if bs.icon_serving != blank -%}
-              <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
-            {%- endif -%}
-            {%- if bs.serving_title != blank -%}
-              <div>{{ bs.serving_title }}</div>
-            {%- endif -%}
+          <div class="drawer__serving">
+            <div class="drawer__serving-wrapper">
+              {%- if bs.icon_serving != blank -%}
+                <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
+              {%- endif -%}
+              {%- if bs.serving_title != blank -%}
+                <div>{{ bs.serving_title }}</div>
+              {%- endif -%}
+            </div>
+            <ul class="drawer__serving-list">
+              <li class="drawer__serving-item">{{ bs.serving_item_one }}</li>
+              <li class="drawer__serving-item">{{ bs.serving_item_two }}</li>
+              <li class="drawer__serving-item">{{ bs.serving_item_three }}</li>
+            </ul>
           </div>
-          <ul class="drawer__serving-list">
-            <li class="drawer__serving-item">{{ bs.serving_item_one }}</li>
-            <li class="drawer__serving-item">{{ bs.serving_item_two }}</li>
-            <li class="drawer__serving-item">{{ bs.serving_item_three }}</li>
-          </ul>
         {%- endif -%}
       {%- endfor -%}
     </div>
