@@ -48,10 +48,15 @@
     </div>
 
     <div class="drawer__recommended">
-      <div class="drawer__recommended-heading">Dietician’s Recommended Use:</div>
-      <div class="drawer__recommended-title">4-7 times daily (560mg-980mg electrolytes & daily immune support)</div>
-      <div class="drawer__recommended-subtitle">Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.</div>
-      <p class="drawer__recommended-content">Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed. Increase daily servings if exercising, living in a hot climate or drinking alcohol.</p>
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+          {%- if block.type == 'recommended' -%}
+            <div class="drawer__recommended-heading">Dietician’s Recommended Use:</div>
+            <div class="drawer__recommended-title">4-7 times daily (560mg-980mg electrolytes & daily immune support)</div>
+            <div class="drawer__recommended-subtitle">Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.</div>
+            <p class="drawer__recommended-content">Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed. Increase daily servings if exercising, living in a hot climate or drinking alcohol.</p>
+          {%- endif -%}
+      {%- endfor -%}
     </div>
 
     <div class="mobile-supplement-continue">
