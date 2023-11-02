@@ -237,6 +237,14 @@
   align-items: flex-start;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__info {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
 .drawer__info-list {
   list-style-type: none;
   padding-left: 0;
