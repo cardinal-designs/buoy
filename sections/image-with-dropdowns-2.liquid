@@ -114,25 +114,41 @@
             {% if block.settings.icon_image_text_1 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+              <div>
               <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+              <p class="small-text">{{ block.settings.icon_image_subtext_1 }}</p>
+              {{ block.settings.icon_image_list_1 }}
+              </div>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_2 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+              <div>
               <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+              <p class="small-text">{{ block.settings.icon_image_subtext_2 }}</p>
+              {{ block.settings.icon_image_list_2 }}
+              </div>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_3 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+              <div>
               <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+              <p class="small-text">{{ block.settings.icon_image_subtext_3 }}</p>
+              {{ block.settings.icon_image_list_3 }}
+              </div>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_4 != blank %}
             <div class="image-with-dropdowns__list-item">
               <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+              <div>
               <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+              <p class="small-text">{{ block.settings.icon_image_subtext_4 }}</p>
+              {{ block.settings.icon_image_list_4 }}
+              </div>
             </div>
             {% endif %}
           </div>
@@ -350,7 +366,14 @@
             "id": "text",
             "label": "Text"
           },
-                    {
+
+
+
+
+
+
+          
+          {
             "type": "image_picker",
             "id": "icon_1",
             "label": "Icon Image 1"
@@ -359,7 +382,19 @@
             "type": "textarea",
             "id": "icon_image_text_1",
             "label": "Icon Image Text 1"
-          },          
+          },  
+
+      
+          {
+            "type": "text",
+            "id": "icon_image_subtext_1",
+            "label": "Icon Image Subtext 1"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_1",
+            "label": "Icon Image List 1"
+          },
           {
             "type": "image_picker",
             "id": "icon_2",
@@ -369,6 +404,16 @@
             "type": "textarea",
             "id": "icon_image_text_2",
             "label": "Icon Image Text 2"
+          },
+          {
+            "type": "text",
+            "id": "icon_image_subtext_2",
+            "label": "Icon Image Subtext 2"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_2",
+            "label": "Icon Image List 2"
           },
           {
             "type": "image_picker",
@@ -381,6 +426,16 @@
             "label": "Icon Image Text 3"
           },
           {
+            "type": "text",
+            "id": "icon_image_subtext_3",
+            "label": "Icon Image Subtext 3"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_3",
+            "label": "Icon Image List 3"
+          },
+          {
             "type": "image_picker",
             "id": "icon_4",
             "label": "Icon Image 4"
@@ -389,6 +444,16 @@
             "type": "textarea",
             "id": "icon_image_text_4",
             "label": "Icon Image Text 4"
+          },
+          {
+            "type": "text",
+            "id": "icon_image_subtext_4",
+            "label": "Icon Image Subtext 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_4",
+            "label": "Icon Image List 4"
           },
           {
             "type": "text",
