@@ -147,6 +147,13 @@
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__recommended-title {
+    font-size: 14px;
+  }
+}
+
 .drawer__recommended-subtitle {
   color: #1f2322;
   font-family: Inter;
