@@ -98,20 +98,17 @@
     <div class="drawer__line"></div>
 
     <div class="drawer__info">
-      <ul class="drawer__info-list">
-        <li class="drawer__info-list-item">
-          {% render 'icon-close-drawer' %}
-          <span>No Sugar, Sweeteners or Flavors</span>
-        </li>
-        <li class="drawer__info-list-item">
-          {% render 'icon-close-drawer' %}
-          <span>Non-GMO Project Verified</span>
-        </li>
-        <li class="drawer__info-list-item">
-          {% render 'icon-close-drawer' %}
-          <span>Keto & Paleo Approved</span>
-        </li>
-      </ul>
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+          {%- if block.type == 'info' -%}
+            <ul class="drawer__info-list">
+              <li class="drawer__info-list-item">
+                <img class="" src="{{ bs.icon_image | img_url: 'master' }}"  alt="{{ bs.icon_image.alt }}">
+                <span>No Sugar, Sweeteners or Flavors</span>
+              </li>
+            </ul>
+          {%- endif -%}
+      {%- endfor -%}
     </div>
 
     <div class="drawer__desktop-continue hide-mobile">
