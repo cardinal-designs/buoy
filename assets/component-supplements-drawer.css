@@ -75,6 +75,12 @@
   margin-top: 10px;
 }
 
+.drawer__serving-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .mobile-supplement-continue {
   width: 100%;
   background: #fff;
