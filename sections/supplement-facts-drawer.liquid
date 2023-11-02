@@ -28,9 +28,9 @@
           {%- endif -%}
         </div>
         <ul class="drawer__serving-list">
-          <li class="drawer__serving-item">1 Short Squeeze (1.5mL)</li>
-          <li class="drawer__serving-item">Electrolytes of ⅓ Sports Drink</li>
-          <li class="drawer__serving-item">Immune Support of ⅓ Multivitamin</li>
+          <li class="drawer__serving-item">{{ bs.serving_item_one }}</li>
+          <li class="drawer__serving-item">{{ bs.serving_item_two }}</li>
+          <li class="drawer__serving-item">{{ bs.serving_item_three }}</li>
         </ul>
       {%- endif -%}
 
@@ -75,8 +75,18 @@
           },
           {
             "type": "text",
-            "id": "serving_item",
-            "label": "Serving Item"
+            "id": "serving_item_one",
+            "label": "Serving Item One"
+          },
+          {
+            "type": "text",
+            "id": "serving_item_two",
+            "label": "Serving Item Two"
+          },
+          {
+            "type": "text",
+            "id": "serving_item_three",
+            "label": "Serving Item Three"
           }
         ]
       }
