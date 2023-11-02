@@ -114,6 +114,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       closeContinue: '.drawer__mobile-continue',
+      closeContinueDesktop: '.drawer__desktop-continue',
       pageOverlay: '.page-overlay'
   }
 
@@ -151,6 +152,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.closeContinue) != 'undefined' && document.querySelector(selectors.closeContinue) != null) {
     document.querySelector(selectors.closeContinue).addEventListener('click', function(){
+      closeNav();
+    });
+  }
+
+    if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
+    document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
   }
