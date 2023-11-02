@@ -32,9 +32,15 @@
               {%- endif -%}
             </div>
             <ul class="drawer__serving-list">
-              <li class="drawer__serving-item">{{ bs.serving_item_one }}</li>
-              <li class="drawer__serving-item">{{ bs.serving_item_two }}</li>
-              <li class="drawer__serving-item">{{ bs.serving_item_three }}</li>
+              {%- if bs.serving_item_one != blank -%}
+                <li class="drawer__serving-item">{{ bs.serving_item_one }}</li>
+              {%- endif -%}
+              {%- if bs.serving_item_two != blank -%}
+                <li class="drawer__serving-item">{{ bs.serving_item_two }}</li>
+              {%- endif -%}
+              {%- if bs.serving_item_three != blank -%}
+                <li class="drawer__serving-item">{{ bs.serving_item_three }}</li>
+              {%- endif -%}
             </ul>
           </div>
         {%- endif -%}
