@@ -165,7 +165,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   
   function closeNav() {
     if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-    document.querySelector('.page-overlay').classList.remove('is-visible');
+    // document.querySelector('.page-overlay').classList.remove('is-visible');
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
     if(document.querySelector('.supplement-side-drawer .drawer_header')) document.querySelector('.supplement-side-drawer .drawer_header').classList.remove('mobile-fixed-header');
   }
