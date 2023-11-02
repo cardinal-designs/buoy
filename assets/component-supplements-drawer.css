@@ -69,6 +69,13 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+
+  .drawer__serving {
+    padding-top: 10px;
+  }
+}
+
 .drawer__serving-wrapper {
   display: flex;
   align-items: center;
