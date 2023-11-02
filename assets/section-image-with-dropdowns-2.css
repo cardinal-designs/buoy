@@ -214,6 +214,13 @@
   border-top: 1px solid #e9e9e9;
 }
 
+.image-with-dropdowns2__bottom-link {
+  margin: 40px auto;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
 @media (max-width: 768px) {
   .image-with-dropdowns__container-2 .page-width {
     grid-template-columns: 1fr;
