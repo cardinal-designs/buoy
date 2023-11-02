@@ -89,7 +89,9 @@
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
           {%- if block.type == 'ingredients' -%}
-            <p class="drawer__ingredients-content">{{ bs.content }}</p>
+            {%- if bs.content != blank -%}
+              <p class="drawer__ingredients-content">{{ bs.content }}</p>
+            {%- endif -%}
           {%- endif -%}
       {%- endfor -%}
     </div>
