@@ -20,10 +20,12 @@
       {%- assign bs = block.settings -%}
       {%- if block.type == 'serving' -%}
         <div class="drawer__serving-wrapper">
-          {%- if bs.icon_serving !=blank -%}
+          {%- if bs.icon_serving != blank -%}
             <img class="" src="{{ bs.icon_serving | img_url: 'master' }}"  alt="{{ bs.icon_serving.alt }}">
           {%- endif -%}
-          <div>ONE SERVING</div>
+          {%- if bsserving_title != blank -%}
+            <div>{{ bs.serving_title }}</div>
+          {%- endif -%}
         </div>
       {%- endif -%}
 
