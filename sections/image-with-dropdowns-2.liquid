@@ -232,6 +232,36 @@
               <p class="sh4">{{ block.settings.list_item4 }}</p>
             </div>
             {% endif %}
+            <div class="">
+              {% if block.settings.suptext2 != blank %}
+              <p class="image-with-dropdowns__suptext">{{ block.settings.suptext2 }}</p>
+              {% endif %}
+              <p class="sh2">{{ block.settings.text2 }}</p>
+              {% if block.settings.list_item1_2 != blank %}
+              <div class="image-with-dropdowns__list-item">
+                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                <p class="sh4">{{ block.settings.list_item1_2 }}</p>
+              </div>
+              {% endif %}
+              {% if block.settings.list_item2_2 != blank %}
+              <div class="image-with-dropdowns__list-item">
+                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                <p class="sh4">{{ block.settings.list_item2_2 }}</p>
+              </div>
+              {% endif %}
+              {% if block.settings.list_item3_2 != blank %}
+              <div class="image-with-dropdowns__list-item">
+                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                <p class="sh4">{{ block.settings.list_item3_2 }}</p>
+              </div>
+              {% endif %}
+              {% if block.settings.list_item4_2 != blank %}
+              <div class="image-with-dropdowns__list-item">
+                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                <p class="sh4">{{ block.settings.list_item4_2 }}</p>
+              </div>
+              {% endif %}
+            </div>
           </div>
         </div>
         {% endcase %}
@@ -541,6 +571,36 @@
             "type": "text",
             "id": "list_item4",
             "label": "List Item 4"
+          },
+          {
+            "type": "text",
+            "id": "suptext2",
+            "label": "Suptext 2"
+          },
+          {
+            "type": "textarea",
+            "id": "text2",
+            "label": "Text 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item1_2",
+            "label": "List Item 1 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item2_2",
+            "label": "List Item 2 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3_2",
+            "label": "List Item 3 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item4_2",
+            "label": "List Item 4 - 2"
           }
         ]
       }
