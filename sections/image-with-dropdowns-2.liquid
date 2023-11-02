@@ -74,25 +74,25 @@
           <div class="image-with-dropdowns__a image-with-dropdowns__a_2">
             {% if block.settings.icon_image_text_1 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_1 }}"/>
+              <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
               <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_2 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_2 }}"/>
+              <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
               <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_3 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_3 }}"/>
+              <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
               <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
             </div>
             {% endif %}
             {% if block.settings.icon_image_text_4 != blank %}
             <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_4 }}"/>
+              <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
               <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
             </div>
             {% endif %}
