@@ -2667,6 +2667,17 @@ select[name=selling_plan] {
   padding-bottom: 20px;
 }
 
+.product-reviews .okeReviews .okeReviews-select:before {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid currentColor;
+    height: 0;
+    right: 12px;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 0;
+}
+
 
 
 
