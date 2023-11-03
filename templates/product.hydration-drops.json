@@ -260,7 +260,8 @@
         "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bottom"
+        "background": "bottom",
+        "hide_supp": false
       }
     },
     "8b9c24a7-0d88-4279-a771-d04362368955": {
@@ -412,6 +413,13 @@
       "type": "product-bar-toggle",
       "settings": {
       }
+    },
+    "afa55adf-d57d-4799-be43-5f548916eec5": {
+      "type": "supplement-facts-drawer",
+      "settings": {
+        "product_name": "Hydration Drops",
+        "title": "Supplement Facts"
+      }
     }
   },
   "order": [
@@ -424,6 +432,7 @@
     "91da1537-2987-42c0-8813-ee1b4ee1058e",
     "1636344367d21ce97f",
     "1637720233f9199bd5",
-    "165168225907175bb6"
+    "165168225907175bb6",
+    "afa55adf-d57d-4799-be43-5f548916eec5"
   ]
 }
