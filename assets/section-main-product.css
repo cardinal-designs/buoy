@@ -2641,6 +2641,15 @@ select[name=selling_plan] {
   }
 }
 
+  .okeReviews-review-primary .okeReviews .okeReviews-starRating {
+    height: 14px;
+    width: 70px;
+  }
+  
+  .okeReviews-review-primary .okeReviews .okeReviews-starRating-indicator-layer {
+    background-size: 70px 14px;
+  }
+
 
 
 
