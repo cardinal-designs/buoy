@@ -17,13 +17,14 @@
   .supplement-side-drawer {
     top: 54px;
     width: 100%;
+    padding-bottom: 110px;
   }
 }
 
 .drawer__header {
   display: flex;
   justify-content: flex-end;
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 30px;
 }
 
@@ -50,6 +51,7 @@
   font-weight: 300;
   font-style: italic;
   color: #1f2322;
+  margin-bottom: -5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -114,7 +116,7 @@
 }
 
 .drawer__serving-list {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .drawer__serving-container {
@@ -133,10 +135,10 @@
 
 .drawer__recommended {
   background: #f8f8f8;
-  padding: 20px;
+  padding: 23px 20px 27px 20px;
   border-radius: 12px;
   border: 1px solid #797b7a;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .drawer__recommended-heading {
@@ -178,7 +180,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 .drawer__recommended-content p {
@@ -187,7 +189,7 @@
 }
 
 .drawer__table {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -204,7 +206,7 @@
 
 .drawer__desktop-continue {
   padding-top: 35px;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 }
 
 .drawer__continue-cta {
@@ -217,8 +219,8 @@
 }
 
 .drawer__ingredients {
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 35px;
+  margin-bottom: 47px;
 }
 
 .drawer__ingredients-content {
@@ -243,7 +245,7 @@
 }
 
 .drawer__info {
-  margin-top: 50px;
+  margin-top: 48px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -263,21 +265,14 @@
   padding-left: 0;
   max-width: 300px;
   width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-
-  .drawer__info-list {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+  margin: 0;
 }
 
 .drawer__info-list-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .drawer__info-list-item span {
