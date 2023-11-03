@@ -2642,13 +2642,17 @@ select[name=selling_plan] {
 }
 
 .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-primary .okeReviews-starRating {
-    height: 14px;
-    width: 70px;
-  }
+  height: 14px;
+  width: 70px;
+}
   
 .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-primary .okeReviews-starRating-indicator-layer {
-    background-size: 70px 14px;
-  }
+  background-size: 70px 14px;
+}
+
+.product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-review {
+  border: solid #545759;
+}
 
 
 
