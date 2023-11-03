@@ -2403,7 +2403,11 @@ select[name=selling_plan] {
 @media screen and (max-width: 768px) {
 
   .template-product .product-section .page-width {
-    padding: 0 27px;
+    padding: 0 20px;
+  }
+
+  .template-product .page-width {
+    padding: 0 20px;
   }
 
   .Badge_Grid_Container {
