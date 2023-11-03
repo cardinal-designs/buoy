@@ -416,6 +416,21 @@
     },
     "afa55adf-d57d-4799-be43-5f548916eec5": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "8e49ee95-94a1-43a3-9d4b-9ca4a2f3f707": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+            "serving_item_three": ""
+          }
+        }
+      },
+      "block_order": [
+        "8e49ee95-94a1-43a3-9d4b-9ca4a2f3f707"
+      ],
       "settings": {
         "product_name": "Hydration Drops",
         "title": "Supplement Facts"
