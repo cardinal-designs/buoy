@@ -142,6 +142,15 @@
       "shop-slide-out": {
         "type": "shop-slide-out",
         "blocks": {
+          "bced2d8c-e325-4672-b33b-3e25126aed39": {
+            "type": "product",
+            "settings": {
+              "product": "ocean-electrolyte-kit",
+              "description": "<strong>New<\/strong>",
+              "show_second_slide": false,
+              "second_description": ""
+            }
+          },
           "4e779e6d-dc2b-472f-bc4b-a783854a5088": {
             "type": "product",
             "settings": {
@@ -180,6 +189,7 @@
           }
         },
         "block_order": [
+          "bced2d8c-e325-4672-b33b-3e25126aed39",
           "4e779e6d-dc2b-472f-bc4b-a783854a5088",
           "7a0ee902-f569-4b6d-b6db-50b6806f9b27",
           "dddb8552-72c9-4360-8d61-2f7684492324",
