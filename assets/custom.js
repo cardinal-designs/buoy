@@ -201,11 +201,12 @@ setTimeout(function(){
 
 $('.Open_Drawer').click(function(){
   console.log('clicked');
-  openNav();
-  $('.Supplement_Side_Drawer').css('right','-100%');
-  $('.page-overlay').addClass('is-visible');
-  $('body').addClass('lock-scroll');
-  $('.Supplement_Side_Drawer .drawer__header').addClass('mobile-fixed-header');
+if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
+    document.querySelector('.page-blury-overlay').classList.add('is-visible');
+    document.querySelector('body').classList.add('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 10;
+
+    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
 });
 
 $('.page-overlay').click(function(){
