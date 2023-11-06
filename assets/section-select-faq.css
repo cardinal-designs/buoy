@@ -1,5 +1,5 @@
 .benefits__info-title2 {
-  margin-bottom: 70px;
+  margin-bottom: 70px !important;
   color: #797B7A;
   font-size: 16px;
 }
@@ -76,7 +76,7 @@
   .benefits__info-title2 {
     text-align: center;
     margin-bottom: 0px;
-    padding-bottom: 60px;
+    padding-bottom: 60px !important;
   }
 
   .select-faq__container {
