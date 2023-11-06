@@ -113,6 +113,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
+      openTest: 'js-open',
       closeContinue: '.drawer__mobile-continue',
       closeContinueDesktop: '.drawer__desktop-continue',
       pageOverlay: '.page-blury-overlay'
@@ -125,6 +126,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openNav();
     }); 
   }
+
+  if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
+    document.querySelector(selectors.openTest).addEventListener('click', function(){
+      openNav();
+    }); 
+  }
+
 
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
