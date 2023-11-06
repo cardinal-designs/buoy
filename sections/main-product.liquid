@@ -516,7 +516,7 @@
                       <video class="hide-mobile" controls muted loop preload="metadata">
                         <source src="{{ block.settings.testimonial_video }}#t=0.1" type="video/mp4">
                       </video>
-                      <video class="hide-desktop" autoplay muted loop>
+                      <video class="hide-desktop" autoplay muted loop webkit-playsinline playsinline>
                         <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
                       </video>
                      {% elsif block.settings.testimonial_image != blank %}
