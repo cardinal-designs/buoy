@@ -2579,7 +2579,7 @@ select[name=selling_plan] {
 
 .Product_Tags img {
   height: 20px;
-  width: auto;
+  width: fit-content;
 }
 
 .Product_Tags div {
