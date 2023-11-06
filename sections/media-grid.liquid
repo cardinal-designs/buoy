@@ -4,7 +4,20 @@
   <p class="sh3">{{ section.settings.suptitle }}</p>
   <h1>{{ section.settings.title }}</h1>
   <p class="sh2">{{ section.settings.text }}</p>
-  <div class="media-grid">
+  <div class="hide-desktop media-grid">
+  {% for block in section.blocks limit: 4 %}
+    <div class="media-grid__item">
+    {% if block.settings.video != blank %}
+    <video autoplay muted loop>
+      <source src="{{ block.settings.video }}" type="video/mp4">
+    </video>
+    {% elsif block.settings.image != blank %}
+    <img src="{{ block.settings.image |img_url:'master' }}"/>
+    {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+  <div class="hide-mobile media-grid">
   {% for block in section.blocks %}
     <div class="media-grid__item">
     {% if block.settings.video != blank %}
