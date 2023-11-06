@@ -226,6 +226,10 @@
   margin-bottom: 40px;
 }
 
+.image-with-dropdowns__content .sh2 {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 768px) {
   .image-with-dropdowns__container-2 .page-width {
     grid-template-columns: 1fr;
