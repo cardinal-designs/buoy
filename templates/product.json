@@ -106,8 +106,8 @@
         "add_gradient": false,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc71b6a8aa418cabcb3a722850c681.mp4",
         "image": "shopify:\/\/shop_images\/Buoy_Shot4_217_edited_-min.jpg",
-        "title": "Harvest the healing powers of the <i>deep ocean<\/i>.",
-        "text": "The electrolytes, trace minerals and elements in this kit are harvested to preserve their <strong> ionically charged states<\/strong> and <strong>high bioavailability<\/strong> for whole-body health.",
+        "title": "Harvest the healing powers of the deep ocean.",
+        "text": "Add electrolytes, trace minerals and elements to every",
         "button_label": "",
         "button_link": "",
         "value_title": "",
@@ -163,8 +163,9 @@
         "58b6ed44-54f5-4d15-a82f-2ae07d337e7e",
         "8d8cd2d6-d17c-4f50-984b-c15455b24b0d"
       ],
+      "disabled": true,
       "settings": {
-        "text": "The world's best salt preserved in it's <i>naturally-charged, ionic states<\/i> with micronutrients, minerals and elements that nourish well beyond the label.",
+        "text": "Setting The Bar",
         "bold_text": "",
         "no_background": true,
         "add_top_padding": true,
@@ -246,6 +247,26 @@
       "settings": {
         "product": ""
       }
+    },
+    "b658deef-4163-4f3e-a92b-787462a46eff": {
+      "type": "how-to-2",
+      "blocks": {
+        "c3f430ad-62a9-49ae-ae93-1402229ae939": {
+          "type": "point",
+          "settings": {
+            "emoji": "",
+            "title": "Add",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "c3f430ad-62a9-49ae-ae93-1402229ae939"
+      ],
+      "settings": {
+        "video_url": "",
+        "title": "Add To"
+      }
     }
   },
   "order": [
@@ -253,6 +274,7 @@
     "16376825244a973b62",
     "163633853719b9de14",
     "163771143220978a33",
-    "1637720233f9199bd5"
+    "1637720233f9199bd5",
+    "b658deef-4163-4f3e-a92b-787462a46eff"
   ]
 }
