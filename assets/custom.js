@@ -201,12 +201,7 @@ setTimeout(function(){
 
 $('.Open_Drawer').click(function(){
   console.log('clicked');
-if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
-    document.querySelector('.page-blury-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
-
-    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+  $('.Supplement_Side_Drawer').css('right','100%');
 });
 
 $('.page-overlay').click(function(){
