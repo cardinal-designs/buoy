@@ -200,10 +200,8 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(){
-  console.log(document.getElementById("supplementSideDrawer"));
-  document.getElementById("supplementSideDrawer").style.right = "0";
-  // $('.Supplement_Side_Drawer').css('right','-100%');
-  // $('.page-overlay').addClass('is-visible');
+  $('.Supplement_Side_Drawer').css('right','-100%');
+  $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
   $('.Supplement_Side_Drawer .drawer_header').addClass('mobile-fixed-header');
 });
