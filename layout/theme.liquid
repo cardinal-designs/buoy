@@ -239,7 +239,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     <div class="page-overlay"></div>
     <div class="page-blury-overlay"></div>
     
-   {% unless template.name == 'product' %} 
+ 
     {% if page.handle == 'buoy-black-friday-offer-1' %}
       <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
       {% section 'black-friday-announcement-bar' %}
@@ -249,7 +249,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       {% section 'announcement-bar' %}
     </announcement-container>
     {% endif %}
-   {% endunless %}
+
     
     <header-container class="header--transparent">
       {% section 'header' %}
