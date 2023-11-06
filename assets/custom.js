@@ -200,7 +200,7 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(){
-  console.log('clicked');
+  console.log(document.querySelector('.supplement-side-drawer'));
   $('.Supplement_Side_Drawer').css('right','-100%');
   $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
