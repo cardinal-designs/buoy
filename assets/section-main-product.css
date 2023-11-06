@@ -1376,6 +1376,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
   background-color: #F8F8F8;
+  border: 1px solid #1F2322;
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
