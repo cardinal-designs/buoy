@@ -2648,6 +2648,18 @@ select[name=selling_plan] {
   .Testimonials_Rating {
     margin: 10px auto 16px;
   }
+
+  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls {
+    flex-wrap: wrap;
+  }
+
+  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-filterToggle {
+    width: calc(50% - 10px)
+  }
+  
+  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-sort {
+    width: calc(50% - 10px)
+  }
 }
 
 .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-primary .okeReviews-starRating {
