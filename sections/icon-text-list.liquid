@@ -1,14 +1,6 @@
 {{ 'section-icon-text-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width icon-text__container hide-desktop">
-  {% for block in section.blocks limit: 4 %}
-  <div class="icon-text__block">
-    <img src="{{ block.settings.image | img_url: 'master' }}" />
-    <p>{{ block.settings.title }}</p>
-  </div>
-  {% endfor %}
-</div>
-<div class="hide-mobile page-width icon-text__container">
+<div class="page-width icon-text__container">
   {% for block in section.blocks %}
   <div class="icon-text__block">
     <img src="{{ block.settings.image | img_url: 'master' }}" />
