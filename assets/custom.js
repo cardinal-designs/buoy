@@ -193,7 +193,6 @@ setTimeout(function(){
 $('.Open_Drawer').click(function(){
   console.log('clicked');
   $(this).parent('.pee-club-product-info').siblings('.Supplement_Side_Drawer').css('right','0');
-  $('.Supplement_Side_Drawer').css('right','-100%');
   $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
   $('.Supplement_Side_Drawer .drawer_header').addClass('mobile-fixed-header');
