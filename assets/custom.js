@@ -195,7 +195,7 @@ $('.Open_Drawer').click(function(){
   $('.Supplement_Side_Drawer').css('right','-100%');
   $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
-  $('.Supplement_Side_Drawer .drawer_header').addClass('mobile-fixed-header');
+  $('.Supplement_Side_Drawer .drawer__header').addClass('mobile-fixed-header');
 });
 
 $('.page-overlay').click(function(){
