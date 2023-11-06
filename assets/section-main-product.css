@@ -2651,7 +2651,7 @@ select[name=selling_plan] {
 
   .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls {
     flex-wrap: wrap;
-    flex-flow: unset;
+    flex-flow: wrap;
   }
 
   .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-filterToggle {
