@@ -1540,7 +1540,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form #rtx_sands_block .rtx_option_selector {
-  padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .product-form .rtx_option_selector input[type=radio] {
@@ -2063,7 +2063,7 @@ span#timer strong {
 
 .rtx_option_selector_main {
   border: 1px solid #797B7A;
-  padding: 20px;
+  padding: 20px 20px 26px;
   border-radius: 10px;
 }
 
