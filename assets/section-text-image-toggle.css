@@ -71,7 +71,7 @@
   display: none;
 }
 
-.text-image-toggle__image:nth-child(1) {
+.hide-mobile.text-image-toggle__image:nth-child(1) {
   display: block;
 }
 
@@ -89,6 +89,14 @@
 @media screen and (max-width: 768px) {
   .text-image-toggle__container .page-width {
     flex-direction: column
+  }
+
+  .text-image-toggle__image{
+    display: none;
+  }
+
+  .hide-desktop.text-image-toggle__image:nth-child(2) {
+    display: block;
   }
   
   .text-image-toggle__images {
