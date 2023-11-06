@@ -20,7 +20,7 @@
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       <div style="{% if block.settings.recommend == false %}padding-top: 18px; margin-top: 37px;{% endif %}" class="pee-club-product">
-        {% render 'supplement-facts-drawer-grid',
+        {% render 'supplement-facts-drawer',
           product: product 
         %}
         {% unless forloop.index == 1 %}
