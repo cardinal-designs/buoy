@@ -2656,6 +2656,7 @@ select[name=selling_plan] {
 
   .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-filterToggle {
     width: calc(50% - 10px)
+    margin-right: 20px;
   }
   
   .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-sort {
