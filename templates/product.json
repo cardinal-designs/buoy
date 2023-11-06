@@ -103,7 +103,7 @@
         "1abb7f43-b06a-4b4c-982e-2ca0f7911639"
       ],
       "settings": {
-        "add_gradient": false,
+        "add_gradient": true,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc71b6a8aa418cabcb3a722850c681.mp4",
         "image": "shopify:\/\/shop_images\/Buoy_Shot4_217_edited_-min.jpg",
         "title": "Harvest the healing powers of the deep ocean.",
@@ -115,6 +115,45 @@
         "value_check2": "",
         "value_check3": "",
         "value_check4": ""
+      }
+    },
+    "b658deef-4163-4f3e-a92b-787462a46eff": {
+      "type": "how-to-2",
+      "blocks": {
+        "c3f430ad-62a9-49ae-ae93-1402229ae939": {
+          "type": "point",
+          "settings": {
+            "emoji": "🧋",
+            "title": "Enhance Any Drink",
+            "text": "Add Hydration Drops and Rescue Salt to any drink for fast-acting electrolyte and mineral replenishment."
+          }
+        },
+        "4875127f-de98-4317-a86f-3fefb9db2b8f": {
+          "type": "point",
+          "settings": {
+            "emoji": "🥑",
+            "title": "Add To Food",
+            "text": "Use Rescue Salt as a delicious electrolyte and mineral topping on any meal."
+          }
+        },
+        "45fcaa31-9b50-43cf-9f86-a596999bccea": {
+          "type": "point",
+          "settings": {
+            "emoji": "👅",
+            "title": "Dissolve On Tongue",
+            "text": "Rescue Salt dissolves directly on your tongue for fast-acting replenishment."
+          }
+        }
+      },
+      "block_order": [
+        "c3f430ad-62a9-49ae-ae93-1402229ae939",
+        "4875127f-de98-4317-a86f-3fefb9db2b8f",
+        "45fcaa31-9b50-43cf-9f86-a596999bccea"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Smaller_Desktop.webp",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6815c4c66ad4448d8d221e3ee70abc4f.mp4",
+        "title": "The easiest way to get your electrolytes and minerals in"
       }
     },
     "163633853719b9de14": {
@@ -247,34 +286,14 @@
       "settings": {
         "product": ""
       }
-    },
-    "b658deef-4163-4f3e-a92b-787462a46eff": {
-      "type": "how-to-2",
-      "blocks": {
-        "c3f430ad-62a9-49ae-ae93-1402229ae939": {
-          "type": "point",
-          "settings": {
-            "emoji": "",
-            "title": "Add",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "c3f430ad-62a9-49ae-ae93-1402229ae939"
-      ],
-      "settings": {
-        "video_url": "",
-        "title": "Add To"
-      }
     }
   },
   "order": [
     "main",
     "16376825244a973b62",
+    "b658deef-4163-4f3e-a92b-787462a46eff",
     "163633853719b9de14",
     "163771143220978a33",
-    "1637720233f9199bd5",
-    "b658deef-4163-4f3e-a92b-787462a46eff"
+    "1637720233f9199bd5"
   ]
 }
