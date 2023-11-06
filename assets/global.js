@@ -1443,6 +1443,7 @@ $(window).on('resize scroll', function() {
 
 $('.image-with-dropdowns__q').click(function () {
   $('.image-with-dropdowns__a').slideUp()
+  $('.image-with-dropdowns__content-point').removeClass('active');
   $(this).next().slideToggle()
   $(this).toggleClass('active');
   $(this).parent().toggleClass('active');
