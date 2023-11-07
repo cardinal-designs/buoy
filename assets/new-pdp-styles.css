@@ -1,7 +1,7 @@
 /* Rhymes */
 @font-face {
   font-family: Rhymes-Italic;
-  src: url('{{ 'Rhymes-Text-Light-Italic.ttf' | asset_url }}');
+  src: url('{{ 'Rhymes-Text-Light-Italic.otf' | asset_url }}');
   font-style: normal;
   font-weight: 300;
 }
