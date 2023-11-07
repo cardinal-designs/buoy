@@ -1,4 +1,4 @@
-<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+<div class="announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
@@ -59,6 +59,11 @@
       "id": "hide_mobile",
       "label": "Hide Announcement Bar on mobile?",
       "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color (optional)"
     }
   ]
 }
