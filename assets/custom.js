@@ -217,6 +217,7 @@ $('.Open_Drawer').click(function(event){
 });
 
 $('.page-blury-overlay').click(function(){
+  console.log('clicked');
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
