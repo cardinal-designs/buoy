@@ -524,6 +524,7 @@
                         </video>
                       </div>
                      {% elsif block.settings.testimonial_image != blank %}
+                       <div class="video-tag"><p>{{ block.settings.video_tag }}</p></div>
                        <img src="{{ block.settings.testimonial_image | img_url: 'master' }}"/>
                      {% endif %}
                      <span class="Testimonials_Rating"></span>
