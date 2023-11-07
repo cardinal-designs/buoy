@@ -210,16 +210,14 @@ $('.Open_Drawer').click(function(event){
       $(item).css('right','0');
     }
   })
-  // console.log(document.querySelector('.supplement-side-drawer').dataset.productName);
-  // console.log(document.querySelector('.pee-club-product-title'));
   // $('.supplement-side-drawer').css('right','0');
   $('.page-blury-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').addClass('mobile-fixed-header');
 });
 
-$('.page-overlay').click(function(){
-  $('.supplement-side-drawer-grid').css('right','-100%');
+$('.page-blury-overlay').click(function(){
+  $('.supplement-side-drawer').css('right','-100%');
   $('.page-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
