@@ -1,4 +1,8 @@
 {{ 'section-pee-club-products.css' | asset_url | stylesheet_tag }}
+<script>
+  console.log({{ template.name | json }})
+</script>
+
 
 <div class="pee-club-products__container
   {% if section.settings.add_top_border %} top-border{% endif %}
