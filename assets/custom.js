@@ -200,12 +200,12 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(event){
-  const peeClubProduct = $(event.target).parent().parent();
-  const productTitle = peeClubProduct.find('.pee-club-product-title').text();
-  const dataProductName = $('.supplement-side-drawer');
+  let peeClubProduct = $(event.target).parent().parent();
+  let productTitle = peeClubProduct.find('.pee-club-product-title').text();
+  let dataProductName = $('.supplement-side-drawer');
 
   dataProductName.each(function() {
-    const itemName = $(this).data('productName');
+    let itemName = $(this).data('productName');
     if (itemName === productTitle) {
       $(this).css('right', '0');
       $('.page-blury-overlay').addClass('is-visible');
