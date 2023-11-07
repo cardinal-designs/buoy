@@ -1623,7 +1623,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
  
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
-  if (!$(this).next()[0].hasClass("active")){
+  if (!$(this).next().hasClass("active")){
     $(this).next().get(0).play();
     $(this).next().toggleClass("active");
   } else {
