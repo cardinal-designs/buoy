@@ -207,6 +207,7 @@ $('.Open_Drawer').click(function(event){
     const itemName = item.dataset.productName;
     if (itemName === productTitle) {
       console.log(itemName);
+      $(item).css('right','0');
     }
   })
   // console.log(document.querySelector('.supplement-side-drawer').dataset.productName);
