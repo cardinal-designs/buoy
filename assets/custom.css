@@ -231,7 +231,7 @@
   text-align: center;
 }
 
-.supplement-side-drawer .drawer_header a {
+.supplement-side-drawer-grid .drawer_header a {
   text-decoration: none;
   font-size: 40px;
   line-height: 1.5;
@@ -250,7 +250,7 @@
   background: #f6ece180;
 }
 
-.supplement-side-drawer .closebtn {
+.supplement-side-drawer-grid .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -258,7 +258,7 @@
   margin-left: 50px;
 }
 
-.supplement-side-drawer .drawer_header p {
+.supplement-side-drawer-grid .drawer_header p {
   font-size: 14px;
   margin: 0;
   line-height: 30px;
@@ -269,11 +269,11 @@
 
 @media screen and (max-height: 450px) {
 
-  .supplement-side-drawer {
+  .supplement-side-drawer-grid {
     padding-top: 15px;
   }
 
-  .supplement-side-drawer a {
+  .supplement-side-drawer-grid a {
     font-size: 18px;
   }
 }
