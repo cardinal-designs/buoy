@@ -42,14 +42,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: block;
+  visibility: visible;
   background: black;
   opacity: 0.4;
   z-index: 99999;
 }
 
 .reviews_button.active {
-  display: none;
+  visibility: hidden;
 }
 
 .okeReviews.okeReviews--theme .okeReviews-widgetNavBar-item[aria-selected='true'] {
