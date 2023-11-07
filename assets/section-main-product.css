@@ -1822,7 +1822,7 @@ fieldset.product-form__input .form__label {
 
 .product-listblock img {
   width: 28px;
-  height: 28px;
+  height: fit-content;
 }
 
 .product-listblock:nth-child(1) {
@@ -2579,7 +2579,7 @@ select[name=selling_plan] {
 
 .Product_Tags img {
   height: 20px;
-  width: fit-content;
+  width: fit-contentw;
 }
 
 .Product_Tags div {
@@ -2603,10 +2603,6 @@ select[name=selling_plan] {
     align-items: unset;
     flex-direction: column;
     padding: 0 22px;
-  }
-
-  .Product_Tags img {
-    max-width: 20px;
   }
 
   .Product_Tags div span {
@@ -2647,20 +2643,6 @@ select[name=selling_plan] {
 
   .Testimonials_Rating {
     margin: 10px auto 16px;
-  }
-
-  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls {
-    flex-wrap: wrap;
-    flex-flow: wrap;
-  }
-
-  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-filterToggle {
-    width: calc(50% - 5px);
-    margin-right: 10px !important;
-  }
-  
-  .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-controls .okeReviews-reviews-controls-sort {
-    width: calc(50% - 5px);
   }
 }
 
