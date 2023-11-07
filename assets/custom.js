@@ -204,7 +204,7 @@ $('.Open_Drawer').click(function(event){
   const productTitle = peeClubProduct.querySelector('.pee-club-product-title').textContent;
   const dataProductName = document.querySelectorAll('.supplement-side-drawer');
   dataProductName.forEach((item) => {
-    console.log(item.querySelector('.supplement-side-drawer').dataset.productName);
+    console.log(item.dataset.productName);
   })
   // console.log(document.querySelector('.supplement-side-drawer').dataset.productName);
   // console.log(document.querySelector('.pee-club-product-title'));
