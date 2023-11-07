@@ -218,7 +218,7 @@
   }  
 }
 
-.supplement-side-drawer {
+/* .supplement-side-drawer {
   height: 100%;
   width: 768px;
   position: fixed;
@@ -229,7 +229,7 @@
   overflow-x: hidden;
   transition: 0.5s;
   text-align: center;
-}
+} */
 
 .supplement-side-drawer .drawer_header a {
   text-decoration: none;
@@ -241,14 +241,14 @@
   text-align: right;
 }
 
-/* .drawer_header {
+.drawer_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   z-index: 9999;
   background: #f6ece180;
-} */
+}
 
 .supplement-side-drawer .closebtn {
   position: absolute;
