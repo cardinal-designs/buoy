@@ -225,10 +225,10 @@ $('.page-blury-overlay').click(function(){
 });
 
 $('.js-close-supplement-drawer').click(function(event){
-  console.log('closing');
   const peeClubProduct = $(event.target).parent().parent();
   const productTitle = peeClubProduct.find('.pee-club-product-title').text();
   const dataProductName = $('.supplement-side-drawer');
+  console.log(productTitle);
 
   dataProductName.each(function() {
     const itemName = $(this).data('productName');
