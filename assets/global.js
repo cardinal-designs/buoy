@@ -1622,12 +1622,12 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
 
  
 $('.reviews_button').click(function(){
-  if (!$(this).hasClass("active")){
+  if (!$(this).next().hasClass("active")){
     $(this).next().play();
-    $(this).toggleClass("active");
+    $(this).next().toggleClass("active");
   } else {
     $(this).next().pause();
-    $(this).toggleClass("active");
+    $(this).next().toggleClass("active");
   }
 });
  
