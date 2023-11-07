@@ -200,7 +200,8 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(){
-  console.log(document.querySelector('.supplement-side-drawer').dataset);
+  console.log(document.querySelector('.supplement-side-drawer').dataset.productName);
+  console.log(document.querySelector('.pee-club-product-title'));
   $('.supplement-side-drawer').css('right','0');
   $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
