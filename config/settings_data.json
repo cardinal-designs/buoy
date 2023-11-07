@@ -15,12 +15,14 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "Black Friday Sale: Save 30% + Free Shipping on Subscriptions",
+          "text": "<span style=\"font-weight: 500;\">Black Friday Sale<\/span>: Save 30% + Free Shipping on Subscriptions",
           "link": "shopify:\/\/pages\/buoy-black-friday-offer-test",
           "btn_text": "Shop Sale",
           "btn_link": "shopify:\/\/pages\/buoy-black-friday-offer-test",
           "hide_mobile": false,
-          "background": "#def647"
+          "background": "#def647",
+          "button_color": "#1f2322",
+          "button_text_color": "#FFFFFF"
         }
       },
       "header": {
