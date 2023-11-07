@@ -215,7 +215,7 @@ $('.Open_Drawer').click(function(event){
   // $('.supplement-side-drawer').css('right','0');
   $('.page-blury-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
-  $('.Supplement_Side_Drawer-Grid .drawer_header').addClass('mobile-fixed-header');
+  $('.supplement-side-drawer .drawer__header').addClass('mobile-fixed-header');
 });
 
 $('.page-overlay').click(function(){
