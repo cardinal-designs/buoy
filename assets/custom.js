@@ -224,7 +224,7 @@ $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
-$('.drawer__close .js-close-supplement-drawer').click(function(){
+$('.drawer__close .js-close-supplement-drawer').click(function(event){
   console.log('closing');
   const peeClubProduct = $(event.target).parent().parent();
   const productTitle = peeClubProduct.find('.pee-club-product-title').text();
