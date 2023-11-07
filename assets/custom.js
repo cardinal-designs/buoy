@@ -203,6 +203,7 @@ $('.Open_Drawer').click(function(event){
   let peeClubProduct = $(event.target).parent().parent();
   let productTitle = peeClubProduct.find('.pee-club-product-title').text();
   let dataProductName = $('.supplement-side-drawer');
+  if ($(dataProductName).length === 0) return;
 
   dataProductName.each(function() {
     let itemName = $(this).data('productName');
