@@ -1619,3 +1619,15 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
+
+ 
+$('.reviews_button').click(function(){
+  if ($(this).hasClass("active")){
+    $(this).next().play();
+    $(this).toggleClass("active");
+  } else {
+    $(this).next().pause();
+    $(this).toggleClass("active");
+  }
+});
+ 
