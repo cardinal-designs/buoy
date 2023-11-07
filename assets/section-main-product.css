@@ -72,6 +72,13 @@
   z-index: 999999;
 }
 
+.video-tag p {
+  color: #1F2322;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
 .okeReviews.okeReviews--theme .okeReviews-widgetNavBar-item[aria-selected='true'] {
   border-bottom: 1px solid;
 }
