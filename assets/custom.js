@@ -201,7 +201,7 @@ setTimeout(function(){
 
 $('.Open_Drawer').click(function(){
   console.log(document.querySelector('.supplement-side-drawer-grid'));
-  $('.supplement-side-drawer-grid').css('right','100%');
+  $('.supplement-side-drawer-grid').css('right','0');
   $('.page-overlay').addClass('is-visible');
   $('body').addClass('lock-scroll');
   $('.Supplement_Side_Drawer-Grid .drawer_header').addClass('mobile-fixed-header');
