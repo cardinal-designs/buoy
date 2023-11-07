@@ -402,6 +402,21 @@
     },
     "018dc235-4ad1-4de2-8260-2f878c196700": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "f49edee3-f409-496f-9455-1557b29caf86": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+            "serving_item_three": "Immune Support of ⅓ Multivitamin"
+          }
+        }
+      },
+      "block_order": [
+        "f49edee3-f409-496f-9455-1557b29caf86"
+      ],
       "settings": {
         "product_name": "Immunity Drops",
         "title": "Supplement Facts"
