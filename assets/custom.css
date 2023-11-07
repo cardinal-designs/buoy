@@ -266,3 +266,15 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+@media screen and (max-height: 450px) {
+
+  .supplement-side-drawer {
+    padding-top: 15px;
+  }
+
+  .supplement-side-drawer a {
+    font-size: 18px;
+  }
+
+}
