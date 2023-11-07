@@ -205,7 +205,9 @@ $('.Open_Drawer').click(function(event){
   const dataProductName = document.querySelectorAll('.supplement-side-drawer');
   dataProductName.forEach((item) => {
     const itemName = item.dataset.productName;
-    console.log(itemName);
+    if (itemName === productTitle) {
+      console.log(itemName);
+    }
   })
   // console.log(document.querySelector('.supplement-side-drawer').dataset.productName);
   // console.log(document.querySelector('.pee-club-product-title'));
