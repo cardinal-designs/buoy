@@ -200,16 +200,6 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(event){
-  // const peeClubProduct = event.target.parentElement.parentElement;
-  // const productTitle = peeClubProduct.querySelector('.pee-club-product-title').textContent;
-  // const dataProductName = document.querySelectorAll('.supplement-side-drawer');
-  // dataProductName.forEach((item) => {
-  //   const itemName = item.dataset.productName;
-  //   if (itemName === productTitle) {
-  //     console.log(itemName);
-  //     $(item).css('right','0');
-  //   }
-  // })
   const peeClubProduct = $(event.target).parent().parent();
   const productTitle = peeClubProduct.find('.pee-club-product-title').text();
   const dataProductName = $('.supplement-side-drawer');
@@ -219,12 +209,11 @@ $('.Open_Drawer').click(function(event){
     if (itemName === productTitle) {
       console.log(itemName);
       $(this).css('right', '0');
+      $('.page-blury-overlay').addClass('is-visible');
+      $('body').addClass('lock-scroll');
+      $('.supplement-side-drawer .drawer__header').addClass('mobile-fixed-header');
     }
   });
-  // $('.supplement-side-drawer').css('right','0');
-  $('.page-blury-overlay').addClass('is-visible');
-  $('body').addClass('lock-scroll');
-  $('.supplement-side-drawer .drawer__header').addClass('mobile-fixed-header');
 });
 
 $('.page-blury-overlay').click(function(){
