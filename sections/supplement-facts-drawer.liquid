@@ -2,7 +2,14 @@
 
 {% assign ss = section.settings %}
 
-<div id="supplementSideDrawer" data-product-name="{{ ss.product_name }}" class="supplement-side-drawer">
+<div 
+  id="supplementSideDrawer" 
+  data-product-name="{{ ss.product_name }}" 
+  class="supplement-side-drawer"
+  {% if template.name == 'clear-pee-club-1' %}
+    style="top: 0;"
+  {% endif %}
+>
   <div class="drawer__wrapper-main">
 
     <div class="drawer__header">

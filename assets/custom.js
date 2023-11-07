@@ -205,7 +205,7 @@ $('.Open_Drawer').click(function(event){
   let dataProductName = $('.supplement-side-drawer');
 
   dataProductName.each(function() {
-   $(this).css('top', '0');
+  //  $(this).css('top', '0');
     let itemName = $(this).data('productName');
     if (itemName === productTitle) {
       $(this).css('right', '0');
