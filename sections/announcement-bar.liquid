@@ -14,7 +14,7 @@
     <button class="announcement-bar__close">{% render 'icon-close' %}</button>
 
   {% if section.settings.btn_text != blank %}
-    <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+    <a class="Announcement_Button" {% if section.settings.button_text_color != blank or section.settings.button_color != blank %}style="background: {{ section.settings.button_color }}; color: {{section.settings.button_text_color}}"{% endif %} href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
   {% endif %}
 </div>
 
@@ -33,7 +33,7 @@
   "name": "t:sections.announcement-bar.name",
   "settings": [
     {
-      "type": "text",
+      "type": "textarea",
       "id": "text",
       "default": "Welcome to our store",
       "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
@@ -64,6 +64,16 @@
       "type": "color",
       "id": "background",
       "label": "Background Color (optional)"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color"
     }
   ]
 }
