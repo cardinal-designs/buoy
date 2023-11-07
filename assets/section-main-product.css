@@ -49,7 +49,7 @@
 }
 
 .reviews_button.active {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .okeReviews.okeReviews--theme .okeReviews-widgetNavBar-item[aria-selected='true'] {
