@@ -207,7 +207,6 @@ $('.Open_Drawer').click(function(event){
   dataProductName.each(function() {
     const itemName = $(this).data('productName');
     if (itemName === productTitle) {
-      console.log(itemName);
       $(this).css('right', '0');
       $('.page-blury-overlay').addClass('is-visible');
       $('body').addClass('lock-scroll');
