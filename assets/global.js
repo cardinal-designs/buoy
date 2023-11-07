@@ -1632,7 +1632,7 @@ $('.reviews_button').click(function(){
   }
 });
 
-$('.announcement-bar__close').click(function {
+$('.announcement-bar__close').click(function() {
   console.log('a')
   $('#shopify-section-announcement-bar').slideUp()
 })
