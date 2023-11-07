@@ -225,10 +225,19 @@ $('.page-blury-overlay').click(function(){
 });
 
 $('.drawer__close .js-close-supplement-drawer').click(function(){
-  $('.supplement-side-drawer').css('right','-100%');
-  $('.page-blury-overlay').removeClass('is-visible');
-  $('body').removeClass('lock-scroll');
-  $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+  const peeClubProduct = $(event.target).parent().parent();
+  const productTitle = peeClubProduct.find('.pee-club-product-title').text();
+  const dataProductName = $('.supplement-side-drawer');
+
+  dataProductName.each(function() {
+    const itemName = $(this).data('productName');
+    if (itemName === productTitle) {
+      $(this).css('right', '0');
+      $('.page-blury-overlay').removeClass('is-visible');
+      $('body').removeClass('lock-scroll');
+      $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+    }
+  });
 });
 
 $(window).on("orientationchange, resize", function(event) {
