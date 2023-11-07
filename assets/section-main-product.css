@@ -43,9 +43,14 @@
   left: 0;
   right: 0;
   visibility: visible;
-  background: black;
-  opacity: 0.3;
+  background-color: rgba(0,0,0,0.3);
   z-index: 99999;
+}
+
+.reviews_button img {
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%,-50%);
 }
 
 .reviews_button.active {
