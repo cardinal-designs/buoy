@@ -1631,4 +1631,8 @@ $('.reviews_button').click(function(){
     $(this).toggleClass("active");
   }
 });
+
+$('.announcement-bar__close').click(function {
+  $('#shopify-section-announcement-bar').slideUp()
+})
  
