@@ -1623,12 +1623,12 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
  
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
-  if (!$(this).next().hasClass("active")){
+  if (!$(this).hasClass("active")){
     $(this).next().get(0).play();
-    $(this).next().toggleClass("active");
+    $(this).toggleClass("active");
   } else {
     $(this).next().get(0).pause()
-    $(this).next().toggleClass("active");
+    $(this).toggleClass("active");
   }
 });
  
