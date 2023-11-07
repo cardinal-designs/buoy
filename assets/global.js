@@ -1622,7 +1622,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
 
  
 $('.reviews_button').click(function(){
-  console.log('afafa')
+  console.log('afafa', $(this).next())
   if (!$(this).next().hasClass("active")){
     $(this).next().play();
     $(this).next().toggleClass("active");
