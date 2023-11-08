@@ -468,9 +468,24 @@
     },
     "ac48341b-77fc-41c3-9f8b-f9a95ef8c528": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "8624bf76-2b7d-471a-b329-8aa75ca4cb1b": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "30mg Caffeine (⅓ Cup of Coffee)",
+            "serving_item_three": "Electrolytes of ⅓ Sports Drink"
+          }
+        }
+      },
+      "block_order": [
+        "8624bf76-2b7d-471a-b329-8aa75ca4cb1b"
+      ],
       "settings": {
         "product_name": "Energy Drops",
-        "title": ""
+        "title": "Supplement Facts"
       }
     }
   },
