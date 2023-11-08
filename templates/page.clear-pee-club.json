@@ -412,10 +412,21 @@
             "serving_item_two": "Electrolytes of ⅓ Sports Drink",
             "serving_item_three": "Immune Support of ⅓ Multivitamin"
           }
+        },
+        "b85c526b-d674-4254-bb9b-b4672d892834": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "One Bottle:",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+            "serving_item_three": "Immune Support of 13+ Multivitamins"
+          }
         }
       },
       "block_order": [
-        "acc6d2f0-ea52-4209-9661-d8dc7f6752ad"
+        "acc6d2f0-ea52-4209-9661-d8dc7f6752ad",
+        "b85c526b-d674-4254-bb9b-b4672d892834"
       ],
       "settings": {
         "product_name": "Immunity Drops",
