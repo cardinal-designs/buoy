@@ -206,6 +206,8 @@
 .drawer__mobile-continue {
   padding-top: 20px;
   padding-bottom: 20px;
+  position: sticky;
+  bottom: 0;
 }
 
 .drawer__desktop-continue {
