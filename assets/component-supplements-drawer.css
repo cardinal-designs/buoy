@@ -192,13 +192,6 @@
   margin-top: 40px;
 }
 
-@media screen and (max-width: 768px) {
-
-  .drawer__table {
-    margin-top: 10px;
-  }
-}
-
 .drawer__mobile-continue {
   position: sticky;
   bottom: -90px;
