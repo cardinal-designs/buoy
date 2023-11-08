@@ -488,11 +488,28 @@
             "serving_item_two": "Caffeine of 13+ Cups of Coffee",
             "serving_item_three": "Electrolytes of 13+ Sports Drinks"
           }
+        },
+        "690bd2ab-6315-4124-aac9-e47e73f4b8f1": {
+          "type": "recommended",
+          "settings": {
+            "heading": "Dietician’s Recommended Use:",
+            "title": "4-7 times daily (560mg-980mg electrolytes & 120mg-210mg clean caffeine)",
+            "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+            "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+          }
+        },
+        "30e62bd1-87fa-4457-85f0-9628550340de": {
+          "type": "table",
+          "settings": {
+            "table_image": "shopify:\/\/shop_images\/Energy-Drops-Supplement-Facts.svg"
+          }
         }
       },
       "block_order": [
         "8624bf76-2b7d-471a-b329-8aa75ca4cb1b",
-        "78b84db9-b502-4ffc-854d-b8d62ac94407"
+        "78b84db9-b502-4ffc-854d-b8d62ac94407",
+        "690bd2ab-6315-4124-aac9-e47e73f4b8f1",
+        "30e62bd1-87fa-4457-85f0-9628550340de"
       ],
       "settings": {
         "product_name": "Energy Drops",
