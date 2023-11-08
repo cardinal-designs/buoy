@@ -426,10 +426,21 @@
             "serving_item_two": "30mg Caffeine (⅓ Cup of Coffee)",
             "serving_item_three": "Electrolytes of ⅓ Sports Drink"
           }
+        },
+        "629e8542-5b29-4cb9-a9a0-7ec88aacd9c0": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "One Bottle:",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Caffeine of 13+ Cups of Coffee",
+            "serving_item_three": "Electrolytes of 13+ Sports Drinks"
+          }
         }
       },
       "block_order": [
-        "aa672d4a-1ed6-4a40-adab-aca2b48d1299"
+        "aa672d4a-1ed6-4a40-adab-aca2b48d1299",
+        "629e8542-5b29-4cb9-a9a0-7ec88aacd9c0"
       ],
       "settings": {
         "product_name": "Energy Drops",
