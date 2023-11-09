@@ -29,7 +29,7 @@
   font-family: Rhymes Text;
   font-style: italic;
   font-weight: 300;
-  line-height: 60px;
+  line-height: 1;
 }
 
 .full-video__container .green-title {
@@ -48,17 +48,13 @@
   margin: 0 auto;
   text-align: center;
   max-width: 1080px;
+  line-height: 1;
 }
 
 .full-video__container .page-width {
   position: relative;
 }
 
-.full-video__container h4 {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 800px;
-}
 
 @media screen and (max-width: 999px) {
   .full-video-text__container h1 span {
