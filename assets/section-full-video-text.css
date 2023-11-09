@@ -17,7 +17,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 3;
-  width: 90%;
+  width: calc(90% - 140px);
 }
 
 .full-video__container {
