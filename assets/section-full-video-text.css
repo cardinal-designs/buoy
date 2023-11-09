@@ -24,6 +24,14 @@
  padding-top: 100px; 
 }
 
+.full-video-text__container h1 span {
+  font-size: 50px;
+  font-family: Rhymes Text;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 60px;
+}
+
 .full-video__container .green-title {
   color: #1F2322;
   font-size: 16px;
