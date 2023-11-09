@@ -3,6 +3,10 @@
   padding-bottom: 56.25%;
 }
 
+.video-section__media video {
+  border-radius: 10px;
+}
+
 .video-section__media.deferred-media {
   overflow: visible;
 }
