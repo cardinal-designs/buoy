@@ -1,9 +1,11 @@
 .video-section__media {
   position: relative;
+  width: 100%;
 }
 
 .video-section__media video {
   border-radius: 10px;
+  width: 100%;
 }
 
 
