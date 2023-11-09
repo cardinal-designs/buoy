@@ -31,6 +31,10 @@
   max-width: 800px;
 }
 
+.full-video__container .page-width {
+  position: relative;
+}
+
 .full-video__container a {
   margin: 60px auto;
   text-align: center;
