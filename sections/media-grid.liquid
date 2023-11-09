@@ -1,6 +1,6 @@
 {{ 'section-media-grid.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width media-grid__container">
+<div style="background-color: {{ section.settings.background }};" class="page-width media-grid__container">
   <p class="sh3">{{ section.settings.suptitle }}</p>
   <h1>{{ section.settings.title }}</h1>
   <p class="sh2">{{ section.settings.text }}</p>
@@ -52,6 +52,11 @@
     "type": "textarea",
       "id": "text",
       "label": "Text"
+    },
+	{
+    "type": "color",
+      "id": "background",
+      "label": "Background Color"
     }
   ],
   "blocks": [
