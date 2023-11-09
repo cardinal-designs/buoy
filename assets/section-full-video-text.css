@@ -15,11 +15,11 @@
   z-index: 9;
 }
 
-.to-be-seen-video__container {
+.full-video__container {
  padding-top: 100px; 
 }
 
-.to-be-seen-video__container h1 {
+.full-video__container h1 {
   text-align: center;
   max-width: 900px;
   margin: 0 auto 30px;
@@ -33,14 +33,6 @@
 
 .full-video__container .page-width {
   position: relative;
-}
-
-.full-video__container a {
-  margin: 60px auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: max-content;
 }
 
 .full-video__container h4 {
@@ -65,9 +57,5 @@
 
   .full-video__container h6 {
     margin: 0 auto 40px;
-  }
-
-  .full-video__container a {
-    margin: 30px auto 40px;
   }
 }
