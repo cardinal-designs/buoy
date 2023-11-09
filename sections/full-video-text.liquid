@@ -1,18 +1,15 @@
 {{ 'section-full-video-text.css' | asset_url | stylesheet_tag }}
 
-<div style="background: {{ section.settings.background }};" class="full-video__container">
+<div class="full-video__container">
   <div style="color: {{ section.settings.color }};" class="page-width">
     <h1>{{ section.settings.title }}</h1>
-    <h6 class="light">{{ section.settings.subtitle }}</h6>
+    <h6 class="light">{{ section.settings.text }}</h6>
     <div class="video-section__media">
-      {%- if section.settings.video_url.type == 'youtube' -%}
-      <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-      {%- else -%}
-      <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id}}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      {%- endif -%}
+      <video autoplay loop muted playsinline class="img-fill">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <a href="{{ section.settings.link }}" class="button button--white">{{ section.settings.link_text }}</a>
-    <h4 class="light">{{ section.settings.text }}</h4>
   </div>
 </div>
 
@@ -27,40 +24,14 @@
       },
       {
         "type": "textarea",
-        "id": "subtitle",
-        "label": "Subtitle"
-      },
-      {
-        "type": "video_url",
-        "id": "video_url",
-        "accept": [
-          "youtube",
-          "vimeo"
-        ],
-        "default": "https://vimeo.com/77477140",
-        "label": "Video",
-        "placeholder": "t:sections.video.settings.video_url.placeholder"
-	  },
-      {
-        "type": "textarea",
         "id": "text",
         "label": "Text"
       },
-	  {
-        "type": "url",
-        "id": "link",
-        "label": "Link"
-      },
-	  {
-        "type": "text",
-        "id": "link_text",
-        "label": "Link Text"
-      },
       {
-        "type": "color",
-        "id": "background",
-        "label": "Background Color"
-      },
+        "type": "text",
+        "id": "video_url",
+        "label": "Video"
+	  },
 	  {
         "type": "color",
         "id": "color",
