@@ -3,6 +3,34 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "3aaebc96-7374-4f5b-808e-92ce2792f5b5": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Hydration Drops",
+            "subtitle": "Unflavored Liquid Electrolytes",
+            "bubble_text": "40 Serv\/Bottle",
+            "icon1": "shopify:\/\/shop_images\/no-icon.svg",
+            "list_item1": "No Sugar or Sweeteners",
+            "icon2": "shopify:\/\/shop_images\/check.svg",
+            "list_item2": "Electrolytes & Trace Minerals",
+            "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
+            "list_item3": "Enhance Any Drink"
+          }
+        },
+        "a7e275c4-f7be-4021-9449-ec9aeccf9fe3": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Rescue Salt",
+            "subtitle": "Harvested, Unrefined Sea Salt",
+            "bubble_text": "45 Serv\/jar",
+            "icon1": "shopify:\/\/shop_images\/Icons_thick_1.png",
+            "list_item1": "1,215mg Electrolytes Per Serving",
+            "icon2": "shopify:\/\/shop_images\/check.svg",
+            "list_item2": "87+ Ionic Trace Minerals",
+            "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
+            "list_item3": "Add To Food, Drinks, or Directly on Tongue"
+          }
+        },
         "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
           "type": "onetime_block",
           "settings": {
@@ -80,6 +108,8 @@
         }
       },
       "block_order": [
+        "3aaebc96-7374-4f5b-808e-92ce2792f5b5",
+        "a7e275c4-f7be-4021-9449-ec9aeccf9fe3",
         "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90",
         "c722ed3c-e21b-4d49-9c95-1195071825ad",
         "b807a726-d1e0-4fb9-96ca-01c7806619c6",
