@@ -74,4 +74,12 @@
   .full-video__container h1 {
     margin: 0 auto 40px;
   }
+
+  .full-video-text__container h1 span {
+    font-size: 35px;
+  }
+  
+  .full-video__container h1 {
+    font-size: 30px;
+  }
 }
