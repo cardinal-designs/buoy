@@ -35,10 +35,10 @@
   padding: 0 10px;
 }
 
-.full-video__container h6 {
-  margin: 0 auto 100px;
+.full-video__container h1 {
+  margin: 0 auto;
   text-align: center;
-  max-width: 800px;
+  max-width: 1080px;
 }
 
 .full-video__container .page-width {
@@ -55,13 +55,8 @@
   .full-video__container {
     padding-top: 50px; 
   }
-
-  .full-video__container h4 {
-    font-size: 18px;
-    line-height: 28px;
-  }
   
-  .full-video__container h6 {
+  .full-video__container h1 {
     margin: 0 auto 40px;
   }
 }
