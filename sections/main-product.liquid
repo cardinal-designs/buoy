@@ -36,10 +36,12 @@
           {{ product.description }}
         </div>
 
+        {% if section.settings.show_drawer_triggers == true %}
         <div class="product__drawer-triggers">
           <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
           <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
         </div>
+        {% endif %}
 
         <div class="Product_Tags">
           {%- for tag in product.tags -%}
@@ -1103,6 +1105,12 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "text",
           "id" : "lowest_price",
           "label" : "Starting At Price"
+        },
+        {
+          "type" : "checkbox",
+          "id" : "show_drawer_triggers",
+          "label" : "Show Drawer Links?",
+          "default": true
         }
       ],
       "blocks": [
