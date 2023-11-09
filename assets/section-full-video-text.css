@@ -23,6 +23,13 @@
   height: 100%;
 }
 
+.full-video-text__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .to-be-seen-video__container {
  padding-top: 100px; 
 }
