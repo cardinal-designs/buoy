@@ -2,8 +2,10 @@
 
 <div class="full-video__container">
   <div style="color: {{ section.settings.color }};" class="page-width">
-    <h1>{{ section.settings.title }}</h1>
-    <h6 class="light">{{ section.settings.text }}</h6>
+    <div class="full-video-text__container">
+      <h1>{{ section.settings.title }}</h1>
+      <h6 class="light">{{ section.settings.text }}</h6>
+    </div>
     <div class="video-section__media">
       <video autoplay loop muted playsinline class="img-fill">
         <source src="{{ section.settings.video_url }}" type="video/mp4">
