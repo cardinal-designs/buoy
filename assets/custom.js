@@ -235,8 +235,7 @@ $('.text-image-toggle__button').click(function() {
 })
 
 $('.dropdown-container-item__title').click(function() {
-  
-  if($('.dropdown-container-item__title').hasClass('active')) {
+  if($(this).hasClass('active')) {
     $(this).removeClass('active')
   } else {
     $(this).addClass('active')
