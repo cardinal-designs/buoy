@@ -237,6 +237,7 @@ $('.text-image-toggle__button').click(function() {
 $('.dropdown-container-item__title').click(function() {
   $('.dropdown-container-item__title').removeClass('active')
   $(this).addClass('active')
+  $(this).next().toggleSlide();
 })
 
 
