@@ -2780,6 +2780,10 @@ select[name=selling_plan] {
   border-bottom: 2px solid var(--charcoal);
 }
 
+.dropdown-container-item__body {
+  margin: 13px 0 43px;
+}
+
 .dropdown-container-item__body-text {
   display: flex;
   gap: 8px;
