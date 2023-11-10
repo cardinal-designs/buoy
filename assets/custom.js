@@ -235,8 +235,12 @@ $('.text-image-toggle__button').click(function() {
 })
 
 $('.dropdown-container-item__title').click(function() {
-  $('.dropdown-container-item__title').removeClass('active')
-  $(this).addClass('active')
+  
+  if($('.dropdown-container-item__title').hasClass('active')) {
+    $(this).removeClass('active')
+  } else {
+    $(this).addClass('active')
+  } 
   $(this).next().slideToggle();
 })
 
