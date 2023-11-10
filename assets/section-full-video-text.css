@@ -66,8 +66,8 @@
     max-width: 300px;
   }
   
-  .full-video__container h1 {
-    margin: 0 auto 40px;
+  .full-video__container {
+    padding-bottom: 50px;
   }
 
   .full-video-text__container h1 span {
@@ -76,6 +76,7 @@
   
   .full-video__container h1 {
     font-size: 30px;
+    margin: 0 auto 40px;
   }
 
   .video-section__media {
