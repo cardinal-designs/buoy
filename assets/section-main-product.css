@@ -2749,6 +2749,10 @@ select[name=selling_plan] {
   position: relative;
 }
 
+.dropdown-container-item__container {
+  margin-bottom: 14px;
+}
+
 .dropdown-container-item__x:before {
   content: "";
   position: absolute;
