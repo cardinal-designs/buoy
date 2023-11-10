@@ -45,11 +45,11 @@
               <p>{{ block.settings.bubble_text }}</p>
             </div>
             <p>{{ block.settings.subtitle }}</p>
-            <img src="{{ block.settings.icon1 }}"/>
+            <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
             <p>{{ block.settings.list_item1 }}</p>
-            <img src="{{ block.settings.icon2 }}"/>
+            <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
             <p>{{ block.settings.list_item2 }}</p>
-            <img src="{{ block.settings.icon3 }}"/>
+            <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
             <p>{{ block.settings.list_item3 }}</p>          
           </div>
           {% endif %}
