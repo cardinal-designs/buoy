@@ -2723,7 +2723,23 @@ select[name=selling_plan] {
   position: relative;
 }
 
- .dropdown-container-item__title .dropdown-container-item__x:before {
+.dropdown-container-item__x {
+  display: block;
+  height: 17px;
+  width: 17px;
+  position: relative;
+}
+
+.dropdown-container-item__x:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7.5px;
+  border-right: 2px solid var(--charcoal);
+}
+
+ .dropdown-container-item__title.active .dropdown-container-item__x:before {
   content: "";
   position: absolute;
   top: 0;
