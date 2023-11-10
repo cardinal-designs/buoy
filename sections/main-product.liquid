@@ -35,6 +35,26 @@
         <div class="product__description sh4">
           {{ product.description }}
         </div>
+        
+        <div class="dropdown-container-item">
+        {% for block in section.blocks %}
+          {% if block.type ==  "dropdown" %}
+          <div class="dropdown-container-item">
+            <div>
+              <p>{{ block.settings.title }}</p>
+              <p>{{ block.settings.bubble_text }}</p>
+            </div>
+            <p>{{ block.settings.subtitle }}</p>
+            <img src="{{ block.settings.icon1 }}"/>
+            <p>{{ block.settings.list_item1 }}</p>
+            <img src="{{ block.settings.icon2 }}"/>
+            <p>{{ block.settings.list_item2 }}</p>
+            <img src="{{ block.settings.icon3 }}"/>
+            <p>{{ block.settings.list_item3 }}</p>          
+          </div>
+          {% endif %}
+        {% endfor %}
+        </div>
 
         {% if section.settings.show_drawer_triggers == true %}
         <div class="product__drawer-triggers">
