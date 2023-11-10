@@ -2715,6 +2715,14 @@ select[name=selling_plan] {
   padding-bottom: 20px;
 }
 
+.dropdown-container-item {
+  border-top: 1px solid #BBBCBC;
+}
+
+.dropdown-container-item:last-of-type {
+  border-bottom: 1px solid #BBBCBC;
+}
+
 .dropdown-container-item__body {
   display: none;
 }
