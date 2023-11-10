@@ -2817,3 +2817,7 @@ select[name=selling_plan] {
   height: fit-content;
 }
 
+.dropdown-container-item__body-list p {
+  margin: 0;
+}
+
