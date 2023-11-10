@@ -67,8 +67,7 @@
           <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
           <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
         </div>
-        {% endif %}
-
+       
         <div class="Product_Tags">
           {%- for tag in product.tags -%}
             <div>
@@ -85,7 +84,8 @@
             </div>
           {%- endfor -%}
         </div>
-        
+        {% endif %}
+
         {% comment %}
         <a class="Link_Text js-open-supplement-drawer" href="javascript:void(0);">{{ section.settings.supplement_fact_text }}</a>
         {% endcomment %}
