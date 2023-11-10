@@ -2808,4 +2808,8 @@ select[name=selling_plan] {
   line-height: 20px;
 }
 
+.dropdown-container-item__body-list {
+  display: flex;
+}
+
 
