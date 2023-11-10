@@ -2794,6 +2794,9 @@ select[name=selling_plan] {
   border-radius: 10px;
   color: white;
   background: #1F2322;
+}
+
+.dropdown-container-item__body-text .bubble-text p {
   font-size: 12px;
 }
 
