@@ -2721,6 +2721,9 @@ select[name=selling_plan] {
 
 .dropdown-container-item__title {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .dropdown-container-item__x {
