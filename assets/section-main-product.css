@@ -2780,4 +2780,17 @@ select[name=selling_plan] {
   border-bottom: 2px solid var(--charcoal);
 }
 
+.dropdown-container-item__body-text {
+  display: flex;
+  gap: 8px;
+}
+
+.dropdown-container-item__body-text .rhyme {
+  font-size: 14px;
+  font-family: Rhymes-Italic;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 20px;
+}
+
 
