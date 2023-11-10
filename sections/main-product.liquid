@@ -40,17 +40,23 @@
         {% for block in section.blocks %}
           {% if block.type ==  "dropdown" %}
           <div class="dropdown-container-item">
-            <div>
+            <div class="dropdown-container-item__title">
               <p>{{ block.settings.title }}</p>
-              <p>{{ block.settings.bubble_text }}</p>
+              <div class="dropdown-container-item__x"></div>
             </div>
-            <p>{{ block.settings.subtitle }}</p>
-            <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
-            <p>{{ block.settings.list_item1 }}</p>
-            <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
-            <p>{{ block.settings.list_item2 }}</p>
-            <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
-            <p>{{ block.settings.list_item3 }}</p>          
+            <div class="-">
+              <div>
+                <p>{{ block.settings.subtitle }}</p>
+                <p>{{ block.settings.bubble_text }}</p>
+              </div>
+              
+              <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
+              <p>{{ block.settings.list_item1 }}</p>
+              <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
+              <p>{{ block.settings.list_item2 }}</p>
+              <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
+              <p>{{ block.settings.list_item3 }}</p>   
+            </div>
           </div>
           {% endif %}
         {% endfor %}
