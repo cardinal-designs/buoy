@@ -2719,7 +2719,11 @@ select[name=selling_plan] {
   display: none;
 }
 
- .dropdown-container-item__title.active .dropdown-container-item__x:before {
+.dropdown-container-item__title {
+  position: relative;
+}
+
+ .dropdown-container-item__title .dropdown-container-item__x:before {
   content: "";
   position: absolute;
   top: 0;
