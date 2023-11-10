@@ -363,46 +363,6 @@
         "background": "#f8f8f8"
       }
     },
-    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
-      "type": "text-image-toggle",
-      "blocks": {
-        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
-          "type": "block",
-          "settings": {
-            "title": "Powder Packets",
-            "image": "PDP_Chart_Powder_Packet.svg",
-            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
-          }
-        },
-        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
-          "type": "block",
-          "settings": {
-            "title": "Sports Drinks",
-            "image": "PDP_Chart_Sports_Drink.svg",
-            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
-          }
-        },
-        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
-          "type": "block",
-          "settings": {
-            "title": "Tablets",
-            "image": "PDP_Chart_Tablet.svg",
-            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
-          }
-        }
-      },
-      "block_order": [
-        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
-        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
-        "f75e4649-78ab-4807-ae2c-31b0c6994095"
-      ],
-      "settings": {
-        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
-        "subtitle": "Compare Buoy with leading competitors:",
-        "supplements": true,
-        "background": "#f8f8f8"
-      }
-    },
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff": {
       "type": "image-marquee",
       "blocks": {
@@ -577,6 +537,47 @@
         "add_top_border": false,
         "add_bottom_border": false,
         "background": "none"
+      }
+    },
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "background": "#f8f8f8"
       }
     },
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e": {
@@ -963,10 +964,10 @@
     "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff",
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a",
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4",
-    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff",
     "6cb8bb7b-9996-4d2f-80f1-c4d7bdc1586c",
     "dfda59f4-3498-4216-bf73-0eef810f3c0e",
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e",
     "78ecde29-5caf-40ad-b926-8c84cae46127",
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200",
