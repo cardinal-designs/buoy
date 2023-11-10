@@ -2734,6 +2734,12 @@ select[name=selling_plan] {
   align-items: center;
 }
 
+.dropdown-container-item__title p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
 .dropdown-container-item__x {
   display: block;
   height: 17px;
