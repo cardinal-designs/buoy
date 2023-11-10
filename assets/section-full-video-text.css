@@ -85,6 +85,7 @@
 
   .video-section__media video {
     height: 600px;
+    object-fit: cover;
   }
 
   .full-video__container .green-title {
