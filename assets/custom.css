@@ -61,44 +61,8 @@
   left: 20px;
 }
 
-.supplement-side-drawer {
-  height: 100%;
-  width: 768px;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  right: -100%;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  text-align:center;
-}
-
-.supplement-side-drawer .drawer_header a {
-  text-decoration: none;
-  font-size: 40px;
-  line-height: 1.5;
-  color: black;
-  display: block;
-  transition: 0.3s;
-  text-align: right;
-}
-
-.drawer_header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 9999;
-  background: #f6ece180;
-}
-
-.supplement-side-drawer .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+#mCSB_1_scrollbar_vertical {
+  display: none !important;
 }
 
 .drawer_cover_cls {
@@ -134,15 +98,6 @@
   z-index: 999999999999;
   width: 25px;
   left: 0;
-}
-
-.supplement-side-drawer .drawer_header p {
-  font-size: 14px;
-  margin: 0;
-  line-height: 30px;
-  color: #1F2322;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 .drawer_cover_cls .drawer_left h3 {
@@ -204,21 +159,8 @@
   width: 100%;
 }
 
-.supplement-detail-text {
-  position: relative;
-  top: 80px;
-}
-
-.supplement-detail-text p {
-  font-size: 12px !important;
-  margin: 17px 0 !important;
-  font-weight: 300 !important;
-  line-height: 18px !important;
-}
-
 .mobile-fixed-header {
   position: relative;
-  background-color: #f6ece180 !important;
 }
 
 @media screen and (max-width: 1024px){
@@ -266,13 +208,6 @@
     width: 100%;
   }
   
-  .supplement-detail-text {
-    position: inherit;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    border-bottom: solid 2px #000;
-  }
-  
   .drawer_cover_cls .drawer_left h3 {
     font-size: 30px;
   }
@@ -280,38 +215,5 @@
   .mobile-fixed-header {
     position: sticky;
     top: -10px;
-  }
-
-  .supplement-side-drawer {
-    width: 100%;
-  }
-  
-}
-
-@media screen and (max-height: 450px) {
-  
-  .supplement-side-drawer {
-    padding-top: 15px;
-  }
-  .supplement-side-drawer a {
-    font-size: 18px;
-  }
-  
-}
-
-.mobile-supplement-continue {
-  width: 100%;
-  background: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position: sticky;
-  bottom: 0px;
-}
-
-.mobile-supplement-continue a {
-  width: 100%;
-}
-
-#mCSB_1_scrollbar_vertical {
-  display: none !important;
+  }  
 }

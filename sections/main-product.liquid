@@ -4,7 +4,10 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-supplements-drawer.css' | asset_url | stylesheet_tag }}
+
 {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
+
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -12,8 +15,7 @@
 <section data='{{product | json}}' class="page-width">
   <input type="hidden" id='current_variant_price' value="{{ currentVariant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
-     
-    {% render 'supplement-facts-drawer' %}
+
     <div class="product__info-wrapper">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -21,6 +23,7 @@
         {% render 'okendo-reviews-product-rating-summary', product: product %}
 
         <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p> 
+
         <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}

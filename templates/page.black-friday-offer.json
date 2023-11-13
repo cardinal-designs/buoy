@@ -6,10 +6,10 @@
         "video_url": "",
         "mobile_video_url": "",
         "image": "shopify:\/\/shop_images\/Homepage_D_Hero_1.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Homepage_M_Hero_1_V1.jpg",
-        "review": "Over 72,000+ people add Buoy",
-        "title": "30% OFF a healthy habit",
-        "text": "Save on Buoy's <u>biggest sale<\/u> ever!",
+        "mobile_image": "shopify:\/\/shop_images\/Homepage_M_Hero_1_v2.jpg",
+        "review": "Over 72,000+ people loving Buoy",
+        "title": "Black Friday Sale — Save 30%",
+        "text": "Unflavored & Unsweetened<br>Ionic Liquid Electrolyte Drops",
         "button_label": "Unlock Offer",
         "button_link": "#subscribe",
         "button_style": "beige",
@@ -74,18 +74,38 @@
     "31e36676-5821-47f9-a328-6c162b259d29": {
       "type": "pee-club-products",
       "blocks": {
-        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
           "type": "block",
           "settings": {
             "recommend": true,
-            "sale_text": "<strong>Limited Time<\/strong> — 30% OFF",
+            "sale_text": "<strong>NEW<\/strong> — Save 30%",
+            "product": "ocean-electrolyte-kit",
+            "servings": "3 HYDRATION DROPS · (120 SERV)<br> + 1  RESCUE SALT · (45 SERV)",
+            "text": "<strong>The Ocean's Best™<\/strong> — A complete ocean-harvested electrolyte and mineral routine featuring Buoy's best-selling ionic ocean electrolyte drops with our <strong>new Rescue Salt<\/strong>.",
+            "list_item1": "One Month Supply",
+            "list_item2": "Electrolytes + 87 Trace Minerals",
+            "list_item3": "No Sugar, Sweeteners, Flavors, Processing or Addtives",
+            "button_text": "Try Risk Free",
+            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47349290860844&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
+            "button_price": "$51.00",
+            "button_discount_price": "$35.70"
+          }
+        },
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 30%",
             "product": "hydration-drops",
             "servings": "3 BOTTLES · 120 SERVINGS",
             "text": "The cleanest electrolytes and minerals from Earth's most healing source: <strong>the deep ocean<\/strong>.",
             "list_item1": "One Month Supply",
             "list_item2": "Electrolytes, 87 Ionic Trace Minerals + Vitamins",
             "list_item3": "No Sugar, Sweeteners, Flavors, Artificial Ingredients, Additives",
-            "button_text": "Try Clean Hydration"
+            "button_text": "Try Risk Free",
+            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=45021294362924&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
+            "button_price": "$39.00",
+            "button_discount_price": "$27.30"
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -99,40 +119,49 @@
             "list_item1": "One Month Supply",
             "list_item2": "Gently Caffeinated With Green Tea, l-Theanine, Electrolytes",
             "list_item3": "No Sugar, Sweeteners, Flavors, Artificial Ingredients, Additives",
-            "button_text": "Unlock All-Natural Energy"
+            "button_text": "<strong>Try Risk Free<\/strong>",
+            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=45021294068012&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
+            "button_price": "$45.00",
+            "button_discount_price": "$31.50"
           }
         },
         "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
           "type": "block",
           "settings": {
             "recommend": false,
-            "sale_text": "30% Off",
+            "sale_text": "Save 30%",
             "product": "immunity-drops",
             "servings": "3 PACK · 120 SERVINGS",
             "text": "3-in-1 immune support with vitamins, zinc and antioxidants + hydration.",
             "list_item1": "One Month Supply",
             "list_item2": "Vitamin C, Zinc, Ginger Root, Electrolytes",
             "list_item3": "No Sugar, Sweeteners, Flavors, Artificial Ingredients, Additives",
-            "button_text": "Clean Immune Support"
+            "button_text": "Try Risk Free",
+            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=45021315989804&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
+            "button_price": "$45.00",
+            "button_discount_price": "$31.50"
           }
         },
         "8939123e-4123-47d7-a631-21ea009a79ce": {
           "type": "block",
-          "disabled": true,
           "settings": {
             "recommend": false,
-            "sale_text": "Save 24%",
+            "sale_text": "Save 30%",
             "product": "wellness-kit",
-            "servings": "3 BOTTLES · 120 SERVINGS",
-            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.<br><br>1 Hydration Drops<br>1 Energy Drops<br>1 Immunity Drops",
-            "list_item1": "One month supply",
-            "list_item2": "All three drops",
+            "servings": "1 HYDRATION DROPS · (45 SERV)<br> 1 ENERGY DROPS · (45 SERV)<br>1 IMMUNITY DROPS· (45 SERV)",
+            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.",
+            "list_item1": "One Month Supply",
+            "list_item2": "Hydrate, Energize, Protect",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "$43",
+            "button_discount_price": "$30.10"
           }
         }
       },
       "block_order": [
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1",
         "56552880-d878-401c-b38e-f4f0c4cc485e",
         "a55a48cb-e8fe-4147-b872-04281d92e180",
         "aca99b1c-2e36-45dc-8c71-d752f8937b59",
@@ -935,7 +964,7 @@
       "type": "sticky-footer",
       "settings": {
         "button_text": "Try Buoy Risk Free",
-        "button_link": "#shopify-section-template--21489620287788__31e36676-5821-47f9-a328-6c162b259d29"
+        "button_link": "#subscribe"
       }
     }
   },

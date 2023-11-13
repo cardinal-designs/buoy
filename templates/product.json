@@ -2,6 +2,50 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "59199dcd-2a5d-4cc6-9abd-1463300a889d": {
+          "type": "onetime_block",
+          "settings": {
+            "onetime_purchase_type_text": "Free Shipping",
+            "onetime_purchase_type_subtext": ""
+          }
+        },
+        "cd8d40be-95cf-4f1d-8f6f-b5a2a5ebcd60": {
+          "type": "block",
+          "settings": {
+            "purchase_type_text": "Delivered Monthly + Free Shipping, Always",
+            "purchase_type_subtext": ""
+          }
+        },
+        "fdaa4757-2988-4fb0-a86a-6079df874dfa": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"No heavy metals like pink Himalayan salt\"",
+            "testimonial_author": "Josie W"
+          }
+        },
+        "e8fe9d00-dd8d-48b4-9e7b-021208c5470b": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"Adding a pinch every morning to my lemon water\"",
+            "testimonial_author": "Sophia E"
+          }
+        },
+        "687e272c-0c62-4732-8291-02999f5c24e6": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"Literally melts in your mouth\"",
+            "testimonial_author": "Rory C"
+          }
+        }
+      },
+      "block_order": [
+        "59199dcd-2a5d-4cc6-9abd-1463300a889d",
+        "cd8d40be-95cf-4f1d-8f6f-b5a2a5ebcd60",
+        "fdaa4757-2988-4fb0-a86a-6079df874dfa",
+        "e8fe9d00-dd8d-48b4-9e7b-021208c5470b",
+        "687e272c-0c62-4732-8291-02999f5c24e6"
+      ],
       "settings": {
         "picker_type": "button",
         "supplement_fact_text": "",
@@ -11,26 +55,83 @@
         "shop_more_link1": "",
         "shop_more_text2": "",
         "shop_more_link2": "",
-        "one_time_text": "",
+        "one_time_text": "Free Shipping",
         "testimonial_btn_txt": "",
         "testimonial_btn_link": ""
+      }
+    },
+    "16376825244a973b62": {
+      "type": "product-sticky-scroll",
+      "blocks": {
+        "a23a4bc4-fe53-481d-b35c-d2d2660b1039": {
+          "type": "text_block",
+          "settings": {
+            "title": "✨ Vitality",
+            "text": "The world’s most pristine sea salt and 87+ minerals and biological elements preserved in their naturally-charged ionic state that supports every cell and system.",
+            "subtext": ""
+          }
+        },
+        "faaef7e4-7b0b-4795-9dcc-fa7016904a16": {
+          "type": "text_block",
+          "settings": {
+            "title": "🏃‍♂️ Performance & Recovery",
+            "text": "A rush of hydration to fuel your movement and rapidly replenish electrolyte and mineral levels to restore fluid balance.",
+            "subtext": ""
+          }
+        },
+        "7b2ba384-37c5-43b9-b56d-b73a58f4d1cc": {
+          "type": "text_block",
+          "settings": {
+            "title": "⚡️ Energy",
+            "text": "Essential electrolytes and hard-to-find trace minerals provide an instant, long-lasting boost to natural energy levels.",
+            "subtext": ""
+          }
+        },
+        "1abb7f43-b06a-4b4c-982e-2ca0f7911639": {
+          "type": "text_block",
+          "settings": {
+            "title": "⚖️ Nervous System Regulation",
+            "text": "Support optimal muscle function, dissolve cramps and regulate contractions with healthy doses of bioavailable sodium, chloride and trace minerals.",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "a23a4bc4-fe53-481d-b35c-d2d2660b1039",
+        "faaef7e4-7b0b-4795-9dcc-fa7016904a16",
+        "7b2ba384-37c5-43b9-b56d-b73a58f4d1cc",
+        "1abb7f43-b06a-4b4c-982e-2ca0f7911639"
+      ],
+      "settings": {
+        "add_gradient": false,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc71b6a8aa418cabcb3a722850c681.mp4",
+        "image": "shopify:\/\/shop_images\/Buoy_Shot4_217_edited_-min.jpg",
+        "title": "The world's best salt",
+        "text": "4 ionic ocean electrolytes and 87+ trace minerals that support every cell and system, delivered in a fast-acting boost.",
+        "button_label": "",
+        "button_link": "",
+        "value_title": "",
+        "value_check1": "",
+        "value_check2": "",
+        "value_check3": "",
+        "value_check4": ""
       }
     },
     "163633853719b9de14": {
       "type": "value-props",
       "blocks": {
-        "c4177298-8711-460a-8e5a-e443945bf714": {
+        "88e8917e-91d0-47a5-88c9-c6a1957deb7d": {
           "type": "value_prop",
           "settings": {
-            "emoji": "✅",
-            "text": "Gluten and Major Allergen-Free"
+            "emoji": "⚡️",
+            "text": "1215mg Electrolytes Per Serv"
           }
         },
         "2644320b-687d-4396-82e3-5cfe6d44b7e4": {
           "type": "value_prop",
           "settings": {
-            "emoji": "🌱",
-            "text": "Vegan + Non-GMO"
+            "emoji": "🌊",
+            "text": "Deep Ocean Harvested"
           }
         },
         "ba704d03-fb61-4e5a-8077-576b9a6bfa65": {
@@ -53,318 +154,21 @@
             "emoji": "🧪",
             "text": "Third-Party Tested"
           }
-        },
-        "e93e6d30-f3dc-40a0-a049-c6cbd8f34ddf": {
-          "type": "link",
-          "settings": {
-            "link": "shopify:\/\/pages\/who-we-are",
-            "text": "See How We Stack Up"
-          }
-        },
-        "cbd77fb3-5f1d-4be8-8e62-b45788938228": {
-          "type": "link",
-          "settings": {
-            "link": "",
-            "text": "See Buoy’s Whitepaper"
-          }
         }
       },
       "block_order": [
-        "c4177298-8711-460a-8e5a-e443945bf714",
+        "88e8917e-91d0-47a5-88c9-c6a1957deb7d",
         "2644320b-687d-4396-82e3-5cfe6d44b7e4",
         "ba704d03-fb61-4e5a-8077-576b9a6bfa65",
         "58b6ed44-54f5-4d15-a82f-2ae07d337e7e",
-        "8d8cd2d6-d17c-4f50-984b-c15455b24b0d",
-        "e93e6d30-f3dc-40a0-a049-c6cbd8f34ddf",
-        "cbd77fb3-5f1d-4be8-8e62-b45788938228"
+        "8d8cd2d6-d17c-4f50-984b-c15455b24b0d"
       ],
       "settings": {
-        "text": "Years of research and testing have gone into Buoy, our best-selling hydrating wellness drops made with people and all their drinks in mind.",
+        "text": "The world's best salt preserved in it's <i>naturally-charged, ionic states<\/i> with micronutrients, minerals and elements that nourish well beyond the label.",
         "bold_text": "",
         "no_background": true,
         "add_top_padding": true,
         "add_bottom_padding": true
-      }
-    },
-    "16376825244a973b62": {
-      "type": "product-sticky-scroll",
-      "blocks": {
-        "a23a4bc4-fe53-481d-b35c-d2d2660b1039": {
-          "type": "text_block",
-          "settings": {
-            "title": "Peak Performance",
-            "text": "Losing as little as 2% of key electrolytes and fluids can significantly impair physical and mental performance. When you exercise, you lose 6-10%.",
-            "subtext": "SHORTER RECOVERIES | RESTORE FLUID + ELECTROLYTE BALANCE"
-          }
-        },
-        "faaef7e4-7b0b-4795-9dcc-fa7016904a16": {
-          "type": "text_block",
-          "settings": {
-            "title": "Enhanced Productivity",
-            "text": "At universities in East London and Westminster, students who hydrated while taking an exam improved their scores by 5% over their dried-out classmates.",
-            "subtext": "SHARPER FOCUS | MORE MOTIVATION"
-          }
-        },
-        "7b2ba384-37c5-43b9-b56d-b73a58f4d1cc": {
-          "type": "text_block",
-          "settings": {
-            "title": "Emotional Wellbeing",
-            "text": "Even the healthiest people show mood changes when mildly dehydrated. In men, dehydration promotes feelings of anxiety and nervousness; in women, sluggishness and brain fog are more common.",
-            "subtext": "BETTER MOODS | CLEARER MINDS"
-          }
-        },
-        "1abb7f43-b06a-4b4c-982e-2ca0f7911639": {
-          "type": "text_block",
-          "settings": {
-            "title": "Supports Satiety",
-            "text": "Insufficient micronutrient and mineral levels are triggers for appetite and hunger. Our all-natural, hand-harvested sea salt has 87 micronutrients and trace-minerals.",
-            "subtext": "REDUCED CRAVINGS | FEEL FULL"
-          }
-        },
-        "2306b6fa-3ed0-4857-82b5-68247362729c": {
-          "type": "text_block",
-          "settings": {
-            "title": "Immune Support",
-            "text": "Staying hydrated with fluid and electrolytes is the foundation for normal immune function and promotes your body's ability to detox. Our added vitamins and herbal extracts provide a robust antioxidant boost.",
-            "subtext": "INFLAMMATION REDUCER"
-          }
-        }
-      },
-      "block_order": [
-        "a23a4bc4-fe53-481d-b35c-d2d2660b1039",
-        "faaef7e4-7b0b-4795-9dcc-fa7016904a16",
-        "7b2ba384-37c5-43b9-b56d-b73a58f4d1cc",
-        "1abb7f43-b06a-4b4c-982e-2ca0f7911639",
-        "2306b6fa-3ed0-4857-82b5-68247362729c"
-      ],
-      "settings": {
-        "add_gradient": false,
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/Desktop_-_Feel_and_Move_your_best_image_placeholder_for_gif_2x_a30f894a-ae09-4d8d-8152-ad842b47291d.png",
-        "title": "Feel and move your best",
-        "text": "Remineralize and deeply hydrate your cells with the drinks you’re already drinking.",
-        "button_label": "",
-        "button_link": "",
-        "value_title": "",
-        "value_check1": "",
-        "value_check2": "",
-        "value_check3": "",
-        "value_check4": ""
-      }
-    },
-    "16376975486cc44a77": {
-      "type": "product-timeline",
-      "blocks": {
-        "0c760d81-019b-4db0-a55f-09cd87141217": {
-          "type": "block",
-          "settings": {
-            "time": "6:30 AM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "Waking Up",
-            "text": "You wake up dehydrated. Wake up on the right side of the bed by adding a hydration boost to your morning routine."
-          }
-        },
-        "05d5b199-ba28-4985-90db-68836a0aa8c4": {
-          "type": "block",
-          "settings": {
-            "time": "7:00 AM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "Working Out",
-            "text": "Losing just 2% of fluids and key electrolytes can impact physical performance. When you exercise, you lose 6-10%."
-          }
-        },
-        "a898ffd2-4025-4d0b-adb2-92894043dee3": {
-          "type": "block",
-          "settings": {
-            "time": "2:00 PM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "The 2pm Wall",
-            "text": "That midday wall is classic dehydration. Address the root symptoms with hydration not just another matcha."
-          }
-        },
-        "8e1300d5-e4ec-4563-9b77-383b33713ac9": {
-          "type": "block",
-          "settings": {
-            "time": "4:00 PM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "On the Go",
-            "text": "When air is fry, like in low-humidity airplane cabins, your throats's cilia is much less effective at fending off viruses and bacteria, making you more vulnerable to getting sick. Fortify your immune system with hydration while in the air."
-          }
-        },
-        "cf5ab993-c82e-4f5e-8e70-b629d9246dd6": {
-          "type": "block",
-          "settings": {
-            "time": "5:00 PM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "Happy Hour",
-            "text": "Give your body what it needs to break down acetaldehyde alcohol's toxic byproduct, while you're drinking. Mix us in with the fun to feel better the next day."
-          }
-        },
-        "b0805612-b02d-4590-b807-2dd9b762d8f4": {
-          "type": "block",
-          "settings": {
-            "time": "10:00 PM",
-            "image": "shopify:\/\/shop_images\/Desktop_-_Latte_c4bb8f04-86db-492d-8dd5-fda4c6681a0f.png",
-            "title": "Bedtime",
-            "text": "Buoy's all-natural, hand harvested sea salt is a natural deep sleep promoter. Add some into the last thing you drink before bed to catch some quality Zs."
-          }
-        }
-      },
-      "block_order": [
-        "0c760d81-019b-4db0-a55f-09cd87141217",
-        "05d5b199-ba28-4985-90db-68836a0aa8c4",
-        "a898ffd2-4025-4d0b-adb2-92894043dee3",
-        "8e1300d5-e4ec-4563-9b77-383b33713ac9",
-        "cf5ab993-c82e-4f5e-8e70-b629d9246dd6",
-        "b0805612-b02d-4590-b807-2dd9b762d8f4"
-      ],
-      "settings": {
-        "title": "Healthy habits made easy",
-        "text": "We made Buoy to seamlessly fit into your lifestyle. <strong>Squeeze throughout the day, everyday.<\/strong>"
-      }
-    },
-    "163634316546f1d02a": {
-      "type": "how-to",
-      "blocks": {
-        "ff7fbbb1-ee29-407f-93d0-f49d1098d0b2": {
-          "type": "step",
-          "settings": {
-            "title": "Grab your drink ☕",
-            "text": "Try Buoy in everything—even alcohol!"
-          }
-        },
-        "ee1c6d81-a3f5-4c2a-a9fb-c8cbafc53fba": {
-          "type": "step",
-          "settings": {
-            "title": "Ready, set, squeeze 💦",
-            "text": "Pinch lightly to squeeze for as long as it takes to say “Buoy!”"
-          }
-        },
-        "3cf05972-1767-4b39-8229-d801503aeca6": {
-          "type": "step",
-          "settings": {
-            "title": "Hydrate ⚡",
-            "text": "Knock it back and ask Siri to play “Good Times” by Chic."
-          }
-        }
-      },
-      "block_order": [
-        "ff7fbbb1-ee29-407f-93d0-f49d1098d0b2",
-        "ee1c6d81-a3f5-4c2a-a9fb-c8cbafc53fba",
-        "3cf05972-1767-4b39-8229-d801503aeca6"
-      ],
-      "settings": {
-        "subtitle": "How To",
-        "title": "Start <span class=\"gradient animated-text wave\">squeezing<\/span>",
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/Desktop_-_Start_Squeezing.png"
-      }
-    },
-    "1636341016c5da18e4": {
-      "type": "ingredients",
-      "blocks": {
-        "fd5b462b-cf57-4b40-b376-97ee3c18948b": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "56841de7-2a53-4765-be09-1f0b794d83c2": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "cd245627-9cd4-4c04-bd46-51a2459e523a": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "dac6ba0b-46bc-4d53-9274-c34333ff20e8": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "bd2fc055-bba6-4df5-87f0-f5c7657774f7": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "d9f870d0-6538-4d20-bb3d-9da2aea34714": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "ec967bcd-e19c-425a-8e93-4bb62722e6c1": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        },
-        "0c91c1da-8c09-495b-b47c-25ed58c3b545": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55890.jpg",
-            "name": "87 Trace Ionic Minerals",
-            "description": "All-Natural Sea Salt",
-            "location": "Brittany, France",
-            "fast_fact": "Although sodium gets a bad rap for cardiovascular health, you shouldn’t avoid it entirely. Your body needs it to function. Instead, focus on choosing better sources of sodium that aren’t processed or manufactured.",
-            "important": "Sodium maintains fluid balance through osmosis. Without proper amounts, you’re either losing more water than you can take in (dehydration), or consuming more water than your body can get rid of (hypervolemia). Both are bad."
-          }
-        }
-      },
-      "block_order": [
-        "fd5b462b-cf57-4b40-b376-97ee3c18948b",
-        "56841de7-2a53-4765-be09-1f0b794d83c2",
-        "cd245627-9cd4-4c04-bd46-51a2459e523a",
-        "dac6ba0b-46bc-4d53-9274-c34333ff20e8",
-        "bd2fc055-bba6-4df5-87f0-f5c7657774f7",
-        "d9f870d0-6538-4d20-bb3d-9da2aea34714",
-        "ec967bcd-e19c-425a-8e93-4bb62722e6c1",
-        "0c91c1da-8c09-495b-b47c-25ed58c3b545"
-      ],
-      "settings": {
-        "title": "11 clean, functional ingredients",
-        "text": "Formulated by a leading pharmaceutical expert to transform your beverage of choice into a deeply-hydrating, wellness-forward refreshment."
       }
     },
     "163771143220978a33": {
@@ -430,108 +234,11 @@
       "settings": {
         "reverse_gradient": false,
         "title": "A better way to feel better",
-        "text": "Unlock hydration’s superpowers by making it your habit. <strong>Try your new wellness ritual <span class=\"gradient animated-text wave\">risk free<\/span>.<\/strong>",
+        "text": "Unlock the ocean's benefits by making it your habit. <strong>Try your new wellness ritual <span class=\"gradient animated-text wave\">risk free<\/span>.<\/strong>",
         "check_title": "FEEL BETTER ABOUT YOUR DAILY ESSENTIALS",
         "check_1": "100% PCR Bottles",
         "check_2": "Carbon Neutral",
         "check_3": "Supporting People with Chronic Illnesses"
-      }
-    },
-    "16363445681bb6cac3": {
-      "type": "press-logos",
-      "blocks": {
-        "6d6a408b-3bad-4404-99da-bb9206eae8ca": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/NextThing_Logo_BLK_4c1a0f0b-0174-4ed5-a843-d4b84ce10458.png"
-          }
-        },
-        "48abe4ae-4264-4904-830b-46f124ad8b46": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/BevNET_logo_BLK_6ff6fccb-db8a-44a2-9ba7-8e2f98334f96.png"
-          }
-        },
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/CVSLogo_color_blk_437f7e3d-460e-421a-a5b9-48318c3a57a4.png"
-          }
-        },
-        "9329573b-5a63-4550-b65c-8c6186e2f514": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Mens_Journal_Logo_BLK_5ec9749c-b03b-4601-a2be-ba051e211405.png"
-          }
-        },
-        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Inc._Magazine_logo_BW_4cc31bac-0523-4406-a183-e36a4648ab74.png"
-          }
-        },
-        "458a3615-62f9-43c0-89f9-375da0056d1b": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Thrillest_blk_9d835c65-df3b-498d-89a3-527016b68bd1.png"
-          }
-        }
-      },
-      "block_order": [
-        "6d6a408b-3bad-4404-99da-bb9206eae8ca",
-        "48abe4ae-4264-4904-830b-46f124ad8b46",
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d",
-        "9329573b-5a63-4550-b65c-8c6186e2f514",
-        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df",
-        "458a3615-62f9-43c0-89f9-375da0056d1b"
-      ],
-      "settings": {
-        "background": "#ecd8c5",
-        "enable_marquee": false,
-        "add_border": false
-      }
-    },
-    "1636344367d21ce97f": {
-      "type": "faq",
-      "blocks": {
-        "cfe68448-581e-4c82-bb2e-1b016f5fb1c1": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Is it really flavorless?",
-            "answer": "Electrolytes, vitamins, and ionic trace minerals are naturally bitter, which is why traditional sports drinks and hydration supplements use sugar and sweeteners to offset their intense taste.\n<br><br>\nWe spent two years formulating Buoy with not only effective ingredients but also with as neutral of a flavor profile as those essential nutrients can get without adding the junk to mask it. With a proper dosage in a full drink (a light, half-second pinch), you should notice little to no taste. We encourage everyone to try Buoy in their favorite non-water drink to start. Many of our Anti-Yellow Pee Club members like the herbal hint of flavor noticeable in still water."
-          }
-        },
-        "b5bd8dfb-3fa8-442c-b3c3-5066c5568770": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Is it really flavorless?",
-            "answer": "Electrolytes, vitamins, and ionic trace minerals are naturally bitter, which is why traditional sports drinks and hydration supplements use sugar and sweeteners to offset their intense taste.\n<br><br>\nWe spent two years formulating Buoy with not only effective ingredients but also with as neutral of a flavor profile as those essential nutrients can get without adding the junk to mask it. With a proper dosage in a full drink (a light, half-second pinch), you should notice little to no taste. We encourage everyone to try Buoy in their favorite non-water drink to start. Many of our Anti-Yellow Pee Club members like the herbal hint of flavor noticeable in still water."
-          }
-        },
-        "bab396a5-3447-40f0-8f1d-4dd69ba8e05c": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Is it really flavorless?",
-            "answer": "Electrolytes, vitamins, and ionic trace minerals are naturally bitter, which is why traditional sports drinks and hydration supplements use sugar and sweeteners to offset their intense taste.\n<br><br>\nWe spent two years formulating Buoy with not only effective ingredients but also with as neutral of a flavor profile as those essential nutrients can get without adding the junk to mask it. With a proper dosage in a full drink (a light, half-second pinch), you should notice little to no taste. We encourage everyone to try Buoy in their favorite non-water drink to start. Many of our Anti-Yellow Pee Club members like the herbal hint of flavor noticeable in still water."
-          }
-        },
-        "8efa5392-e759-475d-9e78-b37523f2ef72": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Is it really flavorless?",
-            "answer": "Electrolytes, vitamins, and ionic trace minerals are naturally bitter, which is why traditional sports drinks and hydration supplements use sugar and sweeteners to offset their intense taste.\n<br><br>\nWe spent two years formulating Buoy with not only effective ingredients but also with as neutral of a flavor profile as those essential nutrients can get without adding the junk to mask it. With a proper dosage in a full drink (a light, half-second pinch), you should notice little to no taste. We encourage everyone to try Buoy in their favorite non-water drink to start. Many of our Anti-Yellow Pee Club members like the herbal hint of flavor noticeable in still water."
-          }
-        }
-      },
-      "block_order": [
-        "cfe68448-581e-4c82-bb2e-1b016f5fb1c1",
-        "b5bd8dfb-3fa8-442c-b3c3-5066c5568770",
-        "bab396a5-3447-40f0-8f1d-4dd69ba8e05c",
-        "8efa5392-e759-475d-9e78-b37523f2ef72"
-      ],
-      "settings": {
-        "title": "Ask us the tough ones",
-        "text": "Our exceptional team of healthcare professionals and scientists have answers."
       }
     },
     "1637720233f9199bd5": {
@@ -543,14 +250,9 @@
   },
   "order": [
     "main",
-    "163633853719b9de14",
     "16376825244a973b62",
-    "16376975486cc44a77",
-    "163634316546f1d02a",
-    "1636341016c5da18e4",
+    "163633853719b9de14",
     "163771143220978a33",
-    "16363445681bb6cac3",
-    "1636344367d21ce97f",
     "1637720233f9199bd5"
   ]
 }
