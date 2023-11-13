@@ -1,0 +1,35 @@
+.icon-text__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px 18px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.icon-text__block img {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-text__block {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-text__block p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 768px) {  
+  .icon-text__container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-top: 50px !important;
+    margin-bottom: 50px;
+    border-top: 1px solid #E9E9E9;
+  }
+}

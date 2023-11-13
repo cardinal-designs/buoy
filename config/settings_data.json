@@ -7,7 +7,7 @@
     "social_tiktok_link": "https:\/\/tiktok.com\/@justaddbuoy",
     "social_spotify_link": "",
     "show_shipping_countdown": true,
-    "order_within_text": "Ships <span>Today, August 11th<\/span> If Ordered Within <span>2 hr 29 mins<\/span>",
+    "order_within_text": "In stock and ships tomorrow",
     "favicon": "shopify:\/\/shop_images\/Buoy_Favicon-01.png",
     "show_announcement_bar": true,
     "fix_announcement": true,
@@ -15,11 +15,14 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "Try Buoy risk-free for 30 days and save 23% plus free shipping",
-          "link": "shopify:\/\/pages\/clear-pee-club-1",
-          "btn_text": "Start Here",
-          "btn_link": "shopify:\/\/pages\/clear-pee-club-1",
-          "hide_mobile": false
+          "text": "<span style=\"font-weight: 500\">Black Friday Sale<\/span>: Save 30% + Free Shipping on Subscriptions",
+          "link": "shopify:\/\/pages\/buoy-black-friday-offer-test",
+          "btn_text": "Shop Sale",
+          "btn_link": "shopify:\/\/pages\/buoy-black-friday-offer-test",
+          "hide_mobile": false,
+          "background": "#def647",
+          "button_color": "#1f2322",
+          "button_text_color": "#ffffff"
         }
       },
       "header": {

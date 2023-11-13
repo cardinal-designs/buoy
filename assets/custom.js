@@ -41,16 +41,16 @@ $('.supplement-facts-form-image').slick({
   nextArrow: '<button type="button" class="slick-next"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(-90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>'
 });
 
-$('.Testimonials_Slider').slick({
-  dots: true,
-  arrows: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: '<button type="button" class="slick-prev"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(-90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>'
-});
+// $('.Testimonials_Slider').slick({
+//   dots: true,
+//   arrows: true,
+//   infinite: false,
+//   speed: 300,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   prevArrow: '<button type="button" class="slick-prev"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>',
+//   nextArrow: '<button type="button" class="slick-next"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6" transform="rotate(-90)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></button>'
+// });
 
 $('.Featured_product__media-list').slick({
   dots: true,
@@ -255,3 +255,23 @@ document.querySelector('.page-blury-overlay').onclick = function() {
   if(document.querySelector('.mobile-toggle-btn--wrapper')) document.querySelector('.mobile-toggle-btn--wrapper').click();
   document.body.classList.remove('overflow-hidden');
 }
+
+$('.text-image-toggle__button').click(function() {
+  let id = $(this).data('id')
+  $('.text-image-toggle__button').removeClass('active')
+  $(this).addClass('active')
+  $('.text-image-toggle__image').hide()
+  $(`.text-image-toggle__image[data-id='${id}']`).show()
+})
+
+$('.dropdown-container-item__title').click(function() {
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active')
+  } else {
+    $(this).addClass('active')
+  } 
+  $(this).next().slideToggle();
+})
+
+
+

@@ -1,0 +1,26 @@
+.marquee__item img {
+  width: 200px;
+  height: auto;
+  
+}
+
+.image-marquee {
+  background: white !important;
+  padding: 140px 0 20px !important;
+}
+
+.image-marquee .marquee__container.hide-mobile {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {  
+  .image-marquee .marquee__container {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 768px) {  
+  .image-marquee {
+    padding: 90px 0 60px !important;
+  }
+}

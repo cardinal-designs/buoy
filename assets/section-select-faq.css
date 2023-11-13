@@ -1,0 +1,163 @@
+.benefits__info-title2 {
+  margin-bottom: 70px !important;
+  color: #797B7A;
+  font-size: 16px;
+}
+
+.select-faq__list-item {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.select-faq__list-item svg {
+  width: 25px;
+  height: 25px;
+}
+
+.select-faq__list-item p {
+  padding-top: 0 !important;
+  font-size: 16px;
+}
+
+.select-faq__titles-container {
+  margin: 40px 0 10px;
+}
+
+.select-faq__titles {
+  color: #797B7A;
+  margin: 0 0 18px;
+}
+
+.select-faq__texts {
+  margin: 0 0 30px;
+}
+
+.green-outline {
+  background: #e2f567;
+  padding: 1px 4px;
+}
+
+.select-faq__container .benefits__info-item .select-faq__container-title {
+  padding-bottom: 0;
+  border-bottom: unset;
+  line-height: 25px;
+  margin-top: 0;
+}
+
+.select-faq__container .benefits__info {
+  width: 50%;
+  padding-left: 2%;
+  margin-left: 8%;
+  border-left: 1px solid #E9E9E9;
+}
+
+.select-faq__container .benefits__item h3 {
+  margin: 0;
+  color: #797B7A;
+  font-weight: 300;
+}
+
+.select-faq__container .benefits__item h3.active {
+  font-weight: 400;
+  color: #1f2322;
+}
+
+.select-faq__container .benefits__item {
+  margin-bottom: 34px;
+}
+
+.select-faq__x {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .benefits__info-title2 {
+    text-align: center;
+    margin-bottom: 0px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .select-faq__container {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .select-faq__container .benefits__items.hide-desktop .benefits__item-mobile h3 {
+     margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .select-faq__container .benefits__items.hide-desktop {
+    margin: unset;
+    max-width: 100%;
+    border-bottom: 1px solid #BBBCBC;
+  }
+
+  .select-faq__container .benefits__flex {
+    padding: 0 !important;
+  }
+
+  .select-faq__item-mobile {
+    border-top: 1px solid #BBBCBC;
+    position: relative
+  }
+
+  .mobile-benefits-info {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .select-faq__texts {
+    font-size: 16px;
+  }
+
+   .select-faq__container .mobile-benefits-info .sh2 {
+     margin: 0;
+   }
+
+  .select-faq__x {
+    display: block;
+    height: 17px;
+    width: 17px;
+    position: relative;
+  }
+
+  .select-faq__x:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7.5px;
+    border-right: 2px solid var(--charcoal);
+  }
+
+  .select-faq__x.minus:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7.5px;
+    border-right: none;
+  }
+
+  .select-faq__x:after {
+    content: "";
+    position: absolute;
+    top: 7.5px;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid var(--charcoal);
+  }
+}
+
+
