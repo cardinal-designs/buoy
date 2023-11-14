@@ -462,6 +462,15 @@ fieldset.product-form__input .form__label {
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .product-form__submit {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
 .no-js .product-form__submit.button--secondary {
   --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
@@ -478,8 +487,8 @@ fieldset.product-form__input .form__label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #DEF647;
-  border: none !important;
+  background: var(--green-1);
+  border: none;
 }
 
 /* Overrides */
@@ -535,7 +544,13 @@ fieldset.product-form__input .form__label {
 /* Product media */
 .product__media-list {
   margin: 0 -8px;
-  padding-right: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .product__media-list {
+    margin: 0 -20px;
+    padding-right: 20px;
+  }
 }
 
 .product__media-list .slick-list {
@@ -544,6 +559,12 @@ fieldset.product-form__input .form__label {
 
 .product__media {
   padding-top: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .product__media-item:nth-child(2) .product__media {
+    margin-left: 20px; 
+  }
 }
   
 .product__media img, .product__media video {
@@ -837,25 +858,9 @@ fieldset.product-form__input .form__label {
     display: flex;
     flex-direction: column-reverse;
   }
-
-  .product__media-wrapper {
-    overflow-x: scroll;
-    margin: 0px -1020px;
-    scroll-padding: 0px 1000px;
-    scroll-snap-type: x mandatory;
-    cursor: grabbing;
-    order: 1;
-  }
   
   .product__media-wrapper .sticky-images {
     margin-bottom: 16px;
-  }
-
-  .product__media-list {
-    margin: 0;
-    padding: 0px 1000px;
-    display: inline-flex;
-    white-space: nowrap; 
   }
 
   .product__media-item {
@@ -1356,6 +1361,10 @@ fieldset.product-form__input .form__label {
   flex: 0 0 calc(50% - 5px);
 }
 
+.Variant_Blocks .Variant_Title {
+  text-align: center;
+}
+
 .Variant_Blocks span {
   display: block;
   letter-spacing: normal;
@@ -1380,6 +1389,7 @@ fieldset.product-form__input .form__label {
   font-style: italic;
   margin: 0;
   text-align: center;
+  line-height: 20px;
 }
 
 .Variant_Servings {
@@ -1406,8 +1416,8 @@ fieldset.product-form__input .form__label {
   text-align: left;
   margin: 0;
   background-color: transparent;
-  border-radius: 10px;
-  border: 1px solid #545759;
+  border-radius: 17px;
+  border: 1px solid var(--gray-light);
 }
 
 .product-form__input .Variant_Blocks input[type=radio] + label::after {
@@ -1419,20 +1429,12 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
-  background-color: #F8F8F8;
-  border: 1px solid #1F2322;
+  background-color: #F8F1EB;
+  border: 1px solid var(--charcoal-60);
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
   display: none;
-}
-
-.product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Title,
-.product-form__input .Variant_Blocks input[type=radio] + label > .Supply_Time,
-.product-form__input .Variant_Blocks input[type=radio] + label > .Variant_Servings,
-.product-form__input .Variant_Blocks input[type=radio] + label > .Serving_Cost {
-  opacity: .4;
-  text-align: center;
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label > * {
@@ -1460,7 +1462,7 @@ fieldset.product-form__input .form__label {
   width: auto;
   position: absolute;
   right: 18px;
-  border-radius: 8px;
+  border-radius: 14px;
   padding: 4px 10px;
   top: -10px;
   font-weight: 400;
@@ -1589,28 +1591,24 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form .rtx_option_selector input[type=radio] {
-  height: 20px;
-  width: 20px;
+  height: 28px;
+  width: 28px;
   margin-top: 5px!important;
   position: relative;
+  border: 1px solid var(--black);
 }
 
 .product-form .rtx_option_selector input[type=radio]:before {
-  width: 18px;
+  width: 28px;
   margin: -1px -1px;
-  height: 18px;
+  height: 28px;
 }
 
 .product-form .rtx_option_selector input[type=radio]:checked:after {
-  content: "";
+  content: url('./check.svg');;
   position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 5px;
-  height: 11px;
-  border: solid #FFFFFF;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  top: 3px;
+  left: 4px;
   z-index: 11;
 }
 
@@ -1906,7 +1904,15 @@ fieldset.product-form__input .form__label {
   .Testimonials_Slider {
     overflow-x: auto;
     display: inline-flex;
-    width: 100%;
+    padding-left: 20px;
+    padding-right: 15px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-bottom: 20px;
   }
 
   .Testimonials_Wrapper {
@@ -1986,7 +1992,6 @@ fieldset.product-form__input .form__label {
 
 .template-product .product-form__submit.button.button--full-width.button--primary {
   margin-bottom: 14px;
-  border: 1.5px solid var(--charcoal);
 }
 
 .template-product .pdp-faq .faq__header .sh4 {
@@ -2093,7 +2098,13 @@ span#timer strong {
   position: relative;
   display: block;
   position: absolute;
-  right: 5px;
+  right: -50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .product__media-arrows {
+    right: -30px;
+  }
 }
 
 .product__media-arrows .slick-arrow {
@@ -2212,7 +2223,7 @@ span#timer strong {
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
   height: 100%!important;
   clip: inherit!important;
-  right: -75px;
+  right: -70px;
   font-family: inter,sans-serif;
   font-style: normal;
   font-weight: 400!important;
@@ -2225,7 +2236,7 @@ span#timer strong {
 }
 
 .product__info-container .okeReviews-reviewsSummary-ratingCount {
-  left: 74px;
+  left: 68px;
 }
 
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text{
@@ -2383,7 +2394,7 @@ select[name=selling_plan] {
 .discount-bubble {
   border: 1px solid #398200;
   background: #398200;
-  padding: 20px;
+  padding: 14px 20px;
   border-radius: 3px;
   height: auto;
   margin: 28px auto 0px;
@@ -2407,6 +2418,10 @@ select[name=selling_plan] {
   left: 45%;
 }
 
+
+.product-bar__container .button:hover{
+  background-color: #fff;
+}
 
 @media screen and (max-width: 1280px) {
 
@@ -2481,12 +2496,18 @@ select[name=selling_plan] {
     margin-bottom: 50px;
   }
 
+  @media screen and (max-width: 768px) {
+    .Testimonials_Main {
+      margin-bottom: 25px;
+    }
+  }
+
   .Testimonials_Main .slick-dots {
     margin: 0;
   }
 
   .All_Reviews {
-    margin-top: 48px;
+    margin-top: 30px;
   }
 
   .product__media-item .product-spinner {
@@ -2621,7 +2642,7 @@ select[name=selling_plan] {
 }
 
 .Product_Tags img {
-  height: 20px;
+  height: 32px;
   width: fit-content;
 }
 

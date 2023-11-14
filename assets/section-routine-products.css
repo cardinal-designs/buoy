@@ -10,15 +10,21 @@ routine-products__container {
 
 .routine-products__container > h2 {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 54px;
   margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .routine-products__container>h2 {
+    margin-bottom: 41px;
+  }
 }
 
 .routine-products__product {
   background: #f8f8f8;
   border-radius: 15px;
-  padding: 40px 30px 30px;
-  max-width: 415px;
+  padding: 34px 30px 30px;
+  max-width: 421px;
   text-align: center;
   flex: 1 1 0px;
 }
@@ -36,9 +42,11 @@ routine-products__container {
 .routine-products__new {
   border-radius: 25px;
   width: fit-content;
-  margin: 24px auto;
+  margin: 0 auto;
   background: #DEF647;
   padding: 2px 10px; 
+  margin-top: 11px;
+  margin-bottom: 14px;
 }
 
 .routine-products__new p {
@@ -49,10 +57,14 @@ routine-products__container {
   width: 100%;
   margin-top: 18px;
   background: #f8f8f8;
+  height: 38px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .routine-products__bottom h4 {
-  margin: 30px auto 16px;
+  margin: 0 auto;
+  margin-top: -3px;
 }
 
 .okendo_placeholder {

@@ -4,6 +4,13 @@
   padding-bottom: 150px !important;
 }
 
+@media screen and (max-width:768px) {
+  .media-grid__container {
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
