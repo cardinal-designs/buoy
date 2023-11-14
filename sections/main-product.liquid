@@ -87,13 +87,13 @@
           {%- for tag in product.tags -%}
             <div>
               {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
-              <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
+                <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
               {% endif %}
               {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
-              <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
+                <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
               {% endif %}
               {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
-              <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
+                <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
               {% endif %}
               <span>{{ tag }}</span>
             </div>
@@ -160,11 +160,15 @@
               {%- for variant in product.variants -%}
                 {% assign value = variant.options[optionIndex] %}
                 {%- unless values contains value -%}
-                {% assign values = values | join:',' %}
-                {% assign values = values | append:',' | append:value %}
-                {% assign values = values | split:',' %}
+                {% assign values = values | join: ',' %}
+                {% assign values = values | append: ',' | append:value %}
+                {% assign values = values | split: ',' %}
 
                  {% assign my_fields = variant.metafields.custom %}
+                 <script>
+  console.log({{ my_fields | json }})
+</script>
+
                   <span class="Variant_Blocks" data-id={{ variant.id }}>
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                       name="{{ option.name }}"
@@ -173,17 +177,17 @@
                       {% if option.selected_value == value %}checked{% endif %}
                     >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                      {%- if my_fields.supply_time  != blank -%}
+                      {%- if my_fields.supply_time != blank -%}
                         <span class="Supply_Time">{{ my_fields.supply_time }} / {{ my_fields.servings }}</span>
                       {%- endif -%}
-                      {%- if my_fields.product_image  != blank -%}
+                      {%- if my_fields.product_image != blank -%}
                         <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if my_fields.serving_cost  != blank -%}
+                     {%- if my_fields.serving_cost != blank -%}
                         <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
                       {%- endif -%}
-                      {%- if my_fields.best_value  != blank -%}
+                      {%- if my_fields.best_value != blank -%}
                         <span class="Best_Value">{{ my_fields.best_value }}</span>
                       {%- endif -%}
                     </label>
@@ -603,7 +607,7 @@
         {% endif %}
       </div>
     </div>
-    <div class="product__media-wrapper no-scrollbar drag-scroll">
+    <div class="product__media-wrapper">
       <div class="sticky-images">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}

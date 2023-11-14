@@ -1010,10 +1010,9 @@ $('.chronic-multicolumn__slider').slick({
 
 
 // PDP main slider
-$productMediaSlider = $('.product__media-list');
-var productMediaSlider = {
-  prevArrow: '<button type="button" class="slick-prev"><svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.46667" y1="10.5569" x2="23" y2="10.5569" stroke="#1F2322"/><path d="M10.2227 20L0.722667 10.5L10.2227 1.00002" stroke="#1F2322"/></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="21.5333" y1="10.4431" x2="1.33514e-05" y2="10.4431" stroke="#1F2322"/><path d="M12.7773 1L22.2773 10.5L12.7773 20" stroke="#1F2322"/></svg></button>',
+$('.product__media-list').slick({
+  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
   appendArrows: '.product__media-arrows',
   responsive: [
     {
@@ -1023,9 +1022,7 @@ var productMediaSlider = {
       }
     }
   ]
-}
-
-slickOnDesktop($productMediaSlider, productMediaSlider);
+})
 
 // People
 $('.people-slider__drink-slider--1').slick({
@@ -1440,15 +1437,26 @@ $(window).on('resize scroll', function() {
   
 });
 
-
 $('.image-with-dropdowns__q').click(function () {
-  $('.image-with-dropdowns__a').slideUp()
-  $('.image-with-dropdowns__content-point').removeClass('active');
-  $(this).next().slideToggle()
+  // Check if the clicked accordion is already active
+  const isActive = $(this).hasClass('active');
+
+  // Close all slides
+  $('.image-with-dropdowns__a').slideUp();
+
+  // Remove active class from all elements except the clicked one
+  $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
+  $('.image-with-dropdowns__q').not(this).removeClass('active');
+
+  // Toggle the visibility of the clicked slide if it wasn't already active
+  if (!isActive) {
+    $(this).next().slideToggle();
+  }
+
+  // Toggle the 'active' class on the clicked elements
   $(this).toggleClass('active');
   $(this).parent().toggleClass('active');
-})
-
+});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
