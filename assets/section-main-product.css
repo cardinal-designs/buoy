@@ -1527,7 +1527,7 @@ fieldset.product-form__input .form__label {
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-wrap: nowrap;
+    white-space: nowrap;
   }
   
 }
@@ -1863,7 +1863,7 @@ fieldset.product-form__input .form__label {
 
 .product-listblock img {
   width: 28px;
-  height: fit-content;
+  height: 28px;
 }
 
 .product-listblock:nth-child(1) {
@@ -2643,7 +2643,7 @@ select[name=selling_plan] {
 
 .Product_Tags img {
   height: 32px;
-  width: fit-content;
+  width: 32px;
 }
 
 .Product_Tags div {
