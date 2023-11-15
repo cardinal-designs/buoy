@@ -151,7 +151,7 @@
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
           {% assign my_fields = product.variant.metafields.custom %}
-          <p class="product-form__text-label">Choose Quantity</p>
+          <p id="selector" class="product-form__text-label">Choose Quantity</p>
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
              {% assign optionIndex = forloop.index0 %}
@@ -320,8 +320,8 @@
             {% comment %} Mobile sticky ATC {% endcomment %}
             <div class="product-form__sticky-atc hide-desktop">
               <p class="product-form__sticky-atc-text">Risk Free - 30-Day Money Back Guarantee</p>
-              <button
-                type="submit"
+              <a
+                href="#selector"
                 name="add"
                 style="flex-direction: initial; padding: 12px 10px;"
                 data-available="{{ currentVariant.available }}"
@@ -348,7 +348,7 @@
                   {{ 'products.product.sold_out' | t }}
                   {%- endif -%}
                 </div>
-              </button>
+              </a>
             </div>
             {% comment %} Mobile sticky ATC end {% endcomment %}
             {%- if block.settings.show_dynamic_checkout -%}
