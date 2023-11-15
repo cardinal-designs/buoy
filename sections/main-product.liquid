@@ -165,9 +165,6 @@
                 {% assign values = values | split: ',' %}
 
                  {% assign my_fields = variant.metafields.custom %}
-                 <script>
-  console.log({{ my_fields | json }})
-</script>
 
                   <span class="Variant_Blocks" data-id={{ variant.id }}>
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
@@ -292,14 +289,14 @@
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
-                    type="submit"
-                    name="add"
-                    style="flex-direction: initial; padding: 12px 10px;"
-                    data-available="{{ currentVariant.available }}"
-                    class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                    {% if currentVariant.available == false %}disabled{% endif %}
-                    data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                    >
+              type="submit"
+              name="add"
+              style="flex-direction: initial; padding: 12px 10px;"
+              data-available="{{ currentVariant.available }}"
+              class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+              {% if currentVariant.available == false %}disabled{% endif %}
+              data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+            >
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
@@ -320,6 +317,40 @@
                 {%- endif -%}
               </div>
             </button>
+            {% comment %} Mobile sticky ATC {% endcomment %}
+            <div class="product-form__sticky-atc hide-desktop">
+              <p class="product-form__sticky-atc-text">Risk Free - 30-Day Money Back Guarantee</p>
+              <button
+                type="submit"
+                name="add"
+                style="flex-direction: initial; padding: 12px 10px;"
+                data-available="{{ currentVariant.available }}"
+                class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                {% if currentVariant.available == false %}disabled{% endif %}
+                data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+              >
+                <div style="display: flex;">
+                  {%- if currentVariant.available -%}
+                  Add to Cart —&nbsp; 
+                  {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                    <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                  {% else %}
+                    <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
+                    {{ currentVariant.price | money_without_trailing_zeros }}
+                  {% endif %}
+                  {% comment %} {% render 'rtx_price'%} {% endcomment %}
+                  {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                    <span data-smartrr-compare-price></span>
+                    <span data-smartrr-regular-price></span>
+                    <span data-smartrr-subscribe-price></span>
+                  </div> {% endcomment %}
+                  {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                </div>
+              </button>
+            </div>
+            {% comment %} Mobile sticky ATC end {% endcomment %}
             {%- if block.settings.show_dynamic_checkout -%}
             {% comment %} {{ form | payment_button }} {% endcomment %}
             <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">

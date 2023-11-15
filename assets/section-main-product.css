@@ -462,13 +462,22 @@ fieldset.product-form__input .form__label {
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .product-form__submit {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-  }
+.product-form__sticky-atc {
+  position: fixed;
+  left: 0;
+  bottom: 25px;
+  width: 100%;
+  z-index: 2;
+  background: var(--white);
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.product-form__sticky-atc-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  font-family: Rhymes-Italic;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -1429,7 +1438,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
-  background-color: #F8F1EB;
+  background-color: var(--gray-lighest);
   border: 1px solid var(--charcoal-60);
 }
 
