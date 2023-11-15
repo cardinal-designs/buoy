@@ -325,7 +325,7 @@
                 name="add"
                 style="flex-direction: initial; padding: 12px 10px;"
                 data-available="{{ currentVariant.available }}"
-                class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                 {% if currentVariant.available == false %}disabled{% endif %}
                 data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
               >
