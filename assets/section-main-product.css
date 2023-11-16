@@ -46,6 +46,7 @@
   background-color: rgba(0,0,0,0.3);
   z-index: 99999;
   border-radius: 10px;
+  height: calc(100% - 10px);
 }
 
 .reviews_button img {
