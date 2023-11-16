@@ -80,8 +80,8 @@
         {%- if block.type == 'table' -%}
           {%- if bs.table_image != blank -%}
             <div class="drawer__table-image-wrapper">
-              {% render 'lazy-image' image: bs.table_image_mobile, fade: true, class:"hide-desktop" %}
-              {% render 'lazy-image' image: bs.table_image, fade: true, class:"hide-mobile" %}
+              {% render 'lazy-image' image: bs.table_image_mobile, fade: true, classes:"hide-desktop" %}
+              {% render 'lazy-image' image: bs.table_image, fade: true, classes:"hide-mobile" %}
             </div>
           {%- endif -%}
         {%- endif -%}
