@@ -72,9 +72,14 @@ $('.Featured_product__media-list').slick({
 });
 
 $('.dropdown-ind__drop .close, .dropdown-ind').click(function() {
-  $(this).parent().find('p, img').toggle()
-  $(this).parent().find('.close').toggleClass('flip'); 
-})
+  // Close all accordions
+  $('.dropdown-ind__drop p, .dropdown-ind__drop img').hide();
+  $('.dropdown-ind__drop .close').removeClass('flip');
+
+  // Open the clicked accordion
+  $(this).parent().find('p, img').toggle();
+  $(this).parent().find('.close').toggleClass('flip');
+});
 
 //scrollbar js start
 $('.image-slider__img-container, .image-slider__img-container-mobile').scroll(function() {

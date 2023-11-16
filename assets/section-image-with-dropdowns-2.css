@@ -1,5 +1,5 @@
 .image-with-dropdowns__container-2 {
-  padding-top: 100px;
+  padding-top: 84px;
   padding-bottom: 80px;
 }
 
@@ -226,6 +226,10 @@
   margin-bottom: 40px;
 }
 
+.image-with-dropdowns__a .sh2 {
+  line-height: 28px;
+}
+
 .image-with-dropdowns__content .sh2 {
   margin-bottom: 30px;
 }
@@ -236,7 +240,8 @@
   }
 
   .image-with-dropdowns__container-2 {
-    padding-top: 50px;
+    padding-top: 0;
+    padding-bottom: 40px;
   }
 
   .image-with-dropdowns__container-2 h1 .rhyme-italic {

@@ -111,8 +111,14 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
 
       /* Colors */
       :root {
+        --black: #000000;
+        --white: #FFFFFF;
+        
         --charcoal: #1F2322;
         --charcoal-light: #545759;
+        --charcoal-60: #797B7A;
+        --gray-light: #E9E9E9;
+        --gray-lighest: #F8F8F8;
 
         --beige-dark: #ECD8C5;
         --beige: #F6ECE1;
@@ -129,6 +135,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
         --green-dark: #75A951;
         --green: #9AC847;
         --green-light: #C6DB76;
+        --green-1: #DEF647;
 
         --yellow: #FED18E;
         --yellow-light: #FEEBCD;
@@ -213,15 +220,15 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     </script> -->
 
     {% if template contains 'product' or template.suffix == 'okendo-reviews' or page.title == 'Reviews' %}
-        {{ 'okendo-reviews.js' | asset_url | script_tag }}
+      {{ 'okendo-reviews.js' | asset_url | script_tag }}
     {% endif %}
 
   
   {% render 'shogun-head' %}
 
   {% if handle contains 'sample-page' %}
-<meta name="robots" content="noindex">
-{% endif %}
+    <meta name="robots" content="noindex">
+  {% endif %}
 
 </head>
 
@@ -239,6 +246,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     <div class="page-overlay"></div>
     <div class="page-blury-overlay"></div>
     
+   {% unless template.name == 'product' %} 
     {% if page.handle == 'buoy-black-friday-offer' %}
       <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
       {% section 'black-friday-announcement-bar' %}
@@ -248,6 +256,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       {% section 'announcement-bar' %}
     </announcement-container>
     {% endif %}
+   {% endunless %}
 
     
     <header-container class="header--transparent">

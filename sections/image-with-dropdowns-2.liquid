@@ -12,7 +12,14 @@
         Your browser does not support the video tag.
       </video>
       {% else %}
-      {% render 'lazy-image' image: section.settings.image, classes: '' %}
+        {% comment %} Desktop Image {% endcomment %}
+        {%- if section.settings.image != blank -%}
+          {% render 'lazy-image' image: section.settings.image, classes: 'hide-mobile' %}
+        {%- endif -%}
+        {% comment %} Mobile Image {% endcomment %}
+        {%- if section.settings.image_mobile != blank -%}
+          {% render 'lazy-image' image: section.settings.image_mobile, classes: 'hide-desktop' %}
+        {%- endif -%}
       {% endif %}    
     </div>
     <h1 class="hide-desktop">{{ section.settings.title }}</h1>
@@ -21,254 +28,254 @@
         {% for block in section.blocks %}
         {% case block.type %}
         {% when 'type1' %}
-        <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
-          <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-            <div class="image-with-dropdowns__content-text">
-              <h5>{{ block.settings.title }}</h5>
-            </div>
-            <div class="image-with-dropdowns__x"></div>
-          </div>
-          <div class="image-with-dropdowns__a">
-            {% if section.settings.video_url != blank %}
-            <video autoplay loop muted playsinline class="video">
-              <source src="{{ block.settings.video_url }}" type="video/mp4">
-            </video>
-            {% else %}
-            {% render 'lazy-image' image: block.settings.image, classes: '' %}
-            {% endif %} 
-            <p class="sh2">{{ block.settings.text }}</p>
-            {% if block.settings.list_item1 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item1 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item2 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item2 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item3 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item3 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item4 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item4 }}</p>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-        {% when 'type2' %}
-        <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
-          <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-            <div class="image-with-dropdowns__content-text">
-              <h5>{{ block.settings.title }}</h5>
-            </div>
-            <div class="image-with-dropdowns__x"></div>
-          </div>
-          <div class="image-with-dropdowns__a image-with-dropdowns__a_2">
-            {% if block.settings.icon_image_text_1 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
-              <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_2 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
-              <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_3 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
-              <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_4 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
-              <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-        {% when 'type3' %}
-        <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
-          <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-            <div class="image-with-dropdowns__content-text">
-              <h5>{{ block.settings.title }}</h5>
-            </div>
-            <div class="image-with-dropdowns__x"></div>
-          </div>
-          <div class="image-with-dropdowns__a image-with-dropdowns__a_3">
-           {% if block.settings.suptext != blank %}
-            <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
-            {% endif %}
-            <p class="sh2">{{ block.settings.text }}</p>
-           <div class="icon-image-block3">
-            {% if block.settings.icon_image_text_1 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
-              <div class="icon-image-block3__container">
-              <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
-              <p class="small-text">{{ block.settings.icon_image_subtext_1 }}</p>
-              {{ block.settings.icon_image_list_1 }}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
               </div>
+              <div class="image-with-dropdowns__x"></div>
             </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_2 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
-              <div class="icon-image-block3__container">
-              <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
-              <p class="small-text">{{ block.settings.icon_image_subtext_2 }}</p>
-              {{ block.settings.icon_image_list_2 }}
-              </div>
-            </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_3 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
-              <div class="icon-image-block3__container">
-              <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
-              <p class="small-text">{{ block.settings.icon_image_subtext_3 }}</p>
-              {{ block.settings.icon_image_list_3 }}
-              </div>
-            </div>
-            {% endif %}
-            {% if block.settings.icon_image_text_4 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
-              <div class="icon-image-block3__container">
-              <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
-              <p class="small-text">{{ block.settings.icon_image_subtext_4 }}</p>
-              {{ block.settings.icon_image_list_4 }}
-              </div>
-            </div>
-            {% endif %}
-          </div>
-          {% if block.settings.suptext2 != blank %}
-          <p class="image-with-dropdowns__suptext image-with-dropdowns__suptext2">{{ block.settings.suptext2 }}</p>
-          {% endif %}
-          {% if block.settings.list_item1 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item1 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item2 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item2 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item3 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item3 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item4 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item4 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.show_ingredients == true %}
-              <div class="view-supplements">
-                <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-              </div>
+            <div class="image-with-dropdowns__a">
+              {% if section.settings.video_url != blank %}
+                <video autoplay loop muted playsinline class="video">
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+              {% else %}
+                {% render 'lazy-image' image: block.settings.image, classes: '' %}
+              {% endif %} 
+              <p class="sh2">{{ block.settings.text }}</p>
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
               {% endif %}
-          </div>
-
-        </div>
-        {% when 'type4' %}
-        <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
-          <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-            <div class="image-with-dropdowns__content-text">
-              <h5>{{ block.settings.title }}</h5>
-            </div>
-            <div class="image-with-dropdowns__x"></div>
-          </div>
-          <div class="image-with-dropdowns__a image-with-dropdowns__a_4">
-            {% if section.settings.video_url != blank %}
-            <video autoplay loop muted playsinline class="video">
-              <source src="{{ block.settings.video_url }}" type="video/mp4">
-            </video>
-            {% else %}
-            {% render 'lazy-image' image: block.settings.image, classes: '' %}
-            {% endif %} 
-            {% if block.settings.suptext != blank %}
-            <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
-            {% endif %}
-            <p class="sh2">{{ block.settings.text }}</p>
-            {% if block.settings.list_item1 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item1 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item2 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item2 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item3 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item3 }}</p>
-            </div>
-            {% endif %}
-            {% if block.settings.list_item4 != blank %}
-            <div class="image-with-dropdowns__list-item">
-              <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-              <p class="sh4">{{ block.settings.list_item4 }}</p>
-            </div>
-            {% endif %}
-            <div class="image-with-dropdowns__block4-bottom">
-              {% if block.settings.suptext2 != blank %}
-              <p class="image-with-dropdowns__suptext">{{ block.settings.suptext2 }}</p>
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
               {% endif %}
-              <p class="sh2">{{ block.settings.text2 }}</p>
-              {% if block.settings.list_item1_2 != blank %}
-              <div class="image-with-dropdowns__list-item">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-                <p class="sh4">{{ block.settings.list_item1_2 }}</p>
-              </div>
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
               {% endif %}
-              {% if block.settings.list_item2_2 != blank %}
-              <div class="image-with-dropdowns__list-item">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-                <p class="sh4">{{ block.settings.list_item2_2 }}</p>
-              </div>
-              {% endif %}
-              {% if block.settings.list_item3_2 != blank %}
-              <div class="image-with-dropdowns__list-item">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-                <p class="sh4">{{ block.settings.list_item3_2 }}</p>
-              </div>
-              {% endif %}
-              {% if block.settings.list_item4_2 != blank %}
-              <div class="image-with-dropdowns__list-item">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-                <p class="sh4">{{ block.settings.list_item4_2 }}</p>
-              </div>
-              {% endif %}
-              {% if block.settings.link != blank %}
-                <div class="image-with-dropdowns2__bottom-link">
-                  <a class="body" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
                 </div>
               {% endif %}
             </div>
           </div>
-        </div>
+        {% when 'type2' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_2">
+              {% if block.settings.icon_image_text_1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% when 'type3' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_3">
+              {% if block.settings.suptext != blank %}
+                <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+              {% endif %}
+              <p class="sh2">{{ block.settings.text }}</p>
+              <div class="icon-image-block3">
+                {% if block.settings.icon_image_text_1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_1 }}</p>
+                  {{ block.settings.icon_image_list_1 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_2 }}</p>
+                  {{ block.settings.icon_image_list_2 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_3 }}</p>
+                  {{ block.settings.icon_image_list_3 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_4 }}</p>
+                  {{ block.settings.icon_image_list_4 }}
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              {% if block.settings.suptext2 != blank %}
+                <p class="image-with-dropdowns__suptext image-with-dropdowns__suptext2">{{ block.settings.suptext2 }}</p>
+              {% endif %}
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.show_ingredients == true %}
+                <div class="view-supplements">
+                  <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                </div>
+              {% endif %}
+            </div>
+
+          </div>
+        {% when 'type4' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_4">
+              {% if section.settings.video_url != blank %}
+                <video autoplay loop muted playsinline class="video">
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+              {% else %}
+                {% render 'lazy-image' image: block.settings.image, classes: '' %}
+              {% endif %} 
+              {% if block.settings.suptext != blank %}
+                <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+              {% endif %}
+              <p class="sh2">{{ block.settings.text }}</p>
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
+                </div>
+              {% endif %}
+              <div class="image-with-dropdowns__block4-bottom">
+                {% if block.settings.suptext2 != blank %}
+                  <p class="image-with-dropdowns__suptext">{{ block.settings.suptext2 }}</p>
+                {% endif %}
+                <p class="sh2">{{ block.settings.text2 }}</p>
+                {% if block.settings.list_item1_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item1_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item2_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item2_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item3_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item3_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item4_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item4_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <div class="image-with-dropdowns2__bottom-link">
+                    <a class="body" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
         {% endcase %}
         {% endfor %}
       </div>
@@ -290,7 +297,12 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image"
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Mobile Image"
       },
       {
         "type": "textarea",
