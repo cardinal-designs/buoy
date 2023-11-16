@@ -62,12 +62,13 @@
         "dca0e5dd-357d-4543-b722-8d65bedef3b1",
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
       "settings": {
-        "title": "Best Electrolyte Drink for Your Daily Hydration Needs",
-        "text": "Stay effortlessly hydrated by adding the latest innovation in electrolyte supplements to your daily routine.<br><br>\n\nWhen it comes to daily hydration, not all electrolytes are created equal. Supercharge your hydration like never before with Buoy’s uniquely unflavored, sugar-free, and bioavailable hydration drops. Designed for the movers, the shakers, and everyone in between.<br><br>\n\n✓ What Makes The Perfect Electrolyte Drink<br>\n✓ Common Electrolyte Options And Their Flaws<br>\n✓ Our Electrolyte Solution for Optimal Hydration<br>\n✓ How Buoy Complements Every Lifestyle<br>\n✓ Easy Ways To Incorporate Buoy Into Your Daily Routine<br><br>\n\nPlus, a sneak peek of our favorite electrolyte drink that takes your everyday hydration to the next level!",
+        "title": "",
+        "text": "",
         "shop_all_label": "Shop Hydration Drops",
         "shop_all_link": "shopify:\/\/products\/hydration-drops",
         "promo_link_text": "",
@@ -75,6 +76,98 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
+      }
+    },
+    "31e36676-5821-47f9-a328-6c162b259d29": {
+      "type": "pee-club-products",
+      "blocks": {
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": true,
+            "sale_text": "Formulated for Optimal Hydration",
+            "product": "hydration-drops",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "The easiest and healthiest way to get your hydrating electrolytes and minerals in without the sugar, sweeteners or flavors.",
+            "list_item1": "One month supply",
+            "list_item2": "Ocean Electrolytes + 87 Ionic Trace Minerals",
+            "list_item3": "Hydrate for less than $1\/day + 100% Money Back Guarantee",
+            "button_text": "Boost your Daily Hydration",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "a55a48cb-e8fe-4147-b872-04281d92e180": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "energy-drops",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "Buoy's same baseline hydration formula but with the energizing health compounds in green tea for no-jitters, all-natural energy.",
+            "list_item1": "One month supply",
+            "list_item2": "Gently caffeinated",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "immunity-drops",
+            "servings": "3 PACK · 120 SERVINGS",
+            "text": "3-in-1 immune support with electrolytes, vitamins and zinc.",
+            "list_item1": "One month supply",
+            "list_item2": "Hydrate for around $1\/day",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "8939123e-4123-47d7-a631-21ea009a79ce": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "wellness-kit",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.<br><br>1 Hydration Drops<br>1 Energy Drops<br>1 Immunity Drops",
+            "list_item1": "One month supply",
+            "list_item2": "All three drops",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        }
+      },
+      "block_order": [
+        "56552880-d878-401c-b38e-f4f0c4cc485e",
+        "a55a48cb-e8fe-4147-b872-04281d92e180",
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59",
+        "8939123e-4123-47d7-a631-21ea009a79ce"
+      ],
+      "settings": {
+        "title": "Best Electrolyte Drink for Your Daily Hydration Needs",
+        "text": "Stay effortlessly hydrated by adding the latest innovation in electrolyte supplements to your daily routine.<br><br>\n\nWhen it comes to daily hydration, not all electrolytes are created equal. Supercharge your hydration like never before with Buoy’s uniquely unflavored, sugar-free, and bioavailable hydration drops. Designed for the movers, the shakers, and everyone in between.",
+        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> What Makes The Perfect Electrolyte Drink<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Common Electrolyte Options And Their Flaws<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Our Electrolyte Solution for Optimal Hydration<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> How Buoy Complements Every Lifestyle<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Easy Ways To Incorporate Buoy Into Your Daily Routine<br> <br>Plus, a sneak peek of our favorite electrolyte drink that takes your everyday hydration to the next level!<\/p>",
+        "button_label": "Read our reviews",
+        "button_link": "shopify:\/\/pages\/reviews",
+        "background": "",
+        "add_top_border": true,
+        "add_bottom_border": false
       }
     },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
@@ -483,96 +576,6 @@
         "add_bottom_border": true,
         "background": "bg_color",
         "hide_supp": false
-      }
-    },
-    "31e36676-5821-47f9-a328-6c162b259d29": {
-      "type": "pee-club-products",
-      "blocks": {
-        "56552880-d878-401c-b38e-f4f0c4cc485e": {
-          "type": "block",
-          "settings": {
-            "recommend": true,
-            "sale_text": "Save 24%",
-            "product": "hydration-drops",
-            "servings": "3 BOTTLES · 120 SERVINGS",
-            "text": "The complete electrolyte and mineral supplement for premium hydration",
-            "list_item1": "One month supply",
-            "list_item2": "Hydrate for less than $1\/day",
-            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit",
-            "checkout_link": "",
-            "button_price": "",
-            "button_discount_price": ""
-          }
-        },
-        "a55a48cb-e8fe-4147-b872-04281d92e180": {
-          "type": "block",
-          "settings": {
-            "recommend": false,
-            "sale_text": "Save 24%",
-            "product": "energy-drops",
-            "servings": "3 BOTTLES · 120 SERVINGS",
-            "text": "Buoy's same baseline hydration formula but with the energizing health compounds in green tea for no-jitters, all-natural energy.",
-            "list_item1": "One month supply",
-            "list_item2": "Gently caffeinated",
-            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit",
-            "checkout_link": "",
-            "button_price": "",
-            "button_discount_price": ""
-          }
-        },
-        "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "recommend": false,
-            "sale_text": "Save 24%",
-            "product": "immunity-drops",
-            "servings": "3 PACK · 120 SERVINGS",
-            "text": "3-in-1 immune support with electrolytes, vitamins and zinc.",
-            "list_item1": "One month supply",
-            "list_item2": "Hydrate for around $1\/day",
-            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit",
-            "checkout_link": "",
-            "button_price": "",
-            "button_discount_price": ""
-          }
-        },
-        "8939123e-4123-47d7-a631-21ea009a79ce": {
-          "type": "block",
-          "settings": {
-            "recommend": false,
-            "sale_text": "Save 24%",
-            "product": "wellness-kit",
-            "servings": "3 BOTTLES · 120 SERVINGS",
-            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.<br><br>1 Hydration Drops<br>1 Energy Drops<br>1 Immunity Drops",
-            "list_item1": "One month supply",
-            "list_item2": "All three drops",
-            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit",
-            "checkout_link": "",
-            "button_price": "",
-            "button_discount_price": ""
-          }
-        }
-      },
-      "block_order": [
-        "56552880-d878-401c-b38e-f4f0c4cc485e",
-        "a55a48cb-e8fe-4147-b872-04281d92e180",
-        "aca99b1c-2e36-45dc-8c71-d752f8937b59",
-        "8939123e-4123-47d7-a631-21ea009a79ce"
-      ],
-      "settings": {
-        "title": "The Best Electrolyte Drink for Leg Cramps: <br><u>Our Top Pick<\/u>",
-        "text": "Stop muscle cramps in their tracks with Buoy's seawater electrolytes, 87 ionic ocean minerals and plant-powered vitamins in their most bioavailable form.<br><br>Incorporate these on-the-go electrolytes into your routine for long term, lasting relief.<br><br><strong>Save 24%<\/strong> and try risk free for a month to feel how good clean hydration feels.",
-        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Delivered monthly<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Free shipping, always<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Free Welcome Kit<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> No commitment, cancel anytime<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 30 Day Money Back Guarantee<\/p>",
-        "button_label": "Read our reviews",
-        "button_link": "#shopify-section-template--17817534824748__74a67b66-5d60-41fe-b3b9-b73374644bbe",
-        "background": "",
-        "add_top_border": true,
-        "add_bottom_border": false
       }
     },
     "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
@@ -1141,6 +1144,7 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "304f34df-6587-4eb2-a832-96b49eef9918",
+    "31e36676-5821-47f9-a328-6c162b259d29",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
@@ -1150,7 +1154,6 @@
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "50df382c-255c-4272-b876-eca398cca73a",
-    "31e36676-5821-47f9-a328-6c162b259d29",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
