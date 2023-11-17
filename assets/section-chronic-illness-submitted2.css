@@ -24,8 +24,8 @@
 }
 
 .collection-groups__item {
-  padding-bottom: 0;
-  border: 0;
+  padding-bottom: 0 !important;
+  border-bottom: none;
 }
 
 
