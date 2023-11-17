@@ -56,9 +56,43 @@
         "button_label": "Go to Cart",
         "button_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47155557171500&items[][quantity]=1&items[][selling_plan]=586645575&return_to=\/checkout"
       }
+    },
+    "b32109d6-b158-4211-b81c-72a8d2fac8fd": {
+      "type": "submitted-products",
+      "blocks": {
+        "ef550fd9-f72f-42a3-b5bf-b81245473baf": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "url": ""
+          }
+        },
+        "f27f22b6-fd8e-451f-84b4-e076a6ca0864": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "url": ""
+          }
+        },
+        "955f3f24-9ee0-40d1-a0db-a6c9cc484d0b": {
+          "type": "block",
+          "settings": {
+            "product": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "ef550fd9-f72f-42a3-b5bf-b81245473baf",
+        "f27f22b6-fd8e-451f-84b4-e076a6ca0864",
+        "955f3f24-9ee0-40d1-a0db-a6c9cc484d0b"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "165896656305efe1a5"
+    "165896656305efe1a5",
+    "b32109d6-b158-4211-b81c-72a8d2fac8fd"
   ]
 }
