@@ -33,9 +33,12 @@
   margin: 70px auto 100px !important;
 }
 
+.card-information__wrapper a {
+  text-align: left !important;
+}
 
 .chronic-submitted__text .light {
-  margin: 0 auto 35px;
+  margin: 0 auto;
   max-width: 563px;
 }
 
