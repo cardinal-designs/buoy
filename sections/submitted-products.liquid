@@ -12,7 +12,9 @@
               product_card_product: block.settings.product,
               show_secondary_image: true,
               hover_video: block.settings.hover_video,
-              show_shop_button: true %}
+              show_shop_button: true,
+              product_card_url: block.settings.url
+          %}
           {% endfor %}
         </div>
       </div>
@@ -34,6 +36,11 @@
             "type": "product",
             "id": "product",
             "label": "Product"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "ATC URL"
           }
         ]
       }
