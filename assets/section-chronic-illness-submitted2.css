@@ -1,0 +1,72 @@
+.chronic-submitted__container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.chronic-submitted__info {
+  width: 100%;
+}
+
+.chronic-submitted__text {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 44px;
+  padding: 0 60px;
+}
+
+.chronic-submitted__text .sh3 {
+  max-width: 563px;
+  margin: 0 auto 10px;
+  color: #545759;
+}
+
+
+.chronic-submitted__text .light {
+  margin: 0 auto 35px;
+  max-width: 563px;
+}
+
+.chronic-submitted__text h2 {
+   max-width: 563px;
+  margin: 0 auto 20px
+}
+
+.chronic-submitted__info .marquee__container {
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee {
+  padding: 5px 0 7px;
+  position: relative;
+  bottom: 0;
+  overflow-x: hidden;
+  display: flex;
+  z-index: 1;
+  border-top: 2px solid #1F2322;
+}
+
+.chronic-submitted__info .marquee__item {
+  margin: 0;
+  padding: 0 20px;
+  display: flex !important;
+  align-items: center;
+}
+
+.chronic-submitted__info .marquee__item svg {
+  width: 11px;
+  margin-top: 4px;
+  margin-right: 6px;
+}
+
+.chronic-submitted__info .marquee__item p {
+  margin: 0;
+  margin-top: 4px;
+  text-transform: unset;
+}
