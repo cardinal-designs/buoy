@@ -1,12 +1,47 @@
+{{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-groups">
+  <div class="page-width">
+  	{% for block in section.blocks %}
+      <div class="collection-groups__item">
+        <div class="collection-groups__grid">
+          {% for block in section.blocks %}
+            {% render 'product-card'
+              product_card_product: block.settings.product,
+              show_secondary_image: true,
+              hover_video: block.settings.hover_video,
+              show_shop_button: true %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Submitted Products",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Submitted Products"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
