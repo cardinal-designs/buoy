@@ -1,4 +1,7 @@
 {{ 'section-chronic-illness-submitted.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 
 <div class="chronic-submitted__container">
   <div class="chronic-submitted__info">
@@ -6,23 +9,41 @@
       <p class="sh3">{{ section.settings.suptitle }}</p>
       <h2>{{ section.settings.title }}</h2>
       <p class="light">{{ section.settings.text }}</p>
-      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+      <div class="collection-groups__item">
+        <div class="collection-groups__grid">
+          {% for block in section.blocks %}
+            {% if block.type == 'product' %}
+            {% render 'product-card-atc'
+              product_card_product: block.settings.product,
+              show_secondary_image: true,
+              hover_video: block.settings.hover_video,
+              show_shop_button: true,
+              product_card_url: block.settings.url
+          %}
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   <div class="marquee">
     <div class="marquee__container">
         {% for block in section.blocks %}
+          {% if block.type == 'marquee' %}
           <div class="marquee__item">
             {% render 'icon-check' %}
             <p class="body-xs light">{{ block.settings.text }}</p>
           </div>
+          {% endif %}
         {% endfor %}
       </div>
       <div class="marquee__container">
         {% for block in section.blocks %}
+          {% if block.type == 'marquee' %}
           <div class="marquee__item">
             {% render 'icon-check' %}
             <p class="body-xs light">{{ block.settings.text }}</p>
           </div>
+         {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -65,13 +86,29 @@
 	],
     "blocks": [
       {
-        "type": "block",
-        "name": "Block",
+        "type": "marquee",
+        "name": "Marquee",
         "settings": [
           {
             "type": "text",
             "id": "text",
             "label": "Text"
+          }
+        ]
+      },
+            {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "ATC URL"
           }
         ]
       }
