@@ -88,11 +88,95 @@
         "955f3f24-9ee0-40d1-a0db-a6c9cc484d0b"
       ],
       "settings": {
+        "suptitle": "",
+        "title": "",
+        "text": ""
+      }
+    },
+    "ce2ffa96-5ed7-4b59-ab15-0fa911a39bb7": {
+      "type": "chronic-illness-submitted2",
+      "blocks": {
+        "0dcdfef8-10dc-4e0f-a3ff-d5ce55286d52": {
+          "type": "product",
+          "settings": {
+            "product": "ocean-electrolyte-kit",
+            "url": ""
+          }
+        },
+        "eb3ead2e-74d6-456d-a3a7-ff018756782c": {
+          "type": "product",
+          "settings": {
+            "product": "hydration-drops",
+            "url": ""
+          }
+        },
+        "0d50a924-7475-4536-b3b8-fc82e0e2c2f9": {
+          "type": "product",
+          "settings": {
+            "product": "rescue-salts",
+            "url": ""
+          }
+        },
+        "6c11ad99-a94b-4b0c-82f6-7aeaf0c82191": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "85e0b58e-1e95-4b2b-8f86-4c2c0b49cf5e": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "b6816eba-439e-4a1a-a2bc-69a2685df3a7": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        },
+        "692a3b89-105b-4f2e-b1ab-ab8656325698": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "9ec06094-dbd4-488c-9211-26ff1213cc48": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "e7c47aee-fb47-48da-b2f2-159cdf3db9da": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        }
+      },
+      "block_order": [
+        "0dcdfef8-10dc-4e0f-a3ff-d5ce55286d52",
+        "eb3ead2e-74d6-456d-a3a7-ff018756782c",
+        "0d50a924-7475-4536-b3b8-fc82e0e2c2f9",
+        "6c11ad99-a94b-4b0c-82f6-7aeaf0c82191",
+        "85e0b58e-1e95-4b2b-8f86-4c2c0b49cf5e",
+        "b6816eba-439e-4a1a-a2bc-69a2685df3a7",
+        "692a3b89-105b-4f2e-b1ab-ab8656325698",
+        "9ec06094-dbd4-488c-9211-26ff1213cc48",
+        "e7c47aee-fb47-48da-b2f2-159cdf3db9da"
+      ],
+      "settings": {
+        "suptitle": "THANKS FOR APPLYING",
+        "title": "Your 35% off discount is waiting!",
+        "text": "Your cart has been auto-populated with our Hydration Drops—our recommended product for anyone starting out. Don’t worry, your 35% off discount will automatically be applied at checkout and to every recurring order from here on out. <br><br>Click the link below to finalize check out.",
+        "button_label": "",
+        "button_link": ""
       }
     }
   },
   "order": [
     "165896656305efe1a5",
-    "b32109d6-b158-4211-b81c-72a8d2fac8fd"
+    "b32109d6-b158-4211-b81c-72a8d2fac8fd",
+    "ce2ffa96-5ed7-4b59-ab15-0fa911a39bb7"
   ]
 }
