@@ -64,7 +64,7 @@
         {% endif %}
 
         {% if show_shop_button %}
-          <a href="{{ product_card_url | default: '#' }}" class="shop-btn button button--beige">Go To Cart</a>
+          <a href="{{ product_card_url | default: '#' }}" class="shop-btn button button--beige">{{ product_card_button_text }}</a>
         {% endif %}
       </div>
     </div>
