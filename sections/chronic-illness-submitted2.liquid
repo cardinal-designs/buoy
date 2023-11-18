@@ -18,7 +18,8 @@
               show_secondary_image: true,
               hover_video: block.settings.hover_video,
               show_shop_button: true,
-              product_card_url: block.settings.url
+              product_card_url: block.settings.url,
+              product_card_button_text: block.settings.button_text
           %}
           {% endif %}
           {% endfor %}
@@ -94,6 +95,11 @@
             "type": "product",
             "id": "product",
             "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
           },
           {
             "type": "url",
