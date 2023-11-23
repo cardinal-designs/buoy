@@ -74,10 +74,27 @@
     "31e36676-5821-47f9-a328-6c162b259d29": {
       "type": "pee-club-products",
       "blocks": {
-        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
           "type": "block",
           "settings": {
             "recommend": true,
+            "sale_text": "<strong>NEW<\/strong> — Save 30%",
+            "product": "ocean-electrolyte-kit",
+            "servings": "3 HYDRATION DROPS · (120 SERV) + 1  RESCUE SALT · (45 SERV)",
+            "text": "<strong>The Ocean's Best™<\/strong> — A complete ocean-harvested electrolyte and mineral routine featuring Buoy's best-selling ionic ocean electrolyte drops with our <strong>new Rescue Salt<\/strong>.",
+            "list_item1": "One Month Supply",
+            "list_item2": "Electrolytes + 87 Trace Minerals",
+            "list_item3": "No Sugar, Sweeteners, Flavors, Processing or Addtives",
+            "button_text": "Try Risk Free",
+            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47349290860844&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
+            "button_price": "$51.00",
+            "button_discount_price": "$35.70"
+          }
+        },
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
             "sale_text": "Save 30%",
             "product": "hydration-drops",
             "servings": "3 BOTTLES · 120 SERVINGS",
@@ -89,23 +106,6 @@
             "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=45021294362924&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
             "button_price": "$39.00",
             "button_discount_price": "$27.30"
-          }
-        },
-        "220f0253-c4d6-4374-8cda-c34b6b9d90a1": {
-          "type": "block",
-          "settings": {
-            "recommend": false,
-            "sale_text": "NEW — Save 30%",
-            "product": "ocean-electrolyte-kit",
-            "servings": "3 HYDRATION DROPS · (120 SERV) + 1  RESCUE SALT · (45 SERV)",
-            "text": "<strong>The Ocean's Best™<\/strong> — A complete ocean-harvested electrolyte and mineral routine featuring Buoy's best-selling ionic ocean electrolyte drops with our <strong>new Rescue Salt<\/strong>.",
-            "list_item1": "One Month Supply",
-            "list_item2": "Electrolytes + 87 Trace Minerals",
-            "list_item3": "No Sugar, Sweeteners, Flavors, Processing or Addtives",
-            "button_text": "Try Risk Free",
-            "checkout_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47349290860844&items[][quantity]=1&items[][selling_plan]=538869831&return_to=\/checkout?discount=BFCM23VIP",
-            "button_price": "$51.00",
-            "button_discount_price": "$35.70"
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -178,8 +178,8 @@
         }
       },
       "block_order": [
-        "56552880-d878-401c-b38e-f4f0c4cc485e",
         "220f0253-c4d6-4374-8cda-c34b6b9d90a1",
+        "56552880-d878-401c-b38e-f4f0c4cc485e",
         "a55a48cb-e8fe-4147-b872-04281d92e180",
         "aca99b1c-2e36-45dc-8c71-d752f8937b59",
         "1dba120e-2430-47ec-b774-989bddefba6e",
