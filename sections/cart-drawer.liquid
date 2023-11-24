@@ -234,8 +234,7 @@
               {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
               {% render 'cart-drawer-item' item: item, idx: index %}
             {% endfor %}
-          </div>
-           <div class="cart-drawer__footer">
+
             {% if section.settings.upsell_subproduct1 != blank %}
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
@@ -353,7 +352,9 @@
             </div>
             {% endif %}
             {% endif %}
-          
+          </div>
+           <div class="cart-drawer__footer">
+            
             <div class="cart-drawer__shipping-wrapper" id="cart-drawer-subtotal">
               <h4 class="body light">Promo Code</h4>
               <h4 class="body light">Applied at Checkout</h4>
