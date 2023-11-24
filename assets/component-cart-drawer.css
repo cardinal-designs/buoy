@@ -792,11 +792,6 @@
   .cart-drawer__footer .car-notes {
     text-transform: capitalize;
   }
-
-  .cart-drawer__header .cart-drawer__title {
-    visibility: hidden;
-  }
-  
 }
 
 @media screen and (max-width: 374px) {

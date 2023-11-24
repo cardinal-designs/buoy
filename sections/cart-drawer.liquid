@@ -228,9 +228,6 @@
           </div>
           
           {%- else -%}
-          <div class="cart-title hide-desktop">
-            <h2 class="cart-drawer__title sh2 light">{{ section.settings.cart_title }} ({{ cart.item_count }})</h2>
-          </div>
           <div class="cart-drawer__items" id="cart-drawer-items">
             {% for item in cart.items %}
               {% assign index = cart.item_count | minus: forloop.index0 %}
