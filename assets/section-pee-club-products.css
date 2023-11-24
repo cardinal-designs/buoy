@@ -22,12 +22,9 @@
   display: none;
 }
 
-
-
 .pee-club-products {
   display: flex;
 }
-
 
 .pee-club-product {
   padding: 0 18px 18px;
@@ -70,6 +67,10 @@
 
 .pee-club-product:first-of-type .pee-club-product-info {
   display: block;
+}
+
+.pee-club-product-info .pee-club-product-info__button button {
+  cursor: pointer;
 }
 
 .pee-club-product img {
