@@ -782,11 +782,11 @@
   }
 
   .cart-drawer__items {
-    height: calc(100% - 455px);
+    /* height: calc(100% - 455px); */
   }
 
   .cart-drawer__content {
-    height: calc(100vh - 0px);
+    height: calc(100dvh - 0px);
   }
 
   .cart-drawer__footer .car-notes {
