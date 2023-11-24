@@ -61,7 +61,8 @@
 }
 
 .cart-drawer__items {
-  height: calc(100% - 455px);
+  height: 100%;
+  padding-bottom: 480px;
   padding-right: 10px;
   overflow-y: auto;
   margin: 20px 10px 20px 20px;
