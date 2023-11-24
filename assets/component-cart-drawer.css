@@ -8,6 +8,7 @@
   position: fixed; 
   right: 0;
   top: 0;
+  bottom: 0;
   visibility: hidden;
   transform: translateX(100%);
   -webkit-transform: translateX(100%); 
@@ -24,7 +25,6 @@
 }
 
 .cart-drawer__inner {
-  min-height: 800px;
   height: 100dvh;
   position: absolute;
   top: 0;
