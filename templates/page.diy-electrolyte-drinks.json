@@ -252,6 +252,7 @@
         "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4",
         "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3"
       ],
+      "disabled": true,
       "settings": {
         "review_emoji": "⭐️",
         "head-title": "3,000 +trusted reviews",
@@ -318,32 +319,48 @@
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Mineral Deficiencies<\/strong>",
-            "text": "The main cause of leg cramps is having low electrolyte and mineral levels. <br><br>Electrolytes—<i>specifically <strong>sodium, potassium, chloride<\/strong> and <strong>magnesium<\/strong><\/i>—are essential to proper muscle functions like contractions and repair. <br><br> If you're not replenishing them often throughout the day, you'll be at higher risk for leg cramps, especially at night when they can be the most disruptive."
+            "suptext": "<h3>Sodium<\/h3>",
+            "text": "Not just for flavoring food, sodium plays a critical role in maintaining fluid balance in your body. It helps regulate blood pressure and is key for muscle and nerve function. Too little or too much, and your body's systems may not operate as smoothly as they should."
           }
         },
         "995875da-7462-4aaa-a036-35bf1899a1d1": {
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Dehydration<\/strong>",
-            "text": "Without an adequate balance of electrolytes and fluids, your muscles can't properly relax.<br><br>Replenishing fluids and electrolytes throughout the morning, afternoon and late evening, especially for people leading an active lifestyle, is a great way to prevent leg cramps."
+            "suptext": "<h3>Potassium<\/h3>",
+            "text": "It's more than just bananas. Potassium regulates muscle function, including the all-important heart muscle. It works in partnership with sodium to balance fluid levels in the body, which helps to control blood pressure and keep things running smoothly at a cellular level."
           }
         },
         "365d3728-31ba-4a31-85f8-0e225017bf50": {
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Stress<\/strong>",
-            "text": "When stressed or feeling anxious, our muscles tense up and become  rigid, which can lead to muscle cramping.<br><br>While anxiety and stress are hard to control, having plenty of electrolytes and fluids in your body allows your body to handle excess levels of cortisol better than it would without."
+            "suptext": "<h3>Chloride<\/h3>",
+            "text": "This electrolyte is the silent partner to sodium and potassium, helping to keep the balance of fluids inside and outside of cells. It's essential for digestion, as it's a key component of the fluids secreted in the digestive system."
           }
         },
         "0944c29e-8858-4c67-8143-998693ed58f5": {
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Nerve Compression<\/strong>",
-            "text": "Poor posture and overworking muscle groups may restrict blood flow, which is a common cause of leg cramps.<br><br>Daily things like sitting too long in one spot, standing on hard and flat floors and even poor posture while standing and sitting may be a factor for leg cramps."
+            "suptext": "<h3>Magnesium<\/h3>",
+            "text": "Magnesium is involved in a whopping 300+ biochemical reactions in your body. From energy creation to protein formation and even DNA repair, magnesium has a hand in a multitude of physiological processes. It's also key for regulating muscle and nerve function, blood sugar, and blood pressure levels."
+          }
+        },
+        "15efc9c7-bd61-495f-b086-d2393487f92d": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "suptext": "<h3>Calcium<\/h3>",
+            "text": "Calcium aids in muscle contraction and is vital for bone health. It works in tandem with other electrolytes like potassium and magnesium to ensure your muscles function smoothly and efficiently."
+          }
+        },
+        "9b9a02c3-5ad4-4c90-a041-e3a9321b56a0": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "suptext": "<h3>Sweeteners & Flavorings<\/h3>",
+            "text": "While not required, healthy, whole food ingredients like honey, lemon juice, and fruit purees can add taste without artificial additives."
           }
         }
       },
@@ -351,10 +368,12 @@
         "71af6773-5252-4003-91a5-b1690c90cb84",
         "995875da-7462-4aaa-a036-35bf1899a1d1",
         "365d3728-31ba-4a31-85f8-0e225017bf50",
-        "0944c29e-8858-4c67-8143-998693ed58f5"
+        "0944c29e-8858-4c67-8143-998693ed58f5",
+        "15efc9c7-bd61-495f-b086-d2393487f92d",
+        "9b9a02c3-5ad4-4c90-a041-e3a9321b56a0"
       ],
       "settings": {
-        "section_title": "<h2 style=\"font-size: 45px\">Common causes <i>of leg cramps<\/i>\n<\/h2>",
+        "section_title": "<h2 style=\"font-size: 45px\">Exploring Homemade<i> Electrolyte Ingredients<\/i>\n<\/h2>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bottom"
