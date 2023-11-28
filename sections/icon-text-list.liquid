@@ -2,7 +2,10 @@
 
 <div class="page-width">
   {%- if section.settings.title != blank -%}
-    <h1 class="icon-text__header">{{ section.settings.title }}</h1>
+    <h1 class="icon-text__header">
+      <span>{{ section.settings.title_one }}</span>
+      {{ section.settings.title }}
+    </h1>
   {%- endif -%}
   <div class="icon-text__container">
     {% for block in section.blocks %}
@@ -18,6 +21,11 @@
 {
   "name": "Icon Text List",
   "settings": [
+    {
+      "type": "text",
+      "id": "title_one",
+      "label": "Title"
+    },
     {
       "type": "text",
       "id": "title",
