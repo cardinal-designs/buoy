@@ -62,10 +62,6 @@
                 <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
                 <p>{{ block.settings.list_item3 }}</p>   
               </div>
-              <div class="product__drawer-triggers">
-                <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-                <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
-              </div>
             </div>
           </div>
           {% endif %}
@@ -88,6 +84,11 @@
             </div>
           </div>
         {% endif %}
+
+        <div class="product__drawer-triggers">
+          <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+          <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
+        </div>
 
         {% comment %}
         <a class="Link_Text js-open-supplement-drawer" href="javascript:void(0);">{{ section.settings.supplement_fact_text }}</a>
