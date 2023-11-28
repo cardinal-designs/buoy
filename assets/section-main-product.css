@@ -2652,6 +2652,12 @@ select[name=selling_plan] {
   padding-bottom: 26px;
 }
 
+@media screen and (max-width: 768px) {
+  .product__drawer-triggers {
+    margin-top: 30px;
+  }
+}
+
 .product__drawer-triggers a {
   text-decoration: underline;
   text-underline-offset: 7px;
