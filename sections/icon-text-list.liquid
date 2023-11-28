@@ -2,7 +2,7 @@
 
 <div class="page-width">
   {%- if section.settings.title != blank -%}
-    <h1>{{ section.settings.title | replace: '<p>', '' | replace: '</p>', '' }}</h1>
+    <h1 class="icon-text__header">{{ section.settings.title | replace: '<p>', '' | replace: '</p>', '' }}</h1>
   {%- endif -%}
   <div class="icon-text__container">
     {% for block in section.blocks %}
