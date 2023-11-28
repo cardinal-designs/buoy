@@ -77,9 +77,13 @@
           {%- if section.settings.product_feature_icon != blank -%}        
             <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
           {%- endif -%}
-            <div>  
-              <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
-              <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
+            <div>
+              {%- if section.settings.product_feature_text != blank -%}
+                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
+              {%- endif -%}
+              {%- if section.settings.product_feature_text_two != blank -%}
+                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
+              {%- endif -%}
             </div>
           </div>
         </div>
