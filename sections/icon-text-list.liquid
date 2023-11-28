@@ -1,7 +1,7 @@
 {{ 'section-icon-text-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  {%- if section.settings.title != blank -%}
+  {%- if section.settings.title != blank and section.settings.title_one != blank -%}
     <h1 class="icon-text__header">
       <span class="icon-text__header-italic">{{ section.settings.title_one }}</span>
       {{ section.settings.title }}
