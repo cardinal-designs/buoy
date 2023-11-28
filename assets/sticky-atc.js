@@ -12,7 +12,7 @@ function stickAtc() {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && window.scrollY > lastScrollPosition) {
+      if (window.scrollY > lastScrollPosition) {
         console.log(window.scrollY);
         stickyAtc.classList.add('active');
       } else {
