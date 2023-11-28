@@ -11,6 +11,8 @@ function stickAtc() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         stickyAtc.classList.add('active');
+      } else {
+        stickyAtc.classList.remove('active');
       }
     });
   }, options);
