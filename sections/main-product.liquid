@@ -6,8 +6,6 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-supplements-drawer.css' | asset_url | stylesheet_tag }}
 
-{{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
-
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -15,15 +13,13 @@
 <section data='{{product | json}}' class="page-width">
   <input type="hidden" id='current_variant_price' value="{{ currentVariant.price | money_without_trailing_zeros }}" >
   <div class="product {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
-
+     
+    {% render 'supplement-facts-drawer' %}
     <div class="product__info-wrapper">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {% render 'okendo-reviews-product-rating-summary', product: product %}
-
-        <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p> 
-
         <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}
@@ -31,76 +27,18 @@
           {% endif %}
         </h1>
 
-        {% if section.settings.lowest_price != blank %}
-          <p class="starting-at__price">Starting At {{ section.settings.lowest_price }}</p>
-        {% endif %}
+        <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p>       
+
+        <div class="Product_Tags">
+          {%- for tag in product.tags -%}
+            <span>{{ tag }}</span>
+          {%- endfor -%}
+        </div>
         
-        <div class="product__description sh4">
+        <div class="product__description sh4 light">
           {{ product.description }}
         </div>
         
-        <div class="dropdown-container-item__container">
-          <p class="product-form__text-label">What's Included</p>
-        {% for block in section.blocks %}
-          {% if block.type ==  "dropdown" %}
-          <div class="dropdown-container-item">
-            <div class="dropdown-container-item__title">
-              <p>{{ block.settings.title }}</p>
-              <div class="dropdown-container-item__x"></div>
-            </div>
-            <div class="dropdown-container-item__body">
-              <div class="dropdown-container-item__body-text">
-                <p class="rhyme">{{ block.settings.subtitle }}</p>
-                <div class="bubble-text">
-                  <p>{{ block.settings.bubble_text }}</p>
-                </div>
-              </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item1 }}</p>
-              </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item2 }}</p>
-              </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item3 }}</p>   
-              </div>
-              <div class="product__drawer-triggers">
-                <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-                <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-        {% endfor %}
-        </div>
-
-        {% if section.settings.show_drawer_triggers == true %}
-        <div class="product__drawer-triggers">
-          <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-          <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
-        </div>
-       
-        <div class="Product_Tags">
-          {%- for tag in product.tags -%}
-            <div>
-              {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
-                <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
-              {% endif %}
-              {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
-                <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
-              {% endif %}
-              {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
-                <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
-              {% endif %}
-              <span>{{ tag }}</span>
-            </div>
-          {%- endfor -%}
-        </div>
-        {% endif %}
-
         {% comment %}
         <a class="Link_Text js-open-supplement-drawer" href="javascript:void(0);">{{ section.settings.supplement_fact_text }}</a>
         {% endcomment %}
@@ -151,7 +89,6 @@
           {%- unless product.has_only_default_variant -%}
           {%- if section.settings.picker_type == 'button' -%}
           {% assign my_fields = product.variant.metafields.custom %}
-          <p id="selector" class="product-form__text-label">Choose Quantity</p>
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
             {%- for option in product.options_with_values -%}
              {% assign optionIndex = forloop.index0 %}
@@ -160,12 +97,11 @@
               {%- for variant in product.variants -%}
                 {% assign value = variant.options[optionIndex] %}
                 {%- unless values contains value -%}
-                {% assign values = values | join: ',' %}
-                {% assign values = values | append: ',' | append:value %}
-                {% assign values = values | split: ',' %}
+                {% assign values = values | join:',' %}
+                {% assign values = values | append:',' | append:value %}
+                {% assign values = values | split:',' %}
 
                  {% assign my_fields = variant.metafields.custom %}
-
                   <span class="Variant_Blocks" data-id={{ variant.id }}>
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                       name="{{ option.name }}"
@@ -174,18 +110,15 @@
                       {% if option.selected_value == value %}checked{% endif %}
                     >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                      {%- if my_fields.supply_time != blank -%}
-                        <span class="Supply_Time">{{ my_fields.supply_time }} / {{ my_fields.servings }}</span>
-                      {%- endif -%}
-                      {%- if my_fields.product_image != blank -%}
-                        <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
-                      {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if my_fields.serving_cost != blank -%}
-                        <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
-                      {%- endif -%}
-                      {%- if my_fields.best_value != blank -%}
+                      {%- if my_fields.best_value  != blank -%}
                         <span class="Best_Value">{{ my_fields.best_value }}</span>
+                      {%- endif -%}
+                      {%- if my_fields.supply_time  != blank -%}
+                        <span class="Supply_Time">{{ my_fields.supply_time }}</span>
+                      {%- endif -%}
+                      {%- if my_fields.servings != blank -%}
+                        <span class="Variant_Servings">({{ my_fields.servings }})</span>
                       {%- endif -%}
                     </label>
                   </span>
@@ -280,23 +213,18 @@
               </div>
             {% endif %}
           {% endcomment %}
-           {% if settings.show_shipping_countdown != blank %}
-            <div id="Order_Within" class="Order_Within Risk_Free">
-               <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Shipping_Time.png?v=1698697270"/>
-               {{ settings.order_within_text }}
-            </div>
-          {% endif %}
+            
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
-              type="submit"
-              name="add"
-              style="flex-direction: initial; padding: 12px 10px;"
-              data-available="{{ currentVariant.available }}"
-              class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-              {% if currentVariant.available == false %}disabled{% endif %}
-              data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-            >
+                    type="submit"
+                    name="add"
+                    style="flex-direction: initial; padding: 12px 10px;"
+                    data-available="{{ currentVariant.available }}"
+                    class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    {% if currentVariant.available == false %}disabled{% endif %}
+                    data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                    >
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
@@ -317,40 +245,6 @@
                 {%- endif -%}
               </div>
             </button>
-            {% comment %} Mobile sticky ATC {% endcomment %}
-            <div class="product-form__sticky-atc hide-desktop">
-              <p class="product-form__sticky-atc-text">Risk Free - 30-Day Money Back Guarantee</p>
-              <a
-                href="#selector"
-                name="add"
-                style="flex-direction: initial; padding: 12px 10px;"
-                data-available="{{ currentVariant.available }}"
-                class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                {% if currentVariant.available == false %}disabled{% endif %}
-                data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-              >
-                <div style="display: flex;">
-                  {%- if currentVariant.available -%}
-                  Add to Cart —&nbsp; 
-                  {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                    <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                  {% else %}
-                    <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
-                    {{ currentVariant.price | money_without_trailing_zeros }}
-                  {% endif %}
-                  {% comment %} {% render 'rtx_price'%} {% endcomment %}
-                  {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                    <span data-smartrr-compare-price></span>
-                    <span data-smartrr-regular-price></span>
-                    <span data-smartrr-subscribe-price></span>
-                  </div> {% endcomment %}
-                  {%- else -%}
-                  {{ 'products.product.sold_out' | t }}
-                  {%- endif -%}
-                </div>
-              </a>
-            </div>
-            {% comment %} Mobile sticky ATC end {% endcomment %}
             {%- if block.settings.show_dynamic_checkout -%}
             {% comment %} {{ form | payment_button }} {% endcomment %}
             <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
@@ -360,12 +254,12 @@
             </div>
             {%- endif -%}
           </div>
-          
-          {% if product.metafields.custom.discount_bubble != blank %}
-          <div class="discount-bubble">
-            <p>{{ product.metafields.custom.discount_bubble }}</p>
+
+          {% if settings.show_shipping_countdown != blank %}
+          <div id="Order_Within" class="Order_Within Risk_Free">
+             {{ settings.order_within_text }}
           </div>
-          {% endif %}
+        {% endif %}
 
 {%- liquid
     assign currentVariant = currentVariant
@@ -375,7 +269,6 @@
   -%}
 
 {%- comment -%} Subscription Box {%- endcomment -%}
-    
     <div class="rtx-subscription-box">
   
       {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
@@ -409,7 +302,6 @@
           {%- endform -%}
         </product-form>
 
-          {% comment %}
         {% assign my_fields = product.metafields.my_fields %}
         {% if my_fields.badge_one != blank or my_fields.badge_two != blank or my_fields.badge_three != blank or my_fields.badge_four != blank %}
           <div class="Badge_Grid_Container">
@@ -439,7 +331,7 @@
           </div>
         {% endif %}
         
-      
+        {% comment %}
         {% if product.type == 'Subscription' or product.type == 'Bundle' %}
         <div class="product__subscription-tooltip">
           <button class="product__subscription-tooltip-text">
@@ -464,7 +356,7 @@
           <p class="body light">✓ Free Shipping</p>
         </div>
         {% endif %}
-       
+        {% endcomment %}
 
         <div class="pdp-faq">
           <div class="faq-section pdp-faq-section">
@@ -567,49 +459,19 @@
             </div>
           </div>
         </div>
-         {% endcomment %}
-
-        <div class="product-listblock__container">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'list_block' -%}
-             <div class="product-listblock">          
-               <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/>
-               <div>  
-                 <p class="sh2 product-listblock__text">{{ block.settings.list_block_type_text }}</p> 
-                 <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
-               </div>
-             </div>
-          {%- endcase -%}
-        {%- endfor -%}
-        </div>
         <div class="Testimonials_Main">
-          <p class="Testimonials_Main_Title">Reviews</p>
           <div class="Testimonials_Slider">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when 'testimonials' -%}
                    <div class="Testimonials_Wrapper">
-                     {% if block.settings.testimonial_video != blank %}
-                      <div style="position: relative;">
-                        <div class="video-tag"><p>{{ block.settings.video_tag }}</p></div>
-                        <div class="reviews_button hide-mobile"><img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Exclude.png?v=1699317160"/></div>
-                        <video class="hide-mobile" muted loop preload="metadata">
-                          <source src="{{ block.settings.testimonial_video }}#t=0.1" type="video/mp4">
-                        </video>
-                        <video class="hide-desktop" autoplay muted loop webkit-playsinline playsinline>
-                          <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
-                        </video>
-                      </div>
-                     {% elsif block.settings.testimonial_image != blank %}
-                       <div style="position: relative;">
-                         <div class="video-tag"><p>{{ block.settings.video_tag }}</p></div>
-                         <img src="{{ block.settings.testimonial_image | img_url: 'master' }}"/>
-                       </div>
-                     {% endif %}
                      <span class="Testimonials_Rating"></span>
                      {% if block.settings.testimonial_text != blank %}
-                       <p>{{ block.settings.testimonial_text }}</p>
+                       <h4 class="Testimonials_Title">{{ block.settings.testimonial_text }}</h4>
+                     {% endif %}
+                
+                     {% if block.settings.testimonial_text != blank %}
+                       <span class="Testimonials_Author">{{ block.settings.testimonial_author }}</span>
                      {% endif %}
                    </div>
               {%- endcase -%}
@@ -619,7 +481,6 @@
             <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">{{ section.settings.testimonial_btn_txt }}</a>
           {% endif %}
         </div>
-      
         {% if section.settings.shop_more_text1 != blank or section.settings.shop_more_text2 != blank %}
           <div class="product__links">
             {% if section.settings.shop_more_text1 != blank %}
@@ -638,7 +499,7 @@
         {% endif %}
       </div>
     </div>
-    <div class="product__media-wrapper">
+    <div class="product__media-wrapper no-scrollbar drag-scroll">
       <div class="sticky-images">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
@@ -891,7 +752,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       })
     }
   }
-  // window.Order_Within();
+  window.Order_Within();
 </script>
 
 {% # rtx-pfp.liquid Script start %}
@@ -1176,71 +1037,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "url",
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
-        },
-        {
-          "type" : "text",
-          "id" : "lowest_price",
-          "label" : "Starting At Price"
-        },
-        {
-          "type" : "checkbox",
-          "id" : "show_drawer_triggers",
-          "label" : "Show Drawer Links?",
-          "default": true
         }
       ],
       "blocks": [
-        {
-          "type": "dropdown",
-          "name": "Dropdown Block",
-          "settings": [
-            {
-              "type": "text",
-              "id": "title",
-              "label": "Dropdown Title"
-            },
-            {
-              "type": "text",
-              "id": "subtitle",
-              "label": "Dropdown Subtitle"
-            },
-            {
-              "type": "text",
-              "id": "bubble_text",
-              "label": "Dropdown Bubble Text"
-            },
-            {
-              "type": "image_picker",
-              "id": "icon1",
-              "label": "Dropdown Icon 1"
-            },
-             {
-              "type": "text",
-              "id": "list_item1",
-              "label": "Dropdown List Item 1"
-            },
-            {
-              "type": "image_picker",
-              "id": "icon2",
-              "label": "Dropdown Icon 1"
-            },
-             {
-              "type": "text",
-              "id": "list_item2",
-              "label": "Dropdown List Item 2"
-            },
-            {
-              "type": "image_picker",
-              "id": "icon3",
-              "label": "Dropdown Icon 3"
-            },
-             {
-              "type": "text",
-              "id": "list_item3",
-              "label": "Dropdown List Item 3"
-            }
-          ]
-        },
         {
           "type": "block",
           "name": "Subscribe Block",
@@ -1286,28 +1085,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           ]
         },
         {
-          "type": "list_block",
-          "name": "List Block",
-          "limit":3,
-          "settings": [
-            {
-              "type": "image_picker",
-              "id": "list_block_type_img",
-              "label": "List Item Image"
-            },
-            {
-              "type": "text",
-              "id": "list_block_type_text",
-              "label": "List Item Text"
-            },
-            {
-              "type": "text",
-              "id": "list_block_type_subtext",
-              "label": "List Item Subtext"
-            }
-          ]
-        },
-        {
           "type": "testimonials",
           "name": "Testimonials",
           "settings": [
@@ -1318,18 +1095,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             },
             {
               "type": "text",
-              "id": "video_tag",
-              "label": "Video Tag"
-            },
-            {
-              "type": "text",
-              "id": "testimonial_video",
-              "label": "Testimonial Video URL"
-            },
-            {
-              "type": "image_picker",
-              "id": "testimonial_image",
-              "label": "Testimonial Image"
+              "id": "testimonial_author",
+              "label": "Testimonial author"
             }
           ]
         }

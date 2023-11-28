@@ -48,6 +48,7 @@
         "bbdb1b6d-d85c-4e53-a287-4605f0fc497d",
         "d8490b05-b183-4550-a55f-eb70c58bbd51"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/CIF_D_Welcome_Package_MP4_2x_d827f154-72f5-41bc-9c12-291fd14838ac.jpg",
         "suptitle": "THANKS FOR APPLYING",
@@ -56,9 +57,91 @@
         "button_label": "Go to Cart",
         "button_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47155557171500&items[][quantity]=1&items[][selling_plan]=586645575&return_to=\/checkout"
       }
+    },
+    "ce2ffa96-5ed7-4b59-ab15-0fa911a39bb7": {
+      "type": "chronic-illness-submitted2",
+      "blocks": {
+        "0dcdfef8-10dc-4e0f-a3ff-d5ce55286d52": {
+          "type": "product",
+          "settings": {
+            "product": "ocean-electrolyte-kit",
+            "button_text": "Try Risk Free — <s>$51<\/s> $32.95",
+            "url": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47446129180972&items[][quantity]=1&items[][selling_plan]=689255285036&return_to=\/checkout"
+          }
+        },
+        "eb3ead2e-74d6-456d-a3a7-ff018756782c": {
+          "type": "product",
+          "settings": {
+            "product": "hydration-drops",
+            "button_text": "Try Risk Free — <s>$39<\/s> $25.00",
+            "url": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47155557171500&items[][quantity]=1&items[][selling_plan]=586645575&return_to=\/checkout"
+          }
+        },
+        "0d50a924-7475-4536-b3b8-fc82e0e2c2f9": {
+          "type": "product",
+          "settings": {
+            "product": "rescue-salts",
+            "button_text": "Try Risk Free — <s>$36<\/s> $23.26",
+            "url": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47446172795180&items[][quantity]=1&items[][selling_plan]=689255285036&return_to=\/checkout"
+          }
+        },
+        "6c11ad99-a94b-4b0c-82f6-7aeaf0c82191": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "85e0b58e-1e95-4b2b-8f86-4c2c0b49cf5e": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "b6816eba-439e-4a1a-a2bc-69a2685df3a7": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        },
+        "692a3b89-105b-4f2e-b1ab-ab8656325698": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "9ec06094-dbd4-488c-9211-26ff1213cc48": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "e7c47aee-fb47-48da-b2f2-159cdf3db9da": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        }
+      },
+      "block_order": [
+        "0dcdfef8-10dc-4e0f-a3ff-d5ce55286d52",
+        "eb3ead2e-74d6-456d-a3a7-ff018756782c",
+        "0d50a924-7475-4536-b3b8-fc82e0e2c2f9",
+        "6c11ad99-a94b-4b0c-82f6-7aeaf0c82191",
+        "85e0b58e-1e95-4b2b-8f86-4c2c0b49cf5e",
+        "b6816eba-439e-4a1a-a2bc-69a2685df3a7",
+        "692a3b89-105b-4f2e-b1ab-ab8656325698",
+        "9ec06094-dbd4-488c-9211-26ff1213cc48",
+        "e7c47aee-fb47-48da-b2f2-159cdf3db9da"
+      ],
+      "settings": {
+        "suptitle": "THANKS FOR APPLYING",
+        "title": "Your 35% off discount is waiting!",
+        "text": "Your 35% off discount will be automatically applied at checkout and every recurring order from here on out. <br><br>\nBy default, this discount is applicable to the monthly subscription offers below (top products requested by our chronic illness community). Contact us if you are interested in applying your lifetime discount to a different Buoy subscription product."
+      }
     }
   },
   "order": [
-    "165896656305efe1a5"
+    "165896656305efe1a5",
+    "ce2ffa96-5ed7-4b59-ab15-0fa911a39bb7"
   ]
 }

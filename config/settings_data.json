@@ -7,7 +7,7 @@
     "social_tiktok_link": "https:\/\/tiktok.com\/@justaddbuoy",
     "social_spotify_link": "",
     "show_shipping_countdown": true,
-    "order_within_text": "In stock and ships tomorrow",
+    "order_within_text": "Ships <span>Today, August 11th<\/span> If Ordered Within <span>2 hr 29 mins<\/span>",
     "favicon": "shopify:\/\/shop_images\/Buoy_Favicon-01.png",
     "show_announcement_bar": true,
     "fix_announcement": true,
@@ -15,14 +15,11 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "<span style=\"font-weight: 500\">Black Friday Sale<\/span>: Save 30% + Free Shipping on Subscriptions",
-          "link": "shopify:\/\/pages\/buoy-black-friday-offer-test",
-          "btn_text": "Shop Sale",
+          "text": "Black Friday Sale — Save 30% + Free Shipping • Automatically Applied At Checkout",
+          "link": "shopify:\/\/pages\/buoy-black-friday-offer",
+          "btn_text": "Save 30%",
           "btn_link": "shopify:\/\/pages\/buoy-black-friday-offer",
-          "hide_mobile": false,
-          "background": "#def647",
-          "button_color": "#1f2322",
-          "button_text_color": "#ffffff"
+          "hide_mobile": false
         }
       },
       "header": {
@@ -83,12 +80,12 @@
           "e_marquee_1": "",
           "e_marquee_2": "",
           "e_marquee_3": "",
-          "upsell_title": "One-Time Purchase Add-Ons",
-          "upsell_button": "Exclusive Offer",
-          "upsell_subproduct1": "hydration-drops-1",
-          "upsell_subproduct2": "energy-drops-1",
-          "upsell_subproduct3": "immunity-drops-1",
-          "upsell_subproduct4": "",
+          "upsell_title": "Round Out Your Routine",
+          "upsell_button": "Single Product Offer",
+          "upsell_subproduct1": "rescue-salts-1",
+          "upsell_subproduct2": "hydration-drops-1",
+          "upsell_subproduct3": "energy-drops-1",
+          "upsell_subproduct4": "immunity-drops-1",
           "upsell_subproduct5": ""
         }
       },
@@ -145,6 +142,15 @@
       "shop-slide-out": {
         "type": "shop-slide-out",
         "blocks": {
+          "bced2d8c-e325-4672-b33b-3e25126aed39": {
+            "type": "product",
+            "settings": {
+              "product": "ocean-electrolyte-kit",
+              "description": "<strong>New<\/strong>",
+              "show_second_slide": false,
+              "second_description": ""
+            }
+          },
           "4e779e6d-dc2b-472f-bc4b-a783854a5088": {
             "type": "product",
             "settings": {
@@ -183,6 +189,7 @@
           }
         },
         "block_order": [
+          "bced2d8c-e325-4672-b33b-3e25126aed39",
           "4e779e6d-dc2b-472f-bc4b-a783854a5088",
           "7a0ee902-f569-4b6d-b6db-50b6806f9b27",
           "dddb8552-72c9-4360-8d61-2f7684492324",
@@ -200,6 +207,15 @@
       "main-menu": {
         "type": "main-menu",
         "blocks": {
+          "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4": {
+            "type": "menu_item",
+            "settings": {
+              "link": "shopify:\/\/products\/ocean-electrolyte-kit",
+              "title": "Shop Ocean Electrolyte Kit",
+              "mobile_title": "Ocean Electrolyte Kit — <strong>New<\/strong>",
+              "image": "shopify:\/\/shop_images\/OceanElectrolyteKit_Hero1_V2.jpg"
+            }
+          },
           "70c6f708-5bac-432f-994f-036e28f9e8d0": {
             "type": "menu_item",
             "settings": {
@@ -227,13 +243,13 @@
               "image": "shopify:\/\/shop_images\/Menu_Product_Image_3.png"
             }
           },
-          "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4": {
+          "d7ac1cef-343c-44f0-864b-1dea3fdbd0e0": {
             "type": "menu_item",
             "settings": {
-              "link": "shopify:\/\/products\/wellness-kit",
-              "title": "Shop Wellness Bundle",
-              "mobile_title": "Wellness Bundle",
-              "image": "shopify:\/\/shop_images\/Menu_Product_Image_4.png"
+              "link": "shopify:\/\/products\/rescue-salts",
+              "title": "Shop Rescue Salt",
+              "mobile_title": "Rescue Salt — <strong>New<\/strong>",
+              "image": "shopify:\/\/shop_images\/Screenshot2023-11-06at6.14.39PM.png"
             }
           },
           "8885c5e6-05c7-4be0-9538-75c4f5b3b241": {
@@ -310,10 +326,11 @@
           }
         },
         "block_order": [
+          "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4",
           "70c6f708-5bac-432f-994f-036e28f9e8d0",
           "54f80d9f-ad36-4ec2-bc9d-a2366eada929",
           "aae1739e-76cc-4170-9e5e-6d03e576ad94",
-          "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4",
+          "d7ac1cef-343c-44f0-864b-1dea3fdbd0e0",
           "8885c5e6-05c7-4be0-9538-75c4f5b3b241",
           "108bcd97-4fe7-43b2-beb2-5709b81ac8c7",
           "bfcb4cc4-8122-4488-ba14-81bc9e3ad140",
