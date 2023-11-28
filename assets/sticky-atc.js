@@ -12,7 +12,7 @@ function stickAtc() {
       if (entry.isIntersecting) {
         stickyAtc.classList.add('active');
       } else {
-        stickyAtc.classList.remove('active');
+        // stickyAtc.classList.remove('active');
       }
     });
   }, options);
