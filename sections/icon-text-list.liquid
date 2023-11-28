@@ -1,6 +1,9 @@
 {{ 'section-icon-text-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width icon-text__container">
+  {%- if section.settings.title != blank -%}
+    <h1>{{ section.settings.title }}</h1>
+  {%- endif -%}
   {% for block in section.blocks %}
   <div class="icon-text__block">
     <img src="{{ block.settings.image | img_url: 'master' }}" />
@@ -12,7 +15,13 @@
 {% schema %}
 {
   "name": "Icon Text List",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
   "blocks": [
     {
       "type": "block",
