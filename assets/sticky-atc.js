@@ -4,6 +4,7 @@
 function stickAtc() {
   const iconTextHeader = document.querySelector('.icon-text__header');
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
+  const stickyAtcBtn = document.querySelector('.product-form__submit-sticky');
 
   if (!iconTextHeader || !stickyAtc) return;
 
