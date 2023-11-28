@@ -28,6 +28,7 @@ function stickAtc() {
 
   observer.observe(iconTextHeader);
 
+  // Remove active class on click         
   stickyAtcBtn.addEventListener('click', () => {
     stickyAtc.classList.remove('active');
   })
