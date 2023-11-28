@@ -1,5 +1,6 @@
 function stickAtc() {
-  console.log('hey');
+  const iconTextHeader = document.querySelector('.icon-text-header');
+  console.log(iconTextHeader);
 }
 
 stickAtc();
