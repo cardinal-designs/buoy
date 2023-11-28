@@ -474,7 +474,7 @@ fieldset.product-form__input .form__label {
   transition: transform 300ms ease;
 }
 
-.product-form__sticky-atc .active {
+.product-form__sticky-atc.active {
   transform: translate(0);
 }
 
