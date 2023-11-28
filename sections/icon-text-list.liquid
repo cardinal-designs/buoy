@@ -1,15 +1,17 @@
 {{ 'section-icon-text-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width icon-text__container">
+<div class="page-width">
   {%- if section.settings.title != blank -%}
     <h1>{{ section.settings.title }}</h1>
   {%- endif -%}
+  <div class="icon-text__container">
   {% for block in section.blocks %}
-  <div class="icon-text__block">
-    <img src="{{ block.settings.image | img_url: 'master' }}" />
-    <p>{{ block.settings.title }}</p>
-  </div>
+    <div class="icon-text__block">
+      <img src="{{ block.settings.image | img_url: 'master' }}" />
+      <p>{{ block.settings.title }}</p>
+    </div>
   {% endfor %}
+  </div>
 </div>
 
 {% schema %}
