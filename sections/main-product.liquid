@@ -74,9 +74,9 @@
 
         <div class="product-listblock__container-one">
           <div class="product-listblock-one">  
-          {%- if section.settings.product_feature_icon != blank -%}        
-            <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
-          {%- endif -%}
+            {%- if section.settings.product_feature_icon != blank -%}        
+              <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
+            {%- endif -%}
             <div>
               {%- if section.settings.product_feature_text != blank -%}
                 <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
