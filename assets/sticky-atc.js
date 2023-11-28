@@ -4,25 +4,16 @@ function stickAtc() {
 
   if (!iconTextHeader || !stickyAtc) return;
 
-  let lastScrollPosition = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const iconTextHeaderRect = iconTextHeader.getBoundingClientRect();
+    const shouldStick = iconTextHeaderRect.bottom > 0; // Check if iconTextHeader is visible
 
-  const options = {
-    threshold: 0.50,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && window.scrollY > lastScrollPosition) {
-        stickyAtc.classList.add('active');
-      } else {
-        stickyAtc.classList.remove('active');
-      }
-    });
-
-    lastScrollPosition = window.scrollY;
-  }, options);
-
-  observer.observe(iconTextHeader);
+    if (shouldStick) {
+      stickyAtc.classList.add('active');
+    } else {
+      stickyAtc.classList.remove('active');
+    }
+  });
 }
 
 stickAtc();
