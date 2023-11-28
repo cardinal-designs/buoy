@@ -74,10 +74,10 @@
 
         <div class="product-listblock__container-one">
           <div class="product-listblock-one">          
-            {% comment %} <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/> {% endcomment %}
+            <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
             <div>  
-              <p class="sh3 product-listblock__text">Energy, Gut Health, Brain Function, Skin</p> 
-              <p class="product-listblock__subtext">Delivered in 3x more bioavailable form factor</p>
+              <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
+              <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
             </div>
           </div>
         </div>
