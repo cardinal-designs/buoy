@@ -10,7 +10,6 @@
 }
 
 .pee-club-products__wrapper {
-  cursor: pointer;
   display: flex;
   overflow: auto;
   position: relative;
@@ -22,15 +21,12 @@
   display: none;
 }
 
-
-
 .pee-club-products {
   display: flex;
 }
 
-
 .pee-club-product {
-  padding: 0 18px 18px;
+  padding: 0 18px 25px;
   margin: 0 8px;
   background: white;
   border-radius: 17px;
@@ -70,6 +66,10 @@
 
 .pee-club-product:first-of-type .pee-club-product-info {
   display: block;
+}
+
+.pee-club-product-info .pee-club-product-info__button {
+  cursor: pointer;
 }
 
 .pee-club-product img {
@@ -182,8 +182,9 @@
 }
 
 .pee-club-product-arrow {
+  cursor: pointer;
   position: absolute;
-  bottom: 18px;
+  bottom: 8px;
   right: 18px;
 }
 
@@ -206,6 +207,7 @@
 
 .Open_Drawer {
   display: block;
+  cursor: pointer;
   text-align: center;
   margin: 16px 0;
 }

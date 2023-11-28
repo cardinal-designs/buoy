@@ -185,12 +185,6 @@
   padding: 0 40px;
 }
 
-@media screen and (max-width: 768px) {
-  .product-bar-wrapper {
-    display: none;
-  }
-}
-
 .product-bar-illness__flex {
   gap: 20px;
   display: flex;
