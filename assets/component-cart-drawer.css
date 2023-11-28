@@ -1,19 +1,18 @@
 .cart-drawer {
   width: 100%;
   max-width: 480px; 
-  height: 100dvh;
+  height: 100%;
   opacity: 0;
   overflow-y: auto;
   padding: 0;
   position: fixed; 
   right: 0;
   top: 0;
-  bottom: 0;
   visibility: hidden;
   transform: translateX(100%);
   -webkit-transform: translateX(100%); 
   transition: .4s ease-in-out;
-  z-index: 15;
+  z-index: 999999;
   background: white;
 }
 
@@ -25,7 +24,8 @@
 }
 
 .cart-drawer__inner {
-  height: 100dvh;
+  height: 800px;
+  /* height: 100%; */
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1F2322;
+  border-bottom: 1.5px solid #1F2322;
 }
 
 .cart-drawer__close {
@@ -54,18 +54,17 @@
 
 .cart-drawer__content {
   /* height: calc(100vh - 60px); */
-  height: 100%;
+  height: 800px;
   display: flex;
   flex-direction: column;
   background: white;
 }
 
 .cart-drawer__items {
-  height: 100%;
-  padding-bottom: 200px;
+  height: calc(100% - 514px);
   padding-right: 10px;
   overflow-y: auto;
-  margin: 20px 10px 20px 20px;
+  margin: 30px 10px 30px 20px;
 }
 
 .cart-drawer__welcome-message {
@@ -80,7 +79,7 @@
 }
 
 .cart-drawer__item:first-child {
-  padding-top: 0;
+  border-top: 0.75px solid rgb(84 87 89 / 30%);
 }
 
 .cart-drawer__item-remove {
@@ -420,7 +419,7 @@
 }
 
 .sub-upsell__container {
-  padding-top: 20px;
+  padding: 0 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #1F2322;
 }
@@ -766,7 +765,7 @@
 }
 
 .cart-drawer__content .cart-title .cart-drawer__title {
-  margin: 20px 0 0;
+  margin: 30px 0 0;
   font-size: 18px;
 }
 
@@ -778,20 +777,25 @@
   }
 
   .cart-drawer__footer {
-    /* bottom: 50px; */
+    bottom: 50px;
   }
 
   .cart-drawer__items {
-    /* height: calc(100% - 455px); */
+    height: calc(100% - 650px);
   }
 
   .cart-drawer__content {
-    height: calc(100dvh - 0px);
+    height: calc(100vh - 0px);
   }
 
   .cart-drawer__footer .car-notes {
     text-transform: capitalize;
   }
+
+  .cart-drawer__header .cart-drawer__title {
+    visibility: hidden;
+  }
+  
 }
 
 @media screen and (max-width: 374px) {

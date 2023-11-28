@@ -58,6 +58,28 @@ body.lock-scroll {
   opacity: 1;
 }
 
+.page-blury-overlay {
+  width: 100%;
+  height: 100%;
+  display: block !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.page-blury-overlay.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 .page-width {
   max-width: 1440px;
   margin: 0 auto;
@@ -1370,7 +1392,7 @@ deferred-media {
 
 /* Button - hover */
 
-.button:not([disabled]):hover,
+.button:not([disabled], .product-form .button, .Product_Bar_Container .button, .routine-products__product button):hover,
 .shopify-challenge__button:hover,
 .customer button:hover {
   box-shadow: 6px 6px 0 0 var(--charcoal);
@@ -1886,11 +1908,12 @@ input[type='checkbox'] {
   border-radius: 30px;
   padding: 0;
   font-family: inter;
-  width: 113px;
-  height: 29px;
+  width: 103px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 103px;
 }
 
 .announcement-bar {
@@ -1899,7 +1922,7 @@ input[type='checkbox'] {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 14px;
+  padding: 12px 14px;
 }
 
 .announcement-bar__link {
@@ -1910,7 +1933,6 @@ input[type='checkbox'] {
 .announcement-bar__message {
   text-align: center;
   margin: 0 12px 0 0;
-  font-size: 16px;
 }
 
 .announcement-bar__message p {
@@ -1953,6 +1975,10 @@ input[type='checkbox'] {
     width: 100%;
     padding: 0 15px;
   }
+
+  .Announcement_Button {
+     margin-right: 40px;
+  }
   
 }
 
@@ -1962,24 +1988,13 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (max-width: 450px) {
-  
-  .announcement-bar__message {
-    font-size: 12px;
-  }
-
-  .Announcement_Button {
-    font-size: 12px;
-  }
-  
-}
 
 /* section-header */
 header-container {
   position: sticky;
   top: 0;
   background-color: #ffffff;
-  z-index: 4;
+  z-index: 3;
 }
 
 /* Main Header Layout */

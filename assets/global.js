@@ -1010,10 +1010,9 @@ $('.chronic-multicolumn__slider').slick({
 
 
 // PDP main slider
-$productMediaSlider = $('.product__media-list');
-var productMediaSlider = {
-  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(272.182 1503.504) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="29.013" height="12.007" viewBox="0 0 29.013 12.007"><g id="Arrow" transform="translate(28.001 11.504) rotate(180)"><g id="Arrow-2" data-name="Arrow" transform="translate(271.17 1503) rotate(180)"><path id="Path_3" data-name="Path 3" d="M4.98,11,0,5.5,4.98,0" transform="translate(271.17 1503) rotate(180)" fill="none" stroke="#1f2322" stroke-width="1.5"/><path id="Path_4" data-name="Path 4" d="M249.357,1495.977h28" transform="translate(-6.188 1.523)" fill="none" stroke="#1f2322" stroke-width="1.5"/></g></g></svg></button>',
+$('.product__media-list').slick({
+  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
   appendArrows: '.product__media-arrows',
   responsive: [
     {
@@ -1023,9 +1022,7 @@ var productMediaSlider = {
       }
     }
   ]
-}
-
-slickOnDesktop($productMediaSlider, productMediaSlider);
+})
 
 // People
 $('.people-slider__drink-slider--1').slick({
@@ -1440,12 +1437,26 @@ $(window).on('resize scroll', function() {
   
 });
 
-
 $('.image-with-dropdowns__q').click(function () {
-  $(this).next().slideToggle()
-  $(this).toggleClass('active');
-})
+  // Check if the clicked accordion is already active
+  const isActive = $(this).hasClass('active');
 
+  // Close all slides
+  $('.image-with-dropdowns__a').slideUp();
+
+  // Remove active class from all elements except the clicked one
+  $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
+  $('.image-with-dropdowns__q').not(this).removeClass('active');
+
+  // Toggle the visibility of the clicked slide if it wasn't already active
+  if (!isActive) {
+    $(this).next().slideToggle();
+  }
+
+  // Toggle the 'active' class on the clicked elements
+  $(this).toggleClass('active');
+  $(this).parent().toggleClass('active');
+});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
@@ -1591,10 +1602,46 @@ $('.benefits__item').click(function() {
   $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
 })
 
-$('.benefits__item-mobile').click(function() {
+$('.select-faq__container .benefits__item').click(function() {
+  $('.benefits__item h3.active').removeClass('active')
+  $(this).find('h3').addClass('active')
+   let num = $('.benefits__item h3.active').parent().data("id")
+  $('.benefits__info-item').hide()
+  $(`.benefits__info-item[data-id="${num}"]`).fadeIn() 
+})
+
+$('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
   $('.benefits__item-mobile h4.active').removeClass('active')
   $(this).find('h4').addClass('active')
    let num = $('.benefits__item-mobile h4.active').parent().data("id")
   $('.mobile-benefits-info').slideUp()
   $(`.mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
+
+$('.select-faq__item-mobile.benefits__item-mobile').click(function() {
+  $('.select-faq__x').removeClass('minus')
+  $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
+  $(this).find('h3').addClass('active')
+  $(this).find('.select-faq__x').addClass('minus')
+   let num = $(this).data("id")
+  $('.select-faq__container .mobile-benefits-info').slideUp()
+  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
+})
+
+ 
+$('.reviews_button').click(function(){
+  console.log('afafa', $(this).next().hasClass("active"))
+  if (!$(this).hasClass("active")){
+    $(this).next().get(0).play();
+    $(this).toggleClass("active");
+  } else {
+    $(this).next().get(0).pause()
+    $(this).toggleClass("active");
+  }
+});
+
+$('.announcement-bar__close').click(function() {
+  $('#shopify-section-announcement-bar').hide()
+  $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
+})
+ 
