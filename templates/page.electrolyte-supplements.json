@@ -334,6 +334,7 @@
         "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4",
         "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3"
       ],
+      "disabled": true,
       "settings": {
         "review_emoji": "⭐️",
         "head-title": "3,000 +trusted reviews",
@@ -435,8 +436,9 @@
         "365d3728-31ba-4a31-85f8-0e225017bf50",
         "0944c29e-8858-4c67-8143-998693ed58f5"
       ],
+      "disabled": true,
       "settings": {
-        "section_title": "<h2 style=\"font-size: 45px\">Common causes <i>of leg cramps<\/i>\n<\/h2>",
+        "section_title": "<h2 style=\"font-size: 45px\">Electrolytes: The Invisible Health Heroes<\/h2>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bottom"
@@ -508,6 +510,7 @@
         "2a6bd8e3-7b04-400d-a28b-a3a907955de4",
         "7d0679b9-e537-4027-af9f-ddebb9b41e54"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Which is better?<\/strong><br><span class=\"medium\">Electrolyte Drinks<\/span> <i>vs. <\/i><span class=\"medium\">Sports Drinks<\/span>",
         "link_text": "Make An Electrolyte Drink At Home —>",
@@ -534,24 +537,24 @@
         "b46d22a2-dc4c-4952-920e-df027e14433e": {
           "type": "dropdown",
           "settings": {
-            "title": "Salt Source",
-            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
+            "title": "🧂 Sodium",
+            "text": "Think of sodium as the body's water manager. It calls the shots on how much water stays in and how much goes out. But balance is key—too much sodium and your body might hold on to water like it's the last boat off a deserted island.",
             "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
           }
         },
         "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
           "type": "dropdown",
           "settings": {
-            "title": "Naturally-Balanced Electrolytes",
-            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
+            "title": "🍌 Potassium",
+            "text": "The sidekick to sodium, potassium is key for your muscles and nerves. It helps control your heartbeat and works with sodium to manage the water balance in your body. It's crucial for muscle strength, nerve function, and a stable heart rhythm.",
             "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
           }
         },
         "07c66f31-6bda-4e4c-9097-b51e4c178122": {
           "type": "dropdown",
           "settings": {
-            "title": "Ionic Trace Minerals",
-            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
+            "title": "💧 Chloride",
+            "text": "Modern agriculture and commercial water have stripped our food and water of essential tOften found tagging along with sodium, chloride supports fluid balance and is a critical component in the production of stomach acid, which is critical for proper digestion.\nrace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
             "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
           }
         },
@@ -571,8 +574,8 @@
         "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
       ],
       "settings": {
-        "title": "Key Ingredients for Electrolyte Drinks",
-        "subtext": "What makes a high-quality electrolyte drink?",
+        "title": "Electrolytes: The Invisible Health Heroes",
+        "subtext": "Electrolytes are mineral compounds that break down into ions in the body, carrying electrical energy crucial for muscle contractions, nerve impulses, and regulating fluid balance. Without them, our body couldn’t carry out its natural functions for optimal health and vitality.<br><br>\n\nLet's introduce the star cast of electrolytes in every bottle of Buoy and highlight their roles:",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bg_color",
