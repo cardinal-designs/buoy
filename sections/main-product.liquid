@@ -79,20 +79,20 @@
         </div>
        
         <div class="Product_Tags">
-          {%- for tag in product.tags -%}
-            <div>
-              {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
-                <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
-              {% endif %}
-              {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
-                <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
-              {% endif %}
-              {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
-                <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
-              {% endif %}
-              <span>{{ tag }}</span>
-            </div>
+        <div class="product-listblock__container">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'list_block' -%}
+              <div class="product-listblock">          
+                <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/>
+                <div>  
+                  <p class="sh2 product-listblock__text">{{ block.settings.list_block_type_text }}</p> 
+                  <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
+                </div>
+              </div>
+            {%- endcase -%}
           {%- endfor -%}
+        </div>
         </div>
         {% endif %}
 
