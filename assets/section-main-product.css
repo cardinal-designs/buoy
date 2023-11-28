@@ -471,6 +471,11 @@ fieldset.product-form__input .form__label {
   padding: 20px;
   padding-bottom: 10px;
   transform: translate(-100%);
+  transition: transform 300ms ease;
+}
+
+.product-form__sticky-atc .active {
+  transform: translate(0);
 }
 
 .product-form__sticky-atc-text {
