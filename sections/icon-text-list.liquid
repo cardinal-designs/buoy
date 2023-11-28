@@ -5,12 +5,12 @@
     <h1>{{ section.settings.title }}</h1>
   {%- endif -%}
   <div class="icon-text__container">
-  {% for block in section.blocks %}
-    <div class="icon-text__block">
-      <img src="{{ block.settings.image | img_url: 'master' }}" />
-      <p>{{ block.settings.title }}</p>
-    </div>
-  {% endfor %}
+    {% for block in section.blocks %}
+      <div class="icon-text__block">
+        <img src="{{ block.settings.image | img_url: 'master' }}" />
+        <p>{{ block.settings.title }}</p>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
