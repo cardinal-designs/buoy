@@ -30,10 +30,6 @@
             {% include 'curved-hydrated' %}
           {% endif %}
         </h1>
-
-        {% if section.settings.lowest_price != blank %}
-          <p class="starting-at__price">Starting At {{ section.settings.lowest_price }}</p>
-        {% endif %}
         
         <div class="product__description sh4">
           {{ product.description }}
@@ -1176,11 +1172,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "type" : "url",
           "id" : "testimonial_btn_link",
           "label" : "Testimonials button url"
-        },
-        {
-          "type" : "text",
-          "id" : "lowest_price",
-          "label" : "Starting At Price"
         },
         {
           "type" : "checkbox",
