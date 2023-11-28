@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.icon-text__header-italic {
+  font-family: Rhymes-Light-Italic;
+}
+
 @media screen and (max-width: 768px) {
   .icon-text__header {
     margin-top: 54px;
