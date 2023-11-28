@@ -7,7 +7,6 @@
 {{ 'component-supplements-drawer.css' | asset_url | stylesheet_tag }}
 
 {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'sticky-atc.js' | asset_url }}" defer="defer"></script>
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -23,7 +22,7 @@
 
         {% render 'okendo-reviews-product-rating-summary', product: product %}
 
-        <p class="product__subtitle sh3">{{ product.metafields.my_fields.subtitle }}</p> 
+        <p class="product__subtitle sh3 light">{{ product.metafields.my_fields.subtitle }}</p> 
 
         <h1 class="product__title h4">
           {{ product.title | escape }}
@@ -31,12 +30,17 @@
             {% include 'curved-hydrated' %}
           {% endif %}
         </h1>
+
+        {% if section.settings.lowest_price != blank %}
+          <p class="starting-at__price">Starting At {{ section.settings.lowest_price }}</p>
+        {% endif %}
         
         <div class="product__description sh4">
           {{ product.description }}
         </div>
         
         <div class="dropdown-container-item__container">
+          <p class="product-form__text-label">What's Included</p>
         {% for block in section.blocks %}
           {% if block.type ==  "dropdown" %}
           <div class="dropdown-container-item">
@@ -73,27 +77,28 @@
         {% endfor %}
         </div>
 
-        <div class="product-listblock__container-one">
-          <div class="product-listblock">  
-            {%- if section.settings.product_feature_icon != blank -%}        
-              <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
-            {%- endif -%}
-            <div>
-              {%- if section.settings.product_feature_text != blank -%}
-                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
-              {%- endif -%}
-              {%- if section.settings.product_feature_text_two != blank -%}
-                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
-              {%- endif -%}
-            </div>
-          </div>
-        </div>
-
         {% if section.settings.show_drawer_triggers == true %}
-          <div class="product__drawer-triggers">
-            <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-            <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
-          </div>
+        <div class="product__drawer-triggers">
+          <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+          <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
+        </div>
+       
+        <div class="Product_Tags">
+          {%- for tag in product.tags -%}
+            <div>
+              {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
+                <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
+                <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
+                <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
+              {% endif %}
+              <span>{{ tag }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
         {% endif %}
 
         {% comment %}
@@ -320,7 +325,7 @@
                 name="add"
                 style="flex-direction: initial; padding: 12px 10px;"
                 data-available="{{ currentVariant.available }}"
-                class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                 {% if currentVariant.available == false %}disabled{% endif %}
                 data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
               >
@@ -565,21 +570,21 @@
          {% endcomment %}
 
         <div class="product-listblock__container">
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'list_block' -%}
-              <div class="product-listblock">          
-                <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/>
-                <div>  
-                  <p class="sh2 product-listblock__text">{{ block.settings.list_block_type_text }}</p> 
-                  <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
-                </div>
-              </div>
-            {%- endcase -%}
-          {%- endfor -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'list_block' -%}
+             <div class="product-listblock">          
+               <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/>
+               <div>  
+                 <p class="sh2 product-listblock__text">{{ block.settings.list_block_type_text }}</p> 
+                 <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
+               </div>
+             </div>
+          {%- endcase -%}
+        {%- endfor -%}
         </div>
         <div class="Testimonials_Main">
-          <p class="Testimonials_Main_Title">What They’ve Been Saying</p>
+          <p class="Testimonials_Main_Title">Reviews</p>
           <div class="Testimonials_Slider">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
@@ -1173,23 +1178,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "label" : "Testimonials button url"
         },
         {
-          "type" : "header",
-          "content" : "Product Features"
-        },
-        {
-          "type" : "image_picker",
-          "id" : "product_feature_icon",
-          "label" : "Product Feature Icon"
-        },
-        {
           "type" : "text",
-          "id" : "product_feature_text",
-          "label" : "Product Feature Text"
-        },
-        {
-          "type" : "text",
-          "id" : "product_feature_text_two",
-          "label" : "Product Feature Text Two"
+          "id" : "lowest_price",
+          "label" : "Starting At Price"
         },
         {
           "type" : "checkbox",
