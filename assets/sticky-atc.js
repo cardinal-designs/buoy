@@ -27,6 +27,10 @@ function stickAtc() {
   }, options);
 
   observer.observe(iconTextHeader);
+
+  stickyAtcBtn.addEventListener('click', () => {
+    stickyAtc.classList.remove('active');
+  })
 }
 
 stickAtc();
