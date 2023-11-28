@@ -3,7 +3,7 @@ function stickAtc() {
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
   
   const options = {
-    threshold: 0.25,
+    threshold: 0.50,
   };
   const $observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
