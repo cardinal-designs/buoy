@@ -1,37 +1,18 @@
 {{ 'section-icon-text-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  {%- if section.settings.title != blank and section.settings.title_one != blank -%}
-    <h1 class="icon-text__header">
-      <span class="icon-text__header-italic">{{ section.settings.title_one }}</span>
-      {{ section.settings.title }}
-    </h1>
-  {%- endif -%}
-  <div class="icon-text__container">
-    {% for block in section.blocks %}
-      <div class="icon-text__block">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
-        <p>{{ block.settings.title }}</p>
-      </div>
-    {% endfor %}
+<div class="page-width icon-text__container">
+  {% for block in section.blocks %}
+  <div class="icon-text__block">
+    <img src="{{ block.settings.image | img_url: 'master' }}" />
+    <p>{{ block.settings.title }}</p>
   </div>
+  {% endfor %}
 </div>
 
 {% schema %}
 {
   "name": "Icon Text List",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title_one",
-      "label": "Title One"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title Two"
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "block",
