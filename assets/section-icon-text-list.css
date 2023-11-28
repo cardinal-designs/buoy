@@ -2,8 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 32px 18px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 65px;
+  margin-bottom: 36px;
+}
+
+.icon-text__header {
+  text-align: center;
+}
+
+.icon-text__header-italic {
+  font-family: Rhymes-Light-Italic;
+}
+
+@media screen and (max-width: 768px) {
+  .icon-text__header {
+    margin-top: 54px;
+  }
 }
 
 .icon-text__block img {
@@ -28,9 +42,7 @@
   .icon-text__container {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding-top: 50px !important;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-top: 1px solid #E9E9E9;
+    margin-top: 32px;
+    margin-bottom: 0;
   }
 }
