@@ -32,7 +32,7 @@
       font-weight: 400;
       color: #1F2322;
       margin: 0 auto !important;
-      padding: 0px 12.5px;
+      padding: 0px 8px;
     }
     .rtx-tooltip__flex{
       display: flex;
@@ -102,7 +102,7 @@
       position: relative;
       margin-left: 7px;
       margin-top: 4px;
-      background: #C6DB76;
+      background: #398200;
       border-radius: 14px;
       padding: 0px;
       animation: gradient 3s ease infinite;
@@ -110,6 +110,7 @@
       display: flex;
       width: 100%;
       white-space: nowrap;
+      color: white;
     }
     .rtx_text {
       position: absolute;
@@ -144,10 +145,15 @@
       display: inline !important;
     }
     .clear_tag .save24{
-      color: #1F2322;
+      color: white;
       font-weight: 400;
       font-size: 12px;
     }
+
+    .product__rtx-tooltip.hide-desktop .clear_button {
+      margin: 16px 0 0 0 !important;
+    }
+  
     @media only screen and (max-width: 500px) {
       .rtx-tooltip__flex{
         flex-direction: column;
@@ -156,17 +162,20 @@
          margin-left: 0;
       }
     }
+
+  
   </style>
   
   <div data-rtx-subscription-{{ product.id }}-{{ section.id }}-{{ block.id }}>
     {%- comment -%} Subscription type toggle {%- endcomment -%}
     {%- unless requiresPlan -%}
+      <p class="product-form__text-label">Choose Payment Option</p>
       <div class="rtx_option_selector_main">
         <div class="rtx_option_selector">
           <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
           <label for="purchaseTypeOneTime" class="rtx_option_label">
             <div style="position: relative;" class="rtx_option_heading">
-              One-Time Purchase 
+              One-Time Purchase —&nbsp;
               <span class="rtx_one_time_price">
                 <s class="js-main-compare-price">{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>
                 <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
@@ -203,7 +212,7 @@
                       </p>
                       {% assign oneTimeSubtext = block.settings.onetime_purchase_type_subtext %}
                       {%- if oneTimeSubtext != blank -%}
-                        <p class="Label_Sub_Text">{{ oneTimeSubtext | newline_to_br }}</p>
+                        <p class="Label_Sub_Text">{{ oneTimeSubtext }}</p>
                       {%- endif -%}
                       </div>
                     </div>
@@ -220,7 +229,7 @@
               <label for="purchaseTypeSbubscription" class="rtx_option_label">
                 <div class="rtx-tooltip__flex">
                   <div class="rtx_option_heading">
-                    Subscribe
+                    Subscribe — &nbsp
                     <div class="Multi_Price">
                       <span class="rtx_one_time_price"><s class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</s></span>
                       <span id="rtx_one_price_save" class="js-subscription-price">
@@ -228,7 +237,7 @@
                       </span>
                     </div>
                   </div>
-                  <div class="product__rtx-tooltip">
+                  <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
                       <div class="clear_button">
                         <p class="clear_tag"><span class="save24">Save 23%</span></p>
@@ -272,9 +281,26 @@
                                   </p>                    
                                 {%- endif -%}                        
                               {% endcomment %}
+                              <div class="product__rtx-tooltip hide-desktop">
+                                <div class="rtx_popup">
+                                  <div class="clear_button">
+                                    <p class="clear_tag"><span class="save24">Save 23%</span></p>
+                                  </div>
+                                  <div class="rtx_popup_content">
+                                    <blockquote class="rtx_text">
+                                      <p>You’re the boss.</p>
+                                      <p>
+                                        ✓ Free Shipping<br>
+                                        ✓ 30 Day Guarantee<br>
+                                        ✓ Cancel after your first order or make it a habit
+                                      </p>
+                                    </blockquote>
+                                  </div>
+                                </div>
+                              </div>
                               {% assign subscriptionSubtext = block.settings.purchase_type_subtext %}
                               {%- if subscriptionSubtext != blank -%}
-                                <p class="Label_Sub_Text">{{ subscriptionSubtext | newline_to_br }}</p>
+                                <p class="Label_Sub_Text">{{ subscriptionSubtext }}</p>
                               {%- endif -%}
                             </div>
                           </div>
@@ -287,7 +313,14 @@
           </div>
         </div>
       {% if product.metafields.custom.subscription_widget_subtext %}
-        <p class="Label_Sub_Text">{{ product.metafields.custom.subscription_widget_subtext.value | newline_to_br }}</p>
+        <p class="Label_Sub_Text hide-mobile">{{ product.metafields.custom.subscription_widget_subtext.value  }}</p>
+
+        {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' • ' -%}
+        <p class="Label_Sub_Text hide-desktop">
+          {% for word in title_words -%}
+            •&nbsp;{{ word }}<br/>
+          {%- endfor %}
+         </p>
       {% endif %}
       </div>
     {%- endunless -%}

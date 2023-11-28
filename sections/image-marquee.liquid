@@ -1,0 +1,59 @@
+{{ 'section-marquee.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-marquee.css' | asset_url | stylesheet_tag }}
+
+
+<div class="marquee image-marquee">
+  <div class="hide-mobile marquee__container">
+    {% for block in section.blocks limit: section.settings.show_images %}
+      <div class="marquee__item">
+        <img src="{{ block.settings.image | img_url: 'master' }}" />
+      </div>
+    {% endfor %}
+  </div>
+  <div class="hide-desktop marquee__container">
+    {% for block in section.blocks %}
+      <div class="marquee__item">
+        <img src="{{ block.settings.image | img_url: 'master' }}" />
+      </div>
+    {% endfor %}
+  </div>
+  <div class="hide-desktop marquee__container">
+    {% for block in section.blocks %}
+      <div class="marquee__item">
+        <img src="{{ block.settings.image | img_url: 'master' }}" />
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Marquee",
+    "settings": [   
+      {
+        "type": "number",
+        "id": "show_images",
+        "label": "Show First X Image(s)",
+        "default": 3
+      }
+    ],
+    "blocks": [
+      {
+        "type": "marquee_item",
+        "name": "Marquee Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Marquee"
+      }
+    ]
+  }
+{% endschema %}

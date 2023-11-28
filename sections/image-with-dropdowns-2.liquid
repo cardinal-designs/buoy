@@ -1,0 +1,641 @@
+{{ 'section-image-with-dropdowns.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-with-dropdowns-2.css' | asset_url | stylesheet_tag }}
+
+
+<div id="image-with-dropdowns__container" style="{{ section.settings.background }}" class="image-with-dropdowns__container-2">
+  <h1 class="hide-mobile">{{ section.settings.title }}</h1>
+  <div class="page-width"> 
+    <div class="image-with-dropdowns__image">
+      {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="video">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {% else %}
+        {% comment %} Desktop Image {% endcomment %}
+        {%- if section.settings.image != blank -%}
+          {% render 'lazy-image' image: section.settings.image, classes: 'hide-mobile' %}
+        {%- endif -%}
+        {% comment %} Mobile Image {% endcomment %}
+        {%- if section.settings.image_mobile != blank -%}
+          {% render 'lazy-image' image: section.settings.image_mobile, classes: 'hide-desktop' %}
+        {%- endif -%}
+      {% endif %}    
+    </div>
+    <h1 class="hide-desktop">{{ section.settings.title }}</h1>
+    <div class="image-with-dropdowns__content">
+      <div class="image-with-dropdowns__dropdown">
+        {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'type1' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a">
+              {% if section.settings.video_url != blank %}
+                <video autoplay loop muted playsinline class="video">
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+              {% else %}
+                {% render 'lazy-image' image: block.settings.image, classes: '' %}
+              {% endif %} 
+              <p class="sh2">{{ block.settings.text }}</p>
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% when 'type2' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_2">
+              {% if block.settings.icon_image_text_1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.icon_image_text_4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+                  <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% when 'type3' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_3">
+              {% if block.settings.suptext != blank %}
+                <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+              {% endif %}
+              <p class="sh2">{{ block.settings.text }}</p>
+              <div class="icon-image-block3">
+                {% if block.settings.icon_image_text_1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_1 | img_url: 'master'  }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_1 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_1 }}</p>
+                  {{ block.settings.icon_image_list_1 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_2 | img_url: 'master' }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_2 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_2 }}</p>
+                  {{ block.settings.icon_image_list_2 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_3 | img_url: 'master' }}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_3 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_3 }}</p>
+                  {{ block.settings.icon_image_list_3 }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if block.settings.icon_image_text_4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="{{ block.settings.icon_4 | img_url: 'master'}}"/>
+                  <div class="icon-image-block3__container">
+                  <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
+                  <p class="small-text">{{ block.settings.icon_image_subtext_4 }}</p>
+                  {{ block.settings.icon_image_list_4 }}
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              {% if block.settings.suptext2 != blank %}
+                <p class="image-with-dropdowns__suptext image-with-dropdowns__suptext2">{{ block.settings.suptext2 }}</p>
+              {% endif %}
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.show_ingredients == true %}
+                <div class="view-supplements">
+                  <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                </div>
+              {% endif %}
+            </div>
+
+          </div>
+        {% when 'type4' %}
+          <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+            <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__content-text">
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="image-with-dropdowns__x"></div>
+            </div>
+            <div class="image-with-dropdowns__a image-with-dropdowns__a_4">
+              {% if section.settings.video_url != blank %}
+                <video autoplay loop muted playsinline class="video">
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+              {% else %}
+                {% render 'lazy-image' image: block.settings.image, classes: '' %}
+              {% endif %} 
+              {% if block.settings.suptext != blank %}
+                <p class="image-with-dropdowns__suptext">{{ block.settings.suptext }}</p>
+              {% endif %}
+              <p class="sh2">{{ block.settings.text }}</p>
+              {% if block.settings.list_item1 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item1 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item2 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item2 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item3 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item3 }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.list_item4 != blank %}
+                <div class="image-with-dropdowns__list-item">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                  <p class="sh4">{{ block.settings.list_item4 }}</p>
+                </div>
+              {% endif %}
+              <div class="image-with-dropdowns__block4-bottom">
+                {% if block.settings.suptext2 != blank %}
+                  <p class="image-with-dropdowns__suptext">{{ block.settings.suptext2 }}</p>
+                {% endif %}
+                <p class="sh2">{{ block.settings.text2 }}</p>
+                {% if block.settings.list_item1_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item1_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item2_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item2_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item3_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item3_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.list_item4_2 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item4_2 }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <div class="image-with-dropdowns2__bottom-link">
+                    <a class="body" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Image With Dropdowns 2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      }
+	],
+    "blocks": [
+      {
+        "type": "type1",
+        "name": "Type 1",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "list_item1",
+            "label": "List Item 1"
+          },
+          {
+            "type": "text",
+            "id": "list_item2",
+            "label": "List Item 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3",
+            "label": "List Item 3"
+          },
+          {
+            "type": "text",
+            "id": "list_item4",
+            "label": "List Item 4"
+          }
+        ]
+      },
+      {
+        "type": "type2",
+        "name": "Type 2",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon Image 1"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_1",
+            "label": "Icon Image Text 1"
+          },          
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon Image 2"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_2",
+            "label": "Icon Image Text 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon Image 3"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_3",
+            "label": "Icon Image Text 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon Image 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_4",
+            "label": "Icon Image Text 4"
+          }
+        ]
+      },
+      {
+        "type": "type3",
+        "name": "Type 3",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "suptext",
+            "label": "Suptext"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon Image 1"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_1",
+            "label": "Icon Image Text 1"
+          },  
+          {
+            "type": "text",
+            "id": "icon_image_subtext_1",
+            "label": "Icon Image Subtext 1"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_1",
+            "label": "Icon Image List 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon Image 2"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_2",
+            "label": "Icon Image Text 2"
+          },
+          {
+            "type": "text",
+            "id": "icon_image_subtext_2",
+            "label": "Icon Image Subtext 2"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_2",
+            "label": "Icon Image List 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon Image 3"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_3",
+            "label": "Icon Image Text 3"
+          },
+          {
+            "type": "text",
+            "id": "icon_image_subtext_3",
+            "label": "Icon Image Subtext 3"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_3",
+            "label": "Icon Image List 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon Image 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_4",
+            "label": "Icon Image Text 4"
+          },
+          {
+            "type": "text",
+            "id": "icon_image_subtext_4",
+            "label": "Icon Image Subtext 4"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_list_4",
+            "label": "Icon Image List 4"
+          },
+          {
+            "type": "text",
+            "id": "suptext2",
+            "label": "Suptext 2"
+          },
+          {
+            "type": "textarea",
+            "id": "list_item1",
+            "label": "List Item 1"
+          },
+          {
+            "type": "textarea",
+            "id": "list_item2",
+            "label": "List Item 2"
+          },
+          {
+            "type": "textarea",
+            "id": "list_item3",
+            "label": "List Item 3"
+          },
+          {
+            "type": "textarea",
+            "id": "list_item4",
+            "label": "List Item 4"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_ingredients",
+            "label": "Show Ingredients Link?",
+            "default": true
+          }
+        ]
+      },
+      {
+        "type": "type4",
+        "name": "Type 4",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+           {
+            "type": "text",
+            "id": "suptext",
+            "label": "Suptext"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "list_item1",
+            "label": "List Item 1"
+          },
+          {
+            "type": "text",
+            "id": "list_item2",
+            "label": "List Item 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3",
+            "label": "List Item 3"
+          },
+          {
+            "type": "text",
+            "id": "list_item4",
+            "label": "List Item 4"
+          },
+          {
+            "type": "text",
+            "id": "suptext2",
+            "label": "Suptext 2"
+          },
+          {
+            "type": "textarea",
+            "id": "text2",
+            "label": "Text 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item1_2",
+            "label": "List Item 1 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item2_2",
+            "label": "List Item 2 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item3_2",
+            "label": "List Item 3 - 2"
+          },
+          {
+            "type": "text",
+            "id": "list_item4_2",
+            "label": "List Item 4 - 2"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link URL"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image With Dropdowns 2"
+      }
+    ]
+  }
+{% endschema %}

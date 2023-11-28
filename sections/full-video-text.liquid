@@ -1,0 +1,65 @@
+{{ 'section-full-video-text.css' | asset_url | stylesheet_tag }}
+
+<div class="full-video__container">
+  <div style="color: {{ section.settings.color }};" class="page-width">
+    <div class="full-video-text__container">
+      <p class="green-title">{{ section.settings.title }}</p>
+      <h1 class="light">{{ section.settings.text }}</h1>
+    </div>
+    <div class="video-section__media">
+      {% if section.settings.video_url_mobile != blank and section.settings.video_url != blank %}
+        <video autoplay loop muted playsinline class=" hide-desktop">
+          <source src="{{ section.settings.video_url_mobile }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay loop muted playsinline class="hide-mobile">
+          <source src="{{ section.settings.video_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% else %}
+        <video autoplay loop muted playsinline>
+          <source src="{{ section.settings.video_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Full Video Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video"
+	  },
+      {
+        "type": "text",
+        "id": "video_url_mobile",
+        "label": "Video"
+	  },
+	  {
+        "type": "color",
+        "id": "color",
+        "label": "Text Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Full Video Text"
+      }
+    ]
+  }
+{% endschema %}

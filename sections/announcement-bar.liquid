@@ -1,20 +1,20 @@
-<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+<div class="announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
         <p class="announcement-bar__message body">
-          {{ section.settings.text | escape }}
+          {{ section.settings.text }}
         </p>
     {%- if section.settings.link != blank -%}
       </a>
     {%- endif -%}
   {%- endif -%}
-  {% comment %}
+
     <button class="announcement-bar__close">{% render 'icon-close' %}</button>
-  {% endcomment %}
+
   {% if section.settings.btn_text != blank %}
-    <a class="Announcement_Button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+    <a class="Announcement_Button" {% if section.settings.button_text_color != blank or section.settings.button_color != blank %}style="background: {{ section.settings.button_color }}; color: {{section.settings.button_text_color}}"{% endif %} href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
   {% endif %}
 </div>
 
@@ -33,7 +33,7 @@
   "name": "t:sections.announcement-bar.name",
   "settings": [
     {
-      "type": "text",
+      "type": "textarea",
       "id": "text",
       "default": "Welcome to our store",
       "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
@@ -59,6 +59,21 @@
       "id": "hide_mobile",
       "label": "Hide Announcement Bar on mobile?",
       "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color (optional)"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color"
     }
   ]
 }

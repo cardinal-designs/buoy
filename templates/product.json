@@ -20,22 +20,25 @@
         "fdaa4757-2988-4fb0-a86a-6079df874dfa": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "\"The most energized I've ever felt\"",
-            "testimonial_author": "Caleb E"
-          }
-        },
-        "687e272c-0c62-4732-8291-02999f5c24e6": {
-          "type": "testimonials",
-          "settings": {
-            "testimonial_text": "\"The drops are good but this salt is my absolute favorite\"",
-            "testimonial_author": "Rory C"
+            "testimonial_text": "\"No heavy metals like pink Himalayan salt\"",
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "e8fe9d00-dd8d-48b4-9e7b-021208c5470b": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "\"Use salts in the morning before my workout\"",
-            "testimonial_author": "Sophia E"
+            "testimonial_text": "\"Adding a pinch every morning to my lemon water\"",
+            "video_tag": "",
+            "testimonial_video": ""
+          }
+        },
+        "687e272c-0c62-4732-8291-02999f5c24e6": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"Literally melts in your mouth\"",
+            "video_tag": "",
+            "testimonial_video": ""
           }
         }
       },
@@ -43,8 +46,8 @@
         "59199dcd-2a5d-4cc6-9abd-1463300a889d",
         "cd8d40be-95cf-4f1d-8f6f-b5a2a5ebcd60",
         "fdaa4757-2988-4fb0-a86a-6079df874dfa",
-        "687e272c-0c62-4732-8291-02999f5c24e6",
-        "e8fe9d00-dd8d-48b4-9e7b-021208c5470b"
+        "e8fe9d00-dd8d-48b4-9e7b-021208c5470b",
+        "687e272c-0c62-4732-8291-02999f5c24e6"
       ],
       "settings": {
         "picker_type": "button",
@@ -52,12 +55,14 @@
         "supplement_fact_link": "",
         "ship_text": "",
         "shop_more_text1": "",
-        "shop_more_link1": "shopify:\/\/products\/rescue-salts",
+        "shop_more_link1": "",
         "shop_more_text2": "",
-        "shop_more_link2": "shopify:\/\/products\/hydration-drops",
+        "shop_more_link2": "",
         "one_time_text": "Free Shipping",
         "testimonial_btn_txt": "",
-        "testimonial_btn_link": ""
+        "testimonial_btn_link": "",
+        "lowest_price": "",
+        "show_drawer_triggers": true
       }
     },
     "16376825244a973b62": {
@@ -66,32 +71,32 @@
         "a23a4bc4-fe53-481d-b35c-d2d2660b1039": {
           "type": "text_block",
           "settings": {
-            "title": "🔋Stable Energy",
-            "text": "Ionic ocean electrolytes and trace minerals for cellular hydration and natural energy.",
+            "title": "✨ Vitality",
+            "text": "The world’s most pristine sea salt and 87+ minerals and biological elements preserved in their naturally-charged ionic state that supports every cell and system.",
             "subtext": ""
           }
         },
         "faaef7e4-7b0b-4795-9dcc-fa7016904a16": {
           "type": "text_block",
           "settings": {
-            "title": "🧠 Brain Function",
-            "text": "Brain-activating minerals reduce brain fog and mental fatigue while boosting memory and focus.",
+            "title": "🏃‍♂️ Performance & Recovery",
+            "text": "A rush of hydration to fuel your movement and rapidly replenish electrolyte and mineral levels to restore fluid balance.",
             "subtext": ""
           }
         },
         "7b2ba384-37c5-43b9-b56d-b73a58f4d1cc": {
           "type": "text_block",
           "settings": {
-            "title": "😌 Gut Health",
-            "text": "Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.",
+            "title": "⚡️ Energy",
+            "text": "Essential electrolytes and hard-to-find trace minerals provide an instant, long-lasting boost to natural energy levels.",
             "subtext": ""
           }
         },
         "1abb7f43-b06a-4b4c-982e-2ca0f7911639": {
           "type": "text_block",
           "settings": {
-            "title": "⭐️ Radiant Skin",
-            "text": "Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.",
+            "title": "⚖️ Nervous System Regulation",
+            "text": "Support optimal muscle function, dissolve cramps and regulate contractions with healthy doses of bioavailable sodium, chloride and trace minerals.",
             "subtext": ""
           }
         }
@@ -103,11 +108,11 @@
         "1abb7f43-b06a-4b4c-982e-2ca0f7911639"
       ],
       "settings": {
-        "add_gradient": true,
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fb96336e3bfb41e79d3a127b40fe76f6.mp4",
+        "add_gradient": false,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc71b6a8aa418cabcb3a722850c681.mp4",
         "image": "shopify:\/\/shop_images\/Buoy_Shot4_217_edited_-min.jpg",
-        "title": "Harvest the healing powers of the deep ocean.",
-        "text": "Electrolytes, trace minerals and elements from the deep ocean and preserved in their naturally balanced and ionically charged ratios to deliver radiant health benefits.",
+        "title": "The world's best salt",
+        "text": "4 ionic ocean electrolytes and 87+ trace minerals that support every cell and system, delivered in a fast-acting boost.",
         "button_label": "",
         "button_link": "",
         "value_title": "",
@@ -115,45 +120,6 @@
         "value_check2": "",
         "value_check3": "",
         "value_check4": ""
-      }
-    },
-    "b658deef-4163-4f3e-a92b-787462a46eff": {
-      "type": "how-to-2",
-      "blocks": {
-        "c3f430ad-62a9-49ae-ae93-1402229ae939": {
-          "type": "point",
-          "settings": {
-            "emoji": "🧋",
-            "title": "Enhance Any Drink",
-            "text": "Add Hydration Drops and Rescue Salt to any drink for fast-acting electrolyte and mineral replenishment."
-          }
-        },
-        "4875127f-de98-4317-a86f-3fefb9db2b8f": {
-          "type": "point",
-          "settings": {
-            "emoji": "🥑",
-            "title": "Add To Food",
-            "text": "Use Rescue Salt as a delicious electrolyte and mineral topping on any meal."
-          }
-        },
-        "45fcaa31-9b50-43cf-9f86-a596999bccea": {
-          "type": "point",
-          "settings": {
-            "emoji": "👅",
-            "title": "Dissolve On Tongue",
-            "text": "Rescue Salt dissolves directly on your tongue for fast-acting replenishment."
-          }
-        }
-      },
-      "block_order": [
-        "c3f430ad-62a9-49ae-ae93-1402229ae939",
-        "4875127f-de98-4317-a86f-3fefb9db2b8f",
-        "45fcaa31-9b50-43cf-9f86-a596999bccea"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Smaller_Desktop.webp",
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6815c4c66ad4448d8d221e3ee70abc4f.mp4",
-        "title": "The easiest way to get your electrolytes and minerals in"
       }
     },
     "163633853719b9de14": {
@@ -202,9 +168,8 @@
         "58b6ed44-54f5-4d15-a82f-2ae07d337e7e",
         "8d8cd2d6-d17c-4f50-984b-c15455b24b0d"
       ],
-      "disabled": true,
       "settings": {
-        "text": "Setting The Bar",
+        "text": "The world's best salt preserved in it's <i>naturally-charged, ionic states<\/i> with micronutrients, minerals and elements that nourish well beyond the label.",
         "bold_text": "",
         "no_background": true,
         "add_top_padding": true,
@@ -286,14 +251,94 @@
       "settings": {
         "product": ""
       }
+    },
+    "b6ee174b-8172-4e93-b4af-84cebdb5d31e": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "b3f7e833-08dc-448f-a809-d4d75005bd81": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/check.svg",
+            "serving_title": "ONE SERVING:",
+            "serving_item_one": "¼ tsp (1.2g)",
+            "serving_item_two": "More electrolytes than leading powder packet",
+            "serving_item_three": ""
+          }
+        },
+        "baeb4f24-6080-4314-a3cd-b394e23d8222": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/check.svg",
+            "serving_title": "ONE JAR:",
+            "serving_item_one": "45 Servings",
+            "serving_item_two": "More electrolytes than 45 powder packets",
+            "serving_item_three": ""
+          }
+        },
+        "56f67080-cbfe-426f-bb2d-dfdc87af6141": {
+          "type": "recommended",
+          "settings": {
+            "heading": "Dietician’s Recommended Use:",
+            "title": "1-2 times daily (1,215mg-2,430mg electrolytes)",
+            "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+            "content": "Add directly to mouth or pair with any food or beverage for fast-acting hydration, perfect for hydrated mornings. Especially important to dose when exercising, living in a hot climate or managing a chronic condition.\nIf not consuming directly with a beverage, intake 12-16oz of fluid to support optimal electrolyte balance."
+          }
+        },
+        "b30fdb89-21a0-42a9-9e69-a95a094f517d": {
+          "type": "table",
+          "settings": {
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_D.svg"
+          }
+        },
+        "b585d837-cb35-4c89-9f67-a366e0e3a63d": {
+          "type": "ingredients",
+          "settings": {
+            "content": ""
+          }
+        },
+        "e49fbf44-e40c-4cae-8015-cc688f5344e0": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "539a91b3-8661-43bd-ba0c-28969b362b30": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "b3f7e833-08dc-448f-a809-d4d75005bd81",
+        "baeb4f24-6080-4314-a3cd-b394e23d8222",
+        "56f67080-cbfe-426f-bb2d-dfdc87af6141",
+        "b30fdb89-21a0-42a9-9e69-a95a094f517d",
+        "b585d837-cb35-4c89-9f67-a366e0e3a63d",
+        "e49fbf44-e40c-4cae-8015-cc688f5344e0",
+        "539a91b3-8661-43bd-ba0c-28969b362b30"
+      ],
+      "settings": {
+        "product_name": "",
+        "title": ""
+      }
     }
   },
   "order": [
     "main",
     "16376825244a973b62",
-    "b658deef-4163-4f3e-a92b-787462a46eff",
     "163633853719b9de14",
     "163771143220978a33",
-    "1637720233f9199bd5"
+    "1637720233f9199bd5",
+    "b6ee174b-8172-4e93-b4af-84cebdb5d31e"
   ]
 }

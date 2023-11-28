@@ -20,9 +20,6 @@
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       <div style="{% if block.settings.recommend == false %}padding-top: 18px; margin-top: 37px;{% endif %}" class="pee-club-product">
-        {% render 'supplement-facts-drawer-grid',
-          product: product 
-        %}
         {% unless forloop.index == 1 %}
           <div class="pee-club-product-arrow">
           {% render 'icon-caret' %}
@@ -41,7 +38,7 @@
         </div>
         <div {% if forloop.index0 == 0 %}id="pee-product-anchor"{% endif %} data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
-        <h5>{{ product.title }}</h5>
+        <h5 class="pee-club-product-title">{{ product.title }}</h5>
         <p class="serving">{{ block.settings.servings }}</p>
         <p class="light">{{ block.settings.text }}</p>
         <div class="pee-club-product-info">
@@ -59,7 +56,7 @@
           </div>
           {% if block.settings.checkout_link != blank %}
           <a href="{{ block.settings.checkout_link }}">
-          <button style="width: 100%;" class="pee-club-product-info__button button">{{ block.settings.button_text }} - 
+          <button style="width: 100%;" class=" button">{{ block.settings.button_text }} - 
            {% if block.settings.button_price != blank and block.settings.button_discount_price != blank %}
             <span><span class="discount-price">{{ block.settings.button_price }}</span>&nbsp;{{block.settings.button_discount_price }}</span>
             {% else %}
