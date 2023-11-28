@@ -9,7 +9,8 @@ function stickAtc() {
   };
   const $observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.boundingClientRect.bottom < 0) {
+      if (entry.isIntersecting) {
+        console.log(entry.boundingClientRect);
         stickyAtc.classList.add('active');
       } else {
         // stickyAtc.classList.remove('active');
