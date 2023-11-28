@@ -1,6 +1,8 @@
 function stickAtc() {
   const iconTextHeader = document.querySelector('.icon-text__header');
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
+
+  if (!iconTextHeader && !stickyAtc) return;
   
   const options = {
     threshold: 0.50,
