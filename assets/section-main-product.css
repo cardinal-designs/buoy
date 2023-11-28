@@ -2135,6 +2135,13 @@ span#timer strong {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .rtx_option_selector_main {
+    padding: 13px 15px 15px;
+  }
+  
+}
+
 .product__media-arrows .slick-next {
   border-radius: 0 17px;
 }
