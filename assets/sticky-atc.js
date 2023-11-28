@@ -2,7 +2,7 @@ function stickAtc() {
   const iconTextHeader = document.querySelector('.icon-text__header');
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
 
-  if (!iconTextHeader || !stickyAtc) return;
+  if (!iconTextHeader) return;
 
   window.addEventListener('scroll', () => {
     const iconTextHeaderRect = iconTextHeader.getBoundingClientRect();
