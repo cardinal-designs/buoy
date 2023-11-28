@@ -1879,6 +1879,7 @@ fieldset.product-form__input .form__label {
 
 .product-listblock__text {
   margin: 2px 0 5px;
+  text-transform: capitalize;
 }
 
 .product-listblock__subtext {
