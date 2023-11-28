@@ -172,7 +172,7 @@
 
 .product__title {
   font-size: 64px;
-  margin: 0 0 60px;
+  margin-bottom: 10px;
   font-weight: 500;
   line-height: 57px;
   letter-spacing: -2px;
@@ -895,7 +895,7 @@ fieldset.product-form__input .form__label {
   .product__title {
     font-size: 40px;
     line-height: 36px;
-    margin-bottom: 10px;
+    margin: 0 0 50px;
   }
 
   .product__subtitle {
