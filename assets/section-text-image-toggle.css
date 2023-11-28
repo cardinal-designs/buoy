@@ -31,6 +31,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .text-image-toggle__container .js-open-supplement-drawer {
+    margin-top: 38px;
+  }
+}
+
 .text-image-toggle__container .text-image-toggle__text a {
   margin-top: 35px;
   text-decoration: underline;
