@@ -2,18 +2,27 @@ function stickAtc() {
   const iconTextHeader = document.querySelector('.icon-text__header');
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
 
-  if (!iconTextHeader) return;
+  if (!iconTextHeader || !stickyAtc) return;
 
-  window.addEventListener('scroll', () => {
-    const iconTextHeaderRect = iconTextHeader.getBoundingClientRect();
-    const shouldStick = iconTextHeaderRect.bottom > 0; // Check if iconTextHeader is visible
+  let lastScrollPosition = window.scrollY;
 
-    if (shouldStick) {
-      stickyAtc.classList.add('active');
-    } else {
-      stickyAtc.classList.remove('active');
-    }
-  });
+  const options = {
+    threshold: 0.50,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && window.scrollY > lastScrollPosition) {
+        stickyAtc.classList.add('active');
+      } else {
+        stickyAtc.classList.remove('active');
+      }
+    });
+
+    lastScrollPosition = window.scrollY;
+  }, options);
+
+  observer.observe(iconTextHeader);
 }
 
 stickAtc();
