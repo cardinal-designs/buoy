@@ -470,6 +470,7 @@ fieldset.product-form__input .form__label {
   background: var(--white);
   padding: 20px;
   padding-bottom: 10px;
+  display: none;
 }
 
 .product-form__sticky-atc-text {
