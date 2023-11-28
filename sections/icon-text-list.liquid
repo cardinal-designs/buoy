@@ -2,7 +2,7 @@
 
 <div class="page-width">
   {%- if section.settings.title != blank -%}
-    <h1 class="icon-text__header">{{ section.settings.title | replace: '<p>', '' | replace: '</p>', '' }}</h1>
+    <h1 class="icon-text__header">{{ section.settings.title }}</h1>
   {%- endif -%}
   <div class="icon-text__container">
     {% for block in section.blocks %}
@@ -19,7 +19,7 @@
   "name": "Icon Text List",
   "settings": [
     {
-      "type": "richtext",
+      "type": "text",
       "id": "title",
       "label": "Title"
     }
