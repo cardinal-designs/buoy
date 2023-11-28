@@ -10,7 +10,7 @@ function stickAtc() {
   const $observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        stickyAtc.style.display = 'block';
+        stickyAtc.classList.add('active');
       }
     });
   }, options);
