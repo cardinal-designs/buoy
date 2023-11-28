@@ -2157,6 +2157,12 @@ span#timer strong {
  margin-top: -20px;
 }
 
+@media screen and (max-width: 768px) {
+  .product-form__text-label {
+    margin-top: -10px;
+  }
+}
+
 .template-product .rtx_option_heading {
   margin-top: 1px;
   display: flex;
