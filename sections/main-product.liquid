@@ -72,17 +72,17 @@
         {% endfor %}
         </div>
 
-        {% if section.settings.show_drawer_triggers == true %}
-          <div class="product-listblock__container-one">
-            <div class="product-listblock-one">          
-              {% comment %} <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/> {% endcomment %}
-              <div>  
-                <p class="sh3 product-listblock__text">Energy, Gut Health, Brain Function, Skin</p> 
-                <p class="product-listblock__subtext">Delivered in 3x more bioavailable form factor</p>
-              </div>
+        <div class="product-listblock__container-one">
+          <div class="product-listblock-one">          
+            {% comment %} <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}"/> {% endcomment %}
+            <div>  
+              <p class="sh3 product-listblock__text">Energy, Gut Health, Brain Function, Skin</p> 
+              <p class="product-listblock__subtext">Delivered in 3x more bioavailable form factor</p>
             </div>
           </div>
+        </div>
 
+        {% if section.settings.show_drawer_triggers == true %}
           <div class="product__drawer-triggers">
             <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
