@@ -21,35 +21,40 @@
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"I use a squeeze or two every afternoon\" \"",
-            "testimonial_author": "- Callie M"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "f6625a45-434f-4c18-9a4a-11f6219a858d": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Doesn't seem to spike blood pressure like coffee\"",
-            "testimonial_author": "- Johnnie L"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "a55b8a89-545d-43e7-8111-8b7a0c79c0c5": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"A festival weekend must-have\"",
-            "testimonial_author": "- Jamie S"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "fa94545a-2b3c-41eb-8abb-dc20e4743371": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Adding to tea is my favorite\"",
-            "testimonial_author": "- Linette I"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "8a1ced81-db57-43b3-81a7-99b0bde0854f": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Down to just one coffee a day now\"",
-            "testimonial_author": "- Viola A"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         }
       },
@@ -73,7 +78,9 @@
         "shop_more_link2": "",
         "one_time_text": "",
         "testimonial_btn_txt": "See All Reviews",
-        "testimonial_btn_link": "#Product_Reviews"
+        "testimonial_btn_link": "#Product_Reviews",
+        "lowest_price": "",
+        "show_drawer_triggers": true
       }
     },
     "78ab67c0-cbbc-4a9c-a175-b4b3756a90a9": {
@@ -449,7 +456,8 @@
         "0aab4d8e-1486-4b80-a953-6ed223917b83": {
           "type": "table",
           "settings": {
-            "table_image": "shopify:\/\/shop_images\/Energy-Drops-Supplement-Facts.svg"
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Energy_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Energy_D.svg"
           }
         },
         "daa64e42-3e99-46bf-8147-4b15829abae2": {

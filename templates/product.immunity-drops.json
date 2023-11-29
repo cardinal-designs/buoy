@@ -21,35 +21,40 @@
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Replaced my multivitamin\"",
-            "testimonial_author": "- Selena S"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "5a9efd84-78ec-4f97-bf8c-3d377aa1ee9a": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "“A bit more taste than the others but dang I feel good\"",
-            "testimonial_author": "- Stefan K"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "506a7e62-3754-4a4b-a8a1-9aea5233d724": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Love a few drops in my kombucha\"",
-            "testimonial_author": "- Gina A"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "47c1b639-d362-4a34-ac9a-520c2e5b09e0": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "“Drink your vitamins\"",
-            "testimonial_author": "- Eva B"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "43a2c109-1d70-48b8-8ce3-578c4ecafc37": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"So many good ingredients!\"",
-            "testimonial_author": "- Aang C"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         }
       },
@@ -73,7 +78,9 @@
         "shop_more_link2": "",
         "one_time_text": "",
         "testimonial_btn_txt": "See All Reviews",
-        "testimonial_btn_link": "#Product_Reviews"
+        "testimonial_btn_link": "#Product_Reviews",
+        "lowest_price": "",
+        "show_drawer_triggers": true
       }
     },
     "2acd1e19-6fab-439e-b277-654073124b62": {
@@ -449,7 +456,8 @@
         "9fbe1c77-4f85-4bfc-b3ed-aba159756d8f": {
           "type": "table",
           "settings": {
-            "table_image": "shopify:\/\/shop_images\/Immunity-Supplement-Facts.svg"
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_D.svg"
           }
         },
         "a08c2567-e69d-4e66-a6d0-fa93a903ef92": {

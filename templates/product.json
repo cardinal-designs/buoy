@@ -21,21 +21,24 @@
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"No heavy metals like pink Himalayan salt\"",
-            "testimonial_author": "Josie W"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "e8fe9d00-dd8d-48b4-9e7b-021208c5470b": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Adding a pinch every morning to my lemon water\"",
-            "testimonial_author": "Sophia E"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         },
         "687e272c-0c62-4732-8291-02999f5c24e6": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"Literally melts in your mouth\"",
-            "testimonial_author": "Rory C"
+            "video_tag": "",
+            "testimonial_video": ""
           }
         }
       },
@@ -57,7 +60,9 @@
         "shop_more_link2": "",
         "one_time_text": "Free Shipping",
         "testimonial_btn_txt": "",
-        "testimonial_btn_link": ""
+        "testimonial_btn_link": "",
+        "lowest_price": "",
+        "show_drawer_triggers": true
       }
     },
     "16376825244a973b62": {
@@ -246,6 +251,86 @@
       "settings": {
         "product": ""
       }
+    },
+    "b6ee174b-8172-4e93-b4af-84cebdb5d31e": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "b3f7e833-08dc-448f-a809-d4d75005bd81": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/check.svg",
+            "serving_title": "ONE SERVING:",
+            "serving_item_one": "¼ tsp (1.2g)",
+            "serving_item_two": "More electrolytes than leading powder packet",
+            "serving_item_three": ""
+          }
+        },
+        "baeb4f24-6080-4314-a3cd-b394e23d8222": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/check.svg",
+            "serving_title": "ONE JAR:",
+            "serving_item_one": "45 Servings",
+            "serving_item_two": "More electrolytes than 45 powder packets",
+            "serving_item_three": ""
+          }
+        },
+        "56f67080-cbfe-426f-bb2d-dfdc87af6141": {
+          "type": "recommended",
+          "settings": {
+            "heading": "Dietician’s Recommended Use:",
+            "title": "1-2 times daily (1,215mg-2,430mg electrolytes)",
+            "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+            "content": "Add directly to mouth or pair with any food or beverage for fast-acting hydration, perfect for hydrated mornings. Especially important to dose when exercising, living in a hot climate or managing a chronic condition.\nIf not consuming directly with a beverage, intake 12-16oz of fluid to support optimal electrolyte balance."
+          }
+        },
+        "b30fdb89-21a0-42a9-9e69-a95a094f517d": {
+          "type": "table",
+          "settings": {
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_D.svg"
+          }
+        },
+        "b585d837-cb35-4c89-9f67-a366e0e3a63d": {
+          "type": "ingredients",
+          "settings": {
+            "content": ""
+          }
+        },
+        "e49fbf44-e40c-4cae-8015-cc688f5344e0": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "539a91b3-8661-43bd-ba0c-28969b362b30": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "b3f7e833-08dc-448f-a809-d4d75005bd81",
+        "baeb4f24-6080-4314-a3cd-b394e23d8222",
+        "56f67080-cbfe-426f-bb2d-dfdc87af6141",
+        "b30fdb89-21a0-42a9-9e69-a95a094f517d",
+        "b585d837-cb35-4c89-9f67-a366e0e3a63d",
+        "e49fbf44-e40c-4cae-8015-cc688f5344e0",
+        "539a91b3-8661-43bd-ba0c-28969b362b30"
+      ],
+      "settings": {
+        "product_name": "",
+        "title": ""
+      }
     }
   },
   "order": [
@@ -253,6 +338,7 @@
     "16376825244a973b62",
     "163633853719b9de14",
     "163771143220978a33",
-    "1637720233f9199bd5"
+    "1637720233f9199bd5",
+    "b6ee174b-8172-4e93-b4af-84cebdb5d31e"
   ]
 }

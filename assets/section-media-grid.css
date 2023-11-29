@@ -1,7 +1,14 @@
 .media-grid__container {
   text-align: center;
-  padding-top: 80px !important;
-  padding-bottom: 150px !important;
+  padding-top: 31px !important;
+  padding-bottom: 110px !important;
+}
+
+@media screen and (max-width:768px) {
+  .media-grid__container {
+    padding-top: 27px !important;
+    padding-bottom: 50px !important;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -21,7 +28,7 @@
 
 .media-grid__container .sh3 {
   color: #797B7A;
-  margin: 0 auto 20px;
+  margin: 0 auto 6px;
 }
 
 .media-grid__container .sh2 {
@@ -30,7 +37,7 @@
 }
 
 .media-grid__container h1 {
- margin: 0 auto 30px;
+ margin: 0 auto 20px;
 }
 
 .media-grid__container h1 .rhyme-italic {
@@ -67,7 +74,7 @@
   }
 
   .media-grid__container h1 {
-    margin-bottom: 40px;
+    margin-bottom: 21px;
   }
   
   .media-grid__container .sh2 {
