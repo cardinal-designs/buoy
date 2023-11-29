@@ -21,7 +21,7 @@
 
 .text-image-toggle__text p {
   margin: 33px 0 8px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .text-image-toggle__container .js-open-supplement-drawer {
@@ -47,7 +47,7 @@
 
 .text-image-toggle__buttons {
   display: flex;
-  gap: 4px 10px;
+  gap: 4px 12px;
   flex-wrap: wrap;
   margin-top: 5px;
 }
@@ -67,8 +67,8 @@
 }
 
 .text-image-toggle__button.active {
-  color: white;
-  background: #1F2322;
+  background: #DEF647;
+  border: none;
 }
 
 .text-image-toggle__text h1 {

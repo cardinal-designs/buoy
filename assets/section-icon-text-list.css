@@ -8,6 +8,7 @@
 
 .icon-text__header {
   text-align: center;
+  margin-top: 142px;
 }
 
 .icon-text__header-italic {
@@ -43,6 +44,5 @@
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 32px;
-    margin-bottom: 0;
   }
 }

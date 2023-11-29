@@ -172,7 +172,7 @@
 
 .product__title {
   font-size: 64px;
-  margin: 0 0 36px;
+  margin: 0 0 32px;
   font-weight: 400;
   line-height: 57px;
   letter-spacing: -2px;
@@ -202,7 +202,7 @@
 .Serving_Cost {
   font-size: 12px;
   font-weight: 400;
-  margin-top: 12px;
+  margin-top: 8px;
   text-align: center;
 }
 
@@ -1901,6 +1901,10 @@ fieldset.product-form__input .form__label {
   margin-bottom: 35px;
 }
 
+.product-listblock__container-one {
+  margin-top: 16px;
+}
+
 .three-x-text {
   font-family: 'Dela Gothic One', sans-serif;
   font-style: normal;
@@ -2428,14 +2432,32 @@ select[name=selling_plan] {
   border-radius: 3px;
   height: auto;
   margin: 28px auto 0px;
-  width: 305px;
+  max-width: 460px;
+  width: 100%;
   position: relative;
   text-align: center;
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .discount-bubble {
+    max-width: 285px;
+    width: 100%;
+  }
+}
+
 .discount-bubble p {
   margin: 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .discount-bubble p {
+    white-space: initial;
+  }
 }
 
 .discount-bubble:before {
