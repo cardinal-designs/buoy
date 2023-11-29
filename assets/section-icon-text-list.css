@@ -42,9 +42,7 @@
   .icon-text__container {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding-top: 50px !important;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-top: 1px solid #E9E9E9;
+    margin-top: 32px;
+    margin-bottom: 0;
   }
 }
