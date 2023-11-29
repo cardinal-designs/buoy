@@ -79,12 +79,17 @@
               <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}"/>
             {%- endif -%}
             <div>
-              {%- if section.settings.product_feature_text != blank -%}
-                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
-              {%- endif -%}
-              {%- if section.settings.product_feature_text_two != blank -%}
-                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
-              {%- endif -%}
+
+              {% if product.metafields.custom.tag_icon_1 and forloop.index == 1 %}
+                <img src="{{ product.metafields.custom.tag_icon_1.value | img_url: 'master' }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon_2 and forloop.index == 2 %}
+                <img src="{{ product.metafields.custom.tag_icon_2.value | img_url: 'master' }}"/>
+              {% endif %}
+              {% if product.metafields.custom.tag_icon_3 and forloop.index == 3 %}
+                <img src="{{ product.metafields.custom.tag_icon_3.value | img_url: 'master' }}"/>
+              {% endif %}
+              <span>{{ tag }}</span>
             </div>
           </div>
         </div>
@@ -320,7 +325,7 @@
                 name="add"
                 style="flex-direction: initial; padding: 12px 10px;"
                 data-available="{{ currentVariant.available }}"
-                class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                 {% if currentVariant.available == false %}disabled{% endif %}
                 data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
               >
