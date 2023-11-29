@@ -65,6 +65,7 @@
         },
         "8c815d42-5465-43da-9c7c-2725d06ac27a": {
           "type": "list_block",
+          "disabled": true,
           "settings": {
             "list_block_type_img": "shopify:\/\/shop_images\/Callouts.png",
             "list_block_type_text": "30-Day Money Back Guarantee",
@@ -103,6 +104,7 @@
         "one_time_text": "One Time Purchase",
         "testimonial_btn_txt": "All Reviews",
         "testimonial_btn_link": "#Product_Reviews",
+        "product_feature_icon": "shopify:\/\/shop_images\/star_734f1cf7-69fc-4281-a50b-b783c5441121.png",
         "product_feature_text": "Energy, Gut Health, Brain Function, Skin",
         "product_feature_text_two": "Delivered in 3x more bioavailable form factor",
         "show_drawer_triggers": true
@@ -114,57 +116,57 @@
         "1083faa0-a895-49d0-b79a-995556c1a851": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Deep Ocean Minerals"
+            "image": "shopify:\/\/shop_images\/vegan.svg",
+            "title": "Vegan"
           }
         },
         "4cb0a6cc-78b4-4bf3-97f4-836b009452f3": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/psychiatry_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Vegan"
+            "image": "shopify:\/\/shop_images\/gmo.svg",
+            "title": "Non-GMO Verified"
           }
         },
         "48445f51-5b78-409f-8df6-c40635aebfa3": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/verified_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Non-GMO Project Verified"
+            "image": "shopify:\/\/shop_images\/keto.svg",
+            "title": "Keto Approved"
           }
         },
         "da9577ec-04dd-466c-87e8-66511f10d1bc": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "3x Bioavailable Form Factor"
-          }
-        },
-        "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/check.svg",
             "title": "Gluten & Major Allergen Free"
           }
         },
+        "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/third-party.svg",
+            "title": "Third Party Tested"
+          }
+        },
         "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nutrition_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Keto & Paleo Approved"
+            "image": "shopify:\/\/shop_images\/bio-available.svg",
+            "title": "3x Bioavailable Form Factor"
           }
         },
         "9d38c763-6f85-46a2-9f99-07f2e5b38186": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/labs_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Third Party Tested"
+            "image": "shopify:\/\/shop_images\/deep.svg",
+            "title": "Deep Ocean Minerals"
           }
         },
         "f094a7d8-7384-4dc5-a296-de548c44952f": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lab_profile_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "White Papers & Clinical Trials"
+            "image": "shopify:\/\/shop_images\/drink.png",
+            "title": "Add to Any Drink"
           }
         }
       },
@@ -274,8 +276,8 @@
       ],
       "settings": {
         "video_url": "",
-        "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55424_1x1_8_b3a299ea-793c-4041-a104-8770b8f96218.png",
-        "image_mobile": "shopify:\/\/shop_images\/BUOYHYDRATION_55424_1x1_8_b3a299ea-793c-4041-a104-8770b8f96218.png"
+        "image": "shopify:\/\/shop_images\/hydration-drops.png",
+        "image_mobile": "shopify:\/\/shop_images\/hydration-drops-mobile.png"
       }
     },
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
