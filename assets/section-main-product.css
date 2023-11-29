@@ -2437,7 +2437,8 @@ select[name=selling_plan] {
 
 @media screen and (max-width: 768px) {
   .discount-bubble {
-    white-space: initial;
+    max-width: 268px;
+    width: 100%;
   }
 }
 
