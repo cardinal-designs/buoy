@@ -292,54 +292,6 @@
         "add_bottom_border": false
       }
     },
-    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
-      "type": "reviews-slider",
-      "blocks": {
-        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Vasu S",
-            "content": "\"Prevents cramps and helps me sleep better\""
-          }
-        },
-        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Karey W",
-            "content": "\"I seem to have a lot more energy since I started using these drops. I start with my 1st cup of coffee in the morning and continue throughout the day.\""
-          }
-        },
-        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Angela R",
-            "content": "\"Daily essential I bring with me everywhere\""
-          }
-        },
-        "715e1da7-5de3-44b9-899b-211d689d2929": {
-          "type": "pr_slide",
-          "disabled": true,
-          "settings": {
-            "text": "-Delaney K",
-            "content": "\"Skeptical at first but I noticed changes in my skin\""
-          }
-        }
-      },
-      "block_order": [
-        "2403b53d-6918-43e2-b5b2-076aff2fa24e",
-        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
-        "0fff71db-dfa8-49eb-9726-ec3517079f19",
-        "715e1da7-5de3-44b9-899b-211d689d2929"
-      ],
-      "disabled": true,
-      "settings": {
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "none",
-        "reviews_btn_txt": "All Reviews",
-        "reviews_btn_link": ""
-      }
-    },
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
       "type": "pr-slider",
       "blocks": {
@@ -483,49 +435,6 @@
         "subtext": "Buoy turns any drink an electrolyte and multi-mineral beverage in one squeeze.",
         "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
         "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
-      }
-    },
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
-      "type": "pee-club-half-image",
-      "blocks": {
-        "7408eeea-301f-442d-a916-b380c5201277": {
-          "type": "block",
-          "settings": {
-            "title": "🌍 Sustaining Health, Sustaining the Planet",
-            "list": "At Buoy, sustainability isn't an afterthought—it's a core principle. With eco-friendly packaging and a pledge to use only what the earth can replenish, Buoy demonstrates that health and wellness extend beyond the individual to the planet we all share. Choosing Buoy means investing in a future where environmental care and personal care go hand in hand.",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Image_Section_New.jpg"
-          }
-        },
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
-          "type": "block",
-          "settings": {
-            "title": "🤝 A True Ally in Wellness",
-            "list": "Living with chronic illness can often feel like navigating through uncharted waters. Buoy understands this profound challenge and responds with products that aim to ease this journey. By ensuring that necessary electrolytes are absorbed efficiently, Buoy supports the daily struggles of chronic illness, making it a supportive ally in long-term health management.",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
-          }
-        },
-        "f5bfc524-6f5c-44a4-9425-df416fd58291": {
-          "type": "block",
-          "settings": {
-            "title": "🏋️‍♀️ More Than Just a Supplement",
-            "list": "Buoy’s philosophy transcends the norm of what a supplement should be. It's about embracing a holistic approach to wellness that considers all aspects of health. From mental clarity to physical vigor, Buoy's carefully calibrated electrolyte balance is designed to enhance overall well-being.<br><br>\n\nBuoy's commitment is clear: to offer a product that doesn't just promise wellness but practices it. By embracing sustainability, supporting those with chronic illness, and providing a comprehensive approach to health, Buoy isn't just a part of your health routine; it's a part of your commitment to a life well-lived.",
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "7408eeea-301f-442d-a916-b380c5201277",
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3",
-        "f5bfc524-6f5c-44a4-9425-df416fd58291"
-      ],
-      "settings": {
-        "title": "Buoy’s Commitment to Holistic Wellness",
-        "text": "In the bustling marketplace of health supplements, Buoy rises like a beacon with its unwavering commitment to holistic wellness. This isn't just about hydration; it's about a conscientious choice for a healthier lifestyle, one drop at a time.",
-        "background": "",
-        "add_top_border": false,
-        "add_bottom_border": false
       }
     },
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
@@ -829,6 +738,95 @@
         "add_top_border": false,
         "add_bottom_border": false,
         "background": "none"
+      }
+    },
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
+      "type": "pee-club-half-image",
+      "blocks": {
+        "7408eeea-301f-442d-a916-b380c5201277": {
+          "type": "block",
+          "settings": {
+            "title": "🌍 Sustaining Health, Sustaining the Planet",
+            "list": "At Buoy, sustainability isn't an afterthought—it's a core principle. With eco-friendly packaging and a pledge to use only what the earth can replenish, Buoy demonstrates that health and wellness extend beyond the individual to the planet we all share. Choosing Buoy means investing in a future where environmental care and personal care go hand in hand.",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Image_Section_New.jpg"
+          }
+        },
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
+          "type": "block",
+          "settings": {
+            "title": "🤝 A True Ally in Wellness",
+            "list": "Living with chronic illness can often feel like navigating through uncharted waters. Buoy understands this profound challenge and responds with products that aim to ease this journey. By ensuring that necessary electrolytes are absorbed efficiently, Buoy supports the daily struggles of chronic illness, making it a supportive ally in long-term health management.",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
+          }
+        },
+        "f5bfc524-6f5c-44a4-9425-df416fd58291": {
+          "type": "block",
+          "settings": {
+            "title": "🏋️‍♀️ More Than Just a Supplement",
+            "list": "Buoy’s philosophy transcends the norm of what a supplement should be. It's about embracing a holistic approach to wellness that considers all aspects of health. From mental clarity to physical vigor, Buoy's carefully calibrated electrolyte balance is designed to enhance overall well-being.<br><br>\n\nBuoy's commitment is clear: to offer a product that doesn't just promise wellness but practices it. By embracing sustainability, supporting those with chronic illness, and providing a comprehensive approach to health, Buoy isn't just a part of your health routine; it's a part of your commitment to a life well-lived.",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "7408eeea-301f-442d-a916-b380c5201277",
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3",
+        "f5bfc524-6f5c-44a4-9425-df416fd58291"
+      ],
+      "settings": {
+        "title": "Buoy’s Commitment to Holistic Wellness",
+        "text": "In the bustling marketplace of health supplements, Buoy rises like a beacon with its unwavering commitment to holistic wellness. This isn't just about hydration; it's about a conscientious choice for a healthier lifestyle, one drop at a time.",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
+      "type": "reviews-slider",
+      "blocks": {
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Dylan W",
+            "content": "<strong>Squeezable Magic<\/strong><br><br>\nBuoy gives me almost instant headache relief and helps me stay energized throughout the day. I’ve only tried it with water so far, but I love the clean taste!"
+          }
+        },
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Kimberly K",
+            "content": "<strong>Hydration Drops are WONDERFUL!<\/strong><br><br>\nI started feeling better IMMEDIATELY after starting using the drops. It's like night and day regarding my inflammation and overall well-being. I will NEVER be without them."
+          }
+        },
+        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Sophie S",
+            "content": "<strong>Just What I Was Looking For<\/strong><br><br>\nI’ve been on the hunt for a hydration product without sugar, stevia, or monk fruit, and I finally found it with Buoy! Instantly a big fan."
+          }
+        },
+        "715e1da7-5de3-44b9-899b-211d689d2929": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Joseph C.",
+            "content": "<br><br><strong>Love These!<\/strong><br><br>\nBuoy drops have definitely helped me maintain consistent hydration throughout the day, no matter what I’m doing."
+          }
+        }
+      },
+      "block_order": [
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e",
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
+        "0fff71db-dfa8-49eb-9726-ec3517079f19",
+        "715e1da7-5de3-44b9-899b-211d689d2929"
+      ],
+      "settings": {
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none",
+        "reviews_btn_txt": "All Reviews",
+        "reviews_btn_link": ""
       }
     },
     "19f84cc7-e91f-487d-a62c-2e8944758d96": {
@@ -1174,13 +1172,11 @@
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
-    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "50df382c-255c-4272-b876-eca398cca73a",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
@@ -1189,6 +1185,8 @@
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
