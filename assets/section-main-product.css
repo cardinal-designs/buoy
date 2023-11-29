@@ -2442,6 +2442,12 @@ select[name=selling_plan] {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .discount-bubble p {
+    white-space: initial;
+  }
+}
+
 .discount-bubble:before {
   content: '';
   position: absolute;
