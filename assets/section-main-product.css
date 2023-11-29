@@ -2429,9 +2429,16 @@ select[name=selling_plan] {
   height: auto;
   margin: 28px auto 0px;
   max-width: 460px;
+  width: 100%;
   position: relative;
   text-align: center;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .discount-bubble {
+    white-space: initial;
+  }
 }
 
 .discount-bubble p {
