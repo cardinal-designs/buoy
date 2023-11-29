@@ -2428,7 +2428,7 @@ select[name=selling_plan] {
   border-radius: 3px;
   height: auto;
   margin: 28px auto 0px;
-  width: 305px;
+  max-width: 500px;
   position: relative;
   text-align: center;
   color: white;
@@ -2436,6 +2436,10 @@ select[name=selling_plan] {
 
 .discount-bubble p {
   margin: 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .discount-bubble:before {
