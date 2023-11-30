@@ -51,7 +51,9 @@
         {%- if block.type == 'content' -%}
           <button class="clinical__info-btn">
             <div class="clinical__info-title">
-              <span>{{ bs.btn_title }}</span>
+              {%- if bs.btn_title != blank -%}
+                <span>{{ bs.btn_title }}</span>
+              {%- endif -%}
               {%- if bs.notification != blank -%}
                 <span class="clinical__info--soon">{{ bs.notification }}</span>
               {%- endif -%}
@@ -59,7 +61,9 @@
             <div class="clinical__info-content">
               <div class="clinical__info-line"></div>
               <div class="clinical__info-item clinical__info-item-primary">
-                <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
+                {%- if bs.heading != blank -%}
+                  <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
+                {%- endif -%}
                 <div class="clinical__info-content-block">
                   <h3 class="clinical__info-title">{{ bs.title }}</h3>
                   <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
