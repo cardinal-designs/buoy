@@ -1441,7 +1441,7 @@ $('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
   const section = document.querySelector('.image-with-dropdowns__dropdown');
-  console.log(section);
+  section.scrollIntoView({ behavior: 'smooth' });
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
