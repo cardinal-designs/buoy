@@ -190,5 +190,13 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 23px;
-  color: var(-charcoal)
+  color: var(-charcoal);
+}
+
+.clinical__info-text-one {
+  font-family: inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(-charcoal);
 }
