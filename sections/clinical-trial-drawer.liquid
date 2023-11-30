@@ -65,7 +65,9 @@
                   <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
                 {%- endif -%}
                 <div class="clinical__info-content-block">
-                  <h3 class="clinical__info-title">{{ bs.title }}</h3>
+                  {%- if bs.title != blank -%}
+                    <h3 class="clinical__info-title">{{ bs.title }}</h3>
+                  {%- endif -%}
                   <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
                   <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
                 </div>
