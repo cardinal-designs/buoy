@@ -145,6 +145,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: left;
 }
 
 .clinical__info-btn-active {
@@ -155,7 +156,6 @@
 
   .clinical__info-btn {
     padding: 24px 20px;
-    text-align: left;
   }
 }
 
