@@ -103,14 +103,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 11px;
-}
-
-@media screen and (max-width: 768px) {
-
-  .clinical__info-list-item {
-    margin-bottom: 9px;
-  }
+  margin-bottom: 9px;
 }
 
 .clinical__info-list-item span {
