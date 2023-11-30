@@ -19,7 +19,7 @@
     <div class="drawer__title-wrapper">
       {%- if ss.product_name != blank -%}
         <div class="drawer__product-name">
-          2023
+          {{ ss.year }}
           {{ ss.product_name }}
         </div>
       {%- endif -%}
@@ -61,6 +61,11 @@
   {
     "name": "Clinical Trial Drawer",
     "settings": [
+      {
+        "type": "text",
+        "id": "year",
+        "label": "Year"
+      },
       {
         "type": "text",
         "id": "product_name",
