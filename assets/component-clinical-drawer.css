@@ -144,3 +144,14 @@
   color: var(--charcoal);
   display: flex;
 }
+
+.clinical__info--soon {
+  font-size: 14px;
+  background-color: #398200;
+  display: inline-block;
+  width: auto;
+  border-radius: 14px;
+  padding: 4px 10px;
+  font-weight: 400;
+  color: white;
+}
