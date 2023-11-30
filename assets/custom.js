@@ -126,6 +126,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-blury-overlay'
   }
 
+  var element =  document.getElementsByClassName('js-open-supplement-drawer');
+
   if (document.querySelector(selectors.openClinical)) {
     document.querySelector(selectors.openClinical).addEventListener('click', function(){
       openClinical();
