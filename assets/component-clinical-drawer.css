@@ -192,6 +192,10 @@
   margin-bottom: 32px;
 }
 
+.clinical__info-content-block:last-child {
+  margin-bottom: 48px;
+}
+
 .clinical__info-title {
   font-family: inter, sans-serif;
   font-size: 16px;
