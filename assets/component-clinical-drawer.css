@@ -113,3 +113,8 @@
   font-weight: 400;
   line-height: 21px;
 }
+
+.clinical__info-btn {
+  border: var(--charcoal-light);
+  border-radius: 8px;
+}
