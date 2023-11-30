@@ -120,6 +120,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       openClinical: '.js-clinical-open',
+      closeClinical: '.js-clinical-close',
       openTest: 'js-open',
       closeContinue: '.drawer__mobile-continue',
       closeContinueDesktop: '.drawer__desktop-continue',
@@ -131,6 +132,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openClinical)) {
     document.querySelector(selectors.openClinical).addEventListener('click', function(){
       openClinical();
+    }); 
+  }
+
+  if (document.querySelector(selectors.closeClinical)) {
+    document.querySelector(selectors.closeClinical).addEventListener('click', function(){
+      closeClinical();
     }); 
   }
 
