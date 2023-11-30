@@ -184,7 +184,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openClinical() {
-    console.log('opened')
+    openNav();
   }
 
   function openNav() {
