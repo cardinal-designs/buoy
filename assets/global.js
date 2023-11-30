@@ -1443,7 +1443,9 @@ $('.image-with-dropdowns__q').click(function () {
   const section = $('.icon-text__header');
   console.log(section);
   // Scroll to the top of the section
-  section[0].scrollIntoView({ behavior: 'smooth' });
+  $('html, body').animate({
+    scrollTop: section.offset().top
+  }, 1000); // Adjust the duration as needed
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
