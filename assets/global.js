@@ -1442,7 +1442,6 @@ $('.image-with-dropdowns__q').click(function () {
   const isActive = $(this).hasClass('active');
   const section = $('.icon-text__header');
   console.log(section);
-  // Scroll to the top of the section
   $('html, body').animate({
     scrollTop: section.offset().top
   }, 1000); // Adjust the duration as needed
