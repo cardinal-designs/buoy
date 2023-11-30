@@ -40,7 +40,9 @@
           {%- if bs.icon_item != blank -%}
             <li class="clinical__info-list-item">
               <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
-              <span>{{ bs.item_description }}</span>
+              {%- if bs.item_description != blank -%}
+                <span>{{ bs.item_description }}</span>
+              {%- endif -%}
             </li>
           {%- endif -%}
         {%- endif -%}
