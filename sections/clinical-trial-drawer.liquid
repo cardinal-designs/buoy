@@ -52,7 +52,9 @@
         <button class="clinical__info-btn">
           <div class="clinical__info-title">
             <span>{{ bs.btn_title }}</span>
-            <span class="clinical__info--soon">{{ bs.coming_soon }}</span>
+            {%- if bs.notification != blank -%}
+              <span class="clinical__info--soon">{{ bs.notification }}</span>
+            {%- endif -%}
           </div>
           <div class="clinical__info-content">
             <div class="clinical__info-line"></div>
@@ -143,7 +145,7 @@
           },
           {
             "type": "text",
-            "id": "coming_soon",
+            "id": "notification",
             "label": "Notification"
           },
           {
