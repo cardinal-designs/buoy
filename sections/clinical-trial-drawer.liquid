@@ -60,9 +60,16 @@
             <div class="clinical__info-line"></div>
             <div class="clinical__info-item">
               <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
-              <h3 class="clinical__info-title">{{ bs.title }}</h3>
-              <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-              <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+              <div class="clinical__info-content-block">
+                <h3 class="clinical__info-title">{{ bs.title }}</h3>
+                <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+              </div>
+              <div class="clinical__info-content-block">
+                <h3 class="clinical__info-title">{{ bs.title_two }}</h3>
+                <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+              </div>
             </div>
           </div>
         </button>
@@ -178,7 +185,7 @@
           },
           {
             "type": "text",
-            "id": "title_two",
+            "id": "block_two_title",
             "label": "Block Two Title"
           },
           {
