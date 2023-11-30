@@ -67,8 +67,12 @@
                     {%- if bs.title != blank -%}
                       <h3 class="clinical__info-title">{{ bs.title }}</h3>
                     {%- endif -%}
-                    <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                    <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+                    {%- if bs.text_block_one != blank -%}
+                      <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                    {%- endif -%}
+                    {%- if bs.text_block_two != blank -%}
+                      <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+                    {%- endif -%}
                   </div>
                   <div class="clinical__info-content-block">
                     <h3 class="clinical__info-title">{{ bs.block_two_title }}</h3>
