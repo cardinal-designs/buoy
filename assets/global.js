@@ -1440,10 +1440,6 @@ $(window).on('resize scroll', function() {
 $('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
-  const section = $('.icon-text__header');
-  $('html, body').animate({
-        scrollTop: $(section).offset().top
-    }, 500);
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
