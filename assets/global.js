@@ -1440,7 +1440,7 @@ $(window).on('resize scroll', function() {
 $('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
-  const section = $('.image-with-dropdowns__content-point');
+  const section = $('.image-with-dropdowns__dropdown');
   // Scroll to the top of the section
   section[0].scrollIntoView({ behavior: 'smooth' });
 
