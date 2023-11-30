@@ -175,3 +175,12 @@
   background: var(--gray-light);
   margin-top: 24px;
 }
+
+.clinical__info-heading {
+  font-family: inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
