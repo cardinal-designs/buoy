@@ -258,6 +258,7 @@ $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
+// close supplement drawer (click outside)
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
