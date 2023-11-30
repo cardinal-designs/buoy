@@ -125,7 +125,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-blury-overlay'
   }
 
-  console.log(openIngredients);
+  console.log(selectors.openIngredients);
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
 
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
