@@ -116,7 +116,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   /* Open Clinical Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
-      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
+      openDrawerSection: '.js-open-supplement-drawer',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       openClinical: '.js-clinical-open',
@@ -149,7 +149,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-      openNav();
+      // openNav();
+      console.log('clicked');
     });
   }
 
