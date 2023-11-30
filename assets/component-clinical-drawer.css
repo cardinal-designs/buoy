@@ -145,8 +145,9 @@
   text-align: left;
 }
 
-.clinical__info-btn-active {
-  flex-direction: column;
+.clinical__info-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
