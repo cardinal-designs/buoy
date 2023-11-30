@@ -126,14 +126,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
-  console.log(document.querySelector(selectors.openClinical))
 
-  // if (document.querySelector(selectors.openClinical)) {
-  //   document.querySelector(selectors.openClinical).addEventListener('click', function(){
-  //     // openNav();
-  //     console.log('clicked');
-  //   }); 
-  // }
+  if (document.querySelector(selectors.openClinical)) {
+    document.querySelector(selectors.openClinical).addEventListener('click', function(){
+      // openNav();
+      console.log('clicked');
+    }); 
+  }
 
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openIngredients).addEventListener('click', function(){
