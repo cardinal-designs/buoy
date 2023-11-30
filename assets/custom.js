@@ -259,6 +259,7 @@ $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
+// close clinical drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
