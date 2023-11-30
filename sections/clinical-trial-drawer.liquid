@@ -32,8 +32,8 @@
     {%- for block in section.blocks -%}
       {%- assign bs = block.settings -%}
       {%- if block.type == 'list-item' -%}
-        <ul class="drawer__info-list">
-          <li class="drawer__info-list-item">
+        <ul class="clinical__info-list">
+          <li class="clinical__info-list-item">
             <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
             <span>{{ bs.item_description }}</span>
           </li>
