@@ -116,9 +116,10 @@
 
 .clinical__info-btn {
   border: 1px solid var(--charcoal-light);
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
   text-transform: capitalize;
+  width: 100%;
 }
