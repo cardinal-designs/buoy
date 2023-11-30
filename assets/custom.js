@@ -149,7 +149,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
     document.querySelector(selectors.openTest).addEventListener('click', function(){
-      console.log('clicked');
       openNav();
     }); 
   }
