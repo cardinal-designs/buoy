@@ -32,12 +32,12 @@
     <ul class="clinical__info-list">
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
-          {%- if block.type == 'list-item' -%}
-            <li class="clinical__info-list-item">
-              <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
-              <span>{{ bs.item_description }}</span>
-            </li>
-          {%- endif -%}
+        {%- if block.type == 'list-item' -%}
+          <li class="clinical__info-list-item">
+            <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
+            <span>{{ bs.item_description }}</span>
+          </li>
+        {%- endif -%}
       {%- endfor -%}
     </ul>
 
