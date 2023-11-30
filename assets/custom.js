@@ -125,8 +125,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       pageOverlay: '.page-blury-overlay'
   }
 
-  console.log(selectors.openClinical);
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
+
+  if (document.querySelector(selectors.openClinical) != 'undefined' && document.querySelector(selectors.openClinical) != null) {
+    document.querySelector(selectors.openClinical).addEventListener('click', function(){
+      // openNav();
+      console.log('clicked');
+    }); 
+  }
 
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openIngredients).addEventListener('click', function(){
@@ -140,7 +146,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       openNav();
     }); 
   }
-
 
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
