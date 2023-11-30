@@ -57,9 +57,9 @@
           <div class="clinical__info-content">
             <div class="clinical__info-line"></div>
             <div class="clinical__info-item">
-              <h2 class="clinical__info-heading">Primary Outcome Measures:</h2>
-              <h3 class="clinical__info-title">Net Fluid Balance</h3>
-              <p class="clinical__info-text-one">Time Frame: Urine will be measured during each visit (3 total visits that each last 6 hours)</p>
+              <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
+              <h3 class="clinical__info-title">{{ bs.title }}</h3>
+              <p class="clinical__info-text-one">{{ bs.text_block_one }}</p>
               <p class="clinical__info-text-two">Determined by subtracting the cumulative urine output from the total fluid load consumed</p>
             </div>
           </div>
@@ -145,6 +145,26 @@
             "type": "text",
             "id": "coming_soon",
             "label": "Coming Soon"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "text_block_one",
+            "label": "Text Block One"
+          },
+          {
+            "type": "text",
+            "id": "text_block_two",
+            "label": "Text Block Two"
           }
         ]
       }
