@@ -147,6 +147,13 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+
+  .clinical__info-btn {
+    padding: 24px 20px;
+  }
+}
+
 .clinical__info--soon {
   font-family: inter, sans-serif;
   font-size: 12px;
