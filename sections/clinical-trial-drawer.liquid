@@ -58,37 +58,39 @@
                 <span class="clinical__info--soon">{{ bs.notification }}</span>
               {%- endif -%}
             </div>
-            <div class="clinical__info-content">
-              <div class="clinical__info-line"></div>
-              <div class="clinical__info-item clinical__info-item-primary">
-                <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
-                <div class="clinical__info-content-block">
-                  {%- if bs.title != blank -%}
-                    <h3 class="clinical__info-title">{{ bs.title }}</h3>
-                  {%- endif -%}
-                  <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                  <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+            {%- if bs.heading != blank -%}
+              <div class="clinical__info-content">
+                <div class="clinical__info-line"></div>
+                <div class="clinical__info-item clinical__info-item-primary">
+                  <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
+                  <div class="clinical__info-content-block">
+                    {%- if bs.title != blank -%}
+                      <h3 class="clinical__info-title">{{ bs.title }}</h3>
+                    {%- endif -%}
+                    <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                    <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+                  </div>
+                  <div class="clinical__info-content-block">
+                    <h3 class="clinical__info-title">{{ bs.block_two_title }}</h3>
+                    <p class="clinical__info-text-one">{{ bs.block_two_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                    <p class="clinical__info-text-two">{{ bs.block_two_text_block_two }}</p>
+                  </div>
+                  <div class="clinical__info-content-block">
+                    <h3 class="clinical__info-title">{{ bs.block_three_title }}</h3>
+                    <p class="clinical__info-text-one">{{ bs.block_three_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                    <p class="clinical__info-text-two">{{ bs.block_three_text_block_two }}</p>
+                  </div>
                 </div>
-                <div class="clinical__info-content-block">
-                  <h3 class="clinical__info-title">{{ bs.block_two_title }}</h3>
-                  <p class="clinical__info-text-one">{{ bs.block_two_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                  <p class="clinical__info-text-two">{{ bs.block_two_text_block_two }}</p>
-                </div>
-                <div class="clinical__info-content-block">
-                  <h3 class="clinical__info-title">{{ bs.block_three_title }}</h3>
-                  <p class="clinical__info-text-one">{{ bs.block_three_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                  <p class="clinical__info-text-two">{{ bs.block_three_text_block_two }}</p>
+                <div class="clinical__info-item clinical__info-item-secondary">
+                  <h2 class="clinical__info-heading">{{ bs.secondary_heading }}</h2>
+                  <div class="clinical__info-content-block clinical__info-content-block-secondary">
+                    <h3 class="clinical__info-title">{{ bs.secondary_title }}</h3>
+                    <p class="clinical__info-text-one">{{ bs.secondary_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                    <p class="clinical__info-text-two">{{ bs.secondary_text_block_two }}</p>
+                  </div>
                 </div>
               </div>
-              <div class="clinical__info-item clinical__info-item-secondary">
-                <h2 class="clinical__info-heading">{{ bs.secondary_heading }}</h2>
-                <div class="clinical__info-content-block clinical__info-content-block-secondary">
-                  <h3 class="clinical__info-title">{{ bs.secondary_title }}</h3>
-                  <p class="clinical__info-text-one">{{ bs.secondary_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                  <p class="clinical__info-text-two">{{ bs.secondary_text_block_two }}</p>
-                </div>
-              </div>
-            </div>
+            {%- endif -%}
           </button>
         {%- endif -%}
       {%- endfor -%}
