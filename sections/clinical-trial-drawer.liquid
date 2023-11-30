@@ -46,20 +46,27 @@
     </ul>
 
     <div class="clinical__info">
-      <button class="clinical__info-btn">
-        <div class="clinical__info-title">
-          <span>General Hydration</span>
-        </div>
-        <div class="clinical__info-content">
-          <div class="clinical__info-line"></div>
-          <div class="clinical__info-item">
-            <h2 class="clinical__info-heading">Primary Outcome Measures:</h2>
-            <h3 class="clinical__info-title">Net Fluid Balance</h3>
-            <p class="clinical__info-text-one">Time Frame: Urine will be measured during each visit (3 total visits that each last 6 hours)</p>
-            <p class="clinical__info-text-two">Determined by subtracting the cumulative urine output from the total fluid load consumed</p>
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        {%- if block.type == 'content' -%}
+        <button class="clinical__info-btn">
+          <div class="clinical__info-title">
+            <span>{{ bs.btn_title }}</span>
+            <span class="clinical__info--soon">{{ bs.coming_soon }}</span>
           </div>
-        </div>
-      </button>
+          <div class="clinical__info-content">
+            <div class="clinical__info-line"></div>
+            <div class="clinical__info-item">
+              <h2 class="clinical__info-heading">Primary Outcome Measures:</h2>
+              <h3 class="clinical__info-title">Net Fluid Balance</h3>
+              <p class="clinical__info-text-one">Time Frame: Urine will be measured during each visit (3 total visits that each last 6 hours)</p>
+              <p class="clinical__info-text-two">Determined by subtracting the cumulative urine output from the total fluid load consumed</p>
+            </div>
+          </div>
+        </button>
+        {%- endif -%}
+      {%- endfor -%}
+
       <button class="clinical__info-btn">
         <div class="clinical__info-title">
           <span>Type 1 Diabetes</span>
@@ -133,6 +140,11 @@
             "type": "text",
             "id": "btn_title",
             "label": "Content Title"
+          },
+          {
+            "type": "text",
+            "id": "coming_soon",
+            "label": "Coming Soon"
           }
         ]
       }
