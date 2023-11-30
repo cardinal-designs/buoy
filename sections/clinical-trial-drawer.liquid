@@ -18,7 +18,9 @@
     <div class="drawer__title-wrapper">
       {%- if ss.product_name != blank -%}
         <div class="drawer__product-name">
-          {{ ss.year }}
+          {%- if ss.year != blank -%}
+            {{ ss.year }}
+          {%- endif -%}
           {{ ss.product_name }}
         </div>
       {%- endif -%}
