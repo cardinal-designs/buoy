@@ -101,9 +101,16 @@
 
 .clinical__info-list-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   margin-bottom: 9px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .clinical__info-list-item {
+    align-items: flex-start;
+  }
 }
 
 .clinical__info-list-item span {
