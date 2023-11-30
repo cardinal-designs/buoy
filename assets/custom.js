@@ -129,8 +129,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openClinical)) {
     document.querySelector(selectors.openClinical).addEventListener('click', function(){
-      // openNav();
-      console.log('clicked');
+      openClinical();
     }); 
   }
 
@@ -181,6 +180,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
+  }
+
+  function openClinical() {
+    console.log('opened')
   }
 
   function openNav() {
