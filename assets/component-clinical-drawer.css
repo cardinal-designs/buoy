@@ -147,6 +147,10 @@
   align-items: center;
 }
 
+.clinical__info-btn-active {
+  flex-direction: column;
+}
+
 @media screen and (max-width: 768px) {
 
   .clinical__info-btn {
