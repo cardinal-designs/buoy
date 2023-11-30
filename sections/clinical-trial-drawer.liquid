@@ -76,6 +76,14 @@
                 <p class="clinical__info-text-two">{{ bs.block_three_text_block_two }}</p>
               </div>
             </div>
+            <div class="clinical__info-item">
+              <h2 class="clinical__info-heading">{{ bs.secondary_heading }}</h2>
+              <div class="clinical__info-content-block">
+                <h3 class="clinical__info-title">{{ bs.title }}</h3>
+                <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
+                <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
+              </div>
+            </div>
           </div>
         </button>
         {%- endif -%}
@@ -225,6 +233,30 @@
             "type": "text",
             "id": "block_three_text_block_two",
             "label": "Block Three Text Block Two"
+          },
+          {
+            "type": "header",
+            "content": "Secondary Content"
+          },
+          {
+            "type": "text",
+            "id": "secondary_heading",
+            "label": "Secondary Heading"
+          },
+          {
+            "type": "text",
+            "id": "secondary_title",
+            "label": "Secondary Block One Title"
+          },
+          {
+            "type": "richtext",
+            "id": "secondary_text_block_one",
+            "label": "Secondary Block One Text Block One"
+          },
+          {
+            "type": "text",
+            "id": "secondary_text_block_two",
+            "label": "Secondary Block One Text Block Two"
           }
         ]
       }
