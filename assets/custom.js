@@ -200,7 +200,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function closeClinical() {
-    document.getElementById("clinicalSideDrawer").style.right = "-100%";
+    if(document.getElementById("clinicalSideDrawer")) {
+      document.getElementById("clinicalSideDrawer").style.right = "-100%";
+    }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
     document.querySelector('header-container').style.zIndex = 3;
