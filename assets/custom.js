@@ -130,9 +130,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
 
   if (document.querySelector(selectors.openClinical)) {
-    document.querySelector(selectors.openClinical).addEventListener('click', function(){
-      openClinical();
-    }); 
+    document.querySelectorAll(selectors.openClinical).forEach((item) => {
+      item.addEventListener('click', function(){
+        openClinical();
+      }); 
+    });
   }
 
   if (document.querySelector(selectors.closeClinical)) {
