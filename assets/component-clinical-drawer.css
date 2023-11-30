@@ -100,6 +100,13 @@
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .clinical__info-list {
+    margin-bottom: 48px;
+  }
+}
+
 .clinical__info-list-item {
   display: flex;
   align-items: center;
