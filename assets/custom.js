@@ -191,6 +191,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
 
+  function closeClinical() {
+    document.getElementById("clinicalSideDrawer").style.right = "-100%";
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+    document.querySelector('body').classList.remove('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 3;
+    document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  }
+
   function openNav() {
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
