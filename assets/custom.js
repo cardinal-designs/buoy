@@ -127,7 +127,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
 
-  if (document.querySelector(selectors.openClinical) != 'undefined' && document.querySelector(selectors.openClinical) != null) {
+  if (document.querySelector(selectors.openClinical)) {
     document.querySelector(selectors.openClinical).addEventListener('click', function(){
       // openNav();
       console.log('clicked');
