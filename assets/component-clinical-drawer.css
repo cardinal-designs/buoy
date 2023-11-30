@@ -143,6 +143,8 @@
   margin-bottom: 12px;
   color: var(--charcoal);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .clinical__info--soon {
