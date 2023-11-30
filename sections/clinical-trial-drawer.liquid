@@ -26,17 +26,21 @@
         <div class="drawer__title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
-    <div class="clinical__about-container">
-      <p class="clinical__about">{{ ss.about }}</p>
-    </div>
+    {%- if ss.about != blank -%}
+      <div class="clinical__about-container">
+        <p class="clinical__about">{{ ss.about }}</p>
+      </div>
+    {%- endif -%}
     <ul class="clinical__info-list">
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
         {%- if block.type == 'list-item' -%}
-          <li class="clinical__info-list-item">
-            <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
-            <span>{{ bs.item_description }}</span>
-          </li>
+          {%- if bs.icon_item != blank -%}
+            <li class="clinical__info-list-item">
+              <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
+              <span>{{ bs.item_description }}</span>
+            </li>
+          {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
     </ul>
