@@ -61,7 +61,7 @@
             <div class="clinical__info-item">
               <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
               <h3 class="clinical__info-title">{{ bs.title }}</h3>
-              <p class="clinical__info-text-one">{{ bs.text_block_one }}</p>
+              <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
               <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
             </div>
           </div>
