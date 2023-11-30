@@ -113,6 +113,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
 (function(){
   /* Open Supplement Drawer */
+  /* Open Clinical Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
