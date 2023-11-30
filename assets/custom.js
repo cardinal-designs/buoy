@@ -143,12 +143,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }); 
   }
 
-  if (document.querySelectorAll(selectors.openIngredients)) {
-    document.querySelector(selectors.openIngredients).forEach((item) => {
-      item.addEventListener('click', function(){
-        openNav();
-      }); 
-    });
+  if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
+    document.querySelector(selectors.openIngredients).addEventListener('click', function(){
+      openNav();
+    }); 
   }
 
   if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
