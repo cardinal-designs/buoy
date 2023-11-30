@@ -113,11 +113,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
 (function(){
   /* Open Supplement Drawer */
+  /* Open Clinical Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
       openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
+      openClinical: '.js-clinical-open',
+      closeClinical: '.js-clinical-close',
       openTest: 'js-open',
       closeContinue: '.drawer__mobile-continue',
       closeContinueDesktop: '.drawer__desktop-continue',
@@ -125,6 +128,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   var element =  document.getElementsByClassName('js-open-supplement-drawer');
+
+  if (document.querySelector(selectors.openClinical)) {
+    document.querySelector(selectors.openClinical).addEventListener('click', function(){
+      openClinical();
+    }); 
+  }
+
+  if (document.querySelector(selectors.closeClinical)) {
+    document.querySelector(selectors.closeClinical).addEventListener('click', function(){
+      closeClinical();
+    }); 
+  }
 
   if (document.querySelector(selectors.openIngredients) != 'undefined' && document.querySelector(selectors.openIngredients) != null) {
     document.querySelector(selectors.openIngredients).addEventListener('click', function(){
@@ -134,11 +149,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
     document.querySelector(selectors.openTest).addEventListener('click', function(){
-      console.log('clicked');
       openNav();
     }); 
   }
-
 
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
@@ -174,6 +187,26 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
+  }
+
+  function openClinical() {
+    if(document.getElementById("clinicalSideDrawer")) {
+      document.getElementById("clinicalSideDrawer").style.right = "0";
+    }
+    document.querySelector('.page-blury-overlay').classList.add('is-visible');
+    document.querySelector('body').classList.add('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 10;
+    document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
+  }
+
+  function closeClinical() {
+    if(document.getElementById("clinicalSideDrawer")) {
+      document.getElementById("clinicalSideDrawer").style.right = "-100%";
+    }
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+    document.querySelector('body').classList.remove('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 3;
+    document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
   function openNav() {
@@ -221,6 +254,7 @@ $('.Open_Drawer').click(function(event){
   });
 });
 
+// close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
@@ -229,11 +263,27 @@ $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
+// close clinical drawer (click outside)
+$('.page-blury-overlay').click(function(){
+  $('.clinical-trial-drawer').css('right','-100%');
+  $('.page-blury-overlay').removeClass('is-visible');
+  $('.js-product-quick-view-drawer').removeClass('active');
+  $('body').removeClass('lock-scroll open-bundle-info');
+  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
+});
+
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+});
+
+$('.js-clinical-close').click(function(){
+  $('.clinical-trial-drawer').css('right','-100%');
+  $('.page-blury-overlay').removeClass('is-visible');
+  $('body').removeClass('lock-scroll');
+  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $(window).on("orientationchange, resize", function(event) {
