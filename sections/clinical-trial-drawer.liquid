@@ -1,4 +1,7 @@
 {{ 'component-supplements-drawer.css' | asset_url | stylesheet_tag }}
+
+{%- assign ss = section.settings -%}
+
 <div 
   id="clinicalSideDrawer" 
   data-product-name="{{ ss.product_name }}" 
@@ -34,3 +37,26 @@
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-close-supplement-drawer">Keep Shopping</a>        
     </div>
 </div>
+
+{% schema %}
+  {
+    "name": "Clinical Trial Drawer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_name",
+        "label": "Product Name"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Clinical Trial Drawer"
+      }
+    ]
+  }
+{% endschema %}
