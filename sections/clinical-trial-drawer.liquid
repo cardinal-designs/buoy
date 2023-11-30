@@ -29,6 +29,10 @@
       <p class="drawer__about">{{ ss.about }}</p>
     </div>
 
+    {%- for block in section.blocks -%}
+      {%- assign bs = block.settings -%}
+    {%- endfor -%}
+
     <div class="drawer__line"></div>
 
     <div class="drawer__desktop-continue hide-mobile">
