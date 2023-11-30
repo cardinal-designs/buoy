@@ -250,6 +250,7 @@ $('.Open_Drawer').click(function(event){
   });
 });
 
+// close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
@@ -258,20 +259,20 @@ $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
-// close supplement drawer (click outside)
+$('.page-blury-overlay').click(function(){
+  $('.clinical-trial-drawer').css('right','-100%');
+  $('.page-blury-overlay').removeClass('is-visible');
+  $('.js-product-quick-view-drawer').removeClass('active');
+  $('body').removeClass('lock-scroll open-bundle-info');
+  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
+});
+
+// close supplement drawer
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
-});
-
-// close clinical trial drawer (click outside)
-$('.js-clinical-close').click(function(){
-  $('.clinical-trial-drawer').css('right','-100%');
-  $('.page-blury-overlay').removeClass('is-visible');
-  $('body').removeClass('lock-scroll');
-  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $(window).on("orientationchange, resize", function(event) {
