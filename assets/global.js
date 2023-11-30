@@ -1440,8 +1440,9 @@ $(window).on('resize scroll', function() {
 $('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
-  const section = document.querySelector('.image-with-dropdowns__dropdown');
-  section.scrollIntoView({ behavior: 'smooth' });
+  const section = $('.image-with-dropdowns__dropdown');
+  // Scroll to the top of the section with smooth behavior
+  section[0].scrollIntoView({ behavior: 'smooth' });
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
