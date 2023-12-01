@@ -524,57 +524,6 @@
         "add_bottom_border": false
       }
     },
-    "50df382c-255c-4272-b876-eca398cca73a": {
-      "type": "dropdowns",
-      "blocks": {
-        "b46d22a2-dc4c-4952-920e-df027e14433e": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Salt Source",
-            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
-            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
-          }
-        },
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Naturally-Balanced Electrolytes",
-            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
-          }
-        },
-        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
-          "type": "dropdown",
-          "settings": {
-            "title": "Ionic Trace Minerals",
-            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
-          }
-        },
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
-          "type": "dropdown",
-          "settings": {
-            "title": "B Vitamins",
-            "text": "Did you know some vitamins can help you hydrate better?<br><br>Buoy's curated blend of plant-powered B vitamins that support routine electrolyte function.",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
-          }
-        }
-      },
-      "block_order": [
-        "b46d22a2-dc4c-4952-920e-df027e14433e",
-        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
-        "07c66f31-6bda-4e4c-9097-b51e4c178122",
-        "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
-      ],
-      "settings": {
-        "title": "Why Choose Buoy",
-        "subtext": "Say goodbye to sugary, artificially flavored electrolytes that do more harm than good for your diabetes management. Buoy understands that when it comes to diabetes, what you consume has to prioritize your health needs above all else.<br><br>\n\nThat's why we invite you to try enhancing your beverages with Buoy's unflavored, diabetes-friendly electrolytes for an entire month, absolutely risk free. If it doesn't meet your expectations, we'll provide a full refund, no questions asked.<br><br>\n\n✓ Sugar Free<br>\n✓ Stevia & Sweetener Free<br>\n✓ No Flavors<br>\n✓ No Calories or Carbohydrates<br>\n✓ NonGMO & Vegan<br>\n✓ 3x More Bioavailable Form Factor<br><br>\n\nMONEY BACK GUARANTEE | 20% OFF FIRST ORDER",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "bg_color",
-        "hide_supp": false
-      }
-    },
     "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
       "type": "custom-featured-product",
       "disabled": true,
@@ -786,6 +735,61 @@
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
+      }
+    },
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "blocks": {
+        "b46d22a2-dc4c-4952-920e-df027e14433e": {
+          "type": "dropdown",
+          "disabled": true,
+          "settings": {
+            "title": "Salt Source",
+            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
+            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+          }
+        },
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
+          "type": "dropdown",
+          "disabled": true,
+          "settings": {
+            "title": "Naturally-Balanced Electrolytes",
+            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+          }
+        },
+        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
+          "type": "dropdown",
+          "disabled": true,
+          "settings": {
+            "title": "Ionic Trace Minerals",
+            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+          }
+        },
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
+          "type": "dropdown",
+          "disabled": true,
+          "settings": {
+            "title": "B Vitamins",
+            "text": "Did you know some vitamins can help you hydrate better?<br><br>Buoy's curated blend of plant-powered B vitamins that support routine electrolyte function.",
+            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+          }
+        }
+      },
+      "block_order": [
+        "b46d22a2-dc4c-4952-920e-df027e14433e",
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
+        "07c66f31-6bda-4e4c-9097-b51e4c178122",
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
+      ],
+      "settings": {
+        "title": "Why Choose Buoy",
+        "subtext": "Say goodbye to sugary, artificially flavored electrolytes that do more harm than good for your diabetes management. Buoy understands that when it comes to diabetes, what you consume has to prioritize your health needs above all else.<br><br>\n\nThat's why we invite you to try enhancing your beverages with Buoy's unflavored, diabetes-friendly electrolytes for an entire month, absolutely risk free. If it doesn't meet your expectations, we'll provide a full refund, no questions asked.<br><br>\n\n✓ Sugar Free<br>\n✓ Stevia & Sweetener Free<br>\n✓ No Flavors<br>\n✓ No Calories or Carbohydrates<br>\n✓ NonGMO & Vegan<br>\n✓ 3x More Bioavailable Form Factor<br><br>\n\nMONEY BACK GUARANTEE | 20% OFF FIRST ORDER\n\n<br><br>\n\n<div class=\"my-custom-button-container\">\n\n<a href=\"https:\/\/justaddbuoy.com\/products\/hydration-drops\" class=\"my-custom-button\"> Try Buoy For A Month — Diabetes Formulated, Risk Free<\/a>\n\n<style>\n  .my-custom-button-container {\n    text-align: center; \/* Center the button within the text box *\/\n  }\n\n  .my-custom-button {\n    background-color: #4caf50; \/* Green background color *\/\n    border: none; \/* Remove borders *\/\n    color: white; \/* White text color *\/\n    padding: 15px 32px; \/* Add padding *\/\n    text-decoration: none; \/* Remove underline *\/\n    display: inline-block; \/* Make it an inline block *\/\n    font-size: 16px; \/* Set font size *\/\n    margin: 4px 2px; \/* Add margin *\/\n    cursor: pointer; \/* Add cursor pointer *\/\n  }\n<\/style>\n<\/div>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bg_color",
+        "hide_supp": false
       }
     },
     "19f84cc7-e91f-487d-a62c-2e8944758d96": {
@@ -1116,7 +1120,6 @@
         "af8689d0-f863-4ce0-8d98-cc087f0e0293",
         "3218cea9-9862-46c8-a8ab-f919660bb5fe"
       ],
-      "disabled": true,
       "settings": {
         "text": "Clean hydration for whole-body health",
         "no_background": true,
@@ -1138,7 +1141,6 @@
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
-    "50df382c-255c-4272-b876-eca398cca73a",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
@@ -1146,6 +1148,7 @@
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
+    "50df382c-255c-4272-b876-eca398cca73a",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
