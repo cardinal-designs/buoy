@@ -120,6 +120,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       openClinical: '.js-clinical-open',
+      openHsa: '.js-hsa-open',
       closeClinical: '.js-clinical-close',
       openTest: 'js-open',
       closeContinue: '.drawer__mobile-continue',
