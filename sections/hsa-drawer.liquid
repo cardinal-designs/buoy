@@ -28,6 +28,11 @@
         <span class="drawer__notification">{{ ss.notification }}</span>
       </div>
     {%- endif -%}
+    {%- if ss.about != blank -%}
+      <div class="clinical__about-container">
+        <p class="clinical__about">{{ ss.about }}</p>
+      </div>
+    {%- endif -%}
     <div class="drawer__desktop-continue hide-mobile">
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-hsa-close">Keep Shopping</a>        
     </div>
@@ -55,6 +60,11 @@
         "type": "text",
         "id": "notification",
         "label": "Notification"
+      },
+      {
+        "type": "text",
+        "id": "about",
+        "label": "About"
       }
     ],
     "presets": [
