@@ -196,6 +196,12 @@
   gap: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .view-drawer-links {
+    flex-direction: column;
+  }
+}
+
 .view-supplements {
   text-align: center;
   text-decoration: underline;
