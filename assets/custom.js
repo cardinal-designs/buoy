@@ -140,9 +140,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   if (document.querySelector(selectors.closeHsa)) {
-    document.querySelector(selectors.closeHsa).addEventListener('click', function(){
-      closeHsa();
-    }); 
+    document.querySelectorAll(selectors.closeHsa).forEach((item) => {
+      item.addEventListener('click', function(){
+        closeHsa();
+      }); 
+    });
   }
 
   if (document.querySelector(selectors.openClinical)) {
