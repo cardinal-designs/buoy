@@ -113,11 +113,24 @@
         "add_bottom_border": false
       }
     },
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
+      "type": "image-slider",
+      "settings": {
+        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "title": "<h2>Understanding Diabetes and Electrolyte Imbalance<\/h2>",
+        "subtext": "Diabetes affects the body's ability to produce or use insulin effectively, leading to high or low blood sugar levels. This imbalance can also disrupt the body's electrolyte balance, making it crucial for diabetics to maintain appropriate levels.<h3>How Blood Sugar Affects Electrolytes<\/h3>High or low blood sugar can lead to dehydration, kidney problems, and other complications that affect the balance of important minerals like sodium, potassium, and magnesium in the body. Maintaining the right levels of these electrolytes is essential for overall health.",
+        "img": "",
+        "mobile_img": ""
+      }
+    },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
       "type": "product-slider-2",
       "blocks": {
         "915598b8-73ba-4440-9c78-70b475eb492a": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "hydration-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
@@ -125,6 +138,7 @@
         },
         "475664b0-eea5-49a4-9521-d603009b918d": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "energy-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
@@ -132,6 +146,7 @@
         },
         "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "immunity-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
@@ -139,6 +154,7 @@
         },
         "9d231586-a60b-42ac-9721-d7ea47797c99": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "wellness-kit",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
@@ -152,7 +168,7 @@
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
       "settings": {
-        "title": "<h2>Buoy’s Solution: Tailored Electrolyte Balance for Diabetics<\/h2>",
+        "title": "Buoy’s Solution: Tailored Electrolyte Balance for Diabetics",
         "text": "Buoy's purposefully unflavored and unsweetened line of electrolyte drops infuse any beverage with fast-acting hydration without sugar, sweeteners, or anything that can affect blood sugar levels. Sourced from nature’s most powerful and potent ingredient sources.<br><br>\n\nAll Gain, No Sugar — Diabetes Formulated:<br><br>\n✓ 0 Sugar<br>\n✓ 0 Calories & Carbs<br>\n✓ 0 Sweeteners, Flavors<br>\n✓ Deep Ocean Electrolytes<br>\n✓ 87+ Ionic Trace Minerals<br>\n✓ Energy-Boosting B Vitamin Complex",
         "shop_all_label": "Shop All Products",
         "shop_all_link": "shopify:\/\/collections\/all",
@@ -578,18 +594,6 @@
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
-      }
-    },
-    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
-      "type": "image-slider",
-      "settings": {
-        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "title": "<h2>Understanding Diabetes and Electrolyte Imbalance<\/h2>",
-        "subtext": "Diabetes affects the body's ability to produce or use insulin effectively, leading to high or low blood sugar levels. This imbalance can also disrupt the body's electrolyte balance, making it crucial for diabetics to maintain appropriate levels.<h3>How Blood Sugar Affects Electrolytes<\/h3>High or low blood sugar can lead to dehydration, kidney problems, and other complications that affect the balance of important minerals like sodium, potassium, and magnesium in the body. Maintaining the right levels of these electrolytes is essential for overall health.",
-        "img": "",
-        "mobile_img": ""
       }
     },
     "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
@@ -1129,6 +1133,7 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "31e36676-5821-47f9-a328-6c162b259d29",
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
@@ -1140,7 +1145,6 @@
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "50df382c-255c-4272-b876-eca398cca73a",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
-    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "a09de49d-45af-40d0-969c-1445290cd3be",
