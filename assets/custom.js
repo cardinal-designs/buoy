@@ -163,11 +163,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  if (document.querySelector(selectors.openDrawer) != 'undefined' && document.querySelector(selectors.openDrawer) != null) {
-    document.querySelector(selectors.openDrawer).addEventListener('click', function(){
-      // openNav();
-      console.log('clicked');
-    });
+  if (document.querySelector(selectors.openDrawer)) {
+    document.querySelectorAll(selectors.openDrawer).forEach((item) => {
+      item.addEventListener('click', function(){
+        openNav();
+      }); 
+    })
   }
 
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
