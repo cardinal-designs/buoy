@@ -99,3 +99,10 @@
   line-height: 25px;
   margin-bottom: 25px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .hsa-side-drawer .drawer__about {
+    font-size: 14px;
+  }
+}
