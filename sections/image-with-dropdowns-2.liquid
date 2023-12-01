@@ -276,16 +276,18 @@
                     <p class="sh4">{{ block.settings.list_item4_2 }}</p>
                   </div>
                 {% endif %}
-                {% if block.settings.link_text != blank %}
-                  <div class="image-with-dropdowns2__bottom-link js-clinical-open">
-                    <div class="body">{{ block.settings.link_text }}</div>
-                  </div>
-                {% endif %}
-                {% if block.settings.show_ingredients == true %}
-                  <div class="view-supplements">
-                    <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-                  </div>
-                {% endif %}
+                <div class="view-drawer-links">
+                  {% if block.settings.show_ingredients == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_clinical == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="image-with-dropdowns2__bottom-link js-clinical-open">View Clinical Trial</a>
+                    </div>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </div>
@@ -640,14 +642,15 @@
             "label": "List Item 4 - 2"
           },
           {
-            "type": "text",
-            "id": "link_text",
-            "label": "Link Text"
-          },
-          {
             "type": "checkbox",
             "id": "show_ingredients",
             "label": "Show Ingredients Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
             "default": false
           }
         ]
