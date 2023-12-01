@@ -46,7 +46,7 @@
   gap: 5px;
 }
 
-.clinical-trial-drawer .drawer__product-name {
+.drawer__product-name {
   font-size: 24px;
   font-weight: 300;
   font-family: Rhymes-Light-Italic;
@@ -56,13 +56,12 @@
 
 @media screen and (max-width: 768px) {
 
-  .clinical-trial-drawer .drawer__product-name {
+  .drawer__product-name {
     font-size: 20px;
-    line-height: 39px;
   }
 }
 
-.drawer__title {
+.clinical-trial-drawer .drawer__title {
   font-size: 40px;
   font-weight: 400;
   font-family: Inter;
@@ -71,8 +70,9 @@
 
 @media screen and (max-width: 768px) {
 
-  .drawer__title {
+  .clinical-trial-drawer .drawer__title {
     font-size: 30px;
+    line-height: 39px;
   }
 }
 
