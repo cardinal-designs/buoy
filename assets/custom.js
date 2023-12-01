@@ -332,6 +332,13 @@ $('.js-clinical-close').click(function(){
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
+$('.js-hsa-close').click(function(){
+  $('.clinical-trial-drawer').css('right','-100%');
+  $('.page-blury-overlay').removeClass('is-visible');
+  $('body').removeClass('lock-scroll');
+  $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+});
+
 $(window).on("orientationchange, resize", function(event) {
   $('.related-blog-wrapper .article-card__title').matchHeight();
 });
