@@ -156,9 +156,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   if (document.querySelector(selectors.closeClinical)) {
-    document.querySelector(selectors.closeClinical).addEventListener('click', function(){
-      closeClinical();
-    }); 
+    document.querySelectorAll(selectors.closeClinical).forEach((item) => {
+      item.addEventListener('click', function(){
+        closeClinical();
+      }); 
+    });
   }
 
   if (document.querySelector(selectors.openIngredients)) {
