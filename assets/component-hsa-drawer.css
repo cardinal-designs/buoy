@@ -1,0 +1,22 @@
+.hsa-side-drawer {
+  height: 100%;
+  width: 768px;
+  position: fixed;
+  z-index: 99;
+  top: 80.5px;
+  right: -100%;
+  background-color: var(--white);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: 0 30px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .hsa-side-drawer {
+    top: 54px;
+    width: 100%;
+    padding-bottom: 110px;
+  }
+}
