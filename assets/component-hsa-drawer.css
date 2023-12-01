@@ -26,6 +26,12 @@
   height: 100%;
 }
 
+.hsa-side-drawer .drawer__desktop-continue {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .drawer__header {
   display: flex;
   justify-content: flex-end;
