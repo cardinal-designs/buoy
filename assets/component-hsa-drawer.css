@@ -73,17 +73,18 @@
   }
 }
 
-.drawer__title {
+.hsa-side-drawer .drawer__title {
   font-size: 40px;
   font-weight: 400;
   font-family: Inter;
-  color: #1f2322;
+  color: var(--charcoal);
 }
 
 @media screen and (max-width: 768px) {
 
-  .drawer__title {
+  .hsa-side-drawer .drawer__title {
     font-size: 30px;
+    line-height: 39px;
   }
 }
 
