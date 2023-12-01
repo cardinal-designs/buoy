@@ -11,7 +11,6 @@
   {% endif %}
 >
   <div class="drawer__wrapper-main">
-
     <div class="drawer__header">
       <a href="javascript:void(0)" class="drawer__close js-hsa-close hide-mobile">
         <span>Close</span> {% render 'icon-close-drawer' %}</a>
@@ -24,16 +23,13 @@
         <div class="drawer__title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
-
     <div class="drawer__desktop-continue hide-mobile">
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-hsa-close">Keep Shopping</a>        
     </div>
-
   </div>
-
-    <div class="drawer__mobile-continue hide-desktop">
-      <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-hsa-close">Keep Shopping</a>        
-    </div>
+  <div class="drawer__mobile-continue hide-desktop">
+    <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-hsa-close">Keep Shopping</a>        
+  </div>
 </div>
 
 {% schema %}
@@ -49,6 +45,11 @@
         "type": "text",
         "id": "title",
         "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "notification",
+        "label": "Notification"
       }
     ],
     "presets": [
