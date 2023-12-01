@@ -66,6 +66,25 @@
                   <p class="sh4">{{ block.settings.list_item4 }}</p>
                 </div>
               {% endif %}
+              {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                <div class="view-drawer-links">
+                  {% if block.settings.show_ingredients == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_clinical == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_hsa == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                    </div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {% when 'type2' %}
@@ -101,6 +120,25 @@
                   <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
                 </div>
               {% endif %}
+              {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                <div class="view-drawer-links">
+                  {% if block.settings.show_ingredients == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_clinical == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_hsa == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                    </div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {% when 'type3' %}
@@ -185,13 +223,26 @@
                   <p class="sh4">{{ block.settings.list_item4 }}</p>
                 </div>
               {% endif %}
-              {% if block.settings.show_ingredients == true %}
-                <div class="view-supplements">
-                  <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+              {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                <div class="view-drawer-links">
+                  {% if block.settings.show_ingredients == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_clinical == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_hsa == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                    </div>
+                  {% endif %}
                 </div>
-              {% endif %}
+              {%- endif -%}
             </div>
-
           </div>
         {% when 'type4' %}
           <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
@@ -266,11 +317,25 @@
                     <p class="sh4">{{ block.settings.list_item4_2 }}</p>
                   </div>
                 {% endif %}
-                {% if block.settings.link != blank %}
-                  <div class="image-with-dropdowns2__bottom-link">
-                    <a class="body" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                {%- if block.settings.show_ingredients or block.settings.show_clinical or block.settings.show_hsa -%}
+                  <div class="view-drawer-links">
+                    {% if block.settings.show_ingredients == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_clinical == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_hsa == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                      </div>
+                    {% endif %}
                   </div>
-                {% endif %}
+                {%- endif -%}
               </div>
             </div>
           </div>
@@ -296,11 +361,6 @@
         "type": "image_picker",
         "id": "image",
         "label": "Desktop Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_mobile",
-        "label": "Mobile Image"
       },
       {
         "type": "image_picker",
@@ -352,6 +412,24 @@
             "type": "text",
             "id": "list_item4",
             "label": "List Item 4"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_ingredients",
+            "label": "Show Ingredients Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
+            "default": false
           }
         ]
       },
@@ -403,6 +481,24 @@
             "type": "textarea",
             "id": "icon_image_text_4",
             "label": "Icon Image Text 4"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_ingredients",
+            "label": "Show Ingredients Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
+            "default": false
           }
         ]
       },
@@ -534,7 +630,19 @@
             "type": "checkbox",
             "id": "show_ingredients",
             "label": "Show Ingredients Link?",
-            "default": true
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
+            "default": false
           }
         ]
       },
@@ -618,14 +726,22 @@
             "label": "List Item 4 - 2"
           },
           {
-            "type": "url",
-            "id": "link",
-            "label": "Link URL"
+            "type": "checkbox",
+            "id": "show_ingredients",
+            "label": "Show Ingredients Link?",
+            "default": false
           },
           {
-            "type": "text",
-            "id": "link_text",
-            "label": "Link Text"
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
+            "default": false
           }
         ]
       }
