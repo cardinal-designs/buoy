@@ -139,6 +139,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
+  if (document.querySelector(selectors.closeHsa)) {
+    document.querySelector(selectors.closeHsa).addEventListener('click', function(){
+      closeHsa();
+    }); 
+  }
+
   if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
       item.addEventListener('click', function(){
@@ -206,7 +212,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openHsa() {
-    if(document.getElementById("hsaSideDrawer")) {
+    if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
@@ -215,8 +221,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
 
+  function closeHsa() {
+    if (document.getElementById("hsaSideDrawer")) {
+      document.getElementById("hsaSideDrawer").style.right = "-100%";
+    }
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+    document.querySelector('body').classList.remove('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 3;
+    document.querySelector('.hsa-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  }
+
   function openClinical() {
-    if(document.getElementById("clinicalSideDrawer")) {
+    if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "0";
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
@@ -226,7 +242,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function closeClinical() {
-    if(document.getElementById("clinicalSideDrawer")) {
+    if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
