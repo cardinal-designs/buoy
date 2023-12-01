@@ -318,6 +318,15 @@ $('.page-blury-overlay').click(function(){
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
+// close hsa drawer (click outside)
+$('.page-blury-overlay').click(function(){
+  $('.hsa-side-drawer').css('right','-100%');
+  $('.page-blury-overlay').removeClass('is-visible');
+  $('.js-product-quick-view-drawer').removeClass('active');
+  $('body').removeClass('lock-scroll open-bundle-info');
+  $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+});
+
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
