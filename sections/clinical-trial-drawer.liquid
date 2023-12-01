@@ -1,4 +1,4 @@
-{% comment %} {{ 'component-clinical-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'component-clinical-drawer.css' | asset_url | stylesheet_tag }}
 
 {%- assign ss = section.settings -%}
 
@@ -122,7 +122,8 @@
           </button>
         {%- endif -%}
       {%- endfor -%}
-
+    </div>
+    
     <div class="drawer__desktop-continue hide-mobile">
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-clinical-close">Keep Shopping</a>        
     </div>
@@ -287,4 +288,4 @@
       }
     ]
   }
-{% endschema %} {% endcomment %}
+{% endschema %}
