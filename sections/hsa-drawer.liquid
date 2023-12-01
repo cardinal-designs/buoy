@@ -23,6 +23,11 @@
         <div class="drawer__title">{{ ss.title }}</div>
       {%- endif -%}
     </div>
+    {%- if ss.notification != blank -%}
+      <div class="drawer__notification-wrapper">
+        <span class="clinical__info--soon">{{ ss.notification }}</span>
+      </div>
+    {%- endif -%}
     <div class="drawer__desktop-continue hide-mobile">
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-hsa-close">Keep Shopping</a>        
     </div>
