@@ -225,6 +225,11 @@
                       <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
                     </div>
                   {% endif %}
+                  {% if block.settings.show_hsa == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                    </div>
+                  {% endif %}
                 </div>
               {%- endif -%}
             </div>
@@ -609,6 +614,12 @@
             "type": "checkbox",
             "id": "show_clinical",
             "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
             "default": false
           }
         ]
