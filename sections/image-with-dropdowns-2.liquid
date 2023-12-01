@@ -106,6 +106,11 @@
                   <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
                 </div>
               {% endif %}
+              {%- if block.settings.show_ingredients -%}
+                <div class="view-supplements">
+                  <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {% when 'type3' %}
@@ -409,6 +414,12 @@
             "type": "textarea",
             "id": "icon_image_text_4",
             "label": "Icon Image Text 4"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_ingredients",
+            "label": "Show Ingredients Link?",
+            "default": false
           }
         ]
       },
@@ -540,7 +551,7 @@
             "type": "checkbox",
             "id": "show_ingredients",
             "label": "Show Ingredients Link?",
-            "default": true
+            "default": false
           }
         ]
       },
