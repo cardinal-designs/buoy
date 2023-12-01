@@ -113,18 +113,6 @@
         "add_bottom_border": false
       }
     },
-    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
-      "type": "image-slider",
-      "settings": {
-        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "title": "<h2>Understanding Diabetes and Electrolyte Imbalance<\/h2>",
-        "subtext": "Diabetes affects the body's ability to produce or use insulin effectively, leading to high or low blood sugar levels. This imbalance can also disrupt the body's electrolyte balance, making it crucial for diabetics to maintain appropriate levels.<h3>How Blood Sugar Affects Electrolytes<\/h3>High or low blood sugar can lead to dehydration, kidney problems, and other complications that affect the balance of important minerals like sodium, potassium, and magnesium in the body. Maintaining the right levels of these electrolytes is essential for overall health.",
-        "img": "",
-        "mobile_img": ""
-      }
-    },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
       "type": "product-slider-2",
       "blocks": {
@@ -177,6 +165,64 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
+      }
+    },
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
+      "type": "image-slider",
+      "settings": {
+        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "title": "<h2>Understanding Diabetes and Electrolyte Imbalance<\/h2>",
+        "subtext": "Diabetes affects the body's ability to produce or use insulin effectively, leading to high or low blood sugar levels. This imbalance can also disrupt the body's electrolyte balance, making it crucial for diabetics to maintain appropriate levels.<h3>How Blood Sugar Affects Electrolytes<\/h3>High or low blood sugar can lead to dehydration, kidney problems, and other complications that affect the balance of important minerals like sodium, potassium, and magnesium in the body. Maintaining the right levels of these electrolytes is essential for overall health.",
+        "img": "",
+        "mobile_img": ""
+      }
+    },
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
+      "type": "reviews-slider",
+      "blocks": {
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Allison M",
+            "content": "<strong>Buoy helps lower my high blood sugars<\/strong><br><br>\nBuoy helps lower my high blood sugars faster. I feel more energetic and just better overall because I’m more hydrated."
+          }
+        },
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Rick B",
+            "content": "<strong>It works!<\/strong><br><br>\nDrinking enough water to help with blood sugar control was always a challenge. But with Buoy, It makes it so much easier to get the electrolytes that are missed."
+          }
+        },
+        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Robert A",
+            "content": "<strong>Helps with my Type 1 dehydration<\/strong><br><br>\nI sleep better. My skin doesn’t look all drained. And most of all, it’s actually been helpful in regulating blood sugar levels."
+          }
+        },
+        "715e1da7-5de3-44b9-899b-211d689d2929": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Kara J",
+            "content": "<br><br><strong>Couldn’t be happier about this product<\/strong><br><br>\n“The added benefit of it being sugar free has been an amazing added bonus given that I’m a recovering Type 2 diabetic. I couldn’t imagine life without this!”"
+          }
+        }
+      },
+      "block_order": [
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e",
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
+        "0fff71db-dfa8-49eb-9726-ec3517079f19",
+        "715e1da7-5de3-44b9-899b-211d689d2929"
+      ],
+      "settings": {
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none",
+        "reviews_btn_txt": "All Reviews",
+        "reviews_btn_link": "shopify:\/\/pages\/reviews"
       }
     },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
@@ -340,52 +386,6 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": false
-      }
-    },
-    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
-      "type": "reviews-slider",
-      "blocks": {
-        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Allison M",
-            "content": "<strong>Buoy helps lower my high blood sugars<\/strong><br><br>\nBuoy helps lower my high blood sugars faster. I feel more energetic and just better overall because I’m more hydrated."
-          }
-        },
-        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Rick B",
-            "content": "<strong>It works!<\/strong><br><br>\nDrinking enough water to help with blood sugar control was always a challenge. But with Buoy, It makes it so much easier to get the electrolytes that are missed."
-          }
-        },
-        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Robert A",
-            "content": "<strong>Helps with my Type 1 dehydration<\/strong><br><br>\nI sleep better. My skin doesn’t look all drained. And most of all, it’s actually been helpful in regulating blood sugar levels."
-          }
-        },
-        "715e1da7-5de3-44b9-899b-211d689d2929": {
-          "type": "pr_slide",
-          "settings": {
-            "text": "- Kara J",
-            "content": "<br><br><strong>Couldn’t be happier about this product<\/strong><br><br>\n“The added benefit of it being sugar free has been an amazing added bonus given that I’m a recovering Type 2 diabetic. I couldn’t imagine life without this!”"
-          }
-        }
-      },
-      "block_order": [
-        "2403b53d-6918-43e2-b5b2-076aff2fa24e",
-        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
-        "0fff71db-dfa8-49eb-9726-ec3517079f19",
-        "715e1da7-5de3-44b9-899b-211d689d2929"
-      ],
-      "settings": {
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "none",
-        "reviews_btn_txt": "All Reviews",
-        "reviews_btn_link": "shopify:\/\/pages\/reviews"
       }
     },
     "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
@@ -1131,12 +1131,12 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "31e36676-5821-47f9-a328-6c162b259d29",
-    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "304f34df-6587-4eb2-a832-96b49eef9918",
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
-    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
