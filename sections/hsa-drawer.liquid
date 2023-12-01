@@ -30,7 +30,7 @@
     {%- endif -%}
     {%- if ss.about != blank -%}
       <div class="drawer__about-container">
-        <p class="drawer__about">{{ ss.about | replace: '<p>', '' | replace: '</p>', '' }}</p>
+        <p class="drawer__about">{{ ss.about }}</p>
       </div>
     {%- endif -%}
     <div class="drawer__desktop-continue hide-mobile">
@@ -62,7 +62,7 @@
         "label": "Notification"
       },
       {
-        "type": "richtext",
+        "type": "textarea",
         "id": "about",
         "label": "About"
       }
