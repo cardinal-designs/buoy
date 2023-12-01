@@ -302,7 +302,7 @@
                     <p class="sh4">{{ block.settings.list_item4_2 }}</p>
                   </div>
                 {% endif %}
-                {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                {%- if block.settings.show_ingredients or block.settings.show_clinical or block.settings.show_hsa -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
                       <div class="view-supplements">
@@ -312,6 +312,11 @@
                     {% if block.settings.show_clinical == true %}
                       <div class="view-supplements">
                         <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_clinical == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body">HSA & FSA Pending</a>
                       </div>
                     {% endif %}
                   </div>
@@ -697,6 +702,12 @@
             "type": "checkbox",
             "id": "show_clinical",
             "label": "Show Clinical Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_hsa",
+            "label": "Show HSA Link?",
             "default": false
           }
         ]
