@@ -113,11 +113,18 @@
                   <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
                 </div>
               {% endif %}
-              {%- if block.settings.show_ingredients -%}
-                <div class="view-supplements">
-                  <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-                </div>
-              {%- endif -%}
+              <div class="view-drawer-links">
+                {% if block.settings.show_ingredients == true %}
+                  <div class="view-supplements">
+                    <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                  </div>
+                {% endif %}
+                {% if block.settings.show_clinical == true %}
+                  <div class="view-supplements">
+                    <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                  </div>
+                {% endif %}
+              </div>
             </div>
           </div>
         {% when 'type3' %}
@@ -439,6 +446,12 @@
             "type": "checkbox",
             "id": "show_ingredients",
             "label": "Show Ingredients Link?",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "show_clinical",
+            "label": "Show Clinical Link?",
             "default": false
           }
         ]
