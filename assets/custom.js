@@ -133,7 +133,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openHsa)) {
     document.querySelectorAll(selectors.openHsa).forEach((item) => {
       item.addEventListener('click', function(){
-        openClinical();
+        openHsa();
       }); 
     });
   }
@@ -202,6 +202,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
+  }
+
+  function openHsa() {
+    if(document.getElementById("hsaSideDrawer")) {
+      document.getElementById("hsaSideDrawer").style.right = "0";
+    }
   }
 
   function openClinical() {
