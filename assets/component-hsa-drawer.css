@@ -74,3 +74,18 @@
     font-size: 30px;
   }
 }
+
+.drawer__notification-wrapper {
+
+}
+
+.clinical__info--soon {
+  font-family: inter, sans-serif;
+  font-size: 12px;
+  background-color: var(--green-1);
+  display: inline-block;
+  width: auto;
+  border-radius: 14px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
