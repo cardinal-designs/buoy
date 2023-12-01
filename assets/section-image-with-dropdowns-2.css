@@ -191,6 +191,9 @@
 
 .view-drawer-links {
   margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .view-supplements {
