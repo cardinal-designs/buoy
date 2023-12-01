@@ -208,7 +208,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if(document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
     }
-    console.log('clicked');
+    document.querySelector('.page-blury-overlay').classList.add('is-visible');
+    document.querySelector('body').classList.add('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 10;
+    document.querySelector('.hsa-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
 
   function openClinical() {
