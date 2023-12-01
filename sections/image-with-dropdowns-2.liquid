@@ -213,20 +213,21 @@
                   <p class="sh4">{{ block.settings.list_item4 }}</p>
                 </div>
               {% endif %}
-              <div class="view-drawer-links">
-                {% if block.settings.show_ingredients == true %}
-                  <div class="view-supplements">
-                    <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-                  </div>
-                {% endif %}
-                {% if block.settings.show_clinical == true %}
-                  <div class="view-supplements">
-                    <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
-                  </div>
-                {% endif %}
-              </div>
+              {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                <div class="view-drawer-links">
+                  {% if block.settings.show_ingredients == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.show_clinical == true %}
+                    <div class="view-supplements">
+                      <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                    </div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
             </div>
-
           </div>
         {% when 'type4' %}
           <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
@@ -301,18 +302,20 @@
                     <p class="sh4">{{ block.settings.list_item4_2 }}</p>
                   </div>
                 {% endif %}
-                <div class="view-drawer-links">
-                  {% if block.settings.show_ingredients == true %}
-                    <div class="view-supplements">
-                      <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
-                    </div>
-                  {% endif %}
-                  {% if block.settings.show_clinical == true %}
-                    <div class="view-supplements">
-                      <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
-                    </div>
-                  {% endif %}
-                </div>
+                {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                  <div class="view-drawer-links">
+                    {% if block.settings.show_ingredients == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_clinical == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                      </div>
+                    {% endif %}
+                  </div>
+                {%- endif -%}
               </div>
             </div>
           </div>
