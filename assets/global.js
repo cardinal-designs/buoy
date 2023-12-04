@@ -1450,12 +1450,21 @@ $('.image-with-dropdowns__q').click(function () {
 
   // Toggle the visibility of the clicked slide if it wasn't already active
   if (!isActive) {
-    $(this).next().slideToggle();
+    $(this).next().slideToggle(function() {
+      // Callback function after slideToggle completes
+      // Toggle the 'active' class on the clicked elements only if the slide is expanded
+      if ($(this).is(':visible')) {
+        $(this).prev().toggleClass('active');
+        $(this).parent().toggleClass('active');
+      }
+    });
   }
 
   // Toggle the 'active' class on the clicked elements
-  $(this).toggleClass('active');
-  $(this).parent().toggleClass('active');
+  if (!isActive) {
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
+  }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
