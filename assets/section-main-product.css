@@ -1604,6 +1604,12 @@ fieldset.product-form__input .form__label {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .template-product .product-form .rtx_option_selector {
+    align-items: flex-start;
+  } 
+}
+
 .product-form #rtx_sands_block .rtx_option_selector {
   padding-top: 15px;
 }
