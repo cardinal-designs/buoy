@@ -6,10 +6,10 @@
   <div class="page-width"> 
     <div class="image-with-dropdowns__image">
       {% if section.settings.video_url != blank %}
-      <video autoplay loop muted playsinline class="video">
-        <source src="{{ section.settings.video_url }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+        <video autoplay loop muted playsinline class="video">
+          <source src="{{ section.settings.video_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       {% else %}
         {% comment %} Desktop Image {% endcomment %}
         {%- if section.settings.image != blank -%}
