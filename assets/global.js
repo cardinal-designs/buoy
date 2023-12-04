@@ -1453,9 +1453,10 @@ $('.image-with-dropdowns__q').click(function () {
     $(this).next().slideToggle();
   }
 
-  // Toggle the 'active' class on the clicked elements
-  $(this).toggleClass('active');
-  $(this).parent().toggleClass('active');
+  if (!isActive) {
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
+  }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
