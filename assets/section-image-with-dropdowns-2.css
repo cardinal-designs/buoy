@@ -5,7 +5,8 @@
 
 .image-with-dropdowns__container-2 .page-width {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
 }
 
 .image-with-dropdowns__container-2 .image-with-dropdowns__image .aspect-ratio img, .image-with-dropdowns__container-2 .image-with-dropdowns__image .aspect-ratio video {
