@@ -483,6 +483,9 @@ fieldset.product-form__input .form__label {
   font-style: italic;
   font-size: 16px;
   font-family: Rhymes-Italic;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .no-js .product-form__submit.button--secondary {
