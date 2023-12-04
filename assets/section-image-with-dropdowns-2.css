@@ -189,20 +189,8 @@
   margin-bottom: 30px !important;
 }
 
-.view-drawer-links {
-  margin: 40px auto;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .view-drawer-links {
-    flex-direction: column;
-  }
-}
-
 .view-supplements {
+  margin: 40px auto;
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 7px;
@@ -232,7 +220,6 @@
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 7px;
-  cursor: pointer;
 }
 
 .image-with-dropdowns__a {

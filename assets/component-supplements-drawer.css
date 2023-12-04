@@ -49,8 +49,8 @@
 .drawer__product-name {
   font-size: 24px;
   font-weight: 300;
-  font-family: Rhymes-Light-Italic;
-  color: var(--charcoal);
+  font-style: italic;
+  color: #1f2322;
   margin-bottom: -5px;
 }
 
@@ -194,7 +194,7 @@
 
 .drawer__mobile-continue {
   position: sticky;
-  bottom: -25px;
+  bottom: -90px;
 }
 
 .drawer__desktop-continue {

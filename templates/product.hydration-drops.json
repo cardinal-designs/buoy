@@ -198,10 +198,7 @@
             "list_item1": "Fast-acting",
             "list_item2": "Easier on stomach",
             "list_item3": "Dissolves instantly and evenly",
-            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup",
-            "show_ingredients": false,
-            "show_clinical": false,
-            "show_hsa": false
+            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup"
           }
         },
         "6da36b77-d8ff-4636-9463-71aae7e3657e": {
@@ -215,10 +212,7 @@
             "icon_3": "shopify:\/\/shop_images\/Icons_thick_3.png",
             "icon_image_text_3": "B Vitamin Complex<br>\n<span class=\"rhymes-subtitle\">Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.<\/span>",
             "icon_4": "shopify:\/\/shop_images\/Icons_thick_4.png",
-            "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>",
-            "show_ingredients": false,
-            "show_clinical": false,
-            "show_hsa": false
+            "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>"
           }
         },
         "cb7221f0-8478-4596-bd94-8a4f7aa0ba83": {
@@ -248,9 +242,7 @@
             "list_item2": "No Carbs or Calories<br><span class=\"rhymes-subtitle\">Fasting friendly electrolytes!<\/span>",
             "list_item3": "No Artificial Ingredients or Additives",
             "list_item4": "",
-            "show_ingredients": true,
-            "show_clinical": false,
-            "show_hsa": false
+            "show_ingredients": true
           }
         },
         "aabbf8b6-7cb9-4f6c-984c-492c48db0a03": {
@@ -270,10 +262,7 @@
             "list_item1_2": "White Papers for Every Product",
             "list_item2_2": "Third-Party Tested",
             "list_item3_2": "3 Clinical Trials in Progress Highlighting Efficacy",
-            "list_item4_2": "",
-            "show_ingredients": true,
-            "show_clinical": false,
-            "show_hsa": true
+            "list_item4_2": ""
           }
         }
       },
@@ -1023,118 +1012,6 @@
         "product_name": "Hydration Drops",
         "title": "Supplement Facts"
       }
-    },
-    "bfc21481-990a-4791-9e4a-69ddc894fa30": {
-      "type": "clinical-trial-drawer",
-      "blocks": {
-        "4e078a55-2405-4784-930e-6fdaab851bdf": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
-            "item_description": "General Hydration — Estimated Trial Results Early 2024"
-          }
-        },
-        "892500d5-bb9e-48fa-9d20-b291a438e73a": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
-            "item_description": "Type 1 Diabetes — Estimated Trial Results Mid 2024"
-          }
-        },
-        "87573a57-116a-46db-b94c-a51814a80be4": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
-            "item_description": "Chemotherapy Dehydration — Estimated Trial Results Late 2024"
-          }
-        },
-        "383d3ef7-831e-4789-b165-b199c3da47dd": {
-          "type": "content",
-          "settings": {
-            "btn_title": "General Hydration",
-            "notification": "",
-            "heading": "Primary Outcome Measures:",
-            "title": "Net Fluid Balance",
-            "text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
-            "text_block_two": "Determined by subtracting the cumulative urine output from the total fluid load consumed",
-            "block_two_title": "Electrolytes In Urine",
-            "block_two_text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
-            "block_two_text_block_two": "Sodium, Potassium, and Chloride levels will be measured",
-            "block_three_title": "Blood Labs",
-            "block_three_text_block_one": "<p><strong>Time Frame:<\/strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.<\/p>",
-            "block_three_text_block_two": "Venous whole blood will be collected using phlebotomy and 100ul will be analyzed using an i-STAT",
-            "secondary_heading": "Secondary Outcome Measures:",
-            "secondary_title": "Bioimpedence",
-            "secondary_text_block_one": "<p><strong>Time Frame:<\/strong> Each urine collection occurs for a total of 6 hours<\/p>",
-            "secondary_text_block_two": "Bioimpedence measured after each urine collection"
-          }
-        },
-        "f5ad9f62-f8e8-4636-a9fb-2a52fda22bad": {
-          "type": "content",
-          "settings": {
-            "btn_title": "Type 1 Diabetes",
-            "notification": "Coming Soon!",
-            "heading": "",
-            "title": "",
-            "text_block_one": "",
-            "text_block_two": "",
-            "block_two_title": "",
-            "block_two_text_block_one": "",
-            "block_two_text_block_two": "",
-            "block_three_title": "",
-            "block_three_text_block_one": "",
-            "block_three_text_block_two": "",
-            "secondary_heading": "",
-            "secondary_title": "",
-            "secondary_text_block_one": "",
-            "secondary_text_block_two": ""
-          }
-        },
-        "c96bf56d-24c2-43d5-8950-028b011aa724": {
-          "type": "content",
-          "settings": {
-            "btn_title": "Chemotherapy Dehydration",
-            "notification": "Coming Soon!",
-            "heading": "",
-            "title": "",
-            "text_block_one": "",
-            "text_block_two": "",
-            "block_two_title": "",
-            "block_two_text_block_one": "",
-            "block_two_text_block_two": "",
-            "block_three_title": "",
-            "block_three_text_block_one": "",
-            "block_three_text_block_two": "",
-            "secondary_heading": "",
-            "secondary_title": "",
-            "secondary_text_block_one": "",
-            "secondary_text_block_two": ""
-          }
-        }
-      },
-      "block_order": [
-        "4e078a55-2405-4784-930e-6fdaab851bdf",
-        "892500d5-bb9e-48fa-9d20-b291a438e73a",
-        "87573a57-116a-46db-b94c-a51814a80be4",
-        "383d3ef7-831e-4789-b165-b199c3da47dd",
-        "f5ad9f62-f8e8-4636-a9fb-2a52fda22bad",
-        "c96bf56d-24c2-43d5-8950-028b011aa724"
-      ],
-      "settings": {
-        "year": "2023",
-        "product_name": "Hydration Drops",
-        "title": "Clinical Trial Updates",
-        "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
-      }
-    },
-    "a546f286-1be0-46f5-85b5-7519d9042cf3": {
-      "type": "hsa-drawer",
-      "settings": {
-        "product_name": "Rescue Salt",
-        "title": "2024 HSA & FSA eligibility",
-        "notification": "Pending",
-        "about": "Buoy’s Rescue Salt is pending HSA and FSA eligibility for those using their health and flexible savings accounts to pay for qualified medical expenses.<br>\nBy January 2024, Buoy’s Rescue Salt should be HSA & FSA approved."
-      }
     }
   },
   "order": [
@@ -1155,8 +1032,6 @@
     "1636344367d21ce97f",
     "1637720233f9199bd5",
     "165168225907175bb6",
-    "afa55adf-d57d-4799-be43-5f548916eec5",
-    "bfc21481-990a-4791-9e4a-69ddc894fa30",
-    "a546f286-1be0-46f5-85b5-7519d9042cf3"
+    "afa55adf-d57d-4799-be43-5f548916eec5"
   ]
 }
