@@ -1454,8 +1454,11 @@ $('.image-with-dropdowns__q').click(function () {
   }
 
   if (!isActive) {
-    $(this).toggleClass('active');
-    $(this).parent().toggleClass('active');
+    $(this).addClass('active');
+    $(this).parent().addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $(this).parent().removeClass('active');
   }
 });
 
