@@ -91,6 +91,12 @@
   background: white;
 }
 
+@media screen and (max-width: 768px) {
+  .image-with-dropdowns__container-2 .image-with-dropdowns__content-point {
+    padding: 20px 20px 0;
+  }
+}
+
 .image-with-dropdowns__container-2 .image-with-dropdowns__content-point.active {
   background: #F8F8F8;
 }
