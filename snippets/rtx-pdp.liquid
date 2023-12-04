@@ -172,59 +172,55 @@
       <p class="product-form__text-label">Choose Payment Option</p>
       <div class="rtx_option_selector_main">
         <div class="rtx_option_selector">
-          <div>
-            <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %}>
-          </div>
-          <div>
-            <label for="purchaseTypeOneTime" class="rtx_option_label">
-              <div style="position: relative;" class="rtx_option_heading">
-                One-Time Purchase —&nbsp;
-                <span class="rtx_one_time_price">
-                  <s class="js-main-compare-price">{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>
-                  <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
-                </span>
-              </div>
-              <div class="Subscribe_Info">
-                <div class="rtx_sub_container">
-                  {% assign my_fields = currentVariant.metafields.custom %}
-                  {% for block in section.blocks %}
-                    {%- case block.type -%}
-                      {%- when 'onetime_block' -%}
-                        <div class="subscribe-item_info">
-                          {%- if block.settings.onetime_purchase_type_img != blank -%}
-                            <img src="{{ block.settings.onetime_purchase_type_img | img_url: 'master' }}">
-                          {%- endif -%}
-                        <div>
-                      {% comment %}
-                        {%- if block.settings.three_bottle_text != blank -%}
-                          <p class="Label_Text js-label-text Three_Bottle_Text_Onetime" data-cms-text="{{ block.settings.three_bottle_text }}">
-                            {{ block.settings.three_bottle_text }}
-                          </p>
+          <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+          <label for="purchaseTypeOneTime" class="rtx_option_label">
+            <div style="position: relative;" class="rtx_option_heading">
+              One-Time Purchase —&nbsp;
+              <span class="rtx_one_time_price">
+                <s class="js-main-compare-price">{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>
+                <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+              </span>
+            </div>
+            <div class="Subscribe_Info">
+              <div class="rtx_sub_container">
+                {% assign my_fields = currentVariant.metafields.custom %}
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when 'onetime_block' -%}
+                      <div class="subscribe-item_info">
+                        {%- if block.settings.onetime_purchase_type_img != blank -%}
+                          <img src="{{ block.settings.onetime_purchase_type_img | img_url: 'master' }}">
                         {%- endif -%}
-                        {%- if block.settings.nine_bottle_text != blank -%}
-                          <p class="Label_Text js-label-text Nine_Bottle_Text_Onetime" data-cms-text="{{ block.settings.nine_bottle_text }}">
-                            {{ block.settings.nine_bottle_text }}
-                          </p>                    
-                        {%- endif -%}                    
-                        <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
-                          {{ my_fields.subscription_text | default: block.settings.onetime_purchase_type_text }}
+                      <div>
+                    {% comment %}
+                      {%- if block.settings.three_bottle_text != blank -%}
+                        <p class="Label_Text js-label-text Three_Bottle_Text_Onetime" data-cms-text="{{ block.settings.three_bottle_text }}">
+                          {{ block.settings.three_bottle_text }}
                         </p>
-                      {% endcomment %}
-                        <p class="Label_Text js-label-text js-onetime" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
-                          {{ my_fields.one_time_purchase_subtext | default: block.settings.onetime_purchase_type_text }}
-                        </p>
-                        {% assign oneTimeSubtext = block.settings.onetime_purchase_type_subtext %}
-                        {%- if oneTimeSubtext != blank -%}
-                          <p class="Label_Sub_Text">{{ oneTimeSubtext }}</p>
-                        {%- endif -%}
-                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.nine_bottle_text != blank -%}
+                        <p class="Label_Text js-label-text Nine_Bottle_Text_Onetime" data-cms-text="{{ block.settings.nine_bottle_text }}">
+                          {{ block.settings.nine_bottle_text }}
+                        </p>                    
+                      {%- endif -%}                    
+                      <p class="Label_Text js-label-text" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
+                        {{ my_fields.subscription_text | default: block.settings.onetime_purchase_type_text }}
+                      </p>
+                    {% endcomment %}
+                      <p class="Label_Text js-label-text js-onetime" data-cms-text="{{ block.settings.onetime_purchase_type_text }}">
+                        {{ my_fields.one_time_purchase_subtext | default: block.settings.onetime_purchase_type_text }}
+                      </p>
+                      {% assign oneTimeSubtext = block.settings.onetime_purchase_type_subtext %}
+                      {%- if oneTimeSubtext != blank -%}
+                        <p class="Label_Sub_Text">{{ oneTimeSubtext }}</p>
+                      {%- endif -%}
                       </div>
-                    {% endcase %}
-                  {% endfor %}
-                </div>
-              </div>    
-            </label>
-          </div>
+                    </div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>    
+          </label>
         </div>
         <div id="rtx_sands_block">
           <div id="rtx_option_sub">
