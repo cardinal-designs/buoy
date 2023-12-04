@@ -277,7 +277,7 @@
           {% endcomment %}
            {% if settings.show_shipping_countdown != blank %}
             <div id="Order_Within" class="Order_Within Risk_Free">
-               <img src="{{ settings.order_icon }}"/>
+               <img src="{{ settings.order_icon | img_url: 'master' }}"/>
                {{ settings.order_within_text }}
             </div>
           {% endif %}
