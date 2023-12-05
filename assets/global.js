@@ -1463,10 +1463,6 @@ $('.image-with-dropdowns__q').click(function (e) {
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
-    var offsetTop = $(this).offset().top;
-    $('html, body').animate({
-      scrollTop: $(this).offset().top
-    }, 300);
   }
 });
 
