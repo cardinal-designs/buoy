@@ -1651,8 +1651,9 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
   var offsetTop = $(this).offset().top;
+  var scrollHeight = this.scrollHeight;
   $('html, body').animate({
-    scrollTop: offsetTop - $this.find('.page-width mobile-benefits-info').height()
+    scrollTop: offsetTop - scrollHeight
   }, 300);
 
   // var isActive = $(this).find('h3').hasClass('active');
