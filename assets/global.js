@@ -1649,33 +1649,22 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp(function() {
     $('.select-faq__x').removeClass('minus');
     $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
-
-    var isActive = $(this).prev().find('h3').hasClass('active');
-    if (!isActive) {
-      var offsetTop = $(this).prev().offset().top;
-      $('html, body').animate({
-        scrollTop: offsetTop - 200
-      }, 300);
-      $(this).slideDown();
-      $(this).prev().find('h3').addClass('active');
-      $(this).prev().find('.select-faq__x').addClass('minus');
-    }
   });
 
-  // var isActive = $(this).find('h3').hasClass('active');
-  // if (!isActive) {
-  //   var offsetTop = $(this).offset().top;
-  //   $('html, body').animate({
-  //     scrollTop: offsetTop - 200
-  //   }, 300);
-  //   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
-  //   $(this).find('h3').addClass('active')
-  //   $(this).find('.select-faq__x').addClass('minus')
-  // } else {
-  //   $('.select-faq__container .mobile-benefits-info').slideUp()
-  //   $('.select-faq__x').removeClass('minus')
-  //   $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
-  // }
+  var isActive = $(this).find('h3').hasClass('active');
+  if (!isActive) {
+    var offsetTop = $(this).offset().top;
+    $('html, body').animate({
+      scrollTop: offsetTop - 200
+    }, 300);
+    $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
+    $(this).find('h3').addClass('active')
+    $(this).find('.select-faq__x').addClass('minus')
+  } else {
+    $('.select-faq__container .mobile-benefits-info').slideUp()
+    $('.select-faq__x').removeClass('minus')
+    $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
+  }
 })
 
  
