@@ -1018,7 +1018,10 @@ $('.product__media-list').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false
+        arrows: false,
+        centerMode: true,
+        centerPadding: '194px',
+        variableWidth: true,
       }
     }
   ]
@@ -1438,25 +1441,49 @@ $(window).on('resize scroll', function() {
 });
 
 $('.image-with-dropdowns__q').click(function () {
-  // Check if the clicked accordion is already active
-  const isActive = $(this).hasClass('active');
+  // Check if the clicked accordion item is already active
+  var isActive = $(this).hasClass('active');
 
-  // Close all slides
+  // Close all accordion items
   $('.image-with-dropdowns__a').slideUp();
 
   // Remove active class from all elements except the clicked one
   $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
   $('.image-with-dropdowns__q').not(this).removeClass('active');
 
-  // Toggle the visibility of the clicked slide if it wasn't already active
   if (!isActive) {
-    $(this).next().slideToggle();
+    // If the accordion item is not active, open it and scroll to the content
+    $(this).next().slideToggle(function() {
+      if ($(this).is(':visible')) {
+        // Scroll to the top of the content when it becomes visible
+        var offsetTop = $(this).offset().top;
+        // scroll only on mobile
+        var mediaQuery = '(max-width: 768px)';
+        var mediaQueryList = window.matchMedia(mediaQuery);
+        // listen for screen size change
+        mediaQueryList.addEventListener('change', (event) => {
+          if (event.matches) {
+            $('html, body').animate({
+              scrollTop: offsetTop - 150
+            }, 300);
+          }
+        });
+        // run on page load on mobile
+        if (window.innerWidth < 768) {
+          $('html, body').animate({
+            scrollTop: offsetTop - 150
+          }, 300);
+        }
+      }
+    });
+    $(this).addClass('active');
+    $(this).parent().addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $(this).parent().removeClass('active');
   }
-
-  // Toggle the 'active' class on the clicked elements
-  $(this).toggleClass('active');
-  $(this).parent().toggleClass('active');
 });
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
@@ -1623,9 +1650,13 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
   $(this).find('h3').addClass('active')
   $(this).find('.select-faq__x').addClass('minus')
-   let num = $(this).data("id")
+  let num = $(this).data("id")
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
+  var offsetTop = $(this).offset().top;
+  $('html, body').animate({
+    scrollTop: offsetTop - 200
+  }, 300);
 })
 
  

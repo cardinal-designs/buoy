@@ -75,7 +75,7 @@
         "b89e2a9e-a526-4b3f-82d7-01190d6a9f37": {
           "type": "list_block",
           "settings": {
-            "list_block_type_img": "shopify:\/\/shop_images\/Callouts_1.png",
+            "list_block_type_img": "shopify:\/\/shop_images\/heart.svg",
             "list_block_type_text": "Dietician Recommended Formula",
             "list_block_type_subtext": "Based on 5-8 daily servings of Buoy reviewed by over 100+ dieticians."
           }
@@ -104,7 +104,7 @@
         "one_time_text": "One Time Purchase",
         "testimonial_btn_txt": "All Reviews",
         "testimonial_btn_link": "#Product_Reviews",
-        "product_feature_icon": "shopify:\/\/shop_images\/star_734f1cf7-69fc-4281-a50b-b783c5441121.png",
+        "product_feature_icon": "shopify:\/\/shop_images\/star.svg",
         "product_feature_text": "Energy, Gut Health, Brain Function, Skin",
         "product_feature_text_two": "Delivered in 3x more bioavailable form factor",
         "show_drawer_triggers": true
@@ -165,7 +165,7 @@
         "f094a7d8-7384-4dc5-a296-de548c44952f": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/drink.png",
+            "image": "shopify:\/\/shop_images\/coffee-pot.svg",
             "title": "Add to Any Drink"
           }
         }
@@ -257,8 +257,7 @@
           "type": "type4",
           "settings": {
             "title": "Sourcing & Formulation",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/pexels_videos_1723096_2160p__short_1.png",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/03bdc1f1d41f4b0ea9024b9bef1dc895.mp4",
             "suptext": "BIOACTIVE SOURCES",
             "text": "Supplements shouldn't be manufactured. Hydrate with nature's original electrolyte and mineral boost: <span class=\"green-outline\">the deep ocean.<\/span>",
             "list_item1": "Hand Harvested + Solar Evaporated",
@@ -270,14 +269,10 @@
             "list_item1_2": "White Papers for Every Product",
             "list_item2_2": "Third-Party Tested",
             "list_item3_2": "3 Clinical Trials in Progress Highlighting Efficacy",
-<<<<<<< HEAD
-            "list_item4_2": ""
-=======
             "list_item4_2": "",
             "show_ingredients": true,
             "show_clinical": false,
             "show_hsa": true
->>>>>>> 0397a9cc (Commit theme settings)
           }
         }
       },
@@ -289,8 +284,8 @@
       ],
       "settings": {
         "video_url": "",
-        "image": "shopify:\/\/shop_images\/hydration-drops.png",
-        "image_mobile": "shopify:\/\/shop_images\/hydration-drops-mobile.png"
+        "image": "shopify:\/\/shop_images\/Media_Frame.png",
+        "image_mobile": "shopify:\/\/shop_images\/Media_Frame.png"
       }
     },
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
@@ -567,7 +562,7 @@
           "settings": {
             "text": "Complete your hydration ritual with our Rescue Salt.",
             "new_product": true,
-            "image": "shopify:\/\/shop_images\/Upsell_Rescue_Salt_D.png",
+            "image": "shopify:\/\/shop_images\/Upsell_Rescue_Salt_D_59f697f2-6771-4e04-aa24-6f0ee9a92041.png",
             "product": "rescue-salts",
             "bottom_text": "Rescue Salt",
             "add_to_cart": true
@@ -578,7 +573,7 @@
           "settings": {
             "text": "Want to try them all? Build a custom bundle.",
             "new_product": false,
-            "image": "shopify:\/\/shop_images\/Bundle_D.png",
+            "image": "shopify:\/\/shop_images\/Upsell_Bundle_1_D.png",
             "product": "byob",
             "bottom_text": "Build Your Bundle",
             "add_to_cart": false
@@ -1131,13 +1126,13 @@
         "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
       }
     },
-    "a546f286-1be0-46f5-85b5-7519d9042cf3": {
+    "7ae45205-8e22-4157-8fa6-828ee04b6542": {
       "type": "hsa-drawer",
       "settings": {
         "product_name": "Rescue Salt",
         "title": "2024 HSA & FSA eligibility",
         "notification": "Pending",
-        "about": "Buoy’s Rescue Salt is pending HSA and FSA eligibility for those using their health and flexible savings accounts to pay for qualified medical expenses.<br>\nBy January 2024, Buoy’s Rescue Salt should be HSA & FSA approved."
+        "about": "Buoy’s Rescue Salt is pending HSA and FSA eligibility for those using their health and flexible savings accounts to pay for qualified medical expenses.\nBy January 2024, Buoy’s Rescue Salt should be HSA & FSA approved."
       }
     }
   },
@@ -1161,6 +1156,6 @@
     "165168225907175bb6",
     "afa55adf-d57d-4799-be43-5f548916eec5",
     "bfc21481-990a-4791-9e4a-69ddc894fa30",
-    "a546f286-1be0-46f5-85b5-7519d9042cf3"
+    "7ae45205-8e22-4157-8fa6-828ee04b6542"
   ]
 }

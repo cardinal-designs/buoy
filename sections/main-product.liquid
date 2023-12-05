@@ -277,7 +277,9 @@
           {% endcomment %}
            {% if settings.show_shipping_countdown != blank %}
             <div id="Order_Within" class="Order_Within Risk_Free">
-               <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Shipping_Time.png?v=1698697270"/>
+              {%- if settings.order_icon != blank -%}
+                <img src="{{ settings.order_icon | img_url: 'master' }}"/>
+              {%- endif -%}
                {{ settings.order_within_text }}
             </div>
           {% endif %}
@@ -321,28 +323,8 @@
                 style="flex-direction: initial; padding: 12px 10px;"
                 data-available="{{ currentVariant.available }}"
                 class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                {% if currentVariant.available == false %}disabled{% endif %}
-                data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
               >
-                <div style="display: flex;">
-                  {%- if currentVariant.available -%}
-                  Add to Cart —&nbsp; 
-                  {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                    <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                  {% else %}
-                    <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
-                    {{ currentVariant.price | money_without_trailing_zeros }}
-                  {% endif %}
-                  {% comment %} {% render 'rtx_price'%} {% endcomment %}
-                  {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                    <span data-smartrr-compare-price></span>
-                    <span data-smartrr-regular-price></span>
-                    <span data-smartrr-subscribe-price></span>
-                  </div> {% endcomment %}
-                  {%- else -%}
-                  {{ 'products.product.sold_out' | t }}
-                  {%- endif -%}
-                </div>
+                <div style="display: flex;">Add to Cart</div>
               </a>
             </div>
             {% comment %} Mobile sticky ATC end {% endcomment %}

@@ -175,9 +175,13 @@
           <input type="radio" id="purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
           <label for="purchaseTypeOneTime" class="rtx_option_label">
             <div style="position: relative;" class="rtx_option_heading">
-              One-Time Purchase —&nbsp;
+              <span>One-Time Purchase - </span>
               <span class="rtx_one_time_price">
-                <s class="js-main-compare-price">{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>
+                <span class="rtx_compare_price js-main-compare-price">
+                  {% if currentVariant.compare_at_price > currentVariant.price %}
+                    {{ currentVariant.compare_at_price | money_without_trailing_zeros }} 
+                  {% endif %}
+                </span>
                 <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </div>
@@ -229,9 +233,11 @@
               <label for="purchaseTypeSbubscription" class="rtx_option_label">
                 <div class="rtx-tooltip__flex">
                   <div class="rtx_option_heading">
-                    Subscribe — &nbsp
+                    <span>Subscribe - </span>
                     <div class="Multi_Price">
-                      <span class="rtx_one_time_price"><s class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</s></span>
+                      <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price">
+                        {{ currentVariant.price | money_without_trailing_zeros }}
+                      </s>
                       <span id="rtx_one_price_save" class="js-subscription-price">
                         {{- currentAllocations[0].price | money_without_trailing_zeros -}}
                       </span>

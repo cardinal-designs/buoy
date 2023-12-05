@@ -10,11 +10,6 @@
 
 .image-with-dropdowns__image {
   position: relative;
-  margin-right: 15%;
-}
-
-.image-with-dropdowns__image .aspect-ratio {
-  height: 665px;
 }
 
 .image-with-dropdowns__image .aspect-ratio img,
@@ -169,7 +164,7 @@
 @media screen and (max-width: 1200px) {
   
   .image-with-dropdowns__image .aspect-ratio {
-    height: 530px;
+    height: 450px;
   }
   
 }
@@ -231,7 +226,7 @@
   }
 
   .image-with-dropdowns__image .aspect-ratio {
-    height: 420px;
+    height: 325px;
     max-width: 340px !important;
   }
 
@@ -248,8 +243,7 @@
   }
   
   .image-with-dropdowns__image .aspect-ratio {
-    height: 403px;
-    max-width: 320px !important;
+    height: 325px;
   }
   
 }

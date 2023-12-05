@@ -1,14 +1,13 @@
 .icon-text__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 32px 18px;
+  gap: 28px 18px;
   margin-top: 65px;
   margin-bottom: 36px;
 }
 
 .icon-text__header {
   text-align: center;
-  margin-top: 142px;
 }
 
 .icon-text__header-italic {

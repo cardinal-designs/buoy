@@ -16,7 +16,7 @@
 .product__media-wrapper .sticky-images {
   position: sticky;
   top: 140px;
-  margin-bottom: 80px;
+  margin-bottom: 73px;
 }
 
 .product__info-wrapper {
@@ -168,6 +168,7 @@
   font-size: 12px;
   letter-spacing: 0;
   line-height: 1.375em;
+  color: var(--charcoal-60);
 }
 
 .product__title {
@@ -464,18 +465,18 @@ fieldset.product-form__input .form__label {
 .product-form__sticky-atc {
   position: fixed;
   left: 0;
-  bottom: 25px;
+  bottom: 0;
   width: 100%;
   z-index: 2;
   background: var(--white);
-  padding: 20px;
-  padding-bottom: 10px;
-  transform: translate(-100%);
+  padding: 12px 20px 6px 20px;
+  transform: translateY(100%);
   transition: transform 300ms ease;
+  box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.09);
 }
 
 .product-form__sticky-atc.active {
-  transform: translate(0);
+  transform: translateY(0);
 }
 
 .product-form__sticky-atc-text {
@@ -483,6 +484,9 @@ fieldset.product-form__input .form__label {
   font-style: italic;
   font-size: 16px;
   font-family: Rhymes-Italic;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -878,8 +882,8 @@ fieldset.product-form__input .form__label {
   }
 
   .product__media-item {
-    width: 75vw;
-    margin: 0 5px;
+    width: 86vw;
+    /* margin-left: 12px; */
   }
 
   .product__media-item .product-spinner {
@@ -1428,7 +1432,7 @@ fieldset.product-form__input .form__label {
   text-align: left;
   margin: 0;
   background-color: transparent;
-  border-radius: 17px;
+  border-radius: 10px;
   border: 1px solid var(--gray-light);
 }
 
@@ -1596,6 +1600,14 @@ fieldset.product-form__input .form__label {
   padding: 0 0 15px;
   background-color: #ffffff;
   border-bottom: 1px solid rgb(31 35 34 / 10%);
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .template-product .product-form .rtx_option_selector {
+    align-items: flex-start;
+  } 
 }
 
 .product-form #rtx_sands_block .rtx_option_selector {
@@ -1880,7 +1892,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-listblock__text {
-  margin: 2px 0;
+  margin: 0;
   text-transform: capitalize;
   letter-spacing: 0;
 }
@@ -1888,6 +1900,7 @@ fieldset.product-form__input .form__label {
 .product-listblock__subtext {
   margin: 0;
   font-family: Rhymes-Light-Italic;
+  margin-top: -2px;
 }
 
 .product-listblock__container {
@@ -1935,7 +1948,7 @@ fieldset.product-form__input .form__label {
 }
 
 .template-product .rtx_sub_container .subscribe-item_info {
-  margin-left: 35px !important;
+  margin-left: 0 !important;
   font-size: 12px;
   line-height: 21px;
   margin-top: 0;
@@ -2179,10 +2192,15 @@ span#timer strong {
   display: none;
 }
 
-.template-product .rtx_one_time_price s {
-  color: #545759;
+.template-product .rtx_compare_price {
+  color: var(--charcoal-60);
   font-weight: 300;
   font-size: 18px;
+  text-decoration: line-through;
+}
+
+.template-product .rtx_one_time_price {
+  padding-left: 5px;
 }
 
 .template-product .rtx_text {
@@ -2261,6 +2279,7 @@ span#timer strong {
   width: auto!important;
   overflow: hidden;
   top: 3px;
+  color: var(--charcoal-60);
 }
 
 .product__info-container .okeReviews-reviewsSummary-ratingCount {
@@ -2422,8 +2441,8 @@ select[name=selling_plan] {
 .discount-bubble {
   border: 1px solid #398200;
   background: #398200;
-  padding: 14px 20px;
-  border-radius: 3px;
+  padding: 10px 20px;
+  border-radius: 8px;
   height: auto;
   margin: 28px auto 0px;
   max-width: 460px;

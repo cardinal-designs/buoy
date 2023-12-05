@@ -107,7 +107,7 @@ body.open-bundle-info {
 .product-quick-view-slide-out--wrapper .shop-slide-out__content .product-content--wrapper .drawer-product--info .okeReviews-reviewsSummary-ratingCount span {
   font-size: 12px;
   font-weight: 300 !important;
-  color: #1F2322;
+  color: var(--charcoal-60);
   line-height: 20px;
   top: 1px;
 }
