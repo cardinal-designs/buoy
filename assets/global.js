@@ -1481,7 +1481,7 @@ $('.image-with-dropdowns__q').click(function () {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
         $('html, body').animate({
-          scrollTop: offsetTop - 75
+          scrollTop: offsetTop - 100
         }, 300);
       }
     });
