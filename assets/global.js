@@ -1458,8 +1458,8 @@ $('.image-with-dropdowns__q').click(function (e) {
     $(this).parent().addClass('active');
     var $panel = $(this).closest('.image-with-dropdowns__q');
     $('html,body').animate({
-      scrollTop: $panel.offset().top
-    }, 100); 
+      scrollTop: $panel.offset().top - '100px';
+    }, 300); 
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
