@@ -1458,7 +1458,7 @@ $('.image-with-dropdowns__q').click(function (e) {
     $(this).parent().addClass('active');
     var offsetTop = $(this).offset().top;
      $('html, body').animate({
-      scrollTop: offsetTop - 50
+      scrollTop: offsetTop - 70
     }, 300);
   } else {
     $(this).removeClass('active');
