@@ -1476,7 +1476,6 @@ $('.image-with-dropdowns__q').click(function () {
   if (!isActive) {
     // If the accordion item is not active, open it and scroll to the content
     $(this).next().slideToggle(function() {
-      // Callback function after slideToggle completes
       if ($(this).is(':visible')) {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
