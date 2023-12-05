@@ -1456,7 +1456,7 @@ $('.image-with-dropdowns__q').click(function (e) {
   if (!isActive) {
     $(this).addClass('active');
     $(this).parent().addClass('active');
-    $(this).scrollTop = 0;
+    console.log($(this).scrollTop())
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
