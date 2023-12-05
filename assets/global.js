@@ -1437,9 +1437,13 @@ $(window).on('resize scroll', function() {
   
 });
 
-$('.image-with-dropdowns__q').click(function (e) {
+$('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
+  var offsetTop = $(this).offset().top;
+    $('html, body').animate({
+    scrollTop: offsetTop - 75
+  }, 300);
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
@@ -1456,10 +1460,6 @@ $('.image-with-dropdowns__q').click(function (e) {
   if (!isActive) {
     $(this).addClass('active');
     $(this).parent().addClass('active');
-    var offsetTop = $(this).offset().top;
-     $('html, body').animate({
-      scrollTop: offsetTop - 75
-    }, 300);
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
