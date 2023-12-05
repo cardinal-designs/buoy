@@ -1455,6 +1455,17 @@ $('.image-with-dropdowns__q').click(function () {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
         // scroll only on mobile
+        const mediaQuery = '(max-width: 768px)';
+        const mediaQueryList = window.matchMedia(mediaQuery);
+        // listen for screen size change
+        mediaQueryList.addEventListener('change', (event) => {
+          if (event.matches) {
+            $('html, body').animate({
+              scrollTop: offsetTop - 150
+            }, 300);
+          }
+        });
+        // run on page load
         if (window.innerWidth < 768) {
           $('html, body').animate({
             scrollTop: offsetTop - 150
