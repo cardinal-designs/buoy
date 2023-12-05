@@ -1437,31 +1437,6 @@ $(window).on('resize scroll', function() {
   
 });
 
-// $('.image-with-dropdowns__q').click(function (e) {
-//   // Check if the clicked accordion is already active
-//   const isActive = $(this).hasClass('active');
-
-//   // Close all slides
-//   $('.image-with-dropdowns__a').slideUp();
-
-//   // Remove active class from all elements except the clicked one
-//   $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
-//   $('.image-with-dropdowns__q').not(this).removeClass('active');
-
-//   if (!isActive) {
-//     $(this).next().slideToggle();
-//     $(this).addClass('active');
-//     $(this).parent().addClass('active');
-//     var offsetTop = $(this).offset().top;
-//      $('html, body').animate({
-//       scrollTop: offsetTop - 75
-//     }, 300);
-//   } else {
-//     $(this).removeClass('active');
-//     $(this).parent().removeClass('active');
-//   }
-// });
-
 $('.image-with-dropdowns__q').click(function () {
   // Check if the clicked accordion item is already active
   var isActive = $(this).hasClass('active');
