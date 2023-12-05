@@ -1655,7 +1655,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
 
   // Scroll to the top of the clicked element with an offset of 75 pixels
   $('html, body').animate({
-    scrollTop: offsetTop - 75
+    scrollTop: offsetTop - 100
   }, 300); 
 })
 
