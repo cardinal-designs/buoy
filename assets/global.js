@@ -1440,6 +1440,8 @@ $(window).on('resize scroll', function() {
 $('.image-with-dropdowns__q').click(function (e) {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
+  const top = document.querySelector('.image-with-dropdowns__content');
+  console.log(top);
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
