@@ -1437,11 +1437,36 @@ $(window).on('resize scroll', function() {
   
 });
 
-$('.image-with-dropdowns__q').click(function (e) {
-  // Check if the clicked accordion is already active
-  const isActive = $(this).hasClass('active');
+// $('.image-with-dropdowns__q').click(function (e) {
+//   // Check if the clicked accordion is already active
+//   const isActive = $(this).hasClass('active');
 
-  // Close all slides
+//   // Close all slides
+//   $('.image-with-dropdowns__a').slideUp();
+
+//   // Remove active class from all elements except the clicked one
+//   $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
+//   $('.image-with-dropdowns__q').not(this).removeClass('active');
+
+//   if (!isActive) {
+//     $(this).next().slideToggle();
+//     $(this).addClass('active');
+//     $(this).parent().addClass('active');
+//     var offsetTop = $(this).offset().top;
+//      $('html, body').animate({
+//       scrollTop: offsetTop - 75
+//     }, 300);
+//   } else {
+//     $(this).removeClass('active');
+//     $(this).parent().removeClass('active');
+//   }
+// });
+
+$('.image-with-dropdowns__q').click(function () {
+  // Check if the clicked accordion item is already active
+  var isActive = $(this).hasClass('active');
+
+  // Close all accordion items
   $('.image-with-dropdowns__a').slideUp();
 
   // Remove active class from all elements except the clicked one
@@ -1449,18 +1474,31 @@ $('.image-with-dropdowns__q').click(function (e) {
   $('.image-with-dropdowns__q').not(this).removeClass('active');
 
   if (!isActive) {
-    $(this).next().slideToggle();
+    // If the accordion item is not active, open it and scroll to the content
+    $(this).next().slideToggle(function() {
+      // Callback function after slideToggle completes
+      if ($(this).is(':visible')) {
+        // Scroll to the top of the content when it becomes visible
+        var offsetTop = $(this).offset().top;
+        $('html, body').animate({
+          scrollTop: offsetTop - 75
+        }, 300);
+      }
+    });
     $(this).addClass('active');
     $(this).parent().addClass('active');
-    var offsetTop = $(this).offset().top;
-     $('html, body').animate({
-      scrollTop: offsetTop - 75
-    }, 300);
   } else {
+    // If the accordion item is active, close it and scroll back to the top
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
+    
+    // Scroll back to the top of the page
+    $('html, body').animate({
+      scrollTop: 0
+    }, 300);
   }
 });
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
