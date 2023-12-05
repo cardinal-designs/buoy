@@ -1442,6 +1442,8 @@ $('.image-with-dropdowns__q').click(function (e) {
   const isActive = $(this).hasClass('active');
   const top = document.querySelector('.image-with-dropdowns__content');
   console.log(top);
+  top.scrollTop = 0;
+
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
