@@ -1651,7 +1651,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
 
-  var hasActiveClass = $(this).find('.benefits__item-mobile').hasClass('select-faq__item-mobile');
+  var hasActiveClass = $(this).hasClass('select-faq__item-mobile');
   console.log(hasActiveClass)
   // // Get the offset of the clicked element
   // var offsetTop = $(this).offset().top;
