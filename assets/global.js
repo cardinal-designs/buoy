@@ -1465,7 +1465,7 @@ $('.image-with-dropdowns__q').click(function (e) {
     $(this).parent().removeClass('active');
     var sectionTop = $('.image-with-dropdowns__a').offset().top;
     $('html, body').animate({
-      scrollTop: sectionTop
+      scrollTop: sectionTop - 75
     }, 300);
   }
 });
