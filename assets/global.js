@@ -1646,10 +1646,9 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   let num = $(this).data("id")
 
   // Close all other accordion items
-  $('.select-faq__container .mobile-benefits-info').slideUp(function() {
-    $('.select-faq__x').removeClass('minus');
-    $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
-  });
+  $('.select-faq__container .mobile-benefits-info').slideUp();
+  $('.select-faq__x').removeClass('minus');
+  $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
 
   var isActive = $(this).find('h3').hasClass('active');
   if (!isActive) {
@@ -1661,7 +1660,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $(this).find('h3').addClass('active')
     $(this).find('.select-faq__x').addClass('minus')
   } else {
-    $('.select-faq__container .mobile-benefits-info').slideUp()
+    // $('.select-faq__container .mobile-benefits-info').slideUp()
     $('.select-faq__x').removeClass('minus')
     $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
   }
