@@ -1459,7 +1459,7 @@ $('.image-with-dropdowns__q').click(function (e) {
     var $panel = $(this).closest('.image-with-dropdowns__q');
     $('html,body').animate({
       scrollTop: $panel.offset().top
-    }, 500); 
+    }, 100); 
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
