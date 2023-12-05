@@ -1646,7 +1646,6 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   let num = $(this).data("id")
 
   // Close all other accordion items
-  $('.select-faq__container .mobile-benefits-info').slideUp();
   $('.select-faq__x').removeClass('minus');
   $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
 
