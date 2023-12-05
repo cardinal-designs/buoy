@@ -1454,21 +1454,23 @@ $('.image-with-dropdowns__q').click(function () {
       if ($(this).is(':visible')) {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
-        // // scroll only on mobile
-        // var mediaQuery = '(max-width: 768px)';
-        // var mediaQueryList = window.matchMedia(mediaQuery);
-        // // listen for screen size change
-        // mediaQueryList.addEventListener('change', (event) => {
-        //   if (event.matches) {
-        //     $('html, body').animate({
-        //       scrollTop: offsetTop - 150
-        //     }, 300);
-        //   }
-        // });
+        // scroll only on mobile
+        var mediaQuery = '(max-width: 768px)';
+        var mediaQueryList = window.matchMedia(mediaQuery);
+        // listen for screen size change
+        mediaQueryList.addEventListener('change', (event) => {
+          if (event.matches) {
+            $('html, body').animate({
+              scrollTop: offsetTop - 150
+            }, 300);
+          }
+        });
         // run on page load on mobile
-        $('html, body').animate({
-          scrollTop: offsetTop - 150
-        }, 300);
+        if (window.innerWidth < 768) {
+          $('html, body').animate({
+            scrollTop: offsetTop - 150
+          }, 300);
+        }
       }
     });
     $(this).addClass('active');
