@@ -1441,8 +1441,8 @@ $('.image-with-dropdowns__q').click(function (e) {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
 
-  console.log(e.target)
-  // let top = e.target.offsetTop;
+  let top = e.target.offsetTop;
+    console.log(top)
   // window.scroll({
   //   top: top, // if you have a sticky nav, take the height of that off 'top' e.g. 'top - 100';
   //   behavior: 'smooth'
