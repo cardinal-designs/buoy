@@ -1642,44 +1642,15 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
   $(`.mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
 
-$('.select-faq__item-mobile.benefits__item-mobile').click(function () {
-  // Check if the device screen width is below a certain threshold (e.g., 768 pixels for mobile)
-  if (window.innerWidth < 768) {
-    // Check if the clicked element has the "active" class
-    var isActive = $(this).find('h3').hasClass('active');
-
-    // Close all accordion items if they are already active
-    if (isActive) {
-      $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
-      $(this).find('.select-faq__x').removeClass('minus');
-      $(this).find('h3').removeClass('active');
-      let num = $(this).data("id");
-      $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideUp();
-    } else {
-      // Close all accordion items
-      $('.select-faq__x').removeClass('minus');
-      $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active');
-
-      // Open the clicked accordion item
-      $(this).find('h3').addClass('active');
-      $(this).find('.select-faq__x').addClass('minus');
-      let num = $(this).data("id");
-      $('.select-faq__container .mobile-benefits-info').slideUp();
-      $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown();
-    }
-
-    // If the clicked element has the "active" class, scroll to the top
-    if (isActive) {
-      // Get the offset of the clicked element
-      var offsetTop = $(this).offset().top;
-
-      // Scroll to the top of the clicked element with an offset of 75 pixels
-      $('html, body').animate({
-        scrollTop: offsetTop - 75
-      }, 300);
-    }
-  }
-});
+$('.select-faq__item-mobile.benefits__item-mobile').click(function() {
+  $('.select-faq__x').removeClass('minus')
+  $('.select-faq__container .benefits__item-mobile h3.active').removeClass('active')
+  $(this).find('h3').addClass('active')
+  $(this).find('.select-faq__x').addClass('minus')
+   let num = $(this).data("id")
+  $('.select-faq__container .mobile-benefits-info').slideUp()
+  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
+})
 
  
 $('.reviews_button').click(function(){
