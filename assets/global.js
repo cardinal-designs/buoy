@@ -1454,6 +1454,7 @@ $('.image-with-dropdowns__q').click(function () {
       if ($(this).is(':visible')) {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
+        // scroll only on mobile
         if (window.innerWidth < 768) {
           $('html, body').animate({
             scrollTop: offsetTop - 150
