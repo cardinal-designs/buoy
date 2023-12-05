@@ -1635,6 +1635,7 @@ $('.select-faq__container .benefits__item').click(function() {
 })
 
 $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
+  console.log('clicked');
   $('.benefits__item-mobile h4.active').removeClass('active')
   $(this).find('h4').addClass('active')
    let num = $('.benefits__item-mobile h4.active').parent().data("id")
