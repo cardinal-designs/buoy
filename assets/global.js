@@ -1442,11 +1442,10 @@ $('.image-with-dropdowns__q').click(function (e) {
   const isActive = $(this).hasClass('active');
 
   let top = e.target.offsetTop;
-    console.log(top)
-  // window.scroll({
-  //   top: top, // if you have a sticky nav, take the height of that off 'top' e.g. 'top - 100';
-  //   behavior: 'smooth'
-  // });
+  window.scroll({
+    top: top, // if you have a sticky nav, take the height of that off 'top' e.g. 'top - 100';
+    behavior: 'smooth'
+  });
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
