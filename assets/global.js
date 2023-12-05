@@ -1457,7 +1457,9 @@ $('.image-with-dropdowns__q').click(function (e) {
     $(this).addClass('active');
     $(this).parent().addClass('active');
     var $panel = $(this).closest('.image-with-dropdowns__q');
-    console.log($panel);
+    $('html,body').animate({
+      scrollTop: $panel.offset().top
+    }, 500); 
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
