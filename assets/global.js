@@ -1447,8 +1447,7 @@ $('.image-with-dropdowns__q').click(function (e) {
   // Remove active class from all elements except the clicked one
   $('.image-with-dropdowns__content-point').not($(this).next()).removeClass('active');
   $('.image-with-dropdowns__q').not(this).removeClass('active');
-  $('.image-with-dropdowns__content-point').not($(this).parent()).removeClass('active');
-  
+
   if (!isActive) {
     $(this).next().slideToggle();
     $(this).addClass('active');
