@@ -1654,7 +1654,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   if (!isActive) {
     var offsetTop = $(this).offset().top;
     $('html, body').animate({
-      scrollTop: offsetTop - 200
+      scrollTop: offsetTop - 100
     }, 300);
     $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
     $(this).find('h3').addClass('active')
