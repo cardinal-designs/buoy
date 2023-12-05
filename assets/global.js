@@ -1442,7 +1442,7 @@ $('.image-with-dropdowns__q').click(function (e) {
   const isActive = $(this).hasClass('active');
   const top = document.querySelector('.image-with-dropdowns__content');
 
-  var accordionContainer = button.closest(top);
+  var accordionContainer = button.closest(document.querySelector('.image-with-dropdowns__content'));
 
   // Scroll to the top of the accordion container
   if (accordionContainer) {
