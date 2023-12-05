@@ -1652,7 +1652,12 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
 
   var isActive = $(this).find('h3').hasClass('active');
-  console.log(isActive);
+  if (!isActive) {
+    var offsetTop = $(this).offset().top;
+    $('html, body').animate({
+      scrollTop: offsetTop - 75
+    }, 300);
+  }
 })
 
  
