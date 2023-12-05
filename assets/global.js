@@ -1648,8 +1648,6 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $(this).find('h3').addClass('active')
   $(this).find('.select-faq__x').addClass('minus')
    let num = $(this).data("id")
-  $('.select-faq__container .mobile-benefits-info').slideUp()
-  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
 
   var isActive = $(this).find('h3').hasClass('active');
   if (!isActive) {
@@ -1657,6 +1655,9 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $('html, body').animate({
       scrollTop: offsetTop - 75
     }, 300);
+    $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown()
+  } else {
+    $('.select-faq__container .mobile-benefits-info').slideUp()
   }
 })
 
