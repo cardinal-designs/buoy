@@ -1463,6 +1463,10 @@ $('.image-with-dropdowns__q').click(function (e) {
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
+    var sectionTop = $('.image-with-dropdowns__a').offset().top;
+    $('html, body').animate({
+      scrollTop: sectionTop
+    }, 300);
   }
 });
 
