@@ -23,7 +23,7 @@
     </div>
     <div class="benefits__items hide-desktop">
       {% for block in section.blocks %}
-      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile">
+      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
         <h4 class="light">{{ block.settings.title }}</h4>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
       </div>
