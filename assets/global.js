@@ -1437,9 +1437,16 @@ $(window).on('resize scroll', function() {
   
 });
 
-$('.image-with-dropdowns__q').click(function () {
+$('.image-with-dropdowns__q').click(function (e) {
   // Check if the clicked accordion is already active
   const isActive = $(this).hasClass('active');
+
+  console.log(e.target)
+  // let top = e.target.offsetTop;
+  // window.scroll({
+  //   top: top, // if you have a sticky nav, take the height of that off 'top' e.g. 'top - 100';
+  //   behavior: 'smooth'
+  // });
 
   // Close all slides
   $('.image-with-dropdowns__a').slideUp();
