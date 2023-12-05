@@ -2193,7 +2193,7 @@ span#timer strong {
 }
 
 .template-product .rtx_one_time_price .rtx_compare_price {
-  color: #797B7A;
+  color: var(--charcoal-60);
   font-weight: 300;
   font-size: 18px;
   text-decoration: line-through;
