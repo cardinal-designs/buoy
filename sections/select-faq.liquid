@@ -23,11 +23,11 @@
     </div>
     <div class="benefits__items hide-desktop">
       {% for block in section.blocks %}
-      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile">
-        <h4 class="light {% if forloop.index == 1 %}active{% endif %}">{{ block.settings.title }}</h4>
+      <div data-id="{{ forloop.index }}" class="page-width benefits__item-mobile select-faq__item-mobile">
+        <h4 class="light">{{ block.settings.title }}</h4>
         <div class="select-faq__x {% if forloop.index == 1 %}minus{% endif %}"></div>
       </div>
-      <div data-id="{{ forloop.index }}" class="page-width mobile-benefits-info" {% if forloop.index0 == 0 %}style="display: block;"{% endif %}>
+      <div data-id="{{ forloop.index }}" class="page-width mobile-benefits-info">
       <p class="sh2 hide-desktop">{{ block.settings.text }}</p>
        <div  class="select-faq__titles-container">
         {% if block.settings.title1 != blank %}
