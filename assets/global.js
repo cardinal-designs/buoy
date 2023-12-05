@@ -1016,6 +1016,7 @@ $('.product__media-list').slick({
   appendArrows: '.product__media-arrows',
   centerMode: true,
   centerPadding: '20px',
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 768,
