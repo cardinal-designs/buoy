@@ -1481,7 +1481,7 @@ $('.image-with-dropdowns__q').click(function () {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
         $('html, body').animate({
-          scrollTop: offsetTop - 100
+          scrollTop: offsetTop - 50
         }, 300);
       }
     });
@@ -1491,11 +1491,6 @@ $('.image-with-dropdowns__q').click(function () {
     // If the accordion item is active, close it and scroll back to the top
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
-    
-    // Scroll back to the top of the page
-    $('html, body').animate({
-      scrollTop: 0
-    }, 300);
   }
 });
 
