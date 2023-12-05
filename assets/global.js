@@ -1015,7 +1015,7 @@ $('.product__media-list').slick({
   nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
   appendArrows: '.product__media-arrows',
   centerMode: true,
-  centerPadding: '200px',
+  centerPadding: '20%',
   variableWidth: true,
   responsive: [
     {
