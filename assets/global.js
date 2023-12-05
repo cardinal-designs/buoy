@@ -1456,6 +1456,10 @@ $('.image-with-dropdowns__q').click(function (e) {
   if (!isActive) {
     $(this).addClass('active');
     $(this).parent().addClass('active');
+    var offsetTop = $(this).offset().top;
+     $('html, body').animate({
+      scrollTop: offsetTop - 100
+    }, 300);
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
