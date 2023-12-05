@@ -1653,7 +1653,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   var offsetTop = $(this).offset().top;
   var scrollHeight = $this.find('.page-width.mobile-benefits-info').prop('scrollHeight');
   $('html, body').animate({
-    scrollTop: offsetTop - scrollHeight
+    scrollTop: offsetTop - $this.find('.page-width mobile-benefits-info').height() - 200
   }, 300);
 
   // var isActive = $(this).find('h3').hasClass('active');
