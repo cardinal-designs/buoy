@@ -12,7 +12,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.dataset.lazySrc=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MTCBJP4');</script>
     <!-- End Google Tag Manager -->
@@ -20,7 +20,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-777256469"></script>
+    <script async data-lazy-src="https://www.googletagmanager.com/gtag/js?id=AW-777256469"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -52,12 +52,14 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     
-    <img width="99999" height="99999" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;" alt="LCP" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">
-
     <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
 
-  
+    <script src="{{ 'preloader.js' | asset_url }}"></script>
+    <script src="{{ 'bootstrap.js' | asset_url }}"></script>
+    <script src="{{ 'preconnect_resources.js' | asset_url }}"></script>
+    <script src="{{ 'lazy.js' | asset_url }}"></script>
+   
     <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -72,9 +74,9 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
     {% endif %}
 
-    {{ content_for_header }}
+    {%- assign content_for_header = content_for_header | replace: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'" -%}
 
-   
+    {{ content_for_header }}
 
     {% style %}
       /* Inter Bold */
@@ -83,6 +85,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
         src: url('{{ 'Inter-Bold.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
       }
 
       /* Inter Mediun */
@@ -91,6 +94,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
         src: url('{{ 'Inter-Medium.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
       }
 
       /* Inter Regular */
@@ -99,6 +103,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
         src: url('{{ 'Inter-Regular.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
       }
 
       /* Inter Light */
@@ -107,6 +112,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
         src: url('{{ 'Inter-Light.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
       }
 
       /* Colors */
@@ -348,6 +354,9 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       });
       </script>
     {% endif %}
+
+    <script src="{{ 'optimization.js' | asset_url }}" defer></script>
+
   </body>
-  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UFRh4Z"></script>
+  <script async type="text/javascript" data-lazy-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UFRh4Z"></script>
 </html>
