@@ -218,6 +218,56 @@
         "add_bottom_border": false
       }
     },
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
+      "type": "give-back-blocks",
+      "blocks": {
+        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
+            "title": "<h3 style=\"font-size:20px\">Purity In Every Drop<\/h3>",
+            "text": "<p style=\"font-size:15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>",
+            "link": "#chronic",
+            "link_text": "Get Your Discount"
+          }
+        },
+        "cb342647-8792-4891-8a6c-718b91cb7587": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
+            "title": "<h3 style=\"font-size:20px\">Quick Hydration, Naturally<\/h3>",
+            "text": "<p style=\"font-size:15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>",
+            "link": "shopify:\/\/products\/hydration-drops",
+            "link_text": "Hydrate and Support"
+          }
+        },
+        "65881b14-1267-4676-a9aa-1bb942915aa4": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
+            "title": "Chronic Illness Creators",
+            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
+            "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
+            "link_text": "Follow Buoy on TikTok"
+          }
+        }
+      },
+      "block_order": [
+        "db928337-6fc0-4c06-805b-d823af2f4c1b",
+        "cb342647-8792-4891-8a6c-718b91cb7587",
+        "65881b14-1267-4676-a9aa-1bb942915aa4"
+      ],
+      "settings": {
+        "title": "Buoy’s Natural Approach",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
       "type": "product-slider-2",
       "blocks": {
@@ -1010,55 +1060,6 @@
         "background": "none"
       }
     },
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
-      "type": "give-back-blocks",
-      "blocks": {
-        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
-            "title": "<h3 style=\"font-size:20px\">Purity In Every Drop<\/h3>",
-            "text": "<p style=\"font-size:15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>",
-            "link": "#chronic",
-            "link_text": "Get Your Discount"
-          }
-        },
-        "cb342647-8792-4891-8a6c-718b91cb7587": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
-            "title": "<h3 style=\"font-size:20px\">Quick Hydration, Naturally<\/h3>",
-            "text": "<p style=\"font-size:15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>",
-            "link": "shopify:\/\/products\/hydration-drops",
-            "link_text": "Hydrate and Support"
-          }
-        },
-        "65881b14-1267-4676-a9aa-1bb942915aa4": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
-            "title": "Chronic Illness Creators",
-            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
-            "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
-            "link_text": "Follow Buoy on TikTok"
-          }
-        }
-      },
-      "block_order": [
-        "db928337-6fc0-4c06-805b-d823af2f4c1b",
-        "cb342647-8792-4891-8a6c-718b91cb7587",
-        "65881b14-1267-4676-a9aa-1bb942915aa4"
-      ],
-      "settings": {
-        "title": "Buoy’s Natural Approach",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "none"
-      }
-    },
     "271bbc88-ee3e-4299-aee5-2c393d4bf363": {
       "type": "pee-club-value-props",
       "blocks": {
@@ -1140,6 +1141,7 @@
     "50df382c-255c-4272-b876-eca398cca73a",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
@@ -1157,7 +1159,6 @@
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953"
   ]
