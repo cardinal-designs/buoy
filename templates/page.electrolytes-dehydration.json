@@ -218,6 +218,57 @@
         "add_bottom_border": false
       }
     },
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
+      "type": "text-block-section-2",
+      "blocks": {
+        "71af6773-5252-4003-91a5-b1690c90cb84": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px\">Purity In Every Drop<\/h3>",
+            "suptext": "",
+            "text": "<p style=\"font-size: 15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>"
+          }
+        },
+        "995875da-7462-4aaa-a036-35bf1899a1d1": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">Quick Hydration, Naturally<\/h3>",
+            "suptext": "",
+            "text": "<p style=\"font-size: 15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>"
+          }
+        },
+        "365d3728-31ba-4a31-85f8-0e225017bf50": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "suptext": "<strong>Stress<\/strong>",
+            "text": "When stressed or feeling anxious, our muscles tense up and become  rigid, which can lead to muscle cramping.<br><br>While anxiety and stress are hard to control, having plenty of electrolytes and fluids in your body allows your body to handle excess levels of cortisol better than it would without."
+          }
+        },
+        "0944c29e-8858-4c67-8143-998693ed58f5": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "suptext": "<strong>Nerve Compression<\/strong>",
+            "text": "Poor posture and overworking muscle groups may restrict blood flow, which is a common cause of leg cramps.<br><br>Daily things like sitting too long in one spot, standing on hard and flat floors and even poor posture while standing and sitting may be a factor for leg cramps."
+          }
+        }
+      },
+      "block_order": [
+        "71af6773-5252-4003-91a5-b1690c90cb84",
+        "995875da-7462-4aaa-a036-35bf1899a1d1",
+        "365d3728-31ba-4a31-85f8-0e225017bf50",
+        "0944c29e-8858-4c67-8143-998693ed58f5"
+      ],
+      "settings": {
+        "section_title": "<h2>Buoy’s Natural Approach<\/h2>\n\n<p style=\"font-size: 15px\">Buoy's purposefully unflavored and unsweetened line of electrolyte drops infuse any beverage with fast-acting hydration without sugar, sweeteners, or anything that can affect blood sugar levels. Sourced from nature’s most potent ingredient sources.<\/p>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bottom"
+      }
+    },
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
       "type": "give-back-blocks",
       "blocks": {
@@ -261,6 +312,7 @@
         "cb342647-8792-4891-8a6c-718b91cb7587",
         "65881b14-1267-4676-a9aa-1bb942915aa4"
       ],
+      "disabled": true,
       "settings": {
         "title": "Buoy’s Natural Approach",
         "add_top_border": true,
@@ -542,57 +594,6 @@
         "add_top_border": false,
         "add_bottom_border": false,
         "background": "none"
-      }
-    },
-    "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
-      "type": "text-block-section-2",
-      "blocks": {
-        "71af6773-5252-4003-91a5-b1690c90cb84": {
-          "type": "block",
-          "settings": {
-            "title": "<h3 style=\"font-size: 20px\">Purity In Every Drop<\/h3>",
-            "suptext": "",
-            "text": "<p style=\"font-size: 15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>"
-          }
-        },
-        "995875da-7462-4aaa-a036-35bf1899a1d1": {
-          "type": "block",
-          "settings": {
-            "title": "<h3 style=\"font-size:20px\">Quick Hydration, Naturally<\/h3>",
-            "suptext": "",
-            "text": "<p style=\"font-size: 15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>"
-          }
-        },
-        "365d3728-31ba-4a31-85f8-0e225017bf50": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "title": "",
-            "suptext": "<strong>Stress<\/strong>",
-            "text": "When stressed or feeling anxious, our muscles tense up and become  rigid, which can lead to muscle cramping.<br><br>While anxiety and stress are hard to control, having plenty of electrolytes and fluids in your body allows your body to handle excess levels of cortisol better than it would without."
-          }
-        },
-        "0944c29e-8858-4c67-8143-998693ed58f5": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "title": "",
-            "suptext": "<strong>Nerve Compression<\/strong>",
-            "text": "Poor posture and overworking muscle groups may restrict blood flow, which is a common cause of leg cramps.<br><br>Daily things like sitting too long in one spot, standing on hard and flat floors and even poor posture while standing and sitting may be a factor for leg cramps."
-          }
-        }
-      },
-      "block_order": [
-        "71af6773-5252-4003-91a5-b1690c90cb84",
-        "995875da-7462-4aaa-a036-35bf1899a1d1",
-        "365d3728-31ba-4a31-85f8-0e225017bf50",
-        "0944c29e-8858-4c67-8143-998693ed58f5"
-      ],
-      "settings": {
-        "section_title": "<h2>Buoy’s Natural Approach<\/h2>\n\n<p style=\"font-size: 15px\">Buoy's purposefully unflavored and unsweetened line of electrolyte drops infuse any beverage with fast-acting hydration without sugar, sweeteners, or anything that can affect blood sugar levels. Sourced from nature’s most potent ingredient sources.<\/p>",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "bottom"
       }
     },
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
@@ -1151,6 +1152,7 @@
     "50df382c-255c-4272-b876-eca398cca73a",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
@@ -1158,7 +1160,6 @@
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
-    "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
