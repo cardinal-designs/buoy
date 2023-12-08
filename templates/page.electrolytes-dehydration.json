@@ -728,6 +728,7 @@
       "blocks": {
         "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "title": "Purposefully Unflavored",
             "emoji": "⚡️",
@@ -737,6 +738,7 @@
         },
         "a8857c10-0308-470e-9fda-843eda7c0033": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "title": "Harvested, Not Manufactured",
             "emoji": "🌊",
@@ -746,6 +748,7 @@
         },
         "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "title": "3x More Bioavailable",
             "emoji": "🧬",
@@ -755,6 +758,7 @@
         },
         "c3ba0924-90f1-4215-a807-52f05df73ae2": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "title": "On-The-Go Electrolytes",
             "emoji": "🏃‍♀️",
@@ -764,6 +768,7 @@
         },
         "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "title": "Sustainably Hydrate",
             "emoji": "♻️",
@@ -1003,7 +1008,7 @@
         "0cdc5b4f-8de6-41ea-b8d1-fd4a669fd64f"
       ],
       "settings": {
-        "title": "FAQs",
+        "title": "<h2>FAQs<\/h2>",
         "text": "Everything you need to know about how to stop cramps with electrolytes.",
         "add_top_border": true,
         "add_bottom_border": true,
