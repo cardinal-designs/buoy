@@ -596,6 +596,55 @@
         "background": "bg_color"
       }
     },
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
+      "type": "give-back-blocks",
+      "blocks": {
+        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
+            "title": "Get Your Chronic Illness Discount",
+            "text": "Get an additional 15% off Buoy's already discounted subscription plan if you have a chronic illnesses and you're looking for clean hydration.",
+            "link": "#chronic",
+            "link_text": "Get Your Discount"
+          }
+        },
+        "cb342647-8792-4891-8a6c-718b91cb7587": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
+            "title": "Donations to Nonprofits",
+            "text": "We donate a bottle for every bottle sold on our website to a verified 501(c)3 nonprofit supporting chronic illness communities. If you don’t have an illness, you can still support those who do.",
+            "link": "#shop",
+            "link_text": "Hydrate and Support"
+          }
+        },
+        "65881b14-1267-4676-a9aa-1bb942915aa4": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
+            "title": "Chronic Illness Creators",
+            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
+            "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
+            "link_text": "Follow Buoy on TikTok"
+          }
+        }
+      },
+      "block_order": [
+        "db928337-6fc0-4c06-805b-d823af2f4c1b",
+        "cb342647-8792-4891-8a6c-718b91cb7587",
+        "65881b14-1267-4676-a9aa-1bb942915aa4"
+      ],
+      "settings": {
+        "title": "<h2>Convenience and Usage of Buoy’s Drops<\/h2>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
     "304f34df-6587-4eb2-a832-96b49eef9918": {
       "type": "product-slider-2",
       "blocks": {
@@ -634,8 +683,9 @@
         "dca0e5dd-357d-4543-b722-8d65bedef3b1",
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
+      "disabled": true,
       "settings": {
-        "title": "<h2>Convenience and Usage of Buoy’s Drops<\/h2>",
+        "title": "Convenience and Usage of Buoy’s Drops",
         "text": "<p style=\"font-size:20px\">Let's face it: In today's fast-paced world, convenience is king. And that's where Buoy's electrolyte drops shine. No powders to mix, no bulky bottles to lug around—just a small, sleek bottle of liquid goodness that you can carry in your pocket or purse. Here’s how to use Buoy’s Hydrating Wellness Drops:<\/p>",
         "shop_all_label": "Shop All Products",
         "shop_all_link": "shopify:\/\/collections\/all",
@@ -1009,56 +1059,6 @@
         "background": "none"
       }
     },
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
-      "type": "give-back-blocks",
-      "blocks": {
-        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
-            "title": "Get Your Chronic Illness Discount",
-            "text": "Get an additional 15% off Buoy's already discounted subscription plan if you have a chronic illnesses and you're looking for clean hydration.",
-            "link": "#chronic",
-            "link_text": "Get Your Discount"
-          }
-        },
-        "cb342647-8792-4891-8a6c-718b91cb7587": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
-            "title": "Donations to Nonprofits",
-            "text": "We donate a bottle for every bottle sold on our website to a verified 501(c)3 nonprofit supporting chronic illness communities. If you don’t have an illness, you can still support those who do.",
-            "link": "#shop",
-            "link_text": "Hydrate and Support"
-          }
-        },
-        "65881b14-1267-4676-a9aa-1bb942915aa4": {
-          "type": "block",
-          "settings": {
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
-            "title": "Chronic Illness Creators",
-            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
-            "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
-            "link_text": "Follow Buoy on TikTok"
-          }
-        }
-      },
-      "block_order": [
-        "db928337-6fc0-4c06-805b-d823af2f4c1b",
-        "cb342647-8792-4891-8a6c-718b91cb7587",
-        "65881b14-1267-4676-a9aa-1bb942915aa4"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "3 Ways Buoy Gives Back",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "none"
-      }
-    },
     "271bbc88-ee3e-4299-aee5-2c393d4bf363": {
       "type": "pee-club-value-props",
       "blocks": {
@@ -1139,6 +1139,7 @@
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
@@ -1146,7 +1147,6 @@
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
-    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363"
   ]
 }
