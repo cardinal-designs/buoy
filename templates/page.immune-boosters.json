@@ -203,6 +203,56 @@
         "add_bottom_border": false
       }
     },
+    "304f34df-6587-4eb2-a832-96b49eef9918": {
+      "type": "product-slider-2",
+      "blocks": {
+        "915598b8-73ba-4440-9c78-70b475eb492a": {
+          "type": "block",
+          "settings": {
+            "product": "hydration-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
+          }
+        },
+        "475664b0-eea5-49a4-9521-d603009b918d": {
+          "type": "block",
+          "settings": {
+            "product": "energy-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
+          }
+        },
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
+          "type": "block",
+          "settings": {
+            "product": "immunity-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
+          }
+        },
+        "9d231586-a60b-42ac-9721-d7ea47797c99": {
+          "type": "block",
+          "settings": {
+            "product": "wellness-kit",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "915598b8-73ba-4440-9c78-70b475eb492a",
+        "475664b0-eea5-49a4-9521-d603009b918d",
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
+        "9d231586-a60b-42ac-9721-d7ea47797c99"
+      ],
+      "settings": {
+        "title": "<h2>Buoy Immune Booster Products and Their Ingredients<\/h2>",
+        "text": "<p style=\"font-size: 15px\">When it comes to supporting your immune system, not all electrolyte drops are created equal. At Buoy, we've specially formulated our products to give your body the essential nutrients it craves for optimal health.<br><br>\n\nAnd you can trust that every ingredient is scientifically backed to offer real, measurable benefits. Here's a rundown of what we offer:<\/p>",
+        "shop_all_label": "Shop All Products",
+        "shop_all_link": "shopify:\/\/collections\/all",
+        "promo_link_text": "",
+        "promo_link": "",
+        "background": "bg_color",
+        "add_top_border": true,
+        "add_bottom_border": true
+      }
+    },
     "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
       "type": "text-block-section-2",
       "blocks": {
@@ -503,57 +553,6 @@
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "none"
-      }
-    },
-    "304f34df-6587-4eb2-a832-96b49eef9918": {
-      "type": "product-slider-2",
-      "blocks": {
-        "915598b8-73ba-4440-9c78-70b475eb492a": {
-          "type": "block",
-          "settings": {
-            "product": "hydration-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
-          }
-        },
-        "475664b0-eea5-49a4-9521-d603009b918d": {
-          "type": "block",
-          "settings": {
-            "product": "energy-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
-          }
-        },
-        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
-          "type": "block",
-          "settings": {
-            "product": "immunity-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
-          }
-        },
-        "9d231586-a60b-42ac-9721-d7ea47797c99": {
-          "type": "block",
-          "settings": {
-            "product": "wellness-kit",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "915598b8-73ba-4440-9c78-70b475eb492a",
-        "475664b0-eea5-49a4-9521-d603009b918d",
-        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
-        "9d231586-a60b-42ac-9721-d7ea47797c99"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Convenience and Usage of Buoy’s Drops",
-        "text": "<p style=\"font-size:20px\">Let's face it: In today's fast-paced world, convenience is king. And that's where Buoy's electrolyte drops shine. No powders to mix, no bulky bottles to lug around—just a small, sleek bottle of liquid goodness that you can carry in your pocket or purse. Here’s how to use Buoy’s Hydrating Wellness Drops:<\/p>",
-        "shop_all_label": "Shop All Products",
-        "shop_all_link": "shopify:\/\/collections\/all",
-        "promo_link_text": "",
-        "promo_link": "",
-        "background": "bg_color",
-        "add_top_border": true,
-        "add_bottom_border": true
       }
     },
     "a09de49d-45af-40d0-969c-1445290cd3be": {
@@ -1149,6 +1148,7 @@
     "31e36676-5821-47f9-a328-6c162b259d29",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
+    "304f34df-6587-4eb2-a832-96b49eef9918",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
@@ -1159,7 +1159,6 @@
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
-    "304f34df-6587-4eb2-a832-96b49eef9918",
     "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
