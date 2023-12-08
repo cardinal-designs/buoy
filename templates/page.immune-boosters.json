@@ -208,6 +208,7 @@
       "blocks": {
         "038404e6-07ff-4263-843c-2cc50033bfd5": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Buoy_on_a_Plane_1_-min.jpg",
             "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
@@ -220,6 +221,7 @@
         },
         "23a5c523-2b5a-4ebe-a612-0c0050ccfa43": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_4CA27A23F307-1.jpg",
             "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
@@ -232,6 +234,7 @@
         },
         "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_FCC75D1016B9-1.jpg",
             "tags": "<li>Hydration<\/li>",
@@ -245,6 +248,7 @@
         },
         "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Image_Section_4b_D.png",
             "tags": "<li>Hydration<\/li>",
@@ -263,10 +267,9 @@
         "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4",
         "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3"
       ],
-      "disabled": true,
       "settings": {
         "review_emoji": "⭐️",
-        "head-title": "3,000 +trusted reviews",
+        "head-title": "What Our Customers are Saying",
         "sub-text": "",
         "button_label": "Read All Reviews",
         "button_link": "shopify:\/\/pages\/reviews",
@@ -439,6 +442,7 @@
         "2a6bd8e3-7b04-400d-a28b-a3a907955de4",
         "7d0679b9-e537-4027-af9f-ddebb9b41e54"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Which is better?<\/strong><br><span class=\"medium\">Electrolyte Drinks<\/span> <i>vs. <\/i><span class=\"medium\">Sports Drinks<\/span>",
         "link_text": "Make An Electrolyte Drink At Home —>",
@@ -548,40 +552,6 @@
         "subtext": "Buoy turns any drink an electrolyte and multi-mineral beverage in one squeeze.",
         "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
         "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
-      }
-    },
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
-      "type": "pee-club-half-image",
-      "blocks": {
-        "7408eeea-301f-442d-a916-b380c5201277": {
-          "type": "block",
-          "settings": {
-            "title": "",
-            "list": "<p style=\"font-size: 15px\">When it comes to bolstering your immune system, you shouldn't have to compromise with additives and synthetic ingredients. At Buoy, we've crafted a line of electrolyte and mineral drops that prioritize your well-being from the inside out.<br><br>\n\nExperience the Buoy difference for an entire month, risk-free. If our drops don't meet your expectations, we'll give you a full refund, no questions asked.<br><br>\n\n✓ All Natural Ingredients <br>\n✓ Immunity-Boosting Vitamins & Minerals <br>\n✓ Sugar Free <br>\n✓ Stevia & Sweetener Free <br>\n✓ No Flavors <br>\n✓ No Calories or Carbohydrates <br>\n✓ NonGMO & Vegan <br>\n✓ 3x More Bioavailable Form Factor<br><br>\n\nMONEY BACK GUARANTEE | 20% OFF FIRST ORDER<\/p><br>\n\n <a href=\"https:\/\/justaddbuoy.com\/products\/hydration-drops\">\n          <button style=\"width: 100%;\" class=\"pee-club-product-info__button button\">Boost Your Immunity With Buoy — Try It For a Month, Risk Free<\/button><\/a>",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Image_Section_New.jpg"
-          }
-        },
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
-          "type": "block",
-          "settings": {
-            "title": "",
-            "list": "",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
-          }
-        }
-      },
-      "block_order": [
-        "7408eeea-301f-442d-a916-b380c5201277",
-        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3"
-      ],
-      "settings": {
-        "title": "Why Choose Buoy",
-        "text": "",
-        "background": "",
-        "add_top_border": false,
-        "add_bottom_border": false
       }
     },
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
@@ -815,6 +785,7 @@
         "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe",
         "2b5efa08-8895-40da-b13e-bf8a0e1b45c5"
       ],
+      "disabled": true,
       "settings": {
         "text": "BOARD OF HEALTH PROFESSIONALS",
         "head-title": "<span class=\"medium no-italic\">Trust the<\/span> Experts",
@@ -825,6 +796,40 @@
         "background_color": "#f8f1eb",
         "add_top_border": true,
         "add_bottom_border": true
+      }
+    },
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
+      "type": "pee-club-half-image",
+      "blocks": {
+        "7408eeea-301f-442d-a916-b380c5201277": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "list": "<p style=\"font-size: 15px\">When it comes to bolstering your immune system, you shouldn't have to compromise with additives and synthetic ingredients. At Buoy, we've crafted a line of electrolyte and mineral drops that prioritize your well-being from the inside out.<br><br>\n\nExperience the Buoy difference for an entire month, risk-free. If our drops don't meet your expectations, we'll give you a full refund, no questions asked.<br><br>\n\n✓ All Natural Ingredients <br>\n✓ Immunity-Boosting Vitamins & Minerals <br>\n✓ Sugar Free <br>\n✓ Stevia & Sweetener Free <br>\n✓ No Flavors <br>\n✓ No Calories or Carbohydrates <br>\n✓ NonGMO & Vegan <br>\n✓ 3x More Bioavailable Form Factor<br><br>\n\nMONEY BACK GUARANTEE | 20% OFF FIRST ORDER<\/p><br>\n\n <a href=\"https:\/\/justaddbuoy.com\/products\/hydration-drops\">\n          <button style=\"width: 100%;\" class=\"pee-club-product-info__button button\">Boost Your Immunity With Buoy — Try It For a Month, Risk Free<\/button><\/a>",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Image_Section_New.jpg"
+          }
+        },
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "list": "",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
+          }
+        }
+      },
+      "block_order": [
+        "7408eeea-301f-442d-a916-b380c5201277",
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3"
+      ],
+      "settings": {
+        "title": "Why Choose Buoy",
+        "text": "",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "19f84cc7-e91f-487d-a62c-2e8944758d96": {
@@ -1146,12 +1151,12 @@
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
-    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
