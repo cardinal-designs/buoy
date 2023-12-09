@@ -947,16 +947,16 @@
           "type": "faq_item",
           "disabled": true,
           "settings": {
-            "title": "Can I find your drinks in stores?",
-            "answer": "Yes! Buoy is nationwide in CVS, Walgreens and boutique natural grocers across the country.<br><br>Check our store locator to find the closest stores to you or order directly from our site."
+            "title": "",
+            "answer": ""
           }
         },
         "0cdc5b4f-8de6-41ea-b8d1-fd4a669fd64f": {
           "type": "faq_item",
           "disabled": true,
           "settings": {
-            "title": "What is your return policy?",
-            "answer": "Buoy offers a 30 day money back guarantee on all of our products purchased through our website so you can try it risk free in your routine to see if it's a good fit.<br><br>If it's not for you, get a full refund no questions asked."
+            "title": "",
+            "answer": ""
           }
         }
       },
@@ -994,11 +994,12 @@
       "blocks": {
         "db928337-6fc0-4c06-805b-d823af2f4c1b": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "video_url": "",
             "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
-            "title": "Get Your Chronic Illness Discount",
-            "text": "Get an additional 15% off Buoy's already discounted subscription plan if you have a chronic illnesses and you're looking for clean hydration.",
+            "title": "",
+            "text": "",
             "link": "#chronic",
             "link_text": "Get Your Discount"
           }
@@ -1009,8 +1010,8 @@
           "settings": {
             "video_url": "",
             "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
-            "title": "Donations to Nonprofits",
-            "text": "We donate a bottle for every bottle sold on our website to a verified 501(c)3 nonprofit supporting chronic illness communities. If you don’t have an illness, you can still support those who do.",
+            "title": "",
+            "text": "",
             "link": "#shop",
             "link_text": "Hydrate and Support"
           }
@@ -1021,8 +1022,8 @@
           "settings": {
             "video_url": "",
             "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
-            "title": "Chronic Illness Creators",
-            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
+            "title": "",
+            "text": "",
             "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
             "link_text": "Follow Buoy on TikTok"
           }
@@ -1035,7 +1036,7 @@
       ],
       "disabled": true,
       "settings": {
-        "title": "3 Ways Buoy Gives Back",
+        "title": "",
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "none"
