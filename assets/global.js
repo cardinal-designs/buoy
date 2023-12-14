@@ -1030,6 +1030,9 @@ $(document).ready(function () {
   });
 	$(".product__media-list").on("beforeChange", function (slick) {
     console.log(".slick-prev");
+    if ($(".slick-prev").hasClass("slick-disabled")) {
+      $(".slick-prev").addClass("test");
+    }
 		// if ($(".slick-prev").hasClass("slick-disabled")) {
 		// 	$(".slick-prev").addClass("test");
 		// } else {
