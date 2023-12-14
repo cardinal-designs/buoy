@@ -1024,7 +1024,16 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ]
+  ],
+  beforeChange: function(event, slick, currentSlide, nextSlide) {
+    // first slide, hide the left arrow
+    if (nextSlide === 0) {
+      $('.slick-prev').hide();
+    } else {
+      $('.slick-prev').show();
+    }
+  }
+
 })
 
 // People
