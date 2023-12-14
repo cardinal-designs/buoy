@@ -1030,7 +1030,7 @@ $(document).ready(function () {
   });
 	$(".product__media-list").on("afterChange", function () {
 		if ($(".slick-prev").hasClass("slick-disabled")) {
-			$(".prev-btn").addClass("slick-disabled");
+			$(".slick-prev").addClass("test");
 		} else {
 			$(".prev-btn").removeClass("slick-disabled");
 		}
