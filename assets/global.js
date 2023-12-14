@@ -1029,16 +1029,17 @@ $(document).ready(function () {
     ]
   });
 	$(".product__media-list").on("afterChange", function () {
-		if ($(".slick-prev").hasClass("slick-disabled")) {
-			$(".slick-prev").addClass("test");
-		} else {
-			$(".prev-btn").removeClass("slick-disabled");
-		}
-		if ($(".slick-next").hasClass("slick-disabled")) {
-			$(".next-btn").addClass("slick-disabled");
-		} else {
-			$(".next-btn").removeClass("slick-disabled");
-		}
+    console.log('hey');
+		// if ($(".slick-prev").hasClass("slick-disabled")) {
+		// 	$(".slick-prev").addClass("test");
+		// } else {
+		// 	$(".prev-btn").removeClass("slick-disabled");
+		// }
+		// if ($(".slick-next").hasClass("slick-disabled")) {
+		// 	$(".next-btn").addClass("slick-disabled");
+		// } else {
+		// 	$(".next-btn").removeClass("slick-disabled");
+		// }
 	});
 });
 
