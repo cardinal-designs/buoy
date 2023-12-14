@@ -1010,22 +1010,44 @@ $('.chronic-multicolumn__slider').slick({
 
 
 // PDP main slider
-$('.product__media-list').slick({
-  infinite: false,
-  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
-  appendArrows: '.product__media-arrows',
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '194px',
-        variableWidth: true,
+$(document).ready(function () {
+  $('.product__media-list').slick({
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
+    appendArrows: '.product__media-arrows',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '194px',
+          variableWidth: true,
+        }
       }
-    }
-  ]
+    ]
+  });
+  	$(".prev-btn").click(function () {
+		$(".slick-list").slick("slickPrev");
+	});
+
+	$(".next-btn").click(function () {
+		$(".slick-list").slick("slickNext");
+	});
+	$(".prev-btn").addClass("slick-disabled");
+	$(".slick-list").on("afterChange", function () {
+		if ($(".slick-prev").hasClass("slick-disabled")) {
+			$(".prev-btn").addClass("slick-disabled");
+		} else {
+			$(".prev-btn").removeClass("slick-disabled");
+		}
+		if ($(".slick-next").hasClass("slick-disabled")) {
+			$(".next-btn").addClass("slick-disabled");
+		} else {
+			$(".next-btn").removeClass("slick-disabled");
+		}
+	});
 });
 
 
