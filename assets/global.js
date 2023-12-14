@@ -1027,12 +1027,13 @@ $('.product__media-list').slick({
       }
     }
   ],
+  onInit: function(slick) {
+    // Check if the slider is at the start
+    if (slick.currentSlide === 0) {
+      $('.slick-prev').addClass('start-prev-arrow');
+    }
+  }
 })
-
-$('.product__media-list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  console.log(slick.$prevArrow);
-});
-
 
 // People
 $('.people-slider__drink-slider--1').slick({
