@@ -382,15 +382,11 @@ $('.text-image-toggle__button').click(function() {
 })
 
 $('.dropdown-container-item__title').click(function() {
-  // Check if the clicked item is already active
   var isActive = $(this).hasClass('active');
-
   // Remove 'active' class from all titles
   $('.dropdown-container-item__title').removeClass('active');
-
   // Close all dropdowns
   $('.dropdown-container-item__body').slideUp();
-
   // If the clicked item was not active, make it active and slide down its content
   if (!isActive) {
     $(this).addClass('active');
