@@ -1255,7 +1255,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
   let add_items;
   let id = Number($(this).data('id'));
-  console.log(id)
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
