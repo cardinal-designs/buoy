@@ -1013,7 +1013,7 @@ $('.chronic-multicolumn__slider').slick({
 $(document).ready(function () {
   $('.product__media-list').slick({
     infinite: false,
-    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+    prevArrow: '<button type="button" class="slick-prev test"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
     appendArrows: '.product__media-arrows',
     responsive: [
@@ -1031,7 +1031,7 @@ $(document).ready(function () {
 	$(".product__media-list").on("beforeChange", function (slick) {
     console.log(".slick-prev");
     if ($(".slick-prev").hasClass("slick-disabled")) {
-      $(".slick-prev").addClass("test");
+      console.log("test");
     } else {
       $(".slick-prev").removeClass("test");
     }
