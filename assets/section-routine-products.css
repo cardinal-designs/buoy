@@ -49,7 +49,12 @@ routine-products__container {
   margin-bottom: 14px;
 }
 
-.routine-products__new p {
+.routine-products__extra {
+  background: var(--green-2);
+}
+
+.routine-products__new p,
+.routine-products__extra p {
   margin: 0;
 }
 
