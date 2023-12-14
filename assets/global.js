@@ -1011,7 +1011,6 @@ $('.chronic-multicolumn__slider').slick({
 
 // PDP main slider
 $('.product__media-list').slick({
-  swipe: false,
   prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
   nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
   appendArrows: '.product__media-arrows',
@@ -1025,16 +1024,7 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ],
-  beforeChange: function(slick, currentSlide, nextSlide) {
-    // Enable swipe only if not on the first slide
-    if (nextSlide > 0) {
-      $('.product__media-list').slick('setOption', 'swipe', true);
-    } else {
-      $('.product__media-list').slick('setOption', 'swipe', false);
-    }
-  }
-
+  ]
 })
 
 // People
