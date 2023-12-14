@@ -1011,7 +1011,7 @@ $('.chronic-multicolumn__slider').slick({
 
 // PDP main slider
 $('.product__media-list').slick({
-    onInit: function(slick) {
+    beforeChange: function(slick) {
       console.log(slick)
 ;    // Check if the slider is at the start
     // if (slick.currentSlide === 0) {
