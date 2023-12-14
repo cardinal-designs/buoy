@@ -1011,12 +1011,8 @@ $('.chronic-multicolumn__slider').slick({
 
 // PDP main slider
 $('.product__media-list').slick({
-    beforeChange: function(slick) {
-      console.log(slick)
-;    // Check if the slider is at the start
-    // if (slick.currentSlide === 0) {
-    //   $('.slick-prev').addClass('start-prev-arrow');
-    // }
+  beforeChange: function(slick) {
+    console.log(slick);
   },
   infinite: false,
   slidesToScroll: 1,
