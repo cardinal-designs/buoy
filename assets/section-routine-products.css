@@ -21,7 +21,7 @@ routine-products__container {
 }
 
 .routine-products__product {
-  background: #f8f8f8;
+  background: var(--gray-lighest);
   border-radius: 15px;
   padding: 34px 30px 30px;
   max-width: 421px;
@@ -68,7 +68,7 @@ routine-products__container {
 .routine-products__product button {
   width: 100%;
   margin-top: 18px;
-  background: #f8f8f8;
+  background: var(--gray-lighest);
   height: 38px;
   padding: 0;
   cursor: pointer;
