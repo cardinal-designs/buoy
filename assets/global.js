@@ -1030,7 +1030,7 @@ $('.product__media-list').slick({
 })
 
 $('.product__media-list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  console.log(currentSlide);
+  console.log(slick);
 });
 
 
