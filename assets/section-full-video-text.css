@@ -3,6 +3,15 @@
   width: 100%;
 }
 
+.full-video__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
 .video-section__media video {
   border-radius: 10px;
   width: 100%;
@@ -96,13 +105,4 @@
   .full-video__container .green-title {
     font-size: 14px;
   }
-}
-
-.full-video__overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2);
-  z-index: 1;
 }
