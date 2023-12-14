@@ -1035,7 +1035,7 @@ $(document).ready(function () {
       $(".slick-prev").removeClass("test");
     }
 
-    if ($(".slick-prev").hasClass("slick-disabled")) {
+    if ($(".slick-next").hasClass("slick-disabled")) {
       $(".slick-next").addClass("test");
     } else {
       $(".slick-next").removeClass("test");
