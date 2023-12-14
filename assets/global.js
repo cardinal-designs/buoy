@@ -1028,7 +1028,7 @@ $(document).ready(function () {
       }
     ]
   });
-	$(".product__media-list").on("beforeChange", function (slick) {
+	$(".product__media-list").on("afterChange", function (slick) {
     console.log(".slick-prev");
     if ($(".slick-prev").hasClass("slick-disabled")) {
       console.log("test");
