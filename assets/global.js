@@ -1028,23 +1028,17 @@ $(document).ready(function () {
       }
     ]
   });
+  $(".product__media-list").on("beforeChange", function (slick) {
+    if ($(".slick-prev").hasClass("slick-disabled")) {
+      $(".slick-prev").addClass("test");
+    }
+	});
 	$(".product__media-list").on("afterChange", function (slick) {
     console.log(".slick-prev");
     if ($(".slick-prev").hasClass("slick-disabled")) {
-      console.log("test");
     } else {
       $(".slick-prev").removeClass("test");
     }
-		// if ($(".slick-prev").hasClass("slick-disabled")) {
-		// 	$(".slick-prev").addClass("test");
-		// } else {
-		// 	$(".prev-btn").removeClass("slick-disabled");
-		// }
-		// if ($(".slick-next").hasClass("slick-disabled")) {
-		// 	$(".next-btn").addClass("slick-disabled");
-		// } else {
-		// 	$(".next-btn").removeClass("slick-disabled");
-		// }
 	});
 });
 
