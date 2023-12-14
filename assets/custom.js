@@ -383,15 +383,15 @@ $('.text-image-toggle__button').click(function() {
 
 $('.dropdown-container-item__title').click(function() {
   var isActive = $(this).hasClass('active');
-  $('.dropdown-container-item__body').not(this).removeClass('active');
+  // $('.dropdown-container-item').slideUp();
+  // $('.dropdown-container-item__body').not(this).removeClass('active');
 
-  // If the clicked item was not active, make it active
-  if (!isActive) {
-    $(this).addClass('active');
-  }
-
-  // Slide toggle the associated dropdown content
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active')
+  } else {
+    $(this).addClass('active')
     $(this).next().slideToggle();
+  } 
 })
 
 
