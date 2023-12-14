@@ -1011,6 +1011,13 @@ $('.chronic-multicolumn__slider').slick({
 
 // PDP main slider
 $('.product__media-list').slick({
+    onInit: function(slick) {
+      console.log(slick)
+;    // Check if the slider is at the start
+    // if (slick.currentSlide === 0) {
+    //   $('.slick-prev').addClass('start-prev-arrow');
+    // }
+  },
   infinite: false,
   slidesToScroll: 1,
   prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
@@ -1026,13 +1033,7 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ],
-  onInit: function(slick) {
-    // Check if the slider is at the start
-    if (slick.currentSlide === 0) {
-      $('.slick-prev').addClass('start-prev-arrow');
-    }
-  }
+  ]
 })
 
 // People
