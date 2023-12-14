@@ -1026,12 +1026,7 @@ $('.product__media-list').slick({
     }
   ],
   beforeChange: function(event, slick, currentSlide, nextSlide) {
-    // first slide, hide the left arrow
-    if (nextSlide === 0) {
-      $('.slick-prev').hide();
-    } else {
-      $('.slick-prev').show();
-    }
+    console.log(currentSlide);
   }
 
 })
