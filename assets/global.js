@@ -1028,15 +1028,7 @@ $(document).ready(function () {
       }
     ]
   });
-  	$(".prev-btn").click(function () {
-		$(".slick-list").slick("slickPrev");
-	});
-
-	$(".next-btn").click(function () {
-		$(".slick-list").slick("slickNext");
-	});
-	$(".prev-btn").addClass("slick-disabled");
-	$(".slick-list").on("afterChange", function () {
+	$(".product__media-list").on("afterChange", function () {
 		if ($(".slick-prev").hasClass("slick-disabled")) {
 			$(".prev-btn").addClass("slick-disabled");
 		} else {
