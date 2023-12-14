@@ -1026,7 +1026,7 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ]
+  ],
 })
 
 $('.product__media-list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
