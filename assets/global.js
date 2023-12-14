@@ -1028,11 +1028,8 @@ $(document).ready(function () {
       }
     ]
   });
-	$(".product__media-list").on("afterChange", function () {
-    console.log('hey');
-    if ($(".slick-prev").hasClass("slick-disabled")) {
-      $(".slick-prev").addClass("test");
-    }
+	$(".product__media-list").on("afterChange", function (slick) {
+    console.log(slick.$prevArrow);
 		// if ($(".slick-prev").hasClass("slick-disabled")) {
 		// 	$(".slick-prev").addClass("test");
 		// } else {
