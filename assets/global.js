@@ -1010,22 +1010,40 @@ $('.chronic-multicolumn__slider').slick({
 
 
 // PDP main slider
-$('.product__media-list').slick({
-  prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
-  nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
-  appendArrows: '.product__media-arrows',
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '194px',
-        variableWidth: true,
+$(document).ready(function () {
+  $('.product__media-list').slick({
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev slider-arrow-disable"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
+    appendArrows: '.product__media-arrows',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '194px',
+          variableWidth: true,
+        }
       }
+    ]
+  });
+  // disable/enable arrows
+	$(".product__media-list").on("afterChange", function (slick) {
+    if ($(".slick-prev").hasClass("slick-disabled")) {
+      $(".slick-prev").addClass("slider-arrow-disable");
+    } else {
+      $(".slick-prev").removeClass("slider-arrow-disable");
     }
-  ]
-})
+
+    if ($(".slick-next").hasClass("slick-disabled")) {
+      $(".slick-next").addClass("slider-arrow-disable");
+    } else {
+      $(".slick-next").removeClass("slider-arrow-disable");
+    }
+	});
+});
+
 
 // People
 $('.people-slider__drink-slider--1').slick({

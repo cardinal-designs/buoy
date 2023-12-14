@@ -21,7 +21,7 @@ routine-products__container {
 }
 
 .routine-products__product {
-  background: #f8f8f8;
+  background: var(--gray-lighest);
   border-radius: 15px;
   padding: 34px 30px 30px;
   max-width: 421px;
@@ -30,7 +30,7 @@ routine-products__container {
 }
 
 .routine-products__product h5 {
-  max-width: 250px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -43,20 +43,32 @@ routine-products__container {
   border-radius: 25px;
   width: fit-content;
   margin: 0 auto;
-  background: #DEF647;
-  padding: 2px 10px; 
-  margin-top: 11px;
+  background: var(--green-1);
+  padding: 3px 12px; 
+  margin-top: 16px;
   margin-bottom: 14px;
 }
 
-.routine-products__new p {
+.routine-products__extra {
+  border-radius: 25px;
+  width: fit-content;
+  margin: 0 auto;
+  background: var(--green-2);
+  padding: 3px 12px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+
+.routine-products__new p,
+.routine-products__extra p {
   margin: 0;
 }
 
 .routine-products__product button {
   width: 100%;
   margin-top: 18px;
-  background: #f8f8f8;
+  background: var(--gray-lighest);
   height: 38px;
   padding: 0;
   cursor: pointer;

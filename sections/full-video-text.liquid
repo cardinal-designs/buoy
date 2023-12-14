@@ -7,6 +7,7 @@
       <h1 class="light">{{ section.settings.text }}</h1>
     </div>
     <div class="video-section__media">
+      <div class="full-video__overlay"></div>
       {% if section.settings.video_url_mobile != blank and section.settings.video_url != blank %}
         <video autoplay loop muted playsinline class=" hide-desktop">
           <source src="{{ section.settings.video_url_mobile }}" type="video/mp4">

@@ -132,7 +132,8 @@
         "one_time_text": "One Time Purchase",
         "testimonial_btn_txt": "All Reviews",
         "testimonial_btn_link": "#Product_Reviews",
-        "lowest_price": "$30",
+        "product_feature_text": "",
+        "product_feature_text_two": "",
         "show_drawer_triggers": false
       }
     },
@@ -207,6 +208,8 @@
         "f094a7d8-7384-4dc5-a296-de548c44952f"
       ],
       "settings": {
+        "title_one": "",
+        "title": ""
       }
     },
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a": {
@@ -222,7 +225,10 @@
             "list_item1": "Fast-acting",
             "list_item2": "Easier on stomach",
             "list_item3": "Dissolves instantly and evenly",
-            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup"
+            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
           }
         },
         "6da36b77-d8ff-4636-9463-71aae7e3657e": {
@@ -236,7 +242,10 @@
             "icon_3": "shopify:\/\/shop_images\/Icons_thick_3.png",
             "icon_image_text_3": "B Vitamin Complex<br>\n<span class=\"rhymes-subtitle\">Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.<\/span>",
             "icon_4": "shopify:\/\/shop_images\/Icons_thick_4.png",
-            "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>"
+            "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
           }
         },
         "cb7221f0-8478-4596-bd94-8a4f7aa0ba83": {
@@ -260,13 +269,15 @@
             "icon_4": "shopify:\/\/shop_images\/Icons_thick_6.png",
             "icon_image_text_4": "Antioxidants",
             "icon_image_subtext_4": "Acasia, Rosemary, Blood Orange, Anise",
-            "icon_image_list_4": "<ul>\n<li>Potent, natural stabilizer without adding  citric acid<\/li>\n<\/ul>",
+            "icon_image_list_4": "<ul>\n<li>Potent, natural stabilizer without adding \u2028citric acid<\/li>\n<\/ul>",
             "suptext2": "Our “NO” List",
             "list_item1": "No Sugar, Sweeteners, Flavors",
             "list_item2": "No Carbs or Calories<br><span class=\"rhymes-subtitle\">Fasting friendly electrolytes!<\/span>",
             "list_item3": "No Artificial Ingredients or Additives",
             "list_item4": "",
-            "show_ingredients": true
+            "show_ingredients": true,
+            "show_clinical": false,
+            "show_hsa": false
           }
         },
         "aabbf8b6-7cb9-4f6c-984c-492c48db0a03": {
@@ -287,8 +298,9 @@
             "list_item2_2": "Third-Party Tested",
             "list_item3_2": "3 Clinical Trials in Progress Highlighting Efficacy",
             "list_item4_2": "",
-            "link": "#",
-            "link_text": "View Clinical Trial"
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
           }
         }
       },
@@ -300,8 +312,7 @@
       ],
       "settings": {
         "video_url": "",
-        "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55424_1x1_8.png",
-        "title": "A <span class=\"rhyme-italic\">Next-Generation<\/span> Supplement"
+        "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55424_1x1_8.png"
       }
     },
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
@@ -338,13 +349,13 @@
         "07ea710f-c5e1-4493-b9ed-0e00be1787a2": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/03bdc1f1d41f4b0ea9024b9bef1dc895.mp4"
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/83ea9259fde240fdb8686ae9539e2134.mp4"
           }
         },
         "71792e7c-daab-4c20-a32f-bafa9b93a789": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/03bdc1f1d41f4b0ea9024b9bef1dc895.mp4"
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/83ea9259fde240fdb8686ae9539e2134.mp4"
           }
         }
       },
@@ -359,7 +370,7 @@
       "settings": {
         "suptitle": "how to",
         "title": "Sip On <span class=\"rhyme-italic\">Cellular Hydration<\/span>",
-        "text": "Elevate the drinks you’re already drinking by adding  <span class=\"green-outline\">one quick squeeze<\/span> 4–7 times per day.",
+        "text": "Elevate the drinks you’re already drinking by adding \u2028<span class=\"green-outline\">one quick squeeze<\/span> 4–7 times per day.",
         "background": "#f8f8f8"
       }
     },
@@ -421,7 +432,8 @@
         "title": "Buoy’s Unflavored Approach",
         "text": "We harvest the worlds most <span>bioactive ingredient<\/span> sources in their <span>unprocessed forms<\/span> and deliver their health benefits in the same <span>naturally-balanced, preserved ratios.<\/span>",
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebcc71b6a8aa418cabcb3a722850c681.mp4",
-        "color": "#FFFFFF"
+        "video_url_mobile": "",
+        "color": "#ffffff"
       }
     },
     "dfda59f4-3498-4216-bf73-0eef810f3c0e": {
@@ -431,7 +443,7 @@
           "type": "block",
           "settings": {
             "title": "Why should I subscribe?",
-            "text": "Transformative health benefits come with consistent habits.  Our flexible, sustainable subscription plan supports whole-body  at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today,  100% Risk Free.",
+            "text": "Transformative health benefits come with consistent habits. \u2028Our flexible, sustainable subscription plan supports whole-body \u2028at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today, \u2028100% Risk Free.",
             "title1": "SHORT-TERM RELIEF",
             "text1": "Energy",
             "title2": "LONG-TERM HEALTH BENEFITS",
@@ -586,22 +598,25 @@
         "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
           "type": "block",
           "settings": {
-            "text": "Complete your hydration ritual with our Rescue Salt.",
-            "new_product": true,
-            "product": "rescue-salts",
-            "bottom_text": "Rescue Salt",
+            "text": "Add Energy Drops to this stack to \u2028round out your routine.",
+            "new_product": false,
+            "extra_savings": true,
+            "image": "shopify:\/\/shop_images\/BUOYHYDRATION_55391_2.png",
+            "product": "energy-drops-1",
+            "bottom_text": "Energy Drops",
             "add_to_cart": true
           }
         },
         "73e9c2ba-6884-470f-a719-177359344c65": {
           "type": "block",
           "settings": {
-            "text": "Want to try them all? Build a custom bundle.",
+            "text": "Add Immunity Drops to this stack to round out your routine.",
             "new_product": false,
-            "image": "shopify:\/\/shop_images\/3Bottles_All_2.jpg",
-            "product": "byob",
-            "bottom_text": "Build Your Bundle",
-            "add_to_cart": false
+            "extra_savings": true,
+            "image": "shopify:\/\/shop_images\/immunity-drops.png",
+            "product": "immunity-drops-1",
+            "bottom_text": "Immunity Drops",
+            "add_to_cart": true
           }
         }
       },
