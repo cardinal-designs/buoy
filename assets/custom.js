@@ -382,10 +382,6 @@ $('.text-image-toggle__button').click(function() {
 })
 
 $('.dropdown-container-item__title').click(function() {
-  var isActive = $(this).hasClass('active');
-  // $('.dropdown-container-item').slideUp();
-  // $('.dropdown-container-item__body').not(this).removeClass('active');
-
   if($(this).hasClass('active')) {
     $(this).removeClass('active')
   } else {
