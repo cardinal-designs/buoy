@@ -1025,7 +1025,16 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ]
+  ],
+  beforeChange: function(slick, currentSlide, nextSlide) {
+    // Enable swipe only if not on the first slide
+    if (nextSlide > 0) {
+      $('.product__media-list').slick('setOption', 'swipe', true);
+    } else {
+      $('.product__media-list').slick('setOption', 'swipe', false);
+    }
+  }
+
 })
 
 // People
