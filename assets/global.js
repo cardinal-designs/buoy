@@ -1028,6 +1028,7 @@ $(document).ready(function () {
       }
     ]
   });
+  // disable/enable arrows
 	$(".product__media-list").on("afterChange", function (slick) {
     if ($(".slick-prev").hasClass("slick-disabled")) {
       $(".slick-prev").addClass("slider-arrow-disable");
