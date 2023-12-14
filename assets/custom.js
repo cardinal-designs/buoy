@@ -383,16 +383,16 @@ $('.text-image-toggle__button').click(function() {
 
 $('.dropdown-container-item__title').click(function() {
   var isActive = $(this).hasClass('active');
-  console.log(isActive)
   $('.dropdown-container-item').slideUp();
   $('.dropdown-container-item__body').not(this).removeClass('active');
 
-  if($(this).hasClass('active')) {
-    $(this).removeClass('active')
-  } else {
-    $(this).addClass('active')
-  } 
-  $(this).next().slideToggle();
+  // If the clicked item was not active, make it active
+  if (!isActive) {
+    $(this).addClass('active');
+  }
+  
+  // Slide toggle the associated dropdown content
+    $(this).next().slideToggle();
 })
 
 
