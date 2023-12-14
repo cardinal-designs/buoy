@@ -1024,12 +1024,13 @@ $('.product__media-list').slick({
         variableWidth: true,
       }
     }
-  ],
-  beforeChange: function(event, slick, currentSlide, nextSlide) {
-    console.log(currentSlide);
-  }
-
+  ]
 })
+
+$('.product__media-list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log('hey');
+});
+
 
 // People
 $('.people-slider__drink-slider--1').slick({
