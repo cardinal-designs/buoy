@@ -1028,7 +1028,12 @@ $('.product__media-list').slick({
     }
   ],
   beforeChange: function(event, slick, currentSlide, nextSlide) {
-    console.log('Before Change:', currentSlide, 'to', nextSlide);
+    // If going to the first slide, hide the prev arrow
+    if (nextSlide === 0) {
+      $('.slick-prev').hide();
+    } else {
+      $('.slick-prev').show();
+    }
   }
 })
 
