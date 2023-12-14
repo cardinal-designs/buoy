@@ -382,13 +382,14 @@ $('.text-image-toggle__button').click(function() {
 })
 
 $('.dropdown-container-item__title').click(function() {
-  if($(this).hasClass('active')) {
-    $(this).removeClass('active')
-  } else {
-    $(this).addClass('active')
-  } 
+  // Remove 'active' class and close all dropdowns
+  $('.dropdown-container-item__title').not(this).removeClass('active');
+  $('.dropdown-content').not($(this).next()).slideUp();
+
+  // Toggle 'active' class and slide toggle the clicked dropdown
+  $(this).toggleClass('active');
   $(this).next().slideToggle();
-})
+});
 
 
 
