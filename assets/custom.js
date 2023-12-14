@@ -385,6 +385,7 @@ $('.dropdown-container-item__title').click(function() {
   var isActive = $(this).hasClass('active');
   console.log(isActive)
   $('.dropdown-container-item').slideUp();
+  $('.dropdown-container-item').not(this).removeClass('active');
 
   if($(this).hasClass('active')) {
     $(this).removeClass('active')
