@@ -9,9 +9,11 @@
       {% if block.settings.text != blank %}
         <h5 class="rhymes">{{ block.settings.text }}</h5>
       {% endif %}
-      <div class="routine-products__new" style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
-        <p>New Product</p>
-      </div>
+      {%- if block.settings.new_product -%}
+        <div class="routine-products__new">
+          <p>New Product</p>
+        </div>
+      {%- endif -%}
       <img src="{{ block.settings.image | img_url: 'master' }}"/>
       <div class="routine-products__bottom">
         <h4>{{ block.settings.bottom_text }}</h4>
