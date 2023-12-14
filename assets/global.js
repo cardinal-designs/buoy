@@ -1032,6 +1032,8 @@ $(document).ready(function () {
     console.log(".slick-prev");
     if ($(".slick-prev").hasClass("slick-disabled")) {
       $(".slick-prev").addClass("test");
+    } else {
+      $(".slick-prev").removeClass("test");
     }
 		// if ($(".slick-prev").hasClass("slick-disabled")) {
 		// 	$(".slick-prev").addClass("test");
