@@ -960,6 +960,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       const props = sellingPlanPropertiesGet();
       let strProperties = '';
       sellingPlanPropertiesGet().forEach(prop => {
+        console.log(prop);
         const key = prop[0];
         if (!key.startsWith('properties[')) return;
         const val = prop[1];
