@@ -363,7 +363,6 @@
       {%- comment -%} Gift Box {%- endcomment -%}
   
       <div data-retextion-gift-box class="rtx-gift-box">
-        <input id="tag" type="hidden" name="properties[Test]" value="Test">
         <div>
           <label for="subscriptionEmail">Recipient's Email</label>
           <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]">
@@ -961,7 +960,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       const props = sellingPlanPropertiesGet();
       let strProperties = '';
       sellingPlanPropertiesGet().forEach(prop => {
-        console.log(prop);
         const key = prop[0];
         if (!key.startsWith('properties[')) return;
         const val = prop[1];
