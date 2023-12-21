@@ -15,14 +15,16 @@ class ProductForm extends HTMLElement {
     const inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON').innerText;
     const obj = JSON.parse(productVariants);
-    console.log(obj);
+    const objForm = JSON.parse(serializeForm(this.form));
+   
     for (let key in obj) {
       console.log(key);
+      if (key == )
     }
     
     inputMetafield.value = 'Test';
     
-    console.log(serializeForm(this.form));
+    console.log(objForm);
     
 
     submitButton.setAttribute('disabled', true);
