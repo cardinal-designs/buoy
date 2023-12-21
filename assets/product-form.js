@@ -12,16 +12,17 @@ class ProductForm extends HTMLElement {
     evt.preventDefault();
     
     const submitButton = this.querySelector('[type="submit"]');
-    const inputMetafield = this.querySelector('#variantMetafield');
+    let inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON').innerText;
     const obj = JSON.parse(productVariants);
     const objForm = JSON.parse(serializeForm(this.form));
+    const activeVariantId = objForm.id;
    
     for (let key in obj) {
-      console.log(key);
+      if ( key == activeVariantId ){
+        inputMetafield.value = obj[key];
+      }
     }
-    
-    inputMetafield.value = 'Test';
     
     console.log(objForm);
     
