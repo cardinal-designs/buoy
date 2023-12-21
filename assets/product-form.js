@@ -14,9 +14,7 @@ class ProductForm extends HTMLElement {
     const submitButton = this.querySelector('[type="submit"]');
     const inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON');
-   let el = JSON.stringify(
-     JSON.parse(productVariants.innerText)
-   )
+   let el = JSON.parse(productVariants.innerText);
     inputMetafield.value = 'Test';
     console.dir( el);
     console.log(serializeForm(this.form));
