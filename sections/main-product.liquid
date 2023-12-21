@@ -161,7 +161,10 @@
               </div>
               {%- endfor -%}
   
-              <script id="productJSON" type="application/json">
+              <script type="application/json">
+                      {{ product.variants | json }}
+              </script>
+            <script id="productJSON" type="application/json">
                       {{ product.variants | json }}
               </script>
             {{ variantMetafield }}
