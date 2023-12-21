@@ -16,8 +16,8 @@ class ProductForm extends HTMLElement {
     const productVariants = document.querySelector('#productJSON').innerText;
     const obj = JSON.parse(productVariants);
     console.log(obj);
-    for (variable in obj) {
-      console.log(variable);
+    for (let key in obj) {
+      console.log(key);
     }
     
     inputMetafield.value = 'Test';
