@@ -270,9 +270,7 @@
 
 {%- comment -%} Subscription Box {%- endcomment -%}
     <div class="rtx-subscription-box">
-      {% if product.selected_variant.metafields.custom.checkout_msrp_text != blank %}
-            <input id="variant" type="hidden" name="properties[MSRP]" value="{{ currentVariant.metafields.custom.checkout_msrp_text }}">
-      {% endif %}
+        <input id="variantMetafield" type="hidden" name="properties[MSRP]" value="">
       {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
       <div>
         <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
