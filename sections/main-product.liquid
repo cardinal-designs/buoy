@@ -625,7 +625,7 @@
   {
     {% for variant in product.variants %}
       "{{ variant.id }}":{
-        "metafield":"{{ variant.metafields.custom.checkout_mspr_text | json }}",
+        "metafield":"{{ variant.metafields.custom.checkout_msrp_text | json }}",
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   }
