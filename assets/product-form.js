@@ -13,6 +13,7 @@ class ProductForm extends HTMLElement {
     
     const submitButton = this.querySelector('[type="submit"]');
     const inputMetafield = this.querySelector('#variantMetafield');
+    inputMetafield.value = 'Test';
     console.log(inputMetafield);
 
     submitButton.setAttribute('disabled', true);
