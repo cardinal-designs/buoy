@@ -15,7 +15,7 @@ class ProductForm extends HTMLElement {
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
-
+    
     const body = JSON.stringify({
       ...JSON.parse(serializeForm(this.form)),
       sections: this.getSectionsToRender().map((section) => section.section),
