@@ -270,7 +270,7 @@
 
 {%- comment -%} Subscription Box {%- endcomment -%}
     <div class="rtx-subscription-box">
-      {% if currentVariant.metafields.custom.checkout_msrp_text != blank %}
+      {% if product.selected_or_first_available_variant.metafields.custom.checkout_msrp_text != blank %}
             <input id="variant" type="hidden" name="properties[MSRP]" value="{{ product.selected_or_first_available_variant.metafields.custom.checkout_msrp_text }}">
       {% endif %}
       {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
