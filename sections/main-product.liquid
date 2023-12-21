@@ -164,9 +164,6 @@
               <script type="application/json">
                       {{ product.variants | json }}
               </script>
-            <script id="productJSON" type="application/json">
-                      {{ product | json }}
-              </script>
             {{ variantMetafield }}
             </variant-selects>
           {%- endif -%}
@@ -623,6 +620,9 @@
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   }
+</script>
+<script id="productJSON" type="application/json">
+                      {{ product | json }}
 </script>
 
 {% comment %}
