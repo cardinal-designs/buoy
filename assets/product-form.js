@@ -12,6 +12,8 @@ class ProductForm extends HTMLElement {
     evt.preventDefault();
     
     const submitButton = this.querySelector('[type="submit"]');
+    const inputMetafield = this.querySelector('#variantMetafield');
+    console.log(inputMetafield);
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
