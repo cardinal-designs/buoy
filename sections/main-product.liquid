@@ -624,9 +624,7 @@
 <script id="productJSON" type="application/json">
   {
     {% for variant in product.variants %}
-      "{{ variant.id }}":{
-        "metafield":"{{ variant.metafields.custom.checkout_msrp_text }}"
-      }{% unless forloop.last %},{% endunless %}
+      "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
     {% endfor %}
   }
 </script>
