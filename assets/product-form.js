@@ -15,13 +15,13 @@ class ProductForm extends HTMLElement {
     const inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON').innerText;
     const obj = JSON.parse(productVariants);
-    
+    console.log(obj);
     for (variable in obj) {
       console.log(variable);
     }
     
     inputMetafield.value = 'Test';
-    console.dir(obj);
+    
     console.log(serializeForm(this.form));
     
 
