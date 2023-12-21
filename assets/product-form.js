@@ -15,6 +15,8 @@ class ProductForm extends HTMLElement {
     const inputMetafield = this.querySelector('#variantMetafield');
     inputMetafield.value = 'Test';
     console.log(inputMetafield);
+    console.log(serializeForm(this.form));
+    
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
