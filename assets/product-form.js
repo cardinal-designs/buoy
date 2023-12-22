@@ -14,17 +14,17 @@ class ProductForm extends HTMLElement {
     const submitButton = this.querySelector('[type="submit"]');
     let inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON').innerText;
-    const obj = JSON.parse(productVariants);
-    const objForm = JSON.parse(serializeForm(this.form));
-    const activeVariantId = objForm.id;
+    const productVariantsParsed = JSON.parse(productVariants);
+    const parsedForm = JSON.parse(serializeForm(this.form));
+    const activeVariantId = parsedForm.id;
    
-    for (let key in obj) {
+    for (let key in productVariantsParsed) {
       if ( key == activeVariantId ){
-        inputMetafield.value = obj[key];
+        inputMetafield.value = productVariantsParsed[key];
       }
     }
     
-    console.log(objForm);
+    console.log('parsed', parsedForm);
     
 
     submitButton.setAttribute('disabled', true);
