@@ -151,7 +151,6 @@
             {%- if property.last != blank and property_first_char != '_' -%}
               {%  unless property_first_key == 'MSRP'%}
                 <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                  {{ property_first_key }}
                 {{ property.first }}: &nbsp;
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
