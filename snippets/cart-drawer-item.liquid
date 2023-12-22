@@ -148,7 +148,8 @@
           {%- for property in item.properties -%}
             {%- assign property_first_char = property.first | slice: 0 -%}
             {%- if property.last != blank and property_first_char != '_' -%}
-              <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
+              {%  unless property_first_char == 'MSRP'%}
+                <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
                 {{ property.first }}: &nbsp;
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
@@ -158,6 +159,7 @@
                   {{ property.last }}
                 {%- endif -%}
                 </h6>
+              {%  endunless %}
             {%- endif -%}
           {%- endfor -%}
         </div>
