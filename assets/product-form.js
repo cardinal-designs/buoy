@@ -23,9 +23,6 @@ class ProductForm extends HTMLElement {
         inputMetafield.value = productVariantsParsed[key];
       }
     }
-    
-    console.log('parsed', parsedForm);
-    
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
