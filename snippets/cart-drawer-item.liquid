@@ -147,6 +147,7 @@
   
           {%- for property in item.properties -%}
             {%- assign property_first_char = property.first | slice: 0 -%}
+            {%- assign property_first_key = property.first -%}
             {%- if property.last != blank and property_first_char != '_' -%}
               {%  unless property_first_char == 'MSRP'%}
                 <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
