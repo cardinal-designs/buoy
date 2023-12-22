@@ -12,10 +12,21 @@ class ProductForm extends HTMLElement {
     evt.preventDefault();
     
     const submitButton = this.querySelector('[type="submit"]');
+    let inputMetafield = this.querySelector('#variantMetafield');
+    const productVariants = document.querySelector('#productJSON').innerText;
+    const productVariantsParsed = JSON.parse(productVariants);
+    const parsedForm = JSON.parse(serializeForm(this.form));
+    const activeVariantId = parsedForm.id;
+   
+    for (let key in productVariantsParsed) {
+      if ( key == activeVariantId ){
+        inputMetafield.value = productVariantsParsed[key];
+      }
+    }
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
-
+    
     const body = JSON.stringify({
       ...JSON.parse(serializeForm(this.form)),
       sections: this.getSectionsToRender().map((section) => section.section),

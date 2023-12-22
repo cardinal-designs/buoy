@@ -270,7 +270,7 @@
 
 {%- comment -%} Subscription Box {%- endcomment -%}
     <div class="rtx-subscription-box">
-  
+        <input id="variantMetafield" type="hidden" name="properties[MSRP]" value="">
       {%- comment -%} Subscription Gift Box Toggle {%- endcomment -%}
       <div>
         <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
@@ -618,6 +618,13 @@
         "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}""{% endif %},
         "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
       }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
+<script id="productJSON" type="application/json">
+  {
+    {% for variant in product.variants %}
+      "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
     {% endfor %}
   }
 </script>
