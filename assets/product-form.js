@@ -25,7 +25,7 @@ class ProductForm extends HTMLElement {
         let name = productVariantsParsed[key].split(':');
         console.log(name);
         inputMetafield.name = `properties[${name[0]}]`;
-        inputMetafield.value = `properties[${name[1]}]`;
+        inputMetafield.value = name[1];
       }
     }
 
