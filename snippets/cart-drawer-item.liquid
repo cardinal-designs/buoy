@@ -176,9 +176,12 @@
         
         
         <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-        {{ item.selling_plan_allocation.selling_plan.name }}
           {% if item.selling_plan_allocation.selling_plan %}
-            {% render 'icon-calendar' %} Monthly: 
+            {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+              {% render 'icon-calendar' %} Quarterly: 
+          {% else %}
+              {% render 'icon-calendar' %} Monthly: 
+            {% endif %}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
               One-Time Purchase: 
           {% endif %}
