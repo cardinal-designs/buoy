@@ -188,10 +188,12 @@
 
           {% if item.product.title contains '1 Bottle' %}
              1 Bottles—40 servings
+          {% elsif item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+             {{ item.selling_plan_allocation.selling_plan.name }}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-          bb   3 Bottles—120 servings
+             3 Bottles—120 servings
           {% else %}
-           af {{ item.selling_plan_allocation.selling_plan.name }}
+             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
         </p>
   
