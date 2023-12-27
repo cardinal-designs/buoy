@@ -22,6 +22,7 @@ class ProductForm extends HTMLElement {
     for (let key in productVariantsParsed) {
       console.log(key);
       if ( key == activeVariantId ){
+        console.log(inputMetafield.name)
         inputMetafield.value = productVariantsParsed[key];
       }
     }
