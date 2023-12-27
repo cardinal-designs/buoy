@@ -22,10 +22,16 @@ class ProductForm extends HTMLElement {
     for (let key in productVariantsParsed) {
       console.log(key);
       if ( key == activeVariantId ){
-        let name = productVariantsParsed[key].split(':');
-        console.log(name);
-        inputMetafield.name = `properties[${name[0]}]`;
-        inputMetafield.value = name[1];
+        if (productVariantsParsed[key].includes(':')){
+          let name = productVariantsParsed[key].split(':');
+          console.log(name);
+          inputMetafield.name = `properties[${name[0]}]`;
+          inputMetafield.value = name[1];
+        } else {
+          inputMetafield.name = `properties[MSRP]`;
+          inputMetafield.value = productVariantsParsed[key];
+        }
+        
       }
     }
 
