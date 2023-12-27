@@ -17,6 +17,7 @@ class ProductForm extends HTMLElement {
     const productVariantsParsed = JSON.parse(productVariants);
     const parsedForm = JSON.parse(serializeForm(this.form));
     const activeVariantId = parsedForm.id;
+    console.log(activeVariantId);
    
     for (let key in productVariantsParsed) {
       if ( key == activeVariantId ){
