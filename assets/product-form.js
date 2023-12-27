@@ -27,10 +27,8 @@ class ProductForm extends HTMLElement {
           console.log(name);
           inputMetafield.name = `properties[${name[0]}]`;
           inputMetafield.value = name[1];
-        // } else {
-        //   inputMetafield.name = `properties[MSRP]`;
-        //   inputMetafield.value = productVariantsParsed[key];
-        // }
+        } 
+        
         
       }
     }
