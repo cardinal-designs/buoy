@@ -127,7 +127,7 @@
     {% if itemFrequency != blank %}
         {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
         {% for frequency in splitFrequency %}
-          <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+          <p style="margin-bottom: -5px;" class="a product-option cart-drawer__item-frequency body-xs light">
           {% render 'icon-calendar' %} Monthly: {{ frequency }}
           </p>
         {% endfor %}
@@ -175,7 +175,7 @@
         </ul>
         
         
-        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
+        <p style="margin-bottom: -5px;" class="b product-option cart-drawer__item-frequency body-xs light">
           {% if item.selling_plan_allocation.selling_plan %}
             {% render 'icon-calendar' %} Monthly: 
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
