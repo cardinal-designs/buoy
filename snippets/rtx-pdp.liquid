@@ -258,7 +258,7 @@
                             {%- endif -%}
                             <div>
                               <p class="Label_Text js-label-text js-subscription" data-cms-text="{{ block.settings.purchase_type_text }}">
-                                {{ my_fields.subscription_text | default: block.settings.purchase_type_text }}
+                                ff{{ my_fields.subscription_text | default: block.settings.purchase_type_text }}
                               </p>
                               {% comment %}
                                 {%- if block.settings.three_bottle_text != blank -%}
