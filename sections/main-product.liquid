@@ -876,13 +876,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
-  $('#purchaseTypeOneTime').select(function() {
+  $('#purchaseTypeOneTime').change(function() {
     $('.Serving_Cost').each(function() {
       $(this).text($(this).data('onetimeprice'))
     })
   })
 
-  $('#purchaseTypeSbubscription').select(function() {
+  $('#purchaseTypeSbubscription').change(function() {
     $('.Serving_Cost').each(function() {
       $('.Serving_Cost').text($(this).data('subprice'))
     })
