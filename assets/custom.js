@@ -27,6 +27,10 @@ $( document ).ready(function() {
     if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
   });
 
+  $('.rtx_option_selector input').select(function() {
+    console.log('bbbee')
+  })
+
   if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
 });
 
