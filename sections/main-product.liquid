@@ -931,6 +931,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanQueryUpdate = () => {
       $('.Serving_Cost').each(function() {
+        console.log($(this).text(),$(this).data('subprice'))
         if($(this).text() == $(this).data('subprice')) {
           $(this).text($(this).data('onetimeprice'))
         } else {
