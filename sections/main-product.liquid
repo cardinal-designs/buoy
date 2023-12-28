@@ -176,7 +176,9 @@
                         <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if my_fields.serving_cost != blank -%}
+                     {%- if product.metafields.custom.subscription_serving_price != blank -%}
+                        <span class="Serving_Cost">{{ product.metafields.custom.subscription_serving_price }}</span>    
+                     {%- elsif my_fields.serving_cost != blank -%}
                         <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
                       {%- endif -%}
                       {%- if my_fields.best_value != blank -%}
