@@ -931,7 +931,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanQueryUpdate = () => {
       $('.Serving_Cost').each(function() {
-        console.log($(this).data('onetimeprice'))
+        $(this).text($(this).data('onetimeprice'))
       })
       const queryParams = queryParamsGet();
       if (elementSubscriptionBox.classList.contains('is-visible')) {
