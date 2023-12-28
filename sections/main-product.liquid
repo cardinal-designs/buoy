@@ -876,6 +876,20 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
+  $('#purchaseTypeOneTime').select(function() {
+      $(this).text($(this).data('onetimeprice'))
+    })
+  )}
+
+  $('#purchaseTypeSbubscription').select(function() {
+      $(this).text($(this).data('subprice'))
+    })
+  )}
+
+
+
+
+  
   ((api) => { 
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
   const boxProduct = {{ product | json }};
@@ -930,14 +944,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       elementGiftBox.classList.remove('is-visible');
     };
     const sellingPlanQueryUpdate = () => {
-      $('.Serving_Cost').each(function() {
-        console.log($(this).text(),$(this).data('subprice'))
-        if($(this).text() == $(this).data('subprice')) {
-          $(this).text($(this).data('onetimeprice'))
-        } else {
-          $(this).text($(this).data('subprice'))
-        }
-      })
       const queryParams = queryParamsGet();
       if (elementSubscriptionBox.classList.contains('is-visible')) {
         queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
