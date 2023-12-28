@@ -19,6 +19,7 @@ $( document ).ready(function() {
   // });
 
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
+    console.log('bbbbb')
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
