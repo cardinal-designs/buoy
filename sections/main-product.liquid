@@ -877,13 +877,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
 <script type="text/javascript">
   $('#purchaseTypeOneTime').select(function() {
-    $('.Serving_Cost').each(function {(
+    $('.Serving_Cost').each(function {
       $(this).text($(this).data('onetimeprice'))
     )}
   )}
 
   $('#purchaseTypeSbubscription').select(function() {
-    $('.Serving_Cost').each(function {(
+    $('.Serving_Cost').each(function {
       $('.Serving_Cost').text($(this).data('subprice'))
     })
   )}
