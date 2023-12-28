@@ -930,7 +930,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       elementGiftBox.classList.remove('is-visible');
     };
     const sellingPlanQueryUpdate = () => {
-      console.log($('.Serving_Cost'))
+      $('.Serving_Cost').each(function() {
+        console.log($(this).data('onetimeprice'))
+      })
       const queryParams = queryParamsGet();
       if (elementSubscriptionBox.classList.contains('is-visible')) {
         queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
