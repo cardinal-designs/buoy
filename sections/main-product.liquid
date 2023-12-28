@@ -931,8 +931,11 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanQueryUpdate = () => {
       $('.Serving_Cost').each(function() {
-        if($(this))
-        $(this).text($(this).data('onetimeprice'))
+        if($(this).text() == $(this).data('subprice')) {
+          $(this).text($(this).data('onetimeprice'))
+        } else {
+          $(this).text($(this).data('subprice'))
+        }
       })
       const queryParams = queryParamsGet();
       if (elementSubscriptionBox.classList.contains('is-visible')) {
