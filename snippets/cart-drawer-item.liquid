@@ -174,17 +174,23 @@
         
         <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
           {% if item.selling_plan_allocation.selling_plan %}
-            {% render 'icon-calendar' %} Monthly: 
+            {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+              {% render 'icon-calendar' %} Quarterly: 
+          {% else %}
+              {% render 'icon-calendar' %} Monthly: 
+            {% endif %}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
               One-Time Purchase: 
           {% endif %}
 
           {% if item.product.title contains '1 Bottle' %}
              1 Bottles—40 servings
+          {% elsif item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+             {{ item.selling_plan_allocation.selling_plan.name }}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-             Delivered Every 4 Weeks
+             3 Bottles—120 servings
           {% else %}
-            {{ item.selling_plan_allocation.selling_plan.name }}
+             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
         </p>
   
