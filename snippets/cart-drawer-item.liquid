@@ -128,7 +128,7 @@
         {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
         {% for frequency in splitFrequency %}
           <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-          {% render 'icon-calendar' %} Monthly: {{ frequency }}
+          {% render 'icon-calendar' %} Monthly: {{ frequency }}kkkkksds
           </p>
         {% endfor %}
       {% endif %}
