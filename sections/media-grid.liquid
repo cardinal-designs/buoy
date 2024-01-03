@@ -8,7 +8,7 @@
   {% for block in section.blocks limit: 4 %}
     <div class="media-grid__item">
     {% if block.settings.video != blank %}
-    <video autoplay muted loop>
+    <video autoplay muted loop webkit-playsinline playsinline>
       <source src="{{ block.settings.video }}" type="video/mp4">
     </video>
     {% elsif block.settings.image != blank %}
@@ -21,7 +21,7 @@
   {% for block in section.blocks %}
     <div class="media-grid__item">
     {% if block.settings.video != blank %}
-    <video autoplay muted loop>
+    <video autoplay muted loop webkit-playsinline playsinline>
       <source src="{{ block.settings.video }}" type="video/mp4">
     </video>
     {% elsif block.settings.image != blank %}
