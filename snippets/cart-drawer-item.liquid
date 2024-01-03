@@ -182,7 +182,7 @@
           {% if item.product.title contains '1 Bottle' %}
              1 Bottles—40 servings
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-             3 Bottles—120 servings
+             Delivered Every 4 Weeks
           {% else %}
             {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
