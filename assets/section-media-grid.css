@@ -1,13 +1,13 @@
 .media-grid__container {
   text-align: center;
-  padding-top: 31px !important;
-  padding-bottom: 110px !important;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
 }
 
 @media screen and (max-width:768px) {
   .media-grid__container {
-    padding-top: 27px !important;
-    padding-bottom: 50px !important;
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
   }
 }
 
