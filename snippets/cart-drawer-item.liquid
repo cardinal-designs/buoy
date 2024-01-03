@@ -180,11 +180,10 @@
               {% render 'icon-calendar' %} Monthly: 
             {% endif %}
           {% else %}
-              One-Time Purchase: 
+              One-Time Purchase 
           {% endif %}
 
           {% if item.product.title contains '1 Bottle' %}
-             1 Bottles—40 servings
           {% elsif item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
              {{ item.selling_plan_allocation.selling_plan.name }}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
