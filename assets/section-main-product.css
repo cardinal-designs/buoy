@@ -1498,7 +1498,11 @@ fieldset.product-form__input .form__label {
 }
   
 @media screen and (max-width: 768px) {
-
+  .Variant_Blocks .Variant_Title {
+    max-width: 105px;
+    margin: 0 auto;
+  }
+  
   .template-product .product-form .rtx_option_selector {
     padding: 10px 0 30px;
   }
