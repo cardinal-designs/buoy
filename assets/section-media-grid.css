@@ -11,6 +11,10 @@
   }
 }
 
+.grey-background {
+ background-color: #f8f8f8;
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
