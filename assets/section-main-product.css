@@ -2473,6 +2473,13 @@ select[name=selling_plan] {
   }
 }
 
+@media screen and (max-width: 410px) {
+  .template-product .rtx_option_heading, .template-product .rtx_option_heading span {
+    font-size: 14px;
+  }
+}
+
+
 .discount-bubble:before {
   content: '';
   position: absolute;
