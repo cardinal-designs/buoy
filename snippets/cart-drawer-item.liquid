@@ -179,7 +179,7 @@
           {% else %}
               {% render 'icon-calendar' %} Monthly: 
             {% endif %}
-          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
+          {% else %}
               One-Time Purchase: 
           {% endif %}
 
@@ -188,7 +188,7 @@
           {% elsif item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
              {{ item.selling_plan_allocation.selling_plan.name }}
           {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-             3 Bottles—120 servings
+             Delivered Every 4 Weeks
           {% else %}
              {{ item.selling_plan_allocation.selling_plan.name }}
           {% endif %}
