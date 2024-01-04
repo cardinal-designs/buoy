@@ -1692,14 +1692,14 @@ $('.reviews_button').click(function(){
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
-  $('.main-menu').css('top','53px');
+  $('.main-menu').css('top','54px');
   $('.Show_Announcement_Bar').addClass('not-active');
 })
 
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
-    $('.main-menu').css('top', '53px');
+    $('.main-menu').css('top', '54px');
   }
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
