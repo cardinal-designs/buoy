@@ -1664,21 +1664,19 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 })
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
-  $('.select-faq__x').removeClass('minus')
-  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
-  $(this).find('h4').addClass('active')
-  $(this).find('.select-faq__x').addClass('minus')
-  let num = $(this).data("id")
-  $('.select-faq__container .mobile-benefits-info').slideUp()
-  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
-  $('.mobile-benefits-info').scrollHeight;
-  var scrollHeight = $('.mobile-benefits-info').prop('scrollHeight');
-  console.log('Scroll Height:', scrollHeight);
-  var offsetTop = $(this).offset().top;
+  $('.select-faq__x').removeClass('minus');
+  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active');
+  $(this).find('h4').addClass('active');
+  $(this).find('.select-faq__x').addClass('minus');
+  let num = $(this).data("id");
+  $('.select-faq__container .mobile-benefits-info').slideUp();
+  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown();
+
+  // Scroll to the top of the clicked element
   $('html, body').animate({
-    scrollTop: offsetTop - 200
-  }, 300);
-})
+    scrollTop: $(this).offset().top
+  }, 'slow');
+});
 
  
 $('.reviews_button').click(function(){
