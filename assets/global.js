@@ -1672,8 +1672,8 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
   $('.mobile-benefits-info').scrollHeight;
-  var getElHeight = $('.mobile-benefits-info').scrollHeight;
-  console.log(getElHeight)
+  var scrollHeight = $('.mobile-benefits-info').prop('scrollHeight');
+  console.log('Scroll Height:', scrollHeight);
   var offsetTop = $(this).offset().top;
   $('html, body').animate({
     scrollTop: offsetTop - 200
