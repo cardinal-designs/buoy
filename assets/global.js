@@ -1694,13 +1694,11 @@ $('.announcement-bar__close').click(function() {
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
   $('.main-menu').css('top','53px');
   $('.Show_Announcement_Bar').addClass('not-active');
-  console.log(document.querySelector('.Show_Announcement_Bar'));
 })
 
 $('[href="#menu"]').click(function() {
-  // console.log(document.querySelector('.Show_Announcement_Bar'));
-  if ($('.Show_Announcement_Bar').hasClass('not-active')) {
-    $('.main-menu').css('top','53px');
+  if ($('.Show_Announcement_Bar').length || $('.Show_Announcement_Bar').hasClass('not-active')) {
+    $('.main-menu').css('top', '53px');
   }
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
