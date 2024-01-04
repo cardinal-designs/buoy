@@ -1697,7 +1697,7 @@ $('.announcement-bar__close').click(function() {
 })
 
 $('[href="#menu"]').click(function() {
-  if ($('.Show_Announcement_Bar').length || $('.Show_Announcement_Bar').hasClass('not-active')) {
+  if ($('.Show_Announcement_Bar').length == 0 || $('.Show_Announcement_Bar').hasClass('not-active')) {
     $('.main-menu').css('top', '53px');
   }
   $('.main-menu').attr('aria-hidden', false);
