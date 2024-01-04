@@ -1693,4 +1693,25 @@ $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
 })
+
+$('[href="#menu"]').click(function() {
+  console.log(document.querySelector('.Show_Announcement_Bar'));
+  $('.main-menu').attr('aria-hidden', false);
+  $('.page-overlay').addClass('is-visible Menu_Overlay');
+  $('body').addClass('Overflow_Hidden');
+  $('.Mobile_Menu_Close').show();
+  $('.Hamburger_New').hide();
+  $('.header-wrapper').addClass('active');
+  $(this).addClass('active');
+});
+
+$('.main-menu__close').click(function() {
+  $('.main-menu').attr('aria-hidden', true);
+  $('.page-overlay').removeClass('is-visible Menu_Overlay');
+  $('.Mobile_Menu_Close').hide();
+  $('body').removeClass('Overflow_Hidden');
+  $('.Hamburger_New').show();
+  $('.header-wrapper').removeClass('active');
+  $('[href="#menu"]').removeClass('active');
+}); 
  
