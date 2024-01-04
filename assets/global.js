@@ -1673,7 +1673,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
   var offsetTop = $(this).offset().top;
   $('.select-faq__container').animate({
-    scrollTop: 64
+    scrollTop: 100
   }, 'slow');
 })
 
