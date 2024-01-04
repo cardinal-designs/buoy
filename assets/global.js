@@ -1672,12 +1672,11 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
   var offsetTop = $(this).offset().top;
-  $('html, body').animate({
-    scrollTop: offsetTop - 200
-  }, 300);
+  $('.select-faq__item-mobile').animate({
+    scrollTop: offsetTop
+  }, 'slow');
 })
 
- 
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
   if (!$(this).hasClass("active")){
@@ -1689,8 +1688,37 @@ $('.reviews_button').click(function(){
   }
 });
 
+// Announcement bar
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
+  $('.main-menu').css('top','54px');
+  $('.Show_Announcement_Bar').addClass('not-active');
 })
+
+// Main menu open
+$('[href="#menu"]').click(function() {
+  var announcementBar = $('.Show_Announcement_Bar');
+  if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
+    $('.main-menu').css('top', '54px');
+  }
+  $('.main-menu').attr('aria-hidden', false);
+  $('.page-overlay').addClass('is-visible Menu_Overlay');
+  $('body').addClass('Overflow_Hidden');
+  $('.Mobile_Menu_Close').show();
+  $('.Hamburger_New').hide();
+  $('.header-wrapper').addClass('active');
+  $(this).addClass('active');
+});
+
+// Main menu close
+$('.main-menu__close').click(function() {
+  $('.main-menu').attr('aria-hidden', true);
+  $('.page-overlay').removeClass('is-visible Menu_Overlay');
+  $('.Mobile_Menu_Close').hide();
+  $('body').removeClass('Overflow_Hidden');
+  $('.Hamburger_New').show();
+  $('.header-wrapper').removeClass('active');
+  $('[href="#menu"]').removeClass('active');
+}); 
  

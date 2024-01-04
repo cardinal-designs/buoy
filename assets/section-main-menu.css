@@ -615,11 +615,11 @@ announcement-container.Fixed_Bar {
 @media only screen and (max-width: 667px) {
 
   .Announcement_Shown.main-menu {
-    top: 114px;
+    top: 108px;
   }
     
   .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 114px;
+    top: 108px;
   }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {
@@ -631,7 +631,7 @@ announcement-container.Fixed_Bar {
   }
 
   .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 114px;
+    top: 108px;
   }
   
 }
