@@ -1689,17 +1689,17 @@ $('.reviews_button').click(function(){
   }
 });
 
-let open;
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
   $('.main-menu').css('top','53px');
-  open = false;
+  $('.Show_Announcement_Bar').addClass('not-active');
+  console.log($('.Show_Announcement_Bar'));
 })
 
 $('[href="#menu"]').click(function() {
-  console.log(open);
-  if (open) {
+  // console.log(document.querySelector('.Show_Announcement_Bar'));
+  if (document.querySelector('.Show_Announcement_Bar')) {
     $('.main-menu').css('top','108px');
   } else {
     $('.main-menu').css('top','53px');
