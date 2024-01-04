@@ -7,7 +7,7 @@
       <h1 class="light">{{ section.settings.text }}</h1>
     </div>
     <div class="video-section__media">
-      {%- if ss.full-video__overlay -%}
+      {%- if ss.has_overlay -%}
         <div class="full-video__overlay"></div>
       {%- endif -%}
       {% if section.settings.video_url_mobile != blank and section.settings.video_url != blank %}
@@ -51,7 +51,8 @@
       {
         "type": "checkbox",
         "id": "has_overlay",
-        "label": "Overlay"
+        "label": "Overlay",
+        "default": false
       },
       {
         "type": "text",
