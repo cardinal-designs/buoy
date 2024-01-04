@@ -1689,11 +1689,14 @@ $('.reviews_button').click(function(){
   }
 });
 
+let open;
+
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
   $('.main-menu').css('top','53px');
-  console.log('closed');
+  open = false;
+  console.log(open);
 })
 
 $('[href="#menu"]').click(function() {
