@@ -1699,12 +1699,9 @@ $('.announcement-bar__close').click(function() {
 
 $('[href="#menu"]').click(function() {
   // console.log(document.querySelector('.Show_Announcement_Bar'));
-  if (document.querySelector('.Show_Announcement_Bar')) {
-    $('.main-menu').css('top','108px');
-  } else {
+  if ($('.Show_Announcement_Bar').hasClass('not-active')) {
     $('.main-menu').css('top','53px');
   }
-
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
   $('body').addClass('Overflow_Hidden');
