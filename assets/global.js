@@ -1697,7 +1697,7 @@ $('.announcement-bar__close').click(function() {
 $('[href="#menu"]').click(function() {
   console.log(document.querySelector('.Show_Announcement_Bar'));
   if (document.querySelector('.Show_Announcement_Bar')) {
-    $('.main-menu').css('top','110px');
+    $('.main-menu').css('top','108px');
   }
 
   $('.main-menu').attr('aria-hidden', false);
