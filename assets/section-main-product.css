@@ -2819,7 +2819,10 @@ select[name=selling_plan] {
 
 .dropdown-container-item {
   border-top: 1px solid #BBBCBC;
-  margin-top: 100px;
+}
+
+.dropdown-container-item:first-child {
+  margin-top: 50px;
 }
 
 .dropdown-container-item:last-of-type {
