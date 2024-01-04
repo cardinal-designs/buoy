@@ -1689,6 +1689,7 @@ $('.reviews_button').click(function(){
   }
 });
 
+// Announcement bar
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
@@ -1696,6 +1697,7 @@ $('.announcement-bar__close').click(function() {
   $('.Show_Announcement_Bar').addClass('not-active');
 })
 
+// Main menu open
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
@@ -1710,6 +1712,7 @@ $('[href="#menu"]').click(function() {
   $(this).addClass('active');
 });
 
+// Main menu close
 $('.main-menu__close').click(function() {
   $('.main-menu').attr('aria-hidden', true);
   $('.page-overlay').removeClass('is-visible Menu_Overlay');
