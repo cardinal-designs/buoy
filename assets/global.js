@@ -1674,7 +1674,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
 
   // Scroll to the top of the clicked element
   $('html, body').animate({
-    scrollTop: $(this).offset().top - 500
+    scrollTop: $(this).offset().top - 600
   }, 'slow');
 });
 
