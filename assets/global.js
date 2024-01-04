@@ -1699,7 +1699,7 @@ $('[href="#menu"]').click(function() {
   if (document.querySelector('.Show_Announcement_Bar')) {
     $('.main-menu').css('top','108px');
   } else {
-    $('.main-menu').css('top','55px');
+    $('.main-menu').css('top','53px');
   }
 
   $('.main-menu').attr('aria-hidden', false);
