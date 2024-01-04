@@ -2825,6 +2825,12 @@ select[name=selling_plan] {
   margin-top: 28px;
 }
 
+@media screen and (max-width: 768px) {
+  .dropdown-container-item:first-child {
+    margin-top: 24px;
+  }
+}
+
 .dropdown-container-item:last-of-type {
   border-bottom: 1px solid #BBBCBC;
 }
