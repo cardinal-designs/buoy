@@ -1700,7 +1700,7 @@ $('.announcement-bar__close').click(function() {
 })
 
 $('[href="#menu"]').click(function() {
-  console.log(document.querySelector('.Show_Announcement_Bar'));
+  console.log(open);
   if (document.querySelector('.Show_Announcement_Bar')) {
     $('.main-menu').css('top','108px');
   } else {
