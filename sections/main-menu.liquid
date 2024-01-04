@@ -74,6 +74,7 @@
 {% javascript %}
 
   $('[href="#menu"]').click(function() {
+    console.log('clicked');
     $('.main-menu').attr('aria-hidden', false);
     $('.page-overlay').addClass('is-visible Menu_Overlay');
     $('body').addClass('Overflow_Hidden');
