@@ -1863,7 +1863,7 @@ fieldset.product-form__input .form__label {
 .template-product .rtx_sub_container .Label_Text {
   display: flex;
   font-size: 14px !important;
-  color: #545759;
+  color: var(--charcoal-light);
   font-family: Rhymes-Light-Italic;
   margin-top: 0;
 }
