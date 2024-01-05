@@ -2382,7 +2382,7 @@ span#timer strong {
 
 label[for=subscriptionGift] {
   font-size: 14px;
-  color: #1f2322;
+  color: var(--charcoal);
   font-family: inter,sans-serif;
   line-height: 17px;
   text-underline-offset: 2px;
@@ -2452,7 +2452,7 @@ select[name=selling_plan] {
   width: 100%;
   position: relative;
   text-align: center;
-  color: white;
+  color: var(--white);
 }
 
 @media screen and (max-width: 768px) {
