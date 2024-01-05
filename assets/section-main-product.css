@@ -1786,15 +1786,15 @@ fieldset.product-form__input .form__label {
   content: '';
   height: 8px;
   width: 8px;
-  background: #fff;
+  background: var(--white);
   border-radius: 50%;
   left: 0;
   top: 0;
-  border: 1px solid #1F2322;
+  border: 1px solid var(--charcoal);
 }
 
 .Testimonials_Main .slick-dots li.slick-active button::before {
-  background: #1F2322;
+  background: var(--charcoal);
 }
 
 .Testimonials_Main {
@@ -1817,7 +1817,7 @@ fieldset.product-form__input .form__label {
 .Testimonials_Main .slick-next svg,
 .Testimonials_Main .slick-prev svg {
   width: 20px;
-  color: #1f2322;
+  color: var(--charcoal);
   height: unset;
   transition: transform .3s ease;
 }
