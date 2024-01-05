@@ -2736,8 +2736,8 @@ select[name=selling_plan] {
 }
 
 .Product_Tags div:nth-child(2) {
-  border-left: 1px solid #E9E9E9;
-  border-right: 1px solid #E9E9E9;
+  border-left: 1px solid var(--gray-light);
+  border-right: 1px solid var(--gray-light);
 } 
 
 .Product_Tags div:nth-child(1) {
