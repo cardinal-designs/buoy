@@ -38,7 +38,7 @@
         
         <div class="dropdown-container-item__container">
           {%- if section.settings.dropdown_title != blank -%}
-            <div>{{ section.settings.dropdown_title }}</div>
+            <div class="dropdown-container-item__main-title">{{ section.settings.dropdown_title }}</div>
           {%- endif -%}
           {% for block in section.blocks %}
             {% if block.type == "dropdown" %}
