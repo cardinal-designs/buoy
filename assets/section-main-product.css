@@ -2817,7 +2817,7 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item {
-  border-top: 1px solid #BBBCBC;
+  border-top: 1px solid var(--charcoal-lighter);
 }
 
 .dropdown-container-item:first-child {
@@ -2831,7 +2831,7 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item:last-of-type {
-  border-bottom: 1px solid #BBBCBC;
+  border-bottom: 1px solid var(--charcoal-lighter);
 }
 
 .dropdown-container-item__body {
