@@ -2628,7 +2628,7 @@ select[name=selling_plan] {
     top: 0;
     width: 100%;
     left: 0;
-    background: #fff;
+    background: var(--white);
   }
 
   .pdp-faq .faq-section {
