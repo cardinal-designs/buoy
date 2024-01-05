@@ -2423,7 +2423,7 @@ select[name=selling_plan] {
   margin: 0 auto;
   background-color: transparent;
   border-radius: 17px;
-  border: 1px solid #545759;
+  border: 1px solid var(--charcoal-light);
   -webkit-appearance: none;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.98561 4.8066L8.80576 1.10922C9.06475 0.862723 9.06475 0.431362 8.80576 0.184869C8.54676 -0.0616231 8.09352 -0.0616231 7.83453 0.184869L4.53237 3.45089L1.16547 0.246492C0.906475 -7.45058e-08 0.453237 -1.04308e-07 0.194245 0.246492C-0.0647482 0.492984 -0.0647482 0.924346 0.194245 1.17084L4.07914 4.86822C4.33813 5.05309 4.72662 5.05309 4.98561 4.8066Z' fill='%23222727'/%3E%3C/svg%3E%0A");
@@ -2495,7 +2495,7 @@ select[name=selling_plan] {
 
 
 .product-bar__container .button:hover{
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 @media screen and (max-width: 1280px) {
