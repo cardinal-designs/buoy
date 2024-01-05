@@ -1394,13 +1394,13 @@ fieldset.product-form__input .form__label {
 .Variant_Blocks label {
   font-family: inter,sans-serif;
   font-size: 18px !important;
-  color: #1F2322 !important;
+  color: var(--charcoal) !important;
   font-weight: 300 !important;
 }
 
 .Supply_Time {
   font-size: 14px;
-  color: #1f2322;
+  color: var(--charcoal);
   font-family: Rhymes-Light-Italic;
   margin: 0;
   text-align: center;
@@ -1410,7 +1410,7 @@ fieldset.product-form__input .form__label {
 .Variant_Servings {
   font-size: 12px;
   font-weight: 300;
-  color: #1F2322;
+  color: var(--charcoal);
   line-height: normal;
   font-family: inter,sans-serif;
 }
