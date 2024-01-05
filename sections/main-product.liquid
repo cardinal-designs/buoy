@@ -37,40 +37,41 @@
         </div>
         
         <div class="dropdown-container-item__container">
-        {% for block in section.blocks %}
-          {% if block.type == "dropdown" %}
-          <div class="dropdown-container-item">
-            <div class="dropdown-container-item__title">
-              <p>{{ block.settings.title }}</p>
-              <div class="dropdown-container-item__x"></div>
-            </div>
-            <div class="dropdown-container-item__body">
-              <div class="dropdown-container-item__body-text">
-                <p class="rhyme">{{ block.settings.subtitle }}</p>
-                <div class="bubble-text">
-                  <p>{{ block.settings.bubble_text }}</p>
+          <div>{{ section.settings.dropdown_title }}</div>
+          {% for block in section.blocks %}
+            {% if block.type == "dropdown" %}
+            <div class="dropdown-container-item">
+              <div class="dropdown-container-item__title">
+                <p>{{ block.settings.title }}</p>
+                <div class="dropdown-container-item__x"></div>
+              </div>
+              <div class="dropdown-container-item__body">
+                <div class="dropdown-container-item__body-text">
+                  <p class="rhyme">{{ block.settings.subtitle }}</p>
+                  <div class="bubble-text">
+                    <p>{{ block.settings.bubble_text }}</p>
+                  </div>
+                </div>
+                <div class="dropdown-container-item__body-list">
+                  <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
+                  <p>{{ block.settings.list_item1 }}</p>
+                </div>
+                <div class="dropdown-container-item__body-list">
+                  <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
+                  <p>{{ block.settings.list_item2 }}</p>
+                </div>
+                <div class="dropdown-container-item__body-list">
+                  <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
+                  <p>{{ block.settings.list_item3 }}</p>   
+                </div>
+                <div class="product__drawer-triggers">
+                  <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+                  <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
                 </div>
               </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item1 }}</p>
-              </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item2 }}</p>
-              </div>
-              <div class="dropdown-container-item__body-list">
-                <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
-                <p>{{ block.settings.list_item3 }}</p>   
-              </div>
-              <div class="product__drawer-triggers">
-                <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-                <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
-              </div>
             </div>
-          </div>
-          {% endif %}
-        {% endfor %}
+            {% endif %}
+          {% endfor %}
         </div>
 
         <div class="product-listblock__container-one">
@@ -1196,6 +1197,11 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           "id" : "show_drawer_triggers",
           "label" : "Show Drawer Links?",
           "default": true
+        },
+        {
+          "type": "text",
+          "id": "dropdown_title",
+          "label": "Dropdown Title"
         }
       ],
       "blocks": [
