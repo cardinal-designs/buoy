@@ -2920,7 +2920,7 @@ select[name=selling_plan] {
   padding: 4px 8px;
   border-radius: 15px;
   color: var(--white);
-  background: #1F2322;
+  background: var(--charcoal);
 }
 
 .dropdown-container-item__body-text .bubble-text p {
