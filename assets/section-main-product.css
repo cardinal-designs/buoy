@@ -1682,12 +1682,12 @@ fieldset.product-form__input .form__label {
 
 .one_sub_text_new {
   margin: 0;
-  color: #545759;
+  color: var(--charcoal-light);
   font-weight: 300;
 }
 
 .template-product.clear_button {
-  background: #398200;
+  background: var(--green-2);
 }
 
 .template-product .subscribe-item_info p {
