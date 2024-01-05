@@ -103,7 +103,7 @@
 }
 
 .product-reviews .okeReviews .okeReviews-review-reviewer-product-details-heading, .product-reviews .okeReviews.okeReviews--theme .okeReviews-sectionedList-heading, .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-attribute-label {
-  color: #797B7A;
+  color: var(--charcoal-60);
   font-size: 14px;
   font-family: Inter;
   font-weight: 500;
@@ -126,7 +126,7 @@
 }
 
 .okeReviews.okeReviews--theme .okeReviews-button, .okeReviews.okeReviews--theme .okeReviews-showMore {
-  background: white !important;
+  background: var(--white) !important;
 }
 
 .product-reviews .okeReviews-reviewsSummary-ratingCount {
@@ -215,7 +215,7 @@
 .product__tabs-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
 }
 
 .product__tabs-header .body {
@@ -224,7 +224,7 @@
   opacity: .4;
   cursor: pointer;
   transition: opacity .2s ease;
-  color: black !important;
+  color: var(--black) !important;
   font-size: 12px;
 }
 
@@ -294,17 +294,17 @@
 
 .product__bundle-header-container .hydration:hover, .product__bundle-header-container .hydration.active {
   background: var(--teal-dark);
-  color: white;
+  color: var(--white);
 }
 
 .product__bundle-header-container .immunity:hover, .product__bundle-header-container .immunity.active {
   background: var(--green-dark);
-  color: white;
+  color: var(--white);
 }
 
 .product__bundle-header-container .energy:hover, .product__bundle-header-container .energy.active {
   background: var(--orange-dark);
-  color: white;
+  color: var(--white);
 }
 
 .product__bundle .product__tabs {
@@ -377,7 +377,7 @@
   width: 100%;
   height: 50px;
   padding: 0 40px;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 100px;
   text-align: center;
 }
@@ -703,7 +703,7 @@ fieldset.product-form__input .form__label {
     right: 100%;
     width: 2000px;
     bottom: 0;
-    background: white;
+    background: var(--white);
     z-index: 1;
   }
   
