@@ -2442,8 +2442,8 @@ select[name=selling_plan] {
 
 
 .discount-bubble {
-  border: 1px solid #398200;
-  background: #398200;
+  border: 1px solid var(--green-2);
+  background: var(--green-2);
   padding: 10px 20px;
   border-radius: 8px;
   height: auto;
