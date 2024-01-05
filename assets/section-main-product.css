@@ -21,7 +21,7 @@
 
 .product__info-wrapper {
   padding: 0 100px 100px 0;
-  background: white;
+  background: var(--white);
   position: relative;
   z-index: 2;
 }
@@ -33,7 +33,7 @@
   right: 100%;
   width: 2000px;
   bottom: 0;
-  background: white;
+  background: var(--white);
 }
 
 .reviews_button {
@@ -64,7 +64,7 @@
 }
 
 .video-tag {
-  background: white;
+  background: var(--white);
   padding: 0px 5px;
   border-radius: 10px;
   position: absolute;
@@ -74,7 +74,7 @@
 }
 
 .video-tag p {
-  color: #1F2322;
+  color: var(--charcoal);
   font-size: 12px;
   font-weight: 400;
   margin: 0;
