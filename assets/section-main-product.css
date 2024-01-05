@@ -1440,7 +1440,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]+label:hover {
-  border: 1px solid #545759;  
+  border: 1px solid var(--charcoal-light);  
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
@@ -1457,7 +1457,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::after {
-  background-color: #F8F8F8;
+  background-color: var(--gray-lighest);
 }
 
 .product__info-wrapper .product-form__input {
@@ -1472,7 +1472,7 @@ fieldset.product-form__input .form__label {
 
 .Best_Value {
   font-size: 14px;
-  background-color: #398200;
+  background-color: var(--green-2);
   display: inline-block;
   width: auto;
   position: absolute;
@@ -1481,7 +1481,7 @@ fieldset.product-form__input .form__label {
   padding: 4px 10px;
   top: -10px;
   font-weight: 400;
-  color: white;
+  color: var(--white);
 }
 
 .Product_Bar_Variant .product-form__input input[type=radio]+label {
@@ -1601,7 +1601,7 @@ fieldset.product-form__input .form__label {
 
 .template-product .product-form .rtx_option_selector {
   padding: 0 0 15px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-bottom: 1px solid rgb(31 35 34 / 10%);
   display: flex;
   align-items: center;
@@ -1640,7 +1640,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form .rtx_option_selector input[type="radio"]:checked::before {
-  background: #1F2322;
+  background: var(--charcoal);
 }
 
 .One_Time_Info {
@@ -1668,7 +1668,7 @@ fieldset.product-form__input .form__label {
 }
 
 .One_Time_Info .one_sub_text {
-  color: #1f2322;
+  color: var(--charcoal);
   margin: 0 0 6px;
   font-size: 12px!important;
   line-height: normal;
