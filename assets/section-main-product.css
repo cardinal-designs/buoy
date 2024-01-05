@@ -2294,7 +2294,7 @@ span#timer strong {
 }
 
 .Why_This_Matters a {
-  background-color: #f8f1eb;
+  background-color: var(--beige-light);
   font-size: 14px;
   font-weight: 500;
   padding: 9px 24px;
