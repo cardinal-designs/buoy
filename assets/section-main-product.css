@@ -2487,7 +2487,7 @@ select[name=selling_plan] {
   content: '';
   position: absolute;
   border: 1px solid #333;
-  border-color: #398200 transparent;
+  border-color: var(--green-2) transparent;
   border-width: 0 13px 11px 13px;
   top: -12px;
   left: 45%;
