@@ -2013,7 +2013,7 @@ fieldset.product-form__input .form__label {
   line-height: normal;
   padding: 0;
   font-weight: 300;
-  color: #545759;
+  color: var(--charcoal-light);
 }
 
 .Risk_Free li:last-child {
@@ -2025,7 +2025,7 @@ fieldset.product-form__input .form__label {
 }
 
 .template-product .pdp-faq .faq__header .sh4 {
-  color: #1F2322 !important;
+  color: var(--charcoal) !important;
   font-size: 18px;
   line-height: normal;
   margin: 0;
@@ -2043,13 +2043,13 @@ span#timer strong {
 
 .pdp-faq .faq__content ul li {
   font-size: 16px;
-  color: #1F2322;
+  color: var(--charcoal);
   font-weight: 400;
 }
 
 .pdp-faq .faq__header svg {
   width: 17px;
-  color: #545759;
+  color: var(--charcoal-light);
 }
 
 .pdp-faq .faq__item:first-child {
