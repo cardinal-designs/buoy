@@ -922,8 +922,8 @@ fieldset.product-form__input .form__label {
   .product__tabs-header-wrapper {
     margin: 0 -27px;
     overflow-x: scroll;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
   }
   
   .product__tabs-header {
