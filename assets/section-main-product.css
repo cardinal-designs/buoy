@@ -1723,7 +1723,7 @@ fieldset.product-form__input .form__label {
   font-size: 25px;
   font-weight: 400;
   line-height: 1.4em;
-  color: #1f2322;
+  color: var(--charcoal);
   margin: 0 auto 4px;
   max-width: 390px;
   font-family: inter,sans-serif;
