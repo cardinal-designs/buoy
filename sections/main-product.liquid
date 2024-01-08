@@ -43,7 +43,7 @@
           {% for block in section.blocks %}
             {% if block.type == "dropdown" %}
             <div class="dropdown-container-item">
-              <div class="dropdown-container-item__title">
+              <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
                 <p>{{ block.settings.title }}</p>
                 <div class="dropdown-container-item__x"></div>
               </div>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="product__drawer-triggers">
                   <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-                  <a href="javascript:void(0);" class="tabs-label body medium">Buoy's Clinical Trial</a>
+                  <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
                 </div>
               </div>
             </div>

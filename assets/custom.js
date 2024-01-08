@@ -154,8 +154,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
-      item.addEventListener('click', function(){
-        openClinical();
+      item.addEventListener('click', function(e){
+        openClinical(e);
       }); 
     });
   }
@@ -170,8 +170,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
-      item.addEventListener('click', function(){
-        openNav();
+      item.addEventListener('click', function(e){
+        openNav(e);
       }); 
     });
   }
@@ -220,6 +220,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
+  // Open HSA Drawer
   function openHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
@@ -230,6 +231,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
 
+   // Close HSA Drawer
   function closeHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "-100%";
@@ -240,16 +242,37 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
-  function openClinical() {
-    if (document.getElementById("clinicalSideDrawer")) {
-      document.getElementById("clinicalSideDrawer").style.right = "0";
+  // Open Clinical Drawer
+  function openClinical(e) {
+    const itemContainer = document.querySelector('.dropdown-container-item');
+    if (itemContainer) {
+      const parentEl = e.target.closest('.dropdown-container-item');
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      if (!dataTitle) return;
+      const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
+      clinicalDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
+      });
+    } else {
+      // For single drawer on PDP
+      const clinicalDrawer = document.getElementById("clinicalSideDrawer");
+      showDrawer(clinicalDrawer);
     }
-    document.querySelector('.page-blury-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
-    document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
+
+    // Show drawer
+    function showDrawer(drawer) {
+      drawer.style.right = "0";
+      document.querySelector('.page-blury-overlay').classList.add('is-visible');
+      document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('header-container').style.zIndex = 10;
+      document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
+    }
   }
 
+  // Close Clinical Drawer
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
@@ -260,15 +283,41 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
-  function openNav() {
-    if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
-    document.querySelector('.page-blury-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
+  // Open Supplement Drawer
+  function openNav(e) {
+    const itemContainer = document.querySelector('.dropdown-container-item');
+    if (itemContainer) {
+      // For multiple drawers on PDP
+      const parentEl = e.target.closest('.dropdown-container-item');
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      if (!dataTitle) return;
+      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+      supplementDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
+      });
+    } else {
+      // For single drawer on PDP
+      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      showDrawer(supplementDrawer);
+    }
 
-    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+    // Show drawer
+    function showDrawer(drawer) {
+      drawer.style.right = "0";
+      document.querySelector('.page-blury-overlay').classList.add('is-visible');
+      document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('header-container').style.zIndex = 10;
+
+      if (document.querySelector('.supplement-side-drawer .drawer__header')) {
+        document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+      }
+    }
   }
   
+  // Close Supplement Drawer
   function closeNav() {
     if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
