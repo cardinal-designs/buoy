@@ -1257,14 +1257,29 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   })
   
   if (!!subid) {
-    add_items = [{id: id, quantity: 1, selling_plan: subid, properties: {
+    if (metafieldKey && metafieldValue){
+      add_items = [{id: id, quantity: 1, selling_plan: subid, properties: {
       [metafieldKey]: metafieldValue}}]
+    } else {
+      add_items = [{id: id, quantity: 1, selling_plan: subid}]
+    }
+    
   } else if (checked_type == 'subscription') {
-    add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub, properties: {
+    if (metafieldKey && metafieldValue){
+      add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub, properties: {
       [metafieldKey]: metafieldValue}}]
+    } else {
+      add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub}]
+    }
+    
   } else {
-    add_items = [{id: id, quantity: 1, properties: {
+    if (metafieldKey && metafieldValue){
+       add_items = [{id: id, quantity: 1, properties: {
       [metafieldKey]: metafieldValue}}]
+    } else {
+       add_items = [{id: id, quantity: 1}]
+    }
+   
   }
   console.log(add_items);
   
