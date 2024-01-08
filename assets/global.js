@@ -1242,15 +1242,20 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let metafieldArray;
   let metafieldKey;
   let metafieldValue;
-  if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
-    metafieldHasValue = true;
-    console.log(metafieldHasValue)
-    metafieldArray = metafield.split(':');
-    metafieldKey = metafieldArray[0];
-    metafieldValue = metafieldArray[1];
+  if (metafield){
+      if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
+      metafieldHasValue = true;
+      console.log(metafieldHasValue)
+      metafieldArray = metafield.split(':');
+      metafieldKey = metafieldArray[0];
+      metafieldValue = metafieldArray[1];
+      } else {
+        metafieldHasValue = false;
+      }
   } else {
-    metafieldHasValue = false;
+     metafieldHasValue = false;
   }
+  
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
