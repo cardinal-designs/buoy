@@ -1238,8 +1238,9 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield');
-  console.log(metafield.indexOf(':'));
+  let metafieldHasValue = false;
   if (metafield.indexOf(':')){
+    metafieldHasValue = true;
     let metafieldArray = $(this).data('metafield').split(':');
     let metafieldKey = metafieldArray[0];
     let metafieldValue = metafieldArray[1];
@@ -1259,7 +1260,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   })
   
   if (!!subid) {
-    if (metafieldKey && metafieldValue){
+    if (metafieldHasValue){
       add_items = [{id: id, quantity: 1, selling_plan: subid, properties: {
       [metafieldKey]: metafieldValue}}]
     } else {
@@ -1267,7 +1268,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     }
     
   } else if (checked_type == 'subscription') {
-    if (metafieldKey && metafieldValue){
+    if (metafieldHasValue){
       add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub, properties: {
       [metafieldKey]: metafieldValue}}]
     } else {
@@ -1275,7 +1276,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     }
     
   } else {
-    if (metafieldKey && metafieldValue){
+    if (metafieldHasValue){
        add_items = [{id: id, quantity: 1, properties: {
       [metafieldKey]: metafieldValue}}]
     } else {
