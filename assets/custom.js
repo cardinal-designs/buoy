@@ -267,7 +267,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
-        console.log('title name:', titleName, 'drawer name:', drawerName);
         if (titleName == drawerName) {
           console.log(drawer);
         }
