@@ -262,9 +262,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   function openNav(e) {
     const parentEl = e.target.parentElement.parentElement.parentElement;
-    const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-    if (dataTitle) {
+    if (parentEl) {
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
         if (dataTitle === drawerName) {
