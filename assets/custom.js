@@ -269,6 +269,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const drawerName = drawer.dataset.productName;
       if (dataTitle === drawerName) {
         console.log(drawer);
+        drawer.style.right = "0";
       }
     })
     // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
