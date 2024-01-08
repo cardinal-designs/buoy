@@ -281,7 +281,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     //   document.querySelector('body').classList.add('lock-scroll');
     //   document.querySelector('header-container').style.zIndex = 10;
     // }
-          document.getElementById("supplementSideDrawer").style.right = "0";
+      document.getElementById("supplementSideDrawer").style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
