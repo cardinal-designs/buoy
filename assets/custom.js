@@ -256,9 +256,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
     clinicalDrawers.forEach((drawer) => {
       const drawerName = drawer.dataset.productName;
-      console.log(drawerName);
       if (dataTitle === drawerName) {
-        // console.log(drawer);
+        console.log(drawer);
         // showDrawer(drawer);
       }
     });
