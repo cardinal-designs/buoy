@@ -528,6 +528,7 @@
         },
         "d9f870d0-6538-4d20-bb3d-9da2aea34714": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_210x210_PDP_Ingredient_Vitamin_D3.jpg",
             "name": "Vitamin D3",
@@ -561,6 +562,7 @@
         },
         "39fc5547-0230-4fea-9ada-4f498876432a": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_210x210_PDP_Ingredient_Elderberry.jpg",
             "name": "Elderberry",
@@ -572,6 +574,7 @@
         },
         "8065b803-c0ee-488a-8ec7-877690b49ce9": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_210x210_PDP_Ingredient_Echinacea.jpg",
             "name": "Echinacea",
@@ -594,6 +597,7 @@
         },
         "dac6ba0b-46bc-4d53-9274-c34333ff20e8": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_210x210_PDP_Ingredient_Vitamin_A.jpg",
             "name": "Vitamin A",
@@ -605,6 +609,7 @@
         },
         "ec967bcd-e19c-425a-8e93-4bb62722e6c1": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/D_1x1_210x210_PDP_Ingredient_Vitamin_E.jpg",
             "name": "Vitamin E",
@@ -718,7 +723,9 @@
       "disabled": true,
       "settings": {
         "background": "#ffffff",
-        "enable_marquee": false
+        "enable_marquee": false,
+        "add_top_border": false,
+        "add_bottom_border": false
       }
     },
     "1636344367d21ce97f": {
@@ -785,7 +792,10 @@
       ],
       "settings": {
         "title": "Ask us the tough ones",
-        "text": "Our exceptional team of healthcare professionals and scientists have answers."
+        "text": "Our exceptional team of healthcare professionals and scientists have answers.",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "163771143220978a33": {
