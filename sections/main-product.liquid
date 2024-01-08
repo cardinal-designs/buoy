@@ -43,7 +43,7 @@
           {% for block in section.blocks %}
             {% if block.type == "dropdown" %}
             <div class="dropdown-container-item">
-              <div class="dropdown-container-item__title">
+              <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
                 <p>{{ block.settings.title }}</p>
                 <div class="dropdown-container-item__x"></div>
               </div>
