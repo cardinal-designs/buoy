@@ -267,7 +267,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
-        console.log('title name:', titleName, 'drawer name:', drawerName);
+        if (titleName === drawerName) {
+          drawer.style.right = "0";
+          document.querySelector('.page-blury-overlay').classList.add('is-visible');
+          document.querySelector('body').classList.add('lock-scroll');
+          document.querySelector('header-container').style.zIndex = 10;
+          document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+        }
       })
     })
     // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
