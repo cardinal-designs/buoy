@@ -294,10 +294,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
             showDrawer(drawer);
           }
         });
-      } else {
-        const defaultDrawer = document.getElementById("supplementSideDrawer");
-        showDrawer(defaultDrawer);
       }
+    } else {
+      const defaultDrawer = document.getElementById("supplementSideDrawer");
+      showDrawer(defaultDrawer);
     }
 
     function showDrawer(drawer) {
