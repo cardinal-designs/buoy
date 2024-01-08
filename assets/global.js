@@ -1292,7 +1292,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     }
    
   }
-  console.log(add_items);
   
   const body = JSON.stringify({
     items: add_items,
