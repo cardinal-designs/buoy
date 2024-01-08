@@ -1238,7 +1238,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield').split(':');
-  if (metafield) {
+  if (metafield != '') {
     let metafieldKey = metafield[0];
     let metafieldValue = metafield[1];
   }
