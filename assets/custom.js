@@ -248,6 +248,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('body').classList.add('lock-scroll');
     document.querySelector('header-container').style.zIndex = 10;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
+
+    const itemContainer = document.querySelector('.dropdown-container-item');
+    console.log(itemContainer);
   }
 
   function closeClinical() {
@@ -258,33 +261,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('body').classList.remove('lock-scroll');
     document.querySelector('header-container').style.zIndex = 3;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
-
-        const itemContainer = document.querySelector('.dropdown-container-item');
-    if (itemContainer) {
-      // For multiple drawers on PDP
-      const parentEl = e.target.closest('.dropdown-container-item');
-      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-      if (!dataTitle) return;
-      const supplementDrawers = document.querySelectorAll('.clinical-trial-drawer');
-        supplementDrawers.forEach((drawer) => {
-          const drawerName = drawer.dataset.productName;
-          if (dataTitle === drawerName) {
-            showDrawer(drawer);
-          }
-        });
-    } else {
-      // For single drawer on PDP
-      const defaultDrawer = document.getElementById("clinicalSideDrawer");
-      showDrawer(defaultDrawer);
-    }
-
-    // Show drawer
-    function showDrawer(drawer) {
-      drawer.style.right = "0";
-      document.querySelector('.page-blury-overlay').classList.add('is-visible');
-      document.querySelector('body').classList.add('lock-scroll');
-      document.querySelector('header-container').style.zIndex = 10;
-    }
   }
 
   function openNav(e) {
