@@ -70,7 +70,7 @@
           </button>
           </a>
           {% else %}
-          <button data-id="{{ product.selected_or_first_available_variant.id }}" data-subid="{{ product.selling_plan_groups[0].selling_plans[0].id }}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
+          <button data-id="{{ product.selected_or_first_available_variant.id }}" data-metafield="{{product.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" data-subid="{{ product.selling_plan_groups[0].selling_plans[0].id }}" class="pee-club-add-to-cart button">{{ block.settings.button_text }} - 
             <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
                 <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
               </span>
