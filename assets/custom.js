@@ -283,20 +283,21 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // }
 
     const parentEl = e.target.closest('.dropdown-container-item');
-    const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-
-    if (dataTitle) {
-      supplementDrawers.forEach((drawer) => {
-        const drawerName = drawer.dataset.productName;
-        if (dataTitle === drawerName) {
-          console.log(drawer);
-          showDrawer(drawer);
-        }
-      });
-    } else {
-      const defaultDrawer = document.getElementById("supplementSideDrawer");
-      showDrawer(defaultDrawer);
+    if (parentEl && parentEl.querySelector('.dropdown-container-item__title')) {
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+      if (dataTitle) {
+        supplementDrawers.forEach((drawer) => {
+          const drawerName = drawer.dataset.productName;
+          if (dataTitle === drawerName) {
+            console.log(drawer);
+            showDrawer(drawer);
+          }
+        });
+      } else {
+        const defaultDrawer = document.getElementById("supplementSideDrawer");
+        showDrawer(defaultDrawer);
+      }
     }
 
     function showDrawer(drawer) {
