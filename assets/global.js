@@ -1324,6 +1324,24 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let subid = Number($(this).data('subid'));
+  let metafield = $(this).data('metafield');
+  console.log(metafield);
+  let metafieldHasValue = false;
+  let metafieldArray;
+  let metafieldKey;
+  let metafieldValue;
+  if (metafield){
+      if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
+      metafieldHasValue = true;
+      metafieldArray = metafield.split(':');
+      metafieldKey = metafieldArray[0];
+      metafieldValue = metafieldArray[1];
+      } else {
+        metafieldHasValue = false;
+      }
+  } else {
+     metafieldHasValue = false;
+  }
   
   $.getJSON('/cart', function (results) {
     if(Number(results.item_count) > 0) {
