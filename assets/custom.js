@@ -261,6 +261,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openNav() {
+    console.log('clicked');
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
