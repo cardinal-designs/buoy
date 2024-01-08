@@ -1255,13 +1255,13 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   
   if (!!subid) {
     add_items = [{id: id, quantity: 1, selling_plan: subid, properties: {
-      metafieldKey: metafieldValue }}]
+      `${metafieldKey}`: metafieldValue}}]
   } else if (checked_type == 'subscription') {
     add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub, properties: {
-      metafieldKey: metafieldValue }}]
+      `${metafieldKey}`: metafieldValue}}]
   } else {
     add_items = [{id: id, quantity: 1, properties: {
-      metafieldKey: metafieldValue }}]
+      `${metafieldKey}`: metafieldValue}}]
   }
   console.log(add_items);
   
