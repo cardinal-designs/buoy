@@ -1238,10 +1238,12 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield').split(':');
+  let metafieldKey = metafield[0];
+  let metafieldValue = metafield[1];
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
-    console.log(metafield);
+    console.log(metafieldKey, metafieldValue);
   
   $.getJSON('/cart', function (results) {
     if(Number(results.item_count) > 0) {
