@@ -263,7 +263,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const dataTitle = document.querySelectorAll('.dropdown-container-item__title');
     dataTitle.forEach((title) => {
-      console.log(title);
+      console.log(title.dataset.title);
     })
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
     supplementDrawers.forEach((drawer) => {
