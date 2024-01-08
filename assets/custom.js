@@ -263,6 +263,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
+      // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
@@ -274,6 +275,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           }
         });
     } else {
+      // For single drawer on PDP
       const defaultDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(defaultDrawer);
     }
