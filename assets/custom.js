@@ -263,11 +263,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const dataTitle = document.querySelectorAll('.dropdown-container-item__title');
     dataTitle.forEach((title) => {
-      console.log(title.dataset.title);
-    })
-    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-    supplementDrawers.forEach((drawer) => {
-      console.log(drawer.dataset.productName);
+      const titleName = title.dataset.title;
+      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+      supplementDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        console.log(titleName, drawerName)
+      })
     })
     // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     // document.querySelector('.page-blury-overlay').classList.add('is-visible');
