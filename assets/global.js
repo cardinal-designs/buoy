@@ -1248,6 +1248,8 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     metafieldArray = metafield.split(':');
     metafieldKey = metafieldArray[0];
     metafieldValue = metafieldArray[1];
+  } else {
+    metafieldHasValue = false;
   }
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
