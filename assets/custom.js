@@ -295,8 +295,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
     } else {
       // For single drawer on PDP
-      const defaultDrawer = document.getElementById("supplementSideDrawer");
-      showDrawer(defaultDrawer);
+      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      showDrawer(supplementDrawer);
     }
 
     // Show drawer
