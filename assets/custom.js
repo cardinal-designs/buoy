@@ -264,15 +264,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const parentEl = e.target.parentElement.parentElement.parentElement;
     const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
     console.log(dataTitle);
-    dataTitle.forEach((title) => {
-      const titleName = title.dataset.title;
-      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-      supplementDrawers.forEach((drawer) => {
-        const drawerName = drawer.dataset.productName;
-        if (titleName == drawerName) {
-          // console.log(drawer);
-        }
-      })
+    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    supplementDrawers.forEach((drawer) => {
+      const drawerName = drawer.dataset.productName;
+      if (dataTitle === drawerName) {
+        console.log(drawer);
+      }
     })
     // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     // document.querySelector('.page-blury-overlay').classList.add('is-visible');
