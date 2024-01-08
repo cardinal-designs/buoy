@@ -955,6 +955,175 @@
       "type": "product-bar-toggle",
       "settings": {
       }
+    },
+    "f31ddba4-2db9-448a-9413-e1e1b499bfed": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "9495b685-4872-48f9-8799-56f08c6749fa": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "f0ad9572-6bc9-4370-8582-6a6e461c9acf": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "8354755a-3be3-4641-9825-7a1ca1743369": {
+          "type": "recommended",
+          "settings": {
+            "heading": "",
+            "title": "",
+            "sub_title": "",
+            "content": ""
+          }
+        },
+        "c9971272-99f7-4197-a3cf-e91bd3316f4a": {
+          "type": "table",
+          "settings": {
+          }
+        },
+        "87dcb5e2-c7c1-4bcd-ad1b-ac39de328a5a": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "de2fbf20-f4a8-42f5-81d1-e755f8ce6507": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "9495b685-4872-48f9-8799-56f08c6749fa",
+        "f0ad9572-6bc9-4370-8582-6a6e461c9acf",
+        "8354755a-3be3-4641-9825-7a1ca1743369",
+        "c9971272-99f7-4197-a3cf-e91bd3316f4a",
+        "87dcb5e2-c7c1-4bcd-ad1b-ac39de328a5a",
+        "de2fbf20-f4a8-42f5-81d1-e755f8ce6507"
+      ],
+      "settings": {
+        "product_name": "",
+        "title": ""
+      }
+    },
+    "398f2c7f-ca7b-4a96-aa26-b2c48bd16c0d": {
+      "type": "clinical-trial-drawer",
+      "blocks": {
+        "7bdd56d8-e1ed-4c28-aa0c-53f8a28e06b0": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "6e0ee015-5579-4eea-9494-67ab693f289f": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "9d25f921-f7c3-4dce-983f-17fbfa94e6ea": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "075091c3-b610-4c63-afa3-609ba2b7a642": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "a4b024de-9f04-45b3-82f0-7103d4635f90": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "c223ff60-929b-4db5-b152-a381f9b1182a": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        }
+      },
+      "block_order": [
+        "7bdd56d8-e1ed-4c28-aa0c-53f8a28e06b0",
+        "6e0ee015-5579-4eea-9494-67ab693f289f",
+        "9d25f921-f7c3-4dce-983f-17fbfa94e6ea",
+        "075091c3-b610-4c63-afa3-609ba2b7a642",
+        "a4b024de-9f04-45b3-82f0-7103d4635f90",
+        "c223ff60-929b-4db5-b152-a381f9b1182a"
+      ],
+      "settings": {
+        "year": "",
+        "product_name": "",
+        "title": "",
+        "about": ""
+      }
     }
   },
   "order": [
@@ -975,6 +1144,8 @@
     "91da1537-2987-42c0-8813-ee1b4ee1058e",
     "1636344367d21ce97f",
     "1637720233f9199bd5",
-    "165168225907175bb6"
+    "165168225907175bb6",
+    "f31ddba4-2db9-448a-9413-e1e1b499bfed",
+    "398f2c7f-ca7b-4a96-aa26-b2c48bd16c0d"
   ]
 }
