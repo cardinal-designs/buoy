@@ -164,7 +164,7 @@
 
                  {% assign my_fields = variant.metafields.custom %}
 
-                  <span class="Variant_Blocks" data-id={{ variant.id }}>
+                  <span class="Variant_Blocks" data-id="{{ variant.id }}">
                     <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                       name="{{ option.name }}"
                       value="{{ value | escape }}"
