@@ -1045,9 +1045,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
           }
         }
-        /*elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
+        elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
           input.disabled = (elValue != 'purchaseTypeSubscription');
-        });*/
+        });
         sellingPlanUpdate();
       });
     }); 
