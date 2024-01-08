@@ -261,7 +261,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openNav(e) {
-    console.log(e.target.parentElement.parentElement);
+    console.log(e.target.parentElement.parentElement.parentElement);
     const dataTitle = document.querySelectorAll('.dropdown-container-item__title');
     dataTitle.forEach((title) => {
       const titleName = title.dataset.title;
