@@ -220,6 +220,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
+  // Open HSA Drawer
   function openHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
@@ -230,6 +231,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
 
+   // Close HSA Drawer
   function closeHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "-100%";
@@ -240,6 +242,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
+  // Open Clinical Drawer
   function openClinical(e) {
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
@@ -269,6 +272,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
   }
 
+  // Close Clinical Drawer
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
@@ -279,6 +283,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
+  // Open Supplement Drawer
   function openNav(e) {
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
@@ -312,6 +317,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
   }
   
+  // Close Supplement Drawer
   function closeNav() {
     if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
