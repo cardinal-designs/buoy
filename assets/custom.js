@@ -267,7 +267,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     })
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
     supplementDrawers.forEach((drawer) => {
-      console.log(drawer);
+      console.log(drawer.dataset.productName);
     })
     // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     // document.querySelector('.page-blury-overlay').classList.add('is-visible');
