@@ -261,6 +261,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openNav(e) {
+    console.log(e.target.parentElement);
     const dataTitle = document.querySelectorAll('.dropdown-container-item__title');
     dataTitle.forEach((title) => {
       const titleName = title.dataset.title;
@@ -268,7 +269,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
         if (titleName == drawerName) {
-          console.log(drawer);
+          // console.log(drawer);
         }
       })
     })
