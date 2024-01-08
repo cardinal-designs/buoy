@@ -262,7 +262,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   function openNav(e) {
     console.log(e.target.parentElement)
-    console.log(document.querySelector('.dropdown-container-item__title'))
+    console.log(document.querySelector('.dropdown-container-item__title').dataset.title)
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
