@@ -250,16 +250,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
 
     const itemContainer = document.querySelector('.dropdown-container-item');
-    const parentEl = e.target.closest('.dropdown-container-item');
-    const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-    if (!dataTitle) return;
-    const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
-    clinicalDrawers.forEach((drawer) => {
-      const drawerName = drawer.dataset.productName;
-      if (dataTitle === drawerName) {
-        showDrawer(drawer);
-      }
-    });
+    if (itemContainer) {
+      const parentEl = e.target.closest('.dropdown-container-item');
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      if (!dataTitle) return;
+      const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
+      clinicalDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
+      });
+    }
 
     function showDrawer(drawer) {
       drawer.style.right = "0";
