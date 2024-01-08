@@ -991,7 +991,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanUpdate = () => {
       sellingPlanQueryUpdate();
-      console.log(sellingPlanUrlGenerate());
+      console.log('aaa',sellingPlanUrlGenerate());
     };
     const sellingPlanUpdateVariant = () => {
       const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
