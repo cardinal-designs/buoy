@@ -155,7 +155,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
       item.addEventListener('click', function(e){
-        console.log(item);
         openClinical(e);
       }); 
     });
