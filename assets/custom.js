@@ -251,7 +251,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
     const itemContainer = document.querySelector('.dropdown-container-item');
     const parentEl = e.target.closest('.dropdown-container-item');
-    console.log(parentEl);
+    const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+    console.log(dataTitle);
   }
 
   function closeClinical() {
