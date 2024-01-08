@@ -261,12 +261,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openNav(e) {
-    console.log(e.target.parentElement)
     console.log(document.querySelector('.dropdown-container-item__title').dataset.title)
-    if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
-    document.querySelector('.page-blury-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
+    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    supplementDrawers.forEach((drawer) => {
+      console.log(drawer);
+    })
+    // if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
+    // document.querySelector('.page-blury-overlay').classList.add('is-visible');
+    // document.querySelector('body').classList.add('lock-scroll');
+    // document.querySelector('header-container').style.zIndex = 10;
 
     if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
   }
