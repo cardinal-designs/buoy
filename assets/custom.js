@@ -185,6 +185,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
     document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
       console.log(selectors.openDrawerSection);
+      console.log('hey');
       // openNav();
     });
   }
