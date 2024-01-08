@@ -1325,7 +1325,6 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
   let id = Number($(this).data('id'));
   let subid = Number($(this).data('subid'));
   let metafield = $(this).data('metafield');
-  console.log(metafield);
   let metafieldHasValue = false;
   let metafieldArray;
   let metafieldKey;
@@ -1350,8 +1349,13 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
       $('.cart-count-bubble').text('')
     }
   })
+  if (metafieldHasValue){
+    add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST', properties: {
+      [metafieldKey]: metafieldValue}}]
+  } else {
+    add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST'}]
+  }
   
-  add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST'}]
 
   
   const body = JSON.stringify({
