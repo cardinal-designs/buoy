@@ -1263,6 +1263,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     add_items = [{id: id, quantity: 1, properties: {
       metafieldKey: metafieldValue }}]
   }
+  console.log(add_items);
   
   const body = JSON.stringify({
     items: add_items,
