@@ -995,7 +995,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanUpdateVariant = () => {
       const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
-      console.log('variant',variant)
+      console.log(variant.id)
       let newOptions = '';
       // Determine the selected option
       let selected = sellingPlanSelectionGet();
