@@ -253,6 +253,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const parentEl = e.target.closest('.dropdown-container-item');
     const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
     if (!dataTitle) return;
+    const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
+    clinicalDrawers.forEach((drawer) => {
+      const drawerName = drawer.dataset.productName;
+      if (dataTitle === drawerName) {
+        console.log(drawer);
+        // showDrawer(drawer);
+      }
+    });
   }
 
   function closeClinical() {
