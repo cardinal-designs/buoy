@@ -154,8 +154,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
-      item.addEventListener('click', function(){
-        openClinical();
+      item.addEventListener('click', function(e){
+        openClinical(e);
       }); 
     });
   }
@@ -240,7 +240,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.hsa-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
-  function openClinical() {
+  function openClinical(e) {
     // if (document.getElementById("clinicalSideDrawer")) {
     //   document.getElementById("clinicalSideDrawer").style.right = "0";
     // }
@@ -250,7 +250,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
 
     const itemContainer = document.querySelector('.dropdown-container-item');
-    console.log(itemContainer);
+    const parentEl = e.target.closest('.dropdown-container-item');
+    console.log(parentEl);
   }
 
   function closeClinical() {
