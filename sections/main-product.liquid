@@ -895,7 +895,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
 
   
-  ((api) => { 
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
@@ -1085,7 +1084,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         sellingPlanUrlGenerate
       }
     });
-  })((window.retextionBuyBox = {}));
+  )((window.retextionBuyBox = {}));
   </script>
 
 
