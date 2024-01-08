@@ -879,7 +879,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
-  console.log('hey');
   $('#purchaseTypeOneTime').change(function() {
     $('.Serving_Cost').each(function() {
       $(this).text($(this).data('onetimeprice'))
@@ -898,6 +897,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   
   ((api) => { 
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
+  console.log('aaaaaaaaa', boxId);
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
