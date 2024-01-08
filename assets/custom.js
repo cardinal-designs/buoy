@@ -261,21 +261,23 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   function openNav(e) {
-    const parentEl = e.target.closest('.dropdown-container-item');
-    if (parentEl && parentEl.querySelector('.dropdown-container-item__title')) {
-      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-      if (!dataTitle) return;
-      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-        supplementDrawers.forEach((drawer) => {
-          const drawerName = drawer.dataset.productName;
-          if (dataTitle === drawerName) {
-            showDrawer(drawer);
-          }
-        });
-    } else {
-      const defaultDrawer = document.getElementById("supplementSideDrawer");
+          const defaultDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(defaultDrawer);
-    }
+    // const parentEl = e.target.closest('.dropdown-container-item');
+    // if (parentEl && parentEl.querySelector('.dropdown-container-item__title')) {
+    //   const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+    //   if (!dataTitle) return;
+    //   const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    //     supplementDrawers.forEach((drawer) => {
+    //       const drawerName = drawer.dataset.productName;
+    //       if (dataTitle === drawerName) {
+    //         showDrawer(drawer);
+    //       }
+    //     });
+    // } else {
+    //   const defaultDrawer = document.getElementById("supplementSideDrawer");
+    //   showDrawer(defaultDrawer);
+    // }
 
     function showDrawer(drawer) {
       drawer.style.right = "0";
