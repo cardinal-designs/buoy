@@ -280,7 +280,7 @@
                   <div class="cart-upsell__container-atc">
                     <p class="sh3">{{upsell1.title}}</p>
                     <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell1.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    <button data-id="{{upsell1.selected_or_first_available_variant.id}}" data-metafield="{{upsell1.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}} "type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
                   </div>
                 </div>
               </div>
