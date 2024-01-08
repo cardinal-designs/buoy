@@ -1239,10 +1239,11 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield');
   console.log(metafield.indexOf(':'));
-  let metafieldArray = $(this).data('metafield').split(':');
-  
-    // let metafieldKey = metafieldArray[0];
-    // let metafieldValue = metafieldArray[1];
+  if (metafield.indexOf(':')){
+    let metafieldArray = $(this).data('metafield').split(':');
+    let metafieldKey = metafieldArray[0];
+    let metafieldValue = metafieldArray[1];
+  }
   
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
