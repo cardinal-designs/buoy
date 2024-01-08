@@ -3,7 +3,7 @@
   {%- liquid
     assign currentVariant = variant | default: product.selected_or_first_available_variant
     assign requiresPlan = product.requires_selling_plan
-    assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+    assign selectedAllocation = ''
     assign currentAllocations = currentVariant.selling_plan_allocations
   -%}
   {%- comment -%} Buy Box Styles {%- endcomment -%}
