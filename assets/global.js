@@ -1241,6 +1241,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let metafieldHasValue = false;
   if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
     metafieldHasValue = true;
+    console.log(metafieldHasValue)
     let metafieldArray = metafield.split(':');
     let metafieldKey = metafieldArray[0];
     let metafieldValue = metafieldArray[1];
