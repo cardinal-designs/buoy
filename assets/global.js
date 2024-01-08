@@ -1245,7 +1245,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   if (metafield){
       if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
       metafieldHasValue = true;
-      console.log(metafieldHasValue)
       metafieldArray = metafield.split(':');
       metafieldKey = metafieldArray[0];
       metafieldValue = metafieldArray[1];
@@ -1255,11 +1254,9 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   } else {
      metafieldHasValue = false;
   }
-  
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
-    console.log(metafieldKey, metafieldValue);
   
   
   $.getJSON('/cart', function (results) {
