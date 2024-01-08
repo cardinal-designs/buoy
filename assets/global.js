@@ -1239,7 +1239,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield');
   let metafieldHasValue = false;
-  if (metafield.indexOf(':')){
+  if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
     metafieldHasValue = true;
     let metafieldArray = metafield.split(':');
     let metafieldKey = metafieldArray[0];
