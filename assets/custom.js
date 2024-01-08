@@ -257,10 +257,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     clinicalDrawers.forEach((drawer) => {
       const drawerName = drawer.dataset.productName;
       if (dataTitle === drawerName) {
-        console.log(drawer);
-        // showDrawer(drawer);
+        showDrawer(drawer);
       }
     });
+
+    function showDrawer(drawer) {
+      drawer.style.right = "0";
+      document.querySelector('.page-blury-overlay').classList.add('is-visible');
+      document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('header-container').style.zIndex = 10;
+      document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
+    }
   }
 
   function closeClinical() {
