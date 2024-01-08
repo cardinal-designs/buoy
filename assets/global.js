@@ -1266,6 +1266,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
     .then((response) => response.json())
     .then((parsedState) => {
+      console.log('hello');
       atcGetSectionsToRender().forEach((section => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
