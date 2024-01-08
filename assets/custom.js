@@ -260,8 +260,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
-  function openNav() {
-    console.log(document.getElementById("supplementSideDrawer"))
+  function openNav(e) {
+    console.log(e.target)
     if(document.getElementById("supplementSideDrawer")) document.getElementById("supplementSideDrawer").style.right = "0";
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
