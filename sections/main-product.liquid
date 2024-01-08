@@ -892,12 +892,13 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   })
 
 
-
+let test = {{ currentVariant.id | json }};
+console.log('selectedVariantId',test)
 
   
   ((api) => { 
   const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
-  console.log('aaaaaaaaa', boxId);
+
   const boxProduct = {{ product | json }};
   const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
   const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
