@@ -2460,6 +2460,10 @@ select[name=selling_plan] {
     max-width: 285px;
     width: 100%;
   }
+
+  .template-product .rtx_option_heading, .template-product .rtx_option_heading span {
+    font-size: 16px;
+  }
 }
 
 .discount-bubble p {
