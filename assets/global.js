@@ -1245,11 +1245,11 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     let metafieldKey = metafieldArray[0];
     let metafieldValue = metafieldArray[1];
   }
-  console.log(metafieldHasValue);
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
     console.log(metafieldKey, metafieldValue);
+  
   
   $.getJSON('/cart', function (results) {
     if(Number(results.item_count) > 0) {
