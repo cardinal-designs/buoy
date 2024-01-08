@@ -1065,6 +1065,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     elementsVariantSelectors.forEach(vs => {
       vs.addEventListener('change', e => {
         selectedVariantId = e.target.value;
+        console.log(selectedVariantId)
         sellingPlanUpdateVariant();
       });
     });
