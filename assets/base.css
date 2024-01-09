@@ -2655,11 +2655,6 @@ details-disclosure > details {
   animation: spin 10s linear infinite;
 }
 
-.curved-hydrating {
-  margin-left: -35px;
-  margin-bottom: 5px;
-}
-
 @media screen and (max-width: 768px) {
   .product-spinner__emoji {
     font-size: 23px;
@@ -2669,15 +2664,10 @@ details-disclosure > details {
     height: 63px;
     width: auto;
   }
-
-  .curved-hydrating {
-    height: 35px;
-    margin-left: -32px;
-  }
 }
 
 .Cart_Close_Mobile {
-  displa:none;
+  display: none;
 }
 
 .Cart_Close_Mobile svg {
