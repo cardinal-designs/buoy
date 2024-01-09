@@ -1263,6 +1263,10 @@ fieldset.product-form__input .form__label {
   margin: 3px 0;
 }
   
+.subscribe-item_info p:last-of-type {
+  color: rgba(0,0,0,0.4);
+}
+  
 .subscribe-item_info > div {
   align-self: center; 
 }
