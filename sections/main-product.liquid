@@ -184,7 +184,16 @@
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
                      {%- if product.metafields.custom.subscription_serving_price != blank -%}
-                        <span class="Serving_Cost" data-subprice="{{ product.metafields.custom.subscription_serving_price }}" data-onetimeprice="{{ my_fields.serving_cost }}">{{ product.metafields.custom.subscription_serving_price }}</span>    
+                        <span 
+                          class="Serving_Cost" 
+                          data-subprice="{{ product.metafields.custom.subscription_serving_price }}" 
+                          data-onetimeprice="{{ my_fields.serving_cost }}"
+                        >
+                          <script>
+  console.log({{ product.metafields.custom.subscription_serving_price | json }})
+</script>
+                          {{ product.metafields.custom.subscription_serving_price }}
+                        </span>    
                      {%- elsif my_fields.serving_cost != blank -%}
                         <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
                       {%- endif -%}
