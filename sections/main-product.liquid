@@ -901,7 +901,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     var checkSellingPlan = urlParams.get('selling_plan');
     console.log('checkSellingPlan', checkSellingPlan)
     if(checkSellingPlan != '' && checkSellingPlan != null && checkSellingPlan != undefined){
-      $('#purchaseTypeSbubscription').trigger('change')
+      $('#purchaseTypeSbubscription').trigger('click')
     }else{
       $('select[name="selling_plan"]').prop('disabled' , true);
     }
