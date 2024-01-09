@@ -2906,6 +2906,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__body-text {
   display: flex;
+  align-items: center;
   gap: 8px;
   margin-bottom: 13px;
 }
