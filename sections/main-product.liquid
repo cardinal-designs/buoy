@@ -190,7 +190,7 @@
                           data-onetimeprice="{{ my_fields.serving_cost }}"
                         >
                           <script>
-  console.log({{ product.metafields.custom.subscription_serving_price | json }})
+  console.log({{ variant.metafields.custom.serving_cost | json }})
 </script>
                           {{ product.metafields.custom.subscription_serving_price }}
                         </span>    
