@@ -883,17 +883,30 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
-  $('#purchaseTypeOneTime').change(function() {
-    $('.Serving_Cost').each(function() {
-      $(this).text($(this).data('onetimeprice'))
-    })
-  })
+  // $('#purchaseTypeOneTime').change(function() {
+  //   $('.Serving_Cost').each(function() {
+  //     $(this).text($(this).data('onetimeprice'))
+  //   })
+  // })
 
-  $('#purchaseTypeSbubscription').change(function() {
-    $('.Serving_Cost').each(function() {
-      $('.Serving_Cost').text($(this).data('subprice'))
-    })
-  })
+  // $('#purchaseTypeSbubscription').change(function() {
+  //   $('.Serving_Cost').each(function() {
+  //     $('.Serving_Cost').text($(this).data('subprice'))
+  //   })
+  // })
+
+  document.getElementById('purchaseTypeOneTime').addEventListener('change', function() {
+    document.querySelectorAll('.Serving_Cost').forEach(function(element) {
+      element.textContent = element.dataset.onetimeprice;
+    });
+  });
+  
+  document.getElementById('purchaseTypeSbubscription').addEventListener('change', function() {
+    document.querySelectorAll('.Serving_Cost').forEach(function(element) {
+      element.textContent = element.dataset.subprice;
+    });
+  });
+
 
 
 
