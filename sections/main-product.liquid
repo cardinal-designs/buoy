@@ -883,18 +883,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
-  // $('#purchaseTypeOneTime').change(function() {
-  //   $('.Serving_Cost').each(function() {
-  //     $(this).text($(this).data('onetimeprice'))
-  //   })
-  // })
-
-  // $('#purchaseTypeSbubscription').change(function() {
-  //   $('.Serving_Cost').each(function() {
-  //     $('.Serving_Cost').text($(this).data('subprice'))
-  //   })
-  // })
-
   $(document).ready(function(){
     var urlParams = new URLSearchParams(window.location.search);
     var checkSellingPlan = urlParams.get('selling_plan');
