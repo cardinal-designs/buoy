@@ -191,7 +191,7 @@
                 {% for block in section.blocks %}
                   {%- case block.type -%}
                     {%- when 'onetime_block' -%}
-                      <div class="subscribe-item_info">
+                      <div class="subscribe-item_info test">
                         {%- if block.settings.onetime_purchase_type_img != blank -%}
                           <img src="{{ block.settings.onetime_purchase_type_img | img_url: 'master' }}">
                         {%- endif -%}
