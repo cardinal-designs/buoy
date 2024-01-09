@@ -183,16 +183,14 @@
                         <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if variant.metafields.custom.serving_cost != blank -%}
+                     {%- if my_fields.serving_cost != blank -%}
                         <span 
                           class="Serving_Cost" 
-                          data-subprice="{{ variant.metafields.custom.serving_cost }}" 
+                          data-subprice="{{ my_fields.serving_cost }}" 
                           data-onetimeprice="{{ my_fields.serving_cost }}"
                         >
-                          {{ variant.metafields.custom.serving_cost }}
+                          {{ my_fields.serving_cost }}
                         </span>    
-                     {%- elsif my_fields.serving_cost != blank -%}
-                        <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
                       {%- endif -%}
                       {%- if my_fields.best_value != blank -%}
                         <span class="Best_Value">{{ my_fields.best_value }}</span>
