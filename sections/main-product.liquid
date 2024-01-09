@@ -897,6 +897,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
   $(document).ready(function(){
     var urlParams = new URLSearchParams(window.location.search); //get all parameters
+    console.log('urlParams',  urlParams)
     var checkSellingPlan = urlParams.get('selling_plan');
     console.log('checkSellingPlan', checkSellingPlan)
     if(checkSellingPlan){
