@@ -31,6 +31,17 @@
             "list_item3": "Add To Food, Drinks, or Directly on Tongue"
           }
         },
+        "fc77ee7c-f9b8-4ca1-858a-fc71d1fbd180": {
+          "type": "dropdown",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "bubble_text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": ""
+          }
+        },
         "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
           "type": "onetime_block",
           "settings": {
@@ -110,6 +121,7 @@
       "block_order": [
         "3aaebc96-7374-4f5b-808e-92ce2792f5b5",
         "a7e275c4-f7be-4021-9449-ec9aeccf9fe3",
+        "fc77ee7c-f9b8-4ca1-858a-fc71d1fbd180",
         "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90",
         "c722ed3c-e21b-4d49-9c95-1195071825ad",
         "b807a726-d1e0-4fb9-96ca-01c7806619c6",
@@ -958,32 +970,307 @@
     },
     "0eedab9e-3745-417a-85b6-719dc36251dc": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "bd7f8f2e-507c-4f77-8a91-3fefdafa4ea7": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "f8f70f60-8584-4d61-93b3-ea87f3948dd1": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "0a5f6c7d-7cd0-4426-b2a1-489d6eaa8bf2": {
+          "type": "recommended",
+          "settings": {
+            "heading": "",
+            "title": "",
+            "sub_title": "",
+            "content": ""
+          }
+        },
+        "231a9988-b899-4c6c-b0c6-24dc703726fb": {
+          "type": "table",
+          "settings": {
+          }
+        },
+        "085a7120-cc4c-4be1-b444-91fb0abe60a3": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "34880c20-5e98-4542-95f9-989f77e6d934": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "bd7f8f2e-507c-4f77-8a91-3fefdafa4ea7",
+        "f8f70f60-8584-4d61-93b3-ea87f3948dd1",
+        "0a5f6c7d-7cd0-4426-b2a1-489d6eaa8bf2",
+        "231a9988-b899-4c6c-b0c6-24dc703726fb",
+        "085a7120-cc4c-4be1-b444-91fb0abe60a3",
+        "34880c20-5e98-4542-95f9-989f77e6d934"
+      ],
       "settings": {
         "product_name": "Hydration Drops",
         "title": "Supplement Facts"
-      }
-    },
-    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b": {
-      "type": "clinical-trial-drawer",
-      "settings": {
-        "year": "2023",
-        "product_name": "Hydration Drops",
-        "title": "Clinical Trial Updates",
-        "about": ""
       }
     },
     "26893cd8-8c44-4b58-a036-b29a7351bb60": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "83f46dc3-eb1a-434c-bfda-65a7690ea657": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "1196d01e-a2bd-4819-8f7e-034ca09f4abc": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "16a939f9-a656-430e-a1a3-33b1f36a4c5c": {
+          "type": "recommended",
+          "settings": {
+            "heading": "",
+            "title": "",
+            "sub_title": "",
+            "content": ""
+          }
+        },
+        "8b1d7a06-d68b-4f6c-b871-e6b81df05d11": {
+          "type": "table",
+          "settings": {
+          }
+        },
+        "83f2a2e3-385e-4481-a984-362b30ab5ff7": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "afd31815-db3d-421f-9e8b-6968ac10ef3d": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "83f46dc3-eb1a-434c-bfda-65a7690ea657",
+        "1196d01e-a2bd-4819-8f7e-034ca09f4abc",
+        "16a939f9-a656-430e-a1a3-33b1f36a4c5c",
+        "8b1d7a06-d68b-4f6c-b871-e6b81df05d11",
+        "83f2a2e3-385e-4481-a984-362b30ab5ff7",
+        "afd31815-db3d-421f-9e8b-6968ac10ef3d"
+      ],
       "settings": {
         "product_name": "Rescue Salt",
         "title": "Supplement Facts"
       }
     },
-    "d3dd7628-e239-4ca5-bb56-86754f38530e": {
+    "66bad48b-a0a0-422a-8b5c-b203121eabd7": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "5fcbbf1c-40c9-41e6-ab2e-859fda824180": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "7be1d9ff-4db0-43c7-9e29-8fdecceb4ebf": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "70d00036-2f12-4b86-85c3-e9916edf8233": {
+          "type": "recommended",
+          "settings": {
+            "heading": "",
+            "title": "",
+            "sub_title": "",
+            "content": ""
+          }
+        },
+        "b7f26676-ee0e-4166-ab59-d22f23bc358b": {
+          "type": "table",
+          "settings": {
+          }
+        },
+        "7324bbf9-af44-4d59-bcbc-459ee274589d": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "bb3f8025-7273-45c4-a1ab-98405b92ba02": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "5fcbbf1c-40c9-41e6-ab2e-859fda824180",
+        "7be1d9ff-4db0-43c7-9e29-8fdecceb4ebf",
+        "70d00036-2f12-4b86-85c3-e9916edf8233",
+        "b7f26676-ee0e-4166-ab59-d22f23bc358b",
+        "7324bbf9-af44-4d59-bcbc-459ee274589d",
+        "bb3f8025-7273-45c4-a1ab-98405b92ba02"
+      ],
+      "settings": {
+        "product_name": "",
+        "title": ""
+      }
+    },
+    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b": {
       "type": "clinical-trial-drawer",
+      "blocks": {
+        "2b4beb61-6b23-410b-b8b9-ce9dc70f9ee1": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "00cbcac1-1111-4750-8a92-996bf172bba9": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "b5286b10-6224-4935-96e3-fc19fcb113d9": {
+          "type": "list-item",
+          "settings": {
+            "item_description": ""
+          }
+        },
+        "f2f3f57b-ab34-4b28-99e8-309abbb73d10": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "bf4edc04-d286-46a0-a458-86a563a597e7": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "00eeff17-cafd-4343-be21-7ce08e3c62ef": {
+          "type": "content",
+          "settings": {
+            "btn_title": "",
+            "notification": "",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        }
+      },
+      "block_order": [
+        "2b4beb61-6b23-410b-b8b9-ce9dc70f9ee1",
+        "00cbcac1-1111-4750-8a92-996bf172bba9",
+        "b5286b10-6224-4935-96e3-fc19fcb113d9",
+        "f2f3f57b-ab34-4b28-99e8-309abbb73d10",
+        "bf4edc04-d286-46a0-a458-86a563a597e7",
+        "00eeff17-cafd-4343-be21-7ce08e3c62ef"
+      ],
       "settings": {
         "year": "2023",
-        "product_name": "Rescue Salt",
+        "product_name": "Hydration Drops",
         "title": "Clinical Trial Updates",
         "about": ""
       }
@@ -1009,8 +1296,8 @@
     "1637720233f9199bd5",
     "165168225907175bb6",
     "0eedab9e-3745-417a-85b6-719dc36251dc",
-    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b",
     "26893cd8-8c44-4b58-a036-b29a7351bb60",
-    "d3dd7628-e239-4ca5-bb56-86754f38530e"
+    "66bad48b-a0a0-422a-8b5c-b203121eabd7",
+    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b"
   ]
 }
