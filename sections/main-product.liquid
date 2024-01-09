@@ -183,16 +183,13 @@
                         <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if product.metafields.custom.subscription_serving_price != blank -%}
+                     {%- if variant.metafields.custom.serving_cost != blank -%}
                         <span 
                           class="Serving_Cost" 
-                          data-subprice="{{ product.metafields.custom.subscription_serving_price }}" 
+                          data-subprice="{{ variant.metafields.custom.serving_cost }}" 
                           data-onetimeprice="{{ my_fields.serving_cost }}"
                         >
-                          <script>
-  console.log({{ variant.metafields.custom.serving_cost | json }})
-</script>
-                          {{ product.metafields.custom.subscription_serving_price }}
+                          {{ variant.metafields.custom.serving_cost }}
                         </span>    
                      {%- elsif my_fields.serving_cost != blank -%}
                         <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
