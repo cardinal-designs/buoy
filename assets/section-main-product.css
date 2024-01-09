@@ -1654,6 +1654,10 @@ fieldset.product-form__input .form__label {
   display: flex;
 }
 
+.subscribe-item_info p.Label_Sub_Text {
+  padding-left: 0;
+}
+
 .product-form #rtx_option_sub input[type=radio] + label .Subscribe_Info {
   display: block;
 }
