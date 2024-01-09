@@ -68,9 +68,9 @@
                 </div>
                 <div class="product__drawer-triggers">
                   <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-                  {% unless block.settings.title == 'Hydration Drops' %}
+                  {% if block.settings.title == 'Hydration Drops' %}
                   <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
-                  {% endunless %}
+                  {% endif %}
                 </div>
               </div>
             </div>
