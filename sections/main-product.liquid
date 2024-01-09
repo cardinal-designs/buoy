@@ -883,17 +883,17 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 {% # rtx-pfp.liquid Script start %}
 
 <script type="text/javascript">
-  // $('#purchaseTypeOneTime').change(function() {
-  //   $('.Serving_Cost').each(function() {
-  //     $(this).text($(this).data('onetimeprice'))
-  //   })
-  // })
+  $('#purchaseTypeOneTime').change(function() {
+    $('.Serving_Cost').each(function() {
+      $(this).text($(this).data('onetimeprice'))
+    })
+  })
 
-  // $('#purchaseTypeSbubscription').change(function() {
-  //   $('.Serving_Cost').each(function() {
-  //     $('.Serving_Cost').text($(this).data('subprice'))
-  //   })
-  // })
+  $('#purchaseTypeSbubscription').change(function() {
+    $('.Serving_Cost').each(function() {
+      $('.Serving_Cost').text($(this).data('subprice'))
+    })
+  })
 
 
 
