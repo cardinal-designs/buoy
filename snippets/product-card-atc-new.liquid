@@ -64,7 +64,7 @@
         {% endif %}
         </a>
         {% if show_shop_button %}
-           <button onclick="addToCart(event)" class="shop-btn button button--beige" data-id="{{product_card_atc.selected_or_first_available_variant.id}}" data-selling="{{product_card_atc.selling_plan_groups[0].selling_plans[0].id}}">{{ product_card_button_text }}</button>
+           <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{product_card_atc.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" data-id="{{product_card_atc.selected_or_first_available_variant.id}}" data-selling="{{product_card_atc.selling_plan_groups[0].selling_plans[0].id}}">{{ product_card_button_text }}</button>
         {% endif %}
       </div>
     </div>
@@ -73,6 +73,8 @@
   function addToCart(event){
     const addButton = event.target;
     let productId = addButton.dataset.id;
+    let productSellingPlan = addButton.dataset.selling;
+    let productQuantity = 1;
     console.log(productId);
   }
 </script>
