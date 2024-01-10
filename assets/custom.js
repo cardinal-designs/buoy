@@ -285,7 +285,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
-    console.log('clicked')
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
       // For multiple drawers on PDP
@@ -307,6 +306,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
     // Show drawer
     function showDrawer(drawer) {
+      console.log('opened');
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
