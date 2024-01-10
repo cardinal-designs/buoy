@@ -99,6 +99,23 @@
     } else {
       add_items = [{id: productId, quantity: productQuantity, selling_plan: productSellingPlan}]
     }
+
+    let formData = {
+     'items': add_items
+    };
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
     console.log(add_items);
   }
 </script>
