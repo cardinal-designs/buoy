@@ -1663,18 +1663,46 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
   $(`.mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
 
+// Benefits accordion, sets first accordion item open on mobile
+var firstAccordion = $('.select-faq__item-mobile.benefits__item-mobile:first');
+firstAccordion.find('.light').addClass('active');
+firstAccordion.addClass('active');
+firstAccordion.find('.select-faq__x').addClass('minus');
+firstAccordion.next().slideDown();
+
+// Mobile Benefits accordion
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
-  $('.select-faq__x').removeClass('minus')
-  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
-  $(this).find('h4').addClass('active')
-  $(this).find('.select-faq__x').addClass('minus')
-  let num = $(this).data("id")
+  var isActive = $(this).hasClass('active');
+  // close all 
   $('.select-faq__container .mobile-benefits-info').slideUp()
-  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
-  var offsetTop = $(this).offset().top;
-  $('.select-faq__item-mobile').animate({
-    scrollTop: offsetTop
-  }, 'slow');
+  $('.select-faq__x').removeClass('minus')
+
+  // Remove active class from all elements except the clicked one
+  $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
+  $('.select-faq__item-mobile.benefits__item-mobile').not(this).removeClass('active');
+  $('.select-faq__item-mobile.benefits__item-mobile .light').removeClass('active');
+
+  if (!isActive) {
+    // If the accordion item is not active, open it and scroll to the content
+    $(this).next().slideToggle(function() {
+      if ($(this).is(':visible')) {
+        // Scroll to the top of the content when it becomes visible
+        var offsetTop = $(this).offset().top;
+        $('html, body').animate({
+          scrollTop: offsetTop - 140
+        }, 300);
+      }
+    });
+    $(this).addClass('active');
+    $(this).parent().addClass('active');
+    $(this).find('.select-faq__x').addClass('minus')
+    $(this).find('.light').addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $(this).parent().removeClass('active');
+    $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+    $(this).find('.light').removeClass('active')
+  }
 })
 
 $('.reviews_button').click(function(){

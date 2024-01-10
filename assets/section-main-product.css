@@ -1654,9 +1654,8 @@ fieldset.product-form__input .form__label {
   display: flex;
 }
 
-
 .subscribe-item_info p.Label_Sub_Text {
-  margin: 13px 0 0;
+  padding-left: 0;
 }
 
 .product-form #rtx_option_sub input[type=radio] + label .Subscribe_Info {
@@ -2462,7 +2461,7 @@ select[name=selling_plan] {
   }
 
   .template-product .rtx_option_heading, .template-product .rtx_option_heading span, .template-product .rtx_option_heading s {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -2705,7 +2704,6 @@ select[name=selling_plan] {
   display: flex;
   gap: 21px;
   margin-top: 37px;
-  padding-bottom: 26px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2908,6 +2906,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__body-text {
   display: flex;
+  align-items: center;
   gap: 8px;
   margin-bottom: 13px;
 }
@@ -2954,6 +2953,6 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item__body .product__drawer-triggers {
-  margin: 43px 0 35px;
+  margin: 23px 0 30px;
 }
 

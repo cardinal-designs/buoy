@@ -28,7 +28,6 @@
         <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}
-            {% include 'curved-hydrated' %}
           {% endif %}
         </h1>
         
@@ -177,16 +176,25 @@
                     >
                     <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
                       {%- if my_fields.supply_time != blank -%}
-                        <span class="Supply_Time">{{ my_fields.supply_time }} /<br class="hide-desktop"/> {{ my_fields.servings }}</span>
+                        <span 
+                          class="Supply_Time"
+                        >
+                          {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
+                          {{ my_fields.servings }}
+                        </span>
                       {%- endif -%}
                       {%- if my_fields.product_image != blank -%}
                         <img src="{{ my_fields.product_image | img_url: 'master' }}"/>
                       {%- endif -%}
                       <span class="Variant_Title">{{ value }}</span>
-                     {%- if product.metafields.custom.subscription_serving_price != blank -%}
-                        <span class="Serving_Cost" data-subprice="{{ product.metafields.custom.subscription_serving_price }}" data-onetimeprice="{{ my_fields.serving_cost }}">{{ product.metafields.custom.subscription_serving_price }}</span>    
-                     {%- elsif my_fields.serving_cost != blank -%}
-                        <span class="Serving_Cost">{{ my_fields.serving_cost }}</span>
+                     {%- if my_fields.serving_cost != blank -%}
+                        <span 
+                          class="Serving_Cost" 
+                          data-subprice="{{ my_fields.serving_cost }}" 
+                          data-onetimeprice="{{ my_fields.serving_cost }}"
+                        >
+                          {{ my_fields.serving_cost }}
+                        </span>    
                       {%- endif -%}
                       {%- if my_fields.best_value != blank -%}
                         <span class="Best_Value">{{ my_fields.best_value }}</span>
