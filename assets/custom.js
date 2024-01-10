@@ -306,7 +306,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
     // Show drawer
     function showDrawer(drawer) {
-      console.log(supplementDrawer.scrollHeight)
+      supplementDrawer.scrollTop = 0;
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
