@@ -285,6 +285,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
     showDrawer(supplementDrawer);
 
     const itemContainer = document.querySelector('.dropdown-container-item__container');
@@ -303,7 +304,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
     } else {
       // For single drawer on PDP
-      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      // const supplementDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(supplementDrawer);
     }
 
