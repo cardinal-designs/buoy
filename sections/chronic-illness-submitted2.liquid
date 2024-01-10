@@ -13,8 +13,9 @@
         <div class="collection-groups__grid">
           {% for block in section.blocks %}
             {% if block.type == 'product' %}
-            {% render 'product-card-atc'
+            {% render 'product-card-atc-new'
               product_card_product: block.settings.product,
+              product_card_atc: block.settings.product_atc,
               show_secondary_image: true,
               hover_video: block.settings.hover_video,
               show_shop_button: true,
@@ -98,8 +99,8 @@
           },
           {
             "type": "product",
-            "id": "product_discount",
-            "label": "Discount Product"
+            "id": "product_atc",
+            "label": "ATC Product"
           },
           {
             "type": "textarea",
