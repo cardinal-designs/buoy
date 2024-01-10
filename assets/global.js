@@ -1672,7 +1672,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   console.log(num)
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
-  $(this).animate({
+  $('.select-faq__item-mobile.benefits__item-mobile').animate({
       scrollTop: 0
     }, 500);
 })
