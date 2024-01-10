@@ -1698,6 +1698,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
 
 // Open the first accordion item
 var firstAccordion = $('.select-faq__item-mobile.benefits__item-mobile:first');
+firstAccordion.find('.light').addClass('active');
 firstAccordion.addClass('active');
 firstAccordion.find('.select-faq__x').addClass('minus');
 firstAccordion.next().slideDown();
