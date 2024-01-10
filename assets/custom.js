@@ -288,7 +288,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
       // For multiple drawers on PDP
-      const parentEl = e.target.closest('.dropdown-container-item');
+      const parentEl = e.target.closest(itemContainer);
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
