@@ -1701,6 +1701,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
     $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+    $(this).find('.light').removeClass('active')
   }
 })
 
