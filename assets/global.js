@@ -1668,17 +1668,40 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   console.log(isActive);
   // close all 
   $('.select-faq__container .mobile-benefits-info').slideUp()
+  // Remove active class from all elements except the clicked one
+  $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
 
-  $('.select-faq__x').removeClass('minus')
-  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
-  $(this).find('h4').addClass('active')
-  $(this).find('.select-faq__x').addClass('minus')
-  let num = $(this).data("id")
+  if (!isActive) {
+    // If the accordion item is not active, open it and scroll to the content
+    $(this).next().slideToggle(function() {
+      if ($(this).is(':visible')) {
+        // Scroll to the top of the content when it becomes visible
+        var offsetTop = $(this).offset().top;
+        // run on page load on mobile
+        if (window.innerWidth < 768) {
+          $('html, body').animate({
+            scrollTop: offsetTop - 150
+          }, 300);
+        }
+      }
+    });
+    $(this).addClass('active');
+    $(this).parent().addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $(this).parent().removeClass('active');
+  }
 
-  $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
-  $('.select-faq__item-mobile.benefits__item-mobile').animate({
-      scrollTop: 0
-    }, 500);
+  // $('.select-faq__x').removeClass('minus')
+  // $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+  // $(this).find('h4').addClass('active')
+  // $(this).find('.select-faq__x').addClass('minus')
+  // let num = $(this).data("id")
+
+  // $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
+  // $('.select-faq__item-mobile.benefits__item-mobile').animate({
+  //     scrollTop: 0
+  //   }, 500);
 })
 
 $('.reviews_button').click(function(){
