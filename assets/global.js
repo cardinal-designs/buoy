@@ -1665,14 +1665,14 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   var isActive = $(this).hasClass('active');
-  // close all 
-  $('.select-faq__container .mobile-benefits-info').slideUp()
-  $('.select-faq__x').removeClass('minus')
+
+  // Close all accordion items except the clicked one
+  $('.select-faq__container .mobile-benefits-info').not($(this).next()).slideUp();
+  $('.select-faq__x').not($(this).find('.select-faq__x')).removeClass('minus');
 
   // Remove active class from all elements except the clicked one
-  $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
   $('.select-faq__item-mobile.benefits__item-mobile').not(this).removeClass('active');
-  $(this).find('.light').removeClass('active')
+  $(this).find('.light').removeClass('active');
 
   if (!isActive) {
     // If the accordion item is not active, open it and scroll to the content
@@ -1686,22 +1686,13 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
       }
     });
     $(this).addClass('active');
-    $(this).parent().addClass('active');
-    $(this).find('.select-faq__x').addClass('minus')
+    $(this).find('.select-faq__x').addClass('minus');
   } else {
+    // If the accordion item is active, close it
     $(this).removeClass('active');
-    $(this).parent().removeClass('active');
-    $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+    $(this).find('.select-faq__x').removeClass('minus');
   }
-
-  // $('.select-faq__x').removeClass('minus')
-  // $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
-  // $(this).find('h4').addClass('active')
-  // $(this).find('.select-faq__x').addClass('minus')
-  // let num = $(this).data("id")
-
-  // $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
-})
+});
 
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
