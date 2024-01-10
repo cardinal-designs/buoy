@@ -1689,6 +1689,8 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $(this).addClass('active');
     $(this).parent().addClass('active');
     $(this).find('.select-faq__x').addClass('minus')
+    let num = $(this).data("id")
+    $(`.select-faq__container .mobile-benefits-info[data-id="${num}"]`).slideDown() 
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
