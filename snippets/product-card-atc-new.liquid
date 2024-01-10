@@ -70,6 +70,25 @@
     </div>
 </div>
 <script>
+  function atcGetSectionsToRender() {
+  return [
+    {
+      id: 'cart-drawer__content',
+      section: document.getElementById('cart-drawer__content').dataset.id,
+      selector: '.cart-drawer__content',
+    },
+    {
+      id: 'cart-icon-bubble',
+      section: document.getElementById('cart-icon-bubble').dataset.id,
+      selector: '.cart-icon-bubble'
+    },
+    {
+      id: 'cart-drawer__header',
+      section: document.getElementById('cart-drawer__header').dataset.id,
+      selector: '.cart-drawer__header',
+    }
+  ];
+}
   function addToCart(event){
     const addButton = event.target;
     let add_items;
