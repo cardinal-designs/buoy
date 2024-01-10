@@ -1,5 +1,12 @@
 {{ 'section-media-grid.css' | asset_url | stylesheet_tag }}
-<div {% if section.settings.background != blank %}style="background-color: {{ section.settings.background }};"{% endif %} class="media-grid__container" >
+<div 
+  {% if section.settings.background != blank %}
+    style="background-color: {{ section.settings.background }};"
+  {% else %}
+    style="padding-top: 0;"
+  {% endif %} 
+    class="media-grid__container"
+  >
   <div class="page-width">
     <p class="sh3">{{ section.settings.suptitle }}</p>
     <h1>{{ section.settings.title }}</h1>
