@@ -1640,6 +1640,7 @@ if(loadmore){
 }
 
 $('.benefits__item').click(function() {
+  console.log('clicked');
   $('.benefits__item h4.active').removeClass('active')
   $(this).find('h4').addClass('active')
    let num = $('.benefits__item h4.active').parent().data("id")
