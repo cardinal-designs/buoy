@@ -1679,12 +1679,9 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
       if ($(this).is(':visible')) {
         // Scroll to the top of the content when it becomes visible
         var offsetTop = $(this).offset().top;
-        // run on page load on mobile
-        if (window.innerWidth < 768) {
-          $('html, body').animate({
-            scrollTop: offsetTop - 150
-          }, 300);
-        }
+        $('html, body').animate({
+          scrollTop: offsetTop - 150
+        }, 300);
       }
     });
     $(this).addClass('active');
