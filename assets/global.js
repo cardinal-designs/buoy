@@ -1668,7 +1668,6 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   console.log(isActive);
   // close all 
   $('.select-faq__container .mobile-benefits-info').slideUp()
-  $('.select-faq__x').removeClass('minus')
   // Remove active class from all elements except the clicked one
   $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
 
