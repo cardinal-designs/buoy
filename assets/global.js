@@ -1694,7 +1694,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
   }
 })
-$('.select-faq__item-mobile.benefits__item-mobile:first').trigger('click');
+// $('.select-faq__item-mobile.benefits__item-mobile:first').trigger('click');
 
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
