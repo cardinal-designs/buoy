@@ -1692,7 +1692,6 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   } else {
     $(this).removeClass('active');
     $(this).parent().removeClass('active');
-    $('.select-faq__x').removeClass('minus')
   }
 
   // $('.select-faq__x').removeClass('minus')
