@@ -1663,6 +1663,14 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
   $(`.mobile-benefits-info[data-id="${num}"]`).slideDown() 
 })
 
+// Benefits accordion, sets first accordion item open on mobile
+var firstAccordion = $('.select-faq__item-mobile.benefits__item-mobile:first');
+firstAccordion.find('.light').addClass('active');
+firstAccordion.addClass('active');
+firstAccordion.find('.select-faq__x').addClass('minus');
+firstAccordion.next().slideDown();
+
+// Mobile Benefits accordion
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   var isActive = $(this).hasClass('active');
   // close all 
@@ -1695,13 +1703,6 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
     $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
   }
 })
-
-// Open the first accordion item
-var firstAccordion = $('.select-faq__item-mobile.benefits__item-mobile:first');
-firstAccordion.find('.light').addClass('active');
-firstAccordion.addClass('active');
-firstAccordion.find('.select-faq__x').addClass('minus');
-firstAccordion.next().slideDown();
 
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
