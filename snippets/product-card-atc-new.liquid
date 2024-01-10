@@ -120,7 +120,9 @@
     }
 
     let formData = {
-     'items': add_items
+     'items': add_items,
+      sections: atcGetSectionsToRender().map((section) => section.section),
+      sections_url: window.location.pathname
     };
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
@@ -134,8 +136,14 @@
       return response.json();
       
     })
-    .then(data => {
-      console.log(data);
+    .then(parsedState => {
+      atcGetSectionsToRender().forEach((section => {
+      const elementToReplace =
+            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+
+      elementToReplace.innerHTML =
+        getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+    }));
       
     })
     .catch((error) => {
