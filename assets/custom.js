@@ -304,6 +304,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(supplementDrawer);
     }
+    
+    showDrawer(supplementDrawer);
 
     // Show drawer
     function showDrawer(drawer) {
