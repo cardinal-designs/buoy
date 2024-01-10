@@ -285,6 +285,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
+    showDrawer(supplementDrawer);
+
     const itemContainer = document.querySelector('.dropdown-container-item__container');
     const item = itemContainer.querySelector('.dropdown-container-item');
     if (item) {
@@ -304,8 +306,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(supplementDrawer);
     }
-    
-    showDrawer(supplementDrawer);
 
     // Show drawer
     function showDrawer(drawer) {
