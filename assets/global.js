@@ -1696,6 +1696,12 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   }
 })
 
+// Open the first accordion item
+var firstAccordion = $('.select-faq__item-mobile.benefits__item-mobile:first');
+firstAccordion.addClass('active');
+firstAccordion.find('.select-faq__x').addClass('minus');
+firstAccordion.next().slideDown();
+
 $('.reviews_button').click(function(){
   console.log('afafa', $(this).next().hasClass("active"))
   if (!$(this).hasClass("active")){
