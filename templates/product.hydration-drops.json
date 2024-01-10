@@ -107,8 +107,7 @@
         "product_feature_icon": "shopify:\/\/shop_images\/star.svg",
         "product_feature_text": "Energy, Gut Health, Brain Function, Skin",
         "product_feature_text_two": "Delivered in 3x more bioavailable form factor",
-        "show_drawer_triggers": true,
-        "dropdown_title": ""
+        "show_drawer_triggers": true
       }
     },
     "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff": {
@@ -198,7 +197,7 @@
             "icon_2": "shopify:\/\/shop_images\/Icons_thick_2.png",
             "icon_image_text_2": "Brain Function<br>\n<span class=\"rhymes-subtitle\">Brain-activating minerals reduce brain fog and mental fatigue while boosting memory and focus.<\/span>",
             "icon_3": "shopify:\/\/shop_images\/Icons_thick_3.png",
-            "icon_image_text_3": "Gut Health<br>\n<span class=\"rhymes-subtitle\">Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.<\/span>",
+            "icon_image_text_3": "B Vitamin Complex<br>\n<span class=\"rhymes-subtitle\">Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.<\/span>",
             "icon_4": "shopify:\/\/shop_images\/Icons_thick_4.png",
             "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>",
             "show_ingredients": false,
@@ -259,7 +258,7 @@
           "settings": {
             "title": "Sourcing & Formulation",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ac1cc4cd94cd49d7825c0a753bc5ad45.mp4",
-            "suptext": "DEEP OCEAN ELECTROLYTES",
+            "suptext": "BIOACTIVE SOURCES",
             "text": "Supplements shouldn't be manufactured. Hydrate with nature's original electrolyte and mineral boost: <span class=\"green-outline\">the deep ocean.<\/span>",
             "list_item1": "Hand Harvested + Solar Evaporated",
             "list_item2": "Naturally Balanced Profile",
@@ -272,8 +271,8 @@
             "list_item3_2": "3 Clinical Trials in Progress Highlighting Efficacy",
             "list_item4_2": "",
             "show_ingredients": true,
-            "show_clinical": true,
-            "show_hsa": false
+            "show_clinical": false,
+            "show_hsa": true
           }
         }
       },
