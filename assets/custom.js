@@ -286,7 +286,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Open Supplement Drawer
   function openNav(e) {
     const itemContainer = document.querySelector('.dropdown-container-item__container');
-    if (itemContainer) {
+    const item = itemContainer.querySelector('.dropdown-container-item');
+    if (item) {
       // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
