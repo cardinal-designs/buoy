@@ -1668,12 +1668,12 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   // close all 
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $('.select-faq__x').removeClass('minus')
+  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
 
   // Remove active class from all elements except the clicked one
   $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
   $('.select-faq__item-mobile.benefits__item-mobile').not(this).removeClass('active');
-  $(this).find('.light').removeClass('active')
-  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
+  // $(this).find('.light').removeClass('active')
 
   if (!isActive) {
     // If the accordion item is not active, open it and scroll to the content
