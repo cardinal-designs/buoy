@@ -244,6 +244,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
+    const clinicalDrawer = document.getElementById("clinicalSideDrawer");
     const itemContainer = document.querySelector('.dropdown-container-item');
     if (itemContainer) {
       const parentEl = e.target.closest('.dropdown-container-item');
@@ -258,12 +259,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
     } else {
       // For single drawer on PDP
-      const clinicalDrawer = document.getElementById("clinicalSideDrawer");
       showDrawer(clinicalDrawer);
     }
 
     // Show drawer
     function showDrawer(drawer) {
+      clinicalDrawer.scrollTop = 0;
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
