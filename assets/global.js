@@ -1673,6 +1673,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   $('.benefits__item-mobile select-faq__item-mobile').not($(this).next()).removeClass('active');
   $('.select-faq__item-mobile.benefits__item-mobile').not(this).removeClass('active');
   $(this).find('.light').removeClass('active')
+  $('.select-faq__container .benefits__item-mobile h4.active').removeClass('active')
 
   if (!isActive) {
     // If the accordion item is not active, open it and scroll to the content
