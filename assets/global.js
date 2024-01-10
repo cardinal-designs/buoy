@@ -1665,7 +1665,6 @@ $('.benefits__item-mobile:not(.select-faq__item-mobile)').click(function() {
 
 $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   var isActive = $(this).hasClass('active');
-  console.log(isActive);
   // close all 
   $('.select-faq__container .mobile-benefits-info').slideUp()
   $('.select-faq__x').removeClass('minus')
