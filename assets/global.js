@@ -1676,7 +1676,7 @@ $('.select-faq__item-mobile.benefits__item-mobile').click(function() {
   // $('.select-faq__item-mobile').animate({
   //   scrollTop: offsetTop
   // }, 'slow');
-  $(this).scrollTop(0);
+  $(this).scrollTop = 0;
 })
 
 $('.reviews_button').click(function(){
