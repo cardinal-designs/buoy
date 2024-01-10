@@ -224,6 +224,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
+      document.getElementById("hsaSideDrawer").scrollTop = 0;
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
     document.querySelector('body').classList.add('lock-scroll');
