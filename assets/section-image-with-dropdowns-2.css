@@ -224,7 +224,7 @@
 }
 
 .image-with-dropdowns__suptext {
-  color: #797B7A;
+  color: var(--charcoal-60);
   font-size: 14px;
   font-family: Inter;
   font-weight: 500;
@@ -233,7 +233,7 @@
 }
 
 .image-with-dropdowns__title-text {
-  color: #797B7A;
+  color: var(--charcoal-60);
   font-size: 14px;
   font-family: Inter;
   font-weight: 500;
