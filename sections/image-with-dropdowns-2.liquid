@@ -358,8 +358,11 @@
                 {%- if block.settings.suptext != blank -%}
                   <p class="sh2">{{ block.settings.suptext }}</p>
                 {%- endif -%}
-                <p class="image-with-dropdowns__title-text">FEATURED BENEFITS</p>
+                <p class="image-with-dropdowns__title-text">{{ block.settings.title_text }}</p>
                 <p class="image-with-dropdowns__sub-text">Energy, Gut Health, Brain Function, Glowing Skin</p>
+                {%- if block.settings.suptext != blank -%}
+                  <p class="sh2">{{ block.settings.suptext }}</p>
+                {%- endif -%}
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
@@ -801,10 +804,20 @@
             "id": "image",
             "label": "Image"
           },
-           {
+          {
             "type": "text",
             "id": "suptext",
             "label": "Suptext"
+          },
+          {
+            "type": "text",
+            "id": "title_text",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "sub_text",
+            "label": "Sub Text"
           }
         ]
       }
