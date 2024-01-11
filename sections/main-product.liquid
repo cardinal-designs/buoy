@@ -301,6 +301,10 @@
             </div>
           {% endif %}
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
+          <script>
+            console.log({{ product | json }})
+          </script>
+
           <div class="product-form__buttons">
             <button
               type="submit"
