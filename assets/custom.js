@@ -309,15 +309,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else if (parentDropdown) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
       console.log(parentEl);
-      const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
-      supplementDrawers.forEach((drawer) => {
-        const drawerName = drawer.dataset.productName;
-        if (dataTitle === drawerName) {
-          showDrawer(drawer);
-        } else {
-          showDrawer(supplementDrawer);
-        }
-      });
+      // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
+      // supplementDrawers.forEach((drawer) => {
+      //   const drawerName = drawer.dataset.productName;
+      //   if (dataTitle === drawerName) {
+      //     showDrawer(drawer);
+      //   } else {
+      //     showDrawer(supplementDrawer);
+      //   }
+      // });
     } else {
       // For single drawer on PDP
       showDrawer(supplementDrawer);
