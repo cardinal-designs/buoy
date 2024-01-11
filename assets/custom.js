@@ -288,50 +288,53 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   // Open Supplement Drawer
-function openNav(e) {
-  const parentItem = !!e.target.closest('.dropdown-container-item__container');
-  const parentDropdown = !!e.target.closest('.image-with-dropdowns__q');
+  function openNav(e) {
+    const parentItem = e.target.closest('.dropdown-container-item__container');
+    const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    
+    if (parentItem) {
+      // For dropdown-container-item__container section
+      const parentEl = e.target.closest('.dropdown-container-item');
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      if (!dataTitle) return;
+      supplementDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
+      });
+      // For image with dropdowns section
+    } else if (parentDropdown) {
+      const parentEl = parentDropdown.querySelector('.image-with-dropdowns__q');
+      const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
+      supplementDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        } else {
+          showDrawer(supplementDrawer);
+        }
+      });
+    } else {
+      // For single drawer on PDP
+      showDrawer(supplementDrawer);
+    }
 
-  let dataTitle;
+    // Show drawer
+    function showDrawer(drawer) {
+      drawer.scrollTop = 0;
+      drawer.style.right = "0";
+      document.querySelector('.page-blury-overlay').classList.add('is-visible');
+      document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('header-container').style.zIndex = 10;
 
-  if (parentItem || parentDropdown) {
-    const parentEl = parentItem
-      ? e.target.closest('.dropdown-container-item')
-      : parentDropdown && e.target.closest('.image-with-dropdowns__q');
-
-    dataTitle = parentEl.querySelector('.dropdown-container-item__title, .image-with-dropdowns__content-text').dataset.title;
-
-    if (!dataTitle) return;
-
-    supplementDrawers.forEach((drawer) => {
-      const drawerName = drawer.dataset.productName;
-      if (dataTitle === drawerName) {
-        showDrawer(drawer);
-      } else {
-        showDrawer(supplementDrawer);
+      if (document.querySelector('.supplement-side-drawer .drawer__header')) {
+        document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
       }
-    });
-  } else {
-    // For single drawer on PDP
-    showDrawer(supplementDrawer);
-  }
-
-  // Rest of your code...
-
-  // Show drawer
-  function showDrawer(drawer) {
-    drawer.scrollTop = 0;
-    drawer.style.right = '0';
-    document.querySelector('.page-blurry-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
-
-    if (document.querySelector('.supplement-side-drawer .drawer__header')) {
-      document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
     }
   }
-}
-
   
   // Close Supplement Drawer
   function closeNav() {
