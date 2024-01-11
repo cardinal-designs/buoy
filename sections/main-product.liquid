@@ -319,7 +319,7 @@
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
                 {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                  <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                  {% comment %} <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }} {% endcomment %}
                 {% else %}
                   <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
                   {{ currentVariant.price | money_without_trailing_zeros }}
