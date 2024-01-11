@@ -294,20 +294,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if (parentItem) {
       // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
-      if (parentEl) {
-        const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-        if (!dataTitle) return;
-        const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-        supplementDrawers.forEach((drawer) => {
-          const drawerName = drawer.dataset.productName;
-          if (dataTitle === drawerName) {
-            showDrawer(drawer);
-          }
-        });
-      } else {
-        const supplementDrawer = document.getElementById("supplementSideDrawer");
-        showDrawer(supplementDrawer);
-      }
+      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      if (!dataTitle) return;
+      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+      supplementDrawers.forEach((drawer) => {
+        const drawerName = drawer.dataset.productName;
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
+      });
     } else {
       // For single drawer on PDP
       const supplementDrawer = document.getElementById("supplementSideDrawer");
