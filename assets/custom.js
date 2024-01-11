@@ -313,8 +313,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         const dataTitle = item.dataset.title;
 
         const matchingDrawer = supplementDrawers.find((drawer) => {
-          const drawerName = drawer.dataset.productName;
-          return dataTitle === drawerName;
+          return drawer.dataset.productName === dataTitle;
         });
 
         if (matchingDrawer) {
