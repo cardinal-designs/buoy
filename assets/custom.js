@@ -308,22 +308,20 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For image with dropdowns section
     } else if (parentDropdown) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
-      const allDrops = parentDropdown.querySelectorAll('.image-with-dropdowns__content-text');
+      const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
       const drawersArray = Array.from(supplementDrawers); // or [...supplementDrawers]
 
-      allDrops.forEach((item) => {
-        const dataTitle = item.dataset.title;
+      const dataTitle = allDrops.dataset.title;
 
-        const matchingDrawer = drawersArray.find((drawer) => {
-          return dataTitle === drawer.dataset.productName;
-        });
-
-        if (matchingDrawer) {
-          console.log('Matching drawer:', matchingDrawer);
-          // Perform additional actions with the matching drawer if needed
-          showDrawer(matchingDrawer);
-        }
+      const matchingDrawer = drawersArray.find((drawer) => {
+        return dataTitle === drawer.dataset.productName;
       });
+
+      if (matchingDrawer) {
+        console.log('Matching drawer:', matchingDrawer);
+        // Perform additional actions with the matching drawer if needed
+        showDrawer(matchingDrawer);
+      }
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
       //   const drawerName = drawer.dataset.productName;
