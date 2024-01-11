@@ -377,6 +377,9 @@
                   <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_4 }}</p>
                   <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info_4 }}</p>
                 </div>
+                <div class="image-with-dropdowns__content-wrapper">
+                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_5 }}</p>
+                </div>
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
@@ -877,6 +880,11 @@
             "type": "text",
             "id": "sub_text_info_4",
             "label": "Sub Text Info Four"
+          },
+          {
+            "type": "text",
+            "id": "title_text_5",
+            "label": "Title Five"
           }
         ]
       }
