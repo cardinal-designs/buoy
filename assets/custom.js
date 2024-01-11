@@ -121,7 +121,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   /* Open Clinical Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
-      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
+      openDrawerSection: '.supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       openClinical: '.js-clinical-open',
@@ -182,16 +182,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }); 
   }
 
-  if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
-    document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-      openNav();
-    });
+  if (document.querySelector(selectors.openDrawerSection)) {
+    document.querySelectorAll(selectors.openDrawerSection).forEach((item) => {
+      item.addEventListener('click', function(e){
+        openNav(e);
+      }); 
+    })
   }
 
   if (document.querySelector(selectors.openDrawer)) {
     document.querySelectorAll(selectors.openDrawer).forEach((item) => {
-      item.addEventListener('click', function(){
-        openNav();
+      item.addEventListener('click', function(e){
+        openNav(e);
       }); 
     })
   }
@@ -245,8 +247,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
-    const itemContainer = document.querySelector('.dropdown-container-item');
-    if (itemContainer) {
+    const parentItem = !!e.target.closest('.dropdown-container-item__container');
+    if (parentItem) {
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
@@ -287,22 +289,41 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
-    const itemContainer = document.querySelector('.dropdown-container-item');
-    if (itemContainer) {
-      // For multiple drawers on PDP
+    const parentItemContainer = e.target.closest('.dropdown-container-item__container');
+    const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    
+    if (parentItemContainer) {
+      // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
-      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         }
       });
+      // For image with dropdowns section
+    } else if (parentDropdown) {
+      const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
+      allTitles.forEach((title) => {
+        if (title.classList.contains('active')) {
+          const dataTitle = title.querySelector('.image-with-dropdowns__content-text').dataset.title;
+          supplementDrawers.forEach((drawer) => {
+            const drawerName = drawer.dataset.productName;
+            if (dataTitle === drawerName) {
+              showDrawer(drawer);
+            } else {
+              // For bundle PDP
+              showDrawer(supplementDrawer);
+            }
+          });
+        }
+      })
     } else {
-      // For single drawer on PDP
-      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      // For PDP (not bundle)
       showDrawer(supplementDrawer);
     }
 
