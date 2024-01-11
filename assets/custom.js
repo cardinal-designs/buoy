@@ -317,7 +317,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
             if (dataTitle === drawerName) {
               showDrawer(drawer);
             } else {
-              // For PDP without dropdown-container-item__container section
+              // For image with dropdowns section without dropdown-container-item__container section
               showDrawer(supplementDrawer);
             }
           });
