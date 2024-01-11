@@ -315,7 +315,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         supplementDrawers.forEach((drawer) => {
           const drawerName = drawer.dataset.productName;
           if (dataTitle === drawerName) {
-            showDrawer(drawer);
+            console.log('drawerName', drawerName)
           }
         });
       });
