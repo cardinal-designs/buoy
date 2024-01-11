@@ -306,7 +306,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
-        console.log(drawer);
+        const drawerName = drawer.dataset.productName;
+        console.log(drawerName);
       });
     } else {
       // For single drawer on PDP
