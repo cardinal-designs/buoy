@@ -308,11 +308,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For image with dropdowns section
     } else if (parentDropdown) {
       const parentEl = parentDropdown.querySelector('.image-with-dropdowns__q');
-      const dataTitles = Array.from(parentEl.querySelectorAll('.image-with-dropdowns__content-text')).map(element => element.dataset.title);
-
+      console.log(parentEl);
+      const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
-        if (dataTitles.includes(drawerName)) {
+        if (dataTitle === drawerName) {
           showDrawer(drawer);
         } else {
           showDrawer(supplementDrawer);
