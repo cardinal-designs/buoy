@@ -355,7 +355,9 @@
                 {% else %}
                   {% render 'lazy-image' image: block.settings.image, classes: '' %}
                 {% endif %} 
-                <p class="sh2">{{ block.settings.suptext }}</p>
+                {%- if block.settings.suptext != blank -%}
+                  <p class="sh2">{{ block.settings.suptext }}</p>
+                {%- endif -%}
 
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
