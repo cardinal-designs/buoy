@@ -191,7 +191,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawer)) {
     document.querySelectorAll(selectors.openDrawer).forEach((item) => {
       item.addEventListener('click', function(){
-        openNav();
+        openNav(e);
       }); 
     })
   }
