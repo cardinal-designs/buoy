@@ -287,7 +287,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
-    // const parentItem = e.target.closest('.dropdown-container-item__container');
+    const parentItem = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     if (parentItem) {
       // For multiple drawers on PDP
@@ -297,6 +297,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
+        console.log(drawerName, dataTitle);
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         }
