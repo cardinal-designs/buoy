@@ -215,6 +215,19 @@
     },
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a": {
       "type": "image-with-dropdowns-2",
+      "blocks": {
+        "type5_kA9mf7": {
+          "type": "type5",
+          "settings": {
+            "title": "Hydration Drops",
+            "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
+            "suptext": "Intro text about using Hydration Drops for your daily dose."
+          }
+        }
+      },
+      "block_order": [
+        "type5_kA9mf7"
+      ],
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/PDP_OEK_DetailsMain.png",
