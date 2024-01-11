@@ -308,9 +308,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For image with dropdowns section
     } else if (parentDropdown) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
-      console.log(parentEl);
+      console.log(parentDropdown.querySelector('.image-with-dropdowns__q'));
       const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
-      const dataTitle = allDrops.dataset.title;
 
       // supplementDrawers.forEach((drawer) => {
       //   if (dataTitle === drawer.dataset.productName) {
