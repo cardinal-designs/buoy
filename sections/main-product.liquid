@@ -302,7 +302,7 @@
           {% endif %}
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <script>
-            console.log({{ product | json }})
+            console.log({{ product.selected_or_first_available_selling_plan_allocation | json }})
           </script>
 
           <div class="product-form__buttons">
@@ -319,7 +319,7 @@
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp; 
                 {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                  {% comment %} <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }} {% endcomment %}
+                  <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                 {% else %}
                   <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money_without_trailing_zeros }} {% endif %}</s>&nbsp;
                   {{ currentVariant.price | money_without_trailing_zeros }}
