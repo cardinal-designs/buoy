@@ -358,10 +358,14 @@
                 {%- if block.settings.suptext != blank -%}
                   <p class="sh2">{{ block.settings.suptext }}</p>
                 {%- endif -%}
-                <p class="image-with-dropdowns__title-text">{{ block.settings.title_text }}</p>
-                <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text }}</p>
-                <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_2 }}</p>
-                <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_2 }}</p>
+                <div class="image-with-dropdowns__content-wrapper">
+                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text }}</p>
+                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text }}</p>
+                </div>
+                <div class="image-with-dropdowns__content-wrapper">
+                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_2 }}</p>
+                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_2 }}</p>
+                </div>
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
