@@ -348,14 +348,22 @@
                 <div class="image-with-dropdowns__x"></div>
               </div>
               <div class="image-with-dropdowns__a">
-                {% render 'lazy-image' image: block.settings.image, classes: '' %}
+                {%- if block.settings.image != blank -%}
+                  {% render 'lazy-image' image: block.settings.image, classes: '' %}
+                {%- endif -%}
                 {%- if block.settings.suptext != blank -%}
                   <p class="sh2">{{ block.settings.suptext }}</p>
                 {%- endif -%}
-                <div class="image-with-dropdowns__content-wrapper">
-                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text }}</p>
-                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text }}</p>
-                </div>
+                {%- if block.settings.title_text != blank -%}
+                  <div class="image-with-dropdowns__content-wrapper">
+                    {%- if block.settings.title_text != blank -%}
+                      <p class="image-with-dropdowns__title-text">{{ block.settings.title_text }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.sub_text != blank -%}
+                      <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
                 <div class="image-with-dropdowns__content-wrapper">
                   <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_2 }}</p>
                   <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_2 }}</p>
