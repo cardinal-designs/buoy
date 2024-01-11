@@ -311,14 +311,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const allDrops = parentDropdown.querySelectorAll('.image-with-dropdowns__content-text');
       allDrops.forEach((item) => {
         const dataTitle = item.dataset.title;
-        
+
         supplementDrawers.forEach((drawer) => {
           const drawerName = drawer.dataset.productName;
           if (dataTitle === drawerName) {
             showDrawer(drawer);
           }
         });
-      })
+      });
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
       //   const drawerName = drawer.dataset.productName;
