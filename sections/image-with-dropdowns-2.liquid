@@ -339,6 +339,51 @@
                 </div>
               </div>
             </div>
+          {% when 'type5' %}
+            <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
+              <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
+                <div class="image-with-dropdowns__content-text">
+                  <h5>{{ block.settings.title }}</h5>
+                </div>
+                <div class="image-with-dropdowns__x"></div>
+              </div>
+              <div class="image-with-dropdowns__a">
+                {% if block.settings.video_url != blank %}
+                  <video class="image-with-dropdowns__video" autoplay loop muted playsinline class="video">
+                    <source src="{{ block.settings.video_url }}" type="video/mp4">
+                  </video>
+                {% else %}
+                  {% render 'lazy-image' image: block.settings.image, classes: '' %}
+                {% endif %} 
+                <p class="sh2">{{ block.settings.text }}</p>
+                {% if block.settings.list_item1 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
+                    <p class="sh4">{{ block.settings.list_item1 }}</p>
+                  </div>
+                {% endif %}
+                
+                {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
+                  <div class="view-drawer-links">
+                    {% if block.settings.show_ingredients == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-open-supplement-drawer supplement-section-link">View Full Supplement Facts</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_clinical == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-clinical-open">View Clinical Trial</a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.show_hsa == true %}
+                      <div class="view-supplements">
+                        <a href="javascript:void(0);" class="tabs-label body js-hsa-open">HSA & FSA Pending</a>
+                      </div>
+                    {% endif %}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
           {% endcase %}
         {% endfor %}
       </div>
