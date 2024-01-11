@@ -364,16 +364,32 @@
                     {%- endif -%}
                   </div>
                 {%- endif -%}
-                <div class="image-with-dropdowns__content-wrapper">
-                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_2 }}</p>
-                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_2 }}</p>
-                  <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info }}</p>
-                </div>
-                <div class="image-with-dropdowns__content-wrapper">
-                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_3 }}</p>
-                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_3 }}</p>
-                  <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info_3 }}</p>
-                </div>
+                {%- if block.settings.title_text_2 != blank -%}
+                  <div class="image-with-dropdowns__content-wrapper">
+                    {%- if block.settings.title_text_2 != blank -%}
+                      <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_2 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.sub_text_2 != blank -%}
+                      <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_2 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.sub_text_info != blank -%}
+                      <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.title_text_3 != blank -%}
+                  <div class="image-with-dropdowns__content-wrapper">
+                    {%- if block.settings.title_text_3 != blank -%}
+                      <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_3 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.sub_text_3 != blank -%}
+                      <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_3 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.sub_text_info_3 != blank -%}
+                      <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info_3 }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
                 <div class="image-with-dropdowns__content-wrapper">
                   <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_4 }}</p>
                   <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_4 }}</p>
