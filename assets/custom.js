@@ -308,7 +308,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
-        console.log(drawerName, dataTitle);
         // if (dataTitle === drawerName) {
         //   showDrawer(drawer);
         // }
