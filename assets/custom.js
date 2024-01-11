@@ -312,10 +312,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
           const dataTitle = title.querySelector('.image-with-dropdowns__content-text').dataset.title;
-          console.log(dataTitle);
+          supplementDrawers.forEach((drawer) => {
+            const drawerName = drawer.dataset.productName;
+            if (dataTitle === drawerName) {
+              showDrawer(drawer);
+            }
+          });
         }
       })
-      const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
 
       // supplementDrawers.forEach((drawer) => {
       //   if (dataTitle === drawer.dataset.productName) {
