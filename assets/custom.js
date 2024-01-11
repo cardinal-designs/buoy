@@ -309,14 +309,20 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else if (parentDropdown) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
       const allDrops = parentDropdown.querySelectorAll('.image-with-dropdowns__content-text');
+      const drawersArray = Array.from(supplementDrawers); // or [...supplementDrawers]
+
       allDrops.forEach((item) => {
         const dataTitle = item.dataset.title;
 
-        const matchingDrawer = supplementDrawers.find((drawer) => {
-          return drawer.dataset.productName;
+        const matchingDrawer = drawersArray.find((drawer) => {
+          return dataTitle === drawer.dataset.productName;
         });
 
-        console.log(matchingDrawer);
+        if (matchingDrawer) {
+          console.log('Matching drawer:', matchingDrawer);
+          // Perform additional actions with the matching drawer if needed
+          showDrawer(matchingDrawer);
+        }
       });
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
