@@ -311,7 +311,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
-          console.log(title);
+          const dataTitle = title.querySelector('.image-with-dropdowns__content-text').dataset.title;
+          console.log(dataTitle);
         }
       })
       const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
