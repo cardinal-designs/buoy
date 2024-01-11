@@ -289,12 +289,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
-    const parentItem = e.target.closest('.dropdown-container-item__container');
+    const parentItemContainer = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
     
-    if (parentItem) {
+    if (parentItemContainer) {
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
