@@ -307,8 +307,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
       // For image with dropdowns section
     } else if (parentDropdown) {
-      const allTitleQ = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
-      allTitleQ.forEach((title) => {
+      const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
+      allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
           const dataTitle = title.querySelector('.image-with-dropdowns__content-text').dataset.title;
           supplementDrawers.forEach((drawer) => {
