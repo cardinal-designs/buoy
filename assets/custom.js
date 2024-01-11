@@ -310,7 +310,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
       const allTitles = parentDropdown.querySelector('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
-        console.log(title);
+        if (title.classList.contains('active')) {
+          console.log(title);
+        }
       })
       const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
 
