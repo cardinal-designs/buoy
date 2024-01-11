@@ -342,7 +342,7 @@
           {% when 'type5' %}
             <div class="image-with-dropdowns__content-point {% if forloop.index == 1 %}active{% endif %}">
               <div class="image-with-dropdowns__q {% if forloop.index == 1 %}active{% endif %}">
-                <div class="image-with-dropdowns__content-text">
+                <div class="image-with-dropdowns__content-text" data-title="{{ block.settings.title }}">
                   <h5>{{ block.settings.title }}</h5>
                 </div>
                 <div class="image-with-dropdowns__x"></div>
