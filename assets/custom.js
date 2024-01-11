@@ -310,7 +310,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
       const allDrops = parentDropdown.querySelectorAll('.image-with-dropdowns__content-text');
       allDrops.forEach((item) => {
-        console.log(item)
+        console.log(item.dataset.title)
       })
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
