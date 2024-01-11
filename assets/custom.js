@@ -287,6 +287,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
+    console.log(e.target)
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
       // For multiple drawers on PDP
