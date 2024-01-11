@@ -286,11 +286,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   // Open Supplement Drawer
-function openNav(e) {
-  // Check if e is defined and has the target property
-  if (e && e.target) {
+  function openNav(e) {
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
-
     if (parentItem) {
       // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
@@ -304,28 +301,24 @@ function openNav(e) {
         }
       });
     } else {
-      // For a single drawer on PDP
+      // For single drawer on PDP
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(supplementDrawer);
     }
-  }
 
-  // Rest of your code...
+    // Show drawer
+    function showDrawer(drawer) {
+      drawer.scrollTop = 0;
+      drawer.style.right = "0";
+      document.querySelector('.page-blury-overlay').classList.add('is-visible');
+      document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('header-container').style.zIndex = 10;
 
-  // Show drawer
-  function showDrawer(drawer) {
-    drawer.scrollTop = 0;
-    drawer.style.right = "0";
-    document.querySelector('.page-blurry-overlay').classList.add('is-visible');
-    document.querySelector('body').classList.add('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 10;
-
-    if (document.querySelector('.supplement-side-drawer .drawer__header')) {
-      document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+      if (document.querySelector('.supplement-side-drawer .drawer__header')) {
+        document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+      }
     }
   }
-}
-
   
   // Close Supplement Drawer
   function closeNav() {
