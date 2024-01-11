@@ -121,7 +121,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   /* Open Clinical Drawer */
   let selectors = {
       openDrawer: '.js-open-supplement-drawer',
-      openDrawerSection: '.js-open-supplement-drawer.supplement-section-link',
+      openDrawerSection: '.js-open-supplement-drawer .supplement-section-link',
       closeDrawer: '.js-close-supplement-drawer',
       openIngredients: '.js-ingredients-open',
       openClinical: '.js-clinical-open',
@@ -182,16 +182,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }); 
   }
 
-  if (document.querySelector(selectors.openDrawerSection) != 'undefined' && document.querySelector(selectors.openDrawerSection) != null) {
-    document.querySelector(selectors.openDrawerSection).addEventListener('click', function(){
-      openNav();
-    });
+  if (document.querySelector(selectors.openDrawerSection)) {
+    document.querySelectorAll(selectors.openDrawerSection).forEach((item) => {
+      item.addEventListener('click', function(e){
+        openNav(e);
+      }); 
+    })
   }
 
   if (document.querySelector(selectors.openDrawer)) {
     document.querySelectorAll(selectors.openDrawer).forEach((item) => {
       item.addEventListener('click', function(e){
-        console.log(item);
         openNav(e);
       }); 
     })
