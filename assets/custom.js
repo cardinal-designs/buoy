@@ -316,6 +316,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
             const drawerName = drawer.dataset.productName;
             if (dataTitle === drawerName) {
               showDrawer(drawer);
+            } else {
+              // For PDP without dropdown-container-item__container section
+              showDrawer(supplementDrawer);
             }
           });
         }
