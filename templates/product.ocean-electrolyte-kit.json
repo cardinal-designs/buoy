@@ -216,6 +216,22 @@
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a": {
       "type": "image-with-dropdowns-2",
       "blocks": {
+        "type1_CPNxhC": {
+          "type": "type1",
+          "settings": {
+            "title": "Hydration Drops",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
+          }
+        },
         "df99ddc8-70c7-4a68-b11b-284f77a35416": {
           "type": "type1",
           "settings": {
@@ -286,13 +302,25 @@
             "show_hsa": false
           }
         },
-        "type1_CPNxhC": {
-          "type": "type1",
+        "type3_XDAbLc": {
+          "type": "type3",
           "settings": {
-            "title": "Hydration Drops",
-            "video_url": "",
-            "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
+            "title": "",
+            "suptext": "",
             "text": "",
+            "icon_image_text_1": "",
+            "icon_image_subtext_1": "",
+            "icon_image_list_1": "",
+            "icon_image_text_2": "",
+            "icon_image_subtext_2": "",
+            "icon_image_list_2": "",
+            "icon_image_text_3": "",
+            "icon_image_subtext_3": "",
+            "icon_image_list_3": "",
+            "icon_image_text_4": "",
+            "icon_image_subtext_4": "",
+            "icon_image_list_4": "",
+            "suptext2": "",
             "list_item1": "",
             "list_item2": "",
             "list_item3": "",
@@ -301,13 +329,37 @@
             "show_clinical": false,
             "show_hsa": false
           }
+        },
+        "type4_iYBNd7": {
+          "type": "type4",
+          "settings": {
+            "title": "Test",
+            "video_url": "",
+            "suptext": "Intro text about using Hydration Drops for your daily dose.",
+            "text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "suptext2": "",
+            "text2": "",
+            "list_item1_2": "",
+            "list_item2_2": "",
+            "list_item3_2": "",
+            "list_item4_2": "",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
+          }
         }
       },
       "block_order": [
+        "type1_CPNxhC",
         "df99ddc8-70c7-4a68-b11b-284f77a35416",
         "cb7221f0-8478-4596-bd94-8a4f7aa0ba83",
         "aabbf8b6-7cb9-4f6c-984c-492c48db0a03",
-        "type1_CPNxhC"
+        "type3_XDAbLc",
+        "type4_iYBNd7"
       ],
       "settings": {
         "video_url": "",
