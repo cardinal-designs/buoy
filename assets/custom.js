@@ -313,7 +313,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         } else {
-          // For single drawer on PDP
           showDrawer(supplementDrawer);
         }
       });
