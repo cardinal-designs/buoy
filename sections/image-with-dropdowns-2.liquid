@@ -356,13 +356,7 @@
                   {% render 'lazy-image' image: block.settings.image, classes: '' %}
                 {% endif %} 
                 <p class="sh2">{{ block.settings.text }}</p>
-                {% if block.settings.list_item1 != blank %}
-                  <div class="image-with-dropdowns__list-item">
-                    <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick.png?v=1698726363"/>
-                    <p class="sh4">{{ block.settings.list_item1 }}</p>
-                  </div>
-                {% endif %}
-                
+
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
