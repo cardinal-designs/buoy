@@ -379,6 +379,10 @@
                 </div>
                 <div class="image-with-dropdowns__content-wrapper">
                   <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_5 }}</p>
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="{{ block.settings.icon_1 | img_url: 'master'}}"/>
+                    <p class="sh4">{{ block.settings.list_item1 }}</p>
+                  </div>
                 </div>
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
@@ -885,6 +889,16 @@
             "type": "text",
             "id": "title_text_5",
             "label": "Title Five"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon One"
+          },
+          {
+            "type": "textarea",
+            "id": "list_item1",
+            "label": "List Item 1"
           }
         ]
       }
