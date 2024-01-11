@@ -309,10 +309,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
-        console.log(drawerName);
-        // if (dataTitle === drawerName) {
-        //   showDrawer(drawer);
-        // }
+        console.log(dataTitle);
+        if (dataTitle === drawerName) {
+          showDrawer(drawer);
+        }
       });
     } else {
       // For single drawer on PDP
