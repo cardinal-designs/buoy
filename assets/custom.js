@@ -312,12 +312,16 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       allDrops.forEach((item) => {
         const dataTitle = item.dataset.title;
 
-        supplementDrawers.forEach((drawer) => {
+        const matchingDrawer = supplementDrawers.find((drawer) => {
           const drawerName = drawer.dataset.productName;
-          if (dataTitle === drawerName) {
-            console.log('drawerName', drawerName)
-          }
+          return dataTitle === drawerName;
         });
+
+        if (matchingDrawer) {
+          console.log('Matching drawer:', matchingDrawer);
+          // Perform additional actions with the matching drawer if needed
+          showDrawer(matchingDrawer);
+        }
       });
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
