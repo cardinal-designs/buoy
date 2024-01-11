@@ -348,13 +348,7 @@
                 <div class="image-with-dropdowns__x"></div>
               </div>
               <div class="image-with-dropdowns__a">
-                {% if block.settings.video_url != blank %}
-                  <video class="image-with-dropdowns__video" autoplay loop muted playsinline class="video">
-                    <source src="{{ block.settings.video_url }}" type="video/mp4">
-                  </video>
-                {% else %}
-                  {% render 'lazy-image' image: block.settings.image, classes: '' %}
-                {% endif %} 
+                {% render 'lazy-image' image: block.settings.image, classes: '' %}
                 {%- if block.settings.suptext != blank -%}
                   <p class="sh2">{{ block.settings.suptext }}</p>
                 {%- endif -%}
