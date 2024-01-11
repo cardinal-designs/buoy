@@ -302,7 +302,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       });
     } else if (parentDropdown) {
-      console.log('parentDropdown', parentDropdown);
+      const parentEl = e.target.closest('.image-with-dropdowns__q');
+      console.log(parentEl);
     } else {
       // For single drawer on PDP
       const supplementDrawer = document.getElementById("supplementSideDrawer");
