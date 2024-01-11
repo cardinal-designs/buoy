@@ -316,11 +316,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           return drawer.dataset.productName;
         });
 
-        if (matchingDrawer) {
-          console.log('Matching drawer:', matchingDrawer);
-          // Perform additional actions with the matching drawer if needed
-          showDrawer(matchingDrawer);
-        }
+        console.log(matchingDrawer);
       });
       // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
       // supplementDrawers.forEach((drawer) => {
