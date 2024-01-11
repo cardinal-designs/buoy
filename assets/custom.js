@@ -317,7 +317,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else {
       // For single drawer on PDP
       const supplementDrawer = document.getElementById("supplementSideDrawer");
-      // showDrawer(supplementDrawer);
+      showDrawer(supplementDrawer);
     }
 
     // Show drawer
