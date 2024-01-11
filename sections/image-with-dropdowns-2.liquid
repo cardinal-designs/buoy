@@ -368,6 +368,9 @@
                   <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info }}</p>
                 </div>
                 <div class="image-with-dropdowns__content-wrapper">
+                  <p class="image-with-dropdowns__title-text">{{ block.settings.title_text_3 }}</p>
+                  <p class="image-with-dropdowns__sub-text">{{ block.settings.sub_text_3 }}</p>
+                  <p class="image-with-dropdowns__sub-text-info">{{ block.settings.sub_text_info_2 }}</p>
                 </div>
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
@@ -839,6 +842,21 @@
             "type": "text",
             "id": "sub_text_info",
             "label": "Sub Text Info"
+          },
+          {
+            "type": "text",
+            "id": "title_text_3",
+            "label": "Title Three"
+          },
+          {
+            "type": "text",
+            "id": "sub_text_3",
+            "label": "Sub Text Three"
+          },
+          {
+            "type": "text",
+            "id": "sub_text_info_2",
+            "label": "Sub Text Info Two"
           }
         ]
       }
