@@ -291,12 +291,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const parentItem = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
+    
     if (parentItem) {
       // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
-      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
         if (dataTitle === drawerName) {
@@ -306,20 +308,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else if (parentDropdown) {
       const parentEl = parentDropdown.querySelector('.image-with-dropdowns__q');
       const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
-      const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         } else {
           // For single drawer on PDP
-          const supplementDrawer = document.getElementById("supplementSideDrawer");
           showDrawer(supplementDrawer);
         }
       });
     } else {
       // For single drawer on PDP
-      const supplementDrawer = document.getElementById("supplementSideDrawer");
       showDrawer(supplementDrawer);
     }
 
