@@ -289,7 +289,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     const parentDropdown = !!e.target.closest('.image-with-dropdowns__dropdown');
-    console.log(parentDropdown);
     if (parentItem) {
       // For multiple drawers on PDP
       const parentEl = e.target.closest('.dropdown-container-item');
@@ -302,6 +301,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           showDrawer(drawer);
         }
       });
+    } else if (parentDropdown) {
+      console.log('parentDropdown', parentDropdown);
     } else {
       // For single drawer on PDP
       const supplementDrawer = document.getElementById("supplementSideDrawer");
