@@ -308,7 +308,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For image with dropdowns section
     } else if (parentDropdown) {
       const parentEl = e.target.closest('.image-with-dropdowns__q');
-      console.log(e.target.parentElement);
+      console.log(e.target.querySelector('.image-with-dropdowns__q'));
       const allDrops = parentDropdown.querySelector('.image-with-dropdowns__content-text');
 
       // supplementDrawers.forEach((drawer) => {
