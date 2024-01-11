@@ -320,21 +320,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           });
         }
       })
-
-      // supplementDrawers.forEach((drawer) => {
-      //   if (dataTitle === drawer.dataset.productName) {
-      //     showDrawer(drawer);
-      //   }
-      // });
-      // const dataTitle = parentEl.querySelector('.image-with-dropdowns__content-text').dataset.title;
-      // supplementDrawers.forEach((drawer) => {
-      //   const drawerName = drawer.dataset.productName;
-      //   if (dataTitle === drawerName) {
-      //     showDrawer(drawer);
-      //   } else {
-      //     showDrawer(supplementDrawer);
-      //   }
-      // });
     } else {
       // For single drawer on PDP
       showDrawer(supplementDrawer);
