@@ -289,7 +289,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openNav(e) {
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     console.log(parentItem);
-
     // const parentItem = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__content');
     // const itemContainer = document.querySelector('.dropdown-container-item');
