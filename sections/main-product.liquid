@@ -905,12 +905,14 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   })
 
   document.getElementById('purchaseTypeOneTime').addEventListener('change', function() {
+    console.log('1')
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
       element.textContent = element.dataset.onetimeprice;
     });
   });
   
   document.getElementById('purchaseTypeSbubscription').addEventListener('change', function() {
+     console.log('2')
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
       element.textContent = element.dataset.subprice;
     });
