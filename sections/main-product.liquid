@@ -190,10 +190,10 @@
                      {%- if my_fields.serving_cost != blank -%}
                         <span 
                           class="Serving_Cost" 
-                          data-subprice="{{ my_fields.serving_cost }}" 
-                          data-onetimeprice="{{ product.metafields.custom.serving_sub_price }}"
+                          data-subprice="{{ product.metafields.custom.serving_sub_price}}" 
+                          data-onetimeprice="{{ my_fields.serving_cost }}"
                         >
-                          {{ my_fields.serving_cost }}
+                          {{ product.metafields.custom.serving_sub_price }}
                         </span>    
                       {%- endif -%}
                       {%- if my_fields.best_value != blank -%}
