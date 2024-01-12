@@ -905,15 +905,15 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
   })
 
   document.getElementById('purchaseTypeOneTime').addEventListener('change', function() {
-    console.log('1')
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
+      console.log('23',dataset.onetimeprice)
       element.textContent = element.dataset.onetimeprice;
     });
   });
   
   document.getElementById('purchaseTypeSbubscription').addEventListener('change', function() {
-     console.log('2')
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
+       console.log('22',dataset.onetimeprice)
       element.textContent = element.dataset.subprice;
     });
   });
