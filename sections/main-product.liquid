@@ -906,14 +906,14 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
   document.getElementById('purchaseTypeOneTime').addEventListener('change', function() {
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
-      console.log('23',dataset.onetimeprice)
+      console.log('23',element.dataset.onetimeprice)
       element.textContent = element.dataset.onetimeprice;
     });
   });
   
   document.getElementById('purchaseTypeSbubscription').addEventListener('change', function() {
     document.querySelectorAll('.Serving_Cost').forEach(function(element) {
-       console.log('22',dataset.onetimeprice)
+       console.log('22',element.dataset.subprice)
       element.textContent = element.dataset.subprice;
     });
   });
