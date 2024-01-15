@@ -67,7 +67,7 @@
           {%  assign formatted_id = variant_id | strip | plus: 0 %}
         
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
-        {% for item in  chosen_variant.selling_plan_groups %}
+        {% for item in  chosen_variant.selling_plan_allocation %}
            <div>{{ item.id }}</div>
           {% endfor %}
          
