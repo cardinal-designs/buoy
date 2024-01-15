@@ -16,6 +16,7 @@
             {% render 'product-card-atc-new'
               product_card_product: block.settings.product,
               product_card_atc: block.settings.product_atc,
+              variant_id: block.settings.variant_id,
               show_secondary_image: true,
               hover_video: block.settings.hover_video,
               show_shop_button: true,
@@ -100,6 +101,11 @@
             "type": "product",
             "id": "product_atc",
             "label": "ATC Product"
+          },
+          {
+            "type": "text",
+            "id": "variant_id",
+            "label": "Variant id"
           },
           {
             "type": "textarea",
