@@ -159,14 +159,12 @@
 
       elementToReplace.innerHTML =
         getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+      document.querySelector('cart-drawer').open();
     }));
       
     })
     .catch((error) => {
       console.error('Error:', error);
-    })
-    .finally(() => {
-      document.querySelector('cart-drawer').open();
     });
   }
 </script>
