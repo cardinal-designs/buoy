@@ -64,8 +64,12 @@
         {% endif %}
         </a>
         {% if show_shop_button %}
-          {% if product_card_atc.selected_or_first_available_variant.available %}
-             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{product_card_atc.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" data-id="{{product_card_atc.selected_or_first_available_variant.id}}" data-selling="{{product_card_atc.selling_plan_groups[0].selling_plans[0].id}}">{{ product_card_button_text }}</button>
+          {%  assign formatted_id = variant_id | strip | plus: 0 %}
+          {% assign current_selling_plan_allocation =  selling_id | strip | plus: 0%}
+          {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
+        
+          {% if chosen_variant.available %}
+             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{ current_selling_plan_allocation }}">{{ product_card_button_text }}</button>
           {% else %}
             <button class="shop-btn button button--beige">Out of stock</button>
           {% endif %}
@@ -102,6 +106,7 @@
     let productMetafield = addButton.dataset.metafield;
     let metafieldHasValue = false;
     let metafieldArray;
+    
 
     if (productMetafield){
       if (productMetafield.indexOf(':') != '' || productMetafield.indexOf(':') != null){
@@ -122,12 +127,14 @@
     } else {
       add_items = [{id: productId, quantity: productQuantity, selling_plan: productSellingPlan}]
     }
+    console.log(add_items)
 
     let formData = {
      'items': add_items,
       sections: atcGetSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     };
+    console.log(add_items)
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
       headers: {
@@ -136,7 +143,6 @@
       body: JSON.stringify(formData)
     })
     .then(response => {
-      console.log(response);
       return response.json();
       
     })
@@ -144,17 +150,15 @@
       atcGetSectionsToRender().forEach((section => {
       const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-
+console.log(elementToReplace);
       elementToReplace.innerHTML =
         getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+      document.querySelector('cart-drawer').open();
     }));
       
     })
     .catch((error) => {
       console.error('Error:', error);
-    })
-    .finally(() => {
-      document.querySelector('cart-drawer').open();
     });
   }
 </script>
