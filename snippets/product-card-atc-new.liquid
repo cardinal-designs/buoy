@@ -64,7 +64,7 @@
         {% endif %}
         </a>
         {% if show_shop_button %}
-          {%  assign chosen_variant = product_card_atc.variants | where: 'id', variant_id %}
+          {%  assign chosen_variant = product_card_atc.variants | where: 'id', '{{ variant_id }}' %}
           <div>{{ product_card_atc.variants | where: 'id', variant_id }}</div>
         <div>{{ variant_id }}</div>
           {% if chosen_variant.available %}
