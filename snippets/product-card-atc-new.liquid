@@ -68,7 +68,7 @@
         
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
         {% for item in  chosen_variant.selling_plan_groups %}
-           <div>{{ item }}</div>
+           <div>{{ item.id }}</div>
           {% endfor %}
          
           {% if chosen_variant.available %}
