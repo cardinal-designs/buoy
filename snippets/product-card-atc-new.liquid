@@ -133,6 +133,7 @@
       sections: atcGetSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     };
+    console.log(add_items)
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
       headers: {
