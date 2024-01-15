@@ -64,8 +64,8 @@
         {% endif %}
         </a>
         {% if show_shop_button %}
-          
-          {%  assign chosen_variant = product_card_atc.variants | where: 'id', 47446129213740 %}
+          {%  assign formatted_id = variant_id | strip | plus: 0 %}
+          {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
           
           <div>{{ product_card_atc.variants | where: 'id', '47446129213740' }}</div>
         <div>variant_id: {{ variant_id }}</div>
