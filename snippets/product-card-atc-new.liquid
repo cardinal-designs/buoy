@@ -65,7 +65,7 @@
         </a>
         {% if show_shop_button %}
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', variant_id %}
-          <div>{{ chosen_variant.id }}</div>
+          <div>{{ chosen_variant.selected_or_first_available_variant.id }}</div>
           {% if chosen_variant.available %}
              <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{product_card_atc.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" data-id="{{product_card_atc.selected_or_first_available_variant.id}}" data-selling="{{product_card_atc.selling_plan_groups[0].selling_plans[0].id}}">{{ product_card_button_text }}</button>
           {% else %}
