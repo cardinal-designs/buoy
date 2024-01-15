@@ -139,7 +139,7 @@
             {%- for option in item.options_with_values -%}
               {%- unless option.name == 'Title' -%}
                 <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                  {{ option.name }}:&nbsp;{{ option.value }}
+                  {{ option.name }}:{{ option.value }}
                 </h6>
               {%- endunless -%}
             {%- endfor -%}
@@ -149,7 +149,7 @@
             {%- assign property_first_char = property.first | slice: 0 -%}
             {%- if property.last != blank and property_first_char != '_' -%}
                 <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                {{ property.first }}:&nbsp;
+                {{ property.first }}:
                 {%- if property.last contains '/uploads/' -%}
                   <a href="{{ property.last }}" target="_blank">
                  {{ property.last | split: '/' | last }}
@@ -174,17 +174,13 @@
         
         <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
           {% if item.selling_plan_allocation.selling_plan %}
-            {% render 'icon-calendar' %} Monthly: 
-          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-              One-Time Purchase: 
-          {% endif %}
-
-          {% if item.product.title contains '1 Bottle' %}
-             1 Bottles—40 servings
-          {% elsif item.product.type == 'Subscription' or item.product.type == 'Bundle' %}
-             3 Bottles—120 servings
+            {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+              {% render 'icon-calendar' %} Quarterly: {{ item.selling_plan_allocation.selling_plan.name | default: 'Delivered Every 12 Weeks' }}
+            {% else %}
+              {% render 'icon-calendar' %} Monthly: Delivered Every 4 Weeks
+            {% endif %}
           {% else %}
-            {{ item.selling_plan_allocation.selling_plan.name }}
+              One-Time Purchase 
           {% endif %}
         </p>
   

@@ -15,10 +15,10 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "Try Buoy 100% Risk Free for 30 days and Save 23% + Free Shipping",
-          "link": "shopify:\/\/pages\/clear-pee-club-1",
+          "text": "Invest in Yourself This Year! Subscribe & Save 23% Forever + Free Shipping",
+          "link": "shopify:\/\/products\/hydration-drops",
           "btn_text": "Save 23%",
-          "btn_link": "shopify:\/\/pages\/clear-pee-club-1",
+          "btn_link": "shopify:\/\/products\/hydration-drops",
           "hide_mobile": false
         }
       },
@@ -213,7 +213,7 @@
               "link": "shopify:\/\/products\/ocean-electrolyte-kit",
               "title": "Shop Ocean Electrolyte Kit",
               "mobile_title": "Ocean Electrolyte Kit — <strong>New<\/strong>",
-              "image": "shopify:\/\/shop_images\/OceanElectrolyteKit_Hero1_V2.jpg"
+              "image": "shopify:\/\/shop_images\/PDP_OEK_Hero_1_42c9f8e5-650b-4b7a-a6e0-83b8c4478d8b.jpg"
             }
           },
           "70c6f708-5bac-432f-994f-036e28f9e8d0": {
@@ -367,7 +367,7 @@
           "product_name_1": "Hydration Drops",
           "product_details_1": "3 Bottles — 120 Servings (Delivered Monthly)",
           "product_price_1": "$8.33\/bottle",
-          "product_price_details_1": "<span><strike>$39.00<\/strike><\/span> $25.00 Sub Total",
+          "product_price_details_1": "<span><strike>$39.00<\/strike><\/span> $25.35 Sub Total",
           "product_name_2": "Welcome Package",
           "product_price_2": "Free",
           "disclaimer": "Chronic illness discount applied to all future orders.",
@@ -402,6 +402,13 @@
         "settings": {
         }
       },
+      "10605408327587305396": {
+        "type": "shopify:\/\/apps\/eg-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+        "disabled": false,
+        "settings": {
+          "version": "v3"
+        }
+      },
       "15885745614559378752": {
         "type": "shopify:\/\/apps\/accessibly\/blocks\/app-embed\/4b59303e-1141-4c8a-945f-bf4adb516864",
         "disabled": false,
@@ -412,15 +419,8 @@
           "topBottomPosition": 10,
           "rightLeftPosition": 5,
           "iconSize": "custom",
-          "iconCustomSize": 30,
+          "iconCustomSize": 25,
           "position": "middle-right"
-        }
-      },
-      "10605408327587305396": {
-        "type": "shopify:\/\/apps\/eg-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": false,
-        "settings": {
-          "version": "v3"
         }
       }
     }
