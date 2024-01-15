@@ -68,7 +68,7 @@
         
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
           {% assign current_selling_plan_allocation = chosen_variant.selling_plan_allocations | first %}
-         {% for group in product.selling_plan_groups %}
+         {% for group in product_card_atc.selling_plan_groups %}
            {% for selling_plan in group.selling_plans %}
              <div>{{ selling_plan.id }}</div>
              {% endfor %}
