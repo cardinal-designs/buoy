@@ -68,7 +68,11 @@
         
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
           {% assign current_selling_plan_allocation = chosen_variant.selling_plan_allocations | first %}
-         
+         {% for group in product.selling_plan_groups %}
+           {% for selling_plan in group.selling_plans %}
+             <div>{{ selling_plan.id }}</div>
+             {% endfor %}
+           {% endfor %}
           {% if chosen_variant.available %}
              <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{current_selling_plan_allocation.id}}">{{ product_card_button_text }}</button>
           {% else %}
