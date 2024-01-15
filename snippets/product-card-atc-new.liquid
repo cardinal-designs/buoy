@@ -74,7 +74,7 @@
              {% endfor %}
            {% endfor %}
           {% if chosen_variant.available %}
-             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{current_selling_plan_allocation.id}}">{{ product_card_button_text }}</button>
+             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{product_card_atc.variants.selling_plan_groups[0].selling_plans[0].id}}">{{ product_card_button_text }}</button>
           {% else %}
             <button class="shop-btn button button--beige">Out of stock</button>
           {% endif %}
