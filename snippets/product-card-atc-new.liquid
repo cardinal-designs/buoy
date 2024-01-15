@@ -156,7 +156,7 @@
       atcGetSectionsToRender().forEach((section => {
       const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-
+console.log(elementToReplace);
       elementToReplace.innerHTML =
         getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       document.querySelector('cart-drawer').open();
