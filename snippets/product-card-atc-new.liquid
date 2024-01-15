@@ -65,14 +65,10 @@
         </a>
         {% if show_shop_button %}
           {%  assign formatted_id = variant_id | strip | plus: 0 %}
-        
+          {% assign current_selling_plan_allocation =  selling_id | strip | plus: 0%}
           {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
-          {% assign current_selling_plan_allocation = chosen_variant.selling_plan_allocations | first %}
-         {% for group in product_card_atc.selling_plan_groups %}
-           {% for selling_plan in group.selling_plans %}
-             <div>{{ selling_plan.id }}</div>
-             {% endfor %}
-           {% endfor %}
+          
+
           {% if chosen_variant.available %}
              <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="689255252268">{{ product_card_button_text }}</button>
           {% else %}
