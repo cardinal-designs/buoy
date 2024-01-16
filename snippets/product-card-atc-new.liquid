@@ -55,7 +55,7 @@
       <div class="card-information__wrapper">
 
         <div data-oke-reviews-product-listing-rating>{{ product_card_product.metafields.okendo.ProductListingSnippet }}</div>
-
+        {{ product_card_product | json }}
         <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
           <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
         
