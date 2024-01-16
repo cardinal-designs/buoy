@@ -830,7 +830,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         let hash;
         hash = (hash = window.location.toString().split('#')).length > 1 ? hash[1] : null;
         const url = window.location.toString().split('?')[0] + '?' + qs + (hash ? '#' + hash : '');
-        // history.pushState(queryParams, '', url);
+        history.pushState(queryParams, '', url);
       } catch (e) {
         // Catching since older browsers and iOS can have issues
         console.error(e);
