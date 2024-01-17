@@ -9,6 +9,7 @@
   align-items: center;
   background: white;
   color: var(--charcoal);
+  overflow: scroll;
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
