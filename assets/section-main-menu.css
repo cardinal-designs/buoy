@@ -486,7 +486,7 @@
 
   .main-menu__wrapper {
     position: inherit;
-    overflow: auto;
+    overflow: scroll;
   }
 
   .main-menu__secondary-links {
