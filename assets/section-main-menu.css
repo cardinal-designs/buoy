@@ -19,6 +19,7 @@
   max-height: 624px;
   box-shadow: 0px 14px 20px #00000008;
   display: block;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main-menu[aria-hidden="false"] {
