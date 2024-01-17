@@ -595,6 +595,7 @@
       "blocks": {
         "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "text": "Add Energy Drops to this stack to \u2028round out your routine.",
             "new_product": false,
@@ -608,11 +609,11 @@
         "73e9c2ba-6884-470f-a719-177359344c65": {
           "type": "block",
           "settings": {
-            "text": "Add Immunity Drops to this stack to round out your routine.",
-            "new_product": false,
-            "extra_savings": true,
-            "image": "shopify:\/\/shop_images\/immunity-drops.png",
-            "product": "immunity-drops-1",
+            "text": "Add the world's best sea salt harvested with 87 ionic trace minerals.",
+            "new_product": true,
+            "extra_savings": false,
+            "image": "shopify:\/\/shop_images\/Upsell_Rescue_Salt_D_1.png",
+            "product": "rescue-salts-1",
             "bottom_text": "Immunity Drops",
             "add_to_cart": true
           }
