@@ -105,7 +105,8 @@
         "product_feature_icon": "shopify:\/\/shop_images\/star.svg",
         "product_feature_text": "Energy, Gut Health, Brain Function, Skin",
         "product_feature_text_two": "Delivered in 3x more bioavailable form factor",
-        "show_drawer_triggers": true
+        "show_drawer_triggers": true,
+        "dropdown_title": ""
       }
     },
     "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff": {
@@ -568,6 +569,7 @@
         },
         "73e9c2ba-6884-470f-a719-177359344c65": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "text": "Want to try them all? Build a custom bundle.",
             "new_product": false,
