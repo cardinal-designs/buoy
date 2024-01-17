@@ -1608,6 +1608,11 @@ fieldset.product-form__input .form__label {
   cursor: pointer;
 }
 
+.template-product .product-form .rtx_option_selector input,
+.template-product .product-form .rtx_option_selector label {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .template-product .product-form .rtx_option_selector {
     align-items: flex-start;
