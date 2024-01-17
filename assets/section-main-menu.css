@@ -10,7 +10,7 @@
   background: white;
   color: var(--charcoal);
   overflow: scroll;
-  z-index: 1111;
+  z-index: 99999;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-100%);
