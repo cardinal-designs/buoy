@@ -1243,7 +1243,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let metafieldArray;
   let metafieldKey;
   let metafieldValue;
-  console.log('id', id);
   if (metafield){
       if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
       metafieldHasValue = true;
