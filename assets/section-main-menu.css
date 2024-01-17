@@ -495,7 +495,8 @@
 
   .main-menu__secondary-links.Secondary_Link.Mobile {
     display: block;
-    padding: 27px 0;
+    /* padding: 27px 0; */
+    padding: 270px 0;
   }
 
   .main-menu__secondary-links .sh4:last-child {
