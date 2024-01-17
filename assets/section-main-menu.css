@@ -1,6 +1,5 @@
 .main-menu {
   max-width: 100%;
-  overflow: auto;
   width: 100%;
   padding: 30px 40px 40px;
   position: fixed;
@@ -10,7 +9,7 @@
   align-items: center;
   background: white;
   color: var(--charcoal);
-  overflow: auto;
+  overflow: scroll;
   z-index: 1111;
   opacity: 0;
   visibility: hidden;
@@ -437,6 +436,7 @@
   
   .main-menu {
     max-height: 100%;
+
   }
   
   .Desktop_Title {
