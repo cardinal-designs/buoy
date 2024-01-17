@@ -555,6 +555,18 @@
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e": {
       "type": "routine-products",
       "blocks": {
+        "73e9c2ba-6884-470f-a719-177359344c65": {
+          "type": "block",
+          "settings": {
+            "text": "Our best-selling, ionic liquid electrolytes and trace minerals.",
+            "new_product": false,
+            "extra_savings": false,
+            "image": "shopify:\/\/shop_images\/Upsell_Hydration_Drops_D_a4878f5d-cc53-462e-b487-f572e023547f.png",
+            "product": "hydration-drops-1",
+            "bottom_text": "Hydration Drops",
+            "add_to_cart": false
+          }
+        },
         "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
           "type": "block",
           "settings": {
@@ -562,27 +574,15 @@
             "new_product": true,
             "extra_savings": false,
             "image": "shopify:\/\/shop_images\/Upsell_Rescue_Salt_D_59f697f2-6771-4e04-aa24-6f0ee9a92041.png",
-            "product": "rescue-salts",
+            "product": "rescue-salts-1",
             "bottom_text": "Rescue Salt",
             "add_to_cart": true
-          }
-        },
-        "73e9c2ba-6884-470f-a719-177359344c65": {
-          "type": "block",
-          "settings": {
-            "text": "Want to try them all? Build a custom bundle.",
-            "new_product": false,
-            "extra_savings": false,
-            "image": "shopify:\/\/shop_images\/Upsell_Bundle_1_D.png",
-            "product": "byob",
-            "bottom_text": "Build Your Bundle",
-            "add_to_cart": false
           }
         }
       },
       "block_order": [
-        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac",
-        "73e9c2ba-6884-470f-a719-177359344c65"
+        "73e9c2ba-6884-470f-a719-177359344c65",
+        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac"
       ],
       "settings": {
         "title": "Round out your routine"
