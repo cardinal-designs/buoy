@@ -237,7 +237,9 @@
               {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
               {% render 'cart-drawer-item' item: item, idx: index %}
             {% endfor %}
-                        {% if section.settings.upsell_subproduct1 != blank %}
+          </div>
+           <div class="cart-drawer__footer">
+            {% if section.settings.upsell_subproduct1 != blank %}
             {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
             {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
             {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
@@ -344,9 +346,6 @@
               </div>
               {% endif %}
               </div>
-          </div>
-           <div class="cart-drawer__footer">
-
               <div class="money-back__container">
                 <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Money-Back_Icon_2x_dd8e4035-9b8e-46ae-9673-1af23bdc0989.png?v=1697065035"/>
                 <div class="money-back__text">
