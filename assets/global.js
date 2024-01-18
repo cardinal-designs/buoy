@@ -1289,7 +1289,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     
   } else {
     if (metafieldHasValue){
-      console.log('hhhhhh')
        add_items = [{id: id, quantity: 1, properties: {
       [metafieldKey]: metafieldValue}}]
     } else {
@@ -1307,7 +1306,6 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
     .then((response) => response.json())
     .then((parsedState) => {
-      console.log(parsedState);
       atcGetSectionsToRender().forEach((section => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
@@ -1329,6 +1327,7 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let subid = Number($(this).data('subid'));
+  console.log(subid);
   let metafield = $(this).data('metafield');
   let metafieldHasValue = false;
   let metafieldArray;
