@@ -42,7 +42,7 @@ class ProductForm extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
-    console.log(serializeForm(this.form.purchaseType));
+    console.log(serializeForm(this.form));
 
     fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
