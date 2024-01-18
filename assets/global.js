@@ -1289,6 +1289,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     
   } else {
     if (metafieldHasValue){
+      console.log('hhhhhh')
        add_items = [{id: id, quantity: 1, properties: {
       [metafieldKey]: metafieldValue}}]
     } else {
