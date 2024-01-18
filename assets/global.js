@@ -1260,6 +1260,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
   console.log('checked subid', checked_type_sub);
+   console.log('checked', checked_type);
   
   
   $.getJSON('/cart', function (results) {
