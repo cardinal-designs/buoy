@@ -1,12 +1,1177 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b": {
+      "type": "home-hero",
+      "disabled": true,
       "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
+        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Hero_Image_Mobile.jpg",
+        "review": "Over 3,000 Trusted Reviews",
+        "title": "Best electrolyte drink for leg cramps",
+        "text": "Unflavored Hydration Drops",
+        "button_label": "Start Squeezing",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_style": "beige",
+        "link_label": "",
+        "link_link": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "add_background": false
+      }
+    },
+    "31e36676-5821-47f9-a328-6c162b259d29": {
+      "type": "pee-club-products",
+      "blocks": {
+        "56552880-d878-401c-b38e-f4f0c4cc485e": {
+          "type": "block",
+          "settings": {
+            "recommend": true,
+            "sale_text": "Hydration Perfected ⚡️",
+            "product": "hydration-drops",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "<p style=\"font-size:15px\">Deep ocean electrolytes and 87+ ionic trace minerals for rapid, effective hydration without unnecessary additives.<\/p>",
+            "list_item1": "One month supply",
+            "list_item2": "No sugar, sweeteners, or flavors, just pure hydration",
+            "list_item3": "Combat dehydration for less than $1\/day + 100% Money Back Guarantee",
+            "button_text": "Stay Hydrated Naturally",
+            "checkout_link": "shopify:\/\/products\/hydration-drops",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "a55a48cb-e8fe-4147-b872-04281d92e180": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "energy-drops",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "Buoy's same baseline hydration formula but with the energizing health compounds in green tea for no-jitters, all-natural energy.",
+            "list_item1": "One month supply",
+            "list_item2": "Gently caffeinated",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "immunity-drops",
+            "servings": "3 PACK · 120 SERVINGS",
+            "text": "3-in-1 immune support with electrolytes, vitamins and zinc.",
+            "list_item1": "One month supply",
+            "list_item2": "Hydrate for around $1\/day",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "8939123e-4123-47d7-a631-21ea009a79ce": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 24%",
+            "product": "wellness-kit",
+            "servings": "3 BOTTLES · 120 SERVINGS",
+            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.<br><br>1 Hydration Drops<br>1 Energy Drops<br>1 Immunity Drops",
+            "list_item1": "One month supply",
+            "list_item2": "All three drops",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        }
+      },
+      "block_order": [
+        "56552880-d878-401c-b38e-f4f0c4cc485e",
+        "a55a48cb-e8fe-4147-b872-04281d92e180",
+        "aca99b1c-2e36-45dc-8c71-d752f8937b59",
+        "8939123e-4123-47d7-a631-21ea009a79ce"
+      ],
+      "settings": {
+        "title": "<h1>Electrolytes for Dehydration<\/h1>",
+        "text": "<p style=\"font-size:15px\">Dehydration can sneak up on you and affect how you feel and function. While water is important, sometimes you need a bit more. That's where electrolytes come in. But many electrolyte solutions out there are filled with sugar and additives.<br><br>\n\nEnter Buoy: our sugar-free hydration drops are designed specifically for those who want effective hydration without the extras.<br><br>\n\n✓ Recognizing Dehydration<br>\n✓ The Importance Of Electrolytes<br>\n✓ What To Look For In An Electrolyte Solution<br>\n✓ The Problem With Sugar In Hydration Products<br>\n✓ Our Electrolyte Solution<br><br>\n\nPlus, a sneak peek of our favorite electrolyte to prevent and reverse dehydration symptoms!<\/p>",
+        "text_bottom": "",
+        "button_label": "Read all Reviews",
+        "button_link": "shopify:\/\/pages\/reviews",
+        "background": "",
+        "add_top_border": true,
+        "add_bottom_border": false
+      }
+    },
+    "50df382c-255c-4272-b876-eca398cca73a": {
+      "type": "dropdowns",
+      "blocks": {
+        "b46d22a2-dc4c-4952-920e-df027e14433e": {
+          "type": "dropdown",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">💦 The Importance of Staying Hydrated<\/h3>",
+            "text": "<p style=\"font-size:15px\">Water is vital. It's involved in almost every function in our body—from digestion and absorption to maintaining the balance of bodily fluids and regulating body temperature. When we're dehydrated, these processes get compromised.<\/p>",
+            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+          }
+        },
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
+          "type": "dropdown",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">🌡 Signs and Symptoms of Dehydration<\/h3>",
+            "text": "<p style=\"font-size:15px\">Dehydration isn't always obvious. Beyond thirst, signs include dark urine, fatigue, dizziness, and confusion. Severe dehydration can also lead to rapid heartbeat and accelerated breathing, among other symptoms.<\/p>",
+            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+          }
+        },
+        "07c66f31-6bda-4e4c-9097-b51e4c178122": {
+          "type": "dropdown",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">💧 Causes of Dehydration<\/h3>",
+            "text": "<p style=\"font-size:15px\">It's not just about not drinking enough water. Other causes include excessive sweating, fever, frequent urination, and more. Even certain medications can cause dehydration.<\/p>",
+            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+          }
+        },
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
+          "type": "dropdown",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">🍹 Rehydration: More Than Just Water<\/h3>",
+            "text": "<p style=\"font-size:15px\">Rehydrating is about more than just drinking water. Your body loses salts and minerals when it gets dehydrated. These need to be replaced too. That’s where electrolytes come in.<br><br>\n\nDehydration can sneak up on you, and its impact can be severe. Regularly monitoring your hydration levels and ensuring you're not only drinking water but also replenishing lost electrolytes, can keep you feeling at your best. Don't underestimate the power of proper hydration!<\/p>",
+            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+          }
+        },
+        "a8d68486-9e82-462c-95ea-6676106f9f12": {
+          "type": "dropdown",
+          "disabled": true,
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">Beyond Thirst: The Subtle Signs of Dehydration<\/h3>",
+            "text": "<p style=\"font-size:15px\">Dehydration isn’t always announced with a parched throat or an overwhelming thirst. Many symptoms are silent, slowly sneaking up, making it crucial to be vigilant about your body’s hydration needs.<\/p>\n<h3 style=\"font-size:20px\">🧠 Reduced Cognitive Function<\/h3>\n<p style=\"font-size:15px\">Mental fog isn’t just tied to lack of sleep or stress. If you're struggling to think clearly or remember details, your body might be subtly signaling its need for hydration.<\/p>\n<h3 style=\"font-size:20px\">😴 Unexplained Fatigue<\/h3>\n<p style=\"font-size:15px\">Feeling unusually tired, even after a good night's rest? Dehydration can sap your energy, making you feel sluggish and weary.<\/p>\n<h3 style=\"font-size:20px\">😠 Irritability And Mood Swings<\/h3>\n<p style=\"font-size:15px\">Yes, your hydration level can impact your mood. When dehydrated, you might find yourself more irritable or experiencing mood fluctuations.<\/p>\n<h3 style=\"font-size:20px\">🥵 Overheating<\/h3>\n<p style=\"font-size:15px\">Sweat is our body’s natural cooling system. Without enough fluids, it can't regulate temperature effectively, leading to overheating even in mild conditions.<\/p>\n<h3 style=\"font-size:20px\">🍫 Unexplained Cravings<\/h3>\n<p style=\"font-size:15px\">Suddenly craving salty or sweet snacks? It could be your body's way of signaling a need for electrolytes and hydration.<\/p>\n<h3 style=\"font-size:20px\">🚽 Dark Urine<\/h3>\n<p style=\"font-size:15px\">The color of your urine is a telltale sign. Dark yellow or amber signals dehydration, while a light lemonade color indicates you're well-hydrated.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b46d22a2-dc4c-4952-920e-df027e14433e",
+        "e704a7e2-eec8-427a-b18c-3fb1f1858281",
+        "07c66f31-6bda-4e4c-9097-b51e4c178122",
+        "98a930a8-d687-48b2-a08a-85c17f6c1e3b",
+        "a8d68486-9e82-462c-95ea-6676106f9f12"
+      ],
+      "settings": {
+        "title": "Dive Into Dehydration",
+        "subtext": "<p style=\"font-size:15px\">Dehydration is not just about feeling thirsty. It's a serious concern that can affect every cell and system in your body, leading to a range of health issues.<br><br>\n\nIt's essential to listen to your body and recognize these silent signs. Before reaching for a coffee or snack, consider if water and electrolytes might be the answer you're looking for. Stay hydrated, stay aware, and prioritize your health.<\/p>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bg_color",
+        "hide_supp": false
+      }
+    },
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
+      "type": "title-text",
+      "settings": {
+        "title": "<h3 style=\"font-size:25px\">Beyond Thirst: The Subtle Signs of Dehydration<\/h3>",
+        "italic_title": "",
+        "text": "<p style=\"font-size:15px\">Dehydration isn’t always announced with a parched throat or an overwhelming thirst. Many symptoms are silent, slowly sneaking up, making it crucial to be vigilant about your body’s hydration needs.<\/p>\n<h4 style=\"font-size:20px\">🧠 Reduced Cognitive Function<\/h4>\n<p style=\"font-size:15px\">Mental fog isn’t just tied to lack of sleep or stress. If you're struggling to think clearly or remember details, your body might be subtly signaling its need for hydration.<\/p>\n<h4 style=\"font-size:20px\">😴 Unexplained Fatigue<\/h4>\n<p style=\"font-size:15px\">Feeling unusually tired, even after a good night's rest? Dehydration can sap your energy, making you feel sluggish and weary.<\/p>\n<h4 style=\"font-size:20px\">😠 Irritability And Mood Swings<\/h4>\n<p style=\"font-size:15px\">Yes, your hydration level can impact your mood. When dehydrated, you might find yourself more irritable or experiencing mood fluctuations.<\/p>\n<h4 style=\"font-size:20px\">🥵 Overheating<\/h4>\n<p style=\"font-size:15px\">Sweat is our body’s natural cooling system. Without enough fluids, it can't regulate temperature effectively, leading to overheating even in mild conditions.<\/p>\n<h4 style=\"font-size:20px\">🍫 Unexplained Cravings<\/h4>\n<p style=\"font-size:15px\">Suddenly craving salty or sweet snacks? It could be your body's way of signaling a need for electrolytes and hydration.<\/p>\n<h4 style=\"font-size:20px\">🚽 Dark Urine<\/h4>\n<p style=\"font-size:15px\">The color of your urine is a telltale sign. Dark yellow or amber signals dehydration, while a light lemonade color indicates you're well-hydrated.<br><br>\n\nIt's essential to listen to your body and recognize these silent signs. Before reaching for a coffee or snack, consider if water and electrolytes might be the answer you're looking for. Stay hydrated, stay aware, and prioritize your health.<\/p>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed": {
+      "type": "pee-club-half-image",
+      "blocks": {
+        "7408eeea-301f-442d-a916-b380c5201277": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">Beyond H2O: The Complete Hydration Formula<\/h3>",
+            "list": "<p style=\"font-size:15px\">While water is a fundamental pillar of hydration, simply guzzling gallons isn't always the answer to dehydration. To truly hydrate our bodies and maintain fluid balance, we also need a mix of essential minerals: electrolytes. They play a pivotal role in ensuring our cells can send and receive signals, helping us function optimally.<\/p>",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Image_Section_New.jpg"
+          }
+        },
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3": {
+          "type": "block",
+          "settings": {
+            "title": "Electrolyte Essentials: Your Mini-Guide",
+            "list": "<h4 style=\"font-size:15px\">🔋 Sodium (Na+)<\/h4>\n<p style=\"font-size:15px\">The primary player in maintaining fluid balance. Sodium helps regulate blood volume and blood pressure. Too little or too much can lead to cramping, dizziness, or more severe complications.<\/p>\n<h4 style=\"font-size:15px\">🍌 Potassium (K+)<\/h4>\n<p style=\"font-size:15px\">Works closely with sodium to maintain cell function and contribute to muscle contractions, nerve impulses, and heart rhythms. It's the secret sauce to preventing muscle cramps and fatigue.<\/p>\n<h4 style=\"font-size:15px\">💎 Calcium (Ca2+)<\/h4>\n<p style=\"font-size:15px\">Beyond its role in bone health, calcium is crucial for muscle movement and nerve communication. It's also vital for blood clotting and releasing certain hormones.<\/p>\n<h4 style=\"font-size:15px\">🔍 Magnesium (Mg2+)<\/h4>\n<p style=\"font-size:15px\">A multitasker mineral! It's involved in muscle contractions, nerve function, enzyme activation, and even helps produce energy. Feeling fatigued? You might need more magnesium.<\/p>\n<h4 style=\"font-size:15px\">🌟 Chloride (Cl−)<\/h4>\n<p style=\"font-size:15px\">Partnered with sodium, chloride helps keep the amount of fluid inside and outside of your cells in balance. It's also essential for digestion.<\/p>\n<h4 style=\"font-size:15px\">💡 Bicarbonate (HCO3−)<\/h4>\n<p style=\"font-size:15px\">This electrolyte is a pH regulator, making sure our blood remains at the right pH level. It also aids in digestive processes.<\/p><br><br><br>\n<p style=\"font-size: 15px\">Electrolytes aren't just a fancy term used in sports drink commercials. They're the backbone of our hydration system, ensuring that every sip of water we take truly counts. When we replenish with both water and electrolytes, we give our bodies the best chance to function flawlessly. Stay hydrated, but more importantly, stay balanced.<\/p>",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/Subscription_Box_Image_1_D_2x_d160ea88-0ab1-4879-9ac2-25b489f372de.png"
+          }
+        }
+      },
+      "block_order": [
+        "7408eeea-301f-442d-a916-b380c5201277",
+        "db1a20e0-94a9-4f45-b06f-1bbbdecfbcc3"
+      ],
+      "settings": {
+        "title": "The Electrolyte Edge",
+        "text": "",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
+      "type": "text-block-section-2",
+      "blocks": {
+        "71af6773-5252-4003-91a5-b1690c90cb84": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px\">Purity In Every Drop<\/h3>",
+            "suptext": "",
+            "text": "<p style=\"font-size: 15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>"
+          }
+        },
+        "995875da-7462-4aaa-a036-35bf1899a1d1": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">Quick Hydration, Naturally<\/h3>",
+            "suptext": "",
+            "text": "<p style=\"font-size: 15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>"
+          }
+        },
+        "365d3728-31ba-4a31-85f8-0e225017bf50": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "suptext": "<strong>Stress<\/strong>",
+            "text": "When stressed or feeling anxious, our muscles tense up and become  rigid, which can lead to muscle cramping.<br><br>While anxiety and stress are hard to control, having plenty of electrolytes and fluids in your body allows your body to handle excess levels of cortisol better than it would without."
+          }
+        },
+        "0944c29e-8858-4c67-8143-998693ed58f5": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "suptext": "<strong>Nerve Compression<\/strong>",
+            "text": "Poor posture and overworking muscle groups may restrict blood flow, which is a common cause of leg cramps.<br><br>Daily things like sitting too long in one spot, standing on hard and flat floors and even poor posture while standing and sitting may be a factor for leg cramps."
+          }
+        }
+      },
+      "block_order": [
+        "71af6773-5252-4003-91a5-b1690c90cb84",
+        "995875da-7462-4aaa-a036-35bf1899a1d1",
+        "365d3728-31ba-4a31-85f8-0e225017bf50",
+        "0944c29e-8858-4c67-8143-998693ed58f5"
+      ],
+      "settings": {
+        "section_title": "<h2>Buoy’s Natural Approach<\/h2>\n\n<p style=\"font-size: 15px\">Buoy's purposefully unflavored and unsweetened line of electrolyte drops infuse any beverage with fast-acting hydration without sugar, sweeteners, or anything that can affect blood sugar levels. Sourced from nature’s most potent ingredient sources.<\/p>\n\n<div style=\"text-align: left;\"><a href=\"https:\/\/justaddbuoy.com\/collections\/all\" class=\"button button--beige\">Try the Cleanest Electrolytes On Earth →<\/a><\/div>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bottom"
+      }
+    },
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
+      "type": "give-back-blocks",
+      "blocks": {
+        "db928337-6fc0-4c06-805b-d823af2f4c1b": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_1.jpg",
+            "title": "Purity In Every Drop",
+            "text": "<p style=\"font-size:15px\">At Buoy, we believe that nature knows best. That's why we're committed to harnessing the purest and most effective natural ingredients in our hydration solutions. Every drop of our products reflects our dedication to quality, ensuring that you receive nothing but the best. No compromises, just nature's finest working for you.<\/p>",
+            "link": "#chronic",
+            "link_text": "Get Your Discount"
+          }
+        },
+        "cb342647-8792-4891-8a6c-718b91cb7587": {
+          "type": "block",
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_2.jpg",
+            "title": "Quick Hydration, Naturally",
+            "text": "<p style=\"font-size:15px\">Why turn to artificial additives when nature offers the perfect solution? With Buoy, you're not just getting hydration—you're getting fast-acting, efficient hydration the way nature intended. Our products are expertly formulated to give your body the rapid relief it craves without any artificial nasties. Experience the natural difference with Buoy and feel revitalized in record time!<\/p>",
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "Try the Cleanest Electrolytes On Earth"
+          }
+        },
+        "65881b14-1267-4676-a9aa-1bb942915aa4": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/D_1x1_365x365_TBS_Image_3.jpg",
+            "title": "Chronic Illness Creators",
+            "text": "For Summer 22, we’re investing only in creators with chronic conditions. These talented creators are often tokenized, unpaid and under-represented and it’s time they got their bag.",
+            "link": "https:\/\/www.tiktok.com\/@justaddbuoy",
+            "link_text": "Follow Buoy on TikTok"
+          }
+        }
+      },
+      "block_order": [
+        "db928337-6fc0-4c06-805b-d823af2f4c1b",
+        "cb342647-8792-4891-8a6c-718b91cb7587",
+        "65881b14-1267-4676-a9aa-1bb942915aa4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Buoy’s Natural Approach",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
+    "304f34df-6587-4eb2-a832-96b49eef9918": {
+      "type": "product-slider-2",
+      "blocks": {
+        "915598b8-73ba-4440-9c78-70b475eb492a": {
+          "type": "block",
+          "settings": {
+            "product": "hydration-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
+          }
+        },
+        "475664b0-eea5-49a4-9521-d603009b918d": {
+          "type": "block",
+          "settings": {
+            "product": "energy-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
+          }
+        },
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
+          "type": "block",
+          "settings": {
+            "product": "immunity-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
+          }
+        },
+        "9d231586-a60b-42ac-9721-d7ea47797c99": {
+          "type": "block",
+          "settings": {
+            "product": "wellness-kit",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "915598b8-73ba-4440-9c78-70b475eb492a",
+        "475664b0-eea5-49a4-9521-d603009b918d",
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
+        "9d231586-a60b-42ac-9721-d7ea47797c99"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "shop_all_label": "",
+        "shop_all_link": "shopify:\/\/collections\/all",
+        "promo_link_text": "",
+        "promo_link": "",
+        "background": "bg_color",
+        "add_top_border": true,
+        "add_bottom_border": true
+      }
+    },
+    "2b7564eb-8f3d-425b-9a73-e9499130b312": {
+      "type": "press-logos",
+      "blocks": {
+        "972554b0-f893-4fbb-9013-5f80d5a5209d": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/CVS_Health_Logo_Charcoal.png"
+          }
+        },
+        "ab756480-b649-4d6a-907d-d03203ded3a7": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Walgreens-New-Icon.png"
+          }
+        },
+        "058fd1fa-4f6a-4d9b-88ad-18fe67eceef5": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Urban_Outfitters.png"
+          }
+        }
+      },
+      "block_order": [
+        "972554b0-f893-4fbb-9013-5f80d5a5209d",
+        "ab756480-b649-4d6a-907d-d03203ded3a7",
+        "058fd1fa-4f6a-4d9b-88ad-18fe67eceef5"
+      ],
+      "settings": {
+        "background": "none",
+        "enable_marquee": false,
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "dece096c-1bc4-4b53-9b54-698c55f6a86f": {
+      "type": "image-dropdowns",
+      "blocks": {
+        "2f43efe1-ad3b-4f4d-a788-5f9b10a12e2c": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">💦 The Importance of Staying Hydrated<\/h3>",
+            "text": "<p style=\"font-size:15px\">Water is vital. It's involved in almost every function in our body—from digestion and absorption to maintaining the balance of bodily fluids and regulating body temperature. When we're dehydrated, these processes get compromised.<\/p>"
+          }
+        },
+        "567d47d4-055a-4540-b107-674adf874ee1": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">🌡 Signs and Symptoms of Dehydration<\/h3>",
+            "text": "<p style=\"font-size:15px\">Dehydration isn't always obvious. Beyond thirst, signs include dark urine, fatigue, dizziness, and confusion. Severe dehydration can also lead to rapid heartbeat and accelerated breathing, among other symptoms.<\/p>"
+          }
+        },
+        "4326ad19-ec24-4b0a-840d-9a17b0914868": {
+          "type": "block",
+          "settings": {
+            "title": "💧 Causes of Dehydration",
+            "text": "<p style=\"font-size:15px\">It's not just about not drinking enough water. Other causes include excessive sweating, fever, frequent urination, and more. Even certain medications can cause dehydration.\n<\/p>"
+          }
+        },
+        "c8221bc7-1128-47ef-aa8c-bc586af3f7f1": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">🍹 Rehydration: More Than Just Water<\/h3>",
+            "text": "<p style=\"font-size:15px\">Rehydrating is about more than just drinking water. Your body loses salts and minerals when it gets dehydrated. These need to be replaced too. That’s where electrolytes come in.<br><br>\n\nDehydration can sneak up on you, and its impact can be severe. Regularly monitoring your hydration levels and ensuring you're not only drinking water but also replenishing lost electrolytes, can keep you feeling at your best. Don't underestimate the power of proper hydration!<\/p>"
+          }
+        },
+        "726ed57d-b9aa-4397-b1f8-1a17067f2df2": {
+          "type": "block",
+          "settings": {
+            "title": "✅ Sugar Free Hydration",
+            "text": "High sugar counts, especially from processed forms, can mitigate effective hydration and physical performance with long-term use.<br><br>While you can make the case for a tiny amount of glucose for hydration, Buoy's sugar-free electrolyte drops are packed with sodium co-transporters like potassium and B vitamins that help your body absorb sodium faster than it normally would."
+          }
+        }
+      },
+      "block_order": [
+        "2f43efe1-ad3b-4f4d-a788-5f9b10a12e2c",
+        "567d47d4-055a-4540-b107-674adf874ee1",
+        "4326ad19-ec24-4b0a-840d-9a17b0914868",
+        "c8221bc7-1128-47ef-aa8c-bc586af3f7f1",
+        "726ed57d-b9aa-4397-b1f8-1a17067f2df2"
+      ],
+      "disabled": true,
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
+        "title": "<h2 style=\"font-size: 25px\">The Electrolyte Edge<\/h2>\n\n<h3 style=\"font-size:20px\">Beyond H2O: The Complete Hydration Formula<\/h3>",
+        "text_bottom": "<p style=\"font-size:15px\">Losing just 2% of fluids and key electrolytes can significantly impair physical performance. When you exercise, you lose 6 to 10%.<\/p>",
+        "background": "",
+        "add_top_border": true,
+        "add_bottom_border": false
+      }
+    },
+    "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
+      "type": "trusted-reviews",
+      "blocks": {
+        "038404e6-07ff-4263-843c-2cc50033bfd5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Buoy_on_a_Plane_1_-min.jpg",
+            "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
+            "title": "My Go-To For Everyday Hydration",
+            "content": "I use Buoy multiple times every day and love it! It keeps me hydrated and feeling healthy.",
+            "reviewer_name": "Kay M",
+            "video_poster": "shopify:\/\/shop_images\/IMG_1573-min.jpg",
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6ee13c9393e5410bbe30e14d5fb0aadb.mov"
+          }
+        },
+        "23a5c523-2b5a-4ebe-a612-0c0050ccfa43": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_4CA27A23F307-1.jpg",
+            "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
+            "title": "<h4>10\/10 Recommend!<\/h4>",
+            "content": "Buoy is my new go-to for hydration. The bottle fits perfectly in my purse, so I can take it on the go whenever and wherever.",
+            "reviewer_name": "Jordan H.",
+            "video_poster": "shopify:\/\/shop_images\/IMG_1569.jpg",
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2da558ba094b41db81352ab9252f7c8e.mov"
+          }
+        },
+        "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_FCC75D1016B9-1.jpg",
+            "tags": "<li>Hydration<\/li>",
+            "title": "<h4>Great For Running!<\/h4>",
+            "content": "I will be using this on my runs from now on, especially my long runs where it's hard to carry as much water that I need for the whole time.",
+            "reviewer_name": "Robert M",
+            "video_poster": "shopify:\/\/shop_images\/IMG_11441F06E148-1.jpg",
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cedf03267ec940f2b31c036f8347a9cd.mov",
+            "video_image": "shopify:\/\/shop_images\/Image_Section_4b_D.png"
+          }
+        },
+        "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_4b_D.png",
+            "tags": "<li>Hydration<\/li>",
+            "title": "<h4>I Take This Everywhere!<\/h4>",
+            "content": "I suffer from tremendous headaches as a result of dehydration. Buoy has really helped me, and the small size is super convenient.",
+            "reviewer_name": "Brandi C.",
+            "video_poster": "shopify:\/\/shop_images\/IMG_1578-min.jpg",
+            "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/IMG_1578-min.jpg?v=1676327238",
+            "video_image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "038404e6-07ff-4263-843c-2cc50033bfd5",
+        "23a5c523-2b5a-4ebe-a612-0c0050ccfa43",
+        "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4",
+        "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3"
+      ],
+      "settings": {
+        "review_emoji": "⭐️",
+        "head-title": "Voices From Our Community",
+        "sub-text": "<h3 style=\"font-size:20px\">Hydration Heroes<\/h3>",
+        "button_label": "Read All Reviews",
+        "button_link": "shopify:\/\/pages\/reviews",
+        "background": "bg_color",
+        "add_top_border": true,
+        "add_bottom_border": false
+      }
+    },
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2": {
+      "type": "reviews-slider",
+      "blocks": {
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Amy L",
+            "content": "<h4 style=\"font-size:20px\">Effortless Hydration\n<\/h4> \n<p style=\"font-size:15px\">I was skeptical of Buoy at first but it makes replenishing electrolytes easy and fast. It fits into how I live my life already, no changes needed. <\/p>"
+          }
+        },
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Andrea W",
+            "content": "<h4 style=\"font-size:20px\">Pleasantly Surprised<\/h4>\n<p style=\"font-size:15px\">I've had sporadic results with tools like this in the past, but I must admit that I've had a boost in overall wellness since I started consistently using it throughout the day.<\/p>"
+          }
+        },
+        "0fff71db-dfa8-49eb-9726-ec3517079f19": {
+          "type": "pr_slide",
+          "settings": {
+            "text": "- Matt C",
+            "content": "<h4 style=\"font-size:20px\">Skeptical At First But It Really Works!<\/h4>\n<p style=\"font-size:15px\">After using this for about a week, I can confidently say I have been way more hydrated.<\/p>"
+          }
+        },
+        "715e1da7-5de3-44b9-899b-211d689d2929": {
+          "type": "pr_slide",
+          "disabled": true,
+          "settings": {
+            "text": "- Joshua B",
+            "content": "<br><h4 style=\"font-size:20px\">Buoy Will Change Your Life<\/h4>\n<p style=\"font-size:15px\">I’m skeptical of products like these, but I tried Buoy and was blown away.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2403b53d-6918-43e2-b5b2-076aff2fa24e",
+        "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74",
+        "0fff71db-dfa8-49eb-9726-ec3517079f19",
+        "715e1da7-5de3-44b9-899b-211d689d2929"
+      ],
+      "settings": {
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none",
+        "reviews_btn_txt": "All Reviews",
+        "reviews_btn_link": "shopify:\/\/pages\/reviews"
+      }
+    },
+    "4f22c796-1d64-4f0e-869e-2c8eb4574863": {
+      "type": "image-text-section",
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
+        "title": "<h2>Hydration From The Kitchen<\/h2>",
+        "text": "<h3 style=\"font-size:20px\">Nature’s Hydration Pack<\/h3>\n<p style=\"font-size:15px\">Our kitchen is packed with natural sources of hydration. Foods like cucumbers, watermelons, oranges, and coconut aren't just delicious; they're packed with water and essential electrolytes that our bodies need. These foods do more than quench your thirst. They help balance your body's electrolyte levels, ensuring you stay energized and alert.<\/p>\n<h3 style=\"font-size:20px\">When Food Isn’t Enough<\/h3>\n<p style=\"font-size:15px\">While many foods offer hydration and electrolytes, relying solely on them might not cut it, especially during times of severe dehydration or heavy physical exertion. Our body can lose fluids and minerals faster than food can replenish them under these conditions.<br><br>\n\nPlus, contemporary farming methods and water processing can diminish the electrolyte content in what we consume. That's when hydrating supplements like Buoy step in to quickly and efficiently restore balance.<\/p>",
+        "subtext": "",
+        "button_label": "Learn More",
+        "button_link": "shopify:\/\/products\/hydration-drops",
+        "content_reverse": "right",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51": {
+      "type": "pr-slider",
+      "blocks": {
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Daily_Mail_1.svg",
+            "text": "\"Enter Buoy hydration drops, the easy-to-use formula that’s designed to give you a big boost of the electrolytes and trace minerals that you need every day to feel your best.\""
+          }
+        },
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
+            "text": "“Best electrolytes for daily use\""
+          }
+        },
+        "20f2efcc-4640-43b7-9239-3abd290c09ca": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
+            "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
+          }
+        },
+        "70b64ff0-82c1-4a54-8203-afe718ed3640": {
+          "type": "pr_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
+            "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
+          }
+        }
+      },
+      "block_order": [
+        "3a944d2e-08e6-4382-b541-79f7dbb279f3",
+        "1a5f176f-d949-477e-a735-f63ba2c6bd80",
+        "20f2efcc-4640-43b7-9239-3abd290c09ca",
+        "70b64ff0-82c1-4a54-8203-afe718ed3640"
+      ],
+      "disabled": true,
+      "settings": {
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
+    "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40": {
+      "type": "benefits",
+      "blocks": {
+        "2a6bd8e3-7b04-400d-a28b-a3a907955de4": {
+          "type": "block",
+          "settings": {
+            "title": "Hydration Dos and Don’ts",
+            "text": "✅ Do incorporate Buoy into your daily routine, especially if you're frequently active or in a hot environment.<br><br>\n✅ Do mix Buoy as directed for optimal hydration benefits.<br><br>\n✅ Do listen to your body; if you're feeling thirsty or showing signs of dehydration, it's time to hydrate.<br><br><br>\n❌ Don't rely solely on Buoy; it's essential to maintain a balanced diet and drink regular water throughout the day.<br><br>\n❌ Don't exceed the recommended amount of Buoy; more isn't always better."
+          }
+        },
+        "7d0679b9-e537-4027-af9f-ddebb9b41e54": {
+          "type": "block",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px\">Safety First<\/h3>",
+            "text": "<p style=\"font-size:15px\">Buoy is crafted with natural and effective ingredients to help combat dehydration. However, everyone's body is different.<\/p>\n<h4 style=\"font-size:15px\">Special Considerations<\/h4>\n<p style=\"font-size:15px\">If you're pregnant, nursing, or have a medical condition, it's a good idea to consult with a healthcare professional before using Buoy.<\/p>\n<h4 style=\"font-size:15px\">Medical Interactions<\/h4>\n<p style=\"font-size:15px\">If you're on medication, check for any potential interactions with electrolyte supplements.<\/p>\n<h4 style=\"font-size:15px\">Seeking Medical Advice<\/h4>\n<p style=\"font-size:15px\">If symptoms of dehydration persist or you experience any adverse reactions, stop using Buoy and seek medical advice. Remember, severe dehydration is a serious condition, and in such cases, it's essential to get professional medical care.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2a6bd8e3-7b04-400d-a28b-a3a907955de4",
+        "7d0679b9-e537-4027-af9f-ddebb9b41e54"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "<h2>Buoy’s Hydration Handbook<\/h2>",
+        "link_text": "Make An Electrolyte Drink At Home —>",
+        "link": "shopify:\/\/products\/hydration-drops",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
+      "type": "text-above",
+      "settings": {
+        "emoji": "💗",
+        "suptitle": "<h2>Buoy’s Hydration Handbook<\/h2>",
+        "suptext": "<h3 style=\"font-size:20px\">Hydration Dos and Don’ts<\/h3>\n<p style=\"font-size:15px\">✅ Do incorporate Buoy into your daily routine, especially if you're frequently active or in a hot environment.<br><br>\n✅ Do mix Buoy as directed for optimal hydration benefits.<br><br>\n✅ Do listen to your body; if you're feeling thirsty or showing signs of dehydration, it's time to hydrate.<br><br><br>\n❌ Don't rely solely on Buoy; it's essential to maintain a balanced diet and drink regular water throughout the day.<br><br><br>\n❌ Don't exceed the recommended amount of Buoy; more isn't always better.<\/p>\n<h3 style=\"font-size:20px\">Safety First<\/h3>\n<p style=\"font-size:15px\">Buoy is crafted with natural and effective ingredients to help combat dehydration. However, everyone's body is different.<\/p>\n<h4 style=\"font-size:15px\">Special Considerations<\/h4>\n<p style=\"font-size:15px\">If you're pregnant, nursing, or have a medical condition, it's a good idea to consult with a healthcare professional before using Buoy.<\/p>\n<h4 style=\"Font-size:15px\">Medical Interactions<\/h4>\n<p style=\"font-size:15px\">If you're on medication, check for any potential interactions with electrolyte supplements.<\/p>\n<h4 style=\"font-size:15px\">Seeking Medical Advice<\/h4>\n<p style=\"font-size:15px\">If symptoms of dehydration persist or you experience any adverse reactions, stop using Buoy and seek medical advice. Remember, severe dehydration is a serious condition, and in such cases, it's essential to get professional medical care.<\/p>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "517df923-ac36-43bd-9898-b875c67e1be2": {
+      "type": "profile-table",
+      "settings": {
+        "title": "How Buoy's electrolytes stack up",
+        "desktop_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"><\/path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <\/g>\n    <\/g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+<\/tspan><\/text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25<\/tspan><\/text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy<\/tspan><\/text>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "mobile_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"><\/path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"><\/path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, <\/tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean <\/tspan><tspan x=\"0\" y=\"22\">Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not <\/tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy<\/tspan><\/text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25<\/tspan><\/text>\n    <\/g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others<\/tspan><\/text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
+      "type": "custom-featured-product",
+      "disabled": true,
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": true,
+        "free_shipping_text": "Free Shipping  |  Try Risk Free",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
+      }
+    },
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
+      "type": "image-slider",
+      "disabled": true,
+      "settings": {
+        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "title": "Easily incorporate electrolytes into your routine",
+        "subtext": "Buoy turns any drink an electrolyte and multi-mineral beverage in one squeeze.",
+        "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
+        "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
+      }
+    },
+    "a09de49d-45af-40d0-969c-1445290cd3be": {
+      "type": "image-with-dropdowns",
+      "blocks": {
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "Purposefully Unflavored",
+            "emoji": "⚡️",
+            "subtitle": "NO SUGAR, SWEETENERS, FLAVORS",
+            "text": "Take full control over your diet with electrolytes that won't break your fast, change your metabolic state or cause inflammation with sweet and inflammatory ingredients."
+          }
+        },
+        "a8857c10-0308-470e-9fda-843eda7c0033": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "Harvested, Not Manufactured",
+            "emoji": "🌊",
+            "subtitle": "VEGAN & NONGMO",
+            "text": "Buoy harvests its electrolytes and minerals from pristine marine areas in the South of France for all-natural hydration."
+          }
+        },
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "3x More Bioavailable",
+            "emoji": "🧬",
+            "subtitle": "LIQUID FORM FACTOR",
+            "text": "Buoy's innovative form factor delivers vital electrolytes and minerals in their most bioavailable form that gets to work quickly at the cellular level."
+          }
+        },
+        "c3ba0924-90f1-4215-a807-52f05df73ae2": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "On-The-Go Electrolytes",
+            "emoji": "🏃‍♀️",
+            "subtitle": "40 SERVINGS PER 2OZ BOTTLE",
+            "text": "Carry a week's worht of electrolytes in your pocket. Buoy's TSA Approved squeeze bottle is the most portable electrolyte solution."
+          }
+        },
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "Sustainably Hydrate",
+            "emoji": "♻️",
+            "subtitle": "NO SINGLE SERVING PLASTICS",
+            "text": "The hydration industry is literally littered with single serving plastcs. We changed that.<br><br>✅ Post-Consumer (PCR) Bottles<br>✅ Less Materials Per Serving<br>✅ Free Carbon Neutral Shipping<br>✅ 100% Biodegradable Refill Mailers"
+          }
+        }
+      },
+      "block_order": [
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
+        "a8857c10-0308-470e-9fda-843eda7c0033",
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d",
+        "c3ba0924-90f1-4215-a807-52f05df73ae2",
+        "e0101db3-4644-4c02-8d36-dccdb9a7c155"
+      ],
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/CIP_D_Invest_in_You_MP4_Placeholder_2x_9e2cab89-a62b-4912-b787-d91629944e22.png",
+        "title": "<h2>Why Choose Buoy?<\/h2>",
+        "text": "<p style=\"font-size:15px\">Hydration is the foundation of well-being. Every cell, tissue, and organ in your body relies on water to function optimally. And when it comes to maintaining that delicate balance, not all solutions are created equal. That’s where Buoy shines.<\/p>\n<h3 style=\"font-size:20px\">What Makes Buoy Stand Out?<\/h3>\n<p style=\"font-size:15px\">✓ Sugar Free<br>\n✓ Stevia & Sweetener Free<br>\n✓ No Flavors<br>\n✓ No Calories Or Carbohydrates<br>\n✓ NonGMO & Vegan<br>\n✓ 3x More Bioavailable Form Factor\n<\/p>",
+        "text_bottom": "<h3 style=\"font-size:20px\">Our Commitment To Your Wellness<\/h3>\n<p style=\"font-size:15px\">At Buoy, we're more than just a hydration solution—we're your partner in health. To prove our commitment to your wellness journey, we're offering a special, limited-time promotion: Enjoy a month of Buoy risk-free! Dive deep into the world of real hydration.<\/p>",
+        "button_label": "Claim Your Risk Free Month With Buoy!",
+        "button_link": "shopify:\/\/collections\/all",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "97b52c19-9232-4b33-a84e-be1d55a585da": {
+      "type": "trusted-reviews-2",
+      "blocks": {
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
+            "title": "Dr. Lianli Li, Ph.D.",
+            "title_person": "President",
+            "title_location": "President Gateway Pharmaceutical, St. Louis, Missouri",
+            "content": "“Most of us are living our lives under the optimal hydration level. Buoy gives consumers the proper hydration they need, without having to reach for a sugary, artificial sports drink.”"
+          }
+        },
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
+            "title": "Martha Rosenau",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "“My patients with gastrointestinal disease are truly benefiting from Buoy. They are feeling more vibrant and energetic with this amazing blend of electrolytes. Since it’s free of both sugars and zero-calorie sweetener, it’s the perfect way to rehydrate without further aggravating the gastrointestinal tract. Thank you for creating a dietitian’s dream - the perfectly balanced electrolyte replenisher, free of any form of sweetener.”"
+          }
+        },
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
+            "title": "Melissa Nohr, JD, BCHHP, CBNP",
+            "title_person": "Title",
+            "title_location": "Location",
+            "content": "“I was diagnosed with POTS a year ago and they make a point to help make daily hydration easier and more accessible to those with chronic illnesses. After using Buoy for one year as a customer, I asked to personally invest in the company.”"
+          }
+        }
+      },
+      "block_order": [
+        "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f",
+        "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe",
+        "2b5efa08-8895-40da-b13e-bf8a0e1b45c5"
+      ],
+      "disabled": true,
+      "settings": {
+        "text": "BOARD OF HEALTH PROFESSIONALS",
+        "head-title": "<span class=\"medium no-italic\">Trust the<\/span> Experts",
+        "sub-text": "Consisting of scientists, researchers, pharmaceutical experts, and health professionals, our board of health professionals continue to challenge and uphold us and our products to the highest standards.",
+        "button_label": "Customer Reviews",
+        "button_link": "#shopify-section-template--18635850055980__16390276435f9f6aac",
+        "background": "bg_color",
+        "background_color": "#f8f1eb",
+        "add_top_border": true,
+        "add_bottom_border": true
+      }
+    },
+    "19f84cc7-e91f-487d-a62c-2e8944758d96": {
+      "type": "faq",
+      "blocks": {
+        "42c20396-98fc-43d7-aa6c-7ef200ff4641": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">Why is simply drinking water sometimes not enough to combat dehydration?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">Dehydration isn’t just about water loss. It’s also a loss of essential salts and minerals called electrolytes. Just drinking water won’t replace these vital nutrients and can actually dilute them, which can seriously impact your health. <\/p>"
+          }
+        },
+        "f80ec807-fbe7-49b4-8d32-20c4af856ec3": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px; text-align: center; \">How do electrolytes play a role in the body’s hydration process?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">Electrolytes balance fluid inside and outside of our cells, ensuring our muscles and nerves function correctly. They’re essential for maintaining hydration at a cellular level.<\/p>"
+          }
+        },
+        "f35d1e62-b8a7-4a52-a3df-cdab976c76df": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">What makes Buoy’s electrolyte solution different from regular hydration drinks?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">Many other electrolyte products are filled with added sugars, artificial colors, and unnecessary flavors, which can spike your blood sugar levels and offer little to no actual hydration benefits. These additives can also be detrimental to overall health over time.<br><br>\n\nBuoy, on the other hand, is crafted with high-quality, natural ingredients and none of those unhealthy additives, ensuring you get pure hydration. Moreover, its formulation is more bioavailable, meaning your body absorbs and utilizes it more efficiently, making Buoy a superior choice for genuine hydration and mineral replenishment.<\/p>"
+          }
+        },
+        "5e953ab4-ae66-496d-b1cb-4220a4ffa93b": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">Can I use Buoy’s electrolytes for everyday hydration or just during severe dehydration?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">You can use Buoy's electrolytes for both daily hydration maintenance and during times of severe dehydration.<\/p>"
+          }
+        },
+        "e919a40f-dcf1-48cf-baf6-3605e41ce281": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px; text-align: center; \">How quickly can I expect to feel rehydrated after using Buoy’s electrolyte products?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">While individual experiences may vary, most users feel rehydrated and refreshed within minutes to hours, depending on the level of dehydration.<\/p>"
+          }
+        },
+        "b9d25e98-46e6-4456-adbd-9f89d6621592": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">Are there any artificial additives or sugars in Buoy’s electrolyte solutions?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">No, Buoy's electrolyte solutions prioritize natural ingredients without artificial additives or sugars.<\/p>"
+          }
+        },
+        "a7b2125d-f9d6-4437-b700-06f15421a0b8": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">How does dehydration impact the body’s overall electrolyte balance?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">Dehydration can lead to an imbalance where there's either too much or too little of essential electrolytes, affecting muscle function, pH balance, and overall bodily processes.<\/p>"
+          }
+        },
+        "2853f553-fce4-41a6-be67-32e3090603a4": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size:20px; text-align: center; \">Can Buoy’s electrolytes be used by athletes or those engaging in intense physical activity?<\/h3>",
+            "answer": "<p style=\"font-size:15px; text-align: center; \">Absolutely! Buoy is for everyone, regardless of your activity level. Whether you're an athlete, someone engaging in intense physical activity, or just going about your daily routine, you can benefit from Buoy's electrolytes to help maintain optimal hydration and assist in quick recovery.<\/p>"
+          }
+        },
+        "5d03adc1-3955-4d31-9964-784fb4505da0": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">What are the signs that I might need more than just water to rehydrate?<\/h3>",
+            "answer": "<p style=\"font-size:15px; text-align: enter; \">Signs include persistent thirst even after drinking water, dry mouth, dark urine, fatigue, dizziness, and muscle cramps.<\/p>"
+          }
+        },
+        "c292a162-0ffc-4def-9ac7-bb58bacce435": {
+          "type": "faq_item",
+          "settings": {
+            "title": "<h3 style=\"font-size: 20px; text-align: center; \">Are there any potential side effects or interactions when using Buoy’s electrolyte products?<\/h3>",
+            "answer": "<p style=\"font-size: 15px; text-align: center; \">Buoy has no known side effects when used as directed. While Buoy's electrolyte products are made with natural ingredients, it's always best to consult with a healthcare professional if you have specific health concerns or if you're taking medications.<\/p>"
+          }
+        },
+        "a13903c3-8d09-448e-a2a0-70c8f0645e70": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Can children drink your electrolyte drinks?",
+            "answer": "Yes!<br><br>All Buoy electrolyte drops are safe and effective for children.<br><br>Buoy contains only essential electrolytes and trace minerals important for every cell and system in our bodies, especially key for children as these nutrients are often missing in our diets.<br><br>Other electrolytes contain high sugar and sweetener counts, artifical colors and additives and other inflammatory ingredients."
+          }
+        },
+        "8829708a-b821-4340-aff7-5d755159a887": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Do your electrolyte drinks contain caffeine?",
+            "answer": "Hydration Drops and Immunity Drops do not contain any caffeine.<br><br>Only our Energy Drops contain a small amount of caffeine sourced from the potent health compounds in green tea."
+          }
+        },
+        "05078aa0-b5ea-4033-9b02-b8f1dcfe4baa": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "How long do the effects of your electrolyte drinks last?",
+            "answer": "Buoy electrolytes are a great option for short-term relief with their fast-acting, bioavailable form factor. For results within a day or two, you can help prevent leg cramps, headaches, fatigue and more.<br><br>Use consistently for transformative, long lasting benefits."
+          }
+        },
+        "d8318e2a-8378-4a0d-a4fe-95b0cd6eb8fd": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Are your electrolyte drinks vegan?",
+            "answer": "Yes!<br><br>Buoy's electrolytes and minerals are ethically sourced from the ocean and our antioxidants and vitamins are plant-powered.<br><br>Our electrolyte drops contain no animal byproduct."
+          }
+        },
+        "2a9994d2-d4cc-4672-a308-40cafb9bd13e": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Do you offer bulk orders or subscriptions for your drinks?",
+            "answer": "Yes!<br><br>If you need to stock up, 9 Bottle Packs are available for one-time purchases and subscription to save an additional 24%."
+          }
+        },
+        "8f2eb1b5-5e6c-4281-8a55-f4cc780b8cc1": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "What is the shelf life of your electrolyte drinks?",
+            "answer": "Buoy electrolyte drops are shelf stable over a year.<br><br>After opening, we suggest using within two months."
+          }
+        },
+        "51cdd6af-fcb6-4339-a805-f030fac284bf": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Do you offer any discounts or promotions?",
+            "answer": "Unlock 24% off Buoy when you subscribe to monthly deliveries. Your discount and Free Shipping applies to every order. Cancel anytime, even after yoru first order.<br><br>If it's not for you, get a full refund."
+          }
+        },
+        "289ab26c-4629-4d45-b1aa-0ce3ed0460fa": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "Can I find your drinks in stores?",
+            "answer": "Yes! Buoy is nationwide in CVS, Walgreens and boutique natural grocers across the country.<br><br>Check our store locator to find the closest stores to you or order directly from our site."
+          }
+        },
+        "0cdc5b4f-8de6-41ea-b8d1-fd4a669fd64f": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "title": "What is your return policy?",
+            "answer": "Buoy offers a 30 day money back guarantee on all of our products purchased through our website so you can try it risk free in your routine to see if it's a good fit.<br><br>If it's not for you, get a full refund no questions asked."
+          }
+        }
+      },
+      "block_order": [
+        "42c20396-98fc-43d7-aa6c-7ef200ff4641",
+        "f80ec807-fbe7-49b4-8d32-20c4af856ec3",
+        "f35d1e62-b8a7-4a52-a3df-cdab976c76df",
+        "5e953ab4-ae66-496d-b1cb-4220a4ffa93b",
+        "e919a40f-dcf1-48cf-baf6-3605e41ce281",
+        "b9d25e98-46e6-4456-adbd-9f89d6621592",
+        "a7b2125d-f9d6-4437-b700-06f15421a0b8",
+        "2853f553-fce4-41a6-be67-32e3090603a4",
+        "5d03adc1-3955-4d31-9964-784fb4505da0",
+        "c292a162-0ffc-4def-9ac7-bb58bacce435",
+        "a13903c3-8d09-448e-a2a0-70c8f0645e70",
+        "8829708a-b821-4340-aff7-5d755159a887",
+        "05078aa0-b5ea-4033-9b02-b8f1dcfe4baa",
+        "d8318e2a-8378-4a0d-a4fe-95b0cd6eb8fd",
+        "2a9994d2-d4cc-4672-a308-40cafb9bd13e",
+        "8f2eb1b5-5e6c-4281-8a55-f4cc780b8cc1",
+        "51cdd6af-fcb6-4339-a805-f030fac284bf",
+        "289ab26c-4629-4d45-b1aa-0ce3ed0460fa",
+        "0cdc5b4f-8de6-41ea-b8d1-fd4a669fd64f"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "text": "",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
+    "c78dfd33-b08e-4f3e-890a-4741ce2985fa": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "text": "Start Squeezing",
+        "url": "#Custom_Featured_Section",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "none"
+      }
+    },
+    "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6": {
+      "type": "squeezy-section",
+      "blocks": {
+        "11f7c914-2ada-4f38-8a2a-49181ebfe76e": {
+          "type": "point",
+          "settings": {
+            "emoji": "<span>☕️<\/span>\n<span>🍺<\/span>\n<span>🍵<\/span>\n<span>🍷<\/span>\n<span>🧋<\/span>\n<span>🧃<\/span>\n<span>🍹<\/span>\n<span>🫖<\/span>",
+            "title": "Grab your favorite beverage"
+          }
+        },
+        "e5f34ab2-b853-42e2-9c79-1e0fef178946": {
+          "type": "point",
+          "settings": {
+            "emoji": "🤏",
+            "title": "Add one light squeeze"
+          }
+        },
+        "bdcbb088-dd05-41ca-9335-784c3ef1e5b0": {
+          "type": "point",
+          "settings": {
+            "emoji": "😋",
+            "title": "Enjoy your enhanced beverage"
+          }
+        }
+      },
+      "block_order": [
+        "11f7c914-2ada-4f38-8a2a-49181ebfe76e",
+        "e5f34ab2-b853-42e2-9c79-1e0fef178946",
+        "bdcbb088-dd05-41ca-9335-784c3ef1e5b0"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Squeezy-Image.jpg",
+        "video_url": "",
+        "title": "<h2 style=\"font-size:25px\">Buoy’s Natural Approach<\/h2>",
+        "description": "Essential electrolytes, 87 trace minerals and vitamins delivered in their most bioavailable form factor for fast-acting hydration and wellness.",
+        "button_label": "Start Squeezing",
+        "button_link": "shopify:\/\/collections\/all",
+        "link_label": "",
+        "link_link": "",
+        "content_reverse": "right",
+        "button_style": "beige",
+        "add_top_border": true,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "271bbc88-ee3e-4299-aee5-2c393d4bf363": {
+      "type": "pee-club-value-props",
+      "blocks": {
+        "5a2a67c2-83da-4780-bba7-ee2e6e76d21b": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "⚡️",
+            "text": "All Day Energy"
+          }
+        },
+        "03905e9e-96c9-495b-9dfc-8a312dde7712": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🧽",
+            "text": "Nutrient Absorption"
+          }
+        },
+        "eb22e888-38b1-4764-ae1f-0321461fa517": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "✅",
+            "text": "Healthy Gut Biome"
+          }
+        },
+        "347c31c2-9792-4e22-b90e-a0b60af51392": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "♻️",
+            "text": "Detoxification"
+          }
+        },
+        "af8689d0-f863-4ce0-8d98-cc087f0e0293": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🤗",
+            "text": "Lifted Moods"
+          }
+        },
+        "3218cea9-9862-46c8-a8ab-f919660bb5fe": {
+          "type": "value_prop",
+          "settings": {
+            "emoji": "🌞",
+            "text": "Radiant Skin"
+          }
+        }
+      },
+      "block_order": [
+        "5a2a67c2-83da-4780-bba7-ee2e6e76d21b",
+        "03905e9e-96c9-495b-9dfc-8a312dde7712",
+        "eb22e888-38b1-4764-ae1f-0321461fa517",
+        "347c31c2-9792-4e22-b90e-a0b60af51392",
+        "af8689d0-f863-4ce0-8d98-cc087f0e0293",
+        "3218cea9-9862-46c8-a8ab-f919660bb5fe"
+      ],
+      "settings": {
+        "text": "Clean hydration for whole-body health",
+        "no_background": true,
+        "add_top_padding": false,
+        "add_bottom_padding": false
       }
     }
   },
   "order": [
-    "main"
+    "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
+    "31e36676-5821-47f9-a328-6c162b259d29",
+    "50df382c-255c-4272-b876-eca398cca73a",
+    "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
+    "de71750b-42a8-4309-a3f6-e56beedbc1ed",
+    "477e1b9e-3028-42ca-9c54-1d0176b43e45",
+    "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
+    "304f34df-6587-4eb2-a832-96b49eef9918",
+    "2b7564eb-8f3d-425b-9a73-e9499130b312",
+    "dece096c-1bc4-4b53-9b54-698c55f6a86f",
+    "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
+    "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
+    "4f22c796-1d64-4f0e-869e-2c8eb4574863",
+    "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
+    "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
+    "517df923-ac36-43bd-9898-b875c67e1be2",
+    "38ed0f42-8894-4ce5-9892-8c9c55831eca",
+    "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
+    "a09de49d-45af-40d0-969c-1445290cd3be",
+    "97b52c19-9232-4b33-a84e-be1d55a585da",
+    "19f84cc7-e91f-487d-a62c-2e8944758d96",
+    "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
+    "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
+    "271bbc88-ee3e-4299-aee5-2c393d4bf363"
   ]
 }
