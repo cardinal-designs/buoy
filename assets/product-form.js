@@ -17,32 +17,18 @@ class ProductForm extends HTMLElement {
     const productVariantsParsed = JSON.parse(productVariants);
     const parsedForm = JSON.parse(serializeForm(this.form));
     const activeVariantId = parsedForm.id;
-    let isDescribe;
-    
-    if (parsedForm.purchaseType == 'purchaseTypeSubscription'){
-      isDescribe = true;
-    } else {
-      isDescribe = false;
-    }
    
-   if (isDescribe){
-     for (let key in productVariantsParsed) {
+    for (let key in productVariantsParsed) {
       if ( key == activeVariantId ){
         if (productVariantsParsed[key].includes(':')){
           let name = productVariantsParsed[key].split(':');
           inputMetafield.name = `properties[${name[0]}]`;
           inputMetafield.value = name[1];
-        }  
+        } 
+        
+        
       }
     }
-   } else {
-     for (let key in productVariantsParsed) {
-      if ( key == activeVariantId ){
-        inputMetafield.name = '';
-        inputMetafield.value = ''; 
-      }
-    }
-   }
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
