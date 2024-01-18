@@ -18,14 +18,12 @@ class ProductForm extends HTMLElement {
     const productVariantsParsed = JSON.parse(productVariants);
     const parsedForm = JSON.parse(serializeForm(this.form));
     const activeVariantId = parsedForm.id;
-    console.log(productVariantsParsed);
+    console.log(parsedForm);
    
     for (let key in productVariantsParsed) {
-      console.log(key);
       if ( key == activeVariantId ){
         if (productVariantsParsed[key].includes(':')){
           let name = productVariantsParsed[key].split(':');
-          console.log(name);
           inputMetafield.name = `properties[${name[0]}]`;
           inputMetafield.value = name[1];
         } 
@@ -42,7 +40,6 @@ class ProductForm extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
-    console.log(serializeForm(this.form));
 
     fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
