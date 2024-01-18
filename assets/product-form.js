@@ -14,23 +14,28 @@ class ProductForm extends HTMLElement {
     const submitButton = this.querySelector('[type="submit"]');
     let inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = document.querySelector('#productJSON').innerText;
-    console.log('fff', productVariants);
     const productVariantsParsed = JSON.parse(productVariants);
     const parsedForm = JSON.parse(serializeForm(this.form));
     const activeVariantId = parsedForm.id;
-    console.log(parsedForm);
+    let isDescribe;
+    
+    if (parsedForm.purchaseType == 'purchaseTypeSubscription'){
+      isDescribe = true;
+    } else {
+      isDescribe = false;
+    }
    
-    for (let key in productVariantsParsed) {
+   if (isDescribe){
+     for (let key in productVariantsParsed) {
       if ( key == activeVariantId ){
         if (productVariantsParsed[key].includes(':')){
           let name = productVariantsParsed[key].split(':');
           inputMetafield.name = `properties[${name[0]}]`;
           inputMetafield.value = name[1];
-        } 
-        
-        
+        }  
       }
     }
+   }
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
