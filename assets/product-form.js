@@ -35,6 +35,13 @@ class ProductForm extends HTMLElement {
         }  
       }
     }
+   } else {
+     for (let key in productVariantsParsed) {
+      if ( key == activeVariantId ){
+        inputMetafield.name = '';
+        inputMetafield.value = ''; 
+      }
+    }
    }
 
     submitButton.setAttribute('disabled', true);
