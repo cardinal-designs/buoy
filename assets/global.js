@@ -1255,6 +1255,23 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
   let add_items;
   let id = Number($(this).data('id'));
+  let metafield = $(this).data('metafield');
+  let metafieldHasValue = false;
+  let metafieldArray;
+  let metafieldKey;
+  let metafieldValue;
+  if (metafield){
+      if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
+      metafieldHasValue = true;
+      metafieldArray = metafield.split(':');
+      metafieldKey = metafieldArray[0];
+      metafieldValue = metafieldArray[1];
+      } else {
+        metafieldHasValue = false;
+      }
+  } else {
+     metafieldHasValue = false;
+  }
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
@@ -1268,11 +1285,29 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   })
   
   if (!!subid) {
-    add_items = [{id: id, quantity: 1, selling_plan: subid}]
+    if (metafieldHasValue){
+      add_items = [{id: id, quantity: 1, selling_plan: subid, properties: {
+      [metafieldKey]: metafieldValue}}]
+    } else {
+      add_items = [{id: id, quantity: 1, selling_plan: subid}]
+    }
+    
   } else if (checked_type == 'subscription') {
-    add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub}]
+    if (metafieldHasValue){
+      add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub, properties: {
+      [metafieldKey]: metafieldValue}}]
+    } else {
+      add_items = [{id: id, quantity: 1, selling_plan: checked_type_sub}]
+    }
+    
   } else {
-    add_items = [{id: id, quantity: 1}]
+    if (metafieldHasValue){
+       add_items = [{id: id, quantity: 1, properties: {
+      [metafieldKey]: metafieldValue}}]
+    } else {
+       add_items = [{id: id, quantity: 1}]
+    }
+   
   }
   
   const body = JSON.stringify({
@@ -1305,6 +1340,23 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let subid = Number($(this).data('subid'));
+  let metafield = $(this).data('metafield');
+  let metafieldHasValue = false;
+  let metafieldArray;
+  let metafieldKey;
+  let metafieldValue;
+  if (metafield){
+      if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
+      metafieldHasValue = true;
+      metafieldArray = metafield.split(':');
+      metafieldKey = metafieldArray[0];
+      metafieldValue = metafieldArray[1];
+      } else {
+        metafieldHasValue = false;
+      }
+  } else {
+     metafieldHasValue = false;
+  }
   
   $.getJSON('/cart', function (results) {
     if(Number(results.item_count) > 0) {
@@ -1313,8 +1365,12 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
       $('.cart-count-bubble').text('')
     }
   })
-  
-  add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST'}]
+  if (metafieldHasValue){
+    add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST', properties: {
+      [metafieldKey]: metafieldValue}}]
+  } else {
+    add_items = [{id: id, quantity: 1, selling_plan: subid, discount: 'BUOYTESTEST'}]
+  }
 
   
   const body = JSON.stringify({
