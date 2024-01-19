@@ -48,6 +48,7 @@
         "bbdb1b6d-d85c-4e53-a287-4605f0fc497d",
         "d8490b05-b183-4550-a55f-eb70c58bbd51"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/CIF_D_Welcome_Package_MP4_2x_d827f154-72f5-41bc-9c12-291fd14838ac.jpg",
         "suptitle": "THANKS FOR APPLYING",
@@ -56,9 +57,97 @@
         "button_label": "Go to Cart",
         "button_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47155557171500&items[][quantity]=1&items[][selling_plan]=586645575&return_to=\/checkout"
       }
+    },
+    "chronic_illness_submitted2_G6QkaA": {
+      "type": "chronic-illness-submitted2",
+      "blocks": {
+        "product_ykAHTt": {
+          "type": "product",
+          "settings": {
+            "product": "ocean-electrolyte-kit",
+            "product_atc": "ocean-electrolyte-kit-chronic-illness-discount",
+            "variant_id": "47446129180972",
+            "selling_id": "586645575",
+            "button_text": "Try Risk Free — <s>$51<\/s> $33.15"
+          }
+        },
+        "product_MJwefh": {
+          "type": "product",
+          "settings": {
+            "product": "hydration-drops",
+            "product_atc": "hydration-drops-chronic-illness-discount",
+            "variant_id": "47155557171500",
+            "selling_id": "586645575",
+            "button_text": "Try Risk Free — <s>$39<\/s> $25.35"
+          }
+        },
+        "product_PBDELJ": {
+          "type": "product",
+          "settings": {
+            "product": "rescue-salts",
+            "product_atc": "rescue-salt-chronic-illness-discount",
+            "variant_id": "47446172795180",
+            "selling_id": "586645575",
+            "button_text": "Try Risk Free — <s>$36<\/s> $23.40"
+          }
+        },
+        "marquee_V7DBLm": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "marquee_MwdrYf": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "marquee_cPgqjr": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        },
+        "marquee_UgMcEz": {
+          "type": "marquee",
+          "settings": {
+            "text": "Money Back Guarantee"
+          }
+        },
+        "marquee_xRP8Ap": {
+          "type": "marquee",
+          "settings": {
+            "text": "Free Shipping"
+          }
+        },
+        "marquee_pEy7mA": {
+          "type": "marquee",
+          "settings": {
+            "text": "Cancel Anytime"
+          }
+        }
+      },
+      "block_order": [
+        "product_ykAHTt",
+        "product_MJwefh",
+        "product_PBDELJ",
+        "marquee_V7DBLm",
+        "marquee_MwdrYf",
+        "marquee_cPgqjr",
+        "marquee_UgMcEz",
+        "marquee_xRP8Ap",
+        "marquee_pEy7mA"
+      ],
+      "settings": {
+        "suptitle": "THANKS FOR APPLYING",
+        "title": "Your 35% off discount is waiting!",
+        "text": "Your 35% off discount will be automatically applied at checkout and every recurring order from here on out. <br><br>\nBy default, this discount is applicable to the monthly subscription offers below (top products requested by our chronic illness community). Contact us if you are interested in applying your lifetime discount to a different Buoy subscription product."
+      }
     }
   },
   "order": [
-    "165896656305efe1a5"
+    "165896656305efe1a5",
+    "chronic_illness_submitted2_G6QkaA"
   ]
 }
