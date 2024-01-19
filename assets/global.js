@@ -1256,11 +1256,8 @@ $('body').on('click', '.js-add-to-cart', function(e) {
      metafieldHasValue = false;
   }
   let subid = Number($(this).data('subid'));
-  console.log('subid', subid);
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
-  console.log('checked subid', checked_type_sub);
-   console.log('checked', checked_type);
   
   
   $.getJSON('/cart', function (results) {
@@ -1327,7 +1324,6 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
   let add_items;
   let id = Number($(this).data('id'));
   let subid = Number($(this).data('subid'));
-  console.log(subid);
   let metafield = $(this).data('metafield');
   let metafieldHasValue = false;
   let metafieldArray;
