@@ -1264,8 +1264,8 @@ $('body').on('click', '.js-add-to-cart', function(e) {
       if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
       metafieldHasValue = true;
       metafieldArray = metafield.split(':');
-      metafieldKey = metafieldArray[0];
-      metafieldValue = metafieldArray[1];
+      metafieldKey = metafieldArray[0].trim();
+      metafieldValue = metafieldArray[1].trim();
       } else {
         metafieldHasValue = false;
       }
@@ -1349,8 +1349,8 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
       if (metafield.indexOf(':') != '' || metafield.indexOf(':') != null){
       metafieldHasValue = true;
       metafieldArray = metafield.split(':');
-      metafieldKey = metafieldArray[0];
-      metafieldValue = metafieldArray[1];
+      metafieldKey = metafieldArray[0].trim();
+      metafieldValue = metafieldArray[1].trim();
       } else {
         metafieldHasValue = false;
       }
