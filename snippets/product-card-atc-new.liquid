@@ -55,7 +55,7 @@
       <div class="card-information__wrapper">
 
         <div data-oke-reviews-product-listing-rating>{{ product_card_product.metafields.okendo.ProductListingSnippet }}</div>
-       
+
         <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
           <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
         
@@ -112,8 +112,8 @@
       if (productMetafield.indexOf(':') != '' || productMetafield.indexOf(':') != null){
       metafieldHasValue = true;
       metafieldArray = productMetafield.split(':');
-      metafieldKey = metafieldArray[0];
-      metafieldValue = metafieldArray[1];
+      metafieldKey = metafieldArray[0].trim();
+      metafieldValue = metafieldArray[1].trim();
       } else {
         metafieldHasValue = false;
       }
