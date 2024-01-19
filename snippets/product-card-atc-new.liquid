@@ -112,8 +112,8 @@
       if (productMetafield.indexOf(':') != '' || productMetafield.indexOf(':') != null){
       metafieldHasValue = true;
       metafieldArray = productMetafield.split(':');
-      metafieldKey = metafieldArray[0];
-      metafieldValue = metafieldArray[1];
+      metafieldKey = metafieldArray[0].trim();
+      metafieldValue = metafieldArray[1].trim();
       } else {
         metafieldHasValue = false;
       }
