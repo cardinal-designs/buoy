@@ -22,7 +22,7 @@ class ProductForm extends HTMLElement {
       if ( key == activeVariantId ){
         if (productVariantsParsed[key].includes(':')){
           let name = productVariantsParsed[key].split(':');
-          inputMetafield.name = `properties[${name[0]}]`;
+          inputMetafield.name = `properties[${name[0].trim()}]`;
           inputMetafield.value = name[1].trim();
           console.log(name[0], name[1])
         } 
