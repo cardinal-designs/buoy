@@ -12,21 +12,37 @@ class ProductForm extends HTMLElement {
     evt.preventDefault();
     
     const submitButton = this.querySelector('[type="submit"]');
+    let inputMetafield = this.querySelector('#variantMetafield');
+    const productVariants = document.querySelector('#productJSON').innerText;
+    const productVariantsParsed = JSON.parse(productVariants);
+    const parsedForm = JSON.parse(serializeForm(this.form));
+    const activeVariantId = parsedForm.id;
+   
+    for (let key in productVariantsParsed) {
+      if ( key == activeVariantId ){
+        if (productVariantsParsed[key].includes(':')){
+          let name = productVariantsParsed[key].split(':');
+          inputMetafield.name = `properties[${name[0]}]`;
+          inputMetafield.value = name[1];
+        } 
+        
+        
+      }
+    }
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
- 
+    
     const body = JSON.stringify({
       ...JSON.parse(serializeForm(this.form)),
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
-    
 
     fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
       .then((parsedState) => {
-      
+
         this.getSectionsToRender().forEach((section => {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
