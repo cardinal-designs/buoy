@@ -56,9 +56,33 @@
         "button_label": "Go to Cart",
         "button_link": "https:\/\/justaddbuoy.com\/cart\/add?items[][id]=47155557171500&items[][quantity]=1&items[][selling_plan]=586645575&return_to=\/checkout"
       }
+    },
+    "chronic_illness_submitted2_nkLwJr": {
+      "type": "chronic-illness-submitted2",
+      "blocks": {
+        "product_i6arnC": {
+          "type": "product",
+          "settings": {
+            "product": "ocean-electrolyte-kit",
+            "product_atc": "ocean-electrolyte-kit-chronic-illness-discount",
+            "variant_id": "47446129180972",
+            "selling_id": "586645575",
+            "button_text": "Try Risk Free — <s>$51<\/s> $33.15"
+          }
+        }
+      },
+      "block_order": [
+        "product_i6arnC"
+      ],
+      "settings": {
+        "suptitle": "THANKS FOR APPLYING",
+        "title": "Your 35% off discount is waiting!",
+        "text": "Your 35% off discount will be automatically applied at checkout and every recurring order from here on out. <br><br>\nBy default, this discount is applicable to the monthly subscription offers below (top products requested by our chronic illness community). Contact us if you are interested in applying your lifetime discount to a different Buoy subscription product."
+      }
     }
   },
   "order": [
-    "165896656305efe1a5"
+    "165896656305efe1a5",
+    "chronic_illness_submitted2_nkLwJr"
   ]
 }
