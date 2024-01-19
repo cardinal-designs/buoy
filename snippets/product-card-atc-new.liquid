@@ -1,0 +1,164 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - product_card_product: {Object} Product Liquid object (optional)
+    - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+    - add_image_padding: {Boolean} Enables padding on the image to space out the grid
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+    - show_image_outline: {Boolean} Show card outline. Default: true (optional)
+
+    Usage:
+    {% render 'product-card', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+<div class="card-wrapper">
+  {% if product_card_product.available == false %}
+    {% render 'spinner-sold-out' %}
+  {% elsif product_card_product.metafields.my_fields.show_trending_product_card == true %}
+    {% render 'spinner-trending' %}
+  {% elsif product_card_product.metafields.my_fields.show_most_popular_product_card == true %}
+    {% render 'spinner-most-popular' %}
+  {% endif %}
+
+  <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
+
+  <div class="card card--product" tabindex="-1">
+    <div class="card__inner">
+      <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
+        <div class="media" style="padding-bottom: 125%;">
+          {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
+
+          {% if show_secondary_image %}
+            {% if product_card_product.media[1] != nil and hover_video == blank %}
+              {% render 'lazy-image' image: product_card_product.media[1], fade: true , classes: 'img-fill'%}
+            {% elsif hover_video != blank %}
+              <video autoplay loop muted playsinline class="img-fill">
+                <source src="{{ hover_video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            {% endif %}
+          {% endif %}
+        </div>
+      </a>
+      
+      <div class="card__buttons hide-mobile">
+        <a href="{{ product_card_product.url | default: '#' }}" class="button learn-more">
+          <span class="visually-hidden">{{ shop.name }}</span>Learn More</a>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="card-information">
+      <div class="card-information__wrapper">
+
+        <div data-oke-reviews-product-listing-rating>{{ product_card_product.metafields.okendo.ProductListingSnippet }}</div>
+
+        <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
+          <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
+        
+        {% if product_card_product.metafields.my_fields.product_card_text != blank %}
+          <p class="card-information__text light">{{ product_card_product.metafields.my_fields.product_card_text }}</p>
+        {% endif %}
+        </a>
+        {% if show_shop_button %}
+          {%  assign formatted_id = variant_id | strip | plus: 0 %}
+          {% assign current_selling_plan_allocation =  selling_id | strip | plus: 0%}
+          {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
+        
+          {% if chosen_variant.available %}
+             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{ current_selling_plan_allocation }}">{{ product_card_button_text }}</button>
+          {% else %}
+            <button class="shop-btn button button--beige">Out of stock</button>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+</div>
+<script>
+  function atcGetSectionsToRender() {
+  return [
+    {
+      id: 'cart-drawer__content',
+      section: document.getElementById('cart-drawer__content').dataset.id,
+      selector: '.cart-drawer__content',
+    },
+    {
+      id: 'cart-icon-bubble',
+      section: document.getElementById('cart-icon-bubble').dataset.id,
+      selector: '.cart-icon-bubble'
+    },
+    {
+      id: 'cart-drawer__header',
+      section: document.getElementById('cart-drawer__header').dataset.id,
+      selector: '.cart-drawer__header',
+    }
+  ];
+}
+  function addToCart(event){
+    const addButton = event.target;
+    let add_items;
+    let productId = addButton.dataset.id;
+    let productSellingPlan = addButton.dataset.selling;
+    let productQuantity = 1;
+    let productMetafield = addButton.dataset.metafield;
+    let metafieldHasValue = false;
+    let metafieldArray;
+    
+
+    if (productMetafield){
+      if (productMetafield.indexOf(':') != '' || productMetafield.indexOf(':') != null){
+      metafieldHasValue = true;
+      metafieldArray = productMetafield.split(':');
+      metafieldKey = metafieldArray[0];
+      metafieldValue = metafieldArray[1];
+      } else {
+        metafieldHasValue = false;
+      }
+    } else {
+       metafieldHasValue = false;
+    }
+    
+    if (metafieldHasValue){
+      add_items = [{id: productId, quantity: productQuantity, selling_plan: productSellingPlan, properties: {
+      [metafieldKey]: metafieldValue}}]
+    } else {
+      add_items = [{id: productId, quantity: productQuantity, selling_plan: productSellingPlan}]
+    }
+    console.log(add_items)
+
+    let formData = {
+     'items': add_items,
+      sections: atcGetSectionsToRender().map((section) => section.section),
+      sections_url: window.location.pathname
+    };
+    console.log(add_items)
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      return response.json();
+      
+    })
+    .then(parsedState => {
+      atcGetSectionsToRender().forEach((section => {
+      const elementToReplace =
+            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+console.log(elementToReplace);
+      elementToReplace.innerHTML =
+        getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+      document.querySelector('cart-drawer').open();
+    }));
+      
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+</script>

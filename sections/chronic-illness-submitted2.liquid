@@ -1,6 +1,130 @@
+{{ 'section-chronic-illness-submitted2.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-groups.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<div class="chronic-submitted__container">
+  <div class="chronic-submitted__info">
+    <div class="chronic-submitted__text">
+      <p class="sh3">{{ section.settings.suptitle }}</p>
+      <h2>{{ section.settings.title }}</h2>
+      <p class="light">{{ section.settings.text }}</p>
+      <div class="collection-groups__item">
+        <div class="collection-groups__grid">
+          {% for block in section.blocks %}
+            {% if block.type == 'product' %}
+            {% render 'product-card-atc-new'
+              product_card_product: block.settings.product,
+              product_card_atc: block.settings.product_atc,
+              variant_id: block.settings.variant_id,
+              selling_id: block.settings.selling_id,
+              show_secondary_image: true,
+              hover_video: block.settings.hover_video,
+              show_shop_button: true,
+              product_card_button_text: block.settings.button_text
+          %}
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  <div class="marquee">
+    <div class="marquee__container">
+        {% for block in section.blocks %}
+          {% if block.type == 'marquee' %}
+          <div class="marquee__item">
+            {% render 'icon-check' %}
+            <p class="body-xs light">{{ block.settings.text }}</p>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee__container">
+        {% for block in section.blocks %}
+          {% if block.type == 'marquee' %}
+          <div class="marquee__item">
+            {% render 'icon-check' %}
+            <p class="body-xs light">{{ block.settings.text }}</p>
+          </div>
+         {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "ChronicIllness Submitted2",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "suptitle",
+        "label": "Suptitle"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+	],
+    "blocks": [
+      {
+        "type": "marquee",
+        "name": "Marquee",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+            {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "product",
+            "id": "product_atc",
+            "label": "ATC Product"
+          },
+          {
+            "type": "text",
+            "id": "variant_id",
+            "label": "Variant id"
+          },
+          {
+            "type": "text",
+            "id": "selling_id",
+            "label": "Selling plan id"
+          },
+          {
+            "type": "textarea",
+            "id": "button_text",
+            "label": "Button Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "ChronicIllness Submitted2"
+      }
+    ]
   }
 {% endschema %}
