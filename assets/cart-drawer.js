@@ -253,14 +253,14 @@ class CartDrawer extends HTMLElement {
         }
       }
       
-      if (!!sub_products) {
-        $('.sub-products__text.no-sub').hide()
-        $('.sub-products__text.sub').show()
+      // if (!!sub_products) {
+      //   $('.sub-products__text.no-sub').hide()
+      //   $('.sub-products__text.sub').show()
 
-      } else {
-        $('.sub-products__text.no-sub').show()
-        $('.sub-products__text.sub').hide()
-      }
+      // } else {
+      //   $('.sub-products__text.no-sub').show()
+      //   $('.sub-products__text.sub').hide()
+      // }
 
       if(only_singles) {
 //         for(let i=0;i<data.items.length;i++) {
