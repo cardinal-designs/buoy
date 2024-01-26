@@ -357,7 +357,7 @@ setTimeout(function(){
     var first = text.shift();
     return (text.length > 0 ? "<span class='rated-text'>"+ first + "</span> " : first) + text.join(" ");
   });
-},5000)
+},100)
   
 })();
 
