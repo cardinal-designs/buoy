@@ -26,6 +26,7 @@
       "blocks": {
         "915598b8-73ba-4440-9c78-70b475eb492a": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "hydration-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
@@ -33,6 +34,7 @@
         },
         "475664b0-eea5-49a4-9521-d603009b918d": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "energy-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
@@ -47,6 +49,7 @@
         },
         "9d231586-a60b-42ac-9721-d7ea47797c99": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "wellness-kit",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
@@ -59,12 +62,11 @@
         "dca0e5dd-357d-4543-b722-8d65bedef3b1",
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
-      "disabled": true,
       "settings": {
-        "title": "<strong>Best electrolytes<\/strong> for leg cramps",
-        "text": "Say goodbye to leg cramps with the latest innovation in hydration. Buoy's unflavored and unsweetened electrolyte drops turn any beverage into a hydrating, electrolyte drink without the sugar, sweeteners, flavors or junk.",
-        "shop_all_label": "Shop All Products",
-        "shop_all_link": "shopify:\/\/collections\/all",
+        "title": "<h1>Discover the Best Immune Support Supplement for Your Health<\/h1>",
+        "text": "<p style=\"font-size: 15px\">In a world where maintaining health is more important than ever, choosing the right supplement can make all the difference. Enter Buoy’s Immunity Drops, a standout choice for anyone seeking to boost their immune system with all-natural ingredients—and nothing else.<br><br>\n\nWhat sets Buoy Immunity Drops apart? It’s our commitment to purity, efficiency, and accessibility. Vegan, sugar-free, and fast-acting, our drops are designed for the health-conscious individual who wants to add both quality and convenience to their wellness routine.<br><br>\n\nAre you ready to elevate your immune health? Discover the difference with Buoy’s Immunity Drops and give your body the support it deserves.<\/p>",
+        "shop_all_label": "",
+        "shop_all_link": "https:\/\/justaddbuoy.com\/products\/immunity-drops",
         "promo_link_text": "",
         "promo_link": "",
         "background": "bg_color",
@@ -463,7 +465,8 @@
         "subtext": "What makes a high-quality electrolyte drink?",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bg_color"
+        "background": "bg_color",
+        "hide_supp": false
       }
     },
     "31e36676-5821-47f9-a328-6c162b259d29": {
@@ -480,7 +483,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for less than $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -494,7 +500,10 @@
             "list_item1": "One month supply",
             "list_item2": "Gently caffeinated",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
@@ -509,7 +518,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for around $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "8939123e-4123-47d7-a631-21ea009a79ce": {
@@ -523,7 +535,10 @@
             "list_item1": "One month supply",
             "list_item2": "All three drops",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         }
       },
