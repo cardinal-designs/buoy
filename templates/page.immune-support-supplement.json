@@ -500,6 +500,23 @@
         "hide_supp": false
       }
     },
+    "4f22c796-1d64-4f0e-869e-2c8eb4574863": {
+      "type": "image-text-section",
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
+        "title": "<h2>Scientifically Formulated for Maximum Immune Support<\/h2>",
+        "text": "<p style=\"font-size: 15px\">The formulation of Buoy Immunity Drops is grounded in scientific research. Every ingredient is chosen for its proven effects on immune health and its bioavailability, ensuring that your body can easily absorb and utilize these nutrients.<\/p>\n<h3 style=\"font-size: 25px\">🌿 Bioavailability and Effectiveness<\/h3>\n<p style=\"font-size: 15px\">The fast-absorbing nature of the ingredients means that your body gets the benefits more efficiently. The vitamins and minerals are in forms that the body can easily assimilate, enhancing their effectiveness.<\/p>\n<h3 style=\"font-size: 25px\">🔬 Scientific Formulation<\/h3>\n<p style=\"font-size: 15px\">Each component of the Immunity Drops has been included based on scientific evidence of its role in supporting the immune system, ensuring a product that is both effective and trustworthy.<\/p>",
+        "subtext": "",
+        "button_label": "Boost Your Immune System with Buoy",
+        "button_link": "https:\/\/justaddbuoy.com\/products\/immunity-drops",
+        "content_reverse": "right",
+        "button_style": "beige",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
     "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
       "type": "custom-featured-product",
       "disabled": true,
@@ -519,6 +536,7 @@
     },
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9": {
       "type": "image-slider",
+      "disabled": true,
       "settings": {
         "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
         "add_top_border": true,
@@ -623,11 +641,11 @@
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/CIP_D_Invest_in_You_MP4_Placeholder_2x_9e2cab89-a62b-4912-b787-d91629944e22.png",
-        "title": "Why Choose Buoy",
-        "text": "Skip the label reading with Buoy's clean and pure electrolytes and minerals. Delivered in the easiest, most sustainable and effective way  to hydrate.",
-        "text_bottom": "Try for a month risk free. If you don't like it, get a full refund.",
-        "button_label": "Start Hydrating",
-        "button_link": "shopify:\/\/products\/hydration-drops",
+        "title": "<h2 style=\"font-size: 32px\"><i>Integrating Immunity<br> Drops into Your Daily Routine<\/i><\/h2>",
+        "text": "<p style=\"font-size: 15px\">Incorporating Buoy Immunity Drops into your daily routine is simple and can significantly enhance your immune health.<\/p>",
+        "text_bottom": "<p style=\"font-size: 15px\">By following these guidelines, you can effectively incorporate Buoy Immunity Drops into your everyday life, providing your body with the nutrients it needs for a robust immune system.<\/p>",
+        "button_label": "Try Buoy’s Immunity Drops Today!",
+        "button_link": "https:\/\/justaddbuoy.com\/products\/immunity-drops",
         "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
         "add_top_border": false,
         "add_bottom_border": false
@@ -908,23 +926,6 @@
         "background": "none"
       }
     },
-    "4f22c796-1d64-4f0e-869e-2c8eb4574863": {
-      "type": "image-text-section",
-      "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
-        "title": "<h2>Scientifically Formulated for Maximum Immune Support<\/h2>",
-        "text": "<p style=\"font-size: 15px\">The formulation of Buoy Immunity Drops is grounded in scientific research. Every ingredient is chosen for its proven effects on immune health and its bioavailability, ensuring that your body can easily absorb and utilize these nutrients.<\/p>\n<h3 style=\"font-size: 25px\">🌿 Bioavailability and Effectiveness<\/h3>\n<p style=\"font-size: 15px\">The fast-absorbing nature of the ingredients means that your body gets the benefits more efficiently. The vitamins and minerals are in forms that the body can easily assimilate, enhancing their effectiveness.<\/p>\n<h3 style=\"font-size: 25px\">🔬 Scientific Formulation<\/h3>\n<p style=\"font-size: 15px\">Each component of the Immunity Drops has been included based on scientific evidence of its role in supporting the immune system, ensuring a product that is both effective and trustworthy.<\/p>",
-        "subtext": "",
-        "button_label": "Boost Your Immune System with Buoy",
-        "button_link": "https:\/\/justaddbuoy.com\/products\/immunity-drops",
-        "content_reverse": "right",
-        "button_style": "beige",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
-    },
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb": {
       "type": "give-back-blocks",
       "blocks": {
@@ -1064,6 +1065,7 @@
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
     "517df923-ac36-43bd-9898-b875c67e1be2",
     "50df382c-255c-4272-b876-eca398cca73a",
+    "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
@@ -1072,7 +1074,6 @@
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
-    "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953"
