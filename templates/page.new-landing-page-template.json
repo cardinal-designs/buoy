@@ -47,7 +47,10 @@
             "list_item1": "One Month Supply",
             "list_item2": "No sugar, sweeteners, flavors or artificial ingredients that may break your fast",
             "list_item3": "Hydrate for less than $1\/day +100% Money Back Guarantee",
-            "button_text": "Electrify Your Fast"
+            "button_text": "Electrify Your Fast",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -62,7 +65,10 @@
             "list_item1": "One month supply",
             "list_item2": "Gently caffeinated",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
@@ -77,7 +83,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for around $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "8939123e-4123-47d7-a631-21ea009a79ce": {
@@ -92,7 +101,10 @@
             "list_item1": "One month supply",
             "list_item2": "All three drops",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         }
       },
@@ -348,21 +360,21 @@
           "type": "pr_slide",
           "settings": {
             "text": "- Trent D",
-            "content": "⭐️⭐️⭐️⭐️⭐️<br><br><strong>\"My only electrolyte and mineral supplement I'm using on my 16:8 hour intermittent fasts\"<\/strong>"
+            "content": "<br><strong>\"My only electrolyte and mineral supplement I'm using on my 16:8 hour intermittent fasts\"<\/strong>"
           }
         },
         "0fff71db-dfa8-49eb-9726-ec3517079f19": {
           "type": "pr_slide",
           "settings": {
             "text": "- Eileen M",
-            "content": "⭐️⭐️⭐️⭐️⭐️<br><br><strong>\"My electrolyte and mineral keto sidekick that fits in my pocket\"<\/strong>"
+            "content": "<br><strong>\"My electrolyte and mineral keto sidekick that fits in my pocket\"<\/strong>"
           }
         },
         "2403b53d-6918-43e2-b5b2-076aff2fa24e": {
           "type": "pr_slide",
           "settings": {
             "text": "- Christina K",
-            "content": "⭐️⭐️⭐️⭐️⭐️<br><br><strong>\"My favorite zero sugar electrolyte! No calories or carbs!\"<\/strong>"
+            "content": "<br><strong>\"My favorite zero sugar electrolyte! No calories or carbs!\"<\/strong>"
           }
         },
         "c24e56ed-1a25-44ed-a6d2-4d3c70ac0c74": {
@@ -492,7 +504,8 @@
         "subtext": "Buoy's premium electrolytes and minerals tap into one of nature's most powerful ingredient sources: the deep ocean.",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bottom"
+        "background": "bottom",
+        "hide_supp": false
       }
     },
     "517df923-ac36-43bd-9898-b875c67e1be2": {
