@@ -515,56 +515,15 @@
         "add_bottom_border": true
       }
     },
-    "a09de49d-45af-40d0-969c-1445290cd3be": {
-      "type": "image-with-dropdowns",
-      "blocks": {
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
-          "type": "block",
-          "settings": {
-            "title": "Easy Integration",
-            "emoji": "⚡️",
-            "subtitle": "",
-            "text": "<b>Add a quick squeeze of the drops to any beverage – water, tea, smoothies, or even alcoholic drinks. This versatility means you can enjoy immune support with any meal or at any time of the day.<\/b>"
-          }
-        },
-        "a8857c10-0308-470e-9fda-843eda7c0033": {
-          "type": "block",
-          "settings": {
-            "title": "Daily Use",
-            "emoji": "🌊",
-            "subtitle": "",
-            "text": "<b>For best results, use the drops daily. Regular use supports sustained immune health.<\/b>"
-          }
-        },
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
-          "type": "block",
-          "settings": {
-            "title": "Adaptable Serving Size",
-            "emoji": "🧬",
-            "subtitle": "",
-            "text": "<b>Depending on your needs, you can adjust the serving size. A single squeeze is typically enough, but you can add more if you feel the need for an extra immune boost.<\/b>"
-          }
-        }
-      },
-      "block_order": [
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
-        "a8857c10-0308-470e-9fda-843eda7c0033",
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d"
-      ],
-      "custom_css": [
-
-      ],
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
+      "type": "text-above",
       "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/Single_Tilted_Immunity_5_debf85f0-62fc-4e0c-8f3b-441b4be40a63.jpg",
-        "title": "<h2 style=\"font-size: 30px; text-align: center\">Integrating Immunity Drops into Your Daily Routine<\/h2>",
-        "text": "<p style=\"font-size: 15px; text-align: center\">Incorporating Buoy Immunity Drops into your <br> daily routine is simple and can <br> significantly enhance your immune health.<\/p>",
-        "text_bottom": "<p style=\"font-size: 15px\">By following these guidelines, you can effectively incorporate Buoy Immunity Drops into your everyday life, providing your body with the nutrients it needs for a robust immune system.<\/p>",
-        "button_label": "Try Buoy’s Immunity Drops Today!",
-        "button_link": "https:\/\/justaddbuoy.com\/products\/immunity-drops",
-        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
-        "add_top_border": false,
-        "add_bottom_border": false
+        "emoji": "💗",
+        "suptitle": "<h2>Integrating Immunity Drops into Your Daily Routine<\/h2>",
+        "suptext": "<p style=\"font-size: 15px; text-align: left;\">Incorporating Buoy Immunity Drops into your daily routine is simple and can significantly enhance your immune health.<br><br>\n\n<b>Easy Integration<\/b>: Add a quick squeeze of the drops to any beverage – water, tea, smoothies, or even alcoholic drinks. This versatility means you can enjoy immune support with any meal or at any time of the day.<br><br>\n\n<b>Daily Use<\/b>: For best results, use the drops daily. Regular use supports sustained immune health.<br><br>\n\n<b>Adaptable Serving Size<\/b>: Depending on your needs, you can adjust the serving size. A single squeeze is typically enough, but you can add more if you feel the need for an extra immune boost.<br><br>\n\nBy following these guidelines, you can effectively incorporate Buoy Immunity Drops into your everyday life, providing your body with the nutrients it needs for a robust immune system.<\/p><br><br>\n\n<a href=\"https:\/\/justaddbuoy.com\/products\/immunity-drops\" class=\"button\">Try Buoy’s Immunity Drops Today!<\/a>",
+        "add_top_border": true,
+        "add_bottom_border": true,
+        "background": "bg_color"
       }
     },
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b": {
@@ -914,17 +873,6 @@
         "add_top_padding": false,
         "add_bottom_padding": false
       }
-    },
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953": {
-      "type": "text-above",
-      "settings": {
-        "emoji": "💗",
-        "suptitle": "<h2>Integrating Immunity Drops into Your Daily Routine<\/h2>",
-        "suptext": "<p style=\"font-size: 15px; text-align: left;\">Incorporating Buoy Immunity Drops into your daily routine is simple and can significantly enhance your immune health.<br><br>\n\n<b>Easy Integration<\/b>: Add a quick squeeze of the drops to any beverage – water, tea, smoothies, or even alcoholic drinks. This versatility means you can enjoy immune support with any meal or at any time of the day.<br><br>\n\n<b>Daily Use<\/b>: For best results, use the drops daily. Regular use supports sustained immune health.<br><br>\n\n<b>Adaptable Serving Size<\/b>: Depending on your needs, you can adjust the serving size. A single squeeze is typically enough, but you can add more if you feel the need for an extra immune boost.<br><br>\n\nBy following these guidelines, you can effectively incorporate Buoy Immunity Drops into your everyday life, providing your body with the nutrients it needs for a robust immune system.<\/p><br><br>\n\n<a href=\"https:\/\/justaddbuoy.com\/products\/immunity-drops\" class=\"button\">Try Buoy’s Immunity Drops Today!<\/a>",
-        "add_top_border": true,
-        "add_bottom_border": true,
-        "background": "bg_color"
-      }
     }
   },
   "order": [
@@ -944,14 +892,13 @@
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
-    "a09de49d-45af-40d0-969c-1445290cd3be",
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
-    "271bbc88-ee3e-4299-aee5-2c393d4bf363",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953"
+    "271bbc88-ee3e-4299-aee5-2c393d4bf363"
   ]
 }
