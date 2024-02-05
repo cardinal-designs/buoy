@@ -1,9 +1,9 @@
-<div class="announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+<div class="val-announce announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
   {%- if section.settings.text != blank -%}
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
-        <img src="{{ section.settings.img | img_url: 'master' }}"/>
+        <img class="hide-mobile" src="{{ section.settings.img | img_url: 'master' }}"/>
         <p class="announcement-bar__message body">
           {{ section.settings.text }}
         </p>
