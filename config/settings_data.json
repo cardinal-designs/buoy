@@ -15,8 +15,11 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "custom_css": [
+
+        ],
         "settings": {
-          "text": "Buy a Hydration Drops 9-Pack -> get a FREE Daily Wellness Bundle. Feb 5-12 ONLY, while supplies last.",
+          "text": "<u>Buy a Hydration Drops 9-Pack<\/u> -> <strong>get a FREE Daily Wellness Bundle.<\/strong>\n\n<br><i>Feb 5-12 ONLY; while supplies last.<\/i>",
           "link": "shopify:\/\/products\/hydration-drops",
           "btn_text": "Try Risk Free",
           "btn_link": "shopify:\/\/products\/hydration-drops",
