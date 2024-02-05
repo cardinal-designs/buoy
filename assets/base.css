@@ -1976,6 +1976,14 @@ input[type='checkbox'] {
     flex: 0 0 65%;
   }
 
+  .val-announce .announcement-bar__message {
+    padding: 8px 0 10px;
+    font-size: 14px;
+    text-align: left;
+    flex: unset;
+    margin: 0 auto;
+  }
+
   .val-announce.announcement-bar p {
     text-align: center !important;
     flex: unset;
