@@ -262,7 +262,8 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
 
     <div class="page-overlay"></div>
     <div class="page-blury-overlay"></div>
-    
+
+    {% comment %}
    {% unless template.name == 'product' %} 
     {% if page.handle == 'buoy-black-friday-offer' %}
       <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
@@ -270,10 +271,15 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       </announcement-container>
     {% else %}
     <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'valentines-day-announcement-bar' %}
+      {% section 'announcement-bar' %}
     </announcement-container>
     {% endif %}
    {% endunless %}
+   {% endcomment %}
+
+    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true or template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
+      {% section 'valentines-day-announcement-bar' %}
+    </announcement-container>
 
     
     <header-container class="header--transparent">
