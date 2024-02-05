@@ -632,7 +632,7 @@ announcement-container.Fixed_Bar {
     top: 54px;
   } */
 
-  .Show_Announcement_Bar.Fixed_Bar  +header-container {
+  .Show_Announcement_Bar.Fixed_Bar + header-container {
     top: 85px;
   }
 
