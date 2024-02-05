@@ -4,8 +4,11 @@
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
         <img class="hide-mobile" src="{{ section.settings.img | img_url: 'master' }}"/>
-        <p class="announcement-bar__message body">
+        <p class="hide-mobile announcement-bar__message body">
           {{ section.settings.text }}
+        </p>
+       <p class="hide-desktop announcement-bar__message body">
+          {{ section.settings.mobile_text }}
         </p>
     {%- if section.settings.link != blank -%}
       </a>
@@ -32,6 +35,12 @@
       "id": "text",
       "default": "Welcome to our store",
       "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+    },
+        {
+      "type": "textarea",
+      "id": "mobile_text",
+      "default": "Welcome to our store",
+      "label": "Mobile Text"
     },
     {
       "type": "url",
