@@ -1978,6 +1978,7 @@ input[type='checkbox'] {
 
   .val-announce.announcement-bar p {
     text-align: center !important;
+    flex: unset;
   }
 
   .announcement-bar {
