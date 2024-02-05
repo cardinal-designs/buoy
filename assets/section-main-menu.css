@@ -554,8 +554,12 @@ announcement-container.Fixed_Bar {
   top: 0;
 }
 
-.Show_Announcement_Bar.Fixed_Bar + header-container {
+/* .Show_Announcement_Bar.Fixed_Bar + header-container {
   top: 49px;
+}
+ */
+.Show_Announcement_Bar.Fixed_Bar+header-container {
+  top: 104px;
 }
 
 .Show_Announcement_Bar + header-container {
@@ -604,9 +608,9 @@ announcement-container.Fixed_Bar {
     top: 0;
   }
   
-  .Show_Announcement_Bar.Fixed_Bar+header-container {
+  /* .Show_Announcement_Bar.Fixed_Bar+header-container {
     top: 39px;
-  }
+  } */
 
   .page-template--page-black-friday-offer .Show_Announcement_Bar.Fixed_Bar+header-container {
     top: 0px;
@@ -617,15 +621,19 @@ announcement-container.Fixed_Bar {
 @media only screen and (max-width: 667px) {
 
   .Announcement_Shown.main-menu {
-    top: 108px;
+    top: 139px;
   }
     
   .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 108px;
+    top: 139px;
   }
 
-  .Show_Announcement_Bar.Fixed_Bar + header-container {
+  /* .Show_Announcement_Bar.Fixed_Bar + header-container {
     top: 54px;
+  } */
+
+  .Show_Announcement_Bar.Fixed_Bar + header-container {
+    top: 85px;
   }
 
   .page-template--page-black-friday-offer .Show_Announcement_Bar.Fixed_Bar + header-container {
@@ -633,7 +641,7 @@ announcement-container.Fixed_Bar {
   }
 
   .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 108px;
+    top: 139px;
   }
   
 }
