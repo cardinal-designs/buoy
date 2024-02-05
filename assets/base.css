@@ -1926,6 +1926,14 @@ input[type='checkbox'] {
   padding: 12px 14px;
 }
 
+.val-announce.announcement-bar img {
+  max-width: 250px;
+}
+
+.val-announce.announcement-bar p {
+  text-align: left !important;
+}
+
 .announcement-bar__link {
   display: block;
   text-decoration: none;
