@@ -20,7 +20,18 @@
   </div>
 </div>
 
+{% javascript %}
+  $(window).scroll(function() {
+    var $scrollTop = $(window).scrollTop();
+    var scrollToSectionOffset = $('.pdp-value-props');
 
+    if ($scrollTop > (scrollToSectionOffset.offset().top - 200)) {
+      $('.product-bar').addClass('scrolled');
+    } else {
+      $('.product-bar').removeClass('scrolled');
+    }
+  });
+{% endjavascript %}
 
 {% schema %}
   {
