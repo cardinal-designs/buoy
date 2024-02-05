@@ -3,6 +3,7 @@
     {%- if section.settings.link != blank -%}
       <a href="{{ section.settings.link }}" class="announcement-bar__link">
     {%- endif -%}
+        <img src="{{ section.settings.img | img_url: 'master' }}"/>
         <p class="announcement-bar__message body">
           {{ section.settings.text }}
         </p>
@@ -10,12 +11,6 @@
       </a>
     {%- endif -%}
   {%- endif -%}
-
-    <button class="announcement-bar__close">{% render 'icon-close' %}</button>
-
-  {% if section.settings.btn_text != blank %}
-    <a class="Announcement_Button" {% if section.settings.button_text_color != blank or section.settings.button_color != blank %}style="background: {{ section.settings.button_color }}; color: {{section.settings.button_text_color}}"{% endif %} href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
-  {% endif %}
 </div>
 
 {% if section.settings.hide_mobile %}
@@ -42,6 +37,11 @@
       "type": "url",
       "id": "link",
       "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Image"
     },
     {
       "type": "text",
