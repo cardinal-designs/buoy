@@ -66,6 +66,9 @@
   padding-right: 10px;
   overflow-y: auto;
   margin: 20px 10px 20px 20px;
+  position: unset;
+  height: unset;
+  padding-bottom: 0;
 }
 
 .cart-drawer__welcome-message {
