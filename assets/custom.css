@@ -183,6 +183,11 @@ body.open-cart-drawer {
   padding-bottom: 0;
 }
 
+.cart-drawer__footer {
+  position: unset;
+  height: unset;
+}
+
 
 @media screen and (max-width: 1024px){
   
