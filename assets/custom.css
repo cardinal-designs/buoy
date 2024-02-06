@@ -169,6 +169,11 @@
   position: relative;
 }
 
+body.open-cart-drawer {
+  overflow-y: hidden;
+}
+
+
 @media screen and (max-width: 1024px){
   
   .drawer_cover_cls .drawer_left{
