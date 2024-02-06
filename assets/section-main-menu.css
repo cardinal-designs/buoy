@@ -627,12 +627,8 @@ announcement-container.Fixed_Bar {
     top: 139px;
   }
 
-  /* .Show_Announcement_Bar.Fixed_Bar + header-container {
-    top: 54px;
-  } */
-
   .Show_Announcement_Bar.Fixed_Bar + header-container {
-    top: 85px;
+    top: 54px;
   }
 
   .page-template--page-black-friday-offer .Show_Announcement_Bar.Fixed_Bar + header-container {
