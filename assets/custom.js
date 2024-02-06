@@ -473,4 +473,11 @@ $('.dropdown-container-item__title').click(function() {
 });
 
 
+// Add Class on body tag
+var clickableElement = document.querySelector('.js-mainproduct-submit');
+clickableElement.addEventListener('click', function() {
+  var bodyElement = document.body;
+  bodyElement.classList.add('open-cart-drawer');
+});
+
 
