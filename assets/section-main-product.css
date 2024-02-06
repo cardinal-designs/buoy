@@ -2454,7 +2454,7 @@ select[name=selling_plan] {
   border-radius: 8px;
   height: auto;
   margin: 28px auto 0px;
-  max-width: 460px;
+  /* max-width: 460px; */
   max-width: auto;
   width: 100%;
   position: relative;
@@ -2464,8 +2464,8 @@ select[name=selling_plan] {
 
 @media screen and (max-width: 768px) {
   .discount-bubble {
-    max-width: 285px;
-    /* max-width: unset; */
+    /* max-width: 285px; */
+    max-width: auto;
     width: 100%;
   }
 
