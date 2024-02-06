@@ -177,6 +177,12 @@ body.open-cart-drawer {
   height: calc(100% - 60px);
 }
 
+.cart-drawer__items {
+  position: unset;
+  height: unset;
+  padding-bottom: 0;
+}
+
 
 @media screen and (max-width: 1024px){
   
