@@ -267,7 +267,6 @@
   background: white;
 }
 
-
 .cart-drawer__footer .button svg {
   margin: 0 5px -3px 0;
 }
@@ -532,7 +531,6 @@
   transition: .4s ease-in-out;
 }
 
-
 .cart-drawer__second-slide.show-second {
   transform: translateX(0);
   -webkit-transform: translateX(0);
@@ -617,7 +615,6 @@
 .shop-slide-out__second-image {
   position: relative;
 }
-
 
 .shop-slide-out__second-image .product-card-badge {
   left: 35px;
