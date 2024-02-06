@@ -173,21 +173,6 @@ body.open-cart-drawer {
   overflow-y: hidden;
 }
 
-.cart-drawer__content {
-  height: calc(100% - 60px);
-}
-
-.cart-drawer__items {
-  position: unset;
-  height: unset;
-  padding-bottom: 0;
-}
-
-.cart-drawer__footer {
-  position: unset;
-  height: unset;
-}
-
 
 @media screen and (max-width: 1024px){
   

@@ -193,6 +193,9 @@
   right: 0;
   bottom: 0;
   background-color: white;
+
+  position: unset;
+  height: unset;
 }
 
 .cart-drawer__footer .sh4 {
