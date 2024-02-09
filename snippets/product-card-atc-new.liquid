@@ -73,7 +73,10 @@
           {% assign chosen_variant_2 = product_card_atc_2.variants | where: 'id', formatted_id_2 | first %}
         
           {% if chosen_variant.available %}
-              
+              <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{ current_selling_plan_allocation }}">{{ product_card_button_text }}</button>
+              {% if chosen_variant_2.available %}
+                <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant_2.id}}" data-selling="{{ current_selling_plan_allocation_2 }}">{{ product_card_button_text_2 }}</button>
+              {% endif %}
           {% else %}
               <button class="shop-btn button button--beige">Out of stock</button>
           {% endif %}
