@@ -35,6 +35,7 @@ class CartDrawer extends HTMLElement {
     var this_2 = this;
     $('body').on('click', '.cart-drawer__close', function(event) {
       this_2.close();
+      document.body.classList.remove('open-cart-drawer');
     });
     
     this.onBodyClick = this.handleBodyClick.bind(this);
