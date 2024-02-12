@@ -64,14 +64,21 @@
         {% endif %}
         </a>
         {% if show_shop_button %}
-          {%  assign formatted_id = variant_id | strip | plus: 0 %}
-          {% assign current_selling_plan_allocation =  selling_id | strip | plus: 0%}
-          {%  assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
+          {% assign formatted_id = variant_id | strip | plus: 0 %}
+          {% assign current_selling_plan_allocation =  selling_id | strip | plus: 0 %}
+          {% assign chosen_variant = product_card_atc.variants | where: 'id', formatted_id | first %}
+
+          {% assign formatted_id_2 = variant_id_2 | strip | plus: 0 %}
+          {% assign current_selling_plan_allocation_2 =  selling_id_2 | strip | plus: 0 %}
+          {% assign chosen_variant_2 = product_card_atc_2.variants | where: 'id', formatted_id_2 | first %}
         
           {% if chosen_variant.available %}
-             <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{ current_selling_plan_allocation }}">{{ product_card_button_text }}</button>
+              <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant.id}}" data-selling="{{ current_selling_plan_allocation }}">{{ product_card_button_text }}</button>
+              {% if chosen_variant_2.available %}
+                <button onclick="addToCart(event)" class="shop-btn button button--beige" data-metafield="{{chosen_variant_2.metafields.custom.checkout_msrp_text}}" data-id="{{chosen_variant_2.id}}" data-selling="{{ current_selling_plan_allocation_2 }}">{{ product_card_button_text_2 }}</button>
+              {% endif %}
           {% else %}
-            <button class="shop-btn button button--beige">Out of stock</button>
+              <button class="shop-btn button button--beige">Out of stock</button>
           {% endif %}
         {% endif %}
       </div>

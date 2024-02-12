@@ -21,7 +21,7 @@
 }
 
 .chronic-submitted__text .sh3 {
-  max-width: 563px;
+  max-width: 1030px;
   margin: 0 auto 10px;
   color: #545759;
 }
@@ -29,7 +29,7 @@
 .collection-groups__item {
   padding-bottom: 0 !important;
   border-bottom: none !important;
-  max-width: 1000px;
+  max-width: 1030px;
   margin: 70px auto 100px !important;
 }
 
@@ -44,11 +44,11 @@
 
 .chronic-submitted__text .light {
   margin: 0 auto;
-  max-width: 563px;
+  max-width: 1030px;
 }
 
 .chronic-submitted__text h2 {
-   max-width: 563px;
+  max-width: 1030px;
   margin: 0 auto 20px
 }
 
@@ -89,8 +89,37 @@
   text-transform: unset;
 }
 
+.page-template--page-chronic-illness-submitted .card-wrapper .button {
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .page-template--page-chronic-illness-submitted .card-wrapper .button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+}
+
 @media only screen and (max-width: 768px) {
+  
   .collection-groups__grid {
     grid-template-columns: 1fr !important;
   }
+
+  .chronic-submitted__text {
+    padding: 0 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  
+  .page-template--page-chronic-illness-submitted .card-information__wrapper .okeReviews-reviewsSummary-ratingCount {
+    width: auto;
+  }
+
 }

@@ -22,6 +22,10 @@
               hover_video: block.settings.hover_video,
               show_shop_button: true,
               product_card_button_text: block.settings.button_text
+              product_card_atc_2: block.settings.product_atc_2,
+              variant_id_2: block.settings.variant_id_2,
+              selling_id_2: block.settings.selling_id_2,
+              product_card_button_text_2: block.settings.button_text_2
           %}
           {% endif %}
           {% endfor %}
@@ -99,6 +103,10 @@
             "label": "Product"
           },
           {
+            "type": "header",
+            "content": "ATC Product 1"
+          },
+          {
             "type": "product",
             "id": "product_atc",
             "label": "ATC Product"
@@ -116,6 +124,30 @@
           {
             "type": "textarea",
             "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "header",
+            "content": "ATC Product 2"
+          },
+          {
+            "type": "product",
+            "id": "product_atc_2",
+            "label": "ATC Product"
+          },
+          {
+            "type": "text",
+            "id": "variant_id_2",
+            "label": "Variant id"
+          },
+          {
+            "type": "text",
+            "id": "selling_id_2",
+            "label": "Selling plan id"
+          },
+          {
+            "type": "textarea",
+            "id": "button_text_2",
             "label": "Button Text"
           }
         ]
