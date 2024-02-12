@@ -29,7 +29,25 @@
   {% endfor %}
 {% endif %}
 {% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
-<div class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
+{% liquid
+  assign need_to_set_msrp = false
+  assign is_gift_from_app = false
+  assign has_msrp = false
+
+  for property in item.properties
+    if property contains '_Gifted'
+      assign is_gift_from_app = true
+    endif
+    if property contains 'MSRP'
+      assign has_msrp = true
+    endif
+  endfor
+
+  if is_gift_from_app == true and has_msrp == false and item.variant.metafields.custom.checkout_msrp_text != blank
+    assign need_to_set_msrp = true
+  endif
+%}
+<div {% if need_to_set_msrp %}data-set-msrp="{{ item.variant.metafields.custom.checkout_msrp_text | escape }}" data-item-key="{{ item.key }}" data-item-properties="{{ item.properties | json | escape }}"{% endif  %} class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
     <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
       {% comment %}{% render 'icon-trash' %}{% endcomment %}
@@ -144,6 +162,14 @@
               {%- endunless -%}
             {%- endfor -%}
           {%- endif -%}
+          {% if need_to_set_msrp %}
+            {%  liquid 
+              assign metafields = item.variant.metafields.custom.checkout_msrp_text | split: ':'
+            %}
+            <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
+               {{ metafields | first }}: &nbsp; {{ metafields | last }}
+            </h6>
+          {% endif %}
   
           {%- for property in item.properties -%}
             {%- assign property_first_char = property.first | slice: 0 -%}
