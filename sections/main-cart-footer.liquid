@@ -61,7 +61,7 @@
 
                 {% assign disable_checkout = true %}
                 {% for item in cart.items %}
-                  {% if item.product.type != 'add on' %}
+                  {% if item.product.type != 'add on' and item.product.type != 'gift' %}
                     {% assign disable_checkout = false %}
                   {% endif %}
                 {% endfor %}
