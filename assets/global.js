@@ -1125,7 +1125,7 @@ $('.people-slider__people-slider--2').slick({
 $('.people-slider__drink-slider--3').slick({
   asNavFor: '.people-slider__people-slider--3',
   fade: true,
-  arrows: true
+  arrows: false
 });
     
 $('.people-slider__people-slider--3').on('init', function(event, slick){
