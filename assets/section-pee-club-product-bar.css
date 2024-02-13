@@ -4,10 +4,12 @@
 }
 
 @media screen and (max-width: 959px) {
+  
   .pee-club-product-bar .page-width {
     padding-left: 27px;
     padding-right: 27px;
   }
+  
 }
 
 .pee-club-product-bar .flex-buttons-bar {
@@ -15,10 +17,12 @@
 }
 
 @media screen and (max-width: 959px) {
+  
   .pee-club-product-bar .flex-buttons-bar {
     flex-wrap: wrap;
     gap: 3px;
   }
+  
 }
 
 .pee-club-product-bar .flex-buttons-bar svg {
@@ -136,10 +140,12 @@
 }
 
 @media screen and (max-width: 1000px) {
+  
   .pee-club-product-bar-buttons {
     flex-direction: column;
     gap: 3px;
   }
+  
 }
 
 
