@@ -591,7 +591,10 @@ announcement-container.Fixed_Bar {
 }
 
 @media only screen and (max-width: 768px) {
-
+  .page-template--page-clear-pee-club .Show_Announcement_Bar.Fixed_Bar+header-container {
+      top: 104px;
+  }
+  
   .main-menu {
     top: 54px;
   }
