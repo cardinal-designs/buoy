@@ -8,7 +8,7 @@
 
 <cart-drawer>
   <div class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-modal="true" aria-label="Cart Drawer" role="dialog" tabindex="-1">
-    <form id="cart-drawer__form" action="{{ routes.cart_url }}" method="post" class="cart-drawer__form">
+    {% form 'cart', cart, id: 'cart-drawer__form', class: 'cart-drawer__form' %}
       <div class="cart-drawer__inner">
         <div class="cart-drawer__header" id="cart-drawer__header" data-id="{{ section.id }}">
           <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title sh2 light">{{ section.settings.cart_title }} ({{ cart.item_count }})</h2>
@@ -391,7 +391,7 @@
           </div>
         </div>
       </div>
-    </form> 
+    {% endform %}
   </div>
 </cart-drawer>
 

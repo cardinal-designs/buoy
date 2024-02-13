@@ -49,7 +49,7 @@ class ProductForm extends HTMLElement {
 
           elementToReplace.innerHTML =
             this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
-
+           document.querySelectorAll('cart-drawer').forEach((cd) => cd.checkProperties());
         }));
       })
       .catch((e) => {

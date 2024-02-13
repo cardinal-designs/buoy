@@ -35,6 +35,7 @@ class CartDrawer extends HTMLElement {
     var this_2 = this;
     $('body').on('click', '.cart-drawer__close', function(event) {
       this_2.close();
+      document.body.classList.remove('open-cart-drawer');
     });
     
     this.onBodyClick = this.handleBodyClick.bind(this);
@@ -51,8 +52,37 @@ class CartDrawer extends HTMLElement {
     }, 300);
 
     this.addEventListener('change', this.debouncedOnChange.bind(this));
+    this.checkProperties();
   }
+  async checkProperties() {
+    const updates = [];
+    const sections = this.getSectionsToRender().map((section) => section.section);
+    const sections_url = window.location.pathname;
 
+    this.querySelectorAll('[data-set-msrp]').forEach((item) => {
+      const MSRP = item.dataset.setMsrp.split(':')[1];
+      const id = item.dataset.itemKey;
+      const propertiesArr = JSON.parse(item.dataset.itemProperties || '[]');
+      const properties = {};
+      propertiesArr.forEach(([key, value]) => {
+        properties[key] = value;
+      });
+      updates.push({id, properties: { MSRP, ...properties }, sections, sections_url});
+    });
+    
+    if (!updates.length) return;
+
+    let response;
+
+    for (const update of updates) {
+      response = await fetch(routes.cart_change_url, {...fetchConfig(), ...{ body: JSON.stringify(update) }});
+    }
+
+    const json = await response.json();
+
+    this.renderContent(json.sections);
+
+  }
   open() {
     this.drawer.setAttribute('aria-hidden', false); 
     this.drawer.setAttribute('aria-expanded', true);
@@ -169,7 +199,7 @@ class CartDrawer extends HTMLElement {
           this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
 
       }));
-      
+      this.checkProperties();
       this.disableLoading();  
     }).catch(() => {
       this.disableLoading();
@@ -292,6 +322,7 @@ class CartDrawer extends HTMLElement {
         this.getSectionInnerHTML(sections[section.section], section.selector);
       
     }));
+    this.checkProperties();
   }
   
 }
