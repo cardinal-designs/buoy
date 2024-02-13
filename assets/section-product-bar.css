@@ -187,9 +187,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .product-bar-wrapper {
     display: none;
   }
+  
 }
 
 .product-bar-illness__flex {
