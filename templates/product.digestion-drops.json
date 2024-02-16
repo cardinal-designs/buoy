@@ -1,0 +1,1157 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
+          "type": "onetime_block",
+          "settings": {
+            "onetime_purchase_type_text": "Free Shipping",
+            "onetime_purchase_type_subtext": ""
+          }
+        },
+        "c722ed3c-e21b-4d49-9c95-1195071825ad": {
+          "type": "block",
+          "settings": {
+            "purchase_type_text": "Delivered Monthly + Free Shipping, Always",
+            "purchase_type_subtext": ""
+          }
+        },
+        "d6b99130-55e3-4ed2-b8da-f13041c6ec7d": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"My favorite sugar-free electrolyte\"",
+            "video_tag": "Keto Diet",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7f8640be01004decb02789e30078e5aa.mp4",
+            "testimonial_image": "shopify:\/\/shop_images\/Screenshot2023-11-06at6.14.39PM.png"
+          }
+        },
+        "006c54ae-0968-491b-aa76-79e4de6d7031": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "\"These don't wreck my gut like the stevia ones!\"",
+            "video_tag": "Gut Health",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cbeccb55f5404b95add6594b63a295d9.mp4",
+            "testimonial_image": "shopify:\/\/shop_images\/Screenshot2023-11-06at6.14.39PM.png"
+          }
+        },
+        "b807a726-d1e0-4fb9-96ca-01c7806619c6": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "“I sh*t you not my headaches are gone\"",
+            "video_tag": "Brain Health",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/189add4be5af48afb60d2e817cb851d5.mp4"
+          }
+        },
+        "e70efabd-a066-4a09-837b-bb3e3eb7e0c7": {
+          "type": "testimonials",
+          "disabled": true,
+          "settings": {
+            "testimonial_text": "“My hangover hack\"",
+            "video_tag": "",
+            "testimonial_video": "",
+            "testimonial_image": "shopify:\/\/shop_images\/Screen_Shot_2023-09-20_at_1.55_1.png"
+          }
+        },
+        "fc2dae20-3e71-4600-bb27-51560d9e8ded": {
+          "type": "testimonials",
+          "disabled": true,
+          "settings": {
+            "testimonial_text": "\"Three days in and I actually feel fresh!\"",
+            "video_tag": "",
+            "testimonial_video": "",
+            "testimonial_image": "shopify:\/\/shop_images\/Screen_Shot_2023-09-20_at_1.55_1.png"
+          }
+        },
+        "8c815d42-5465-43da-9c7c-2725d06ac27a": {
+          "type": "list_block",
+          "disabled": true,
+          "settings": {
+            "list_block_type_img": "shopify:\/\/shop_images\/Callouts.png",
+            "list_block_type_text": "30-Day Money Back Guarantee",
+            "list_block_type_subtext": "See how good you feel using Buoy for a month. Don't love it? It's on us."
+          }
+        },
+        "b89e2a9e-a526-4b3f-82d7-01190d6a9f37": {
+          "type": "list_block",
+          "settings": {
+            "list_block_type_img": "shopify:\/\/shop_images\/Callouts_1.png",
+            "list_block_type_text": "Doctor Recommended Formula",
+            "list_block_type_subtext": "Based on 4-7 daily servings of Buoy reviewed by over 900+ doctors."
+          }
+        }
+      },
+      "block_order": [
+        "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90",
+        "c722ed3c-e21b-4d49-9c95-1195071825ad",
+        "d6b99130-55e3-4ed2-b8da-f13041c6ec7d",
+        "006c54ae-0968-491b-aa76-79e4de6d7031",
+        "b807a726-d1e0-4fb9-96ca-01c7806619c6",
+        "e70efabd-a066-4a09-837b-bb3e3eb7e0c7",
+        "fc2dae20-3e71-4600-bb27-51560d9e8ded",
+        "8c815d42-5465-43da-9c7c-2725d06ac27a",
+        "b89e2a9e-a526-4b3f-82d7-01190d6a9f37"
+      ],
+      "settings": {
+        "picker_type": "button",
+        "supplement_fact_text": "Supplement Facts",
+        "supplement_fact_link": "",
+        "ship_text": "<label>UNITES STATES:<\/label>\n<p>Free Shipping on all orders<\/p>\n\n<label>INTERNATIONAL ORDERS:<\/label>\n<p class=\"mb-5\">Free Shipping on all International orders over $149<\/p>\n<p class=\"small\">Reach out to us for more information on international orders.<\/p>",
+        "shop_more_text1": "",
+        "shop_more_link1": "",
+        "shop_more_text2": "",
+        "shop_more_link2": "",
+        "one_time_text": "One Time Purchase",
+        "testimonial_btn_txt": "All Reviews",
+        "testimonial_btn_link": "#Product_Reviews",
+        "product_feature_icon": "shopify:\/\/shop_images\/star.svg",
+        "product_feature_text": "Energy, Gut Health, Brain Function, Skin",
+        "product_feature_text_two": "Delivered in 3x more bioavailable form factor",
+        "show_drawer_triggers": true,
+        "dropdown_title": ""
+      }
+    },
+    "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff": {
+      "type": "icon-text-list",
+      "blocks": {
+        "1083faa0-a895-49d0-b79a-995556c1a851": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vegan.svg",
+            "title": "Vegan"
+          }
+        },
+        "4cb0a6cc-78b4-4bf3-97f4-836b009452f3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gmo.svg",
+            "title": "Non-GMO Verified"
+          }
+        },
+        "48445f51-5b78-409f-8df6-c40635aebfa3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/keto.svg",
+            "title": "Keto Approved"
+          }
+        },
+        "da9577ec-04dd-466c-87e8-66511f10d1bc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/check.svg",
+            "title": "Gluten & Major Allergen Free"
+          }
+        },
+        "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/third-party.svg",
+            "title": "Third Party Tested"
+          }
+        },
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bio-available.svg",
+            "title": "3x Bioavailable Form Factor"
+          }
+        },
+        "9d38c763-6f85-46a2-9f99-07f2e5b38186": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/deep.svg",
+            "title": "Deep Ocean Minerals"
+          }
+        },
+        "f094a7d8-7384-4dc5-a296-de548c44952f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coffee-pot.svg",
+            "title": "Add to Any Drink"
+          }
+        }
+      },
+      "block_order": [
+        "1083faa0-a895-49d0-b79a-995556c1a851",
+        "4cb0a6cc-78b4-4bf3-97f4-836b009452f3",
+        "48445f51-5b78-409f-8df6-c40635aebfa3",
+        "da9577ec-04dd-466c-87e8-66511f10d1bc",
+        "11e0a190-5f45-4a12-aeb9-6c17f945d66d",
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98",
+        "9d38c763-6f85-46a2-9f99-07f2e5b38186",
+        "f094a7d8-7384-4dc5-a296-de548c44952f"
+      ],
+      "settings": {
+        "title_one": "Give Your Best Self",
+        "title": "<br>A Squeeze"
+      }
+    },
+    "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a": {
+      "type": "image-with-dropdowns-2",
+      "blocks": {
+        "6da36b77-d8ff-4636-9463-71aae7e3657e": {
+          "type": "type2",
+          "settings": {
+            "title": "Health Benefits",
+            "icon_1": "shopify:\/\/shop_images\/Icons_thick_1.png",
+            "icon_image_text_1": "Energy<br>\n<span class=\"rhymes-subtitle\">Ionic ocean electrolytes and trace minerals for cellular hydration and natural energy.<\/span>",
+            "icon_2": "shopify:\/\/shop_images\/Icons_thick_2.png",
+            "icon_image_text_2": "Brain Function<br>\n<span class=\"rhymes-subtitle\">Brain-activating minerals reduce brain fog and mental fatigue while boosting memory and focus.<\/span>",
+            "icon_3": "shopify:\/\/shop_images\/Icons_thick_3.png",
+            "icon_image_text_3": "Gut Microbiome<br>\n<span class=\"rhymes-subtitle\">Fortify your gut lining with 87 ionic trace minerals that balance the microbiome and enhance your gut’s inflammation response.<\/span>",
+            "icon_4": "shopify:\/\/shop_images\/Icons_thick_4.png",
+            "icon_image_text_4": "Glowing Skin<br>\n<span class=\"rhymes-subtitle\">Restore beautifying electrolytes and minerals that support supple skin and skin elasticity.<\/span>",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
+          }
+        },
+        "df99ddc8-70c7-4a68-b11b-284f77a35416": {
+          "type": "type1",
+          "settings": {
+            "title": "Form Factor",
+            "video_url": "",
+            "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
+            "text": "Liquid Drops are up to <span class=\"green-outline\">3x more bioavailable<\/span> than traditional supplement forms like pills, powders and tablets.",
+            "list_item1": "Fast-acting",
+            "list_item2": "Easier on stomach",
+            "list_item3": "Dissolves instantly and evenly",
+            "list_item4": "Add into 4-7 full beverages per day starting with your morning cup",
+            "show_ingredients": false,
+            "show_clinical": false,
+            "show_hsa": false
+          }
+        },
+        "cb7221f0-8478-4596-bd94-8a4f7aa0ba83": {
+          "type": "type3",
+          "settings": {
+            "title": "Ingredients",
+            "suptext": "Featured Ingredients",
+            "text": "Buoy uses <span class=\"green-outline\">whole-food sourced<\/span> ingredients in their natural forms.",
+            "icon_1": "shopify:\/\/shop_images\/Icons_thick_5.png",
+            "icon_image_text_1": "Ocean Electrolytes",
+            "icon_image_subtext_1": "Sodium, Chloride, Potassium, Magnesium",
+            "icon_image_list_1": "",
+            "icon_2": "shopify:\/\/shop_images\/Icons_thick_5.png",
+            "icon_image_text_2": "87+ Ionic Trace Minerals",
+            "icon_image_subtext_2": "Boron, Selenium, Manganese, Silica",
+            "icon_image_list_2": "",
+            "icon_3": "shopify:\/\/shop_images\/Icons_thick_6.png",
+            "icon_image_text_3": "B Vitamin Complex",
+            "icon_image_subtext_3": "Vitamins B1, B5, B6",
+            "icon_image_list_3": "<ul>\n<li>Supports routine electrolyte function<\/li>\n<li>\n<strong>Methylated note for those with MTHR<\/strong>: Methylation is typically only in reference to Vitamins B9 and B12, which is not used in Hydration Drops.<\/li>\n<\/ul>",
+            "icon_4": "shopify:\/\/shop_images\/Icons_thick_6.png",
+            "icon_image_text_4": "Antioxidants",
+            "icon_image_subtext_4": "Acacia, Rosemary, Blood Orange, Star Anise",
+            "icon_image_list_4": "<ul>\n<li>Potent, natural stabilizer wild-harvested from Australia<\/li>\n<\/ul>",
+            "suptext2": "Our “NO” List",
+            "list_item1": "No Sugar, Sweeteners, Flavors",
+            "list_item2": "No Carbs or Calories<br><span class=\"rhymes-subtitle\">Fasting friendly electrolytes!<\/span>",
+            "list_item3": "No Artificial Ingredients or Additives",
+            "list_item4": "",
+            "show_ingredients": true,
+            "show_clinical": false,
+            "show_hsa": false
+          }
+        },
+        "aabbf8b6-7cb9-4f6c-984c-492c48db0a03": {
+          "type": "type4",
+          "settings": {
+            "title": "Sourcing & Formulation",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ac1cc4cd94cd49d7825c0a753bc5ad45.mp4",
+            "suptext": "BIOACTIVE SOURCES",
+            "text": "Supplements shouldn't be manufactured. Hydrate with nature's original electrolyte and mineral boost: <span class=\"green-outline\">the deep ocean.<\/span>",
+            "list_item1": "Hand Harvested + Solar Evaporated",
+            "list_item2": "Naturally Balanced Profile",
+            "list_item3": "Ionically-Charged Preservation",
+            "list_item4": "",
+            "suptext2": "DOCTOR RECOMMENDED FORMULA",
+            "text2": "Buoy's Scientific Advisory Board formulates and tests every product we create.",
+            "list_item1_2": "White Papers for Every Product",
+            "list_item2_2": "Third-Party Tested",
+            "list_item3_2": "3 Clinical Trials in Progress Highlighting Efficacy",
+            "list_item4_2": "",
+            "show_ingredients": true,
+            "show_clinical": false,
+            "show_hsa": true
+          }
+        }
+      },
+      "block_order": [
+        "6da36b77-d8ff-4636-9463-71aae7e3657e",
+        "df99ddc8-70c7-4a68-b11b-284f77a35416",
+        "cb7221f0-8478-4596-bd94-8a4f7aa0ba83",
+        "aabbf8b6-7cb9-4f6c-984c-492c48db0a03"
+      ],
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/614d6525faaa4a3680f5268f1b0695a5.mp4",
+        "image": "shopify:\/\/shop_images\/PDP_Hydration_Drops_DetailsMain.png",
+        "image_mobile": "shopify:\/\/shop_images\/PDP_Hydration_Drops_DetailsMain.png"
+      }
+    },
+    "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
+      "type": "media-grid",
+      "blocks": {
+        "57802e0c-5306-45c9-8ac3-a570a939a12e": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_PDP_Hydration_Drops_How_To_ba887c9d-e843-4244-a074-5252c3c33fb9.jpg",
+            "video": ""
+          }
+        },
+        "0da40604-a16a-496a-9f71-134533987bf2": {
+          "type": "block",
+          "settings": {
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3c8f223e45974c6aa111e94b2ea9cd84.mp4"
+          }
+        },
+        "8b4a84ed-5154-49a3-a0db-e0c02b5eccf2": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_PDP_Hydration_Drops_How_To_9ce6849f-1458-4846-80ce-aeee3810510b.jpg",
+            "video": ""
+          }
+        },
+        "11c613d1-fb8a-421b-a072-c2e39b7e2c61": {
+          "type": "block",
+          "settings": {
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/55c7eb46e75d4b75a3fbd4f41a380fd6.mp4"
+          }
+        },
+        "07ea710f-c5e1-4493-b9ed-0e00be1787a2": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_PDP_Hydration_Drops_How_To_12d1e98c-511b-480f-bc28-b6750890e8aa.jpg",
+            "video": ""
+          }
+        },
+        "71792e7c-daab-4c20-a32f-bafa9b93a789": {
+          "type": "block",
+          "settings": {
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8e998f6d5a0f4ef7b5c11aab05cb3f87.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "57802e0c-5306-45c9-8ac3-a570a939a12e",
+        "0da40604-a16a-496a-9f71-134533987bf2",
+        "8b4a84ed-5154-49a3-a0db-e0c02b5eccf2",
+        "11c613d1-fb8a-421b-a072-c2e39b7e2c61",
+        "07ea710f-c5e1-4493-b9ed-0e00be1787a2",
+        "71792e7c-daab-4c20-a32f-bafa9b93a789"
+      ],
+      "settings": {
+        "suptitle": "how to",
+        "title": "Sip On <span class=\"rhyme-italic\">Cellular Hydration<\/span>",
+        "text": "Elevate the drinks you’re already drinking by adding \u2028<span class=\"green-outline\">one quick squeeze<\/span> 4–7 times per day.",
+        "background": ""
+      }
+    },
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "background": "#f8f8f8"
+      }
+    },
+    "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff": {
+      "type": "image-marquee",
+      "blocks": {
+        "31bb9375-b10d-45d4-b352-9d615a42b19e": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_14.png"
+          }
+        },
+        "0c4f2581-e1d8-430f-92d1-a3190d1d68cf": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_11.png"
+          }
+        },
+        "e9bbbb20-934a-4e2b-a820-0aee669dc13a": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_12.png"
+          }
+        },
+        "892df876-b22f-4bce-bbf0-0e734aa0e128": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_14.png"
+          }
+        },
+        "d0e5e097-a427-452b-921c-5195897c5fcc": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_11.png"
+          }
+        },
+        "ac06840e-2ab9-4b00-bcfa-32b17335013b": {
+          "type": "marquee_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_12.png"
+          }
+        }
+      },
+      "block_order": [
+        "31bb9375-b10d-45d4-b352-9d615a42b19e",
+        "0c4f2581-e1d8-430f-92d1-a3190d1d68cf",
+        "e9bbbb20-934a-4e2b-a820-0aee669dc13a",
+        "892df876-b22f-4bce-bbf0-0e734aa0e128",
+        "d0e5e097-a427-452b-921c-5195897c5fcc",
+        "ac06840e-2ab9-4b00-bcfa-32b17335013b"
+      ],
+      "settings": {
+        "show_images": 3
+      }
+    },
+    "dfda59f4-3498-4216-bf73-0eef810f3c0e": {
+      "type": "select-faq",
+      "blocks": {
+        "99b6b618-f7de-4e2a-91f8-2f0e9a75cffe": {
+          "type": "block",
+          "settings": {
+            "title": "Why should I subscribe?",
+            "text": "Transformative health benefits come with consistent habits. \u2028Our flexible, sustainable subscription plan supports whole-body \u2028at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today, \u2028100% Risk Free.",
+            "title1": "SHORT-TERM RELIEF",
+            "text1": "Fast Hydration · Mineral Support · Soothes Headaches · Eases Cramps · Helps Hangovers",
+            "title2": "LONG-TERM HEALTH BENEFITS",
+            "text2": "Promotes Nutrient Absorption · Alkalizes The Body · Supports Detoxification · Enhanced Cognition · Radiant Skin",
+            "list_item1": "Save 23% on every order",
+            "list_item2": "Free monthly shipping",
+            "list_item3": "Cancel or pause anytime<br>\n<span class=\"rhymes-subtitle\">Even after your first order<\/span>",
+            "list_item4": "Swap products",
+            "list_item5": "Unlock milestone rewards"
+          }
+        },
+        "8de11ac0-53bb-419b-9bf8-2163bac7c9d6": {
+          "type": "block",
+          "settings": {
+            "title": "Will I taste anything?",
+            "text": "Buoy is <span class=\"green-outline\">purposefully unflavored<\/span>, which means we do not hide behind the sweet and inflammatory ingredients like sugar, stevia, dextrose and \"natural\" flavors which most other electrolyte products include.",
+            "title1": "SUBTLE MINERAL TASTE",
+            "text1": "Hydration Drops harvest electrolytes and minerals in their most bioavailable form. While many people don't notice a taste in most beverages, everyone's palette is different and so you may notice hints of a subtle mineral flavor.",
+            "title2": "A LITTLE GOES A LONG WAY",
+            "text2": "One serving is a single, short squeeze into a full beverage. Each serving contains a ⅓ of the electrolyte content of a sports drink.For those noticing a strong taste, you've likely squeezed too much into a single beverage or a half-full beverage.",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        },
+        "77d41df8-ed22-4a61-a013-a513a156b6b3": {
+          "type": "block",
+          "settings": {
+            "title": "Will Buoy break my fast?",
+            "text": "Nope!<br><br>\nUnlike other electrolytes, Buoy will not change your metabolic state regardless of how many servings you use.",
+            "title1": "",
+            "text1": "",
+            "title2": "",
+            "text2": "",
+            "list_item1": "0 Calories",
+            "list_item2": "0 Carbohydrates",
+            "list_item3": "0 Sugar",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        },
+        "923dc080-bc9d-4c6f-8dd9-9f990869eb2f": {
+          "type": "block",
+          "settings": {
+            "title": "How long until you see results?",
+            "text": "Buoy’s hard-to-find essential nutrients are important for foundational health in the long run.\n<br><br>\nDepending on how chronically dehydrated you are when you start Buoy will affect how intense of a feeling you might notice. Headaches, cramping, midday fatigue, grogginess and drier skin are all symptoms of dehydration.",
+            "title1": "AFTER A WEEK",
+            "text1": "While a lot of people using Buoy notice results after about a week of consistent use, some don’t—and that’s okay.",
+            "title2": "AFTER A MONTH",
+            "text2": "It can take up to a month or two for your body to reach a new normal. Rest assured, our high bioavailable and fast-absorbing ingredients get to work quickly and target nutrient gaps in the American diet.",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        },
+        "2aa6b2b4-03d7-4b32-80a7-b7589fe419d4": {
+          "type": "block",
+          "settings": {
+            "title": "Are your B vitamins methylated?",
+            "text": "Methylation is typically in reference to Vitamins B9 and B12 because of cheap, widely used and non-absorbable forms these specific vitamins. These vitamins are not used in any Buoy products.\n<br><br>\nThe B Vitamins used in Buoy typically do not come in a methylated form (there is a rare B6 form floating around but is not standard or widely used).\n<br><br>\nFor the vitamins used, Buoy sources the cleanest, most absorbable forms of B1, B5, and B6. Methylation is typically a term used with B vitamins that aren't in Buoy.",
+            "title1": "",
+            "text1": "",
+            "title2": "",
+            "text2": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        },
+        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a": {
+          "type": "block",
+          "settings": {
+            "title": "Do your products have caffeine?",
+            "text": "Hydration Drops does not contain caffeine.\n<br><br>\nThe only product that contains caffeine is our Energy Drops, which is sourced from organic green tea.",
+            "title1": "",
+            "text1": "",
+            "title2": "",
+            "text2": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        }
+      },
+      "block_order": [
+        "99b6b618-f7de-4e2a-91f8-2f0e9a75cffe",
+        "8de11ac0-53bb-419b-9bf8-2163bac7c9d6",
+        "77d41df8-ed22-4a61-a013-a513a156b6b3",
+        "923dc080-bc9d-4c6f-8dd9-9f990869eb2f",
+        "2aa6b2b4-03d7-4b32-80a7-b7589fe419d4",
+        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a"
+      ],
+      "settings": {
+        "title": "We want you to ask questions",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e": {
+      "type": "routine-products",
+      "blocks": {
+        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
+          "type": "block",
+          "settings": {
+            "text": "Complete your hydration ritual with our Rescue Salt.",
+            "new_product": true,
+            "extra_savings": false,
+            "image": "shopify:\/\/shop_images\/Upsell_Rescue_Salt_D_d8e9633b-ca91-4090-9c11-962c388ee5a3.png",
+            "product": "rescue-salts-1",
+            "bottom_text": "Rescue Salt",
+            "add_to_cart": true
+          }
+        },
+        "73e9c2ba-6884-470f-a719-177359344c65": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "text": "Want to try them all? Build a custom bundle.",
+            "new_product": false,
+            "extra_savings": false,
+            "image": "shopify:\/\/shop_images\/Upsell_Bundle_1_D_d14c4471-1f29-4cb4-af08-29ba7c6ceee9.png",
+            "product": "byob",
+            "bottom_text": "Build Your Bundle",
+            "add_to_cart": false
+          }
+        }
+      },
+      "block_order": [
+        "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac",
+        "73e9c2ba-6884-470f-a719-177359344c65"
+      ],
+      "settings": {
+        "title": "Round out your routine"
+      }
+    },
+    "78ecde29-5caf-40ad-b926-8c84cae46127": {
+      "type": "image-slider",
+      "disabled": true,
+      "settings": {
+        "background": "background: linear-gradient(180deg,white 0%,#F8F1EB 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "title": "A better way to hydrate",
+        "subtext": "Add a fast-acting electrolyte and mineral replenishment to all your favorite drinks.",
+        "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
+        "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
+      }
+    },
+    "99c8aef5-5bbc-4d18-bd04-0ff4170af200": {
+      "type": "marquee",
+      "blocks": {
+        "a26f295f-8c0f-4bdd-93a6-f43b558f32b9": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "bb473db9-9f22-469f-992e-816a9f1ca75a": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "6e6b3436-3b65-4c4a-bcc6-0fa72eeb8aa2": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "75815366-5a04-4737-9f4a-796d3d1da791": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "76ea5554-07ef-42b5-9b0b-624ae92f3af0": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "2fa191b1-f7ea-414e-bdaf-09bd351f70d7": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "e330e981-224c-40d9-8557-6205431b1740": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        },
+        "4a68c7a1-477d-47c8-87fb-42361cedec1a": {
+          "type": "marquee_item",
+          "settings": {
+            "text": "Function, Not Flavor"
+          }
+        }
+      },
+      "block_order": [
+        "a26f295f-8c0f-4bdd-93a6-f43b558f32b9",
+        "bb473db9-9f22-469f-992e-816a9f1ca75a",
+        "6e6b3436-3b65-4c4a-bcc6-0fa72eeb8aa2",
+        "75815366-5a04-4737-9f4a-796d3d1da791",
+        "76ea5554-07ef-42b5-9b0b-624ae92f3af0",
+        "2fa191b1-f7ea-414e-bdaf-09bd351f70d7",
+        "e330e981-224c-40d9-8557-6205431b1740",
+        "4a68c7a1-477d-47c8-87fb-42361cedec1a"
+      ],
+      "disabled": true,
+      "settings": {
+        "add_border": true,
+        "no_background": false,
+        "background": "#e9d9c7",
+        "emoji": false
+      }
+    },
+    "6983854f-d9de-42d9-a4db-eb7be2a46441": {
+      "type": "image-dropdowns",
+      "blocks": {
+        "fbbb017b-9181-40a8-9fa9-90b3d8ebe1bb": {
+          "type": "block",
+          "settings": {
+            "title": "✨ Mineral Replenishment",
+            "text": "Before modern agriculture and commercially bottled water, 75% of our absorbable mineral content came from natural water sources. Buoy works to replenish those minerals that are absent in even the healthiest of diets."
+          }
+        },
+        "a38eef5d-572a-4f4a-b1f6-cb322a9eeddd": {
+          "type": "block",
+          "settings": {
+            "title": "🥦 Nutrient Absorption",
+            "text": "Even minor deficiencies or inbalances in mineral levels can negatively impact our ability to absorb nutrients. Get the most out of the nutrients you intake by replenishing these fundamental minerals and electrolytes throughout the day."
+          }
+        },
+        "2c49be46-da0f-4656-9795-2bba56160084": {
+          "type": "block",
+          "settings": {
+            "title": "😌 Gut Health",
+            "text": "Electrolytes work to support a healthy gut. Buoy’s minerals and biological elements help to balance the microbiome, fortify the gut lining and enhance the gut’s inflammation response."
+          }
+        },
+        "94407364-32a4-4589-b191-d37bd58aaa77": {
+          "type": "block",
+          "settings": {
+            "title": "🫖 Detoxification",
+            "text": "Your liver requires adequate electrolytes and trace minerals to remove unwanted toxins. Buoy promotes these enzymatic reactions by replenishing mineral deficiencies."
+          }
+        },
+        "aa430747-abd7-486d-b674-af89b5fe3dbd": {
+          "type": "block",
+          "settings": {
+            "title": "💡 Cognition & Mood",
+            "text": "In men, low electrolyte and mineral levels promote feelings of anxiety and nervouseness; in women, these imbalances present as sluggishness and brain fog. Replenish adequate amounts of them daily for sharper focus, more motivation and lifted moods."
+          }
+        }
+      },
+      "block_order": [
+        "fbbb017b-9181-40a8-9fa9-90b3d8ebe1bb",
+        "a38eef5d-572a-4f4a-b1f6-cb322a9eeddd",
+        "2c49be46-da0f-4656-9795-2bba56160084",
+        "94407364-32a4-4589-b191-d37bd58aaa77",
+        "aa430747-abd7-486d-b674-af89b5fe3dbd"
+      ],
+      "disabled": true,
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
+        "title": "Sip on functional benefits",
+        "text_bottom": "Buoy’s benefits go beyond peak hydration. Refresh, revitalize and restore with the electrolytes and minerals our bodies need to function optimally day after day.",
+        "background": "",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "755d6fdb-322b-4169-af92-fe0a6988e43a": {
+      "type": "dropdowns",
+      "blocks": {
+        "8baba3ab-55aa-4804-ae54-1572e9cafcd6": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Seawater Electrolytes",
+            "text": "Hand harvested, seawater electrolytes from protected marine sea salt in the South of France. Preserved in their naturally-occurring, balanced ratios for deep hydration your cells crave.",
+            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+          }
+        },
+        "fbadbbee-ba0e-47c6-9848-cc77c44e3811": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Deep Ocean Trace Minerals",
+            "text": "87 ionically charged trace minerals and biological elements from the deep ocean that revitalize, restore and rebuild at the cellular level.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+          }
+        },
+        "ccf8a2fb-d410-40bb-9fd7-ac99929c0b8d": {
+          "type": "dropdown",
+          "settings": {
+            "title": "B Vitamins",
+            "text": "A curated blend of plant-powered B vitamins that support routine electrolyte function and facilitate energy production.",
+            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+          }
+        },
+        "4b8b39bc-fd7d-4a2b-8b33-d8e3d4944205": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Antioxidants",
+            "text": "Soothe the daily inflammation that depletes electrolyte and mineral levels faster than your body naturally would with plant-powered antioxidants.",
+            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+          }
+        }
+      },
+      "block_order": [
+        "8baba3ab-55aa-4804-ae54-1572e9cafcd6",
+        "fbadbbee-ba0e-47c6-9848-cc77c44e3811",
+        "ccf8a2fb-d410-40bb-9fd7-ac99929c0b8d",
+        "4b8b39bc-fd7d-4a2b-8b33-d8e3d4944205"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ingredients your body can actually absorb",
+        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
+        "add_top_border": false,
+        "add_bottom_border": true,
+        "background": "bottom",
+        "hide_supp": false
+      }
+    },
+    "8b9c24a7-0d88-4279-a771-d04362368955": {
+      "type": "profile-table",
+      "disabled": true,
+      "settings": {
+        "title": "A hydration profile like no other",
+        "desktop_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"><\/path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <\/g>\n    <\/g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+<\/tspan><\/text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25<\/tspan><\/text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy<\/tspan><\/text>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "mobile_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"><\/path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"><\/path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, <\/tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean <\/tspan><tspan x=\"0\" y=\"22\">Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not <\/tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy<\/tspan><\/text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25<\/tspan><\/text>\n    <\/g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others<\/tspan><\/text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "91da1537-2987-42c0-8813-ee1b4ee1058e": {
+      "type": "healthy-perks",
+      "blocks": {
+        "b0c38e36-ac39-4718-a36d-4afe6c99c646": {
+          "type": "point",
+          "settings": {
+            "emoji": "🕺",
+            "title": "Save 23%",
+            "text": ""
+          }
+        },
+        "4391611b-e37b-4f4a-a83a-5c65837696e9": {
+          "type": "point",
+          "settings": {
+            "emoji": "🚚",
+            "title": "Free Shipping, Always",
+            "text": ""
+          }
+        },
+        "61815b19-7bc1-4427-9191-eba672f77372": {
+          "type": "point",
+          "settings": {
+            "emoji": "🤝",
+            "title": "Money Back Guarantee",
+            "text": ""
+          }
+        },
+        "f44542d3-5c49-4896-8160-7254aea380d4": {
+          "type": "point",
+          "settings": {
+            "emoji": "📬",
+            "title": "Monthly Deliveries",
+            "text": ""
+          }
+        },
+        "92fe6856-bd95-4596-accf-9304c5c837f5": {
+          "type": "point",
+          "settings": {
+            "emoji": "💔",
+            "title": "Cancel Anytime",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0c38e36-ac39-4718-a36d-4afe6c99c646",
+        "4391611b-e37b-4f4a-a83a-5c65837696e9",
+        "61815b19-7bc1-4427-9191-eba672f77372",
+        "f44542d3-5c49-4896-8160-7254aea380d4",
+        "92fe6856-bd95-4596-accf-9304c5c837f5"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Homepage_-_D_-_Future_of_Hydration_MP4_2x_4a8a5171-7601-49ad-9f94-a0e6c75e32d7.png",
+        "video_url": "",
+        "title": "Healthy habits with healthier perks",
+        "subtext": "Join the <span style=\"font-weight: 500;\">Clear Pee Club<\/span> for your daily dose of hydration and minerals. Never run dry with this planet-friendly subscription plan."
+      }
+    },
+    "1636344367d21ce97f": {
+      "type": "faq",
+      "blocks": {
+        "cfe68448-581e-4c82-bb2e-1b016f5fb1c1": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Is it really flavorless?",
+            "answer": "Electrolytes, vitamins, and ionic trace minerals are bitter by nature. That’s why traditional sports drinks and hydration supplements use sugar and sweeteners to offset their intense taste.\n<br><br>\nFinding the balance between effective, clean ingredients and a neutral flavor profile took our team of scientists two years to get right. With a proper dosage in a full drink, you should notice little to no taste."
+          }
+        },
+        "b5bd8dfb-3fa8-442c-b3c3-5066c5568770": {
+          "type": "faq_item",
+          "settings": {
+            "title": "What kind of testing do you do?",
+            "answer": "All Buoy products are third-party tested. \n<br><br>\nAll products are tested for impurities like toxins, microbes, metals, allergens and other contaminants. We also test for shelf-stability and accurate nutrition labels.\n<br><br>\nFor every product we create, we publish whitepapers highlighting their efficacy and safety."
+          }
+        },
+        "bab396a5-3447-40f0-8f1d-4dd69ba8e05c": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How long until I see results?",
+            "answer": "Buoy’s hard-to-find essential nutrients are important for foundational health in the long run.\n<br><br>\nDepending on how chronically dehydrated you are when you start Buoy will affect how intense of a feeling you might notice. Headaches, cramping, midday fatigue, grogginess and drier skin are all symptoms of dehydration.\n<br><br>\nWhile a lot of people using Buoy notice results after about a week of consistent use, some don’t—and that’s okay. \n<br><br>\nIt can take up to a month or two for your body to reach a new normal. Rest assured, our high bioavailable and fast-absorbing ingredients get to work quickly and target nutrient gaps in the American diet."
+          }
+        },
+        "8efa5392-e759-475d-9e78-b37523f2ef72": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How does the Clear Pee Club work?",
+            "answer": "Never run dry with our flexible subscription plan. \n<br><br>\nBuoy’s ingredient panel supports foundational health with hydration and minerals that work at the cellular level. We created a product important for daily life. We centered our business model around long-term discounts that help you build healthy habits.\n<br><br>\nBefore each shipment, we’ll send you an email and text to make sure you’re ready. Rush, delay or cancel your subscription at any time, right from your phone or laptop. \n<br><br>\nTry our subscription risk free. If we’re not a good fit after your first month, we’ll give you a full refund."
+          }
+        },
+        "80763b95-932c-4068-b915-09689c98d634": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Will Buoy break my fast?",
+            "answer": "Nope 🤠. \n<br><br>\nWe’re talking to you, keto and intermittent fasting dieters. We formulated all Buoy products to be a sidekick to any diet, specifically those looking to stay in ketosis or a fasting state."
+          }
+        },
+        "0eb94e0e-b138-4585-a517-598b44ed9ceb": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Why do other products have larger serving sizes?",
+            "answer": "Hydration is a turtle’s race—slow and steady wins. \n<br><bar>\nYour body will pass most of the nutrients in large, single-serving doses before you can actually use them. \n<br><br>\nOur approach to hydration is backed by our body's biochemisty and formulated for daily dehydration. \n<br><br>\nWe use high bioavailable and fast-absorbing ingredient sources so you're able to get the most out of every drop.\n<br><br>\nEach bottle has the electrolyte equivalent of 13 sports drinks, without the junk.<\/bar>"
+          }
+        },
+        "2101affa-f21f-476f-867d-ff00f526ced7": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Does this have caffeine?",
+            "answer": "Nope 😊. Only our <strong> Energy Drops<\/strong> contain caffeine."
+          }
+        }
+      },
+      "block_order": [
+        "cfe68448-581e-4c82-bb2e-1b016f5fb1c1",
+        "b5bd8dfb-3fa8-442c-b3c3-5066c5568770",
+        "bab396a5-3447-40f0-8f1d-4dd69ba8e05c",
+        "8efa5392-e759-475d-9e78-b37523f2ef72",
+        "80763b95-932c-4068-b915-09689c98d634",
+        "0eb94e0e-b138-4585-a517-598b44ed9ceb",
+        "2101affa-f21f-476f-867d-ff00f526ced7"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ask us the tough ones",
+        "text": "Our exceptional team of healthcare professionals and scientists have answers.",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "1637720233f9199bd5": {
+      "type": "product-reviews",
+      "settings": {
+        "product": ""
+      }
+    },
+    "165168225907175bb6": {
+      "type": "product-bar-toggle",
+      "settings": {
+      }
+    },
+    "afa55adf-d57d-4799-be43-5f548916eec5": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "8e49ee95-94a1-43a3-9d4b-9ca4a2f3f707": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+            "serving_item_three": ""
+          }
+        },
+        "2ccd3ffd-a680-4658-879d-c58dcd210eff": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "One Bottle:",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+            "serving_item_three": ""
+          }
+        },
+        "55810934-5ba3-4724-a0af-9c118b11df6e": {
+          "type": "recommended",
+          "settings": {
+            "heading": "Dietician’s Recommended Use:",
+            "title": "4-7 times daily (560mg-980mg electrolytes)",
+            "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+            "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed.\n<br>\nIncrease daily servings if exercising, living in a hot climate or drinking alcohol."
+          }
+        },
+        "b028fcf4-3371-4b83-a640-f9dbb89a0454": {
+          "type": "table",
+          "settings": {
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Hydration_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Hydration_D_51702fff-1bec-46e3-833f-811487bae9b7.svg"
+          }
+        },
+        "8024b12e-b7bf-42dd-9904-abee466d65c3": {
+          "type": "info",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+            "icon_info_one": "No Sugar, Sweeteners or Flavors",
+            "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+            "icon_info_two": "Non-GMO Project Verified",
+            "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+            "icon_info_three": "Keto & Paleo Approved",
+            "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+            "icon_info_four": "Clinically Studied",
+            "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+            "icon_info_five": "Deep Ocean Minerals"
+          }
+        },
+        "7c58ce40-e696-42c2-89c8-991810146af8": {
+          "type": "info",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+            "icon_info_one": "Vegan",
+            "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+            "icon_info_two": "Gluten & Major Allergen Free",
+            "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+            "icon_info_three": "Third Party Tested",
+            "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+            "icon_info_four": "3x Bioavailable Form Factor",
+            "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+            "icon_info_five": "Enhance Any Drink"
+          }
+        }
+      },
+      "block_order": [
+        "8e49ee95-94a1-43a3-9d4b-9ca4a2f3f707",
+        "2ccd3ffd-a680-4658-879d-c58dcd210eff",
+        "55810934-5ba3-4724-a0af-9c118b11df6e",
+        "b028fcf4-3371-4b83-a640-f9dbb89a0454",
+        "8024b12e-b7bf-42dd-9904-abee466d65c3",
+        "7c58ce40-e696-42c2-89c8-991810146af8"
+      ],
+      "settings": {
+        "product_name": "Hydration Drops",
+        "title": "Supplement Facts"
+      }
+    },
+    "bfc21481-990a-4791-9e4a-69ddc894fa30": {
+      "type": "clinical-trial-drawer",
+      "blocks": {
+        "4e078a55-2405-4784-930e-6fdaab851bdf": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "General Hydration — Estimated Trial Results Early 2024"
+          }
+        },
+        "892500d5-bb9e-48fa-9d20-b291a438e73a": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "Type 1 Diabetes — Estimated Trial Results Mid 2024"
+          }
+        },
+        "87573a57-116a-46db-b94c-a51814a80be4": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "Chemotherapy Dehydration — Estimated Trial Results Late 2024"
+          }
+        },
+        "383d3ef7-831e-4789-b165-b199c3da47dd": {
+          "type": "content",
+          "settings": {
+            "btn_title": "General Hydration",
+            "notification": "",
+            "heading": "Primary Outcome Measures:",
+            "title": "Net Fluid Balance",
+            "text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "text_block_two": "Determined by subtracting the cumulative urine output from the total fluid load consumed",
+            "block_two_title": "Electrolytes In Urine",
+            "block_two_text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "block_two_text_block_two": "Sodium, Potassium, and Chloride levels will be measured",
+            "block_three_title": "Blood Labs",
+            "block_three_text_block_one": "<p><strong>Time Frame:<\/strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.<\/p>",
+            "block_three_text_block_two": "Venous whole blood will be collected using phlebotomy and 100ul will be analyzed using an i-STAT",
+            "secondary_heading": "Secondary Outcome Measures:",
+            "secondary_title": "Bioimpedence",
+            "secondary_text_block_one": "<p><strong>Time Frame:<\/strong> Each urine collection occurs for a total of 6 hours<\/p>",
+            "secondary_text_block_two": "Bioimpedence measured after each urine collection"
+          }
+        },
+        "f5ad9f62-f8e8-4636-a9fb-2a52fda22bad": {
+          "type": "content",
+          "settings": {
+            "btn_title": "Type 1 Diabetes",
+            "notification": "Coming Soon!",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "c96bf56d-24c2-43d5-8950-028b011aa724": {
+          "type": "content",
+          "settings": {
+            "btn_title": "Chemotherapy Dehydration",
+            "notification": "Coming Soon!",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        }
+      },
+      "block_order": [
+        "4e078a55-2405-4784-930e-6fdaab851bdf",
+        "892500d5-bb9e-48fa-9d20-b291a438e73a",
+        "87573a57-116a-46db-b94c-a51814a80be4",
+        "383d3ef7-831e-4789-b165-b199c3da47dd",
+        "f5ad9f62-f8e8-4636-a9fb-2a52fda22bad",
+        "c96bf56d-24c2-43d5-8950-028b011aa724"
+      ],
+      "settings": {
+        "year": "2023",
+        "product_name": "Hydration Drops",
+        "title": "Clinical Trial Updates",
+        "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
+      }
+    },
+    "7ae45205-8e22-4157-8fa6-828ee04b6542": {
+      "type": "hsa-drawer",
+      "settings": {
+        "product_name": "Rescue Salt",
+        "title": "2024 HSA & FSA eligibility",
+        "notification": "Pending",
+        "about": "Buoy’s Rescue Salt is pending HSA and FSA eligibility for those using their health and flexible savings accounts to pay for qualified medical expenses.\nBy January 2024, Buoy’s Rescue Salt should be HSA & FSA approved."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff",
+    "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a",
+    "cc8941c2-783c-4ab0-89a5-ed80dda021d4",
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
+    "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff",
+    "dfda59f4-3498-4216-bf73-0eef810f3c0e",
+    "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e",
+    "78ecde29-5caf-40ad-b926-8c84cae46127",
+    "99c8aef5-5bbc-4d18-bd04-0ff4170af200",
+    "6983854f-d9de-42d9-a4db-eb7be2a46441",
+    "755d6fdb-322b-4169-af92-fe0a6988e43a",
+    "8b9c24a7-0d88-4279-a771-d04362368955",
+    "91da1537-2987-42c0-8813-ee1b4ee1058e",
+    "1636344367d21ce97f",
+    "1637720233f9199bd5",
+    "165168225907175bb6",
+    "afa55adf-d57d-4799-be43-5f548916eec5",
+    "bfc21481-990a-4791-9e4a-69ddc894fa30",
+    "7ae45205-8e22-4157-8fa6-828ee04b6542"
+  ]
+}
