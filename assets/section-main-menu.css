@@ -562,6 +562,10 @@ announcement-container.Fixed_Bar {
   top: 39px;
 }
 
+.page-template--page-clear-pee-club .Show_Announcement_Bar.Fixed_Bar+header-container {
+  top: 104px;
+}
+
 .Show_Announcement_Bar + header-container {
   top: 0;
 }
@@ -587,7 +591,10 @@ announcement-container.Fixed_Bar {
 }
 
 @media only screen and (max-width: 768px) {
-
+  .page-template--page-clear-pee-club .Show_Announcement_Bar.Fixed_Bar+header-container {
+      top: unset;
+  }
+  
   .main-menu {
     top: 54px;
   }

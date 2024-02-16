@@ -15,6 +15,7 @@
 .product-bar.scrolled {
   transform: translateY(0);
   visibility: visible;
+  top: 104px;
 }
 
 .product-bar__container {
@@ -186,9 +187,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .product-bar-wrapper {
     display: none;
   }
+  
 }
 
 .product-bar-illness__flex {

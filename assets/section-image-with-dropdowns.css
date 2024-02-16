@@ -10,6 +10,7 @@
 
 .image-with-dropdowns__image {
   position: relative;
+  padding-right: 58px;
 }
 
 .image-with-dropdowns__image .aspect-ratio img,
@@ -171,7 +172,6 @@
 
 @media screen and (max-width: 989px) {
   
-  
   .image-with-dropdowns__image .aspect-ratio {
     height: 420px;
   }
@@ -191,6 +191,7 @@
   
   .image-with-dropdowns__image {
     margin-right: unset;
+    padding-right: 0;
   }
 
   .image-with-dropdowns__content h3 {

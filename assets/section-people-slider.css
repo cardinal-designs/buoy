@@ -158,6 +158,10 @@
   left: -50px;
 }
 
+.people-slider__people .slick-track {
+  padding-right: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .people-slider {
     padding: 70px 0 20px;
