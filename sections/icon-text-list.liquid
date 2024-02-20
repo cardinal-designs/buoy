@@ -10,7 +10,7 @@
   <div class="icon-text__container">
     {% for block in section.blocks %}
       <div class="icon-text__block">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
+        <img src="{{ block.settings.image | img_url: 'master' }}" width="25" height="25"/>
         <p>{{ block.settings.title }}</p>
       </div>
     {% endfor %}

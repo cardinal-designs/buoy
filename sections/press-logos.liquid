@@ -1,6 +1,5 @@
 
 {{ 'section-press-logos.css' | asset_url | stylesheet_tag }}
-
 <div class="press-logos
    {% if section.settings.add_top_border %} top-border{% endif %}
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
@@ -11,7 +10,8 @@
       <div class="press-logos__container {% if section.settings.enable_marquee %}press-logo_marquee{% endif %}">
         {% for block in section.blocks %}
           <div class="press-logos__item">
-            <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" />
+            {% assign heightAttr = 300 | divided_by: block.settings.logo.aspect_ratio | round %}
+            <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" width="300" height="{{ heightAttr }}" />
           </div>
         {% endfor %}
       </div>
@@ -19,7 +19,8 @@
         <div class="press-logos__container press-logo_marquee hide-desktop ">
           {% for block in section.blocks %}
             <div class="press-logos__item">
-              <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" />
+              {% assign heightAttr = 300 | divided_by: block.settings.logo.aspect_ratio | round %}
+              <img alt="{{ block.settings.logo.alt }}" src="{{ block.settings.logo | img_url: '300x' }}" width="300" height="{{  heightAttr }}" />
             </div>
           {% endfor %}
         </div>

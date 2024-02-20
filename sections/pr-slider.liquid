@@ -9,7 +9,8 @@
     <div class="pr-slider__container">
       {% for block in section.blocks %}
         <div class="pr-slider__item">
-          <img src="{{ block.settings.image | img_url: 'master' }}"/>
+          {% assign heightAttr = 278 | divided_by: block.settings.image.aspect_ratio | round %}
+          <img src="{{ block.settings.image | img_url: 'master' }}" width="278" height="{{ heightAttr }}"/>
           <h6 class="light">{{ block.settings.text }}</h6>
         </div>
       {% endfor %}

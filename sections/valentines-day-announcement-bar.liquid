@@ -4,7 +4,7 @@
   <div class="val-announce announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
     {%- if section.settings.text != blank -%}
   
-          <img class="hide-mobile" src="{{ section.settings.img | img_url: 'master' }}"/>
+          <img class="hide-mobile" src="{{ section.settings.img | img_url: 'master' }}" width="28" height="28"/>
           <p class="hide-mobile announcement-bar__message body">
             {{ section.settings.text }}
           </p>

@@ -45,6 +45,7 @@
 .media-grid img, .media-grid video {
   width: 100%;
   border-radius: 10px;
+  height: auto;
 }
 
 .media-grid__item {

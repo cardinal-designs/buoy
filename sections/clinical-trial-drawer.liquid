@@ -39,7 +39,7 @@
         {%- if block.type == 'list-item' -%}
           {%- if bs.icon_item != blank -%}
             <li class="clinical__info-list-item">
-              <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}">
+              <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}" width="24" height="24">
               {%- if bs.item_description != blank -%}
                 <span>{{ bs.item_description }}</span>
               {%- endif -%}
