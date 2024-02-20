@@ -19,7 +19,7 @@
         <source src="{{ block.settings.video }}" type="video/mp4">
       </video>
       {% elsif block.settings.image != blank %}
-      <img src="{{ block.settings.image |img_url:'master' }}"/>
+      <img src="{{ block.settings.image |img_url:'master' }}" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}"/>
       {% endif %}
       </div>
     {% endfor %}
@@ -32,7 +32,7 @@
         <source src="{{ block.settings.video }}" type="video/mp4">
       </video>
       {% elsif block.settings.image != blank %}
-      <img src="{{ block.settings.image |img_url:'master' }}"/>
+      <img src="{{ block.settings.image |img_url:'master' }}" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}"/>
       {% endif %}
       </div>
     {% endfor %}

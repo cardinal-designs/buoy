@@ -6,21 +6,24 @@
   <div class="hide-mobile marquee__container">
     {% for block in section.blocks limit: section.settings.show_images %}
       <div class="marquee__item">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
+        {% assign heightAttr = 200 | divided_by: block.settings.image.aspect_ratio | round %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" width="200" height="{{heightAttr}}"/>
       </div>
     {% endfor %}
   </div>
   <div class="hide-desktop marquee__container">
     {% for block in section.blocks %}
       <div class="marquee__item">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
+        {% assign heightAttr = 200 | divided_by: block.settings.image.aspect_ratio | round %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" width="200" height="{{heightAttr}}"/>
       </div>
     {% endfor %}
   </div>
   <div class="hide-desktop marquee__container">
     {% for block in section.blocks %}
       <div class="marquee__item">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
+        {% assign heightAttr = 200 | divided_by: block.settings.image.aspect_ratio | round %}
+        <img src="{{ block.settings.image | img_url: 'master' }}" width="200" height="{{heightAttr}}"/>
       </div>
     {% endfor %}
   </div>

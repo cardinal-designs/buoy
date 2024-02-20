@@ -17,7 +17,7 @@
                <span class="visually-hidden">{{ shop.name }}</span>
                 {% if section.settings.arrow_link_label != blank %}
                   <span class="Main_Menu_Link_Image">
-                    <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}">
+                    <img class="lazyload" data-src="{{ block.settings.image | img_url : '300x' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
                     <span class="Main_Menu_Link_Desktop_Title">{{ block.settings.title }}</span>
                   </span>
                   <span class="Main_Menu_Link_Mobile_Title">{{ block.settings.mobile_title }}</span>

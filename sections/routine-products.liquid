@@ -18,7 +18,7 @@
         <p>New Product</p>
       </div>
       {%- endif -%}
-      <img src="{{ block.settings.image | img_url: 'master' }}"/>
+      <img src="{{ block.settings.image | img_url: 'master' }}" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}"/>
       <div class="routine-products__bottom">
         <h4>{{ block.settings.bottom_text }}</h4>
         <div>

@@ -275,6 +275,10 @@
   gap: 10px;
   margin-bottom: 12px;
 }
+.drawer__info-list-item img {
+  width: 100%;
+  height: auto;
+}
 
 .drawer__info-list-item span {
   color: #1f2322;
