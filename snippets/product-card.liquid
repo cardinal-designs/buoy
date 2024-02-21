@@ -25,7 +25,7 @@
   <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
 
   <div class="card card--product" tabindex="-1">
-    <div class="card__inner">
+    <div class="ff card__inner">
       <a href="{{ product_card_product.url | default: '#' | within: collection }}" class="full-unstyled-link">
         <div class="media" style="padding-bottom: 125%;">
           {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
