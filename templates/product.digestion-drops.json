@@ -301,6 +301,12 @@
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
       "type": "media-grid",
       "blocks": {
+        "block_KCRPh8": {
+          "type": "block",
+          "settings": {
+            "video": ""
+          }
+        },
         "57802e0c-5306-45c9-8ac3-a570a939a12e": {
           "type": "block",
           "settings": {
@@ -343,6 +349,7 @@
         }
       },
       "block_order": [
+        "block_KCRPh8",
         "57802e0c-5306-45c9-8ac3-a570a939a12e",
         "0da40604-a16a-496a-9f71-134533987bf2",
         "11c613d1-fb8a-421b-a072-c2e39b7e2c61",
@@ -352,7 +359,7 @@
       ],
       "settings": {
         "suptitle": "how to",
-        "title": "Sip On <span class=\"rhyme-italic\">Cellular Hydration<\/span>",
+        "title": "Turn Any Drink Into A <span class=\"rhyme-italic\">Digestive Aid<\/span>",
         "text": "Elevate the drinks you’re already drinking by adding \u2028<span class=\"green-outline\">one quick squeeze<\/span> 4–7 times per day.",
         "background": ""
       }
