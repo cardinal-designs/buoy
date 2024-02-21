@@ -803,10 +803,10 @@
     text-transform: capitalize;
   }
 
-  .cart-drawer__inner {
+  /* .cart-drawer__inner {
     height: unset;
     position: unset;
-  }
+  } */
 }
 
 @media screen and (max-width: 374px) {
