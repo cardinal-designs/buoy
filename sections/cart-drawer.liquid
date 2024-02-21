@@ -245,7 +245,7 @@
             {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
               
             {% if section.settings.upsell_subproduct1 != blank %}
-            <div class="sub-upsell__container">
+            <div class="hide-desktop sub-upsell__container">
               <div class="sub-products__text sub">
                 <p class="body-xs">{{section.settings.upsell_title}}</p>
                 <div class="green_button">
@@ -274,7 +274,7 @@
                 {% endfor %}
             
               {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
-              <div class="hide-desktop cart-upsell__container">
+              <div class="cart-upsell__container">
                 <div class="cart-upsell__container-left">
                   <div class="cart-upsell__img">
                     <img class="img-fill" src="{{upsell1.images[0].src  | img_url: 'master' }}"/>
