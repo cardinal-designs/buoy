@@ -277,15 +277,14 @@
                               </p>
                               {% if product.metafields.custom.subscription_widget_subtext %}
                                 <p class="Label_Sub_Text hide-mobile">{{ product.metafields.custom.subscription_widget_subtext.value }}</p>
-                                <p class="Label_Sub_Text hide-desktop">{{ product.metafields.custom.subscription_widget_subtext.value }}</p>
-                              {% comment %}
+                            
                                 {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' • ' -%}
                                 <p class="Label_Sub_Text hide-desktop">
                                   {% for word in title_words -%}
                                     •&nbsp;{{ word }}<br/>
                                   {%- endfor %}
                                 </p>
-                                {% endcomment %}
+                               
                               {% endif %}
                               {% comment %}
                                 {%- if block.settings.three_bottle_text != blank -%}
