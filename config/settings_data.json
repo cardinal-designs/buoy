@@ -204,13 +204,13 @@
       "main-menu": {
         "type": "main-menu",
         "blocks": {
-          "70c6f708-5bac-432f-994f-036e28f9e8d0": {
+          "menu_item_Nd7KWp": {
             "type": "menu_item",
             "settings": {
-              "link": "shopify:\/\/products\/hydration-drops",
-              "title": "Shop Hydration Drops",
-              "mobile_title": "Hydration Drops",
-              "image": "shopify:\/\/shop_images\/Menu_Product_Image_1.png"
+              "link": "shopify:\/\/products\/digestion-drops",
+              "title": "<strong>New<\/strong> — Digestion Drops",
+              "mobile_title": "<strong>New<\/strong> — Digestion Drops",
+              "image": "shopify:\/\/shop_images\/Add-On_DigestionDrop.jpg"
             }
           },
           "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4": {
@@ -220,6 +220,15 @@
               "title": "Shop Ocean Electrolyte Kit",
               "mobile_title": "Ocean Electrolyte Kit",
               "image": "shopify:\/\/shop_images\/OceanElectrolyteKit_Hero1_V2_95760f34-2d5a-4bb5-aac9-d9be1edcb807.jpg"
+            }
+          },
+          "70c6f708-5bac-432f-994f-036e28f9e8d0": {
+            "type": "menu_item",
+            "settings": {
+              "link": "shopify:\/\/products\/hydration-drops",
+              "title": "Shop Hydration Drops",
+              "mobile_title": "Hydration Drops",
+              "image": "shopify:\/\/shop_images\/Menu_Product_Image_1.png"
             }
           },
           "54f80d9f-ad36-4ec2-bc9d-a2366eada929": {
@@ -314,8 +323,9 @@
           }
         },
         "block_order": [
-          "70c6f708-5bac-432f-994f-036e28f9e8d0",
+          "menu_item_Nd7KWp",
           "d0ccb8ce-e5cd-4b77-a782-7c0f37299ce4",
+          "70c6f708-5bac-432f-994f-036e28f9e8d0",
           "54f80d9f-ad36-4ec2-bc9d-a2366eada929",
           "aae1739e-76cc-4170-9e5e-6d03e576ad94",
           "8885c5e6-05c7-4be0-9538-75c4f5b3b241",
