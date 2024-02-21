@@ -32,8 +32,8 @@
 
           {% if show_secondary_image %}
             {% if product_card_product.media[1] != nil and hover_video == blank %}
-             {% if product_card_product.handle == 'digestion-drops' %}
-              {% render 'lazy-image' image: product_card_product.media[2], fade: true , classes: 'img-fill'%}
+             {% if product_card_product.metafields.custom.secondary_hover_image != blank %}
+              {% render 'lazy-image' image: product_card_product.metafields.custom.secondary_hover_image, fade: true , classes: 'img-fill'%}
              {% else %}
               {% render 'lazy-image' image: product_card_product.media[1], fade: true , classes: 'img-fill'%}
              {% endif %}
