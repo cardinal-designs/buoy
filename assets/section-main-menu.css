@@ -648,6 +648,10 @@ announcement-container.Fixed_Bar {
     /* top: 139px; */
       top: 54px;
   }
+
+  .template-index .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
+    top: 139px;
+  }
   
 }
 
