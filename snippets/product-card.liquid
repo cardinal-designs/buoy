@@ -32,7 +32,11 @@
 
           {% if show_secondary_image %}
             {% if product_card_product.media[1] != nil and hover_video == blank %}
+             {% if product_card_product.handle == 'digestion-drops' %}
+              {% render 'lazy-image' image: product_card_product.media[2], fade: true , classes: 'img-fill'%}
+             {% else %}
               {% render 'lazy-image' image: product_card_product.media[1], fade: true , classes: 'img-fill'%}
+             {% endif %}
             {% elsif hover_video != blank %}
               <video autoplay loop muted playsinline class="img-fill">
                 <source src="{{ hover_video }}" type="video/mp4">
