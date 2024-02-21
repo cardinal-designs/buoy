@@ -281,7 +281,7 @@
                                 {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' • ' -%}
                                 <p class="Label_Sub_Text hide-desktop">
                                   {% for word in title_words -%}
-                                    •&nbsp;{{ word }}<br/>
+                                    {{ word }}<br/>
                                   {%- endfor %}
                                 </p>
                               {% endif %}
