@@ -277,13 +277,22 @@
                               </p>
                               {% if product.metafields.custom.subscription_widget_subtext %}
                                 <p class="Label_Sub_Text hide-mobile">{{ product.metafields.custom.subscription_widget_subtext.value }}</p>
-                            
+
+                                {% if product.metafields.custom.subscription_widget_subtext.value contains ' • ' %}
                                 {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' • ' -%}
                                 <p class="Label_Sub_Text hide-desktop">
                                   {% for word in title_words -%}
                                     •&nbsp;{{ word }}<br/>
                                   {%- endfor %}
                                 </p>
+                                {% elsif product.metafields.custom.subscription_widget_subtext.value contains ' ✓ ' %}
+                                  {%- assign title_words = product.metafields.custom.subscription_widget_subtext.value | split: ' ✓ ' -%}
+                                  <p class="Label_Sub_Text hide-desktop">
+                                    {% for word in title_words -%}
+                                      ✓&nbsp;{{ word }}<br/>
+                                    {%- endfor %}
+                                  </p>
+                                {% endif %}
                                
                               {% endif %}
                               {% comment %}
