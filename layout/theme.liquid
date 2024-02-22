@@ -277,9 +277,11 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
    {% endunless %}
    {% endcomment %}
 
+    {% unless template.name == 'product' %} 
     <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'valentines-day-announcement-bar' %}
+      {% section 'announcement-bar' %}
     </announcement-container>
+    {% endunless %}
 
     
     <header-container class="header--transparent">
