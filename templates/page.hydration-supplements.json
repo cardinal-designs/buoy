@@ -31,6 +31,20 @@
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
           }
         },
+        "block_bmEY6w": {
+          "type": "block",
+          "settings": {
+            "product": "ocean-electrolyte-kit",
+            "hover_video": ""
+          }
+        },
+        "block_pnyb4Y": {
+          "type": "block",
+          "settings": {
+            "product": "digestion-drops",
+            "hover_video": ""
+          }
+        },
         "475664b0-eea5-49a4-9521-d603009b918d": {
           "type": "block",
           "settings": {
@@ -51,19 +65,28 @@
             "product": "wellness-kit",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
           }
+        },
+        "block_WCmGch": {
+          "type": "block",
+          "settings": {
+            "product": "rescue-salts",
+            "hover_video": ""
+          }
         }
       },
       "block_order": [
         "915598b8-73ba-4440-9c78-70b475eb492a",
+        "block_bmEY6w",
+        "block_pnyb4Y",
         "475664b0-eea5-49a4-9521-d603009b918d",
         "dca0e5dd-357d-4543-b722-8d65bedef3b1",
-        "9d231586-a60b-42ac-9721-d7ea47797c99"
+        "9d231586-a60b-42ac-9721-d7ea47797c99",
+        "block_WCmGch"
       ],
-      "disabled": true,
       "settings": {
-        "title": "<strong>Best electrolytes<\/strong> for leg cramps",
-        "text": "Say goodbye to leg cramps with the latest innovation in hydration. Buoy's unflavored and unsweetened electrolyte drops turn any beverage into a hydrating, electrolyte drink without the sugar, sweeteners, flavors or junk.",
-        "shop_all_label": "Shop All Products",
+        "title": "Hydration Supplements: Elevate Your Wellness",
+        "text": "Struggling to stay hydrated? You're not alone. With Buoy's hydration supplements, getting enough fluids becomes easy and effective. These supplements transform your regular drinks into powerful hydration boosters, making sure you're well-hydrated without extra effort.<br><br>\n\nNo more guessing if you're drinking enough water—just add Buoy and feel the difference. Welcome to a simpler way to stay hydrated and healthy.",
+        "shop_all_label": "Shop Buoy’s Hydration Supplements Now",
         "shop_all_link": "shopify:\/\/collections\/all",
         "promo_link_text": "",
         "promo_link": "",
@@ -463,7 +486,8 @@
         "subtext": "What makes a high-quality electrolyte drink?",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bg_color"
+        "background": "bg_color",
+        "hide_supp": false
       }
     },
     "31e36676-5821-47f9-a328-6c162b259d29": {
@@ -480,7 +504,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for less than $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -494,7 +521,10 @@
             "list_item1": "One month supply",
             "list_item2": "Gently caffeinated",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
@@ -509,7 +539,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for around $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "8939123e-4123-47d7-a631-21ea009a79ce": {
@@ -523,7 +556,10 @@
             "list_item1": "One month supply",
             "list_item2": "All three drops",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         }
       },
