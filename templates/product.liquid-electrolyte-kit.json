@@ -1352,6 +1352,75 @@
         "title": "Clinical Trial Updates",
         "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
       }
+    },
+    "supplement_facts_drawer_mcLKix": {
+      "type": "supplement-facts-drawer",
+      "blocks": {
+        "serving_Tb8QPK": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "serving_49imyw": {
+          "type": "serving",
+          "settings": {
+            "serving_title": "",
+            "serving_item_one": "",
+            "serving_item_two": "",
+            "serving_item_three": ""
+          }
+        },
+        "recommended_ViDGBm": {
+          "type": "recommended",
+          "settings": {
+            "heading": "",
+            "title": "",
+            "sub_title": "",
+            "content": ""
+          }
+        },
+        "table_6Uc9fN": {
+          "type": "table",
+          "settings": {
+          }
+        },
+        "info_PaPMDm": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        },
+        "info_r8emtb": {
+          "type": "info",
+          "settings": {
+            "icon_info_one": "",
+            "icon_info_two": "",
+            "icon_info_three": "",
+            "icon_info_four": "",
+            "icon_info_five": ""
+          }
+        }
+      },
+      "block_order": [
+        "serving_Tb8QPK",
+        "serving_49imyw",
+        "recommended_ViDGBm",
+        "table_6Uc9fN",
+        "info_PaPMDm",
+        "info_r8emtb"
+      ],
+      "settings": {
+        "product_name": "",
+        "title": ""
+      }
     }
   },
   "order": [
@@ -1376,6 +1445,7 @@
     "0eedab9e-3745-417a-85b6-719dc36251dc",
     "26893cd8-8c44-4b58-a036-b29a7351bb60",
     "66bad48b-a0a0-422a-8b5c-b203121eabd7",
-    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b"
+    "c867c1e0-b93b-487e-8c8d-660d6bcf8f8b",
+    "supplement_facts_drawer_mcLKix"
   ]
 }
