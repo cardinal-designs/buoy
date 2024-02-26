@@ -1359,53 +1359,67 @@
         "serving_Tb8QPK": {
           "type": "serving",
           "settings": {
-            "serving_title": "",
-            "serving_item_one": "",
-            "serving_item_two": "",
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "Electrolytes of ⅓ Sports Drink",
             "serving_item_three": ""
           }
         },
         "serving_49imyw": {
           "type": "serving",
           "settings": {
-            "serving_title": "",
-            "serving_item_one": "",
-            "serving_item_two": "",
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "One Bottle:",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Electrolytes of 13+ Sports Drinks",
             "serving_item_three": ""
           }
         },
         "recommended_ViDGBm": {
           "type": "recommended",
           "settings": {
-            "heading": "",
-            "title": "",
-            "sub_title": "",
-            "content": ""
+            "heading": "Dietitian's Recommended Use:",
+            "title": "4-7 times daily (560mg-980mg electrolytes)",
+            "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
+            "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
           }
         },
         "table_6Uc9fN": {
           "type": "table",
           "settings": {
+            "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
+            "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
           }
         },
         "info_PaPMDm": {
           "type": "info",
           "settings": {
-            "icon_info_one": "",
-            "icon_info_two": "",
-            "icon_info_three": "",
-            "icon_info_four": "",
-            "icon_info_five": ""
+            "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+            "icon_info_one": "No Sugar, Sweeteners or Flavors",
+            "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+            "icon_info_two": "Non-GMO Project Verified",
+            "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+            "icon_info_three": "Keto & Paleo Approved",
+            "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+            "icon_info_four": "Clinically Studied",
+            "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+            "icon_info_five": "Deep Ocean Minerals"
           }
         },
         "info_r8emtb": {
           "type": "info",
           "settings": {
-            "icon_info_one": "",
-            "icon_info_two": "",
-            "icon_info_three": "",
-            "icon_info_four": "",
-            "icon_info_five": ""
+            "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+            "icon_info_one": "Vegan",
+            "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+            "icon_info_two": "Gluten & Major Allergen Free",
+            "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+            "icon_info_three": "Third Party Tested",
+            "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+            "icon_info_four": "3x Bioavailable Form Factor",
+            "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+            "icon_info_five": "Enhance Any Drink"
           }
         }
       },
@@ -1418,8 +1432,8 @@
         "info_r8emtb"
       ],
       "settings": {
-        "product_name": "",
-        "title": ""
+        "product_name": "Digestion Drops",
+        "title": "Supplement Facts"
       }
     }
   },
