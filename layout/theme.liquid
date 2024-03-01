@@ -238,7 +238,8 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     </script> -->
 
     {% if template contains 'product' or template.suffix == 'okendo-reviews' or page.title == 'Reviews' %}
-      {{ 'okendo-reviews.js' | asset_url | script_tag }}
+      {{ 'okendo-reviews.js' | asset_url }}
+      <script src="{{ 'okendo-reviews.js' | asset_url }}" defer="defer"></script>
     {% endif %}
 
   
