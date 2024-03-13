@@ -1813,6 +1813,7 @@ function navDropDownMenu() {
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
 
+  // open dropdown
   dropdownTrigger.addEventListener('click', () => {
     if (!dropdownMenu.classList.contains('active')) {
       dropdownMenu.classList.add('active');
@@ -1823,12 +1824,18 @@ function navDropDownMenu() {
     }
   });
 
+  // close dropdown
+  dropDownClose.addEventListener('click', () => {
+    dropdownMenu.classList.remove('active');
+  })
+
   // check outside click
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.header__dropdown');
     const $btnIsOutside = !e.target.closest('.js-dropdown-trigger')
     if ($isOutside && $btnIsOutside) {
       document.querySelector('.header__dropdown').classList.remove('active');
+      dropDownClose.classList.remove('active');
     }
   });
 }
