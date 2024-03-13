@@ -1777,6 +1777,7 @@ $('.announcement-bar__close').click(function() {
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
   $('.main-menu').css('top','54px');
   $('.Show_Announcement_Bar').addClass('not-active');
+  // remove blur and lock scroll if nav dropdown is open
   if ($('.header__dropdown').hasClass('active')) {
     $('.page-blury-overlay').removeClass('is-visible');
     $('body').removeClass('lock-scroll');
