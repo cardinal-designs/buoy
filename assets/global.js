@@ -1820,5 +1820,11 @@ function navDropDownMenu() {
       headerContainer.style.zIndex = 10;
     }
   })
+
+  // check outside click
+  document.addEventListener('click', (e) => {
+    const $isOutside = !e.target.closest('.header__dropdown');
+    console.log($isOutside);
+  });
 }
 navDropDownMenu();
