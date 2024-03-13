@@ -1805,3 +1805,5 @@ $('.main-menu__close').click(function() {
   $('[href="#menu"]').removeClass('active');
 }); 
  
+// Nav Menu Dropdown Desktop
+const navMenuDropdown = document.querySelector('.js-dropdown-menu');
