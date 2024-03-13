@@ -1827,6 +1827,8 @@ function navDropDownMenu() {
   // close dropdown
   dropDownClose.addEventListener('click', () => {
     dropdownMenu.classList.remove('active');
+    pageBlurOverlay.classList.remove('is-visible');
+    document.querySelector('body').classList.remove('lock-scroll');
   })
 
   // check outside click
