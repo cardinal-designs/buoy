@@ -496,7 +496,9 @@
 <div class="header__dropdown">
   <div class="header__dropdown-container">
     <div class="header__dropdown-left">
-      <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
+      {%- if section.settings.dropdown_title != blank -%}
+        <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
+      {%- endif -%}
       <div class="header__dropdown-links">
         <a href="/collections/all">
           <h3 class="header__dropdown-title">Unflavored Liquid Electrolytes</h3>
