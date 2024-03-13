@@ -1810,5 +1810,5 @@ const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
 const dropdownMenu = document.querySelector('.header__dropdown');
 
 dropdownTrigger.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('active');
+  dropdownMenu.classList.add('active');
 })
