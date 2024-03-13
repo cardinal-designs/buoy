@@ -500,14 +500,20 @@
         <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
       {%- endif -%}
       <div class="header__dropdown-links">
-        <a href="{{ section.settings.dropdown_link_one }}">
-          <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text }}</h3>
-        </a>
-        <a href="{{ section.settings.dropdown_link_two }}">
-          <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
-        </a>
+        {%- if section.settings.dropdown_link_text != blank -%}
+          <a href="{{ section.settings.dropdown_link_one }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text }}</h3>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.dropdown_link_text_two != blank -%}
+          <a href="{{ section.settings.dropdown_link_two }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
+          </a>
+        {%- endif -%}
       </div>
-      <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
+      {%- if section.settings.dropdown_title_two != blank -%}
+        <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
+      {%- endif -%}
       <ul class="header__list">
         {%- for link in section.settings.menu.links -%}
         <li class="header__list-item">
