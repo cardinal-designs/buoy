@@ -500,10 +500,10 @@
         <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
       {%- endif -%}
       <div class="header__dropdown-links">
-        <a href="/collections/all">
+        <a href="{{ section.settings.dropdown_link_one }}">
           <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text }}</h3>
         </a>
-        <a href="/collections/all">
+        <a href="{{ section.settings.dropdown_link_two }}">
           <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
         </a>
       </div>
