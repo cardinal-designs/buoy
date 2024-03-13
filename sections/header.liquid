@@ -583,16 +583,9 @@
 
 {%- comment -%} Drop Down Menu Desktop {%- endcomment -%}
 {%- for link in section.settings.menu.links -%}
-  {%- if link.links != blank -%}
-    {%- for childlink in link.links -%}
-      {%- if childlink.links == blank -%}
-        <script>
-          console.log({{ childlink.title | json }})
-        </script>
-        {{ childlink.title }}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endif -%}
+  <script>
+    console.log({{ link.title | json }})
+  </script>
 {%- endfor -%}
 <div class="header__dropdown">
   <div class="header__dropdown-container">
