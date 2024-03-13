@@ -82,9 +82,6 @@
 </svg>
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper">
   <header class="header header--center{% if section.settings.menu != blank %} header--has-menu{% endif %}">
-    <div class="header--menu">
-      <h1>HEY</h1>
-    </div>
     {%- if section.settings.menu != blank -%}
       <header-drawer>
         <details class="menu-drawer-container">
@@ -577,6 +574,9 @@
       <button class="main-menu__close">Close</button>
     </div>
   </header>
+  <div class="header--menu">
+    <h1>HEY</h1>
+  </div>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 <script type="application/ld+json">
