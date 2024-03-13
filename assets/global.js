@@ -1855,6 +1855,8 @@ function navDropDownMenu() {
       document.querySelector('.header__dropdown').classList.remove('active');
       dropDownClose.classList.remove('active');
       headerBorder.classList.remove('header--scrolled');
+      document.querySelector('body').classList.remove('lock-scroll');
+      pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
     }
