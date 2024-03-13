@@ -1816,11 +1816,12 @@ function navDropDownMenu() {
   dropdownTrigger.addEventListener('click', () => {
     if (!dropdownMenu.classList.contains('active')) {
       dropdownMenu.classList.add('active');
+      dropDownClose.classList.add('active');
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
     }
-  })
+  });
 
   // check outside click
   document.addEventListener('click', (e) => {
