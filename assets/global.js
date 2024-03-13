@@ -1818,6 +1818,7 @@ function navDropDownMenu() {
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
   const headerBorder = document.querySelector('.header--transparent');
+  const headerWrapper = document.querySelector('.header-wrapper');
 
   // open dropdown
   dropdownTrigger.addEventListener('click', () => {
@@ -1827,8 +1828,8 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
-      document.querySelector('header-container').classList.add('active');
-      document.querySelector('.header-wrapper').classList.add('active-dropdown');
+      headerContainer.classList.add('active');
+      headerWrapper.classList.add('active-dropdown');
 
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
