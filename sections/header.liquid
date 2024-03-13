@@ -525,6 +525,7 @@
         </div>
         <div class="header__dropdown-card-bottom">
           <div class="media" style="padding-bottom: 125%;">
+            {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
           </div>
         </div>
       </div>
@@ -633,6 +634,19 @@
       "type": "url",
       "id": "dropdown_link_two",
       "label": "Dropdown URL Two"
+    }
+  ],
+    "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        }
+      ]
     }
   ]
 }
