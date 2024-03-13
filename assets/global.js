@@ -1824,7 +1824,9 @@ function navDropDownMenu() {
   // check outside click
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.header__dropdown');
-    console.log($isOutside);
+    if ($isOutside) {
+      document.querySelector('.header__dropdown').classList.remove('active');
+    }
   });
 }
 navDropDownMenu();
