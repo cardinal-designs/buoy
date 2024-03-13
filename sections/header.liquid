@@ -434,7 +434,7 @@
           {%- endfor -%}
         </ul>
 
-        {% for link in section.settings.menu.links %}
+        {% comment %} {% for link in section.settings.menu.links %}
           {% if link.links != blank %}
           <div class="menu-fixed hide-mobile hide-desktop" data-menu-fixed="{{ link.handle }}">
             <div class="bg"></div>
@@ -472,7 +472,7 @@
             </div>
           </div>
           {% endif %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
       </nav>
     {%- endif -%}
 
