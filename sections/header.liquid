@@ -129,11 +129,11 @@
                           </button>
                         {% else %}
                           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset">
+                            {%- render 'icon-cart' -%}
+                            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
                             <div class="cart-count-bubble hide-mobile sh1">
                               {{ cart.item_count }}
                             </div>
-                            {%- render 'icon-cart' -%}
-                            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
                           </a>
                         {% endif %}
                     </div>
