@@ -517,18 +517,21 @@
       </ul>
     </div>
     <div class="header__dropdown-right">
-      <div class="header__dropdown-card">
-        <div class="header__dropdown-card-top">
-          <h4 class="header__dropdown-card-title">Hydrate with one squeeze.</h4>
-          <span>badge</span>
-          <p class="header__dropdown-card-desc">Shop our best-selling, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="header__dropdown-card-bottom">
-          <div class="media" style="padding-bottom: 125%;">
-            {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        <div class="header__dropdown-card">
+          <div class="header__dropdown-card-top">
+            <h4 class="header__dropdown-card-title">{{ bs.title }}</h4>
+            <span>badge</span>
+            <p class="header__dropdown-card-desc">{{ bs.desc }}</p>
+          </div>
+          <div class="header__dropdown-card-bottom">
+            {% comment %} <div class="media" style="padding-bottom: 125%;">
+              {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
+            </div> {% endcomment %}
           </div>
         </div>
-      </div>
+      {%- endfor -%}
     </div>
   </div>
 </div>
