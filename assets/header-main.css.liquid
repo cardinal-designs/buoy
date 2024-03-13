@@ -364,9 +364,14 @@ header-drawer {
 }
 
 .header__dropdown {
+  display: none;
   position: absolute;
   background: red;
   width: 100%;
+}
+
+.header__dropdown.active {
+  display: block;
 }
 
 .header__dropdown-container {
