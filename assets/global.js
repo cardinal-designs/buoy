@@ -1812,6 +1812,7 @@ function navDropDownMenu() {
   const dropdownMenu = document.querySelector('.header__dropdown');
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
+  const headerBorder = document.querySelector('.header--transparent');
 
   // open dropdown
   dropdownTrigger.addEventListener('click', () => {
@@ -1821,7 +1822,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
-      document.querySelector('.header--transparent').classList.add('header--scrolled');
+      headerBorder.classList.add('header--scrolled');
     }
   });
 
@@ -1830,6 +1831,7 @@ function navDropDownMenu() {
     dropdownMenu.classList.remove('active');
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
+    headerBorder.classList.remove('header--scrolled');
   })
 
   // check outside click
@@ -1839,6 +1841,7 @@ function navDropDownMenu() {
     if ($isOutside && $btnIsOutside) {
       document.querySelector('.header__dropdown').classList.remove('active');
       dropDownClose.classList.remove('active');
+      headerBorder.classList.remove('header--scrolled');
     }
   });
 }
