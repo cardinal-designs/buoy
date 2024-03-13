@@ -1812,6 +1812,7 @@ function navDropDownMenu() {
   const dropdownMenu = document.querySelector('.header__dropdown');
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
+  const headerWrapper = document.querySelector('.header-wrapper');
 
   // open dropdown
   dropdownTrigger.addEventListener('click', () => {
@@ -1821,6 +1822,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
+      headerWrapper.classList.add('active');
     }
   });
 
