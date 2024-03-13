@@ -373,7 +373,7 @@
     </nav>
 
     {%- if section.settings.menu != blank -%}
-      <nav class="header__inline-menu">
+      {% comment %} <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
@@ -463,7 +463,7 @@
           </div>
           {% endif %}
         {% endfor %}
-      </nav>
+      </nav> {% endcomment %}
     {%- endif -%}
 
     <div class="header__icons">
