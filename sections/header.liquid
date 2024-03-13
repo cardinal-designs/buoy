@@ -507,7 +507,7 @@
           <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
         </a>
       </div>
-      <div class="header__dropdown-item">Learn</div>
+      <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
       <ul class="header__list">
         {%- for link in section.settings.menu.links -%}
         <li class="header__list-item">
@@ -521,15 +521,21 @@
         {%- assign bs = block.settings -%}
         <div class="header__dropdown-card">
           <div class="header__dropdown-card-top">
-            <h4 class="header__dropdown-card-title">{{ bs.block_title }}</h4>
+            {%- if bs.block_title != blank -%}
+              <h4 class="header__dropdown-card-title">{{ bs.block_title }}</h4>
+            {%- endif -%}
             <span>badge</span>
-            <p class="header__dropdown-card-desc">{{ bs.block_desc }}</p>
+            {%- if bs.block_desc != blank -%}
+              <p class="header__dropdown-card-desc">{{ bs.block_desc }}</p>
+            {%- endif -%}
           </div>
-          <div class="header__dropdown-card-bottom">
-            <div class="media header__dropdown-card-image" style="padding-bottom: 70%;">
-              {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+          {%- if bs.block_image != blank -%}
+            <div class="header__dropdown-card-bottom">
+              <div class="media header__dropdown-card-image" style="padding-bottom: 70%;">
+                {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+              </div>
             </div>
-          </div>
+          {%- endif -%}
         </div>
       {%- endfor -%}
     </div>
