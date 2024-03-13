@@ -1778,7 +1778,8 @@ $('.announcement-bar__close').click(function() {
   $('.main-menu').css('top','54px');
   $('.Show_Announcement_Bar').addClass('not-active');
   if (document.querySelector('.header__dropdown').classList.contains('active')) {
-    console.log('hey');
+    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+    document.querySelector('body').classList.remove('lock-scroll');
   }
 })
 
