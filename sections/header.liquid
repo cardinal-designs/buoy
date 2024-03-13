@@ -384,45 +384,6 @@
             </a>
           </li>
         </ul>
-        {% comment %} {% for link in section.settings.menu.links %}
-          {% if link.links != blank %}
-          <div class="menu-fixed hide-mobile hide-desktop" data-menu-fixed="{{ link.handle }}">
-            <div class="bg"></div>
-            <div class="inside">
-              <div class="back">
-                {% render 'icon-close' %}
-              </div>
-              <ul class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
-                {%- for childlink in link.links -%}
-                  <li>
-                    {%- if childlink.links == blank -%}
-                      <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %} sh2"{% if childlink.current %} aria-current="page"{% endif %}>
-                        {{ childlink.title | escape }}
-                      </a>
-                    {%- else -%}
-                      <details>
-                        <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large sh2">
-                          {{ childlink.title | escape }}
-                          {% render 'icon-caret' %}
-                        </summary>
-                        <ul class="header__submenu list-menu motion-reduce">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %} sh2"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      </details>
-                    {%- endif -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-            </div>
-          </div>
-          {% endif %}
-        {% endfor %} {% endcomment %}
       </nav>
     {%- endif -%}
 
