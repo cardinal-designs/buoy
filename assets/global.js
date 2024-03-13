@@ -1807,3 +1807,6 @@ $('.main-menu__close').click(function() {
  
 // Nav Menu Dropdown Desktop
 const navMenuDropdown = document.querySelector('.js-dropdown-menu');
+navMenuDropdown.addEventListener('click', () => {
+  console.log('clicked');
+})
