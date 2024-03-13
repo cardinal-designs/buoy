@@ -1777,6 +1777,9 @@ $('.announcement-bar__close').click(function() {
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
   $('.main-menu').css('top','54px');
   $('.Show_Announcement_Bar').addClass('not-active');
+  if (document.querySelector('.js-dropdown-trigger').classList.contains('active')) {
+    console.log('hey');
+  }
 })
 
 // Main menu open
@@ -1822,7 +1825,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
-      
+
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
       }
