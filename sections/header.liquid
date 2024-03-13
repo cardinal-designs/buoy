@@ -582,6 +582,17 @@
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- comment -%} Drop Down Menu Desktop {%- endcomment -%}
+{%- for link in section.settings.menu.links -%}
+  {%- if link.links != blank -%}
+    {%- for childlink in link.links -%}
+      {%- if childlink.links == blank -%}
+        <script>
+          console.log({{ childlink.title | json }})
+        </script>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
 <div class="header__dropdown">
   <div class="header__dropdown-container">
     <div class="header__dropdown-left">
