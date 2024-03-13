@@ -2023,7 +2023,7 @@ header-container.active {
   z-index: 2;
   width: calc(100% - 20px);
   position: sticky;
-  top: 10px;
+  top: 10px !important;
   left: 10px;
   right: 10px;
   border-radius: 20px 20px 0 0;
