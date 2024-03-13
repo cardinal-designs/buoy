@@ -1821,6 +1821,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
+      document.querySelector('.header--transparent').classList.add('header--scrolled');
     }
   });
 
