@@ -1808,6 +1808,7 @@ $('.main-menu__close').click(function() {
 // Nav Menu Dropdown Desktop
 const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
 const dropdownMenu = document.querySelector('.header__dropdown');
+
 navMenuDropdown.addEventListener('click', () => {
-  console.log('clicked');
+  dropdownMenu.classList.add('active');
 })
