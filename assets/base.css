@@ -2148,7 +2148,11 @@ header-container {
 
 .header__icon--cart .cart-count-bubble {
   margin: 0 0 0 10px;
+  text-align: center;
+  font-family: Inter;
   font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .header__icon--cart.active svg circle {
