@@ -1811,4 +1811,11 @@ const dropdownMenu = document.querySelector('.header__dropdown');
 
 dropdownTrigger.addEventListener('click', () => {
   dropdownMenu.classList.add('active');
+    document.querySelector('.page-blury-overlay').classList.add('is-visible');
+    document.querySelector('body').classList.add('lock-scroll');
+    document.querySelector('header-container').style.zIndex = 10;
+
+    if (document.querySelector('.supplement-side-drawer .drawer__header')) {
+      document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
+    }
 })
