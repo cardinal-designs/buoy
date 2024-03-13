@@ -2343,6 +2343,15 @@ details[open] > .header__icon--menu .icon-hamburger {
   padding: 0 1rem;
 }
 
+.header__menu-link {
+  color: #1F2322;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+}
+
 .header__menu-item {
   padding: 0 22.5px;
   text-decoration: none;
