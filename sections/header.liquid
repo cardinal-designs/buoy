@@ -384,7 +384,7 @@
             </a>
           </li>
         </ul>
-        <ul class="list-menu list-menu--inline" role="list">
+        {% comment %} <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
               {%- if link.links != blank -%}
@@ -472,7 +472,7 @@
             </div>
           </div>
           {% endif %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
       </nav>
     {%- endif -%}
 
