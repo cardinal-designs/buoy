@@ -374,8 +374,17 @@
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
-        <button class="header__menu-link sh2">Menu</button>
         <ul class="list-menu list-menu--inline" role="list">
+          <li class="header__menu-item list-menu__item">
+            <button class="header__menu-link sh2">Menu</button>
+          </li>
+          <li class="header__menu-item list-menu__item">
+            <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large sh2">
+              Shop All
+            </a>
+          </li>
+        </ul>
+        {% comment %} <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
               {%- if link.links != blank -%}
@@ -463,7 +472,7 @@
             </div>
           </div>
           {% endif %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
       </nav>
     {%- endif -%}
 
