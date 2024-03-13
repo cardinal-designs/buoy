@@ -601,24 +601,11 @@
       </div>
       <div class="header__dropdown-item">Learn</div>
       <ul class="header__list">
+        {%- for link in section.settings.menu.links -%}
         <li class="header__list-item">
-          <a href="#">Subscribe and Save 23%</a>
+          <a href="{{ link.url }}">{{ link.title }}</a>
         </li>
-        <li class="header__list-item">
-          <a href="#">About Buoy</a>
-        </li>
-        <li class="header__list-item">
-          <a href=#>Our Approach</a>
-        </li>
-        <li class="header__list-item">
-          <a href=#>Sustainability</a>
-        </li>
-        <li class="header__list-item">
-          <a href="#">Chronic Illness Support Program</a>
-        </li>
-        <li class="header__list-item">
-          <a href="#">Contact</a>
-        </li>
+        {%- endfor -%}
       </ul>
     </div>
     <div class="header__dropdown-right">
