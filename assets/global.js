@@ -1852,7 +1852,7 @@ function navDropDownMenu() {
     const $isOutside = !e.target.closest('.header__dropdown');
     const $btnIsOutside = !e.target.closest('.js-dropdown-trigger')
     if ($isOutside && $btnIsOutside) {
-      document.querySelector('.header__dropdown').classList.remove('active');
+      dropdownMenu.classList.remove('active');
       dropDownClose.classList.remove('active');
       headerBorder.classList.remove('header--scrolled');
       document.querySelector('body').classList.remove('lock-scroll');
