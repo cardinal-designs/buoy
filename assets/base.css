@@ -2020,7 +2020,7 @@ header-container {
 }
 
 header-container.active {
-  z-index: 9999999999;
+  z-index: 2;
   width: calc(100% - 20px);
   position: sticky;
   top: 10px;
