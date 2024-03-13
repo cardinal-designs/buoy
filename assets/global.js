@@ -1810,14 +1810,13 @@ function navDropDownMenu() {
   const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
   const dropdownMenu = document.querySelector('.header__dropdown');
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
-  const body = document.querySelector('body');
   const headerContainer = document.querySelector('header-container');
 
   dropdownTrigger.addEventListener('click', () => {
     if (!dropdownMenu.classList.contains('active')) {
       dropdownMenu.classList.add('active');
       pageBlurOverlay.classList.add('is-visible');
-      body.classList.add('lock-scroll');
+      document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
     }
   })
