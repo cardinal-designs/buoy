@@ -1809,6 +1809,6 @@ $('.main-menu__close').click(function() {
 const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
 const dropdownMenu = document.querySelector('.header__dropdown');
 
-navMenuDropdown.addEventListener('click', () => {
-  dropdownMenu.classList.add('active');
+dropdownTrigger.addEventListener('click', () => {
+  dropdownMenu.classList.toggle('active');
 })
