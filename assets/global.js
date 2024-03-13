@@ -1808,6 +1808,7 @@ $('.main-menu__close').click(function() {
 // Nav Menu Dropdown Desktop
 function navDropDownMenu() {
   const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
+  const dropDownClose = document.querySelector('.js-dropdown-close');
   const dropdownMenu = document.querySelector('.header__dropdown');
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
