@@ -546,11 +546,9 @@
 
       {% if template != 'cart' %}
         <button class="js-open-cart header__icon header__icon--cart link link--text focus-inset cart-icon-bubble {% if cart.item_count > 0 %} active{% endif %}"  id="cart-icon-bubble" data-id="{{ section.id }}"  aria-label="Open Cart Drawer">
-          {%- if cart.item_count > 0 -%}
-            <div class="1 cart-count-bubble sh1">
-              {{ cart.item_count }}
-            </div>
-          {%- endif -%}
+          <div class="1 cart-count-bubble sh1">
+            {{ cart.item_count }}
+          </div>
           {% render 'icon-cart-new' %}
 
           <span class="Cart_Close_Mobile">{%- render 'icon-close' -%}</span>                    
