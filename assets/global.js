@@ -1843,6 +1843,8 @@ function navDropDownMenu() {
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
     headerBorder.classList.remove('header--scrolled');
+    headerContainer.classList.remove('active');
+    headerWrapper.classList.remove('active-dropdown');
   })
 
   // check outside click
@@ -1853,6 +1855,8 @@ function navDropDownMenu() {
       document.querySelector('.header__dropdown').classList.remove('active');
       dropDownClose.classList.remove('active');
       headerBorder.classList.remove('header--scrolled');
+      headerContainer.classList.remove('active');
+      headerWrapper.classList.remove('active-dropdown');
     }
   });
 }
