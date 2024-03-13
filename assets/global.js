@@ -1824,7 +1824,8 @@ function navDropDownMenu() {
   // check outside click
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.header__dropdown');
-    if ($isOutside) {
+    const $btnIsOutside = !e.target.closest('.js-dropdown-trigger')
+    if ($isOutside && $btnIsOutside) {
       document.querySelector('.header__dropdown').classList.remove('active');
     }
   });
