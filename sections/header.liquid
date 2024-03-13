@@ -539,7 +539,9 @@
       {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
-        <a href="/account" class="header__shop-link sh2">Account{% render 'icon-account-new' %}</a>
+        <a href="/account" class="header__shop-link sh2">
+          {% render 'icon-account-new' %}
+        </a>
       {%- endif -%}
 
       {% if template != 'cart' %}
