@@ -1827,6 +1827,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
+      console.log(document.querySelector('header-container'));
 
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
