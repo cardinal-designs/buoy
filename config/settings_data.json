@@ -233,6 +233,18 @@
       },
       "main-menu": {
         "type": "main-menu",
+        "blocks": {
+          "block_EqHf8E": {
+            "type": "block",
+            "settings": {
+              "block_image": "shopify:\/\/shop_images\/20240122_Buoy_BottleLifestyle6242_1_1_21b825ec-d9c9-4dc0-8220-b99d973cbd9f.png",
+              "block_desc": "Hydrate with one squeeze."
+            }
+          }
+        },
+        "block_order": [
+          "block_EqHf8E"
+        ],
         "settings": {
           "dropdown_title": "Shop",
           "dropdown_link_text": "Unflavored Liquid Electrolytes",
