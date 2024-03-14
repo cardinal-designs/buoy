@@ -50,8 +50,8 @@
 
     </div>
     <div class="header__dropdown-bottom">
-      {%- if section.settings.dropdown_title_two != blank -%}
-        <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
+      {%- if section.settings.dropdown_title_three != blank -%}
+        <div class="header__dropdown-item">{{ section.settings.dropdown_title_three }}</div>
       {%- endif -%}
       <ul class="header__list-mobile">
         {%- for link in section.settings.mobile_menu.links -%}
@@ -97,6 +97,11 @@
         "type": "text",
         "id": "dropdown_title_two",
         "label": "Dropdown Title Two"
+      },
+      {
+        "type": "text",
+        "id": "dropdown_title_three",
+        "label": "Dropdown Title Three"
       },
       {
         "type": "link_list",
