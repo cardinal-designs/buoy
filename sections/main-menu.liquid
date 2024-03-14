@@ -32,8 +32,10 @@
           {%- for block in section.blocks -%}
             {%- assign bs = block.settings -%}
             <div class="header__dropdown-card-mobile">
-              <div class="media header__dropdown-mobile-image" style="padding-bottom: 70%;">
-                {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+              <div class="header__dropdown-mobile-image-wrapper">
+                <div class="media header__dropdown-mobile-image" style="padding-bottom: 70%;">
+                  {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+                </div>
                 {%- if bs.badge_text != blank -%}
                   <div class="header__dropdown-badge">
                     <p class="header__dropdown-badge-text">{{ bs.badge_text }}</p>
