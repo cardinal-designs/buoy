@@ -9,7 +9,7 @@
   align-items: center;
   background: white;
   color: var(--charcoal);
-  overflow-y: auto;
+  overflow: auto;
   overflow-x: hidden;
   z-index: 99999;
   opacity: 0;
@@ -28,7 +28,6 @@
 .main-menu.active {
   z-index: 100;
   width: calc(100% - 20px);
-  /* top: 51px !important; */
   left: 10px;
   right: 10px;
 }
