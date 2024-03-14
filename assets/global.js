@@ -1565,8 +1565,8 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
         const element = document.querySelector(this.getAttribute('href'));
         const offset = 100;
         const bodyRect = document.body.getBoundingClientRect().top;
+        if (!bodyRect) return;
         const elementRect = element.getBoundingClientRect().top;
-        if (!elementRect) return;
         const elementPosition = elementRect - bodyRect;
         const offsetPosition = elementPosition - offset;
 
