@@ -3,7 +3,7 @@
 
 <div class="main-menu {% if settings.fix_announcement == true %}Fixed_Announcement_Bar{% endif %} {% if settings.show_announcement_bar == true %}Announcement_Shown{% endif %}" aria-hidden="true">  
   <button class="main-menu__close">Close</button>
-  {% comment %} <div class="main-menu__wrapper">
+  <div class="main-menu__wrapper">
     <div class="main-menu__container">
       <div class="main-menu__main-links">
         {% if section.settings.main_menu_title != blank %}
@@ -68,7 +68,7 @@
         </a>
       {% endif %}
     </div>
-  </div> {% endcomment %}
+  </div>
 </div>
 
 {% schema %}
