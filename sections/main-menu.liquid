@@ -36,6 +36,7 @@
                 {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
               </div>
             </div>
+            <p class="header__dropdown-card-image-desc">{{ bs.block_desc }}</p>
           {%- endfor -%}
         </div>
       </div>
@@ -102,6 +103,11 @@
             "type": "image_picker",
             "id": "block_image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "block_desc",
+            "label": "Description"
           }
         ]
       }
