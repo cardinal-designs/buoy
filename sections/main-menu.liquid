@@ -29,8 +29,13 @@
           <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
         {%- endif -%}
         <div class="header__dropdown-card-mobile-wrapper">
+          {%- for block in section.blocks -%}
           <div class="header__dropdown-card-mobile">
-          </div>
+              <div class="media header__dropdown-card-image" style="padding-bottom: 70%;">
+                {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+              </div>
+            </div>
+          {%- endfor -%}
         </div>
       </div>
       
@@ -111,70 +116,13 @@
     ],
     "blocks": [
       {
-        "type": "menu_item",
-        "name": "Menu Item",
+        "type": "block",
+        "name": "Block Item",
         "settings": [
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Desktop Title"
-          },
-          {
-            "type": "text",
-            "id": "mobile_title",
-            "label": "Mobile Title"
-          },
           {
             "type": "image_picker",
             "id": "image",
             "label": "Add image"
-          }
-        ]
-      },
-      {
-        "type": "secondary_link_desktop",
-        "name": "Secondary Link Desktop",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          },
-          {
-            "type": "text",
-            "id": "callout_text",
-            "label": "Callout Text"
-          }
-        ]
-      },
-      {
-        "type": "secondary_link_mobile",
-        "name": "Secondary Link Mobile",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          },
-          {
-            "type": "text",
-            "id": "callout_text",
-            "label": "Callout Text"
           }
         ]
       }
