@@ -30,6 +30,7 @@
         {%- endif -%}
         <div class="header__dropdown-card-mobile-wrapper">
           {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
           <div class="header__dropdown-card-mobile">
               <div class="media header__dropdown-card-image" style="padding-bottom: 70%;">
                 {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
