@@ -128,7 +128,7 @@
           {% if currentVariant.available == false %}
           <span>Sold Out</span>
           {% else %}
-          <span>Add to Cart</span> — 
+          <span>Add to Cart</span>&nbsp—&nbsp
           <span class="button-money">
             <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
           </span>
