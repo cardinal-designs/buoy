@@ -1805,19 +1805,6 @@ $('[href="#menu"]').click(function() {
   $('header-container').addClass('mobile-active');
   $('.page-blury-overlay').addClass('is-visible-mobile');
   document.querySelector('body').classList.add('lock-scroll-mobile');
-
-  document.addEventListener('click', (e) => {
-    const $isOutside = !e.target.closest('.main-menu');
-    const $btnIsOutside = !e.target.closest('.Mobile_Hamburger')
-    if ($isOutside && $btnIsOutside) {
-      $('.header').removeClass('menu-open');
-      $('.main-menu').removeClass('active');
-      $('header-container').removeClass('active');
-      $('header-container').removeClass('mobile-active');
-      $('.page-blury-overlay').removeClass('is-visible-mobile');
-      document.querySelector('body').classList.remove('lock-scroll-mobile');
-    }
-  });
 });
 
 // Main menu close
