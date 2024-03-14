@@ -1811,7 +1811,7 @@ $('[href="#menu"]').click(function() {
     const $btnIsOutside = !e.target.closest('.header__inline-menu')
     if ($isOutside && $btnIsOutside) {
       $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible Menu_Overlay');
+      // $('.page-overlay').removeClass('is-visible Menu_Overlay');
       $('.Mobile_Menu_Close').hide();
       $('body').removeClass('Overflow_Hidden');
       $('.Hamburger_New').show();
