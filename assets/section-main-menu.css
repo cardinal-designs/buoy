@@ -488,8 +488,8 @@
   }
 
   .main-menu__wrapper {
-    position: inherit;
-    overflow: auto;
+    position: relative;
+    /* overflow: auto; */
     height: 100%;
   }
 
