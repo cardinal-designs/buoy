@@ -1801,6 +1801,8 @@ $('[href="#menu"]').click(function() {
   $('.header .header-icon--logo').addClass('menu-open');
   $('.header-wrapper').addClass('menu-open');
   $('.header').addClass('menu-open');
+  document.querySelector('header-container').classList.add('active');
+  document.querySelector('.main-menu').classList.add('active');
 });
 
 // Main menu close
