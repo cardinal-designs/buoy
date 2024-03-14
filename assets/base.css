@@ -2030,7 +2030,7 @@ header-container.active {
 }
 
 header-container.mobile-active {
-  z-index: 100;
+  z-index: 101;
   width: calc(100% - 20px);
   position: sticky;
   top: 10px !important;
