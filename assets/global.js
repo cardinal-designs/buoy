@@ -1810,7 +1810,21 @@ $('[href="#menu"]').click(function() {
     const $isOutside = !e.target.closest('.main-menu');
     const $btnIsOutside = !e.target.closest('.main-menu__close')
     if ($isOutside && $btnIsOutside) {
-      console.log('outside')
+      $('.main-menu').attr('aria-hidden', true);
+      $('.page-overlay').removeClass('is-visible Menu_Overlay');
+      $('.Mobile_Menu_Close').hide();
+      $('body').removeClass('Overflow_Hidden');
+      $('.Hamburger_New').show();
+      $('.header-wrapper').removeClass('active');
+      $('.header-wrapper').removeClass('menu-open');
+      $('[href="#menu"]').removeClass('active');
+      $('.header .header-icon--logo').removeClass('menu-open');
+      $('.header').removeClass('menu-open');
+      $('.main-menu').removeClass('active');
+      $('header-container').removeClass('active');
+      $('header-container').removeClass('mobile-active');
+      $('.page-blury-overlay').removeClass('is-visible-mobile');
+      document.querySelector('body').classList.remove('lock-scroll-mobile');
     }
   });
 });
