@@ -1810,6 +1810,7 @@ $('.main-menu__close').click(function() {
   $('body').removeClass('Overflow_Hidden');
   $('.Hamburger_New').show();
   $('.header-wrapper').removeClass('active');
+  $('.header-wrapper').addClass('menu-open');
   $('[href="#menu"]').removeClass('active');
   $('.header .header-icon--logo').removeClass('menu-open');
 }); 
