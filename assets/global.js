@@ -1819,6 +1819,7 @@ $('.main-menu__close').click(function() {
   $('.header').removeClass('menu-open');
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
+  document.querySelector('header-container').classList.remove('mobile-active');
 }); 
  
 // Nav Menu Dropdown Desktop
