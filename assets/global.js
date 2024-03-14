@@ -1805,27 +1805,6 @@ $('[href="#menu"]').click(function() {
   $('header-container').addClass('mobile-active');
   $('.page-blury-overlay').addClass('is-visible-mobile');
   document.querySelector('body').classList.add('lock-scroll-mobile');
-
-  document.addEventListener('click', (e) => {
-    const $isOutside = !e.target.closest('.main-menu');
-    const $btnIsOutside = !e.target.closest('.header__inline-menu')
-    if ($isOutside && $btnIsOutside) {
-      $('.main-menu').attr('aria-hidden', true);
-      $('.Mobile_Menu_Close').hide();
-      $('body').removeClass('Overflow_Hidden');
-      $('.Hamburger_New').show();
-      $('.header-wrapper').removeClass('active');
-      $('.header-wrapper').removeClass('menu-open');
-      $('[href="#menu"]').removeClass('active');
-      $('.header .header-icon--logo').removeClass('menu-open');
-      $('.header').removeClass('menu-open');
-      $('.main-menu').removeClass('active');
-      $('header-container').removeClass('active');
-      $('header-container').removeClass('mobile-active');
-      $('.page-blury-overlay').removeClass('is-visible-mobile');
-      document.querySelector('body').classList.remove('lock-scroll-mobile');
-    }
-  });
 });
 
 // Main menu close
