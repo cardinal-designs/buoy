@@ -22,6 +22,7 @@
   display: block;
   -webkit-overflow-scrolling: touch;
   height: 635px;
+  border-radius: 0 0 10px 10px;
 }
 
 .main-menu.active {
