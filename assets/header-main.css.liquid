@@ -548,12 +548,20 @@ header-drawer {
 }
 
 .header__dropdown-card-mobile-wrapper {
-  display: flex;
+  /* display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: 100%;
-  overflow-x: auto!important;
+  overflow-x: auto !important;
+  gap: 15px; */
+  display: -webkit-inline-box;
+  /* flex-wrap: nowrap; */
+  /* justify-content: flex-start; */
+  width: 100%;
+  /* overflow-x: auto !important; */
   gap: 15px;
+  max-width: 100vw;
+  overflow: scroll;
 }
 
 .header__dropdown-card-mobile {
