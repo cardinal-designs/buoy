@@ -1802,7 +1802,7 @@ $('[href="#menu"]').click(function() {
   $('.header-wrapper').addClass('menu-open');
   $('.header').addClass('menu-open');
   $('.main-menu').addClass('active');
-  document.querySelector('header-container').classList.add('mobile-active');
+  $('header-container').addClass('mobile-active');
 });
 
 // Main menu close
@@ -1819,7 +1819,7 @@ $('.main-menu__close').click(function() {
   $('.header').removeClass('menu-open');
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
-  document.querySelector('header-container').classList.remove('mobile-active');
+  $('header-container').removeClass('mobile-active');
 }); 
  
 // Nav Menu Dropdown Desktop
