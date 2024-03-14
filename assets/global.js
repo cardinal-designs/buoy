@@ -1799,6 +1799,7 @@ $('[href="#menu"]').click(function() {
   $('.header-wrapper').addClass('active');
   $(this).addClass('active');
   $('.header .header-icon--logo').addClass('menu-open');
+  document.querySelector('.page-blury-overlay').classList.add('is-visible');
 });
 
 // Main menu close
