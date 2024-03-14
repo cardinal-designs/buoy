@@ -1799,7 +1799,8 @@ $('[href="#menu"]').click(function() {
   $('.header-wrapper').addClass('active');
   $(this).addClass('active');
   $('.header .header-icon--logo').addClass('menu-open');
-  document.querySelector('.page-blury-overlay').classList.add('is-visible');
+  $('.page-blury-overlay').addClass('is-visible');
+  console.log('hey');
 });
 
 // Main menu close
