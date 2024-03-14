@@ -1810,6 +1810,7 @@ $('.main-menu__close').click(function() {
   $('.Hamburger_New').show();
   $('.header-wrapper').removeClass('active');
   $('[href="#menu"]').removeClass('active');
+  $('.header .header-icon--logo').removeClass('menu-open');
 }); 
  
 // Nav Menu Dropdown Desktop
