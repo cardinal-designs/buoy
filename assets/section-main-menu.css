@@ -572,6 +572,10 @@ announcement-container.Fixed_Bar {
   top: 0;
 }
 
+.Announcement_Shown.main-menu {
+  top: 129px; 
+}
+
 .header--scrolled + #shopify-section-main-menu .Announcement_Shown.main-menu {
   top: 80px;
 }
@@ -612,6 +616,10 @@ announcement-container.Fixed_Bar {
 
 @media only screen and (max-width: 667px) {
 
+  .Announcement_Shown.main-menu {
+    top: 139px;
+  }
+
   .Show_Announcement_Bar.Fixed_Bar + header-container {
     top: 60px;
   }
@@ -644,4 +652,9 @@ announcement-container.Fixed_Bar {
   .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
     top: 108px;
   }
+
+  .Announcement_Shown.main-menu {
+    top: 108px;
+  }
+  
 }
