@@ -80,6 +80,11 @@ body.lock-scroll {
   opacity: 1;
 }
 
+.page-blury-overlay.is-visible-mobile {
+  visibility: visible;
+  opacity: 1;
+}
+
 .page-width {
   max-width: 1440px;
   margin: 0 auto;
