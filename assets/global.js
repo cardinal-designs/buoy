@@ -1811,7 +1811,6 @@ $('[href="#menu"]').click(function() {
     const $btnIsOutside = !e.target.closest('.header__inline-menu')
     if ($isOutside && $btnIsOutside) {
       $('.main-menu').attr('aria-hidden', true);
-      $('.page-overlay').removeClass('is-visible Menu_Overlay');
       $('.Mobile_Menu_Close').hide();
       $('body').removeClass('Overflow_Hidden');
       $('.Hamburger_New').show();
@@ -1823,7 +1822,7 @@ $('[href="#menu"]').click(function() {
       $('.main-menu').removeClass('active');
       $('header-container').removeClass('active');
       $('header-container').removeClass('mobile-active');
-      // $('.page-blury-overlay').removeClass('is-visible-mobile');
+      $('.page-blury-overlay').removeClass('is-visible-mobile');
       document.querySelector('body').classList.remove('lock-scroll-mobile');
     }
   });
