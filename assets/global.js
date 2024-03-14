@@ -1798,7 +1798,7 @@ $('[href="#menu"]').click(function() {
   $('.Hamburger_New').hide();
   $('.header-wrapper').addClass('active');
   $(this).addClass('active');
-  console.log('open');
+  $('.header .header-icon--logo').addClass('menu-open');
 });
 
 // Main menu close
