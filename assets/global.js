@@ -1805,6 +1805,14 @@ $('[href="#menu"]').click(function() {
   $('header-container').addClass('mobile-active');
   $('.page-blury-overlay').addClass('is-visible-mobile');
   document.querySelector('body').classList.add('lock-scroll-mobile');
+
+  document.addEventListener('click', (e) => {
+    const $isOutside = !e.target.closest('.main-menu');
+    const $btnIsOutside = !e.target.closest('.main-menu__close')
+    if ($isOutside && $btnIsOutside) {
+      console.log('outside')
+    }
+  });
 });
 
 // Main menu close
