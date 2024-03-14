@@ -1799,7 +1799,7 @@ $('[href="#menu"]').click(function() {
   $('.header-wrapper').addClass('active');
   $(this).addClass('active');
   $('.header .header-icon--logo').addClass('menu-open');
-  console.log(document.querySelector('.header .header-icon--logo'));
+  $('.header-wrapper').addClass('menu-open');
 });
 
 // Main menu close
@@ -1810,7 +1810,7 @@ $('.main-menu__close').click(function() {
   $('body').removeClass('Overflow_Hidden');
   $('.Hamburger_New').show();
   $('.header-wrapper').removeClass('active');
-  $('.header-wrapper').addClass('menu-open');
+  $('.header-wrapper').removeClass('menu-open');
   $('[href="#menu"]').removeClass('active');
   $('.header .header-icon--logo').removeClass('menu-open');
 }); 
