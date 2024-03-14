@@ -5,9 +5,7 @@
   <button class="main-menu__close">Close</button>
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
-      <div class="main-menu__main-links">
-        <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
-      </div>
+      <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
       <div class="header__dropdown-links">
         {%- if section.settings.dropdown_link_text != blank -%}
           <a href="{{ section.settings.dropdown_link_one }}">
