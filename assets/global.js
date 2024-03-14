@@ -1800,7 +1800,7 @@ $('[href="#menu"]').click(function() {
   $(this).addClass('active');
   $('.header .header-icon--logo').addClass('menu-open');
   $('.page-blury-overlay').addClass('is-visible');
-  console.log('hey');
+  console.log(document.querySelector('.page-blury-overlay'));
 });
 
 // Main menu close
