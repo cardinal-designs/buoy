@@ -375,94 +375,15 @@
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
-          {%- for link in section.settings.menu.links -%}
-            <li>
-              {%- if link.links != blank -%}
-                <details-disclosure>
-                  <details>
-                    <summary class="header__menu-item list-menu__item link focus-inset sh2">
-                      <div class="header__menu-item-wrapper">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{%- endif -%}>{{ link.title | escape }}</span>
-                        {% render 'icon-caret' %}
-                      </div>
-                    </summary>
-                    <ul class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
-                      {%- for childlink in link.links -%}
-                        <li>
-                          {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %} sh2"{% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- else -%}
-                            <details>
-                              <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large sh2">
-                                {{ childlink.title | escape }}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <ul class="header__submenu list-menu motion-reduce">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %} sh2"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </details>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </details>
-                </details-disclosure>
-              {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset sh2"{% if link.current %} aria-current="page"{% endif %}>
-                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                </a>
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
+          <li class="header__menu-item list-menu__item js-dropdown-trigger">
+            <button class="header__menu-link sh2">Menu</button>
+          </li>
+          <li class="header__menu-item list-menu__item">
+            <a href="/collections/all" class="header__menu-link sh2">
+              Shop All
+            </a>
+          </li>
         </ul>
-
-      {% for link in section.settings.menu.links %}
-      {% if link.links != blank %}
-      <div class="menu-fixed hide-mobile hide-desktop" data-menu-fixed="{{ link.handle }}">
-        <div class="bg"></div>
-        <div class="inside">
-          <div class="back">
-          	{% render 'icon-close' %}
-          </div>
-          <ul class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
-                      {%- for childlink in link.links -%}
-                        <li>
-                          {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %} sh2"{% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- else -%}
-                            <details>
-                              <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large sh2">
-                                {{ childlink.title | escape }}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <ul class="header__submenu list-menu motion-reduce">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %} sh2"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </details>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
       </nav>
     {%- endif -%}
 
@@ -529,19 +450,27 @@
       {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
-        <a href="/account" class="header__shop-link sh2">Account{% render 'icon-account-new' %}</a>
+        <a href="/account" class="header__shop-link sh2">
+          {% render 'icon-account-new' %}
+        </a>
       {%- endif -%}
 
       {% if template != 'cart' %}
         <button class="js-open-cart header__icon header__icon--cart link link--text focus-inset cart-icon-bubble {% if cart.item_count > 0 %} active{% endif %}"  id="cart-icon-bubble" data-id="{{ section.id }}"  aria-label="Open Cart Drawer">
-          <div class="1 cart-count-bubble sh1">
-            {{ cart.item_count }}
-          </div>
           {% render 'icon-cart-new' %}
-
+          <div class="1 cart-count-bubble sh1">
+            {%- if cart.item_count > 0 -%}
+              {{ cart.item_count }}
+            {%- endif -%}
+          </div>
           <span class="Cart_Close_Mobile">{%- render 'icon-close' -%}</span>                    
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         </button>
+        <div class="header__dropdown-close js-dropdown-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M6.10309 23L5 21.8969L12.8969 14L5 6.10309L6.10309 5L14 12.8969L21.8969 5L23 6.10309L15.1031 14L23 21.8969L21.8969 23L14 15.1031L6.10309 23Z" fill="#1F2322"/>
+          </svg>
+        </div>
       {% else %}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
           {%- render 'icon-cart-new' -%}
@@ -563,6 +492,67 @@
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
+
+{%- comment -%} Drop Down Menu Desktop {%- endcomment -%}
+<div class="header__dropdown">
+  <div class="header__dropdown-container">
+    <div class="header__dropdown-left">
+      {%- if section.settings.dropdown_title != blank -%}
+        <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
+      {%- endif -%}
+      <div class="header__dropdown-links">
+        {%- if section.settings.dropdown_link_text != blank -%}
+          <a href="{{ section.settings.dropdown_link_one }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text }}</h3>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.dropdown_link_text_two != blank -%}
+          <a href="{{ section.settings.dropdown_link_two }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
+          </a>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.dropdown_title_two != blank -%}
+        <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
+      {%- endif -%}
+      <ul class="header__list">
+        {%- for link in section.settings.menu.links -%}
+        <li class="header__list-item">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="header__dropdown-right">
+      {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        <div class="header__dropdown-card">
+          <div class="header__dropdown-card-top">
+            {%- if bs.block_title != blank -%}
+              <h4 class="header__dropdown-card-title">{{ bs.block_title }}</h4>
+            {%- endif -%}
+            {%- if bs.badge_text != blank -%}
+              <div class="header__dropdown-badge">
+                <p class="header__dropdown-badge-text">{{ bs.badge_text }}</p>
+              </div>
+            {%- endif -%}
+            {%- if bs.block_desc != blank -%}
+              <p class="header__dropdown-card-desc">{{ bs.block_desc }}</p>
+            {%- endif -%}
+          </div>
+          {%- if bs.block_image != blank -%}
+            <div class="header__dropdown-card-bottom">
+              <div class="media header__dropdown-card-image" style="padding-bottom: 70%;">
+                {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{%- comment -%} End Drop Down Menu Desktop {%- endcomment -%}
 
 <script type="application/ld+json">
   {
@@ -640,6 +630,68 @@
       "id": "mobile_menu",
       "default": "main-menu",
       "label": "Mobile Hamburger Click"
+    },
+    {
+      "type": "text",
+      "id": "dropdown_title",
+      "label": "Dropdown Title"
+    },
+    {
+      "type": "text",
+      "id": "dropdown_title_two",
+      "label": "Dropdown Title Two"
+    },
+    {
+      "type": "text",
+      "id": "dropdown_link_text",
+      "label": "Dropdown Link Text"
+    },
+    {
+      "type": "url",
+      "id": "dropdown_link_one",
+      "label": "Dropdown URL"
+    },
+    {
+      "type": "text",
+      "id": "dropdown_link_text_two",
+      "label": "Dropdown Link Text 2"
+    },
+    {
+      "type": "url",
+      "id": "dropdown_link_two",
+      "label": "Dropdown URL Two"
+    }
+  ],
+    "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Product card in dropdown menu"
+        },
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text"
+        },
+        {
+          "type": "text",
+          "id": "block_desc",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        }
+      ]
     }
   ]
 }

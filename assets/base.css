@@ -2019,17 +2019,31 @@ header-container {
   z-index: 3;
 }
 
+header-container.active {
+  z-index: 2;
+  width: calc(100% - 20px);
+  position: sticky;
+  top: 10px !important;
+  left: 10px;
+  right: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
 /* Main Header Layout */
 .header-wrapper {
   display: block;
   position: relative;
   background-color: white;
-  border-bottom: 1px solid var(--charcoal);
+  border-bottom: 1px solid var(--gray-light);
   transition: background-color, border .3s ease;
 }
 
 .header-wrapper.active {
   border-bottom: 1px solid transparent; 
+}
+
+.header-wrapper.active-dropdown {
+  border-radius: 20px;
 }
 
 .header {
@@ -2147,8 +2161,12 @@ header-container {
 }
 
 .header__icon--cart .cart-count-bubble {
-  margin: 0 10px 0 0;
-  font-size: 16px;
+  margin: 0 0 0 10px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .header__icon--cart.active svg circle {
@@ -2341,6 +2359,15 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__menu {
   padding: 0 1rem;
+}
+
+.header__menu-link {
+  color: var(--charcoal);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  cursor: pointer;
 }
 
 .header__menu-item {

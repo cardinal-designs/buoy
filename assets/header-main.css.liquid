@@ -247,6 +247,7 @@ li:focus, :focus{
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header .list-menu__item {
@@ -255,6 +256,7 @@ li:focus, :focus{
 
 .header__inline-menu {
   margin-left: 0;
+  order: -1;
 }
 
 .Mobile_Show.header__inline-menu {
@@ -358,8 +360,138 @@ header-drawer {
 
   .header__svg-logo {
     max-width: 50px;
-  }
-    
+  } 
 }
 
+.header__dropdown {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.header__dropdown.active {
+  display: block;
+}
+
+.header__dropdown-close {
+  display: none;
+  cursor: pointer;
+}
+
+.header__dropdown-close.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.header__dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.header__dropdown-left {
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.header__dropdown-item {
+  margin-bottom: 20px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--charcoal-60);
+}
+
+.header__dropdown-links {
+  margin-bottom: 30px;
+}
+
+.header__dropdown-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34px;
+  text-transform: capitalize;
+}
+
+.header__list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.header__list-item {
+  color: var(--charcoal);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px; 
+  margin-bottom: 8px;
+}
+
+.header__dropdown-card {
+  max-width: 329px;
+  width: 100%;
+}
+
+.header__dropdown-right {
+  display: flex;
+  gap: 21px;
+  padding-bottom: 20px;
+}
+
+.header__dropdown-card-top {
+  background: var(--gray-lighest);
+  padding: 16px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.header__dropdown-card-title {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 53px;
+}
+
+.header__dropdown-card-desc {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  padding-top: 12px;
+}
+
+.header__dropdown-card-image img {
+  width: 329px;
+  height: 329px;
+  border-radius: 0 0 10px 10px;
+}
+
+.header__dropdown-badge {
+  border-radius: 25px;
+  width: fit-content;
+  background: var(--green-1);
+  padding: 3px 12px;
+  font-size: 12px;
+}
+
+.header__dropdown-badge-text {
+  padding: 0;
+  margin: 0;
+}
 /*** NEW HEADER CSS END ***/
