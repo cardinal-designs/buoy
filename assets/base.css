@@ -2040,6 +2040,7 @@ header-container.active {
 
 .header-wrapper.menu-open {
   display: flex;
+  padding-left: 0;
 }
 
 .header-wrapper.active {
