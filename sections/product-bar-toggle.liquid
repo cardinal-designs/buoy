@@ -144,8 +144,10 @@
       var scrollToSectionOffset = $('.show-product-bar');
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+        console.log(1)
         $('.product-bar').addClass('scrolled');
       } else {
+        console.log(2)
         $('.product-bar').removeClass('scrolled');
       }
     } else {
