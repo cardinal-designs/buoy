@@ -1800,7 +1800,7 @@ $('[href="#menu"]').click(function() {
   $(this).addClass('active');
   $('.header .header-icon--logo').addClass('menu-open');
   $('.header-wrapper').addClass('menu-open');
-  $('.header').addClass('menu-open');
+  // $('.header').addClass('menu-open');
 });
 
 // Main menu close
@@ -1814,7 +1814,7 @@ $('.main-menu__close').click(function() {
   $('.header-wrapper').removeClass('menu-open');
   $('[href="#menu"]').removeClass('active');
   $('.header .header-icon--logo').removeClass('menu-open');
-  $('.header').removeClass('menu-open');
+  // $('.header').removeClass('menu-open');
 }); 
  
 // Nav Menu Dropdown Desktop
