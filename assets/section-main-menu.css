@@ -600,14 +600,6 @@ announcement-container.Fixed_Bar {
   .main-menu {
     top: 54px;
   }
-  
-  .Announcement_Shown.main-menu {
-    top: 93px;
-  }
-
-  .header--scrolled + #shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 93px;
-  }
 
   .Show_Announcement_Bar + header-container {
     top: 0;
@@ -628,10 +620,6 @@ announcement-container.Fixed_Bar {
     top: 139px;
   }
     
-  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    /* top: 139px; */
-    top: 114px;
-  }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {
     top: 60px;
