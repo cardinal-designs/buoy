@@ -1802,7 +1802,7 @@ $('[href="#menu"]').click(function() {
   $('.header-wrapper').addClass('menu-open');
   $('.header').addClass('menu-open');
   $('.main-menu').addClass('active');
-  document.querySelector('header-container').classList.add('active');
+  document.querySelector('header-container').classList.add('mobile-active');
 });
 
 // Main menu close
