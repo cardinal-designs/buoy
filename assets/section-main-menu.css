@@ -28,7 +28,6 @@
 .main-menu.active {
   z-index: 100;
   width: calc(100% - 20px);
-  position: absolute;
   top: 51px !important;
   left: 10px;
   right: 10px;
