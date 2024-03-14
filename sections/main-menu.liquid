@@ -49,19 +49,8 @@
       </div>
 
     </div>
-    <div class="Main_Menu_Bottom">
-      {% if section.settings.show_account %}
-        <a href="/account" class="sh4 light account-link">
-          {% render 'icon-account-new' %}
-          Account
-        </a>
-      {% endif %}
-      {% if section.settings.arrow_link_label != blank %}
-        <a href="{{ section.settings.arrow_link }}" class="arrow-link body medium Shop_Link">
-          {{ section.settings.arrow_link_label }}
-          {% render 'icon-arrow-right' %}
-        </a>
-      {% endif %}
+    <div class="header__dropdown-bottom">
+
     </div>
   </div>
 </div>
