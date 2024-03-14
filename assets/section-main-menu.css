@@ -9,7 +9,8 @@
   align-items: center;
   background: white;
   color: var(--charcoal);
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
@@ -455,6 +456,8 @@
 
   .main-menu__container {
     display: block;
+    padding: 20px;
+    overflow-y: scroll;
   }
 
   .Main_Menu_Link_Desktop_Title {
@@ -488,7 +491,6 @@
 
   .main-menu__wrapper {
     position: inherit;
-    overflow: auto;
     height: 100%;
   }
 
@@ -599,18 +601,6 @@ announcement-container.Fixed_Bar {
   .main-menu {
     top: 54px;
   }
-  
-  .Announcement_Shown.main-menu {
-    top: 93px;
-  }
-  
-  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 93px;
-  }
-
-  .header--scrolled + #shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 93px;
-  }
 
   .Show_Announcement_Bar + header-container {
     top: 0;
@@ -628,12 +618,7 @@ announcement-container.Fixed_Bar {
 @media only screen and (max-width: 667px) {
 
   .Announcement_Shown.main-menu {
-    top: 139px;
-  }
-    
-  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    /* top: 139px; */
-    top: 114px;
+    top: 100px;
   }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {

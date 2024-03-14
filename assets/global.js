@@ -1563,6 +1563,7 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const element = document.querySelector(this.getAttribute('href'));
+        if (!element) return;
         const offset = 100;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = element.getBoundingClientRect().top;
@@ -1775,7 +1776,7 @@ $('.reviews_button').click(function(){
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','0px');
-  $('.main-menu').css('top','54px');
+  $('.main-menu').css('top','40px');
   $('.Show_Announcement_Bar').addClass('not-active');
   // remove page blur and lock scroll if nav dropdown is open
   if ($('.header__dropdown').hasClass('active')) {
@@ -1788,7 +1789,7 @@ $('.announcement-bar__close').click(function() {
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
-    $('.main-menu').css('top', '54px');
+    $('.main-menu').css('top', '40px');
   }
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
@@ -1797,6 +1798,9 @@ $('[href="#menu"]').click(function() {
   $('.Hamburger_New').hide();
   $('.header-wrapper').addClass('active');
   $(this).addClass('active');
+  $('.header .header-icon--logo').addClass('menu-open');
+  $('.header-wrapper').addClass('menu-open');
+  $('.header').addClass('menu-open');
 });
 
 // Main menu close
@@ -1807,7 +1811,10 @@ $('.main-menu__close').click(function() {
   $('body').removeClass('Overflow_Hidden');
   $('.Hamburger_New').show();
   $('.header-wrapper').removeClass('active');
+  $('.header-wrapper').removeClass('menu-open');
   $('[href="#menu"]').removeClass('active');
+  $('.header .header-icon--logo').removeClass('menu-open');
+  $('.header').removeClass('menu-open');
 }); 
  
 // Nav Menu Dropdown Desktop

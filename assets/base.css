@@ -2038,6 +2038,14 @@ header-container.active {
   transition: background-color, border .3s ease;
 }
 
+.header-wrapper.menu-open {
+  display: flex;
+}
+
+.header.menu-open {
+  padding-left: 0;
+}
+
 .header-wrapper.active {
   border-bottom: 1px solid transparent; 
 }

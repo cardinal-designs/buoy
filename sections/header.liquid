@@ -474,21 +474,12 @@
       {% else %}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
           {%- render 'icon-cart-new' -%}
-
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {% comment %}
-          {%- if cart != empty -%}
-            <div class="2 cart-count-bubble">
-              {%- if cart.item_count < 100 -%}
-                <span aria-hidden="true">{{ cart.item_count }}</span>
-              {%- endif -%}
-              <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-            </div>
-          {%- endif -%}
-        {% endcomment %}
         </a>
       {% endif %}
-      <button class="main-menu__close">Close</button>
+      <button class="main-menu__close">
+        {% render 'icon-close' %}
+      </button>
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
@@ -624,12 +615,6 @@
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
-    },
-    {
-      "type": "link_list",
-      "id": "mobile_menu",
-      "default": "main-menu",
-      "label": "Mobile Hamburger Click"
     },
     {
       "type": "text",
