@@ -2038,9 +2038,12 @@ header-container.active {
   transition: background-color, border .3s ease;
 }
 
+.header-wrapper.menu-open {
+  display: flex;
+}
+
 .header-wrapper.active {
   border-bottom: 1px solid transparent; 
-  display: flex;
 }
 
 .header-wrapper.active-dropdown {
