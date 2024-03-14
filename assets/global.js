@@ -1803,7 +1803,7 @@ $('[href="#menu"]').click(function() {
   $('.header').addClass('menu-open');
   $('.main-menu').addClass('active');
   $('header-container').addClass('mobile-active');
-  document.querySelector('.page-blury-overlay').classList.add('is-visible');
+  document.querySelector('.page-blury-overlay').classList.add('is-visible-mobile');
 });
 
 // Main menu close
