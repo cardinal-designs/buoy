@@ -8,6 +8,18 @@
       <div class="main-menu__main-links">
         <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
       </div>
+      <div class="header__dropdown-links">
+        {%- if section.settings.dropdown_link_text != blank -%}
+          <a href="{{ section.settings.dropdown_link_one }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text }}</h3>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.dropdown_link_text_two != blank -%}
+          <a href="{{ section.settings.dropdown_link_two }}">
+            <h3 class="header__dropdown-title">{{ section.settings.dropdown_link_text_two }}</h3>
+          </a>
+        {%- endif -%}
+      </div>
       
       <div class="main-menu__secondary-links">
         {% for block in section.blocks %}
