@@ -34,6 +34,11 @@
             <div class="header__dropdown-card-mobile">
               <div class="media header__dropdown-mobile-image" style="padding-bottom: 70%;">
                 {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
+                {%- if bs.badge_text != blank -%}
+                  <div class="header__dropdown-badge">
+                    <p class="header__dropdown-badge-text">{{ bs.badge_text }}</p>
+                  </div>
+                {%- endif -%}
               </div>
               <p class="header__dropdown-card-mobile-desc">{{ bs.block_desc }}</p>
             </div>
@@ -103,6 +108,11 @@
             "type": "image_picker",
             "id": "block_image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "badge_text",
+            "label": "Badge Text"
           },
           {
             "type": "text",
