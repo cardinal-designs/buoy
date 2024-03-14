@@ -1801,6 +1801,10 @@ $('[href="#menu"]').click(function() {
   $('.header .header-icon--logo').addClass('menu-open');
   $('.header-wrapper').addClass('menu-open');
   $('.header').addClass('menu-open');
+  $('.main-menu').addClass('active');
+  $('header-container').addClass('mobile-active');
+  $('.page-blury-overlay').addClass('is-visible-mobile');
+  document.querySelector('body').classList.add('lock-scroll-mobile');
 });
 
 // Main menu close
@@ -1815,6 +1819,11 @@ $('.main-menu__close').click(function() {
   $('[href="#menu"]').removeClass('active');
   $('.header .header-icon--logo').removeClass('menu-open');
   $('.header').removeClass('menu-open');
+  $('.main-menu').removeClass('active');
+  $('header-container').removeClass('active');
+  $('header-container').removeClass('mobile-active');
+  $('.page-blury-overlay').removeClass('is-visible-mobile');
+  document.querySelector('body').classList.remove('lock-scroll-mobile');
 }); 
  
 // Nav Menu Dropdown Desktop
