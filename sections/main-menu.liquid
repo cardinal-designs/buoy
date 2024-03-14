@@ -47,12 +47,12 @@
           {%- endfor -%}
         </div>
       </div>
-      
+
       <div class="header__dropdown-bottom">
         {%- if section.settings.dropdown_title_three != blank -%}
           <div class="header__dropdown-item">{{ section.settings.dropdown_title_three }}</div>
         {%- endif -%}
-        <ul class="header__list-mobile">
+        <ul class="header__list">
           {%- for link in section.settings.mobile_menu.links -%}
           <li class="header__list-item">
             <a href="{{ link.url }}">{{ link.title }}</a>
