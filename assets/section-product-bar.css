@@ -263,6 +263,10 @@
   .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
     min-width: 200px;
   }
+
+  .product-bar-toggle .flex-buttons-bar {
+    gap: 10px;
+  }
   
 }
 
