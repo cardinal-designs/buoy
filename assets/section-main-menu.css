@@ -10,7 +10,7 @@
   background: white;
   color: var(--charcoal);
   overflow: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
