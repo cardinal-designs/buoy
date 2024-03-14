@@ -1803,7 +1803,7 @@ $('[href="#menu"]').click(function() {
   $('.header').addClass('menu-open');
   $('.main-menu').addClass('active');
   $('header-container').addClass('mobile-active');
-  document.querySelector('.page-blury-overlay').classList.add('is-visible-mobile');
+  $('.page-blury-overlay').addClass('is-visible-mobile');
 });
 
 // Main menu close
@@ -1821,6 +1821,7 @@ $('.main-menu__close').click(function() {
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
   $('header-container').removeClass('mobile-active');
+  $('.page-blury-overlay').removeClass('is-visible-mobile');
 }); 
  
 // Nav Menu Dropdown Desktop
