@@ -1804,6 +1804,7 @@ $('[href="#menu"]').click(function() {
   $('.main-menu').addClass('active');
   $('header-container').addClass('mobile-active');
   $('.page-blury-overlay').addClass('is-visible-mobile');
+  document.querySelector('body').classList.add('lock-scroll');
 });
 
 // Main menu close
@@ -1822,6 +1823,7 @@ $('.main-menu__close').click(function() {
   $('header-container').removeClass('active');
   $('header-container').removeClass('mobile-active');
   $('.page-blury-overlay').removeClass('is-visible-mobile');
+  document.querySelector('body').classList.remove('lock-scroll');
 }); 
  
 // Nav Menu Dropdown Desktop
