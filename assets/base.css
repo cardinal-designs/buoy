@@ -2031,7 +2031,7 @@ header-container.active {
 
 /* Main Header Layout */
 .header-wrapper {
-  /* display: block; */
+  display: flex;
   position: relative;
   background-color: white;
   border-bottom: 1px solid var(--gray-light);
