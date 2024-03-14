@@ -151,7 +151,12 @@
 }
 
 .product-bar-toggle .flex-buttons-bar .js-sticky-add-to-cart {
-  min-width: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green-1);
+  border: none;
   color: #1F2322;
 }
 
