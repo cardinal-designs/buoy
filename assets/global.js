@@ -1808,7 +1808,7 @@ $('[href="#menu"]').click(function() {
 
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.main-menu');
-    const $btnIsOutside = !e.target.closest('.Mobile_Hamburger')
+    const $btnIsOutside = !e.target.closest('.header__inline-menu')
     if ($isOutside && $btnIsOutside) {
       $('.main-menu').attr('aria-hidden', true);
       $('.page-overlay').removeClass('is-visible Menu_Overlay');
