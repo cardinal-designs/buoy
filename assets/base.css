@@ -25,6 +25,10 @@ body.lock-scroll {
   overflow: hidden;
 }
 
+body.lock-scroll-mobile {
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .hide-mobile {
     display: none !important;
