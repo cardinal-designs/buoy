@@ -2047,6 +2047,12 @@ header-container.mobile-active {
   right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  header-container {
+    border-radius: 20px;
+  }
+}
+
 /* Main Header Layout */
 .header-wrapper {
   display: block;
