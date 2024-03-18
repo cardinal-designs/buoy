@@ -626,6 +626,7 @@ announcement-container.Fixed_Bar {
 
   .Announcement_Shown.main-menu {
     top: 100px;
+    border-radius: 20px;
   }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {
