@@ -2047,6 +2047,13 @@ header-container.mobile-active {
   right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+
+  header-container.mobile-active {
+    border-radius: 20px;
+  }
+}
+
 /* Main Header Layout */
 .header-wrapper {
   display: block;
@@ -2066,10 +2073,6 @@ header-container.mobile-active {
 
 .header-wrapper.active {
   border-bottom: 1px solid transparent; 
-}
-
-.header-wrapper.active-dropdown {
-  border-radius: 20px;
 }
 
 .header {
