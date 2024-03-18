@@ -216,9 +216,9 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  border-radius: 20px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
+  border-radius: 20px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
 }
 
 .main-menu__main-links {
