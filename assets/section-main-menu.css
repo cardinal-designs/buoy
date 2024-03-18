@@ -27,6 +27,7 @@
 .main-menu.active {
   position: sticky;
   top: 0;
+  border-radius: 50px !important;
 }
 
 .main-menu[aria-hidden="false"] {
