@@ -2048,7 +2048,7 @@ header-container.mobile-active {
 }
 
 @media screen and (max-width: 768px) {
-  header-container {
+  header-container.mobile-active {
     border-radius: 20px;
   }
 }
