@@ -1787,7 +1787,6 @@ $('.announcement-bar__close').click(function() {
 
 // Main menu open
 $('[href="#menu"]').click(function() {
-  console.log('hey');
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.main-menu').css('top', '40px');
