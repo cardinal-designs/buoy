@@ -27,7 +27,7 @@
 .main-menu.active {
   position: sticky;
   top: 0;
-  border-radius: 0px 20px;
+  border-radius: 10px;
 }
 
 .main-menu[aria-hidden="false"] {
@@ -466,7 +466,7 @@
     padding: 20px;
     overflow-y: scroll;
     padding-right: 0;
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
 
   .Main_Menu_Link_Desktop_Title {
