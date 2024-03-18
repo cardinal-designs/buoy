@@ -217,6 +217,7 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   border-radius: 20px !important;
+  border-bottom-right-radius: 20px;
 }
 
 .main-menu__main-links {
