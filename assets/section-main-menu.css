@@ -465,6 +465,7 @@
     padding: 20px;
     overflow-y: scroll;
     padding-right: 0;
+    border-radius: 0px 0px 20px 20px;
   }
 
   .Main_Menu_Link_Desktop_Title {
@@ -626,7 +627,6 @@ announcement-container.Fixed_Bar {
 
   .Announcement_Shown.main-menu {
     top: 100px;
-    border-radius: 20px !important;
   }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {
