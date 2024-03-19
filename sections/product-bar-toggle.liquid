@@ -72,6 +72,7 @@
          {%- for option in product.options_with_values -%}
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
+           <div class="custom-select">
             <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
             {%- for variant in product.variants -%}
               {% assign value = variant.options[optionIndex] %}
@@ -83,10 +84,12 @@
               {%- endunless -%}
             {%- endfor -%}
             </select>
+           </div>
           {%- endfor -%}
         {% endunless %}
         
         {% if product.selling_plan_groups.size > 0 %}
+          <div class="custom-select-2">
           <select class="product-form__input--dropdown js-sticky-subscription-btns"
             data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
             data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
@@ -95,6 +98,7 @@
             <option value="one-time">One-time Purchase</option>
             <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe and Save 23%</option>
           </select>
+          </div>
         {% endif %}
         {% comment %}
         <div class="product-quick-add__form js-sticky-subscription-btns">
