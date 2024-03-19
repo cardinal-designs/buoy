@@ -229,6 +229,10 @@
   text-transform: unset;
 }
 
+.product-bar-toggle .flex-buttons-bar {
+  align-items: center;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
@@ -251,10 +255,6 @@
 
   span.Product_Bar_Variant {
     flex: 0 0 20%;
-  }
-
-  .product-bar-toggle .flex-buttons-bar {
-    align-items: center;
   }
 
   .Product_Bar_Variant .product-form__input input[type=radio]+label:after {
