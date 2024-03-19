@@ -233,6 +233,10 @@
   align-items: center;
 }
 
+.js-sticky-subscription-btns {
+  min-width: 220px;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
