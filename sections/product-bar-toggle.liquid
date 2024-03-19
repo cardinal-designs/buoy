@@ -130,7 +130,10 @@
           {% else %}
           <span>Add to Cart</span>&nbsp—&nbsp
           <span class="button-money">
-            <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {% comment %}
+            <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
+            {% endcomment %}
+            {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
           </span>
           {% endif %}
         </button>
