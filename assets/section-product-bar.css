@@ -234,7 +234,7 @@
 }
 
 .js-sticky-subscription-btns {
-  min-width: 220px;
+  min-width: 220px !important;
 }
 
 @media screen and (max-width: 1137px) {
