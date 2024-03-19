@@ -655,7 +655,7 @@ class VariantSelects extends HTMLElement {
       if (text) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.innerHTML = addToCartText;
+      addButton.innerHTML = addToCartText; 
       
       stickyButton.removeAttribute('disabled');
       stickyButton.innerHTML = addToCartText;
