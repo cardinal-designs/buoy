@@ -290,6 +290,19 @@
   visibility: visible;
 }
 
+.options__dropdown--li {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.options__dropdown--li:last-child {
+  border-bottom: none;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
