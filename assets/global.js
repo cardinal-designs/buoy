@@ -1840,6 +1840,8 @@ if(optionList.length > 0){
           siblings[i].classList.remove('variant-active');
         }
       }
+
+      console.log('this--',this);
       
       if (data !== "") {
         var variantWrapperDropdown = this.closest('.main__variant--wrap');
