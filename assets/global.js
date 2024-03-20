@@ -1843,17 +1843,17 @@ if(optionList.length > 0){
       
       if (data !== "") {
         var variantWrapperDropdown = this.closest('.custom__input--dropdown');
-        variantWrapperDropdown.querySelector('.custom-color').innerHTML = text;
-        variantWrapperDropdown.querySelectorAll('.color-select-dropdown, .variant--select-dropdown').forEach(function(select) {
-          select.value = data;
-          select.dispatchEvent(new Event('change'));
-        });
-        var dataId = this.closest('.color-dropdown').getAttribute('data-selectid');
-        var element = document.getElementById(dataId);
+        variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = text;
+        // variantWrapperDropdown.querySelectorAll('.color-select-dropdown, .variant--select-dropdown').forEach(function(select) {
+        //   select.value = data;
+        //   select.dispatchEvent(new Event('change'));
+        // });
+        var dataId = this.closest('.options__dropdown').getAttribute('data-selectid');
+        var element = document.getElementsByClassName(dataId)[0];
         element.dispatchEvent(new Event('change'));
       }
   
-      var variantWrapperDropdown = this.closest('.variant-wrapper--dropdown');
+      var variantWrapperDropdown = this.closest('.custom__input--dropdown');
       variantWrapperDropdown.querySelector('.custom-swatch-active').classList.remove("opened");
       variantWrapperDropdown.querySelector(".color-dropdown").classList.remove("dropdown-open");
     });
