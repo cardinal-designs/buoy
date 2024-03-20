@@ -2162,8 +2162,7 @@ header-container.mobile-active {
 /* Header icons */
 .header__icons {
   display: flex;
-  grid-area: icons;
-  justify-self: end;
+  gap: 12px;
 }
 
 .header__icon:not(.header__icon--summary),
