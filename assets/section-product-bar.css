@@ -256,6 +256,16 @@
   white-space: nowrap;
 }
 
+.custom__input--wrap span {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.custom__input--wrap {
+  position: relative;
+}
+
 .custom__input--dropdown {
   position: relative;
 }
