@@ -106,17 +106,32 @@
            
           {%- endfor -%}
         {% endunless %}
+
+        <div class="main__variant--wrap">
         
-        {% if product.selling_plan_groups.size > 0 %}
-          <select class="product-form__input--dropdown js-sticky-subscription-btns"
-            data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
-            data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
-            data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-            >
-            <option value="one-time">One-time Purchase</option>
-            <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe and Save 23%</option>
-          </select>
-        {% endif %}
+          {% if product.selling_plan_groups.size > 0 %}
+            <select class="product-form__input--dropdown js-sticky-subscription-btns"
+              data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
+              data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
+              data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+              >
+              <option value="one-time">One-time Purchase</option>
+              <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe and Save 23%</option>
+            </select>
+
+            <div class="custom__input--dropdown">
+              <div class="custom__input--active">One-time Purchase</div>
+              <ul class="options__dropdown" data-selectid="product-form__input--dropdown js-sticky-subscription-btns"
+                data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
+                data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
+                data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}">
+                <li class="options__dropdown--li" data-value="one-time">One-time Purchase</li>
+                <li class="options__dropdown--li" data-value="subscription">Subscribe and Save 23%</li>
+              </ul>
+            </div>
+            
+          {% endif %}
+        </div>
         {% comment %}
         <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
