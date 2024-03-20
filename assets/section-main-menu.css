@@ -246,7 +246,7 @@
 
 .header--transparent:not(.header--scrolled) .header-wrapper.active {
   background-color: #ffffff;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .header-wrapper.active .header__shop-link,
