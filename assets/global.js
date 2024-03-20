@@ -1836,7 +1836,7 @@ if(optionList.length > 0){
       var text = this.innerHTML;
       var data = this.getAttribute('data-value');
       this.classList.add('variant-active');
-      var siblings = this.parentElement.children;
+      var siblings = this.closest('.options__dropdown').querySelectorAll('.options__dropdown--li');
       for (var i = 0; i < siblings.length; i++) {
         if (siblings[i] !== this) {
           siblings[i].classList.remove('variant-active');
