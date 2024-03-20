@@ -72,7 +72,7 @@
          {%- for option in product.options_with_values -%}
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
-
+values -- {{ values }}
            <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}" style="display: none;">
             {%- for variant in product.variants -%}
               {% assign value = variant.options[optionIndex] %}
@@ -84,7 +84,7 @@
               {%- endunless -%}
             {%- endfor -%}
             </select>
-
+values -- {{ values }}
             <div class="custom__input--dropdown">
               <div class="custom__input--active">{{ option.selected_value }}</div>
               <ul class="" data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
