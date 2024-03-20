@@ -107,9 +107,8 @@
           {%- endfor -%}
         {% endunless %}
 
-        <div class="main__variant--wrap">
-        
-          {% if product.selling_plan_groups.size > 0 %}
+        {% if product.selling_plan_groups.size > 0 %}
+          <div class="main__variant--wrap">
             <select class="product-form__input--dropdown js-sticky-subscription-btns" style="display: none;"
               data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
               data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
@@ -129,9 +128,9 @@
                 <li class="options__dropdown--li" data-value="subscription">Subscribe and Save 23%</li>
               </ul>
             </div>
-            
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
+        
         {% comment %}
         <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
