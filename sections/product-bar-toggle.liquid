@@ -89,7 +89,14 @@
              {% assign values = "" %}
   
             <div class="custom__input--dropdown">
-              <div class="custom__input--active">{{ option.selected_value }}</div>
+              <div class="custom__input--wrap">
+                <div class="custom__input--active">{{ option.selected_value }}</div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10" fill="none">
+                    <path d="M7.5 9.08L0 1.58142L1.08162 0.5L7.5 6.93761L13.9184 0.520391L15 1.60181L7.5 9.08Z" fill="#1F2322"/>
+                  </svg>
+                </span>
+              </div>
               <ul class="options__dropdown" data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
                 {%- for variant in product.variants -%}
                   {% assign value = variant.options[optionIndex] %}
@@ -119,7 +126,14 @@
             </select>
 
             <div class="custom__input--dropdown">
-              <div class="custom__input--active">Subscribe and Save 23%</div>
+              <div class="custom__input--wrap">
+                <div class="custom__input--active">Subscribe and Save 23%</div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10" fill="none">
+                    <path d="M7.5 9.08L0 1.58142L1.08162 0.5L7.5 6.93761L13.9184 0.520391L15 1.60181L7.5 9.08Z" fill="#1F2322"/>
+                  </svg>
+                </span>
+              </div>
               <ul class="options__dropdown" data-selectid="product-form__input--dropdown js-sticky-subscription-btns"
                 data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
                 data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
