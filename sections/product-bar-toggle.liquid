@@ -97,7 +97,7 @@
                   {% assign values = values | join:',' %}
                   {% assign values = values | append:',' | append:value %}
                   {% assign values = values | split:',' %}
-                    <li class="options__dropdown--li" data-value="{{ value }}" data-id="{{ variant.id }}" data-option="option-{{ optionIndex }}">{{ value }}</li>
+                    <li class="options__dropdown--li {% if currentVariant.id == variant.id %}variant-active{% endif %}" data-value="{{ value }}" data-id="{{ variant.id }}" data-option="option-{{ optionIndex }}">{{ value }}</li>
                   {%- endunless -%}
                 {%- endfor -%}
               </ul>
@@ -125,7 +125,7 @@
                 data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
                 data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}">
                 <li class="options__dropdown--li" data-value="one-time">One-time Purchase</li>
-                <li class="options__dropdown--li" data-value="subscription">Subscribe and Save 23%</li>
+                <li class="options__dropdown--li variant-active" data-value="subscription">Subscribe and Save 23%</li>
               </ul>
             </div>
           </div>
