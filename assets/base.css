@@ -2054,6 +2054,7 @@ header-container.mobile-active {
   }
 
   header-container.mobile-active .header__heading {
+    top: initial;
     left: 20px;
   }
 }
