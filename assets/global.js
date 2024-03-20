@@ -1791,6 +1791,7 @@ $('[href="#menu"]').click(function() {
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.main-menu').css('top', '40px');
   }
+  $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
   $('body').addClass('Overflow_Hidden');
