@@ -2052,6 +2052,10 @@ header-container.mobile-active {
   header-container.mobile-active {
     border-radius: 10px;
   }
+
+  header-container.mobile-active .header__heading {
+    left: 20px;
+  }
 }
 
 /* Main Header Layout */
