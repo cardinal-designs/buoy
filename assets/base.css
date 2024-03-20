@@ -2061,11 +2061,12 @@ header-container.mobile-active {
   background-color: white;
   transition: background-color, border .3s ease;
   border-radius: 10px 10px 0 0;
-}
-
-.header-wrapper.active-dropdown {
   border-bottom: 1px solid #E9E9E9;
 }
+
+/* .header-wrapper.active-dropdown {
+  border-bottom: 1px solid #E9E9E9;
+} */
 
 .header-wrapper.menu-open {
   display: flex;
