@@ -1842,7 +1842,7 @@ if(optionList.length > 0){
       }
       
       if (data !== "") {
-        var variantWrapperDropdown = this.closest('.variant-wrapper--dropdown');
+        var variantWrapperDropdown = this.closest('.custom__input--dropdown');
         variantWrapperDropdown.querySelector('.custom-color').innerHTML = text;
         variantWrapperDropdown.querySelectorAll('.color-select-dropdown, .variant--select-dropdown').forEach(function(select) {
           select.value = data;
