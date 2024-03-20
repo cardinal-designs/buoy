@@ -2112,6 +2112,10 @@ header-container.mobile-active {
 .header__heading {
   margin: 0;
   line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header > .header__heading-link {
