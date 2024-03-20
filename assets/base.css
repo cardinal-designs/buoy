@@ -2222,13 +2222,12 @@ header-container.mobile-active {
 .header--transparent:not(.header--scrolled) .header-wrapper {
   background-color: transparent;
   border-color: transparent;
-  border: none;
 }
 
 .page-chronic-illness-support .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-about-sustainability .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-clear-pee-club .header--transparent:not(.header--scrolled) .header-wrapper {
-  background-color: #F8F1EB;
+  background-color: red;
 }
 
 .template-index #MainContent {
