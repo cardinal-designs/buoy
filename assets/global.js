@@ -1854,8 +1854,8 @@ if(optionList.length > 0){
       }
   
       var variantWrapperDropdown = this.closest('.custom__input--dropdown');
-      variantWrapperDropdown.querySelector('.custom-swatch-active').classList.remove("opened");
-      variantWrapperDropdown.querySelector(".color-dropdown").classList.remove("dropdown-open");
+      variantWrapperDropdown.querySelector('.custom__input--active').classList.remove("opened");
+      variantWrapperDropdown.querySelector(".options__dropdown").classList.remove("dropdown-open");
     });
   });
 }
