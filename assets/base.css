@@ -2162,15 +2162,13 @@ header-container.mobile-active {
 /* Header icons */
 .header__icons {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
 .header__icon:not(.header__icon--summary),
 .header__icon span {
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header__icon span {
