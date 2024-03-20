@@ -1842,12 +1842,12 @@ if(optionList.length > 0){
       }
       
       if (data !== "") {
-        var variantWrapperDropdown = this.closest('.custom__input--dropdown');
+        var variantWrapperDropdown = this.closest('.main__variant--wrap');
         variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = text;
-        // variantWrapperDropdown.querySelectorAll('.color-select-dropdown, .variant--select-dropdown').forEach(function(select) {
-        //   select.value = data;
-        //   select.dispatchEvent(new Event('change'));
-        // });
+        variantWrapperDropdown.querySelectorAll('.color-select-dropdown').forEach(function(select) {
+          select.value = data;
+          select.dispatchEvent(new Event('change'));
+        });
         var dataId = this.closest('.options__dropdown').getAttribute('data-selectid');
         var element = document.getElementsByClassName(dataId)[0];
         element.dispatchEvent(new Event('change'));
