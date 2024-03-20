@@ -87,6 +87,7 @@
 
            {% assign values = "" %}
 
+           {% comment %}
             <div class="custom__input--dropdown">
               <div class="custom__input--active">{{ option.selected_value }}</div>
               <ul class="options__dropdown" data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
@@ -101,6 +102,7 @@
                 {%- endfor -%}
               </ul>
             </div>
+        {% endcomment %}
            
             
           {%- endfor -%}
