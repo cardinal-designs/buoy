@@ -2036,6 +2036,7 @@ header-container.active {
   left: 10px;
   right: 10px;
   border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid red;
 }
 
 header-container.mobile-active {
@@ -2099,11 +2100,6 @@ header-container.mobile-active {
   }
   
 }
-
-/* .header--scrolled .header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-} */
 
 .header *[tabindex='-1']:focus {
   outline: none;
