@@ -60,7 +60,7 @@
 
 .image-with-dropdowns__container-2 .image-with-dropdowns__q {
   padding-bottom: 30px;
-  border-bottom: 1px solid #E9E9E9;
+  border-bottom: 1px solid var(--gray-light);
   justify-content: space-between;
 }
 
@@ -179,7 +179,7 @@
 
 .icon-image-block3 {
   padding-bottom: 10px;
-  border-bottom: 1px solid#E9E9E9;
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .icon-image-block3 ul {
