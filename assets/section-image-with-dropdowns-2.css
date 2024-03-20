@@ -60,7 +60,7 @@
 
 .image-with-dropdowns__container-2 .image-with-dropdowns__q {
   padding-bottom: 30px;
-  border-bottom: 1px solid #E9E9E9;
+  border-bottom: 1px solid var(--gray-light);
   justify-content: space-between;
 }
 
@@ -179,7 +179,7 @@
 
 .icon-image-block3 {
   padding-bottom: 10px;
-  border-bottom: 1px solid#E9E9E9;
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .icon-image-block3 ul {
@@ -266,7 +266,7 @@
 .image-with-dropdowns__block4-bottom {
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 1px solid #e9e9e9;
+  border-top: 1px solid var(--gray-light);
 }
 
 .image-with-dropdowns2__bottom-link {

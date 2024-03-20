@@ -21,7 +21,7 @@
   box-shadow: 0px 14px 20px #00000008;
   display: block;
   -webkit-overflow-scrolling: touch;
-  height: 635px;
+  height: 75vh;
 }
 
 .main-menu.active {
@@ -251,7 +251,7 @@
 
 .header-wrapper.active .header__shop-link,
 .header-wrapper.active .header__icon {
-  display: none;
+  /* display: none; */
 }
 
 .header-wrapper.active .main-menu__close {
@@ -465,8 +465,7 @@
   .main-menu__container {
     display: block;
     padding: 20px;
-    overflow-y: scroll;
-    padding-right: 0;
+    border-top: 1px solid var(--gray-lighest);
   }
 
   .Main_Menu_Link_Desktop_Title {
@@ -493,9 +492,8 @@
   }
 
   .header-wrapper.active .main-menu__close {
-    display: block;
-    position: absolute;
-    right: 15px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .main-menu__wrapper {
@@ -566,14 +564,6 @@ announcement-container.Fixed_Bar {
   top: 0;
 }
 
-/* .Show_Announcement_Bar.Fixed_Bar + header-container {
-  top: 49px;
-}
- */
-.Show_Announcement_Bar.Fixed_Bar+header-container {
-  top: 39px;
-}
-
 .page-template--page-clear-pee-club .Show_Announcement_Bar.Fixed_Bar+header-container {
   top: 50px;
 }
@@ -588,6 +578,10 @@ announcement-container.Fixed_Bar {
 
 .header--scrolled + #shopify-section-main-menu .Announcement_Shown.main-menu {
   top: 80px;
+}
+
+header-container .header--scrolled .header-wrapper {
+  border-bottom: none;
 }
 
 .Overflow_Hidden {
@@ -639,8 +633,7 @@ announcement-container.Fixed_Bar {
   }
 
   .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    /* top: 139px; */
-      top: 54px;
+    top: 54px;
   }
 
   .template-index .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {

@@ -1791,6 +1791,7 @@ $('[href="#menu"]').click(function() {
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.main-menu').css('top', '40px');
   }
+  $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
   $('.page-overlay').addClass('is-visible Menu_Overlay');
   $('body').addClass('Overflow_Hidden');
@@ -1839,6 +1840,7 @@ function navDropDownMenu() {
   // open dropdown
   dropdownTrigger.addEventListener('click', () => {
     if (!dropdownMenu.classList.contains('active')) {
+      $('#shopify-section-announcement-bar').hide();
       dropdownMenu.classList.add('active');
       dropDownClose.classList.add('active');
       pageBlurOverlay.classList.add('is-visible');
@@ -1855,6 +1857,7 @@ function navDropDownMenu() {
 
   // close dropdown
   dropDownClose.addEventListener('click', () => {
+    headerContainer.style.top = '0';
     dropdownMenu.classList.remove('active');
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -1875,6 +1878,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
+      headerContainer.style.top = '0';
     }
   });
 }
