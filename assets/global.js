@@ -1817,7 +1817,7 @@ document.addEventListener("click", function(event) {
       event.target.classList.remove("opened");
       event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.remove("dropdown-open");
     } else {
-      var variantWrapperBlock = event.target.closest('.variant-wrapper-block');
+      var variantWrapperBlock = event.target.closest('.custom__input--dropdown');
       variantWrapperBlock.querySelector(".options__dropdown").classList.remove("dropdown-open");
       variantWrapperBlock.querySelector(".custom__input--active").classList.remove("opened");
       event.target.classList.add("opened");
