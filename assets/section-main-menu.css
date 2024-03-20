@@ -493,9 +493,8 @@
   }
 
   .header-wrapper.active .main-menu__close {
-    display: block;
-    position: absolute;
-    right: 15px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .main-menu__wrapper {
