@@ -2227,7 +2227,8 @@ header-container.mobile-active {
 .page-chronic-illness-support .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-about-sustainability .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-clear-pee-club .header--transparent:not(.header--scrolled) .header-wrapper {
-  background-color: red;
+  background-color: #F8F1EB;
+  border-bottom: none;
 }
 
 .template-index #MainContent {
