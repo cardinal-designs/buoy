@@ -2064,7 +2064,8 @@ header-container.mobile-active {
 }
 
 .header-wrapper.active-dropdown {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #E9E9E9;
+  opacity: 0.5;
 }
 
 .header-wrapper.menu-open {
