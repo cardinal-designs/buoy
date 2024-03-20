@@ -74,7 +74,7 @@
            {% assign values = "" %}
 
            <div class="main__variant--wrap">
-             <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
+             <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}" style="display: none;">
               {%- for variant in product.variants -%}
                 {% assign value = variant.options[optionIndex] %}
                 {%- unless values contains value -%}
@@ -110,7 +110,7 @@
         <div class="main__variant--wrap">
         
           {% if product.selling_plan_groups.size > 0 %}
-            <select class="product-form__input--dropdown js-sticky-subscription-btns"
+            <select class="product-form__input--dropdown js-sticky-subscription-btns" style="display: none;"
               data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
               data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
               data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
