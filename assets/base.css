@@ -2222,6 +2222,7 @@ header-container.mobile-active {
 .header--transparent:not(.header--scrolled) .header-wrapper {
   background-color: transparent;
   border-color: transparent;
+  border: none;
 }
 
 .page-chronic-illness-support .header--transparent:not(.header--scrolled) .header-wrapper,
