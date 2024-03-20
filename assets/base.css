@@ -2081,6 +2081,10 @@ header-container.mobile-active {
   padding-left: 0;
 }
 
+.header.menu-open .header__icon--cart {
+  display: none;
+}
+
 .header-wrapper.active {
   border-bottom: 1px solid transparent; 
 }
