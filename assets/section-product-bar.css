@@ -309,6 +309,10 @@
   padding-bottom: 0;
 }
 
+.options__dropdown--li.variant-active {
+  color: #BBBCBC;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
