@@ -1877,7 +1877,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
-      headerContainer.style.top = '0 !important';
+      headerContainer.style.top = '0';
     }
   });
 }
