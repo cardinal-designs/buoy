@@ -2068,7 +2068,7 @@ header-container.mobile-active {
 }
 
 .header-wrapper.menu-open {
-  display: flex;
+  display: initial;
 }
 
 .header.menu-open {
