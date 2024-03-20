@@ -299,6 +299,7 @@
   text-align: left;
   border-bottom: 1px solid #E9E9E9;
   padding: 12px 0;
+  cursor: pointer;
 }
 
 .options__dropdown--li:first-child {
@@ -312,6 +313,7 @@
 
 .options__dropdown--li.variant-active {
   color: #BBBCBC;
+  cursor: text;
 }
 
 @media screen and (max-width: 1137px) {
