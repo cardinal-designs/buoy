@@ -259,6 +259,10 @@
   cursor: pointer;
 }
 
+.main__variant--wrap {
+  position: relative;
+}
+
 .options__dropdown {
   opacity: 0;
   visibility: hidden;
