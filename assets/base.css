@@ -2065,6 +2065,7 @@ header-container.mobile-active {
 
 .header-wrapper.menu-open {
   display: flex;
+  border-bottom: 1px solid red;
 }
 
 .header.menu-open {
