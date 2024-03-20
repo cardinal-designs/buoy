@@ -73,7 +73,7 @@
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
 
-           <ul data-select="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
+           <ul data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
                <li class="active__label">{{  }}</li>
               {%- for variant in product.variants -%}
                 {% assign value = variant.options[optionIndex] %}
