@@ -24,11 +24,11 @@
           {%- endif -%}
         </div>
       </div>
-      <div class="header__dropdown-image-container">
-        <div class="header__dropdown-image-wrapper">
-          {%- if section.settings.dropdown_title_two != blank -%}
-            <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
-          {%- endif -%}
+      <div class="header__dropdown-image-wrapper">
+        {%- if section.settings.dropdown_title_two != blank -%}
+          <div class="header__dropdown-item">{{ section.settings.dropdown_title_two }}</div>
+        {%- endif -%}
+        <div class="header__dropdown-image-container">
           <div class="header__dropdown-card-mobile-wrapper">
             {%- for block in section.blocks -%}
               {%- assign bs = block.settings -%}
