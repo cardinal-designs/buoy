@@ -1807,4 +1807,7 @@ $('.main-menu__close').click(function() {
   $('.header-wrapper').removeClass('active');
   $('[href="#menu"]').removeClass('active');
 }); 
- 
+
+
+// Sticky ATC
+
