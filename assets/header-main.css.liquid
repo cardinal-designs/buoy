@@ -446,14 +446,10 @@ header-drawer {
   border-radius: 10px;
 }
 
-.header__dropdown-image-container {
+.header__dropdown-image-wrapper {
   margin-top: 28px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--gray-light);
-}
-
-.header__dropdown-image-wrapper {
-  padding-top: 28px;
 }
 
 .header__list {
@@ -550,11 +546,21 @@ header-drawer {
   right: 10px;
 }
 
+.header__dropdown-card-mobile-container {
+  margin: 0 -10px;
+  padding: 0 10px;
+  overflow-x: scroll;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .header__dropdown-card-mobile-wrapper {
   display: -webkit-inline-box;
-  width: 100vw;
-  overflow: scroll;
-  padding-right: 50px;
+  padding-right: 25px;
   padding-bottom: 15px;
 }
 
