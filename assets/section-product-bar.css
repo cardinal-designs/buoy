@@ -258,6 +258,26 @@
   cursor: pointer;
 }
 
+.options__dropdown {
+  opacity: 0;
+  visibility: hidden;
+  border-top: 0;
+  position: absolute;
+  background: #fff;
+  z-index: 5;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
+  top: 100%;
+  border: 1px solid #000000;
+  border-top: none;
+  margin: 0;
+  padding: 10px 15px;
+  list-style: none;
+  height: 100%;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
