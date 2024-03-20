@@ -259,7 +259,8 @@
 .custom__input--wrap span {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 7px;
+  line-height: 0;
 }
 
 .custom__input--wrap {
