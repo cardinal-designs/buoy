@@ -263,6 +263,10 @@
   line-height: 0;
 }
 
+.custom__input--active.opened + span {
+  transform: rotate(180deg);
+}
+
 .custom__input--wrap {
   position: relative;
 }
