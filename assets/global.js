@@ -1831,7 +1831,6 @@ var optionList = document.querySelectorAll('.options__dropdown--li');
 if(optionList.length > 0){
   optionList.forEach(function(element) {
     element.addEventListener("click", function() {
-      var text = this.getAttribute('data-value');
       var data = this.getAttribute('data-value');
       this.classList.add('variant-active');
       var siblings = this.parentElement.children;
@@ -1843,8 +1842,8 @@ if(optionList.length > 0){
       
       if (data !== "") {
         var variantWrapperDropdown = this.closest('.main__variant--wrap');
-        variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = text;
-        variantWrapperDropdown.querySelectorAll('.color-select-dropdown').forEach(function(select) {
+        variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = data;
+        variantWrapperDropdown.querySelectorAll('.product-form__input--dropdown').forEach(function(select) {
           select.value = data;
           select.dispatchEvent(new Event('change'));
         });
