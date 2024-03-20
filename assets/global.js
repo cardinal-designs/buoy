@@ -1856,7 +1856,7 @@ function navDropDownMenu() {
 
   // close dropdown
   dropDownClose.addEventListener('click', () => {
-    $('header-container').css('top', '0');
+    headerContainer.style.top = '0';
     dropdownMenu.classList.remove('active');
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
