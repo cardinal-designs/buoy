@@ -120,7 +120,7 @@
             </select>
 
             <div class="custom__input--dropdown">
-              <div class="custom__input--active">One-time Purchase</div>
+              <div class="custom__input--active">Subscribe and Save 23%</div>
               <ul class="options__dropdown" data-selectid="product-form__input--dropdown js-sticky-subscription-btns"
                 data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
                 data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
