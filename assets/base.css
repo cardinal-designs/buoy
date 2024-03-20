@@ -2077,6 +2077,10 @@ header-container.mobile-active {
   display: initial;
 }
 
+.header-wrapper.menu-open .header__shop-link.sh2 {
+  display: none;
+}
+
 .header.menu-open {
   padding-left: 0;
 }
