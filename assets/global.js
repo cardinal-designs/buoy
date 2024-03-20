@@ -1846,7 +1846,6 @@ if(optionList.length > 0){
       if (data !== "") {
         var variantWrapperDropdown = this.closest('.main__variant--wrap');
         variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = text;
-        console.log('asdasd--',variantWrapperDropdown.querySelectorAll('.product-form__input--dropdown'));
 
         var selectDropdown = variantWrapperDropdown.querySelector('.product-form__input--dropdown');
         if(selectDropdown != null) {
