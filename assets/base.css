@@ -2060,7 +2060,7 @@ header-container.mobile-active {
   position: relative;
   background-color: white;
   transition: background-color, border .3s ease;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .header-wrapper.menu-open {
