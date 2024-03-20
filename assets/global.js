@@ -1825,3 +1825,37 @@ document.addEventListener("click", function(event) {
     }
   }
 });
+
+var optionList = document.querySelectorAll('.options__dropdown--li');
+
+if(optionList.length > 0){
+  optionList.forEach(function(element) {
+    element.addEventListener("click", function() {
+      var text = this.getAttribute('data-value');
+      var data = this.getAttribute('data-value');
+      this.classList.add('variant-active');
+      var siblings = this.parentElement.children;
+      for (var i = 0; i < siblings.length; i++) {
+        if (siblings[i] !== this) {
+          siblings[i].classList.remove('variant-active');
+        }
+      }
+      
+      if (data !== "") {
+        var variantWrapperDropdown = this.closest('.variant-wrapper--dropdown');
+        variantWrapperDropdown.querySelector('.custom-color').innerHTML = text;
+        variantWrapperDropdown.querySelectorAll('.color-select-dropdown, .variant--select-dropdown').forEach(function(select) {
+          select.value = data;
+          select.dispatchEvent(new Event('change'));
+        });
+        var dataId = this.closest('.color-dropdown').getAttribute('data-selectid');
+        var element = document.getElementById(dataId);
+        element.dispatchEvent(new Event('change'));
+      }
+  
+      var variantWrapperDropdown = this.closest('.variant-wrapper--dropdown');
+      variantWrapperDropdown.querySelector('.custom-swatch-active').classList.remove("opened");
+      variantWrapperDropdown.querySelector(".color-dropdown").classList.remove("dropdown-open");
+    });
+  });
+}
