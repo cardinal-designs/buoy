@@ -73,18 +73,20 @@
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
 
-           <ul data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
-               <li class="active__label">{{ option.selected_value }}</li>
-              {%- for variant in product.variants -%}
-                {% assign value = variant.options[optionIndex] %}
-                {%- unless values contains value -%}
-                {% assign values = values | join:',' %}
-                {% assign values = values | append:',' | append:value %}
-                {% assign values = values | split:',' %}
-                  <li value="{{ value }}" data-id="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</li>
-                {%- endunless -%}
-              {%- endfor -%}
-            </ul>
+            <div class="custom__input--dropdown">
+              <div class="custom__input--active">{{ option.selected_value }}</div>
+              <ul class="" data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
+                {%- for variant in product.variants -%}
+                  {% assign value = variant.options[optionIndex] %}
+                  {%- unless values contains value -%}
+                  {% assign values = values | join:',' %}
+                  {% assign values = values | append:',' | append:value %}
+                  {% assign values = values | split:',' %}
+                    <li value="{{ value }}" data-id="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>
+            </div>
            
             <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
             {%- for variant in product.variants -%}
