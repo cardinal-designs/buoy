@@ -278,6 +278,11 @@
   height: 100%;
 }
 
+.options__dropdown.dropdown-open {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media screen and (max-width: 1137px) {
   
   .product-bar-toggle  .product-quick-add__form {
