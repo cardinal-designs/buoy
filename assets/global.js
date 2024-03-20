@@ -1811,17 +1811,17 @@ $('.main-menu__close').click(function() {
 
 // Sticky ATC
 
-// document.addEventListener("click", function(event) {
-//   if (event.target.classList.contains("custom__input--active")) {
-//     if (event.target.classList.contains("opened")) {
-//       event.target.classList.remove("opened");
-//       event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.remove("dropdown-open");
-//     } else {
-//       var variantWrapperBlock = event.target.closest('.variant-wrapper-block');
-//       variantWrapperBlock.querySelector(".options__dropdown").classList.remove("dropdown-open");
-//       variantWrapperBlock.querySelector(".custom__input--active").classList.remove("opened");
-//       event.target.classList.add("opened");
-//       event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.add("dropdown-open");
-//     }
-//   }
-// });
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("custom__input--active")) {
+    if (event.target.classList.contains("opened")) {
+      event.target.classList.remove("opened");
+      event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.remove("dropdown-open");
+    } else {
+      var variantWrapperBlock = event.target.closest('.variant-wrapper-block');
+      variantWrapperBlock.querySelector(".options__dropdown").classList.remove("dropdown-open");
+      variantWrapperBlock.querySelector(".custom__input--active").classList.remove("opened");
+      event.target.classList.add("opened");
+      event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.add("dropdown-open");
+    }
+  }
+});
