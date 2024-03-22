@@ -10,7 +10,7 @@
   transition: transform .3s ease;
   visibility: hidden;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 8px -8px rgba(31, 35, 34, 0.12);
+  box-shadow: 0 10px 15px -4px rgba(31, 35, 34, 0.12);
 }
 
 .product-bar.scrolled {
