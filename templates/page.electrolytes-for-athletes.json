@@ -26,6 +26,7 @@
       "blocks": {
         "915598b8-73ba-4440-9c78-70b475eb492a": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "hydration-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
@@ -63,6 +64,22 @@
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": true
+      }
+    },
+    "custom_featured_product_WTzBP6": {
+      "type": "custom-featured-product",
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": false,
+        "free_shipping_text": "WE RECOMMEND STARTING WITH",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<p style=\"font-size: 15px; text-align: left;\"><b>Formulated for Athletes 🔥<br>\nHydration Drops<br>\n3 BOTTLES • 120 SERVINGS<br><br>\n\nDeep ocean electrolytes and over 87 ionic trace minerals, designed to support prolonged, healthy athletic performance.<br><br>\n\n✓ One Month Supply<br>\n✓ No sugar, sweeteners, flavors or artificial ingredients that may reduce your energy and endurance.<br>\n✓ Hydrate for less than $1\/day + 100% Money Back Guarantee<\/b><\/p>",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
@@ -1100,27 +1117,12 @@
         "add_bottom_border": true,
         "background": "bg_color"
       }
-    },
-    "custom_featured_product_WTzBP6": {
-      "type": "custom-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": false,
-        "free_shipping_text": "WE RECOMMEND STARTING WITH",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "<p style=\"font-size: 15px; text-align: left;\"><b>Formulated for Athletes 🔥<br>\nHydration Drops<br>\n3 BOTTLES • 120 SERVINGS<br><br>\n\nDeep ocean electrolytes and over 87 ionic trace minerals, designed to support prolonged, healthy athletic performance.<br><br>\n\n✓ One Month Supply<br>\n✓ No sugar, sweeteners, flavors or artificial ingredients that may reduce your energy and endurance.<br>\n✓ Hydrate for less than $1\/day + 100% Money Back Guarantee<\/b><\/p>",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
     }
   },
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "304f34df-6587-4eb2-a832-96b49eef9918",
+    "custom_featured_product_WTzBP6",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
@@ -1142,7 +1144,6 @@
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
-    "custom_featured_product_WTzBP6"
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953"
   ]
 }
