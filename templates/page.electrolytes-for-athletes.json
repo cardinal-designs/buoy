@@ -31,15 +31,9 @@
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
           }
         },
-        "475664b0-eea5-49a4-9521-d603009b918d": {
-          "type": "block",
-          "settings": {
-            "product": "energy-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
-          }
-        },
         "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "immunity-drops",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
@@ -47,6 +41,7 @@
         },
         "9d231586-a60b-42ac-9721-d7ea47797c99": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "product": "wellness-kit",
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
@@ -55,11 +50,9 @@
       },
       "block_order": [
         "915598b8-73ba-4440-9c78-70b475eb492a",
-        "475664b0-eea5-49a4-9521-d603009b918d",
         "dca0e5dd-357d-4543-b722-8d65bedef3b1",
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
-      "disabled": true,
       "settings": {
         "title": "<strong>Best electrolytes<\/strong> for leg cramps",
         "text": "Say goodbye to leg cramps with the latest innovation in hydration. Buoy's unflavored and unsweetened electrolyte drops turn any beverage into a hydrating, electrolyte drink without the sugar, sweeteners, flavors or junk.",
@@ -463,7 +456,8 @@
         "subtext": "What makes a high-quality electrolyte drink?",
         "add_top_border": false,
         "add_bottom_border": true,
-        "background": "bg_color"
+        "background": "bg_color",
+        "hide_supp": false
       }
     },
     "31e36676-5821-47f9-a328-6c162b259d29": {
@@ -480,7 +474,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for less than $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "a55a48cb-e8fe-4147-b872-04281d92e180": {
@@ -494,7 +491,10 @@
             "list_item1": "One month supply",
             "list_item2": "Gently caffeinated",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "aca99b1c-2e36-45dc-8c71-d752f8937b59": {
@@ -509,7 +509,10 @@
             "list_item1": "One month supply",
             "list_item2": "Hydrate for around $1\/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         },
         "8939123e-4123-47d7-a631-21ea009a79ce": {
@@ -523,7 +526,10 @@
             "list_item1": "One month supply",
             "list_item2": "All three drops",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit"
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
           }
         }
       },
@@ -906,17 +912,6 @@
         "background": "none"
       }
     },
-    "c78dfd33-b08e-4f3e-890a-4741ce2985fa": {
-      "type": "button",
-      "disabled": true,
-      "settings": {
-        "text": "Start Squeezing",
-        "url": "#Custom_Featured_Section",
-        "add_top_border": false,
-        "add_bottom_border": true,
-        "background": "none"
-      }
-    },
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6": {
       "type": "squeezy-section",
       "blocks": {
@@ -1105,6 +1100,14 @@
         "add_bottom_border": true,
         "background": "bg_color"
       }
+    },
+    "featured_product_taXBQg": {
+      "type": "featured-product",
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": false
+      }
     }
   },
   "order": [
@@ -1127,11 +1130,11 @@
     "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
-    "c78dfd33-b08e-4f3e-890a-4741ce2985fa",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
     "4f22c796-1d64-4f0e-869e-2c8eb4574863",
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
-    "717bd63f-ac96-4e6c-8c5f-749a552ba953"
+    "717bd63f-ac96-4e6c-8c5f-749a552ba953",
+    "featured_product_taXBQg"
   ]
 }
