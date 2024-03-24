@@ -54,8 +54,8 @@
         "9d231586-a60b-42ac-9721-d7ea47797c99"
       ],
       "settings": {
-        "title": "<strong>Best electrolytes<\/strong> for leg cramps",
-        "text": "Say goodbye to leg cramps with the latest innovation in hydration. Buoy's unflavored and unsweetened electrolyte drops turn any beverage into a hydrating, electrolyte drink without the sugar, sweeteners, flavors or junk.",
+        "title": "Best Electrolytes for Athletes",
+        "text": "<p style=\"font-size: 15px\">Whether you're a seasoned marathon runner, a weekend warrior, or someone looking to unlock the athlete inside, maintaining a precise balance of electrolytes is as critical as the training itself. But finding the right electrolyte solution that matches the intensity of your physical endeavors without adding unnecessary sugars or artificial ingredients is a challenge.<br><br>\n\nElevate your athletic regimen with Buoy's unflavored and unsweetened hydration drops, meticulously crafted to meet the rigorous demands of sports, intensive workouts, and competitive activities, empowering the athlete in all of us.<br><br>\n\n✓ The Importance of Electrolytes for Athletes<br>\n✓ Common Causes of Low Performance<br>\n✓ Ingredients Athletes Should Avoid<br>\n✓ Why Water Alone Isn’t Enough<br>\n✓ Our Tailored Electrolyte Solution<br><br>\n\nPlus, a sneak peek of our favorite electrolyte for athletes!<\/p>",
         "shop_all_label": "Shop All Products",
         "shop_all_link": "shopify:\/\/collections\/all",
         "promo_link_text": "",
@@ -1101,12 +1101,20 @@
         "background": "bg_color"
       }
     },
-    "featured_product_taXBQg": {
-      "type": "featured-product",
+    "custom_featured_product_WTzBP6": {
+      "type": "custom-featured-product",
       "settings": {
         "product": "hydration-drops",
         "secondary_background": false,
-        "enable_video_looping": false
+        "enable_video_looping": false,
+        "free_shipping_text": "WE RECOMMEND STARTING WITH",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "<p style=\"font-size: 15px; text-align: left;\"><b>Formulated for Athletes 🔥<br>\nHydration Drops<br>\n3 BOTTLES • 120 SERVINGS<br><br>\n\nDeep ocean electrolytes and over 87 ionic trace minerals, designed to support prolonged, healthy athletic performance.<br><br>\n\n✓ One Month Supply<br>\n✓ No sugar, sweeteners, flavors or artificial ingredients that may reduce your energy and endurance.<br>\n✓ Hydrate for less than $1\/day + 100% Money Back Guarantee<\/b><\/p>",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
       }
     }
   },
@@ -1135,6 +1143,6 @@
     "31a4b0e5-fb54-43dd-accb-77f53d0e3dcb",
     "271bbc88-ee3e-4299-aee5-2c393d4bf363",
     "717bd63f-ac96-4e6c-8c5f-749a552ba953",
-    "featured_product_taXBQg"
+    "custom_featured_product_WTzBP6"
   ]
 }
