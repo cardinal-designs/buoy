@@ -15,6 +15,7 @@
 
 .product-bar.scrolled {
   transform: translateY(0);
+  animation: appearPageShower 1s ease;
   animation-fill-mode: forwards;
   visibility: visible;
   top: 79px;
