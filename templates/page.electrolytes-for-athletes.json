@@ -354,6 +354,55 @@
         "background": "none"
       }
     },
+    "a09de49d-45af-40d0-969c-1445290cd3be": {
+      "type": "image-with-dropdowns",
+      "blocks": {
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
+          "type": "block",
+          "settings": {
+            "title": "7 - 10 Servings for Intense Training Days",
+            "emoji": "🔥",
+            "subtitle": "",
+            "text": ""
+          }
+        },
+        "a8857c10-0308-470e-9fda-843eda7c0033": {
+          "type": "block",
+          "settings": {
+            "title": "4 - 7 Servings on Light or Rest Days",
+            "emoji": "😴",
+            "subtitle": "",
+            "text": ""
+          }
+        },
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
+          "type": "block",
+          "settings": {
+            "title": "Dissolves Instantly & Evenly in Any Beverage",
+            "emoji": "💦",
+            "subtitle": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
+        "a8857c10-0308-470e-9fda-843eda7c0033",
+        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d"
+      ],
+      "settings": {
+        "video_url": "",
+        "image": "shopify:\/\/shop_images\/CIP_D_Invest_in_You_MP4_Placeholder_2x_9e2cab89-a62b-4912-b787-d91629944e22.png",
+        "title": "How to Use Buoy’s Electrolytes to Boost Athletic Performance",
+        "text": "<p style=\"font-size: 15px\">Essential electrolytes, 87 ionic trace minerals and vitamins delivered in their most bioavailable form factor for fast-acting hydration.<br><br>\n\n— One Serving = One Short Squeeze<br><br>\n— 40 Servings Per Bottle<\/p>",
+        "text_bottom": "",
+        "button_label": "Perform Better with Buoy’s Electrolyte Drops",
+        "button_link": "https:\/\/justaddbuoy.com\/products\/hydration-drops",
+        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
     "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
       "type": "text-block-section-2",
       "blocks": {
@@ -590,55 +639,6 @@
         "title": "Electrolyte Drinks vs. Sports Drinks",
         "text": "WHICH IS BETTER?",
         "background": "",
-        "add_top_border": false,
-        "add_bottom_border": false
-      }
-    },
-    "a09de49d-45af-40d0-969c-1445290cd3be": {
-      "type": "image-with-dropdowns",
-      "blocks": {
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595": {
-          "type": "block",
-          "settings": {
-            "title": "7 - 10 Servings for Intense Training Days",
-            "emoji": "🔥",
-            "subtitle": "",
-            "text": ""
-          }
-        },
-        "a8857c10-0308-470e-9fda-843eda7c0033": {
-          "type": "block",
-          "settings": {
-            "title": "4 - 7 Servings on Light or Rest Days",
-            "emoji": "😴",
-            "subtitle": "",
-            "text": ""
-          }
-        },
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d": {
-          "type": "block",
-          "settings": {
-            "title": "Dissolves Instantly & Evenly in Any Beverage",
-            "emoji": "💦",
-            "subtitle": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "7b14ed78-f4e3-4916-9b8a-a17431a01595",
-        "a8857c10-0308-470e-9fda-843eda7c0033",
-        "964f72a5-0e3e-4cdb-9fb2-7415e8c2c83d"
-      ],
-      "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/CIP_D_Invest_in_You_MP4_Placeholder_2x_9e2cab89-a62b-4912-b787-d91629944e22.png",
-        "title": "How to Use Buoy’s Electrolytes to Boost Athletic Performance",
-        "text": "<p style=\"font-size: 15px\">Essential electrolytes, 87 ionic trace minerals and vitamins delivered in their most bioavailable form factor for fast-acting hydration.<br><br>\n\n— One Serving = One Short Squeeze<br><br>\n— 40 Servings Per Bottle<\/p>",
-        "text_bottom": "",
-        "button_label": "Perform Better with Buoy’s Electrolyte Drops",
-        "button_link": "https:\/\/justaddbuoy.com\/products\/hydration-drops",
-        "background": "background: transparent linear-gradient(0deg, #F8F1EB 0%, #F8F1EB00 100%) 0% 0% no-repeat padding-box;",
         "add_top_border": false,
         "add_bottom_border": false
       }
@@ -1061,6 +1061,7 @@
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
     "304f34df-6587-4eb2-a832-96b49eef9918",
     "517df923-ac36-43bd-9898-b875c67e1be2",
+    "a09de49d-45af-40d0-969c-1445290cd3be",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
@@ -1068,7 +1069,6 @@
     "38ed0f42-8894-4ce5-9892-8c9c55831eca",
     "b46f1469-d32e-4de6-b81d-d6d4a30541a9",
     "de71750b-42a8-4309-a3f6-e56beedbc1ed",
-    "a09de49d-45af-40d0-969c-1445290cd3be",
     "97b52c19-9232-4b33-a84e-be1d55a585da",
     "19f84cc7-e91f-487d-a62c-2e8944758d96",
     "29bf5fd5-0a11-4383-ba78-39b6ce58dfd6",
