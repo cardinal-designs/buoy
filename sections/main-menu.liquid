@@ -143,3 +143,16 @@
     ]
   }
 {% endschema %}
+
+<script>
+  window.addEventListener("scroll", function() {
+  const scrollDistance = window.scrollY;
+  const fadeEffect = document.querySelector(".fade-on-scroll::before");
+  const maxScrollDistance = 200; // Adjust as needed
+
+  if (scrollDistance <= maxScrollDistance) {
+    const opacity = scrollDistance / maxScrollDistance;
+    fadeEffect.style.opacity = opacity;
+  }
+});
+</script>
