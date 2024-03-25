@@ -332,12 +332,12 @@
           </details>
         </details-modal>
       {%- endif -%}
-      
+
       <script>
         console.log({{ request.page_type | json }})
       </script>
 
-      {%- if request.page_type == 'index' -%}
+      {%- if request.page_type == 'index' and request.page_type == 'product' -%}
         <div class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header-icon header-icon--logo">
