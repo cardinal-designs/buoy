@@ -56,23 +56,6 @@
         "add_bottom_border": false
       }
     },
-    "custom_featured_product_WTzBP6": {
-      "type": "custom-featured-product",
-      "disabled": true,
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": false,
-        "free_shipping_text": "WE RECOMMEND STARTING WITH",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "<p style=\"font-size: 15px; text-align: left;\"><b>Formulated for Athletes 🔥<br>\nHydration Drops<br>\n3 BOTTLES • 120 SERVINGS<br><br>\n\nDeep ocean electrolytes and over 87 ionic trace minerals, designed to support prolonged, healthy athletic performance.<br><br>\n\n✓ One Month Supply<br>\n✓ No sugar, sweeteners, flavors or artificial ingredients that may reduce your energy and endurance.<br>\n✓ Hydrate for less than $1\/day + 100% Money Back Guarantee<\/b><\/p>",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
-    },
     "2b7564eb-8f3d-425b-9a73-e9499130b312": {
       "type": "press-logos",
       "blocks": {
@@ -489,6 +472,7 @@
         "2a6bd8e3-7b04-400d-a28b-a3a907955de4",
         "7d0679b9-e537-4027-af9f-ddebb9b41e54"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Which is better?<\/strong><br><span class=\"medium\">Electrolyte Drinks<\/span> <i>vs. <\/i><span class=\"medium\">Sports Drinks<\/span>",
         "link_text": "Make An Electrolyte Drink At Home —>",
@@ -504,32 +488,32 @@
         "b46d22a2-dc4c-4952-920e-df027e14433e": {
           "type": "dropdown",
           "settings": {
-            "title": "Salt Source",
-            "text": "85% of an average American's sodium intake comes from nutrient sparse sources like the cheap and processed salts found in sports drinks and traditional electrolyte products.<br><br>\n👎 Sodium Bicarbonate<br><br>👎 Sodium Chloride<br><br>👍 Real Sea Salt",
+            "title": "❌ Limitations of Plain Water",
+            "text": "<p style=\"font-size: 15px\">During strenuous exercise, athletes don't just lose water through sweat; they lose electrolytes at a significant rate. These electrolytes, including sodium, chloride, potassium, magnesium and calcium, are crucial for muscle function, hydration, and overall performance.<br><br>\n\nRelying solely on water for rehydration can lead to dilution of the body's electrolyte concentration, potentially causing hyponatremia (low blood sodium levels), which can be dangerous.<\/p>",
             "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
           }
         },
         "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
           "type": "dropdown",
           "settings": {
-            "title": "Naturally-Balanced Electrolytes",
-            "text": "Sodium, potassium, chloride and magnesium are the essential electrolytes needed for optimal hydration. <br><br>Getting all of these in their naturally occurring ratios—like from harvested sea salt—makes for easy absorption as its the way we've hydrated for cenuries before modern society.",
+            "title": "❌ How Traditional Sports Drinks Fall Short",
+            "text": "<p style=\"font-size: 15px\">While many turn to traditional sports drinks for electrolyte replenishment, these options often come with high sugar content and artificial additives, which can negatively impact long-term health and performance.<br><br>\n\nMoreover, the electrolyte balance in many sports drinks may not be ideal for all types of athletes and activities, leading to suboptimal recovery and performance.<\/p>",
             "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
           }
         },
         "07c66f31-6bda-4e4c-9097-b51e4c178122": {
           "type": "dropdown",
           "settings": {
-            "title": "Ionic Trace Minerals",
-            "text": "Modern agriculture and commercial water have stripped our food and water of essential trace minerals, making them hard to find even in balanced diets.<br><br>Buoy is packed with 87 trace minerals that nurture well beyond the label and facilitate energy generation and muscle health.",
+            "title": "✅ Buoy’s Electrolyte Solution",
+            "text": "<p style=\"font-size: 15px\">Recognizing these limitations, Buoy offers a scientifically formulated electrolyte solution that provides a balanced mix of essential minerals lost during exercise. Buoy's Hydration Drops are designed to optimize hydration and electrolyte balance without the unnecessary sugars and calories found in conventional sports drinks.<br><br>\n\nBy enhancing your water or any beverage with Buoy, you ensure rapid and effective absorption of electrolytes, supporting endurance, reducing cramps and accelerating recovery.<\/p>",
             "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
           }
         },
         "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
           "type": "dropdown",
           "settings": {
-            "title": "B Vitamins",
-            "text": "Did you know some vitamins can help you hydrate better?<br><br>Buoy's curated blend of plant-powered B vitamins that support routine electrolyte function.",
+            "title": "✅ Tailored for All Athletes",
+            "text": "<p style=\"font-size: 15px\">Whether you’re a sprinter, a marathon runner, a swimmer, or a team sports athlete, maintaining electrolyte balance is crucial for your performance and recovery. Buoy’s electrolyte solutions are versatile and effective, designed to meet the hydration needs of athletes across all disciplines.<br><br>\n\nWith fast absorption and high bioavailability, Buoy ensures that you can train harder, recover faster, and perform at your best, without compromising on health or hydration.<br><br>\n\nIn the pursuit of athletic excellence, water is necessary but not sufficient. Buoy's electrolyte solutions bridge the gap, offering athletes a superior option for maintaining hydration and electrolyte balance. This is why Buoy is more than just a supplement; it's an essential tool in your athletic arsenal.<\/p>",
             "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
           }
         }
@@ -541,12 +525,12 @@
         "98a930a8-d687-48b2-a08a-85c17f6c1e3b"
       ],
       "settings": {
-        "title": "Key Ingredients for Electrolyte Drinks",
-        "subtext": "What makes a high-quality electrolyte drink?",
+        "title": "Why Athletes Need More Than Water",
+        "subtext": "<p style=\"font-size: 15px\">Water is the essence of life and a fundamental component of physical health and athletic performance. Yet, when it comes to the rigorous demands of sports and intense physical activity, water alone falls short. Here’s why athletes need to look beyond just H2O.<\/p>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bg_color",
-        "hide_supp": false
+        "hide_supp": true
       }
     },
     "38ed0f42-8894-4ce5-9892-8c9c55831eca": {
@@ -1011,7 +995,6 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "31e36676-5821-47f9-a328-6c162b259d29",
-    "custom_featured_product_WTzBP6",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
