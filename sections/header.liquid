@@ -333,40 +333,32 @@
         </details-modal>
       {%- endif -%}
 
-      <script>
-        console.log({{ request.page_type | json }})
-      </script>
-
-      {%- if request.page_type == 'index' and request.page_type == 'product' -%}
-        <div class="header__heading">
-      {%- endif -%}
-          <a href="{{ routes.root_url }}" class="header-icon header-icon--logo">
-            <span class="visually-hidden">{{ shop.name }}</span>
-            <div class="header__logo-wrapper">
-              {%- if section.settings.svg_logo != blank -%}
-                <div class="header__svg-logo" style="max-width: {{ section.settings.logo_width }}">
-                  {{ section.settings.svg_logo }}
-                </div>
+      <div class="header__heading">
+        <a href="{{ routes.root_url }}" class="header-icon header-icon--logo">
+          <span class="visually-hidden">{{ shop.name }}</span>
+          <div class="header__logo-wrapper">
+            {%- if section.settings.svg_logo != blank -%}
+              <div class="header__svg-logo" style="max-width: {{ section.settings.logo_width }}">
+                {{ section.settings.svg_logo }}
+              </div>
+            {%- else -%}
+              {%- if section.settings.logo != blank -%}
+                {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                  src="{{ section.settings.logo | img_url: image_size }}"
+                  loading="lazy"
+                  class="header__heading-logo"
+                  width="{{ section.settings.logo.width }}"
+                  height="{{ section.settings.logo.height }}"
+                  alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                >
               {%- else -%}
-                {%- if section.settings.logo != blank -%}
-                  {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-                  <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                    src="{{ section.settings.logo | img_url: image_size }}"
-                    loading="lazy"
-                    class="header__heading-logo"
-                    width="{{ section.settings.logo.width }}"
-                    height="{{ section.settings.logo.height }}"
-                    alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-                  >
-                {%- else -%}
-                  <span class="h2">{{ shop.name }}</span>
-                {%- endif -%}
+                <span class="h2">{{ shop.name }}</span>
               {%- endif -%}
-            </div>
-          </a>
-      {%- if request.page_type == 'index' -%}
-        </div>
-      {%- endif -%}
+            {%- endif -%}
+          </div>
+        </a>
+      </div>
 
       <nav class="header__inline-menu Mobile_Show">
         <ul class="list-menu list-menu--inline" role="list">
