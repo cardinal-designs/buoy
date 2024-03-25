@@ -198,16 +198,20 @@
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
         $('.product-bar').addClass('scrolled');
+        $('.js-sticky-add-to-cart').show()
       } else {
         $('.product-bar').removeClass('scrolled');
+        $('.js-sticky-add-to-cart').hide()
         $('.custom__input--active').removeClass('opened');
         $('.options__dropdown').removeClass('dropdown-open');
       }
     } else {
       if ($scrollTop > 1200) {
         $('.product-bar').addClass('scrolled');
+        $('.js-sticky-add-to-cart').show()
       } else {
         $('.product-bar').removeClass('scrolled');
+        $('.js-sticky-add-to-cart').hide()
         $('.custom__input--active').removeClass('opened');
         $('.options__dropdown').removeClass('dropdown-open');
       }
