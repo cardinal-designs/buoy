@@ -332,6 +332,10 @@
           </details>
         </details-modal>
       {%- endif -%}
+      
+      <script>
+        console.log({{ request.page_type | json }})
+      </script>
 
       {%- if request.page_type == 'index' -%}
         <div class="header__heading">
