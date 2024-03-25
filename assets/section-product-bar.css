@@ -14,7 +14,8 @@
 }
 
 .product-bar.scrolled {
-  /* transform: translateY(0); */
+  transform: translateY(0);
+  animation-fill-mode: forwards;
   visibility: visible;
   top: 79px;
 }
