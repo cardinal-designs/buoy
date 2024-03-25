@@ -15,12 +15,9 @@
 
 .product-bar.scrolled {
   transform: translateY(0);
+  transition: transform 0.3s ease;
   visibility: visible;
   top: 79px;
-}
-
-.product-bar.upscrolled {
-  transform: translateY(-100%);
 }
 
 .product-bar__container {
