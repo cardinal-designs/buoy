@@ -15,10 +15,12 @@
 
 .product-bar.scrolled {
   transform: translateY(0);
-  animation: appearPageShower 1s ease;
-  animation-fill-mode: forwards;
   visibility: visible;
   top: 79px;
+}
+
+.product-bar.upscrolled {
+  transform: translateY(-100%);
 }
 
 .product-bar__container {
