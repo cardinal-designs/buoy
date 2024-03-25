@@ -2054,6 +2054,7 @@ header-container.mobile-active {
 
 header-container.active .header {
   padding: 22px 19px;
+  height: 60px;
 }
 
 @media screen and (max-width: 768px) {
