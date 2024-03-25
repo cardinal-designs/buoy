@@ -198,24 +198,24 @@
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
         $('.product-bar').addClass('scrolled');
-        $('.product-bar').slideDown();
-        $('.js-sticky-add-to-cart').show();
+        $('.product-bar').css('transform','translateY(0)'); 
+        $('.js-sticky-add-to-cart').show()
       } else {
         $('.product-bar').removeClass('scrolled');
-        $('.js-sticky-add-to-cart').hide() ;
-        $('.product-bar').slideUp();
+        $('.js-sticky-add-to-cart').hide() 
+        $('.product-bar').css('transform','translateY(-100%)');
         $('.custom__input--active').removeClass('opened');
         $('.options__dropdown').removeClass('dropdown-open');
       }
     } else {
       if ($scrollTop > 1200) {
         $('.product-bar').addClass('scrolled');
-        $('.product-bar').slideDown();
+        $('.product-bar').css('transform','translateY(0)'); 
         $('.js-sticky-add-to-cart').show();
       } else {
         $('.product-bar').removeClass('scrolled');
         $('.js-sticky-add-to-cart').hide();
-         $('.product-bar').slideUp();
+        $('.product-bar').css('transform','translateY(-100%)'); 
         $('.custom__input--active').removeClass('opened');
         $('.options__dropdown').removeClass('dropdown-open');
       }
