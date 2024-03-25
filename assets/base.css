@@ -2038,6 +2038,11 @@ header-container.active {
   border-radius: 20px 20px 0 0;
 }
 
+header-container.active .header-logo {
+  width: 49px;
+  height: 28px;
+}
+
 header-container.mobile-active {
   z-index: 101;
   width: calc(100% - 20px);
