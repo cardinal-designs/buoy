@@ -14,10 +14,7 @@
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
-  /* transform: translateY(-100%);
-  -webkit-transform: translateY(-100%); */
-  transition: .4s ease-in-out;
-  /* max-height: 624px; */
+  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
   box-shadow: 0px 14px 20px #00000008;
   display: block;
   -webkit-overflow-scrolling: touch;
@@ -33,8 +30,6 @@
 .main-menu[aria-hidden="false"] {
   visibility: visible;
   opacity: 1;
-  /* transform: translateY(0);
-  -webkit-transform: translateY(0); */
 }
 
 .main-menu__close {
