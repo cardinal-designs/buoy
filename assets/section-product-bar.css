@@ -6,7 +6,7 @@
   left: 0;
   background: white;
   z-index: 3;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
   visibility: hidden;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 10px 15px -4px rgba(31, 35, 34, 0.12);
@@ -15,7 +15,7 @@
 .product-bar.scrolled {
   transform: translateY(0);
   transition: transform 0.3s ease;
-  visibility: visible;
+  visibility: visible; 
   top: 79px;
 }
 
