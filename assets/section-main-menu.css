@@ -9,7 +9,8 @@
   align-items: center;
   background: white;
   color: var(--charcoal);
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
@@ -20,6 +21,13 @@
   box-shadow: 0px 14px 20px #00000008;
   display: block;
   -webkit-overflow-scrolling: touch;
+  height: 75vh;
+}
+
+.main-menu.active {
+  position: sticky;
+  top: 0;
+  border-radius: 10px;
 }
 
 .main-menu[aria-hidden="false"] {
@@ -238,11 +246,12 @@
 
 .header--transparent:not(.header--scrolled) .header-wrapper.active {
   background-color: #ffffff;
+  border-radius: 20px;
 }
 
 .header-wrapper.active .header__shop-link,
 .header-wrapper.active .header__icon {
-  display: none;
+  /* display: none; */
 }
 
 .header-wrapper.active .main-menu__close {
@@ -455,6 +464,8 @@
 
   .main-menu__container {
     display: block;
+    padding: 20px;
+    border-top: 1px solid var(--gray-lighest);
   }
 
   .Main_Menu_Link_Desktop_Title {
@@ -481,14 +492,12 @@
   }
 
   .header-wrapper.active .main-menu__close {
-    display: block;
-    position: absolute;
-    right: 15px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .main-menu__wrapper {
     position: inherit;
-    overflow: auto;
     height: 100%;
   }
 
@@ -555,14 +564,6 @@ announcement-container.Fixed_Bar {
   top: 0;
 }
 
-/* .Show_Announcement_Bar.Fixed_Bar + header-container {
-  top: 49px;
-}
- */
-.Show_Announcement_Bar.Fixed_Bar+header-container {
-  top: 39px;
-}
-
 .page-template--page-clear-pee-club .Show_Announcement_Bar.Fixed_Bar+header-container {
   top: 50px;
 }
@@ -577,6 +578,10 @@ announcement-container.Fixed_Bar {
 
 .header--scrolled + #shopify-section-main-menu .Announcement_Shown.main-menu {
   top: 80px;
+}
+
+header-container .header--scrolled .header-wrapper {
+  border-bottom: none;
 }
 
 .Overflow_Hidden {
@@ -599,18 +604,6 @@ announcement-container.Fixed_Bar {
   .main-menu {
     top: 54px;
   }
-  
-  .Announcement_Shown.main-menu {
-    top: 93px;
-  }
-  
-  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 93px;
-  }
-
-  .header--scrolled + #shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 93px;
-  }
 
   .Show_Announcement_Bar + header-container {
     top: 0;
@@ -628,12 +621,7 @@ announcement-container.Fixed_Bar {
 @media only screen and (max-width: 667px) {
 
   .Announcement_Shown.main-menu {
-    top: 139px;
-  }
-    
-  .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    /* top: 139px; */
-    top: 114px;
+    top: 100px;
   }
 
   .Show_Announcement_Bar.Fixed_Bar + header-container {
@@ -645,12 +633,11 @@ announcement-container.Fixed_Bar {
   }
 
   .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    /* top: 139px; */
-      top: 54px;
+    top: 54px;
   }
 
   .template-index .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
-    top: 114px;
+    top: 50px;
   }
 
   .template-collection .header--scrolled+#shopify-section-main-menu .Announcement_Shown.Fixed_Announcement_Bar.main-menu {
