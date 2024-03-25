@@ -56,52 +56,6 @@
         "add_bottom_border": false
       }
     },
-    "304f34df-6587-4eb2-a832-96b49eef9918": {
-      "type": "product-slider-2",
-      "blocks": {
-        "915598b8-73ba-4440-9c78-70b475eb492a": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "product": "hydration-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
-          }
-        },
-        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "product": "immunity-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
-          }
-        },
-        "9d231586-a60b-42ac-9721-d7ea47797c99": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "product": "wellness-kit",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "915598b8-73ba-4440-9c78-70b475eb492a",
-        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
-        "9d231586-a60b-42ac-9721-d7ea47797c99"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Best Electrolytes for Athletes",
-        "text": "<p style=\"font-size: 15px\">Whether you're a seasoned marathon runner, a weekend warrior, or someone looking to unlock the athlete inside, maintaining a precise balance of electrolytes is as critical as the training itself. But finding the right electrolyte solution that matches the intensity of your physical endeavors without adding unnecessary sugars or artificial ingredients is a challenge.<br><br>\n\nElevate your athletic regimen with Buoy's unflavored and unsweetened hydration drops, meticulously crafted to meet the rigorous demands of sports, intensive workouts, and competitive activities, empowering the athlete in all of us.<br><br>\n\n✓ The Importance of Electrolytes for Athletes<br>\n✓ Common Causes of Low Performance<br>\n✓ Ingredients Athletes Should Avoid<br>\n✓ Why Water Alone Isn’t Enough<br>\n✓ Our Tailored Electrolyte Solution<br><br>\n\nPlus, a sneak peek of our favorite electrolyte for athletes!<\/p>",
-        "shop_all_label": "Shop All Products",
-        "shop_all_link": "shopify:\/\/collections\/all",
-        "promo_link_text": "",
-        "promo_link": "",
-        "background": "bg_color",
-        "add_top_border": true,
-        "add_bottom_border": true
-      }
-    },
     "custom_featured_product_WTzBP6": {
       "type": "custom-featured-product",
       "disabled": true,
@@ -337,6 +291,56 @@
         "background": "none",
         "reviews_btn_txt": "All Reviews",
         "reviews_btn_link": ""
+      }
+    },
+    "304f34df-6587-4eb2-a832-96b49eef9918": {
+      "type": "product-slider-2",
+      "blocks": {
+        "915598b8-73ba-4440-9c78-70b475eb492a": {
+          "type": "block",
+          "settings": {
+            "product": "hydration-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
+          }
+        },
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
+          "type": "block",
+          "settings": {
+            "product": "immunity-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
+          }
+        },
+        "9d231586-a60b-42ac-9721-d7ea47797c99": {
+          "type": "block",
+          "settings": {
+            "product": "wellness-kit",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
+          }
+        },
+        "block_HaWR8G": {
+          "type": "block",
+          "settings": {
+            "product": "energy-drops",
+            "hover_video": ""
+          }
+        }
+      },
+      "block_order": [
+        "915598b8-73ba-4440-9c78-70b475eb492a",
+        "dca0e5dd-357d-4543-b722-8d65bedef3b1",
+        "9d231586-a60b-42ac-9721-d7ea47797c99",
+        "block_HaWR8G"
+      ],
+      "settings": {
+        "title": "Buoy’s Solution: The Perfect Electrolyte Balance for Athletes",
+        "text": "<p style=\"font-size: 15px\">Elevate your athletic performance and recovery with Buoy's deep ocean electrolytes, enriched with 87+ ionic trace minerals and the finest plant-derived vitamins for maximum bioavailability.<br><br>\n\nMake these portable electrolyte drops an essential part of your athletic routine for enduring performance and rapid recovery.<br><br>\n\nSave 24% and try risk-free for a month to feel how good clean hydration feels.<br><br>\n\nClean & Pure — Formulated for Peak Athletic Performance<br><br>\n✓ 0 Sugar<br>\n✓ 0 Calories & Carbs<br>\n✓ 0 Sweeteners, Flavors<br>\n✓ Deep Ocean Electrolytes<br>\n✓ 87+ Ionic Trace Minerals<br>\n✓ Energy-Boosting B Vitamin Complex<\/p>",
+        "shop_all_label": "Shop All Products",
+        "shop_all_link": "https:\/\/justaddbuoy.com\/collections\/all",
+        "promo_link_text": "",
+        "promo_link": "",
+        "background": "bg_color",
+        "add_top_border": true,
+        "add_bottom_border": true
       }
     },
     "477e1b9e-3028-42ca-9c54-1d0176b43e45": {
@@ -1068,13 +1072,13 @@
   "order": [
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b",
     "31e36676-5821-47f9-a328-6c162b259d29",
-    "304f34df-6587-4eb2-a832-96b49eef9918",
     "custom_featured_product_WTzBP6",
     "2b7564eb-8f3d-425b-9a73-e9499130b312",
     "dece096c-1bc4-4b53-9b54-698c55f6a86f",
     "051bd394-26fe-4f3b-9af0-d6cafb2f9d6b",
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88",
     "66fa9280-30b7-49e9-a2e5-bf6fe405e4b2",
+    "304f34df-6587-4eb2-a832-96b49eef9918",
     "477e1b9e-3028-42ca-9c54-1d0176b43e45",
     "7f8df6bf-b0e8-4dbd-9888-f1d60fe58c51",
     "6f4ad2c0-5e3c-42cf-81e0-a781b4136c40",
