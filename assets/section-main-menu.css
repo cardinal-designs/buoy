@@ -655,25 +655,3 @@ header-container .header--scrolled .header-wrapper {
   }
   
 }
-
-.fade-on-scroll {
-  position: relative;
-  overflow: hidden;
-  /* Ensure content doesn't overflow the container */
-}
-
-.fade-on-scroll::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  /* Height of the fade effect */
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-  /* Adjust opacity values as needed */
-  pointer-events: none;
-  /* Ensure the fade effect doesn't interfere with mouse events */
-  z-index: 1;
-  /* Ensure the fade effect is behind the content */
-}
