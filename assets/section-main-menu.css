@@ -20,7 +20,7 @@
   -webkit-overflow-scrolling: touch;
   /* height: 78vh; */
   /* height: 100%; */
-  height: calc(100vh - 12px);
+  height: calc(100vh - 12%);
 }
 
 .main-menu.active {
