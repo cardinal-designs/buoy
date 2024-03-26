@@ -1858,6 +1858,7 @@ function navDropDownMenu() {
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
       headerContainer.style.top = 10;
+      console.log('aaaa')
       headerContainer.classList.add('active');
       headerWrapper.classList.add('active-dropdown');
 
