@@ -1865,6 +1865,8 @@ function navDropDownMenu() {
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
       }
+    } else {
+      headerContainer.setAttribute('style', 'top: 0px !important');
     }
   });
 
