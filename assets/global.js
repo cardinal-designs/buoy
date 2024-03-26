@@ -1857,6 +1857,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
+      headerContainer.style.top = 10;
       headerContainer.classList.add('active');
       headerWrapper.classList.add('active-dropdown');
 
