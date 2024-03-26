@@ -2080,6 +2080,13 @@ header-container.active .header {
   margin: 0 19px;
 }
 
+@media screen and (max-width: 768px) {
+
+  .header-wrapper {
+    margin: 0;
+  }
+}
+
 .header-wrapper.active-dropdown {
   border-bottom: 1px solid var(--gray-light);
 }
