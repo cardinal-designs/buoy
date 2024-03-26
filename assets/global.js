@@ -1793,7 +1793,7 @@ $('[href="#menu"]').click(function() {
     $('.main-menu').css('top', '40px');
   } else {
     console.log('b')
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
+    $('.main-menu').css('top', '400px');
   }
   // $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
