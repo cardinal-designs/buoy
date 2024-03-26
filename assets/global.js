@@ -1865,9 +1865,7 @@ function navDropDownMenu() {
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
       }
-    } else {
-      headerContainer.setAttribute('style', 'top: 0px !important');
-    }
+    } 
   });
 
   // close dropdown
@@ -1878,6 +1876,8 @@ function navDropDownMenu() {
     headerBorder.classList.remove('header--scrolled');
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
+    headerContainer.setAttribute('style', 'top: 0px !important');
+
   })
 
   // check outside click
