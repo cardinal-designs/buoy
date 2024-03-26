@@ -1806,6 +1806,7 @@ $('[href="#menu"]').click(function() {
   $('header-container').addClass('mobile-active');
   $('.page-blury-overlay').addClass('is-visible-mobile');
   document.querySelector('body').classList.add('lock-scroll-mobile');
+  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
 });
 
 // Main menu close
