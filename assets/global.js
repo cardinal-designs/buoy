@@ -1791,9 +1791,10 @@ $('[href="#menu"]').click(function() {
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     console.log('a')
     $('.main-menu').css('top', '40px');
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   } else {
     console.log('b')
-    $('.main-menu').css('top', '400px');
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   }
   // $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
