@@ -1840,7 +1840,7 @@ $('.main-menu__close').click(function() {
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
   } else {
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 30px !important');
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 60px !important');
   }
 }); 
  
