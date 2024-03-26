@@ -19,7 +19,8 @@
   display: block;
   -webkit-overflow-scrolling: touch;
   /* height: 78vh; */
-  height: calc(100vh - 12px)
+  height: 100%;
+  max-height: calc(100vh - 12px);
 }
 
 .main-menu.active {
