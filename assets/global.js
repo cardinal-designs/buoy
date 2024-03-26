@@ -1857,7 +1857,12 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
-      headerContainer.setAttribute('style', 'top: 55px !important');
+      
+      if(document.querySelector('.Show_Announcement_Bar.not-active')) {
+        headerContainer.setAttribute('style', 'top: 10px !important');
+      } else {
+        headerContainer.setAttribute('style', 'top: 55px !important');
+      }
       console.log('aaaa')
       headerContainer.classList.add('active');
       headerWrapper.classList.add('active-dropdown');
