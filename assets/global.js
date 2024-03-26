@@ -1835,7 +1835,13 @@ $('.main-menu__close').click(function() {
   $('header-container').removeClass('mobile-active');
   $('.page-blury-overlay').removeClass('is-visible-mobile');
   document.querySelector('body').classList.remove('lock-scroll-mobile');
-  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
+
+  var announcementBar = $('.Show_Announcement_Bar');
+  if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
+  } else {
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 30px !important');
+  }
 }); 
  
 // Nav Menu Dropdown Desktop
