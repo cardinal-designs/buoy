@@ -1857,7 +1857,6 @@ function navDropDownMenu() {
 
   // close dropdown
   dropDownClose.addEventListener('click', () => {
-    headerContainer.style.top = '0';
     dropdownMenu.classList.remove('active');
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -1878,7 +1877,6 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
-      headerContainer.style.top = '0';
     }
   });
 }
