@@ -2032,7 +2032,7 @@ header-container.active {
   z-index: 100;
   width: calc(100% - 20px);
   position: sticky;
-  top: 10px !important;
+  top: 10px;
   left: 12px;
   right: 12px;
   border-radius: 20px 20px 0 0;
@@ -2078,6 +2078,13 @@ header-container.active .header {
   transition: background-color, border .3s ease;
   border-radius: 10px 10px 0 0;
   margin: 0 19px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .header-wrapper {
+    margin: 0;
+  }
 }
 
 .header-wrapper.active-dropdown {
