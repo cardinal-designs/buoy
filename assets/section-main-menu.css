@@ -17,10 +17,7 @@
   transition: opacity .4s ease, visibility .4s ease;
   box-shadow: 0px 14px 20px #00000008;
   display: block;
-  -webkit-overflow-scrolling: touch;
-  /* height: 78vh; */
-  /* height: 100%; */
-  height: calc(100vh - 12%);
+  -webkit-overflow-scrolling: touch;  
 }
 
 .main-menu.active {
