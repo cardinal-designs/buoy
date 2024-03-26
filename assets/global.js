@@ -1823,7 +1823,6 @@ $('.main-menu__close').click(function() {
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
   $('header-container').removeClass('mobile-active');
-  $('header-container').attribute('css', 'top: 0px !important;');
   $('.page-blury-overlay').removeClass('is-visible-mobile');
   document.querySelector('body').classList.remove('lock-scroll-mobile');
 }); 
