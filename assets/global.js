@@ -1876,7 +1876,7 @@ function navDropDownMenu() {
     headerBorder.classList.remove('header--scrolled');
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
-     headerContainer.setAttribute('style', 'top: unset !important');
+     headerContainer.setAttribute('style', 'top: 39px !important');
   })
 
   // check outside click
