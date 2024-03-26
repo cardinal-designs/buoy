@@ -1845,7 +1845,7 @@ function navDropDownMenu() {
   const dropdownMenu = document.querySelector('.header__dropdown');
   const pageBlurOverlay = document.querySelector('.page-blury-overlay');
   const headerContainer = document.querySelector('header-container');
-  const headerBorder = document.querySelector('.header--transparent');
+  const headerBorder = document.querySelector('.header--transparent'); 
   const headerWrapper = document.querySelector('.header-wrapper');
 
   // open dropdown
