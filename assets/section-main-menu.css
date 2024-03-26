@@ -14,27 +14,22 @@
   z-index: 99999;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
-  transition: .4s ease-in-out;
-  max-height: 624px;
+  transition: opacity .4s ease, visibility .4s ease;
   box-shadow: 0px 14px 20px #00000008;
   display: block;
   -webkit-overflow-scrolling: touch;
-  height: 75vh;
+  height: calc(89vh - 12px);
 }
 
 .main-menu.active {
   position: sticky;
   top: 0;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .main-menu[aria-hidden="false"] {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
 }
 
 .main-menu__close {
@@ -151,8 +146,8 @@
 }
 
 .main-menu__close svg {
-  height: 14px;
-  width: 14px;
+  height: 24px;
+  width: 24px;
 }
 
 .Main_Menu_Link_Desktop_Title {
@@ -465,7 +460,6 @@
   .main-menu__container {
     display: block;
     padding: 20px;
-    border-top: 1px solid var(--gray-lighest);
   }
 
   .Main_Menu_Link_Desktop_Title {

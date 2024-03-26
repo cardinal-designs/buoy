@@ -3,12 +3,11 @@
 
 <div class="main-menu {% if settings.fix_announcement == true %}Fixed_Announcement_Bar{% endif %} {% if settings.show_announcement_bar == true %}Announcement_Shown{% endif %}" aria-hidden="true">  
   <button class="main-menu__close">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M5.23066 19.7142L4.28516 18.7687L11.0539 11.9999L4.28516 5.23115L5.23066 4.28564L11.9994 11.0544L18.7682 4.28564L19.7137 5.23115L12.945 11.9999L19.7137 18.7687L18.7682 19.7142L11.9994 12.9454L5.23066 19.7142Z" fill="#1F2322"/>
-    </svg>
+    {% render 'drawer-icon-close' %}
   </button>
   <div class="main-menu__wrapper">
     <div class="main-menu__container">
+      <div class="main-menu__overlay-fade"></div>
       <div class="header__dropdown-item">{{ section.settings.dropdown_title }}</div>
       <div class="header__dropdown-links-wrapper">
         <div class="header__dropdown-links">
@@ -60,6 +59,12 @@
             <a href="{{ link.url }}">{{ link.title }}</a>
           </li>
           {%- endfor -%}
+          <li class="header__list-item header__list-item--account">
+            <a href="/account" class="header__list-link">
+              {% render 'icon-account-mobile-menu' %}
+              <span>Account</span>
+            </a>
+          </li>
         </ul>
       </div>
 

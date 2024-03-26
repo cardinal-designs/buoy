@@ -2033,9 +2033,14 @@ header-container.active {
   width: calc(100% - 20px);
   position: sticky;
   top: 10px !important;
-  left: 10px;
-  right: 10px;
+  left: 12px;
+  right: 12px;
   border-radius: 20px 20px 0 0;
+}
+
+header-container.active .header-logo {
+  width: 49px;
+  height: 28px;
 }
 
 header-container.mobile-active {
@@ -2045,6 +2050,11 @@ header-container.mobile-active {
   top: 10px !important;
   left: 10px;
   right: 10px;
+}
+
+header-container.active .header {
+  padding: 22px 19px;
+  height: 60px;
 }
 
 @media screen and (max-width: 768px) {
