@@ -1775,7 +1775,7 @@ $('.reviews_button').click(function(){
 // Announcement bar
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
-  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
+  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   $('.main-menu').css('top','40px');
   $('.Show_Announcement_Bar').addClass('not-active');
   // remove page blur and lock scroll if nav dropdown is open
@@ -1825,6 +1825,7 @@ $('.main-menu__close').click(function() {
   $('header-container').removeClass('mobile-active');
   $('.page-blury-overlay').removeClass('is-visible-mobile');
   document.querySelector('body').classList.remove('lock-scroll-mobile');
+  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
 }); 
  
 // Nav Menu Dropdown Desktop
