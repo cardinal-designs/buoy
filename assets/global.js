@@ -1775,7 +1775,7 @@ $('.reviews_button').click(function(){
 // Announcement bar
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
-  $('.Show_Announcement_Bar.Fixed_Bar + header-container').css('top','10px !important'); 
+  $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   $('.main-menu').css('top','40px');
   $('.Show_Announcement_Bar').addClass('not-active');
   // remove page blur and lock scroll if nav dropdown is open
