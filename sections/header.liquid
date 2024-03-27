@@ -531,7 +531,7 @@
           </div>
           {%- if bs.block_image != blank -%}
             <div class="header__dropdown-card-bottom">
-              <div style="background-image: {{ bs.block_image | img_url: 'master'}};" class="media header__dropdown-card-image">
+              <div style="background-image: {{ bs.block_image}};" class="media header__dropdown-card-image">
                
                 {% comment %}
                 {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
