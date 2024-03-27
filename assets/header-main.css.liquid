@@ -496,12 +496,6 @@ header-drawer {
   }
 }
 
-.header__dropdown-card {
-  max-width: 329px;
-  width: 100%;
-}
-
-
 .header__dropdown-right {
   display: flex;
   gap: 21px;
@@ -550,13 +544,27 @@ header-drawer {
   width: 100%;
 }
 
+.header__dropdown-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__dropdown-card-bottom {
-  max-width: 329px;
+  position: relative;
+  height: 100%;
 }
 
 .header__dropdown-card-bottom img {
-  width: 100%;
-  border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+   border-radius: 0 0 10px 10px;
 }
 
 .header__dropdown-badge-text {
