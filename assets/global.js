@@ -1776,7 +1776,7 @@ $('.reviews_button').click(function(){
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
   if ($('.header-wrapper.active.menu-open').length === 0 ) {
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 330px !important');
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
   } else {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   }
