@@ -1793,11 +1793,9 @@ $('.announcement-bar__close').click(function() {
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
-    console.log('a')
     $('.main-menu').css('top', '40px');
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
   } else {
-    console.log('b')
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 70px !important');
   }
   // $('#shopify-section-announcement-bar').hide();
