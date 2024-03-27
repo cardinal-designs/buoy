@@ -1874,12 +1874,11 @@ function navDropDownMenu() {
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
       
-      if(document.querySelector('.Show_Announcement_Bar.not-active')) {
+      if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
         headerContainer.setAttribute('style', 'top: 10px !important');
       } else {
         headerContainer.setAttribute('style', 'top: 55px !important');
       }
-      console.log('aaaa')
       headerContainer.classList.add('active');
       headerWrapper.classList.add('active-dropdown');
 
