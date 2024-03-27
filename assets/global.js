@@ -1846,8 +1846,11 @@ $('.main-menu__close').click(function() {
 
 $(window).on('resize', function(){
     let announceHeight = $('#shopify-section-announcement-bar').height()
-    console.log(announceHeight)
-    $('header-container').attr('style', `top: ${announceHeight}px !important`);
+    if(announceHeight) {
+      $('header-container').attr('style', `top: ${announceHeight}px !important`);
+    } else {
+      $('header-container').attr('style', `top: 0px !important`);
+    }
 });
  
 // Nav Menu Dropdown Desktop
