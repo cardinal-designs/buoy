@@ -1886,7 +1886,19 @@ function navDropDownMenu() {
       if (!headerBorder.classList.contains('header--scrolled')) {
         headerBorder.classList.add('header--scrolled');
       }
-    } 
+    } else {
+      dropdownMenu.classList.remove('active');
+      pageBlurOverlay.classList.remove('is-visible');
+      document.querySelector('body').classList.remove('lock-scroll');
+      headerBorder.classList.remove('header--scrolled');
+      headerContainer.classList.remove('active');
+      headerWrapper.classList.remove('active-dropdown');
+      if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
+        headerContainer.setAttribute('style', 'top: 0px !important');
+      } else {
+       headerContainer.setAttribute('style', 'top: 39px !important');
+      }
+    }
   });
 
   // close dropdown
