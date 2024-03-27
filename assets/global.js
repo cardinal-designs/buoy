@@ -1839,6 +1839,7 @@ $('.main-menu__close').click(function() {
 
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
+    console.log('fwfwfwfwfwwfwf')
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
   } else {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 60px !important');
