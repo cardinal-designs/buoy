@@ -1847,7 +1847,6 @@ $('.main-menu__close').click(function() {
 
 $(window).on('resize', function(){
     let announceHeight = $('.Show_Announcement_Bar').height()
-  console.log(announceHeight)
     if(announceHeight) {
       $('header-container').attr('style', `top: ${announceHeight}px !important`);
     } else {
@@ -1898,7 +1897,9 @@ function navDropDownMenu() {
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
         headerContainer.setAttribute('style', 'top: 0px !important');
       } else {
-       headerContainer.setAttribute('style', 'top: 39px !important');
+
+       let announceHeight = $('.Show_Announcement_Bar').height() + 10
+       headerContainer.setAttribute('style', `top: ${announceHeight}px !important`);
       }
     }
   });
