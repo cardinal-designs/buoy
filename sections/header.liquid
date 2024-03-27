@@ -530,13 +530,8 @@
             {%- endif -%}
           </div>
           {%- if bs.block_image != blank -%}
-            <div style="  background: url({{ bs.block_image | img_url: 'master' }}) no-repeat fixed; background-size: contain; height: 100%;" class="header__dropdown-card-bottom">
-                {% comment %}
+            <div class="header__dropdown-card-bottom">
                 <img src="{{ bs.block_image | img_url: 'master' }}"/>
-           
-                {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
-               {% endcomment %}
-            
             </div>
           {%- endif -%}
         </div>
