@@ -1896,7 +1896,7 @@ function navDropDownMenu() {
     headerBorder.classList.remove('header--scrolled');
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
-    if(document.querySelector('.Show_Announcement_Bar.not-active')) {
+    if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
     } else {
      headerContainer.setAttribute('style', 'top: 39px !important');
