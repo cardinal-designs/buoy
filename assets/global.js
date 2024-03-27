@@ -1930,7 +1930,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
-      
+      console.log('fffff')
     }
   });
 }
