@@ -1847,8 +1847,10 @@ $('.main-menu__close').click(function() {
 $(window).on('resize', function(){
     let announceHeight = $('#shopify-section-announcement-bar').height()
     if(announceHeight) {
+      console.log(1)
       $('header-container').attr('style', `top: ${announceHeight}px !important`);
     } else {
+      console.log(2)
       $('header-container').attr('style', `top: 0px !important`);
     }
 });
