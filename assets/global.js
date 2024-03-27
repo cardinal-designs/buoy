@@ -1843,6 +1843,12 @@ $('.main-menu__close').click(function() {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 60px !important');
   }
 }); 
+
+$(window).on('resize', function(){
+    let announceHeight = $('.announcement-bar').height()
+  console.log(announceHeight)
+    $('header-container').css({ top: '100px' });
+});
  
 // Nav Menu Dropdown Desktop
 function navDropDownMenu() {
