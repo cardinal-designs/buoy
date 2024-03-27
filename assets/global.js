@@ -1896,7 +1896,7 @@ function navDropDownMenu() {
       headerWrapper.classList.remove('active-dropdown');
       dropDownClose.classList.remove('active');
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
-        headerContainer.setAttribute('style', 'top: 440px !important');
+        headerContainer.setAttribute('style', 'top: 0px !important');
       } else {
 
        let announceHeight = $('.Show_Announcement_Bar').height()
