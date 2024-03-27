@@ -1792,10 +1792,11 @@ $('.announcement-bar__close').click(function() {
 // Main menu open
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
+  console.log()
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.main-menu').css('top', '40px');
     console.log(1)
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
+    $('header-container').attr('style', 'top: 10px !important');
   } else {
     console.log(2)
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 70px !important');
