@@ -530,7 +530,7 @@
             {%- endif -%}
           </div>
           {%- if bs.block_image != blank -%}
-            <div style="  background: url({{ bs.block_image | img_url: 'master' }}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="header__dropdown-card-bottom">
+            <div style="  background: url({{ bs.block_image | img_url: 'master' }}) fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="header__dropdown-card-bottom">
                 {% comment %}
                 <img src="{{ bs.block_image | img_url: 'master' }}"/>
            
