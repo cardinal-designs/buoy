@@ -1845,7 +1845,7 @@ $('.main-menu__close').click(function() {
 }); 
 
 $(window).on('resize', function(){
-    let announceHeight = $('#shopify-section-announcement-bar').height()
+    let announceHeight = $('.Show_Announcement_Bar').height()
   console.log(announceHeight)
     if(announceHeight) {
       $('header-container').attr('style', `top: ${announceHeight}px !important`);
