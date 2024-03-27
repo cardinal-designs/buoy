@@ -1838,6 +1838,7 @@ $('.main-menu__close').click(function() {
   document.querySelector('body').classList.remove('lock-scroll-mobile');
 
   var announcementBar = $('.Show_Announcement_Bar');
+  console.log(announcementBar.length === 0 || announcementBar.hasClass('not-active'))
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
   } else {
