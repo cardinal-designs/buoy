@@ -1847,7 +1847,7 @@ $('.main-menu__close').click(function() {
 $(window).on('resize', function(){
     let announceHeight = $('.announcement-bar').height()
   console.log(announceHeight)
-    $('header-container').css({ top: '100px' });
+    $('header-container').css({ top: `${announcementHeight}px !important;` });
 });
  
 // Nav Menu Dropdown Desktop
