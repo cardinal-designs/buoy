@@ -624,10 +624,12 @@ header-drawer {
 
 .main-menu__overlay-fade {
   height: 10px;
-  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(1, 24, 24, 0), #fff);
+  z-index: 1;
+  width: calc(100% + 40px);
+  transform: translate(-20px, 0px);
 }
