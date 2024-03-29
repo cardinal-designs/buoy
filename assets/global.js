@@ -1842,7 +1842,7 @@ $('.main-menu__close').click(function() {
     $('header-container').attr('style', 'top: 0px !important');
   } else {
     // $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 60px !important');
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height()}px !important`);
   }
 }); 
 
