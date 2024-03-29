@@ -860,7 +860,6 @@ Array.from(animatedText).map(animate)
 
 // Slick on mobile
 function slickOnMobile(slider, settings){
-  console.log('aa')
   $(window).on('load resize', function() {
     if ($(window).width() > 768) {
       if (slider.hasClass('slick-initialized')) {
@@ -1849,7 +1848,11 @@ $('.main-menu__close').click(function() {
 $(window).on('resize', function(){
     let announceHeight = $('.Show_Announcement_Bar').height()
     if(announceHeight) {
-      $('header-container').attr('style', `top: ${announceHeight}px !important`);
+      if ($('.header-wrapper').hasClass('active-dropdown') || $('.menu-open').hasClass('active-dropdown')) {
+        $('header-container').attr('style', `top: ${announceHeight + 10}px !important`);
+      } else {
+        $('header-container').attr('style', `top: ${announceHeight}px !important`);
+      }
     } else {
       $('header-container').attr('style', `top: 0px !important`);
     }
