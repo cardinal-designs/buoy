@@ -1963,9 +1963,10 @@ function navDropDownMenu() {
           console.log(2)
         } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
           headerContainer.setAttribute('style', 'top: 0px');
+        
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
-          console.log(3)
+          console.log(3, e)
         }
       }
       headerBorder.classList.remove('header--scrolled');
