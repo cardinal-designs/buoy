@@ -1923,7 +1923,7 @@ function navDropDownMenu() {
     headerBorder.classList.remove('header--scrolled');
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
-    if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
+    if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && !headerBorder.classList.contains('header--scrolled')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
     } else if (headerBorder.classList.contains('header--scrolled')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
