@@ -1844,7 +1844,7 @@ $('.main-menu__close').click(function() {
 
 $(window).on('resize', function(){
     let announceHeight = $('.Show_Announcement_Bar').height()
-    if(announceHeight) {
+    if(announceHeight && document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
       if ($('.header-wrapper').hasClass('active-dropdown') || $('.header-wrapper').hasClass('menu-open')) {
         $('header-container').attr('style', `top: ${announceHeight + 10}px !important`);
       } else {
