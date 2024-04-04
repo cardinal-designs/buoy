@@ -1782,15 +1782,15 @@ $('[href="#menu"]').click(function() {
       if(document.querySelector('announcement-container').classList.contains('Fixed_Bar') && document.querySelector('header-container').classList.contains('header--scrolled')) {
         $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`); 
       } else {
-        $('header-container').attr('style', `top: 10px !important`); 
+        $('header-container').attr('style', `top: 11px !important`); 
       }
     } else {
-      $('header-container').attr('style', 'top: 10px !important');
+      $('header-container').attr('style', 'top: 12px !important');
     }
   } else if ((announcementBar.length === 0 || announcementBar.hasClass('not-active')) ) {
         console.log(2)
     $('.main-menu').css('top', '40px');
-    $('header-container').attr('style', 'top: 10px !important');
+    $('header-container').attr('style', 'top: 13px !important');
   } else {
         console.log(3)
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
