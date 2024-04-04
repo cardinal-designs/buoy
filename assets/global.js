@@ -1778,7 +1778,7 @@ $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   console.log()
   if(document.querySelector('header-container').classList.contains('header--scrolled') && announcementBar.length !== 0 ) {
-    console.log(1)
+    console.log(12)
     $('.main-menu').css('top', '40px');
     if ($(window).width() <= 768) {
       $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
