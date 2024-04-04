@@ -1900,8 +1900,8 @@ function navDropDownMenu() {
         headerContainer.setAttribute('style', 'top: 0px !important');
       } else {
        let announceHeight = $('.Show_Announcement_Bar').height()
-       // headerContainer.setAttribute('style', `top: ${announceHeight}px`);
-        headerContainer.setAttribute('style', `top: 0px`);
+       headerContainer.setAttribute('style', `top: ${announceHeight}px`);
+        // headerContainer.setAttribute('style', `top: 0px`);
       }
     }
   });
