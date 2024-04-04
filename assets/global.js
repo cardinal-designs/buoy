@@ -1771,23 +1771,7 @@ $('.reviews_button').click(function(){
   }
 });
 
-// Announcement bar
-$('.announcement-bar__close').click(function() {
-  $('#shopify-section-announcement-bar').hide()
-  console.log('aaaaaaaaaa',$('.header-wrapper.active.menu-open').length)
-  if ($('.header-wrapper.active.menu-open').length === 0 ) {
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
-  } else {
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
-  }
-  $('.main-menu').css('top','40px');
-  $('.Show_Announcement_Bar').addClass('not-active');
-  // remove page blur and lock scroll if nav dropdown is open
-  if ($('.header__dropdown').hasClass('active')) {
-    $('.page-blury-overlay').removeClass('is-visible');
-    $('body').removeClass('lock-scroll');
-  }
-})
+
 
 // Main menu open
 $('[href="#menu"]').click(function() {
@@ -1963,10 +1947,8 @@ function navDropDownMenu() {
           console.log(2)
         } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
           headerContainer.setAttribute('style', 'top: 0px');
-        
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
-          console.log(3, e.target)
         }
       }
       headerBorder.classList.remove('header--scrolled');
@@ -1974,3 +1956,22 @@ function navDropDownMenu() {
   });
 }
 navDropDownMenu();
+
+
+// Announcement bar
+$('.announcement-bar__close').click(function() {
+  $('#shopify-section-announcement-bar').hide()
+  console.log('aaaaaaaaaa',$('.header-wrapper.active.menu-open').length)
+  if ($('.header-wrapper.active.menu-open').length === 0 ) {
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
+  } else {
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 10px !important');
+  }
+  $('.main-menu').css('top','40px');
+  $('.Show_Announcement_Bar').addClass('not-active');
+  // remove page blur and lock scroll if nav dropdown is open
+  if ($('.header__dropdown').hasClass('active')) {
+    $('.page-blury-overlay').removeClass('is-visible');
+    $('body').removeClass('lock-scroll');
+  }
+})
