@@ -1935,6 +1935,7 @@ function navDropDownMenu() {
     } else if (headerBorder.classList.contains('header--scrolled')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
     } else {
+      console.log('bae')
       headerContainer.setAttribute('style', 'top: 39px');  
     }
     headerBorder.classList.remove('header--scrolled');
