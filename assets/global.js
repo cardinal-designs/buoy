@@ -1966,7 +1966,7 @@ function navDropDownMenu() {
         
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
-          console.log(3, e)
+          console.log(3, e.target)
         }
       }
       headerBorder.classList.remove('header--scrolled');
