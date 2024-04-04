@@ -1874,10 +1874,13 @@ function navDropDownMenu() {
       headerContainer.style.zIndex = 10;
       
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
+        console.log('first')
         headerContainer.setAttribute('style', 'top: 10px !important');
       } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
         headerContainer.setAttribute('style', 'top: 10px !important');
+        console.log('second')
       } else {
+        console.log('third')
         headerContainer.setAttribute('style', 'top: 55px !important');
       }
       headerContainer.classList.add('active');
