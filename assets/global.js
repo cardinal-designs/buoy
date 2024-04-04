@@ -1920,7 +1920,7 @@ function navDropDownMenu() {
     dropdownMenu.classList.remove('active');
     pageBlurOverlay.classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    headerBorder.classList.remove('header--scrolled');
+    
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
     console.log('vv',headerBorder.classList.contains('header--scrolled'))
@@ -1931,6 +1931,7 @@ function navDropDownMenu() {
     } else {
      headerContainer.setAttribute('style', 'top: 39px !important');
     }
+    headerBorder.classList.remove('header--scrolled');
   })
 
   // check outside click
