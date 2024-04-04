@@ -1776,15 +1776,13 @@ $('.reviews_button').click(function(){
 // Main menu open
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
-  console.log()
   if(document.querySelector('header-container').classList.contains('header--scrolled') && announcementBar.length !== 0 ) {
-    console.log(12)
     $('.main-menu').css('top', '40px');
     if ($(window).width() <= 768) {
       if(document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
-         $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
+        $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
       } else {
-        $('header-container').attr('style', `top: 10px !important`);
+        $('header-container').attr('style', `top: 10px`);
       }
     } else {
       $('header-container').attr('style', 'top: 10px !important');
