@@ -1856,8 +1856,6 @@ $(window).on('resize', function(){
     if(announceHeight) {
       if ($('.header-wrapper').hasClass('active-dropdown') || $('.header-wrapper').hasClass('menu-open')) {
         $('header-container').attr('style', `top: ${announceHeight + 10}px !important`);
-      } else if {
-        
       } else {
         $('header-container').attr('style', `top: ${announceHeight}px !important`);
       }
