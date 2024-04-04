@@ -1781,7 +1781,11 @@ $('[href="#menu"]').click(function() {
     console.log(12)
     $('.main-menu').css('top', '40px');
     if ($(window).width() <= 768) {
-      $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
+      if(document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
+         $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
+      } else {
+        $('header-container').attr('style', `top: 10px !important`);
+      }
     } else {
       $('header-container').attr('style', 'top: 10px !important');
     }
