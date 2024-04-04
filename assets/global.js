@@ -1792,7 +1792,10 @@ $('.announcement-bar__close').click(function() {
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   console.log()
-  if ((announcementBar.length === 0 || announcementBar.hasClass('not-active')) && !document.querySelector('header-container').classList.contains('header--scrolled')) {
+  if(document.querySelector('header-container').classList.contains('header--scrolled') && announcementBar.length !== 0 ) {
+    $('.main-menu').css('top', '40px');
+    $('header-container').attr('style', 'top: 10px !important');
+  } else if ((announcementBar.length === 0 || announcementBar.hasClass('not-active')) ) {
     $('.main-menu').css('top', '40px');
     $('header-container').attr('style', 'top: 10px !important');
   } else {
