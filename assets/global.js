@@ -1946,6 +1946,7 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
+      console.log(headerBorder.classList)
       if ($(window).width() > 768) {
         if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && !headerBorder.classList.contains('header--scrolled')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
