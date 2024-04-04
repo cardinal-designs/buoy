@@ -1929,7 +1929,7 @@ function navDropDownMenu() {
     } else if (headerBorder.classList.contains('header--scrolled')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
     } else {
-      headerContainer.setAttribute('style', 'top: 0px');  
+      headerContainer.setAttribute('style', 'top: 39px');  
     }
     headerBorder.classList.remove('header--scrolled');
   })
