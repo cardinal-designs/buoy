@@ -1941,7 +1941,7 @@ function navDropDownMenu() {
     if ($isOutside && $btnIsOutside) {
       dropdownMenu.classList.remove('active');
       dropDownClose.classList.remove('active');
-      headerBorder.classList.remove('header--scrolled');
+      
       document.querySelector('body').classList.remove('lock-scroll');
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
@@ -1958,6 +1958,7 @@ function navDropDownMenu() {
           console.log(3)
         }
       }
+      headerBorder.classList.remove('header--scrolled');
     }
   });
 }
