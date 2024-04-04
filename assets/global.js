@@ -1792,9 +1792,8 @@ $('.announcement-bar__close').click(function() {
 $('[href="#menu"]').click(function() {
   var announcementBar = $('.Show_Announcement_Bar');
   console.log()
-  if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
+  if ((announcementBar.length === 0 || announcementBar.hasClass('not-active')) && !document.querySelector('header-container').classList.contains('header--scrolled')) {
     $('.main-menu').css('top', '40px');
-    console.log(1)
     $('header-container').attr('style', 'top: 10px !important');
   } else {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
