@@ -1929,7 +1929,7 @@ function navDropDownMenu() {
     } else if (headerBorder.classList.contains('header--scrolled')) {
       headerContainer.setAttribute('style', 'top: 0px !important');
     } else {
-      headerContainer.setAttribute('style', 'top: 391px');  
+      headerContainer.setAttribute('style', 'top: 39px');  
     }
     headerBorder.classList.remove('header--scrolled');
   })
@@ -1949,10 +1949,13 @@ function navDropDownMenu() {
       if ($(window).width() > 768) {
         if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && !headerBorder.classList.contains('header--scrolled')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
+          console.log(1)
         } else if (headerBorder.classList.contains('header--scrolled')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
+          console.log(2)
         } else {
-          headerContainer.setAttribute('style', 'top: 392px');
+          headerContainer.setAttribute('style', 'top: 39px');
+          console.log(3)
         }
       }
     }
