@@ -1886,6 +1886,8 @@ function navDropDownMenu() {
       
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
         headerContainer.setAttribute('style', 'top: 10px !important');
+      } else if (headerBorder.classList.contains('header--scrolled')) {
+        headerContainer.setAttribute('style', 'top: 10px !important');
       } else {
         console.log('vae')
         headerContainer.setAttribute('style', 'top: 55px !important');
