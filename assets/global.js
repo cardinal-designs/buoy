@@ -1854,11 +1854,14 @@ $('.main-menu__close').click(function() {
 $(window).on('resize', function(){
     let announceHeight = $('.Show_Announcement_Bar').height()
     if(announceHeight) {
-      if ($('.header-wrapper').hasClass('active-dropdown') || $('.header-wrapper').hasClass('menu-open')) {
-        $('header-container').attr('style', `top: ${announceHeight + 10}px !important`);
-      } else {
-        $('header-container').attr('style', `top: ${announceHeight}px !important`);
-      }
+      // if ($('.header-wrapper').hasClass('active-dropdown') || $('.header-wrapper').hasClass('menu-open')) {
+      //   $('header-container').attr('style', `top: ${announceHeight + 10}px !important`);
+      // } else if {
+        
+      // } else {
+      //   $('header-container').attr('style', `top: ${announceHeight}px !important`);
+      // }
+      $('header-container').attr('style', `top: 0px !important`);
     } else {
       $('header-container').attr('style', `top: 0px !important`);
     }
