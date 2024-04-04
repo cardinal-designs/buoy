@@ -1940,7 +1940,7 @@ function navDropDownMenu() {
       headerWrapper.classList.remove('active-dropdown');
       console.log(headerBorder.classList)
       if ($(window).width() > 768) {
-        if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+        if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar'))) {
           headerContainer.setAttribute('style', 'top: 0px !important');
           console.log(1)
         } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
