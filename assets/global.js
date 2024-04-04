@@ -1858,7 +1858,7 @@ $(window).on('resize', function(){
       $('header-container').attr('style', `top: 0px !important`);
     }
 });
- 
+
 // Nav Menu Dropdown Desktop
 function navDropDownMenu() {
   const dropdownTrigger = document.querySelector('.js-dropdown-trigger');
