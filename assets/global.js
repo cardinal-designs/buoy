@@ -1929,8 +1929,8 @@ function navDropDownMenu() {
   document.addEventListener('click', (e) => {
     const $isOutside = !e.target.closest('.header__dropdown');
     const $btnIsOutside = !e.target.closest('.js-dropdown-trigger')
-    !e.target.closest('.announcement-bar__close')
-    if ($isOutside && $btnIsOutside) {
+    const $btnAnnounce = !e.target.closest('.announcement-bar__close')
+    if ($isOutside && $btnIsOutside && $btnAnnounce) {
       dropdownMenu.classList.remove('active');
       dropDownClose.classList.remove('active');
       
