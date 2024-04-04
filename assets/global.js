@@ -1885,10 +1885,13 @@ function navDropDownMenu() {
       headerContainer.style.zIndex = 10;
       
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
+        console.log('a')
         headerContainer.setAttribute('style', 'top: 10px !important');
-      } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+      } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
+       console.log('aa')
         headerContainer.setAttribute('style', 'top: 10px !important');
       } else {
+        console.log('aaa')
         headerContainer.setAttribute('style', 'top: 55px !important');
       }
       headerContainer.classList.add('active');
@@ -1907,7 +1910,7 @@ function navDropDownMenu() {
       dropDownClose.classList.remove('active');
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
         headerContainer.setAttribute('style', 'top: 0px !important');
-      } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+      } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
         headerContainer.setAttribute('style', 'top: 0px !important');
       } else {
       console.log('aaaa')
@@ -1953,10 +1956,10 @@ function navDropDownMenu() {
         if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && !headerBorder.classList.contains('header--scrolled')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
           console.log(1)
-        } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+        } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
           console.log(2)
-        } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled')){
+        } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
           headerContainer.setAttribute('style', 'top: 0px');
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
