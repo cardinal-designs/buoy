@@ -1954,6 +1954,8 @@ function navDropDownMenu() {
         } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
           headerContainer.setAttribute('style', 'top: 0px !important');
           console.log(2)
+        } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled')){
+          headerContainer.setAttribute('style', 'top: 0px');
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
           console.log(3)
