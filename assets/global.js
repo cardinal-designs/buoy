@@ -1774,7 +1774,7 @@ $('.reviews_button').click(function(){
 // Announcement bar
 $('.announcement-bar__close').click(function() {
   $('#shopify-section-announcement-bar').hide()
-  console.log($('.header-wrapper.active.menu-open').length)
+  console.log('aaaaaaaaaa',$('.header-wrapper.active.menu-open').length)
   if ($('.header-wrapper.active.menu-open').length === 0 ) {
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 0px !important');
   } else {
