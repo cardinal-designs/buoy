@@ -1951,7 +1951,7 @@ function navDropDownMenu() {
           console.log(3)
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
-          consoele.log(4)
+          console.log(4)
         }
       }
       headerBorder.classList.remove('header--scrolled');
