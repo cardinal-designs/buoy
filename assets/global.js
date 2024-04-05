@@ -1791,10 +1791,11 @@ $('[href="#menu"]').click(function() {
         console.log(2)
     $('.main-menu').css('top', '40px');
     $('header-container').attr('style', 'top: 10px !important');
+  } else if (document.querySelector('header-container').classList.contains('header--scrolled')) {
+     $('header-container').attr('style', `top: 10px !important`);
   } else {
         console.log(3)
     $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
-    // $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 70px !important');
   }
   // $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
