@@ -1956,7 +1956,7 @@ function navDropDownMenu() {
           headerContainer.setAttribute('style', 'top: 0px !important');
           console.log(2)
         } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
-          headerContainer.setAttribute('style', 'top: 0px');
+          headerContainer.setAttribute('style', 'top: 10px');
           console.log(3)
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
