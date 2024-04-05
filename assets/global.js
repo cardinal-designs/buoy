@@ -1793,7 +1793,7 @@ $('[href="#menu"]').click(function() {
     $('header-container').attr('style', 'top: 10px !important');
   } else {
         console.log(3)
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
+    $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
     // $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', 'top: 70px !important');
   }
   // $('#shopify-section-announcement-bar').hide();
@@ -1957,7 +1957,6 @@ function navDropDownMenu() {
           console.log(2)
         } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
           headerContainer.setAttribute('style', 'top: 0px');
-          console.log(3,$(window).width() )
         } else {
           headerContainer.setAttribute('style', 'top: 39px');
           console.log(4)
