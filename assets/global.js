@@ -1795,7 +1795,7 @@ $('[href="#menu"]').click(function() {
      $('announcement-container').attr('style', `top: 10px !important`);
   } else {
         console.log(3)
-    $('header-container').attr('style', `top: ${announcementBar.height() + 120}px !important`);
+    $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
   }
   // $('#shopify-section-announcement-bar').hide();
   $('.main-menu').attr('aria-hidden', false);
