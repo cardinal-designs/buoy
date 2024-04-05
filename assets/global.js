@@ -1904,11 +1904,11 @@ function navDropDownMenu() {
       headerWrapper.classList.remove('active-dropdown');
       dropDownClose.classList.remove('active');
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
-        headerContainer.setAttribute('style', 'top: 0px !important');
+        headerContainer.setAttribute('style', 'top: 30px !important');
       } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
-        headerContainer.setAttribute('style', 'top: 0px !important');
+        headerContainer.setAttribute('style', 'top: 20px !important');
       } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
-        headerContainer.setAttribute('style', 'top: 0px !important');
+        headerContainer.setAttribute('style', 'top: 40px !important');
       } else {
        let announceHeight = $('.Show_Announcement_Bar').height()
        headerContainer.setAttribute('style', `top: ${announceHeight}px`);
