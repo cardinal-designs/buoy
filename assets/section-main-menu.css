@@ -513,7 +513,7 @@
   }
 
   .Show_Announcement_Bar + .mobile-active .main-menu.active {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 140px);
   }
 
   .Show_Announcement_Bar.not-active + .mobile-active .main-menu.active {
