@@ -1936,15 +1936,19 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
-      console.log('hi',headerBorder.classList)
+      console.log('hi',$(window).width() > 768)
       if ($(window).width() > 768) {
         if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar'))) {
+          console.log(1)
           headerContainer.setAttribute('style', 'top: 0px !important');
         } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
+          console.log(2)
           headerContainer.setAttribute('style', 'top: 0px !important');
         } else if (!document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')){
+          console.log(3)
           headerContainer.setAttribute('style', 'top: 0px');
         } else {
+          console.log(4)
           headerContainer.setAttribute('style', 'top: 39px');
         }
       }
