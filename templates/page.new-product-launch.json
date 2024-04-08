@@ -4,7 +4,7 @@
       "type": "main-page",
       "custom_css": [
         "{text-align: center}",
-        "{padding: 0 1rem;}"
+        "{@media screen and (max-width: 768px) .page-width--narrow {padding: 0 1rem;}"
       ],
       "settings": {
       }
