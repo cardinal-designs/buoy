@@ -528,6 +528,13 @@
     height: calc(100vh - 120px);
   }
 
+  .Show_Announcement_Bar.not-active.announcement--scrolled + .mobile-active .main-menu.Fixed_Announcement_Bar.active {
+    height: calc(100vh - 140px);
+  }
+
+  /* .Show_Announcement_Bar.not-active.announcement--scrolled + .mobile-active .main-menu.Fixed_Announcement_Bar.active {
+    height: calc(100vh - 120px);
+  } */
 }
 
 @media only screen and (max-width: 667px) {
