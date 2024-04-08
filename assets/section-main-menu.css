@@ -513,23 +513,23 @@
   }
 
   .Show_Announcement_Bar + .mobile-active .main-menu.active {
-    height: calc(100vh - 140px);
+    height: calc(100dvh - 140px);
   }
 
   .Show_Announcement_Bar.not-active + .mobile-active .main-menu.active {
-    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
   }
 
   .Show_Announcement_Bar.announcement--scrolled + .mobile-active .main-menu.active {
-    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
   }
 
   .Show_Announcement_Bar.announcement--scrolled + .mobile-active .main-menu.Fixed_Announcement_Bar.active {
-    height: calc(100vh - 140px);
+    height: calc(100dvh - 140px);
   }
 
   .Show_Announcement_Bar.not-active.announcement--scrolled + .mobile-active .main-menu.Fixed_Announcement_Bar.active {
-    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
   }
 }
 
