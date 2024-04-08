@@ -524,6 +524,10 @@
     height: calc(100vh - 80px);
   }
 
+  .Show_Announcement_Bar.announcement--scrolled + .mobile-active .main-menu.Fixed_Announcement_Bar.active {
+    height: calc(100vh - 120px);
+  }
+
 }
 
 @media only screen and (max-width: 667px) {
