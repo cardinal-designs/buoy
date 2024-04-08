@@ -1775,7 +1775,8 @@ $('[href="#menu"]').click(function() {
   if(document.querySelector('header-container').classList.contains('header--scrolled') && announcementBar.length !== 0 ) {
     $('.main-menu').css('top', '40px');
     if ($(window).width() <= 768) {
-      
+      document.querySelector('.main-menu.active').setAttribute('style', 'height: calc(100vh - 20px)');
+
       if(document.querySelector('announcement-container').classList.contains('Fixed_Bar') && document.querySelector('header-container').classList.contains('header--scrolled')) {
         $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`); 
       } else {
@@ -1870,7 +1871,6 @@ function navDropDownMenu() {
       pageBlurOverlay.classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       headerContainer.style.zIndex = 10;
-      document.querySelector('.main-menu.active').setAttribute('style', 'height: calc(100vh - 20px)');
       
       if(document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) {
         headerContainer.setAttribute('style', 'top: 10px !important');
