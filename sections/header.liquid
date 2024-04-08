@@ -516,10 +516,10 @@
       {%- for block in section.blocks -%}
         {%- assign bs = block.settings -%}
         <div class="header__dropdown-card">
-        {%- if bs.block_link != blank -%}
-        <a href="{{ bs.block_link }}">
-        {%- endif -%}
           <div class="header__dropdown-card-top">
+          {%- if bs.block_link != blank -%}
+          <a href="{{ bs.block_link }}">
+          {%- endif -%}
             {%- if bs.block_title != blank -%}
               <h4 class="header__dropdown-card-title">{{ bs.block_title }}</h4>
             {%- endif -%}
@@ -531,14 +531,20 @@
             {%- if bs.block_desc != blank -%}
               <p class="header__dropdown-card-desc">{{ bs.block_desc }}</p>
             {%- endif -%}
+          {%- if bs.block_link != blank -%}
+          </a>
+          {%- endif -%}
           </div>
           {%- if bs.block_image != blank -%}
             <div class="header__dropdown-card-bottom">
+              {%- if bs.block_link != blank -%}
+              <a href="{{ bs.block_link }}">
+              {%- endif -%}
                 <img src="{{ bs.block_image | img_url: 'master' }}"/>
+              {%- if bs.block_link != blank -%}
+              </a>
+              {%- endif -%}
             </div>
-          {%- endif -%}
-          {%- if bs.block_link != blank -%}
-          </a>
           {%- endif -%}
         </div>
 
