@@ -32,6 +32,9 @@
             {%- for block in section.blocks -%}
               {%- assign bs = block.settings -%}
               <div class="header__dropdown-card-mobile">
+                {%- if bs.block_link != blank -%}
+                <a href="{{ bs.block_link }}">
+                {%- endif -%}
                 <div class="header__dropdown-mobile-image-wrapper">
                   <div class="media header__dropdown-mobile-image" style="padding-bottom: 70%;">
                     {% render 'lazy-image' image: bs.block_image, fade: true, classes: 'img-fill' %}
@@ -43,6 +46,9 @@
                   {%- endif -%}
                 </div>
                 <p class="header__dropdown-card-mobile-desc">{{ bs.block_desc }}</p>
+                {%- if bs.block_link != blank -%}
+                </a>
+                {%- endif -%}
               </div>
             {%- endfor -%}
           </div>
@@ -126,6 +132,11 @@
             "type": "image_picker",
             "id": "block_image",
             "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "block_link",
+            "label": "URL"
           },
           {
             "type": "text",
