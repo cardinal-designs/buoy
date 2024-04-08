@@ -1825,6 +1825,7 @@ $('.main-menu__close').click(function() {
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
   $('header-container').removeClass('mobile-active');
+  $('header-container').removeAttribute('style');
   $('.page-blury-overlay').removeClass('is-visible-mobile');
   document.querySelector('body').classList.remove('lock-scroll-mobile');
 
