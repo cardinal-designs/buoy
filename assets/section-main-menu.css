@@ -520,7 +520,7 @@
     height: calc(100vh - 80px);
   }
 
-  .Show_Announcement_Bar.anouncement--scrolled + .mobile-active .main-menu.active {
+  .Show_Announcement_Bar.announcement--scrolled + .mobile-active .main-menu.active {
     height: calc(100vh - 80px);
   }
 
