@@ -1787,8 +1787,10 @@ $('[href="#menu"]').click(function() {
   } else if ((announcementBar.length === 0 || announcementBar.hasClass('not-active')) ) {
     $('.main-menu').css('top', '40px');
     $('header-container').attr('style', 'top: 10px !important');
-  } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+  } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled') && !document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
      $('header-container').attr('style', `top: 10px !important`);
+  } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
+    $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`)
   } else {
     $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
   }
