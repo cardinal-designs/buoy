@@ -1788,7 +1788,7 @@ $('[href="#menu"]').click(function() {
     $('.main-menu').css('top', '40px');
     $('header-container').attr('style', 'top: 10px !important');
   } else if (document.querySelector('announcement-container').classList.contains('announcement--scrolled')) {
-     $('announcement-container').attr('style', `top: 10px !important`);
+     $('header-container').attr('style', `top: 10px !important`);
   } else {
     $('header-container').attr('style', `top: ${announcementBar.height() + 10}px !important`);
   }
