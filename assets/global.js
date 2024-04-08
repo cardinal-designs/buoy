@@ -1831,7 +1831,7 @@ $('.main-menu__close').click(function() {
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('header-container').attr('style', 'top: 0px !important');
   } else {
-    $('header-container').attr('style', `top: 0px`); 
+    $('header-container').attr('style', `top: 0px !important`); 
     $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height()}px !important`);
   }
 }); 
