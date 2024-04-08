@@ -520,6 +520,10 @@
     height: calc(100vh - 80px);
   }
 
+  .Show_Announcement_Bar.anouncement--scrolled + .mobile-active .main-menu.active {
+    height: calc(100vh - 80px);
+  }
+
 }
 
 @media only screen and (max-width: 667px) {
