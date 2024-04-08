@@ -1825,16 +1825,16 @@ $('.main-menu__close').click(function() {
   $('.main-menu').removeClass('active');
   $('header-container').removeClass('active');
   $('header-container').removeClass('mobile-active');
-  $('header-container').attr('style', `top: 0px`); 
   $('.page-blury-overlay').removeClass('is-visible-mobile');
   document.querySelector('body').classList.remove('lock-scroll-mobile');
 
   var announcementBar = $('.Show_Announcement_Bar');
   if (announcementBar.length === 0 || announcementBar.hasClass('not-active')) {
     $('header-container').attr('style', 'top: 0px !important');
+  } else if ($('.Show_Announcement_Bar').hasClass('Fixed_Bar')) {
+    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height()}px !important`);
   } else {
     $('header-container').attr('style', `top: 0px !important`); 
-    $('.Show_Announcement_Bar.Fixed_Bar + header-container').attr('style', `top: ${announcementBar.height()}px !important`);
   }
 }); 
 
