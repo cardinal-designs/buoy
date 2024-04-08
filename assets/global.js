@@ -1911,9 +1911,9 @@ function navDropDownMenu() {
     headerContainer.classList.remove('active');
     headerWrapper.classList.remove('active-dropdown');
     if((document.querySelector('.Show_Announcement_Bar.not-active') || !document.querySelector('.Show_Announcement_Bar')) && !headerBorder.classList.contains('header--scrolled')) {
-      headerContainer.setAttribute('style', 'top: 0px !important');
+      headerContainer.setAttribute('style', 'top: 0px');
     } else if (headerBorder.classList.contains('header--scrolled')) {
-      headerContainer.setAttribute('style', 'top: 0px !important');
+      headerContainer.setAttribute('style', 'top: 0px');
     } else {
       headerContainer.setAttribute('style', 'top: 39px');  
     }
