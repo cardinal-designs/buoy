@@ -15,8 +15,8 @@
         </div>
       {%- else -%}
         <div class="routine-products__new" style="{% if block.settings.new_product == true %}visibility: visible;{% else %}visibility: hidden;{% endif %}">
-        <p>New Product</p>
-      </div>
+          <p>New Product</p>
+        </div>
       {%- endif -%}
       <img src="{{ block.settings.image | img_url: 'master' }}" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}"/>
       <div class="routine-products__bottom">
