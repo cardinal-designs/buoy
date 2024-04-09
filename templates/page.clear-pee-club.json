@@ -101,7 +101,41 @@
             "button_discount_price": ""
           }
         },
+        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b": {
+          "type": "block",
+          "settings": {
+            "recommend": true,
+            "sale_text": "Save 23%",
+            "product": "liquid-electrolyte-kit",
+            "servings": "4 PACK · 160 SERVINGS",
+            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.",
+            "list_item1": "One month supply",
+            "list_item2": "Hydrate for around $1\/day",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
         "979f8209-aebb-4a57-9721-290ec3ec2823": {
+          "type": "block",
+          "settings": {
+            "recommend": false,
+            "sale_text": "Save 23%",
+            "product": "digestion-drops",
+            "servings": "3 PACK · 120 SERVINGS",
+            "text": "Bloat and digestion support, stacked with fast-acting hydration.",
+            "list_item1": "One month supply",
+            "list_item2": "Hydrate for around $1\/day",
+            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
+            "button_text": "Start A Healthy Habit",
+            "checkout_link": "",
+            "button_price": "",
+            "button_discount_price": ""
+          }
+        },
+        "block_8aApc8": {
           "type": "block",
           "settings": {
             "recommend": false,
@@ -134,30 +168,14 @@
             "button_price": "",
             "button_discount_price": ""
           }
-        },
-        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b": {
-          "type": "block",
-          "settings": {
-            "recommend": false,
-            "sale_text": "Save 23%",
-            "product": "wellness-kit",
-            "servings": "3 PACK · 120 SERVINGS",
-            "text": "A full routine for all-around health that hydrates, energizes, and fortifies.",
-            "list_item1": "One month supply",
-            "list_item2": "Hydrate for around $1\/day",
-            "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
-            "button_text": "Start A Healthy Habit",
-            "checkout_link": "",
-            "button_price": "",
-            "button_discount_price": ""
-          }
         }
       },
       "block_order": [
         "fc36dce2-21e8-428c-bb7c-b94d25f7c194",
+        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b",
         "979f8209-aebb-4a57-9721-290ec3ec2823",
-        "cf2b2d77-df7c-41af-b8ca-d9f8be5fe7ae",
-        "2f84277c-9615-4b0b-b3dc-711c0cb5d48b"
+        "block_8aApc8",
+        "cf2b2d77-df7c-41af-b8ca-d9f8be5fe7ae"
       ],
       "settings": {
         "title": "Subscribe to optimal health",
