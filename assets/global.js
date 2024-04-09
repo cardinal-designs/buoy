@@ -629,12 +629,15 @@ class VariantSelects extends HTMLElement {
     let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
     // let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
     let addToCartText = `Add to Cart — ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}${variantJson[this.currentVariant.id].price}`;
+    // let addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price}`;
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-        addToCartText = `Add to Cart — &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+         addToCartText = `Add to Cart — &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+        //addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].subscription_price}`;
+
       }
     }
-
+ 
     document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
       element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
     });
@@ -651,7 +654,7 @@ class VariantSelects extends HTMLElement {
       if (text) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButton.innerHTML = addToCartText;
+      addButton.innerHTML = addToCartText; 
       
       stickyButton.removeAttribute('disabled');
       stickyButton.innerHTML = addToCartText;
@@ -1838,6 +1841,63 @@ $('.main-menu__close').click(function() {
   }
 }); 
 
+
+
+// Sticky ATC
+
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("custom__input--active")) {
+    if (event.target.classList.contains("opened")) {
+      event.target.classList.remove("opened");
+      event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.remove("dropdown-open");
+    } else {
+      var variantWrapperBlock = event.target.closest('.custom__input--dropdown');
+      if(variantWrapperBlock != null){
+        variantWrapperBlock.querySelector(".options__dropdown").classList.remove("dropdown-open");
+        variantWrapperBlock.querySelector(".custom__input--active").classList.remove("opened");
+        event.target.classList.add("opened");
+        event.target.closest('.custom__input--dropdown').querySelector(".options__dropdown").classList.add("dropdown-open");
+      }
+    }
+  }
+});
+
+var optionList = document.querySelectorAll('.options__dropdown--li');
+
+if(optionList.length > 0){
+  optionList.forEach(function(element) {
+    element.addEventListener("click", function() {
+      var text = this.innerHTML;
+      var data = this.getAttribute('data-value');
+      this.classList.add('variant-active');
+      var siblings = this.parentElement.children;
+      for (var i = 0; i < siblings.length; i++) {
+        if (siblings[i] !== this) {
+          siblings[i].classList.remove('variant-active');
+        }
+      }
+      
+      if (data !== "") {
+        var variantWrapperDropdown = this.closest('.main__variant--wrap');
+        variantWrapperDropdown.querySelector('.custom__input--active').innerHTML = text;
+
+        var selectDropdown = variantWrapperDropdown.querySelector('.product-form__input--dropdown');
+        if(selectDropdown != null) {
+          selectDropdown.value = data;
+          selectDropdown.dispatchEvent(new Event('change'));
+        }
+        var dataId = this.closest('.options__dropdown').getAttribute('data-selectid');
+        var element = document.getElementsByClassName(dataId)[0];
+        element.dispatchEvent(new Event('change'));
+      }
+  
+      var variantWrapperDropdown = this.closest('.custom__input--dropdown');
+      variantWrapperDropdown.querySelector('.custom__input--active').classList.remove("opened");
+      variantWrapperDropdown.querySelector(".options__dropdown").classList.remove("dropdown-open");
+    });
+  });
+}
+
 $(window).on('resize', function(){
     let announceHeight = $('.Show_Announcement_Bar').height()
     if(announceHeight && document.querySelector('announcement-container').classList.contains('Fixed_Bar')) {
@@ -1969,3 +2029,4 @@ $('.announcement-bar__close').click(function() {
     $('body').removeClass('lock-scroll');
   }
 })
+

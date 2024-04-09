@@ -24,6 +24,7 @@
     <div class="product-bar__container">
       <div class="product-bar__title">
         <h5>{{ product.title }}</h5>
+        <p class="product-bar__text">30-Day Risk Free</p>
       </div>
 
       {% comment %}
@@ -71,30 +72,79 @@
          {%- for option in product.options_with_values -%}
            {% assign optionIndex = forloop.index0 %}
            {% assign values = "" %}
-            <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
-            {%- for variant in product.variants -%}
-              {% assign value = variant.options[optionIndex] %}
-              {%- unless values contains value -%}
-              {% assign values = values | join:',' %}
-              {% assign values = values | append:',' | append:value %}
-              {% assign values = values | split:',' %}
-                <option value="{{ value }}" data-id="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
-              {%- endunless -%}
-            {%- endfor -%}
-            </select>
+
+           <div class="main__variant--wrap">
+             <select class="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}" style="display: none;">
+              {%- for variant in product.variants -%}
+                {% assign value = variant.options[optionIndex] %}
+                {%- unless values contains value -%}
+                {% assign values = values | join:',' %}
+                {% assign values = values | append:',' | append:value %}
+                {% assign values = values | split:',' %}
+                  <option value="{{ value }}" data-id="{{ variant.id }}" {% if currentVariant.id == variant.id %}selected{% endif %} data-option="option-{{ optionIndex }}">{{ value }}</option>
+                {%- endunless -%}
+              {%- endfor -%}
+              </select>
+  
+             {% assign values = "" %}
+  
+            <div class="custom__input--dropdown">
+              <div class="custom__input--wrap">
+                <div class="custom__input--active">{{ option.selected_value }}</div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10" fill="none">
+                    <path d="M7.5 9.08L0 1.58142L1.08162 0.5L7.5 6.93761L13.9184 0.520391L15 1.60181L7.5 9.08Z" fill="#1F2322"/>
+                  </svg>
+                </span>
+              </div>
+              <ul class="options__dropdown" data-selectid="js product-form__input--dropdown js-sticky-variants" data-option="option-{{ optionIndex }}">
+                {%- for variant in product.variants -%}
+                  {% assign value = variant.options[optionIndex] %}
+                  {%- unless values contains value -%}
+                  {% assign values = values | join:',' %}
+                  {% assign values = values | append:',' | append:value %}
+                  {% assign values = values | split:',' %}
+                    <li class="options__dropdown--li {% if currentVariant.id == variant.id %}variant-active{% endif %}" data-value="{{ value }}" data-id="{{ variant.id }}" data-option="option-{{ optionIndex }}">{{ value }}</li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+           
           {%- endfor -%}
         {% endunless %}
-        
+
         {% if product.selling_plan_groups.size > 0 %}
-          <select class="product-form__input--dropdown js-sticky-subscription-btns"
-            data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
-            data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
-            data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-            >
-            <option value="one-time">One-time</option>
-            <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe</option>
-          </select>
+          <div class="main__variant--wrap">
+            <select class="product-form__input--dropdown js-sticky-subscription-btns" style="display: none;"
+              data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
+              data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
+              data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+              >
+              <option value="one-time">One-time Purchase</option>
+              <option value="subscription" {% if selectedAllocation != blank %} selected {% endif %}>Subscribe and Save 23%</option>
+            </select>
+
+            <div class="custom__input--dropdown">
+              <div class="custom__input--wrap">
+                <div class="custom__input--active">Subscribe and Save 23%</div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10" fill="none">
+                    <path d="M7.5 9.08L0 1.58142L1.08162 0.5L7.5 6.93761L13.9184 0.520391L15 1.60181L7.5 9.08Z" fill="#1F2322"/>
+                  </svg>
+                </span>
+              </div>
+              <ul class="options__dropdown" data-selectid="product-form__input--dropdown js-sticky-subscription-btns"
+                data-subid="{% if product.handle == 'wellness-kit' %}{{ rtx_selling_plan.selling_plans[0].id }}{% else %}{{ rtx_selling_plan.selling_plans[1].id }}{% endif %}"
+                data-price="{{ currentVariant.price | money_without_trailing_zeros }}"
+                data-subsc-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}">
+                <li class="options__dropdown--li" data-value="one-time">One-time Purchase</li>
+                <li class="options__dropdown--li variant-active" data-value="subscription">Subscribe and Save 23%</li>
+              </ul>
+            </div>
+          </div>
         {% endif %}
+        
         {% comment %}
         <div class="product-quick-add__form js-sticky-subscription-btns">
           <div class="product-quick-add__form-item one-time">
@@ -127,9 +177,12 @@
           {% if currentVariant.available == false %}
           <span>Sold Out</span>
           {% else %}
-          <span>Add to Cart</span> — 
+          <span>Add to Cart</span>&nbsp—&nbsp
           <span class="button-money">
-            <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {% comment %}
+            <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
+            {% endcomment %}
+            {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
           </span>
           {% endif %}
         </button>
@@ -145,14 +198,22 @@
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
         $('.product-bar').addClass('scrolled');
+        // $('.js-sticky-add-to-cart').show()
       } else {
         $('.product-bar').removeClass('scrolled');
+        // $('.js-sticky-add-to-cart').hide();
+        $('.custom__input--active').removeClass('opened');
+        $('.options__dropdown').removeClass('dropdown-open');
       }
     } else {
       if ($scrollTop > 1200) {
-        $('.product-bar').addClass('scrolled');
+        $('.product-bar').addClass('scrolled'); 
+        // $('.js-sticky-add-to-cart').show();  
       } else {
-        $('.product-bar').removeClass('scrolled');
+        $('.product-bar').removeClass('scrolled');   
+        // $('.js-sticky-add-to-cart').hide();
+        $('.custom__input--active').removeClass('opened');
+        $('.options__dropdown').removeClass('dropdown-open');
       }
 	}
   });
