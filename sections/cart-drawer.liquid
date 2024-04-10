@@ -10,517 +10,252 @@
   <div class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-modal="true" aria-label="Cart Drawer" role="dialog" tabindex="-1">
     {% form 'cart', cart, id: 'cart-drawer__form', class: 'cart-drawer__form' %}
       <div class="cart-drawer__inner">
+
         <div class="cart-drawer__header" id="cart-drawer__header" data-id="{{ section.id }}">
-          <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title sh2 light">{{ section.settings.cart_title }} ({{ cart.item_count }})</h2>
-
-          {% comment %}
-          <button type="button" class="header__icon header__icon--cart link link--text focus-inset {% if cart.item_count > 0 %} active{% endif %}" id="cart-icon-bubble-2"  aria-label="Open Cart Drawer">
-            {% render 'icon-cart' %}
-            <div class="cart-count-bubble sh2">
-              {{ cart.item_count }}
-            </div>
-            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-          </button> 
-          {% endcomment %}
-          
+          <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title h6 medium">{{ section.settings.cart_title }}</h2>
           <button type="button" class="cart-drawer__close modal__close-button link link--text focus-inset" id="cart-drawer__close" aria-label="{{ 'accessibility.close' | t }}">
-            {% render 'icon-arrow-cross' %}
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.10309 18L0 16.8969L7.89691 9L0 1.10309L1.10309 0L9 7.89691L16.8969 0L18 1.10309L10.1031 9L18 16.8969L16.8969 18L9 10.1031L1.10309 18Z" fill="#1F2322"/></svg>            
           </button>
-          
         </div>
-        <div class="cart-drawer__content 111" id="cart-drawer__content" data-id="{{ section.id }}">
 
-          {% if section.settings.e_marquee_1 != blank %}
-          <div class="shop-slide-out__marquee">
-            {%- if cart.items.size == 0 -%}
-             <div class="shop-slide-out__marquee-container">
-              {% if section.settings.e_marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
-              {% endif %}
-            </div> 
-            <div class="shop-slide-out__marquee-container">
-              {% if section.settings.e_marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
-              {% endif %}
-            </div>
-            <div class="shop-slide-out__marquee-container">
-              {% if section.settings.e_marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.e_marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.e_marquee_3 }}</p>
-              {% endif %}
-            </div>
-            {%- else -%}
-            <div class="shop-slide-out__marquee-container">
-              {% if section.settings.marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
-              {% endif %}
-            </div> 
-            <div class="shop-slide-out__marquee-container">
-              {% if section.settings.marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
-              {% endif %}
-            </div>
-            <div class="shop-slide-out__marquee-container">
-              {% if section.settings.marquee_1 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_1 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_2 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_2 }}</p>
-              {% endif %}
-              {% if section.settings.marquee_3 != blank %}
-              <p class="shop-slide-out__marquee-item body-small">{{ section.settings.marquee_3 }}</p>
-              {% endif %}
-            </div>
-            {%- endif -%}
-          </div>
-          {% endif %}
+        <div class="cart-drawer__content" id="cart-drawer__content" data-id="{{ section.id }}">
          
           {%- if cart.items.size == 0 -%}
-          <div class="cart-drawer__empty">
-            <div class="text-hero__container"> 
-              <div class="text-hero__svg">
-                {{ section.settings.text_svg }}
-              </div>
-              <div class="text-hero__title">
-                <p class="h2">{{ section.settings.title }}</p>
-              </div>
-            </div>
-           
-            {% comment %}
-            <p class="sh3 small_text">Lets Fix that!</p>
-            {% for block in section.blocks %}
-            {% if block.type == 'block' %}
-            {% assign upsell = all_products[block.settings.upsell_product] %}
-            <div class="cart-upsell__container">
-              <div class="cart-upsell__container-left">
-                <div class="cart-upsell__img">
-                  <img src="{{upsell.media[0].src | img_url: '95x' }}"/>
-                </div>
-                <div class="cart-upsell__container-atc">
-                  <h6>{{upsell.title}}</h6>
-                  {% unless block.settings.show_second_slide %}
-                  <button {% if upsell.selected_or_first_available_variant.available == false %}disabled{% endif %} data-id="{{upsell.selected_or_first_available_variant.id}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">
-                    {% if upsell.selected_or_first_available_variant.available == false %}
-                    Sold Out
-                    {% else %}
-                    Add to Cart
-                    {% endif %}
-                  </button>
-                  {% else %}
-                  <button type="button" {% if upsell.selected_or_first_available_variant.available == false %}disabled{% endif %} class="body-xs cart-upsell__button has-second-slide">
-                    {% if upsell.selected_or_first_available_variant.available == false %}
-                    Sold Out
-                    {% else %}
-                    Add to Cart
-                    {% endif %}
-                  </button>
-                  {% endunless %}
-                </div>
-              </div>
-              <div class="cart-upsell__container-right">
-                {% if block.settings.trending == true %}
-                <div class="trending">
-                  <p class="body-xs">Trending</p>
-                </div>
-                {% elsif block.settings.popular == true %}
-                <div class="popular">
-                  <p class="body-xs">Popular</p>
-                </div>
-                {% endif %}
-                <div>
-                  <p class="sh2">{{upsell.price | money }}</p>
-                  <p class="cart-upsell__sale-price">{{upsell.compare_at_price | money }}</p>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-            {% endcomment %}
-            <div class="shop-slide-out__items">
-              {% for block in section.blocks %}
-              {% if block.type == 'empty' %}
-              {% assign current_product = all_products[block.settings.product] %}
-              <a class="shop-slide-out__item" href="{{ current_product.url }}">
-                <div class="shop-slide-out__item-content">
-                  <h3 class="h5 medium">{{ current_product.title }}</h3>
-                  <p class="body light">{{ block.settings.description }}</p>
-                </div>
-                <div class="shop-slide-out__item-image">
-                  <img src="{{ current_product.featured_image | img_url: '200x' }}" alt="{{ current_product.title | escape }}"
-                       loading="lazy" class="motion-reduce img-fill">
-                  <div class="shop-slide-out__item-image-overlay">
-                    <p class="body-small">Explore</p>
-                  </div>
-                </div>
-              </a>
-              {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-          <div class="cart-drawer__second-slide">
-            {% for block in section.blocks %}
-            {% if block.settings.show_second_slide %}
-            {% assign current_product = all_products[block.settings.upsell_product] %}
-            <div class="cart-drawer__second-container">
-              <div class="shop-slide-out__second-header">
-                <button type="button" class="shop-slide-out__second-back">
-                  {% render 'icon-arrow-left' %}
-                </button>
-                <p class="sh4 light">Maybe Later</p>
-              </div>
-              <div class="shop-slide-out__second-content">
-                <div class="shop-slide-out__second-image">
-                  <img src="{{ 'total-seal.svg' | asset_url }}" class="product-card-badge trending-seal badge" style="border: none; animation: spin 8s linear infinite;">
 
-                  <img src="{{ block.settings.second_image | img_url: '500x' }}" alt="{{ block.settings.second_image.alt | escape }}"
-                       loading="lazy" class="motion-reduce" width="100%">
-                </div>
-                <div class="shop-slide-out__second-content-container">
-                  <h3 class="h5 medium">{{ current_product.title }}</h3>
-                  <p class="sh2 light">{{ block.settings.second_description }}</p>
-                </div>
-                <div class="cart-drawer__radio-container">
-                  <label class="body container" data-id="{{current_product.selected_or_first_available_variant.id}}" data-price="{{current_product.price | money }}">
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="checkmark"></span>
-                    One-Time Sample Pack
-                  </label>
-                  <label class="body container" data-id="{{current_product.selected_or_first_available_variant.id}}" data-subid="{{current_product.selling_plan_groups[0].selling_plans[0].id}}" data-price="{{current_product.variants[0].selling_plan_allocations[0].price | money }}">
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                    Join the Anti-Yellow Pee Club and Save
-                  </label>
-                </div>
-                <button class="slideout-button button">Add to Cart - <span>{{current_product.price | money}}</span></button> 
+            <div class="cart-drawer__empty">
+              <div class="cart-drawer__empty-top">
+                <h3 class="cart-drawer__empty-title body-large">{{ section.settings.empty_cart_title }}</h3>
+                <p class="cart-drawer__empty-text rhymes-subtitle">{{ section.settings.empty_cart_text }}</p>
+                <a href="/collections/all" class="button button--small button--white">Shop All</a>
               </div>
+              {% if section.blocks.size > 0 %}
+                <div class="cart-drawer__empty-slider">
+                  <p class="cart-drawer__empty-slider-title body-small uppercase medium">{{ section.settings.empty_cart_slider_title }}</p>
+                  <div class="cart-drawer__empty-slider-container no-scrollbar">
+                    <div class="cart-drawer__empty-slider-content">
+                      {% for block in section.blocks %}
+                        <div class="header__dropdown-card-mobile">
+                          {% if block.settings.block_link != blank %}
+                            <a href="{{ block.settings.block_link }}">
+                          {% endif %}
+                          <div class="header__dropdown-mobile-image-wrapper">
+                            <div class="media header__dropdown-mobile-image" style="padding-bottom: 70%;">
+                              {% render 'lazy-image' image: block.settings.block_image, fade: true, classes: 'img-fill' %}
+                            </div>
+                            {% if block.settings.badge_text != blank %}
+                              <div class="header__dropdown-badge">
+                                <p class="header__dropdown-badge-text">{{ block.settings.badge_text }}</p>
+                              </div>
+                            {% endif %}
+                          </div>
+                          <p class="header__dropdown-card-mobile-desc">{{ block.settings.block_desc }}</p>
+                          {% if block.settings.block_link != blank %}
+                            </a>
+                          {% endif %}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
             </div>
-            {% endif %}
-            {% endfor %}
-          </div>
-          
+
           {%- else -%}
-          <div class="cart-title hide-desktop">
-            <h2 class="cart-drawer__title sh2 light">{{ section.settings.cart_title }} ({{ cart.item_count }})</h2>
-          </div>
-          <div class="cart-drawer__items" id="cart-drawer-items">
-            {% for item in cart.items %}
-              {% assign index = cart.item_count | minus: forloop.index0 %}
-              {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
-              {% render 'cart-drawer-item' item: item, idx: index %}
-            {% endfor %}
-                        {% if section.settings.upsell_subproduct1 != blank %}
-            {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
-            {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
-            {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
-            {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
-            {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
-              
-            {% if section.settings.upsell_subproduct1 != blank %}
-            <div class="hide-desktop sub-upsell__container">
-              <div class="sub-products__text sub">
-                <p class="body-xs">{{section.settings.upsell_title}}</p>
-                <div class="green_button">
-                  <p class="green_text">{{section.settings.upsell_button}}</p>
-                </div>
-              </div>
-              <div class="sub-upsell__container-scroll">
-              {% assign include_incart1 = false %}
-              {% assign include_incart2 = false %}
-              {% assign include_incart3 = false %}
-              {% assign include_incart4 = false %}
-              {% assign include_incart5 = false %}
-        
-                {% for item in cart.items %}
-                  {% if item.product.id == upsell1.id %}
-                    {% assign include_incart1 = true %}
-                  {% elsif item.product.id == upsell2.id %}
-                    {% assign include_incart2 = true %}
-                  {% elsif item.product.id == upsell3.id %}
-                    {% assign include_incart3 = true %}
-                  {% elsif item.product.id == upsell4.id %}
-                    {% assign include_incart4 = true %}
-                  {% elsif item.product.id == upsell5.id %}
-                    {% assign include_incart5 = true %}
-                  {% endif %}
-                {% endfor %}
-            
-              {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell1.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell1.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell1.selected_or_first_available_variant.id}}" data-metafield="{{upsell1.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct2 != blank and include_incart2 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell2.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell2.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell2.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell2.selected_or_first_available_variant.id}}" data-metafield="{{upsell2.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell2.price | money_without_trailing_zeros }} <s>{{upsell2.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct3 != blank and include_incart3 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell3.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell3.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell3.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell3.selected_or_first_available_variant.id}}" data-metafield="{{upsell3.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell3.price | money_without_trailing_zeros }} <s>{{upsell3.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct4 != blank and include_incart4 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell4.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell4.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell4.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell4.selected_or_first_available_variant.id}}" data-metafield="{{upsell4.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell4.price | money_without_trailing_zeros }} <s>{{upsell4.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct5 != blank and include_incart5 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell5.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell5.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell5.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell5.selected_or_first_available_variant.id}}" data-metafield="{{upsell5.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell5.price | money_without_trailing_zeros }} <s>{{upsell5.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              </div>
-              <div class="money-back__container">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Money-Back_Icon_2x_dd8e4035-9b8e-46ae-9673-1af23bdc0989.png?v=1697065035"/>
-                <div class="money-back__text">
-                  <p>30-Day Money Back Guarantee</p>
-                  <p class="body-xs">See how good you feel using Buoy for a month. Don’t love it? It’s on us.</p>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endif %}
-          </div>
-           <div class="cart-drawer__footer">
-            {% if section.settings.upsell_subproduct1 != blank %}
-            {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
-            {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
-            {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
-            {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
-            {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
-              
-            {% if section.settings.upsell_subproduct1 != blank %}
-            <div class="hide-mobile sub-upsell__container">
-              <div class="sub-products__text sub">
-                <p class="body-xs">{{section.settings.upsell_title}}</p>
-                <div class="green_button">
-                  <p class="green_text">{{section.settings.upsell_button}}</p>
-                </div>
-              </div>
-              <div class="sub-upsell__container-scroll">
-              {% assign include_incart1 = false %}
-              {% assign include_incart2 = false %}
-              {% assign include_incart3 = false %}
-              {% assign include_incart4 = false %}
-              {% assign include_incart5 = false %}
-        
-                {% for item in cart.items %}
-                  {% if item.product.id == upsell1.id %}
-                    {% assign include_incart1 = true %}
-                  {% elsif item.product.id == upsell2.id %}
-                    {% assign include_incart2 = true %}
-                  {% elsif item.product.id == upsell3.id %}
-                    {% assign include_incart3 = true %}
-                  {% elsif item.product.id == upsell4.id %}
-                    {% assign include_incart4 = true %}
-                  {% elsif item.product.id == upsell5.id %}
-                    {% assign include_incart5 = true %}
-                  {% endif %}
-                {% endfor %}
-            
-              {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell1.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell1.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell1.selected_or_first_available_variant.id}}" data-metafield="{{upsell1.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct2 != blank and include_incart2 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell2.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell2.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell2.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell2.selected_or_first_available_variant.id}}" data-metafield="{{upsell2.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell2.price | money_without_trailing_zeros }} <s>{{upsell2.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct3 != blank and include_incart3 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell3.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell3.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell3.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell3.selected_or_first_available_variant.id}}" data-metafield="{{upsell3.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell3.price | money_without_trailing_zeros }} <s>{{upsell3.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct4 != blank and include_incart4 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell4.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell4.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell4.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell4.selected_or_first_available_variant.id}}" data-metafield="{{upsell4.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell4.price | money_without_trailing_zeros }} <s>{{upsell4.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% if section.settings.upsell_subproduct5 != blank and include_incart5 == false %}
-              <div class="cart-upsell__container">
-                <div class="cart-upsell__container-left">
-                  <div class="cart-upsell__img">
-                    <img class="img-fill" src="{{upsell5.images[0].src  | img_url: 'master' }}"/>
-                  </div>
-                  <div class="cart-upsell__container-atc">
-                    <p class="sh3">{{upsell5.title}}</p>
-                    <div data-oke-reviews-product-listing-rating>{{ upsell5.metafields.okendo.ProductListingSnippet }}</div>
-                    <button data-id="{{upsell5.selected_or_first_available_variant.id}}" data-metafield="{{upsell5.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell5.price | money_without_trailing_zeros }} <s>{{upsell5.compare_at_price | money_without_trailing_zeros }}</s></button>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              </div>
-              <div class="money-back__container">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Money-Back_Icon_2x_dd8e4035-9b8e-46ae-9673-1af23bdc0989.png?v=1697065035"/>
-                <div class="money-back__text">
-                  <p>30-Day Money Back Guarantee</p>
-                  <p class="body-xs">See how good you feel using Buoy for a month. Don’t love it? It’s on us.</p>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endif %}
-          
-            <div class="cart-drawer__shipping-wrapper" id="cart-drawer-subtotal">
-              <h4 class="body light">Promo Code</h4>
-              <h4 class="body light">Applied at Checkout</h4>
-            </div>
-            <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
-              <h4 class="body light">Shipping</h4>
-              <h4 class="body light green">Always Free</h4>
-            </div>
-            <div class="cart-drawer__subtotal-wrapper" id="cart-drawer-subtotal">
-              <h4 class="body light">Subtotal</h4>
-              <div class="cart-drawer__loading-container">
-                <h4 class="cart-drawer__subtotal body medium">{{ cart.total_price | money }}</h4>
-                </div>
-              </div>
-              {% assign disable_checkout = true %}
+            <div class="cart-drawer__items" id="cart-drawer-items">
               {% for item in cart.items %}
-                {% if item.product.type != 'add on' and item.product.type != 'gift' %}
-                  {% assign disable_checkout = false %}
-                {% endif %}
+                {% assign index = cart.item_count | minus: forloop.index0 %}
+                {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
+                {% render 'cart-drawer-item' item: item, idx: index %}
               {% endfor %}
-             
-              <a {% if disable_checkout == true %}style="pointer-events: none; opacity: 0.5;"{% endif %} href="/checkout" class="button button--full-width" name="checkout" form="cart">{% render 'icon-checkout' %} {{ 'sections.cart.mini_cart_checkout' | t }} — {{ cart.total_price | money }}</a>
-              <span class="car-notes body-xs">{{ section.settings.cart_notes }}</span>
+
+              {% if section.settings.show_money_back_message %}
+                <div class="cart-drawer__money-back">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#DEF647"/><path d="M11.9989 18.6268L11.34 18.0322C10.2067 16.9916 9.26985 16.0939 8.52932 15.3392C7.78879 14.5845 7.19888 13.9098 6.7596 13.3152C6.32031 12.7205 6.01228 12.1822 5.83549 11.7C5.65871 11.2179 5.57031 10.7304 5.57031 10.2375C5.57031 9.27156 5.89442 8.4649 6.54263 7.81752C7.19085 7.17013 7.99174 6.84644 8.94531 6.84644C9.55603 6.84644 10.1212 6.99108 10.6408 7.28036C11.1605 7.56965 11.6132 7.98751 11.9989 8.53394C12.4489 7.95536 12.9257 7.52947 13.4292 7.25626C13.9328 6.98304 14.4739 6.84644 15.0525 6.84644C16.006 6.84644 16.8069 7.17013 17.4551 7.81752C18.1033 8.4649 18.4275 9.27156 18.4275 10.2375C18.4275 10.7304 18.3391 11.2179 18.1623 11.7C17.9855 12.1822 17.6775 12.7205 17.2382 13.3152C16.7989 13.9098 16.209 14.5845 15.4684 15.3392C14.7279 16.0939 13.791 16.9916 12.6578 18.0322L11.9989 18.6268ZM11.9989 17.3572C13.0836 16.3608 13.9762 15.5063 14.6767 14.7938C15.3772 14.0813 15.9337 13.4571 16.3462 12.9214C16.7587 12.3857 17.048 11.9082 17.2141 11.4889C17.3801 11.0696 17.4632 10.6532 17.4632 10.2398C17.4632 9.53114 17.2382 8.94911 16.7882 8.49376C16.3382 8.0384 15.7608 7.81072 15.0561 7.81072C14.504 7.81072 13.9931 7.97947 13.5233 8.31697C13.0534 8.65447 12.6739 9.12858 12.3846 9.73929H11.5971C11.3185 9.13929 10.9443 8.66786 10.4745 8.32501C10.0047 7.98215 9.49374 7.81072 8.9417 7.81072C8.23696 7.81072 7.6596 8.0384 7.2096 8.49376C6.7596 8.94911 6.5346 9.53206 6.5346 10.2426C6.5346 10.6571 6.61763 11.0759 6.78371 11.4991C6.94978 11.9223 7.23906 12.4045 7.65156 12.9455C8.06406 13.4866 8.62388 14.1107 9.33103 14.8179C10.0382 15.525 10.9275 16.3714 11.9989 17.3572Z" fill="#1F2322"/></svg>
+                  <p class="cart-drawer__money-back-text rhymes-subtitle">30-Day Money Back Guarantee</p>
+                </div>
+              {% endif %}
+
+              {% if section.settings.upsell_products != blank %}
+                <div class="cart-drawer__upsells">
+                  <div class="cart-drawer__upsells-header">
+                    <h3 class="cart-drawer__upsells-title body-med medium">{{ section.settings.upsell_title }}</h3>
+                    <p class="cart-drawer__upsells-text rhymes-subtitle">{{ section.settings.upsell_text }}</p>
+                  </div>
+                  <div class="cart-drawer__upsells-container no-scrollbar">
+                    <div class="cart-drawer__upsells-content">
+                      {% for upsell_product in section.settings.upsell_products %}
+                        <div class="cart-drawer__upsell">
+                          <div class="cart-drawer__upsell-image">
+                            {{ upsell_product | image_url: width: 150 | image_tag: width: upsell_product.width, class: 'img-fill', sizes: '150px', widths: '100, 150, 200' }}
+                          </div>
+                          <div class="cart-drawer__upsell-content">
+
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% comment %}
+              {% if section.settings.upsell_subproduct1 != blank %}
+              {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
+              {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
+              {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
+              {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
+              {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
+                
+              {% if section.settings.upsell_subproduct1 != blank %}
+              <div class="hide-desktop sub-upsell__container">
+                <div class="sub-products__text sub">
+                  <p class="body-xs">{{section.settings.upsell_title}}</p>
+                  <div class="green_button">
+                    <p class="green_text">{{section.settings.upsell_button}}</p>
+                  </div>
+                </div>
+                <div class="sub-upsell__container-scroll">
+                {% assign include_incart1 = false %}
+                {% assign include_incart2 = false %}
+                {% assign include_incart3 = false %}
+                {% assign include_incart4 = false %}
+                {% assign include_incart5 = false %}
+          
+                  {% for item in cart.items %}
+                    {% if item.product.id == upsell1.id %}
+                      {% assign include_incart1 = true %}
+                    {% elsif item.product.id == upsell2.id %}
+                      {% assign include_incart2 = true %}
+                    {% elsif item.product.id == upsell3.id %}
+                      {% assign include_incart3 = true %}
+                    {% elsif item.product.id == upsell4.id %}
+                      {% assign include_incart4 = true %}
+                    {% elsif item.product.id == upsell5.id %}
+                      {% assign include_incart5 = true %}
+                    {% endif %}
+                  {% endfor %}
+              
+                {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
+                <div class="cart-upsell__container">
+                  <div class="cart-upsell__container-left">
+                    <div class="cart-upsell__img">
+                      <img class="img-fill" src="{{upsell1.images[0].src  | img_url: 'master' }}"/>
+                    </div>
+                    <div class="cart-upsell__container-atc">
+                      <p class="sh3">{{upsell1.title}}</p>
+                      <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
+                      <button data-id="{{upsell1.selected_or_first_available_variant.id}}" data-metafield="{{upsell1.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                {% if section.settings.upsell_subproduct2 != blank and include_incart2 == false %}
+                <div class="cart-upsell__container">
+                  <div class="cart-upsell__container-left">
+                    <div class="cart-upsell__img">
+                      <img class="img-fill" src="{{upsell2.images[0].src  | img_url: 'master' }}"/>
+                    </div>
+                    <div class="cart-upsell__container-atc">
+                      <p class="sh3">{{upsell2.title}}</p>
+                      <div data-oke-reviews-product-listing-rating>{{ upsell2.metafields.okendo.ProductListingSnippet }}</div>
+                      <button data-id="{{upsell2.selected_or_first_available_variant.id}}" data-metafield="{{upsell2.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell2.price | money_without_trailing_zeros }} <s>{{upsell2.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                {% if section.settings.upsell_subproduct3 != blank and include_incart3 == false %}
+                <div class="cart-upsell__container">
+                  <div class="cart-upsell__container-left">
+                    <div class="cart-upsell__img">
+                      <img class="img-fill" src="{{upsell3.images[0].src  | img_url: 'master' }}"/>
+                    </div>
+                    <div class="cart-upsell__container-atc">
+                      <p class="sh3">{{upsell3.title}}</p>
+                      <div data-oke-reviews-product-listing-rating>{{ upsell3.metafields.okendo.ProductListingSnippet }}</div>
+                      <button data-id="{{upsell3.selected_or_first_available_variant.id}}" data-metafield="{{upsell3.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell3.price | money_without_trailing_zeros }} <s>{{upsell3.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                {% if section.settings.upsell_subproduct4 != blank and include_incart4 == false %}
+                <div class="cart-upsell__container">
+                  <div class="cart-upsell__container-left">
+                    <div class="cart-upsell__img">
+                      <img class="img-fill" src="{{upsell4.images[0].src  | img_url: 'master' }}"/>
+                    </div>
+                    <div class="cart-upsell__container-atc">
+                      <p class="sh3">{{upsell4.title}}</p>
+                      <div data-oke-reviews-product-listing-rating>{{ upsell4.metafields.okendo.ProductListingSnippet }}</div>
+                      <button data-id="{{upsell4.selected_or_first_available_variant.id}}" data-metafield="{{upsell4.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell4.price | money_without_trailing_zeros }} <s>{{upsell4.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                {% if section.settings.upsell_subproduct5 != blank and include_incart5 == false %}
+                <div class="cart-upsell__container">
+                  <div class="cart-upsell__container-left">
+                    <div class="cart-upsell__img">
+                      <img class="img-fill" src="{{upsell5.images[0].src  | img_url: 'master' }}"/>
+                    </div>
+                    <div class="cart-upsell__container-atc">
+                      <p class="sh3">{{upsell5.title}}</p>
+                      <div data-oke-reviews-product-listing-rating>{{ upsell5.metafields.okendo.ProductListingSnippet }}</div>
+                      <button data-id="{{upsell5.selected_or_first_available_variant.id}}" data-metafield="{{upsell5.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell5.price | money_without_trailing_zeros }} <s>{{upsell5.compare_at_price | money_without_trailing_zeros }}</s></button>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                </div>
+                <div class="money-back__container">
+                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Money-Back_Icon_2x_dd8e4035-9b8e-46ae-9673-1af23bdc0989.png?v=1697065035"/>
+                  <div class="money-back__text">
+                    <p>30-Day Money Back Guarantee</p>
+                    <p class="body-xs">See how good you feel using Buoy for a month. Don’t love it? It’s on us.</p>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endif %}
+            {% endcomment %}
             </div>
           {%- endif -%}
-          <div class="loading-overlay hidden" id="cart-drawer-loading"> 
-            <div class="loading-overlay__spinner">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
+
+        </div>
+
+        <div class="cart-drawer__footer">
+          <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
+            <h4 class="body-small light">Shipping</h4>
+            <h4 class="body-small light green">Free</h4>
+          </div>
+          <div class="cart-drawer__subtotal-wrapper" id="cart-drawer-subtotal">
+            <h4 class="body-small light">Subtotal</h4>
+            <div class="cart-drawer__loading-container">
+              <h4 class="cart-drawer__subtotal body-small">{{ cart.total_price | money }}</h4>
             </div>
           </div>
+
+          {% assign disable_checkout = true %}
+          {% for item in cart.items %}
+            {% if item.product.type != 'add on' and item.product.type != 'gift' %}
+              {% assign disable_checkout = false %}
+            {% endif %}
+          {% endfor %}
+          
+          <a {% if disable_checkout == true %}style="pointer-events: none; opacity: 0.5;"{% endif %} href="/checkout" class="button button--full-width" name="checkout" form="cart">{{ 'sections.cart.mini_cart_checkout' | t }}&nbsp;&nbsp;{% render 'icon-checkout' %}</a>
         </div>
+
+        <div class="loading-overlay hidden" id="cart-drawer-loading"> 
+          <div class="loading-overlay__spinner">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+        </div>
+        
       </div>
     {% endform %}
   </div>
 </cart-drawer>
-
-<script>
-  $('.has-second-slide').click(function() {
-    $('.cart-drawer__second-slide').addClass('show-second');
-  });
-
-  $('.shop-slide-out__second-back').click(function() {
-    $('.cart-drawer__second-slide').removeClass('show-second');
-  });
-</script>
 
 {% schema %}
 {
@@ -537,65 +272,33 @@
       "content": "Cart Content"
     },
     {
+      "type": "checkbox",
+      "id": "show_money_back_message",
+      "label": "Show Money Back Guarantee Message",
+      "default": true
+    },
+    {
       "type": "header",
       "content": "Empty Cart Content"
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "Title"
+      "id": "empty_cart_title",
+      "label": "Empty Cart Title"
     },
     {
       "type": "textarea",
-      "id": "text_svg",
-      "label": "Text SVG"
-    },    
-    {
-      "type": "header",
-      "content": "Notes"
+      "id": "empty_cart_text",
+      "label": "Empty Cart Text"
     },
     {
       "type": "text",
-      "id": "cart_notes",
-      "label": "Cart Notes"
+      "id": "empty_cart_slider_title",
+      "label": "Empty Cart Slider Title"
     },
     {
       "type": "header",
-      "content": "Cart Marquee"
-    },
-    {
-      "type": "text",
-      "id": "marquee_1",
-      "label": "Marquee"
-    },
-    {
-      "type": "text",
-      "id": "marquee_2",
-      "label": "Marquee"
-    },
-    {
-      "type": "text",
-      "id": "marquee_3",
-      "label": "Marquee"
-    },
-    {
-      "type": "header",
-      "content": "Empty Cart Marquee"
-    },
-    {
-      "type": "text",
-      "id": "e_marquee_1",
-      "label": "Marquee"
-    },
-    {
-      "type": "text",
-      "id": "e_marquee_2",
-      "label": "Marquee"
-    },
-    {
-      "type": "text",
-      "id": "e_marquee_3",
-      "label": "Marquee"
+      "content": "Upsell"
     },
     {
       "type": "text",
@@ -603,54 +306,43 @@
       "label": "Upsell Title"
     },
     {
-      "type": "text",
-      "id": "upsell_button",
-      "label": "Upsell Button Text"
+      "type": "textarea",
+      "id": "upsell_text",
+      "label": "Upsell Text"
     },
     {
-      "type": "product",
-      "id": "upsell_subproduct1",
-      "label": "Upsell Product 1"
-    },
-    {
-      "type": "product",
-      "id": "upsell_subproduct2",
-      "label": "Upsell Product 2"
-    },
-    {
-      "type": "product",
-      "id": "upsell_subproduct3",
-      "label": "Upsell Product 3"
-    },
-    {
-      "type": "product",
-      "id": "upsell_subproduct4",
-      "label": "Upsell Product 4"
-    },
-    {
-      "type": "product",
-      "id": "upsell_subproduct5",
-      "label": "Upsell Product 5"
+      "type": "product_list",
+      "id": "upsell_products",
+      "label": "Upsell Products"
     }
-    
   ],
-  "blocks": [
-    {
-      "type": "empty",
-      "name": "Empty Cart Links",
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block Item",
         "settings": [
           {
-            "type": "product",
-            "id": "product",
-            "label": "Product"
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Image"
           },
           {
-            "type": "textarea",
-            "id": "description",
+            "type": "url",
+            "id": "block_link",
+            "label": "URL"
+          },
+          {
+            "type": "text",
+            "id": "badge_text",
+            "label": "Badge Text"
+          },
+          {
+            "type": "text",
+            "id": "block_desc",
             "label": "Description"
           }
         ]
-    }
-  ]
+      }
+    ]
 }
 {% endschema %}

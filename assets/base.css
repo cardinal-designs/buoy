@@ -50,10 +50,12 @@ body.lock-scroll-mobile {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(246, 236, 225, .85);
+  background: rgba(187, 188, 188);
   z-index: 9;
   visibility: hidden;
   opacity: 0;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(3px);
   transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
 }
 
@@ -684,6 +686,12 @@ h6,
   }
 }
 
+.rhymes-subtitle {
+  font-size: 14px;
+  font-family: Rhymes-Light-Italic;
+  font-weight: 300;
+}
+
 p,
 .body {
   font-family: inter, sans-serif;
@@ -723,6 +731,23 @@ p,
   letter-spacing: 0.01em;
   line-height: 1.75em;
   text-transform: uppercase;
+}
+
+.body-med {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 2em;
+}
+
+.body-large {
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 2em;
 }
 
 .italic {
@@ -2218,10 +2243,13 @@ header-container.active .header {
 
 .header__icon--cart {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .header__icon--cart .cart-count-bubble {
-  margin: 0 0 0 10px;
+  margin: 0;
   text-align: center;
   font-family: Inter;
   font-size: 12px;

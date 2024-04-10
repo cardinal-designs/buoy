@@ -1,35 +1,33 @@
-{% assign isMainBundleProduct = item.properties._bundle_parent %}
-{% assign subProductKeys = blank %}
-{% assign bundeOriginal_price = 0 %}
-{% assign bundeFinal_price = 0 %}
-{% assign discountTitle = blank %}
-{% assign itemFrequency = blank %}
-{% comment %}
-  <li class="discounts__discount">
-    {%- render 'icon-discount' -%}
-  </li>
-  {% endcomment %}
-{% if isMainBundleProduct != blank %}
-  {% for line_item in cart.items %}
-    {% assign subBundleId = line_item.properties._bundle_id %}
-    {% if subBundleId == item.properties._bundle_id and line_item.properties._bundle_parent == blank %}
-      {% assign original_price = line_item.original_price | times:line_item.quantity %}
-      {% assign final_price = line_item.final_price | times:line_item.quantity %}
-      {% assign bundeOriginal_price = bundeOriginal_price | plus:original_price %}
-      {% assign bundeFinal_price = bundeFinal_price | plus:final_price %}
-      {% assign UpdateData = line_item.key | append:'|' | append:line_item.properties._original_qty | append:'|' | append:line_item.product.title %}
-      {% assign subProductKeys = subProductKeys | append:',' | append:UpdateData %}
-      {%- for discount in line_item.discounts -%}
-        {% assign discountTitle = discountTitle | append:',' | append:discount.title %}
-      {%- endfor -%}
-      {% if line_item.selling_plan_allocation.selling_plan.name != blank %}
-        {% assign itemFrequency = itemFrequency | append:',' | append:line_item.selling_plan_allocation.selling_plan.name %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-{% assign mainUpdateData = item.key | append:'|' | append:item.quantity %}
 {% liquid
+  assign isMainBundleProduct = item.properties._bundle_parent
+  assign subProductKeys = blank
+  assign bundeOriginal_price = 0
+  assign bundeFinal_price = 0
+  assign discountTitle = blank
+  assign itemFrequency = blank
+
+  if isMainBundleProduct != blank
+    for line_item in cart.items
+      assign subBundleId = line_item.properties._bundle_id
+      if subBundleId == item.properties._bundle_id and line_item.properties._bundle_parent == blank
+        assign original_price = line_item.original_price | times:line_item.quantity
+        assign final_price = line_item.final_price | times:line_item.quantity
+        assign bundeOriginal_price = bundeOriginal_price | plus:original_price
+        assign bundeFinal_price = bundeFinal_price | plus:final_price
+        assign UpdateData = line_item.key | append:'|' | append:line_item.properties._original_qty | append:'|' | append:line_item.product.title
+        assign subProductKeys = subProductKeys | append:',' | append:UpdateData
+        for discount in line_item.discounts
+          assign discountTitle = discountTitle | append:',' | append:discount.title
+        endfor
+        if line_item.selling_plan_allocation.selling_plan.name != blank
+          assign itemFrequency = itemFrequency | append:',' | append:line_item.selling_plan_allocation.selling_plan.name
+        endif
+      endif
+    endfor
+  endif
+
+  assign mainUpdateData = item.key | append:'|' | append:item.quantity
+
   assign need_to_set_msrp = false
   assign is_gift_from_app = false
   assign has_msrp = false
@@ -47,11 +45,11 @@
     assign need_to_set_msrp = true
   endif
 %}
+
 <div {% if need_to_set_msrp %}data-set-msrp="{{ item.variant.metafields.custom.checkout_msrp_text | escape }}" data-item-key="{{ item.key }}" data-item-properties="{{ item.properties | json | escape }}"{% endif  %} class="cart-drawer__item" {% if subProductKeys != blank %} data-bundle-items='{{ subProductKeys | remove_first:',' | split:',' | reverse | join:',' | append:'==' | append:mainUpdateData }}'{% endif %}>
   <cart-drawer-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-    <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove body-xs" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-      {% comment %}{% render 'icon-trash' %}{% endcomment %}
-      Remove
+    <a href="{{ item.url_to_remove }}" class="cart-drawer__item-remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+      {% render 'icon-trash' %}
     </a>
   </cart-drawer-remove-button>
     
@@ -68,173 +66,180 @@
   </div>
   <div class="cart-drawer__item-content">
 
-    <h4 class="cart-drawer__item-title sh3">{{ item.product.title }}</h4>
+    <div class="cart-drawer__top">
+      <h4 class="cart-drawer__item-title body-small medium">{{ item.product.title }}</h4>
 
-    <div class="cart-drawer__item-price sh4">
-      {% if isMainBundleProduct != blank %}
-        {% if bundeOriginal_price != bundeFinal_price %}
-        <dl class="cart-item__discounted-prices">
-          <dd>
-            <s class="cart-item__old-price price price--end">
-              {{ bundeOriginal_price | money }}
-            </s>
-          </dd>
-          <dt class="visually-hidden">
-            {{ 'products.product.price.sale_price' | t }}
-          </dt>
-          <dd class="price price--end">
-            {{ bundeFinal_price | money }}
-          </dd>
-        </dl>
-        {% else %}
-          <span class="price price--end">
-            {{ bundeOriginal_price | money }}
-          </span>
-        {% endif %}
-      {% else %}
-        {%- if item.original_price != item.final_price -%}
+      <div class="cart-drawer__item-price body-xs">
+        {% if isMainBundleProduct != blank %}
+          {% if bundeOriginal_price != bundeFinal_price %}
           <dl class="cart-item__discounted-prices">
-            <dt class="visually-hidden">
-              {{ 'products.product.price.regular_price' | t }}
-            </dt>
             <dd>
-              <s class="cart-item__old-price price price--end">
-                {{ item.original_price | money }}
+              <s class="cart-item__old-price price">
+                {{ bundeOriginal_price | money }}
               </s>
             </dd>
             <dt class="visually-hidden">
               {{ 'products.product.price.sale_price' | t }}
             </dt>
-            <dd class="price price--end">
-              {{ item.final_price | money }}
+            <dd class="price">
+              {{ bundeFinal_price | money }}
             </dd>
           </dl>
+          {% else %}
+            <span class="price">
+              {{ bundeOriginal_price | money }}
+            </span>
+          {% endif %}
+        {% else %}
+          {%- if item.original_price != item.final_price -%}
+            <dl class="cart-item__discounted-prices">
+              <dt class="visually-hidden">
+                {{ 'products.product.price.regular_price' | t }}
+              </dt>
+              <dd>
+                <s class="cart-item__old-price price">
+                  {{ item.original_price | money }}
+                </s>
+              </dd>
+              <dt class="visually-hidden">
+                {{ 'products.product.price.sale_price' | t }}
+              </dt>
+              <dd class="price">
+                {{ item.final_price | money }}
+              </dd>
+            </dl>
 
-          {%- if item.variant.available and item.unit_price_measurement -%}
-            <div class="unit-price caption">
-              <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-              {{ item.variant.unit_price | money }}
-              <span aria-hidden="true">/</span>
-              <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
-              {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                {{- item.variant.unit_price_measurement.reference_value -}}
-              {%- endif -%}
-              {{ item.variant.unit_price_measurement.reference_unit }}
-            </div>
+            {%- if item.variant.available and item.unit_price_measurement -%}
+              <div class="unit-price caption">
+                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                {{ item.variant.unit_price | money }}
+                <span aria-hidden="true">/</span>
+                <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                  {{- item.variant.unit_price_measurement.reference_value -}}
+                {%- endif -%}
+                {{ item.variant.unit_price_measurement.reference_unit }}
+              </div>
+            {%- endif -%}
+          {%- else -%}
+            <span class="price">
+              {{ item.original_price | money }}
+            </span>
           {%- endif -%}
-        {%- else -%}
-          <span class="price price--end">
-            {{ item.original_price | money }}
-          </span>
         {%- endif -%}
-      {%- endif -%}
+        </div>
       </div>
 
-    {% comment %} CHANGE {% endcomment %}
 
-    {% if isMainBundleProduct != blank %}
-      {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
-      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-        {%- for discount in discounts -%}
-          <li class="discounts__discount">
-            {%- render 'icon-discount' -%}
-            {{ discount }}
-          </li>
-        {%- endfor -%}
-      </ul>
-    {% if itemFrequency != blank %}
-        {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
-        {% for frequency in splitFrequency %}
-          <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-          {% render 'icon-calendar' %} Monthly: {{ frequency }}
-          </p>
-        {% endfor %}
-      {% endif %}
-    {% else %}
-      {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
-        <div class="cart-drawer__item-variant">
-          {%- if item.product.has_only_default_variant == false -%}
-            {%- for option in item.options_with_values -%}
-              {%- unless option.name == 'Title' -%}
-                <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                  {{ option.name }}:&nbsp;{{ option.value }}
-                </h6>
-              {%- endunless -%}
+      <div class="cart-drawer__bottom-container">
+        <div class="cart-drawer__data">
+
+        {% if isMainBundleProduct != blank %}
+          {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
+          <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+            {%- for discount in discounts -%}
+              <li class="discounts__discount">
+                {%- render 'icon-discount' -%}
+                {{ discount }}
+              </li>
             {%- endfor -%}
-          {%- endif -%}
-          {% if need_to_set_msrp %}
-            {%  liquid 
-              assign metafields = item.variant.metafields.custom.checkout_msrp_text | split: ':'
-            %}
-            <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-               {{ metafields | first }}: &nbsp; {{ metafields | last }}
-            </h6>
+          </ul>
+        {% if itemFrequency != blank %}
+            {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+            {% for frequency in splitFrequency %}
+              <p class="product-option cart-drawer__item-frequency body-xs light">
+              {% render 'icon-calendar' %} Monthly: {{ frequency }}
+              </p>
+            {% endfor %}
           {% endif %}
-  
-          {%- for property in item.properties -%}
-            {%- assign property_first_char = property.first | slice: 0 -%}
-            {%- if property.last != blank and property_first_char != '_' -%}
-              <h6 style="margin-bottom: -5px;" class="cart-drawer__item-option body-xs light">
-                {{ property.first }}: &nbsp;
-                {%- if property.last contains '/uploads/' -%}
-                  <a href="{{ property.last }}" target="_blank">
-                 {{ property.last | split: '/' | last }}
-                  </a>
-                {%- else -%}
-                  {{ property.last }}
+        {% else %}
+          {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+            <div class="cart-drawer__item-variant">
+              {%- if item.product.has_only_default_variant == false -%}
+                {%- for option in item.options_with_values -%}
+                  {%- unless option.name == 'Title' -%}
+                    <h6 class="cart-drawer__item-option body-xs light">
+                      {{ option.value }}
+                    </h6>
+                  {%- endunless -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+              {% comment %}
+                {% if need_to_set_msrp %}
+                  {%  liquid 
+                    assign metafields = item.variant.metafields.custom.checkout_msrp_text | split: ':'
+                  %}
+                  <h6 class="cart-drawer__item-option body-xs light">
+                    {{ metafields | first }}: &nbsp; {{ metafields | last }}
+                  </h6>
+                {% endif %}
+              {% endcomment %}
+        
+              {%- for property in item.properties -%}
+                {%- assign property_first_char = property.first | slice: 0 -%}
+                {%- if property.last != blank and property_first_char != '_' and property.first != 'MSRP' -%}
+                  <h6 class="cart-drawer__item-option body-xs">
+                    {{ property.first }}: &nbsp;
+                    {%- if property.last contains '/uploads/' -%}
+                      <a href="{{ property.last }}" target="_blank">
+                    {{ property.last | split: '/' | last }}
+                      </a>
+                    {%- else -%}
+                      {{ property.last }}
+                    {%- endif -%}
+                    </h6>
                 {%- endif -%}
-                </h6>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      
-        <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-          {%- for discount in item.discounts -%}
-            <li class="discounts__discount">
-              {%- render 'icon-discount' -%}
-              {{ discount.title }}
-            </li>
-          {%- endfor -%}
-        </ul>
-        
-        
-        <p style="margin-bottom: -5px;" class="product-option cart-drawer__item-frequency body-xs light">
-          {% if item.selling_plan_allocation.selling_plan %}
-            {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
-              {% render 'icon-calendar' %} Quarterly: {{ item.selling_plan_allocation.selling_plan.name | default: 'Delivered Every 12 Weeks' }}
+              {%- endfor -%}
+            </div>
+          
+            <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+              {%- for discount in item.discounts -%}
+                <li class="discounts__discount">
+                  {%- render 'icon-discount' -%}
+                  {{ discount.title }}
+                </li>
+              {%- endfor -%}
+            </ul>
+            
+            {% if item.selling_plan_allocation.selling_plan %}
+              {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
+                <p class="product-option cart-drawer__item-frequency body-xs"></p>{% render 'icon-calendar' %} Quarterly: {{ item.selling_plan_allocation.selling_plan.name | default: 'Delivered Every 12 Weeks' }}</p>
+              {% else %}
+                <p class="product-option cart-drawer__item-frequency body-xs">{% render 'icon-calendar' %} Monthly: Delivered Every 4 Weeks</p>
+              {% endif %}
             {% else %}
-              {% render 'icon-calendar' %} Monthly: Delivered Every 4 Weeks
+              <p class="product-option cart-drawer__item-frequency body-xs">One-Time Purchase</p>
+              <button class="js-add-subscription cart-drawer__item-add-subscription body-xs green">Subscribe & SAVE 23%</button>
             {% endif %}
-          {% else %}
-              One-Time Purchase 
-          {% endif %}
-        </p>
-  
-      {%- endif -%}
-    {% endif %}
+            
+          {%- endif -%}
+        {% endif %}
+      </div>
 
-    <div class="cart-drawer__item-bottom">
+      <div class="cart-drawer__item-bottom">
 
-      <div class="cart-drawer__item-quantity">
-        <quantity-input class="quantity">
-          <button class="quantity__button no-js-hidden" name="minus" type="button">
-            <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
-            {% render 'icon-minus' %}
-          </button>
-          <input class="quantity__input body"
-            type="number"
-            name="updates[]"
-            value="{{ item.quantity }}"
-            min="0"
-            aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-            id="Quantity-{{ item.index | plus: 1 }}"
-            data-index="{{ item.index | plus: 1 }}"
-          >
-          <button class="quantity__button no-js-hidden" name="plus" type="button">
-            <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
-            {% render 'icon-plus' %}
-          </button>
-        </quantity-input>
+        <div class="cart-drawer__item-quantity">
+          <quantity-input class="quantity">
+            <button class="quantity__button no-js-hidden" name="minus" type="button">
+              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+              {% render 'icon-minus' %}
+            </button>
+            <input class="quantity__input body"
+              type="number"
+              name="updates[]"
+              value="{{ item.quantity }}"
+              min="0"
+              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+              id="Quantity-{{ item.index | plus: 1 }}"
+              data-index="{{ item.index | plus: 1 }}"
+            >
+            <button class="quantity__button no-js-hidden" name="plus" type="button">
+              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+              {% render 'icon-plus' %}
+            </button>
+          </quantity-input>
+        </div>
       </div>
     </div>
   </div>

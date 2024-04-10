@@ -73,6 +73,11 @@ class ProductForm extends HTMLElement {
         id: 'cart-drawer__header',
         section: document.getElementById('cart-drawer__header').dataset.id,
         selector: '.cart-drawer__header'
+      },
+      {
+        id: 'cart-icon-bubble',
+        section: document.getElementById('cart-icon-bubble').dataset.id,
+        selector: '.cart-icon-bubble'
       }
     ];
   }
