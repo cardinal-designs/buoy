@@ -1984,7 +1984,6 @@ input[type='checkbox'] {
 @media screen and (max-width: 768px) {
   
   .announcement-bar__message {
-    padding: 8px 0 10px;
     font-size: 14px;
     text-align: left;
     flex: 0 0 65%;
@@ -2016,13 +2015,13 @@ input[type='checkbox'] {
   }
   
 }
-
+/* 
 @media screen and (max-width: 667px) {
   .announcement-bar {
     height: 60px;
   }
 }
-
+ */
 
 /* section-header */
 header-container {
