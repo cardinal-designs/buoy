@@ -1937,7 +1937,6 @@ input[type='checkbox'] {
 
 .announcement-bar img {
   max-height: 36px;
-  padding-left: 20px;
 }
 
 .val-announce.announcement-bar img {
@@ -1955,7 +1954,7 @@ input[type='checkbox'] {
 
 .announcement-bar__message {
   text-align: center;
-  margin: 0 12px 0 0;
+  margin: 0;
 }
 
 .announcement-bar__message p {
