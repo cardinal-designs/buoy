@@ -15,15 +15,25 @@
   {% endif %}
 </div>
 
-{% if section.settings.hide_mobile %}
+
 <style>
+{% if section.settings.hide_mobile %}
 @media screen and (max-width: 768px) {
   #shopify-section-announcement-bar {
     display: none;
   }
 }
-</style>
 {% endif %}
+
+{% if section.settings.image == blank %}
+@media screen and (max-width: 768px) {
+  .announcement-bar__message {
+    text-align: center;
+  }
+}
+{% endif %}
+</style>
+
 
 {% schema %}
 {
