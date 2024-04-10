@@ -10,6 +10,9 @@
       </a>
     {%- endif -%}
   {%- endif -%}
+  {% if section.settings.image != blank %}
+  <img src="{{ section.settings.image | img_url: 'master' }}"/>
+  {% endif %}
 </div>
 
 {% if section.settings.hide_mobile %}
