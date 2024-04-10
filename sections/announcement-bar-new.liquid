@@ -10,12 +10,6 @@
       </a>
     {%- endif -%}
   {%- endif -%}
-
-    <button class="announcement-bar__close">{% render 'icon-close' %}</button>
-
-  {% if section.settings.btn_text != blank %}
-    <a class="Announcement_Button" {% if section.settings.button_text_color != blank or section.settings.button_color != blank %}style="background: {{ section.settings.button_color }}; color: {{section.settings.button_text_color}}"{% endif %} href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
-  {% endif %}
 </div>
 
 {% if section.settings.hide_mobile %}
