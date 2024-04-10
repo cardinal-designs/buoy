@@ -1935,6 +1935,11 @@ input[type='checkbox'] {
   padding: 12px 14px;
 }
 
+.announcement-bar img {
+  max-height: 36px;
+  padding-left: 20px;
+}
+
 .val-announce.announcement-bar img {
   max-width: 250px;
 }
