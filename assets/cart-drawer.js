@@ -227,14 +227,9 @@ class CartDrawer extends HTMLElement {
 
     return [
       {
-        id: 'cart-drawer__header',
-        section: document.getElementById('cart-drawer__header').dataset.id,
-        selector: '.cart-drawer__header',
-      },
-      {
-        id: 'cart-drawer__content',
-        section: document.getElementById('cart-drawer__content').dataset.id,
-        selector: '.cart-drawer__content',
+        id: 'cart-drawer__inner',
+        section: document.getElementById('cart-drawer__inner').dataset.id,
+        selector: '.cart-drawer__inner',
       },
       {
         id: 'cart-icon-bubble',

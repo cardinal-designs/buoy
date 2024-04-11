@@ -65,71 +65,27 @@
     {% endif %}
   </div>
   <div class="cart-drawer__item-content">
-
     <div class="cart-drawer__top">
-      <h4 class="cart-drawer__item-title body-small medium">{{ item.product.title }}</h4>
+
+      {% if item.product.type != 'add on' %}
+        <h4 class="cart-drawer__item-title body-small medium">{{ item.product.title }}</h4>
+      {% else %}
+        {% assign split_title = item.product.title | split: ': ' %}
+        <h4 class="cart-drawer__item-title body-small medium">{{split_title[0] }}</h4>
+      {% endif %}
 
       <div class="cart-drawer__item-price body-xs">
-        {% if isMainBundleProduct != blank %}
-          {% if bundeOriginal_price != bundeFinal_price %}
-          <dl class="cart-item__discounted-prices">
-            <dd>
-              <s class="cart-item__old-price price">
-                {{ bundeOriginal_price | money }}
-              </s>
-            </dd>
-            <dt class="visually-hidden">
-              {{ 'products.product.price.sale_price' | t }}
-            </dt>
-            <dd class="price">
-              {{ bundeFinal_price | money }}
-            </dd>
-          </dl>
-          {% else %}
-            <span class="price">
-              {{ bundeOriginal_price | money }}
-            </span>
-          {% endif %}
+        {% if item.original_price > item.final_price %}
+          <span class="new-price">{{ item.final_price | money }}</span>
+          <span class="old-price">{{ item.original_price | money }}</span>
+        {% elsif item.selling_plan_allocation.compare_at_price > item.final_price %}
+          <span class="new-price">{{ item.final_price | money }}</span>
+          <span class="old-price">{{ item.selling_plan_allocation.compare_at_price | money }}</span>
         {% else %}
-          {%- if item.original_price != item.final_price -%}
-            <dl class="cart-item__discounted-prices">
-              <dt class="visually-hidden">
-                {{ 'products.product.price.regular_price' | t }}
-              </dt>
-              <dd>
-                <s class="cart-item__old-price price">
-                  {{ item.original_price | money }}
-                </s>
-              </dd>
-              <dt class="visually-hidden">
-                {{ 'products.product.price.sale_price' | t }}
-              </dt>
-              <dd class="price">
-                {{ item.final_price | money }}
-              </dd>
-            </dl>
-
-            {%- if item.variant.available and item.unit_price_measurement -%}
-              <div class="unit-price caption">
-                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                {{ item.variant.unit_price | money }}
-                <span aria-hidden="true">/</span>
-                <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
-                {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                  {{- item.variant.unit_price_measurement.reference_value -}}
-                {%- endif -%}
-                {{ item.variant.unit_price_measurement.reference_unit }}
-              </div>
-            {%- endif -%}
-          {%- else -%}
-            <span class="price">
-              {{ item.original_price | money }}
-            </span>
-          {%- endif -%}
-        {%- endif -%}
-        </div>
+          {{ item.final_price | money }}
+        {% endif %}
       </div>
-
+    </div>
 
       <div class="cart-drawer__bottom-container">
         <div class="cart-drawer__data">
@@ -148,7 +104,7 @@
             {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
             {% for frequency in splitFrequency %}
               <p class="product-option cart-drawer__item-frequency body-xs light">
-              {% render 'icon-calendar' %} Monthly: {{ frequency }}
+              {% render 'icon-recurring' %}{{ frequency }}
               </p>
             {% endfor %}
           {% endif %}
@@ -201,16 +157,23 @@
                 </li>
               {%- endfor -%}
             </ul>
+
+            {% if split_title[1] != blank %}
+              <p class="product-option cart-drawer__item-frequency body-xs">{{ split_title[1] }}</p>
+            {% endif %}
             
             {% if item.selling_plan_allocation.selling_plan %}
               {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
-                <p class="product-option cart-drawer__item-frequency body-xs"></p>{% render 'icon-calendar' %} Quarterly: {{ item.selling_plan_allocation.selling_plan.name | default: 'Delivered Every 12 Weeks' }}</p>
+                <p class="product-option cart-drawer__item-frequency body-xs"></p>{% render 'icon-recurring' %} {{ item.selling_plan_allocation.selling_plan.name | default: 'Every 12 Weeks' }}</p>
               {% else %}
-                <p class="product-option cart-drawer__item-frequency body-xs">{% render 'icon-calendar' %} Monthly: Delivered Every 4 Weeks</p>
+                <p class="product-option cart-drawer__item-frequency body-xs">{% render 'icon-recurring' %} Every 4 Weeks</p>
               {% endif %}
+              <p class="product-option cart-drawer__item-frequency body-xs">Cancel Anytime</p>
             {% else %}
               <p class="product-option cart-drawer__item-frequency body-xs">One-Time Purchase</p>
-              <button class="js-add-subscription cart-drawer__item-add-subscription body-xs green">Subscribe & SAVE 23%</button>
+              {% if item.product.type != 'add on' %}
+                <button class="js-add-subscription cart-drawer__item-add-subscription body-xs green">Subscribe & SAVE 23%</button>
+              {% endif %}
             {% endif %}
             
           {%- endif -%}

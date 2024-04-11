@@ -9,7 +9,7 @@
 <cart-drawer>
   <div class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-modal="true" aria-label="Cart Drawer" role="dialog" tabindex="-1">
     {% form 'cart', cart, id: 'cart-drawer__form', class: 'cart-drawer__form' %}
-      <div class="cart-drawer__inner">
+      <div class="cart-drawer__inner" id="cart-drawer__inner" data-id="{{ section.id }}">
 
         <div class="cart-drawer__header" id="cart-drawer__header" data-id="{{ section.id }}">
           <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title h6 medium">{{ section.settings.cart_title }}</h2>
@@ -31,7 +31,7 @@
               {% if section.blocks.size > 0 %}
                 <div class="cart-drawer__empty-slider">
                   <p class="cart-drawer__empty-slider-title body-small uppercase medium">{{ section.settings.empty_cart_slider_title }}</p>
-                  <div class="cart-drawer__empty-slider-container no-scrollbar">
+                  <div class="cart-drawer__empty-slider-container no-scrollbar drag-scroll">
                     <div class="cart-drawer__empty-slider-content">
                       {% for block in section.blocks %}
                         <div class="header__dropdown-card-mobile">
@@ -64,7 +64,7 @@
             <div class="cart-drawer__items" id="cart-drawer-items">
               {% for item in cart.items %}
                 {% assign index = cart.item_count | minus: forloop.index0 %}
-                {%  if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
+                {% if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
                 {% render 'cart-drawer-item' item: item, idx: index %}
               {% endfor %}
 
@@ -81,156 +81,95 @@
                     <h3 class="cart-drawer__upsells-title body-med medium">{{ section.settings.upsell_title }}</h3>
                     <p class="cart-drawer__upsells-text rhymes-subtitle">{{ section.settings.upsell_text }}</p>
                   </div>
-                  <div class="cart-drawer__upsells-container no-scrollbar">
+                  <div class="cart-drawer__upsells-container no-scrollbar drag-scroll">
                     <div class="cart-drawer__upsells-content">
                       {% for upsell_product in section.settings.upsell_products %}
-                        <div class="cart-drawer__upsell">
-                          <div class="cart-drawer__upsell-image">
-                            {{ upsell_product | image_url: width: 150 | image_tag: width: upsell_product.width, class: 'img-fill', sizes: '150px', widths: '100, 150, 200' }}
+                        {% liquid
+                          assign title_split = upsell_product.title | split: ': '
+                          assign is_in_cart = false
+                          for item in cart.items
+                            if item.product.handle == upsell_product.handle
+                              assign is_in_cart = true
+                            endif
+                          endfor
+                        %}
+                        {% unless is_in_cart %}
+                          <div class="cart-drawer__upsell">
+                            <div class="cart-drawer__upsell-image">
+                              {{ upsell_product.featured_image | image_url: width: 150 | image_tag: width: upsell_product.featured_image.width, class: 'img-fill', sizes: '150px', widths: '100, 150, 200' }}
+                            </div>
+                            <div class="cart-drawer__upsell-content">
+                              <div data-oke-reviews-product-listing-rating>{{ upsell_product.metafields.okendo.ProductListingSnippet }}</div>
+                              <p class="cart-drawer__upsell-title body-small">{{ title_split[0] }}</p>
+                              <p class="cart-drawer__upsell-price body-small">
+                                {% if upsell_product.compare_at_price > upsell_product.price %}
+                                  <span class="new-price">{{ upsell_product.price | money }}</span>
+                                  <span class="old-price">{{ upsell_product.compare_at_price | money }}</span>
+                                {% else %}
+                                  {{ upsell_product.price | money }}
+                                {% endif %}
+                              </p>
+                              {% if title_split[1] != blank %}
+                                <p class="cart-drawer__upsell-type body-small">{{ title_split[1] }}</p>
+                              {% endif %}
+                              <button data-id="{{ upsell_product.selected_or_first_available_variant.id }}" data-metafield="{{ upsell_product.selected_or_first_available_variant.metafields.custom.checkout_msrp_text }}" type="button" class="js-add-to-cart cart-drawer__upsell-add">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13.5625" stroke="#797B7A" stroke-width="0.875"/><path d="M13.4654 14.5346H7.875V13.4654H13.4654V7.875H14.5346V13.4654H20.125V14.5346H14.5346V20.125H13.4654V14.5346Z" fill="#797B7A"/></svg>
+                              </button>
+                            </div>
                           </div>
-                          <div class="cart-drawer__upsell-content">
-
-                          </div>
-                        </div>
+                        {% endunless %}
                       {% endfor %}
                     </div>
                   </div>
                 </div>
               {% endif %}
-
-              {% comment %}
-              {% if section.settings.upsell_subproduct1 != blank %}
-              {% assign upsell1 = all_products[section.settings.upsell_subproduct1] %}
-              {% assign upsell2 = all_products[section.settings.upsell_subproduct2] %}
-              {% assign upsell3 = all_products[section.settings.upsell_subproduct3] %}
-              {% assign upsell4 = all_products[section.settings.upsell_subproduct4] %}
-              {% assign upsell5 = all_products[section.settings.upsell_subproduct5] %}
-                
-              {% if section.settings.upsell_subproduct1 != blank %}
-              <div class="hide-desktop sub-upsell__container">
-                <div class="sub-products__text sub">
-                  <p class="body-xs">{{section.settings.upsell_title}}</p>
-                  <div class="green_button">
-                    <p class="green_text">{{section.settings.upsell_button}}</p>
-                  </div>
-                </div>
-                <div class="sub-upsell__container-scroll">
-                {% assign include_incart1 = false %}
-                {% assign include_incart2 = false %}
-                {% assign include_incart3 = false %}
-                {% assign include_incart4 = false %}
-                {% assign include_incart5 = false %}
-          
-                  {% for item in cart.items %}
-                    {% if item.product.id == upsell1.id %}
-                      {% assign include_incart1 = true %}
-                    {% elsif item.product.id == upsell2.id %}
-                      {% assign include_incart2 = true %}
-                    {% elsif item.product.id == upsell3.id %}
-                      {% assign include_incart3 = true %}
-                    {% elsif item.product.id == upsell4.id %}
-                      {% assign include_incart4 = true %}
-                    {% elsif item.product.id == upsell5.id %}
-                      {% assign include_incart5 = true %}
-                    {% endif %}
-                  {% endfor %}
-              
-                {% if section.settings.upsell_subproduct1 != blank and include_incart1 == false %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img class="img-fill" src="{{upsell1.images[0].src  | img_url: 'master' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <p class="sh3">{{upsell1.title}}</p>
-                      <div data-oke-reviews-product-listing-rating>{{ upsell1.metafields.okendo.ProductListingSnippet }}</div>
-                      <button data-id="{{upsell1.selected_or_first_available_variant.id}}" data-metafield="{{upsell1.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell1.price | money_without_trailing_zeros }} <s>{{upsell1.compare_at_price | money_without_trailing_zeros }}</s></button>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-                {% if section.settings.upsell_subproduct2 != blank and include_incart2 == false %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img class="img-fill" src="{{upsell2.images[0].src  | img_url: 'master' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <p class="sh3">{{upsell2.title}}</p>
-                      <div data-oke-reviews-product-listing-rating>{{ upsell2.metafields.okendo.ProductListingSnippet }}</div>
-                      <button data-id="{{upsell2.selected_or_first_available_variant.id}}" data-metafield="{{upsell2.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell2.price | money_without_trailing_zeros }} <s>{{upsell2.compare_at_price | money_without_trailing_zeros }}</s></button>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-                {% if section.settings.upsell_subproduct3 != blank and include_incart3 == false %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img class="img-fill" src="{{upsell3.images[0].src  | img_url: 'master' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <p class="sh3">{{upsell3.title}}</p>
-                      <div data-oke-reviews-product-listing-rating>{{ upsell3.metafields.okendo.ProductListingSnippet }}</div>
-                      <button data-id="{{upsell3.selected_or_first_available_variant.id}}" data-metafield="{{upsell3.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell3.price | money_without_trailing_zeros }} <s>{{upsell3.compare_at_price | money_without_trailing_zeros }}</s></button>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-                {% if section.settings.upsell_subproduct4 != blank and include_incart4 == false %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img class="img-fill" src="{{upsell4.images[0].src  | img_url: 'master' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <p class="sh3">{{upsell4.title}}</p>
-                      <div data-oke-reviews-product-listing-rating>{{ upsell4.metafields.okendo.ProductListingSnippet }}</div>
-                      <button data-id="{{upsell4.selected_or_first_available_variant.id}}" data-metafield="{{upsell4.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell4.price | money_without_trailing_zeros }} <s>{{upsell4.compare_at_price | money_without_trailing_zeros }}</s></button>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-                {% if section.settings.upsell_subproduct5 != blank and include_incart5 == false %}
-                <div class="cart-upsell__container">
-                  <div class="cart-upsell__container-left">
-                    <div class="cart-upsell__img">
-                      <img class="img-fill" src="{{upsell5.images[0].src  | img_url: 'master' }}"/>
-                    </div>
-                    <div class="cart-upsell__container-atc">
-                      <p class="sh3">{{upsell5.title}}</p>
-                      <div data-oke-reviews-product-listing-rating>{{ upsell5.metafields.okendo.ProductListingSnippet }}</div>
-                      <button data-id="{{upsell5.selected_or_first_available_variant.id}}" data-metafield="{{upsell5.selected_or_first_available_variant.metafields.custom.checkout_msrp_text}}" type="button" class="js-add-to-cart body-xs cart-upsell__button">add — {{upsell5.price | money_without_trailing_zeros }} <s>{{upsell5.compare_at_price | money_without_trailing_zeros }}</s></button>
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-                </div>
-                <div class="money-back__container">
-                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Money-Back_Icon_2x_dd8e4035-9b8e-46ae-9673-1af23bdc0989.png?v=1697065035"/>
-                  <div class="money-back__text">
-                    <p>30-Day Money Back Guarantee</p>
-                    <p class="body-xs">See how good you feel using Buoy for a month. Don’t love it? It’s on us.</p>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endif %}
-            {% endcomment %}
             </div>
           {%- endif -%}
 
         </div>
 
-        <div class="cart-drawer__footer">
+        <div class="cart-drawer__footer" id="cart-drawer__footer" data-id="{{ section.id }}">
+
+          {% if cart.item_count > 0 %}
+            <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
+              <h4 class="body-small light">Promo Code</h4>
+              <h4 class="body-small light">Applied at Checkout</h4>
+            </div>
+          {% endif %}
+
           <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
             <h4 class="body-small light">Shipping</h4>
             <h4 class="body-small light green">Free</h4>
           </div>
+
           <div class="cart-drawer__subtotal-wrapper" id="cart-drawer-subtotal">
             <h4 class="body-small light">Subtotal</h4>
             <div class="cart-drawer__loading-container">
-              <h4 class="cart-drawer__subtotal body-small">{{ cart.total_price | money }}</h4>
+              <h4 class="cart-drawer__subtotal body-small">
+                {% liquid
+                  assign cart_total_price_with_subscription = 0
+                  assign contains_subscription_product = false
+                  for item in cart.items
+                    if item.selling_plan_allocation
+                      assign contains_subscription_product = true
+                      assign cart_total_price_with_subscription = cart_total_price_with_subscription | plus: item.selling_plan_allocation.compare_at_price
+                    else
+                      assign cart_total_price_with_subscription = cart_total_price_with_subscription | plus: item.final_price
+                    endif
+                  endfor
+                %}
+                {% if contains_subscription_product %}
+                  <span class="old-price">{{ cart_total_price_with_subscription | money }}</span>
+                  <span class="new-price">{{ cart.total_price | money }}</span>
+                {% else %}
+                  {% if cart.original_total_price > cart.total_price %}
+                    <span class="old-price">{{ cart.original_total_price | money }}</span>
+                    <span class="new-price">{{ cart.total_price | money }}</span>
+                  {% else %}
+                    {{ cart.total_price | money }}
+                  {% endif %}
+                {% endif %}
+              </h4>
             </div>
           </div>
 
