@@ -12,10 +12,47 @@
       <div class="cart-drawer__inner" id="cart-drawer__inner" data-id="{{ section.id }}">
 
         <div class="cart-drawer__header" id="cart-drawer__header" data-id="{{ section.id }}">
-          <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title h6 medium">{{ section.settings.cart_title }}</h2>
-          <button type="button" class="cart-drawer__close modal__close-button link link--text focus-inset" id="cart-drawer__close" aria-label="{{ 'accessibility.close' | t }}">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.10309 18L0 16.8969L7.89691 9L0 1.10309L1.10309 0L9 7.89691L16.8969 0L18 1.10309L10.1031 9L18 16.8969L16.8969 18L9 10.1031L1.10309 18Z" fill="#1F2322"/></svg>            
-          </button>
+          <div class="cart-drawer__header-container">
+            <h2 id="cart-drawer__title" data-id="cart-drawer__title" class="cart-drawer__title h6 medium">{{ section.settings.cart_title }}</h2>
+            <button type="button" class="cart-drawer__close modal__close-button link link--text focus-inset" id="cart-drawer__close" aria-label="{{ 'accessibility.close' | t }}">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.10309 18L0 16.8969L7.89691 9L0 1.10309L1.10309 0L9 7.89691L16.8969 0L18 1.10309L10.1031 9L18 16.8969L16.8969 18L9 10.1031L1.10309 18Z" fill="#1F2322"/></svg>            
+            </button>
+          </div>
+
+          {% if section.settings.enable_progress_bar and cart.item_count > 0 %}
+            {% liquid
+              assign contains_subscription_product = false
+              assign contains_add_on = false
+              for item in cart.items
+                if item.selling_plan_allocation
+                  assign contains_subscription_product = true
+                elsif item.product.type == 'add on'
+                  assign contains_add_on = true
+                endif
+              endfor
+
+              assign progress_text = ''
+              assign progress_percentage = 0
+              if contains_subscription_product and contains_add_on
+                assign progress_text = "You're getting our deepest discounts!"
+                assign progress_percentage = 100
+              elsif contains_subscription_product
+                assign progress_text = 'Add a single bottle for deeper discounts!'
+                assign progress_percentage = 66
+              elsif contains_add_on
+                assign progress_text = 'Subscribe to save 23% on every order!'
+                assign progress_percentage = 33
+              endif
+            %}
+
+            <div class="cart-drawer__progress">
+              <p class="cart-drawer__progress-text body-xs">{{ progress_text }}</p>
+              <div class="cart-drawer__progress-bar">
+                <div class="cart-drawer__progress-bar-inner" style="width: {{ progress_percentage }}%"></div>
+              </div>
+            </div>
+          {% endif %}
+
         </div>
 
         <div class="cart-drawer__content" id="cart-drawer__content" data-id="{{ section.id }}">
@@ -209,6 +246,12 @@
     {
       "type": "header",
       "content": "Cart Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_progress_bar",
+      "label": "Enable Progress Bar",
+      "default": true
     },
     {
       "type": "checkbox",
