@@ -270,7 +270,7 @@
             </div>
           </noscript>
 
-          {{ product.selected_selling_plan_allocation | json }}
+          
 
           {% comment %} {% render 'smartrr-product' %} {% endcomment %}
           {% render 'rtx-pdp' %}
@@ -302,6 +302,9 @@
                {{ settings.order_within_text }}
             </div>
           {% endif %}
+
+          <pre>{{ product.selected_selling_plan_allocation | json }}</pre>
+            
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
