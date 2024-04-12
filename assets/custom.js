@@ -494,6 +494,18 @@ function cartHtml(){
     subscriptionListener();
     $(document).find('#cart-drawer-loading').addClass('hidden');
   });
+
+  fetch(window.Shopify.routes.root +'?section_id=main-cart-items')
+  .then((response) => response.text())
+  .then((responseText) => {			  
+    const cartid = 'main-cart-items';
+    const html = new DOMParser().parseFromString(responseText, 'text/html')  
+      console.log('html', html)
+    const destination = document.querySelector('.main-cart-items');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
+  });
 }
 
 function subscriptionUpgrade(line, qty, selling_plan_id) {
