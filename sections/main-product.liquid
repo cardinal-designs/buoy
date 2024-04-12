@@ -302,8 +302,7 @@
                {{ settings.order_within_text }}
             </div>
           {% endif %}
-          {{ product.selling_plan_groups[0].selling_plans | json }}==product.selling_plan_groups[0]
-          {{ product.selling_plan_groups[0].selling_plans.id }}===
+          {{ product.selling_plan_groups[0].selling_plans[0].id }}===
           {% if product.selling_plan_groups[0].selling_plans.id %}
             <input type="hidden" name="selling_plan_id" value="{{ product.selling_plan_groups[0].selling_plans[0].id }}">
           {% endif %}
