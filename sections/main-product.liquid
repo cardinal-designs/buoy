@@ -1026,6 +1026,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         if (!val || !val.toString().length) return;
         strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
       });
+
+      console.log("sellingPlanSelectionGet()", sellingPlanSelectionGet())
+      
       return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
     };
     const sellingPlanUpdate = () => {
