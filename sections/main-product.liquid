@@ -1027,8 +1027,12 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
       });
 
-      console.log("sellingPlanSelectionGet()", sellingPlanSelectionGet())
-      
+      let selling_plan_id = sellingPlanSelectionGet();
+      let sellingPlanInput = $('input[name="selling_plan_id"]');
+      let sellingPlanInputVal = sellingPlanInput.val();
+      if(selling_plan_id != sellingPlanInputVal){
+        sellingPlanInput.val(selling_plan_id);
+      }
       return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
     };
     const sellingPlanUpdate = () => {
