@@ -69,6 +69,7 @@ class ProductForm extends HTMLElement {
         submitButton.classList.remove('loading');
         submitButton.removeAttribute('disabled');
         this.cartDrawer.open();
+        subscriptionListener();
       });
   }
 
