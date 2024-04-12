@@ -24,9 +24,7 @@ class ProductForm extends HTMLElement {
           let name = productVariantsParsed[key].split(':');
           inputMetafield.name = `properties[${name[0].trim()}]`;
           inputMetafield.value = name[1].trim();
-        } 
-        
-        
+        }
       }
     }
 
@@ -38,6 +36,8 @@ class ProductForm extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
+
+    console.log("body", body)
 
     fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
