@@ -270,6 +270,8 @@
             </div>
           </noscript>
 
+          {{ product.selected_selling_plan_allocation | json }}
+
           {% comment %} {% render 'smartrr-product' %} {% endcomment %}
           {% render 'rtx-pdp' %}
           {% # render 'rtx-pdp--old' %}
