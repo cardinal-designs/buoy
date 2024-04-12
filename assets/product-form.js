@@ -36,13 +36,16 @@ class ProductForm extends HTMLElement {
     
     // Add or update the specific key in the form data
     let purchaseType = formData['purchaseType'];
+    let defaultSellingPlanId = formData['selling_plan_id'];
     if(purchaseType == 'purchaseTypeOneTime'){
       let properties = formData['properties'];
       console.log("properties", properties)
+      properties['selling_plan_id'] = defaultSellingPlanId;
     }
     
     const body = JSON.stringify({
-      ...JSON.parse(serializeForm(this.form)),
+      // ...JSON.parse(serializeForm(this.form)),
+      ...formData,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
