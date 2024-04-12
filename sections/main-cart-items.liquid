@@ -134,7 +134,7 @@
                       
                         {% if item.selling_plan_allocation.selling_plan %}
                           {% if item.selling_plan_allocation.selling_plan.name == 'Delivered Every 12 Weeks' %}
-                            <p class="product-option cart-drawer__item-frequency body-xs"></p>{% render 'icon-recurring' %} {{ item.selling_plan_allocation.selling_plan.name | default: 'Every 12 Weeks' }}</p>
+                            <p class="product-option cart-drawer__item-frequency body-xs">{% render 'icon-recurring' %} {{ item.selling_plan_allocation.selling_plan.name | default: 'Every 12 Weeks' }}</p>
                           {% else %}
                             <p class="product-option cart-drawer__item-frequency body-xs">{% render 'icon-recurring' %} Every 4 Weeks</p>
                           {% endif %}
