@@ -30,6 +30,16 @@ class ProductForm extends HTMLElement {
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
+
+    const form = this.form;
+    const formData = JSON.parse(serializeForm(form));
+    
+    // Add or update the specific key in the form data
+    let purchaseType = formData['purchaseType'];
+    if(purchaseType == 'purchaseTypeOneTime'){
+      let properties = formData['properties'];
+      console.log("properties", properties)
+    }
     
     const body = JSON.stringify({
       ...JSON.parse(serializeForm(this.form)),
