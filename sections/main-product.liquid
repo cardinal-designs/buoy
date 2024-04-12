@@ -303,8 +303,9 @@
             </div>
           {% endif %}
 
-          <pre>{{ product.selling_plan_groups[0] | json }}</pre>
-          <pre>{{ product.selling_plan_groups[0].selling_plans | json }}</pre>
+          {% if product.selling_plan_groups[0].selling_plans.id %}
+            <input type="hidden" name="selling_plan_id" value="{{ product.selling_plan_groups[0].selling_plans.id }}">
+          {% endif %}
 
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
