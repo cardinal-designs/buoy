@@ -304,8 +304,8 @@
           {% endif %}
 
           <pre>{{ product.selling_plan_groups[0] | json }}</pre>
-          <pre>{{ product.selling_plan_groups[0].options }}</pre>
-            selling_plans
+          <pre>{{ product.selling_plan_groups[0].options[0] }}</pre>
+
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
           <div class="product-form__buttons">
             <button
