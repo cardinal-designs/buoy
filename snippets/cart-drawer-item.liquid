@@ -171,7 +171,7 @@
               <p class="product-option cart-drawer__item-frequency body-xs">Cancel Anytime</p>
             {% else %}
               <p class="product-option cart-drawer__item-frequency body-xs">One-Time Purchase</p>
-              {% if item.product.type != 'add on' %}
+              {% if item.product.type != 'add on' and item.properties['_selling_plan_id'] %}
                 <button class="js-add-subscription cart-drawer__item-add-subscription body-xs green" data-subscription-id="{{ item.properties['_selling_plan_id'] }}" data-key="{{ item.key }}" data-qty="{{ item.quantity }}">Subscribe & SAVE 23%</button>
               {% endif %}
             {% endif %}
