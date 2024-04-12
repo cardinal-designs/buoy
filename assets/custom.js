@@ -492,6 +492,7 @@ function cartHtml(){
     const source = html.getElementById(cartid);			  
     if (source && destination) destination.innerHTML = source.innerHTML;
     subscriptionListener();
+    $(document).find('#cart-drawer-loading').addClass('hidden');
   });
 }
 
@@ -502,6 +503,7 @@ function subscriptionUpgrade(line, qty, selling_plan_id) {
     selling_plan: selling_plan_id
   };
   if(line && qty && selling_plan_id){
+    $(document).find('#cart-drawer-loading').removeClass('hidden');
     fetch(window.Shopify.routes.root + 'cart/change.js', {
       method: 'POST',
       headers: {
