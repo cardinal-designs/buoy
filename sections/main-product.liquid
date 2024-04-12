@@ -303,7 +303,7 @@
             </div>
           {% endif %}
             
-          {% if product.selling_plan_groups[0].selling_plans.id %}
+          {% if product.selling_plan_groups[0].selling_plans[0].id %}
             <input type="hidden" name="selling_plan_id" value="{{ product.selling_plan_groups[0].selling_plans[0].id }}">
           {% endif %}
 
