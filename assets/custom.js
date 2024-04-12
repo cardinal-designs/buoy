@@ -484,7 +484,8 @@ clickableElement.addEventListener('click', function() {
 
 //cart drawer js
 $( document ).ready(function() {
-  $(document).find('.cart-drawer__item-add-subscription').on('click', function () {
+  $(document).find('.cart-drawer__item-add-subscription').on('click', function (e) {
+    e.preventDefault();
     console.log("test")
   })
 });
