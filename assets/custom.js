@@ -482,36 +482,40 @@ clickableElement.addEventListener('click', function() {
 });
 }
 
-function subscriptionUpgrade() {
+function subscriptionUpgrade(line, qty, selling_plan_id) {
   let updates = {
-    id : '45021294362924:32904cb73aeaf72ae2be270b2ce2d21d',
-    quantity: 1,
-    selling_plan: 538869831
+    id : line,
+    quantity: qty,
+    selling_plan: selling_plan_id
   };
-  
-  fetch(window.Shopify.routes.root + 'cart/change.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(updates)
-  })
-  .then(response => {
-    return response.json();
-  })
-  .then(response => {
-    console.log('response', response)
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+  if(line && qty && selling_plan_id){
+    fetch(window.Shopify.routes.root + 'cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updates)
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(response => {
+      console.log('response', response)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
 }
 function subscriptionListener () {
   $(document).find('.cart-drawer__item-add-subscription').on('click', function (e) {
     e.preventDefault();
-    let subscriptionId = $(this).attr('data-subscription-id');
+    let subscriptionId = Number($(this).attr('data-subscription-id'));
     let datakey = $(this).attr('data-key');
-    let dataQty = $(this).attr('data-qty');
+    let dataQty = Number($(this).attr('data-qty'));
+    if(subscriptionId && datakey && dataQty){
+      subscriptionUpgrade(datakey, dataQty, subscriptionId)
+    }
   })
 }
 //cart drawer js
