@@ -482,6 +482,18 @@ clickableElement.addEventListener('click', function() {
 });
 }
 
+function cartHtml(){
+  fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+  .then((response) => response.text())
+  .then((responseText) => {
+    const cartid = 'cart-drawer';
+    const html = new DOMParser().parseFromString(responseText, 'text/html')  
+    const destination = document.querySelector('.cart-drawer');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;	
+  });
+}
+
 function subscriptionUpgrade(line, qty, selling_plan_id) {
   let updates = {
     id : line,
@@ -504,6 +516,9 @@ function subscriptionUpgrade(line, qty, selling_plan_id) {
     })
     .catch((error) => {
       console.error('Error:', error);
+    })
+    .finally(() => {
+      cartHtml();
     });
   }
 }
