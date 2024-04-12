@@ -483,6 +483,7 @@ clickableElement.addEventListener('click', function() {
 }
 
 function subscriptionUpgrade () {
+  console.log("test helllll")
   $(document).find('.cart-drawer__item-add-subscription').on('click', function (e) {
     e.preventDefault();
     console.log("test")
