@@ -1253,7 +1253,8 @@ function getSectionInnerHTML(html, selector) {
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
-  console.log('ATCCC')
+  document.querySelector('cart-drawer').enableLoading();
+  
   let add_items;
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield');
