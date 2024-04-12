@@ -482,4 +482,10 @@ clickableElement.addEventListener('click', function() {
 });
 }
 
+//cart drawer js
+$( document ).ready(function() {
+  $(document).find('.cart-drawer__item-add-subscription').on('click', function () {
+    console.log("test")
+  })
+});
 
