@@ -1245,6 +1245,9 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
 
 
 function getSectionInnerHTML(html, selector) {
+
+  subscriptionUpgrade();
+  
   return new DOMParser()
     .parseFromString(html, 'text/html')
     .querySelector(selector).innerHTML;
