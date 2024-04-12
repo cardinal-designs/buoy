@@ -1331,6 +1331,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
       console.error(e);
     })
     .finally(() => {
+      document.querySelector('cart-drawer').disableLoading();
       document.querySelector('cart-drawer').open();
     });
 });
