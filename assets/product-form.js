@@ -39,7 +39,7 @@ class ProductForm extends HTMLElement {
     let defaultSellingPlanId = formData['selling_plan_id'];
     if(purchaseType == 'purchaseTypeOneTime'){
       let properties = formData['properties'];
-      properties['selling_plan_id'] = defaultSellingPlanId;
+      properties['_selling_plan_id'] = defaultSellingPlanId;
     }
     
     const body = JSON.stringify({
