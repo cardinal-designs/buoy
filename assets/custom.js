@@ -482,16 +482,39 @@ clickableElement.addEventListener('click', function() {
 });
 }
 
-function subscriptionUpgrade () {
+function subscriptionUpgrade() {
+  let updates = {
+    id : '45021294362924:32904cb73aeaf72ae2be270b2ce2d21d',
+    quantity: 1,
+    selling_plan: 538869831
+  };
+  
+  fetch(window.Shopify.routes.root + 'cart/change.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(updates)
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(response => {
+    console.log('response', response)
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+function subscriptionListener () {
   $(document).find('.cart-drawer__item-add-subscription').on('click', function (e) {
     e.preventDefault();
     let subscriptionId = $(this).attr('data-subscription-id');
-    let datakey = $(this).attr('data-key')
-
+    let datakey = $(this).attr('data-key');
   })
 }
 //cart drawer js
 $( document ).ready(function() {
-  subscriptionUpgrade();
+  subscriptionListener();
 });
 
