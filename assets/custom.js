@@ -490,7 +490,8 @@ function cartHtml(){
     const html = new DOMParser().parseFromString(responseText, 'text/html')  
     const destination = document.querySelector('.cart-drawer');
     const source = html.getElementById(cartid);			  
-    if (source && destination) destination.innerHTML = source.innerHTML;	
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
   });
 }
 
