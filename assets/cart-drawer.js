@@ -203,6 +203,8 @@ class CartDrawer extends HTMLElement {
       this.disableLoading();  
     }).catch(() => {
       this.disableLoading();
+    }).finally(() => {
+      subscriptionUpgrade();
     });
   }
   
