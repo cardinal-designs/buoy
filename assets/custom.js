@@ -511,6 +511,7 @@ function subscriptionListener () {
     e.preventDefault();
     let subscriptionId = $(this).attr('data-subscription-id');
     let datakey = $(this).attr('data-key');
+    let dataQty = $(this).attr('data-qty');
   })
 }
 //cart drawer js
