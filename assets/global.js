@@ -1404,19 +1404,14 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 function atcGetSectionsToRender() {
   return [
     {
-      id: 'cart-drawer__content',
-      section: document.getElementById('cart-drawer__content').dataset.id,
-      selector: '.cart-drawer__content',
+      id: 'cart-drawer__inner',
+      section: document.getElementById('cart-drawer__inner').dataset.id,
+      selector: '.cart-drawer__inner',
     },
     {
       id: 'cart-icon-bubble',
       section: document.getElementById('cart-icon-bubble').dataset.id,
       selector: '.cart-icon-bubble'
-    },
-    {
-      id: 'cart-drawer__header',
-      section: document.getElementById('cart-drawer__header').dataset.id,
-      selector: '.cart-drawer__header',
     }
   ];
 }
