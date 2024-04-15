@@ -1,0 +1,80 @@
+<div class="announcement-bar" {% if section.settings.background != blank %}style="background: {{ section.settings.background }};"{% endif %}  role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+  {%- if section.settings.text != blank -%}
+    {%- if section.settings.link != blank -%}
+      <a href="{{ section.settings.link }}" class="announcement-bar__link">
+    {%- endif -%}
+        <p {% if section.settings.text_color != blank %}style="color: {{ section.settings.text_color }};"{% endif %} class="announcement-bar__message body">
+          {{ section.settings.text }}
+        </p>
+    {%- if section.settings.link != blank -%}
+      </a>
+    {%- endif -%}
+  {%- endif -%}
+  {% if section.settings.image != blank %}
+  <img src="{{ section.settings.image | img_url: 'master' }}"/>
+  {% endif %}
+</div>
+
+
+<style>
+{% if section.settings.hide_mobile %}
+@media screen and (max-width: 768px) {
+  #shopify-section-announcement-bar {
+    display: none;
+  }
+}
+{% endif %}
+
+{% if section.settings.image == blank %}
+@media screen and (max-width: 768px) {
+  .announcement-bar {
+    justify-content: center;
+  }
+
+  .announcement-bar__message {
+    text-align: center;
+  }
+}
+{% endif %}
+</style>
+
+
+{% schema %}
+{
+  "name": "New Announcement Bar",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "default": "Welcome to our store",
+      "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_mobile",
+      "label": "Hide Announcement Bar on mobile?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

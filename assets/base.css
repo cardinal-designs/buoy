@@ -1932,7 +1932,12 @@ input[type='checkbox'] {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 14px;
+  padding: 12px 20px;
+}
+
+.announcement-bar img {
+  max-height: 36px;
+  margin-left: 20px;
 }
 
 .val-announce.announcement-bar img {
@@ -1950,7 +1955,7 @@ input[type='checkbox'] {
 
 .announcement-bar__message {
   text-align: center;
-  margin: 0 12px 0 0;
+  margin: 0;
 }
 
 .announcement-bar__message p {
@@ -1979,7 +1984,6 @@ input[type='checkbox'] {
 @media screen and (max-width: 768px) {
   
   .announcement-bar__message {
-    padding: 8px 0 10px;
     font-size: 14px;
     text-align: left;
     flex: 0 0 65%;
@@ -2004,7 +2008,7 @@ input[type='checkbox'] {
     align-items: center;
     max-width: 100%;
     width: 100%;
-    padding: 0 15px;
+    padding: 10px 20px;
   }
 
   .Announcement_Button {
@@ -2012,13 +2016,13 @@ input[type='checkbox'] {
   }
   
 }
-
+/* 
 @media screen and (max-width: 667px) {
   .announcement-bar {
     height: 60px;
   }
 }
-
+ */
 
 /* section-header */
 header-container {
