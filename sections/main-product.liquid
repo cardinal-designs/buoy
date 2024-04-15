@@ -294,9 +294,6 @@
           {% endcomment %}
            {% if product.metafields.my_fields.custom_shipping_text != blank %}
            <div id="Order_Within" class="Order_Within Risk_Free">
-              {%- if settings.order_icon != blank -%}
-                <img src="{{ settings.order_icon | img_url: 'master' }}"/>
-              {%- endif -%}
                {{ product.metafields.my_fields.custom_shipping_text }}
             </div>
            {% elsif settings.show_shipping_countdown != blank %}
