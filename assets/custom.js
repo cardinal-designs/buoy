@@ -538,7 +538,7 @@ function subscriptionUpgrade(line, qty, selling_plan_id) {
   }
 }
 function subscriptionListener () {
-  $(document).find('.cart-drawer__item-add-subscription').on('click', function (e) {
+  $(document).on('click', '.cart-drawer__item-add-subscription', function (e) {
     e.preventDefault();
     let subscriptionId = Number($(this).attr('data-subscription-id'));
     let datakey = $(this).attr('data-key');
