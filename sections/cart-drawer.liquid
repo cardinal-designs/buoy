@@ -99,7 +99,8 @@
 
           {%- else -%}
             <div class="cart-drawer__items" id="cart-drawer-items">
-              {% for item in cart.items %}
+              {% assign cart_items_new_first = cart.items | reverse %}
+              {% for item in cart_items_new_first %}
                 {% assign index = cart.item_count | minus: forloop.index0 %}
                 {% if item.properties._bundle_parent == blank and item.properties._bundle_id != blank %}{% continue %}{% endif %}
                 {% render 'cart-drawer-item' item: item, idx: index %}
