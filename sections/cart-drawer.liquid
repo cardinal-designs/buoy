@@ -131,7 +131,7 @@
                             endif
                           endfor
                         %}
-                        {% unless is_in_cart %}
+                        {% if is_in_cart == false and upsell_product.available %}
                           <div class="cart-drawer__upsell">
                             <div class="cart-drawer__upsell-image">
                               {{ upsell_product.featured_image | image_url: width: 150 | image_tag: width: upsell_product.featured_image.width, class: 'img-fill', sizes: '150px', widths: '100, 150, 200' }}
@@ -155,7 +155,7 @@
                               </button>
                             </div>
                           </div>
-                        {% endunless %}
+                        {% endif %}
                       {% endfor %}
                     </div>
                   </div>
