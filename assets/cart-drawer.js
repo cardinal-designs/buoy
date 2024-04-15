@@ -89,6 +89,7 @@ class CartDrawer extends HTMLElement {
 
     this.pageOverlayElement.classList.add('is-visible');
     this.pageOverlayElement.addEventListener('click', this.onBodyClick);
+    document.body.classList.add('overflow-hidden');
     
     fetch('/cart.js')
     .then(response => response.json())
@@ -99,6 +100,7 @@ class CartDrawer extends HTMLElement {
   close() {
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
+    document.body.classList.remove('overflow-hidden');
 
     this.pageOverlayElement.classList.remove('is-visible');
     this.pageOverlayElement.removeEventListener('click', this.onBodyClick);
