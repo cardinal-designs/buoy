@@ -482,4 +482,74 @@ clickableElement.addEventListener('click', function() {
 });
 }
 
+function cartHtml(){
+  fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+  .then((response) => response.text())
+  .then((responseText) => {
+    const cartid = 'cart-drawer';
+    const html = new DOMParser().parseFromString(responseText, 'text/html')  
+    const destination = document.querySelector('.cart-drawer');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
+    $(document).find('#cart-drawer-loading').addClass('hidden');
+  });
+
+  fetch(window.Shopify.routes.root +'?section_id=main-cart-items')
+  .then((response) => response.text())
+  .then((responseText) => {			  
+    const cartid = 'main-cart-items';
+    const html = new DOMParser().parseFromString(responseText, 'text/html')  
+      console.log('html', html)
+    const destination = document.querySelector('.main-cart-items');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
+  });
+}
+
+function subscriptionUpgrade(line, qty, selling_plan_id) {
+  let updates = {
+    id : line,
+    quantity: qty,
+    selling_plan: selling_plan_id
+  };
+  if(line && qty && selling_plan_id){
+    $(document).find('#cart-drawer-loading').removeClass('hidden');
+    fetch(window.Shopify.routes.root + 'cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updates)
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(response => {
+      console.log('response', response)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      cartHtml();
+    });
+  }
+}
+function subscriptionListener () {
+  $(document).on('click', '.cart-drawer__item-add-subscription', function (e) {
+    e.preventDefault();
+    let subscriptionId = Number($(this).attr('data-subscription-id'));
+    let datakey = $(this).attr('data-key');
+    let dataQty = Number($(this).attr('data-qty'));
+    if(subscriptionId && datakey && dataQty){
+      subscriptionUpgrade(datakey, dataQty, subscriptionId)
+    }
+  })
+}
+//cart drawer js
+$( document ).ready(function() {
+  subscriptionListener();
+});
 

@@ -89,6 +89,7 @@ class CartDrawer extends HTMLElement {
 
     this.pageOverlayElement.classList.add('is-visible');
     this.pageOverlayElement.addEventListener('click', this.onBodyClick);
+    document.body.classList.add('overflow-hidden');
     
     fetch('/cart.js')
     .then(response => response.json())
@@ -99,6 +100,7 @@ class CartDrawer extends HTMLElement {
   close() {
     this.drawer.setAttribute('aria-hidden', true);
     this.drawer.removeAttribute('aria-expanded', true);
+    document.body.classList.remove('overflow-hidden');
 
     this.pageOverlayElement.classList.remove('is-visible');
     this.pageOverlayElement.removeEventListener('click', this.onBodyClick);
@@ -203,6 +205,8 @@ class CartDrawer extends HTMLElement {
       this.disableLoading();  
     }).catch(() => {
       this.disableLoading();
+    }).finally(() => {
+      subscriptionListener();
     });
   }
   
@@ -227,14 +231,9 @@ class CartDrawer extends HTMLElement {
 
     return [
       {
-        id: 'cart-drawer__header',
-        section: document.getElementById('cart-drawer__header').dataset.id,
-        selector: '.cart-drawer__header',
-      },
-      {
-        id: 'cart-drawer__content',
-        section: document.getElementById('cart-drawer__content').dataset.id,
-        selector: '.cart-drawer__content',
+        id: 'cart-drawer__inner',
+        section: document.getElementById('cart-drawer__inner').dataset.id,
+        selector: '.cart-drawer__inner',
       },
       {
         id: 'cart-icon-bubble',

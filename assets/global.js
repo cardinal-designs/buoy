@@ -1253,6 +1253,8 @@ function getSectionInnerHTML(html, selector) {
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
+  document.querySelector('cart-drawer').enableLoading();
+  
   let add_items;
   let id = Number($(this).data('id'));
   let metafield = $(this).data('metafield');
@@ -1331,6 +1333,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
       console.error(e);
     })
     .finally(() => {
+      document.querySelector('cart-drawer').disableLoading();
       document.querySelector('cart-drawer').open();
     });
 });
@@ -1401,19 +1404,14 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 function atcGetSectionsToRender() {
   return [
     {
-      id: 'cart-drawer__content',
-      section: document.getElementById('cart-drawer__content').dataset.id,
-      selector: '.cart-drawer__content',
+      id: 'cart-drawer__inner',
+      section: document.getElementById('cart-drawer__inner').dataset.id,
+      selector: '.cart-drawer__inner',
     },
     {
       id: 'cart-icon-bubble',
       section: document.getElementById('cart-icon-bubble').dataset.id,
       selector: '.cart-icon-bubble'
-    },
-    {
-      id: 'cart-drawer__header',
-      section: document.getElementById('cart-drawer__header').dataset.id,
-      selector: '.cart-drawer__header',
     }
   ];
 }

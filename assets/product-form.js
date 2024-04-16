@@ -24,17 +24,27 @@ class ProductForm extends HTMLElement {
           let name = productVariantsParsed[key].split(':');
           inputMetafield.name = `properties[${name[0].trim()}]`;
           inputMetafield.value = name[1].trim();
-        } 
-        
-        
+        }
       }
     }
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
+
+    const form = this.form;
+    const formData = JSON.parse(serializeForm(form));
+    
+    // Add or update the specific key in the form data
+    let purchaseType = formData['purchaseType'];
+    let defaultSellingPlanId = formData['selling_plan_id'];
+    if(purchaseType == 'purchaseTypeOneTime'){
+      let properties = formData['properties'];
+      properties['_selling_plan_id'] = defaultSellingPlanId;
+    }
     
     const body = JSON.stringify({
-      ...JSON.parse(serializeForm(this.form)),
+      // ...JSON.parse(serializeForm(this.form)),
+      ...formData,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname
     });
@@ -59,20 +69,21 @@ class ProductForm extends HTMLElement {
         submitButton.classList.remove('loading');
         submitButton.removeAttribute('disabled');
         this.cartDrawer.open();
+        subscriptionListener();
       });
   }
 
   getSectionsToRender() {
     return [
       {
-        id: 'cart-drawer__content',
-        section: document.getElementById('cart-drawer__content').dataset.id,
-        selector: '.cart-drawer__content',
+        id: 'cart-drawer__inner',
+        section: document.getElementById('cart-drawer__inner').dataset.id,
+        selector: '.cart-drawer__inner',
       },
       {
-        id: 'cart-drawer__header',
-        section: document.getElementById('cart-drawer__header').dataset.id,
-        selector: '.cart-drawer__header'
+        id: 'cart-icon-bubble',
+        section: document.getElementById('cart-icon-bubble').dataset.id,
+        selector: '.cart-icon-bubble'
       }
     ];
   }
