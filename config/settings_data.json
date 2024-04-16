@@ -107,6 +107,8 @@
         ],
         "settings": {
           "cart_title": "Your Cart",
+          "enable_progress_bar": true,
+          "show_money_back_message": true,
           "empty_cart_title": "Your cart is empty.",
           "empty_cart_text": "Try any Buoy product 100% risk free for a month.",
           "empty_cart_slider_title": "Explore Our Favorites",
@@ -265,9 +267,9 @@
         "settings": {
           "dropdown_title": "Shop",
           "dropdown_link_text": "Unflavored Liquid Electrolytes",
-          "dropdown_link_one": "shopify:\/\/collections",
+          "dropdown_link_one": "shopify:\/\/collections\/all",
           "dropdown_link_text_two": "Shop All",
-          "dropdown_link_two": "shopify:\/\/collections",
+          "dropdown_link_two": "shopify:\/\/collections\/all",
           "dropdown_title_two": "Featured",
           "dropdown_title_three": "Learn",
           "mobile_menu": "desktop-menu-new"
