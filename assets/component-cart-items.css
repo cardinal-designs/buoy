@@ -17,8 +17,12 @@
   position: relative;
 }
 
-.cart-items *.right {
+.cart-items * .right {
   text-align: right;
+}
+
+.cart-items * .center {
+  text-align: center;
 }
 
 .cart-item__image {
