@@ -159,6 +159,7 @@ class CartItems extends HTMLElement {
       document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
       this.disableLoading();
     }).catch(() => {
+      console.log('error',error);
       this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
       document.getElementById('cart-errors').textContent = window.cartStrings.error;
       this.disableLoading();
