@@ -91,6 +91,12 @@
   font-family: inter, sans-serif;
 }
 
+.cart__item--grid {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .cart-item cart-remove-button {
   display: inline-block;
   margin: 0 0 0 10px;
