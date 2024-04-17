@@ -263,6 +263,10 @@ cart-remove-button .icon-remove {
   .cart-item__image {
     height: auto;
   }
+
+  .cart-item .loading-overlay {
+    bottom: 10px;
+  }
   
 }
 
