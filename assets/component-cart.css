@@ -145,6 +145,10 @@ cart-items {
   cursor: pointer;
 }
 
+#cart-errors {
+  color: #ff0000;
+}
+
 .cart__ctas > *:not(noscript:first-child) + * {
   margin-top: 1rem;
 }
