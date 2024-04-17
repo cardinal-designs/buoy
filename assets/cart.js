@@ -156,7 +156,7 @@ class CartItems extends HTMLElement {
       }));
 
       // this.updateLiveRegions(line, parsedState.item_count);
-      document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
+      // document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
       this.disableLoading();
     }).catch((error) => {
       console.log('error--',error);
