@@ -255,9 +255,9 @@
                   <td class="cart-item__quantity">
                     
                     <div class="cart__item--grid">
-                      <label class="medium-down" for="Quantity-{{ item.index | plus: 1 }}">
+                      {% comment %}<label class="medium-down" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
-                      </label>
+                      </label>{% endcomment %}
                       <quantity-input class="quantity">
                         <button class="quantity__button no-js-hidden" name="minus" type="button">
                           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
