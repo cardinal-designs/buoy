@@ -229,7 +229,8 @@ cart-remove-button .icon-remove {
     grid-row: 1 / 3;
   }
 
-  .cart-item__quantity {
+  .cart-item__quantity,
+  .cart-item__totals {
     grid-column: 2 / 5;
   }
 
