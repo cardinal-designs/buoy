@@ -155,6 +155,8 @@ class CartItems extends HTMLElement {
           this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       }));
 
+      console.log('linesadas ---- ',line);
+
       this.updateLiveRegions(line, parsedState.item_count);
       document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
       this.disableLoading();
