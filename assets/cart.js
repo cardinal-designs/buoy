@@ -155,10 +155,11 @@ class CartItems extends HTMLElement {
           this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       }));
 
-      this.updateLiveRegions(line, parsedState.item_count);
-      document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
+      // this.updateLiveRegions(line, parsedState.item_count);
+      // document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
       this.disableLoading();
-    }).catch(() => {
+    }).catch((error) => {
+      console.log('error--',error);
       this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
       document.getElementById('cart-errors').textContent = window.cartStrings.error;
       this.disableLoading();
@@ -166,6 +167,7 @@ class CartItems extends HTMLElement {
   }
 
   updateLiveRegions(line, itemCount) {
+    console.log('line--',line);
     if (this.currentItemCount === itemCount) {
       document.getElementById(`Line-item-error-${line}`)
         .querySelector('.cart-item__error-text')

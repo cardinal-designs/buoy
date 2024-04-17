@@ -35,7 +35,7 @@
             <thead>
               <tr>
                 <th class="caption-with-letter-spacing" colspan="2" scope="col">{{ 'sections.cart.headings.product' | t }}</th>
-                <th class="right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.price' | t }}</th>
+                <th class="caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.price' | t }}</th>
                 <th class="cart-items__heading--wide medium-up caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.quantity' | t }}</th>
                 <th class="medium-up right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.total' | t }}</th>
               </tr>
@@ -99,13 +99,13 @@
                       <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
-                    <a href="{{ item.product.url }}" class="cart-item__name break">{{ item.product.title | escape }}</a>
+                    <a href="{{ item.product.url }}" class="cart-item__name break body-small medium">{{ item.product.title | escape }}</a>
 
                     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                       <dl>
                         {%- if item.product.has_only_default_variant == false -%}
                           {%- for option in item.options_with_values -%}
-                            <div class="product-option">
+                            <div class="product-option body-xs">
                               <dt>{{ option.name }}: </dt>
                               <dd>{{ option.value }}</dd>
                             </div>
@@ -196,19 +196,19 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
+                            <s class="cart-item__old-price price body-xs">
                               {{ bundeOriginal_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price body-xs">
                             {{ bundeFinal_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
+                        <span class="price body-xs">
                           {{ bundeOriginal_price | money }}
                         </span>
                       {%- endif -%}
@@ -219,14 +219,14 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
+                            <s class="cart-item__old-price price body-xs">
                               {{ item.original_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price body-xs">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
@@ -244,7 +244,7 @@
                           </div>
                         {%- endif -%}
                       {%- else -%}
-                        <span class="price price--end">
+                        <span class="price body-xs">
                           {{ item.original_price | money }}
                         </span>
                       {%- endif -%}
@@ -253,28 +253,36 @@
                   </td>
 
                   <td class="cart-item__quantity">
-                    <label class="medium-down" for="Quantity-{{ item.index | plus: 1 }}">
-                      {{ 'products.product.quantity.label' | t }}
-                    </label>
-                    <quantity-input class="quantity">
-                      <button class="quantity__button no-js-hidden" name="minus" type="button">
-                        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
-                        {% render 'icon-minus' %}
-                      </button>
-                      <input class="quantity__input"
-                        type="number"
-                        name="updates[]"
-                        value="{{ item.quantity }}"
-                        min="0"
-                        aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                        id="Quantity-{{ item.index | plus: 1 }}"
-                        data-index="{{ item.index | plus: 1 }}"
-                      >
-                      <button class="quantity__button no-js-hidden" name="plus" type="button">
-                        <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
-                        {% render 'icon-plus' %}
-                      </button>
-                    </quantity-input>
+                    
+                    <div class="cart__item--grid">
+                      <label class="medium-down hide-mobile" for="Quantity-{{ item.index | plus: 1 }}">
+                        {{ 'products.product.quantity.label' | t }}
+                      </label>
+                      <quantity-input class="quantity">
+                        <button class="quantity__button no-js-hidden" name="minus" type="button">
+                          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                          {% render 'icon-minus' %}
+                        </button>
+                        <input class="quantity__input"
+                          type="number"
+                          name="updates[]"
+                          value="{{ item.quantity }}"
+                          min="0"
+                          aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                          id="Quantity-{{ item.index | plus: 1 }}"
+                          data-index="{{ item.index | plus: 1 }}"
+                        >
+                        <button class="quantity__button no-js-hidden" name="plus" type="button">
+                          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                          {% render 'icon-plus' %}
+                        </button>
+                      </quantity-input>
+                      <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                        <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                          {% render 'icon-remove' %}
+                        </a>
+                      </cart-remove-button>
+                    </div>
                   </td>
 
                   <td class="cart-item__totals right">
@@ -319,12 +327,6 @@
                         {%- endif -%}
                       {%- endif -%}
                     </div>
-
-                    <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                      <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                        {% render 'icon-remove' %}
-                      </a>
-                    </cart-remove-button>
                   </td>
                   {% if isMainBundleProduct != blank %}
                   <script type="application/json" class="item-data">
