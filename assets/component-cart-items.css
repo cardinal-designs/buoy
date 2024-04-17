@@ -259,6 +259,10 @@ cart-remove-button .icon-remove {
   .cart-item .quantity__input {
     height: 3.5rem;
   }
+
+  .cart-item__image {
+    height: auto;
+  }
   
 }
 
