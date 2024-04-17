@@ -195,6 +195,10 @@ cart-items .title-wrapper-with-link {
   align-items: center;
 }
 
+cart-items .title-wrapper-with-link .title {
+  text-transform: capitalize;
+}
+
 @media screen and (min-width: 769px) {
   .cart-note {
     max-width: 35rem;
