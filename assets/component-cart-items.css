@@ -47,6 +47,8 @@
   color: rgb(var(--color-foreground));
   text-decoration: none;
   display: block;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 .cart-item__name:hover {
