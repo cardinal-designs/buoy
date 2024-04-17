@@ -147,6 +147,7 @@ cart-items {
 
 #cart-errors {
   color: #ff0000;
+  line-height: 1.5;
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {
