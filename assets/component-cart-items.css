@@ -221,12 +221,12 @@ cart-remove-button .icon-remove {
     margin-bottom: 0;
   }
 
-  .cart-item__media {
-    grid-row: 1 / 3;
-  }
-
   .cart-item__details {
     grid-column: 2 / 4;
+  }
+
+  .cart-item__media {
+    grid-row: 1 / 3;
   }
 
   .cart-item__quantity {
