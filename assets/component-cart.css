@@ -191,6 +191,10 @@ cart-items {
   text-align: center;
 }
 
+.cart-items .title-wrapper-with-link {
+  align-items: center;
+}
+
 @media screen and (min-width: 769px) {
   .cart-note {
     max-width: 35rem;
