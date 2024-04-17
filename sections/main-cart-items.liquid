@@ -196,19 +196,19 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end body-xs">
+                            <s class="cart-item__old-price price body-xs">
                               {{ bundeOriginal_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end body-xs">
+                          <dd class="price body-xs">
                             {{ bundeFinal_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end body-xs">
+                        <span class="price body-xs">
                           {{ bundeOriginal_price | money }}
                         </span>
                       {%- endif -%}
@@ -219,14 +219,14 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end body-xs">
+                            <s class="cart-item__old-price price body-xs">
                               {{ item.original_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end body-xs">
+                          <dd class="price {% comment %}price--end{% endcomment %}body-xs">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
