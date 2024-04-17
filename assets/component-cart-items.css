@@ -10,6 +10,7 @@
   opacity: 0.85;
   font-weight: normal;
   font-family: inter, sans-serif;
+  font-weight: 500;
 }
 
 .cart-item__totals {
@@ -75,6 +76,10 @@
 .product-option {
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+.cart-item {
+  font-family: inter, sans-serif;
 }
 
 .cart-item cart-remove-button {
