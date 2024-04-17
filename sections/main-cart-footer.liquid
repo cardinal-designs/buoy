@@ -71,11 +71,13 @@
                 </button>
               </div>
 
+            {% comment %}
               {%- if additional_checkout_buttons -%}
                 <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                   {{ content_for_additional_checkout_buttons }}
                 </div>
               {%- endif -%}
+            {% endcomment %}
           {%- endcase -%}
         {% endfor %}
 
