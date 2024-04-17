@@ -141,7 +141,7 @@ cart-remove-button .icon-remove {
 
 @media screen and (min-width: 769px) {
   .cart-item .loading-overlay {
-    top: 0;
+    top: 10px;
     padding-top: 5.5rem;
     bottom: auto;
   }
