@@ -1993,8 +1993,9 @@ function navDropDownMenu() {
     const $btnAnnounce = !e.target.closest('.announcement-bar__close')
     if ($isOutside && $btnIsOutside && $btnAnnounce) {
       dropdownMenu.classList.remove('active');
-      dropDownClose.classList.remove('active');
-      
+      if(dropDownClose) {
+        dropDownClose.classList.remove('active');
+      }
       document.querySelector('body').classList.remove('lock-scroll');
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
