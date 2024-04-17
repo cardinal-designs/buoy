@@ -35,7 +35,7 @@
             <thead>
               <tr>
                 <th class="caption-with-letter-spacing" colspan="2" scope="col">{{ 'sections.cart.headings.product' | t }}</th>
-                <th class="caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.price' | t }}</th>
+                <th class="right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.price' | t }}</th>
                 <th class="cart-items__heading--wide medium-up caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.quantity' | t }}</th>
                 <th class="medium-up right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.total' | t }}</th>
               </tr>
@@ -187,7 +187,7 @@
                     </p>
                   </td>
 
-                  <td class="cart-item__prices">
+                  <td class="cart-item__prices right">
                     <div class="cart-item__price-wrapper">
                     {% if isMainBundleProduct != blank %}
                       {%- if bundeOriginal_price != bundeFinal_price -%}
@@ -196,19 +196,19 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price body-xs">
+                            <s class="cart-item__old-price price price--end body-xs">
                               {{ bundeOriginal_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price body-xs">
+                          <dd class="price price--end body-xs">
                             {{ bundeFinal_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price body-xs">
+                        <span class="price price--end body-xs">
                           {{ bundeOriginal_price | money }}
                         </span>
                       {%- endif -%}
@@ -219,14 +219,14 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price body-xs">
+                            <s class="cart-item__old-price price price--end body-xs">
                               {{ item.original_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price {% comment %}price--end{% endcomment %}body-xs">
+                          <dd class="price price--end body-xs">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
@@ -244,7 +244,7 @@
                           </div>
                         {%- endif -%}
                       {%- else -%}
-                        <span class="price body-xs">
+                        <span class="price price--end body-xs">
                           {{ item.original_price | money }}
                         </span>
                       {%- endif -%}
