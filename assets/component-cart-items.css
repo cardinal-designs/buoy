@@ -174,7 +174,8 @@ cart-remove-button .icon-remove {
 }
 
 .cart-item quantity-input {
-  border: 1.5px solid var(--charcoal);
+  border: 1px solid var(--charcoal-lighter);
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
