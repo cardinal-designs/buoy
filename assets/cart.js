@@ -155,7 +155,7 @@ class CartItems extends HTMLElement {
           this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       }));
 
-      // this.updateLiveRegions(line, parsedState.item_count);
+      this.updateLiveRegions(line, parsedState.item_count);
       document.getElementById(`CartItem-${line}`)?.querySelector(`[name="${name}"]`)?.focus();
       this.disableLoading();
     }).catch((error) => {
@@ -167,7 +167,8 @@ class CartItems extends HTMLElement {
   }
 
   updateLiveRegions(line, itemCount) {
-    if (this.currentItemCount === itemCount) {
+    console.log('line--',line)
+;    if (this.currentItemCount === itemCount) {
       document.getElementById(`Line-item-error-${line}`)
         .querySelector('.cart-item__error-text')
         .innerHTML = window.cartStrings.quantityError.replace(
