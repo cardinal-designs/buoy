@@ -219,14 +219,14 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
+                            <s class="cart-item__old-price price price--end body-xs">
                               {{ item.original_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price price--end body-xs">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
@@ -244,7 +244,7 @@
                           </div>
                         {%- endif -%}
                       {%- else -%}
-                        <span class="price price--end">
+                        <span class="price price--end body-xs">
                           {{ item.original_price | money }}
                         </span>
                       {%- endif -%}
