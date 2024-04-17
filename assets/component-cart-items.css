@@ -173,6 +173,10 @@ cart-remove-button .icon-remove {
   text-transform: uppercase;
 }
 
+.cart-item quantity-input {
+  border: 1.5px solid var(--charcoal);
+}
+
 @media screen and (max-width: 768px) {
   .cart-items,
   .cart-items thead,
