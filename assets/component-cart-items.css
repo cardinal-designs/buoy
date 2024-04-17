@@ -247,6 +247,18 @@ cart-remove-button .icon-remove {
     min-width: 3.5rem;
     min-height: 3.5rem;
   }
+
+  .cart-item quantity-input {
+    width: 10rem;
+  }
+
+  .cart-item .quantity__button {
+    width: 3.5rem;
+  }
+
+  .cart-item .quantity__input {
+    height: 3.5rem;
+  }
   
 }
 
