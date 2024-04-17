@@ -167,8 +167,7 @@ class CartItems extends HTMLElement {
   }
 
   updateLiveRegions(line, itemCount) {
-    console.log('line--',line)
-;    if (this.currentItemCount === itemCount) {
+    if (this.currentItemCount === itemCount) {
       document.getElementById(`Line-item-error-${line}`)
         .querySelector('.cart-item__error-text')
         .innerHTML = window.cartStrings.quantityError.replace(
