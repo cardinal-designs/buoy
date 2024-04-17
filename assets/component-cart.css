@@ -142,6 +142,7 @@ cart-items {
 
 .cart__ctas button {
   width: 100%;
+  cursor: pointer;
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {
