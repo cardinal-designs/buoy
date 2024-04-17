@@ -217,13 +217,13 @@
               {% assign disable_checkout = false %}
             {% endif %}
           {% endfor %}
-          {% comment %}
+    
           {%- if additional_checkout_buttons -%}
             <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="{{ disable_checkout }} cart__dynamic-checkout-buttons additional-checkout-buttons">
               {{ content_for_additional_checkout_buttons }}
             </div>
           {%- endif -%}
-          {% endcomment %}
+ 
           <a {% if disable_checkout == true %}style="pointer-events: none; opacity: 0.5;"{% endif %} href="/checkout" class="button button--full-width" name="checkout" form="cart">{{ 'sections.cart.mini_cart_checkout' | t }}&nbsp;&nbsp;{% render 'icon-checkout' %}</a>
         </div>
 
