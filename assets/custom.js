@@ -345,6 +345,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
     // Check if the supplementSideDrawer is visible
     if (supplementSideDrawer.style.right == '0px') {
+      console.log("testttt222222")
         if (!supplementSideDrawer.contains(event.target)) {
             console.log("testttt")
             closeNav();
