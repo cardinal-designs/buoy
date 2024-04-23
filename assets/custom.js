@@ -348,7 +348,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if (supplementSideDrawer.style.right === '0px') {
         if (!supplementSideDrawer.contains(event.target)) {
             console.log("testttt")
-            closeNav();
+            // closeNav();
         }
     }
   });
