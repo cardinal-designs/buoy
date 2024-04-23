@@ -222,6 +222,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
+  document.addEventListener('click', function(event) {
+      var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
+    
+      // Check if the drawer is open and the clicked target is not within the drawer
+      if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target)) {
+          console.log("here")
+      }
+  });
+
   // Open HSA Drawer
   function openHsa() {
     if (document.getElementById("hsaSideDrawer")) {
