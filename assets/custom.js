@@ -198,11 +198,28 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     })
   }
 
+  // if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
+  //   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+  //     closeNav();
+  //   });
+  // }
+
+  // Add event listener to close the drawer when clicking outside of it
+  document.addEventListener('click', function(event) {
+    const drawer = document.querySelector(selectors.drawer);
+    // Check if the clicked element is not within the drawer or one of its descendants
+    if (drawer && !drawer.contains(event.target)) {
+      closeNav();
+    }
+  });
+  
+  // Add event listener to close the drawer when the close button is clicked
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
     document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
       closeNav();
     });
   }
+
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
@@ -216,7 +233,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-    if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
+  if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
