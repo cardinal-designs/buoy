@@ -649,7 +649,7 @@
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
-        <div class="product__media-list 000">
+        <div class="product__media-list">
           {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
           {% comment %}
           {%- if currentVariant.featured_media != null -%}
