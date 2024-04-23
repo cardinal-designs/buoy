@@ -228,7 +228,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   document.addEventListener('click', function(event) {
       var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
-      if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target) && !isDrawerOpen) {
+      if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target) && isDrawerOpen) {
           console.log("here")
       }
   });
