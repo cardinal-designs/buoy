@@ -349,7 +349,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       console.log("testttt222222")
         if (!supplementSideDrawer.contains(event.target)) {
             console.log("testttt")
-            closeNav();
+            // closeNav();
         }
     }
   });
