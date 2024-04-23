@@ -171,7 +171,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
-        selectors.pageOverlay.classList.add('is-visible')
         openNav(e);
       }); 
     });
