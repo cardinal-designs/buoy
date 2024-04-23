@@ -343,14 +343,39 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
   
   // Close Supplement Drawer
-  function closeNav() {
-    if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-    document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 3;
+  // function closeNav() {
+  //   if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
+  //   document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+  //   document.querySelector('body').classList.remove('lock-scroll');
+  //   document.querySelector('header-container').style.zIndex = 3;
     
-    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  //   if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  // }
+
+  function closeNav() {
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    if(supplementDrawer) {
+      supplementDrawer.style.right = "-100%";
+      document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+      document.querySelector('body').classList.remove('lock-scroll');
+      document.querySelector('header-container').style.zIndex = "3";
+
+      if(document.querySelector('.supplement-side-drawer .drawer__header')) {
+        document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+      }
+    }
   }
+
+  // Add event listener to close drawer when clicking outside
+  document.addEventListener('click', function(event) {
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
+    const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+
+    if (isDrawerVisible && !isClickInsideDrawer) {
+      closeNav();
+    }
+  });
 
 setTimeout(function(){
  $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
