@@ -570,9 +570,9 @@ class VariantSelects extends HTMLElement {
     parent.prepend(newMedia);
     this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
     this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-    if(parent.querySelector('li.product__media-item')){
-      window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
-    }
+    // if(parent.querySelector('li.product__media-item')){
+    //   window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
+    // }
   }
 
   updateURL() {
