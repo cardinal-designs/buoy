@@ -1030,19 +1030,19 @@ $(document).ready(function () {
     ]
   });
   // disable/enable arrows
-	$(".product__media-list").on("afterChange", function (slick) {
-    if ($(".slick-prev").hasClass("slick-disabled")) {
-      $(".slick-prev").addClass("slider-arrow-disable");
-    } else {
-      $(".slick-prev").removeClass("slider-arrow-disable");
-    }
+	// $(".product__media-list").on("afterChange", function (slick) {
+ //    if ($(".slick-prev").hasClass("slick-disabled")) {
+ //      $(".slick-prev").addClass("slider-arrow-disable");
+ //    } else {
+ //      $(".slick-prev").removeClass("slider-arrow-disable");
+ //    }
 
-    if ($(".slick-next").hasClass("slick-disabled")) {
-      $(".slick-next").addClass("slider-arrow-disable");
-    } else {
-      $(".slick-next").removeClass("slider-arrow-disable");
-    }
-	});
+ //    if ($(".slick-next").hasClass("slick-disabled")) {
+ //      $(".slick-next").addClass("slider-arrow-disable");
+ //    } else {
+ //      $(".slick-next").removeClass("slider-arrow-disable");
+ //    }
+	// });
 });
 
 
