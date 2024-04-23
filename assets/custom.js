@@ -345,7 +345,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
     // Check if the supplementSideDrawer is visible
     
-    setTimeOut(function () {
+    setTimeout(function () {
       console.log("supplementSideDrawer.style.right", supplementSideDrawer.style.right)
       if (supplementSideDrawer.style.right == '0px') {
         console.log("testttt222222")
