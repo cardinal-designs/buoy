@@ -174,7 +174,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
         console.log("11111")
-        isDrawerOpen = true;
         openNav(e);
       }); 
     });
@@ -350,6 +349,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
       }
     }
+    isDrawerOpen = true;
   }
   
   // Close Supplement Drawer
