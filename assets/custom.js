@@ -198,11 +198,28 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     })
   }
 
+  // if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
+  //   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+  //     closeNav();
+  //   });
+  // }
+
+  // Add event listener to close the popup when clicking outside of it
+  document.addEventListener('click', function(event) {
+    const popup = document.querySelector(selectors.closeDrawer);
+    // Check if the clicked element is not the popup or one of its descendants
+    if (popup && !popup.contains(event.target)) {
+      closeNav();
+    }
+  });
+  
+  // Add event listener to close the popup when the close button is clicked
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
     document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
       closeNav();
     });
   }
+
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
