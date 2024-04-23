@@ -87,8 +87,8 @@ body.lock-scroll-mobile {
 } */
 
 .page-blury-overlay.is-visible {
-  visibility: visible;
-  opacity: 0.1;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .page-blury-overlay.is-visible-mobile {
