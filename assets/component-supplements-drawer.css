@@ -290,3 +290,10 @@
   font-weight: 400;
   line-height: 21px;
 }
+
+@media screen and (max-width: 768px) {
+  
+  .drawer__info-list-item img {
+    height: 40px;
+  }
+}
