@@ -227,8 +227,8 @@
             </div>    
           </label>
         </div>
-  
-        <div id="rtx_sands_block">
+        {% unless product.metafields.custom.hide_subscription %}
+          <div id="rtx_sands_block">
           <div id="rtx_option_sub">
             <div class="rtx_option_selector">
               <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
@@ -340,10 +340,11 @@
             </div>
           </div>
         </div>
+        {% endunless %}
      
       </div>
     {%- endunless -%}
-{{ product.metafields.custom.hide_subscription }}----subscription
+
   {%- comment -%} Subscription Box {%- endcomment -%}
 
   <div style="display: none;" data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
