@@ -172,8 +172,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
         console.log("tettttttt")
-        openNav(e);
         document.querySelector('.page-blury-overlay').classList.add('is-visible');
+        openNav(e);
       }); 
     });
   }
