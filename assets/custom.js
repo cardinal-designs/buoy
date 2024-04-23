@@ -198,26 +198,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     })
   }
 
-  // if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
-  //   document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-  //     closeNav();
-  //   });
-  // }
-
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
     document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
       closeNav();
     });
   }
-  
-  
-  document.addEventListener('click', function(event) {
-    const supplementSideDrawer = document.getElementById('supplementSideDrawer');
-    if (supplementSideDrawer && !supplementSideDrawer.contains(event.target)) {
-      
-      closeNav(); 
-    }
-  });
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
