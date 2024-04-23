@@ -344,14 +344,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   document.addEventListener('click', function(event) {
     var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
     // Check if the supplementSideDrawer is visible
-    console.log("supplementSideDrawer.style.right", supplementSideDrawer.style.right)
-    if (supplementSideDrawer.style.right == '0px') {
-      console.log("testttt222222")
-        if (!supplementSideDrawer.contains(event.target)) {
-            console.log("testttt")
-            // closeNav();
-        }
-    }
+    
+    setTimeOut(function () {
+      console.log("supplementSideDrawer.style.right", supplementSideDrawer.style.right)
+      if (supplementSideDrawer.style.right == '0px') {
+        console.log("testttt222222")
+          if (!supplementSideDrawer.contains(event.target)) {
+              console.log("testttt")
+              // closeNav();
+          }
+      }
+    }, 500)
+    
   });
   
   // Close Supplement Drawer
