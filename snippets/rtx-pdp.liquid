@@ -185,7 +185,7 @@
                 <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </div>
-            {% comment %}
+            
             <div class="Subscribe_Info">
               <div class="rtx_sub_container">
                 {% assign my_fields = currentVariant.metafields.custom %}
@@ -224,11 +224,9 @@
                   {% endcase %}
                 {% endfor %}
               </div>
-            </div>
-            {% endcomment %}
+            </div>    
           </label>
         </div>
-        {% comment %}
         <div id="rtx_sands_block">
           <div id="rtx_option_sub">
             <div class="rtx_option_selector">
@@ -341,7 +339,6 @@
             </div>
           </div>
         </div>
-        {% endcomment %}
       </div>
     {%- endunless -%}
 
