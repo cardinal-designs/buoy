@@ -354,7 +354,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
               // closeNav();
           }
       }
-    }, 500)
+    }, 1000)
     
   });
   
