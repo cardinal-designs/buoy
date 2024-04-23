@@ -210,12 +210,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
   
-  // Add event listener to close the drawer when clicking outside of the "supplementSideDrawer" div
+  
   document.addEventListener('click', function(event) {
     const supplementSideDrawer = document.getElementById('supplementSideDrawer');
     if (supplementSideDrawer && !supplementSideDrawer.contains(event.target)) {
-      // Check if the clicked element is not within the "supplementSideDrawer" div
-      closeNav(); // Replace closeNav() with the appropriate function to close the drawer
+      
+      closeNav(); 
     }
   });
 
