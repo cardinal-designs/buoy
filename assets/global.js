@@ -557,11 +557,11 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant || !this.currentVariant?.featured_media) return;
-    // const newMedia = document.querySelector(
-    //   `[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`
-    // );
+    const newMedia = document.querySelector(
+      `[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`
+    );
 
-    // if (!newMedia) return;
+    if (!newMedia) return;
     // const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
     // const parent = newMedia.parentElement;
     // if (parent.firstChild == newMedia) return;
