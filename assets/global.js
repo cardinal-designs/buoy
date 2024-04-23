@@ -557,22 +557,20 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant || !this.currentVariant?.featured_media) return;
-    const newMedia = document.querySelector(
-      `[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`
-    );
+    // const newMedia = document.querySelector(
+    //   `[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`
+    // );
 
-    if (!newMedia) return;
-    const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
-//     const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    const parent = newMedia.parentElement;
-    if (parent.firstChild == newMedia) return;
-//     modalContent.prepend(newMediaModal);
-    parent.prepend(newMedia);
-    this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
-    this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-    if(parent.querySelector('li.product__media-item')){
-      window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
-    }
+    // if (!newMedia) return;
+    // const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
+    // const parent = newMedia.parentElement;
+    // if (parent.firstChild == newMedia) return;
+    // parent.prepend(newMedia);
+    // this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
+    // this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
+    // if(parent.querySelector('li.product__media-item')){
+    //   window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
+    // }
   }
 
   updateURL() {
