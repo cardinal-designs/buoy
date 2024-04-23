@@ -171,6 +171,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
+        console.log("11111")
         openNav(e);
       }); 
     });
@@ -178,6 +179,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
     document.querySelector(selectors.openTest).addEventListener('click', function(){
+      console.log("22222")
       openNav();
     }); 
   }
@@ -185,6 +187,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawerSection)) {
     document.querySelectorAll(selectors.openDrawerSection).forEach((item) => {
       item.addEventListener('click', function(e){
+        console.log("3333")
         openNav(e);
       }); 
     })
@@ -193,6 +196,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openDrawer)) {
     document.querySelectorAll(selectors.openDrawer).forEach((item) => {
       item.addEventListener('click', function(e){
+        console.log("4444")
         openNav(e);
       }); 
     })
@@ -222,12 +226,12 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  document.addEventListener('click', function(event) {
-      var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
-      if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target)) {
-          console.log("here")
-      }
-  });
+  // document.addEventListener('click', function(event) {
+  //     var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
+  //     if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target)) {
+  //         console.log("here")
+  //     }
+  // });
 
   // Open HSA Drawer
   function openHsa() {
