@@ -331,6 +331,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
       drawer.style.right = "0";
+      console.log("tttt", document.querySelector('.page-blury-overlay'))
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -340,23 +341,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       }
     }
   }
-
-  document.addEventListener('click', function(event) {
-    var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
-    // Check if the supplementSideDrawer is visible
-    
-    setTimeout(function () {
-      console.log("supplementSideDrawer.style.right", supplementSideDrawer.style.right)
-      if (supplementSideDrawer.style.right == '0px') {
-        console.log("testttt222222")
-          if (!supplementSideDrawer.contains(event.target)) {
-              console.log("testttt")
-              // closeNav();
-          }
-      }
-    }, 1000)
-    
-  });
   
   // Close Supplement Drawer
   function closeNav() {
