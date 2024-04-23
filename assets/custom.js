@@ -168,8 +168,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  let isDrawerOpen = false;
-
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
@@ -224,13 +222,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       closeNav();
     });
   }
-
-  document.addEventListener('click', function(event) {
-      var supplementSideDrawer = document.querySelector('#supplementSideDrawer');
-      if (supplementSideDrawer.style.right === '0px' && !supplementSideDrawer.contains(event.target) && isDrawerOpen) {
-          console.log("here")
-      }
-  });
 
   // Open HSA Drawer
   function openHsa() {
@@ -349,7 +340,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         document.querySelector('.supplement-side-drawer .drawer__header').classList.add('mobile-fixed-header');
       }
     }
-    isDrawerOpen = true;
   }
   
   // Close Supplement Drawer
@@ -360,7 +350,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('header-container').style.zIndex = 3;
     
     if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
-    isDrawerOpen = false;
   }
 
 setTimeout(function(){
