@@ -204,21 +204,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   //   });
   // }
 
-  // Add event listener to close the drawer when clicking outside of it
-  document.addEventListener('click', function(event) {
-    const drawer = document.querySelector(selectors.drawer);
-    // Check if the clicked element is not within the drawer or one of its descendants
-    if (drawer && !drawer.contains(event.target)) {
-      closeNav();
-    }
-  });
-  
-  // Add event listener to close the drawer when the close button is clicked
-  if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
-    document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+  // Add event listener to close the drawer when clicking on the div with ID "supplementSideDrawer"
+  const supplementSideDrawer = document.getElementById('supplementSideDrawer');
+  if (supplementSideDrawer) {
+    supplementSideDrawer.addEventListener('click', function() {
       closeNav();
     });
   }
+
 
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
