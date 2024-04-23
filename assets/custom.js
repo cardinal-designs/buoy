@@ -171,7 +171,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
-        console.log("11111")
         openNav(e);
       }); 
     });
@@ -290,6 +289,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
+    event.stopPropagation(); 
     const parentItemContainer = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
