@@ -562,15 +562,15 @@ class VariantSelects extends HTMLElement {
     );
 
     if (!newMedia) return;
-    // const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
-    // const parent = newMedia.parentElement;
-    // if (parent.firstChild == newMedia) return;
+    const modalContent = document.querySelector('#ProductModal-' + this.dataset.section + ' .product-media-modal__content');
+    const parent = newMedia.parentElement;
+    if (parent.firstChild == newMedia) return;
     // parent.prepend(newMedia);
-    // this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
-    // this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-    // if(parent.querySelector('li.product__media-item')){
-    //   window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
-    // }
+    this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
+    this.stickyHeader &&  this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
+    if(parent.querySelector('li.product__media-item')){
+      window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });
+    }
   }
 
   updateURL() {
