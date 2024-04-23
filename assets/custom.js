@@ -173,6 +173,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       item.addEventListener('click', function(e){
         console.log("tettttttt")
         openNav(e);
+        document.querySelector('.page-blury-overlay').classList.add('is-visible');
       }); 
     });
   }
@@ -332,7 +333,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
       drawer.style.right = "0";
-      console.log("tttt", document.querySelector('.page-blury-overlay'))
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
