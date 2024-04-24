@@ -385,6 +385,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       console.log("55555")
       closeNav();
     }
+
+    const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+    const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+    const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+    if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
+      console.log("6666")
+      closeClinical();
+    }
   });
 
 setTimeout(function(){
