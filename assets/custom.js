@@ -200,13 +200,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
     document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
+      
+      console.log("333")
       closeNav();
     });
   }
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
-      console.log("3333")
       closeNav();
       console.log("2222")
       closeClinical();
@@ -215,12 +216,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.closeContinue) != 'undefined' && document.querySelector(selectors.closeContinue) != null) {
     document.querySelector(selectors.closeContinue).addEventListener('click', function(){
+      console.log("444")
       closeNav();
     });
   }
 
   if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
+      console.log("eee")
       closeNav();
     });
   }
@@ -379,6 +382,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
 
     if (isDrawerVisible && !isClickInsideDrawer) {
+      console.log("44444")
       closeNav();
     }
   });
