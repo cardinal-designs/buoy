@@ -206,7 +206,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
+      console.log("3333")
       closeNav();
+      console.log("2222")
       closeClinical();
     });
   }
@@ -281,6 +283,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Close Clinical Drawer
   function closeClinical() {
+    console.log("111")
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
     }
