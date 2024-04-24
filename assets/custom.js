@@ -432,6 +432,7 @@ $('.page-blury-overlay').click(function(){
   $('body').removeClass('lock-scroll open-bundle-info');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 
+  console.log("tetttt")
   $('.clinical-trial-drawer').css('right','-100%');
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
   
