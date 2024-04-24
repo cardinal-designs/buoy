@@ -382,7 +382,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
 
     if (isDrawerVisible && !isClickInsideDrawer) {
-      console.log("44444")
+      console.log("55555")
       closeNav();
     }
   });
