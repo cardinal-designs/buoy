@@ -19,7 +19,6 @@ $( document ).ready(function() {
   // });
 
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
-    console.log('bbbbb')
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
@@ -200,8 +199,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.closeDrawer) != 'undefined' && document.querySelector(selectors.closeDrawer) != null) {
     document.querySelector(selectors.closeDrawer).addEventListener('click', function(){
-      
-      console.log("333")
       closeNav();
     });
   }
@@ -209,21 +206,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
       closeNav();
-      console.log("2222")
-      closeClinical();
     });
   }
 
   if (document.querySelector(selectors.closeContinue) != 'undefined' && document.querySelector(selectors.closeContinue) != null) {
     document.querySelector(selectors.closeContinue).addEventListener('click', function(){
-      console.log("444")
       closeNav();
     });
   }
 
   if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
-      console.log("eee")
       closeNav();
     });
   }
@@ -286,7 +279,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Close Clinical Drawer
   function closeClinical() {
-    console.log("111")
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
     }
@@ -380,9 +372,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
     const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
-
     if (isDrawerVisible && !isClickInsideDrawer) {
-      console.log("55555")
       closeNav();
     }
 
@@ -390,7 +380,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
     const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
     if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
-      console.log("6666")
       closeClinical();
     }
   });
@@ -543,8 +532,7 @@ function cartHtml(){
   .then((response) => response.text())
   .then((responseText) => {			  
     const cartid = 'main-cart-items';
-    const html = new DOMParser().parseFromString(responseText, 'text/html')  
-      console.log('html', html)
+    const html = new DOMParser().parseFromString(responseText, 'text/html');
     const destination = document.querySelector('.main-cart-items');
     const source = html.getElementById(cartid);			  
     if (source && destination) destination.innerHTML = source.innerHTML;
