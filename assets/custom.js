@@ -431,6 +431,10 @@ $('.page-blury-overlay').click(function(){
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
+
+  $('.clinical-trial-drawer').css('right','-100%');
+  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
+  
 });
 
 $('.js-close-supplement-drawer').click(function(){
