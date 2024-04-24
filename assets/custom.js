@@ -224,6 +224,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open HSA Drawer
   function openHsa() {
+    event.stopPropagation();
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
       document.getElementById("hsaSideDrawer").scrollTop = 0;
@@ -247,6 +248,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
+    event.stopPropagation();
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
       const parentEl = e.target.closest('.dropdown-container-item');
@@ -289,7 +291,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
-    event.stopPropagation(); 
+    event.stopPropagation();
     const parentItemContainer = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
