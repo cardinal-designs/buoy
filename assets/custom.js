@@ -207,6 +207,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.pageOverlay) != 'undefined' && document.querySelector(selectors.pageOverlay) != null) {
     document.querySelector(selectors.pageOverlay).addEventListener('click', function(){
       closeNav();
+      closeClinical();
     });
   }
 
@@ -431,11 +432,6 @@ $('.page-blury-overlay').click(function(){
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
-
-  console.log("tetttt")
-  $('.clinical-trial-drawer').css('right','-100%');
-  $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
-  
 });
 
 $('.js-close-supplement-drawer').click(function(){
