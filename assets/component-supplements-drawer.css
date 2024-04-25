@@ -280,7 +280,7 @@
 
 .drawer__info-list-item img {
   width: auto;
-  height: 60px;
+  height: 30px;
 }
 
 .drawer__info-list-item span {
@@ -294,6 +294,6 @@
 @media screen and (max-width: 768px) {
   
   .drawer__info-list-item img {
-    height: 40px;
+    height: 20px;
   }
 }
