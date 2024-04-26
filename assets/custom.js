@@ -368,21 +368,23 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   // Add event listener to close drawer when clicking outside
-  // document.addEventListener('click', function(event) {
-  //   const supplementDrawer = document.getElementById("supplementSideDrawer");
-  //   const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-  //   const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
-  //   if (isDrawerVisible && !isClickInsideDrawer) {
-  //     closeNav();
-  //   }
-
-  //   const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
-  //   const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-  //   const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
-  //   if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
-  //     closeClinical();
-  //   }
-  // });
+  if(!window.location.href?.includes('pages')){
+    document.addEventListener('click', function(event) {
+      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
+      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      if (isDrawerVisible && !isClickInsideDrawer) {
+        closeNav();
+      }
+  
+      const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+      const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
+        closeClinical();
+      }
+    });
+  }
 
 setTimeout(function(){
  $(".okeReviews-starRating--small .okeReviews-a11yText").html(function(){
