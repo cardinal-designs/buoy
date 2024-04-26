@@ -598,7 +598,10 @@ $( document ).ready(function() {
           // Now check if we're clicking inside the supplement drawer and if it is visible
           var $supplementDrawer = $(event.target).closest('.supplement-side-drawer'); // Use class selector directly here
           var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
+        console.log("isClickInsideDrawer", isClickInsideDrawer);
+        
           var isDrawerVisible = $supplementDrawer.css('right') == "0px";
+        console.log("isDrawerVisible", isDrawerVisible);
           console.log("Closingsssssr");
           if (isDrawerVisible && !isClickInsideDrawer) {
               console.log("Closing supplement drawer");
