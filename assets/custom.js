@@ -599,7 +599,7 @@ $( document ).ready(function() {
           var $supplementDrawer = $(event.target).closest('.supplement-side-drawer'); // Use class selector directly here
           var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
         console.log("isClickInsideDrawer", isClickInsideDrawer);
-        
+          console.log("$supplementDrawer", $supplementDrawer)
           var isDrawerVisible = $supplementDrawer.css('right') == "0px";
         console.log("isDrawerVisible", isDrawerVisible);
           console.log("Closingsssssr");
