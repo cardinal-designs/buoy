@@ -598,7 +598,7 @@ $( document ).ready(function() {
           
           var $supplementDrawer = $(event.target).closest('.supplement-side-drawer')
           var isClickInsideDrawer = $supplementDrawer.length && $supplementDrawer.has(event.target).length > 0;
-          var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') === "0px";
+          var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') == "0px";
   
           if (isDrawerVisible && !isClickInsideDrawer) {
             console.log("hellll")
