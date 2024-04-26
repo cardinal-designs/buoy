@@ -397,8 +397,6 @@ setTimeout(function(){
 })();
 
 $('.Open_Drawer').click(function(event){
-
-  console.log("data")
   let peeClubProduct = $(event.target).parent().parent();
   console.log("peeClubProduct", peeClubProduct)
   let productTitle = peeClubProduct.find('.pee-club-product-title').text();
