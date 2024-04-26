@@ -595,24 +595,16 @@ $( document ).ready(function() {
    $(document).on('click', function(event) {
         // Check if the clicked area is outside the drawer
         if (!$(event.target).closest('.drawer__wrapper-main')?.length) {
-            console.log("tetttetttette")
-
-          var $supplementDrawer = $("#supplementSideDrawer");
+          
+          var $supplementDrawer = $(event.target).closest('.supplement-side-drawer')
           var isClickInsideDrawer = $supplementDrawer.length && $supplementDrawer.has(event.target).length > 0;
           var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') === "0px";
   
           if (isDrawerVisible && !isClickInsideDrawer) {
-              closeNav();
+              $supplementDrawer.css('right', '-100%')
           }
   
-          // Handle the clinical side drawer
-          var $clinicalSideDrawer = $("#clinicalSideDrawer");
-          var isClickInsideClinicalDrawer = $clinicalSideDrawer.length && $clinicalSideDrawer.has(event.target).length > 0;
-          var isDrawerClinicalVisible = $clinicalSideDrawer.length && $clinicalSideDrawer.css('right') === "0px";
-  
-          if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
-              closeClinical();
-          }
+
             // if ($('#myDrawer').hasClass('open')) {
             //     $('#myDrawer').removeClass('open');
             //     // If you're moving the drawer with CSS, you might adjust its position
