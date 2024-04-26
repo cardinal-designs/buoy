@@ -592,6 +592,32 @@
     },
     "supplement_facts_drawer_eMfAVA": {
       "type": "supplement-facts-drawer",
+      "blocks": {
+        "serving_4dF7qN": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+            "serving_title": "One Serving:",
+            "serving_item_one": "1 Short Squeeze (1.5mL)",
+            "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+            "serving_item_three": ""
+          }
+        },
+        "serving_Q7KRb8": {
+          "type": "serving",
+          "settings": {
+            "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+            "serving_title": "One Bottle:",
+            "serving_item_one": "40 Servings",
+            "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+            "serving_item_three": ""
+          }
+        }
+      },
+      "block_order": [
+        "serving_4dF7qN",
+        "serving_Q7KRb8"
+      ],
       "settings": {
         "product_name": "Digestion Drops",
         "title": "Supplement Facts"
