@@ -398,12 +398,17 @@ $('.Open_Drawer').click(function(event){
 
   console.log("data")
   let peeClubProduct = $(event.target).parent().parent();
+  console.log("peeClubProduct", peeClubProduct)
   let productTitle = peeClubProduct.find('.pee-club-product-title').text();
+  console.log("productTitle", productTitle)
   let dataProductName = $('.supplement-side-drawer');
+  console.log("dataProductName", dataProductName)
+  console.log("$(dataProductName).length", $(dataProductName).length)
   if ($(dataProductName).length === 0) return;
 
   dataProductName.each(function() {
     let itemName = $(this).data('productName');
+    console.log("itemName", itemName)
     if (itemName === productTitle) {
       $(this).css('right', '0');
       $('.page-blury-overlay').addClass('is-visible');
