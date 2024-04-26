@@ -413,6 +413,7 @@ $('.Open_Drawer').click(function(event){
 
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
+console.log("clickedddd");
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
