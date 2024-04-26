@@ -592,27 +592,42 @@ function subscriptionListener () {
 $( document ).ready(function() {
   subscriptionListener();
 
-   $(document).on('click', function(event) {
-        // Check if the clicked area is outside the drawer
-        if (!$(event.target).closest('.drawer__wrapper-main')?.length) {
-          
-          var $supplementDrawer = $(event.target).closest('.supplement-side-drawer')
-          var isClickInsideDrawer = $supplementDrawer.length && $supplementDrawer.has(event.target).length > 0;
-          var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') == "0px";
+  $(document).on('click', function(event) {
+      // Check if the clicked area is not inside the specific drawer wrapper
+      if ($(event.target).closest('.drawer__wrapper-main').length === 0) {
+          // Now check if we're clicking inside the supplement drawer and if it is visible
+          var $supplementDrawer = $('.supplement-side-drawer'); // Use class selector directly here
+          var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
+          var isDrawerVisible = $supplementDrawer.css('right') === "0px";
   
           if (isDrawerVisible && !isClickInsideDrawer) {
-            console.log("hellll")
-              $supplementDrawer.css('right', '-100%')
+              console.log("Closing supplement drawer");
+              $supplementDrawer.css('right', '-100%'); // Close the drawer by updating CSS
           }
+      }
+  });
+
+   // $(document).on('click', function(event) {
+   //      // Check if the clicked area is outside the drawer
+   //      if (!$(event.target).closest('.drawer__wrapper-main')?.length) {
+          
+   //        var $supplementDrawer = $(event.target).closest('.supplement-side-drawer')
+   //        var isClickInsideDrawer = $supplementDrawer.length && $supplementDrawer.has(event.target).length > 0;
+   //        var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') == "0px";
+  
+   //        if (isDrawerVisible && !isClickInsideDrawer) {
+   //          console.log("hellll")
+   //            $supplementDrawer.css('right', '-100%')
+   //        }
   
 
-            // if ($('#myDrawer').hasClass('open')) {
-            //     $('#myDrawer').removeClass('open');
-            //     // If you're moving the drawer with CSS, you might adjust its position
-            //     $('#myDrawer').css('left', '-300px'); // Adjust based on your CSS or leave this line out if transition is handled via CSS class
-            // }
-        }
-    });
+   //          // if ($('#myDrawer').hasClass('open')) {
+   //          //     $('#myDrawer').removeClass('open');
+   //          //     // If you're moving the drawer with CSS, you might adjust its position
+   //          //     $('#myDrawer').css('left', '-300px'); // Adjust based on your CSS or leave this line out if transition is handled via CSS class
+   //          // }
+   //      }
+   //  });
 
 });
 
