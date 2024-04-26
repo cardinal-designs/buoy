@@ -601,6 +601,7 @@ $( document ).ready(function() {
           var isDrawerVisible = $supplementDrawer.length && $supplementDrawer.css('right') === "0px";
   
           if (isDrawerVisible && !isClickInsideDrawer) {
+            console.log("hellll")
               $supplementDrawer.css('right', '-100%')
           }
   
