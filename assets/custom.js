@@ -597,20 +597,43 @@ $( document ).ready(function() {
       if ($(event.target).closest('.drawer__wrapper-main').length === 0) {
           // Now check if we're clicking inside the supplement drawer and if it is visible
           var $supplementDrawer = $('.supplement-side-drawer'); // Use class selector directly here
-          var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
-
-        var rightValue = $supplementDrawer.css('right');
-    console.log("The 'right' CSS property value is:", rightValue);
+          // var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
         
-        console.log("isClickInsideDrawer", isClickInsideDrawer);
-          console.log("$supplementDrawer", $supplementDrawer)
-          var isDrawerVisible = $supplementDrawer.css('right') == "0px";
-        console.log("isDrawerVisible", isDrawerVisible);
-          console.log("Closingsssssr");
-          if (isDrawerVisible && !isClickInsideDrawer) {
-              console.log("Closing supplement drawer");
-              $supplementDrawer.css('right', '-100%'); // Close the drawer by updating CSS
-          }
+
+          // var rightValue = $supplementDrawer.css('right');
+          // console.log("The 'right' CSS property value is:", rightValue);
+          
+          // console.log("isClickInsideDrawer", isClickInsideDrawer);
+          // console.log("$supplementDrawer", $supplementDrawer)
+          // var isDrawerVisible = $supplementDrawer.css('right') == "0px";
+          // console.log("isDrawerVisible", isDrawerVisible);
+          // console.log("Closingsssssr");
+          // if (isDrawerVisible && !isClickInsideDrawer) {
+          //     console.log("Closing supplement drawer");
+          //     $supplementDrawer.css('right', '-100%'); // Close the drawer by updating CSS
+          // }
+
+          $supplementDrawer.each(function() {
+
+              var rightValue = $(this).css('right');
+
+              var isClickInsideDrawer = $(this).has(event.target).length > 0;
+              var isDrawerVisible = $(this).css('right') == "0px";
+            
+              // Check if the right property is exactly '0px'
+              if (rightValue === '0px') {
+                  console.log("A drawer with right 0px found:", this);
+      
+                  // You can perform further actions here
+                  // For example, triggering an event, adding a class, etc.
+                  // $(this).addClass('open'); // Example action: Add a class
+              }
+
+               if (isDrawerVisible && !isClickInsideDrawer) {
+                  console.log("Closing supplement drawer");
+                  $supplementDrawer.css('right', '-100%'); // Close the drawer by updating CSS
+              }
+          });
       }
   });
 
