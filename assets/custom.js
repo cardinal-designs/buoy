@@ -591,5 +591,18 @@ function subscriptionListener () {
 //cart drawer js
 $( document ).ready(function() {
   subscriptionListener();
+
+   $(document).on('click', function(event) {
+        // Check if the clicked area is outside the drawer
+        if (!$(event.target).closest('.drawer__wrapper-main')?.length) {
+            console.log("tetttetttette")
+            // if ($('#myDrawer').hasClass('open')) {
+            //     $('#myDrawer').removeClass('open');
+            //     // If you're moving the drawer with CSS, you might adjust its position
+            //     $('#myDrawer').css('left', '-300px'); // Adjust based on your CSS or leave this line out if transition is handled via CSS class
+            // }
+        }
+    });
+
 });
 
