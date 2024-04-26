@@ -596,7 +596,7 @@ $( document ).ready(function() {
       // Check if the clicked area is not inside the specific drawer wrapper
       if ($(event.target).closest('.drawer__wrapper-main').length === 0) {
           // Now check if we're clicking inside the supplement drawer and if it is visible
-          var $supplementDrawer = $('.supplement-side-drawer'); // Use class selector directly here
+          var $supplementDrawer = $(event.target).closest('.supplement-side-drawer'); // Use class selector directly here
           var isClickInsideDrawer = $supplementDrawer.has(event.target).length > 0;
           var isDrawerVisible = $supplementDrawer.css('right') === "0px";
   
