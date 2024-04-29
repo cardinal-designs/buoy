@@ -295,10 +295,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-
-    console.log("parentItemContainer", parentItemContainer);
-    console.log("parentDropdown", parentDropdown);
-    // console.log("drawerName", drawer.dataset.productName);
     
     if (parentItemContainer) {
       // For dropdown-container-item__container section
@@ -313,7 +309,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
       // For image with dropdowns section
     } else if (parentDropdown) {
-console.log(parentDropdown);
       const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
@@ -325,7 +320,17 @@ console.log(parentDropdown);
               showDrawer(drawer);
             } else {
               // For bundle PDP
-              showDrawer(supplementDrawer);
+              if(location.href.includes("/products/")){
+                if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
+                  showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+                }
+                else{
+                  showDrawer(supplementDrawer);
+                }
+              }
+              else{
+                showDrawer(supplementDrawer);
+              }
             }
           });
         }
