@@ -1251,7 +1251,6 @@ function getSectionInnerHTML(html, selector) {
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
-  console.log("teetettettet")
   document.querySelector('cart-drawer').enableLoading();
   
   let add_items;
