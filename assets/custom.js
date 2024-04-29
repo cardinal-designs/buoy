@@ -298,7 +298,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
     console.log("parentItemContainer", parentItemContainer);
     console.log("parentDropdown", parentDropdown);
-    console.log("drawerName", drawer.dataset.productName);
+    // console.log("drawerName", drawer.dataset.productName);
     
     if (parentItemContainer) {
       // For dropdown-container-item__container section
