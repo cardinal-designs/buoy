@@ -674,6 +674,68 @@
       },
       "energy-facts-drawer": {
         "type": "energy-facts-drawer",
+        "blocks": {
+          "serving_h6VC9c": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "serving_CgaYa7": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_6EzYcB": {
+            "type": "recommended",
+            "settings": {
+              "heading": "",
+              "title": "",
+              "sub_title": "",
+              "content": ""
+            }
+          },
+          "table_6am3Vm": {
+            "type": "table",
+            "settings": {
+            }
+          },
+          "info_GYJCJY": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          },
+          "info_xXKX4n": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_h6VC9c",
+          "serving_CgaYa7",
+          "recommended_6EzYcB",
+          "table_6am3Vm",
+          "info_GYJCJY",
+          "info_xXKX4n"
+        ],
         "settings": {
           "drawer_id": "",
           "product_name": "",
