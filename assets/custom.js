@@ -331,6 +331,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else {
       // For PDP (not bundle)
       if(location.href.includes("/ products/")){
+        console.log("I am also here")
         if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
           showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
         }
