@@ -323,6 +323,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
               showDrawer(drawer);
             } else {
               // For bundle PDP
+
+              console.log("in else", document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+              
+
               if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
                 showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
               }
