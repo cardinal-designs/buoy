@@ -40,7 +40,7 @@
         <button data-button="{{ forloop.index }}" style="{% if forloop.index == 1 %}display: block;{% endif %}" class="button js-add-to-cart" 
                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                 data-id="{{ product.selected_or_first_available_variant.id }}" 
-                data-time="one-time">
+                data-time="subscription">
 
           {% if product.selected_or_first_available_variant.available == false %}
           <span>Sold Out</span>
