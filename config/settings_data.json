@@ -424,10 +424,79 @@
       },
       "electrolyte-facts-drawer": {
         "type": "electrolyte-facts-drawer",
+        "blocks": {
+          "serving_DBEjUy": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "serving_JFyxhc": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_rMw4bp": {
+            "type": "recommended",
+            "settings": {
+              "heading": "",
+              "title": "",
+              "sub_title": "",
+              "content": ""
+            }
+          },
+          "table_dLeFKf": {
+            "type": "table",
+            "settings": {
+            }
+          },
+          "ingredients_EERbCY": {
+            "type": "ingredients",
+            "settings": {
+              "content": ""
+            }
+          },
+          "info_gmqKCq": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          },
+          "info_JMWU7i": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_DBEjUy",
+          "serving_JFyxhc",
+          "recommended_rMw4bp",
+          "table_dLeFKf",
+          "ingredients_EERbCY",
+          "info_gmqKCq",
+          "info_JMWU7i"
+        ],
         "settings": {
           "drawer_id": "",
-          "product_name": "",
-          "title": ""
+          "product_name": "Liquid Electrolyte Variety Kit",
+          "title": "Supplement Facts"
         }
       },
       "digestion-facts-drawer": {
