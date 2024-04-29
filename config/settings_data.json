@@ -591,6 +591,68 @@
       },
       "immunity-facts-drawer": {
         "type": "immunity-facts-drawer",
+        "blocks": {
+          "serving_E7bik3": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "serving_Q9zy9a": {
+            "type": "serving",
+            "settings": {
+              "serving_title": "",
+              "serving_item_one": "",
+              "serving_item_two": "",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_xB9gFq": {
+            "type": "recommended",
+            "settings": {
+              "heading": "",
+              "title": "",
+              "sub_title": "",
+              "content": ""
+            }
+          },
+          "table_rnhGeg": {
+            "type": "table",
+            "settings": {
+            }
+          },
+          "info_HjxxC3": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          },
+          "info_mMR874": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_E7bik3",
+          "serving_Q9zy9a",
+          "recommended_xB9gFq",
+          "table_rnhGeg",
+          "info_HjxxC3",
+          "info_mMR874"
+        ],
         "settings": {
           "drawer_id": "",
           "product_name": "",
