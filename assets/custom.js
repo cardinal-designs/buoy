@@ -330,13 +330,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       })
     } else {
       // For PDP (not bundle)
-      if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
-        showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+      if(location.href.includes("/ products/")){
+        if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
+          showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+        }
+        else{
+          showDrawer(supplementDrawer);
+        }
       }
       else{
         showDrawer(supplementDrawer);
       }
-      // showDrawer(supplementDrawer);
     }
 
     // Show drawer
