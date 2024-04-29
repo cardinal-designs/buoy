@@ -30,7 +30,9 @@
           <ul class="pee-club-product-bar-dropdown">
             {% for block in section.blocks %}
             {% assign product = all_products[block.settings.product] %}
-              <li data-id="{{ forloop.index }}" data-title="{{ product.title }}" data-text="{{ block.settings.text }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></li>
+              {% if product %}
+                <li data-id="{{ forloop.index }}" data-title="{{ product.title }}" data-text="{{ block.settings.text }}" value="{{ forloop.index0 }}">{{ product.title }}<span>{{ block.settings.text }}</span></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>
