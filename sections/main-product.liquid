@@ -25,7 +25,7 @@
 
         <p class="product__subtitle sh3">{{ product.metafields.my_fields.subtitle }}</p> 
 
-        <h1 class="product__title h4 pee-club-product-title">
+        <h1 class="product__title h4">
           {{ product.title | escape }}
           {% if product.metafields.custom.curved_icon == true %}
           {% endif %}
@@ -66,7 +66,7 @@
                   <p>{{ block.settings.list_item3 }}</p>   
                 </div>
                 <div class="product__drawer-triggers">
-                  <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open product__drawer-triggers">Full Supplement Facts</a>
+                  <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
                   {% if block.settings.title == 'Hydration Drops' %}
                   <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
                   {% endif %}
