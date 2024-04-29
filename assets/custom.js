@@ -296,6 +296,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
 
+    console.log("parentItemContainer", parentItemContainer);
+    console.log("parentDropdown", parentDropdown);
+    console.log("drawerName", drawer.dataset.productName);
+    
     if (parentItemContainer) {
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
