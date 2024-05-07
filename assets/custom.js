@@ -19,7 +19,6 @@ $( document ).ready(function() {
   // });
 
   $( '.radio_rtx' ).parents('.Subscribe_Box').click(function() {
-    console.log('bbbbb')
     $(this).addClass('active');
     $('.rtx_option_selector input').prop( "checked", false );
     $(this).find('input').prop( "checked", true );
@@ -216,7 +215,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-    if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
+  if (document.querySelector(selectors.closeContinueDesktop) != 'undefined' && document.querySelector(selectors.closeContinueDesktop) != null) {
     document.querySelector(selectors.closeContinueDesktop).addEventListener('click', function(){
       closeNav();
     });
@@ -224,6 +223,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open HSA Drawer
   function openHsa() {
+    event.stopPropagation();
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0";
       document.getElementById("hsaSideDrawer").scrollTop = 0;
@@ -247,6 +247,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
+    event.stopPropagation();
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
       const parentEl = e.target.closest('.dropdown-container-item');
@@ -289,6 +290,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Supplement Drawer
   function openNav(e) {
+    event.stopPropagation();
     const parentItemContainer = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
@@ -317,14 +319,34 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
               showDrawer(drawer);
             } else {
               // For bundle PDP
-              showDrawer(supplementDrawer);
+              if(location.href.includes("/products/")){
+                if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
+                  showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+                }
+                else{
+                  showDrawer(supplementDrawer);
+                }
+              }
+              else{
+                showDrawer(supplementDrawer);
+              }
             }
           });
         }
       })
     } else {
       // For PDP (not bundle)
-      showDrawer(supplementDrawer);
+      if(location.href.includes("/products/")){
+        if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
+          showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`));
+        }
+        else{
+          showDrawer(supplementDrawer);
+        }
+      }
+      else{
+        showDrawer(supplementDrawer);
+      }
     }
 
     // Show drawer
@@ -342,13 +364,46 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
   
   // Close Supplement Drawer
-  function closeNav() {
-    if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-    document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 3;
+  // function closeNav() {
+  //   if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
+  //   document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+  //   document.querySelector('body').classList.remove('lock-scroll');
+  //   document.querySelector('header-container').style.zIndex = 3;
     
-    if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  //   if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  // }
+
+  function closeNav() {
+    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    if(supplementDrawer) {
+      supplementDrawer.style.right = "-100%";
+      document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+      document.querySelector('body').classList.remove('lock-scroll');
+      document.querySelector('header-container').style.zIndex = "3";
+
+      if(document.querySelector('.supplement-side-drawer .drawer__header')) {
+        document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
+      }
+    }
+  }
+
+  // Add event listener to close drawer when clicking outside
+  if(!window.location.href?.includes('pages')){
+    document.addEventListener('click', function(event) {
+      const supplementDrawer = document.getElementById("supplementSideDrawer");
+      const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
+      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      if (isDrawerVisible && !isClickInsideDrawer) {
+        closeNav();
+      }
+  
+      const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+      const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
+        closeClinical();
+      }
+    });
   }
 
 setTimeout(function(){
@@ -369,7 +424,7 @@ $('.Open_Drawer').click(function(event){
 
   dataProductName.each(function() {
     let itemName = $(this).data('productName');
-    if (itemName === productTitle) {
+    if (itemName == productTitle) {
       $(this).css('right', '0');
       $('.page-blury-overlay').addClass('is-visible');
       $('body').addClass('lock-scroll');
@@ -380,6 +435,7 @@ $('.Open_Drawer').click(function(event){
 
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
+console.log("clickedddd");
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
@@ -499,8 +555,7 @@ function cartHtml(){
   .then((response) => response.text())
   .then((responseText) => {			  
     const cartid = 'main-cart-items';
-    const html = new DOMParser().parseFromString(responseText, 'text/html')  
-      console.log('html', html)
+    const html = new DOMParser().parseFromString(responseText, 'text/html');
     const destination = document.querySelector('.main-cart-items');
     const source = html.getElementById(cartid);			  
     if (source && destination) destination.innerHTML = source.innerHTML;
@@ -551,5 +606,19 @@ function subscriptionListener () {
 //cart drawer js
 $( document ).ready(function() {
   subscriptionListener();
+
+  $(document).on('click', function(event) {
+      if ($(event.target).closest('.drawer__wrapper-main').length === 0) {
+          var $supplementDrawer = $('.supplement-side-drawer');
+          $supplementDrawer.each(function() {
+              var isClickInsideDrawer = $(this).has(event.target).length > 0;
+              var isDrawerVisible = $(this).css('right') == "0px";
+               if (isDrawerVisible && !isClickInsideDrawer) {
+                  $supplementDrawer.css('right', '-100%');
+              }
+          });
+      }
+  });
+
 });
 

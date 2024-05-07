@@ -81,9 +81,14 @@ body.lock-scroll-mobile {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.page-blury-overlay.is-visible {
+/* .page-blury-overlay.is-visible {
   visibility: visible;
   opacity: 1;
+} */
+
+.page-blury-overlay.is-visible {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .page-blury-overlay.is-visible-mobile {

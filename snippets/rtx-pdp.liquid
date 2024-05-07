@@ -185,6 +185,7 @@
                 <span class="js-rtx_one_time_price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
               </span>
             </div>
+            
             <div class="Subscribe_Info">
               <div class="rtx_sub_container">
                 {% assign my_fields = currentVariant.metafields.custom %}
@@ -226,7 +227,8 @@
             </div>    
           </label>
         </div>
-        <div id="rtx_sands_block">
+        {% unless product.metafields.custom.hide_subscription %}
+          <div id="rtx_sands_block">
           <div id="rtx_option_sub">
             <div class="rtx_option_selector">
               <input type="radio" id="purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation != blank %} checked {% endif %}>
@@ -338,6 +340,8 @@
             </div>
           </div>
         </div>
+        {% endunless %}
+     
       </div>
     {%- endunless -%}
 

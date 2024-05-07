@@ -331,6 +331,588 @@
           "background": "#def647",
           "text_color": "#1f2322"
         }
+      },
+      "hydration-facts-drawer": {
+        "type": "hydration-facts-drawer",
+        "blocks": {
+          "serving_EAdQ6H": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "ONE SERVING:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+              "serving_item_three": ""
+            }
+          },
+          "serving_bnwEBP": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "ONE BOTTLE:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_a6AMXr": {
+            "type": "recommended",
+            "settings": {
+              "heading": "DIETICIAN’S RECOMMENDED USE:",
+              "title": "4-7 times daily (560mg-980mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed.\n\nIncrease daily servings if exercising, living in a hot climate or drinking alcohol."
+            }
+          },
+          "table_TcR77k": {
+            "type": "table",
+            "settings": {
+              "table_image": "shopify:\/\/shop_images\/Hydration_Drops_Supplement_Facts.svg"
+            }
+          },
+          "ingredients_RpVQxH": {
+            "type": "ingredients",
+            "settings": {
+              "content": "OTHER INGREDIENTS: Purified Water, Non-GMO Citric Acid (From Limes), Proprietary Wild Harvested Antioxidant Blend: Organic Blood Orange, Organic Acacia, Organic Rosemary, Organic Star Anise."
+            }
+          },
+          "info_fFexbY": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_tdHaXw": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_EAdQ6H",
+          "serving_bnwEBP",
+          "recommended_a6AMXr",
+          "table_TcR77k",
+          "ingredients_RpVQxH",
+          "info_fFexbY",
+          "info_tdHaXw"
+        ],
+        "settings": {
+          "product_name": "Hydration Drops",
+          "title": "Supplement Facts"
+        }
+      },
+      "electrolyte-facts-drawer": {
+        "type": "electrolyte-facts-drawer",
+        "blocks": {
+          "serving_DBEjUy": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "30mg Caffeine (⅓ Cup of Coffee)",
+              "serving_item_three": "Electrolytes of ⅓ Sports Drink"
+            }
+          },
+          "serving_JFyxhc": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "One Bottle:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Caffeine of 13+ Cups of Coffee",
+              "serving_item_three": "Electrolytes of 13+ Sports Drinks"
+            }
+          },
+          "recommended_rMw4bp": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietician’s Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes & 120mg-210mg clean caffeine)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+            }
+          },
+          "table_dLeFKf": {
+            "type": "table",
+            "settings": {
+              "table_image": "shopify:\/\/shop_images\/Energy-Drops-Supplement-Facts.svg"
+            }
+          },
+          "info_gmqKCq": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_JMWU7i": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "third-party",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_DBEjUy",
+          "serving_JFyxhc",
+          "recommended_rMw4bp",
+          "table_dLeFKf",
+          "info_gmqKCq",
+          "info_JMWU7i"
+        ],
+        "settings": {
+          "product_name": "Liquid Electrolyte Variety Kit",
+          "title": "Supplement Facts"
+        }
+      },
+      "digestion-facts-drawer": {
+        "type": "digestion-facts-drawer",
+        "blocks": {
+          "serving_XRK8RG": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+              "serving_item_three": ""
+            }
+          },
+          "serving_RCQmRy": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "One Bottle:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_VXEPph": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietitian's Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+            }
+          },
+          "table_4YfKyP": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
+            }
+          },
+          "info_bef3Xe": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_kcfpEm": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_XRK8RG",
+          "serving_RCQmRy",
+          "recommended_VXEPph",
+          "table_4YfKyP",
+          "info_bef3Xe",
+          "info_kcfpEm"
+        ],
+        "settings": {
+          "product_name": "Digestion Drops",
+          "title": "Supplement Facts"
+        }
+      },
+      "immunity-facts-drawer": {
+        "type": "immunity-facts-drawer",
+        "blocks": {
+          "serving_E7bik3": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+              "serving_item_three": "Immune Support of ⅓ Multivitamin"
+            }
+          },
+          "serving_Q9zy9a": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "One Bottle:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+              "serving_item_three": "Immune Support of 13+ Multivitamins"
+            }
+          },
+          "recommended_xB9gFq": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietician’s Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes & daily immune support)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed.\n\nIncrease daily servings if exercising, living in a hot climate or drinking alcohol."
+            }
+          },
+          "table_rnhGeg": {
+            "type": "table",
+            "settings": {
+              "table_image": "shopify:\/\/shop_images\/Immunity-Supplement-Facts.svg"
+            }
+          },
+          "info_HjxxC3": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_mMR874": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_E7bik3",
+          "serving_Q9zy9a",
+          "recommended_xB9gFq",
+          "table_rnhGeg",
+          "info_HjxxC3",
+          "info_mMR874"
+        ],
+        "settings": {
+          "product_name": "Immunity Drops",
+          "title": "Supplement Facts"
+        }
+      },
+      "energy-facts-drawer": {
+        "type": "energy-facts-drawer",
+        "blocks": {
+          "serving_h6VC9c": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+              "serving_item_three": ""
+            }
+          },
+          "serving_CgaYa7": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "One Bottle:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Electrolytes of 13+ Sports Drinks",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_6EzYcB": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietitian's Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+            }
+          },
+          "table_6am3Vm": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
+            }
+          },
+          "info_GYJCJY": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_xXKX4n": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_h6VC9c",
+          "serving_CgaYa7",
+          "recommended_6EzYcB",
+          "table_6am3Vm",
+          "info_GYJCJY",
+          "info_xXKX4n"
+        ],
+        "settings": {
+          "product_name": "Energy Drops",
+          "title": "Supplement Facts"
+        }
+      },
+      "rescue-facts-drawer": {
+        "type": "rescue-facts-drawer",
+        "blocks": {
+          "serving_eatgfH": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/Icons_thin.svg",
+              "serving_title": "ONE SERVING:",
+              "serving_item_one": "¼ tsp (1.2g)",
+              "serving_item_two": "More electrolytes than leading powder packet",
+              "serving_item_three": ""
+            }
+          },
+          "serving_TdQWVe": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/Icons_thin.svg",
+              "serving_title": "ONE JAR:",
+              "serving_item_one": "45 Servings",
+              "serving_item_two": "More electrolytes than 45 powder packets",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_qqdycg": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietitian's Recommended Use:",
+              "title": "1-2 times daily (1,215mg-2,430mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
+              "content": "Add directly to mouth or pair with any food or beverage for fast-acting hydration, perfect for hydrated mornings. Especially important to dose when exercising, living in a hot climate or managing a chronic condition.<br>\nIf not consuming directly with a beverage, intake 12-16oz of fluid to support optimal electrolyte balance."
+            }
+          },
+          "table_tnRebB": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_M_1.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_D_1.svg"
+            }
+          },
+          "info_dfAfGQ": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Pending HSA & FSA Eligibility",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_9Kexfy": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/Group_792.svg",
+              "icon_info_five": "Enhance Any Drink or Food"
+            }
+          }
+        },
+        "block_order": [
+          "serving_eatgfH",
+          "serving_TdQWVe",
+          "recommended_qqdycg",
+          "table_tnRebB",
+          "info_dfAfGQ",
+          "info_9Kexfy"
+        ],
+        "settings": {
+          "product_name": "Rescue Salt",
+          "title": "Supplement Facts"
+        }
+      },
+      "marry-me-hat-facts-drawer": {
+        "type": "marry-me-hat-facts-drawer",
+        "blocks": {
+          "serving_VAaEBg": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/check.svg",
+              "serving_title": "ONE SERVING:",
+              "serving_item_one": "¼ tsp (1.2g)",
+              "serving_item_two": "More electrolytes than leading powder packet",
+              "serving_item_three": ""
+            }
+          },
+          "serving_q6xWD6": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/check.svg",
+              "serving_title": "ONE JAR:",
+              "serving_item_one": "45 Servings",
+              "serving_item_two": "More electrolytes than 45 powder packets",
+              "serving_item_three": ""
+            }
+          },
+          "recommended_gRkqwW": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietician’s Recommended Use:",
+              "title": "1-2 times daily (1,215mg-2,430mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add directly to mouth or pair with any food or beverage for fast-acting hydration, perfect for hydrated mornings. Especially important to dose when exercising, living in a hot climate or managing a chronic condition.\nIf not consuming directly with a beverage, intake 12-16oz of fluid to support optimal electrolyte balance."
+            }
+          },
+          "table_p3YWaq": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_M.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_D.svg"
+            }
+          },
+          "ingredients_tj63DG": {
+            "type": "ingredients",
+            "settings": {
+              "content": ""
+            }
+          },
+          "info_EKwmxD": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          },
+          "info_yVF3kD": {
+            "type": "info",
+            "settings": {
+              "icon_info_one": "",
+              "icon_info_two": "",
+              "icon_info_three": "",
+              "icon_info_four": "",
+              "icon_info_five": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_VAaEBg",
+          "serving_q6xWD6",
+          "recommended_gRkqwW",
+          "table_p3YWaq",
+          "ingredients_tj63DG",
+          "info_EKwmxD",
+          "info_yVF3kD"
+        ],
+        "settings": {
+          "product_name": "Marry Me Hat",
+          "title": ""
+        }
       }
     },
     "content_for_index": [
