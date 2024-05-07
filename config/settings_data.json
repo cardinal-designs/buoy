@@ -443,11 +443,21 @@
               "serving_item_two": "Caffeine of 13+ Cups of Coffee",
               "serving_item_three": "Electrolytes of 13+ Sports Drinks"
             }
+          },
+          "recommended_XdiBFP": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietician’s Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes & 120mg-210mg clean caffeine)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+            }
           }
         },
         "block_order": [
           "serving_HNqCiN",
-          "serving_RxyKE4"
+          "serving_RxyKE4",
+          "recommended_XdiBFP"
         ],
         "settings": {
           "product_name": "Liquid Electrolyte Variety Kit",
