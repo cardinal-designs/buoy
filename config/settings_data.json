@@ -503,6 +503,21 @@
       },
       "energy-facts-drawer": {
         "type": "energy-facts-drawer",
+        "blocks": {
+          "serving_TLzWiG": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "Electrolytes of ⅓ Sports Drink",
+              "serving_item_three": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_TLzWiG"
+        ],
         "settings": {
           "product_name": "Energy Drops",
           "title": "Supplement Facts"
