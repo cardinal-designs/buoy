@@ -662,6 +662,21 @@
       },
       "rescue-facts-drawer": {
         "type": "rescue-facts-drawer",
+        "blocks": {
+          "serving_cEcnfP": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/Icons_thin.svg",
+              "serving_title": "ONE SERVING:",
+              "serving_item_one": "¼ tsp (1.2g)",
+              "serving_item_two": "More electrolytes than leading powder packet",
+              "serving_item_three": ""
+            }
+          }
+        },
+        "block_order": [
+          "serving_cEcnfP"
+        ],
         "settings": {
           "product_name": "Rescue Salt",
           "title": "Supplement Facts"
