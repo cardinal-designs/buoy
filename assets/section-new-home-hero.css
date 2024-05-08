@@ -191,8 +191,8 @@
   .homepage__hero--content:before {
     position: absolute;
     content: "";
-    top: 50px;
-    bottom: 50px;
+    top: 0;
+    bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
