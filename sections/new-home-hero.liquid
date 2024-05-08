@@ -12,6 +12,15 @@
   #section-{{ section.id }} .Home_Hero_Content_Container p svg path {
     fill: {{ section.settings.desktop_font_color }};
   }
+
+  @media only screen and (max-width: 768px) {
+    
+    #section-{{ section.id }} .Home_Hero_Content_Container * {
+      color: {{ section.settings.mobile_font_color }};
+    }
+    
+  }
+  
 {% endstyle %}
 
 <div class="show-sticky-header"></div>
