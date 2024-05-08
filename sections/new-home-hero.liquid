@@ -78,16 +78,16 @@
   </div>
   <div class="homepage__hero--image">
     {% if section.settings.video_url != blank %}
-      <video autoplay loop muted playsinline class="img-fill hide-mobile">
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-mobile">
         <source src="{{ section.settings.video_url }}" type="video/mp4">
       </video>
     {% endif %}
     {% if section.settings.mobile_video_url != blank %}
-      <video autoplay loop muted playsinline class="img-fill hide-desktop">
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-desktop">
         <source src="{{ section.settings.mobile_video_url }}" type="video/mp4">
       </video>
     {% else %}
-      <video autoplay loop muted playsinline class="img-fill hide-desktop">
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-desktop">
         <source src="{{ section.settings.video_url }}" type="video/mp4">
       </video>
     {% endif %}
@@ -180,6 +180,25 @@
         "type": "url",
         "id": "link_link",
         "label": "Link Link"
+      },
+      {
+        "type": "header",
+        "content": "Video Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay"
+      },
+      {
+        "type": "checkbox",
+        "id": "mute",
+        "label": "Mute"
+      },
+      {
+        "type": "checkbox",
+        "id": "loop",
+        "label": "Loop"
       },
       {
         "type": "header",
