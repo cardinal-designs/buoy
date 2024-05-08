@@ -5,17 +5,17 @@
     background: {{ section.settings.bg_color }};
   }
 
-  #section-{{ section.id }} .Home_Hero_Content_Container * {
+  #section-{{ section.id }} .New_Home_Hero_Content_Container * {
     color: {{ section.settings.desktop_font_color }};
   }
 
-  #section-{{ section.id }} .Home_Hero_Content_Container p svg path {
+  #section-{{ section.id }} .New_Home_Hero_Content_Container p svg path {
     fill: {{ section.settings.desktop_font_color }};
   }
 
   @media only screen and (max-width: 768px) {
     
-    #section-{{ section.id }} .Home_Hero_Content_Container * {
+    #section-{{ section.id }} .New_Home_Hero_Content_Container * {
       color: {{ section.settings.mobile_font_color }};
     }
     
@@ -25,8 +25,8 @@
 
 <div class="show-sticky-header"></div>
 <div id="section-{{ section.id }}" class="New_Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %}">
-  <div class="Home_Hero_Content">
-    <div class="Home_Hero_Content_Container">      
+  <div class="New_Home_Hero_Content">
+    <div class="New_Home_Hero_Content_Container">      
       {% if section.settings.review != blank %}
         <p class="body-small hide-mobile">{% render 'icon-five-star' %}<span>{{ section.settings.review }}</span></p>
       {% endif %}
