@@ -1,4 +1,4 @@
-.New_Home_Hero_Section {
+.homepage__hero {
   min-height: 100vh;
   margin-top: -1px;
   display: grid;
@@ -7,11 +7,11 @@
   display: flex;
 }
 
-.New_Home_Hero_Section.top-border {
+.homepage__hero.top-border {
   border-top: 1.5px solid var(--charcoal);
 }
 
-.New_Home_Hero_Section.bottom-border {
+.homepage__hero.bottom-border {
   border-bottom: 1.5px solid var(--charcoal);
 }
 
@@ -108,7 +108,7 @@
 
 @media only screen and (max-width: 768px) {
   
-  .New_Home_Hero_Section {
+  .homepage__hero {
     display: flex;
     position: relative;
   }
