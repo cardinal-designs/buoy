@@ -4,6 +4,10 @@
   #section-{{ section.id }}.Home_Hero_Section {
     background: {{ section.settings.bg_color }};
   }
+
+  #section-{{ section.id }} .Home_Hero_Content_Container * {
+    color: {{ section.settings.desktop_font_color }};
+  }
 {% endstyle %}
 
 <div class="show-sticky-header"></div>
