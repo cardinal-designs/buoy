@@ -34,7 +34,7 @@
 {% endstyle %}
 
 <div class="show-sticky-header"></div>
-<div id="section-{{ section.id }}" class="New_Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %}{% if section.settings.image_position =='left' %}{{ section.settings.image_position }}{% else %}{{ section.settings.image_position }}{% endif %}">
+<div id="section-{{ section.id }}" class="New_Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %} {% if section.settings.image_position =='left' %}{{ section.settings.image_position }}{% else %}{{ section.settings.image_position }}{% endif %}">
   <div class="New_Home_Hero_Content">
     <div class="New_Home_Hero_Content_Container">      
       {% if section.settings.review != blank %}
