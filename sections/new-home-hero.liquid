@@ -5,6 +5,16 @@
     background: {{ section.settings.bg_color }};
   }
 
+  #section-{{ section.id }}.New_Home_Hero_Section.image-right {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #section-{{ section.id }}.New_Home_Hero_Section.image-left {
+    display: flex;
+    flex-direction: row-revrce;
+  }
+
   #section-{{ section.id }} .New_Home_Hero_Content_Container * {
     color: {{ section.settings.desktop_font_color }};
   }
