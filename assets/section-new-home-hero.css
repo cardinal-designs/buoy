@@ -143,13 +143,17 @@
   }
 
   .homepage__hero--content-container {
+    position: absolute;
     width: 100%;
     margin: 0;
-    position: absolute;
-    bottom: 50px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .page-template--page-black-friday-offer .homepage__hero--content-container {
@@ -212,6 +216,18 @@
     line-height: 20px;
     font-weight: 400;
     padding: 14px 46px;
+  }
+
+  .homepage__hero--content-container.mobile-content-top {
+    justify-content: flex-start;
+  }
+
+  .homepage__hero--content-container.mobile-content-center {
+    justify-content: center;
+  }
+
+  .homepage__hero--content-container.mobile-content-bottom {
+    justify-content: flex-end;
   }
   
 }
