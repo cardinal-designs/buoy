@@ -19,8 +19,7 @@
   padding: 60px 0 60px 45px;
   display: flex;
   align-items: center;
-  min-width: 50%;
-  width: 100%;
+  width: 50%;
 }
 
 .Home_Hero_Content_Container { 
@@ -53,7 +52,7 @@
 
 .Home_Hero_Image {
   position: relative;
-  width: auto;
+  width: 50%;
 }
 
 .Home_Hero_Image video {
