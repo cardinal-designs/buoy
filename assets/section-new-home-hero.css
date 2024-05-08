@@ -15,38 +15,38 @@
   border-bottom: 1.5px solid var(--charcoal);
 }
 
-.New_Home_Hero_Content {
+.homepage__hero--content {
   padding: 60px 0 60px 45px;
   display: flex;
   align-items: center;
   width: 50%;
 }
 
-.New_Home_Hero_Content_Container { 
+.homepage__hero--content_Container { 
   margin-left: auto;
   padding-right: 45px;
 }
 
-.New_Home_Hero_Content_Container .body-small {
+.homepage__hero--content_Container .body-small {
   margin: 0 0 40px;
   display: flex;
   align-items: center;
 }
 
-.New_Home_Hero_Content_Container .body-small span {
+.homepage__hero--content_Container .body-small span {
   margin-left: 7px;
 }
 
-.New_Home_Hero_Content_Container .h1 {
+.homepage__hero--content_Container .h1 {
   margin: 0 0 40px;
   letter-spacing: 0.9px;
 }
 
-.New_Home_Hero_Content_Container .h6 {
+.homepage__hero--content_Container .h6 {
   margin: 0 0 10px;
 }
 
-.New_Home_Hero_Content_Container a {
+.homepage__hero--content_Container a {
   transition: 0.25s ease-in;
 }
 
@@ -61,18 +61,18 @@
   object-position: center;
 }
 
-.New_Home_Hero_Content_Container .arrow-link {
+.homepage__hero--content_Container .arrow-link {
   margin-top: 20px;
 }
 
-.New_Home_Hero_Content_Container a:hover {
+.homepage__hero--content_Container a:hover {
   opacity: 0.7;
   transition: 0.25s ease-in;
 }
 
 @media screen and (max-width: 1250px) {
   
-  .New_Home_Hero_Content_Container .body-small {
+  .homepage__hero--content_Container .body-small {
     margin: 0 0 25px;
   }
   
@@ -80,11 +80,11 @@
 
 @media screen and (max-width: 1024px) {
   
-  .New_Home_Hero_Content_Container .body-small {
+  .homepage__hero--content_Container .body-small {
     margin: 0 0 25px;
   }
 
-  .New_Home_Hero_Content {
+  .homepage__hero--content {
     width: 60%;
   }
 
@@ -96,11 +96,11 @@
 
 @media screen and (max-width: 989px) {
 
-  .New_Home_Hero_Content_Container .body-small {
+  .homepage__hero--content_Container .body-small {
     margin: 0 0 20px;
   }
 
-  .New_Home_Hero_Content_Container .h1 {
+  .homepage__hero--content_Container .h1 {
     margin: 0 0 30px;
   }
   
@@ -113,7 +113,7 @@
     position: relative;
   }
 
-  .New_Home_Hero_Content {
+  .homepage__hero--content {
     width: 100%;
     padding: 55px 20px;
     position: relative;
@@ -123,7 +123,7 @@
     border: none;
   }
 
-  .New_Home_Hero_Content_Container {
+  .homepage__hero--content_Container {
     width: 100%;
     margin: 0;
     position: absolute;
@@ -133,23 +133,23 @@
     padding: 0 20px;
   }
 
-  .page-template--page-black-friday-offer .New_Home_Hero_Content_Container {
+  .page-template--page-black-friday-offer .homepage__hero--content_Container {
     bottom: unset;
   }
 
-  .New_Home_Hero_Content_Container .body-small {
+  .homepage__hero--content_Container .body-small {
     justify-content: center;
     flex-wrap: wrap;
     margin: 25px 0 0;
   }
   
-  .New_Home_Hero_Content_Container .body-small span {
+  .homepage__hero--content_Container .body-small span {
     display: block;
     width: 100%;
     margin: 9px 0 0;
   }
 
-  .New_Home_Hero_Content_Container .h1 {
+  .homepage__hero--content_Container .h1 {
     max-width: 100%;
     margin: 0 auto 30px;
   }
@@ -163,7 +163,7 @@
     width: 100%;
   }
 
-  .New_Home_Hero_Content_link {
+  .homepage__hero--content_link {
     display: flex;
     align-items: center;
     justify-content: center;
