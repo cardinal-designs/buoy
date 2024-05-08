@@ -20,6 +20,19 @@
   display: flex;
   align-items: center;
   width: 50%;
+  height: 100%;
+}
+
+.homepage__hero--content.content-top {
+  justify-content: flex-start;
+}
+
+.homepage__hero--content.content-center {
+  justify-content: center;
+}
+
+.homepage__hero--content.content-bottom {
+  justify-content: flex-end;
 }
 
 .homepage__hero--content-container { 
