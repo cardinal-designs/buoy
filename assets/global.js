@@ -2033,3 +2033,10 @@ $('.announcement-bar__close').click(function() {
   }
 })
 
+class QuickAddCard extends HTMLElement {
+  constructor() {
+    super();
+  }
+}
+
+customElements.define("quick-add-card", QuickAddCard)

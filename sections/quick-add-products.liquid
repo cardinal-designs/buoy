@@ -1,0 +1,167 @@
+{{  'quick-add-products.css' | stylesheet_tag }}
+{{ 'quick-add-card.css' | stylesheet_tag }}
+{% liquid
+  assign grid = section.settings
+  assign blocks = section.blocks
+ %}
+<div class="quick-add-grid">
+  <div class="quick-add-grid__header">
+    {% if grid.heading != blank %}
+      <h3 class="quick-add-grid__heading">
+        {{ grid.heading }}
+      </h3>
+    {% endif %}
+
+    {% if grid.text != blank %}
+      <p class="quick-add-grid__text">
+        {{ grid.text }}
+      </p>
+    {% endif %}
+  </div>
+
+  {% if blocks != blank %}
+    <div class="quick-add-grid__grid">
+      {% for block in blocks %}
+        {% case block.type %}
+          {% when 'product' %}
+            {% render 'product-card-quick-add', content: block.settings %}
+          {% when 'card' %}
+          {% endcase %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Quick Add Products Grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "heading",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Primary media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          },
+          {
+            "type": "header",
+            "content": "Hover media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_hover",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video_hover",
+            "label": "Video"
+          },
+          {
+            "type": "header",
+            "content": "Product Form"
+          },
+          {
+            "type": "image_picker",
+            "id": "form_image",
+            "label": "Product Image"
+          },
+          {
+            "type": "text",
+            "id": "form_text",
+            "label": "Form Text"
+          }
+        ]
+      },
+      {
+        "type": "card",
+        "name": "Card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "select",
+            "id": "checkmarks",
+            "label": "Checkmarks",
+            "options": [
+              {
+                "value": "show",
+                "label": "Show"
+              },
+              {
+                "value": "hide",
+                "label": "Hide"
+              }
+            ],
+            "default": "show"
+          },
+          {
+            "type": "header",
+            "content": "Style"
+          },
+          {
+            "type": "color_background",
+            "id": "overlay",
+            "label": "Overlay"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "Color"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Quick Add Products Grid"
+      }
+    ]
+  }
+{% endschema %}

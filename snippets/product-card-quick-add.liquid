@@ -1,0 +1,37 @@
+{% liquid
+  assign card_product = content.heading
+ %}
+
+<quick-add-card class="quick-add__container">
+  <div class="quick-add__image">
+
+    {% if content.image != blank %}
+      {{ content.image | image_url: width: 850 | image_tag: class: ''  }}
+    {% elsif content.video != blank %}
+      {{ content.video | video_tag }}
+    {% else %}
+      {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
+    {% endif %}
+
+    <a class="quick-add__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
+    <button>Add</button>
+
+    <div class="quick-add__form-wrapper">
+    </div>
+  </div>
+  <div class="quick-add__content">
+    <h5 class="quick-add__title">{{ card_product.title }}</h5>
+    {% if card_product.metafields.my_fields.product_card_text != blank %}
+      <p>{{ card_product.metafields.my_fields.product_card_text }}</p>
+    {% endif %}
+
+    <div class="quick-add__price">
+      <div class="quick-add__price-recurring">
+        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+      </div>
+      <div class="quick-add__price-otp">
+        {{ card_product.selected_or_first_available_variant.price | money }}
+      </div>
+    </div>
+  </div>
+</quick-add-card>
