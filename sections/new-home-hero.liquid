@@ -44,6 +44,11 @@
     #section-{{ section.id }} .homepage__hero--content-container p svg path {
       fill: {{ section.settings.mobile_font_color }};
     }
+
+    #section-{{ section.id }} .homepage__hero--content:before {
+      background: {{ section.settings.overlay_color }};
+      opacity: {{ section.settings.overlay_opacity }};
+    }
     
   }
   
@@ -266,6 +271,26 @@
         "type": "color",
         "id": "btn_h_border_color",
         "label": "Border"
+      },
+      {
+        "type": "header",
+        "content": "Content Overlay"
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Overlay Color",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "label": "Overlay Opacity",
+        "id": "overlay_opacity",
+        "unit": "%",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 5
       }
     ],
     "presets": [
