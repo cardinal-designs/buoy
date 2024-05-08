@@ -57,6 +57,13 @@
   font-family: Rhymes-Light-Italic;
 }
 
+.homepage__hero--content .button {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  padding: 13px 93px;
+}
+
 .homepage__hero--content-container a {
   transition: 0.25s ease-in;
 }
