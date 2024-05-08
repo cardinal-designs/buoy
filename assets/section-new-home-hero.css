@@ -3,6 +3,8 @@
   margin-top: -1px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  display: flex;
 }
 
 .Home_Hero_Section.top-border {
@@ -17,6 +19,8 @@
   padding: 60px 0 60px 45px;
   display: flex;
   align-items: center;
+  min-width: 50%;
+  width: 100%;
 }
 
 .Home_Hero_Content_Container { 
@@ -49,6 +53,7 @@
 
 .Home_Hero_Image {
   position: relative;
+  width: auto;
 }
 
 .Home_Hero_Image video {
