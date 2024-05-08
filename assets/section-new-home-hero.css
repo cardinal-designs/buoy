@@ -75,6 +75,14 @@
   .New_Home_Hero_Content_Container .body-small {
     margin: 0 0 25px;
   }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .New_Home_Hero_Content_Container .body-small {
+    margin: 0 0 25px;
+  }
 
   .New_Home_Hero_Content {
     width: 60%;
