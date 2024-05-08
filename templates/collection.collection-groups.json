@@ -2,17 +2,71 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    },
+    "quick_add_products_PXexHD": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_V3ByPw": {
+          "type": "product",
+          "settings": {
+            "heading": "liquid-electrolyte-kit",
+            "form_text": ""
+          }
+        },
+        "product_jDczPk": {
+          "type": "product",
+          "settings": {
+            "heading": "ocean-electrolyte-kit",
+            "form_text": ""
+          }
+        },
+        "card_xN8GeW": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0863_1.png",
+            "link": "",
+            "heading": "SAVE 23% When You Subscribe",
+            "text": "Free Monthly Shipping\nFree Welcome Kit\nCancel Anytime\n30-Day Money Back Guarantee",
+            "checkmarks": "show",
+            "overlay": "#1F232266",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "product_V3ByPw",
+        "product_jDczPk",
+        "card_xN8GeW"
+      ],
+      "settings": {
+        "heading": "Kits",
+        "text": "The best place to start. Save on our curated bundles."
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "quick_add_products_PXexHD"
   ]
 }
