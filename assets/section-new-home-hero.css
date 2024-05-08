@@ -1,9 +1,6 @@
 .homepage__hero {
   min-height: 100vh;
   margin-top: -1px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
   display: flex;
 }
 
@@ -146,8 +143,8 @@
     position: absolute;
     width: 100%;
     margin: 0;
-    top: 50px;
-    bottom: 50px;
+    top: 100px;
+    bottom: 100px;
     left: 0;
     right: 0;
     padding: 0 20px;
