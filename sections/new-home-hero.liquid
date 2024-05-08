@@ -43,7 +43,11 @@
       {% if section.settings.button_link != blank %}
         <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
       {% endif %}
-      {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_link }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>{% endif %}
+      {% if section.settings.link_label != blank %}
+        <div class="body arrow-link">
+          <a href="{{ section.settings.link_link }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>
+        </div>
+      {% endif %}
       {% if section.settings.review != blank %}
         <p class="body-small hide-desktop">{% render 'icon-five-star' %}<span>{{ section.settings.review }}</span></p>
       {% endif %}
