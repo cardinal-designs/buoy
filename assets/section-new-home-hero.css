@@ -22,31 +22,31 @@
   width: 50%;
 }
 
-.homepage__hero--content_Container { 
+.homepage__hero--content-container { 
   margin-left: auto;
   padding-right: 45px;
 }
 
-.homepage__hero--content_Container .body-small {
+.homepage__hero--content-container .body-small {
   margin: 0 0 40px;
   display: flex;
   align-items: center;
 }
 
-.homepage__hero--content_Container .body-small span {
+.homepage__hero--content-container .body-small span {
   margin-left: 7px;
 }
 
-.homepage__hero--content_Container .h1 {
+.homepage__hero--content-container .h1 {
   margin: 0 0 40px;
   letter-spacing: 0.9px;
 }
 
-.homepage__hero--content_Container .h6 {
+.homepage__hero--content-container .h6 {
   margin: 0 0 10px;
 }
 
-.homepage__hero--content_Container a {
+.homepage__hero--content-container a {
   transition: 0.25s ease-in;
 }
 
@@ -61,18 +61,18 @@
   object-position: center;
 }
 
-.homepage__hero--content_Container .arrow-link {
+.homepage__hero--content-container .arrow-link {
   margin-top: 20px;
 }
 
-.homepage__hero--content_Container a:hover {
+.homepage__hero--content-container a:hover {
   opacity: 0.7;
   transition: 0.25s ease-in;
 }
 
 @media screen and (max-width: 1250px) {
   
-  .homepage__hero--content_Container .body-small {
+  .homepage__hero--content-container .body-small {
     margin: 0 0 25px;
   }
   
@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 1024px) {
   
-  .homepage__hero--content_Container .body-small {
+  .homepage__hero--content-container .body-small {
     margin: 0 0 25px;
   }
 
@@ -96,11 +96,11 @@
 
 @media screen and (max-width: 989px) {
 
-  .homepage__hero--content_Container .body-small {
+  .homepage__hero--content-container .body-small {
     margin: 0 0 20px;
   }
 
-  .homepage__hero--content_Container .h1 {
+  .homepage__hero--content-container .h1 {
     margin: 0 0 30px;
   }
   
@@ -123,7 +123,7 @@
     border: none;
   }
 
-  .homepage__hero--content_Container {
+  .homepage__hero--content-container {
     width: 100%;
     margin: 0;
     position: absolute;
@@ -133,23 +133,23 @@
     padding: 0 20px;
   }
 
-  .page-template--page-black-friday-offer .homepage__hero--content_Container {
+  .page-template--page-black-friday-offer .homepage__hero--content-container {
     bottom: unset;
   }
 
-  .homepage__hero--content_Container .body-small {
+  .homepage__hero--content-container .body-small {
     justify-content: center;
     flex-wrap: wrap;
     margin: 25px 0 0;
   }
   
-  .homepage__hero--content_Container .body-small span {
+  .homepage__hero--content-container .body-small span {
     display: block;
     width: 100%;
     margin: 9px 0 0;
   }
 
-  .homepage__hero--content_Container .h1 {
+  .homepage__hero--content-container .h1 {
     max-width: 100%;
     margin: 0 auto 30px;
   }
