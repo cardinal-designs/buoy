@@ -50,12 +50,12 @@
   transition: 0.25s ease-in;
 }
 
-.Home_Hero_Image {
+.New_Home_Hero_Image {
   position: relative;
   width: 50%;
 }
 
-.Home_Hero_Image video {
+.New_Home_Hero_Image video {
   width: 100%;
   height: 100%;
   object-position: center;
@@ -137,7 +137,7 @@
     margin: 0 auto 30px;
   }
 
-  .Home_Hero_Image {
+  .New_Home_Hero_Image {
     position: absolute;
     top: 0;
     right: 0;
