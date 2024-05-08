@@ -22,6 +22,12 @@
     #section-{{ section.id }} .New_Home_Hero_Content_Container p svg path {
       fill: {{ section.settings.mobile_font_color }};
     }
+
+    #section-{{ section.id }} .New_Home_Hero_Content_Container a.button {
+      color: {{ section.settings.btn_font_color }};
+      background: {{ section.settings.btn_bg_color }};
+      border-color: {{ section.settings.btn_border_color }};
+    }
     
   }
   
@@ -208,6 +214,46 @@
         "id": "mobile_font_color",
         "label": "Mobile fonts color",
         "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Button Color"
+      },
+      {
+        "type": "color",
+        "id": "btn_bg_color",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id": "btn_font_color",
+        "label": "Font",
+        "default": "#1f2322"
+      },
+      {
+        "type": "color",
+        "id": "btn_border_color",
+        "label": "Border"
+      },
+      {
+        "type": "header",
+        "content": "Button Hover Color"
+      },
+      {
+        "type": "color",
+        "id": "btn_h_bg_color",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id": "btn_h_font_color",
+        "label": "Font",
+        "default": "#1f2322"
+      },
+      {
+        "type": "color",
+        "id": "btn_h_border_color",
+        "label": "Border"
       }
     ],
     "presets": [
