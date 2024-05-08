@@ -63,7 +63,7 @@
       <h2 class="h1">{{ section.settings.title }}</h2>
       {% endif %}        
       {% if section.settings.button_link != blank %}
-        <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
       {% endif %}
       {% if section.settings.link_label != blank %}
         <div class="New_Home_Hero_Content_link">
@@ -169,26 +169,6 @@
         "type": "url",
         "id": "button_link",
         "label": "Button Link"
-      },
-      {
-        "type": "select",
-        "id": "button_style",
-        "label": "Button style",
-        "options": [
-          {
-            "value": "white",
-            "label": "White"
-          },
-          {
-            "value": "beige",
-            "label": "Beige"
-          },
-          {
-            "value": "blue",
-            "label": "Blue"
-          }
-        ],
-        "default": "beige"
       },
       {
         "type": "text",
