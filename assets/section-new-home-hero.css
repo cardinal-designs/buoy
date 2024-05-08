@@ -38,6 +38,9 @@
 .homepage__hero--content-container { 
   margin-left: auto;
   padding-right: 45px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .homepage__hero--content-container .body-small {
