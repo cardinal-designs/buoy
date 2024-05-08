@@ -1,16 +1,16 @@
 {{ 'section-new-home-hero.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  #section-{{ section.id }}.New_Home_Hero_Section {
+  #section-{{ section.id }}.homepage__hero {
     background: {{ section.settings.bg_color }};
   }
 
-  #section-{{ section.id }}.New_Home_Hero_Section.image-right {
+  #section-{{ section.id }}.homepage__hero.image-right {
     display: flex;
     flex-direction: row;
   }
   
-  #section-{{ section.id }}.New_Home_Hero_Section.image-left {
+  #section-{{ section.id }}.homepage__hero.image-left {
     display: flex;
     flex-direction: row-reverse;
   }
@@ -50,7 +50,7 @@
 {% endstyle %}
 
 <div class="show-sticky-header"></div>
-<div id="section-{{ section.id }}" class="New_Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %} {% if section.settings.image_position =='left' %}{{ section.settings.image_position }}{% else %}{{ section.settings.image_position }}{% endif %}">
+<div id="section-{{ section.id }}" class="homepage__hero{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %} {% if section.settings.image_position =='left' %}{{ section.settings.image_position }}{% else %}{{ section.settings.image_position }}{% endif %}">
   <div class="New_Home_Hero_Content">
     <div class="New_Home_Hero_Content_Container">      
       {% if section.settings.review != blank %}
