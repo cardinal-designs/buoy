@@ -52,7 +52,7 @@
 
 <div class="show-sticky-header"></div>
 <div id="section-{{ section.id }}" class="homepage__hero{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %} {% if section.settings.image_position =='left' %}{{ section.settings.image_position }}{% else %}{{ section.settings.image_position }}{% endif %}">
-  <div class="homepage__hero--content">
+  <div class="homepage__hero--content {{ section.settings.content_position }}">
     <div class="homepage__hero--content-container {{ section.settings.moble_content_position }}">      
       {% if section.settings.review != blank %}
         <p class="body-small hide-mobile">{% render 'icon-five-star' %}<span>{{ section.settings.review }}</span></p>
@@ -198,6 +198,26 @@
           {
             "label": "Right",
             "value": "image-right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "Desktop Content Position",
+        "id": "content_position",
+        "default": "content-center",
+        "options": [
+          {
+            "label": "Top",
+            "value": "content-top"
+          },
+          {
+            "label": "Center",
+            "value": "content-center"
+          },
+          {
+            "label": "Bottom",
+            "value": "content-bottom"
           }
         ]
       },
