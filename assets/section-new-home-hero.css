@@ -23,24 +23,24 @@
   height: 100%;
 }
 
-.homepage__hero--content.content-top {
-  justify-content: flex-start;
-}
-
-.homepage__hero--content.content-center {
-  justify-content: center;
-}
-
-.homepage__hero--content.content-bottom {
-  justify-content: flex-end;
-}
-
 .homepage__hero--content-container { 
   margin-left: auto;
   padding-right: 45px;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.homepage__hero--content-container.content-top {
+  justify-content: flex-start;
+}
+
+.homepage__hero--content-container.content-center {
+  justify-content: center;
+}
+
+.homepage__hero--content-container.content-bottom {
+  justify-content: flex-end;
 }
 
 .homepage__hero--content-container .body-small {
