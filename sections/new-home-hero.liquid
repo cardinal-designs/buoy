@@ -1,10 +1,13 @@
 {{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #section-{{ section.id }} .Home_Hero_Section {
+    background: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
 <div class="show-sticky-header"></div>
-<div class="Home_Hero_Section
-    {% if section.settings.add_top_border %} top-border{% endif %}
-    {% if section.settings.add_bottom_border %} bottom-border{% endif %}"
-    style="{% if section.settings.add_background %}background: #FCF9F8;{% endif %}"
-  >
+<div id="section-{{ section.id }}" class="Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %}">
   <div class="Home_Hero_Content">
     <div class="Home_Hero_Content_Container">      
       {% if section.settings.review != blank %}
@@ -165,9 +168,9 @@
         "label": "Add Bottom Border"
       },
       {
-        "type": "checkbox",
-        "id": "add_background",
-        "label": "Add Background"
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
       }
     ],
     "presets": [
