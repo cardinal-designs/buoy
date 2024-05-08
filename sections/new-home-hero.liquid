@@ -20,7 +20,7 @@
   }
 
   #section-{{ section.id }} .homepage__hero--content-container p svg path {
-    fill: #FFD66B;
+    fill: {{ section.settings.star_color }};
   }
 
   #section-{{ section.id }} .homepage__hero--content-container .button {
@@ -42,7 +42,7 @@
     }
 
     #section-{{ section.id }} .homepage__hero--content-container p svg path {
-      fill: #FFD66B;
+      fill: {{ section.settings.star_color }};
     }
 
     #section-{{ section.id }} .homepage__hero--content:before {
@@ -239,6 +239,12 @@
         "type": "color",
         "id": "bg_color",
         "label": "Background color"
+      },
+      {
+        "type": "color",
+        "id": "star_color",
+        "label": "Star color",
+        "default": "#FFD66B"
       },
       {
         "type": "color",
