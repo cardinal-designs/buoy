@@ -1,7 +1,7 @@
 {{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  #section-{{ section.id }} .Home_Hero_Section {
+  #section-{{ section.id }}.Home_Hero_Section {
     background: {{ section.settings.bg_color }};
   }
 {% endstyle %}
