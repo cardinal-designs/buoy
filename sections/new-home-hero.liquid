@@ -1,6 +1,185 @@
+{{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
+<div class="show-sticky-header"></div>
+<div class="Home_Hero_Section
+    {% if section.settings.add_top_border %} top-border{% endif %}
+    {% if section.settings.add_bottom_border %} bottom-border{% endif %}"
+    style="{% if section.settings.add_background %}background: #FCF9F8;{% endif %}"
+  >
+  <div class="Home_Hero_Content">
+    <div class="Home_Hero_Content_Container">      
+      {% if section.settings.review != blank %}
+        <p class="body-small hide-mobile">{% render 'icon-five-star' %}<span>{{ section.settings.review }}</span></p>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <h6 class="h6">{{ section.settings.text }}</h6>
+      {% endif %}
+      {% if section.settings.title != blank %}
+      <h2 class="h1">{{ section.settings.title }}</h2>
+      {% endif %}        
+      {% if section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="button button--{{ section.settings.button_style }}">{{ section.settings.button_label }}</a>
+      {% endif %}
+      {% if section.settings.link_label != blank %}<a href="{{ section.settings.link_link }}" class="body mdeium arrow-link">{{ section.settings.link_label }} {% render 'icon-arrow-right' %}</a>{% endif %}
+      {% if section.settings.review != blank %}
+        <p class="body-small hide-desktop">{% render 'icon-five-star' %}<span>{{ section.settings.review }}</span></p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="Home_Hero_Image">
+    {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="img-fill hide-mobile">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+    {% if section.settings.mobile_video_url != blank %}
+      <video autoplay loop muted playsinline class="img-fill hide-desktop">
+        <source src="{{ section.settings.mobile_video_url }}" type="video/mp4">
+      </video>
+    {% else %}
+      <video autoplay loop muted playsinline class="img-fill hide-desktop">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+    {% if section.settings.video_url == blank and section.settings.image != blank %}
+    <img
+      srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+        {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+        {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+        {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+        {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+      src="{{ section.settings.image | img_url: '533x' }}"
+      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+      alt="{{ section.settings.image.alt | escape }}"
+      loading="lazy"
+      class="motion-reduce img-fill hide-mobile"
+    >
+    <img
+      srcset="{%- if section.settings.mobile_image.width >= 165 -%}{{ section.settings.mobile_image | img_url: '165x' }} 165w,{%- endif -%}
+        {%- if section.settings.mobile_image.width >= 360 -%}{{ section.settings.mobile_image | img_url: '360x' }} 360w,{%- endif -%}
+        {%- if section.settings.mobile_image.width >= 533 -%}{{ section.settings.mobile_image | img_url: '533x' }} 533w,{%- endif -%}
+        {%- if section.settings.mobile_image.width >= 720 -%}{{ section.settings.mobile_image | img_url: '720x' }} 720w,{%- endif -%}
+        {%- if section.settings.mobile_image.width >= 940 -%}{{ section.settings.mobile_image | img_url: '940x' }} 940w,{%- endif -%}
+        {%- if section.settings.mobile_image.width >= 1066 -%}{{ section.settings.mobile_image | img_url: '1066x' }} 1066w{%- endif -%}"
+      src="{{ section.settings.mobile_image | img_url: '533x' }}"
+      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+      alt="{{ section.settings.mobile_image.alt | escape }}"
+      loading="lazy"
+      class="motion-reduce img-fill hide-desktop"
+    >
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "New Home Hero Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "text",
+        "id": "mobile_video_url",
+        "label": "Mobile Video URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "review",
+        "label": "Review"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button style",
+        "options": [
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "beige",
+            "label": "Beige"
+          },
+          {
+            "value": "blue",
+            "label": "Blue"
+          }
+        ],
+        "default": "beige"
+      },
+      {
+        "type": "text",
+        "id": "link_label",
+        "label": "Link Label"
+      },
+      {
+        "type": "url",
+        "id": "link_link",
+        "label": "Link Link"
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_background",
+        "label": "Add Background"
+      }
+    ],
+    "presets": [
+      {
+        "name": "New Home Hero Section"
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
