@@ -1,7 +1,7 @@
 {{ 'section-new-home-hero.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  #section-{{ section.id }}.Home_Hero_Section {
+  #section-{{ section.id }}.New_Home_Hero_Section {
     background: {{ section.settings.bg_color }};
   }
 
@@ -24,7 +24,7 @@
 {% endstyle %}
 
 <div class="show-sticky-header"></div>
-<div id="section-{{ section.id }}" class="Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %}">
+<div id="section-{{ section.id }}" class="New_Home_Hero_Section{% if section.settings.add_top_border %} top-border{% endif %}{% if section.settings.add_bottom_border %} bottom-border{% endif %}">
   <div class="Home_Hero_Content">
     <div class="Home_Hero_Content_Container">      
       {% if section.settings.review != blank %}
