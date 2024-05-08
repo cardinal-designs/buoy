@@ -1,4 +1,4 @@
-.Home_Hero_Section {
+.New_Home_Hero_Section {
   min-height: 100vh;
   margin-top: -1px;
   display: grid;
@@ -7,11 +7,11 @@
   display: flex;
 }
 
-.Home_Hero_Section.top-border {
+.New_Home_Hero_Section.top-border {
   border-top: 1.5px solid var(--charcoal);
 }
 
-.Home_Hero_Section.bottom-border {
+.New_Home_Hero_Section.bottom-border {
   border-bottom: 1.5px solid var(--charcoal);
 }
 
@@ -91,7 +91,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .Home_Hero_Section {
+  .New_Home_Hero_Section {
     display: flex;
     position: relative;
   }
