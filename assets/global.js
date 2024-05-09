@@ -521,7 +521,10 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
     }
 
-    this.updateSticky();
+    if(!this.dataset.formType == 'product-card') {
+      this.updateSticky();
+    }
+    
   }
 
   updateSticky(){
@@ -610,7 +613,7 @@ class VariantSelects extends HTMLElement {
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
-        document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
+        document.querySelector('#current_variant_price') && document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
 
         document.getElementById('price-' + this.dataset.section)?.classList.remove('visibility-hidden');
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut, this.currentVariant.price);
@@ -618,25 +621,23 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]'),
-          stickyButton = document.querySelector('.js-sticky-add-to-cart');
+    const addButton = this.closest("product-form").querySelector('[name="add"]'),
+    stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
-    let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText);
 
-    let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
-    // let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
+    let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
+
+    let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
     let addToCartText = `Add to Cart — ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}${variantJson[this.currentVariant.id].price}`;
-    // let addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price}`;
+
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
          addToCartText = `Add to Cart — &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-        //addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].subscription_price}`;
-
       }
     }
  
-    document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
+    this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
       element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
     });
 

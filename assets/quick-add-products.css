@@ -1,0 +1,25 @@
+.quick-add-grid {
+  margin-bottom: 100px;
+}
+
+.quick-add-grid__header {
+  margin-bottom: 40px;
+}
+
+.quick-add-grid__heading {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 34px;
+}
+
+.quick-add-grid__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 18px;
+  row-gap: 93px;
+}

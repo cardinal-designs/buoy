@@ -1,31 +1,37 @@
-{{  'quick-add-products.css' | stylesheet_tag }}
-{{ 'quick-add-card.css' | stylesheet_tag }}
+{{ 'quick-add-products.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+
 {% liquid
   assign grid = section.settings
   assign blocks = section.blocks
+  assign base = 'quick-add-grid'
  %}
-<div class="quick-add-grid">
-  <div class="quick-add-grid__header">
+<div class="{{ base }} page-width">
+  <div class="{{ base }}__header">
     {% if grid.heading != blank %}
-      <h3 class="quick-add-grid__heading">
+      <h3 class="{{ base }}__heading">
         {{ grid.heading }}
       </h3>
     {% endif %}
 
     {% if grid.text != blank %}
-      <p class="quick-add-grid__text">
+      <p class="{{ base }}__tex sh4">
         {{ grid.text }}
       </p>
     {% endif %}
   </div>
 
   {% if blocks != blank %}
-    <div class="quick-add-grid__grid">
+    <div class="{{ base }}__grid">
       {% for block in blocks %}
         {% case block.type %}
           {% when 'product' %}
-            {% render 'product-card-quick-add', content: block.settings %}
+            <div class="{{ base }}__grid-item">
+              {% render 'product-card-quick-add', content: block.settings %}
+            </div>
           {% when 'card' %}
+            <div class="{{ base }}__grid-item">
+            </div>
           {% endcase %}
       {% endfor %}
     </div>
