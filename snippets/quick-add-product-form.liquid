@@ -117,10 +117,10 @@
                 data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
                 data-onetimeprice="{{ my_fields.serving_cost }}"
               >
-                <span class="quick-add__price-otp rtx_one_time_price js-rtx_one_time_price rtx_compare_price">{{ p.selected_or_first_available_variant.price | money }}</span>
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
                 </span>
+                <span class="quick-add__price-otp rtx_one_time_price js-rtx_one_time_price rtx_compare_price">{{ p.selected_or_first_available_variant.price | money }}</span>
               </span>    
             {%- endif -%}
 
@@ -161,19 +161,23 @@
     <input type="hidden" name="id" value="{{ currentVariant.id }}">
 
     <div class="product-form__buttons">
-      <button type="submit" name="add" class="button button--primary">
+      <button type="submit" name="add" class="button button--primary" data-available="{{ currentVariant.available }}">
         {% if currentVariant.available %}
           <span>Add To Cart -&nbsp;</span>
         {% else %}
           <span>Sold Out -&nbsp;</span>
         {% endif %}
+        {% if currentVariant.selling_plan_allocations.size > 0 %}
+          {{ currentVariant.selling_plan_allocations[0].price | money }}
+          <s>{{ currentVariant.price | money }}</s>
+        {% else %}
          {% if currentVariant.compare_at_price > currentVariant.price %}
-           <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
-           &nbsp;
-           {{ currentVariant.price | money_without_trailing_zeros }}
+          {{ currentVariant.price | money }}&nbsp;
+           <s>{{ currentVariant.compare_at_price | money }}</s>
          {% else %}
-           {{ currentVariant.price | money_without_trailing_zeros }}
+           {{ currentVariant.price | money }}
          {% endif %}
+        {% endif %}
         
       </button>
     </div>

@@ -102,6 +102,9 @@
   background: #FFFFFFE5;
   border-radius: 10px;
   overflow-y: scroll;
+
+  transform: translateY(100%);
+  transition: all .4s ease;
 }
 
 .quick-add__form-inner {
@@ -322,4 +325,12 @@
 .quick-add__form-subtext {
   text-align: center;
   margin: 10px 0 0;
+}
+
+quick-add-card[data-open="false"] {
+
+}
+
+quick-add-card[data-open="true"] .quick-add__form-wrapper {
+  transform: translateY(0)
 }

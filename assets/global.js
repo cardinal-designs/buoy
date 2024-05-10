@@ -497,6 +497,7 @@ class SliderComponent extends HTMLElement {
 
 customElements.define('slider-component', SliderComponent);
 
+
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
@@ -649,14 +650,14 @@ class VariantSelects extends HTMLElement {
       addButton.setAttribute('disabled', true);
       if (text) addButton.innerHTML = text;
       
-      stickyButton.setAttribute('disabled', true);
-      if (text) stickyButton.innerHTML = text;
+      stickyButton && stickyButton.setAttribute('disabled', true);
+      if (text && stickyButton) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
       addButton.innerHTML = addToCartText; 
       
-      stickyButton.removeAttribute('disabled');
-      stickyButton.innerHTML = addToCartText;
+      stickyButton && stickyButton.removeAttribute('disabled');
+      if (stickyButton) stickyButton.innerHTML = addToCartText;
     }
 
     if (!modifyClass) return;
@@ -2037,6 +2038,48 @@ $('.announcement-bar__close').click(function() {
 class QuickAddCard extends HTMLElement {
   constructor() {
     super();
+
+    this.variantJson = JSON.parse(this.querySelector("#js-product-variant-json").innerText)
+
+    this.purchaseTypeInputs = this.querySelectorAll("input[name='purchaseType']")
+
+    this.addToCart = this.querySelector("button[name='add']")
+
+    this.currentVariant = this.querySelector("form input[name='id']").value
+
+    this.toggleButton = this.querySelector("[data-toggle]")
+  }
+
+  connectedCallback() {
+    this.purchaseTypeInputs.forEach( i => {
+      i.addEventListener("change",  this.handlePurchaseTypeChange.bind(this))
+    })
+
+    this.toggleButton.addEventListener('click', this.handleToggle.bind(this))
+  }
+
+  handleToggle() {
+    this.dataset.open = this.dataset.open == 'true' ? 'false' : 'true'
+  }
+
+  handlePurchaseTypeChange(event) {
+    console.log(event.target.value)
+    this.currentVariant = this.querySelector("form input[name='id']").value
+
+    this.buttonContent = ''
+    if (this.addToCart.dataset.available == 'true') {
+      this.buttonContent = `<span>Add To Cart -&nbsp;</span>`
+    } else {
+      this.buttonContent = `<span>Sold Out -&nbsp;</span>`
+    }
+
+    if( event.target.value == 'purchaseTypeSbubscription' ) {
+      this.buttonContent = `${this.buttonContent} &nbsp;${this.variantJson[this.currentVariant].subscription_price}&nbsp;<s>${this.variantJson[this.currentVariant].price}</s>`
+    } else {
+      this.buttonContent = `${this.buttonContent} ${this.variantJson[this.currentVariant].price}&nbsp;<s>${this.variantJson[this.currentVariant].compare_price}</s>`
+    }
+
+    this.addToCart.innerHTML = this.buttonContent
   }
 }
 

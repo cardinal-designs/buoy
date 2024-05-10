@@ -3,7 +3,7 @@
   assign base = 'quick-add'
  %}
 
-<quick-add-card class="{{ base }}__container">
+<quick-add-card class="{{ base }}__container" data-open="false" >
   <div class="{{ base }}__image">
 
     {% if content.image != blank %}
@@ -16,7 +16,7 @@
 
     <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
-    <button class="{{ base }}__button">Add</button>
+    <button data-toggle class="{{ base }}__button">Add</button>
 
     <div class="{{ base }}__form-wrapper no-scrollbar">
       <div class="{{ base }}__form-inner">
