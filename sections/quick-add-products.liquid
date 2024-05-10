@@ -15,7 +15,7 @@
     {% endif %}
 
     {% if grid.text != blank %}
-      <p class="{{ base }}__tex sh4">
+      <p class="{{ base }}__text sh4">
         {{ grid.text }}
       </p>
     {% endif %}
@@ -31,6 +31,31 @@
             </div>
           {% when 'card' %}
             <div class="{{ base }}__grid-item">
+              <div class="{{ base }}__card" style="--background: {{ block.settings.overlay }}; --color: {{ block.settings.color }}">
+                {% if block.settings.image != blank %}
+                  {{ block.settings.image | image_url: width: 850 | image_tag: class: '' }}                  
+                {% endif %}
+
+                <div class="{{ base }}__card-overlay"> </div>
+
+                <div class="{{ base }}__card-content">
+                  {% if block.settings.heading != blank %}
+                    <h3 class="{{ base }}__card-heading">{{  block.settings.heading }}</h3>
+                  {% endif %}
+
+                  {% if block.settings.text != blank %}
+                    <div class="{{ base }}__card-text">
+                      {% assign bullets = block.settings.text | newline_to_br | split: '<br />'  %}
+
+                      <ul>
+                        {% for bullet in bullets %}
+                          <li>{{ bullet }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
             </div>
           {% endcase %}
       {% endfor %}

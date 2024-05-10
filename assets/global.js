@@ -2047,7 +2047,7 @@ class QuickAddCard extends HTMLElement {
 
     this.currentVariant = this.querySelector("form input[name='id']").value
 
-    this.toggleButton = this.querySelector("[data-toggle]")
+    this.toggleButton = this.querySelectorAll("[data-toggle]")
   }
 
   connectedCallback() {
@@ -2055,7 +2055,9 @@ class QuickAddCard extends HTMLElement {
       i.addEventListener("change",  this.handlePurchaseTypeChange.bind(this))
     })
 
-    this.toggleButton.addEventListener('click', this.handleToggle.bind(this))
+    this.toggleButton.forEach( b => {
+      b.addEventListener('click', this.handleToggle.bind(this))
+    })
   }
 
   handleToggle() {
