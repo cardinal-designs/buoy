@@ -1,0 +1,39 @@
+<div class="simple-hero__container page-width">
+  <div class="simple-hero">
+    <div class="simple-hero__heading">
+      {{ section.settings.heading }}
+    </div>
+  </div>
+</div>
+
+<style>
+  .simple-hero__heading {
+    margin: 0;
+    font-size: 50px;
+    line-height: normal;
+    font-family: inter, sans-serif;
+    text-align: center;
+  }
+  
+  .simple-hero__heading em {
+    font-family: Rhymes-Light-Italic;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Simple Hero",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Simple Hero"
+      }
+    ]
+  }
+{% endschema %}

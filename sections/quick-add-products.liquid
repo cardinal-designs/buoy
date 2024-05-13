@@ -6,7 +6,7 @@
   assign blocks = section.blocks
   assign base = 'quick-add-grid'
  %}
-<div class="{{ base }} page-width">
+<div class="{{ base }} page-width" data-anchor="{{ section.settings.heading | downcase | handle }}" style="scroll-margin-top: calc(var(--sticky-header-height) + 90px);">
   <div class="{{ base }}__header">
     {% if grid.heading != blank %}
       <h3 class="{{ base }}__heading">

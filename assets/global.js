@@ -708,6 +708,10 @@ class HeaderContainer extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    document.body.style = `${document.body.style}; --sticky-header-height: ${ this.offsetHeight}px;`
+  }
+
   onScroll() {
     if (this.classList.contains('header--transparent')) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
