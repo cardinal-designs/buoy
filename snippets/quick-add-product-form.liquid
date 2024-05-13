@@ -9,7 +9,7 @@
   endif
  %}
 
-<product-form class="product-form">
+<product-form data-form-type="product-card" class="product-form">
   {% form 'product', p, id: product_form_id, data-smartrr-form-id: p.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
     {% capture variantMetafield %}
       <select class="js-variant-metafield hidden">
@@ -19,7 +19,7 @@
       </select>
     {% endcapture %}
     {% unless p.has_only_default_variant %}
-      <variant-radios class="no-js-hidden" data-section="{{ section.id }}"  data-product="{{ p.id }}-"  data-url="{{ p.url }}" data-update-url="false" data-form-type="product-card">
+      <variant-radios class="no-js-hidden" data-section="{{ section.id }}"  data-product="{{ p.id }}"  data-url="{{ p.url }}" data-update-url="false" data-form-type="product-card">
         {%- for option in p.options_with_values -%}
           {% assign optionIndex = forloop.index0 %}
           {% assign values = "" %}
@@ -89,23 +89,22 @@
               <span class="custom-radio"> </span>
               One-Time Purchase
             </span>
-              {%- if my_fields.serving_cost != blank -%}
-              <span 
-                class="Serving_Cost rtx_compare_price js-main-compare-price"
-              >
-                {% if currentVariant.compare_at_price > currentVariant.price %}
-                  <span>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</span>
-                {% endif %}
-                <span class="js-rtx_one_time_price">{{ currentVariant.price | money }}</span>
-              
-              </span>    
-            {%- endif -%}
+            <span 
+              class="Serving_Cost rtx_one_time_price" 
+              data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
+              data-onetimeprice="{{ my_fields.serving_cost }}"
+            >
+              <span class="js-rtx_one_time_price">
+                {{ p.selected_or_first_available_variant.price | money }}
+              </span>
+              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_price | money }}</s>
+            </span> 
             </label>
           </span>
 
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeSbubscription" name="purchaseType" value="purchaseTypeSbubscription" {% if selectedAllocation == blank %} checked {% endif %} >
-            <label for="{{ p.id }}-purchaseTypeSbubscription">
+            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank %} checked {% endif %} >
+            <label for="{{ p.id }}-purchaseTypeSubscription">
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
               Subscribe

@@ -583,7 +583,8 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment`);
+    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment, #product-form-${this.dataset.product}`);
+  
     productForms.forEach((productForm) => {
       const input = productForm.querySelector('input[name="id"]');
       input.value = this.currentVariant.id;
@@ -630,6 +631,7 @@ class VariantSelects extends HTMLElement {
     let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
 
     let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
+
     let addToCartText = `Add to Cart — ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}${variantJson[this.currentVariant.id].price}`;
 
     if(subscriptionOption){
@@ -638,11 +640,22 @@ class VariantSelects extends HTMLElement {
       }
     }
  
-    this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
-      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
-    });
+    if(this.closest('product-form').dataset.formType == 'product-card') {
+      addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price} ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}`;
 
-    
+      if(subscriptionOption){
+        if(subscriptionOption.value == "purchaseTypeSubscription"){
+          addToCartText = `Add to Cart — &nbsp;${variantJson[this.currentVariant.id].subscription_price}&nbsp;<s>${variantJson[this.currentVariant.id].price}</s>`;
+        }
+      }
+      this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
+        element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+      })
+    } else {
+        this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
+        element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+      });
+    }
 
     addButton.dataset.available = (!disable);
 
@@ -2069,7 +2082,7 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
-    console.log(event.target.value)
+    console.log(this.querySelector("form input[name='id']").value)
     this.currentVariant = this.querySelector("form input[name='id']").value
 
     this.buttonContent = ''
@@ -2079,7 +2092,7 @@ class QuickAddCard extends HTMLElement {
       this.buttonContent = `<span>Sold Out -&nbsp;</span>`
     }
 
-    if( event.target.value == 'purchaseTypeSbubscription' ) {
+    if( event.target.value == 'purchaseTypeSubscription' ) {
       this.buttonContent = `${this.buttonContent} &nbsp;${this.variantJson[this.currentVariant].subscription_price}&nbsp;<s>${this.variantJson[this.currentVariant].price}</s>`
     } else {
       this.buttonContent = `${this.buttonContent} ${this.variantJson[this.currentVariant].price}&nbsp;<s>${this.variantJson[this.currentVariant].compare_price}</s>`
