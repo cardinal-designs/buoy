@@ -122,7 +122,7 @@
   width: 100%;
 
   transform: translateY(100%);
-  transition: all .4s ease;
+  transition: transform .4s ease;
 }
 
 .quick-add__display .quick-add__close {
@@ -306,6 +306,12 @@
   justify-content: start;
   align-items: center;
   gap: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .quick-add__form .Serving_Cost{
@@ -367,12 +373,17 @@ quick-add-card[data-open="false"] {
 }
 
 quick-add-card[data-open="true"] .quick-add__display {
-  transform: translateY(0)
+  transform: translateY(0);
+  transition: transform .4s ease;
 }
 
 quick-add-card[data-open="true"] .quick-add__close {
   opacity: 1;
   transform: translateY( calc(-100% - 8px))
+}
+
+quick-add-card[data-open="true"] .quick-add__price {
+  opacity: 0;
 }
 
 .quick-add__overlay {
@@ -408,14 +419,13 @@ quick-add-card[data-open="true"] .quick-add__close {
     max-height: calc(80vh - 40px);
     width: calc(100vw - 24px);
     opacity: 0;
-    /* transform: translateY(0%) translateX(calc(-100% - 12px)); */
+    z-index: 11;
+    transition: transform .4s ease;
   }
 
   quick-add-card[data-open="true"] .quick-add__display {
     position: fixed;
-    z-index: 11;
     opacity: 1;
-    /* transform: translateY(0%) translateX(0%); */
   }
 
   .quick-add__title {

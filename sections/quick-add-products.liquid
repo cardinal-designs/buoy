@@ -38,6 +38,9 @@
 
                 <div class="{{ base }}__card-overlay"> </div>
 
+                {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="{{ base }}__card-link"> </a>{% endif %}
+
                 <div class="{{ base }}__card-content">
                   {% if block.settings.heading != blank %}
                     <h3 class="{{ base }}__card-heading">{{  block.settings.heading }}</h3>
