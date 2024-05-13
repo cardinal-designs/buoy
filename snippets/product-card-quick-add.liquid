@@ -35,6 +35,16 @@
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
 
+      {% if card_product.tags != blank and content.settings.show_tags == true %}
+        <div class="{{ base }}__product-tags">
+          {% for tag in card_product.tags %}
+            <div class="{{ base }}__product-tag">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
       <button data-toggle class="{{ base }}__button">Add</button>

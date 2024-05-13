@@ -45,6 +45,30 @@
   }
 }
 
+.quick-add__product-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  height: fit-content;
+}
+
+.quick-add__product-tag {
+  background: var(--charcoal);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inter, sans-serif;
+  line-height: normal;
+}
+
 .quick-add__link {
   position: absolute;
   width: 100%;
