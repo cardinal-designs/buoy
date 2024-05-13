@@ -23,6 +23,42 @@
         "collapse_on_larger_devices": false
       }
     },
+    "simple_hero_N6WiHw": {
+      "type": "simple-hero",
+      "settings": {
+        "heading": "Hydrate <em>Your Way<\/em>"
+      }
+    },
+    "anchor_link_hero_yGar76": {
+      "type": "anchor-link-hero",
+      "blocks": {
+        "link_DRKtrB": {
+          "type": "Link",
+          "settings": {
+            "heading": "Kits"
+          }
+        },
+        "link_Y8qLDD": {
+          "type": "Link",
+          "settings": {
+            "heading": "Unflavored Liquid Electrolytes"
+          }
+        },
+        "link_Kg8w8H": {
+          "type": "Link",
+          "settings": {
+            "heading": "Add-Ons"
+          }
+        }
+      },
+      "block_order": [
+        "link_DRKtrB",
+        "link_Y8qLDD",
+        "link_Kg8w8H"
+      ],
+      "settings": {
+      }
+    },
     "quick_add_products_PXexHD": {
       "type": "quick-add-products",
       "blocks": {
@@ -134,6 +170,8 @@
   "order": [
     "banner",
     "product-grid",
+    "simple_hero_N6WiHw",
+    "anchor_link_hero_yGar76",
     "quick_add_products_PXexHD",
     "quick_add_products_reJfnX",
     "quick_add_products_bMe83T"
