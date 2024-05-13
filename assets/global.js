@@ -2093,7 +2093,6 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
-    console.log(this.querySelector("form input[name='id']").value)
     this.currentVariant = this.querySelector("form input[name='id']").value
 
     this.buttonContent = ''
