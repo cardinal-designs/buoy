@@ -2,15 +2,16 @@
   "sections": {
     "902758e5-2326-4116-ab43-a576df7f670e": {
       "type": "home-hero",
+      "disabled": true,
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
-        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
         "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
         "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
         "review": "Over 4,000 Trusted Reviews",
-        "title": "Add Functional Benefits To Any Drink",
-        "text": "Unflavored Hydration Drops",
-        "button_label": "Start Squeezing",
+        "title": "Buoy x Chris Paul Electrolytes",
+        "text": "Out Now — Limited Quantities",
+        "button_label": "Shop CP3's Electrolytes",
         "button_link": "shopify:\/\/collections\/all",
         "button_style": "beige",
         "link_label": "",
@@ -18,6 +19,41 @@
         "add_top_border": false,
         "add_bottom_border": false,
         "add_background": false
+      }
+    },
+    "new_home_hero_LUNXEb": {
+      "type": "new-home-hero",
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
+        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
+        "review": "Over 4,000 Trusted Reviews",
+        "title": "Chris Paul x Buoy Electrolytes",
+        "text": "Limited-Edition",
+        "button_label": "Limited Quantities Available",
+        "button_link": "shopify:\/\/collections\/all",
+        "link_label": "",
+        "link_link": "",
+        "autoplay": true,
+        "mute": true,
+        "loop": true,
+        "image_position": "image-right",
+        "moble_content_position": "mobile-content-center",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "bg_color": "#ffffff",
+        "star_color": "#ffd66b",
+        "desktop_font_color": "#1f2322",
+        "mobile_font_color": "#ffffff",
+        "btn_bg_color": "#def647",
+        "btn_font_color": "#1f2322",
+        "btn_border_color": "#def647",
+        "btn_h_bg_color": "#1f2322",
+        "btn_h_font_color": "#ffffff",
+        "btn_h_border_color": "#1f2322",
+        "overlay_color": "#000000",
+        "overlay_opacity": 50
       }
     },
     "16318238207c8b14a8": {
@@ -392,6 +428,7 @@
   },
   "order": [
     "902758e5-2326-4116-ab43-a576df7f670e",
+    "new_home_hero_LUNXEb",
     "16318238207c8b14a8",
     "6484e2d1-6529-43c4-975f-4a239d15a19e",
     "1643601523d98d2b70",

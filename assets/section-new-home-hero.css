@@ -1,0 +1,235 @@
+.homepage__hero {
+  min-height: 100vh;
+  margin-top: -1px;
+  display: flex;
+}
+
+.homepage__hero.top-border {
+  border-top: 1.5px solid var(--charcoal);
+}
+
+.homepage__hero.bottom-border {
+  border-bottom: 1.5px solid var(--charcoal);
+}
+
+.homepage__hero--content {
+  padding: 60px 0 60px 70px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.homepage__hero--content-container { 
+  margin-left: auto;
+  padding-right: 55px;
+}
+
+.homepage__hero--content-container .body-small {
+  margin: 0 0 48px;
+  display: flex;
+  align-items: center;
+}
+
+.homepage__hero--content-container .body-small span {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.homepage__hero--content-container .h1 {
+  margin: 0 0 48px;
+  font-size: 64px;
+  line-height: 69px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  font-family: inter, sans-serif;
+}
+
+.homepage__hero--content-container .h6 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  line-height: 32.35px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: Rhymes-Light-Italic;
+}
+
+.homepage__hero--content .button {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  padding: 13px 93px;
+  height: 51px;
+}
+
+.homepage__hero--content-container a {
+  transition: 0.25s ease-in;
+}
+
+.homepage__hero--image {
+  position: relative;
+  width: 50%;
+}
+
+.homepage__hero--image video {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.homepage__hero--content-container .arrow-link {
+  margin-top: 20px;
+}
+
+.homepage__hero--content-container a:hover {
+  transition: 0.25s ease-in;
+}
+
+@media screen and (max-width: 1250px) {
+  
+  .homepage__hero--content-container .body-small {
+    margin: 0 0 25px;
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .homepage__hero--content-container .body-small {
+    margin: 0 0 25px;
+  }
+
+  .homepage__hero--content {
+    width: 60%;
+  }
+
+  .homepage__hero--image {
+    width: 40%;
+  }
+  
+}
+
+@media screen and (max-width: 989px) {
+
+  .homepage__hero--content-container .body-small {
+    margin: 0 0 20px;
+  }
+
+  .homepage__hero--content-container .h1 {
+    margin: 0 0 30px;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .homepage__hero {
+    display: flex;
+    position: relative;
+  }
+
+  .homepage__hero--content {
+    width: 100%;
+    padding: 55px 20px;
+    position: relative;
+    z-index: 2;
+    background: none;
+    text-align: center;
+    border: none;
+  }
+
+  .homepage__hero--content-container {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-template--page-black-friday-offer .homepage__hero--content-container {
+    bottom: unset;
+  }
+
+  .homepage__hero--content-container .body-small {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 24px 0 0;
+  }
+  
+  .homepage__hero--content-container .body-small span {
+    display: block;
+    width: 100%;
+    margin: 8px 0 0;
+  }
+
+  .homepage__hero--content-container .h1 {
+    max-width: 100%;
+    margin: 0 auto 24px;
+    font-size: 40px;
+    line-height: 48.41px;
+  }
+
+  .homepage__hero--image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .homepage__hero--content:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .homepage__hero--content-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homepage__hero--content-container .h6 {
+    font-size: 20px;
+    line-height: 26.96px;
+    margin-bottom: 16px;
+  }
+
+  .homepage__hero--content .button {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 5px 46px;
+    width: 203px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homepage__hero--content-container.mobile-content-top {
+    justify-content: flex-start;
+  }
+
+  .homepage__hero--content-container.mobile-content-center {
+    justify-content: center;
+  }
+
+  .homepage__hero--content-container.mobile-content-bottom {
+    justify-content: flex-end;
+  }
+  
+}
