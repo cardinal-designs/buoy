@@ -50,7 +50,6 @@ class ProductForm extends HTMLElement {
           '_selling_plan_id': defaultSellingPlanId
         }
       }
-      
     }
   
     const body = JSON.stringify({

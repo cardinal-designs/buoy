@@ -133,28 +133,11 @@
             </label>
           </span>
         </fieldset>
-
-        <div style="display: none;" data-retextion-subscription-box class="rtx-subscription-box {% if requiresPlan or selectedAllocation != blank %} is-visible{% endif %}">
-          <select name="selling_plan">
-            {%- liquid
-              for allocation in currentAllocations
-                assign plan = allocation.selling_plan
-                echo '<option'
-                if plan.selected or sellectedAllocation == blank and forloop.first
-                  echo ' selected'
-                endif
-                echo ' value="' | append: plan.id | append: '">'
-                echo plan.name | escape
-                echo '</option>'
-              endfor
-            -%}
-          </select>
-        </div>
       </div>
     {% endif %}
 
     {% if p.selling_plan_groups[0].selling_plans[0].id %}
-      <input type="hidden" name="selling_plan_id" value="{{ p.selling_plan_groups[0].selling_plans[0].id }}">
+      <input type="hidden" name="selling_plan" value="{{ p.selling_plan_groups[0].selling_plans[0].id }}">
     {% endif %}
 
     <input type="hidden" name="id" value="{{ currentVariant.id }}">

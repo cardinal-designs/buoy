@@ -583,13 +583,24 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment, #product-form-${this.dataset.product}`);
+    if(this.dataset.formType="product-card" ){
+      const productForm = this.closest('product-form');
+      const id = productForm.querySelector('input[name="id"]');
+      id.value = this.currentVariant.id;
+      id.dispatchEvent(new Event('change', { bubbles: true }));
+
+      const sellingPlan = productForm.querySelector('input[name="selling_plan"]');
+      sellingPlan.value = this.currentVariant.selling_plan_allocations[0].selling_plan_id;
+      sellingPlan.dispatchEvent(new Event('change', { bubbles: true }));
+    } else {
+      const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment`);
   
-    productForms.forEach((productForm) => {
-      const input = productForm.querySelector('input[name="id"]');
-      input.value = this.currentVariant.id;
-      input.dispatchEvent(new Event('change', { bubbles: true }));
-    });
+      productForms.forEach((productForm) => {
+        const input = productForm.querySelector('input[name="id"]');
+        input.value = this.currentVariant.id;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    }
   }
 
   updatePickupAvailability() {
