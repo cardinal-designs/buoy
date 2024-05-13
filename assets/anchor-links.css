@@ -22,14 +22,14 @@
     gap: 20px;
     width: calc(100% + 66px);
     margin-left: -33px;
-    padding: 33px;
+    padding: 20 33px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .anchor-links__list {
     justify-content: start;
-    padding: 20px 0;
+    padding: 20px 33px;
   }
 }
 
