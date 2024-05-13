@@ -652,11 +652,11 @@ class VariantSelects extends HTMLElement {
     }
  
     if(this.closest('product-form').dataset.formType == 'product-card') {
-      addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price} ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}`;
+      addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price} ${(this.currentVariant.compare_at_price != null) ? `&nbsp;&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>` : ``}`;
 
       if(subscriptionOption){
         if(subscriptionOption.value == "purchaseTypeSubscription"){
-          addToCartText = `Add to Cart — &nbsp;${variantJson[this.currentVariant.id].subscription_price}&nbsp;<s>${variantJson[this.currentVariant.id].price}</s>`;
+          addToCartText = `Add to Cart — &nbsp;${variantJson[this.currentVariant.id].subscription_price}&nbsp;&nbsp;<s>${variantJson[this.currentVariant.id].price}</s>`;
         }
       }
       this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {

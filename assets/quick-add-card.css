@@ -404,6 +404,10 @@
   margin-top: 20px;
 }
 
+.quick-add__form .product-form__buttons .button span + s:not(:empty) {
+  margin-left: 1px;
+}
+
 .quick-add__tag {
   background: var(--green-2);
   color: #ffffff;
