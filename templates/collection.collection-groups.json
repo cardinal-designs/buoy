@@ -78,18 +78,56 @@
           "type": "product",
           "settings": {
             "heading": "digestion-drops",
-            "video": "shopify:\/\/files\/videos\/-4467-494b-986d-640d1db9a101.mp4",
+            "image": "shopify:\/\/shop_images\/Buoy_Digestion_v3_1.png",
+            "video_hover": "shopify:\/\/files\/videos\/-4467-494b-986d-640d1db9a101.mp4",
+            "form_text": ""
+          }
+        },
+        "product_k97xDM": {
+          "type": "product",
+          "settings": {
+            "heading": "immunity-drops",
+            "image": "shopify:\/\/shop_images\/20240122_Buoy_Motion_Hydration1332_1_1.png",
+            "form_text": ""
+          }
+        },
+        "product_mUqRjB": {
+          "type": "product",
+          "settings": {
+            "heading": "energy-drops",
+            "image": "shopify:\/\/shop_images\/20240122_Buoy_Motion_Hydration1332_1_2.png",
             "form_text": ""
           }
         }
       },
       "block_order": [
         "product_6JMfck",
-        "product_gAT4Cn"
+        "product_gAT4Cn",
+        "product_k97xDM",
+        "product_mUqRjB"
       ],
       "settings": {
         "heading": "Unflavored Liquid Electrolytes",
         "text": "Add-to-any-beverage ocean electrolytes and 87+ trace minerals. No sugar, sweeteners, or flavors."
+      }
+    },
+    "quick_add_products_bMe83T": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_JAMMLq": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-salts",
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_JAMMLq"
+      ],
+      "settings": {
+        "heading": "",
+        "text": ""
       }
     }
   },
@@ -97,6 +135,7 @@
     "banner",
     "product-grid",
     "quick_add_products_PXexHD",
-    "quick_add_products_reJfnX"
+    "quick_add_products_reJfnX",
+    "quick_add_products_bMe83T"
   ]
 }
