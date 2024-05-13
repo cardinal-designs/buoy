@@ -62,11 +62,32 @@
         "heading": "Kits",
         "text": "The best place to start. Save on our curated bundles."
       }
+    },
+    "quick_add_products_reJfnX": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_6JMfck": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops",
+            "image": "shopify:\/\/shop_images\/20240122_Buoy_Motion_Hydration1332_1.png",
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_6JMfck"
+      ],
+      "settings": {
+        "heading": "Unflavored Liquid Electrolytes",
+        "text": "Add-to-any-beverage ocean electrolytes and 87+ trace minerals. No sugar, sweeteners, or flavors."
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "quick_add_products_PXexHD"
+    "quick_add_products_PXexHD",
+    "quick_add_products_reJfnX"
   ]
 }
