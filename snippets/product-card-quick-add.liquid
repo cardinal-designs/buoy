@@ -4,13 +4,33 @@
  %}
 
 <quick-add-card class="{{ base }}__container" data-open="false" >
-  <div class="{{ base }}__image">
+  <div class="{{ base }}__media">
 
-    <div class="{{ base }}__image-inner">
+    <div class="{{ base }}__media-inner">
+      {% if content.image_hover != blank %}
+        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover'  }}
+      {% elsif content.video_hover != blank %}
+        {{ content.video_hover | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          class: 'quick-add__video-hover',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+      {% endif %}
+
       {% if content.image != blank %}
         {{ content.image | image_url: width: 850 | image_tag: class: ''  }}
       {% elsif content.video != blank %}
-        {{ content.video | video_tag }}
+        {{ content.video | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          class: 'quick-add__video',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
       {% else %}
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
