@@ -1,3 +1,7 @@
+[id*='__quick_add_products'] + [id*='__quick_add_products'] .quick-add-grid__header {
+  border-top: 1px solid var(--gray-light);
+  padding-top: 40px;
+}
 .quick-add-grid {
   margin-bottom: 100px;
 }
