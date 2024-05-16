@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .quick-add__media {
+    margin-bottom: 8px;
+  }
+}
+
 .quick-add__media-inner {
   position: relative;
   width: 100%;
