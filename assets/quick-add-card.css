@@ -267,6 +267,7 @@
   border-radius: 10px;
   scrollbar-color: var(--gray-light) transparent;
   scrollbar-width: thin;
+  box-sizing: border-box;
 }
 
 .quick-add__form-header {
@@ -298,6 +299,11 @@
   gap: 6px;
 }
 
+.quick-add__form-title .okeReviews.okeReviews--theme {
+  line-height: normal;
+  max-height: 12px;
+}
+
 .quick-add__form-title .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
   color: var(--charcoal-60);
   font-size: 12px;
@@ -305,6 +311,13 @@
   font-family: inter, sans-serif;
   margin: 0;
   left: 35px;
+  line-height: normal;
+  vertical-align: super;
+}
+
+.quick-add__form-title .okeReviews-starRating--small {
+  line-height: normal;
+  vertical-align: super;
 }
 
 .quick-add__form-title .okeReviews-starRating--small span.okeReviews-a11yText > span.rated-text {

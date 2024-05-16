@@ -5,6 +5,16 @@
   margin-bottom: 100px;
 }
 
+.quick-add-grid.page-width {
+  padding: 0 70px;
+  max-width: 1300px;
+  box-sizing: content-box;
+}
+
+.quick-add-grid.page-width > * {
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 768px) {
   .quick-add-grid {
     margin-bottom: 60px;
