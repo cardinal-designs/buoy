@@ -2089,6 +2089,16 @@ class QuickAddCard extends HTMLElement {
   }
 
   handleToggle() {
+
+    if(this.dataset.open == 'false') {
+       const closeOpenCards = document.querySelectorAll("quick-add-card[data-open='true']")
+
+       if (!closeOpenCards) return
+
+       closeOpenCards.forEach( c => {
+        c.dataset.open = 'false'
+       })
+    }
     this.dataset.open = this.dataset.open == 'true' ? 'false' : 'true'
   }
 
