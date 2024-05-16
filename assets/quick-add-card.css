@@ -195,6 +195,12 @@
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 768px) {
+  .quick-add__form-wrapper {
+    height: auto;
+  }
+}
+
 .quick-add__display {
   position: absolute;
   left: 0;
@@ -251,6 +257,11 @@
 
 .quick-add__form-title {
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 6px;
 }
 
 .quick-add__form-title .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
@@ -453,6 +464,8 @@
 .quick-add__form-subtext {
   text-align: center;
   margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 quick-add-card[data-open="false"] {
