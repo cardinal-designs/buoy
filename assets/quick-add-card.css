@@ -59,7 +59,14 @@
   height: fit-content;
 }
 
-.quick-add__product-tag {
+@media screen and (max-width: 768px) {
+  .quick-add__product-tags {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+.quick-add__product-tag { 
   background: var(--charcoal);
   padding: 3px 8px;
   border-radius: 4px;
@@ -67,6 +74,13 @@
   font-size: 14px;
   font-family: inter, sans-serif;
   line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .quick-add__product-tag {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .quick-add__link {
