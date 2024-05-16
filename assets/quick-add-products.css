@@ -24,13 +24,14 @@
 }
 
 .quick-add-grid__header {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   padding-top: 40px;
 }
 
 @media screen and (max-width: 768px) {
   .quick-add-grid__header {
-    font-size: 28px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 } 
 
@@ -48,6 +49,7 @@
 @media screen and (max-width: 768px) {
   .quick-add-grid__heading {
     font-size: 24px;
+    margin-bottom: 8px;
   }
 } 
 
@@ -183,10 +185,6 @@
 
   .quick-add-grid.page-width {
     padding: 0 20px;
-  }
-
-  .quick-add-grid__header {
-    margin-bottom: 28px;
   }
 
   .quick-add-grid__card-content {
