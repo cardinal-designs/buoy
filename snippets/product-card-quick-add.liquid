@@ -52,13 +52,13 @@
 
     <div class="quick-add__overlay"> </div>
     <div class="quick-add__display">
-      <button data-toggle class="quick-add__close">
-        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.73115 15.7142L0.785645 14.7687L7.55442 7.99993L0.785645 1.23115L1.73115 0.285645L8.49993 7.05442L15.2687 0.285645L16.2142 1.23115L9.44544 7.99993L16.2142 14.7687L15.2687 15.7142L8.49993 8.94544L1.73115 15.7142Z" fill="#1F2322"/>
-          </svg>          
-      </button>
       <div class="{{ base }}__form-wrapper no-scrollbar">
-        <div class="{{ base }}__form-inner">
+        <button data-toggle class="quick-add__close">
+          <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73115 15.7142L0.785645 14.7687L7.55442 7.99993L0.785645 1.23115L1.73115 0.285645L8.49993 7.05442L15.2687 0.285645L16.2142 1.23115L9.44544 7.99993L16.2142 14.7687L15.2687 15.7142L8.49993 8.94544L1.73115 15.7142Z" fill="#1F2322"/>
+            </svg>          
+        </button>
+        <div class="{{ base }}__form-inner no-scrollbar">
           <div class="{{ base }}__form-header">
             <div class="{{ base }}__form-image">
               {{ card_product.featured_image | image_url: width: 160 | image_tag: class: '' }}

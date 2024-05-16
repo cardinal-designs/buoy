@@ -1,4 +1,4 @@
-[id*='__quick_add_products'] + [id*='__quick_add_products'] .quick-add-grid__header {
+[id*='__quick_add_products'] .quick-add-grid__header {
   border-top: 1px solid var(--gray-light);
 }
 .quick-add-grid {
@@ -154,7 +154,7 @@
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 1px;
+  top: -2px;
   left: -30px;
 }
 

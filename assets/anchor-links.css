@@ -14,7 +14,7 @@
   overflow-x: scroll;
   margin: 0;
   padding: 36px 0;
-  border-bottom: 1px solid var(--gray-light);
+  /* border-bottom: 1px solid var(--gray-light); */
   position: relative;
 }
 
@@ -27,7 +27,7 @@
     border-bottom: none;
   }
 
-  .anchor-links__sticky:after {
+  /* .anchor-links__sticky:after {
     position: absolute;
     bottom: 0;
     height: 1px;
@@ -36,7 +36,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-  }
+  } */
 }
 
 @media screen and (max-width: 500px) {
