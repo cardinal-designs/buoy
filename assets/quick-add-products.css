@@ -191,11 +191,13 @@
 
   .quick-add-grid__card-text ul {
     gap: 6px;
+    margin-bottom: 1px;
   }
 
   .quick-add-grid__card-text li::before {
     top: -1px;
     width: 18px;
     height: 18px;
+    left: -23px;
   }
 }

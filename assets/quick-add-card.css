@@ -149,6 +149,7 @@
   font-family: Rhymes-Light-Italic;
   margin: 0;
   line-height: normal;
+  font-weight: 300;
 }
 
 .quick-add__price {
@@ -263,6 +264,8 @@
   border: 1px solid var(--charcoal-60);
   background: #FFFFFFE5;
   border-radius: 10px;
+  scrollbar-color: var(--charcoal) var(--charcoal);
+  scrollbar-width: thin;
 }
 
 .quick-add__form-header {
