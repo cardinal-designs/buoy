@@ -145,9 +145,9 @@
     <div class="product-form__buttons">
       <button type="submit" name="add" class="button button--primary" data-available="{{ currentVariant.available }}">
         {% if currentVariant.available %}
-          <span>Add To Cart -&nbsp;</span>
+          <span>Add To Cart &mdash;&nbsp;</span>
         {% else %}
-          <span>Sold Out -&nbsp;</span>
+          <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
         {% if currentVariant.selling_plan_allocations.size > 0 %}
           <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
