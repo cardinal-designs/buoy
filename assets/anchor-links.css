@@ -15,6 +15,7 @@
   margin: 0;
   padding: 36px 0;
   border-bottom: 1px solid var(--gray-light);
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -22,14 +23,26 @@
     gap: 20px;
     width: calc(100% + 66px);
     margin-left: -33px;
-    padding: 20 33px;
+    padding: 20px 33px 56px;
+    border-bottom: none;
+  }
+
+  .anchor-links__sticky:after {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: var(--gray-light);
+    width: calc(100% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
   }
 }
 
 @media screen and (max-width: 500px) {
   .anchor-links__list {
     justify-content: start;
-    padding: 20px 33px;
+    padding: 20px 33px 56px;
   }
 }
 
