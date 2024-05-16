@@ -10,7 +10,7 @@
   @font-face {
     font-family: Rhymes-Light-Italic;
     src: url('{{ 'Rhymes-Text-Light-Italic.woff' | asset_url }}');
-    font-style: normal;
+    font-style: italic;
     font-weight: 100;
   }
 
