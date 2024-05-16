@@ -129,6 +129,12 @@
   gap: 8px;
 }
 
+@media screen and (max-width: 768px) {
+  .quick-add__content {
+    gap: 6px;
+  }
+} 
+
 .quick-add__title {
   font-family: inter, sans-serif;
   font-style: normal;
@@ -158,6 +164,13 @@
   font-size: 16px;
   letter-spacing: 0;
   line-height: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .quick-add__price {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 .quick-add__price-recurring {
