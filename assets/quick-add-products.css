@@ -146,13 +146,13 @@
 }
 
 .quick-add-grid__card-text ul {
-  padding: 0 0 0 25px;
+  padding: 0 0 0 30px;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 5px;
+  gap: 8px;
 }
 
 .quick-add-grid__card-text li {
@@ -172,7 +172,7 @@
   left: -30px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   .quick-add-grid__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
