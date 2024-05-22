@@ -1138,8 +1138,8 @@ $('.people-slider__people-slider--3').slick({
   rtl: true,
   variableWidth: true,
   infinite: false,
-  prevArrow: '<button type="button" class="people-slider__arrows--3 slick-prev">HEY</button>',
-  nextArrow: '<button type="button" class="people-slider__arrows--3 slick-next">HEY</button>',
+  prevArrow: '<button type="button" class="slick-prev">HEY</button>',
+  nextArrow: '<button type="button" class="slick-next">HEY</button>',
   appendArrows: '.people-slider__arrows--3',
   responsive: [
     {
