@@ -352,6 +352,32 @@
         "bottom_link": ""
       }
     },
+    "people_slider_C8M4y6": {
+      "type": "people-slider",
+      "blocks": {
+        "person_RVVRRx": {
+          "type": "person",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Headshot_Dan_4x5_d813ebd0-4bb0-4e08-9f39-eee0eb63eeed.jpg",
+            "name": "Daniel Schindler",
+            "role": "Founder & CEO",
+            "drink_image": "shopify:\/\/shop_images\/D_1x1_103x103_PDP_Drinks_GreenJuice_70b274b9-37fc-4b2d-a93b-e0adef4bf4e4.png"
+          }
+        }
+      },
+      "block_order": [
+        "person_RVVRRx"
+      ],
+      "settings": {
+        "reverse_layout": false,
+        "add_background": false,
+        "title": "In support of people & planet",
+        "text": "The world didn't need <em>just<\/em> another brand.<br><br> Buoy meets at the intersection of efficacy and sustainability: clean, bioavailable ingredients in a convenient, fast-absorbing form factor made from recycled materials.<br><br>And we're dedicating our brand and its resources to the community that needs it the most: people living with chronic illnesses.",
+        "bottom_text": "",
+        "bottom_link_text": "",
+        "bottom_link": ""
+      }
+    },
     "1635517483ddb3d83f": {
       "type": "animate-heading-text",
       "blocks": {
@@ -389,6 +415,7 @@
     "163603902787621b03",
     "164203013985f69588",
     "people_slider_2_gyMR4n",
+    "people_slider_C8M4y6",
     "1635517483ddb3d83f"
   ]
 }
