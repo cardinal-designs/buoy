@@ -1131,7 +1131,6 @@ $('.people-slider__drink-slider--3').slick({
 //   $('.people-slider__arrows--3 .slick-prev').hide()
 // });
     
-
 $('.people-slider__people-slider--3').slick({
   asNavFor: '.people-slider__drink-slider--3',
   slidesToShow: 3,
@@ -1165,7 +1164,6 @@ $('.people-slider__people-slider--3').slick({
   ]
 });
     
- 
 $('.people-slider__people-slider--3').on('afterChange', function(event, slick, currentSlide, nextSlide){
   if (currentSlide == 0) {
     $('.people-slider__arrows--3 .slick-prev').hide()
