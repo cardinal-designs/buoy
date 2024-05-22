@@ -1127,9 +1127,9 @@ $('.people-slider__drink-slider--3').slick({
   arrows: false
 });
     
-// $('.people-slider__people-slider--3').on('init', function(event, slick){
-//   $('.people-slider__arrows--3 .slick-prev').hide()
-// });
+$('.people-slider__people-slider--3').on('init', function(event, slick){
+  $('.people-slider__arrows--3 .slick-prev').show()
+});
     
 
 $('.people-slider__people-slider--3').slick({
