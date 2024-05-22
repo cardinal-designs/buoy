@@ -11,30 +11,6 @@
       {% endif %}
     </div>
     <div class="people-slider__container">
-      <div class="people-slider__people">
-        <div class="people-slider__people-slider--2">
-          {% for block in section.blocks %}
-            <div class="people-slider__people-item">
-              <div class="people-slider__people-item-wrapper">
-                <img
-                  srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-                    {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-                    {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w,{%- endif -%}
-                    {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
-                    {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | img_url: '940x' }} 940w,{%- endif -%}
-                    {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
-                  src="{{ block.settings.image | img_url: '533x' }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                  alt="{{ block.settings.image.alt | escape }}"
-                  loading="lazy"
-                  class="motion-reduce img-fill"
-                >
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="people-slider__arrows--2"></div>
-      </div>
       <div class="people-slider__drink">
         <div class="people-slider__drink-slider--2">
           {% for block in section.blocks %}
@@ -83,6 +59,30 @@
             </div>
           {% endfor %}
         </div>
+      </div>
+      <div class="people-slider__people">
+        <div class="people-slider__people-slider--2">
+          {% for block in section.blocks %}
+            <div class="people-slider__people-item">
+              <div class="people-slider__people-item-wrapper">
+                <img
+                  srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+                    {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+                    {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
+                  src="{{ block.settings.image | img_url: '533x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  loading="lazy"
+                  class="motion-reduce img-fill"
+                >
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="people-slider__arrows--2"></div>
       </div>
     </div>
     {% if section.settings.bottom_link_text != blank or section.settings.bottom_text != blank %}
