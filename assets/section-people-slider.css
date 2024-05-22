@@ -27,10 +27,6 @@
   gap: 30px;
 }
 
-.people-slider__container-2 {
-  grid-template-columns: minmax(0, .65fr) minmax(0, .35fr);
-}
-
 .people-slider__container-3 {
   grid-template-columns: minmax(0, .65fr) minmax(0, .35fr);
 }
@@ -81,10 +77,6 @@
 }
 
 .people-slider__people-slider--3 {
-  margin: 0 -10px 0 -2000px;
-}
-
-.people-slider__people-slider--2 {
   margin: 0 -10px 0 -2000px;
 }
 
