@@ -11,6 +11,7 @@
     "order_icon": "shopify:\/\/shop_images\/shipping-time.svg",
     "favicon": "shopify:\/\/shop_images\/Buoy_Favicon-01.png",
     "show_announcement_bar": true,
+    "show_pdp_announce": true,
     "fix_announcement": false,
     "sections": {
       "announcement-bar": {
@@ -325,12 +326,12 @@
       "announcement-bar-new": {
         "type": "announcement-bar-new",
         "settings": {
-          "text": "<strong>Buoy x Chris Paul collab electrolytes<\/strong> running out. <u>Shop Now<\/u>—>",
+          "text": "Memorial Day Sale — <strong>Extra 20% Off<\/strong> 9 packs with code <strong>MDW20<\/strong>. <u>Shop Now<\/u>",
           "link": "shopify:\/\/collections\/all",
           "hide_mobile": false,
           "background": "#def647",
           "text_color": "#1f2322",
-          "image": "shopify:\/\/shop_images\/PDP_CP3_x3_d95f5aa6-1d18-4890-915c-60d37fa7f186.png"
+          "image": "shopify:\/\/shop_images\/PDP_Hydration_Drops_9x_d02f375b-ddaa-47ad-8eef-1fba145b3739.png"
         }
       },
       "hydration-facts-drawer": {
@@ -540,8 +541,8 @@
           "table_rxE8zb": {
             "type": "table",
             "settings": {
-              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
-              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M-2.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D-2.svg"
             }
           },
           "info_4QffLi": {
@@ -623,7 +624,8 @@
           "table_QcJkaG": {
             "type": "table",
             "settings": {
-              "table_image": "shopify:\/\/shop_images\/Immunity-Supplement-Facts.svg"
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_M-2.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_D-2.svg"
             }
           },
           "info_fhFGe4": {

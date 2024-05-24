@@ -159,6 +159,12 @@
       },
       {
         "type": "checkbox",
+        "id": "show_pdp_announce",
+        "label": "Show Announcement Bar on PDP",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "fix_announcement",
         "label": "Fixed Announcement",
         "default": true
