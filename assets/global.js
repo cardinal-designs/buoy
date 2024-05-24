@@ -1145,14 +1145,16 @@ $('.people-slider__people-slider--3').slick({
       breakpoint: 1500,
       settings: {
         slidesToShow: 2,
-        arrows: true
+        arrows: true,
+        appendArrows: '.people-slider__arrows--3',
       }
     },
     {
       breakpoint: 900,
       settings: {
         slidesToShow: 1,
-        arrows: true
+        arrows: true,
+        appendArrows: '.people-slider__arrows--3',
       }
     },
     {
@@ -1161,7 +1163,8 @@ $('.people-slider__people-slider--3').slick({
         slidesToShow: 1,
         variableWidth: false,
         infinite: false,
-        arrows: true
+        arrows: true,
+        appendArrows: '.people-slider__arrows--3',
       }
     }
   ] 
