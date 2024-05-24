@@ -1164,7 +1164,7 @@ $('.people-slider__people-slider--3').slick({
         arrows: true
       }
     }
-  ]
+  ] 
 });
     
 // $('.people-slider__people-slider--3').on('afterChange', function(event, slick, currentSlide, nextSlide){
