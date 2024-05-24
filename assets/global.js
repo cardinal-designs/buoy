@@ -1145,6 +1145,7 @@ $('.people-slider__people-slider--3').slick({
       breakpoint: 1500,
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 1,
         arrows: true
       }
     },
