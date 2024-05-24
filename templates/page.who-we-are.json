@@ -295,6 +295,53 @@
         "5af1b3f3-8cb8-4208-8434-7889bf180ccc",
         "abb346df-a2a8-4eae-82c2-6523a30f766b"
       ],
+      "disabled": true,
+      "settings": {
+        "reverse_layout": false,
+        "add_background": false,
+        "title": "In support of people & planet",
+        "text": "The world didn't need <em>just<\/em> another brand.<br><br> Buoy meets at the intersection of efficacy and sustainability: clean, bioavailable ingredients in a convenient, fast-absorbing form factor made from recycled materials.<br><br>And we're dedicating our brand and its resources to the community that needs it the most: people living with chronic illnesses.",
+        "bottom_text": "",
+        "bottom_link_text": "",
+        "bottom_link": ""
+      }
+    },
+    "people_slider_3_VLjYkz": {
+      "type": "people-slider-3",
+      "blocks": {
+        "person_NjeWft": {
+          "type": "person",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Headshot_Dan_4x5_d813ebd0-4bb0-4e08-9f39-eee0eb63eeed.jpg",
+            "name": "Daniel Schindler",
+            "role": "Founder & CEO",
+            "drink_image": "shopify:\/\/shop_images\/D_1x1_103x103_PDP_Drinks_GreenJuice.png"
+          }
+        },
+        "person_UXdQhp": {
+          "type": "person",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Headshot_Eddie_4x5_0652c1cc-9dad-48a7-b187-6c41c44c791e.jpg",
+            "name": "Eddie Zelenak",
+            "role": "Founder & CMO",
+            "drink_image": "shopify:\/\/shop_images\/D_1x1_103x103_PDP_Drinks_MatchaLatte.png"
+          }
+        },
+        "person_hm4Abc": {
+          "type": "person",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Headshot_Cole_4x5_47a25c42-b82b-4121-8c02-4a0d46017d52.jpg",
+            "name": "Cole Puchi",
+            "role": "Founder & CSO",
+            "drink_image": "shopify:\/\/shop_images\/D_1x1_103x103_PDP_Drinks_Beer.png"
+          }
+        }
+      },
+      "block_order": [
+        "person_NjeWft",
+        "person_UXdQhp",
+        "person_hm4Abc"
+      ],
       "settings": {
         "reverse_layout": false,
         "add_background": false,
@@ -341,6 +388,7 @@
     "16354119189a10ab60",
     "163603902787621b03",
     "164203013985f69588",
+    "people_slider_3_VLjYkz",
     "1635517483ddb3d83f"
   ]
 }
