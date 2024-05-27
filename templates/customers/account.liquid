@@ -150,7 +150,9 @@
           </div>
           <div class="new__account--tabs-content">
             <div id="tab-1" class="tab-content current">
-        		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div class='customer_address'>
+                {{ customer.default_address | format_address }}
+              </div>
         	</div>
         	<div id="tab-2" class="tab-content">
         		{% paginate customer.orders by 20 %}
