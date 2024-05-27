@@ -821,7 +821,8 @@ li[data-address] > h2 {
 
 .new__account--header h1 {
   text-align: center;
-  margin: 0 0 0;
+  line-height: 1;
+  margin: 0 0 16px;
 }
 
 .new__account--inner ul.tabs {
