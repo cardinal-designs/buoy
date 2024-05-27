@@ -919,11 +919,11 @@ li[data-address] > h2 {
 
   .new__account--inner ul.tabs {
     flex-wrap: wrap;
-    flex: 1 1 100%;
   }
 
   .new__account--inner ul.tabs li {
     width: 100%;
+    flex: 1 1 100%;
   }
 }
 
