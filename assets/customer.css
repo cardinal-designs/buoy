@@ -819,12 +819,13 @@ li[data-address] > h2 {
 
 /*========== ACCOUNT PAGE CSS STAART ==========*/
 
-ul.tabs {
+.new__account--inner ul.tabs {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-ul.tabs li {
+
+.new__account--inner ul.tabs li {
   background: none;
   color: #222;
   display: inline-block;
@@ -832,18 +833,18 @@ ul.tabs li {
   cursor: pointer;
 }
 
-ul.tabs li.current {
+.new__account--inner ul.tabs li.current {
   background: #ededed;
   color: #222;
 }
 
-.tab-content {
+.new__account--inner .tab-content {
   display: none;
   background: #ededed;
   padding: 15px;
 }
 
-.tab-content.current {
+.new__account--inner .tab-content.current {
   display: inherit;
 }
 
