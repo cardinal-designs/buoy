@@ -849,6 +849,7 @@ li[data-address] > h2 {
   display: none;
   background: #ededed;
   padding: 15px;
+  border-radius: 10px;
 }
 
 .new__account--inner .tab-content.current {
