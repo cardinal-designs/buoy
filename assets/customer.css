@@ -823,14 +823,20 @@ li[data-address] > h2 {
   margin: 0px;
   padding: 0px;
   list-style: none;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
 }
 
 .new__account--inner ul.tabs li {
   background: none;
   color: #222;
-  display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .new__account--inner ul.tabs li.current {
