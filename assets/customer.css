@@ -915,4 +915,11 @@ li[data-address] > h2 {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 989px) {
+
+  .new__account--inner ul.tabs li {
+    width: 100%;
+  }
+}
+
 /*========== ACCOUNT PAGE CSS END ==========*/
