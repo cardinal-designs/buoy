@@ -858,6 +858,10 @@ li[data-address] > h2 {
   margin-right: 10px;
 }
 
+.new__account--inner ul.tabs li:last-child {
+  margin-right: 0;
+}
+
 .new__account--inner ul.tabs li:hover {
   background: var(--green-1);
   color: var(--charcoal);
