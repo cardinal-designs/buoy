@@ -834,8 +834,8 @@ li[data-address] > h2 {
 }
 
 .new__account--inner ul.tabs li.current {
-  background: #ededed;
-  color: #222;
+  background: var(--green-1);
+  color: var(--charcoal);
 }
 
 .new__account--inner .tab-content {
