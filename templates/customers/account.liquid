@@ -115,9 +115,6 @@
       <div class='customer_address'>
         {{ customer.default_address | format_address }}
       </div>
-      <!-- Start Retextion Customer Login -->
-{% render 'rtxn_customer_login_btn', customer: customer %} 
-      <!-- End Retextion Customer Login -->
       
 
       <a href="{{ routes.account_addresses_url }}">
