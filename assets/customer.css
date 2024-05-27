@@ -893,11 +893,14 @@ li[data-address] > h2 {
 
 .new__account--tabs-content .account__logout--wrap a {
   font-size: 16px;
+  displaay: flex;
+  align-items: center;
   font-family: inter,sans-serif;
 }
 
 .new__account--tabs-content .account__logout--wrap svg {
   width: 16px;
   height: auto;
+  margin-right: 10px;
 }
 /*========== ACCOUNT PAGE CSS END ==========*/
