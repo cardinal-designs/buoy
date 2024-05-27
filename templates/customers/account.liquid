@@ -154,6 +154,10 @@
               <div class='customer_address'>
                 {{ customer.default_address | format_address }}
               </div>
+
+              <a href="{{ routes.account_addresses_url }}">
+                {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+              </a>
         	</div>
         	<div id="tab-2" class="tab-content">
         		{% paginate customer.orders by 20 %}
