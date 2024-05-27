@@ -829,7 +829,7 @@ li[data-address] > h2 {
 }
 
 .new__account--inner ul.tabs li {
-  background: none;
+  background: #f8f8f8;
   color: #222;
   padding: 10px 15px;
   cursor: pointer;
@@ -847,7 +847,7 @@ li[data-address] > h2 {
 
 .new__account--inner .tab-content {
   display: none;
-  background: #ededed;
+  background: #f8f8f8;
   padding: 15px;
   border-radius: 10px;
 }
