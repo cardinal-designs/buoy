@@ -819,6 +819,11 @@ li[data-address] > h2 {
 
 /*========== ACCOUNT PAGE CSS STAART ==========*/
 
+.new__account--header h1 {
+  text-align: center;
+  margin: 0 0 0;
+}
+
 .new__account--inner ul.tabs {
   margin: 0px;
   padding: 0px;
