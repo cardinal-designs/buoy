@@ -842,7 +842,7 @@ li[data-address] > h2 {
 
 .new__account--inner ul.tabs li {
   background: #f8f8f8;
-  color: #222;
+  color: var(--charcoal);
   padding: 10px 15px;
   cursor: pointer;
   display: inline-flex;
@@ -851,6 +851,11 @@ li[data-address] > h2 {
   align-items: center;
   border-radius: 10px;
   margin-right: 10px;
+}
+
+.new__account--inner ul.tabs li:hover {
+  background: var(--green-1);
+  color: var(--charcoal);
 }
 
 .new__account--inner ul.tabs li.current {
