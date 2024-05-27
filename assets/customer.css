@@ -917,6 +917,10 @@ li[data-address] > h2 {
 
 @media only screen and (max-width: 989px) {
 
+  .new__account--inner ul.tabs {
+    flex-wrap: wrap;
+  }
+
   .new__account--inner ul.tabs li {
     width: 100%;
   }
