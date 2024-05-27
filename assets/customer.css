@@ -891,6 +891,11 @@ li[data-address] > h2 {
   margin-top: 10px;
 }
 
+.new__account--tabs-content .account__logout--wrap a {
+  font-size: 16px;
+  font-family: inter,sans-serif;
+}
+
 .new__account--tabs-content .account__logout--wrap svg {
   width: 16px;
   height: auto;
