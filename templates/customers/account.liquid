@@ -1,6 +1,7 @@
 {% comment %} <!-- BEGIN SMARTRR SNIPPET -->{% render 'smartrr-account' %}<!-- END SMARTRR SNIPPET -->  {% endcomment %}
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'customer.js' | asset_url }}" defer></script>
 
 <div class="customer account">
   <div class='account_main'>
@@ -152,7 +153,7 @@
           <div class="new__account--tabs-content">
             <div id="tab-1" class="tab-content current">
 
-              <div class="new__account--addresses-add">
+              <div class="new__account--addresses-add customer addresses" data-customer-addresses>
                 <div data-address>
                   <button
                     type="button"
