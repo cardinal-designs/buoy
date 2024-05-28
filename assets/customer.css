@@ -1005,7 +1005,8 @@ li[data-address] h2 {
   border-radius: 10px;
 }
 
-.new__account #loyaltylion .lion-history-table__header-cell {
+.new__account #loyaltylion .lion-history-table__header-cell,
+.new__account #loyaltylion .lion-history-table__row-cell {
   text-align: center;
 }
 
