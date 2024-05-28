@@ -1177,6 +1177,21 @@ li[data-address] h2 {
 }
 
 
+.new__account thead th#ColumnOrder, .new__account thead th#ColumnDate, .new__account thead th#ColumnPayment, .new__account thead th#ColumnFulfillment, .new__account thead th#ColumnTotal {
+  font-weight: 600;
+}
+
+.new__account thead th, .new__account tr td {
+  padding: 10px;
+  text-align: left !important;
+  border: 1px solid #000000;
+}
+
+.new__account thead th {
+  border-bottom: none;
+}
+
+
 @media only screen and (max-width: 1280px) {
 
   .new__account--addresses-col {
