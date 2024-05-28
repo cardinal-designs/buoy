@@ -650,10 +650,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  var formClose = document.querySelector('.new__account--addresses-form-close');
-  var resetButton = document.querySelector('.address__btn--close');
-  
-  formClose.addEventListener('click', function() {
-    resetButton.click();
-  });
+    var formClose = document.querySelector('.new__account--addresses-form-close');
+    var resetButton = document.querySelector('.address__btn--close');
+
+    if (formClose && resetButton) {
+        formClose.addEventListener('click', function() {
+            resetButton.click();
+        });
+    } else {
+        console.error('Could not find the form close or reset button elements.');
+    }
 });
