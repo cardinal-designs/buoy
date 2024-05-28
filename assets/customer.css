@@ -766,6 +766,7 @@ li[data-address] > h2 {
 
 .customer .select select {
   padding: 10px 16px !important;
+  background: #fff;
 }
 
 .customer .field label {
@@ -950,11 +951,6 @@ li[data-address] > h2 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.new__account--addresses-col.default {
-  background: #f8e3cb;
-  border-radius: 10px;
 }
 
 .new__account--addresses-col button {
