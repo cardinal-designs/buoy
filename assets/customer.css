@@ -709,14 +709,14 @@ li[data-address] {
   text-align: left;
 }
 
-li[data-address] > h2 {
+li[data-address] h2 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 769px) {
-  li[data-address] > h2 {
+  li[data-address] h2 {
     font-size: 2.2rem;
   }
 }
