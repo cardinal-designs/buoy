@@ -650,12 +650,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to handle the click event on Button 1
-document.getElementById('button1').addEventListener('click', function() {
+document.querySelectorAll('querySelectorAll').addEventListener('click', function() {
     // Automatically trigger click on Button 2
-    document.getElementById('button2').click();
+    document.querySelectorAll('button2').click();
 });
 
 // Function to handle the click event on Button 2
-document.getElementById('button2').addEventListener('click', function() {
+document.querySelectorAll('button2').addEventListener('click', function() {
     alert('Button 2 was clicked!');
 });
