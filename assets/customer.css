@@ -1042,7 +1042,7 @@ li[data-address] h2 {
 }
 
 .new__account .address__btn button {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .new__account .address__btn button:hover {
