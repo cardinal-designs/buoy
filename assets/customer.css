@@ -963,11 +963,13 @@ li[data-address] h2 {
 }
 
 .new__account--addresses-col {
-  width: 100%;
+  width: 33.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 15px;
+  text-align: left;
 }
 
 .new__account--addresses-col-item {
