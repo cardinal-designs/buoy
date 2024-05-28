@@ -999,7 +999,13 @@ li[data-address] h2 {
 
 .new__account--addresses-form {
   padding: 0 15px;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
 .new__account .field label {
@@ -1154,6 +1160,13 @@ li[data-address] h2 {
 .css-zsmbld {
   font-size: 2rem;
   padding-bottom: 40px;
+}
+
+.new__account--addresses-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
 }
 
 
