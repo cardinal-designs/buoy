@@ -1036,8 +1036,9 @@ li[data-address] h2 {
 .new__account .address__btn {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 15px;
+  gap: 20px;
 }
 
 .new__account .address__btn button {
