@@ -996,7 +996,8 @@ li[data-address] h2 {
   content: unset;
 }
 
-.new__account #loyaltylion .lion-header {
+.new__account #loyaltylion .lion-header,
+.new__account #loyaltylion .lion-claimed-rewards-list--empty {
   border-radius: 10px;
 }
 
