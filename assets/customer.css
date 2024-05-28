@@ -751,7 +751,8 @@ li[data-address] > h2 {
   margin-top: 1.5rem;
 }
 
-.customer .field input {
+.customer .field input,
+.customer .select select {
   width: 100%;
   padding: 16px !important;
   border: 1px solid black;
@@ -761,6 +762,10 @@ li[data-address] > h2 {
   font-size: 14px;
   letter-spacing: 0;
   line-height: 1.375em;
+}
+
+.customer .select select {
+  padding: 10px 16px !important;
 }
 
 .customer .field label {
