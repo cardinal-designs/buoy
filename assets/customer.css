@@ -1013,8 +1013,12 @@ li[data-address] h2 {
   margin: 0 auto;
   background: #ffffff;
   padding: 40px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: auto;
+}
+
+.new__account--addresses-form h2 {
+  
 }
 
 .new__account .field label {
