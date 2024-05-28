@@ -1053,6 +1053,11 @@ li[data-address] h2 {
   font-size: 16px;
 }
 
+.new__account #loyaltylion .lion-action-button:hover {
+  background: var(--charcoal);
+  color: var(--white);
+}
+
 .new__account .address__btn {
   display: flex;
   align-items: center;
