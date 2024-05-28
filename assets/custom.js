@@ -649,13 +649,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Function to handle the click event on Button 1
-document.querySelectorAll('querySelectorAll').addEventListener('click', function() {
-    // Automatically trigger click on Button 2
-    document.querySelectorAll('address__btn--close').click();
-});
-
-// Function to handle the click event on Button 2
-document.querySelectorAll('address__btn--close').addEventListener('click', function() {
-    alert('Button 2 was clicked!');
+document.addEventListener('DOMContentLoaded', function() {
+  var formClose = document.querySelector('.new__account--addresses-form-close');
+  var resetButton = document.querySelector('.address__btn--close');
+  
+  formClose.addEventListener('click', function() {
+    resetButton.click();
+  });
 });
