@@ -152,15 +152,14 @@
           <div class="new__account--tabs-content">
             <div id="tab-1" class="tab-content current">
               <div class="customer__info--wrap">
-                
-
-                {%- for address in customer.addresses -%}
-                  <div class="customer__addresss">
-                    {{ address | format_address }}
-                    <p>{{ customer.email }}</p>
-                  </div>
-                {%- endfor -%}
-  
+                <div class="address___wrap">
+                  {%- for address in customer.addresses -%}
+                    <div class="customer__addresss">
+                      {{ address | format_address }}
+                      <p>{{ customer.email }}</p>
+                    </div>
+                  {%- endfor -%}
+                </div>
                 <div class="customer__view--address-wrap">
                   <a href="{{ routes.account_addresses_url }}" class="button button--beige">
                     {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
