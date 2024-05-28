@@ -996,6 +996,10 @@ li[data-address] h2 {
   content: unset;
 }
 
+.new__account #loyaltylion .lion-header {
+  border-radius: 10px;
+}
+
 
 @media only screen and (max-width: 989px) {
 
