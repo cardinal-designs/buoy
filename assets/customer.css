@@ -1035,6 +1035,11 @@ li[data-address] h2 {
   margin-bottom: 0;
 }
 
+.new__account #loyaltylion .lion-reward-item__title,
+.new__account #loyaltylion .lion-rule-item__title {
+  color: #1F2322;
+}
+
 .new__account .address__btn {
   display: flex;
   align-items: center;
