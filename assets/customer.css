@@ -954,6 +954,13 @@ li[data-address] > h2 {
   justify-content: space-between;
 }
 
+.new__account--addresses-col-item {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .new__account--addresses-col button {
   margin: 14px 0;
 }
