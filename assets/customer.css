@@ -991,6 +991,11 @@ li[data-address] h2 {
   font-size: 33px;
 }
 
+.new__account #loyaltylion .lion-integrated-page-section__heading-text:after,
+.new__account #loyaltylion .lion-integrated-page-section__heading-text:before {
+  content: unset;
+}
+
 
 @media only screen and (max-width: 989px) {
 
