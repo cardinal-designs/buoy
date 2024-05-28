@@ -933,6 +933,11 @@ li[data-address] > h2 {
   border-bottom: 0px;
 }
 
+.customer__info--wrap .address___wrap .customer__addresss h6 {
+  font-size: 20px;
+  margin:  0 0 10px;
+}
+
 
 @media only screen and (max-width: 989px) {
 
