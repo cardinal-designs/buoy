@@ -39,7 +39,7 @@
                       </button>
                       <div id="AddAddress" class="new__account--addresses-form">
                         <div class="new__account--addresses-form-inner">
-                        <span class="new__account--addresses-form-close">X</span>
+                        <a href="#" class="new__account--addresses-form-close">X</a>
                         <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
                         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
                           <div class="field">
@@ -146,7 +146,7 @@
                           </button>
                           <div id="EditAddress_{{ address.id }}" class="new__account--addresses-form">
                             <div class="new__account--addresses-form-inner">
-                            <span class="new__account--addresses-form-close">X</span>
+                            <a href="#" class="new__account--addresses-form-close">X</a>
                             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
                             {%- form 'customer_address', address -%}
                               <div class="field">
