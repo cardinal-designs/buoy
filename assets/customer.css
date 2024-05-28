@@ -989,6 +989,11 @@ li[data-address] h2 {
   margin-top: 10px;
 }
 
+.new__account .addresses input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+
 .new__account--addresses .customer {
   margin: 0;
   max-width: unset;
