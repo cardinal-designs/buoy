@@ -155,7 +155,7 @@
                 <div class="address___wrap">
                   {%- for address in customer.addresses -%}
                     <div class="customer__addresss">
-                      <h6>Address {{ forloop.index }}</h6>
+                      <h6>Address ({{ forloop.index }})</h6>
                       {{ address | format_address }}
                       <p>{{ customer.email }}</p>
                     </div>
