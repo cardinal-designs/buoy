@@ -935,7 +935,7 @@ li[data-address] > h2 {
 .new__account--addresses-row {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
+  margin: 0;
 }
 
 .new__account--addresses-col {
