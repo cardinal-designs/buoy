@@ -1182,7 +1182,7 @@ li[data-address] h2 {
 }
 
 .new__account thead th, .new__account tr td {
-  padding: 10px;
+  padding: 15px !important;
   text-align: left !important;
   border: 1px solid #000000;
 }
@@ -1253,8 +1253,7 @@ li[data-address] h2 {
   }
 
   .new__account .address__btn {
-    flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
   .new__account .address__btn button {
@@ -1285,6 +1284,15 @@ li[data-address] h2 {
 
   .new__account #loyaltylion .lion-faq-list__question-answer ul {
     padding-left: 20px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 769px) {
+  
+  .new__account .address__btn {
+    flex-direction: column;
   }
   
 }
