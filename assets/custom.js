@@ -622,3 +622,29 @@ $( document ).ready(function() {
 
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabs = document.querySelectorAll(".new__account ul.tabs li");
+
+  tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+          var tab_id = tab.getAttribute("data-tab");
+
+          // Remove 'current' class from all tabs and tab content
+          tabs.forEach(function (t) {
+              t.classList.remove("current");
+          });
+
+          var tabContents = document.querySelectorAll(".new__account .tab-content");
+          tabContents.forEach(function (content) {
+              content.classList.remove("current");
+          });
+
+          // Add 'current' class to the clicked tab and corresponding tab content
+          tab.classList.add("current");
+          document.getElementById(tab_id).classList.add("current");
+      });
+  });
+});
