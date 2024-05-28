@@ -994,6 +994,11 @@ li[data-address] h2 {
   height: 16px;
 }
 
+.new__account--addresses-check {
+  display: flex;
+  align-items: center;
+}
+
 .new__account--addresses .customer {
   margin: 0;
   max-width: unset;
