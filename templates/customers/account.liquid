@@ -145,6 +145,7 @@
                           </button>
                           <div id="EditAddress_{{ address.id }}" class="new__account--addresses-form">
                             <div class="new__account--addresses-form-inner">
+                              <span class="new__account--addresses-form-close">X</span>
                             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
                             {%- form 'customer_address', address -%}
                               <div class="field">
