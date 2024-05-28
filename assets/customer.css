@@ -927,10 +927,12 @@ li[data-address] > h2 {
 .customer__info--wrap .address___wrap .customer__addresss {
   width: 100%;
   border-bottom: 1px solid #1F2322;
+  margin-bottom: 20px;
 }
 
 .customer__info--wrap .address___wrap .customer__addresss:last-child {
   border-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .customer__info--wrap .address___wrap .customer__addresss h6 {
