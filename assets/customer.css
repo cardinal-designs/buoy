@@ -972,6 +972,11 @@ li[data-address] h2 {
   text-align: left;
 }
 
+.new__account--addresses-col-header {
+  width: 100%;
+  text-align: left;
+}
+
 .new__account--addresses-col-item {
   display: flex;
   justify-content: center;
