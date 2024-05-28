@@ -1083,7 +1083,7 @@ li[data-address] h2 {
   margin-top: 20px;
 }
 
-.new__account--addresses h2 {
+.new__account--addresses h2.title {
   margin: 0;
   text-align: center;
   font-size: 24px;
@@ -1105,10 +1105,6 @@ li[data-address] h2 {
 .new__account .field input,
 .new__account .select select {
   height: 53px !important;
-}
-
-#AddAddress {
-  margin-top: 20px;
 }
 
 
