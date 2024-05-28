@@ -27,7 +27,7 @@
               <div class="new__account--addresses">
                 {%- paginate customer.addresses by 5 -%}
                   <div class="customer addresses" data-customer-addresses>
-                    <div data-address>
+                    <div data-address class="new__account--addresses-header">
                       <div class="">
                         <h2>Hey, {{ customer.first_name }}</h2>
                         <p>{{ customer.email }}</p>
