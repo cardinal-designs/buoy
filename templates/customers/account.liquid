@@ -1,6 +1,7 @@
 {% comment %} <!-- BEGIN SMARTRR SNIPPET -->{% render 'smartrr-account' %}<!-- END SMARTRR SNIPPET -->  {% endcomment %}
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'customer.js' | asset_url }}" defer></script>
 
 <div class="customer account">
   <div class='account_main'>
@@ -536,3 +537,10 @@
     </div>
   </div>
 </section>
+
+                      
+<script>
+  window.onload = () => {
+    typeof CustomerAddresses !== 'undefined' && new CustomerAddresses();
+  }
+</script>
