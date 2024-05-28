@@ -999,6 +999,13 @@ li[data-address] h2 {
   align-items: center;
 }
 
+.new__account--addresses-check input {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .new__account--addresses .customer {
   margin: 0;
   max-width: unset;
