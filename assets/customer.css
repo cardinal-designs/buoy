@@ -1198,6 +1198,8 @@ li[data-address] h2 {
   right: 20px;
   width: 20px;
   height: 20px;
+  display: flex !important;
+  align-items: center;
 }
 
 
