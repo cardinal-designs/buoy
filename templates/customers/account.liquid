@@ -152,14 +152,12 @@
           <div class="new__account--tabs-content">
             <div id="tab-1" class="tab-content current">
               <div class="customer__info--wrap">
-                <div class='customer_address'>
-                  {{ customer.default_address | format_address }}
-                  <p>{{ customer.email }}</p>
-                </div>
+                
 
                 {%- for address in customer.addresses -%}
                   <div class="customer__addresss">
                     {{ address | format_address }}
+                    <p>{{ customer.email }}</p>
                   </div>
                 {%- endfor -%}
   
