@@ -650,14 +650,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var formClose = document.querySelector('.new__account--addresses-form-close');
-    var resetButton = document.querySelector('.address__btn--close');
+    var formCloses = document.querySelectorAll('.new__account--addresses-form-close');
+    var resetButtons = document.querySelectorAll('.address__btn--close');
 
-    if (formClose && resetButton) {
+    if (formCloses.length !== resetButtons.length) {
+        console.error('The number of form close buttons does not match the number of reset buttons.');
+        return;
+    }
+
+    formCloses.forEach((formClose, index) => {
+        var resetButton = resetButtons[index];
         formClose.addEventListener('click', function() {
             resetButton.click();
         });
-    } else {
-        console.error('Could not find the form close or reset button elements.');
-    }
+    });
 });
