@@ -167,9 +167,6 @@
                                 <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
                               </div>
                               <div>
-                                <label for="AddressCountry_{{ form.id }}">
-                                  {{ 'customer.addresses.country' | t }}
-                                </label>
                                 <div class="select">
                                   <select
                                     id="AddressCountry_{{ form.id }}"
@@ -185,11 +182,11 @@
                                     <use href="#icon-caret" />
                                   </svg>
                                 </div>
+                                <label for="AddressCountry_{{ form.id }}">
+                                  {{ 'customer.addresses.country' | t }}
+                                </label>
                               </div>
                               <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
-                                <label for="AddressProvince_{{ form.id }}">
-                                  {{ 'customer.addresses.province' | t }}
-                                </label>
                                 <div class="select">
                                   <select
                                     id="AddressProvince_{{ form.id }}"
@@ -202,6 +199,9 @@
                                     <use href="#icon-caret" />
                                   </svg>
                                 </div>
+                                <label for="AddressProvince_{{ form.id }}">
+                                  {{ 'customer.addresses.province' | t }}
+                                </label>
                               </div>
                               <div class="field">
                                 <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
