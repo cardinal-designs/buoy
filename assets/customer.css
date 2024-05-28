@@ -807,8 +807,8 @@ li[data-address] > h2 {
 
 /*========== ACCOUNT PAGE CSS STAART ==========*/
 
-.new__account .new__account--inner {
-  margin-bottom: 60px;
+.new__account {
+  padding: 60px 0;
 }
 
 .new__account--inner .new__account--header {
