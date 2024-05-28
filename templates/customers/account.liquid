@@ -63,7 +63,6 @@
                             <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
                           </div>
                           <div>
-                            <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
                             <div class="select">
                               <select
                                 id="AddressCountryNew"
@@ -77,9 +76,9 @@
                                 <use href="#icon-caret" />
                               </svg>
                             </div>
+                            <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
                           </div>
                           <div id="AddressProvinceContainerNew" style="display: none">
-                            <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
                             <div class="select">
                               <select
                                 id="AddressProvinceNew"
@@ -92,6 +91,7 @@
                                 <use href="#icon-caret" />
                               </svg>
                             </div>
+                            <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
                           </div>
                           <div class="field">
                             <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
