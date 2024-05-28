@@ -992,18 +992,13 @@ li[data-address] h2 {
 .new__account .addresses input[type=checkbox] {
   width: 16px;
   height: 16px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .new__account--addresses-check {
   display: flex;
   align-items: center;
-}
-
-.new__account--addresses-check input {
-  width: 16px;
-  height: 16px;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 .new__account--addresses .customer {
