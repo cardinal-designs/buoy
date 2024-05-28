@@ -932,6 +932,16 @@ li[data-address] > h2 {
   margin: 0;
 }
 
+.new__account--addresses-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.new__account--addresses-col {
+  width: 50%;
+}
+
 
 @media only screen and (max-width: 989px) {
 
