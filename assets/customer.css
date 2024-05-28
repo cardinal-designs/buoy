@@ -1074,6 +1074,16 @@ li[data-address] h2 {
   margin-top: 10px;
 }
 
+.new__account--addresses-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.new__account--addresses-btn button {
+  margin: 0 !important;
+}
+
 
 @media only screen and (max-width: 989px) {
 
