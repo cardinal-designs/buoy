@@ -116,8 +116,10 @@
                     <ul role="list" class="new__account--addresses-row">
                       {%- for address in customer.addresses -%}
                         <li data-address class="new__account--addresses-col{% if address == customer.default_address %} default{% endif %}">
-                          <h2>Address ({{ forloop.index }}) {% if address == customer.default_address %}{{ 'customer.addresses.default' | t }}{% endif %}</h2>
-                          {{ address | format_address }}
+                          <div class="new__account--addresses-col-header">
+                            <h2>Address ({{ forloop.index }}) {% if address == customer.default_address %}{{ 'customer.addresses.default' | t }}{% endif %}</h2>
+                            {{ address | format_address }}
+                          </div>
                           <div class="new__account--addresses-col-item">
                           <button
                             type="button"
