@@ -1010,6 +1010,11 @@ li[data-address] h2 {
   .new__account--addresses-col {
     width: 100%;
   }
+
+  .new__account--addresses .customer {
+    padding: 0;
+  }
+  
 }
 
 /*========== ACCOUNT PAGE CSS END ==========*/
