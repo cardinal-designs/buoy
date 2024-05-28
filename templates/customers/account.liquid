@@ -142,6 +142,7 @@
                             {{ 'customer.addresses.delete' | t }}
                           </button>
                           <div id="EditAddress_{{ address.id }}" class="new__account--addresses-form">
+                            <div class="new__account--addresses-form-inner">
                             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
                             {%- form 'customer_address', address -%}
                               <div class="field">
@@ -224,6 +225,7 @@
                                 <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
                               </div>
                             {%- endform -%}
+                            </div>
                             </div>
                           </div>
                         </li>
