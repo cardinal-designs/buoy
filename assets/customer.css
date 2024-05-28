@@ -1006,6 +1006,13 @@ li[data-address] h2 {
   margin-bottom: 0;
 }
 
+.new__account .address__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
 .new__account .address__btn button {
   margin: 0;
 }
