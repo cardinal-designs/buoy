@@ -1042,7 +1042,8 @@ li[data-address] h2 {
   color: #1F2322;
 }
 
-#loyaltylion .lion-faq-list__question-header {
+.new__account #loyaltylion .lion-faq-list__question-header,
+.new__account #loyaltylion .lion-faq-list__question-answer p {
   font-size: 16px;
 }
 
