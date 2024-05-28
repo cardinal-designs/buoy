@@ -1083,9 +1083,10 @@ li[data-address] h2 {
   margin-top: 20px;
 }
 
-.new__account--addresses h4 {
+.new__account--addresses h2 {
   margin: 0;
   text-align: center;
+  font-size: 24px;
 }
 
 .new__account--addresses .add-btn {
