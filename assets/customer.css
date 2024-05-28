@@ -1162,6 +1162,11 @@ li[data-address] h2 {
   .new__account--addresses {
     padding-bottom: 20px;
   }
+
+  .new__account--addresses h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
   
 }
 
