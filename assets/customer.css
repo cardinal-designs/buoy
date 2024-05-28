@@ -920,6 +920,15 @@ li[data-address] > h2 {
   justify-content: space-between;
 }
 
+.customer__info--wrap .address___wrap {
+  width: 60%;
+}
+
+.customer__info--wrap .address___wrap .customer__addresss {
+  width: 100%;
+  border-bottom: 1px solid #1F2322;
+}
+
 
 @media only screen and (max-width: 989px) {
 
