@@ -929,6 +929,10 @@ li[data-address] > h2 {
   border-bottom: 1px solid #1F2322;
 }
 
+.customer__info--wrap .address___wrap .customer__addresss:last-child {
+  border-bottom: 0px;
+}
+
 
 @media only screen and (max-width: 989px) {
 
