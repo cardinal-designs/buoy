@@ -987,6 +987,10 @@ li[data-address] h2 {
 
 .new__account--addresses-col button {
   margin: 25px 0 15px;
+  width: auto;
+  min-width: unset;
+  padding: 14px 30px;
+  flex: 1 0 0;
 }
 
 .new__account--addresses-form {
