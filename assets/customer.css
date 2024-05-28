@@ -1192,10 +1192,12 @@ li[data-address] h2 {
   border-bottom: none;
 }
 
-span.new__account--addresses-form-close {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 10px;
+.new__account--addresses-form-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 
