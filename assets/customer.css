@@ -952,6 +952,10 @@ li[data-address] > h2 {
   border-radius: 10px;
 }
 
+.new__account--addresses-col button {
+  margin: 10px 0;
+}
+
 
 @media only screen and (max-width: 989px) {
 
