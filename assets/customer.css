@@ -837,6 +837,7 @@ li[data-address] h2 {
   text-align: center;
   line-height: 1;
   margin: 0 0 16px;
+  text-transform: capitalize;
 }
 
 .new__account--header p {
@@ -1015,6 +1016,22 @@ li[data-address] h2 {
 
 .new__account .address__btn button {
   margin: 0;
+}
+
+.new__account--tabs-content .order-history {
+  width: 100%;
+  text-align: center;
+}
+
+.customer.order {
+  background: #f6ece1;
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  border-radius: 10px;
+}
+
+.customer.order h1 {
+  margin: 10px 0;
 }
 
 
