@@ -1085,6 +1085,11 @@ li[data-address] h2 {
   margin: 0 !important;
 }
 
+.new__account--addresses-btn button:hover {
+  background: var(--charcoal) !important;
+  color: var(--white) !important;
+}
+
 
 @media only screen and (max-width: 989px) {
 
