@@ -6,10 +6,13 @@
 
 <div class="page-width page-width--narrow">
   {% unless page.handle == 'cp3-waitlist' or page.handle == 'rescue-drops-seeding-list' %}
+  {% endunless %}
+  {% if page.metafields.custom.hide_page_title != false %}
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-    {% endunless %}
+  {% endif %}
+ 
   <div class="rte">
     {{ page.content }}
   </div>
