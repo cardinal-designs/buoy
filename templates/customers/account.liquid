@@ -166,7 +166,7 @@
                                 <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
                                 <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
                               </div>
-                              <div>
+                              <div class="field">
                                 <div class="select">
                                   <select
                                     id="AddressCountry_{{ form.id }}"
@@ -186,7 +186,7 @@
                                   {{ 'customer.addresses.country' | t }}
                                 </label>
                               </div>
-                              <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+                              <div class="field" id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
                                 <div class="select">
                                   <select
                                     id="AddressProvince_{{ form.id }}"
