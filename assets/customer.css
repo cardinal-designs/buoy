@@ -15,9 +15,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer:not(.account, .order) {
     max-width: 47.8rem;
   }
+  
 }
 
 .customer a,
@@ -69,9 +71,11 @@
 }
 
 @media only screen and (min-width: 769px) {
+  
   .customer h2.form__message {
     font-size: 2.2rem;
   }
+  
 }
 
 .customer .field {
@@ -95,10 +99,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer table {
     border: none;
     box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
   }
+  
 }
 
 .customer tbody {
@@ -114,9 +120,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer td {
     padding-right: 2.2rem;
   }
+  
 }
 
 .customer tbody td {
@@ -139,6 +147,7 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer th,
   .customer td:first-of-type {
     text-align: left;
@@ -164,6 +173,7 @@
   .customer tbody td:first-of-type {
     padding-top: 2.4rem;
   }
+  
 }
 
 .customer tbody td:last-of-type {
@@ -171,9 +181,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer tbody td:last-of-type {
     padding-bottom: 0;
   }
+  
 }
 
 .customer tbody tr {
@@ -181,9 +193,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer tbody tr:first-of-type {
     border-top: none;
   }
+  
 }
 
 .customer tfoot td:first-of-type,
@@ -201,10 +215,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer tfoot tr:first-of-type td,
   .customer tfoot tr:first-of-type th {
     padding-top: 2.4rem;
   }
+  
 }
 
 .customer tfoot tr:last-of-type td {
@@ -212,10 +228,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .customer tfoot tr:last-of-type td,
   .customer tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
   }
+  
 }
 
 /* works around colspan phantom border issues */
@@ -232,6 +250,7 @@
 
 /* mobile table overrides */
 @media screen and (max-width: 768px) {
+  
   .customer thead,
   .customer th,
   .customer tfoot td:first-of-type {
@@ -264,6 +283,7 @@
     justify-content: flex-start;
     width: 100%;
   }
+  
 }
 
 /* Pagination */
@@ -273,10 +293,12 @@
 }
 
 @media screen and (min-width: 990px) {
+  
   .customer .pagination {
     margin-top: 7rem;
     margin-bottom: 10rem;
   }
+  
 }
 
 .customer .pagination ul {
@@ -400,10 +422,12 @@
 }
 
 @media only screen and (min-width: 769px) {
+  
   .activate button[name="decline"] {
     margin-top: inherit;
     margin-left: 1rem;
   }
+  
 }
 
 /* Account/Order */
@@ -418,26 +442,33 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   :is(.account, .order) {
     padding: 0 5rem;
   }
+  
 }
 
 @media screen and (min-width: 990px) {
+  
   :is(.account, .order) > div:nth-of-type(2) {
     display: flex;
     margin-top: 5rem;
   }
+  
 }
 
 @media screen and (min-width: 990px) {
+  
   :is(.account, .order) > div:nth-of-type(2) > div:first-of-type {
     flex-grow: 1;
     padding-right: 3.2rem;
   }
+  
 }
 
 @media screen and (min-width: 769px) and (max-width: 989px) {
+  
   .order > div:nth-of-type(2) > div:last-of-type {
     display: flex;
   }
@@ -445,6 +476,7 @@
   .order > div:nth-of-type(2) > div:last-of-type div {
     padding-right: 3.2rem;
   }
+  
 }
 
 :is(.account, .order) p {
@@ -462,9 +494,11 @@
 }
 
 @media screen and (min-width: 990px) {
+  
   :is(.account, .order) h2 {
     margin-top: 0;
   }
+  
 }
 
 .account h1 + a {
@@ -479,6 +513,7 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .account thead th:last-child,
   .account td:last-child {
     text-align: right;
@@ -488,6 +523,7 @@
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
   }
+  
 }
 
 .account table td:first-of-type a {
@@ -506,10 +542,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .order thead th:nth-last-child(-n + 3),
   .order td:nth-last-child(-n + 3) {
     text-align: right;
   }
+  
 }
 
 .order tfoot tr:last-of-type td,
@@ -520,10 +558,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .order tfoot tr:last-of-type td,
   .order tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
   }
+  
 }
 
 .order tfoot tr:last-of-type td:before {
@@ -582,9 +622,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .order td .cart-discount {
     display: none;
   }
+  
 }
 
 .order tbody ul {
@@ -597,9 +639,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .order tbody ul {
     text-align: left;
   }
+  
 }
 
 .order table a {
@@ -613,9 +657,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .order tbody tr:first-of-type td:first-of-type > div {
     align-items: flex-start;
   }
+  
 }
 
 .order .properties {
@@ -672,9 +718,11 @@
 }
 
 @media screen and (min-width: 769px) {
+  
   .addresses li > button:first-of-type {
     margin-top: 3rem;
   }
+  
 }
 
 .addresses form button:first-of-type {
@@ -727,9 +775,11 @@ li[data-address] h2 {
 }
 
 @media only screen and (min-width: 769px) {
+  
   li[data-address] h2 {
     font-size: 2.2rem;
   }
+  
 }
 
 .addresses ul p {
@@ -742,6 +792,7 @@ li[data-address] h2 {
 }
 
 @media only screen and (min-width: 769px) {
+  
   .addresses form > div:nth-of-type(1) {
     padding-right: 2rem;
   }
@@ -755,6 +806,7 @@ li[data-address] h2 {
     flex-basis: 50%;
     box-sizing: border-box;
   }
+  
 }
 
 .addresses form > div:nth-of-type(7),
@@ -1335,7 +1387,7 @@ li[data-address] h2 {
     flex-direction: column;
   }
 
-  .new__account--addresses {
+  .new__account--addresses { 
     padding-bottom: 20px;
   }
 
