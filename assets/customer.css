@@ -1073,7 +1073,7 @@ li[data-address] h2 {
 }
 
 .new__account--addresses-form h2 {
-  font-size: 33px;
+  font-size: 33px !important;
   margin: 0;
 }
 
@@ -1404,7 +1404,7 @@ li[data-address] h2 {
   }
 
   .new__account--addresses-form h2 {
-    font-size: 20px;
+    font-size: 20px !important;
     margin-bottom: 0;
   }
 
