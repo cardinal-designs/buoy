@@ -270,6 +270,7 @@
     text-transform: uppercase;
     flex-grow: 1;
     text-align: left;
+    font-weight: 500;
   }
 
   .customer td:first-of-type {
@@ -1346,7 +1347,7 @@ li[data-address] h2 {
   }
 
   .new__account .customer tr {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .new__account--addresses-form {
