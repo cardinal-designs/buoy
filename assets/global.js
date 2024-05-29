@@ -2109,6 +2109,10 @@ class QuickAddCard extends HTMLElement {
       const y = this.getBoundingClientRect().top + window.scrollY - offsetY;
 
       window.scrollTo({top: y, behavior: 'smooth'});
+
+      if(document.querySelector(".amped-wrapper")) document.querySelector(".amped-wrapper").classList.add("hide-mobile")
+    } else {
+      if(document.querySelector(".amped-wrapper")) document.querySelector(".amped-wrapper").classList.remove("hide-mobile")
     }
   }
 
