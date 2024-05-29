@@ -1196,6 +1196,7 @@ li[data-address] h2 {
   border-top: 1px solid #000;
 }
 
+.new__account th:first-of-type,
 .new__account tbody td:first-of-type {
   border-left: 1px solid #000;
 }
