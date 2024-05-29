@@ -1188,11 +1188,15 @@ li[data-address] h2 {
   font-weight: 600;
 }
 
-.new__account thead th, 
+.new__account thead th,
 .new__account tr td {
   padding: 15px !important;
   text-align: left !important;
   border: 1px solid #000000;
+}
+
+.new__account thead th {
+  border-bottom: none;
 }
 
 .new__account thead th {
