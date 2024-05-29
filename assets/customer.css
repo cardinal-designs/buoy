@@ -1193,12 +1193,6 @@ li[data-address] h2 {
   padding: 15px !important;
   text-align: left !important;
   border: 1px solid #000000;
-  border-bottom: 0;
-}
-
-.new__account thead th:last-child, 
-.new__account tr td:last-child {
-  border-bottom: 1px solid #000000;
 }
 
 .new__account thead th {
@@ -1244,6 +1238,17 @@ li[data-address] h2 {
 
   .new__account--inner .tab-content {
     padding: 20px;
+  }
+
+  .new__account thead th, 
+  .new__account tr td {
+    padding: 10px !important;
+    border-bottom: none;
+  }
+  
+  .new__account thead th:last-child, 
+  .new__account tr td:last-child {
+    border-bottom: 1px solid #000000;
   }
 
   .new__account--addresses-col {
