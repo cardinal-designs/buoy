@@ -1180,14 +1180,25 @@ li[data-address] h2 {
 }
 
 
-.new__account thead th#ColumnOrder, .new__account thead th#ColumnDate, .new__account thead th#ColumnPayment, .new__account thead th#ColumnFulfillment, .new__account thead th#ColumnTotal {
+.new__account thead th#ColumnOrder, 
+.new__account thead th#ColumnDate, 
+.new__account thead th#ColumnPayment, 
+.new__account thead th#ColumnFulfillment, 
+.new__account thead th#ColumnTotal {
   font-weight: 600;
 }
 
-.new__account thead th, .new__account tr td {
+.new__account thead th, 
+.new__account tr td {
   padding: 15px !important;
   text-align: left !important;
   border: 1px solid #000000;
+  border-bottom: 0;
+}
+
+.new__account thead th:last-child, 
+.new__account tr td:last-child {
+  border-bottom: 1px solid #000000;
 }
 
 .new__account thead th {
