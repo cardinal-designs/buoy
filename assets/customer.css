@@ -1245,6 +1245,10 @@ li[data-address] h2 {
     padding: 0;
   }
 
+  .new__account .customer tr {
+    margin-bottom: 10px;
+  }
+
   .new__account--addresses-form {
     width: 100%;
   }
