@@ -824,7 +824,7 @@ li[data-address] h2 {
 
 /*========== ACCOUNT PAGE CSS STAART ==========*/
 
-.new__account.customer {
+.new__account {
   padding: 60px 0;
   max-width: unset;
   margin: 0;
@@ -890,6 +890,8 @@ li[data-address] h2 {
   background: #f6ece1;
   padding: 45px;
   border-radius: 10px;
+  margin: 0;
+  max-width: unset;
 }
 
 .new__account--inner .tab-content.current {
