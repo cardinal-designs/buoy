@@ -70,7 +70,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 18px;
-  row-gap: 93px;
+  row-gap: 60px;
 }
 
 .quick-add-grid__card {
@@ -153,6 +153,7 @@
   justify-content: start;
   align-items: start;
   gap: 8px;
+  list-style-type: unset;
 }
 
 .quick-add-grid__card-text li {

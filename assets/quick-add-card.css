@@ -1,5 +1,4 @@
 .quick-add__media {
-  aspect-ratio: 0.76/1;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -16,6 +15,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  aspect-ratio: 0.76/1;
 }
 
 .quick-add__media img {
@@ -205,7 +205,7 @@
   height: 32px;
   cursor: pointer;
   background: white;
-  border: 1px solid var(--charcoal);
+  border: 1px solid #1F2322;
   border-radius: 100%;
   padding: 8px;
   box-sizing: border-box;
@@ -256,14 +256,15 @@
 .quick-add__form-inner {
   padding: 20px 20px 10px;
   width: 100%;
-  height: calc(100% - 30px);
-  max-height: fit-content;
+  /* height: calc(100% - 30px);
+  max-height: fit-content; */
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   overflow-y: auto;
   overflow-x: clip;
-  border: 1px solid var(--charcoal-60);
+  border: 1px solid #1F2322;
   background: #FFFFFFE5;
   border-radius: 10px;
   scrollbar-color: var(--gray-light) transparent;
@@ -585,7 +586,8 @@ quick-add-card[data-open="true"] .quick-add__overlay {
   .quick-add__display {
     left: 12px;
     right: 12px;
-    bottom: 12px;
+    /* bottom: 12px; */
+    bottom: env(safe-area-inset-bottom);
     height: 100%;
     max-height: calc(80vh - 40px);
     width: calc(100vw - 24px);

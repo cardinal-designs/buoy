@@ -2100,6 +2100,16 @@ class QuickAddCard extends HTMLElement {
        })
     }
     this.dataset.open = this.dataset.open == 'true' ? 'false' : 'true'
+
+    if(this.dataset.open == 'true') {
+      let offsetY = document.querySelector("header-container").offsetHeight
+        if(document.querySelector(".anchor-links__sticky")) {
+          offsetY = offsetY + document.querySelector(".anchor-links__sticky").clientHeight
+        }
+      const y = this.getBoundingClientRect().top + window.scrollY - offsetY;
+
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
   }
 
   handlePurchaseTypeChange(event) {
