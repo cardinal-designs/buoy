@@ -1139,12 +1139,14 @@ li[data-address] h2 {
 .new__account #loyaltylion .lion-faq-list__question-header,
 .new__account #loyaltylion .lion-faq-list__question-answer p {
   font-size: 16px !important;
+  font-family: inter, sans-serif;
 }
 
 .new__account #loyaltylion .lion-action-button {
   min-width: auto;
   color: #1F2322;
   font-size: 16px !important;
+  font-family: inter, sans-serif;
 }
 
 .new__account #loyaltylion .lion-action-button:hover {
