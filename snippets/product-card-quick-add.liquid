@@ -61,7 +61,11 @@
         <div class="{{ base }}__form-inner no-scrollbar">
           <div class="{{ base }}__form-header">
             <div class="{{ base }}__form-image">
-              {{ card_product.featured_image | image_url: width: 160 | image_tag: class: '' }}
+              {% if content.settings.form_image != blank %}
+                {{ content.settings.form_image | image_url: width: 160 | image_tag: class: '' }}
+              {% else %}
+                {{ card_product.featured_image | image_url: width: 160 | image_tag: class: '' }}
+              {% endif %}
             </div>
             <div class="{{  base }}__form-title">
               <div data-oke-reviews-product-listing-rating>
