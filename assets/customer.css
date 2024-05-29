@@ -1195,8 +1195,8 @@ li[data-address] h2 {
   border: 1px solid #000000;
 }
 
-.new__account thead th {
-  border-bottom: none;
+.new__account thead:after {
+  content: unset;
 }
 
 .new__account--addresses-form-close {
