@@ -12,7 +12,7 @@
     Usage:
     {% render 'product-card', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
-{{ product_card_product.metafields.my_fields.show_trending_product_card }}
+
 <div class="card-wrapper">
   {% if product_card_product.available == false %}
     {% render 'spinner-sold-out' %}
