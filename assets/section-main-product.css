@@ -2747,7 +2747,7 @@ select[name=selling_plan] {
 
 .product__drawer-triggers {
   display: flex;
-  gap: 10px;
+  gap: 21px;
   margin-top: 37px;
 }
 
@@ -2755,6 +2755,7 @@ select[name=selling_plan] {
   
   .product__drawer-triggers {
     margin-top: 30px;
+    flex-direction: column;
   }
   
 }
