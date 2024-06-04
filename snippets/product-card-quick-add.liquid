@@ -8,14 +8,14 @@
 
     <div class="{{ base }}__media-inner">
       {% if content.image_hover != blank %}
-        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover'  }}
+        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
       {% elsif content.video_hover != blank %}
         {{ content.video_hover | video_tag:
           autoplay: true,
           loop: true,
           muted: true,
           controls: false,
-          class: 'quick-add__video-hover',
+          class: 'quick-add__video-hover hide-mobile',
           sizes: '100vw',
           widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
       {% endif %}
