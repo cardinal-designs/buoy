@@ -550,6 +550,11 @@ quick-add-card[data-open="true"] .quick-add__price {
   opacity: 0;
 }
 
+quick-add-card[data-open="true"] .quick-add__video-hover,
+quick-add-card[data-open="true"] .quick-add__image-hover {
+  opacity: 0 !important;
+}
+
 .quick-add__overlay {
   display: none;
   position: absolute;
