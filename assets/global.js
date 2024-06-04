@@ -643,7 +643,7 @@ class VariantSelects extends HTMLElement {
 
     let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
 
-    let addToCartText = `Add to Cart &mdash; ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}${variantJson[this.currentVariant.id].price}`;
+    let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
 
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
@@ -652,19 +652,25 @@ class VariantSelects extends HTMLElement {
     }
  
     if(this.closest('product-form').dataset.formType == 'product-card') {
-      addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> ${(this.currentVariant.compare_at_price != null) ? `<s>${variantJson[this.currentVariant.id].compare_price}</s>` : ``}`;
+      
+      addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
 
       if(subscriptionOption){
         if(subscriptionOption.value == "purchaseTypeSubscription"){
-          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].price}</s>`;
+          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
         }
       }
-      this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
+      this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
         element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+
+        if(element.classList.contains("js-sub-compare-price")) {
+          element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
+        }
+        
       })
     } else {
         this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
-        element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+          element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
       });
     }
 
@@ -2127,9 +2133,17 @@ class QuickAddCard extends HTMLElement {
     }
 
     if( event.target.value == 'purchaseTypeSubscription' ) {
-      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].subscription_price}</span><s>${this.variantJson[this.currentVariant].price}</s>`
+      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].subscription_price}</span><s>${this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price}</s>`
+
+      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        s.innerText = s.dataset.subprice.replace("ing", '')
+      })
     } else {
       this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+
+      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        s.innerText = s.dataset.onetimeprice.replace("ing", '')
+      })
     }
 
     this.addToCart.innerHTML = this.buttonContent

@@ -45,13 +45,13 @@
                     <span class="custom-radio"> </span>
                     {{ value }}
                   </span>
-                   {%- if my_fields.serving_cost != blank -%}
+                   {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span 
                       class="Serving_Cost" 
                       data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
                       data-onetimeprice="{{ my_fields.serving_cost }}"
                     >
-                      {{ my_fields.serving_cost | replace: "serving", "serv"}}
+                      {{ p.metafields.custom.serving_sub_price | replace: "serving", "serv"}}
                     </span>    
                   {%- endif -%}
 
@@ -90,7 +90,7 @@
               One-Time Purchase
             </span>
             <span 
-              class="Serving_Cost rtx_one_time_price" 
+              class="rtx_one_time_price" 
               data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
@@ -110,18 +110,14 @@
               Subscribe
               <span class="quick-add__tag">Save 23%</span>
             </span>
-              {%- if my_fields.serving_cost != blank -%}
               <span 
-                class="Serving_Cost" 
-                data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
-                data-onetimeprice="{{ my_fields.serving_cost }}"
+                class="" 
               >
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
                 </span>
-                <span class="quick-add__price-otp rtx_one_time_price js-rtx_one_time_price rtx_compare_price">{{ p.selected_or_first_available_variant.price | money }}</span>
-              </span>    
-            {%- endif -%}
+                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_price | default: p.selected_or_first_available_variant.price | money }}</s>
+              </span>
 
               {%- if my_fields.supply_time != blank -%}
               <span 
