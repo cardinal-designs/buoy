@@ -97,7 +97,7 @@
               <span class="js-rtx_one_time_price">
                 {{ p.selected_or_first_available_variant.price | money }}
               </span>
-              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_price | money }}</s>
+              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
             </span> 
             </label>
           </span>
@@ -109,6 +109,7 @@
               <span class="custom-radio"> </span>
               Subscribe
               <span class="quick-add__tag">Save 23%</span>
+              
             </span>
               <span 
                 class="" 
@@ -116,7 +117,7 @@
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
                 </span>
-                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
               </span>
 
               {%- if my_fields.supply_time != blank -%}

@@ -583,7 +583,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    if(this.dataset.formType="product-card" ){
+    if(this.dataset.formType=="product-card" ){
       const productForm = this.closest('product-form');
       const id = productForm.querySelector('input[name="id"]');
       id.value = this.currentVariant.id;
@@ -670,7 +670,7 @@ class VariantSelects extends HTMLElement {
       })
     } else {
         this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
-          element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+          element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price : variantJson[this.currentVariant.id].subscription_price;
       });
     }
 
