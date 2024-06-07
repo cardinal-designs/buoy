@@ -630,7 +630,7 @@ $( document ).ready(function() {
     return shippingday
   }
 
-  Order_Within.innerHTML = getNextDays()
+  Order_Within.appendChild(getNextDays())
 
 });
 
