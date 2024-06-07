@@ -24,12 +24,12 @@
             const oneHour = 60 * 60 * 1000;
             localStorage.setItem('customer-portal-token', data.token)
             localStorage.setItem('customer-portal-token-expiration', new Date().getTime() + oneHour)
-            window.location.replace("/apps/" + appName + "/#/shop/subscriptions");
+            window.location.replace("/apps/" + appName + "/#/shop/subscriptions", "_blank");
           }
         }
       };
     } else {
-      window.location.replace("/apps/" + appName + "/#/login");
+      window.location.replace("/apps/" + appName + "/#/login", "_blank");
     }
     window.addEventListener("load", loginRetextionCustomerPortal);
   }
@@ -39,6 +39,6 @@
   }
   document.addEventListener('DOMContentLoaded', function() {
     checkShowCustomerPortalStatus();
-  })
+  });
 </script>
 
