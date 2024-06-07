@@ -621,7 +621,7 @@ $( document ).ready(function() {
   });
 
 
-  let orderDate =  document.querySelector('.Order_Within span');
+  let orderDate =  document.querySelector('.Order_Within .autoDay');
   if(!!orderDate){
     let shippingday;
     const dayNum = new Date().getUTCDay();
