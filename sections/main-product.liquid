@@ -914,6 +914,16 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     }
   }
   // window.Order_Within();
+
+ let Order_Within = document.querySelectorAll('.Order_Within');
+  const getNextDays = () => {
+    let shippingday;
+    const dayNum = new Date().getUTCDay();
+    dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
+    return shippingday
+  }
+
+  Order_Within.innerHTML = getNextDays()
 </script>
 
 {% # rtx-pfp.liquid Script start %}
