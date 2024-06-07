@@ -34,8 +34,11 @@
   }
   function checkShowCustomerPortalStatus() {
         document.querySelector('.rtxn_customer_portal_login').style.display = "block";
-        document.querySelector('.rtxn_manage_subscriptions_btn').addEventListener("click", loginRetextionCustomerPortal);
-  }
+        document.querySelector('.rtxn_manage_subscriptions_btn').addEventListener("click", function(event) {
+          event.preventDefault();
+          loginRetextionCustomerPortal();
+        });
+  };
   document.addEventListener('DOMContentLoaded', function() {
     checkShowCustomerPortalStatus();
   });
