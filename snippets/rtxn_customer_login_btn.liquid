@@ -1,9 +1,10 @@
 <p class="rtxn_customer_portal_login" style="display: none;">
-  <a target="_blank" class="rtxn_manage_subscriptions_btn">Manage Subscriptions</a>
+  <a href="#" target="_blank" class="rtxn_manage_subscriptions_btn">Manage Subscriptions</a>
 </p>
 
 <script>
-  function loginRetextionCustomerPortal() {
+  function loginRetextionCustomerPortal(event) {
+    event.preventDefault(); // Prevent default link behavior
     const appName = "retextion";
     const customerId = {% if customer.id %} {{ customer.id }} {% else %} null {% endif %};
     if (customerId) {
@@ -22,25 +23,23 @@
           const data = JSON.parse(xhr.responseText);
           if (data.token) {
             const oneHour = 60 * 60 * 1000;
-            localStorage.setItem('customer-portal-token', data.token)
-            localStorage.setItem('customer-portal-token-expiration', new Date().getTime() + oneHour)
-            window.location.replace("/apps/" + appName + "/#/shop/subscriptions", "_blank");
+            localStorage.setItem('customer-portal-token', data.token);
+            localStorage.setItem('customer-portal-token-expiration', new Date().getTime() + oneHour);
+            window.open("/apps/" + appName + "/#/shop/subscriptions", "_blank");
           }
         }
       };
     } else {
-      window.location.replace("/apps/" + appName + "/#/login", "_blank");
+      window.open("/apps/" + appName + "/#/login", "_blank");
     }
   }
+
   function checkShowCustomerPortalStatus() {
-        document.querySelector('.rtxn_customer_portal_login').style.display = "block";
-        document.querySelector('.rtxn_manage_subscriptions_btn').addEventListener("click", function(event) {
-          event.preventDefault();
-          loginRetextionCustomerPortal();
-        });
-  };
+    document.querySelector('.rtxn_customer_portal_login').style.display = "block";
+    document.querySelector('.rtxn_manage_subscriptions_btn').addEventListener("click", loginRetextionCustomerPortal);
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     checkShowCustomerPortalStatus();
   });
 </script>
-
