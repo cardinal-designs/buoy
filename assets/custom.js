@@ -622,10 +622,11 @@ $( document ).ready(function() {
 
 
   let orderDate =  document.querySelector('.Order_Within span');
-  let shippingday;
-  const dayNum = new Date().getUTCDay();
-  dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
-  orderDate.innerHTML = shippingday;
-
+  if(!!orderDate){
+    let shippingday;
+    const dayNum = new Date().getUTCDay();
+    dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
+    orderDate.innerHTML = shippingday;
+  }
 });
 
