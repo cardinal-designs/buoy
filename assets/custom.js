@@ -620,7 +620,7 @@ $( document ).ready(function() {
       }
   });
 
-  let Order_Within = document.querySelectorAll('.Order_Within');
+  let Order_Within = document.querySelectorAll('.Order_Within p');
   console.log('aaa',Order_Within)
   const getNextDays = () => {
     let shippingday;
