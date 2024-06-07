@@ -621,7 +621,6 @@ $( document ).ready(function() {
   });
 
   let orderDate = document.getElementById("#Order_Within")
-  console.log('aaa',Order_Within)
   let shippingday;
   const dayNum = new Date().getUTCDay();
   dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
