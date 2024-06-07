@@ -626,6 +626,7 @@ $( document ).ready(function() {
     let shippingday;
     const dayNum = new Date().getUTCDay();
     dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
+    console.log(shippingday)
     return shippingday
   }
 
