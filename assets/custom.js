@@ -620,14 +620,15 @@ $( document ).ready(function() {
       }
   });
 
-  // let orderDate = document.getElementById("Order_Within");
-  // let shippingday;
-  // const dayNum = new Date().getUTCDay();
-  // dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
 
-  // console.log(1, orderDate)
-  // console.log(2, shippingday)
-  // orderDate.textContent = shippingday;
+   let orderDate =  document.querySelector('.Order_Within span');
+  let shippingday;
+  const dayNum = new Date().getUTCDay();
+  dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
+
+  console.log(1, orderDate)
+  console.log(2, shippingday)
+  orderDate.innerHTML = shippingday;
 
 });
 
