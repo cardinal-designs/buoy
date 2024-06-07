@@ -620,14 +620,14 @@ $( document ).ready(function() {
       }
   });
 
-  let orderDate = document.getElementById("Order_Within img");
+  let orderDate = document.getElementById("Order_Within");
   let shippingday;
   const dayNum = new Date().getUTCDay();
   dayNum === 5 || dayNum === 6 ? shippingday = 'In stock and ships Monday' : shippingday = 'In stock and ships tomorrow';
 
   console.log(1, orderDate)
   console.log(2, shippingday)
-  orderDate.appendChild(shippingday);
+  orderDate.textContent = shippingday;
 
 });
 
