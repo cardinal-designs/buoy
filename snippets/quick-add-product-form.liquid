@@ -44,8 +44,8 @@
                    <span class="Variant_Title">
                     <span class="custom-radio"> </span>
                     {{ value }}
-                    {%- if my_fields.best_value != blank and my_fields.best_value != "Best Value" -%}
-                      <span class="quick-add__best-value-tag Best_Value">{{ my_fields.best_value | remove: "Best Value +" }}</span>
+                    {%- if p.metafields.custom.quick_add_value_tag != blank -%}
+                      <span class="quick-add__best-value-tag Best_Value">{{ p.metafields.custom.quick_add_value_tag }}</span>
                     {%- endif -%}
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
