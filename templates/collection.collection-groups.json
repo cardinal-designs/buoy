@@ -2,17 +2,236 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    },
+    "simple_hero_N6WiHw": {
+      "type": "simple-hero",
+      "settings": {
+        "heading": "Hydrate <em>Your Way<\/em>"
+      }
+    },
+    "anchor_links_yGar76": {
+      "type": "anchor-links",
+      "blocks": {
+        "link_DRKtrB": {
+          "type": "Link",
+          "settings": {
+            "heading": "Kits"
+          }
+        },
+        "link_Y8qLDD": {
+          "type": "Link",
+          "settings": {
+            "heading": "Unflavored Liquid Electrolytes"
+          }
+        },
+        "link_Kg8w8H": {
+          "type": "Link",
+          "settings": {
+            "heading": "Add-Ons"
+          }
+        }
+      },
+      "block_order": [
+        "link_DRKtrB",
+        "link_Y8qLDD",
+        "link_Kg8w8H"
+      ],
+      "settings": {
+      }
+    },
+    "quick_add_products_PXexHD": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_V3ByPw": {
+          "type": "product",
+          "settings": {
+            "heading": "liquid-electrolyte-kit",
+            "image": "shopify:\/\/shop_images\/Collection_LEVK.jpg",
+            "image_hover": "shopify:\/\/shop_images\/Collection_LEVK_Hover.jpg",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_LEVK_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_jDczPk": {
+          "type": "product",
+          "settings": {
+            "heading": "ocean-electrolyte-kit",
+            "image": "shopify:\/\/shop_images\/Collection_OEK.jpg",
+            "image_hover": "shopify:\/\/shop_images\/Collection_OEK_Hover.jpg",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_OEK_Add.jpg",
+            "form_text": "Hydration Drops, Rescue Salt"
+          }
+        },
+        "card_xN8GeW": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0863_1.png",
+            "link": "",
+            "heading": "SAVE 23% When You Subscribe",
+            "text": "Free Monthly Shipping\nFree Welcome Kit\nCancel Anytime\n30-Day Money Back Guarantee",
+            "checkmarks": "show",
+            "overlay": "#1F232266",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "product_V3ByPw",
+        "product_jDczPk",
+        "card_xN8GeW"
+      ],
+      "settings": {
+        "heading": "Kits",
+        "text": "The best place to start. Save on our curated bundles."
+      }
+    },
+    "quick_add_products_reJfnX": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_6JMfck": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops",
+            "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_HD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_gAT4Cn": {
+          "type": "product",
+          "settings": {
+            "heading": "digestion-drops",
+            "image": "shopify:\/\/shop_images\/Collection_DD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_DD_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_DD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_k97xDM": {
+          "type": "product",
+          "settings": {
+            "heading": "immunity-drops",
+            "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_ID_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_mUqRjB": {
+          "type": "product",
+          "settings": {
+            "heading": "energy-drops",
+            "image": "shopify:\/\/shop_images\/Collection_ED.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ED_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_ED_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_mzcwjq": {
+          "type": "product",
+          "settings": {
+            "heading": "cp3s-secret-stuff",
+            "image": "shopify:\/\/shop_images\/Collection_CP3D.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_CP3D_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_CP3D_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_7N9XMB": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-drops",
+            "image": "shopify:\/\/shop_images\/Collection_RD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_RD_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_RD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_7TR3YX": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "brain-health-drops",
+            "image": "shopify:\/\/shop_images\/Collection_BHD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_BHD_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_BHD_Add.jpg",
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_6JMfck",
+        "product_gAT4Cn",
+        "product_k97xDM",
+        "product_mUqRjB",
+        "product_mzcwjq",
+        "product_7N9XMB",
+        "product_7TR3YX"
+      ],
+      "settings": {
+        "heading": "Unflavored Liquid Electrolytes",
+        "text": "Add-to-any-beverage ocean electrolytes and 87+ trace minerals. No sugar, sweeteners, or flavors."
+      }
+    },
+    "quick_add_products_bMe83T": {
+      "type": "quick-add-products",
+      "blocks": {
+        "product_JAMMLq": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-salts",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_RS_Hover.mp4",
+            "show_tags": false,
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_JAMMLq"
+      ],
+      "settings": {
+        "heading": "Add-Ons",
+        "text": ""
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "simple_hero_N6WiHw",
+    "anchor_links_yGar76",
+    "quick_add_products_PXexHD",
+    "quick_add_products_reJfnX",
+    "quick_add_products_bMe83T"
   ]
 }

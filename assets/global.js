@@ -497,6 +497,7 @@ class SliderComponent extends HTMLElement {
 
 customElements.define('slider-component', SliderComponent);
 
+
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
@@ -521,7 +522,10 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
     }
 
-    this.updateSticky();
+    if(!this.dataset.formType == 'product-card') {
+      this.updateSticky();
+    }
+    
   }
 
   updateSticky(){
@@ -579,12 +583,24 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment`);
-    productForms.forEach((productForm) => {
-      const input = productForm.querySelector('input[name="id"]');
-      input.value = this.currentVariant.id;
-      input.dispatchEvent(new Event('change', { bubbles: true }));
-    });
+    if(this.dataset.formType=="product-card" ){
+      const productForm = this.closest('product-form');
+      const id = productForm.querySelector('input[name="id"]');
+      id.value = this.currentVariant.id;
+      id.dispatchEvent(new Event('change', { bubbles: true }));
+
+      const sellingPlan = productForm.querySelector('input[name="selling_plan"]');
+      sellingPlan.value = this.currentVariant.selling_plan_allocations[0].selling_plan_id;
+      sellingPlan.dispatchEvent(new Event('change', { bubbles: true }));
+    } else {
+      const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment`);
+  
+      productForms.forEach((productForm) => {
+        const input = productForm.querySelector('input[name="id"]');
+        input.value = this.currentVariant.id;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    }
   }
 
   updatePickupAvailability() {
@@ -610,7 +626,7 @@ class VariantSelects extends HTMLElement {
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
-        document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
+        document.querySelector('#current_variant_price') && document.querySelector('#current_variant_price').replaceWith(html.querySelector('#current_variant_price'));
 
         document.getElementById('price-' + this.dataset.section)?.classList.remove('visibility-hidden');
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut, this.currentVariant.price);
@@ -618,29 +634,49 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    const addButton = document.getElementById('product-form-' + this.dataset.section)?.querySelector('[name="add"]'),
-          stickyButton = document.querySelector('.js-sticky-add-to-cart');
+    const addButton = this.closest("product-form").querySelector('[name="add"]'),
+    stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
-    let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText);
 
-    let subscriptionOption = document.querySelector('[name="purchaseType"]:checked');
-    // let addToCartText = 'Add to Cart' + '— $' + (this.currentVariant.price / 100 );
-    let addToCartText = `Add to Cart — ${(this.currentVariant.compare_at_price != null) ? `&nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;` : ``}${variantJson[this.currentVariant.id].price}`;
-    // let addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].price}`;
+    let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
+
+    let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
+
+    let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+
     if(subscriptionOption){
       if(subscriptionOption.value == "purchaseTypeSubscription"){
-         addToCartText = `Add to Cart — &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-        //addToCartText = `Add to Cart — ${variantJson[this.currentVariant.id].subscription_price}`;
-
+         addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
       }
     }
  
-    document.querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price').forEach(element => {
-      element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
-    });
+    if(this.closest('product-form').dataset.formType == 'product-card') {
+      
+      addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
 
-    
+      if(subscriptionOption){
+        if(subscriptionOption.value == "purchaseTypeSubscription"){
+          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+        }
+      }
+      this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
+        element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+
+        if(element.classList.contains("js-sub-compare-price")) {
+          element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
+        }
+        
+      })
+    } else {
+        this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
+          element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+
+          if(element.classList.contains("js-sub-compare-price")) {
+            element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
+          }
+      });
+    }
 
     addButton.dataset.available = (!disable);
 
@@ -648,14 +684,14 @@ class VariantSelects extends HTMLElement {
       addButton.setAttribute('disabled', true);
       if (text) addButton.innerHTML = text;
       
-      stickyButton.setAttribute('disabled', true);
-      if (text) stickyButton.innerHTML = text;
+      stickyButton && stickyButton.setAttribute('disabled', true);
+      if (text && stickyButton) stickyButton.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
       addButton.innerHTML = addToCartText; 
       
-      stickyButton.removeAttribute('disabled');
-      stickyButton.innerHTML = addToCartText;
+      stickyButton && stickyButton.removeAttribute('disabled');
+      if (stickyButton) stickyButton.innerHTML = addToCartText;
     }
 
     if (!modifyClass) return;
@@ -704,6 +740,10 @@ class HeaderContainer extends HTMLElement {
         this.classList.add('header--scrolled');
       }
     }
+  }
+
+  connectedCallback() {
+    document.body.style = `${document.body.style}; --sticky-header-height: ${ this.offsetHeight}px;`
   }
 
   onScroll() {
@@ -2033,3 +2073,85 @@ $('.announcement-bar__close').click(function() {
   }
 })
 
+class QuickAddCard extends HTMLElement {
+  constructor() {
+    super();
+
+    this.variantJson = JSON.parse(this.querySelector("#js-product-variant-json").innerText)
+
+    this.purchaseTypeInputs = this.querySelectorAll("input[name='purchaseType']")
+
+    this.addToCart = this.querySelector("button[name='add']")
+
+    this.currentVariant = this.querySelector("form input[name='id']").value
+
+    this.toggleButton = this.querySelectorAll("[data-toggle]")
+  }
+
+  connectedCallback() {
+    this.purchaseTypeInputs.forEach( i => {
+      i.addEventListener("change",  this.handlePurchaseTypeChange.bind(this))
+    })
+
+    this.toggleButton.forEach( b => {
+      b.addEventListener('click', this.handleToggle.bind(this))
+    })
+  }
+
+  handleToggle() {
+
+    if(this.dataset.open == 'false') {
+       const closeOpenCards = document.querySelectorAll("quick-add-card[data-open='true']")
+
+       if (!closeOpenCards) return
+
+       closeOpenCards.forEach( c => {
+        c.dataset.open = 'false'
+       })
+    }
+    this.dataset.open = this.dataset.open == 'true' ? 'false' : 'true'
+
+    if(this.dataset.open == 'true') {
+      let offsetY = document.querySelector("header-container").offsetHeight
+        if(document.querySelector(".anchor-links__sticky")) {
+          offsetY = offsetY + document.querySelector(".anchor-links__sticky").clientHeight
+        }
+      const y = this.getBoundingClientRect().top + window.scrollY - offsetY;
+
+      window.scrollTo({top: y, behavior: 'smooth'});
+
+      if(document.querySelector(".amped-wrapper")) document.querySelector(".amped-wrapper").classList.add("hide-mobile")
+    } else {
+      if(document.querySelector(".amped-wrapper")) document.querySelector(".amped-wrapper").classList.remove("hide-mobile")
+    }
+  }
+
+  handlePurchaseTypeChange(event) {
+    this.currentVariant = this.querySelector("form input[name='id']").value
+
+    this.buttonContent = ''
+    if (this.addToCart.dataset.available == 'true') {
+      this.buttonContent = `<span>Add To Cart &mdash;&nbsp;</span>`
+    } else {
+      this.buttonContent = `<span>Sold Out &mdash;&nbsp;</span>`
+    }
+
+    if( event.target.value == 'purchaseTypeSubscription' ) {
+      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].subscription_price}</span><s>${this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price}</s>`
+
+      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        s.innerText = s.dataset.subprice.replace("ing", '')
+      })
+    } else {
+      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+
+      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        s.innerText = s.dataset.onetimeprice.replace("ing", '')
+      })
+    }
+
+    this.addToCart.innerHTML = this.buttonContent
+  }
+}
+
+customElements.define("quick-add-card", QuickAddCard)

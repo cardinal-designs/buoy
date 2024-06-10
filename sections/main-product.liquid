@@ -11,7 +11,6 @@
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {% assign currentVariant = product.selected_or_first_available_variant %}
 <section data='{{product | json}}' class="page-width">
   <input type="hidden" id='current_variant_price' value="{{ currentVariant.price | money_without_trailing_zeros }}" >
@@ -422,6 +421,26 @@
           
           
           {%- endform -%}
+
+          <script type="application/json" id="js-product-variant-json">
+            {
+              {% for variant in product.variants %}
+                "{{ variant.id }}":{
+                  "price":"{{ variant.price | money_without_trailing_zeros }}",
+                  "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}""{% endif %},
+                  "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            }
+          </script>
+          <script id="productJSON" type="application/json">
+            {
+              {% for variant in product.variants %}
+                "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            }
+          </script>
+
         </product-form>
 
           {% comment %}
@@ -764,24 +783,6 @@
 </div>
 
 <div class="show-product-bar"></div>
-<script type="application/json" id="js-product-variant-json">
-  {
-    {% for variant in product.variants %}
-      "{{ variant.id }}":{
-        "price":"{{ variant.price | money_without_trailing_zeros }}",
-        "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}""{% endif %},
-        "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-      }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  }
-</script>
-<script id="productJSON" type="application/json">
-  {
-    {% for variant in product.variants %}
-      "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  }
-</script>
 
 {% comment %}
 {% unless product.type == 'Bundle' %}
@@ -1097,8 +1098,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           sellingPlan.disabled = false;
           document.querySelector('.js-sticky-subscription-btns').value = "subscription";
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
           }
         } else {
           subscriptionBoxHide();
@@ -1106,8 +1107,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           document.querySelector('.js-sticky-subscription-btns').value = "one-time";
           
           if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
           }
         }
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
