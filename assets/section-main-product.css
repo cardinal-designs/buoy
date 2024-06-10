@@ -26,6 +26,10 @@
   z-index: 2;
 }
 
+.green-text {
+  color: var(--green-2) !important;
+}
+
 .product__info-wrapper::before {
   content: '';
   position: absolute;
@@ -2371,11 +2375,6 @@ span#timer strong {
   margin-right: 4px;
 }
 
-.Order_Within span {
-  font-weight: 700;
-}
-
-
 .Product_Bar_Variants .Variant_Blocks input[type=radio]+label {
   padding: 0;
   width: auto;
@@ -2751,6 +2750,15 @@ select[name=selling_plan] {
   
   .product__drawer-triggers {
     margin-top: 30px;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  
+  .product__drawer-triggers {
+    gap: 10px;
+    flex-direction: column;
   }
   
 }

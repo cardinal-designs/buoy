@@ -69,6 +69,9 @@
                   {% if block.settings.title == 'Hydration Drops' %}
                   <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
                   {% endif %}
+                  {% if product.handle == 'rescue-drops' %}
+                  <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">35% Chronic Illness Discount</a>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -100,6 +103,9 @@
             {% endif %}
             {% if product.title == "CP3's Secret Stuff" %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Why This Collab</a>
+            {% endif %}
+            {% if product.handle == 'rescue-drops' %}
+            <a href="#chronic" class="green-text tabs-label body medium">35% Chronic Illness Discount</a>
             {% endif %}
           </div>
         {% endif %}
@@ -298,14 +304,14 @@
           {% endcomment %}
            {% if product.metafields.my_fields.custom_shipping_text != blank %}
            <div id="Order_Within" class="Order_Within Risk_Free">
-               {{ product.metafields.my_fields.custom_shipping_text }}
+               <span>{{ product.metafields.my_fields.custom_shipping_text }}</span>
             </div>
            {% elsif settings.show_shipping_countdown != blank %}
             <div id="Order_Within" class="Order_Within Risk_Free">
               {%- if settings.order_icon != blank -%}
                 <img src="{{ settings.order_icon | img_url: 'master' }}"/>
               {%- endif -%}
-               {{ settings.order_within_text }}
+               <span class="autoDay">{{ settings.order_within_text }}</span>
             </div>
           {% endif %}
             

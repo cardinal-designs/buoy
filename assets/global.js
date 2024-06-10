@@ -1167,14 +1167,14 @@ $('.people-slider__drink-slider--3').slick({
   arrows: false
 });
     
-// $('.people-slider__people-slider--3').on('init', function(event, slick){
-//   $('.people-slider__arrows--3 .slick-prev').hide()
-// });
+$('.people-slider__people-slider--3').on('init', function(event, slick){
+  $('.people-slider__arrows--3 .slick-prev').hide()
+});
     
 
 $('.people-slider__people-slider--3').slick({
   asNavFor: '.people-slider__drink-slider--3',
-  slidesToShow: 3,
+  slidesToShow: 2,
   rtl: true,
   variableWidth: true,
   infinite: false,

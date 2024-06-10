@@ -8,9 +8,9 @@
         "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
         "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
         "review": "Over 4,000 Trusted Reviews",
-        "title": "Add Functional Benefits To Any Drink",
+        "title": "Add functional benefits to any drink",
         "text": "Unflavored Hydration Drops",
-        "button_label": "Start Squeezing",
+        "button_label": "Shop Now",
         "button_link": "shopify:\/\/collections\/all",
         "button_style": "beige",
         "link_label": "",
@@ -18,6 +18,42 @@
         "add_top_border": false,
         "add_bottom_border": false,
         "add_background": false
+      }
+    },
+    "new_home_hero_LUNXEb": {
+      "type": "new-home-hero",
+      "disabled": true,
+      "settings": {
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8827892bcb747e4bfcc58298a28b825.mov",
+        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
+        "review": "Over 4,000 Trusted Reviews",
+        "title": "Chris Paul x Buoy Electrolytes",
+        "text": "Limited-Edition",
+        "button_label": "Limited Quantities Available",
+        "button_link": "shopify:\/\/collections\/all",
+        "link_label": "",
+        "link_link": "",
+        "autoplay": true,
+        "mute": true,
+        "loop": true,
+        "image_position": "image-right",
+        "moble_content_position": "mobile-content-center",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "bg_color": "#ffffff",
+        "star_color": "#ffd66b",
+        "desktop_font_color": "#1f2322",
+        "mobile_font_color": "#ffffff",
+        "btn_bg_color": "#def647",
+        "btn_font_color": "#1f2322",
+        "btn_border_color": "#def647",
+        "btn_h_bg_color": "#1f2322",
+        "btn_h_font_color": "#ffffff",
+        "btn_h_border_color": "#1f2322",
+        "overlay_color": "#000000",
+        "overlay_opacity": 50
       }
     },
     "16318238207c8b14a8": {
@@ -81,6 +117,13 @@
             "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
           }
         },
+        "f59387ed-ae30-4315-ada8-d460ebd03cba": {
+          "type": "block",
+          "settings": {
+            "product": "digestion-drops",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/011dd8a1ba324a12b2d8b80c5bb0d0d2.mp4"
+          }
+        },
         "57354990-203d-49e0-9041-3f32046b01ef": {
           "type": "block",
           "settings": {
@@ -91,26 +134,19 @@
         "be4baf4c-0050-44ff-a85a-ac6629bc1cf5": {
           "type": "block",
           "settings": {
-            "product": "immunity-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
-          }
-        },
-        "f59387ed-ae30-4315-ada8-d460ebd03cba": {
-          "type": "block",
-          "settings": {
-            "product": "wellness-kit",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
+            "product": "liquid-electrolyte-kit",
+            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f8da2fa6dbf947f88c32d6b084205074.mp4"
           }
         }
       },
       "block_order": [
         "1043d447-dd6a-45c5-984d-c152477a632f",
+        "f59387ed-ae30-4315-ada8-d460ebd03cba",
         "57354990-203d-49e0-9041-3f32046b01ef",
-        "be4baf4c-0050-44ff-a85a-ac6629bc1cf5",
-        "f59387ed-ae30-4315-ada8-d460ebd03cba"
+        "be4baf4c-0050-44ff-a85a-ac6629bc1cf5"
       ],
       "settings": {
-        "title": "<strong>Meet the<\/strong>  Drops",
+        "title": "Meet the  Drops",
         "text": "Add electrolytes, 87 ionic trace minerals, vitamins and antioxidants to any beverage.",
         "shop_all_label": "Shop All",
         "shop_all_link": "shopify:\/\/collections\/all",
@@ -273,7 +309,7 @@
       ],
       "settings": {
         "review_emoji": "⭐️",
-        "head-title": "3,000 +<br><b>trusted reviews<\/b>",
+        "head-title": "4,000+ trusted reviews",
         "sub-text": "",
         "button_label": "Read All Reviews",
         "button_link": "shopify:\/\/pages\/reviews",
@@ -392,6 +428,7 @@
   },
   "order": [
     "902758e5-2326-4116-ab43-a576df7f670e",
+    "new_home_hero_LUNXEb",
     "16318238207c8b14a8",
     "6484e2d1-6529-43c4-975f-4a239d15a19e",
     "1643601523d98d2b70",

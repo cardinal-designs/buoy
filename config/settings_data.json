@@ -11,6 +11,7 @@
     "order_icon": "shopify:\/\/shop_images\/shipping-time.svg",
     "favicon": "shopify:\/\/shop_images\/Buoy_Favicon-01.png",
     "show_announcement_bar": true,
+    "show_pdp_announce": false,
     "fix_announcement": false,
     "sections": {
       "announcement-bar": {
@@ -115,8 +116,9 @@
           "upsell_title": "Exclusive Add-Ons",
           "upsell_text": "Risk-Free, One-Time Purchase",
           "upsell_products": [
-            "rescue-salts-1-jar",
+            "rescue-drops-1-bottle",
             "digestion-drops-1-bottle",
+            "rescue-salts-1-jar",
             "energy-drops-1-bottle",
             "immunity-drops-1-bottle",
             "hydration-drops-1-bottle"
@@ -289,10 +291,10 @@
           "check_1": "Free Shipping",
           "check_2": "Skip or Cancel Anytime",
           "check_3": "Monthly Deliveries",
-          "product_name_1": "Hydration Drops",
-          "product_details_1": "3 Bottles — 120 Servings (Delivered Monthly)",
-          "product_price_1": "$8.33\/bottle",
-          "product_price_details_1": "<span><strike>$39.00<\/strike><\/span> $25.00 Sub Total",
+          "product_name_1": "",
+          "product_details_1": "",
+          "product_price_1": "",
+          "product_price_details_1": "",
           "product_name_2": "Welcome Package",
           "product_price_2": "Free",
           "disclaimer": "Chronic illness discount applied to all future orders.",
@@ -325,11 +327,12 @@
       "announcement-bar-new": {
         "type": "announcement-bar-new",
         "settings": {
-          "text": "Try all of our drops with  our new<strong> <u>Liquid Electrolyte Variety Kit <\/u>—> <\/strong>",
-          "link": "shopify:\/\/products\/liquid-electrolyte-kit",
+          "text": "<strong>NEW Rescue Drops<\/strong> out now. <u>Shop 6x Stronger<\/u> —>",
+          "link": "shopify:\/\/products\/rescue-drops",
           "hide_mobile": false,
           "background": "#def647",
-          "text_color": "#1f2322"
+          "text_color": "#1f2322",
+          "image": "shopify:\/\/shop_images\/Promo_Bar_Rescue_Drops.jpg"
         }
       },
       "hydration-facts-drawer": {
@@ -367,6 +370,7 @@
           "table_qgN9ty": {
             "type": "table",
             "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Hydration_M_f88e06ce-f0eb-4eab-9d0c-aadbbf11db79.svg",
               "table_image": "shopify:\/\/shop_images\/Hydration_Drops_Supplement_Facts.svg"
             }
           },
@@ -423,9 +427,85 @@
       },
       "electrolyte-facts-drawer": {
         "type": "electrolyte-facts-drawer",
+        "blocks": {
+          "serving_HNqCiN": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "One Serving:",
+              "serving_item_one": "1 Short Squeeze (1.5mL)",
+              "serving_item_two": "30mg Caffeine (⅓ Cup of Coffee)",
+              "serving_item_three": "Electrolytes of ⅓ Sports Drink"
+            }
+          },
+          "serving_RxyKE4": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/bottle.svg",
+              "serving_title": "One Bottle:",
+              "serving_item_one": "40 Servings",
+              "serving_item_two": "Caffeine of 13+ Cups of Coffee",
+              "serving_item_three": "Electrolytes of 13+ Sports Drinks"
+            }
+          },
+          "recommended_XdiBFP": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietician’s Recommended Use:",
+              "title": "4-7 times daily (560mg-980mg electrolytes & 120mg-210mg clean caffeine)",
+              "sub_title": "Reviewed by over 100+ dieticians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 4-7 full beverages throughout the day, starting with your morning cup and ending in the early afternoon."
+            }
+          },
+          "table_9AgwkE": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Energy_Drops_Supplement_Facts.jpg",
+              "table_image": "shopify:\/\/shop_images\/Energy-Drops-Supplement-Facts.svg"
+            }
+          },
+          "info_jyN3Mx": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_EBMBNX": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "third-party",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_five": "Enhance Any Drink"
+            }
+          }
+        },
+        "block_order": [
+          "serving_HNqCiN",
+          "serving_RxyKE4",
+          "recommended_XdiBFP",
+          "table_9AgwkE",
+          "info_jyN3Mx",
+          "info_EBMBNX"
+        ],
         "settings": {
-          "product_name": "",
-          "title": ""
+          "product_name": "Liquid Electrolyte Variety Kit",
+          "title": "Supplement Facts"
         }
       },
       "digestion-facts-drawer": {
@@ -463,8 +543,8 @@
           "table_rxE8zb": {
             "type": "table",
             "settings": {
-              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
-              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M-2.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D-2.svg"
             }
           },
           "info_4QffLi": {
@@ -546,7 +626,8 @@
           "table_QcJkaG": {
             "type": "table",
             "settings": {
-              "table_image": "shopify:\/\/shop_images\/Immunity-Supplement-Facts.svg"
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_M-2.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Immunity_D-2.svg"
             }
           },
           "info_fhFGe4": {
@@ -612,8 +693,8 @@
           "table_dAWxxe": {
             "type": "table",
             "settings": {
-              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_M.svg",
-              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Digestion_D.svg"
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_Energy_M_1.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_Energy_D_1.svg"
             }
           },
           "info_gd7YJn": {
@@ -691,12 +772,52 @@
               "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
               "content": "Add directly to mouth or pair with any food or beverage for fast-acting hydration, perfect for hydrated mornings. Especially important to dose when exercising, living in a hot climate or managing a chronic condition.<br>\nIf not consuming directly with a beverage, intake 12-16oz of fluid to support optimal electrolyte balance."
             }
+          },
+          "table_9giBz7": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_M_1.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueSalt_D_1.svg"
+            }
+          },
+          "info_jMrA8N": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Pending HSA & FSA Eligibility",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_eJBLcY": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/Group_792.svg",
+              "icon_info_five": "Enhance Any Drink or Food"
+            }
           }
         },
         "block_order": [
           "serving_cEcnfP",
           "serving_VqDDdF",
-          "recommended_9A9Ytd"
+          "recommended_9A9Ytd",
+          "table_9giBz7",
+          "info_jMrA8N",
+          "info_eJBLcY"
         ],
         "settings": {
           "product_name": "Rescue Salt",
@@ -708,6 +829,89 @@
         "settings": {
           "product_name": "",
           "title": ""
+        }
+      },
+      "rescue-drops-facts-drawer": {
+        "type": "rescue-drops-facts-drawer",
+        "blocks": {
+          "serving_P4hErQ": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/serving.svg",
+              "serving_title": "ONE SERVING:",
+              "serving_item_one": "2 Short Squeezes (3mL)",
+              "serving_item_two": "300mg Sodium Per Serving",
+              "serving_item_three": "800mg Total Electrolytes + 87 Trace Minerals"
+            }
+          },
+          "serving_xHqc6A": {
+            "type": "serving",
+            "settings": {
+              "icon_serving": "shopify:\/\/shop_images\/Icons_thin.svg",
+              "serving_title": "ONE BOTTLE:",
+              "serving_item_one": "20 Servings",
+              "serving_item_two": "6,000mg Sodium",
+              "serving_item_three": "16,000mg Total Electrolytes"
+            }
+          },
+          "recommended_9NKPGU": {
+            "type": "recommended",
+            "settings": {
+              "heading": "Dietitian's Recommended Use:",
+              "title": "3-5 times daily (2400mg-4000mg electrolytes)",
+              "sub_title": "Reviewed by over 100+ Dietitians and Buoy’s three pending clinical studies.",
+              "content": "Add a squeeze of Buoy into 3-5 full beverages throughout the day, starting with your morning cup and ending with the last beverage you drink before bed.\n<span class=\"green-outline\">No B-Vitamins for people with MTHR Gene Mutation<\/span>."
+            }
+          },
+          "table_Vw8aLL": {
+            "type": "table",
+            "settings": {
+              "table_image_mobile": "shopify:\/\/shop_images\/Supplement_Facts_RescueDrops_M.svg",
+              "table_image": "shopify:\/\/shop_images\/Supplement_Facts_RescueDrops_D.svg"
+            }
+          },
+          "info_kEBVNA": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/no-icon.svg",
+              "icon_info_one": "No Sugar, Sweeteners or Flavors",
+              "icon_image_two": "shopify:\/\/shop_images\/gmo.svg",
+              "icon_info_two": "Non-GMO Project Verified",
+              "icon_image_three": "shopify:\/\/shop_images\/keto.svg",
+              "icon_info_three": "Keto & Paleo Approved",
+              "icon_image_four": "shopify:\/\/shop_images\/clinically.svg",
+              "icon_info_four": "Clinically Studied",
+              "icon_image_five": "shopify:\/\/shop_images\/deep.svg",
+              "icon_info_five": "Deep Ocean Minerals"
+            }
+          },
+          "info_PnGap9": {
+            "type": "info",
+            "settings": {
+              "icon_image": "shopify:\/\/shop_images\/vegan.svg",
+              "icon_info_one": "Vegan",
+              "icon_image_two": "shopify:\/\/shop_images\/check.svg",
+              "icon_info_two": "Gluten & Major Allergen Free",
+              "icon_image_three": "shopify:\/\/shop_images\/third-party.svg",
+              "icon_info_three": "Third Party Tested",
+              "icon_image_four": "shopify:\/\/shop_images\/bio-available.svg",
+              "icon_info_four": "3x Bioavailable Form Factor",
+              "icon_image_five": "shopify:\/\/shop_images\/Group_792.svg",
+              "icon_info_five": "Enhance Any Drink or Food"
+            }
+          }
+        },
+        "block_order": [
+          "serving_P4hErQ",
+          "serving_xHqc6A",
+          "recommended_9NKPGU",
+          "table_Vw8aLL",
+          "info_kEBVNA",
+          "info_PnGap9"
+        ],
+        "settings": {
+          "product_name": "Rescue Drops",
+          "title": "Supplement Facts"
         }
       }
     },
@@ -753,6 +957,15 @@
         "disabled": false,
         "settings": {
           "version": "v3"
+        }
+      },
+      "4291333794791649201": {
+        "type": "shopify:\/\/apps\/loyalty-rewards-and-referrals\/blocks\/embed-sdk\/6f172e67-4106-4ac0-89c5-b32a069b3101",
+        "disabled": false,
+        "settings": {
+          "disableBundledCSS": false,
+          "disableBundledFonts": false,
+          "useClassIsolator": false
         }
       }
     }
