@@ -3,13 +3,15 @@ const links = document.querySelectorAll('.anchor-links__sticky button[data-secti
 // Highlight on scroll
 window.addEventListener('scroll', (event) => {
   const fromTop = window.scrollY;
-  const headerOffset = document.querySelector("header-container").clientHeight + document.querySelector('.anchor-links__sticky').clientHeight;
+  const announcementContainerHeight = document.querySelector("announcement-container").clientHeight || 0
+  const headerContainerHeight = document.querySelector("header-container").clientHeight || 0
+  const headerOffset = headerContainerHeight + announcementContainerHeight + document.querySelector('.anchor-links__sticky').clientHeight;
 
   links.forEach(link => {
 
     if(link.dataset.section == null) return
 
-    const section = document.querySelector(`[data-anchor="${link.dataset.section}"]`);
+    const section = document.querySelector(`[data-anchor="${link.dataset.section}"]`).closest(".shopify-section");
 
     if (section) {
       if (section.offsetTop - headerOffset <= fromTop && section.offsetTop + section.clientHeight - headerOffset > fromTop) {
