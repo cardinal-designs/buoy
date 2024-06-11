@@ -11,7 +11,7 @@ window.addEventListener('scroll', (event) => {
 
     if(link.dataset.section == null) return
 
-    const section = document.querySelector(`[data-anchor="${link.dataset.section}"]`);
+    const section = document.querySelector(`[data-anchor="${link.dataset.section}"]`).closest(".shopify-section");
 
     if (section) {
       if (section.offsetTop - headerOffset <= fromTop && section.offsetTop + section.clientHeight - headerOffset > fromTop) {
