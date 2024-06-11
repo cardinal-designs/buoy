@@ -630,3 +630,46 @@ $( document ).ready(function() {
   }
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabs = document.querySelectorAll(".new__account ul.tabs li");
+
+  tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+          var tab_id = tab.getAttribute("data-tab");
+
+          // Remove 'current' class from all tabs and tab content
+          tabs.forEach(function (t) {
+              t.classList.remove("current");
+          });
+
+          var tabContents = document.querySelectorAll(".new__account .tab-content");
+          tabContents.forEach(function (content) {
+              content.classList.remove("current");
+          });
+
+          // Add 'current' class to the clicked tab and corresponding tab content
+          tab.classList.add("current");
+          document.getElementById(tab_id).classList.add("current");
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var formCloses = document.querySelectorAll('.new__account--addresses-form-close');
+    var resetButtons = document.querySelectorAll('.address__btn--close');
+
+    if (formCloses.length !== resetButtons.length) {
+        console.error('The number of form close buttons does not match the number of reset buttons.');
+        return;
+    }
+
+    formCloses.forEach((formClose, index) => {
+        var resetButton = resetButtons[index];
+        formClose.addEventListener('click', function() {
+            resetButton.click();
+        });
+    });
+});
