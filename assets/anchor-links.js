@@ -13,6 +13,8 @@ window.addEventListener('scroll', (event) => {
 
     const section = document.querySelector(`[data-anchor="${link.dataset.section}"]`).closest(".shopify-section");
 
+    console.log(section)
+
     if (section) {
       if (section.offsetTop - headerOffset <= fromTop && section.offsetTop + section.clientHeight - headerOffset > fromTop) {
         link.classList.add('active');
