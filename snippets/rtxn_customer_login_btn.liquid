@@ -1,5 +1,5 @@
 <p class="rtxn_customer_portal_login" style="display: none;">
-  <a href="#" class="rtxn_manage_subscriptions_btn">Manage Subscriptions</a>
+  <a href="#" target="_self" class="rtxn_manage_subscriptions_btn">Manage Subscriptions</a>
 </p>
 
 <script>
@@ -25,12 +25,12 @@
             const oneHour = 60 * 60 * 1000;
             localStorage.setItem('customer-portal-token', data.token);
             localStorage.setItem('customer-portal-token-expiration', new Date().getTime() + oneHour);
-            window.open("/apps/" + appName + "/#/shop/subscriptions");
+            window.open("/apps/" + appName + "/#/shop/subscriptions", "_self");
           }
         }
       };
     } else {
-      window.open("/apps/" + appName + "/#/login");
+      window.open("/apps/" + appName + "/#/login", "_self");
     }
   }
 
