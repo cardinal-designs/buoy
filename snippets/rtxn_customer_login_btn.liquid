@@ -25,12 +25,12 @@
             const oneHour = 60 * 60 * 1000;
             localStorage.setItem('customer-portal-token', data.token);
             localStorage.setItem('customer-portal-token-expiration', new Date().getTime() + oneHour);
-            window.open("/apps/" + appName + "/#/shop/subscriptions", "_blank");
+            window.open("/apps/" + appName + "/#/shop/subscriptions");
           }
         }
       };
     } else {
-      window.open("/apps/" + appName + "/#/login", "_blank");
+      window.open("/apps/" + appName + "/#/login");
     }
   }
 
