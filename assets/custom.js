@@ -291,7 +291,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   // Open Supplement Drawer
-  function openSupplement(e) {
+  function openNav(e) {
     event.stopPropagation();
     const parentItemContainer = e.target.closest('.dropdown-container-item__container');
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
@@ -357,7 +357,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
-      document.querySelector('main').classList.add('main__overlay');
       document.querySelector('header-container').style.zIndex = 10;
 
       if (document.querySelector('.supplement-side-drawer .drawer__header')) {
@@ -376,14 +375,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   //   if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
   // }
 
-  function closeSupplement() {
+  function closeNav() {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
       supplementDrawer.style.right = "-100%";
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
-      document.querySelector('main').classList.remove('main__overlay');
-      document.querySelector('header-container').style.zIndex = 3;
+      document.querySelector('header-container').style.zIndex = "3";
 
       if(document.querySelector('.supplement-side-drawer .drawer__header')) {
         document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
@@ -398,7 +396,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
-        closeSupplement();
+        closeNav();
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
