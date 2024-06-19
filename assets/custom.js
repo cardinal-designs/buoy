@@ -357,6 +357,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
+      document.querySelector('main').classList.add('main__overlay');
       document.querySelector('header-container').style.zIndex = 10;
 
       if (document.querySelector('.supplement-side-drawer .drawer__header')) {
