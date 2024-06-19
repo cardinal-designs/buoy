@@ -182,6 +182,7 @@ main.main__overlay:before {
   height: 100%;
   display: block !important;
   position: fixed;
+  content: "";
   top: 0;
   right: 0;
   bottom: 0;
