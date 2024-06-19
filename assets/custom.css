@@ -173,7 +173,7 @@ body.open-cart-drawer {
   overflow-y: hidden;
 }
 
-.page-blury-overlay.is-visible {
+.template-product .page-blury-overlay.is-visible {
   visibility: visible;
   opacity: 1;
 }
