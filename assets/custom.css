@@ -176,6 +176,8 @@ body.open-cart-drawer {
 .template-product .page-blury-overlay {
   background-color: #E9E9E9;
   mix-blend-mode: multiply;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .template-product .page-blury-overlay.is-visible {
