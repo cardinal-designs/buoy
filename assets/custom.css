@@ -173,6 +173,11 @@ body.open-cart-drawer {
   overflow-y: hidden;
 }
 
+.template-product .page-blury-overlay {
+  background-color: #E9E9E9;
+  mix-blend-mode: multiply;
+}
+
 .template-product .page-blury-overlay.is-visible {
   visibility: visible;
   opacity: 1;
