@@ -399,6 +399,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
+        console.log("asdIF");
         document.querySelector('main').classList.remove('main__overlay');
       }
   
