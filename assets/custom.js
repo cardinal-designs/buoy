@@ -285,7 +285,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('body').classList.remove('main__overlay');
+    document.querySelector('main').classList.remove('main__overlay');
     document.querySelector('header-container').style.zIndex = 3;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
