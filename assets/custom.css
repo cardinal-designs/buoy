@@ -190,8 +190,8 @@ main.main__overlay:before {
   background: #bbbcbc;
   z-index: 9;
   mix-blend-mode: multiply;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 }
 
