@@ -272,7 +272,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
-      document.querySelector('main').classList.add('main__overlay');
       document.querySelector('header-container').style.zIndex = 10;
       document.querySelector('.clinical-trial-drawer .drawer__header').classList.add('mobile-fixed-header');
     }
@@ -285,7 +284,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('main').classList.remove('main__overlay');
     document.querySelector('header-container').style.zIndex = 3;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
@@ -357,7 +355,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       drawer.style.right = "0";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
-      document.querySelector('main').classList.add('main__overlay');
       document.querySelector('header-container').style.zIndex = 10;
 
       if (document.querySelector('.supplement-side-drawer .drawer__header')) {
@@ -382,7 +379,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       supplementDrawer.style.right = "-100%";
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
-      document.querySelector('main').classList.remove('main__overlay');
       document.querySelector('header-container').style.zIndex = "3";
 
       if(document.querySelector('.supplement-side-drawer .drawer__header')) {
@@ -399,8 +395,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
-        console.log("asdIF");
-        document.querySelector('main').classList.remove('main__overlay');
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
