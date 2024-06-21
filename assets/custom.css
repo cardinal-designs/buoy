@@ -63,7 +63,7 @@
 
 .quick-add__container .okeReviews-reviewsSummary-ratingCount {
   left: 0;
-  color: var(--charcoal-60);
+  color: var(--charcoal-60) !important;
 }
 
 @media screen and (max-width: 768px) {
