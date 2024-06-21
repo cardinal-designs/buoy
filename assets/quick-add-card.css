@@ -641,6 +641,10 @@ quick-add-card[data-open="true"] .quick-add__overlay {
   width: 65px;
 }
 
+.quick-add__content .okeReviews .okeReviews-reviewsSummary-starRating {
+  margin-right: 0 !important;
+}
+
 .quick-add__content .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
   background-size: 65px 12px;
 }
