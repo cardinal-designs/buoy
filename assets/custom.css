@@ -61,6 +61,10 @@
   left: 20px;
 }
 
+.quick-add__container .okeReviews-reviewsSummary-ratingCount {
+  left: 0;
+}
+
 @media screen and (max-width: 768px) {
   .okeReviews-reviewsSummary-ratingCount {
     left: 0;
