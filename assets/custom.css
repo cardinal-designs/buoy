@@ -68,6 +68,15 @@
   margin-bottom: 2px !important;
 }
 
+.quick-add__content .okeReviews .okeReviews-starRating--small {
+  height: 12px;
+  width: 65px;
+}
+
+.quick-add__content .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
+  background-size: 65px 12px;
+}
+
 @media screen and (max-width: 768px) {
   .okeReviews-reviewsSummary-ratingCount {
     left: 0;
