@@ -311,7 +311,11 @@
               {%- if settings.order_icon != blank -%}
                 <img src="{{ settings.order_icon | img_url: 'master' }}"/>
               {%- endif -%}
+               {% if product.handle == 'rescue-drops' %}
+               <span class="">Ships Free July 12 with your free gifts</span>
+               {% else %}
                <span class="autoDay">{{ settings.order_within_text }}</span>
+               {% endif %}
             </div>
           {% endif %}
             
