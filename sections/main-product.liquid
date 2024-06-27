@@ -205,7 +205,7 @@
                         </span>    
                       {%- endif -%}
                       {%- if my_fields.best_value != blank -%}
-                        <span class="Best_Value">{{ my_fields.best_value }}</span>
+                        <span {% if product.handle == 'rescue-drops' %}style="left: 77%;"{% endif %} class="Best_Value">{{ my_fields.best_value }}</span>
                       {%- endif -%}
                     </label>
                   </span>
