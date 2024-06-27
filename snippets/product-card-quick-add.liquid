@@ -38,7 +38,7 @@
       {% if card_product.tags != blank and content.show_tags == true %}
         <div class="{{ base }}__product-tags">
           {% for tag in card_product.tags %}
-            <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647;"{% endif %} class="{{ base }}__product-tag">
+            <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
               {{ tag }}
             </div>
           {% endfor %}
