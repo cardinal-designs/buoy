@@ -109,6 +109,16 @@
   height: fit-content;
 }
 
+.chronic__product-tag {
+  background: var(--charcoal);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inter, sans-serif;
+  line-height: normal;
+}
+
 @media only screen and (max-width: 991px) {
 
   .page-template--page-chronic-illness-submitted .card-wrapper .button {
