@@ -26,8 +26,8 @@
 
   <div class="card card--product" tabindex="-1">
     <div class="chronic__product-tags">
-      {% for tag in card_product.tags %}
-        <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+      {% for tag in product_card_product.tags %}
+        <div {% if product_card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="chronic__product-tag">
           {{ tag }}
         </div>
       {% endfor %}
