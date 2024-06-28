@@ -95,6 +95,20 @@
   cursor: pointer;
 }
 
+.chronic__product-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  height: fit-content;
+}
+
 @media only screen and (max-width: 991px) {
 
   .page-template--page-chronic-illness-submitted .card-wrapper .button {
