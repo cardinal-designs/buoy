@@ -120,6 +120,12 @@
                     <p class="sh4">{{ block.settings.icon_image_text_4 }}</p>
                   </div>
                 {% endif %}
+                {% if block.settings.icon_image_text_5 != blank %}
+                  <div class="image-with-dropdowns__list-item">
+                    <img src="{{ block.settings.icon_5 | img_url: 'master'  }}"/>
+                    <p class="sh4">{{ block.settings.icon_image_text_5 }}</p>
+                  </div>
+                {% endif %}
                 {%- if block.settings.show_ingredients or block.settings.show_clinical -%}
                   <div class="view-drawer-links">
                     {% if block.settings.show_ingredients == true %}
@@ -589,6 +595,16 @@
             "type": "textarea",
             "id": "icon_image_text_4",
             "label": "Icon Image Text 4"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_5",
+            "label": "Icon Image 5"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_image_text_5",
+            "label": "Icon Image Text 5"
           },
           {
             "type": "checkbox",
