@@ -71,8 +71,20 @@
     "quick_add_products_PXexHD": {
       "type": "quick-add-products",
       "blocks": {
+        "product_8aqXhe": {
+          "type": "product",
+          "settings": {
+            "heading": "liquid-electrolyte-variety-kit",
+            "image": "shopify:\/\/shop_images\/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
+            "image_hover": "shopify:\/\/shop_images\/PDP_LEVK_Hero_2.jpg",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/PDP_LEVK_Brain_5x_633b3839-b2d5-432c-a0c1-f102c91e4de6.png",
+            "form_text": "1 Bottle Of Each: Hydration, Digestion, Brain Health, Energy, Immunity"
+          }
+        },
         "product_V3ByPw": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "liquid-electrolyte-kit",
             "image": "shopify:\/\/shop_images\/Collection_LEVK.jpg",
@@ -107,6 +119,7 @@
         }
       },
       "block_order": [
+        "product_8aqXhe",
         "product_V3ByPw",
         "product_jDczPk",
         "card_xN8GeW"
