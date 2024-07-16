@@ -28,15 +28,9 @@
   <div class="card card--product" tabindex="-1">
     <div class="chronic__product-tags">
       {% for tag in product_card_product.tags limit: 1 %}
-          {% if tag !== 'Sold Out' %}
-          <div class="chronic__product-tag">
-            Now Available
-          </div>
-          {% else %}
-          <div style="background: black; color: white;" class="chronic__product-tag">
-            Sold Out
-          </div>
-          {% endif %}
+        <div {% if tag == 'Pre-Order Promo' %}style="background: green;"{% endif %} class="chronic__product-tag">
+          {{ tag }}
+        </div>
       {% endfor %}
     </div>
     <div class="card__inner">
