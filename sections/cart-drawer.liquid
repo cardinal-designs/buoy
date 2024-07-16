@@ -213,11 +213,7 @@
 
           {% assign disable_checkout = true %}
           {% for item in cart.items %}
-            {% if item.product.type != 'add on' %}
-              {% assign disable_checkout = false %}
-            {% elsif item.product.type != 'gift' %}
-              {% assign disable_checkout = false %}
-            {% elsif item.product.type != 'BYOB' %}
+            {% if item.product.type != 'add on' and item.product.type != 'gift' and item.product.type != 'BYOB' %}
               {% assign disable_checkout = false %}
             {% endif %}
           {% endfor %}
