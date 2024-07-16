@@ -310,6 +310,11 @@
               </svg>
               <span style="margin-left: 5px; color: #F00000">{{ product.metafields.my_fields.custom_shipping_text }}</span>
             </div>
+            {% elsif product.metafields.my_fields.custom_shipping_text != blank %}
+              <div id="Order_Within" class="Order_Within Risk_Free">
+               <img src="{{ settings.order_icon | img_url: 'master' }}"/>
+               <span>{{ product.metafields.my_fields.custom_shipping_text }}</span>
+            </div>   
             {% else %}
             <div id="Order_Within" class="Order_Within Risk_Free">
                <img src="{{ settings.order_icon | img_url: 'master' }}"/>
