@@ -27,7 +27,7 @@
 
   <div class="card card--product" tabindex="-1">
     <div class="chronic__product-tags">
-      {% for tag in product_card_product.tags limit: 1 %}
+      {% for tag in product_card_product.tags limit: 5 %}
        - {{ tag }} -
           {% if tag == 'Now Available' %}
           <div class="chronic__product-tag">
