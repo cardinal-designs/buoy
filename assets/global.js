@@ -1410,6 +1410,8 @@ $('body').on('click', '.add-on-add-to-cart', function(e) {
     sections: atcGetSectionsToRender().map((section) => section.section) 
   })
 
+  console.log(body)
+
   fetch(`${routes.cart_add_url}`, {...fetchConfig(), ...{ body }})
     .then((response) => response.json())
     .then((parsedState) => {
