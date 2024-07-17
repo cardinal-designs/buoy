@@ -1444,36 +1444,36 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 
 
 
-// $('body').on('click', '.add-on-add-to-cart', function(e) {
-//   let id = Number($(this).data('id'));
-//   const body = JSON.stringify({
-//     items: [
-//       {
-//         id,
-//         1
-//       }
-//     ],
-//     sections: atcGetSectionsToRender().map((section) => section.section),
-//     sections_url: window.location.pathname
-//   })
+$('body').on('click', '.add-on-add-to-cart', function(e) {
+  let id = Number($(this).data('id'));
+  const body = JSON.stringify({
+    items: [
+      {
+        id,
+        1
+      }
+    ],
+    sections: atcGetSectionsToRender().map((section) => section.section),
+    sections_url: window.location.pathname
+  })
 
-//   fetch(`${routes.cart_add_url}`, {...fetchConfig(), ...{ body }})
-//     .then((response) => response.json())
-//     .then((parsedState) => {
-//       atcGetSectionsToRender().forEach((section => {
-//         const elementToReplace =
-//           document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id)
+  fetch(`${routes.cart_add_url}`, {...fetchConfig(), ...{ body }})
+    .then((response) => response.json())
+    .then((parsedState) => {
+      atcGetSectionsToRender().forEach((section => {
+        const elementToReplace =
+          document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id)
           
-//         elementToReplace.innerHTML =
-//           getSectionInnerHTML(parsedState.sections[section.section], section.selector)
-//       }))
+        elementToReplace.innerHTML =
+          getSectionInnerHTML(parsedState.sections[section.section], section.selector)
+      }))
 
-//     }).catch((error) => {
-//       console.log(error)
-//     }).finally(() => {
-//       document.querySelector('cart-drawer').disableLoading();
-//     })
-// }
+    }).catch((error) => {
+      console.log(error)
+    }).finally(() => {
+      document.querySelector('cart-drawer').disableLoading();
+    })
+})
 
 
 
