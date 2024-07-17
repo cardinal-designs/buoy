@@ -1404,8 +1404,7 @@ $('body').on('click', '.add-on-add-to-cart', function(e) {
   let id = Number($(this).data('id'));
   const body = JSON.stringify({
     items: [{id: id, quantity: 1}],
-    sections: atcGetSectionsToRender().map((section) => section.section),
-    sections_url: window.location.pathname
+    sections: atcGetSectionsToRender().map((section) => section.section)
   })
 
   fetch(`${routes.cart_add_url}`, {...fetchConfig(), ...{ body }})
