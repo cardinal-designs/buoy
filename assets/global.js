@@ -1418,7 +1418,7 @@ $('body').on('click', '.add-on-add-to-cart', function(e) {
       atcGetSectionsToRender().forEach((section => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id)
-          console.log('e',elementToReplace)
+          console.log('e', parsedState)
         elementToReplace.innerHTML =
           getSectionInnerHTML(parsedState.sections[section.section], section.selector)
       }))
