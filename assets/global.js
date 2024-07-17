@@ -1403,7 +1403,7 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 $('body').on('click', '.add-on-add-to-cart', function(e) {
   let id = Number($(this).data('id'));
   const body = JSOdrN.stringify({
-    items: [{id,1}],
+    items: [{id: id, quantity: 1}],
     sections: atcGetSectionsToRender().map((section) => section.section),
     sections_url: window.location.pathname
   })
