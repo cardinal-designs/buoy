@@ -1401,6 +1401,9 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 
 
 $('body').on('click', '.add-on-add-to-cart', function(e) {
+  e.preventDefault();
+  document.querySelector('cart-drawer').enableLoading();
+  
   let id = Number($(this).data('id'));
   const body = JSON.stringify({
     items: [{id: id, quantity: 1}],
@@ -1421,7 +1424,7 @@ $('body').on('click', '.add-on-add-to-cart', function(e) {
     }).catch((error) => {
       console.log(error)
     }).finally(() => {
-      // document.querySelector('cart-drawer').disableLoading();
+      document.querySelector('cart-drawer').disableLoading();
     })
 })
 
