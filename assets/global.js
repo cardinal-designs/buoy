@@ -1421,7 +1421,7 @@ $('body').on('click', '.add-on-add-to-cart', function(e) {
     }).catch((error) => {
       console.log(error)
     }).finally(() => {
-      document.querySelector('cart-drawer').disableLoading();
+      // document.querySelector('cart-drawer').disableLoading();
     })
 })
 
