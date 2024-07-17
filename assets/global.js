@@ -1439,6 +1439,7 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
     });
 });
 
+
 function atcGetSectionsToRender() {
   return [
     {
