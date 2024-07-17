@@ -1355,6 +1355,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     sections: atcGetSectionsToRender().map((section) => section.section),
     sections_url: window.location.pathname
   });
+  console.log('body',body)
 
   fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
     .then((response) => response.json())
