@@ -832,49 +832,104 @@ function setCookie(name, value, days) {
 // });
 
 // Drag to scroll
-const dragScroll = document.querySelectorAll('.drag-scroll');
+// const dragScroll = document.querySelectorAll('.drag-scroll');
 
-dragScroll.forEach(ele => {
-  let pos = { top: 0, left: 0, x: 0, y: 0 };
+// dragScroll.forEach(ele => {
+//   let pos = { top: 0, left: 0, x: 0, y: 0 };
 
-  const mouseDownHandler = function (e) {
-      ele.style.cursor = 'grabbing';
-      ele.style.userSelect = 'none';
+//   const mouseDownHandler = function (e) {
+//       ele.style.cursor = 'grabbing';
+//       ele.style.userSelect = 'none';
 
-      pos = {
-          left: ele.scrollLeft,
-          top: ele.scrollTop,
-          // Get the current mouse position
-          x: e.clientX,
-          y: e.clientY,
-      };
+//       pos = {
+//           left: ele.scrollLeft,
+//           top: ele.scrollTop,
+//           // Get the current mouse position
+//           x: e.clientX,
+//           y: e.clientY,
+//       };
 
-      document.addEventListener('mousemove', mouseMoveHandler);
-      document.addEventListener('mouseup', mouseUpHandler);
-  };
+//       document.addEventListener('mousemove', mouseMoveHandler);
+//       document.addEventListener('mouseup', mouseUpHandler);
+//   };
 
-  const mouseMoveHandler = function (e) {
-      // How far the mouse has been moved
-      const dx = e.clientX - pos.x;
-      const dy = e.clientY - pos.y;
+//   const mouseMoveHandler = function (e) {
+//       // How far the mouse has been moved
+//       const dx = e.clientX - pos.x;
+//       const dy = e.clientY - pos.y;
 
-      // Scroll the element
-      ele.scrollTop = pos.top - dy;
-      ele.scrollLeft = pos.left - dx;
-  };
+//       // Scroll the element
+//       ele.scrollTop = pos.top - dy;
+//       ele.scrollLeft = pos.left - dx;
+//   };
 
-  const mouseUpHandler = function () {
-      ele.style.cursor = 'grab';
-      ele.style.removeProperty('user-select');
+//   const mouseUpHandler = function () {
+//       ele.style.cursor = 'grab';
+//       ele.style.removeProperty('user-select');
 
-      document.removeEventListener('mousemove', mouseMoveHandler);
-      document.removeEventListener('mouseup', mouseUpHandler);
-  };
+//       document.removeEventListener('mousemove', mouseMoveHandler);
+//       document.removeEventListener('mouseup', mouseUpHandler);
+//   };
 
-  // Attach the handler
+//   // Attach the handler
 
-  ele.addEventListener('mousedown', mouseDownHandler);
+//   ele.addEventListener('mousedown', mouseDownHandler);
+// });
+
+const dragScrollEles = document.querySelectorAll('.drag-scroll');
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  dragScroll(dragScrollEles);
 });
+
+function dragScroll(items) {
+  items.forEach(ele => {
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+  
+    const mouseDownHandler = function (e) {
+        ele.style.cursor = 'grabbing';
+        ele.style.userSelect = 'none';
+  
+        pos = {
+            left: ele.scrollLeft,
+            top: ele.scrollTop,
+            // Get the current mouse position
+            x: e.clientX,
+            y: e.clientY,
+        };
+  
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    };
+  
+    const mouseMoveHandler = function (e) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        const dy = e.clientY - pos.y;
+  
+        // Scroll the element
+        ele.scrollTop = pos.top - dy;
+        ele.scrollLeft = pos.left - dx;
+    };
+  
+    const mouseUpHandler = function () {
+        ele.style.cursor = 'grab';
+        ele.style.removeProperty('user-select');
+  
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+    };
+  
+    // Attach the handler
+  
+    ele.addEventListener('mousedown', mouseDownHandler);
+  });
+}
+
+
+
+
 
 var animatedText = document.querySelectorAll('.animated-text, .animated-text-delay1, .animated-text-delay2, .animated-text-delay3');
 
@@ -1373,6 +1428,12 @@ $('body').on('click', '.js-add-to-cart', function(e) {
     .finally(() => {
       document.querySelector('cart-drawer').disableLoading();
       document.querySelector('cart-drawer').open();
+
+      var dragScrollDivs = document.querySelectorAll('.drag-scroll');
+
+      setTimeout(() => {
+        dragScroll(dragScrollDivs);
+      }, 500);
     });
 });
 
