@@ -242,3 +242,7 @@ cart-items .quantity__input {
   background: var(--green-1);
   border: 0px;
 }
+
+.cart__footer .tax-note {
+  font-size: 14px;
+}
