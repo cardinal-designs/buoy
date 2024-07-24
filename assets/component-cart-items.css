@@ -321,7 +321,10 @@ cart-remove-button .icon-remove {
   }
 }
 
-
 .cart__item--remove {
   color: var(--charcoal-lighter);
+}
+
+.cart-item__quantity .quantity {
+  width: 12rem;
 }
