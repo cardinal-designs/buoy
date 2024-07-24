@@ -278,8 +278,8 @@
                         </button>
                       </quantity-input>
                       <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                        <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                          {% render 'icon-remove' %}
+                        <a href="{{ item.url_to_remove }}" class="cart__item--remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                          {% render 'icon-trash' %}
                         </a>
                       </cart-remove-button>
                     </div>
