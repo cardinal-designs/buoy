@@ -258,3 +258,7 @@ cart-items .quantity__input {
 .cart-item .discounts:empty {
   display: none;
 }
+
+.cart-item .cart-item__error {
+  margin-top: 0;
+}
