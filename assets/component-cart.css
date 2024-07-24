@@ -230,6 +230,10 @@ cart-items .title-wrapper-with-link .title {
   letter-spacing: 0;
 }
 
+cart-items .quantity__button svg {
+  width: 12px;
+} 
+
 cart-items .quantity__input {
   font-family: inter,sans-serif;
 }
