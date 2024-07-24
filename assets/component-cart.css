@@ -228,3 +228,8 @@ cart-items .title-wrapper-with-link .title {
   font-weight: bold;
   font-size: 40px;
 }
+
+.cart__ctas button {
+  background: var(--green-1);
+  border: 0px;
+}
