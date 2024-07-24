@@ -191,6 +191,10 @@ cart-remove-button .icon-remove {
   border-radius: 10px;
 }
 
+.cart-item .price {
+  font-weight: 400;
+}
+
 @media screen and (max-width: 768px) {
   .cart-items,
   .cart-items thead,
