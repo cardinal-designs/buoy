@@ -320,3 +320,8 @@ cart-remove-button .icon-remove {
     padding-left: 10rem;
   }
 }
+
+
+.cart__item--remove {
+  color: var(--charcoal-lighter);
+}
