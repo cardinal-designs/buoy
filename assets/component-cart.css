@@ -250,3 +250,7 @@ cart-items .quantity__input {
 .cart-item .product-option {
   font-size: 12px;
 }
+
+.cart-item .discounts:empty {
+  display: none;
+}
