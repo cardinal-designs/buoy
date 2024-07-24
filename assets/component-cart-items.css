@@ -328,3 +328,8 @@ cart-remove-button .icon-remove {
 .cart-item__quantity .quantity {
   width: 12rem;
 }
+
+.cart__footer-wrapper:last-child .cart__footer {
+  border-top: 1px solid var(--gray-light);
+  margin-top: 40px;
+}
