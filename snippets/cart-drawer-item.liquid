@@ -74,7 +74,7 @@
         <h4 class="cart-drawer__item-title body-small medium">{{split_title[0] }}</h4>
       {% endif %}
 
-      <div class="cart-drawer__item-price body-xs">
+      <div class="cart-drawer__item-price cart-drawer__item-price--1 body-xs">
         {% if item.original_price > item.final_price %}
           <span class="new-price">{{ item.final_price | money }}</span>
           <span class="old-price">{{ item.original_price | money }}</span>
