@@ -227,3 +227,22 @@ body.open-cart-drawer {
     top: -10px;
   }  
 }
+
+.desktop-show {
+  display: none !important;
+}
+
+.mobile-show {
+  display: block !important;
+}
+
+@media screen and (min-width: 769px) {
+
+  .desktop-show {
+    display: block !important;
+  }
+
+  .mobile-show {
+    display: none !important;
+  }
+}

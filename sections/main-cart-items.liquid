@@ -13,6 +13,40 @@
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
+  {% if section.settings.enable_progress_bar and cart.item_count > 0 %}
+    {% liquid
+      assign contains_subscription_product = false
+      assign contains_add_on = false
+      for item in cart.items
+        if item.selling_plan_allocation
+          assign contains_subscription_product = true
+        elsif item.product.type == 'add on' or item.product.type == 'BYOB'
+          assign contains_add_on = true
+        endif
+      endfor
+
+      assign progress_text = ''
+      assign progress_percentage = 0
+      if contains_subscription_product and contains_add_on
+        assign progress_text = "You're getting our deepest discounts!"
+        assign progress_percentage = 100
+      elsif contains_subscription_product
+        assign progress_text = 'Add a single bottle for deeper discounts!'
+        assign progress_percentage = 66
+      else contains_add_on
+        assign progress_text = 'Subscribe to save 23% on every order!'
+        assign progress_percentage = 33
+      endif
+    %}
+
+    <div class="cart-drawer__progress">
+      <p class="cart-drawer__progress-text body-xs">{{ progress_text }}</p>
+      <div class="cart-drawer__progress-bar">
+        <div class="cart-drawer__progress-bar-inner" style="width: {{ progress_percentage }}%"></div>
+      </div>
+    </div>
+  {% endif %}
+
   <div class="cart__warnings">
     <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="button">
@@ -101,6 +135,71 @@
 
                     <a href="{{ item.product.url }}" class="cart-item__name break body-small medium">{{ item.product.title | escape }}</a>
 
+                    <dl>
+                      <div class="cart-item__price-wrapper mobile-show">
+                        {% if isMainBundleProduct != blank %}
+                          {%- if bundeOriginal_price != bundeFinal_price -%}
+                            <dl class="cart-item__discounted-prices body-xs">
+                              <dt class="visually-hidden">
+                                {{ 'products.product.price.regular_price' | t }}
+                              </dt>
+                              <dd>
+                                <s class="cart-item__old-price price body-xs">
+                                  {{ bundeOriginal_price | money }}
+                                </s>
+                              </dd>
+                              <dt class="visually-hidden">
+                                {{ 'products.product.price.sale_price' | t }}
+                              </dt>
+                              <dd class="price body-xs">
+                                {{ bundeFinal_price | money }}
+                              </dd>
+                            </dl>
+                          {%- else -%}
+                            <span class="price body-xs">
+                              {{ bundeOriginal_price | money }}
+                            </span>
+                          {%- endif -%}
+                        {% else %}
+                          {%- if item.original_price != item.final_price -%}
+                            <dl class="cart-item__discounted-prices">
+                              <dt class="visually-hidden">
+                                {{ 'products.product.price.regular_price' | t }}
+                              </dt>
+                              <dd>
+                                <s class="cart-item__old-price price body-xs">
+                                  {{ item.original_price | money }}
+                                </s>
+                              </dd>
+                              <dt class="visually-hidden">
+                                {{ 'products.product.price.sale_price' | t }}
+                              </dt>
+                              <dd class="price body-xs">
+                                {{ item.final_price | money }}
+                              </dd>
+                            </dl>
+
+                            {%- if item.variant.available and item.unit_price_measurement -%}
+                              <div class="unit-price caption">
+                                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                {{ item.variant.unit_price | money }}
+                                <span aria-hidden="true">/</span>
+                                <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                                  {{- item.variant.unit_price_measurement.reference_value -}}
+                                {%- endif -%}
+                                {{ item.variant.unit_price_measurement.reference_unit }}
+                              </div>
+                            {%- endif -%}
+                          {%- else -%}
+                            <span class="price body-xs">
+                              {{ item.original_price | money }}
+                            </span>
+                          {%- endif -%}
+                        {% endif %}
+                      </div>
+                    </dl>
+
                     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                       <dl>
                         {%- if item.product.has_only_default_variant == false -%}
@@ -158,7 +257,7 @@
                 {% endif %}
 
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {% if isMainBundleProduct != blank %}
+                      {%- if isMainBundleProduct != blank -%}
                         {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
                         {%- for discount in discounts -%}
                           <li class="discounts__discount">
@@ -166,14 +265,14 @@
                             {{ discount }}
                           </li>
                         {%- endfor -%}
-                      {% else %}
+                      {%- else -%}
                         {%- for discount in item.discounts -%}
                           <li class="discounts__discount">
                             {%- render 'icon-discount' -%}
                             {{ discount.title }}
                           </li>
                         {%- endfor -%}
-                      {% endif %}
+                      {%- endif -%}
                     </ul>
 
                     <p class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}">
@@ -187,8 +286,42 @@
                     </p>
                   </td>
 
-                  <td class="cart-item__prices right">
-                    <div class="cart-item__price-wrapper">
+                  <td class="cart-item__prices right right-mobile">
+                    <cart-remove-button class="mobile-show" id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                      <a href="{{ item.url_to_remove }}" class="cart__item--remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                        {% render 'icon-trash' %}
+                      </a>
+                    </cart-remove-button>
+                    <div class="cart__item--grid mobile-show">
+                      <label class="medium-down hide-mobile" for="Quantity-{{ item.index | plus: 1 }}">
+                        {{ 'products.product.quantity.label' | t }}
+                      </label>
+                      <quantity-input class="quantity">
+                        <button class="quantity__button no-js-hidden" name="minus" type="button">
+                          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                          {% render 'icon-minus' %}
+                        </button>
+                        <input class="quantity__input"
+                          type="number"
+                          name="updates[]"
+                          value="{{ item.quantity }}"
+                          min="0"
+                          aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                          id="Quantity-{{ item.index | plus: 1 }}"
+                          data-index="{{ item.index | plus: 1 }}"
+                        >
+                        <button class="quantity__button no-js-hidden" name="plus" type="button">
+                          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                          {% render 'icon-plus' %}
+                        </button>
+                      </quantity-input>
+                      <cart-remove-button class="hidden" id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                        <a href="{{ item.url_to_remove }}" class="cart__item--remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                          {% render 'icon-trash' %}
+                        </a>
+                      </cart-remove-button>
+                    </div>
+                    <div class="cart-item__price-wrapper desktop-show">
                     {% if isMainBundleProduct != blank %}
                       {%- if bundeOriginal_price != bundeFinal_price -%}
                         <dl class="cart-item__discounted-prices">
@@ -252,7 +385,7 @@
                     </div>
                   </td>
 
-                  <td class="cart-item__quantity">
+                  <td class="cart-item__quantity desktop-show">
                     
                     <div class="cart__item--grid">
                       <label class="medium-down hide-mobile" for="Quantity-{{ item.index | plus: 1 }}">
@@ -277,9 +410,9 @@
                           {% render 'icon-plus' %}
                         </button>
                       </quantity-input>
-                      <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                        <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                          {% render 'icon-remove' %}
+                      <cart-remove-button class="desktop-show" id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                        <a href="{{ item.url_to_remove }}" class="cart__item--remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                          {% render 'icon-trash' %}
                         </a>
                       </cart-remove-button>
                     </div>
@@ -352,6 +485,17 @@
   </form>
 </cart-items>
 
+{% unless cart == empty %}
+  {% if section.settings.money_back_message != blank %}
+    <div class="page-width">
+      <div class="cart-drawer__money-back cart-section__money">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#DEF647"/><path d="M11.9989 18.6268L11.34 18.0322C10.2067 16.9916 9.26985 16.0939 8.52932 15.3392C7.78879 14.5845 7.19888 13.9098 6.7596 13.3152C6.32031 12.7205 6.01228 12.1822 5.83549 11.7C5.65871 11.2179 5.57031 10.7304 5.57031 10.2375C5.57031 9.27156 5.89442 8.4649 6.54263 7.81752C7.19085 7.17013 7.99174 6.84644 8.94531 6.84644C9.55603 6.84644 10.1212 6.99108 10.6408 7.28036C11.1605 7.56965 11.6132 7.98751 11.9989 8.53394C12.4489 7.95536 12.9257 7.52947 13.4292 7.25626C13.9328 6.98304 14.4739 6.84644 15.0525 6.84644C16.006 6.84644 16.8069 7.17013 17.4551 7.81752C18.1033 8.4649 18.4275 9.27156 18.4275 10.2375C18.4275 10.7304 18.3391 11.2179 18.1623 11.7C17.9855 12.1822 17.6775 12.7205 17.2382 13.3152C16.7989 13.9098 16.209 14.5845 15.4684 15.3392C14.7279 16.0939 13.791 16.9916 12.6578 18.0322L11.9989 18.6268ZM11.9989 17.3572C13.0836 16.3608 13.9762 15.5063 14.6767 14.7938C15.3772 14.0813 15.9337 13.4571 16.3462 12.9214C16.7587 12.3857 17.048 11.9082 17.2141 11.4889C17.3801 11.0696 17.4632 10.6532 17.4632 10.2398C17.4632 9.53114 17.2382 8.94911 16.7882 8.49376C16.3382 8.0384 15.7608 7.81072 15.0561 7.81072C14.504 7.81072 13.9931 7.97947 13.5233 8.31697C13.0534 8.65447 12.6739 9.12858 12.3846 9.73929H11.5971C11.3185 9.13929 10.9443 8.66786 10.4745 8.32501C10.0047 7.98215 9.49374 7.81072 8.9417 7.81072C8.23696 7.81072 7.6596 8.0384 7.2096 8.49376C6.7596 8.94911 6.5346 9.53206 6.5346 10.2426C6.5346 10.6571 6.61763 11.0759 6.78371 11.4991C6.94978 11.9223 7.23906 12.4045 7.65156 12.9455C8.06406 13.4866 8.62388 14.1107 9.33103 14.8179C10.0382 15.525 10.9275 16.3714 11.9989 17.3572Z" fill="#1F2322"/></svg>
+        <p class="cart-drawer__money-back-text rhymes-subtitle">{{ section.settings.money_back_message }}</p>
+      </div>
+    </div>
+  {% endif %}
+{% endunless %}
+
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
@@ -361,6 +505,18 @@
       "id": "show_vendor",
       "default": false,
       "label": "t:sections.main-cart-items.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_progress_bar",
+      "label": "Enable Progress Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "money_back_message",
+      "label": "Money Back Message",
+      "default": "30-Day Money Back Guarantee"
     }
   ]
 }

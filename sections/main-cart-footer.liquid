@@ -13,76 +13,141 @@
         </cart-note>
       {%- endif -%}
 
-      <div class="cart__blocks">
-        {% for block in section.blocks %}
-          {%- case block.type -%}
-            {%- when '@app' -%}
-              {% render block %}
-            {%- when 'subtotal' -%}
-              <div class="js-contents" {{ block.shopify_attributes }}>
-                <div class="totals">
-                  <h3 class="totals__subtotal body-small light">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value body-small">{{ cart.total_price | money_with_currency }}</p>
+      <div class="cart__blocks--main">
+        <div class="cart__blocks">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {%- when 'subtotal' -%}
+                {% if cart.item_count > 0 %}
+                  <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
+                    <h4 class="body-small light">Promo Code</h4>
+                    <h4 class="body-small light">Applied at Checkout</h4>
+                  </div>
+                {% endif %}
+      
+                <div class="cart-drawer__shipping-wrapper cart-drawer__always-free" id="cart-drawer-subtotal">
+                  <h4 class="body-small light">Shipping</h4>
+                  <h4 class="body-small light green">Free</h4>
                 </div>
 
-                <div>
-                  {%- if cart.cart_level_discount_applications.size > 0 -%}
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in cart.cart_level_discount_applications -%}
-                        <li class="discounts__discount discounts__discount--end">
-                          {%- render 'icon-discount' -%}
-                          {{ discount.title }}
-                          (-{{ discount.total_allocated_amount | money }})
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </div>
+                <div class="js-contents" {{ block.shopify_attributes }}>
+                  <div class="totals">
+                    <h3 class="totals__subtotal body-small light">{{ 'sections.cart.subtotal' | t }}</h3>
+                    <p class="totals__subtotal-value body-small light">{{ cart.total_price | money_with_currency }}</p>
+                  </div>
 
-                <small class="tax-note caption-large rte">
-                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                    {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- elsif cart.taxes_included -%}
-                    {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
-                  {%- elsif shop.shipping_policy.body != blank -%}
-                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
-                  {%- else -%}
-                    {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
-                  {%- endif -%}
-                </small>
-              </div>
-            {%- else -%}
-              <div class="cart__ctas" {{ block.shopify_attributes }}>
-                <noscript>
-                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
-                    {{ 'sections.cart.update' | t }}
+                  <div>
+                    {%- if cart.cart_level_discount_applications.size > 0 -%}
+                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                        {%- for discount in cart.cart_level_discount_applications -%}
+                          <li class="discounts__discount discounts__discount--end">
+                            {%- render 'icon-discount' -%}
+                            {{ discount.title }}
+                            (-{{ discount.total_allocated_amount | money }})
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </div>
+
+                  <small class="tax-note caption-large rte">
+                    {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- elsif cart.taxes_included -%}
+                      {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                    {%- elsif shop.shipping_policy.body != blank -%}
+                      {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                    {%- else -%}
+                      {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                    {%- endif -%}
+                  </small>
+                </div>
+              {%- else -%}
+                <div class="cart__ctas" {{ block.shopify_attributes }}>
+                  <noscript>
+                    <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                      {{ 'sections.cart.update' | t }}
+                    </button>
+                  </noscript>
+
+                  {% assign disable_checkout = true %}
+                  {% for item in cart.items %}
+                    {% if item.product.type != 'add on' and item.product.type != 'BYOB' and item.product.type != 'gift' %}
+                      {% assign disable_checkout = false %}
+                    {% endif %}
+                  {% endfor %}
+
+                  <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty or disable_checkout == true %} disabled{% endif %} form="cart">
+                    {{ 'sections.cart.checkout' | t }}&nbsp;&nbsp;{% render 'icon-checkout' %}
                   </button>
-                </noscript>
-
-                {% assign disable_checkout = true %}
-                {% for item in cart.items %}
-                  {% if item.product.type != 'add on' and item.product.type != 'BYOB' and item.product.type != 'gift' %}
-                    {% assign disable_checkout = false %}
-                  {% endif %}
-                {% endfor %}
-
-                <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty or disable_checkout == true %} disabled{% endif %} form="cart">
-                  {{ 'sections.cart.checkout' | t }}
-                </button>
-              </div>
-
-            {% comment %}
-              {%- if additional_checkout_buttons -%}
-                <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                  {{ content_for_additional_checkout_buttons }}
                 </div>
-              {%- endif -%}
-            {% endcomment %}
-          {%- endcase -%}
-        {% endfor %}
 
-        <div id="cart-errors"></div>
+              {% comment %}
+                {%- if additional_checkout_buttons -%}
+                  <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                    {{ content_for_additional_checkout_buttons }}
+                  </div>
+                {%- endif -%}
+              {% endcomment %}
+            {%- endcase -%}
+          {% endfor %}
+
+          <div id="cart-errors"></div>
+        </div>
+        <div class="cart__blocks">
+          {% if section.settings.upsell_products != blank %}
+            <div class="cart-drawer__upsells">
+              <div class="cart-drawer__upsells-header">
+                <h3 class="cart-drawer__upsells-title body-med medium">{{ section.settings.upsell_title }}</h3>
+                <p class="cart-drawer__upsells-text rhymes-subtitle">{{ section.settings.upsell_text }}</p>
+              </div>
+              <div class="cart-drawer__upsells-container no-scrollbar drag-scroll">
+                <div class="cart-drawer__upsells-content">
+                  {% for upsell_product in section.settings.upsell_products %}
+                    {% liquid
+                      assign title_split = upsell_product.title | split: ': '
+                      assign is_in_cart = false
+                      for item in cart.items
+                        if item.product.handle == upsell_product.handle
+                          assign is_in_cart = true
+                        endif
+                      endfor
+                    %}
+                    {% if is_in_cart == false and upsell_product.available %}
+                      <div class="cart-drawer__upsell">
+                        <div class="cart-drawer__upsell-image">
+                          {{ upsell_product.featured_image | image_url: width: 150 | image_tag: width: upsell_product.featured_image.width, class: 'img-fill', sizes: '150px', widths: '100, 150, 200' }}
+                        </div>
+                        <div class="cart-drawer__upsell-content">
+                          <div data-oke-reviews-product-listing-rating>{{ upsell_product.metafields.okendo.ProductListingSnippet }}</div>
+                          <p class="cart-drawer__upsell-title body-small">{{ title_split[0] }}</p>
+                          <p class="cart-drawer__upsell-price body-small">
+                            {% if upsell_product.compare_at_price > upsell_product.price %}
+                              <span class="new-price">{{ upsell_product.price | money }}</span>
+                              <span class="old-price">{{ upsell_product.compare_at_price | money }}</span>
+                            {% else %}
+                              {{ upsell_product.price | money }}
+                            {% endif %}
+                          </p>
+                          {% if title_split[1] != blank %}
+                            <p class="cart-drawer__upsell-type body-small">{{ title_split[1] }}</p>
+                          {% endif %}
+                          <button data-id="{{ upsell_product.selected_or_first_available_variant.id }}" data-metafield="{{ upsell_product.selected_or_first_available_variant.metafields.custom.checkout_msrp_text }}" type="button" class="js-add-to-cart cart-drawer__upsell-add">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13.5625" stroke="#797B7A" stroke-width="0.875"/><path d="M13.4654 14.5346H7.875V13.4654H13.4654V7.875H14.5346V13.4654H20.125V14.5346H14.5346V20.125H13.4654V14.5346Z" fill="#797B7A"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -103,30 +168,49 @@
 {% endjavascript %}
 
 {% schema %}
-{
-  "name": "t:sections.main-cart-footer.name",
-  "class": "cart__footer-wrapper",
-  "settings": [
+  {
+  "name":"t:sections.main-cart-footer.name",
+  "class":"cart__footer-wrapper",
+  "settings":[
     {
-      "type": "checkbox",
-      "id": "show_cart_note",
-      "default": false,
-      "label": "t:sections.main-cart-footer.settings.show_cart_note.label"
+      "type":"checkbox",
+      "id":"show_cart_note",
+      "default":false,
+      "label":"t:sections.main-cart-footer.settings.show_cart_note.label"
+    },
+    {
+      "type":"header",
+      "content":"Upsell"
+    },
+    {
+      "type":"text",
+      "id":"upsell_title",
+      "label":"Upsell Title"
+    },
+    {
+      "type":"textarea",
+      "id":"upsell_text",
+      "label":"Upsell Text"
+    },
+    {
+      "type":"product_list",
+      "id":"upsell_products",
+      "label":"Upsell Products"
     }
   ],
-  "blocks": [
+  "blocks":[
     {
-      "type": "subtotal",
-      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
-      "limit": 1
+      "type":"subtotal",
+      "name":"t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit":1
     },
     {
-      "type": "buttons",
-      "name": "t:sections.main-cart-footer.blocks.buttons.name",
-      "limit": 1
+      "type":"buttons",
+      "name":"t:sections.main-cart-footer.blocks.buttons.name",
+      "limit":1
     },
     {
-      "type": "@app"
+      "type":"@app"
     }
   ]
 }
