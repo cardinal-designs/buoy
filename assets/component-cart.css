@@ -128,6 +128,16 @@ cart-items {
   font-size: 14px;
 }
 
+.cart__blocks--main .totals {
+  display: flex;
+  gap: 5px;
+}
+
+.cart__blocks--main .totals .old-price {
+  text-decoration: line-through;
+  color: var(--charcoal-60);
+}
+
 .cart__footer > .cart__blocks--main .cart__ctas {
   margin: 0;
   padding-top: 20px;
