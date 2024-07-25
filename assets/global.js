@@ -1518,7 +1518,7 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 //   ];
 // }
 
-atcGetSectionsToRender() {
+function atcGetSectionsToRender() {
   const sections = [
     {
       id: 'cart-icon-bubble',
