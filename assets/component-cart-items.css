@@ -186,6 +186,10 @@ cart-remove-button .icon-remove {
   font-size: 14px;
 }
 
+.cart-item .price {
+  font-size: 14px;
+}
+
 .cart-item quantity-input {
   border: 1px solid var(--charcoal-lighter);
   border-radius: 10px;
