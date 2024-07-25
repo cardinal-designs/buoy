@@ -164,6 +164,11 @@ cart-items {
   color: var(--green-2);
 }
 
+.cart-item__price-wrapper .old-price {
+  text-decoration: line-through;
+  color: var(--charcoal-60);
+}
+
 @media screen and (min-width: 769px) {
   
   .cart__items {
