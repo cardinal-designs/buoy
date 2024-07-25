@@ -162,6 +162,7 @@ cart-items {
 
 .cart-item__discounted-prices {
   display: flex;
+  flex-direction: row-reverce;
   gap: 5px;
 }
 
