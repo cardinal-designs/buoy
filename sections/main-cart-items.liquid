@@ -387,10 +387,10 @@
                         {%- endif -%}
                       {%- else -%}
                           {% if item.original_price > item.final_price %}
-                            <span class="new-price">{{ item.final_price | money }}</span>
+                            <span class="new-price price body-xs">{{ item.final_price | money }}</span>
                             <span class="old-price price body-xs">{{ item.original_price | money }}</span>
                           {% elsif item.selling_plan_allocation.compare_at_price > item.final_price %}
-                            <span class="new-price">{{ item.final_price | money }}</span>
+                            <span class="new-price price body-xs">{{ item.final_price | money }}</span>
                             <span class="old-price price body-xs">{{ item.selling_plan_allocation.compare_at_price | money }}</span>
                           {% else %}
                             <span class="old-price price body-xs">{{ item.final_price | money }}</span>
