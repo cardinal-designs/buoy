@@ -35,7 +35,32 @@
                 <div class="js-contents" {{ block.shopify_attributes }}>
                   <div class="totals">
                     <h3 class="totals__subtotal body-small light">{{ 'sections.cart.subtotal' | t }}</h3>
-                    <p class="totals__subtotal-value body-small light">{{ cart.total_price | money_with_currency }}</p>
+                    <p class="totals__subtotal-value body-small light hidden">{{ cart.total_price | money_with_currency }}</p>
+                    <p class="totals__subtotal-value body-small light">
+                      {% liquid
+                        assign cart_total_price_with_subscription = 0
+                        assign contains_subscription_product = false
+                        for item in cart.items
+                          if item.selling_plan_allocation
+                            assign contains_subscription_product = true
+                            assign cart_total_price_with_subscription = cart_total_price_with_subscription | plus: item.selling_plan_allocation.compare_at_price
+                          else
+                            assign cart_total_price_with_subscription = cart_total_price_with_subscription | plus: item.final_price
+                          endif
+                        endfor
+                      %}
+                      {% if contains_subscription_product %}
+                        <span class="old-price">{{ cart_total_price_with_subscription | money }}</span>
+                        <span class="new-price">{{ cart.total_price | money }}</span>
+                      {% else %}
+                        {% if cart.original_total_price > cart.total_price %}
+                          <span class="old-price">{{ cart.original_total_price | money }}</span>
+                          <span class="new-price">{{ cart.total_price | money }}</span>
+                        {% else %}
+                          {{ cart.total_price | money }}
+                        {% endif %}
+                      {% endif %}
+                    </p>
                   </div>
 
                   <div>
