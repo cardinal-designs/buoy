@@ -322,7 +322,12 @@ cart-items .title-wrapper-with-link .title {
   text-transform: capitalize;
 }
 
+.cart-item__totals.right {
+  display: none;
+}
+
 @media screen and (min-width: 769px) {
+  
   .cart-note {
     max-width: 35rem;
   }
@@ -344,6 +349,11 @@ cart-items .title-wrapper-with-link .title {
     display: flex;
     gap: 1rem;
   }
+
+  .cart-item__totals.right {
+    display: table-cell;
+  }
+  
 }
 
 cart-items .title-wrapper-with-link .title {
