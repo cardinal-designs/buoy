@@ -469,6 +469,7 @@ cart-items .quantity__input {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  row-gap: 0;
 }
 
 .cart-drawer__upsells-title {
