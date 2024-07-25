@@ -166,8 +166,16 @@ cart-items {
   gap: 5px;
 }
 
+.cart-item__discounted-prices .new-price {
+  color: var(--green-2);
+}
+
 .cart-item__price-wrapper .new-price {
   color: var(--green-2);
+}
+
+.cart-item__discounted-prices .old-price {
+  color: var(--charcoal-60);
 }
 
 .cart-item__price-wrapper .new-price + .old-price {
