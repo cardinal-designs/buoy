@@ -155,7 +155,7 @@ cart-items {
   justify-content: center;
 }
 
-.cart-item__price-wrapper {
+.cart-item__price-wrapper.mobile-show {
   display: flex;
 }
 
@@ -164,6 +164,7 @@ cart-items {
 }
 
 @media screen and (min-width: 769px) {
+  
   .cart__items {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -228,6 +229,10 @@ cart-items {
   cart-items .title-wrapper-with-link .title {
     font-weight: 700 !important;
     font-size: 40px !important;
+  }
+
+  .cart-item__price-wrapper.desktop-show {
+    display: flex;
   }
 
 }
