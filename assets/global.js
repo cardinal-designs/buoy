@@ -1337,20 +1337,25 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
 })
 
 
+// function getSectionInnerHTML(html, selector) {
+//   return new DOMParser()
+//     .parseFromString(html, 'text/html')
+//     .querySelector(selector).innerHTML;
+// }
+
 function getSectionInnerHTML(html, selector) {
-  console.log("selector", selector)
-  console.log("selector data", new DOMParser()
-    .parseFromString(html, 'text/html')
-    .querySelector(selector))
-  if(new DOMParser()
-    .parseFromString(html, 'text/html')
-    .querySelector(selector))){
-    
-      return new DOMParser()
-        .parseFromString(html, 'text/html')
-        .querySelector(selector).innerHTML;
-    }
+  console.log("selector", selector);
+  const parsedDocument = new DOMParser().parseFromString(html, 'text/html');
+  const selectedElement = parsedDocument.querySelector(selector);
+
+  if (selectedElement) {
+    console.log("selector data", selectedElement);
+    return selectedElement.innerHTML;
+  }
+  
+  return null; // Return null if the element is not found
 }
+
 
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
