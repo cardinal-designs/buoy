@@ -323,7 +323,6 @@
                     </div>
                     <div class="cart-item__price-wrapper desktop-show">
                     {% if isMainBundleProduct != blank %}
-                      iffff
                       {%- if bundeOriginal_price != bundeFinal_price -%}
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
@@ -347,8 +346,11 @@
                         </span>
                       {%- endif -%}
                     {% else %}
-                      else
+
+
+                      
                       {%- if item.original_price != item.final_price -%}
+                        ifffff
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
                             {{ 'products.product.price.regular_price' | t }}
@@ -367,6 +369,7 @@
                         </dl>
 
                         {%- if item.variant.available and item.unit_price_measurement -%}
+                          iffff111
                           <div class="unit-price caption">
                             <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                             {{ item.variant.unit_price | money }}
@@ -379,6 +382,7 @@
                           </div>
                         {%- endif -%}
                       {%- else -%}
+                        222
                         <span class="price body-xs">
                           {{ item.original_price | money }}
                         </span>
