@@ -182,7 +182,8 @@ cart-remove-button .icon-remove {
 }
 
 .cart-items thead th {
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 14px;
 }
 
 .cart-item quantity-input {
