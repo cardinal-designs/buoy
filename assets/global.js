@@ -1337,12 +1337,6 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
 })
 
 
-// function getSectionInnerHTML(html, selector) {
-//   return new DOMParser()
-//     .parseFromString(html, 'text/html')
-//     .querySelector(selector).innerHTML;
-// }
-
 function getSectionInnerHTML(html, selector) {
   console.log("selector", selector);
   const parsedDocument = new DOMParser().parseFromString(html, 'text/html');
