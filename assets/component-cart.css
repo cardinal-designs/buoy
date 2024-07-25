@@ -157,6 +157,7 @@ cart-items {
 
 .cart-item__price-wrapper.mobile-show {
   display: flex !important;
+  gap: 5px;
 }
 
 .cart-item__price-wrapper .new-price {
@@ -233,6 +234,12 @@ cart-items {
 
   .cart-item__price-wrapper.desktop-show {
     display: flex !important;
+    gap: 5px;
+  }
+
+  .cart-item__price-wrapper.mobile-show {
+    display: none !important;
+    gap: 5px;
   }
 
 }
