@@ -479,9 +479,9 @@ cart-items .quantity__input {
 }
 
 .cart-drawer__upsells-container {
-  margin: 0 -20px;
   padding: 0 20px;
   overflow-x: scroll;
+  margin: 0 0 0 -20px;
 }
 
 .cart-drawer__upsells-content {
