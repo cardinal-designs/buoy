@@ -144,6 +144,8 @@ cart-items {
 
 .cart__footer-wrapper:last-child .cart__footer {
   margin-top: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-light);
 }
 
 .cart__blocks--main .cart__ctas .cart__checkout-button {
@@ -151,10 +153,6 @@ cart-items {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cart__footer-wrapper:last-child .cart__footer {
-  padding-top: 20px;
 }
 
 @media screen and (min-width: 769px) {
