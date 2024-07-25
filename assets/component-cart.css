@@ -164,7 +164,7 @@ cart-items {
   color: var(--green-2);
 }
 
-.cart-item__price-wrapper .old-price {
+.cart-item__price-wrapper .new-price + .old-price {
   text-decoration: line-through;
   color: var(--charcoal-60);
 }
