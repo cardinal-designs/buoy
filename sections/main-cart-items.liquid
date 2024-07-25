@@ -278,6 +278,7 @@
                         <p class="product-option">{{ frequency }}</p>
                       {% endfor %}
                     {% else %}
+                      <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                     {% endif %}
 
                     <p class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}">
