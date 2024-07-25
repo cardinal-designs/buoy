@@ -391,10 +391,11 @@
                             <span class="old-price price body-xs">{{ item.final_price | money }}</span>
              
                         {% endif %}
-            
+                        {% comment %}
                         <span class="price body-xs">
                           {{ item.original_price | money }}
                         </span>
+                        {% endcomment %}
                       {%- endif -%}
                     {% endif %}
                     </div>
