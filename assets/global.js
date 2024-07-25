@@ -1530,7 +1530,13 @@ function atcGetSectionsToRender() {
   ];
   
   let location = window.location.href;
-  if (!location?.includes('/cart')) {
+  if (location?.includes('/cart')) {
+     sections.push({
+      id: 'cart-page-width',
+      section: document.getElementById('cart-page-width').dataset.id,
+      selector: '.cart-page-width',
+    });
+  }else{
     sections.push({
       id: 'cart-drawer__inner',
       section: document.getElementById('cart-drawer__inner').dataset.id,
