@@ -360,7 +360,7 @@
                           <dt class="visually-hidden">
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
-                          <dd>
+                          <dd class="old-price price body-xs">
                             <s class="cart-item__old-price price body-xs">
                               {{ item.original_price | money }}
                             </s>
@@ -368,7 +368,7 @@
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price body-xs">
+                          <dd class="new-price price body-xs">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
