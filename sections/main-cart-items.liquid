@@ -350,7 +350,6 @@
 
                       
                       {%- if item.original_price != item.final_price -%}
-                        ifffff
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
                             {{ 'products.product.price.regular_price' | t }}
@@ -369,7 +368,6 @@
                         </dl>
 
                         {%- if item.variant.available and item.unit_price_measurement -%}
-                          iffff111
                           <div class="unit-price caption">
                             <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                             {{ item.variant.unit_price | money }}
@@ -382,7 +380,18 @@
                           </div>
                         {%- endif -%}
                       {%- else -%}
-                        222
+               
+                          {% if item.original_price > item.final_price %}
+                            <span class="new-price">{{ item.final_price | money }}</span>
+                            <span class="old-price price body-xs">{{ item.original_price | money }}</span>
+                          {% elsif item.selling_plan_allocation.compare_at_price > item.final_price %}
+                            <span class="new-price">{{ item.final_price | money }}</span>
+                            <span class="old-price price body-xs">{{ item.selling_plan_allocation.compare_at_price | money }}</span>
+                          {% else %}
+                            <span class="old-price price body-xs">{{ item.final_price | money }}</span>
+             
+                        {% endif %}
+            
                         <span class="price body-xs">
                           {{ item.original_price | money }}
                         </span>
