@@ -236,6 +236,10 @@ cart-items {
     border: none;
   }
 
+  .cart__footer > .cart__blocks--main .cart__blocks:last-child {
+    padding-top: 0
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
