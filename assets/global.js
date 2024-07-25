@@ -1537,11 +1537,18 @@ function atcGetSectionsToRender() {
   
   let location = window.location.href;
   if (location?.includes('/cart')) {
-     sections.push({
-      id: 'cart-page-width',
-      section: document.getElementById('cart-page-width').dataset.id,
-      selector: '.cart-page-width',
-    });
+     sections.push(
+       {
+          id: 'cart-page-width',
+          section: document.getElementById('cart-page-width').dataset.id,
+          selector: '.cart-page-width',
+       },
+       {
+          id: 'main-cart-footer',
+          section: document.getElementById('main-cart-footer').dataset.id,
+          selector: '.main-cart-footer',
+        }
+     );
   }else{
     sections.push({
       id: 'cart-drawer__inner',
