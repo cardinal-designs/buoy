@@ -160,6 +160,11 @@ cart-items {
   gap: 5px;
 }
 
+.cart-item__discounted-prices {
+  display: flex;
+  gap: 5px;
+}
+
 .cart-item__price-wrapper .new-price {
   color: var(--green-2);
 }
