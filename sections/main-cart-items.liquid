@@ -206,6 +206,25 @@
                       </div>
                     </dl>
 
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- if isMainBundleProduct != blank -%}
+                        {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
+                        {%- for discount in discounts -%}
+                          <li class="discounts__discount">
+                            {%- render 'icon-discount' -%}
+                            {{ discount }}
+                          </li>
+                        {%- endfor -%}
+                      {%- else -%}
+                        {%- for discount in item.discounts -%}
+                          <li class="discounts__discount">
+                            {%- render 'icon-discount' -%}
+                            {{ discount.title }}
+                          </li>
+                        {%- endfor -%}
+                      {%- endif -%}
+                    </ul>
+
                     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                       <dl>
                         {%- if item.product.has_only_default_variant == false -%}
@@ -251,35 +270,16 @@
                           {% endif %}
                         {% endif %}
                       </dl>
-
-                    {%- endif -%}
-                {% if isMainBundleProduct and itemFrequency != blank %}
-                  {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
-                  {% for frequency in splitFrequency %}
-                    <p class="product-option">{{ frequency }}</p>
-                  {% endfor %}
-                {% else %}
-                      <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                {% endif %}
-
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- if isMainBundleProduct != blank -%}
-                        {% assign discounts = discountTitle | remove_first:',' | split:',' | uniq %}
-                        {%- for discount in discounts -%}
-                          <li class="discounts__discount">
-                            {%- render 'icon-discount' -%}
-                            {{ discount }}
-                          </li>
-                        {%- endfor -%}
-                      {%- else -%}
-                        {%- for discount in item.discounts -%}
-                          <li class="discounts__discount">
-                            {%- render 'icon-discount' -%}
-                            {{ discount.title }}
-                          </li>
-                        {%- endfor -%}
                       {%- endif -%}
-                    </ul>
+                    
+                    {% if isMainBundleProduct and itemFrequency != blank %}
+                      {% assign splitFrequency = itemFrequency | remove_first:',' | split:',' | uniq %}
+                      {% for frequency in splitFrequency %}
+                        <p class="product-option">{{ frequency }}</p>
+                      {% endfor %}
+                    {% else %}
+                      <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                    {% endif %}
 
                     <p class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}">
                       <span class="cart-item__error-text"></span>
