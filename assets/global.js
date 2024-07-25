@@ -1503,19 +1503,40 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 });
 
 
-function atcGetSectionsToRender() {
-  return [
-    {
-      id: 'cart-drawer__inner',
-      section: document.getElementById('cart-drawer__inner').dataset.id,
-      selector: '.cart-drawer__inner',
-    },
+// function atcGetSectionsToRender() {
+//   return [
+//     {
+//       id: 'cart-drawer__inner',
+//       section: document.getElementById('cart-drawer__inner').dataset.id,
+//       selector: '.cart-drawer__inner',
+//     },
+//     {
+//       id: 'cart-icon-bubble',
+//       section: document.getElementById('cart-icon-bubble').dataset.id,
+//       selector: '.cart-icon-bubble'
+//     }
+//   ];
+// }
+
+atcGetSectionsToRender() {
+  const sections = [
     {
       id: 'cart-icon-bubble',
       section: document.getElementById('cart-icon-bubble').dataset.id,
       selector: '.cart-icon-bubble'
     }
   ];
+  
+  let location = window.location.href;
+  if (!location?.includes('/cart')) {
+    sections.push({
+      id: 'cart-drawer__inner',
+      section: document.getElementById('cart-drawer__inner').dataset.id,
+      selector: '.cart-drawer__inner',
+    });
+  }
+
+  return sections;
 }
 
 
