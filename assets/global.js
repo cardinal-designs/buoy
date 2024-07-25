@@ -1338,6 +1338,10 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
 
 
 function getSectionInnerHTML(html, selector) {
+  console.log("selector", selector)
+  console.log("selector data", new DOMParser()
+    .parseFromString(html, 'text/html')
+    .querySelector(selector))
   return new DOMParser()
     .parseFromString(html, 'text/html')
     .querySelector(selector).innerHTML;
