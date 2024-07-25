@@ -1342,9 +1342,14 @@ function getSectionInnerHTML(html, selector) {
   console.log("selector data", new DOMParser()
     .parseFromString(html, 'text/html')
     .querySelector(selector))
-  return new DOMParser()
+  if(new DOMParser()
     .parseFromString(html, 'text/html')
-    .querySelector(selector).innerHTML;
+    .querySelector(selector))){
+    
+      return new DOMParser()
+        .parseFromString(html, 'text/html')
+        .querySelector(selector).innerHTML;
+    }
 }
 
 // Add to cart
