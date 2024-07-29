@@ -1338,15 +1338,23 @@ $('.menu-fixed .bg, .menu-fixed .back').on('click', function() {
 
 
 function getSectionInnerHTML(html, selector) {
-  return new DOMParser()
-    .parseFromString(html, 'text/html')
-    .querySelector(selector).innerHTML;
+  const parsedDocument = new DOMParser().parseFromString(html, 'text/html');
+  const selectedElement = parsedDocument.querySelector(selector);
+
+  if (selectedElement) {
+    return selectedElement.innerHTML;
+  }
+  
+  return null; // Return null if the element is not found
 }
+
 
 // Add to cart
 $('body').on('click', '.js-add-to-cart', function(e) {
   e.preventDefault();
-  document.querySelector('cart-drawer').enableLoading();
+  let cartDrawer = document.querySelector('cart-drawer');
+  
+  if(cartDrawer)document.querySelector('cart-drawer').enableLoading();
   
   let add_items;
   let id = Number($(this).data('id'));
@@ -1426,8 +1434,10 @@ $('body').on('click', '.js-add-to-cart', function(e) {
       console.error(e);
     })
     .finally(() => {
-      document.querySelector('cart-drawer').disableLoading();
-      document.querySelector('cart-drawer').open();
+      if(cartDrawer){
+        document.querySelector('cart-drawer').disableLoading();
+        document.querySelector('cart-drawer').open();
+      }
 
       var dragScrollDivs = document.querySelectorAll('.drag-scroll');
 
@@ -1501,19 +1511,53 @@ $('body').on('click', '.pee-club-add-to-cart', function(e) {
 });
 
 
+// function atcGetSectionsToRender() {
+//   return [
+//     {
+//       id: 'cart-drawer__inner',
+//       section: document.getElementById('cart-drawer__inner').dataset.id,
+//       selector: '.cart-drawer__inner',
+//     },
+//     {
+//       id: 'cart-icon-bubble',
+//       section: document.getElementById('cart-icon-bubble').dataset.id,
+//       selector: '.cart-icon-bubble'
+//     }
+//   ];
+// }
+
 function atcGetSectionsToRender() {
-  return [
-    {
-      id: 'cart-drawer__inner',
-      section: document.getElementById('cart-drawer__inner').dataset.id,
-      selector: '.cart-drawer__inner',
-    },
+  const sections = [
     {
       id: 'cart-icon-bubble',
       section: document.getElementById('cart-icon-bubble').dataset.id,
       selector: '.cart-icon-bubble'
     }
   ];
+  
+  let location = window.location.href;
+  if (location?.includes('/cart')) {
+     sections.push(
+       {
+          id: 'cart-page-width',
+          section: document.getElementById('cart-page-width').dataset.id,
+          selector: '.cart-page-width',
+       },
+       {
+          id: 'main-cart-footer',
+          section: document.getElementById('main-cart-footer').dataset.id,
+          selector: '.main-cart-footer',
+        }
+     );
+  }else{
+    sections.push({
+      id: 'cart-drawer__inner',
+      section: document.getElementById('cart-drawer__inner').dataset.id,
+      selector: '.cart-drawer__inner',
+    });
+  }
+
+  return sections;
 }
 
 
