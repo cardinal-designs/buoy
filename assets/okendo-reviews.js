@@ -4,7 +4,6 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
     year: 'numeric'
 });
 
-setTimeout(function() {
 window.okeReviewsWidgetOnInit = function () {
 
     const warButton = document.querySelector('.okeReviews-reviewsWidget-header-controls-writeReview:not(.is-okeReviews-hidden)');
@@ -20,7 +19,7 @@ window.okeReviewsWidgetOnInit = function () {
         formatDateForElement();
     }
 };
-},3000)
+
 
 function formatDateForElement() {
     const reviewDates = document.querySelectorAll('[data-oke-reviews-date]');
