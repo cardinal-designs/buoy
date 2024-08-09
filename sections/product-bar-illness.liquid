@@ -31,7 +31,8 @@
 {% javascript %}
   $(window).scroll(function() {
     var $scrollTop = $(window).scrollTop();
-      var scrollToSectionOffset = $('.show-product-bar');
+      var scrollToSectionOffset = $('.shopify-section:nth-child(2)');
+      console.log('here', scrollToSectionOffset)
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
         $('.product-bar').addClass('scrolled');

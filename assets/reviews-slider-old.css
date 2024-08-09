@@ -1,0 +1,117 @@
+.Reviews_Slider_Item img {
+  width: 278px;
+  margin: 0 auto;
+}
+
+.Reviews_Slider_Main {
+  padding: 100px 0;
+}
+
+.Reviews_Slider_Container .slick-prev {
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+}
+
+.Reviews_Slider_Container .slick-next {
+  cursor: pointer;
+  position: absolute;
+  right: calc(0% - 28px);
+  top: 43%;
+  transform: translate(-50%,-50%);
+}
+
+.Reviews_Slider_Container .slick-dots {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Reviews_Slider_Container .slick-prev {
+  z-index: 999;
+}
+
+.Reviews_Slider_Container .slick-dots li {
+  display: inline-block;
+}
+
+.Reviews_Slider_Container .slick-dots li button {
+  font-size: 0;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.Reviews_Slider_Container .slick-dots li button::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  border: 1px solid #1F2322;
+}
+
+.Reviews_Slider_Container .slick-dots li.slick-active button::before {
+  background: #1F2322;
+}
+
+.Reviews_Slider_Content {
+  margin: 0;
+}
+
+.Reviews_Slider_Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Reviews_Slider_Item {
+  text-align: center;
+  padding: 0 40px;
+  flex: 0 0 33.33%;
+}
+
+.Reviews_Slider_Main .Testimonials_Rating {
+  height: 16px;
+  background-size: contain;
+}
+
+.Reviews_Slider_Main .Testimonials_Author {
+  margin: 5px 0 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .Reviews_Slider_Container .slick-prev {
+    left: 5%;
+  }
+  
+  .Reviews_Slider_Container .slick-next {
+    right: calc(5% - 28px);
+  }
+
+  .Reviews_Slider_Main {
+    padding: 80px 0;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  
+  .Reviews_Slider_Container .slick-prev {
+    left: 2%;
+  }
+  
+  .Reviews_Slider_Container .slick-next {
+    right: calc(2% - 28px);
+  }
+}

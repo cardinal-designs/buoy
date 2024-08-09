@@ -1,0 +1,145 @@
+.content-media {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.content-media.reversed {
+  flex-direction: row-reverse;
+}
+
+.content-media__media {
+  height: 530px;
+  width: 530px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.content-media__media video,
+.content-media__media img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-media__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content-media__title {
+  margin: 0;
+  font-family: inter;
+  font-size: 40px;
+}
+
+.content-media__title em {
+  font-family: Rhymes-Light-Italic;
+}
+
+.content-media__heading {
+  margin: 0;
+  font-family: inter;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.content-media__text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.content-media__benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.content-media__benefit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-media__benefit-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-media__benefit-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.content-media__benefit p {
+  margin: 0;
+}
+
+.content-media__link {
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.content-media__image img {
+  height: 65px;
+  width: auto;
+}
+
+@media screen and (max-width: 1125px) {
+  .content-media__media {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-media {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    flex-direction: column !important;
+    gap: 30px;
+  }
+
+  .content-media__media {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+
+  .content-media__content {
+    gap: 20px;
+  }
+
+  .content-media__title {
+    font-size: 30px;
+  }
+
+  .content-media__heading {
+    font-size: 24px;
+  }
+
+  .content-media__benefits {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .content-media__link {
+    margin-top: 10px;
+    display: inline-block;
+  }
+}

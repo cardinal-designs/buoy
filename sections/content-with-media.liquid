@@ -1,0 +1,250 @@
+{{ 'section-content-with-media.css' | asset_url | stylesheet_tag }}
+
+<div class="content-media page-width page-width--wide{% if section.settings.reverse_layout %} reversed{% endif %}">
+  <div class="content-media__media">
+    {%- if section.settings.video != blank -%}
+      {{
+        section.settings.video
+        | video_tag: autoplay: true, muted: true, loop: true, controls: false, image_size: '1400x'
+      }}
+    {%- elsif section.settings.image != blank -%}
+      <img
+        srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}"
+        src="{{ section.settings.image | img_url: '1500x' }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+  <div class="content-media__content">
+    {% for block in section.blocks %}
+      {% if block.type == 'title' %}
+        <h2 class="content-media__title h2 m-h2" {{ block.shopify_attributes }}>{{ block.settings.text }}</h2>
+      {% elsif block.type == 'heading' %}
+        <p class="content-media__heading h3" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+      {% elsif block.type == 'text' %}
+        <p class="content-media__text body-md" {{ block.shopify_attributes }}>{{ block.settings.text | newline_to_br }}</p>
+      {% elsif block.type == 'link' %}
+        <a href="{{ block.settings.link }}" class="content-media__link body-small" {{ block.shopify_attributes }}>{{ block.settings.link_label }}</a>
+      {% elsif block.type == 'benefits' %}
+        <div class="content-media__benefits" {{ block.shopify_attributes }}>
+          {% for i in (i..5) %}
+            {% assign index = i | plus: 1 %}
+            {% assign icon = 'icon' | append: '_' | append: index %}
+            {% assign text = 'text' | append: '_' | append: index %}
+            {% if block.settings[icon] != blank or block.settings[text] != blank %}
+              <div class="content-media__benefit">
+                <div class="content-media__benefit-icon">
+                  <img src="{{ block.settings[icon] | img_url: '50x' }}" alt="{{ block.settings[text] }}">
+                </div>
+                <p class="body-md">{{ block.settings[text] }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% elsif block.type == 'image' %}
+        <div class="content-media__image" {{ block.shopify_attributes }}>
+          <img src="{{ block.settings.image | img_url: 'master' }}">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Content w/ Media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Config"
+      },
+      {
+        "type": "checkbox",
+        "id": "reverse_layout",
+        "label": "Reverse Layout"
+      },
+      {
+        "type": "header",
+        "content": "Media"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name": "Title",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "name": "Link",
+        "settings": [
+          {
+            "type": "text",
+            "id": "link_label",
+            "label": "Link Label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "benefits",
+        "name": "Benefits",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Benefit 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_1",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Benefit 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_2",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Benefit 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_3",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Benefit 4"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_4",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_4",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Benefit 5"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_5",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_5",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Benefit 6"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_6",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "text_6",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Content w/ Media"
+      }
+    ]
+  }
+{% endschema %}

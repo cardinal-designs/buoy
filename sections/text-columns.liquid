@@ -1,0 +1,46 @@
+{{ 'section-text-columns.css' | asset_url | stylesheet_tag }}
+
+<div class="text-columns page-width">
+  <div class="text-columns__container">
+    {% for block in section.blocks %}
+      <div class="text-columns__item" {{ block.shopify_attributes }}>
+        <div class="text-columns__icon">
+          <img src="{{ block.settings.icon | img_url: '50x' }}" alt="{{ block.settings.icon.alt }}">
+        </div>
+        <h2 class="h5">{{ block.settings.text }}</h2>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Columns",
+    "settings": [
+
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Columns"
+      }
+    ]
+  }
+{% endschema %}

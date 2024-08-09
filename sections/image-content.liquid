@@ -1,0 +1,146 @@
+{{ 'section-image-content.css' | asset_url | stylesheet_tag }}
+
+<div class="image-content">
+  <div class="image-content__content">
+    <div class="image-content__content-container">
+      {% for block in section.blocks %}
+        {% if block.type == 'subtitle' %}
+          <p class="image-content__subtitle sh3 medium" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+        {% elsif block.type == 'title' %}
+          <h2 class="image-content__title h2 m-h2" {{ block.shopify_attributes }}>{{ block.settings.text }}</h2>
+        {% elsif block.type == 'text' %}
+          <p class="image-content__text body-large light" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+        {% elsif block.type == 'button' %}
+          <a href="{{ block.settings.link }}" class="image-content__button button button--green" {{ block.shopify_attributes }}>{{ block.settings.text }}</a>
+        {% elsif block.type == 'value_props' %}
+          <div class="image-content__value_props" {{ block.shopify_attributes }}>
+            {% assign value_prop_split = block.settings.text | split: ',' %}
+            {% for prop in value_prop_split %}
+              <div class="image-content__prop">
+                {% render 'icon-checkmark' %}
+                <p class="body-sm">{{ prop }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="image-content__image">
+    {%- if section.settings.image != blank -%}
+      <img
+        srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}"
+        src="{{ section.settings.image | img_url: '1500x' }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+
+    {% if section.settings.show_reviews != blank %}
+      <div class="image-content__reviews">
+
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image / Content",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_reviews",
+        "label": "Show Reviews"
+      },
+      {
+        "type": "product",
+        "id": "product_for_reviews",
+        "label": "Product For Reviews"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "subtitle",
+        "name": "Subtitle",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "title",
+        "name": "Title",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Button Label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button Link"
+          }
+        ]
+      },
+      {
+        "type": "value_props",
+        "name": "Value Props",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Value Props",
+            "info": "Separate each item with a comma."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image / Content"
+      }
+    ]
+  }
+{% endschema %}

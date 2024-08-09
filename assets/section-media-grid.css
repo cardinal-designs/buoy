@@ -35,6 +35,7 @@
 
 .media-grid__container h1 {
   margin: 0 auto 20px;
+  text-wrap: pretty;
 }
 
 .media-grid__container h1 .rhyme-italic {
@@ -50,6 +51,49 @@
 
 .media-grid__item {
   max-width: 280px;
+}
+
+.media-grid__button {
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.media-grid__button .button {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.media-grid__benefits {
+  margin: -35px 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.media-grid__benefit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.media-grid__benefit-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-grid__benefit-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.media-grid__benefit p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -76,5 +120,64 @@
   .media-grid__container .sh2 {
     font-size: 18px;
     margin: 0 auto 40px;
+  }
+
+  .media-grid__button {
+    margin: 30px auto 0;
+  }
+
+  .media-grid__button .button {
+    max-width: 100%;
+  }
+
+  .media-grid__benefits {
+    margin: -15px 0 40px;
+    gap: 8px;
+  }
+}
+
+/* Chronic Illness Page */
+.page-chronic-illness-support .media-grid__container {
+  margin: 100px 0 90px;
+  padding: 0;
+}
+
+.page-chronic-illness-support .media-grid__header {
+  max-width: 645px;
+  margin: 0 auto 60px;
+}
+
+.page-chronic-illness-support .media-grid__header h1 {
+  font-family: inter;
+  font-size: 40px;
+}
+
+.page-chronic-illness-support .media-grid__header h1 em {
+  font-family: Rhymes-Light-Italic;
+}
+
+.page-chronic-illness-support .media-grid__header .sh2 {
+  margin: 0;
+  max-width: 100%;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .page-chronic-illness-support .page-width {
+    padding: 0 20px;
+  }
+
+  .page-chronic-illness-support .media-grid__container {
+    margin: 70px 0;
+  }
+
+  .page-chronic-illness-support .media-grid__header {
+    margin-bottom: 40px;
+  }
+
+  .page-chronic-illness-support .media-grid__header h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
   }
 }
