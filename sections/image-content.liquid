@@ -46,9 +46,10 @@
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
 
-    {% if section.settings.show_reviews != blank %}
+    {% if section.settings.product_for_reviews != blank %}
       <div class="image-content__reviews">
-
+        {% assign reviews_product = section.settings.product_for_reviews %}
+        {% render 'okendo-reviews-product-rating-summary', product: reviews_product %}
       </div>
     {% endif %}
   </div>
@@ -62,11 +63,6 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_reviews",
-        "label": "Show Reviews"
       },
       {
         "type": "product",

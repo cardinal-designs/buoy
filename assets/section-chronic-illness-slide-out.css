@@ -1,310 +1,84 @@
 .chronic-illness-slide-out {
-  width: 100%;
-  max-width: 480px;
-  height: 100%;
-  overflow-y: auto;
-  padding: 0;
+  padding: 20px;
   position: fixed;
-  right: 0;
   top: 0;
-  opacity: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transition: .4s ease-in-out;
-  z-index: 15;
-  background: white;
-  overflow: hidden;
+  opacity: 0;
+  z-index: 12;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 .chronic-illness-slide-out.active {
   visibility: visible;
   opacity: 1;
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
 }
 
-.chronic-illness-slide-out__inner {
-  height: 100vh;
+.chronic-illness-slide-out__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.chronic-illness-slide-out__container {
+  max-width: 744px;
   width: 100%;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
+  max-height: 100%;
+  padding: 70px 70px 0;
   position: relative;
-  transition: transform .3s ease-in-out;
-}
-
-/*========= Header =========*/
-.chronic-illness-slide-out__header {
-  height: 60px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-bottom: 2px solid black;
-}
-
-.chronic-illness-slide-out__header img {
-  width: 50px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: var(--gray-lighest);
+  border: 1px solid var(--charcoal-lighter);
 }
 
 .chronic-illness-slide-out__close {
   position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.chronic-illness-slide-out__content {
-  height: calc(100% - 60px);
-  padding-bottom: 140px;
+  top: 28px;
+  right: 28px;
   display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.chronic-illness-slide-out__compare {
-  padding: 40px 20px;
-  background-color: #F8F1EB80;
-}
-
-.chronic-illness-slide-out__compare .sh4 {
-  text-align: center;
-  margin-bottom: 26px;
-  margin-top: 0;
-}
-
-.chronic-illness__price-item p {
-  color: #545759;
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-.chronic-illness__price-item p:last-of-type {
-  margin-bottom: 0;
-}
-
-.chronic-illness__price-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.chronic-illness-slide-out__info {
-  padding: 40px 20px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.chronic-illness-slide-out__discount .sh0 {
-  max-width: 340px;
-  text-align: center;
-  margin: 0 auto 40px;
-}
-
-.chronic-illness-slide-out__checks {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.5px solid #545759;
-}
-
-.chronic-illness-slide-out__checks p {
-  text-transform: unset;
-  margin-bottom: 12px;
-  margin-top: 0;
-  color: #545759;
-}
-
-.chronic-illness-slide-out__checks p svg {
-  width: 11px;
-}
-
-.chronic-illness-slide-out__info button {
-  width: 100%;
-  cursor: pointer;
-}
-
-.chronic-illness-slide-out__price {
- margin-top: 20px;
-  margin-bottom: 52px;
-}
-
-.chronic-illness-slide-out__price-detail {
-  display: flex;
-  justify-content: space-between;
-}
-
-.chronic-illness-slide-out__price-detail .sh4 {
-  margin: 0;
-  color: #75A951 
-}
-
-.chronic-illness-slide-out__price-subdetail {
-  margin-top: -2px;
-  margin-bottom: 14px;
-}
-
-.chronic-illness-slide-out__price-subdetail p {
-  margin: 0;
-  text-transform: unset;
-}
-
-.chronic-illness-slide-out__price-subdetail {
-  display: flex;
-  justify-content: space-between;
-}
-
-.chronic-illness-slide-out__footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: white;
-}
-
-.chronic-illness-slide-out__footer p {
-  color: #545759;
-  margin-bottom: 14px;
-  text-align: center;
-  text-transform: unset;
-}
-
-@media only screen and (max-width: 768px) {
-  .chronic-illness-slide-out__checks p {
-    font-size: 10px;
-  }
-  
-  .chronic-illness-slide-out__checks p svg {
-    width: 9px;
-  }
-
-  .chronic-illness-slide-out__discount .sh0 {
-    margin: 0 auto 20px;
-  }
-
-  .chronic-illness-slide-out__price-subdetail p {
-    font-size: 10px;
-  }
-
-  .chronic-illness-slide-out__info {
-    padding: 20px 20px 14px;
-  }
-}
-
-
-/*========== Second page =========*/
-.chronic-illness-slide-out__second {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transition: .4s ease-in-out;
-}
-
-.chronic-illness-slide-out__second-header {
-  height: 60px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  border-bottom: 2px solid black;
-}
-
-.chronic-illness-slide-out__second-back {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  gap: 4px;
   cursor: pointer;
 }
 
-.chronic-illness-slide-out__second-header img {
-  width: 50px;
+.chronic-illness-slide-out__close p {
+  margin: 0;
 }
 
-.chronic-illness-slide-out__second-content {
-  height: calc(100% - 60px);
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: auto;
+.chronic-illness-slide-out__inner {
+  padding: 0 0 60px;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+.chronic-illness-slide-out__header {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1 button:not([aria-label="Search Countries"]):hover {
-  box-shadow: 6px 6px 0 0 var(--charcoal) !important;
+.chronic-illness-slide-out__subtitle {
+  margin: 0 0 16px;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form.klaviyo-form.klaviyo-form  .kl-private-reset-css-Xuajs1:last-child button:not([aria-label="Search Countries"]) {
-  border: 1px solid var(--charcoal) !important;
-  transition: 0.2s ease;
+.chronic-illness-slide-out__title {
+  margin: 0 0 30px;
+  font-size: 50px;
+  font-family: inter;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
+.chronic-illness-slide-out__title em {
+  font-family: Rhymes-Light-Italic;
 }
 
-.chronic-illness-slide-out__second-content .klaviyo-form [role="group"] {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
-}
-
-/* .chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label {
-  padding: 11px 12px;
-  border-radius: 50px;
-  background: var(--beige-light);
-  align-items: unset !important;
-}
-
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] label div {
-  margin-bottom: 5px;
-} */
-
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg:first-child {
-  width: 17px !important;
-  height: 17px !important;
-}
-
-.chronic-illness-slide-out__second-content .klaviyo-form [role="radiogroup"] svg:first-child circle {
-  stroke: var(--charcoal);
-  fill: white;
-}
-
-.chronic-illness-slide-out.show-second .chronic-illness-slide-out__inner {
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-}
-
-.chronic-illness-slide-out.show-second .chronic-illness-slide-out__second {
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
+.chronic-illness-slide-out__text {
+  max-width: 535px;
+  margin: 0 auto;
+  line-height: 1.5
 }

@@ -130,6 +130,10 @@
   gap: 20px;
 }
 
+.reviews-slider__arrows button {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1125px) {
   .reviews-slider__container {
     grid-template-columns: minmax(0, 320px) minmax(0, 1fr);

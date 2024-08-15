@@ -210,27 +210,6 @@
   
 }
 
-.product-bar-illness__flex {
-  gap: 20px;
-  display: flex;
-}
-
-.product-bar-illness__flex .check {
-  display: flex;
-  align-items: center;
-}
-
-.product-bar-illness__flex .check svg {
-  width: 11px;
-  margin-top: 0px;
-  margin-right: 6px;
-}
-
-.product-bar-illness__flex .check p {
-  margin: 0;
-  text-transform: unset;
-}
-
 .product-bar-toggle .flex-buttons-bar {
   align-items: center;
 }
@@ -500,4 +479,61 @@
 }
 
 
+/* Illness */
+.product-bar-illness {
+  padding: 0 33px;
+}
 
+.product-bar-illness__container {
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #F4F4F4;
+}
+
+.product-bar-illness p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.product-bar-illness .button {
+  min-width: unset;
+  padding: 10px 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-bar-wrapper--illness {
+    display: block;
+  }
+
+  .product-bar-illness {
+    padding: 0 20px;
+    top: unset !important;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .product-bar-illness__container {
+    padding: 8px 0 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .product-bar-illness p {
+    font-family: Rhymes-Light-Italic;
+    font-size: 12px;
+  }
+
+  .product-bar-illness .button {
+    width: 100%;
+  }
+}

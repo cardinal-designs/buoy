@@ -1,100 +1,42 @@
 {{ 'section-chronic-illness-slide-out.css' | asset_url | stylesheet_tag }}
 
 <div class="chronic-illness-slide-out">
-  <div class="chronic-illness-slide-out__inner">
-    <div class="chronic-illness-slide-out__header">
-      <button class="chronic-illness-slide-out__close">
-        {% render 'icon-arrow-left' %}
-      </button>
-      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Buoy_Logo_2x_d6014af4-d2a0-4881-a1f8-8d5649f5c079.jpg?v=1658952214" width="50" height="25">
-    </div>
-    <div class="chronic-illness-slide-out__content">
-      <div class="chronic-illness-slide-out__compare">
-        <p class="sh4">{{ section.settings.title }}</p>
-        <div class="chronic-illness__price-list">
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_1 }}</p>
-            <p class="light">{{ section.settings.item_price_1 }}</p>
-          </div>
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_2 }}</p>
-            <p class="light">{{ section.settings.item_price_2 }}</p>
-          </div>
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_3 }}</p>
-            <p class="light">{{ section.settings.item_price_3 }}</p>
-          </div>
-        </div>
+  <button class="chronic-illness-slide-out__overlay"></button>
+  <div class="chronic-illness-slide-out__container">
+    <button class="chronic-illness-slide-out__close">
+      <p class="body-xs">Close</p>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.01257 8.00023L1.84943 2.83709L2.83686 1.84966L8 7.0128L13.1631 1.84966L14.1506 2.83709L8.98743 8.00023L14.1506 13.1634L13.1631 14.1508L8 8.98766L2.83686 14.1508L1.84943 13.1634L7.01257 8.00023Z" fill="#1F2322"/></svg>
+    </button>
+    <div class="chronic-illness-slide-out__inner">
+      <div class="chronic-illness-slide-out__header">
+        <p class="chronic-illness-slide-out__subtitle sh3 medium">{{ section.settings.subtitle }}</p>
+        <h2 class="chronic-illness-slide-out__title h1">{{ section.settings.title }}</h2>
+        <p class="chronic-illness-slide-out__text body-large">{{ section.settings.text }}</p>
       </div>
-      <div class="chronic-illness-slide-out__info">
-        <div class="chronic-illness-slide-out__discount">
-          <p class="sh0">{{ section.settings.title2 }}</p>
-          <div class="chronic-illness-slide-out__checks">
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_1 }}</p>
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_2 }}</p>
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_3 }}</p>
-          </div>
-          <div class="chronic-illness-slide-out__price">
-            <div class="chronic-illness-slide-out__price-detail">
-              <p class="sh4 medium">{{ section.settings.product_name_1 }}</p>
-              <p class="sh4 medium">{{ section.settings.product_price_1 }}</p>
-            </div>
-            <div class="chronic-illness-slide-out__price-subdetail">
-               <p class="body-xs">{{ section.settings.product_details_1 }}</p>
-               <p class="body-xs">{{ section.settings.product_price_details_1 }}</p>
-            </div>
-            <div class="chronic-illness-slide-out__price-detail">
-              <p class="sh4 medium">{{ section.settings.product_name_2 }}</p>
-              <p class="sh4 medium">{{ section.settings.product_price_2 }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="chronic-illness-slide-out__footer">
-          <p class="body-xs">{{ section.settings.disclaimer }}</p>
-          <button class="has-second-slide button">{{ section.settings.btn }}</button>
-        </div>
+      <div class="chronic-illness-slide-out__content">
+        <div class="klaviyo-form-VT4VtR"></div>
       </div>
-    </div>
-  </div>
-  <div class="chronic-illness-slide-out__second">
-    <div class="chronic-illness-slide-out__second-header">
-      <button class="chronic-illness-slide-out__second-back">
-        {% render 'icon-arrow-left' %}
-      </button>
-      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Buoy_Logo_2x_d6014af4-d2a0-4881-a1f8-8d5649f5c079.jpg?v=1658952214" width="50" height="25">
-    </div>
-    <div class="chronic-illness-slide-out__second-content">
-      <div class="klaviyo-form-VT4VtR"></div>
     </div>
   </div>
 </div>
  
 {% javascript %}
-$('[href="#chronic"]').click(function() {
-$('.chronic-illness-slide-out').addClass('active');
-    $('.page-overlay').addClass('is-visible');
- 
-    $('body').click(function(e) {
-      const target = e.target;
-      if ($(target).hasClass('page-overlay')) {
-        $('.chronic-illness-slide-out').removeClass('active');
-        $('.page-overlay').removeClass('is-visible');
-      }
-    });
+  $('[href="#chronic"]').click(function() {
+    $('.chronic-illness-slide-out').addClass('active');
+    $('.chronic-illness-slide-out').addClass('active');
+  });
+
+  $('.chronic-illness-slide-out__overlay').click(function() {
+    closePopup();
   });
 
   $('.chronic-illness-slide-out__close').click(function() {
+    closePopup();
+  });
+
+  function closePopup() {
     $('.chronic-illness-slide-out').removeClass('active');
-    $('.page-overlay').removeClass('is-visible');
-  });
-
-  $('.has-second-slide').click(function() {
-    $('.chronic-illness-slide-out').addClass('show-second');
-  });
-
-  $('.chronic-illness-slide-out__second-back').click(function() {
-    $('.chronic-illness-slide-out').removeClass('show-second');
-  });
+  }
 {% endjavascript %}
 
 {% schema %}
@@ -103,98 +45,18 @@ $('.chronic-illness-slide-out').addClass('active');
     "settings": [
       {
         "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "inline_richtext",
         "id": "title",
         "label": "Title"
       },
       {
-        "type": "text",
-        "id": "item_name_1",
-        "label": "Item 1 Name"
-      },
-      {
-        "type": "text",
-        "id": "item_price_1",
-        "label": "Item 1 Price"
-      },
-      {
-        "type": "text",
-        "id": "item_name_2",
-        "label": "Item 2 Name"
-      },
-      {
-        "type": "text",
-        "id": "item_price_2",
-        "label": "Item 2 Price"
-      },
-      {
-        "type": "text",
-        "id": "item_name_3",
-        "label": "Item 3 Name"
-      },
-      {
-        "type": "text",
-        "id": "item_price_3",
-        "label": "Item 3 Price"
-      },
-      {
-        "type": "text",
-        "id": "title2",
-        "label": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "check_1",
-        "label": "Check 1"
-      },
-      {
-        "type": "text",
-        "id": "check_2",
-        "label": "Check 2"
-      },
-      {
-        "type": "text",
-        "id": "check_3",
-        "label": "Check 3"
-      },
-      {
-        "type": "text",
-        "id": "product_name_1",
-        "label": "Product 1 Name"
-      },
-      {
-        "type": "text",
-        "id": "product_details_1",
-        "label": "Product 1 Details"
-      },
-      {
-        "type": "text",
-        "id": "product_price_1",
-        "label": "Product 1 Price"
-      },
-      {
-        "type": "text",
-        "id": "product_price_details_1",
-        "label": "product 1 Price Details"
-      },
-      {
-        "type": "text",
-        "id": "product_name_2",
-        "label": "product 2 Name"
-      },
-      {
-        "type": "text",
-        "id": "product_price_2",
-        "label": "Product 2 Price"
-      },
-      {
-        "type": "text",
-        "id": "disclaimer",
-        "label": "Disclaimer Text"
-      },
-      {
-        "type": "text",
-        "id": "btn",
-        "label": "Button Label"
+        "type": "inline_richtext",
+        "id": "text",
+        "label": "Text"
       }
     ]
   }

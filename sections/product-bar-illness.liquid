@@ -1,38 +1,20 @@
 {{ 'section-product-bar.css' | asset_url | stylesheet_tag }}
   
 <div class="product-bar product-bar-toggle product-bar-illness">
-  <div class="page-width">
-    <div class="product-bar__container">
-      <div class="product-bar__title">
-        <h5>{{ section.settings.title }}</h5>
-        <div class="product-bar-illness__flex">
-          <div class="check">
-            {% render 'icon-check' %}
-            <p class="body-xs light">{{ section.settings.check1 }}</p>
-          </div>
-          <div class="check">
-            {% render 'icon-check' %}
-            <p class="body-xs light">{{ section.settings.check2 }}</p>
-          </div>
-          <div class="check">
-            {% render 'icon-check' %}
-            <p class="body-xs light">{{ section.settings.check3 }}</p>
-          </div>
-          
-        </div>
-      </div>
-      <div class="flex-buttons-bar">
-        <a href="#chronic" class="button">{{ section.settings.btn_label }}</a>
-      </div>
-    </div>
+  <div class="product-bar-illness__container">
+    <p class="body-large">{{ section.settings.title }}</p>
+    <a href="#chronic" class="button button--green">
+      {{ section.settings.btn_label }}
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8625 7.65005L6.22146 13.2851L7.05885 14.1176L14.1177 7.05882L7.05885 0L6.22146 0.832568L11.8625 6.4676H2.85813e-05V7.65005H11.8625Z" fill="currentColor"/></svg>
+    </a>
   </div>
 </div>
 
 {% javascript %}
   $(window).scroll(function() {
     var $scrollTop = $(window).scrollTop();
-      var scrollToSectionOffset = $('.shopify-section:nth-child(2)');
-      console.log('here', scrollToSectionOffset)
+    var scrollToSectionOffset = $('#MainContent .shopify-section:nth-child(2)');
+
     if ( $(window).width() > 768 ) {
       if ($scrollTop > (scrollToSectionOffset.offset().top)) {
         $('.product-bar').addClass('scrolled');
@@ -52,27 +34,12 @@
 {% schema %}
   {
     "name": "Product Bar Illness",
-    "class": "product-bar-wrapper",
+    "class": "product-bar-wrapper product-bar-wrapper--illness",
     "settings": [
       {
         "type" : "text",
         "id" : "title",
         "label" : "Title"
-      },
-      {
-        "type" : "text",
-        "id" : "check1",
-        "label" : "Check 1"
-      },
-      {
-        "type" : "text",
-        "id" : "check2",
-        "label" : "Check 2"
-      },
-      {
-        "type" : "text",
-        "id" : "check3",
-        "label" : "Check 3"
       },
       {
         "type" : "text",

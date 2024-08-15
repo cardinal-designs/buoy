@@ -86,6 +86,29 @@
   object-position: center;
 }
 
+.image-content__reviews {
+  height: 100px;
+  padding-bottom: 20px;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+.image-content__reviews .okeReviews .okeReviews-reviewsSummary-ratingCount {
+  margin: 0;
+  left: 5px;
+  font-family: inter;
+  font-size: 14px;
+  color: white;
+}
+
 @media only screen and (max-width: 1125px) {
   .image-content__title {
     font-size: 40px;
