@@ -229,6 +229,10 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
 
+    {% if template.suffix == 'ci-shop' %}
+      {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
+    {% endif %} 
+
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
     <!-- <script type="text/javascript">

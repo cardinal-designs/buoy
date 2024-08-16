@@ -40,6 +40,9 @@
 .reviews-grid__button {
   width: 360px;
   border-width: 1px;
+}
+
+.reviews-grid__button:not(.button--green) {
   background-color: transparent;
 }
 

@@ -109,6 +109,66 @@
   color: white;
 }
 
+.image-content__link-copy {
+  width: 100%;
+}
+
+.image-content__link-copy-title {
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.image-content__link-copy-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #797B7A;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.image-content__link-copy-container p {
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-content__link-copied {
+  text-transform: unset;
+  color: var(--green-2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-content__link-copied.visible {
+  opacity: 1;
+}
+
+.image-content__link-copy-container button {
+  padding: 12px 25px;
+  display: block;
+  border-left: 1px solid #797B7A;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.image-content__link-copy-container button:hover {
+  background-color: var(--green-1);
+}
+
+.image-content__link-copy-disclaimer {
+  margin: 16px 0 0;
+  color: #797B7A;
+}
+
 @media only screen and (max-width: 1125px) {
   .image-content__title {
     font-size: 40px;

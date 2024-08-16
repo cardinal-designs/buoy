@@ -5,18 +5,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
   z-index: 12;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
+  display: none;
 }
 
 .chronic-illness-slide-out.active {
-  visibility: visible;
-  opacity: 1;
+  display: flex;
 }
 
 .chronic-illness-slide-out__overlay {
@@ -26,6 +22,14 @@
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.65);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.chronic-illness-slide-out.active .chronic-illness-slide-out__overlay {
+  visibility: visible;
+  opacity: 1;
 }
 
 .chronic-illness-slide-out__container {
@@ -38,6 +42,14 @@
   border-radius: 10px;
   background-color: var(--gray-lighest);
   border: 1px solid var(--charcoal-lighter);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.chronic-illness-slide-out.active .chronic-illness-slide-out__container {
+  visibility: visible;
+  opacity: 1;
 }
 
 .chronic-illness-slide-out__close {

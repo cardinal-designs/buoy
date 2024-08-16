@@ -1,0 +1,200 @@
+{
+  "sections": {
+    "main": {
+      "type": "image-content",
+      "blocks": {
+        "title_VrqJ8p": {
+          "type": "title",
+          "settings": {
+            "text": "Shop Your<em>\u202835% Off Discount<\/em>"
+          }
+        },
+        "text_JhBDNP": {
+          "type": "text",
+          "settings": {
+            "text": "Buoy’s pure, additive-free formula ensures you get the benefits of sustained hydration and electrolyte balance without the drawbacks of artificial ingredients."
+          }
+        },
+        "link_copy_UTpW9X": {
+          "type": "link_copy",
+          "settings": {
+            "title": "Save link for future access!",
+            "link": "justaddbuoy.com\/35%Off",
+            "disclaimer": "This discount is exclusive to our Chronic Illness Program customers. Anytime you come back to this page, your discount will be waiting."
+          }
+        },
+        "button_xy9PUV": {
+          "type": "button",
+          "settings": {
+            "text": "Start Shopping",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_VrqJ8p",
+        "text_JhBDNP",
+        "link_copy_UTpW9X",
+        "button_xy9PUV"
+      ],
+      "custom_css": [
+        "em {display: block;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image.jpg",
+        "product_for_reviews": ""
+      }
+    },
+    "product_grid_VjLzyX": {
+      "type": "product-grid",
+      "blocks": {
+        "product_Vgew4j": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops",
+            "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_HD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_4iC7Tf": {
+          "type": "product",
+          "settings": {
+            "heading": "digestion-drops",
+            "image": "shopify:\/\/shop_images\/Collection_DD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_DD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_DD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_cPmjjr": {
+          "type": "product",
+          "settings": {
+            "heading": "immunity-drops",
+            "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_ID_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_CRxWwA": {
+          "type": "product",
+          "settings": {
+            "heading": "energy-drops",
+            "image": "shopify:\/\/shop_images\/Collection_ED.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ED_Hover.mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_ED_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_z6NPyL": {
+          "type": "product",
+          "settings": {
+            "heading": "brain-health-drops",
+            "image": "shopify:\/\/shop_images\/Collection_BHD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_BHD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_BHD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_Yfe9WP": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-salts",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_RS_Hover.mp4",
+            "show_tags": true,
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_Vgew4j",
+        "product_4iC7Tf",
+        "product_cPmjjr",
+        "product_CRxWwA",
+        "product_z6NPyL",
+        "product_Yfe9WP"
+      ],
+      "settings": {
+        "title": "Shop All Products <em>35% Off<\/em>",
+        "link_label": "Read Reviews",
+        "link": "#shopify-section-template--23228284338476__reviews_grid_ERX9pT",
+        "icon_1": "shopify:\/\/shop_images\/drink-icon.svg",
+        "icon_image_text_1": "Value Prop",
+        "icon_2": "shopify:\/\/shop_images\/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+        "icon_image_text_2": "Value Prop",
+        "icon_3": "shopify:\/\/shop_images\/water-icon.svg",
+        "icon_image_text_3": "Value Prop",
+        "icon_4": "shopify:\/\/shop_images\/water-icon.svg",
+        "icon_image_text_4": "Value Prop"
+      }
+    },
+    "text_image_toggle_YQJJzi": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Wellness",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "background": "#f8f8f8"
+      }
+    },
+    "reviews_grid_ERX9pT": {
+      "type": "reviews-grid",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "never_expires": false,
+        "green_button": true,
+        "subtitle": "THE BUOY COMMUNITY",
+        "title": "Real People, <em>Real Health Journeys<\/em>",
+        "button_label": "Back to Shopping",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_grid_VjLzyX",
+    "text_image_toggle_YQJJzi",
+    "reviews_grid_ERX9pT"
+  ]
+}
