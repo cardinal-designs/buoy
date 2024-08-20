@@ -73,3 +73,11 @@
   line-height: 20px;
   text-align: center;
 }
+
+.quick-add__container[data-open="true"] .quick-add__btn-wrap .quick-add__button {
+  opacity: 0.5;
+}
+
+
+
+
