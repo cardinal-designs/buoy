@@ -280,5 +280,9 @@
   .chronic-illness-slide-out__inner {
     padding: 0 0 32px;
   }
+
+  .chronic-illness-slide-out__content .field.half-field {
+    width: 100%;
+  }
   
 }
