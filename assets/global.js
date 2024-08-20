@@ -683,6 +683,12 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
+    let productForm = this.closest("product-form");
+    let addButton;
+    if(productForm){
+      addButton = productForm.querySelector('[name="add"]');
+    }
+    
     let thisData = this;
     let dataUpdate = thisData.dataset.update;
     let currentVariant = thisData.currentVariant;
@@ -728,16 +734,18 @@ class VariantSelects extends HTMLElement {
               inputId.insertAdjacentHTML('beforebegin', sellingInputIDHtml);
             }
           }
+          let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
+          let variantPrice = foundVariant?.price;
+          if(addButton){
+            addButton.innerText = `Subscribe —&nbsp; <s>${Shopify.formatMoney(variantPrice)}</s>&nbsp;${Shopify.formatMoney(priceSelling)}`
+          }
+          
         }
       }
       
     }
     
-    let productForm = this.closest("product-form");
-    let addButton;
-    if(productForm){
-      addButton = productForm.querySelector('[name="add"]');
-    }
+    
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
