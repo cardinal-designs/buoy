@@ -83,9 +83,13 @@
 }
 
 .chronic-illness-slide-out__title {
-  margin: 0 0 30px;
-  font-size: 50px;
+  margin: 0 0 32px;
   font-family: inter;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .chronic-illness-slide-out__title em {
