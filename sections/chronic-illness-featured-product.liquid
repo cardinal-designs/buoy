@@ -112,65 +112,27 @@
             {%- endif -%}
 
             {%- unless product.has_only_default_variant -%}
-   
-              {%- if block.settings.picker_type == 'button' -%}
-                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
-                  {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                        {%- for value in option.values -%}
-                          <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="product-form-{{ section.id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%}
-                      </fieldset>
-                  {%- endfor -%}
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                </variant-radios>
-              {%- else -%}
-                <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
-                  {%- for option in product.options_with_values -%}
-                    <div class="product-form__input product-form__input--dropdown">
-                      <div class="select">
-                        <select disabled id="Option-{{ section.id }}-{{ forloop.index0 }}"
-                          class="select__select"
-                          name="options[{{ option.name | escape }}]"
-                          form="product-form-{{ section.id }}"
+              <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+                {%- for option in product.options_with_values -%}
+                    <fieldset class="js product-form__input">
+                      <legend class="form__label">{{ option.name }}</legend>
+                      {%- for value in option.values -%}
+                        <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                              name="{{ option.name }}"
+                              value="{{ value | escape }}"
+                              form="product-form-{{ section.id }}"
+                              {% if option.selected_value == value %}checked{% endif %}
                         >
-                          {%- for value in option.values -%}
-                            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                              {{ value }}
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        {%- for variant in product.variants -%}
-                          {% assign my_fields = variant.metafields.custom %}
-                          <div class="Featured_Variant_Values">
-                            {%- if my_fields.supply_time  != blank -%}
-                             <span class="Brackets">(</span><span class="Supply_Time">{{ my_fields.featured_supply_time }}</span>
-                            {%- endif -%} <span class="Slash">/</span>
-                            {%- if my_fields.servings != blank -%}
-                              <span class="Variant_Servings">{{ my_fields.servings }}</span><span class="Brackets">)</span>
-                            {%- endif -%}
-                          </div>
-                        {%- endfor -%}
-                      </div>
-                    </div>
-                  {%- endfor -%}
-
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                </variant-selects>
-              {%- endif -%}
+                        <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                          {{ value }}
+                        </label>
+                      {%- endfor -%}
+                    </fieldset>
+                {%- endfor -%}
+                <script type="application/json">
+                  {{ product.variants | json }}
+                </script>
+              </variant-radios>
             {%- endunless -%}
 
             <noscript>
