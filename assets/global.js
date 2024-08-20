@@ -657,19 +657,20 @@ class VariantSelects extends HTMLElement {
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
-        window.variantData = variantData;
         let foundVariant = variantData?.find(variant => variant.id == varId);
         if(foundVariant){
+          console.log("foundVariant", foundVariant)
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
+            console.log("productInfoWrapper", productInfoWrapper)
             let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
             if(sellingInput){
               sellingInput.remove();
             }
             let sellingInputHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
             let inputId = this.querySelector("input[name='id']");
+            console.log("inputId", inputId)
             if(inputId){
-              inputId.value = varId;
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
             }
           }
