@@ -664,15 +664,21 @@ class VariantSelects extends HTMLElement {
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
             console.log("productInfoWrapper", productInfoWrapper)
-            let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
+            let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan']`);
+            let sellingInput_id = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
             if(sellingInput){
               sellingInput.remove();
             }
-            let sellingInputHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
+            if(sellingInput_id){
+              sellingInput.remove();
+            }
+            let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
+            let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
             let inputId = productInfoWrapper.querySelector("input[name='id']");
             console.log("inputId", inputId)
             if(inputId){
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
+              inputId.insertAdjacentHTML('beforebegin', sellingInputIDHtml);
             }
           }
         }
