@@ -15,7 +15,7 @@
       </div>
       <div class="chronic-illness-slide-out__content">
         <!-- <h3 class="chronic--illness__form--title">Fill in the appropriate information.*</h3> -->
-        {%- form id: 'chronicIllnessForm' -%}
+        {%- form 'contact', id: 'chronicIllnessForm' -%}
           {%- if form.posted_successfully? -%}
             <script>
               $('.chronic-illness-slide-out').addClass('active');
