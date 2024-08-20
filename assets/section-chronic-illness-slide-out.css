@@ -116,6 +116,7 @@
   position: relative;
   letter-spacing: 0;
   color: #797B7A;
+  margin-bottom: 12px;
 }
 
 .chronic-illness-slide-out__content .field.half-field {
@@ -141,6 +142,6 @@
   height: auto;
 }
 
-.field__input::placeholder, .customer .field input::placeholder {
+.chronic-illness-slide-out__content .field__input::placeholder {
   opacity: 1;
 }
