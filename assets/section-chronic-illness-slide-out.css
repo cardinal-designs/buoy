@@ -213,11 +213,12 @@
 }
 
 .chronic-illness-slide-out__radios input[type=radio].field__radio + label span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   margin-right: 12px;
-  vertical-align: middle;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #1F2322;
