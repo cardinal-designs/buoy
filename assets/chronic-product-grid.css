@@ -56,3 +56,20 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 60px 18px;
 }
+
+.quick-add__btn-wrap {
+  width: 100%;
+}
+
+.quick-add__btn-wrap .quick-add__button {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: 1px solid #1F2322;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
