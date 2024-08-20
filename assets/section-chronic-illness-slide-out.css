@@ -272,6 +272,10 @@
 
 @media screen and (max-width: 767px) {
 
+  .chronic-illness-slide-out {
+    padding: 0;
+  }
+
   .chronic-illness-slide-out__container {
     padding-left: 28px;
     padding-right: 28px;
