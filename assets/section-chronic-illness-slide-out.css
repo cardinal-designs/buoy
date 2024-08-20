@@ -124,6 +124,8 @@
   color: #797B7A;
   margin-bottom: 12px;
   display: block;
+  pointer-events: none;
+  text-transform: capitalize;
 }
 
 .chronic-illness-slide-out__content .field.half-field {
