@@ -292,7 +292,8 @@
     display: none;
   }
 
-  .chronic-illness-slide-out__radios .field:nth-child(-n+5) {
+  .chronic-illness-slide-out__radios .field:nth-child(-n+5),
+  .chronic-illness-slide-out__radios .field.active {
      display: block;
   }
 
