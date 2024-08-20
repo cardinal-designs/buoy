@@ -126,7 +126,7 @@
                   {%- for variant in product.variants -%}
                     {
                       "id": {{ variant.id }},
-                      "data": "{{ variant }}"
+                      "data": "{{ variant | json }}"
                     }
                     {% unless forloop.last %},{% endunless %}
                   {%- endfor -%}
