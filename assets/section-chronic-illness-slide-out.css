@@ -151,3 +151,22 @@
   opacity: 1;
   color: #797B7A;
 }
+
+.chronic-illness-slide-out__radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.chronic-illness-slide-out__radios .field {
+  display: block;
+  width: 50%;
+  padding: 0 12px;
+  margin-bottom: 14px;
+}
+
+
+
+
+
+
