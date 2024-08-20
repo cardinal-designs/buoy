@@ -126,12 +126,13 @@
                   {%- for variant in product.variants -%}
                     {
                       "id": {{ variant.id }},
-                      "data": "{{ variant | json }}"
+                      "data": {{ variant | json }}
                     }
                     {% unless forloop.last %},{% endunless %}
                   {%- endfor -%}
                 ]
               </script>
+
               <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-update="custom">
                 {%- for option in product.options_with_values -%}
                  {% assign optionIndex = forloop.index0 %}
