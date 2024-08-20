@@ -736,9 +736,12 @@ class VariantSelects extends HTMLElement {
           }
           let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
           let variantPrice = foundVariant?.price;
-          if(addButton){
-            consolr.log("addButton", addButton)
-            addButton.innerText = `Subscribe —&nbsp; <s>${Shopify.formatMoney(variantPrice)}</s>&nbsp;${Shopify.formatMoney(priceSelling)}`
+          if(productInfoWrapper){
+            let submitBtn = productInfoWrapper.querySelector('[name="add"]');
+            if(submitBtn){
+              submitBtn.innerText = `Subscribe —&nbsp; <s>${Shopify.formatMoney(variantPrice)}</s>&nbsp;${Shopify.formatMoney(priceSelling)}`;
+            }
+          
           }
           
         }
