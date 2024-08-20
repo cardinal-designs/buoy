@@ -152,6 +152,32 @@
   color: #797B7A;
 }
 
+.form__radio--button {
+  margin-top: 28px;
+}
+
+.form__radio--title h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  margin: 0 0 8px;
+  color: #1F2322;
+}
+
+.form__radio--title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  margin: 0;
+  color: #797B7A;
+}
+
+.form__radio--title {
+  margin-bottom: 32px;
+}
+
 .chronic-illness-slide-out__radios {
   display: flex;
   flex-wrap: wrap;
