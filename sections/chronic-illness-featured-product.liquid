@@ -225,7 +225,7 @@
                     {% endcomment %}
                       <div style="display: flex;">
                         {%- if currentVariant.available -%}
-                         Add to Cart —&nbsp; 
+                         Subscribe —&nbsp; 
                         {% if product.selected_or_first_available_selling_plan_allocation != blank %}
                           <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                         {% else %}
