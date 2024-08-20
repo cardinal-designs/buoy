@@ -646,7 +646,7 @@ class VariantSelects extends HTMLElement {
         varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
 
         if(productInfoWrapper){
-          let inputId = thisData.querySelector("input[name='id']");
+          let inputId = productInfoWrapper.querySelector("input[name='id']");
           if(inputId){
             inputId.value = varId;
           }
@@ -669,7 +669,7 @@ class VariantSelects extends HTMLElement {
               sellingInput.remove();
             }
             let sellingInputHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
-            let inputId = thisData.querySelector("input[name='id']");
+            let inputId = productInfoWrapper.querySelector("input[name='id']");
             console.log("inputId", inputId)
             if(inputId){
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
