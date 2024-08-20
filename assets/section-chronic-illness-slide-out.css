@@ -287,6 +287,10 @@
     margin-top: 22px;
   }
 
+  .chronic-illness-slide-out__radios .field:nth-child(-n+4) {
+     display: block;
+  }
+
   .chronic-illness-slide-out__radios .field {
     width: 100%;
   }
