@@ -13,7 +13,7 @@ class ProductForm extends HTMLElement {
     const submitButton = this.querySelector('[type="submit"]');
     let inputMetafield = this.querySelector('#variantMetafield');
     const productVariants = if(this.querySelector('#productJSON')){this.querySelector('#productJSON').innerText};
-    const productVariantsParsed = JSON.parse(productVariants);
+    const productVariantsParsed = if(productVariants){JSON.parse(productVariants)};
     const parsedForm = JSON.parse(serializeForm(this.form));
     const activeVariantId = parsedForm.id;
 
