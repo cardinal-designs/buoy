@@ -505,8 +505,6 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
-    console.log("this", this)
-    console.log("this", this.currentVariant)
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(false, '', false, this.currentVariant.price);
@@ -635,7 +633,6 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    console.log("this", this)
     let thisData = this;
     let dataUpdate = thisData.dataset.update;
     let currentVariant = thisData.currentVariant;
@@ -654,7 +651,7 @@ class VariantSelects extends HTMLElement {
       }
 
       let variantScript = document.querySelector('#VariantJSON');
-      console.log("variantScript", variantScript)
+      
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
