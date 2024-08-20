@@ -111,27 +111,72 @@
               </div>
             {%- endif -%}
 
+
+            {% capture variantMetafield %}
+              <select class="js-variant-metafield hidden">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
+                {% endfor %}
+              </select>
+            {% endcapture %}
+
             {%- unless product.has_only_default_variant -%}
               <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
                 {%- for option in product.options_with_values -%}
-                    <fieldset class="js product-form__input">
-                      <legend class="form__label">{{ option.name }}</legend>
-                      {%- for value in option.values -%}
+                 {% assign optionIndex = forloop.index0 %}
+                 {% assign values = "" %}
+                  <fieldset class="js product-form__input">
+                  {%- for variant in product.variants -%}
+                    {% assign value = variant.options[optionIndex] %}
+                    {%- unless values contains value -%}
+                    {% assign values = values | join: ',' %}
+                    {% assign values = values | append: ',' | append:value %}
+                    {% assign values = values | split: ',' %}
+    
+                     {% assign my_fields = variant.metafields.custom %}
+    
+                      <span class="Variant_Blocks" data-id={{ variant.id }}>
                         <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                              name="{{ option.name }}"
-                              value="{{ value | escape }}"
-                              form="product-form-{{ section.id }}"
-                              {% if option.selected_value == value %}checked{% endif %}
+                          name="{{ option.name }}"
+                          value="{{ value | escape }}"
+                          form="product-form-{{ section.id }}"
+                          {% if option.selected_value == value %}checked{% endif %}
                         >
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          {{ value }}
+                          {%- if my_fields.supply_time != blank -%}
+                            <span 
+                              class="Supply_Time"
+                            >
+                              {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
+                              {{ my_fields.servings }}
+                            </span>
+                          {%- endif -%}
+                          {%- if my_fields.product_image != blank -%}
+                            <img src="{{ my_fields.product_image | img_url: 'master' }}" width="{{ my_fields.product_image.value.width }}" height="{{ my_fields.product_image.value.height }}"/>
+                          {%- endif -%}
+                          <span class="Variant_Title">{{ value }}</span>
+                         {%- if my_fields.serving_cost != blank -%}
+                            <span 
+                              class="Serving_Cost" 
+                              data-subprice="{{ product.metafields.custom.serving_sub_price}}" 
+                              data-onetimeprice="{{ my_fields.serving_cost }}"
+                            >
+                              {{ my_fields.serving_cost }}
+                            </span>    
+                          {%- endif -%}
+                          {%- if my_fields.best_value != blank -%}
+                            <span class="Best_Value">{{ my_fields.best_value }}</span>
+                          {%- endif -%}
                         </label>
-                      {%- endfor -%}
-                    </fieldset>
-                {%- endfor -%}
-                <script type="application/json">
-                  {{ product.variants | json }}
-                </script>
+                      </span>
+                    {%- endunless -%}
+                  {%- endfor -%}
+                  </fieldset>
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                {{ variantMetafield }}
               </variant-radios>
             {%- endunless -%}
 
