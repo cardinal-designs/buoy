@@ -34,7 +34,7 @@
     <div class="product-grid__grid">
       {% for block in section.blocks %}
         <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
-          {% render 'product-card-form', content: block.settings %}
+          {% render 'product-card-form', content: block.settings, show_onetime_purchase : section.settings.show_onetime_purchase %}
         </div>
       {% endfor %}
     </div>
@@ -99,6 +99,12 @@
         "type": "textarea",
         "id": "icon_image_text_4",
         "label": "Icon Image Text 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_onetime_purchase",
+        "label": "Show Onetime Purchase",
+        "default": true
       }
     ],
     "blocks": [
