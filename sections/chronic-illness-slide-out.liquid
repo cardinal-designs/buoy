@@ -220,7 +220,92 @@
       $tlt.css("display", "none");
     }
   });
-  
+document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    // Get the value of the form fields
+    const firstName = document.getElementById('ContactFormFirstName').value;
+    const lastName = document.getElementById('ContactFormLastName').value;
+    const email = document.getElementById('ContactForm-email').value;
+    const mobile = document.getElementById('ContactForm-phone').value;
+    const illnessesType = document.querySelector('input[name="illnessesType"]:checked').value;
+    // Construct payload with correct formatting
+    const payload = JSON.stringify({
+        data: {
+            type: 'subscription',
+            attributes: {
+                profile: {
+                    data: {
+                        type: 'profile',
+                        attributes: {
+                            properties: {
+                                'Chronic Illness': illnessesType,
+                                'SMS Consent': 'TRUE'
+                            },
+                            email: email,
+                            phone_number: mobile,
+                            first_name: firstName,
+                            last_name: lastName
+                        },
+                        meta: {
+                            patch_properties: {
+                                append: {
+                                    newKey: 'New Value'
+                                },
+                                unappend: {
+                                    newKey: 'New Value'
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            relationships: {
+                list: {
+                    data: {
+                        type: 'list',
+                        id: 'TE6KNC'
+                    }
+                }
+            }
+        }
+    });
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'REVISION': '2024-07-15' // Ensure the format matches the required format
+        },
+        body: payload
+    };
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            return response.text(); // Use .text() to check if there's a response body
+        })
+        .then(text => {
+            document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+            const container = document.querySelector('.chronic-illness-slide-out__container');
+            const newDiv = document.createElement('div');
+            newDiv.textContent = "This is the new content inside the div.";
+            newDiv.classList.add('new-div-class'); // Add a class if needed
+            container.appendChild(newDiv);
+            if (text) {
+                try {
+                    const jsonResponse = JSON.parse(text); // Parse it manually
+                    console.log(jsonResponse);
+                } catch (e) {
+                    console.error('Failed to parse JSON:', e);
+                }
+            } else {
+                console.log('Empty response body');
+            }
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
+});  
 {% endjavascript %}
 
 {% schema %}
