@@ -95,6 +95,12 @@
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
 
+    {% if card_product.metafields.my_fields.chronic_illness_product_sub_text != blank %}
+      <div class="{{ base }}__sub--text">
+        {{ card_product.metafields.my_fields.chronic_illness_product_sub_text }}
+      </div>
+    {% endif %}
+
     <div class="{{ base }}__price">
       starting at
       <div class="{{ base }}__price-recurring">
