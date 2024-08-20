@@ -285,12 +285,6 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             return response.text(); // Use .text() to check if there's a response body
         })
         .then(text => {
-            document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
-            const container = document.querySelector('.chronic-illness-slide-out__container');
-            const newDiv = document.createElement('div');
-            newDiv.textContent = "This is the new content inside the div.";
-            newDiv.classList.add('new-div-class'); // Add a class if needed
-            container.appendChild(newDiv);
             if (text) {
                 try {
                     const jsonResponse = JSON.parse(text); // Parse it manually
