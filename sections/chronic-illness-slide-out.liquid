@@ -189,7 +189,7 @@
 
   var $tlt = $(".custom__msg--field");
 
-  $("#ContactFormOther").on('change', function() {
+  $(".chronic-illness-slide-out__radios input[type=radio]").on('change', function() {
     var radVal = $(this).val();
     if (radVal == 'Other') {
       $tlt.css("display", "block");
