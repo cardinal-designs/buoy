@@ -246,11 +246,13 @@
 .contact__button,
 .chronic--illness__form--btn {
   margin-top: 18px;
+  width: 100%;
 }
 
 .contact__button .button,
 .chronic-illness-slide-out__inner .form-status-list .button {
   width: 100%;
+  min-width: 100%;
 }
 
 .chronic-illness-slide-out__inner .form-status-list {
