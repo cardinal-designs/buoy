@@ -199,29 +199,12 @@
         "button_label": "Back to Shopping",
         "button_link": "shopify:\/\/collections\/all"
       }
-    },
-    "custom_featured_product_iQUaT4": {
-      "type": "custom-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": true,
-        "enable_video_looping": false,
-        "free_shipping_text": "",
-        "show_price": true,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
     }
   },
   "order": [
     "main",
     "product_grid_VjLzyX",
     "text_image_toggle_YQJJzi",
-    "reviews_grid_ERX9pT",
-    "custom_featured_product_iQUaT4"
+    "reviews_grid_ERX9pT"
   ]
 }
