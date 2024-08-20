@@ -143,26 +143,13 @@
                           {% if option.selected_value == value %}checked{% endif %}
                         >
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          {%- if my_fields.supply_time != blank -%}
-                            <span 
-                              class="Supply_Time"
-                            >
-                              {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
-                              {{ my_fields.servings }}
-                            </span>
-                          {%- endif -%}
-                          {%- if my_fields.product_image != blank -%}
-                            <img src="{{ my_fields.product_image | img_url: 'master' }}" width="{{ my_fields.product_image.value.width }}" height="{{ my_fields.product_image.value.height }}"/>
-                          {%- endif -%}
+                          
                           <span class="Variant_Title">{{ value }}</span>
-                         {%- if my_fields.serving_cost != blank -%}
-                            <span 
-                              class="Serving_Cost" 
-                              data-subprice="{{ product.metafields.custom.serving_sub_price}}" 
-                              data-onetimeprice="{{ my_fields.serving_cost }}"
-                            >
-                              {{ my_fields.serving_cost }}
-                            </span>    
+                          {%- if my_fields.supply_time != blank -%}
+                            <span class="Supply_Time">
+                            {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
+                            {{ my_fields.servings }}
+                            </span>
                           {%- endif -%}
                           {%- if my_fields.best_value != blank -%}
                             <span class="Best_Value">{{ my_fields.best_value }}</span>
