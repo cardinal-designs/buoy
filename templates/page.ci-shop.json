@@ -157,8 +157,7 @@
         "icon_3": "shopify:\/\/shop_images\/water-icon.svg",
         "icon_image_text_3": "Value Prop",
         "icon_4": "shopify:\/\/shop_images\/water-icon.svg",
-        "icon_image_text_4": "Value Prop",
-        "show_onetime_purchase": false
+        "icon_image_text_4": "Value Prop"
       }
     },
     "text_image_toggle_YQJJzi": {
@@ -215,6 +214,50 @@
         "button_label": "Back to Shopping",
         "button_link": "shopify:\/\/collections\/all"
       }
+    },
+    "chronic_product_grid_dfgdYe": {
+      "type": "chronic-product-grid",
+      "blocks": {
+        "product_NmGPAi": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops",
+            "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_HD_Add.jpg",
+            "form_text": ""
+          }
+        },
+        "product_7DXbUL": {
+          "type": "product",
+          "settings": {
+            "heading": "digestion-drops",
+            "image": "shopify:\/\/shop_images\/Collection_DD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_DD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_DD_Add.jpg",
+            "form_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_NmGPAi",
+        "product_7DXbUL"
+      ],
+      "settings": {
+        "title": "Shop All Products <em>35% Off<\/em>",
+        "link_label": "Read Reviews",
+        "link": "",
+        "icon_1": "shopify:\/\/shop_images\/drink-icon.svg",
+        "icon_image_text_1": "Value Prop",
+        "icon_2": "shopify:\/\/shop_images\/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+        "icon_image_text_2": "Value Prop",
+        "icon_3": "shopify:\/\/shop_images\/water-icon.svg",
+        "icon_image_text_3": "Value Prop",
+        "icon_4": "shopify:\/\/shop_images\/water-icon.svg",
+        "icon_image_text_4": "Value Prop"
+      }
     }
   },
   "order": [
@@ -222,6 +265,7 @@
     "chronic_illness_featured_product_Hz7mTh",
     "product_grid_VjLzyX",
     "text_image_toggle_YQJJzi",
-    "reviews_grid_ERX9pT"
+    "reviews_grid_ERX9pT",
+    "chronic_product_grid_dfgdYe"
   ]
 }
