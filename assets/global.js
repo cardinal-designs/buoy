@@ -636,16 +636,17 @@ class VariantSelects extends HTMLElement {
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
     console.log("this", this)
-    let dataUpdate = this.dataset.update;
-    let currentVariant = this.currentVariant;
+    let thisData = this;
+    let dataUpdate = thisData.dataset.update;
+    let currentVariant = thisData.currentVariant;
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
-      let productInfoWrapper = this.closest('.product__info-wrapper');
+      let productInfoWrapper = thisData.closest('.product__info-wrapper');
       if(!currentVariant?.id){
-        varId = this.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
+        varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
 
         if(productInfoWrapper){
-          let inputId = this.querySelector("input[name='id']");
+          let inputId = thisData.querySelector("input[name='id']");
           if(inputId){
             inputId.value = varId;
           }
@@ -668,7 +669,7 @@ class VariantSelects extends HTMLElement {
               sellingInput.remove();
             }
             let sellingInputHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
-            let inputId = this.querySelector("input[name='id']");
+            let inputId = thisData.querySelector("input[name='id']");
             console.log("inputId", inputId)
             if(inputId){
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
