@@ -161,7 +161,15 @@
       </button>
     </div>
 
-    <p class="quick-add__form-subtext">FREE SHIPPING</p>
+    {% assign servies = p.metafields.custom.chronic_illness_subscription_services.value %}
+    <p class="quick-add__form-subtext">
+      {% for text in servies %}
+        {{ text }}
+        {% unless forloop.last %}
+          
+        {% endunless %}
+      {% endfor %}
+    </p>
   {% endform %}
 
   <script type="application/json" id="js-product-variant-json">
