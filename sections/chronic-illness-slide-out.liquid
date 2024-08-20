@@ -186,6 +186,18 @@
   function closePopup() {
     $('.chronic-illness-slide-out').removeClass('active');
   }
+
+  var $tlt = $(".custom__msg--field");
+
+  $("#ContactFormOther").on('change', function() {
+    var radVal = $(this).val();
+    if (radVal == 'Other') {
+      $tlt.css("display", "block");
+    } else {
+      $tlt.css("display", "none");
+    }
+  });
+  
 {% endjavascript %}
 
 {% schema %}
