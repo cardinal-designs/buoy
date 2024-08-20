@@ -143,12 +143,10 @@
                           {% if option.selected_value == value %}checked{% endif %}
                         >
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          
                           <span class="Variant_Title">{{ value }}</span>
                           {%- if my_fields.supply_time != blank -%}
                             <span class="Supply_Time">
-                            {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
-                            {{ my_fields.servings }}
+                            {{ my_fields.supply_time }} / {{ my_fields.servings }}
                             </span>
                           {%- endif -%}
                         </label>
