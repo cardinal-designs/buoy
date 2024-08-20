@@ -141,4 +141,6 @@
   height: auto;
 }
 
-
+.field__input::placeholder, .customer .field input::placeholder {
+  opacity: 1;
+}
