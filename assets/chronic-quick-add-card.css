@@ -168,6 +168,14 @@
   line-height: 25px;
 }
 
+.quick-add__sub--text {
+  font-family: inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
 @media screen and (max-width: 768px) {
   .quick-add__price {
     font-size: 14px;
