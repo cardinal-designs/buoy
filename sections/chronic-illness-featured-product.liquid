@@ -158,15 +158,6 @@
                                     </span>
                                   {%- endif -%}
                                   <span class="Variant_Title">{{ value }}</span>
-                                 {%- if my_fields.serving_cost != blank -%}
-                                    <span 
-                                      class="Serving_Cost" 
-                                      data-subprice="{{ product.metafields.custom.serving_sub_price}}" 
-                                      data-onetimeprice="{{ my_fields.serving_cost }}"
-                                    >
-                                      {{ my_fields.serving_cost }}
-                                    </span>    
-                                  {%- endif -%}
                                   {%- if my_fields.best_value != blank -%}
                                     <span class="Best_Value">{{ my_fields.best_value }}</span>
                                   {%- endif -%}
