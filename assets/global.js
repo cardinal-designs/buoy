@@ -682,27 +682,6 @@ class VariantSelects extends HTMLElement {
             }
           }
         }
-        console.log("foundVariant", foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id)
-        // const foundVariants = variantData?.filter(variant => variant.option1 === currentVariant.option1);
-        // if(foundVariants?.length > 0){
-        //   foundVariants.forEach(variant => {
-        //     if(foundVariant?.price != variant.price){
-        //       let option2 = variant.option2;
-        //       let selectedInput = document.querySelector(⁠ input[value="${option2}"] ⁠);
-        //       if(selectedInput){
-        //         let variantLabel = selectedInput.closest('.variant__label');
-        //         if(variantLabel){
-        //           let diffVariantPrice = Number(variant.price) - Number(foundVariant?.price);
-        //           let variantPrice = variantLabel.querySelector('.variant__price');
-        //           if(variantPrice){
-        //             variantPrice.innerHTML = ` + ${formatMoney(diffVariantPrice)}`;
-        //           }
-        //         }
-        //       }
-              
-        //     }
-        //   });
-        // }
       }
       
     }
