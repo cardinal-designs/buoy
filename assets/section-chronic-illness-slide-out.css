@@ -248,7 +248,12 @@
   margin-top: 18px;
 }
 
-.contact__button .button {
+.contact__button .button,
+.chronic-illness-slide-out__inner .form-status-list .button {
   width: 100%;
+}
+
+.chronic-illness-slide-out__inner .form-status-list {
+  flex-wrap: wrap;
 }
 
