@@ -505,14 +505,15 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
+    console.log("this", this)
+    console.log("this", this.currentVariant)
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(false, '', false, this.currentVariant.price);
     this.updatePickupAvailability();
     this.updateMetafieldText();
 
-    console.log("this", this)
-    console.log("this", this.currentVariant)
+    
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true, this.currentVariant.price);
       this.setUnavailable();
