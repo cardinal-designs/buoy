@@ -114,8 +114,12 @@
       <button data-toggle class="{{ base }}__button">Purchase Options</button>
     </div>
     <div class="product__drawer-triggers">
-      <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
-      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+      {% if content.enable_supplement_facts %}
+        <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
+      {% endif %}
+      {% if content.enable_clinical_trial %}
+        <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+      {% endif %}
     </div>
   </div>
 </quick-add-card>
