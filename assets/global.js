@@ -640,10 +640,10 @@ class VariantSelects extends HTMLElement {
     let currentVariant = this.currentVariant;
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
+      let productInfoWrapper = this.closest('.product__info-wrapper');
       if(!currentVariant?.id){
         varId = this.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
 
-        let productInfoWrapper = this.closest('.product__info-wrapper');
         if(productInfoWrapper){
           let inputId = this.querySelector("input[name='id']");
           if(inputId){
@@ -659,7 +659,22 @@ class VariantSelects extends HTMLElement {
         const variantData = JSON.parse(jsonData);
         window.variantData = variantData;
         let foundVariant = variantData?.find(variant => variant.id == varId);
-        console.log("foundVariant", foundVariant)
+        if(foundVariant){
+          let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
+          if(productInfoWrapper){
+            let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
+            if(sellingInput){
+              sellingInput.remove();
+            }
+            let sellingInputHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
+            let inputId = this.querySelector("input[name='id']");
+            if(inputId){
+              inputId.value = varId;
+              inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
+            }
+          }
+        }
+        console.log("foundVariant", foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id)
         // const foundVariants = variantData?.filter(variant => variant.option1 === currentVariant.option1);
         // if(foundVariants?.length > 0){
         //   foundVariants.forEach(variant => {
