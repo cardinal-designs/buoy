@@ -636,6 +636,8 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
+    console.log("this", this)
+    console.log("this.closest("product-form")", this.closest("product-form"))
     const addButton = this.closest("product-form").querySelector('[name="add"]'),
     stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
