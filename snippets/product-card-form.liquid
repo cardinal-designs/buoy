@@ -47,7 +47,7 @@
 
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
-      <button data-toggle class="{{ base }}__button">Add</button>
+      
     </div>
 
     <div class="quick-add__overlay"> </div>
@@ -102,6 +102,9 @@
       <div class="{{ base }}__price-otp">
         {{ card_product.selected_or_first_available_variant.price | money }}
       </div>
+    </div>
+    <div class="{{ base }}__btn--wrap">
+      <button data-toggle class="{{ base }}__button">Add</button>
     </div>
   </div>
 </quick-add-card>
