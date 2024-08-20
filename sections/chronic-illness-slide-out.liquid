@@ -23,141 +23,142 @@
                 <a class="button button--green" href="/pages/chronic-illness-shop">shop all chronic illness products</a>
               </div>
             </div>
-          {%- endif -%}
-          <div class="contact__fields">
-            <div class="field half-field">
-              <label class="field__label" for="ContactFormFirstName">First Name*</label>
-              <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name" required>
+          {% else %}
+            <div class="contact__fields">
+              <div class="field half-field">
+                <label class="field__label" for="ContactFormFirstName">First Name*</label>
+                <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name" required>
+              </div>
+              <div class="field half-field">
+                <label class="field__label" for="ContactFormLastName">Last Name*</label>
+                <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name" required>
+              </div>
+              <div class="field field--with-error half-field">
+                <label class="field__label" for="ContactForm-email">Email*</label>
+                <input
+                  autocomplete="email"
+                  type="email"
+                  id="ContactForm-email"
+                  class="field__input"
+                  name="contact[email]"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  value=""
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="ContactForm-email-error"
+                  {% endif %}
+                  placeholder="email@example.com"
+                  required
+                >
+                {%- if form.errors contains 'email' -%}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                    <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+                  </small>
+                {%- endif -%}
+              </div>
+              <div class="field half-field">
+                <label class="field__label" for="ContactForm-phone">Phone number*</label>
+                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="(555) 000-0000" required>
+              </div>
             </div>
-            <div class="field half-field">
-              <label class="field__label" for="ContactFormLastName">Last Name*</label>
-              <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name" required>
-            </div>
-            <div class="field field--with-error half-field">
-              <label class="field__label" for="ContactForm-email">Email*</label>
-              <input
-                autocomplete="email"
-                type="email"
-                id="ContactForm-email"
-                class="field__input"
-                name="contact[email]"
-                spellcheck="false"
-                autocapitalize="off"
-                value=""
-                aria-required="true"
-                {% if form.errors contains 'email' %}
-                  aria-invalid="true"
-                  aria-describedby="ContactForm-email-error"
-                {% endif %}
-                placeholder="email@example.com"
-                required
-              >
-              {%- if form.errors contains 'email' -%}
-                <small class="contact__field-error" id="ContactForm-email-error">
-                  <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-                  <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
-                </small>
-              {%- endif -%}
-            </div>
-            <div class="field half-field">
-              <label class="field__label" for="ContactForm-phone">Phone number*</label>
-              <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="(555) 000-0000" required>
-            </div>
-          </div>
-          
-          <div class="form__radio--button">
-            <div class="form__radio--title">
-              <h3>Which of the following illnesses are you managing?</h3>
-              <p>Select all that apply.</p>
-            </div>
-            <div class="chronic-illness-slide-out__radios">
-              <div class="field">
-                <input type="radio" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__radio" required>
-                <label for="ContactFormADHD" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  ADHD or Autism
-                </label>
+            
+            <div class="form__radio--button">
+              <div class="form__radio--title">
+                <h3>Which of the following illnesses are you managing?</h3>
+                <p>Select all that apply.</p>
               </div>
-              <div class="field">
-                <input type="radio" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__radio">
-                <label for="ContactFormEatingDisorderRecovery" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Eating Disorder Recovery
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__radio">
-                <label for="ContactFormCrohnDisease" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Crohn’s Disease
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__radio">
-                <label for="ContactFormImmunodeficiencyDisease" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Immunodeficiency Disease
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__radio">
-                <label for="ContactFormCysticFibrosis" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Cystic Fibrosis
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__radio">
-                <label for="ContactFormMultipleSclerosis" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Multiple Sclerosis
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__radio">
-                <label for="ContactFormChemotherapyDehydration" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Chemotherapy Dehydration
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__radio">
-                <label for="ContactFormPOTS" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  POTS
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__radio">
-                <label for="ContactFormDysautonomia" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Dysautonomia
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__radio">
-                <label for="ContactFormSjogrenDisease" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Sjogren’s Disease
-                </label>
-              </div>
-              <div class="field">
-                <input type="radio" id="ContactFormOther" name="illnessesType" value="Other" class="field__radio">
-                <label for="ContactFormOther" class="field__radio--label">
-                  <span>{% render 'check-icon' %}</span>
-                  Other
-                </label>
-                <div class="custom__msg--field" style="display: none">
-                  <input type="test" id="ContactFormCustomMessage" class="field__input" name="contact[Custom Message]" value="" placeholder="Type your answer">
+              <div class="chronic-illness-slide-out__radios">
+                <div class="field">
+                  <input type="radio" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__radio" required>
+                  <label for="ContactFormADHD" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    ADHD or Autism
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__radio">
+                  <label for="ContactFormEatingDisorderRecovery" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Eating Disorder Recovery
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__radio">
+                  <label for="ContactFormCrohnDisease" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Crohn’s Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__radio">
+                  <label for="ContactFormImmunodeficiencyDisease" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Immunodeficiency Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__radio">
+                  <label for="ContactFormCysticFibrosis" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Cystic Fibrosis
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__radio">
+                  <label for="ContactFormMultipleSclerosis" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Multiple Sclerosis
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__radio">
+                  <label for="ContactFormChemotherapyDehydration" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Chemotherapy Dehydration
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__radio">
+                  <label for="ContactFormPOTS" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    POTS
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__radio">
+                  <label for="ContactFormDysautonomia" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Dysautonomia
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__radio">
+                  <label for="ContactFormSjogrenDisease" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Sjogren’s Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="radio" id="ContactFormOther" name="illnessesType" value="Other" class="field__radio">
+                  <label for="ContactFormOther" class="field__radio--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Other
+                  </label>
+                  <div class="custom__msg--field" style="display: none">
+                    <input type="test" id="ContactFormCustomMessage" class="field__input" name="contact[Custom Message]" value="" placeholder="Type your answer">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="contact__button">
-            <button type="submit" class="button button--green">
-              Join Now & Get 35% Off
-            </button>
-          </div>
+            <div class="contact__button">
+              <button type="submit" class="button button--green">
+                Join Now & Get 35% Off
+              </button>
+            </div>
+          {%- endif -%}
         {%- endform -%}
         {% comment %}<div class="klaviyo-form-VT4VtR"></div>{% endcomment %}
       </div>
