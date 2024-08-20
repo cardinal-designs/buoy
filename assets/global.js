@@ -688,7 +688,6 @@ class VariantSelects extends HTMLElement {
     if(productForm){
       addButton = productForm.querySelector('[name="add"]');
     }
-    
     let thisData = this;
     let dataUpdate = thisData.dataset.update;
     let currentVariant = thisData.currentVariant;
@@ -705,18 +704,14 @@ class VariantSelects extends HTMLElement {
           }
         }
       }
-
       let variantScript = document.querySelector('#VariantJSON');
-      
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         let foundVariant = variantData?.find(variant => variant.id == varId);
         if(foundVariant){
-          console.log("foundVariant", foundVariant)
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
-            console.log("productInfoWrapper", productInfoWrapper)
             let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan']`);
             let sellingInput_id = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
             if(sellingInput){
@@ -728,7 +723,6 @@ class VariantSelects extends HTMLElement {
             let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
             let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
             let inputId = productInfoWrapper.querySelector("input[name='id']");
-            console.log("inputId", inputId)
             if(inputId){
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
               inputId.insertAdjacentHTML('beforebegin', sellingInputIDHtml);
@@ -746,7 +740,6 @@ class VariantSelects extends HTMLElement {
           
         }
       }
-      
     }
     
     
