@@ -111,90 +111,56 @@
               </div>
             {%- endif -%}
 
-          {% capture variantMetafield %}
-            <select class="js-variant-metafield hidden">
-              {% for variant in product.variants %}
-                <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
-              {% endfor %}
-            </select>
-          {% endcapture %}
+            {%- unless product.has_only_default_variant -%}
+              <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+                {%- for option in product.options_with_values -%}
+                    <fieldset class="js product-form__input">
+                      <legend class="form__label">{{ option.name }}</legend>
+                      {%- for value in option.values -%}
+                        <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                              name="{{ option.name }}"
+                              value="{{ value | escape }}"
+                              form="product-form-{{ section.id }}"
+                              {% if option.selected_value == value %}checked{% endif %}
+                        >
+                        <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                          {{ value }}
+                        </label>
+                      {%- endfor -%}
+                    </fieldset>
+                {%- endfor -%}
+                <script type="application/json">
+                  {{ product.variants | json }}
+                </script>
+              </variant-radios>
+            {%- endunless -%}
+
+            <noscript>
+              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+                <div class="select">
+                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                    {%- for variant in product.variants -%}
+                      <option
+                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                        {% if variant.available == false %}disabled{% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+            </noscript>
 
             <div {{ block.shopify_attributes }}>
               {%- if product != blank -%}
                 <product-form class="product-form">
                   {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-
-                     {%- unless product.has_only_default_variant -%}
-                      {% assign my_fields = product.variant.metafields.custom %}
-                      <p id="selector" class="product-form__text-label">Choose Quantity</p>
-                      <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
-                        {%- for option in product.options_with_values -%}
-                         {% assign optionIndex = forloop.index0 %}
-                         {% assign values = "" %}
-                          <fieldset class="js product-form__input">
-                          {%- for variant in product.variants -%}
-                            {% assign value = variant.options[optionIndex] %}
-                            {%- unless values contains value -%}
-                            {% assign values = values | join: ',' %}
-                            {% assign values = values | append: ',' | append:value %}
-                            {% assign values = values | split: ',' %}
-            
-                             {% assign my_fields = variant.metafields.custom %}
-            
-                              <span class="Variant_Blocks" data-id={{ variant.id }}>
-                                <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                                  name="{{ option.name }}"
-                                  value="{{ value | escape }}"
-                                  form="product-form-{{ section.id }}"
-                                  {% if option.selected_value == value %}checked{% endif %}
-                                >
-                                <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                                  {%- if my_fields.supply_time != blank -%}
-                                    <span 
-                                      class="Supply_Time"
-                                    >
-                                      {{ my_fields.supply_time }} /<br class="hide-desktop"/> 
-                                      {{ my_fields.servings }}
-                                    </span>
-                                  {%- endif -%}
-                                  <span class="Variant_Title">{{ value }}</span>
-                                  {%- if my_fields.best_value != blank -%}
-                                    <span class="Best_Value">{{ my_fields.best_value }}</span>
-                                  {%- endif -%}
-                                </label>
-                              </span>
-                            {%- endunless -%}
-                          {%- endfor -%}
-                          </fieldset>
-                          {%- endfor -%}
-                          <script type="application/json">
-                            {{ product.variants | json }}
-                          </script>
-                        {{ variantMetafield }}
-                       </variant-radios>
-                    {%- endunless -%}
-        
-                    <noscript>
-                      <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-                        <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
-                        <div class="select">
-                          <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
-                            {%- for variant in product.variants -%}
-                            <option
-                                    {% if variant == currentVariant %}selected="selected"{% endif %}
-                                    {% if variant.available == false %}disabled{% endif %}
-                                    value="{{ variant.id }}"
-                                    >
-                              {{ variant.title }}
-                              {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                                  - {{ variant.price | money | strip_html }}
-                            </option>
-                            {%- endfor -%}
-                          </select>
-                          {% render 'icon-caret' %}
-                        </div>
-                      </div>
-                    </noscript>
                     
                     {% render 'rtx-pdp', product: product, currentVariant: currentVariant %}
                     
