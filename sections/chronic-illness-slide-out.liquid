@@ -16,10 +16,22 @@
       <div class="chronic-illness-slide-out__content">
         <h3 class="chronic--illness__form--title">Fill in the appropriate information.*</h3>
         {%- form 'contact', id: 'chronicIllnessForm' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+              <p>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</p>
+              <div class="chronic--illness__form--btn">
+                <a class="button button--green" href="/pages/chronic-illness-shop">shop all chronic illness products</a>
+              </div>
+            </div>
+          {%- endif -%}
           <div class="contact__fields">
             <div class="field">
-              <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
-              <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+              <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name">
+              <label class="field__label" for="ContactFormFirstName">First Name*</label>
+            </div>
+            <div class="field">
+              <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name">
+              <label class="field__label" for="ContactFormLastName">Last Name*</label>
             </div>
             <div class="field field--with-error">
               <input
@@ -30,7 +42,7 @@
                 name="contact[email]"
                 spellcheck="false"
                 autocapitalize="off"
-                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                value=""
                 aria-required="true"
                 {% if form.errors contains 'email' %}
                   aria-invalid="true"
@@ -38,7 +50,7 @@
                 {% endif %}
                 placeholder="{{ 'templates.contact.form.email' | t }}"
               >
-              <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <label class="field__label" for="ContactForm-email">Email*</label>
               {%- if form.errors contains 'email' -%}
                 <small class="contact__field-error" id="ContactForm-email-error">
                   <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
@@ -48,20 +60,8 @@
             </div>
           </div>
           <div class="field">
-            <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
-            <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
-          </div>
-          <div class="field">
-            <textarea
-              rows="10"
-              id="ContactForm-body"
-              class="text-area field__input"
-              name="contact[{{ 'templates.contact.form.comment' | t }}]"
-              placeholder="{{ 'templates.contact.form.comment' | t }}"
-            >
-              {{- form.body -}}
-            </textarea>
-            <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+            <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number">
+            <label class="field__label" for="ContactForm-phone">Phone number*</label>
           </div>
           <div class="form__radio--button">
             <div class="field">
