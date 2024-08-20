@@ -670,7 +670,7 @@ class VariantSelects extends HTMLElement {
               sellingInput.remove();
             }
             if(sellingInput_id){
-              sellingInput.remove();
+              sellingInput_id.remove();
             }
             let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
             let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
