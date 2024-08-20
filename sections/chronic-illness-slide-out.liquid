@@ -26,11 +26,11 @@
           {%- endif -%}
           <div class="contact__fields">
             <div class="field">
-              <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name">
+              <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name" required>
               <label class="field__label" for="ContactFormFirstName">First Name*</label>
             </div>
             <div class="field">
-              <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name">
+              <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name" required>
               <label class="field__label" for="ContactFormLastName">Last Name*</label>
             </div>
             <div class="field field--with-error">
@@ -49,6 +49,7 @@
                   aria-describedby="ContactForm-email-error"
                 {% endif %}
                 placeholder="{{ 'templates.contact.form.email' | t }}"
+                required
               >
               <label class="field__label" for="ContactForm-email">Email*</label>
               {%- if form.errors contains 'email' -%}
@@ -60,73 +61,73 @@
             </div>
           </div>
           <div class="field">
-            <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number">
+            <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number" required>
             <label class="field__label" for="ContactForm-phone">Phone number*</label>
           </div>
           <div class="form__radio--button">
             <div class="field">
-              <input type="radio" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__radio">
               <label for="ContactFormADHD" class="field__radio--label">
+                <input type="radio" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__radio" required>
                 ADHD or Autism
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__radio">
               <label for="ContactFormEatingDisorderRecovery" class="field__radio--label">
+                <input type="radio" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__radio">
                 Eating Disorder Recovery
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__radio">
               <label for="ContactFormCrohnDisease" class="field__radio--label">
+                <input type="radio" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__radio">
                 Crohn’s Disease
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__radio">
               <label for="ContactFormImmunodeficiencyDisease" class="field__radio--label">
+                <input type="radio" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__radio">
                 Immunodeficiency Disease
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__radio">
               <label for="ContactFormCysticFibrosis" class="field__radio--label">
+                <input type="radio" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__radio">
                 Cystic Fibrosis
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__radio">
               <label for="ContactFormMultipleSclerosis" class="field__radio--label">
+                <input type="radio" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__radio">
                 Multiple Sclerosis
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__radio">
               <label for="ContactFormChemotherapyDehydration" class="field__radio--label">
+                <input type="radio" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__radio">
                 Chemotherapy Dehydration
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__radio">
               <label for="ContactFormPOTS" class="field__radio--label">
+                <input type="radio" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__radio">
                 POTS
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__radio">
               <label for="ContactFormDysautonomia" class="field__radio--label">
+                <input type="radio" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__radio">
                 Dysautonomia
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__radio">
               <label for="ContactFormSjogrenDisease" class="field__radio--label">
+                <input type="radio" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__radio">
                 Sjogren’s Disease
               </label>
             </div>
             <div class="field">
-              <input type="radio" id="ContactFormOther" name="illnessesType" value="Other" class="field__radio">
               <label for="ContactFormOther" class="field__radio--label">
+                <input type="radio" id="ContactFormOther" name="illnessesType" value="Other" class="field__radio">
                 Other
               </label>
             </div>
