@@ -270,6 +270,10 @@
   background-position: center right 16px;
 }
 
+.show-more {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
 
   .chronic-illness-slide-out {
@@ -290,6 +294,10 @@
   .chronic-illness-slide-out__radios .field {
     width: 100%;
     display: none;
+  }
+
+  .show-more {
+    display: block;
   }
 
   .chronic-illness-slide-out__radios .field:nth-child(-n+5),
