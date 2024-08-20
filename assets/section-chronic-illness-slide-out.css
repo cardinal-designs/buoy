@@ -208,7 +208,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin: -1px 4px 0 0;
+  margin: 4px 0 0;
   vertical-align: middle;
   cursor: pointer;
   border-radius: 50%;
@@ -220,10 +220,15 @@
   background-color: #F8F8F8;
 }
 
+.chronic-illness-slide-out__radios input[type=radio].field__radio + label span svg {
+  opacity: 0;
+}
+
 .chronic-illness-slide-out__radios input[type=radio].field__radio:checked + label span {
-  opacity: 1;
   background-color: #1F2322;
 }
 
-
+.chronic-illness-slide-out__radios input[type=radio].field__radio:checked + label span svg {
+  opacity: 1;
+}
 
