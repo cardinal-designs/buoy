@@ -34,7 +34,7 @@
     <div class="product-grid__grid">
       {% for block in section.blocks %}
         <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
-          {% render 'product-card-with-form', content: block.settings %}
+          {% render 'product-card-with-form', content: block.settings, show_onetime_purchase : section.settings.show_onetime_purchase %}
         </div>
       {% endfor %}
     </div>
