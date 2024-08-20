@@ -651,6 +651,35 @@ class VariantSelects extends HTMLElement {
           }
         }
       }
+
+      let variantScript = document.querySelector('.VariantJSON');
+      if(variantScript) {
+        const jsonData = variantScript.textContent;
+        const variantData = JSON.parse(jsonData);
+        window.variantData = variantData;
+        let foundVariant = variantData?.find(variant => variant.id == varId);
+        console.log("foundVariant", foundVariant)
+        // const foundVariants = variantData?.filter(variant => variant.option1 === currentVariant.option1);
+        // if(foundVariants?.length > 0){
+        //   foundVariants.forEach(variant => {
+        //     if(foundVariant?.price != variant.price){
+        //       let option2 = variant.option2;
+        //       let selectedInput = document.querySelector(⁠ input[value="${option2}"] ⁠);
+        //       if(selectedInput){
+        //         let variantLabel = selectedInput.closest('.variant__label');
+        //         if(variantLabel){
+        //           let diffVariantPrice = Number(variant.price) - Number(foundVariant?.price);
+        //           let variantPrice = variantLabel.querySelector('.variant__price');
+        //           if(variantPrice){
+        //             variantPrice.innerHTML = ` + ${formatMoney(diffVariantPrice)}`;
+        //           }
+        //         }
+        //       }
+              
+        //     }
+        //   });
+        // }
+      }
       
     }
     
