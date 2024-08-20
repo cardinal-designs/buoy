@@ -54,6 +54,22 @@
         "product_for_reviews": ""
       }
     },
+    "chronic_illness_featured_product_Hz7mTh": {
+      "type": "chronic-illness-featured-product",
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": true,
+        "enable_video_looping": true,
+        "free_shipping_text": "",
+        "show_price": true,
+        "show_quantity": false,
+        "show_view_details": true,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
     "product_grid_VjLzyX": {
       "type": "product-grid",
       "blocks": {
@@ -199,29 +215,13 @@
         "button_label": "Back to Shopping",
         "button_link": "shopify:\/\/collections\/all"
       }
-    },
-    "chronic_illness_featured_product_Hz7mTh": {
-      "type": "chronic-illness-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": true,
-        "enable_video_looping": true,
-        "free_shipping_text": "",
-        "show_price": true,
-        "show_quantity": false,
-        "show_view_details": true,
-        "subscription_benefits": "",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
     }
   },
   "order": [
     "main",
+    "chronic_illness_featured_product_Hz7mTh",
     "product_grid_VjLzyX",
     "text_image_toggle_YQJJzi",
-    "reviews_grid_ERX9pT",
-    "chronic_illness_featured_product_Hz7mTh"
+    "reviews_grid_ERX9pT"
   ]
 }
