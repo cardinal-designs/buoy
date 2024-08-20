@@ -512,7 +512,6 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(false, '', false, this.currentVariant.price);
     this.updatePickupAvailability();
     this.updateMetafieldText();
-
     
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true, this.currentVariant.price);
@@ -637,7 +636,24 @@ class VariantSelects extends HTMLElement {
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
     console.log("this", this)
-    console.log("this.closest", this.closest("product-form"))
+    let dataUpdate = this.dataset.update;
+    let currentVariant = this.currentVariant;
+    if(dataUpdate == 'custom'){
+      let varId = currentVariant?.id;
+      if(!currentVariant?.id){
+        varId = this.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
+
+        let productInfoWrapper = this.closest('.product__info-wrapper');
+        if(productInfoWrapper){
+          let inputId = this.querySelector("input[name='id']");
+          if(inputId){
+            inputId.value = varId;
+          }
+        }
+      }
+      
+    }
+    
     let productForm = this.closest("product-form");
     let addButton;
     if(productForm){
