@@ -222,13 +222,11 @@
   });
 document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
-    // Get the value of the form fields
     const firstName = document.getElementById('ContactFormFirstName').value;
     const lastName = document.getElementById('ContactFormLastName').value;
     const email = document.getElementById('ContactForm-email').value;
     const mobile = document.getElementById('ContactForm-phone').value;
     const illnessesType = document.querySelector('input[name="illnessesType"]:checked').value;
-    // Construct payload with correct formatting
     const payload = JSON.stringify({
         data: {
             type: 'subscription',
@@ -288,7 +286,6 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             if (text) {
                 try {
                     const jsonResponse = JSON.parse(text); // Parse it manually
-                    console.log(jsonResponse);
                 } catch (e) {
                     console.error('Failed to parse JSON:', e);
                 }
