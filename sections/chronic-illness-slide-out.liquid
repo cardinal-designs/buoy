@@ -30,11 +30,11 @@
             <div class="contact__fields">
               <div class="field half-field">
                 <label class="field__label" for="ContactFormFirstName">First Name*</label>
-                <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="firstName" value="" placeholder="First Name" required>
+                <input class="field__input" autocomplete="name" type="text" id="ContactFormFirstName" name="contact[First Name]" value="" placeholder="First Name" required>
               </div>
               <div class="field half-field">
                 <label class="field__label" for="ContactFormLastName">Last Name*</label>
-                <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="lastName" value="" placeholder="Last Name" required>
+                <input class="field__input" autocomplete="name" type="text" id="ContactFormLastName" name="contact[Last Name]" value="" placeholder="Last Name" required>
               </div>
               <div class="field field--with-error half-field">
                 <label class="field__label" for="ContactForm-email">Email*</label>
@@ -43,7 +43,7 @@
                   type="email"
                   id="ContactForm-email"
                   class="field__input"
-                  name="email"
+                  name="contact[email]"
                   spellcheck="false"
                   autocapitalize="off"
                   value=""
@@ -64,7 +64,7 @@
               </div>
               <div class="field half-field">
                 <label class="field__label" for="ContactForm-phone">Phone number*</label>
-                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="phoneNumber" pattern="[0-9\-]*" value="" placeholder="(555) 000-0000" required>
+                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="(555) 000-0000" required>
               </div>
             </div>
             
