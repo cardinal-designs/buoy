@@ -15,13 +15,16 @@
       </div>
       <div class="chronic-illness-slide-out__content">
         <!-- <h3 class="chronic--illness__form--title">Fill in the appropriate information.*</h3> -->
-        {%- form 'contact', id: 'chronicIllnessForm' -%}
+        <form method="post" action="#chronicIllnessForm" id="chronicIllnessForm" accept-charset="UTF-8" class="contact-form">
+          <input type="hidden" name="form_type" value="contact">
+          <input type="hidden" name="utf8" value="✓">
           {%- if form.posted_successfully? -%}
             <script>
               $('.chronic-illness-slide-out').addClass('active');
             </script>
             <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
               <p>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</p>
+              
               <div class="chronic--illness__form--btn">
                 <a class="button button--green" href="/pages/chronic-illness-shop">shop all chronic illness products</a>
               </div>
@@ -165,7 +168,7 @@
               </button>
             </div>
           {%- endif -%}
-        {%- endform -%}
+        </form>
         {% comment %}<div class="klaviyo-form-VT4VtR"></div>{% endcomment %}
       </div>
     </div>
