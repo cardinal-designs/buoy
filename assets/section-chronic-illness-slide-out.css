@@ -200,6 +200,10 @@
   color: #1F2322
 }
 
+.chronic-illness-slide-out__radios input[type=radio].field__radio {
+  display: none;
+}
+
 .chronic-illness-slide-out__radios input[type=radio].field__radio + label span {
   display: inline-block;
   width: 20px;
@@ -219,6 +223,7 @@
 
 .chronic-illness-slide-out__radios input[type=radio].field__radio:checked + label span {
   opacity: 1;
+  background-color: #1F2322;
 }
 
 
