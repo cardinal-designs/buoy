@@ -506,9 +506,7 @@ fieldset.product-form__input .form__label {
 .product-form__buttons .button {
   width: 100%;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   background: var(--green-1);
   border: none;
 }
@@ -522,14 +520,6 @@ fieldset.product-form__input .form__label {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
 }
-  
-/* .smartrr-purchase-options {
-  display: none;  
-}
-  
-.wellness-set .smartrr-purchase-options {
-  display: block;  
-} */
 
 .smartrr-purchase-options [data-smartrr-selling-plan-groups] {
   margin-bottom: 14px;
