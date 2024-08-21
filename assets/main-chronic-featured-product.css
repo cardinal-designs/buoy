@@ -2907,6 +2907,11 @@ select[name=selling_plan] {
   .Testimonials_Rating {
     margin: 10px auto 16px;
   }
+
+  .product__info-wrapper .product-form__input {
+    margin: 24px 0;
+  }
+  
 }
 
 .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-primary .okeReviews-starRating {
