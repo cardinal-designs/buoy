@@ -3106,5 +3106,9 @@ select[name=selling_plan] {
   .Variant_Blocks .Variant_Price {
     flex-direction: column;
   }
+
+  .Variant_Blocks .Supply_Time {
+    margin-top: 0;
+  }
   
 }
