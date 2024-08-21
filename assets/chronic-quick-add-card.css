@@ -570,10 +570,12 @@
 }
 
 .quick-add__form-subtext {
-  text-align: center;
   margin: 10px 0 0;
   font-size: 12px;
   line-height: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #1F2322;
 }
 
 quick-add-card[data-open="true"] .quick-add__display {
