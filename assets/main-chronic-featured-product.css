@@ -166,6 +166,20 @@
   margin: 0;
 }
 
+.featured__product-tag {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #1F2322;
+  border-radius: 4px;
+  padding: 2px 4px 2px;
+  color: #1F2322;
+}
+
 .product__info-wrapper .okeReviews-reviewsSummary-ratingCount span {
   font-family: inter, sans-serif;
   font-style: normal;
