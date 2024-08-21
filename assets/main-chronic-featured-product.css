@@ -3043,10 +3043,11 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item__title p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
 }
 
 .dropdown-container-item__x {
