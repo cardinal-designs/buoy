@@ -329,9 +329,7 @@ label.rtx_option_label {
 
 @media only screen and (max-width: 991px) {
 
-  .product.Custom_Featured_Product {
-    display: block !important;
-  }
+  
 
   .Custom_Featured_Product .product__media-wrapper {
     margin: 0 0 33px;
@@ -352,6 +350,10 @@ label.rtx_option_label {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .product.Custom_Featured_Product {
+    display: block !important;
+  }
 
   .Sub_Text_New {
     justify-content: center;
