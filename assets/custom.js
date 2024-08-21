@@ -305,6 +305,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   function closeClinical() {
     let clinicalDrawer = document.getElementById("clinicalSideDrawer");
+    console.log("clinicalDrawer", clinicalDrawer)
     if(clinicalDrawer) {
       clinicalDrawer.style.right = "-100%";
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
