@@ -451,8 +451,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+      console.log("clinicalSideDrawer==", clinicalSideDrawer)
       const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+      console.log("isClickInsideClinicalDrawer", isClickInsideClinicalDrawer)
       const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      console.log("isDrawerClinicalVisible", isDrawerClinicalVisible)
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
       }
