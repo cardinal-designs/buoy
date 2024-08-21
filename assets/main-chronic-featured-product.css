@@ -143,7 +143,8 @@
   font-size: 24px !important;
 }
 
-.okeReviews.okeReviews--theme .okeReviews-button, .okeReviews.okeReviews--theme .okeReviews-showMore {
+.okeReviews.okeReviews--theme .okeReviews-button, 
+.okeReviews.okeReviews--theme .okeReviews-showMore {
   background: var(--white) !important;
 }
 
@@ -245,6 +246,7 @@
 }
 
 /* Tabs */
+
 .product__tabs {
   margin: 40px 0;
 }
@@ -307,6 +309,7 @@
 }
 
 /* Bundle Tabs */
+
 .product__bundle {
   margin-top: 40px;
 }
@@ -410,6 +413,7 @@
 }
 
 /* Form Elements */
+
 .product-form .select__select {
   width: 100%;
   height: 50px;
@@ -449,31 +453,6 @@ fieldset.product-form__input .form__label {
   width: 1px;
 }
 
-.product-form__input input[type='radio'] + label {
-  /* border: 0.1rem solid rgba(var(--color-foreground), 0.55);
-  border-radius: 4rem;
-  background-color: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
-  display: inline-block;
-  margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  text-align: center;
-  transition: border var(--duration-short) ease;
-  cursor: pointer; */
-}
-
-/* .product-form__input input[type='radio'] + label:hover {
-  border: 0.1rem solid rgb(var(--color-foreground));
-}
-
-.product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
-} */
-
 .product-form__input input[type='radio']:disabled + label {
   border-color: rgba(var(--color-foreground), 0.1);
   color: rgba(var(--color-foreground), 0.4);
@@ -485,12 +464,14 @@ fieldset.product-form__input .form__label {
 }
 
 /* Fallback */
+
 .product-form__input input[type='radio']:focus + label {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* No outline when focus-visible is available in the browser */
+
 .product-form__input input[type='radio']:focus:not(:focus-visible) + label {
   box-shadow: none;
 }
@@ -551,6 +532,7 @@ fieldset.product-form__input .form__label {
 }
 
 /* Overrides */
+
 .shopify-payment-button__more-options {
   color: rgb(var(--color-foreground));
 }
@@ -597,6 +579,7 @@ fieldset.product-form__input .form__label {
 /* Product info */
 
 /* Product media */
+
 .product__media-list {
   margin: 0 -8px;
 }
@@ -617,12 +600,6 @@ fieldset.product-form__input .form__label {
 .product__media {
   padding-top: 100% !important;
 }
-
-/* @media screen and (max-width: 768px) {
-  .product__media-item:nth-child(2) .product__media {
-    margin-left: 20px; 
-  }
-} */
   
 .product__media img, .product__media video {
   border-radius: 10px;
@@ -932,7 +909,6 @@ fieldset.product-form__input .form__label {
 
   .product__media-item {
     width: 86vw;
-    /* margin-left: 12px; */
   }
 
   .product__media-item .product-spinner {
@@ -1015,6 +991,7 @@ fieldset.product-form__input .form__label {
 }
 
 /* Nutrition Label Popup */
+
 .product-nutrition-label {
   display: none;
   position: relative;
@@ -1085,6 +1062,7 @@ fieldset.product-form__input .form__label {
 }
 
 /* Tooltip */
+
 .product__subscription-tooltip {
   margin-top: 14px;
   position: relative;
@@ -1108,7 +1086,7 @@ fieldset.product-form__input .form__label {
   font-size: 12px;
 }
   
-.product__subscription-tooltip-text p span{
+.product__subscription-tooltip-text p span {
   font-weight: 700 !important;
 }
 
@@ -1210,8 +1188,8 @@ fieldset.product-form__input .form__label {
   
 }
   
-  
 /*========== new pdp edits ==========*/
+
 .pdp-faq .faq-section {
   margin: 30px 0;
 }
@@ -1396,9 +1374,8 @@ fieldset.product-form__input .form__label {
   background: transparent linear-gradient(146deg, #E2EEF6 0%, #FEEBCD 26%, #E0EAEB 50%, #F0F6FA 79%, #FEEBCD 100%) 0% 0% no-repeat padding-box;
   border-radius: 14px;
   padding: 3px 12px;
-    animation: gradient 3s ease infinite;
+  animation: gradient 3s ease infinite;
   background-size: 400% 400%;
-
 }
  
 .subscribe-tooltip__flex .product__subscription-tooltip  button > p {
@@ -1577,15 +1554,6 @@ fieldset.product-form__input .form__label {
   font-weight: 400;
   line-height: 21px;
   color: #797b7a;
-}
-
-/* .product-form__input .Variant_Blocks input[type=radio]+label:hover {
-  border: 1px solid var(--charcoal-light);  
-} */
-
-.product-form__input .Variant_Blocks input[type=radio]:checked + label {
-  /* background-color: var(--gray-lighest);
-  border: 1px solid var(--charcoal-60); */
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
@@ -2411,16 +2379,16 @@ span#timer strong {
 }
 
 .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
-  height: 100%!important;
-  clip: inherit!important;
+  height: 100% !important;
+  clip: inherit !important;
   right: -50px;
   font-family: inter,sans-serif;
   font-style: normal;
-  font-weight: 400!important;
+  font-weight: 400 !important;
   font-size: 12px;
   letter-spacing: 0;
-  line-height: 21px!important;
-  width: auto!important;
+  line-height: 21px !important;
+  width: auto !important;
   overflow: hidden;
   top: 3px;
   color: var(--charcoal-60);
@@ -2430,8 +2398,8 @@ span#timer strong {
   left: 48px;
 }
 
-.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text{
-  display:none;
+.product__info-container .okeReviews-starRating--small span.okeReviews-a11yText .rated-text {
+  display: none;
   margin-left: 20px;
 }
 
@@ -2476,7 +2444,7 @@ span#timer strong {
   margin-right: 4px;
 }
 
-.Product_Bar_Variants .Variant_Blocks input[type=radio]+label {
+.Product_Bar_Variants .Variant_Blocks input[type=radio] + label {
   padding: 0;
   width: auto;
   height: auto;
@@ -2576,7 +2544,6 @@ select[name=selling_plan] {
   border: 0;
 }
 
-
 .discount-bubble {
   border: 1px solid var(--green-2);
   background: var(--green-2);
@@ -2585,7 +2552,6 @@ select[name=selling_plan] {
   height: auto;
   margin: 28px auto 0px;
   max-width: 460px;
-  /* max-width: unset; */
   width: 100%;
   position: relative;
   text-align: center;
@@ -2596,7 +2562,6 @@ select[name=selling_plan] {
   
   .discount-bubble {
     max-width: 285px;
-    /* max-width: unset; */
     width: 100%;
   }
 
@@ -2608,10 +2573,6 @@ select[name=selling_plan] {
 
 .discount-bubble p {
   margin: 0;
-  /* white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 @media screen and (max-width: 768px) {
@@ -2665,8 +2626,6 @@ select[name=selling_plan] {
 }
 
 @media screen and (max-width: 991px) {
-
-  
 
   .template-product .product__info-wrapper {
     padding-right: 0;
@@ -2777,11 +2736,11 @@ select[name=selling_plan] {
   }
 
   .pdp-faq .faq-section {
-    margin: 44px 0 30px!important;
+    margin: 44px 0 30px !important;
   }
 
   .product-form .rtx_option_selector input[type=radio] {
-    margin-top: 3px!important;
+    margin-top: 3px !important;
   }
 
   .Testimonials_Title {
@@ -3003,10 +2962,6 @@ select[name=selling_plan] {
   background-size: 70px 14px;
 }
 
-/* .product-reviews .okeReviews.okeReviews--theme .okeReviews-reviews-review {
-  border: solid #545759
-} */
-
 .product-reviews .okeReviews-widgetNavBar-count {
   padding-left: 0;
 }
@@ -3028,10 +2983,12 @@ select[name=selling_plan] {
   margin-top: 28px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { 
+  
   .dropdown-container-item:first-child {
     margin-top: 24px;
   }
+  
 }
 
 .dropdown-container-item:last-of-type {
@@ -3151,11 +3108,6 @@ select[name=selling_plan] {
 .dropdown-container-item__body-list {
   margin-bottom: 24px;
 }
-
-/* .dropdown-container-item__body-list img {
-  width: 20px;
-  height: 20px;
-} */
 
 .dropdown-container-item__body .product__drawer-triggers {
   margin: 0;
