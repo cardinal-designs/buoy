@@ -2882,11 +2882,7 @@ select[name=selling_plan] {
   .Product_Tags {  
     justify-content: center;
   }
-
-  .Variant_Blocks input[type=radio]+label {
-    padding: 24px 14px 20px;
-  }
-
+  
   .product-form #rtx_sands_block .rtx_option_selector {
     padding-bottom: 0px;
   }
