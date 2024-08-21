@@ -134,7 +134,7 @@
   }
 
   .product-grid__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     gap: 28px 17px;
   }
 
