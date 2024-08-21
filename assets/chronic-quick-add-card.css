@@ -510,12 +510,12 @@
 }
 
 .quick-add__best-value-tag {
-    background: var(--green-2);
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 14px;
-    border-radius: 4px;
-    padding: 2.75px 6px;
+  background: var(--green-2);
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 4px;
+  padding: 2.75px 6px;
 }
 
 .quick-add__form .product-form__buttons .button {
@@ -549,15 +549,10 @@
   line-height: 14px;
 }
 
-quick-add-card[data-open="false"] {
-
-}
-
 quick-add-card[data-open="true"] .quick-add__display {
   height: 100%;
   max-height: calc(100% - 26px);
   z-index: 1;
-
   transform: translateY(0);
   transition: transform .4s ease;
 }
@@ -572,7 +567,6 @@ quick-add-card[data-open="true"] .quick-add__form-inner {
 
 quick-add-card[data-open="true"] .quick-add__close {
   opacity: 1;
-  /* transform: translateY( calc(-100% - 8px)) */
 }
 
 quick-add-card[data-open="true"] .quick-add__price {
@@ -621,7 +615,6 @@ quick-add-card[data-open="true"] .quick-add__overlay {
   .quick-add__display {
     left: 12px;
     right: 12px;
-    /* bottom: 12px; */
     bottom: env(safe-area-inset-bottom);
     height: 100%;
     max-height: calc(80vh - 40px);
@@ -647,6 +640,7 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     right: 8px;
     bottom: 8px;
   }
+  
 }
 
 .quick-add__container .okeReviews-reviewsSummary-ratingCount {
