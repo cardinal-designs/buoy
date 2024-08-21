@@ -283,7 +283,7 @@
 
 var $tlt = $(".custom__msg--field");
 
-$(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
   var radVal = $(this).val();
   if (radVal === 'Other' && $(this).is(':checked')) {
       $tlt.css("display", "flex");
@@ -294,7 +294,7 @@ $(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', functi
 });
 var globalCheckedValues = [];
 function updateCheckedValues() {
-  globalCheckedValues = $(".chronic-illness-slide-out__radios input[type=checkbox]:checked").map(function() {
+  globalCheckedValues = $(".chronic-illness-slide-out__checkboxs input[type=checkbox]:checked").map(function() {
     return $(this).val(); 
   }).get();  
   if (globalCheckedValues.includes("Other")) {
@@ -304,7 +304,7 @@ function updateCheckedValues() {
     }
   }
 }
-$(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
   var radVal = $(this).val();
   if (radVal === 'Other' && $(this).is(':checked')) {
     $(".custom__msg--field").css("display", "flex");
