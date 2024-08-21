@@ -149,7 +149,6 @@
 .quick-add__content p {
   font-family: Rhymes-Light-Italic;
   margin: 0;
-  line-height: 20px;
   font-weight: 300;
   line-height: 21.57px;
 }
@@ -739,6 +738,10 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     font-size: 12px;
     line-height: 14px;
     padding: 3px 6px 3px;
+  }
+
+  .quick-add__content p {
+    line-height: 20px;
   }
   
 }
