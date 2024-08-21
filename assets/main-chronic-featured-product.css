@@ -1437,6 +1437,10 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
+.Variant_Blocks + .Variant_Blocks {
+  margin-top: 12px;
+}
+
 .Variant_Blocks .Variant_Price {
   display: flex;
   gap: 5px;
