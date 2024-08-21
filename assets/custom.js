@@ -295,8 +295,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const parentDropdown = e.target.closest('.image-with-dropdowns__dropdown');
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
-    console.log("parentItemContainer", parentItemContainer)
-    console.log("parentDropdown", parentDropdown)
+    
     if (parentItemContainer) {
 
       // For dropdown-container-item__container section
