@@ -50,11 +50,12 @@
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span 
-                      class="Serving_Cost" 
-                      data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
-                      data-onetimeprice="{{ my_fields.serving_cost }}"
+                      class="Serving_Price" 
                     >
-                      {{ p.metafields.custom.serving_sub_price | replace: "serving", "serv"}}
+                      <span class="js-rtx_one_time_price">
+                        {{ variant.price | money }}
+                      </span>
+                      <s class="rtx_compare_price js-main-compare-price">{{ variant.compare_at_price | money }}</s>
                     </span>    
                   {%- endif -%}
 
