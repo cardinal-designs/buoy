@@ -707,6 +707,12 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     right: 8px;
     bottom: 8px;
   }
+
+  .quick-add__form-subtext {
+    flex-wrap: wrap;
+    column-count: 2;
+    gap: 4px 10px;
+  }
   
 }
 
