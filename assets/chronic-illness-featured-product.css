@@ -225,6 +225,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
+  margin: 0;
 }
 
 .featured-product-section .title-text__container {
@@ -420,7 +421,8 @@ label.rtx_option_label {
     padding: 0 20px;
   }
 
-  .Custom_Featured_Product .slick-dots li button:before {
+  .Custom_Featured_Product .slick-dots li button:before,
+  .Custom_Featured_Product .slick-dots li button {
     width: 8px;
     height: 8px;
   }
