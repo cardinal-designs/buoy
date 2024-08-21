@@ -293,14 +293,28 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
 
   // Close Clinical Drawer
+  // function closeClinical() {
+  //   if (document.getElementById("clinicalSideDrawer")) {
+  //     document.getElementById("clinicalSideDrawer").style.right = "-100%";
+  //   }
+  //   document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+  //   document.querySelector('body').classList.remove('lock-scroll');
+  //   document.querySelector('header-container').style.zIndex = 3;
+  //   document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
+  // }
+
   function closeClinical() {
-    if (document.getElementById("clinicalSideDrawer")) {
-      document.getElementById("clinicalSideDrawer").style.right = "-100%";
+    let clinicalDrawer = document.getElementById("clinicalSideDrawer");
+    if(clinicalDrawer) {
+      clinicalDrawer.style.right = "-100%";
+      document.querySelector('.page-blury-overlay').classList.remove('is-visible');
+      document.querySelector('body').classList.remove('lock-scroll');
+      document.querySelector('header-container').style.zIndex = "3";
+
+      if(document.querySelector('.clinical-trial-drawer .drawer__header')) {
+        document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
+      }
     }
-    document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-    document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 3;
-    document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
   // Open Supplement Drawer
