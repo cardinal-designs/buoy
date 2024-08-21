@@ -354,10 +354,12 @@
               {% if servies != blank %}
                 <p class="product--service">
                   {% for text in servies %}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M3.66699 9.61494L8.32401 14.3327L16.3337 5.66602" stroke="#1F2322" stroke-width="1.33333"/>
-                    </svg>
-                    {{ text }}
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M3.66699 9.61494L8.32401 14.3327L16.3337 5.66602" stroke="#1F2322" stroke-width="1.33333"/>
+                      </svg>
+                      {{ text }}
+                    </span>
                   {% endfor %}
                 </p>
               {% endif %}
