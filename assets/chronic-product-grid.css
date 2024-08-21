@@ -96,5 +96,12 @@
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  
+  .product-grid {
+    padding: 0 27px;
+  }
+  
+}
 
 
