@@ -1511,15 +1511,16 @@ fieldset.product-form__input .form__label {
   display: flex;
   letter-spacing: 0;
   line-height: 1;
+  justify-content: space-between;
 }
 
 .product-form__input .Variant_Blocks input[type=radio] + label::after {
   display: none;
 }
 
-.product-form__input .Variant_Blocks input[type=radio]+label:hover {
+/* .product-form__input .Variant_Blocks input[type=radio]+label:hover {
   border: 1px solid var(--charcoal-light);  
-}
+} */
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
   /* background-color: var(--gray-lighest);
