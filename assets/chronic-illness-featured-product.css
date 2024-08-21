@@ -6,25 +6,33 @@
   overflow: hidden;
 }
 
-.product-grid__props {
+.Custom_Featured_Product__props {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 }
 
-.product-grid__prop {
+.Custom_Featured_Product__prop {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.product-grid__prop-icon {
+.Custom_Featured_Product__prop-icon {
   height: 28px;
   width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Custom_Featured_Product__prop p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
 }
 
 .js-ingredients-open {
