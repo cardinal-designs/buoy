@@ -448,6 +448,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
+        closeClinical();
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
