@@ -15,6 +15,7 @@
 
 .product-grid__title em {
   font-family: Rhymes-Light-Italic;
+  font-weight: 300;
 }
 
 .product-grid__props {
@@ -134,8 +135,13 @@
   }
 
   .product-grid__grid {
-    grid-template-columns: 50% 50%;
+    display: flex;
     gap: 28px 17px;
+    flex-wrap: wrap;
+  }
+
+  .product-grid__grid-item {
+    width: calc(50% - 8.5px);
   }
 
   .product-grid__header {
@@ -164,16 +170,6 @@
 }
 
 @media screen and (max-width: 374px) {
-
-  .product-grid__grid {
-    display: flex;
-    gap: 28px 17px;
-    flex-wrap: wrap;
-  }
-
-  .product-grid__grid-item {
-    width: calc(50% - 8.5px);
-  }
 
   .quick-add__price {
     flex-direction: column;
