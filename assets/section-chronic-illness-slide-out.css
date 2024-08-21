@@ -381,12 +381,12 @@
   letter-spacing: 0;
 }
 
-.product-grid__grid {
+.chronic__form--aftersubmission .product-grid__grid {
   margin-top: 20px;
   gap: 25px 17px;
 }
 
-.quick-add__button {
+.chronic__form--aftersubmission .quick-add__button {
   font-family: inter,sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -394,15 +394,15 @@
   padding: 5.5px 14px;
 }
 
-.quick-add__media {
+.chronic__form--aftersubmission .quick-add__media {
   margin-bottom: 20px;
 }
 
-.quick-add__content {
+.chronic__form--aftersubmission .quick-add__content {
   gap: 6px;
 }
 
-.quick-add__title {
+.chronic__form--aftersubmission .quick-add__title {
   font-family: inter,sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -410,26 +410,26 @@
   text-align: left;
 }
 
-.quick-add__content p {
+.chronic__form--aftersubmission .quick-add__content p {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
   text-align: left;
 }
 
-.quick-add__price {
+.chronic__form--aftersubmission .quick-add__price {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: #797B7A;
 }
 
-.grid__btn--wrap {
+.chronic__form--aftersubmission .grid__btn--wrap {
   margin-top: 52px;
   width: 100%;
 }
 
-.grid__btn--wrap .button {
+.chronic__form--aftersubmission .grid__btn--wrap .button {
   width: 100%;
   font-family: inter,sans-serif;
   font-size: 16px;
