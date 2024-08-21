@@ -238,6 +238,19 @@
   justify-content: space-between;
 }
 
+.Custom_Featured_Product .product--service {
+    margin: 10px 0 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #1f2322;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
 .Custom_Featured_Product .rtx_one_time_price {
   display: none;
 }
