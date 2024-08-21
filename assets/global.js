@@ -1812,6 +1812,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        console.log("inanchortag");
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;
         const offset = 100;
