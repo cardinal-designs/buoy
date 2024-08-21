@@ -1491,13 +1491,14 @@ fieldset.product-form__input .form__label {
   font-weight: 300 !important;
 }
 
-.Supply_Time {
-  font-size: 14px;
-  color: var(--charcoal);
+.Variant_Blocks .Supply_Time {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  font-size: 12px;
+  line-height: 16px;
   font-family: Rhymes-Light-Italic;
-  margin: 0;
-  text-align: center;
-  line-height: 20px;
+  text-align: left;
+  font-weight: 300;
 }
 
 .Variant_Servings {
