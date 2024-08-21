@@ -370,11 +370,24 @@
                     </div>
                     <div class="dropdown-container-item__body-list">
                       <div class="dropdown-container-item__grid">
-                        <div class="bubble-text">
+                        <div class="dropdown-container-item__image">
                           <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
-                          <p>{{ block.settings.bubble_text }}</p>
+                          <div class="bubble-text">
+                            <p>{{ block.settings.bubble_text }}</p>
+                          </div>
                         </div>
-                        <p>{{ block.settings.list_item1 }}</p>
+                        <div class="dropdown-container-item__content">
+                          <h4>{{ block.settings.list_title1 }}</h4>
+                          <p>{{ block.settings.list_item1 }}</p>
+                          <div class="product__drawer-triggers">
+                            {% if block.settings.enable_supplement_facts %}
+                              <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
+                            {% endif %}
+                            {% if block.settings.enable_clinical_trial %}
+                              <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+                            {% endif %}
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="dropdown-container-item__body-list">
