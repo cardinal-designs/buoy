@@ -3072,6 +3072,8 @@ select[name=selling_plan] {
   border-radius: 15px;
   color: var(--white);
   background: var(--charcoal);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown-container-item__body .bubble-text p {
