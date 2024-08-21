@@ -297,21 +297,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
   }
 
-  // function closeClinical() {
-  //   let clinicalDrawer = document.getElementById("clinicalSideDrawer");
-  //   console.log("clinicalDrawer", clinicalDrawer)
-  //   if(clinicalDrawer) {
-  //     clinicalDrawer.style.right = "-100%";
-  //     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-  //     document.querySelector('body').classList.remove('lock-scroll');
-  //     document.querySelector('header-container').style.zIndex = "3";
-
-  //     if(document.querySelector('.clinical-trial-drawer .drawer__header')) {
-  //       document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
-  //     }
-  //   }
-  // }
-
   // Open Supplement Drawer
   function openNav(e) {
     event.stopPropagation();
