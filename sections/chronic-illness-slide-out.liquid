@@ -173,7 +173,7 @@
       </div>
     </div>
     <div class="chronic__form--aftersubmission">
-      <div class="header__form--aftersubmission">
+      <div class="content__form--aftersubmission">
         {% if section.settings.success_title != blank %}
           <h2>
             {{ section.settings.success_title }}
@@ -189,6 +189,34 @@
             <a href="{{ section.settings.success_btn_url }}" class="button button--green">{{ section.settings.success_btn }}</a>
           </div>
         {% endif %}
+
+        <div class="image-content__link-copy">
+          <p class="image-content__link-copy-title body-large">
+            {{ section.settings.link_title }}
+            <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1889 12.1912C19.3472 14.6999 17.8583 18.4909 13.8802 23.2178L13.7977 21.0013C13.7724 20.3159 13.0406 19.9911 12.1634 20.2763C11.2864 20.5614 10.5958 21.3478 10.6216 22.0339L10.7928 26.6355C10.7983 26.7925 10.8417 26.9315 10.9162 27.0488C11.1522 27.4208 11.7008 27.5682 12.3441 27.386L18.446 25.6552C19.3235 25.4071 20.0509 24.6377 20.0715 23.9384C20.092 23.239 19.3972 22.8735 18.5201 23.1224L16.6949 23.6398C22.2256 16.8669 22.2684 12.7925 21.2154 10.5117C19.469 6.7301 13.5321 5.3051 5.33483 6.70238C4.46928 6.85 3.65065 7.55927 3.50648 8.28661C3.36265 9.01473 3.94716 9.48451 4.81328 9.33754C8.21413 8.75776 11.2536 8.7162 13.6027 9.21666C15.9338 9.71341 17.5199 10.7426 18.1889 12.1912Z" fill="#1F2322"/></svg>
+          </p>
+          <div class="image-content__link-copy-container">
+            <p class="body-sm">
+              {{ section.settings.link }}
+              <span class="image-content__link-copied body-xs">Link copied</span>
+            </p>
+            <button class="image-content__link-copy-button">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 13.056C10.4295 13.6301 10.9774 14.1052 11.6066 14.4489C12.2357 14.7927 12.9315 14.9971 13.6467 15.0483C14.3618 15.0995 15.0796 14.9964 15.7513 14.7458C16.4231 14.4952 17.0331 14.1031 17.54 13.596L20.54 10.596C21.4508 9.65299 21.9548 8.38997 21.9434 7.07899C21.932 5.76801 21.4061 4.51394 20.4791 3.5869C19.5521 2.65986 18.298 2.13402 16.987 2.12263C15.676 2.11123 14.413 2.61521 13.47 3.526L11.75 5.236" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.0002 11.0552C13.5707 10.4811 13.0228 10.006 12.3936 9.66228C11.7645 9.31852 11.0687 9.1141 10.3535 9.06288C9.63841 9.01167 8.92061 9.11485 8.24885 9.36544C7.5771 9.61602 6.96709 10.0081 6.4602 10.5152L3.4602 13.5152C2.54941 14.4582 2.04544 15.7212 2.05683 17.0322C2.06822 18.3432 2.59407 19.5973 3.52111 20.5243C4.44815 21.4514 5.70221 21.9772 7.01319 21.9886C8.32418 22 9.58719 21.496 10.5302 20.5852L12.2402 18.8752" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="image-content__link-copy-disclaimer body-sm">{{ section.settings.disclaimer }}</p>
+
+          <script>
+            $('.image-content__link-copy-button').click(() => {
+              navigator.clipboard.writeText('{{ section.settings.link }}');
+              $('.image-content__link-copied').addClass('visible');
+              setTimeout(() => {
+                $('.image-content__link-copied').removeClass('visible');
+              }, 2000);
+            });
+          </script>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -365,6 +393,25 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
         "type": "inline_richtext",
         "id": "text",
         "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Link Copy"
+      },
+      {
+        "type": "text",
+        "id": "link_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "disclaimer",
+        "label": "Disclaimer"
       },
       {
         "type": "header",
