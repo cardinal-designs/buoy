@@ -305,29 +305,19 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const parentEl = e.target.closest('.dropdown-container-item');
       
       // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-      
       let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
 
-      console.log("dataTitle", dataTitle)
-
-
       let dataTitleElement = e.target.closest('[data-title]');
-      console.log("dataTitleElement", dataTitleElement)
       if(dataTitleElement){
         let dataTitleClosest = dataTitleElement.dataset.title;
-        console.log("dataTitleClosest", dataTitleClosest)
         if(dataTitleClosest){
           dataTitle = dataTitleClosest;
         }
       }
-
-      console.log("dataTitle--", dataTitle)
       
       if (!dataTitle) return;
       supplementDrawers.forEach((drawer) => {
-        console.log("drawer", drawer)
         const drawerName = drawer.dataset.productName;
-        console.log("drawerName", drawerName)
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         }
