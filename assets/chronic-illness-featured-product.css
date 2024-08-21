@@ -294,6 +294,12 @@
   justify-content: center;
 }
 
+.Custom_Featured_Product .product--service span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .Custom_Featured_Product .rtx_one_time_price {
   display: none;
 }
