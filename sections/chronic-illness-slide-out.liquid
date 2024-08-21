@@ -220,10 +220,9 @@
         </div>
 
         <div class="form__product--grid">
-          {% assign product = section.settings.product_grid %}
-          {% if product != blank %}
+          {% if section.blocks != blank %}
             <div class="product-grid__grid">
-              {% for block in product %}
+              {% for block in section.blocks %}
                 <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
                   {% render 'product-card-with-form', content: block.settings %}
                 </div>
@@ -458,11 +457,6 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
         "label": "Product Section Title"
       },
       {
-        "type": "product",
-        "id": "product_grid",
-        "label": "Product List"
-      },
-      {
         "type": "text",
         "id": "grid_btn",
         "label": "Grid Button Label"
@@ -471,6 +465,53 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
         "type": "url",
         "id": "grid_btn_url",
         "label": "Grid Button URL"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "heading",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Primary media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          },
+          {
+            "type": "header",
+            "content": "Hover media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_hover",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video_hover",
+            "label": "Video"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_tags",
+            "label": "Show tags?",
+            "default": false
+          },
+        ]
       }
     ]
   }
