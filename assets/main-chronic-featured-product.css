@@ -1599,10 +1599,6 @@ fieldset.product-form__input .form__label {
     max-width: calc(50% - 5px);
   }
 
-  .Variant_Blocks input[type=radio] + label {
-    padding: 14px 14px 14px 39px;
-  }
-
   .product-form__input .Variant_Blocks input[type=radio]+label:after {
     left: 13px;
   }
