@@ -80,7 +80,7 @@
       </variant-radios>
     {% endunless %}
 
-    {% comment %}
+    
       {% if p.selling_plan_groups.size > 0 %}
         <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
           <fieldset class="js product-form__input">
@@ -135,7 +135,7 @@
           </fieldset>
         </div>
       {% endif %}
-    {% endcomment %}
+    
 
     {% if p.selling_plan_groups[0].selling_plans[0].id %}
       <input type="hidden" name="selling_plan" value="{{ p.selling_plan_groups[0].selling_plans[0].id }}">
