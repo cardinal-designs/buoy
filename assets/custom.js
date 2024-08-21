@@ -458,15 +458,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       }
     });
   }else{
-    let clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
-    console.log("clinicalSideDrawer==", clinicalSideDrawer)
-    let isClickInsideClinicalDrawerNew = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-    console.log("isClickInsideClinicalDrawer", isClickInsideClinicalDrawer)
-    let isDrawerClinicalVisibleNew = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
-    console.log("isDrawerClinicalVisible", isDrawerClinicalVisible)
-    if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
-      closeClinical();
-    }
+    document.addEventListener('click', function(event) {
+      const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
+      const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
+      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
+        closeClinical();
+      }
+    });
   }
 
 setTimeout(function(){
