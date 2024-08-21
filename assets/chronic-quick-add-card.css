@@ -426,12 +426,14 @@
   grid-template-columns: 1fr auto;
   row-gap: 6px;
   column-gap: 3px;
-  color: var(--charcoal);
-  font-size: 14px;
+  color: var(--charcoal) !important;
+  font-size: 14px !important;
   line-height: 21px;
   font-family: inter, sans-serif;
   padding: 0 0 14px;
-  border: none;
+  border: none !important;
+  border-bottom: 1px solid #E9E9E9 !important;
+  border-radius: 0;
 }
 
 .quick-add__form input[type=radio] {
