@@ -50,14 +50,17 @@
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span class="Serving_Price">
-                      <span class="quick-add__price-recurring js-subscription-price">
-                        {{ variant.selling_plan_allocation.price | money }}
-                      </span>
-                      <s class="rtx_compare_price js-sub-compare-price">{{ variant.compare_at_price | default: variant.price | money }}</s>
-                      <span class="js-rtx_one_time_price">
-                        {{ variant.price | money }}
-                      </span>
-                      <s class="rtx_compare_price js-main-compare-price">{{ variant.compare_at_price | money }}</s>
+                      {% if variant.selling_plan_allocations.size > 0 %}
+                        <span class="quick-add__price-recurring js-subscription-price">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                        <s class="rtx_compare_price js-sub-compare-price">{{ variant.price | money }}</s>
+                      {% else %}
+                        {% if variant.compare_at_price > variant.price %}
+                          <span class="quick-add__price-recurring js-subscription-price">{{ variant.price | money }}</span>&nbsp;
+                          <s class="rtx_compare_price js-main-compare-price">{{ variant.compare_at_price | money }}</s>
+                        {% else %}
+                          <span class="quick-add__price-recurring js-subscription-price">{{ variant.price | money }}</span>
+                        {% endif %}
+                      {% endif %}
                     </span>    
                   {%- endif -%}
 
