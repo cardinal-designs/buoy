@@ -2667,9 +2667,8 @@ select[name=selling_plan] {
 @media screen and (max-width: 991px) {
 
   .product {
-    padding-top: 10px!important;
-    display: flex!important;
-    flex-direction: column-reverse !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .template-product .product__info-wrapper {
