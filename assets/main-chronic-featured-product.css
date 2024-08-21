@@ -452,14 +452,14 @@ fieldset.product-form__input .form__label {
   cursor: pointer;
 }
 
-.product-form__input input[type='radio'] + label:hover {
+/* .product-form__input input[type='radio'] + label:hover {
   border: 0.1rem solid rgb(var(--color-foreground));
 }
 
 .product-form__input input[type='radio']:checked + label {
   background-color: rgb(var(--color-foreground));
   color: rgb(var(--color-background));
-}
+} */
 
 .product-form__input input[type='radio']:disabled + label {
   border-color: rgba(var(--color-foreground), 0.1);
