@@ -3094,5 +3094,10 @@ select[name=selling_plan] {
   .dropdown-container-item__body-list {
     margin-bottom: 16px;
   }
+
+  .dropdown-block-title .dropdown-container-item__body-list h4 {
+    font-size: 14px;
+    line-height: 21px;
+  }
   
 }
