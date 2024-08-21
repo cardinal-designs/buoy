@@ -442,6 +442,11 @@ label.rtx_option_label {
   .Custom_Featured_Product__title em {
     display: block;
   }
+
+  .Custom_Featured_Product__props {
+    gap: 12px;
+    flex-direction: column;
+  }
   
 }
 
