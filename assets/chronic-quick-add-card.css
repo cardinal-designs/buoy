@@ -637,6 +637,14 @@ quick-add-card[data-open="true"] .quick-add__overlay {
   z-index: 1;
 }
 
+@media screen and (max-width: 991px) {
+
+  .quick-add__okendo-custom {
+    left: 0;
+  }
+  
+}
+
 @media screen and (max-width: 768px) {
 
   .quick-add__overlay {
