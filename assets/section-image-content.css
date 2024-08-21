@@ -214,4 +214,13 @@
   .image-content__image {
     padding-bottom: 100%;
   }
+  
+}
+
+@media only screen and (max-width: 374px) {
+
+  .image-content__link-copy-container button {
+    padding: 12px 10px;
+  }
+  
 }
