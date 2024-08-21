@@ -417,6 +417,13 @@
   text-align: left;
 }
 
+.quick-add__price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #797B7A;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
