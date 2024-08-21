@@ -1508,7 +1508,7 @@ fieldset.product-form__input .form__label {
   background-color: transparent;
   border-radius: 10px;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   letter-spacing: 0;
   line-height: 1;
 }
