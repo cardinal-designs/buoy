@@ -641,7 +641,6 @@
     };
     const sellingPlanUpdate = () => {
       sellingPlanQueryUpdate();
-      console.log(sellingPlanUrlGenerate());
     };
     const sellingPlanUpdateVariant = () => {
       const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
