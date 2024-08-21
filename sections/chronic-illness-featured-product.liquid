@@ -451,9 +451,6 @@
                             {% if block.settings.enable_supplement_facts %}
                               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
                             {% endif %}
-                            {% if block.settings.enable_clinical_trial %}
-                              <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
-                            {% endif %}
                           </div>
                         </div>
                       </div>
@@ -938,6 +935,12 @@
           "type": "checkbox",
           "id": "enable_supplement_facts",
           "label": "Show supplement facts?",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_clinical_trial",
+          "label": "Show clinical trial?",
           "default": false
         },
         {
