@@ -54,7 +54,18 @@
     
     <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
-        <span class="discount_badge">{{ product.compare_at_price_max | minus:product.price | times:100 | divided_by:product.compare_at_price_max }}% off</span>
+        {% assign currentVariant = product.first_available_variant %}
+        {% capture discount %}
+        {% if currentVariant.selling_plan_allocations.size > 0 %}
+          {{ currentVariant.selling_plan_allocations[0].price | minus:currentVariant.price | times:100 | divided_by:currentVariant.selling_plan_allocations[0].price }}
+        {% else %}
+          {% if currentVariant.compare_at_price > currentVariant.price %}
+            {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
+          {% endif %}
+        {% endif %}
+        {% endcapture %}
+        
+        <span class="discount_badge">{{ discount }}% off</span>
         <div class="Featured_product__media-list">
           {%- for media in product.media -%}
             <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
