@@ -241,7 +241,7 @@
                             {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
                     {% endcomment %}
-                      <div style="display: flex;">
+                      
                         {%- if currentVariant.available -%}
                          Subscribe —&nbsp; 
                         {% if product.selected_or_first_available_selling_plan_allocation != blank %}
@@ -259,7 +259,7 @@
                         {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                         {%- endif -%}
-                    </div>
+                    
                       </button>
                       {%- if block.settings.show_dynamic_checkout -%}
                         {{ form | payment_button }}
