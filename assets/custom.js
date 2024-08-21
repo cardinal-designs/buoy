@@ -351,6 +351,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       }
       else{
+        let dataTitleElement = e.target.closest('[data-title]');
+        console.log("dataTitleElement", dataTitleElement)
         console.log("supplementDrawer", supplementDrawer)
         showDrawer(supplementDrawer);
       }
