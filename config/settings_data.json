@@ -289,6 +289,40 @@
       },
       "chronic-illness-slide-out": {
         "type": "chronic-illness-slide-out",
+        "blocks": {
+          "product_AxgWVN": {
+            "type": "product",
+            "settings": {
+              "heading": "hydration-drops",
+              "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+              "show_tags": true
+            }
+          },
+          "product_7ELDi7": {
+            "type": "product",
+            "settings": {
+              "heading": "hydration-drops",
+              "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+              "show_tags": true
+            }
+          },
+          "product_FFDKMm": {
+            "type": "product",
+            "settings": {
+              "heading": "hydration-drops",
+              "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+              "show_tags": true
+            }
+          }
+        },
+        "block_order": [
+          "product_AxgWVN",
+          "product_7ELDi7",
+          "product_FFDKMm"
+        ],
         "settings": {
           "subtitle": "Join the Program",
           "title": "Get 35% Off Buoy <em>For Life <\/em>",
@@ -297,11 +331,11 @@
           "link": "https:\/\/justaddbuoy.com\/35%Off",
           "success_title": "You’re All Set!",
           "success_content": "This discount is exclusive to our Chronic Illness Program customers. Anytime you come back to this page, your discount will be waiting.",
-          "success_btn": "",
-          "success_btn_url": "",
-          "product_heading": "",
-          "grid_btn": "",
-          "grid_btn_url": ""
+          "success_btn": "Start Shopping",
+          "success_btn_url": "shopify:\/\/pages\/chronic-illness-shop",
+          "product_heading": "Shop Your 35% Off Discount",
+          "grid_btn": "Shop All Chronic Illness Products",
+          "grid_btn_url": "shopify:\/\/pages\/chronic-illness-shop"
         }
       },
       "black-friday-announcement-bar": {
