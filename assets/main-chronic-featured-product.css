@@ -1408,7 +1408,11 @@ fieldset.product-form__input .form__label {
 }
 
 .product__info-wrapper .product-form__input {
-  border: 0;
+  padding: 16px;
+  display: block;
+  border: 1px solid #797B7A;
+  border-radius: 10px;
+  margin-top: 32px;
 }
 
 .Variant_Blocks {
