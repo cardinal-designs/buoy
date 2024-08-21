@@ -195,7 +195,7 @@
   
 }
 
-.quick-add__price-recurring {
+.quick-add__form-wrapper .quick-add__price-recurring {
   color: var(--green-2);
   letter-spacing: normal;
   font-family: inter,sans-serif;
@@ -210,7 +210,6 @@
   text-decoration: line-through;
 }
 
-
 .quick-add__display {
   position: absolute;
   left: 0;
@@ -219,7 +218,6 @@
   height: 100%;
   max-height: calc(100% - 40px);
   width: 100%;
-
   transform: translateY(101%);
   transition: transform .4s ease;
 }
