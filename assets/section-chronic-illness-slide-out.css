@@ -273,12 +273,13 @@
   width: auto;
 }
 
-.chronic-illness-slide-out__content .custom__msg--field .field__input:focus {
-  background-image: url('https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Frame_1000006527_1.svg?v=1724258646');
-}
-
 .chronic-illness-slide-out__content .custom__msg--field .field__input:not(:placeholder-shown) {
   background-image: url('https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Frame_1000006527.svg?v=1724258646');
+}
+
+.chronic-illness-slide-out__content .custom__msg--field .field__input:focus,
+.chronic-illness-slide-out__content .custom__msg--field .field__input:target {
+  background-image: url('https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Frame_1000006527_1.svg?v=1724258646');
 }
 
 .contact__button,
