@@ -379,6 +379,10 @@
   letter-spacing: 0;
 }
 
+.product-grid__grid {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
