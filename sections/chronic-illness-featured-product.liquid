@@ -57,7 +57,7 @@
         {% assign currentVariant = product.first_available_variant %}
         {% capture discount %}
         {% if currentVariant.selling_plan_allocations.size > 0 %}
-          {{ currentVariant.selling_plan_allocations[0].price | minus:currentVariant.price | times:100 | divided_by:currentVariant.selling_plan_allocations[0].price }}
+          {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
         {% else %}
           {% if currentVariant.compare_at_price > currentVariant.price %}
             {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
