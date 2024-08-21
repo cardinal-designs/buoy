@@ -400,9 +400,11 @@
                       <div class="dropdown-container-item__grid">
                         <div class="dropdown-container-item__image">
                           <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
-                          <div class="bubble-text">
-                            <p>{{ block.settings.bubble_text }}</p>
-                          </div>
+                          {% if block.settings.bubble_text != blank %}
+                            <div class="bubble-text">
+                              <p>{{ block.settings.bubble_text }}</p>
+                            </div>
+                          {% endif %}
                         </div>
                         <div class="dropdown-container-item__content">
                           <h4>{{ block.settings.list_title2 }}</h4>
@@ -422,9 +424,11 @@
                       <div class="dropdown-container-item__grid">
                         <div class="dropdown-container-item__image">
                           <img src="{{ block.settings.icon3 | img_url: 'master' }}"/>
-                          <div class="bubble-text">
-                            <p>{{ block.settings.bubble_text }}</p>
-                          </div>
+                          {% if block.settings.bubble_text != blank %}
+                            <div class="bubble-text">
+                              <p>{{ block.settings.bubble_text }}</p>
+                            </div>
+                          {% endif %}
                         </div>
                         <div class="dropdown-container-item__content">
                           <h4>{{ block.settings.list_title3 }}</h4>
