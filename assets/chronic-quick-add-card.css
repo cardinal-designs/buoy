@@ -643,6 +643,18 @@ quick-add-card[data-open="true"] .quick-add__overlay {
   z-index: 1;
 }
 
+.quick-add__discount-badge {
+  background: #398200;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #fff;
+  padding: 3px 8px 4px;
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 
   .quick-add__okendo-custom {
