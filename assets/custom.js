@@ -257,13 +257,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
       let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
 
-      // let dataTitleElement = e.target.closest('[data-title]');
-      // if(dataTitleElement){
-      //   let dataTitleClosest = dataTitleElement.dataset.title;
-      //   if(dataTitleClosest){
-      //     dataTitle = dataTitleClosest;
-      //   }
-      // }
+      let dataTitleElement = e.target.closest('[data-title]');
+      if(dataTitleElement){
+        let dataTitleClosest = dataTitleElement.dataset.title;
+        if(dataTitleClosest){
+          dataTitle = dataTitleClosest;
+        }
+      }
       
       console.log("dataTitle", dataTitle)
       if (!dataTitle) return;
