@@ -210,11 +210,11 @@
   align-items: center;
 }
 
-.chronic-illness-slide-out__radios input[type=radio].field__radio {
+.chronic-illness-slide-out__radios input[type=checkbox].field__radio {
   display: none;
 }
 
-.chronic-illness-slide-out__radios input[type=radio].field__radio + label span {
+.chronic-illness-slide-out__radios input[type=checkbox].field__radio + label span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,15 +231,15 @@
   background-color: #F8F8F8;
 }
 
-.chronic-illness-slide-out__radios input[type=radio].field__radio + label span svg {
+.chronic-illness-slide-out__radios input[type=checkbox].field__radio + label span svg {
   opacity: 0;
 }
 
-.chronic-illness-slide-out__radios input[type=radio].field__radio:checked + label span {
+.chronic-illness-slide-out__radios input[type=checkbox].field__radio:checked + label span {
   background-color: #1F2322;
 }
 
-.chronic-illness-slide-out__radios input[type=radio].field__radio:checked + label span svg {
+.chronic-illness-slide-out__radios input[type=checkbox].field__radio:checked + label span svg {
   opacity: 1;
 }
 
