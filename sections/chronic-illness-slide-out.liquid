@@ -1,4 +1,6 @@
 {{ 'section-chronic-illness-slide-out.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+{{ 'product-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="chronic-illness-slide-out">
   <button class="chronic-illness-slide-out__overlay"></button>
@@ -215,6 +217,19 @@
               }, 2000);
             });
           </script>
+        </div>
+
+        <div class="form__product--grid">
+          {% assign product = section.settings.product_grid %}
+          {% if product != blank %}
+            <div class="product-grid__grid">
+              {% for block in product %}
+                <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
+                  {% render 'product-card-with-form', content: block.settings %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
         
       </div>
