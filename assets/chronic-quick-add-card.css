@@ -434,6 +434,7 @@
   margin: -1px -1px;
   height: 20px;
   position: absolute;
+  left: 0;
 }
 
 .quick-add__form input[type=radio]:checked + label .custom-radio:after {
