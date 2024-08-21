@@ -157,7 +157,9 @@
                           {% if option.selected_value == value %}checked{% endif %}
                         >
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          <span class="Variant_Title">{{ value }}
+                          <span class="Variant_Title">
+                            <span class="custom-radio"></span>
+                            {{ value }}
                             {%- if my_fields.supply_time != blank -%}
                               <br class="hide-desktop"/> 
                               <span class="Supply_Time">
