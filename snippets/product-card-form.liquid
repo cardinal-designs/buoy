@@ -79,8 +79,7 @@
               {% if category != blank %}
                 <p class="{{ base }}__category">
                   {% for cate in category %}
-                    {{ cate }}
-                    {% unless forloop.last %} ,{% endunless %}
+                    {{ cate }}{% unless forloop.last %} ,{% endunless %}
                   {% endfor %}
                 </p>
               {% endif %}
