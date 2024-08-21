@@ -374,7 +374,7 @@
 }
 
 .form__product--grid h2 {
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
@@ -387,7 +387,7 @@
 }
 
 .quick-add__button {
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.52px;
@@ -400,6 +400,14 @@
 
 .quick-add__content {
   gap: 6px;
+}
+
+.quick-add__title {
+  font-family: inter,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {
