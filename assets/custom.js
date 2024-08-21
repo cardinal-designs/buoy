@@ -250,6 +250,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     event.stopPropagation();
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
+      coonsole.log("ifff")
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
