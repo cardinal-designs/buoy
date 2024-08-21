@@ -1542,6 +1542,24 @@ fieldset.product-form__input .form__label {
   display: none;
 }
 
+.variant__price--regular {
+  color: var(--green-2);
+  letter-spacing: normal;
+  font-family: inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.variant__compare--price {
+  letter-spacing: normal;
+  font-family: inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #797b7a;
+}
+
 /* .product-form__input .Variant_Blocks input[type=radio]+label:hover {
   border: 1px solid var(--charcoal-light);  
 } */
