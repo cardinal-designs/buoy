@@ -337,7 +337,7 @@
 
 .quick-add__form-title .okeReviews.okeReviews--theme {
   line-height: normal;
-  max-height: 12px;
+  max-height: unset;
 }
 
 .quick-add__form-title .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
