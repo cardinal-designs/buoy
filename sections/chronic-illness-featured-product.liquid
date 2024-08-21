@@ -54,13 +54,7 @@
     
     <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
-        
-        {% for tag in product.tags limit: 1 %}
-          <span {% if tag == 'Pre-Order Promo' %}style="background: var(--green-2);"{% endif %} class="chronic__product-tag">
-            {{ tag }}
-          </span>
-        {% endfor %}  
-        
+        <span class="discount_badge">35% off</span>
         <div class="Featured_product__media-list">
           {%- for media in product.media -%}
             <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
