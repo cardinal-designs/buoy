@@ -2916,6 +2916,10 @@ select[name=selling_plan] {
   .product-form__buttons .button s {
     color: #797B7A;
   }
+
+  .product__info-wrapper .okeReviews .okeReviews-starRating--small {
+    width: 110px;
+  }
   
 }
 
