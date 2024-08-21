@@ -1416,9 +1416,8 @@ fieldset.product-form__input .form__label {
 }
 
 .Variant_Blocks {
-  display: inline-block;
+  display: block;
   position: relative;
-  flex: 0 0 calc(50% - 5px);
 }
 
 .Variant_Blocks .Variant_Title {
