@@ -576,6 +576,9 @@
   font-weight: 400;
   text-align: left;
   color: #1F2322;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 quick-add-card[data-open="true"] .quick-add__display {
