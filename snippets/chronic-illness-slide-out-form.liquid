@@ -49,20 +49,20 @@
 
       {% liquid
         assign product_form_id = "product-form-" | append: product.id
-        assign currentVariant = product.selected_or_first_available_variant 
+        assign currentVariant = card_product.selected_or_first_available_variant 
       
         if product.selling_plan_groups.size > 0
-          assign requiresPlan = product.requires_selling_plan
+          assign requiresPlan = card_product.requires_selling_plan
           assign selectedAllocation = ''
           assign currentAllocations = currentVariant.selling_plan_allocations
         endif
        %}
       
       <product-form data-form-type="product-card" class="product-form {{ base }}__button">
-        {% form 'product', p, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
+        {% form 'product', card_product, id: product_form_id, data-smartrr-form-id: card_product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
       
           {% if product.selling_plan_groups[0].selling_plans[0].id %}
-            <input type="hidden" name="selling_plan" value="{{ product.selling_plan_groups[0].selling_plans[0].id }}">
+            <input type="hidden" name="selling_plan" value="{{ card_product.selling_plan_groups[0].selling_plans[0].id }}">
           {% endif %}
       
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
