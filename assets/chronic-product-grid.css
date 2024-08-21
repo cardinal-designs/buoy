@@ -143,6 +143,10 @@
     margin-top: 24px;
   }
 
+  .product-grid__props {
+    flex-direction: column;
+  }
+
 }
 
 
