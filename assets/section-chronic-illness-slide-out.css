@@ -524,5 +524,9 @@
   .chronic__form--aftersubmission .product-grid__grid {
     overflow: auto;
   }
+
+  .chronic__form--aftersubmission .image-content__link-copy-container p {
+    font-size: 12px;
+  }
   
 }
