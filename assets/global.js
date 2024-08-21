@@ -707,6 +707,7 @@ class VariantSelects extends HTMLElement {
         }
       }
       let variantScript = document.querySelector('#VariantJSON');
+      console.log("variantScript", variantScript)
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
