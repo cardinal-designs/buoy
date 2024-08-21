@@ -424,6 +424,21 @@
   color: #797B7A;
 }
 
+.grid__btn--wrap {
+  margin-top: 52px;
+  width: 100%;
+}
+
+.grid__btn--wrap .button {
+  width: 100%;
+  font-family: inter,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  padding: 13px 20px;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
