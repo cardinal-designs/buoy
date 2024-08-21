@@ -166,6 +166,10 @@
   margin: 0;
 }
 
+.featured__product-tags {
+  line-height: 0;
+}
+
 .featured__product-tag {
   font-family: Inter;
   font-size: 12px;
