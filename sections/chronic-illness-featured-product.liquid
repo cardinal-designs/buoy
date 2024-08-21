@@ -19,7 +19,7 @@
 {%- assign product = section.settings.product -%}
 {% assign currentVariant = product.selected_or_first_available_variant %}
 
-<section id="Custom_Featured_Section" class="{% if section.settings.secondary_background %}background-secondary{% endif %}">
+<section id="Custom_Featured_Section">
 <div class="Featured_Product_Container
    {% if section.settings.add_top_border %} top-border{% endif %}
    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
@@ -701,12 +701,6 @@
       "type": "product",
       "id": "product",
       "label": "t:sections.featured-product.settings.product.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "secondary_background",
-      "default": false,
-      "label": "t:sections.featured-product.settings.secondary_background.label"
     },
     {
       "type": "header",
