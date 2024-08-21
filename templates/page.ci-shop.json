@@ -56,6 +56,34 @@
     },
     "chronic_illness_featured_product_Hz7mTh": {
       "type": "chronic-illness-featured-product",
+      "blocks": {
+        "dropdown_7AM34h": {
+          "type": "dropdown",
+          "settings": {
+            "title": "What’s Included",
+            "subtitle": "",
+            "bubble_text": "",
+            "list_item1": "Hydration Drops",
+            "list_item2": "",
+            "list_item3": ""
+          }
+        },
+        "dropdown_VAgFNq": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "General overview of kit benefits. Get all four of our functional, liquid electrolytes + minerals for ocean-powered cellular health. Add to any drink. No sugar, sweeteners, flavors.",
+            "bubble_text": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": ""
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_7AM34h",
+        "dropdown_VAgFNq"
+      ],
       "settings": {
         "product": "hydration-drops",
         "secondary_background": true,
