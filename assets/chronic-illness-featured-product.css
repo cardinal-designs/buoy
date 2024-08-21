@@ -446,6 +446,11 @@ label.rtx_option_label {
     gap: 12px;
     flex-direction: column;
   }
+
+  .Custom_Featured_Product .product--service {
+    flex-wrap: wrap;
+    column-count: 2;
+  }
   
 }
 
