@@ -210,16 +210,17 @@
     $('.chronic-illness-slide-out').removeClass('active');
   }
 
-  var $tlt = $(".custom__msg--field");
+var $tlt = $(".custom__msg--field");
 
-  $(".chronic-illness-slide-out__radios input[type=radio]").on('change', function() {
+$(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
     var radVal = $(this).val();
-    if (radVal == 'Other') {
-      $tlt.css("display", "block");
-    } else {
-      $tlt.css("display", "none");
+    if (radVal === 'Other' && $(this).is(':checked')) {
+        $tlt.css("display", "block");
+    } else if (radVal === 'Other' && !$(this).is(':checked')) {
+        $tlt.css("display", "none");
     }
-  });
+});
+
 document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
     const firstName = document.getElementById('ContactFormFirstName').value;
