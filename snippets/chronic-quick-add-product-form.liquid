@@ -80,60 +80,62 @@
       </variant-radios>
     {% endunless %}
 
-    {% if p.selling_plan_groups.size > 0 %}
-      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
-        <fieldset class="js product-form__input">
-          {% unless show_onetime_purchase == false %}
-          <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
-            <label for="{{ p.id }}-purchaseTypeOneTime">
-              <span class="Variant_Title">
-              <span class="custom-radio"> </span>
-              One-Time Purchase
-            </span>
-            <span 
-              class="rtx_one_time_price" 
-              data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
-              data-onetimeprice="{{ my_fields.serving_cost }}"
-            >
-              <span class="js-rtx_one_time_price">
-                {{ p.selected_or_first_available_variant.price | money }}
+    {% comment %}
+      {% if p.selling_plan_groups.size > 0 %}
+        <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
+          <fieldset class="js product-form__input">
+            {% unless show_onetime_purchase == false %}
+            <span class="Variant_Blocks">
+              <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+              <label for="{{ p.id }}-purchaseTypeOneTime">
+                <span class="Variant_Title">
+                <span class="custom-radio"> </span>
+                One-Time Purchase
               </span>
-              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
-            </span> 
-            </label>
-          </span>
-          {% endunless %}
-          <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank %} checked {% endif %} >
-            <label for="{{ p.id }}-purchaseTypeSubscription">
-              <span class="Variant_Title">
-              <span class="custom-radio"> </span>
-              Subscribe
-              <span class="quick-add__tag">Save 23%</span>
-              
-            </span>
               <span 
-                class="" 
+                class="rtx_one_time_price" 
+                data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
+                data-onetimeprice="{{ my_fields.serving_cost }}"
               >
-                <span class="quick-add__price-recurring js-subscription-price">
-                  {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
+                <span class="js-rtx_one_time_price">
+                  {{ p.selected_or_first_available_variant.price | money }}
                 </span>
-                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+              </span> 
+              </label>
+            </span>
+            {% endunless %}
+            <span class="Variant_Blocks">
+              <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank %} checked {% endif %} >
+              <label for="{{ p.id }}-purchaseTypeSubscription">
+                <span class="Variant_Title">
+                <span class="custom-radio"> </span>
+                Subscribe
+                <span class="quick-add__tag">Save 23%</span>
+                
               </span>
-
-              {%- if my_fields.supply_time != blank -%}
-              <span 
-                class="Subscription_Subtext"
-              >
-                {{ p.metafields.custom.subscription_widget_subtext.value | replace: " • ", ", " | replace: "30 Day Money Back", "30-Day" }} 
-              </span>
-            {%- endif -%}
-            </label>
-          </span>
-        </fieldset>
-      </div>
-    {% endif %}
+                <span 
+                  class="" 
+                >
+                  <span class="quick-add__price-recurring js-subscription-price">
+                    {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
+                  </span>
+                  <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                </span>
+  
+                {%- if my_fields.supply_time != blank -%}
+                <span 
+                  class="Subscription_Subtext"
+                >
+                  {{ p.metafields.custom.subscription_widget_subtext.value | replace: " • ", ", " | replace: "30 Day Money Back", "30-Day" }} 
+                </span>
+              {%- endif -%}
+              </label>
+            </span>
+          </fieldset>
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     {% if p.selling_plan_groups[0].selling_plans[0].id %}
       <input type="hidden" name="selling_plan" value="{{ p.selling_plan_groups[0].selling_plans[0].id }}">
