@@ -121,7 +121,7 @@
 .product-reviews .okeReviews .okeReviews-review-reviewer-product-details-heading, .product-reviews .okeReviews.okeReviews--theme .okeReviews-sectionedList-heading, .product-reviews .okeReviews.okeReviews--theme .okeReviews-review-attribute-label {
   color: var(--charcoal-60);
   font-size: 14px;
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -182,7 +182,7 @@
 }
 
 .featured__product-tag {
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.52px;
@@ -2862,7 +2862,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__body-list h4 {
   margin: 0;
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.78px;
@@ -2871,7 +2871,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__content p {
   margin: 12px 0;
-  font-family: Inter;
+  font-family: inter,sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
