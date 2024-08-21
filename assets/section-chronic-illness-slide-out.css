@@ -316,6 +316,47 @@
   min-width: auto;
 }
 
+.chronic__form--aftersubmission .image-content__link-copy {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.chronic__form--aftersubmission .image-content__link-copy-title {
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chronic__form--aftersubmission .image-content__link-copy-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #797B7A;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.chronic__form--aftersubmission .image-content__link-copy-container p {
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chronic__form--aftersubmission .image-content__link-copy-container button {
+  padding: 12px 25px;
+  display: block;
+  border-left: 1px solid #797B7A;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
