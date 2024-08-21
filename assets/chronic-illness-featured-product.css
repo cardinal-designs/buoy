@@ -6,6 +6,27 @@
   overflow: hidden;
 }
 
+.product-grid__props {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-grid__prop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-grid__prop-icon {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .js-ingredients-open {
   text-decoration: underline;
   text-underline-offset: 7px;
