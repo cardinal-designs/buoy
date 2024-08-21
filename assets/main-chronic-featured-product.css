@@ -1507,6 +1507,10 @@ fieldset.product-form__input .form__label {
   margin: 0;
   background-color: transparent;
   border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .product-form__input .Variant_Blocks input[type=radio] + label::after {
