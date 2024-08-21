@@ -61,7 +61,7 @@
       <product-form data-form-type="product-card" class="product-form">
         {% form 'product', card_product, id: product_form_id, data-smartrr-form-id: card_product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
       
-          {% if product.selling_plan_groups[0].selling_plans[0].id %}
+          {% if card_product.selling_plan_groups[0].selling_plans[0].id %}
             <input type="hidden" name="selling_plan" value="{{ card_product.selling_plan_groups[0].selling_plans[0].id }}">
             <input type="hidden" name="selling_plan_id" value="{{ card_product.selling_plan_groups[0].selling_plans[0].id }}">
           {% endif %}
