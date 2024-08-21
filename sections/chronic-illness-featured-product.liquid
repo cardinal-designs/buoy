@@ -160,12 +160,6 @@
                           <span class="Variant_Title">
                             <span class="custom-radio"></span>
                             {{ value }}
-                            {%- if my_fields.supply_time != blank -%}
-                              <br class="hide-desktop"/> 
-                              <span class="Supply_Time">
-                              {{ my_fields.supply_time }} / {{ my_fields.servings }}
-                              </span>
-                            {%- endif -%}
                           </span>
                           
                           <span class="Variant_Price">
@@ -181,6 +175,13 @@
                               {% endif %}
                             {% endif %}
                           </span> 
+
+                          {%- if my_fields.supply_time != blank -%}
+                            <br class="hide-desktop"/> 
+                            <span class="Supply_Time">
+                            {{ my_fields.supply_time }} / {{ my_fields.servings }}
+                            </span>
+                          {%- endif -%}
                           
                         </label>
                       </span>
