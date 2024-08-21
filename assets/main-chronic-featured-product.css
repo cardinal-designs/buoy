@@ -2847,6 +2847,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__image {
   width: 60px;
+  position: relative;
 }
 
 .dropdown-container-item__content {
