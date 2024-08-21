@@ -218,6 +218,7 @@ $(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', functi
         $tlt.css("display", "block");
     } else if (radVal === 'Other' && !$(this).is(':checked')) {
         $tlt.css("display", "none");
+      $("#ContactFormCustomMessage").val('');
     }
 });
 
