@@ -690,7 +690,9 @@ class VariantSelects extends HTMLElement {
     }
     let thisData = this;
     let dataUpdate = thisData.dataset.update;
+    console.log("dataUpdate", dataUpdate)
     let currentVariant = thisData.currentVariant;
+    console.log("currentVariant", currentVariant)
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
       let productInfoWrapper = thisData.closest('.product__info-wrapper');
