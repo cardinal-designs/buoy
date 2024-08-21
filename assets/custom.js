@@ -448,19 +448,25 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
-        closeClinical();
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
-      console.log("clinicalSideDrawer==", clinicalSideDrawer)
       const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-      console.log("isClickInsideClinicalDrawer", isClickInsideClinicalDrawer)
       const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
-      console.log("isDrawerClinicalVisible", isDrawerClinicalVisible)
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
       }
     });
+  }else{
+    let clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
+    console.log("clinicalSideDrawer==", clinicalSideDrawer)
+    let isClickInsideClinicalDrawerNew = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+    console.log("isClickInsideClinicalDrawer", isClickInsideClinicalDrawer)
+    let isDrawerClinicalVisibleNew = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+    console.log("isDrawerClinicalVisible", isDrawerClinicalVisible)
+    if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
+      closeClinical();
+    }
   }
 
 setTimeout(function(){
