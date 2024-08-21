@@ -2919,6 +2919,10 @@ select[name=selling_plan] {
   .product__info-wrapper .okeReviews .okeReviews-starRating--small {
     width: 110px;
   }
+
+  .product__media {
+    padding-top: 105.67% !important;
+  }
   
 }
 
