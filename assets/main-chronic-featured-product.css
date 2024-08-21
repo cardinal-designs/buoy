@@ -1420,6 +1420,23 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
+.Variant_Blocks .Variant_Title {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #1f2322;
+  max-width: 100%;
+  margin: 0;
+}
+
 .Variant_Blocks .Variant_Title .custom-radio {
   height: 20px;
   width: 20px;
