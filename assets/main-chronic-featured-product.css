@@ -3129,8 +3129,8 @@ select[name=selling_plan] {
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  left: 2px;
-  bottom: 8px;
+  left: 0;
+  bottom: 0;
 }
 
 .dropdown-container-item__body .bubble-text p {
