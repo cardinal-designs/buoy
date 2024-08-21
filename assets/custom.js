@@ -320,6 +320,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           dataTitle = dataTitleClosest;
         }
       }
+
+      console.log("dataTitle--", dataTitle)
       
       if (!dataTitle) return;
       supplementDrawers.forEach((drawer) => {
