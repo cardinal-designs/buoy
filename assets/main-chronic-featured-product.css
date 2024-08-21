@@ -2878,6 +2878,10 @@ select[name=selling_plan] {
   color: #797B7A;
 }
 
+.dropdown-block-title .dropdown-container-item__content p {
+  margin: 0;
+}
+
 .product__drawer-triggers {
   display: flex;
   gap: 20px;
