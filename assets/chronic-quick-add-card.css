@@ -88,17 +88,6 @@
   font-family: inter, sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  
-  .quick-add__product-tag,
-  .quick-add__discount-badge {
-    font-size: 12px;
-    line-height: 14px;
-    padding: 3px 6px 3px;
-  }
-  
-}
-
 .quick-add__link {
   position: absolute;
   width: 100%;
@@ -741,6 +730,17 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     top: 33%;
   }
 
+}
+
+@media screen and (max-width: 768px) {
+  
+  .quick-add__product-tag,
+  .quick-add__discount-badge {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px 6px 3px;
+  }
+  
 }
 
 .quick-add__container .okeReviews-reviewsSummary-ratingCount {
