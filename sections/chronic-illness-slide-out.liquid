@@ -231,6 +231,7 @@ function updateCheckedValues() {
   if (globalCheckedValues.includes("Other")) {
     var customMessage = $("#ContactFormCustomMessage").val();
     if (customMessage) {
+       globalCheckedValues.push(customMessage);
     }
   }
     if (globalCheckedValues.length === 0) {
@@ -322,8 +323,8 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             return response.text();
         })
         .then(text => {
-          // document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
-          // document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
             if (text) {
                 try {
                     const jsonResponse = JSON.parse(text);
