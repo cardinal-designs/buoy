@@ -685,7 +685,7 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     bottom: env(safe-area-inset-bottom);
     height: 100%;
     max-height: calc(80vh - 40px);
-    width: calc(100vw - 24px);
+    width: calc(100% - 24px);
     opacity: 0;
     z-index: -1;
     transition: transform .4s ease;
