@@ -420,6 +420,11 @@ label.rtx_option_label {
     padding: 0 20px;
   }
 
+  .Custom_Featured_Product .slick-dots li button:before {
+    width: 8px;
+    height: 8px;
+  }
+
   .product.Custom_Featured_Product {
     display: block !important;
   }
