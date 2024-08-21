@@ -75,8 +75,14 @@
                 </div>
               </div>
               <h6 class="">{{ card_product.title }}</h6>
-              {% if content.form_text != blank %}
-                <p class="">{{ content.form_text }}</p>
+              {% assign category = content.metafields.custom.chronic_illness_category.value %}
+              {% if category != blank %}
+                <p class="">
+                  {% for cate in category %}
+                    {{ cate }}
+                    {% unless forloop.last %} ,{% endunless %}
+                  {% endfor %}
+                </p>
               {% endif %}
             </div>
           </div>
