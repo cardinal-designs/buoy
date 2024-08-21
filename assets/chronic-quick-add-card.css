@@ -213,6 +213,10 @@
   color: #797B7A;
 }
 
+.quick-add__price .quick-add__price-recurring {
+  color: var(--green-2);
+}
+
 .quick-add__price-otp {
   color: var(--charcoal-60);
   text-decoration: line-through;
