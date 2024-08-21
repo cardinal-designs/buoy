@@ -157,7 +157,6 @@
                     <input type="test" id="ContactFormCustomMessage" class="field__input" name="contact[Custom Message]" value="" placeholder="Type your answer">
                   </div>
                 </div>
-                <span id="illnessError" style="color:red; display:none;">Please select at least one chronic illness.</span>
               </div>
               <div class="show-more">
                 <a href="javascript:void(0)">Show more</a>
@@ -170,7 +169,7 @@
             </div>
           {%- endif -%}
         </form>
-     <div class="klaviyo-form-VT4VtR"></div>
+      {% comment %}<div class="klaviyo-form-VT4VtR"></div> {% endcomment %}
       </div>
     </div>
     <div class="chronic__form--aftersubmission"></div>
@@ -234,12 +233,6 @@ function updateCheckedValues() {
        globalCheckedValues.push(customMessage);
     }
   }
-    if (globalCheckedValues.length === 0) {
-        document.getElementById('illnessError').style.display = 'block';
-        return; 
-    }else{
-        document.getElementById('illnessError').style.display = 'none';
-    }
 }
 $(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
   var radVal = $(this).val();
@@ -257,12 +250,6 @@ $("#ContactFormCustomMessage").on('input', function() {
 document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
     var checkedValues = globalCheckedValues; 
-    if (checkedValues.length == 0) {
-        document.getElementById('illnessError').style.display = 'block';
-        return;
-    }else{
-        document.getElementById('illnessError').style.display = 'none';
-    }
     const firstName = document.getElementById('ContactFormFirstName').value;
     const lastName = document.getElementById('ContactFormLastName').value;
     const email = document.getElementById('ContactForm-email').value;
