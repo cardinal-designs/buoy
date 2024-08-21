@@ -1424,6 +1424,16 @@ fieldset.product-form__input .form__label {
   text-align: center;
 }
 
+.Variant_Blocks .Variant_Title .custom-radio {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  position: relative;
+  border: 1px solid var(--black);
+  display: block;
+  overflow: hidden;
+}
+
 .Variant_Blocks span {
   display: block;
   letter-spacing: normal;
