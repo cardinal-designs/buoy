@@ -340,7 +340,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       })
     } else {
-      console.log("eeeelllllllll")
+      console.log("eeeelllllllll", e.target)
       // For PDP (not bundle)
       if(location.href.includes("/products/")){
         if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
