@@ -2666,10 +2666,7 @@ select[name=selling_plan] {
 
 @media screen and (max-width: 991px) {
 
-  .product {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  
 
   .template-product .product__info-wrapper {
     padding-right: 0;
@@ -2684,6 +2681,11 @@ select[name=selling_plan] {
 }
 
 @media screen and (max-width: 768px) {
+
+  .product {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   .template-product .product-section .page-width {
     padding: 0 20px;
