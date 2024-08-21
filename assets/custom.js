@@ -169,9 +169,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
-      console.log("item", item)
       item.addEventListener('click', function(e){
-        console.log("e", e)
         openNav(e);
       }); 
     });
@@ -300,7 +298,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     console.log("parentItemContainer", parentItemContainer)
     console.log("parentDropdown", parentDropdown)
     if (parentItemContainer) {
-      console.log("ifff")
+
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
       
@@ -324,7 +322,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
       // For image with dropdowns section
     } else if (parentDropdown) {
-      console.log("elsee ifff")
+
       const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
