@@ -334,6 +334,7 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             } else {
                 console.log('Empty response body');
             }
+           globalCheckedValues = [];
         })
         .catch(err => {
             console.error('Error:', err);
