@@ -1823,6 +1823,7 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
           document.getElementById('illnessError').style.display = 'none'; 
           document.querySelector('.custom__msg--field').style.display = 'none'; 
           globalCheckedValues = [];  
+          console.log("globalCheckedValues",globalCheckedValues);
         }
         
         if (chronicFormAfterSubmission) {
