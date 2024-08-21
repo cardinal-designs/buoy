@@ -398,6 +398,10 @@
   margin-bottom: 20px;
 }
 
+.quick-add__content {
+  gap: 6px;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
