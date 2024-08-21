@@ -19,13 +19,6 @@
 {%- assign product = section.settings.product -%}
 {% assign currentVariant = product.selected_or_first_available_variant %}
 
-{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-{%- if first_3d_model -%}
-  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- endif -%}
-
 <section id="Custom_Featured_Section" class="{% if section.settings.secondary_background %}background-secondary{% endif %}">
 <div class="Featured_Product_Container
    {% if section.settings.add_top_border %} top-border{% endif %}
