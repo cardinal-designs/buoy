@@ -496,6 +496,8 @@ label.rtx_option_label {
 
   .Featured_Product_Container {
     margin-bottom: 22px;
+    display: inline-block;
+    width: 100%;
   }
 
   .Custom_Featured_Product .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
