@@ -28,33 +28,29 @@
   <div class="page-width page-width--wide">
 
 
-    <div class="Custom_Featured_Product__header">
     {% if section.settings.title != blank %}
-        <h2 class="Custom_Featured_Product__title">
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
-  
-      <div class="Custom_Featured_Product__props">
-        {% for i in (i..3) %}
-          {% assign index = i | plus: 1 %}
-          {% assign icon = 'icon' | append: '_' | append: index %}
-          {% assign text = 'icon_image_text' | append: '_' | append: index %}
-          {% if section.settings[icon] != blank or section.settings[text] != blank %}
-            <div class="Custom_Featured_Product__prop">
-              <div class="Custom_Featured_Product__prop-icon">
-                <img src="{{ section.settings[icon] | img_url: '50x' }}" alt="{{ section.settings[text] }}">
+      <div class="Custom_Featured_Product__header">
+          <h2 class="Custom_Featured_Product__title">
+            {{ section.settings.title }}
+          </h2>
+    
+        <div class="Custom_Featured_Product__props">
+          {% for i in (i..3) %}
+            {% assign index = i | plus: 1 %}
+            {% assign icon = 'icon' | append: '_' | append: index %}
+            {% assign text = 'icon_image_text' | append: '_' | append: index %}
+            {% if section.settings[icon] != blank or section.settings[text] != blank %}
+              <div class="Custom_Featured_Product__prop">
+                <div class="Custom_Featured_Product__prop-icon">
+                  <img src="{{ section.settings[icon] | img_url: '50x' }}" alt="{{ section.settings[text] }}">
+                </div>
+                <p class="body-md">{{ section.settings[text] }}</p>
               </div>
-              <p class="body-md">{{ section.settings[text] }}</p>
-            </div>
-          {% endif %}
-        {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-  
-      {% if section.settings.link_label != blank %}
-        <a href="{{ section.settings.link }}" class="product-grid__link body-small">{{ section.settings.link_label }}</a>
-      {% endif %}
-    </div>
+    {% endif %}
     
     <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
