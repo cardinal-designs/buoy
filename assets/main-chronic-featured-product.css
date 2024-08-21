@@ -2912,6 +2912,10 @@ select[name=selling_plan] {
   .Variant_Blocks .Supply_Time {
     margin-top: 6px;
   }
+
+  .product-form__buttons .button s {
+    color: #797B7A;
+  }
   
 }
 
