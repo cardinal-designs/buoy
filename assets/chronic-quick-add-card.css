@@ -378,10 +378,11 @@
 
 .quick-add__form-title p {
   margin: 0;
-  font-weight: 400;
-  font-size: 12px;
   letter-spacing: 0;
-  line-height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  color: #1F2322;
 }
 
 .quick-add__form variant-radios {
