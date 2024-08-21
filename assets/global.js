@@ -1816,6 +1816,10 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
         const chronicFormAfterSubmission = document.querySelector(".chronic__form--aftersubmission");
         if (chronicIllnessInner) {
           chronicIllnessInner.style.display = "block";
+          const chronicIllnessForm = document.getElementById('chronicIllnessForm');
+          if (chronicIllnessForm) {
+            chronicIllnessForm.reset();
+          }
         }
         
         if (chronicFormAfterSubmission) {
