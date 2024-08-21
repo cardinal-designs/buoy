@@ -78,12 +78,14 @@
 
 .quick-add__product-tag { 
   background: var(--charcoal);
-  padding: 3px 8px;
-  border-radius: 4px;
-  color: #ffffff;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #fff;
+  padding: 3px 8px 4px;
+  border-radius: 4px;
   font-family: inter, sans-serif;
-  line-height: normal;
 }
 
 @media screen and (max-width: 768px) {
