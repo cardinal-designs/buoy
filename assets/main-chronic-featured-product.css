@@ -2845,6 +2845,10 @@ select[name=selling_plan] {
   align-items: flex-start;
 }
 
+.dropdown-block-title .dropdown-container-item__image {
+  width: auto;
+}
+
 .dropdown-container-item__image {
   width: 60px;
   position: relative;
