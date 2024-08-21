@@ -179,5 +179,9 @@
     flex-direction: column;
     gap: 0;
   }
+
+  .quick-add__sub--text {
+    min-height: auto;
+  }
   
 }
