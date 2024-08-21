@@ -1727,7 +1727,7 @@ fieldset.product-form__input .form__label {
 .product-form .rtx_option_selector input[type=radio] {
   height: 28px;
   width: 28px;
-  margin-top: 5px!important;
+  margin-top: 5px !important;
   position: relative;
   border: 1px solid var(--black);
 }
@@ -1776,7 +1776,7 @@ fieldset.product-form__input .form__label {
 .One_Time_Info .one_sub_text {
   color: var(--charcoal);
   margin: 0 0 6px;
-  font-size: 12px!important;
+  font-size: 12px !important;
   line-height: normal;
   font-family: inter,sans-serif;
   font-weight: 300;
@@ -2458,7 +2458,7 @@ span#timer strong {
 .rtx-subscription-box input,
 #subscriptionMessage {
   width: 100%;
-  padding: 16px!important;
+  padding: 16px !important;
   border: 1px solid var(--black);
   font-family: inter,sans-serif;
   font-style: normal;
