@@ -174,5 +174,10 @@
   .product-grid__grid-item {
     width: calc(50% - 8.5px);
   }
+
+  .quick-add__price {
+    flex-direction: column;
+    gap: 0;
+  }
   
 }
