@@ -3078,3 +3078,12 @@ select[name=selling_plan] {
 .dropdown-container-item__body .product__drawer-triggers {
   margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+
+  .dropdown-container-item__body-list h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+}
