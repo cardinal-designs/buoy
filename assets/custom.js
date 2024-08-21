@@ -264,8 +264,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       console.log("else")
       // For single drawer on PDP
 
+      let clinicalDrawer = document.getElementById("clinicalSideDrawer");
       if(location.href.includes("/products/")){
-        const clinicalDrawer = document.getElementById("clinicalSideDrawer");
         showDrawer(clinicalDrawer);
       }
       else{
