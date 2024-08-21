@@ -351,6 +351,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       }
       else{
+        console.log("supplementDrawer", supplementDrawer)
         showDrawer(supplementDrawer);
       }
     }
