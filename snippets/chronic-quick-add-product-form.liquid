@@ -44,9 +44,11 @@
                    <span class="Variant_Title">
                     <span class="custom-radio"> </span>
                     {{ value }}
+                     {% comment %}
                     {%- if my_fields.quick_add_value_tag != blank -%}
                       <span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span>
                     {%- endif -%}
+                     {% endcomment %}
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span class="Serving_Price">
