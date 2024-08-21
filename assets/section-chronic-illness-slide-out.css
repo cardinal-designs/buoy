@@ -367,6 +367,18 @@
   min-width: 121px;
 }
 
+.form__product--grid {
+  margin-top: 20px;
+}
+
+.form__product--grid h2 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0;
+}
+
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
