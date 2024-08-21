@@ -265,23 +265,24 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For single drawer on PDP
 
       let clinicalDrawer = document.getElementById("clinicalSideDrawer");
-      if(location.href.includes("/products/")){
-        showDrawer(clinicalDrawer);
-      }
-      else{
-        console.log("clinicalDrawer", clinicalDrawer)
-        let dataTitleElement = e.target.closest('[data-title]');
-        if(dataTitleElement){
-          let dataTitle = dataTitleElement.dataset.title;
-          if(dataTitle){
-            showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`));
-          }else{
-            showDrawer(clinicalDrawer);
-          }
-        }else{
-          showDrawer(clinicalDrawer);
-        }
-      }
+      showDrawer(clinicalDrawer);
+      // if(location.href.includes("/products/")){
+      //   showDrawer(clinicalDrawer);
+      // }
+      // else{
+      //   console.log("clinicalDrawer", clinicalDrawer)
+      //   let dataTitleElement = e.target.closest('[data-title]');
+      //   if(dataTitleElement){
+      //     let dataTitle = dataTitleElement.dataset.title;
+      //     if(dataTitle){
+      //       showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`));
+      //     }else{
+      //       showDrawer(clinicalDrawer);
+      //     }
+      //   }else{
+      //     showDrawer(clinicalDrawer);
+      //   }
+      // }
       
       
     }
