@@ -592,6 +592,12 @@
   justify-content: center;
 }
 
+.quick-add__form-subtext span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 quick-add-card[data-open="true"] .quick-add__display {
   height: 100%;
   max-height: calc(100% - 26px);
