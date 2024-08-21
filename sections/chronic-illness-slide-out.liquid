@@ -220,6 +220,7 @@
 
         {% if section.blocks.size > 0 %}
         <div class="form__product--grid">
+          <h2>{{ section.settings.product_heading }}</h2>
           <div class="product-grid__grid">
             {% for block in section.blocks %}
               <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
