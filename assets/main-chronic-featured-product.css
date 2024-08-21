@@ -930,16 +930,6 @@ fieldset.product-form__input .form__label {
     margin: 0 0 16px;
   }
 
-  .product__subtitle {
-    font-size: 16px
-  }
-
-  .template-product .product__description,
-  .template-product .product__description p,
-  .template-product .product__description span {
-    font-size: 16px;
-  }
-
   .template-product .product__description p {
     line-height: 24px;
     margin-top: 25px;
@@ -981,11 +971,6 @@ fieldset.product-form__input .form__label {
 
   .product__bundle-header-container button {
     min-width: 150px;
-  }
-
-  .product__subtitle {
-    margin: 10px 0;
-    font-size: 20px;
   }
   
 }
