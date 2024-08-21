@@ -177,11 +177,11 @@
 }
 
 .product__title {
-  font-size: 64px;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 57px;
-  letter-spacing: -2px;
+  line-height: 34px;
+  text-align: left;
 }
 
 .product__subtitle {
