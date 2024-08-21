@@ -203,13 +203,14 @@
 }
 
 .product__subtitle {
-  font-size: 24px;
   letter-spacing: 0;
   text-transform: inherit;
   margin-top: 20px;
   margin-bottom: 15px;
-  line-height: 30px;
-  font-family: Rhymes-Light-Italic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
 }
 
 .product__description {
