@@ -26,6 +26,36 @@
    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
   ">  
   <div class="page-width page-width--wide">
+
+
+    <div class="Custom_Featured_Product__header">
+    {% if section.settings.title != blank %}
+        <h2 class="Custom_Featured_Product__title">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+  
+      <div class="Custom_Featured_Product__props">
+        {% for i in (i..3) %}
+          {% assign index = i | plus: 1 %}
+          {% assign icon = 'icon' | append: '_' | append: index %}
+          {% assign text = 'icon_image_text' | append: '_' | append: index %}
+          {% if section.settings[icon] != blank or section.settings[text] != blank %}
+            <div class="Custom_Featured_Product__prop">
+              <div class="Custom_Featured_Product__prop-icon">
+                <img src="{{ section.settings[icon] | img_url: '50x' }}" alt="{{ section.settings[text] }}">
+              </div>
+              <p class="body-md">{{ section.settings[text] }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+  
+      {% if section.settings.link_label != blank %}
+        <a href="{{ section.settings.link }}" class="product-grid__link body-small">{{ section.settings.link_label }}</a>
+      {% endif %}
+    </div>
+    
     <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
         <div class="Featured_product__media-list">
@@ -722,6 +752,41 @@
   "tag": "section",
   "class": "featured-product-section spaced-section--full-width",
   "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon Image 1"
+    },
+    {
+      "type": "textarea",
+      "id": "icon_image_text_1",
+      "label": "Icon Image Text 1"
+    },          
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon Image 2"
+    },
+    {
+      "type": "textarea",
+      "id": "icon_image_text_2",
+      "label": "Icon Image Text 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon Image 3"
+    },
+    {
+      "type": "textarea",
+      "id": "icon_image_text_3",
+      "label": "Icon Image Text 3"
+    },
     {
       "type": "product",
       "id": "product",
