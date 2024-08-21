@@ -2997,6 +2997,10 @@ select[name=selling_plan] {
   color: #1F2322;
 }
 
+.dropdown-container-item__title.active p {
+  color: #797b7a;
+}
+
 .dropdown-container-item__x {
   display: block;
   height: 17px;
