@@ -166,6 +166,8 @@
     gap: 8px;
     justify-content: start;
     align-items: start;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .product-grid__title {
