@@ -252,7 +252,20 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if (parentItem) {
       console.log("ifff")
       const parentEl = e.target.closest('.dropdown-container-item');
-      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      console.log("parentEl", parentEl)
+      // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+
+      let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+
+      let dataTitleElement = e.target.closest('[data-title]');
+      if(dataTitleElement){
+        let dataTitleClosest = dataTitleElement.dataset.title;
+        if(dataTitleClosest){
+          dataTitle = dataTitleClosest;
+        }
+      }
+      
+      console.log("dataTitle", dataTitle)
       if (!dataTitle) return;
       const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
       clinicalDrawers.forEach((drawer) => {
