@@ -416,6 +416,10 @@ label.rtx_option_label {
 
 @media only screen and (max-width: 768px) {
 
+  .Featured_Product_Container .page-width {
+    padding: 0 20px;
+  }
+
   .product.Custom_Featured_Product {
     display: block !important;
   }
