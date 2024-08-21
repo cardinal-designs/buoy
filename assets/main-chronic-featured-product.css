@@ -3118,6 +3118,10 @@ select[name=selling_plan] {
     font-size: 14px;
     line-height: 21px;
   }
+
+  .Custom_Featured_Product.reverse__grid .product__info-wrapper {
+    padding-right: 0;
+  }
   
 }
 
