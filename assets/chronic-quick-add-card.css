@@ -641,11 +641,16 @@ quick-add-card[data-open="true"] .quick-add__overlay {
 
   .quick-add__okendo-custom {
     left: 0;
+    position: relative;
+    top: 0;
+    transform: unset;
   }
 
   .quick-add__form-title .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
     left: 0;
-    top: 7px;
+    position: relative;
+    top: 0;
+    transform: unset;
   }
   
 }

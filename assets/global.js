@@ -1813,6 +1813,8 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         console.log("inanchortag");
+        document.querySelector(".chronic-illness-slide-out__inner")?.style.display = "none";
+        document.querySelector(".chronic__form--aftersubmission")?.style.display = "block";
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;
         const offset = 100;
