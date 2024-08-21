@@ -105,6 +105,10 @@
   .quick-add__sub--text {
     min-height: 42px;
   }
+
+  .quick-add__container .product__drawer-triggers {
+    gap: 10px;
+  }
   
 }
 
