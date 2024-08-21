@@ -307,7 +307,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       
       let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
-      
+
+      console.log("dataTitle", dataTitle)
 
 
       let dataTitleElement = e.target.closest('[data-title]');
