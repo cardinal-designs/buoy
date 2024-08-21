@@ -437,7 +437,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio'] + label {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+  /* border: 0.1rem solid rgba(var(--color-foreground), 0.55);
   border-radius: 4rem;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
@@ -449,7 +449,7 @@ fieldset.product-form__input .form__label {
   line-height: 1;
   text-align: center;
   transition: border var(--duration-short) ease;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 /* .product-form__input input[type='radio'] + label:hover {
