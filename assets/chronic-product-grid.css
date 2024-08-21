@@ -146,6 +146,8 @@
   .product-grid__props {
     flex-direction: column;
     gap: 8px;
+    justify-content: start;
+    align-items: start;
   }
 
 }
