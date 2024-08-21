@@ -3003,7 +3003,7 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item {
-  border-top: 1px solid var(--charcoal-lighter);
+  border-top: 1px solid var(--charcoal-60);
 }
 
 .dropdown-container-item:first-child {
@@ -3017,7 +3017,7 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item:last-of-type {
-  border-bottom: 1px solid var(--charcoal-lighter);
+  border-bottom: 1px solid var(--charcoal-60);
 }
 
 .dropdown-container-item__body {
@@ -3039,7 +3039,7 @@ select[name=selling_plan] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 0;
+  padding: 16px 0;
 }
 
 .dropdown-container-item__title p {
