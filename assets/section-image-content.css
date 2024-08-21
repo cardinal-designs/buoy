@@ -43,7 +43,11 @@
 .image-content__button {
   max-width: 360px;
   width: 100%;
-  padding: 16px 20px 16px;
+  padding: 13px 20px 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
 }
 
 .image-content__value_props {
