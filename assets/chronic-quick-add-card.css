@@ -189,6 +189,10 @@
   min-height: 21px;
 }
 
+.quick-add__sub--text b {
+  font-weight: 500;
+}
+
 @media screen and (max-width: 768px) {
   
   .quick-add__price {
