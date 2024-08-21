@@ -2927,6 +2927,10 @@ select[name=selling_plan] {
   .product__info-wrapper .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
     background-size: 70px 12px;
   }
+
+  .Custom_Featured_Product .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
+    right: -34px;
+  }
   
 }
 
