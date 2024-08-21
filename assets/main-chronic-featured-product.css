@@ -10,11 +10,11 @@
   gap: 18px;
 }
 
-.reverse__grid .product__media-wrapper {
+.Custom_Featured_Product.reverse__grid .product__media-wrapper {
   order: 2;
 }
 
-.reverse__grid .product__info-wrapper {
+.Custom_Featured_Product.reverse__grid .product__info-wrapper {
   order: 1;
   padding-left: 0;
   padding-right: 16px;
