@@ -2929,7 +2929,11 @@ select[name=selling_plan] {
   }
 
   .Custom_Featured_Product .product__info-container .okeReviews-starRating--small span.okeReviews-a11yText {
-    right: -34px;
+    right: -35px;
+  }
+
+  .Custom_Featured_Product .product__info-container .okeReviews-reviewsSummary-ratingCount {
+    left: 35px;
   }
   
 }
