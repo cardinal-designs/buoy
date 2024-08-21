@@ -66,8 +66,8 @@
               </div>
             {%- endif -%}
 
-            <div class="product__description">
-              {{ product.description | strip_html }}
+            <div class="product__description sh4 light">
+              {{ product.description }}
             </div>
             
             {%- if product.metafields.custom.chronic_illness_product_sub_text != blank -%}
@@ -75,11 +75,6 @@
             {%- endif -%}
 
             {% comment %}<a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>{% endcomment %}
-
-            <div class="product__description sh4 light">
-              {{ product.description }}
-            </div>
-           
 
             {%- comment -%}
             {%- if product != blank -%}
