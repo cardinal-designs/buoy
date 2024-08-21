@@ -164,7 +164,7 @@
   margin-top: 28px;
 }
 
-.form__radio--title h3 {
+.form__checkbox--title h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -173,7 +173,7 @@
   color: #1F2322;
 }
 
-.form__radio--title p {
+.form__checkbox--title p {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -182,17 +182,17 @@
   color: #797B7A;
 }
 
-.form__radio--title {
+.form__checkbox--title {
   margin-bottom: 32px;
 }
 
-.chronic-illness-slide-out__radios {
+.chronic-illness-slide-out__checkboxs {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -12px;
 }
 
-.chronic-illness-slide-out__radios .field {
+.chronic-illness-slide-out__checkboxs .field {
   display: block;
   width: 50%;
   padding: 0 12px;
@@ -210,11 +210,11 @@
   align-items: center;
 }
 
-.chronic-illness-slide-out__radios input[type=checkbox].field__radio {
+.chronic-illness-slide-out__checkboxs input[type=checkbox].field__radio {
   display: none;
 }
 
-.chronic-illness-slide-out__radios input[type=checkbox].field__radio + label span {
+.chronic-illness-slide-out__checkboxs input[type=checkbox].field__radio + label span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,15 +231,15 @@
   background-color: #F8F8F8;
 }
 
-.chronic-illness-slide-out__radios input[type=checkbox].field__radio + label span svg {
+.chronic-illness-slide-out__checkboxs input[type=checkbox].field__radio + label span svg {
   opacity: 0;
 }
 
-.chronic-illness-slide-out__radios input[type=checkbox].field__radio:checked + label span {
+.chronic-illness-slide-out__checkboxs input[type=checkbox].field__radio:checked + label span {
   background-color: #1F2322;
 }
 
-.chronic-illness-slide-out__radios input[type=checkbox].field__radio:checked + label span svg {
+.chronic-illness-slide-out__checkboxs input[type=checkbox].field__radio:checked + label span svg {
   opacity: 1;
 }
 
@@ -490,7 +490,7 @@
     margin-top: 22px;
   }
 
-  .chronic-illness-slide-out__radios .field {
+  .chronic-illness-slide-out__checkboxs .field {
     width: 100%;
     display: none;
   }
@@ -507,8 +507,8 @@
     border-bottom: 1px solid #1f2322;
   }
 
-  .chronic-illness-slide-out__radios .field:nth-child(-n+5),
-  .chronic-illness-slide-out__radios .field.active {
+  .chronic-illness-slide-out__checkboxs .field:nth-child(-n+5),
+  .chronic-illness-slide-out__checkboxs .field.active {
      display: block;
   }
 
