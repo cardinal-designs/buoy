@@ -326,6 +326,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-family: inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
 }
 
 .chronic__form--aftersubmission .image-content__link-copy-container {
