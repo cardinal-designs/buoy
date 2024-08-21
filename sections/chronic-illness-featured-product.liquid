@@ -369,8 +369,13 @@
                       </div>
                     </div>
                     <div class="dropdown-container-item__body-list">
-                      <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
-                      <p>{{ block.settings.list_item1 }}</p>
+                      <div class="dropdown-container-item__grid">
+                        <div class="bubble-text">
+                          <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
+                          <p>{{ block.settings.bubble_text }}</p>
+                        </div>
+                        <p>{{ block.settings.list_item1 }}</p>
+                      </div>
                     </div>
                     <div class="dropdown-container-item__body-list">
                       <img src="{{ block.settings.icon2 | img_url: 'master' }}"/>
