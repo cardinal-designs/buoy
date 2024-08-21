@@ -505,7 +505,7 @@
   }
 
   .chronic__form--aftersubmission .grid__btn--wrap {
-    margin-top: 32px;
+    margin-top: 22px;
   }
 
   .form__product--grid h2 {
@@ -523,6 +523,7 @@
 
   .chronic__form--aftersubmission .product-grid__grid {
     overflow: auto;
+    padding-bottom: 10px;
   }
 
   .chronic__form--aftersubmission .image-content__link-copy-container p {

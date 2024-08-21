@@ -250,7 +250,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     event.stopPropagation();
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
-      console.log("iff")
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
       if (!dataTitle) return;
@@ -264,8 +263,27 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else {
       console.log("else")
       // For single drawer on PDP
-      const clinicalDrawer = document.getElementById("clinicalSideDrawer");
-      showDrawer(clinicalDrawer);
+
+      if(location.href.includes("/products/")){
+        const clinicalDrawer = document.getElementById("clinicalSideDrawer");
+        showDrawer(clinicalDrawer);
+      }
+      else{
+        console.log("clinicalDrawer", clinicalDrawer)
+        let dataTitleElement = e.target.closest('[data-title]');
+        if(dataTitleElement){
+          let dataTitle = dataTitleElement.dataset.title;
+          if(dataTitle){
+            showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`));
+          }else{
+            showDrawer(clinicalDrawer);
+          }
+        }else{
+          showDrawer(clinicalDrawer);
+        }
+      }
+      
+      
     }
 
     // Show drawer
