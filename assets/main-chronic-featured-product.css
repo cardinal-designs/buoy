@@ -1487,8 +1487,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label {
-  background-color: var(--gray-lighest);
-  border: 1px solid var(--charcoal-60);
+  /* background-color: var(--gray-lighest);
+  border: 1px solid var(--charcoal-60); */
 }
 
 .product-form__input .Variant_Blocks input[type=radio]:checked + label::before {
