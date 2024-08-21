@@ -652,10 +652,14 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     top: 0;
     transform: unset;
   }
+
+  .quick-add__form-title .okeReviews.okeReviews--theme {
+    line-height: 0;
+  }
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
 
   .quick-add__overlay {
     position: fixed;
