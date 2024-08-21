@@ -98,7 +98,7 @@
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
-  display: none;
+  display: none !important;
 }
 
 .Custom_Featured_Product button.slick-prev.slick-arrow {
