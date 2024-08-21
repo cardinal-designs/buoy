@@ -536,3 +536,11 @@
   }
   
 }
+
+@media screen and (max-width: 374px) {
+
+  .chronic__form--aftersubmission .image-content__link-copy-container p {
+    padding: 0 5px;
+  }
+  
+}
