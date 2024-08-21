@@ -129,6 +129,11 @@
     gap: 5px;
   }
 
+  .product-grid__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 17px;
+  }
+
 }
 
 
