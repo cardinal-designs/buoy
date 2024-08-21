@@ -162,7 +162,8 @@
       </button>
     </div>
 
-    {% assign servies = p.metafields.custom.chronic_illness_subscription_services.value %}
+    {% assign servies = p.metafields.custom.chronic_illness_subscription_services.values %}
+    servies -- {{ servies }}
     <p class="quick-add__form-subtext">
       {% for text in servies %}
         {{ text }}
