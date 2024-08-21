@@ -437,6 +437,7 @@
 
 .quick-add__form .Variant_Blocks:last-child input[type=radio] + label {
   border-bottom: none !important;
+  padding-bottom: 0;
 }
 
 .quick-add__form input[type=radio] {
