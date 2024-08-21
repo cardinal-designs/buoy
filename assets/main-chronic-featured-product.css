@@ -3110,5 +3110,9 @@ select[name=selling_plan] {
   .Variant_Blocks .Supply_Time {
     margin-top: 0;
   }
+
+  .product-form__buttons .button {
+    font-size: 15px;
+  }
   
 }
