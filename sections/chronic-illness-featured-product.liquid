@@ -149,7 +149,7 @@
             {% endcapture %}
 
             {%- unless product.has_only_default_variant -%}
-              <script type="application/json" id="VariantJSON">
+              <script type="application/json" class="VariantJSON">
                 [
                   {%- for variant in product.variants -%}
                     {
