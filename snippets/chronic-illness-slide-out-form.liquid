@@ -63,8 +63,8 @@
       
           {% if product.selling_plan_groups[0].selling_plans[0].id %}
             <input type="hidden" name="selling_plan" value="{{ card_product.selling_plan_groups[0].selling_plans[0].id }}">
+            <input type="hidden" name="selling_plan_id" value="{{ card_product.selling_plan_groups[0].selling_plans[0].id }}">
           {% endif %}
-      
           <input type="hidden" name="id" value="{{ currentVariant.id }}">
       
           <div class="product-form__buttons">
