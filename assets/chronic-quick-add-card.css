@@ -413,7 +413,7 @@
   margin: 0;
 }
 
-.quick-add__form input[type=radio] + label {
+.quick-add__form-wrapper .quick-add__form input[type=radio] + label {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr auto;
