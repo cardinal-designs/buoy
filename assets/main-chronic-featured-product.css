@@ -3127,7 +3127,7 @@ select[name=selling_plan] {
 
 .dropdown-container-item__body-list {
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   gap: 8px;
 }
 
@@ -3141,5 +3141,5 @@ select[name=selling_plan] {
 }
 
 .dropdown-container-item__body .product__drawer-triggers {
-  margin: 23px 0 30px;
+  margin: 0;
 }
