@@ -313,7 +313,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
       // For image with dropdowns section
     } else if (parentDropdown) {
-      console.log("elsee")
+      console.log("elsee ifff")
       const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
@@ -340,6 +340,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       })
     } else {
+      console.log("eeeelllllllll")
       // For PDP (not bundle)
       if(location.href.includes("/products/")){
         if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
