@@ -1437,6 +1437,11 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
+.Variant_Blocks .Variant_Price {
+  display: flex;
+  gap: 5px;
+}
+
 .Variant_Blocks .Variant_Title .custom-radio {
   height: 20px;
   width: 20px;
