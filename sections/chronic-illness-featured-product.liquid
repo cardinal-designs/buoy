@@ -54,7 +54,7 @@
     
     <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="product__media-wrapper">
-        {% assign currentVariant = product.first_available_variant %}
+        {% assign currentVariant = product.selected_or_first_available_variant %}
         {% capture discount %}
         {% if currentVariant.selling_plan_allocations.size > 0 %}
           {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
