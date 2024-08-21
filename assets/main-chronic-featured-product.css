@@ -1434,6 +1434,19 @@ fieldset.product-form__input .form__label {
   overflow: hidden;
 }
 
+.Variant_Blocks input[type=radio]+label .custom-radio:before {
+  content: "";
+  width: 20px;
+  margin: -1px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+
+.Variant_Blocks input[type=radio]:checked+label .custom-radio:before {
+  background: var(--charcoal);
+}
+
 .Variant_Blocks span {
   display: block;
   letter-spacing: normal;
