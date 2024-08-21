@@ -116,6 +116,130 @@
         "position": "image_first"
       }
     },
+    "chronic_illness_featured_product_6CVr8Q": {
+      "type": "chronic-illness-featured-product",
+      "blocks": {
+        "dropdown_diMT4p": {
+          "type": "dropdown",
+          "settings": {
+            "title": "What’s Included",
+            "subtitle": "",
+            "bubble_text": "x1",
+            "list_title1": "Hydration Drops",
+            "icon1": "shopify:\/\/shop_images\/Hydration_Drops_Square_2.png",
+            "list_item1": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "list_title2": "Digestion Drops",
+            "icon2": "shopify:\/\/shop_images\/Digestion_Drops_Square_6.png",
+            "list_item2": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "list_title3": "Rescue Drops",
+            "icon3": "shopify:\/\/shop_images\/Rescue_Drops_Square_2.png",
+            "list_item3": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": true,
+            "title_pos_side": false
+          }
+        },
+        "dropdown_pgUYtz": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "General overview of kit benefits. Get all four of our functional, liquid electrolytes + minerals for ocean-powered cellular health. Add to any drink. No sugar, sweeteners, flavors.",
+            "bubble_text": "",
+            "list_title1": "Hydration Drops",
+            "icon1": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item1": "Energy, Gut Health, Brain Function, Skin",
+            "list_title2": "Digestion Drops",
+            "icon2": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item2": "Energy, Gut Health, Brain Function, Skin",
+            "list_title3": "Rescue Drops",
+            "icon3": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item3": "Energy, Gut Health, Brain Function, Skin",
+            "enable_supplement_facts": false,
+            "enable_clinical_trial": false,
+            "title_pos_side": true
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_diMT4p",
+        "dropdown_pgUYtz"
+      ],
+      "settings": {
+        "product": "hydration-drops",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_second"
+      }
+    },
+    "chronic_illness_featured_product_4GgdWM": {
+      "type": "chronic-illness-featured-product",
+      "blocks": {
+        "dropdown_Hxg9kX": {
+          "type": "dropdown",
+          "settings": {
+            "title": "What’s Included",
+            "subtitle": "",
+            "bubble_text": "x1",
+            "list_title1": "Hydration Drops",
+            "icon1": "shopify:\/\/shop_images\/Hydration_Drops_Square_2.png",
+            "list_item1": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "list_title2": "Digestion Drops",
+            "icon2": "shopify:\/\/shop_images\/Digestion_Drops_Square_6.png",
+            "list_item2": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "list_title3": "Rescue Drops",
+            "icon3": "shopify:\/\/shop_images\/Rescue_Drops_Square_2.png",
+            "list_item3": "Ionic ocean electrolytes + 87 trace minerals turns any drink into a hydrating beverage. No sugar, sweeteners, flavors.",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": true,
+            "title_pos_side": false
+          }
+        },
+        "dropdown_iAHmxP": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "General overview of kit benefits. Get all four of our functional, liquid electrolytes + minerals for ocean-powered cellular health. Add to any drink. No sugar, sweeteners, flavors.",
+            "bubble_text": "",
+            "list_title1": "Hydration Drops",
+            "icon1": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item1": "Energy, Gut Health, Brain Function, Skin",
+            "list_title2": "Digestion Drops",
+            "icon2": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item2": "Energy, Gut Health, Brain Function, Skin",
+            "list_title3": "Rescue Drops",
+            "icon3": "shopify:\/\/shop_images\/Callouts_1.svg",
+            "list_item3": "Energy, Gut Health, Brain Function, Skin",
+            "enable_supplement_facts": false,
+            "enable_clinical_trial": false,
+            "title_pos_side": true
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_Hxg9kX",
+        "dropdown_iAHmxP"
+      ],
+      "settings": {
+        "product": "hydration-drops",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
+      }
+    },
     "chronic_product_grid_dfgdYe": {
       "type": "chronic-product-grid",
       "blocks": {
@@ -278,6 +402,8 @@
   "order": [
     "main",
     "chronic_illness_featured_product_Hz7mTh",
+    "chronic_illness_featured_product_6CVr8Q",
+    "chronic_illness_featured_product_4GgdWM",
     "chronic_product_grid_dfgdYe",
     "text_image_toggle_YQJJzi",
     "reviews_grid_ERX9pT"
