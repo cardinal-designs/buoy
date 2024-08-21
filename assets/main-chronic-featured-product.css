@@ -1420,8 +1420,6 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
-
-
 .Variant_Blocks .Variant_Title .custom-radio {
   height: 20px;
   width: 20px;
@@ -1432,7 +1430,7 @@ fieldset.product-form__input .form__label {
   overflow: hidden;
 }
 
-.Variant_Blocks input[type=radio]+label .custom-radio:before {
+.Variant_Blocks input[type=radio] + label .custom-radio:before {
   content: "";
   width: 20px;
   margin: -1px;
@@ -1506,7 +1504,8 @@ fieldset.product-form__input .form__label {
   background-color: transparent;
   border-radius: 10px;
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   letter-spacing: 0;
   line-height: 1;
   justify-content: space-between;
