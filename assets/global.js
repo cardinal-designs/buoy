@@ -1820,7 +1820,6 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
           if (chronicIllnessForm) {
             chronicIllnessForm.reset();
           }
-          document.getElementById('illnessError').style.display = 'none'; 
           document.querySelector('.custom__msg--field').style.display = 'none'; 
           globalCheckedValues = [];  
         }
