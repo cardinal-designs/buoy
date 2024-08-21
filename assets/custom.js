@@ -354,7 +354,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         let dataTitleElement = e.target.closest('[data-title]');
         console.log("dataTitleElement", dataTitleElement)
         console.log("supplementDrawer", supplementDrawer)
-        showDrawer(supplementDrawer);
+        if(dataTitleElement){
+          let dataTitle = dataTitleElement.dataset.title;
+          if(dataTitle){
+            showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`));
+          }else{
+            showDrawer(supplementDrawer);
+          }
+        }else{
+          showDrawer(supplementDrawer);
+        }
+        
       }
     }
 
