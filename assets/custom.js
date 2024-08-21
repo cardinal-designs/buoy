@@ -312,6 +312,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
 
       let dataTitleElement = e.target.closest('[data-title]');
+      console.log("dataTitleElement", dataTitleElement)
       if(dataTitleElement){
         let dataTitleClosest = dataTitleElement.dataset.title;
         if(dataTitleClosest){
