@@ -101,6 +101,11 @@
   .product-grid {
     padding: 0 40px;
   }
+
+  .quick-add__container .product__drawer-triggers {
+    gap: 10px;
+    flex-direction: column;
+  }
   
 }
 
@@ -114,10 +119,6 @@
     min-height: 42px;
   }
 
-  .quick-add__container .product__drawer-triggers {
-    gap: 10px;
-  }
-  
 }
 
 
