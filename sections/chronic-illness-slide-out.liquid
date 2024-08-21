@@ -257,6 +257,7 @@ $("#ContactFormCustomMessage").on('input', function() {
 document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
     var checkedValues = globalCheckedValues; 
+    console.log("inclick",globalCheckedValues)
     if (checkedValues.length === 0) {
         document.getElementById('illnessError').style.display = 'block';
         return;
