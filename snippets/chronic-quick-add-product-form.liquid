@@ -175,7 +175,7 @@
     {% assign servies = p.metafields.custom.chronic_illness_subscription_services.value %}
     {% if servies != blank %}
       <p class="quick-add__form-subtext">
-        {% for text in servies %}
+        {% for text in servies limit: 3 %}
           {{ text }}
           {% unless forloop.last %}
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
