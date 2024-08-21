@@ -304,6 +304,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      console.log("dataTitle", dataTitle)
       if (!dataTitle) return;
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
@@ -340,7 +341,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       })
     } else {
-      console.log("eeeelllllllll", e.target)
       // For PDP (not bundle)
       if(location.href.includes("/products/")){
         if(document.querySelector(`.supplement-side-drawer[data-product-name="${ document.querySelector(".product__title").innerText.trim() }"]`)){
@@ -352,8 +352,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       }
       else{
         let dataTitleElement = e.target.closest('[data-title]');
-        console.log("dataTitleElement", dataTitleElement)
-        console.log("supplementDrawer", supplementDrawer)
         if(dataTitleElement){
           let dataTitle = dataTitleElement.dataset.title;
           if(dataTitle){
@@ -364,7 +362,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }else{
           showDrawer(supplementDrawer);
         }
-        
       }
     }
 
