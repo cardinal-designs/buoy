@@ -502,5 +502,9 @@
   .contact__button {
     margin-top: 32px;
   }
+
+  .chronic__form--aftersubmission .product-grid__grid {
+    overflow: auto;
+  }
   
 }
