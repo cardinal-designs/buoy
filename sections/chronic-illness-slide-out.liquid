@@ -267,35 +267,35 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             }
         }
     });
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'REVISION': '2024-07-15' // Ensure the format matches the required format
-        },
-        body: payload
-    };
-    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Network response was not ok. Status: ${response.status}`);
-            }
-            return response.text(); // Use .text() to check if there's a response body
-        })
-        .then(text => {
-            if (text) {
-                try {
-                    const jsonResponse = JSON.parse(text); // Parse it manually
-                } catch (e) {
-                    console.error('Failed to parse JSON:', e);
-                }
-            } else {
-                console.log('Empty response body');
-            }
-        })
-        .catch(err => {
-            console.error('Error:', err);
-        });
+    // const options = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'REVISION': '2024-07-15' // Ensure the format matches the required format
+    //     },
+    //     body: payload
+    // };
+    // fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error(`Network response was not ok. Status: ${response.status}`);
+    //         }
+    //         return response.text(); // Use .text() to check if there's a response body
+    //     })
+    //     .then(text => {
+    //         if (text) {
+    //             try {
+    //                 const jsonResponse = JSON.parse(text); // Parse it manually
+    //             } catch (e) {
+    //                 console.error('Failed to parse JSON:', e);
+    //             }
+    //         } else {
+    //             console.log('Empty response body');
+    //         }
+    //     })
+    //     .catch(err => {
+    //         console.error('Error:', err);
+    //     });
 });  
 {% endjavascript %}
 
