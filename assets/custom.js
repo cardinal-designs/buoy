@@ -299,6 +299,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const supplementDrawers = document.querySelectorAll('.supplement-side-drawer');
     
     if (parentItemContainer) {
+      console.log("ifff")
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
       const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
@@ -311,6 +312,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
       // For image with dropdowns section
     } else if (parentDropdown) {
+      console.log("elsee")
       const allTitles = parentDropdown.querySelectorAll('.image-with-dropdowns__q');
       allTitles.forEach((title) => {
         if (title.classList.contains('active')) {
