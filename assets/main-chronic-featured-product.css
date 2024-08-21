@@ -3114,5 +3114,15 @@ select[name=selling_plan] {
   .product-form__buttons .button {
     font-size: 15px;
   }
+
+  .product-grid__grid {
+    display: flex;
+    gap: 28px 17px;
+    flex-wrap: wrap;
+  }
+
+  .product-grid__grid-item {
+    width: calc(50% - 8.5px);
+  }
   
 }
