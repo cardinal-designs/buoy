@@ -173,6 +173,7 @@
       {% comment %}<div class="klaviyo-form-VT4VtR"></div> {% endcomment %}
       </div>
     </div>
+    <div class="chronic__form--aftersubmission"></div>
   </div>
 </div>
  
@@ -222,84 +223,121 @@ $(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', functi
       $("#ContactFormCustomMessage").val('');
     }
 });
-
-// document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
-//     event.preventDefault(); // Prevent the default form submission
-//     const firstName = document.getElementById('ContactFormFirstName').value;
-//     const lastName = document.getElementById('ContactFormLastName').value;
-//     const email = document.getElementById('ContactForm-email').value;
-//     const mobile = document.getElementById('ContactForm-phone').value;
-//     const illnessesType = document.querySelector('input[name="illnessesType"]:checked').value;
-//     const payload = JSON.stringify({
-//         data: {
-//             type: 'subscription',
-//             attributes: {
-//                 profile: {
-//                     data: {
-//                         type: 'profile',
-//                         attributes: {
-//                             properties: {
-//                                 'Chronic Illness': illnessesType,
-//                                 'SMS Consent': 'TRUE'
-//                             },
-//                             email: email,
-//                             phone_number: mobile,
-//                             first_name: firstName,
-//                             last_name: lastName
-//                         },
-//                         meta: {
-//                             patch_properties: {
-//                                 append: {
-//                                     newKey: 'New Value'
-//                                 },
-//                                 unappend: {
-//                                     newKey: 'New Value'
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             },
-//             relationships: {
-//                 list: {
-//                     data: {
-//                         type: 'list',
-//                         id: 'TE6KNC'
-//                     }
-//                 }
-//             }
-//         }
-//     });
-//     // const options = {
-//     //     method: 'POST',
-//     //     headers: {
-//     //         'Content-Type': 'application/json',
-//     //         'REVISION': '2024-07-15' // Ensure the format matches the required format
-//     //     },
-//     //     body: payload
-//     // };
-//     // fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
-//     //     .then(response => {
-//     //         if (!response.ok) {
-//     //             throw new Error(`Network response was not ok. Status: ${response.status}`);
-//     //         }
-//     //         return response.text(); // Use .text() to check if there's a response body
-//     //     })
-//     //     .then(text => {
-//     //         if (text) {
-//     //             try {
-//     //                 const jsonResponse = JSON.parse(text); // Parse it manually
-//     //             } catch (e) {
-//     //                 console.error('Failed to parse JSON:', e);
-//     //             }
-//     //         } else {
-//     //             console.log('Empty response body');
-//     //         }
-//     //     })
-//     //     .catch(err => {
-//     //         console.error('Error:', err);
-//     //     });
-// });  
+var globalCheckedValues = [];
+function updateCheckedValues() {
+  globalCheckedValues = $(".chronic-illness-slide-out__radios input[type=checkbox]:checked").map(function() {
+    return $(this).val(); 
+  }).get();  
+  if (globalCheckedValues.includes("Other")) {
+    var customMessage = $("#ContactFormCustomMessage").val();
+    if (customMessage) {
+    }
+  }
+    if (globalCheckedValues.length === 0) {
+        document.getElementById('illnessError').style.display = 'block';
+        return; 
+    }else{
+        document.getElementById('illnessError').style.display = 'none';
+    }
+}
+$(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
+  var radVal = $(this).val();
+  if (radVal === 'Other' && $(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "block");
+  } else if (radVal === 'Other' && !$(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "none");
+    $("#ContactFormCustomMessage").val(''); 
+  }
+  updateCheckedValues();
+});
+$("#ContactFormCustomMessage").on('input', function() {
+  updateCheckedValues();
+});
+document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    var checkedValues = globalCheckedValues; 
+    if (checkedValues.length === 0) {
+        document.getElementById('illnessError').style.display = 'block';
+        return;
+    }else{
+        document.getElementById('illnessError').style.display = 'none';
+    }
+    const firstName = document.getElementById('ContactFormFirstName').value;
+    const lastName = document.getElementById('ContactFormLastName').value;
+    const email = document.getElementById('ContactForm-email').value;
+    const mobile = document.getElementById('ContactForm-phone').value;
+    const payload = JSON.stringify({
+        data: {
+            type: 'subscription',
+            attributes: {
+                profile: {
+                    data: {
+                        type: 'profile',
+                        attributes: {
+                            properties: {
+                                'Chronic Illness': globalCheckedValues,
+                                'SMS Consent': 'TRUE'
+                            },
+                            email: email,
+                            phone_number: mobile,
+                            first_name: firstName,
+                            last_name: lastName
+                        },
+                        meta: {
+                            patch_properties: {
+                                append: {
+                                    newKey: 'New Value'
+                                },
+                                unappend: {
+                                    newKey: 'New Value'
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            relationships: {
+                list: {
+                    data: {
+                        type: 'list',
+                        id: 'TE6KNC'
+                    }
+                }
+            }
+        }
+    });
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'REVISION': '2024-07-15'
+        },
+        body: payload
+    };
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+            if (text) {
+                try {
+                    const jsonResponse = JSON.parse(text);
+                } catch (e) {
+                    console.error('Failed to parse JSON:', e);
+                }
+            } else {
+                console.log('Empty response body');
+            }
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
+});  
 {% endjavascript %}
 
 {% schema %}
