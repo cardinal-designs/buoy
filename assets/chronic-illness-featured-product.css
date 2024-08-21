@@ -6,6 +6,11 @@
   overflow: hidden;
 }
 
+.Custom_Featured_Product__title {
+  margin: 0 0 32px;
+  letter-spacing: -.02em;
+}
+
 .Custom_Featured_Product__props {
   display: flex;
   justify-content: center;
