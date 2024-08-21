@@ -179,6 +179,16 @@
             {{ section.settings.success_title }}
           </h2>
         {% endif %}
+        {% if section.settings.success_content != blank %}
+          <div class="header__form--content">
+            {{ section.settings.success_content }}
+          </div>
+        {% endif %}
+        {% if section.settings.success_btn != blank %}
+          <div class="header__btn--wrap">
+            <a href="{{ section.settings.success_btn_url }}" class="button button--green">{{ section.settings.success_btn }}</a>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
