@@ -1812,15 +1812,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const chronicIllnessInner = document.querySelector(".chronic-illness-slide-out__inner");
-        const chronicFormAfterSubmission = document.querySelector(".chronic__form--aftersubmission");
-        if (chronicIllnessInner) {
-          chronicIllnessInner.style.display = "block";
-        }
+        // const chronicIllnessInner = document.querySelector(".chronic-illness-slide-out__inner");
+        // const chronicFormAfterSubmission = document.querySelector(".chronic__form--aftersubmission");
+        // if (chronicIllnessInner) {
+        //   chronicIllnessInner.style.display = "block";
+        // }
         
-        if (chronicFormAfterSubmission) {
-          chronicFormAfterSubmission.style.display = "none";
-        }
+        // if (chronicFormAfterSubmission) {
+        //   chronicFormAfterSubmission.style.display = "none";
+        // }
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;
         const offset = 100;

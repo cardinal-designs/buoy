@@ -322,8 +322,8 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
             return response.text();
         })
         .then(text => {
-          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
-          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+          // document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          // document.querySelector(".chronic__form--aftersubmission").style.display = "block";
             if (text) {
                 try {
                     const jsonResponse = JSON.parse(text);
