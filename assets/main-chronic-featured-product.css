@@ -1502,12 +1502,6 @@ fieldset.product-form__input .form__label {
   background-color: var(--gray-lighest);
 }
 
-.product__info-wrapper .product-form__input {
-  padding: 0;
-  display: flex;
-  gap: 11px;
-}
-
 .product__info-wrapper .product-form__input img {
   width: 100%;
   height: auto;
