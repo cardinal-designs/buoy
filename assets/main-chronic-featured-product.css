@@ -529,6 +529,11 @@ fieldset.product-form__input .form__label {
   display: inline-block;
   background: var(--green-1);
   border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 13px 20px 12px;
+  min-width: 100%;
 }
 
 /* Overrides */
@@ -1832,10 +1837,6 @@ fieldset.product-form__input .form__label {
 
 .template-product .product-form__buttons {
   margin-top: 11px;
-}
-
-.template-product .product-form__buttons .button {
-  padding: 9px !important;
 }
 
 .Testimonials_Title {
