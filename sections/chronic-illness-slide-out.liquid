@@ -173,7 +173,13 @@
       </div>
     </div>
     <div class="chronic__form--aftersubmission">
-      
+      <div class="header__form--aftersubmission">
+        {% if section.settings.success_title != blank %}
+          <h2>
+            {{ section.settings.success_title }}
+          </h2>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
