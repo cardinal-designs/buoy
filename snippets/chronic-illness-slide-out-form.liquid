@@ -47,42 +47,37 @@
 
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
-      <button data-toggle class="{{ base }}__button">Add</button>
-    </div>
-
-    <div class="quick-add__overlay"> </div>
-    <div class="quick-add__display">
-      <div class="{{ base }}__form-wrapper no-scrollbar">
-        <button data-toggle class="quick-add__close">
-          <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.73115 15.7142L0.785645 14.7687L7.55442 7.99993L0.785645 1.23115L1.73115 0.285645L8.49993 7.05442L15.2687 0.285645L16.2142 1.23115L9.44544 7.99993L16.2142 14.7687L15.2687 15.7142L8.49993 8.94544L1.73115 15.7142Z" fill="#1F2322"/>
-            </svg>          
-        </button>
-        <div class="{{ base }}__form-inner no-scrollbar">
-          <div class="{{ base }}__form-header">
-            <div class="{{ base }}__form-image">
-              {% if content.form_image != blank %}
-                {{ content.form_image | image_url: width: 160 | image_tag: class: '' }}
+      {% liquid
+        assign product_form_id = "product-form-" | append: product.id
+        assign currentVariant = product.selected_or_first_available_variant 
+      
+        if product.selling_plan_groups.size > 0
+          assign requiresPlan = product.requires_selling_plan
+          assign selectedAllocation = ''
+          assign currentAllocations = currentVariant.selling_plan_allocations
+        endif
+       %}
+      
+      <product-form data-form-type="product-card" class="product-form {{ base }}__button">
+        {% form 'product', p, id: product_form_id, data-smartrr-form-id: product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
+      
+          {% if product.selling_plan_groups[0].selling_plans[0].id %}
+            <input type="hidden" name="selling_plan" value="{{ product.selling_plan_groups[0].selling_plans[0].id }}">
+          {% endif %}
+      
+          <input type="hidden" name="id" value="{{ currentVariant.id }}">
+      
+          <div class="product-form__buttons">
+            <button type="submit" name="add" class="button button--primary" data-available="{{ currentVariant.available }}">
+              {% if currentVariant.available %}
+                <span>Add</span>
               {% else %}
-                {{ card_product.featured_image | image_url: width: 160 | image_tag: class: '' }}
-              {% endif %}
-            </div>
-            <div class="{{  base }}__form-title">
-              <div data-oke-reviews-product-listing-rating>
-                {{ card_product.metafields.okendo.ProductListingSnippet }}
-                <div class="{{ base }}__okendo-custom">
-                  {{ card_product.metafields.okendo.summaryData | map: "reviewAverageValue" }}/5.0
-                </div>
-              </div>
-              <h6 class="">{{ card_product.title }}</h6>
-              {% if content.form_text != blank %}
-                <p class="">{{ content.form_text }}</p>
-              {% endif %}
-            </div>
+                <span>Sold Out</span>
+              {% endif %}        
+            </button>
           </div>
-
-        </div>
-      </div>
+        {% endform %}
+      </product-form>
     </div>
   </div>
   <div class="{{ base }}__content">
