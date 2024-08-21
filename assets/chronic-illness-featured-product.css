@@ -6,9 +6,18 @@
   overflow: hidden;
 }
 
+.Custom_Featured_Product__header {
+  margin: 100px 0 30px;
+  text-align: center;
+}
+
 .Custom_Featured_Product__title {
   margin: 0 0 32px;
-  letter-spacing: -.02em;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .Custom_Featured_Product__props {
