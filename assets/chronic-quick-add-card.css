@@ -486,6 +486,8 @@
 .quick-add__form .Variant_Blocks {
   display: block;
   width: 100%;
+  max-width: 100%;
+  flex: 100%;
 }
 
 .quick-add__form .Variant_Title {
