@@ -101,6 +101,14 @@
   gap: 20px;
 }
 
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .product-grid__prop p {
+    font-size: 14px;
+  }
+  
+}
+
 @media (max-width: 1199px) {
 
   .product-grid {
