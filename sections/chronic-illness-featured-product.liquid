@@ -50,10 +50,10 @@
               {%- endif -%}
             </h4>
 
-            {% if product.tags != blank and content.show_tags == true %}
-              <div class="{{ base }}__product-tags">
+            {% if product.tags != blank %}
+              <div class="featured__product-tags">
                 {% for tag in product.tags %}
-                  <div {% if product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+                  <div class="featured__product-tag">
                     {{ tag }}
                   </div>
                 {% endfor %}
