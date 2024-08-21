@@ -553,7 +553,7 @@ $('.text-image-toggle__button').click(function() {
   $(this).addClass('active')
   $('.text-image-toggle__image').hide()
   $(`.text-image-toggle__image[data-id='${id}']`).show()
-})
+});
 
 $('.dropdown-container-item__title').click(function() {
   var isActive = $(this).hasClass('active');
