@@ -452,6 +452,14 @@ label.rtx_option_label {
     column-count: 2;
     gap: 4px 10px;
   }
+
+  .Custom_Featured_Product .product--service span:nth-child(odd) {
+    justify-content: end;
+  }
+
+  .Custom_Featured_Product .product--service span:nth-child(even) {
+    justify-content: start;
+  }
   
 }
 
