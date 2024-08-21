@@ -2935,6 +2935,10 @@ select[name=selling_plan] {
   .Custom_Featured_Product .product__info-container .okeReviews-reviewsSummary-ratingCount {
     left: 35px;
   }
+
+  .product__info-wrapper .okeReviews .okeReviews-starRating--small {
+    height: 12px;
+  }
   
 }
 
