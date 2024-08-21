@@ -257,8 +257,6 @@ $("#ContactFormCustomMessage").on('input', function() {
 document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
     var checkedValues = globalCheckedValues; 
-          console.log("globalCheckedValues",globalCheckedValues);
-  
     if (checkedValues.length == 0) {
         document.getElementById('illnessError').style.display = 'block';
         return;
@@ -317,29 +315,29 @@ document.getElementById('chronicIllnessForm').addEventListener('submit', functio
         },
         body: payload
     };
-    // fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
-    //     .then(response => {
-    //         if (!response.ok) {
-    //             throw new Error(`Network response was not ok. Status: ${response.status}`);
-    //         }
-    //         return response.text();
-    //     })
-    //     .then(text => {
-    //       document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
-    //       document.querySelector(".chronic__form--aftersubmission").style.display = "block";
-    //         if (text) {
-    //             try {
-    //                 const jsonResponse = JSON.parse(text);
-    //             } catch (e) {
-    //                 console.error('Failed to parse JSON:', e);
-    //             }
-    //         } else {
-    //             console.log('Empty response body');
-    //         }
-    //     })
-    //     .catch(err => {
-    //         console.error('Error:', err);
-    //     });
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+            if (text) {
+                try {
+                    const jsonResponse = JSON.parse(text);
+                } catch (e) {
+                    console.error('Failed to parse JSON:', e);
+                }
+            } else {
+                console.log('Empty response body');
+            }
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
 });  
 {% endjavascript %}
 
