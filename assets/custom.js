@@ -325,7 +325,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       
       if (!dataTitle) return;
       supplementDrawers.forEach((drawer) => {
+        console.log("drawer", drawer)
         const drawerName = drawer.dataset.productName;
+        console.log("drawerName", drawerName)
         if (dataTitle === drawerName) {
           showDrawer(drawer);
         }
