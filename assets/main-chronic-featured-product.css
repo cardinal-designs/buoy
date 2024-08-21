@@ -1580,23 +1580,9 @@ fieldset.product-form__input .form__label {
 
   
 @media screen and (max-width: 768px) {
-  
-  .Variant_Blocks .Variant_Title {
-    max-width: 105px;
-    margin: 0 auto;
-  }
-  
+
   .template-product .product-form .rtx_option_selector {
     padding: 10px 0 30px;
-  }
-
-  .Variant_Blocks {
-    margin-right: 0;
-    display: inline-block;
-    min-width: auto;
-    position: relative;
-    flex: 0 0 calc(50% - 5px);
-    max-width: calc(50% - 5px);
   }
 
   .product-form__input .Variant_Blocks input[type=radio]+label:after {
