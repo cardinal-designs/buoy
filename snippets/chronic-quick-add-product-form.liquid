@@ -49,9 +49,11 @@
                     {%- endif -%}
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
-                    <span 
-                      class="Serving_Price" 
-                    >
+                    <span class="Serving_Price">
+                      <span class="quick-add__price-recurring js-subscription-price">
+                        {{ variant.selling_plan_allocation.price | money }}
+                      </span>
+                      <s class="rtx_compare_price js-sub-compare-price">{{ variant.compare_at_price | default: variant.price | money }}</s>
                       <span class="js-rtx_one_time_price">
                         {{ variant.price | money }}
                       </span>
@@ -80,7 +82,7 @@
       </variant-radios>
     {% endunless %}
 
-    
+    {% comment %}
       {% if p.selling_plan_groups.size > 0 %}
         <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
           <fieldset class="js product-form__input">
@@ -135,7 +137,7 @@
           </fieldset>
         </div>
       {% endif %}
-    
+    {% endcomment %}
 
     {% if p.selling_plan_groups[0].selling_plans[0].id %}
       <input type="hidden" name="selling_plan" value="{{ p.selling_plan_groups[0].selling_plans[0].id }}">
