@@ -64,6 +64,10 @@
   width: fit-content;
   border-radius: 30px;
   cursor: pointer;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 .text-image-toggle__button.active {
