@@ -286,7 +286,7 @@ var $tlt = $(".custom__msg--field");
 $(".chronic-illness-slide-out__radios input[type=checkbox]").on('change', function() {
     var radVal = $(this).val();
     if (radVal === 'Other' && $(this).is(':checked')) {
-        $tlt.css("display", "block");
+        $tlt.css("display", "flex");
     } else if (radVal === 'Other' && !$(this).is(':checked')) {
         $tlt.css("display", "none");
       $("#ContactFormCustomMessage").val('');
