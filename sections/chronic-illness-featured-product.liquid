@@ -381,8 +381,12 @@
                       <p>{{ block.settings.list_item3 }}</p>   
                     </div>
                     <div class="product__drawer-triggers">
-                      <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
-                      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+                      {% if block.settings.enable_supplement_facts %}
+                        <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
+                      {% endif %}
+                      {% if block.settings.enable_clinical_trial %}
+                        <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -784,11 +788,12 @@
           "id": "icon3",
           "label": "Dropdown Icon 3"
         },
-         {
+        {
           "type": "text",
           "id": "list_item3",
           "label": "Dropdown List Item 3"
         }
+        
       ]
     }
   ],
