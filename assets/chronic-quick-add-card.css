@@ -708,6 +708,7 @@ quick-add-card[data-open="true"] .quick-add__overlay {
     opacity: 0;
     z-index: -1;
     transition: transform .4s ease;
+    bottom: 12px;
   }
 
   quick-add-card[data-open="true"] .quick-add__display {
