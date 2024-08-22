@@ -80,7 +80,9 @@
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
             {% render 'okendo-reviews-product-rating-summary', product: product %}
             <h4 class="product__title" {{ block.shopify_attributes }}>
-              {%- if product.title != blank -%}
+              {%- if section.settings.product_title != blank -%}
+                {{ section.settings.product_title | escape }}
+              {%- elsif product.title != blank -%}
                 {{ product.title | escape }}
               {%- else -%}
                 {{ 'onboarding.product_title' | t }}
@@ -793,6 +795,11 @@
       "type": "product",
       "id": "product",
       "label": "t:sections.featured-product.settings.product.label"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Custom Product Title (optional)"
     },
     {
       "type": "header",
