@@ -733,6 +733,9 @@ class VariantSelects extends HTMLElement {
           if(productInfoWrapper){
             let submitBtn = productInfoWrapper.querySelector('[name="add"]');
             if(submitBtn){
+              // console.log("variantPrice",variantPrice)
+              // console.log("priceSelling",priceSelling)
+
               submitBtn.innerHTML = `Subscribe — <s> ${Shopify.formatMoney(variantPrice)} </s> ${Shopify.formatMoney(priceSelling)}`;
             }
           
