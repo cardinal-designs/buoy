@@ -54,8 +54,14 @@
         {% endcapture %}
         <span class="quick-add__discount-badge">{{ discount }}% off</span>
       </div>
-
-      <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
+   
+      <a class="{{ base }}__link" href="{{ card_product.url }}">
+        {% if content.product_title != blank %}
+          {{ content.product_title }}
+        {% else %}
+          {{ card_product.title }}
+        {% endif %}
+      </a>      
 
       {% liquid
         assign product_form_id = "product-form-" | append: product.id
