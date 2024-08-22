@@ -609,6 +609,10 @@ quick-add-card[data-open="true"] .quick-add__display {
   transition: transform .4s ease;
 }
 
+quick-add-card[data-open=true] .quick-add__price {
+  opacity: 1;
+}
+
 quick-add-card[data-open="false"] .quick-add__form-wrapper {
   top: 0;
 }
