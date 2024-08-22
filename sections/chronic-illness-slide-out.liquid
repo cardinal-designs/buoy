@@ -251,7 +251,7 @@
   
   $(".show-more a").on("click", function() {
     var $this = $(this); 
-    var $content = $this.parents('.form__radio--button').find(".field");
+    var $content = $this.parents('.form__checkbox--button').find(".field");
     var linkText = $this.text().toUpperCase();    
   
     if(linkText === "SHOW MORE"){
