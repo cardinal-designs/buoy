@@ -748,16 +748,10 @@ class VariantSelects extends HTMLElement {
           
               if (disable) {
                 submitBtn.setAttribute('disabled', true);
-                if (text) submitBtn.innerHTML = text;
-                
-                stickyButton && stickyButton.setAttribute('disabled', true);
-                if (text && stickyButton) stickyButton.innerHTML = text;
+                if (text) submitBtn.innerHTML = text;      
               } else {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerHTML = addToCartText; 
-                
-                stickyButton && stickyButton.removeAttribute('disabled');
-                if (stickyButton) stickyButton.innerHTML = addToCartText;
+                submitBtn.innerHTML = addToCartText;               
               }
               return;
             }
