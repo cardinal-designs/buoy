@@ -413,6 +413,26 @@
         "button_link": "shopify:\/\/collections\/all"
       }
     },
+    "17243378381cc48fca": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_cVcWEk": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_cVcWEk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "clinical_trial_drawer_Vya7Lt": {
       "type": "clinical-trial-drawer",
       "blocks": {
@@ -525,6 +545,7 @@
     "chronic_product_grid_dfgdYe",
     "text_image_toggle_YQJJzi",
     "reviews_grid_ERX9pT",
+    "17243378381cc48fca",
     "clinical_trial_drawer_Vya7Lt"
   ]
 }
