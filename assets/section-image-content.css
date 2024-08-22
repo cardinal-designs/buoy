@@ -121,7 +121,7 @@
 .image-content__link-copy-title {
   margin: 0 0 16px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 8px;
   font-weight: 500;
 }
