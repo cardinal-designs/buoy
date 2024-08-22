@@ -690,11 +690,9 @@ class VariantSelects extends HTMLElement {
     let currentVariant = thisData.currentVariant;
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
-      console.log(varId,"varId");
       let productInfoWrapper = thisData.closest('.product__info-wrapper') || thisData.closest(".quick-add__form-wrapper");
       if(!currentVariant?.id){
         varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
-
         if(productInfoWrapper){
           let inputId = productInfoWrapper.querySelector("input[name='id']");
           if(inputId){
@@ -702,15 +700,11 @@ class VariantSelects extends HTMLElement {
           }
         }
       }
-      let variantScript = thisData.parentElement.querySelector('.VariantJSON');
-      console.log(variantScript,"variantScript");
-      
+      let variantScript = thisData.parentElement.querySelector('.VariantJSON');      
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
-        let foundVariant = variantData?.find(variant => variant.id == varId);
-      console.log(foundVariant,"foundVariant");
-        
+        let foundVariant = variantData?.find(variant => variant.id == varId);   
         if(foundVariant){
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
@@ -732,20 +726,11 @@ class VariantSelects extends HTMLElement {
           }
           let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
           let variantPrice = foundVariant?.data?.price;
-            console.log(productInfoWrapper,"productInfoWrapper");
-           console.log(priceSelling,"priceSellingpriceSelling");
-           console.log(variantPrice,"variantPricevariantPrice");
           if(productInfoWrapper){
-            let submitBtn = productInfoWrapper.querySelector('[name="add"]');
-            console.log(submitBtn,"submitBtn");
+            let submitBtn = productInfoWrapper.querySelector('[name="add"]');   
             if(submitBtn){
-              console.log("variantPrice",variantPrice)
-              console.log("priceSelling",priceSelling)
-
-              submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
-                        
+              submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;              
               submitBtn.dataset.available = (!disable);
-          
               if (disable) {
                 submitBtn.setAttribute('disabled', true);
                 if (text) submitBtn.innerHTML = text;      
@@ -754,14 +739,11 @@ class VariantSelects extends HTMLElement {
                 submitBtn.innerHTML = addToCartText;               
               }
               return;
-            }
-          
-          }
-          
+            }          
+          }         
         }
       }
-    }
-    
+    }  
     
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
