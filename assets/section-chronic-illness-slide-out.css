@@ -497,11 +497,6 @@
     border-radius: 0;
   }
 
-  .chronic-illness-slide-out__inner {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
   .form__checkbox--button {
     margin-top: 22px;
   }
@@ -531,6 +526,11 @@
   .chronic-illness-slide-out__inner,
   .chronic__form--aftersubmission {
     padding: 0 0 32px;
+  }
+
+  .chronic-illness-slide-out__inner {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .chronic-illness-slide-out__content .field.half-field {
