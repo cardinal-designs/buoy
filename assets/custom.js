@@ -372,7 +372,20 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         if(dataTitleElement){
           let dataTitle = dataTitleElement.dataset.title;
           if(dataTitle){
-            showDrawer(document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`));
+            let supplementDrawer = document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`);
+            if(supplementDrawer){
+              showDrawer(supplementDrawer);  
+            }else{
+              let elements = Array?.from(document.querySelectorAll('.supplement-side-drawer'));
+              
+              let matchingElement = elements?.filter(element => 
+                element.getAttribute('data-product-name').includes('Hydration Drops')
+              )[0];
+              
+              if (matchingElement) {
+                showDrawer(matchingElement);
+              }
+            }
           }else{
             showDrawer(supplementDrawer);
           }
