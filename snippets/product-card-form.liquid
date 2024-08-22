@@ -111,7 +111,11 @@
   </div>
   <div class="{{ base }}__content">
     {% render 'okendo-reviews-product-rating-summary', product: card_product %}
-    <h5 class="{{ base }}__title">{{ card_product.title }}</h5>
+    {% if content.product_title != blank %}
+      <h5 class="{{ base }}__title">{{ content.product_title }}</h5>
+    {% else %}
+      <h5 class="{{ base }}__title">{{ card_product.title }}</h5>
+    {% endif %}
     {% if card_product.metafields.my_fields.product_card_text != blank %}
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
