@@ -569,7 +569,7 @@
   padding: 9px 15px;
 }
 
-.quick-add__form .product-form__buttons .button span + s:not(:empty) {
+.quick-add__form .product-form__buttons .button s:not(:empty) {
   margin-left: 2px;
 }
 
