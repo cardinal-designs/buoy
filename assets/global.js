@@ -688,7 +688,6 @@ class VariantSelects extends HTMLElement {
     let thisData = this;
     let dataUpdate = thisData.dataset.update;
     let currentVariant = thisData.currentVariant;
-    console.log("currentVariant", currentVariant)
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
       let productInfoWrapper = thisData.closest('.product__info-wrapper') || thisData.closest(".quick-add__form-wrapper");
@@ -706,7 +705,6 @@ class VariantSelects extends HTMLElement {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         let foundVariant = variantData?.find(variant => variant.id == varId);   
-        console.log("foundVariant", foundVariant)
         if(foundVariant){
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
