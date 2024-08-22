@@ -693,6 +693,7 @@ class VariantSelects extends HTMLElement {
     let currentVariant = thisData.currentVariant;
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
+      console.log(varId,"varId");
       let productInfoWrapper = thisData.closest('.product__info-wrapper');
       if(!currentVariant?.id){
         varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
@@ -705,10 +706,14 @@ class VariantSelects extends HTMLElement {
         }
       }
       let variantScript = thisData.parentElement.querySelector('.VariantJSON');
+      console.log(variantScript,"variantScript");
+      
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         let foundVariant = variantData?.find(variant => variant.id == varId);
+      console.log(foundVariant,"foundVariant");
+        
         if(foundVariant){
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
           if(productInfoWrapper){
