@@ -48,6 +48,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .reviews-grid__title {
     font-size: 30px;
   }
@@ -79,4 +80,9 @@
   .reviews-grid__button {
     width: 100%;
   }
+
+  .okeReviews .okeReviews-reviewsCarousel-slider {
+    padding: 0 34px !important;
+  }
+  
 }
