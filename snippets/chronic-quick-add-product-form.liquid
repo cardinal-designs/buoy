@@ -21,7 +21,7 @@
     {% unless p.has_only_default_variant %}
      <script type="application/json" class="VariantJSON">
               [
-                {%- for variant in product.variants -%}
+                {%- for variant in p.variants -%}
                   {
                     "id": {{ variant.id }},
                     "data": {{ variant | json }}
