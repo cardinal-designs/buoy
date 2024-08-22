@@ -32,10 +32,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .text-image-toggle__container .js-open-supplement-drawer {
     margin-top: 38px;
     margin-bottom: 12px;
   }
+  
 }
 
 .text-image-toggle__container .text-image-toggle__text a {
@@ -98,11 +100,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .text-image-toggle__container .page-width {
     flex-direction: column
   }
 
-  .text-image-toggle__image{
+  .text-image-toggle__image {
     display: none;
   }
 
