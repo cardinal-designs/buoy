@@ -738,7 +738,7 @@ class VariantSelects extends HTMLElement {
                 if (text) submitBtn.innerHTML = text;      
               } else {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerHTML = addToCartText;               
+                submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
               }
               return;
             }          
