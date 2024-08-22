@@ -513,7 +513,8 @@
      display: block;
   }
 
-  .chronic-illness-slide-out__inner {
+  .chronic-illness-slide-out__inner,
+  .chronic__form--aftersubmission {
     padding: 0 0 32px;
   }
 
