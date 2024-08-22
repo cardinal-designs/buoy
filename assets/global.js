@@ -746,6 +746,7 @@ class VariantSelects extends HTMLElement {
               console.log("priceSelling",priceSelling)
 
               submitBtn.innerHTML = `Subscribe — <s> ${Shopify.formatMoney(variantPrice)} </s> ${Shopify.formatMoney(priceSelling)}`;
+              return;
             }
           
           }
