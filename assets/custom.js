@@ -379,7 +379,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
               let elements = Array?.from(document.querySelectorAll('.supplement-side-drawer'));
               
               let matchingElement = elements?.filter(element => 
-                element.getAttribute('data-product-name').includes('Hydration Drops')
+                element.getAttribute('data-product-name')?.includes(dataTitle)
               )[0];
               
               if (matchingElement) {
