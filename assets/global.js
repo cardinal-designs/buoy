@@ -743,7 +743,23 @@ class VariantSelects extends HTMLElement {
               console.log("priceSelling",priceSelling)
 
               submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
-              // return;
+                        
+              submitBtn.dataset.available = (!disable);
+          
+              if (disable) {
+                submitBtn.setAttribute('disabled', true);
+                if (text) submitBtn.innerHTML = text;
+                
+                stickyButton && stickyButton.setAttribute('disabled', true);
+                if (text && stickyButton) stickyButton.innerHTML = text;
+              } else {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.innerHTML = addToCartText; 
+                
+                stickyButton && stickyButton.removeAttribute('disabled');
+                if (stickyButton) stickyButton.innerHTML = addToCartText;
+              }
+              return;
             }
           
           }
