@@ -588,10 +588,6 @@
     min-width: auto;
     padding: 12px 15px 13px;
   }
-
-  .chronic__form--aftersubmission .grid__btn--wrap .button {
-    font-size: 14px;
-  }
   
 }
 
@@ -611,6 +607,11 @@
 
   .chronic__form--aftersubmission .image-content__link-copy-container button svg {
     width: 20px;
+  }
+
+  .header__btn--wrap .button,
+  .chronic__form--aftersubmission .grid__btn--wrap .button {
+    font-size: 14px;
   }
   
 }
