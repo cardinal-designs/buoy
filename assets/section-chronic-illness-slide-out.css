@@ -484,14 +484,6 @@
   padding: 13px 20px;
 }
 
-@media screen and (min-width: 680px) and (max-width: 768px) {
-
-  .chronic-illness-slide-out {
-    padding: 10px;
-  }
-  
-}
-
 @media screen and (max-width: 768px) {
 
   .chronic-illness-slide-out {
@@ -604,6 +596,14 @@
     min-width: auto;
     padding: 12px 15px 13px;
     line-height: 0;
+  }
+  
+}
+
+@media screen and (min-width: 680px) and (max-width: 768px) {
+
+  .chronic-illness-slide-out {
+    padding: 10px;
   }
   
 }
