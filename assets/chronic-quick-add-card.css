@@ -6,9 +6,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .quick-add__media {
     margin-bottom: 12px;
   }
+  
 }
 
 .quick-add__media-inner {
@@ -380,8 +382,7 @@
   font-size: 12px;
   position: absolute;
   left: 72px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 6px;
   color: var(--charcoal-60);
   font-size: 12px;
   line-height: 14px;
