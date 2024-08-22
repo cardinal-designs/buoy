@@ -694,7 +694,7 @@ class VariantSelects extends HTMLElement {
     if(dataUpdate == 'custom'){
       let varId = currentVariant?.id;
       console.log(varId,"varId");
-      let productInfoWrapper = thisData.closest('.product__info-wrapper');
+      let productInfoWrapper = thisData.closest('.product__info-wrapper') || thisData.closest(".quick-add__form-wrapper");
       if(!currentVariant?.id){
         varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
 
