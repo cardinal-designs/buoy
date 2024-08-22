@@ -55,7 +55,7 @@
 }
 
 .text-image-toggle__button {
-  padding: 4px 12px 3px;
+  padding: 4px 12px;
   background: white;
   border: 1px solid #1F2322;
   color: #1F2322;
@@ -74,7 +74,7 @@
 
 .text-image-toggle__button.active {
   background: #DEF647;
-  border: none;
+  border-color: #DEF647;
 }
 
 .text-image-toggle__text h1 {
