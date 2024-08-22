@@ -35,7 +35,7 @@
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
 
-      {% if card_product.tags != blank and content.show_tags == true %}
+      {% if card_product.tags != blank %}
         <div class="{{ base }}__product-tags">
           {% for tag in card_product.tags %}
             <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
