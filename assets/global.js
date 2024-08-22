@@ -724,6 +724,7 @@ class VariantSelects extends HTMLElement {
             if(inputId){
               inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
               inputId.insertAdjacentHTML('beforebegin', sellingInputIDHtml);
+              inputId.value = foundVariant?.id;
             }
           }
           let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
