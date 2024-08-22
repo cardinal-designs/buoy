@@ -86,7 +86,11 @@
                 </div>
               </div>
               {% endif %}
-              <h6 class="">{{ card_product.title }}</h6>
+              {% if content.product_title != blank %}
+                <h6 class="">{{ content.product_title }}</h6>
+              {% else %}
+                <h6 class="">{{ card_product.title }}</h6>
+              {% endif %}
               {% assign category = card_product.metafields.custom.chronic_illness_category.value %}
               {% if category != blank %}
                 <p class="{{ base }}__category">
