@@ -43,6 +43,7 @@
             </div>
           {% endfor %}
           {% assign currentVariant = card_product.selected_or_first_available_variant %}
+          currentVariant -- {{ currentVariant }}
           {% capture discount %}
             {% if currentVariant.selling_plan_allocations.size > 0 %}
               {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
