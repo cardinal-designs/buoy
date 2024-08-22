@@ -3009,6 +3009,7 @@ select[name=selling_plan] {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
+  cursor: pointer;
 }
 
 .dropdown-container-item__title p {
