@@ -19,7 +19,7 @@
       </select>
     {% endcapture %}
     {% unless p.has_only_default_variant %}
-      <variant-radios class="no-js-hidden" data-section="{{ section.id }}"  data-product="{{ p.id }}"  data-url="{{ p.url }}" data-update-url="false" data-form-type="product-card">
+      <variant-radios class="no-js-hidden" data-section="{{ section.id }}"  data-product="{{ p.id }}"  data-url="{{ p.url }}" data-update-url="false" data-form-type="product-card" data-update="custom">
         {%- for option in p.options_with_values -%}
           {% assign optionIndex = forloop.index0 %}
           {% assign values = "" %}
