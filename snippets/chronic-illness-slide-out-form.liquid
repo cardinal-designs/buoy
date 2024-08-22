@@ -45,10 +45,10 @@
         {% assign currentVariant = card_product.selected_or_first_available_variant %}
         {% capture discount %}
           {% if currentVariant.selling_plan_allocations.size > 0 %}
-            {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
+            {{ currentVariant.price | minus: currentVariant.selling_plan_allocations[0].price | times: 100 | divided_by: currentVariant.price }}
           {% else %}
             {% if currentVariant.compare_at_price > currentVariant.price %}
-              {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
+              {{ currentVariant.compare_at_price_max | minus: currentVariant.price | times:100 | divided_by: currentVariant.compare_at_price_max }}
             {% endif %}
           {% endif %}
         {% endcapture %}
