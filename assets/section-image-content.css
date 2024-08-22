@@ -121,9 +121,10 @@
 .image-content__link-copy-title {
   margin: 0 0 16px;
   display: flex;
-  align-items: flex-end;
+  align-items: start;
   gap: 8px;
   font-weight: 500;
+  line-height: normal;
 }
 
 .image-content__link-copy-container {
