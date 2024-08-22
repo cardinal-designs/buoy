@@ -735,8 +735,12 @@ class VariantSelects extends HTMLElement {
           }
           let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
           let variantPrice = foundVariant?.data?.price;
+            console.log(productInfoWrapper,"productInfoWrapper");
+           console.log(priceSelling,"priceSellingpriceSelling");
+           console.log(variantPrice,"variantPricevariantPrice");
           if(productInfoWrapper){
             let submitBtn = productInfoWrapper.querySelector('[name="add"]');
+            console.log(submitBtn,"submitBtn");
             if(submitBtn){
               console.log("variantPrice",variantPrice)
               console.log("priceSelling",priceSelling)
