@@ -294,6 +294,13 @@
   min-width: 100%;
 }
 
+.contact__button .button {
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
 .chronic-illness-slide-out__inner .form-status-list {
   flex-wrap: wrap;
 }
