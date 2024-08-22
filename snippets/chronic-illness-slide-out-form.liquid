@@ -35,27 +35,25 @@
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
 
-      {% if card_product.tags != blank %}
-        <div class="{{ base }}__product-tags">
-          {% for tag in card_product.tags %}
-            <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
-              {{ tag }}
-            </div>
-          {% endfor %}
-          {% assign currentVariant = card_product.selected_or_first_available_variant %}
-          currentVariant -- {{ currentVariant }}
-          {% capture discount %}
-            {% if currentVariant.selling_plan_allocations.size > 0 %}
-              {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
-            {% else %}
-              {% if currentVariant.compare_at_price > currentVariant.price %}
-                {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
-              {% endif %}
+      
+      <div class="{{ base }}__product-tags">
+        {% for tag in card_product.tags %}
+          <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+            {{ tag }}
+          </div>
+        {% endfor %}
+        {% assign currentVariant = card_product.selected_or_first_available_variant %}
+        {% capture discount %}
+          {% if currentVariant.selling_plan_allocations.size > 0 %}
+            {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
+          {% else %}
+            {% if currentVariant.compare_at_price > currentVariant.price %}
+              {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
             {% endif %}
-          {% endcapture %}
-          <span class="quick-add__discount-badge">{{ discount }}% off</span>
-        </div>
-      {% endif %}
+          {% endif %}
+        {% endcapture %}
+        <span class="quick-add__discount-badge">{{ discount }}% off</span>
+      </div>
 
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
