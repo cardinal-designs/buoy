@@ -153,3 +153,17 @@
   }
   
 }
+
+@media screen and (max-width: 374px) {
+
+  .text-image-toggle__text h1 .rhyme-italic {
+    font-size: 28px;
+  }
+  
+  .text-image-toggle__text h1 {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+  
+}
