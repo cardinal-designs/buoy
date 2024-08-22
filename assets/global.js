@@ -25,9 +25,6 @@ Shopify.formatMoney = function(cents, format) {
         dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
         cents   = parts[1] ? (decimal + parts[1]) : '';
     // If the cents part is '00', we remove the decimal point and cents
-    if (cents === '.00') {
-      cents = '';
-    }
     return dollars + cents;
   }
   switch(formatString.match(placeholderRegex)[1]) {
