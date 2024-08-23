@@ -13,17 +13,19 @@
   document.addEventListener("DOMContentLoaded", async function() {
 
     function toggleLoadMore(data) {
-      let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
-      if(loadMoreReviewsBtn){
-         if(data?.nextUrl){
-            loadMoreReviewsBtn.classList.contains('hidden'){
-              loadMoreReviewsBtn.classList.remove('hidden')
+        let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
+        if (loadMoreReviewsBtn) {
+            if (data?.nextUrl) {
+                if (loadMoreReviewsBtn.classList.contains('hidden')) {
+                    loadMoreReviewsBtn.classList.remove('hidden');
+                }
+            } else {
+                loadMoreReviewsBtn.classList.add('hidden');
             }
-          }else{
-            loadMoreReviewsBtn.classList.remove('hidden')
-          }
-      }
+        }
     }
+
+    
     function loadReviews(data) {
        console.log("data", data)
     }
