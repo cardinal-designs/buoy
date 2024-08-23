@@ -255,6 +255,11 @@
     display: none;
   }
 
+  .promo__wrapper h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
   .promo__banner,
   .review-grid-item {
     margin-bottom: 20px;
