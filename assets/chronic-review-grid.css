@@ -167,7 +167,7 @@
   padding: 13px 15px;
 }
 
-.load-more-reviews-wrapper .reviews-grid__button {
+.page-chronic-illness-support .load-more-reviews-wrapper .reviews-grid__button {
   display: none;
 }
 
@@ -217,6 +217,10 @@
 
   .okeReviews .okeReviews-reviewsCarousel-slider {
     padding: 0 34px !important;
+  }
+
+  .load-more-reviews-wrapper .reviews-grid__button {
+    margin-bottom: 24px;
   }
   
 }
