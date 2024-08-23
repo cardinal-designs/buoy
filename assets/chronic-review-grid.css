@@ -113,6 +113,13 @@
     position: static;
   }
 
+  #chronic-review-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 60px;
+  }
+
   .reviews-grid__button {
     width: 100%;
   }
