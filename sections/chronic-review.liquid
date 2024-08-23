@@ -22,8 +22,25 @@
       </div>
     </div>
     <div id="chronic-review-container">
-      {% if section.settings.enabled_promo_banner %}
-      <div></div>
+      {% if section.settings.enabled_promo_banner and section.settings.promo_image != blank %}
+        <div class="Promo__banner">
+          <div class="promo__banner--image">
+            <img src="{{ section.settings.promo_image }}" alt="{{ section.settings.promo_image.alt }}" />
+          </div>
+          <div class="promo__banner--content">
+            <div class="promo__wrapper">
+              <h3>{{ section.settings.promo_title }}</h3>
+              <div class="promo__inner--wrapper">
+                <div class="promo__description">
+                  {{ section.settings.promo_desc }}
+                </div>
+                <div class="promo__button">
+                  <a href="{{ section.settings.promo_button_link }}" class="button button--green">{{ section.settings.promo_button_label }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endif %}
     </div>
     <div class="load-more-reviews-wrapper">
