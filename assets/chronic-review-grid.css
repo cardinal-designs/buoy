@@ -142,6 +142,8 @@
   position: relative;
   line-height: 0;
   margin-bottom: 32px;
+  display: inline-block;
+  width: 100%;
 }
 
 .promo__banner--content {
