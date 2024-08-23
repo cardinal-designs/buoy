@@ -280,5 +280,11 @@
   .promo__banner--content {
     padding: 10px;
   }
+
+  .promo__button .button {
+    font-size: 14px;
+    line-height: 23px;
+    padding: 11px 15px;
+  }
   
 }
