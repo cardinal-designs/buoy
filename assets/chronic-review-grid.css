@@ -153,6 +153,11 @@
   height: 100%;
 }
 
+promo__banner--content::after {
+  content: '';
+  position: absolute;
+}
+
 .promo__description li {
   list-style: none;
   font-family: inter;
