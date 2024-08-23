@@ -65,7 +65,7 @@
         }
     }
 
-    function loadReviews(data) {
+    function loadReviews(data, setPosition) {
       let reviews = data?.reviews;
       if(reviews?.length > 0){
         const reviewContainer = document.getElementById('chronic-review-container');
@@ -89,6 +89,14 @@
             reviewContainer.appendChild(gridItem);
         });
 
+        if(setPosition){
+          let promoBanner = reviewContainer.querySelector('.promo__banner');
+          let fifthPosition = reviewContainer.querySelectorAll('.review-grid-item')[3];
+          if (promoBanner && fifthPosition) {
+              reviewContainer.insertBefore(promoBanner, fifthPosition);
+          }
+        }
+
       }
     }
   
@@ -110,7 +118,7 @@
       const data = await fetchReview();  // Load the first 8 reviews
       if(data){
         toggleLoadMore(data);
-        loadReviews(data)
+        loadReviews(data, true)
       }
       // Example: Load more reviews when a button is clicked
      let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
