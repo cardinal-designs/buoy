@@ -167,6 +167,10 @@
   padding: 13px 15px;
 }
 
+.load-more-reviews-wrapper .reviews-grid__button {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   
   .reviews-grid__title {
