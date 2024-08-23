@@ -121,6 +121,12 @@
   color: #FFFFFF;
 }
 
+.promo__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
 .promo__description ul {
   margin: 0;
   padding: 0;
