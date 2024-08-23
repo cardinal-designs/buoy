@@ -344,24 +344,9 @@
         "button_link": "shopify:\/\/collections\/all"
       }
     },
-    "17243378381cc48fca": {
-      "type": "apps",
-      "blocks": {
-        "okendo_reviews_carousel_cVcWEk": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "show_heading": false,
-            "heading": "",
-            "badge_link": "",
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_carousel_cVcWEk"
-      ],
+    "chronic_review_F74gnL": {
+      "type": "chronic-review",
       "settings": {
-        "include_margins": true
       }
     },
     "clinical_trial_drawer_Vya7Lt": {
@@ -466,11 +451,6 @@
         "title": "Clinical Trial Updates",
         "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
       }
-    },
-    "chronic_review_F74gnL": {
-      "type": "chronic-review",
-      "settings": {
-      }
     }
   },
   "order": [
@@ -481,8 +461,7 @@
     "chronic_product_grid_dfgdYe",
     "text_image_toggle_YQJJzi",
     "reviews_grid_ERX9pT",
-    "17243378381cc48fca",
-    "clinical_trial_drawer_Vya7Lt",
-    "chronic_review_F74gnL"
+    "chronic_review_F74gnL",
+    "clinical_trial_drawer_Vya7Lt"
   ]
 }
