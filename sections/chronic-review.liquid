@@ -1,6 +1,6 @@
 <div class="chronic-review">
   <div class="page-width">
-    <div class="chronic-review-grid">
+    <div class="chronic-review-container">
       Chronic Review
     </div>
     <div class="load-more-reviews-wrapper">
@@ -28,6 +28,28 @@
     
     function loadReviews(data) {
        console.log("data", data)
+      let reviews = data?.reviews;
+      if(reviews?.length > 0){
+        const reviewContainer = document.getElementById('chronic-review-container');
+    
+        // Loop through the itemsArray and add grid items
+        reviews?.forEach(item => {
+            // Create a div element for each grid item
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('review-grid-item');
+    
+            // Set the inner HTML of the grid item
+            gridItem.innerHTML = `
+                <h3>${item?.title}</h3>
+                <p>${item?.body}</p>
+                <p>${item?.reviewer?.displayName}</p>
+            `;
+    
+            // Append the grid item to the grid container
+            reviewContainer.appendChild(gridItem);
+        });
+
+      }
     }
   
       async function fetchReview(nextPageUrl) {
