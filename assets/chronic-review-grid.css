@@ -137,6 +137,10 @@
   margin-top: 20px;
 }
 
+.promo__button .button {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   
   .reviews-grid__title {
