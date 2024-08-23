@@ -111,6 +111,10 @@
 #load-more-reviews {
   text-decoration: underline;
   text-underline-offset: 7px;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 .load-more-reviews-wrapper {
