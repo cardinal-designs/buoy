@@ -446,38 +446,35 @@
                   {% endif %}
                 {% endif %}
                 {% if block.type == "benefit_dropdown" %}
-                  <div class="dropdown-container-item dropdown-block-title">
-                    <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
-                      <p>{{ block.settings.title }}</p>
-                      <div class="dropdown-container-item__x"></div>
-                    </div>
-                    <div class="dropdown-container-item__body">
-                      {% if block.settings.subtitle != blank %}
-                        <div class="dropdown-container-item__body-text">
-                          <p class="rhyme">{{ block.settings.subtitle }}</p>
-                        </div>
-                      {% endif %}
-                      <div class="dropdown-container-item__body-list">
-                        <h4>{{ block.settings.list_title1 }}</h4>
-                        <div class="dropdown-container-item__grid">
-                          <div class="dropdown-container-item__image">
-                            <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
+                  {% assign benefitsDropdown = product.metafields.custom.benefits_dropdown.value %}
+                  {% if benefitsDropdown != blank %}
+                    <div class="dropdown-container-item dropdown-block-title">
+                      <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
+                        <p>{{ block.settings.title }}</p>
+                        <div class="dropdown-container-item__x"></div>
+                      </div>
+                      <div class="dropdown-container-item__body">
+                        {% if block.settings.subtitle != blank %}
+                          <div class="dropdown-container-item__body-text">
+                            <p class="rhyme">{{ block.settings.subtitle }}</p>
                           </div>
-                          <div class="dropdown-container-item__content">
-                            <p>{{ block.settings.list_item1 }}</p>
-                            <div class="product__drawer-triggers" data-title="{{ block.settings.list_title1 }}">
-                              {% if block.settings.enable_supplement_facts %}
-                                <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
-                              {% endif %}
-                              {% if block.settings.enable_clinical_trial %}
-                                <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
-                              {% endif %}
+                        {% endif %}
+                        {% for data in whatsDropdown %}
+                          <div class="dropdown-container-item__body-list">
+                          <h4>{{ data.title }}</h4>
+                          <div class="dropdown-container-item__grid">
+                            <div class="dropdown-container-item__image">
+                              <img src="{{ data.image | img_url: 'master' }}"/>
+                            </div>
+                            <div class="dropdown-container-item__content">
+                              <p>{{ data.short_description }}</p>
                             </div>
                           </div>
                         </div>
+                        {% endfor %}
                       </div>
                     </div>
-                  </div>
+                  {% endif %}
                 {% endif %}
               {% endfor %}
             </div>                          
