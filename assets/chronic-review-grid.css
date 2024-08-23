@@ -47,6 +47,20 @@
   background-color: transparent;
 }
 
+#chronic-review-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.review-grid-item h3 {
+  font-size: 18px;
+  line-height: 21.78px;
+  margin: 0 0 16px;
+}
+.chronic-review {
+  background-color: #F8F8F8;
+}
+
 @media screen and (max-width: 768px) {
   
   .reviews-grid__title {
