@@ -8,9 +8,9 @@
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", async function() {
   
-      async function fetchReview() {
+      async function fetchReview(page = 1, perPage = 8) {
           try {
-              const response = await fetch('https://api.okendo.io/v1/stores/ddccf316-2614-49f7-8641-7b411da6bacb/collections/f5674d90-31fa-4ed2-894d-c1a20608af17/reviews');
+              const response = await fetch(`https://api.okendo.io/v1/stores/ddccf316-2614-49f7-8641-7b411da6bacb/collections/f5674d90-31fa-4ed2-894d-c1a20608af17/reviews?page=${page}&perPage=${perPage}`);
               const data = await response.json();
               return data;
           } catch (error) {
@@ -21,9 +21,18 @@
   
       console.log("DOM fully loaded and parsed");
   
-      const data = await fetchReview();
-      console.log("data", data);  // This will log the fetched reviews data
+      const data = await fetchReview();  // Load the first 8 reviews
+      console.log("data", data);
+  
+      // Example: Load more reviews when a button is clicked
+      document.getElementById('load-more-reviews').addEventListener('click', async function() {
+          const nextPage = 2;  // Increment the page number accordingly
+          const moreReviews = await fetchReview(nextPage);
+          console.log("moreReviews", moreReviews);
+          // Append the new reviews to your review section
+      });
   });
+
 
 
 </script>
