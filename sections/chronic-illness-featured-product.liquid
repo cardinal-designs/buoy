@@ -430,10 +430,10 @@
                                 <h4>{{ data.title }}</h4>
                                 <p>{{ data.short_description }}</p>
                                 <div class="product__drawer-triggers" data-title="{{ data.title }}">
-                                  {% if block.settings.enable_supplement_facts %}
+                                  {% if data.enable_supplement_facts %}
                                     <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
                                   {% endif %}
-                                  {% if block.settings.enable_clinical_trial %}
+                                  {% if data.enable_clinical_trial %}
                                     <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
                                   {% endif %}
                                 </div>
@@ -880,21 +880,6 @@
           "type": "text",
           "id": "bubble_text",
           "label": "Dropdown Bubble Text"
-        },
-        {
-          "type": "text",
-          "id": "list_title1",
-          "label": "Dropdown List Title"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon1",
-          "label": "Dropdown Icon"
-        },
-        {
-          "type": "text",
-          "id": "list_item1",
-          "label": "Dropdown List Item"
         }
       ]
     },
