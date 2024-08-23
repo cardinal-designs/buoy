@@ -59,13 +59,9 @@
       "blocks": {
         "whats_included_dropdown_4mUd3g": {
           "type": "whats_included_dropdown",
-          "repeater": "{{ section.settings.product.metafields.custom.what_s_included.value }}",
           "settings": {
             "title": "What’s Included",
-            "bubble_text": "",
-            "list_title1": "{{ block.repeater.title.value }}",
-            "icon1": "{{ block.repeater.image.value }}",
-            "list_item1": "{{ block.repeater.short_description.value }}"
+            "bubble_text": "x1"
           }
         }
       },
