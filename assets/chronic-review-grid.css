@@ -29,6 +29,10 @@
   font-weight: 300;
 }
 
+.reviews-grid__button {
+  border: none; 
+}
+
 .reviews-grid__header-right {
   position: relative;
 }
