@@ -55,7 +55,7 @@
 
 #chronic-review-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  column-count: 2;
   gap: 32px;
 }
 
