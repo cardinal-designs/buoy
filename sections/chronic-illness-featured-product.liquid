@@ -419,7 +419,7 @@
                           <div class="dropdown-container-item__body-list">
                             <div class="dropdown-container-item__grid">
                               <div class="dropdown-container-item__image">
-                                <img src="{{ block.settings.icon1 | img_url: 'master' }}"/>
+                                <img src="{{ data.image | img_url: 'master' }}"/>
                                 {% if block.settings.bubble_text != blank %}
                                   <div class="bubble-text">
                                     <p>{{ block.settings.bubble_text }}</p>
@@ -427,9 +427,9 @@
                                 {% endif %}
                               </div>
                               <div class="dropdown-container-item__content">
-                                <h4>{{ block.settings.list_title1 }}</h4>
-                                <p>{{ block.settings.list_item1 }}</p>
-                                <div class="product__drawer-triggers" data-title="{{ block.settings.list_title1 }}">
+                                <h4>{{ data.title }}</h4>
+                                <p>{{ data.short_description }}</p>
+                                <div class="product__drawer-triggers" data-title="{{ data.title }}">
                                   {% if block.settings.enable_supplement_facts %}
                                     <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
                                   {% endif %}
