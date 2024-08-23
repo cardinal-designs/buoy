@@ -59,12 +59,14 @@
       "blocks": {
         "dropdown_7AM34h": {
           "type": "dropdown",
+          "repeater": "{{ section.settings.product.metafields.custom.what_s_included.value }}",
           "settings": {
             "title": "What’s Included",
             "subtitle": "",
             "bubble_text": "x1",
-            "list_title1": "",
-            "list_item1": "",
+            "list_title1": "{{ block.repeater.title.value }}",
+            "icon1": "{{ block.repeater.image.value }}",
+            "list_item1": "{{ block.repeater.short_description.value }}",
             "enable_supplement_facts": true,
             "enable_clinical_trial": true,
             "title_pos_side": false
