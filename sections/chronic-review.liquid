@@ -11,6 +11,22 @@
 </div>
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", async function() {
+
+    function toggleLoadMore(data) {
+      let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
+      if(loadMoreReviewsBtn){
+         if(data?.nextUrl){
+            loadMoreReviewsBtn.classList.contains('hidden'){
+              loadMoreReviewsBtn.classList.remove('hidden')
+            }
+          }else{
+            loadMoreReviewsBtn.classList.remove('hidden')
+          }
+      }
+    }
+    function loadReviews(data) {
+       console.log("data", data)
+    }
   
       async function fetchReview(nextPageUrl) {
           let url = 'https://api.okendo.io/v1/stores/ddccf316-2614-49f7-8641-7b411da6bacb/collections/f5674d90-31fa-4ed2-894d-c1a20608af17/reviews';
@@ -30,16 +46,22 @@
       console.log("DOM fully loaded and parsed");
   
       const data = await fetchReview();  // Load the first 8 reviews
-      console.log("data", data);
-  
+      // console.log("data", data);
+      toggleLoadMore(data);
+      loadReviews(data)
+     
       // Example: Load more reviews when a button is clicked
-      document.getElementById('load-more-reviews').addEventListener('click', async function() {
-          const nextPage = 2;  // Increment the page number accordingly
-          let nextPageUrl = https://api.okendo.io/v1${data?.nextUrl};
-          const moreReviews = await fetchReview(nextPageUrl);
-          console.log("moreReviews", moreReviews);
-          // Append the new reviews to your review section
-      });
+      if(loadMoreReviewsBtn){
+          loadMoreReviewsBtn.addEventListener('click', async function() {
+              let nextPageUrl = `https://api.okendo.io/v1${data?.nextUrl}`;
+              const moreReviews = await fetchReview(nextPageUrl);
+              // console.log("moreReviews", moreReviews);
+              toggleLoadMore(moreReviews);
+              loadReviews(moreReviews)
+              // Append the new reviews to your review section
+          });
+      }
+    
   });
 
 
