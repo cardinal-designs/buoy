@@ -81,6 +81,8 @@
   border-radius: 10px;
   background-color: #F8F8F8;
   margin-bottom: 32px;
+  display: inline-block;
+  width: 100%;
 }
 
 .review-grid-item p:last-child {
