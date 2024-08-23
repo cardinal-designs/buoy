@@ -390,12 +390,12 @@
       "type": "chronic-review",
       "settings": {
         "background_color": "#ffffff",
-        "never_expires": true,
-        "green_button": false,
+        "never_expires": false,
+        "green_button": true,
         "subtitle": "THE BUOY COMMUNITY",
-        "title": "",
-        "button_label": "",
-        "button_link": ""
+        "title": "Real People, <em>Real Health Journeys<\/em>",
+        "button_label": "Join Now & Save 35%",
+        "button_link": "shopify:\/\/pages\/chronic-illness-shop"
       }
     }
   },
