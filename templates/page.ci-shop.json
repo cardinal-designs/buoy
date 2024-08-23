@@ -63,10 +63,20 @@
             "title": "What’s Included",
             "bubble_text": "x1"
           }
+        },
+        "benefit_dropdown_d9YtaF": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "list_title1": "",
+            "list_item1": ""
+          }
         }
       },
       "block_order": [
-        "whats_included_dropdown_4mUd3g"
+        "whats_included_dropdown_4mUd3g",
+        "benefit_dropdown_d9YtaF"
       ],
       "settings": {
         "title": "Start With Our <em>Best-Selling Kits<\/em>",
@@ -92,6 +102,28 @@
     },
     "chronic_illness_featured_product_6CVr8Q": {
       "type": "chronic-illness-featured-product",
+      "blocks": {
+        "whats_included_dropdown_KHgUAy": {
+          "type": "whats_included_dropdown",
+          "settings": {
+            "title": "",
+            "bubble_text": ""
+          }
+        },
+        "benefit_dropdown_mDb96x": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "list_title1": "",
+            "list_item1": ""
+          }
+        }
+      },
+      "block_order": [
+        "whats_included_dropdown_KHgUAy",
+        "benefit_dropdown_mDb96x"
+      ],
       "settings": {
         "title": "",
         "icon_image_text_1": "",
@@ -113,6 +145,28 @@
     },
     "chronic_illness_featured_product_4GgdWM": {
       "type": "chronic-illness-featured-product",
+      "blocks": {
+        "whats_included_dropdown_WNezLz": {
+          "type": "whats_included_dropdown",
+          "settings": {
+            "title": "",
+            "bubble_text": ""
+          }
+        },
+        "benefit_dropdown_aMWXdF": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "list_title1": "",
+            "list_item1": ""
+          }
+        }
+      },
+      "block_order": [
+        "whats_included_dropdown_WNezLz",
+        "benefit_dropdown_aMWXdF"
+      ],
       "settings": {
         "title": "",
         "icon_image_text_1": "",
