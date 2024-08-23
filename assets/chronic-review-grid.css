@@ -295,8 +295,12 @@
     padding: 15px;
   }
 
+  .okeReviews-starRating-indicator {
+    height: 21px;
+  }
+
   .okeReviews-starRating-indicator-layer {
-    background-size: 100px 25px;
+    background-size: 100px 22px;
   }
   
 }
