@@ -82,10 +82,12 @@
      let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
      if (loadMoreReviewsBtn) {
         loadMoreReviewsBtn.addEventListener('click', async function() {
+            loadMoreReviewsBtn.disabled = true;
             if (data?.nextUrl) {
                 let nextPageUrl = `https://api.okendo.io/v1${data.nextUrl}`;
                 const moreReviews = await fetchReview(nextPageUrl);
                 if (moreReviews) {
+                    loadMoreReviewsBtn.disabled = false;
                     toggleLoadMore(moreReviews);
                     loadReviews(moreReviews);
                 }
