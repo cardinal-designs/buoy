@@ -167,6 +167,13 @@
   padding: 13px 15px;
 }
 
+.okeReviews-starRating-indicator {
+  height: 12px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
 .page-chronic-illness-support .load-more-reviews-wrapper .reviews-grid__button {
   display: none;
 }
