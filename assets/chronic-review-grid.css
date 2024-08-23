@@ -124,8 +124,13 @@
 
 .promo__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
+}
+
+.promo__inner--wrapper {
+  width: 100%;
 }
 
 .promo__description ul {
