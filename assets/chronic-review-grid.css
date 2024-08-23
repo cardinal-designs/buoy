@@ -268,5 +268,17 @@
   #chronic-review-container {
     column-count: 1;
   }
+
+  .promo__banner--content {
+    padding: 15px;
+  }
+  
+}
+
+@media screen and (max-width: 374px) {
+
+  .promo__banner--content {
+    padding: 10px;
+  }
   
 }
