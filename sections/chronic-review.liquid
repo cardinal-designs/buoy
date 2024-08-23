@@ -47,20 +47,24 @@
   
       const data = await fetchReview();  // Load the first 8 reviews
       // console.log("data", data);
-      toggleLoadMore(data);
-      loadReviews(data)
+      if(data){
+        toggleLoadMore(data);
+        loadReviews(data)
+      }
      
       // Example: Load more reviews when a button is clicked
-      if(loadMoreReviewsBtn){
-          loadMoreReviewsBtn.addEventListener('click', async function() {
-              let nextPageUrl = `https://api.okendo.io/v1${data?.nextUrl}`;
-              const moreReviews = await fetchReview(nextPageUrl);
-              // console.log("moreReviews", moreReviews);
-              toggleLoadMore(moreReviews);
-              loadReviews(moreReviews)
-              // Append the new reviews to your review section
-          });
-      }
+     if (loadMoreReviewsBtn) {
+        loadMoreReviewsBtn.addEventListener('click', async function() {
+            if (data?.nextUrl) {
+                let nextPageUrl = `https://api.okendo.io/v1${data.nextUrl}`;
+                const moreReviews = await fetchReview(nextPageUrl);
+                if (moreReviews) {
+                    toggleLoadMore(moreReviews);
+                    loadReviews(moreReviews);
+                }
+            }
+        });
+    }
     
   });
 
