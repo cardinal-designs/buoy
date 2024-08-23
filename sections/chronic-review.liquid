@@ -9,7 +9,6 @@
 </div>
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", async function() {
-
     function toggleLoadMore(data) {
         let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
         if (loadMoreReviewsBtn) {
@@ -23,9 +22,7 @@
         }
     }
 
-    
     function loadReviews(data) {
-       console.log("data", data)
       let reviews = data?.reviews;
       if(reviews?.length > 0){
         const reviewContainer = document.getElementById('chronic-review-container');
@@ -46,8 +43,6 @@
                 <p>${item?.body}</p>
                 <p>${item?.reviewer?.displayName}</p>
             `;
-    
-            // Append the grid item to the grid container
             reviewContainer.appendChild(gridItem);
         });
 
@@ -68,16 +63,12 @@
               return null;
           }
       }
-  
-      console.log("DOM fully loaded and parsed");
-  
+
       const data = await fetchReview();  // Load the first 8 reviews
-      // console.log("data", data);
       if(data){
         toggleLoadMore(data);
         loadReviews(data)
       }
-     
       // Example: Load more reviews when a button is clicked
      let loadMoreReviewsBtn = document.getElementById('load-more-reviews');
      if (loadMoreReviewsBtn) {
