@@ -1,11 +1,10 @@
 .reviews-grid {
-  padding: 100px 0 0;
-  /* padding-bottom: 70px; */
+  padding: 100px 0 70px;
   background-color: var(--gray-lighest);
 }
 
 .reviews-grid__header {
-  /* margin-bottom: 60px; */
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
