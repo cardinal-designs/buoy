@@ -69,6 +69,11 @@
   margin: 0;
 }
 
+#load-more-reviews {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
 .load-more-reviews-wrapper {
   text-align: center;
   padding: 88px 0 3px;
