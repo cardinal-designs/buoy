@@ -69,6 +69,11 @@
   margin: 0;
 }
 
+.load-more-reviews-wrapper {
+  text-align: center;
+  padding: 88px 0 3px;
+}
+
 @media screen and (max-width: 768px) {
   
   .reviews-grid__title {
