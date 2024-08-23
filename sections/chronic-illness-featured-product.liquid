@@ -403,7 +403,7 @@
               {% for block in section.blocks %}
                 {% if block.type == "whats_included_dropdown" %}
                   {% assign whatsDropdown = product.metafields.custom.what_s_included.value %}
-                  {% if whatsDropdown != blank %}
+                  {% if whatsDropdown != blank and block.settings.title != blank %}
                     <div class="dropdown-container-item">
                       <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
                         <p>{{ block.settings.title }}</p>
@@ -447,7 +447,7 @@
                 {% endif %}
                 {% if block.type == "benefit_dropdown" %}
                   {% assign benefitsDropdown = product.metafields.custom.benefits_dropdown.value %}
-                  {% if benefitsDropdown != blank %}
+                  {% if benefitsDropdown != blank and block.settings.title != blank %}
                     <div class="dropdown-container-item dropdown-block-title">
                       <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
                         <p>{{ block.settings.title }}</p>
