@@ -833,8 +833,9 @@
   ],
   "blocks": [
     {
-      "type": "dropdown",
-      "name": "Dropdown Block",
+      "type": "whats_included_dropdown",
+      "name": "What's Included Dropdown",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -883,6 +884,38 @@
           "id": "title_pos_side",
           "label": "Show Title Block",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "benefit_dropdown",
+      "name": "Benefit Dropdown",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Dropdown Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Dropdown Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "list_title1",
+          "label": "Dropdown List Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon1",
+          "label": "Dropdown Icon"
+        },
+        {
+          "type": "text",
+          "id": "list_item1",
+          "label": "Dropdown List Item"
         }
       ]
     }
