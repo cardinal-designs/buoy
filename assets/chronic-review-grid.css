@@ -51,6 +51,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  padding-top: 60px;
 }
 
 .review-grid-item h3 {
