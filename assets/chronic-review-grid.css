@@ -72,6 +72,10 @@
   font-weight: 500;
 }
 
+.review-grid-item h3 + p {
+  margin: 16px 0 20px;
+}
+
 .review-grid-item {
   padding: 30px;
   border-radius: 10px;
