@@ -211,6 +211,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .chronic-review .page-width {
+    padding: 0 20px;
+  }
   
   .reviews-grid__title {
     font-size: 30px;
