@@ -22,7 +22,9 @@
       </div>
     </div>
     <div id="chronic-review-container">
+      {% if section.settings.enabled_promo_banner %}
       <div></div>
+      {% endif %}
     </div>
     <div class="load-more-reviews-wrapper">
       <button id="load-more-reviews">Load More Amazing Stories</button>
@@ -155,6 +157,40 @@
       {
         "type": "url",
         "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "header",
+        "content": "Promo Banner"
+      },
+      {
+        "type": "checkbox",
+        "id": "enabled_promo_banner",
+        "label": "Enabled Promo Banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "promo_title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "promo_desc",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "promo_button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "promo_button_link",
         "label": "Button Link"
       }
     ],
