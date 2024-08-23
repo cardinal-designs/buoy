@@ -116,7 +116,49 @@
 {% schema %}
   {
     "name": "Chronic Review",
-    "settings": [],
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#F8F8F8"
+      },
+      {
+        "type": "checkbox",
+        "id": "never_expires",
+        "label": "Never Expires",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "green_button",
+        "label": "Green Button"
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
     "presets": [
       {
         "name": "Chronic Review"
