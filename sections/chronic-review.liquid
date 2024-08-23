@@ -1,6 +1,6 @@
 {{ 'chronic-review-grid.css' | asset_url | stylesheet_tag }}
 
-<div class="chronic-review reviews-grid">
+<div class="chronic-review reviews-grid" style="background-color: {{ section.settings.background_color }}">
   <div class="page-width page-width--wide">
     <div class="reviews-grid__header">
       <div class="reviews-grid__header-left">
@@ -117,6 +117,12 @@
   {
     "name": "Chronic Review",
     "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#F8F8F8"
+      },
       {
         "type": "checkbox",
         "id": "never_expires",
