@@ -182,17 +182,26 @@
   margin: 0;
 }
 
+.featured__product-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
 .featured__product-tag {
   font-family: inter,sans-serif;
   font-size: 12px;
   font-weight: 400;
-  line-height: 14.52px;
+  /* line-height: 14.52px; */
+  line-height: normal;
   text-align: left;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  /* vertical-align: middle; */
   border: 1px solid #1F2322;
   border-radius: 4px;
-  padding: 2px 4px 2px;
+  padding: 2.25px 6px 2.75px;
   color: #1F2322;
 }
 

@@ -52,7 +52,7 @@
           {% endif %}
         {% endcapture %}
         
-        <span class="quick-add__discount-badge">{{ discount }}% off</span>
+        <span class="quick-add__discount-badge">{{ discount | strip }}% off</span>
       </div>
 
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>

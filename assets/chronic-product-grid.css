@@ -16,6 +16,7 @@
 .product-grid__title em {
   font-family: Rhymes-Light-Italic;
   font-weight: 300;
+  font-style: normal;
 }
 
 .product-grid__props {
@@ -135,9 +136,9 @@
   }
 
   .quick-add__sub--text {
-    min-height: 42px;
+    /* min-height: 42px; */
     font-size: 12px;
-    line-height: 14.52px;
+    /* line-height: normal; */
   }
 
   .quick-add__container .tabs-label {

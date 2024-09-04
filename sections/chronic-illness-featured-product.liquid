@@ -65,7 +65,7 @@
         {% endif %}
         {% endcapture %}
         
-        <span class="discount_badge">{{ discount }}% off</span>
+        <span class="discount_badge">{{ discount | strip }}% off</span>
         <div class="Featured_product__media-list">
           {%- for media in product.media -%}
             <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
@@ -419,7 +419,7 @@
                           <div class="dropdown-container-item__body-list">
                             <div class="dropdown-container-item__grid">
                               <div class="dropdown-container-item__image">
-                                <img src="{{ data.image | img_url: 'master' }}"/>
+                                <img width="60" src="{{ data.image | img_url: 'master' }}"/>
                                 {% if block.settings.bubble_text != blank %}
                                   <div class="bubble-text">
                                     <p>{{ block.settings.bubble_text }}</p>

@@ -88,6 +88,11 @@
   padding: 3px 8px 4px;
   border-radius: 4px;
   font-family: inter, sans-serif;
+  display: none;
+}
+
+.quick-add__product-tag:last-of-type {
+  display: block;
 }
 
 .quick-add__link {
@@ -119,7 +124,8 @@
 }
 
 .quick-add__button:not(:disabled):hover {
-  background: var(--green-1);
+  background: var(--charcoal);
+  color: #ffffff;
 }
 
 .quick-add__content {

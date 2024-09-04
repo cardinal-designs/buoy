@@ -75,6 +75,13 @@
             // Create a div element for each grid item
             const gridItem = document.createElement('div');
             gridItem.classList.add('review-grid-item');
+
+            let avatar = ''
+            if( item?.reviewer?.avatarUrl != undefined ) {
+              avatar = `<img style="width: 72px; height: 72px; object-fit: cover; border-radius: 5px;" alt="${item?.reviewer?.displayName} avatar" src="${item?.reviewer?.avatarUrl}">` || ''
+            } else {
+              avatar = `<img style="width: 72px; height: 72px; object-fit: cover; border-radius: 5px;" alt="${item?.productName} product image" src="${item?.productImageUrl}">` || ''
+            }
     
             // Set the inner HTML of the grid item
             gridItem.innerHTML = `
@@ -84,7 +91,7 @@
                 </span>
                 <h3>${item?.title}</h3>
                 <p>${item?.body}</p>
-                <p>${item?.reviewer?.displayName}</p>
+                <p style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 16px;">${ avatar }<span>${item?.reviewer?.displayName}</span></p>
             `;
             reviewContainer.appendChild(gridItem);
         });
