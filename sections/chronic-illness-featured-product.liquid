@@ -12,7 +12,7 @@
     .product__info-wrapper:before {
       background: #f8f1eb66!important
     }
-  {% endif %}}
+  {% endif %}
         
 {% endstyle %}
 
@@ -78,7 +78,10 @@
       <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb10 !important;"{% endif %}>
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
-            {% render 'okendo-reviews-product-rating-summary', product: product %}
+            {% comment %} {% render 'okendo-reviews-product-rating-summary', product: product %} {% endcomment %}
+            <a href="#Product_Reviews">
+              <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }} <span>{{ product.metafields.okendo.summaryData.reviewAverageValue }}/5 {{ product.metafields.okendo.summaryData.reviewCount }} Reviews</span></div>
+            </a>
             <h4 class="product__title" {{ block.shopify_attributes }}>
               {%- if section.settings.product_title != blank -%}
                 {{ section.settings.product_title | escape }}

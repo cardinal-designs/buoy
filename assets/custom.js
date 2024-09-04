@@ -574,6 +574,10 @@ $('.dropdown-container-item__title').click(function() {
   // If the clicked item was not active, make it active and slide down its content
   if (!isActive) {
     $(this).addClass('active');
+    if(window.matchMedia("(max-width: 768px)").matches) {
+      $(this)[0].scrollIntoView();
+    }
+    
     $(this).next().slideToggle();
   }
 });
