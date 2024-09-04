@@ -13,7 +13,7 @@
      {% endfor %} 
      </div>
      {% if section.settings.supplements == true %}
-      <a href="javascript:void(0);" class="hide-mobile tabs-label body js-ingredients-open supplement-section-link">Clinical Study</a>
+      <a href="javascript:void(0);" class="hide-mobile tabs-label body js-ingredients-open supplement-section-link">{{ section.settings.button_text }}</a>
      {% endif %}
    </div>
    <div class="text-image-toggle__images">
@@ -33,7 +33,7 @@
      {% endfor %}
    </div>
    {% if section.settings.supplements == true %}
-    <a href="javascript:void(0);" class="hide-desktop tabs-label body js-open-supplement-drawer supplement-section-link">Clinical Study</a>
+    <a href="javascript:void(0);" class="hide-desktop tabs-label body js-open-supplement-drawer supplement-section-link">{{ section.settings.button_text }}</a>
    {% endif %}
  </div>
 </div>
@@ -59,6 +59,12 @@
       "id": "supplements",
       "label": "Show Supplments Link?",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Clinical Study"
     },
     {
       "type": "color",
