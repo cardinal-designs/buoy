@@ -662,6 +662,7 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
+    if(this.closest('quick-add-card')) return
     fetch(this.dataset.url + '?variant=' + this.currentVariant.id + '&section_id=' + this.dataset.section)
       .then((response) => response.text())
       .then((responseText) => {
@@ -1828,7 +1829,7 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
         }
         
         if (chronicFormAfterSubmission) {
-          chronicFormAfterSubmission.style.display = "none";
+          chronicFormAfterSubmission.style.display = "block";
         }
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;

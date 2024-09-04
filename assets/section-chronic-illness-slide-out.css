@@ -90,7 +90,7 @@
 }
 
 .chronic-illness-slide-out__title {
-  margin: 0 0 32px;
+  margin: 0 0 14px;
   font-family: inter;
   font-size: 50px;
   font-weight: 400;
@@ -102,6 +102,7 @@
 .chronic-illness-slide-out__title em {
   font-family: Rhymes-Light-Italic;
   font-weight: 300;
+  font-style: normal;
 }
 
 .chronic-illness-slide-out__text {
@@ -115,7 +116,7 @@
 
 .chronic-illness-slide-out__content .field__label {
   font-family: inter,sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 21px;
   text-align: left;
@@ -124,7 +125,7 @@
   position: relative;
   letter-spacing: 0;
   color: #797B7A;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   display: block;
   pointer-events: none;
   text-transform: capitalize;
@@ -175,7 +176,8 @@
   color: #1F2322;
 }
 
-.form__checkbox--title p {
+.form__checkbox--title p,
+.form__checkbox--title h3 span {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -185,7 +187,7 @@
 }
 
 .form__checkbox--title {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .chronic-illness-slide-out__checkboxs {
@@ -198,7 +200,7 @@
   display: block;
   width: 50%;
   padding: 0 12px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .field__checkbox--label {
@@ -285,8 +287,8 @@
 
 .contact__button,
 .chronic--illness__form--btn {
-  margin-top: 18px;
-  width: 100%;
+  margin: 18px auto 0;
+  width: fit-content;
 }
 
 .contact__button .button,
@@ -343,11 +345,11 @@
   font-weight: 400;
   line-height: 28px;
   text-align: center;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .header__btn--wrap {
-  margin-top: 32px;
+  margin-top: 24px;
   text-align: center;
 }
 
@@ -363,14 +365,14 @@
 
 .chronic__form--aftersubmission .image-content__link-copy {
   width: 100%;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 24px;
   display: inline-block;
 }
 
 .chronic__form--aftersubmission .image-content__link-copy-title {
   margin: 0 0 16px;
   display: flex;
+  justify-content: center;
   align-items: start;
   gap: 8px;
   font-family: inter, sans-serif;
@@ -414,7 +416,7 @@
 }
 
 .form__product--grid {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: -20px;
   margin-right: -20px;
 }
@@ -633,4 +635,86 @@
     font-size: 14px;
   }
   
+}
+
+.chronic-illness-slide-out .quick-add__product-tag:not(:last-of-type) {
+  display: none;
+}
+
+.chronic-illness-slide-out quick-add-card product-form {
+  width: 100%;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset {
+  background: white;
+  border: 1px solid #BBBCBC;
+  border-radius: 10px;
+  padding:6px 8px;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset .Variant_Blocks {
+ margin-bottom: 7px;
+ display: block;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset .Variant_Blocks:not(:first-of-type) {
+  margin-bottom: 0px;
+  border-top: 1px solid #E9E9E9;
+  padding-top: 7px;
+ }
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset input {
+  opacity: 0;
+  position: absolute;
+  left: -200px;
+  height: 0px;
+  width: 0px;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset input:not(:checked) + label {
+  color: var(--charcoal-60)
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset label .Variant_Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset label {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: inter, sans-serif;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset label .Supply_Time {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Rhymes-Light-Italic;
+}
+
+.chronic-illness-slide-out quick-add-card variant-radios fieldset label .Variant_Price {
+  display: none;
+}
+
+.chronic-illness-slide-out quick-add-card button[type="submit"] {
+  background: var(--charcoal);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 14px;
+  width: 100%;
+  min-width: fit-content;
+  margin-top: 8px;
+}
+
+.chronic-illness-slide-out quick-add-card .fieldset-expand {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
