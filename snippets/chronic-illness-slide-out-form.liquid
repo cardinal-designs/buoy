@@ -116,24 +116,14 @@
               {%- for option in card_product.options_with_values -%}
                {% assign optionIndex = forloop.index0 %}
                {% assign values = "" %}
+               <custom-select class="text-class">
                 <fieldset class="js product-form__input">
-                {%- for variant in card_product.variants -%}
-                  {% assign value = variant.options[optionIndex] %}
-                  {%- unless values contains value -%}
-                  {% assign values = values | join: ',' %}
-                  {% assign values = values | append: ',' | append:value %}
-                  {% assign values = values | split: ',' %}
-  
-                   {% assign my_fields = variant.metafields.custom %}
-  
-                    <span class="Variant_Blocks" data-id="{{ variant.id }}">
-                      <input type="radio" id="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                        name="{{ option.name }}"
-                        value="{{ value | escape }}"
-                        form="product-form-{{ card_product.id }}"
-                        {% if option.selected_value == value %}checked{% endif %}
-                      >
-                      <label for="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}">
+
+                  <span class="selected_block">
+                    <span class="Variant_Blocks">
+                      {% assign my_fields = card_product.selected_or_first_available_variant.metafields.custom %}
+                      {% assign value = card_product.selected_or_first_available_variant.options[optionIndex] %}
+                      <label>
                         <span class="Variant_Title">
                           <span class="custom-radio"></span>
                           {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
@@ -143,20 +133,6 @@
                             </span>
                           {%- endif -%}
                         </span>
-                        
-                        <span class="Variant_Price">
-                          {% if variant.selling_plan_allocations.size > 0 %}
-                            <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
-                            <s class="variant__compare--price">{{ variant.price | money }}</s>
-                          {% else %}
-                            {% if variant.compare_at_price > variant.price %}
-                              <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
-                              <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
-                            {% else %}
-                              <span class="variant__price--regular">{{ variant.price | money }}</span>
-                            {% endif %}
-                          {% endif %}
-                        </span> 
 
                         {%- if my_fields.supply_time != blank -%}
                           <span class="Supply_Time hide-desktop">
@@ -166,15 +142,69 @@
                         
                       </label>
                     </span>
-                  {%- endunless -%}
-                {%- endfor -%}
+                  </span>
 
-                <button class="fieldset-expand">
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.55905 11.1588L0.941406 4.54244L1.89578 3.58824L7.55905 9.26849L13.2223 3.60623L14.1767 4.56043L7.55905 11.1588Z" fill="#1F2322"/>
-                    </svg>                    
-                </button>
+                  <span class="selection_list">
+                    {%- for variant in card_product.variants -%}
+                      {% assign value = variant.options[optionIndex] %}
+                      {%- unless values contains value -%}
+                      {% assign values = values | join: ',' %}
+                      {% assign values = values | append: ',' | append:value %}
+                      {% assign values = values | split: ',' %}
+      
+                      {% assign my_fields = variant.metafields.custom %}
+      
+                        <span class="Variant_Blocks" data-id="{{ variant.id }}">
+                          <input type="radio" id="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                            name="{{ option.name }}"
+                            value="{{ value | escape }}"
+                            form="product-form-{{ card_product.id }}"
+                            {% if option.selected_value == value %}checked{% endif %}
+                          >
+                          <label for="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                            <span class="Variant_Title">
+                              <span class="custom-radio"></span>
+                              {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
+                              {%- if my_fields.supply_time != blank -%}
+                                <span class="Supply_Time hide-mobile">
+                                  {{ value }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
+                                </span>
+                              {%- endif -%}
+                            </span>
+                            
+                            <span class="Variant_Price">
+                              {% if variant.selling_plan_allocations.size > 0 %}
+                                <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                                <s class="variant__compare--price">{{ variant.price | money }}</s>
+                              {% else %}
+                                {% if variant.compare_at_price > variant.price %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
+                                  <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
+                                {% else %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>
+                                {% endif %}
+                              {% endif %}
+                            </span> 
+
+                            {%- if my_fields.supply_time != blank -%}
+                              <span class="Supply_Time hide-desktop">
+                              {{ my_fields.supply_time }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
+                              </span>
+                            {%- endif -%}
+                            
+                          </label>
+                        </span>
+                      {%- endunless -%}
+                    {%- endfor -%}
+                  </span>
+
+                  <button class="fieldset-expand">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.55905 11.1588L0.941406 4.54244L1.89578 3.58824L7.55905 9.26849L13.2223 3.60623L14.1767 4.56043L7.55905 11.1588Z" fill="#1F2322"/>
+                      </svg>                    
+                  </button>
                 </fieldset>
+              </custom-select>
                 {%- endfor -%}
                 <script type="application/json">
                   {{ card_product.variants | json }}

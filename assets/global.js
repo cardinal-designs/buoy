@@ -731,14 +731,18 @@ class VariantSelects extends HTMLElement {
           if(productInfoWrapper){
             let submitBtn = productInfoWrapper.querySelector('[name="add"]');   
             if(submitBtn){
-              submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;              
+              let buttonText = 'Subscribe'
+              if(thisData.closest("quick-add-card")) {
+                buttonText = 'Add'
+              }
+              submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;              
               submitBtn.dataset.available = (!disable);
               if (disable) {
                 submitBtn.setAttribute('disabled', true);
                 if (text) submitBtn.innerHTML = text;      
               } else {
                 submitBtn.removeAttribute('disabled');
-                submitBtn.innerHTML = `Subscribe —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
+                submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
               }
               return;
             }          
@@ -2388,3 +2392,35 @@ class QuickAddCard extends HTMLElement {
 }
 
 customElements.define("quick-add-card", QuickAddCard)
+
+class CustomSelect extends HTMLElement {
+  constructor() {
+    super();
+
+    this.expand = this.querySelector(".fieldset-expand")
+    this.selected_block = this.querySelector(".selected_block")
+
+    this.expand.addEventListener("click", this.toggleSelect.bind(this))
+    this.selected_block.addEventListener("click", this.toggleSelect.bind(this))
+    this.addEventListener('change', this.onVariantChange.bind(this));
+  }
+
+  toggleSelect(event) {
+    event && event.preventDefault()
+    if (this.classList.contains("active")) {
+      this.classList.remove("active")
+    } else {
+      this.classList.add("active")
+    }
+  }
+
+  onVariantChange() {
+    const selected_value = this.querySelector("input:checked").nextElementSibling
+
+    this.querySelector(".selected_block label").innerHTML = selected_value.innerHTML
+
+    this.toggleSelect()
+  }
+}
+
+customElements.define("custom-select", CustomSelect)
