@@ -226,19 +226,21 @@
         {% endif %}
 
         {% if section.blocks.size > 0 %}
-        <div class="form__product--grid">
-          <h2>{{ section.settings.product_heading }}</h2>
-          <div class="product-grid__grid">
-            {% for block in section.blocks %}
-              <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
-                {% render 'chronic-illness-slide-out-form', content: block.settings %}
+            <div class="form__product--grid">
+              <h2>{{ section.settings.product_heading }}</h2>
+              <div class="form__product--grid-wrapper no-scrollbar">
+                <div class="product-grid__grid">
+                  {% for block in section.blocks %}
+                    <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
+                      {% render 'chronic-illness-slide-out-form', content: block.settings %}
+                    </div>
+                  {% endfor %}
+                </div>
               </div>
-            {% endfor %}
-          </div>
-          <div class="grid__btn--wrap">
-            <a href="{{ section.settings.grid_btn_url }}" class="button button--green">{{ section.settings.grid_btn }}</a>
-          </div>
-        </div>
+              <div class="grid__btn--wrap">
+                <a href="{{ section.settings.grid_btn_url }}" class="button button--green">{{ section.settings.grid_btn }}</a>
+              </div>
+            </div>
         {% endif %}
         
       </div>

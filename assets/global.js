@@ -1833,7 +1833,7 @@ if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !==
         }
         
         if (chronicFormAfterSubmission) {
-          chronicFormAfterSubmission.style.display = "block";
+          chronicFormAfterSubmission.style.display = "none";
         }
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;

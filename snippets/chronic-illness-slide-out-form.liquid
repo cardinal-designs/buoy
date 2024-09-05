@@ -128,17 +128,11 @@
                           <span class="custom-radio"></span>
                           {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
                           {%- if my_fields.supply_time != blank -%}
-                            <span class="Supply_Time hide-mobile">
+                            <span class="Supply_Time">
                               {{ value }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
                             </span>
                           {%- endif -%}
                         </span>
-
-                        {%- if my_fields.supply_time != blank -%}
-                          <span class="Supply_Time hide-desktop">
-                          {{ my_fields.supply_time }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
-                          </span>
-                        {%- endif -%}
                         
                       </label>
                     </span>
@@ -166,7 +160,7 @@
                               <span class="custom-radio"></span>
                               {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
                               {%- if my_fields.supply_time != blank -%}
-                                <span class="Supply_Time hide-mobile">
+                                <span class="Supply_Time">
                                   {{ value }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
                                 </span>
                               {%- endif -%}
@@ -185,12 +179,6 @@
                                 {% endif %}
                               {% endif %}
                             </span> 
-
-                            {%- if my_fields.supply_time != blank -%}
-                              <span class="Supply_Time hide-desktop">
-                              {{ my_fields.supply_time }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
-                              </span>
-                            {%- endif -%}
                             
                           </label>
                         </span>
