@@ -444,6 +444,14 @@
                                    <div class="bubble-text">
                                       <p>{{ block.settings.bubble_text5 }}</p>
                                     </div>
+                                  {% elsif block.settings.bubble_text6 != blank and forloop.index0 == 5 %}
+                                   <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text6 }}</p>
+                                    </div>
+                                  {% elsif block.settings.bubble_text7 != blank and forloop.index0 == 6 %}
+                                   <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text7 }}</p>
+                                    </div>
                                   {% endif %}
                                 </div>
                                 <div class="dropdown-container-item__content">
@@ -918,6 +926,16 @@
           "type": "text",
           "id": "bubble_text5",
           "label": "Dropdown Bubble Text 5"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text6",
+          "label": "Dropdown Bubble Text 6"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text7",
+          "label": "Dropdown Bubble Text 7"
         }
       ]
     },
