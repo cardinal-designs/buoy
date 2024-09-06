@@ -780,3 +780,13 @@ quick-add-card[data-open="true"] .quick-add__overlay {
 .quick-add__content .okeReviews .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
   background-size: 65px 12px;
 }
+
+.quick-add__form .quick-add__best-value-wrapper {
+  flex-basis: 100%;
+}
+
+.quick-add__form .quick-add__best-value-wrapper .quick-add__best-value-tag {
+  position: relative;
+  left: 0;
+    transform: translate(0);
+}

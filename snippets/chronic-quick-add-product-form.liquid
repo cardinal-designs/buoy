@@ -45,21 +45,19 @@
               {% assign my_fields = variant.metafields.custom %}
 
                <span class="Variant_Blocks" data-id="{{ variant.id }}">
-                 <input type="radio" id="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                 <input type="radio" id="{{ section.id }}-{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}"
                    name="{{ option.name }}"
                    value="{{ value | escape }}"
                    form="product-form-{{ p.id }}"
                    {% if option.selected_value == value %}checked{% endif %}
                  >
-                 <label for="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                 <label for="{{section.id }}-{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}">
                    <span class="Variant_Title">
                     <span class="custom-radio"> </span>
                     {{ value }}
-                     {% comment %}
                     {%- if my_fields.quick_add_value_tag != blank -%}
-                      <span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span>
+                      <div class="quick-add__best-value-wrapper"><span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span></div>
                     {%- endif -%}
-                     {% endcomment %}
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span class="Serving_Price">

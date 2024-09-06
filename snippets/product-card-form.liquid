@@ -55,7 +55,9 @@
         <span class="quick-add__discount-badge">{{ discount | strip }}% off</span>
       </div>
 
+      {% unless page.handle contains "chronic-illness" %}
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
+      {% endunless %}
 
       
     </div>
