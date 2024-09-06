@@ -51,440 +51,442 @@
         </div>
       </div>
     {% endif %}
-    
-    <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-      <div class="product__media-wrapper">
-        {% assign currentVariant = product.selected_or_first_available_variant %}
-        {% capture discount %}
-        {% if currentVariant.selling_plan_allocations.size > 0 %}
-          {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
-        {% else %}
-          {% if currentVariant.compare_at_price > currentVariant.price %}
-            {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
-          {% endif %}
-        {% endif %}
-        {% endcapture %}
-        
-        <span class="discount_badge">{{ discount | strip }}% off</span>
-        <div class="Featured_product__media-list">
-          {%- for media in product.media -%}
-            <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
-            </div>
-          {%- endfor -%}
-        
-        </div>
-      </div>
-      <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb10 !important;"{% endif %}>
-        <div id="ProductInfo-{{ section.id }}" class="product__info-container">
-          {%- assign product_form_id = 'product-form-' | append: section.id -%}
-            {% comment %} {% render 'okendo-reviews-product-rating-summary', product: product %} {% endcomment %}
-            <a href="#Product_Reviews">
-              <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }} <span>{{ product.metafields.okendo.summaryData.reviewAverageValue }}/5 {{ product.metafields.okendo.summaryData.reviewCount }} Reviews</span></div>
-            </a>
-            <h4 class="product__title" {{ block.shopify_attributes }}>
-              {%- if section.settings.product_title != blank -%}
-                {{ section.settings.product_title | escape }}
-              {%- elsif product.title != blank -%}
-                {{ product.title | escape }}
-              {%- else -%}
-                {{ 'onboarding.product_title' | t }}
-              {%- endif -%}
-            </h4>
 
-            {% if product.tags != blank %}
-              <div class="featured__product-tags">
-                {% for tag in product.tags %}
-                  <div class="featured__product-tag">
-                    {{ tag }}
-                  </div>
-                {% endfor %}
-              </div>
+    {% unless product.title == blank %}
+      <div class="Custom_Featured_Product {% if section.settings.position == 'image_second' %}reverse__grid{% endif %} product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+        <div class="product__media-wrapper">
+          {% assign currentVariant = product.selected_or_first_available_variant %}
+          {% capture discount %}
+          {% if currentVariant.selling_plan_allocations.size > 0 %}
+            {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
+          {% else %}
+            {% if currentVariant.compare_at_price > currentVariant.price %}
+              {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
             {% endif %}
+          {% endif %}
+          {% endcapture %}
           
-            {%- if section.settings.show_price -%}
-              <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+          <span class="discount_badge">{{ discount | strip }}% off</span>
+          <div class="Featured_product__media-list">
+            {%- for media in product.media -%}
+              <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+                {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
               </div>
-            {%- endif -%}
+            {%- endfor -%}
+          
+          </div>
+        </div>
+        <div class="product__info-wrapper" {% if section.settings.background %}style="background-color: #f8f1eb10 !important;"{% endif %}>
+          <div id="ProductInfo-{{ section.id }}" class="product__info-container">
+            {%- assign product_form_id = 'product-form-' | append: section.id -%}
+              {% comment %} {% render 'okendo-reviews-product-rating-summary', product: product %} {% endcomment %}
+              <a href="#Product_Reviews" {% if product.metafields.okendo.summaryData.reviewAverageValue == blank %}style="display: none;"{% endif %}>
+                <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }} <span>{{ product.metafields.okendo.summaryData.reviewAverageValue }}/5 {{ product.metafields.okendo.summaryData.reviewCount }} Reviews</span></div>
+              </a>
+              <h4 class="product__title" {{ block.shopify_attributes }}>
+                {%- if section.settings.product_title != blank -%}
+                  {{ section.settings.product_title | escape }}
+                {%- elsif product.title != blank -%}
+                  {{ product.title | escape }}
+                {%- else -%}
+                  {{ 'onboarding.product_title' | t }}
+                {%- endif -%}
+              </h4>
 
-            <div class="product__description sh4 light">
-              {{ product.description }}
-            </div>
+              {% if product.tags != blank %}
+                <div class="featured__product-tags">
+                  {% for tag in product.tags %}
+                    <div class="featured__product-tag">
+                      {{ tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
             
-            {%- if product.metafields.custom.chronic_illness_product_sub_text != blank -%}
-              <p class="product__subtitle sh3 light">{{ product.metafields.custom.chronic_illness_product_sub_text }}</p>  
-            {%- endif -%}
+              {%- if section.settings.show_price -%}
+                <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                  {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                </div>
+              {%- endif -%}
 
-            {% comment %}<a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>{% endcomment %}
-
-            {%- comment -%}
-            {%- if product != blank -%}
-              <div {{ block.shopify_attributes }}>
-                {%- form 'product', product -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                  {{ form | payment_terms }}
-                {%- endform -%}
+              <div class="product__description sh4 light">
+                {{ product.description }}
               </div>
-            {%- endif -%}
-            {%- endcomment -%}
+              
+              {%- if product.metafields.custom.chronic_illness_product_sub_text != blank -%}
+                <p class="product__subtitle sh3 light">{{ product.metafields.custom.chronic_illness_product_sub_text }}</p>  
+              {%- endif -%}
 
-            {%- if section.settings.show_quantity -%}
-              <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
-                <label class="form__label" for="Quantity-{{ section.id }}">
-                  {{ 'products.product.quantity.label' | t }}
-                </label>
-                <quantity-input class="quantity">
-                  <button class="quantity__button no-js-hidden" name="minus" type="button">
-                    <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-                    {% render 'icon-minus' %}
-                  </button>
-                  <input class="quantity__input"
-                      type="number"
-                      name="quantity"
-                      id="Quantity-{{ section.id }}"
-                      min="1"
-                      value="1"
-                      form="product-form-{{ section.id }}"
-                    >
-                  <button class="quantity__button no-js-hidden" name="plus" type="button">
-                    <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-                    {% render 'icon-plus' %}
-                  </button>
-                </quantity-input>
-              </div>
-            {%- endif -%}
+              {% comment %}<a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>{% endcomment %}
+
+              {%- comment -%}
+              {%- if product != blank -%}
+                <div {{ block.shopify_attributes }}>
+                  {%- form 'product', product -%}
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    {{ form | payment_terms }}
+                  {%- endform -%}
+                </div>
+              {%- endif -%}
+              {%- endcomment -%}
+
+              {%- if section.settings.show_quantity -%}
+                <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+                  <label class="form__label" for="Quantity-{{ section.id }}">
+                    {{ 'products.product.quantity.label' | t }}
+                  </label>
+                  <quantity-input class="quantity">
+                    <button class="quantity__button no-js-hidden" name="minus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                      {% render 'icon-minus' %}
+                    </button>
+                    <input class="quantity__input"
+                        type="number"
+                        name="quantity"
+                        id="Quantity-{{ section.id }}"
+                        min="1"
+                        value="1"
+                        form="product-form-{{ section.id }}"
+                      >
+                    <button class="quantity__button no-js-hidden" name="plus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                      {% render 'icon-plus' %}
+                    </button>
+                  </quantity-input>
+                </div>
+              {%- endif -%}
 
 
-            {% capture variantMetafield %}
-              <select class="js-variant-metafield hidden">
-                {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
-                {% endfor %}
-              </select>
-            {% endcapture %}
+              {% capture variantMetafield %}
+                <select class="js-variant-metafield hidden">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
+                  {% endfor %}
+                </select>
+              {% endcapture %}
 
-            {%- unless product.has_only_default_variant -%}
-              <script type="application/json" class="VariantJSON">
-                [
-                  {%- for variant in product.variants -%}
-                    {
-                      "id": {{ variant.id }},
-                      "data": {{ variant | json }}
-                    }
-                    {% unless forloop.last %},{% endunless %}
-                  {%- endfor -%}
-                ]
-              </script>
+              {%- unless product.has_only_default_variant -%}
+                <script type="application/json" class="VariantJSON">
+                  [
+                    {%- for variant in product.variants -%}
+                      {
+                        "id": {{ variant.id }},
+                        "data": {{ variant | json }}
+                      }
+                      {% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  ]
+                </script>
 
-              <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-update="custom">
-                {%- for option in product.options_with_values -%}
-                 {% assign optionIndex = forloop.index0 %}
-                 {% assign values = "" %}
-                  <fieldset class="js product-form__input">
-                  {%- for variant in product.variants -%}
-                    {% assign value = variant.options[optionIndex] %}
-                    {%- unless values contains value -%}
-                    {% assign values = values | join: ',' %}
-                    {% assign values = values | append: ',' | append:value %}
-                    {% assign values = values | split: ',' %}
-    
-                     {% assign my_fields = variant.metafields.custom %}
-    
-                      <span class="Variant_Blocks" data-id={{ variant.id }}>
-                        <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                          name="{{ option.name }}"
-                          value="{{ value | escape }}"
-                          form="product-form-{{ section.id }}"
-                          {% if option.selected_value == value %}checked{% endif %}
-                        >
-                        <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          <span class="Variant_Title">
-                            <span class="custom-radio"></span>
-                            {{ value }}
+                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-update="custom">
+                  {%- for option in product.options_with_values -%}
+                  {% assign optionIndex = forloop.index0 %}
+                  {% assign values = "" %}
+                    <fieldset class="js product-form__input">
+                    {%- for variant in product.variants -%}
+                      {% assign value = variant.options[optionIndex] %}
+                      {%- unless values contains value -%}
+                      {% assign values = values | join: ',' %}
+                      {% assign values = values | append: ',' | append:value %}
+                      {% assign values = values | split: ',' %}
+      
+                      {% assign my_fields = variant.metafields.custom %}
+      
+                        <span class="Variant_Blocks" data-id={{ variant.id }}>
+                          <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                            name="{{ option.name }}"
+                            value="{{ value | escape }}"
+                            form="product-form-{{ section.id }}"
+                            {% if option.selected_value == value %}checked{% endif %}
+                          >
+                          <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                            <span class="Variant_Title">
+                              <span class="custom-radio"></span>
+                              {{ value }}
+                              {%- if my_fields.supply_time != blank -%}
+                                <span class="Supply_Time hide-mobile">
+                                {{ my_fields.supply_time }} / {{ my_fields.servings }}
+                                </span>
+                              {%- endif -%}
+                            </span>
+                            
+                            <span class="Variant_Price">
+                              {% if variant.selling_plan_allocations.size > 0 %}
+                                <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                                <s class="variant__compare--price">{{ variant.price | money }}</s>
+                              {% else %}
+                                {% if variant.compare_at_price > variant.price %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
+                                  <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
+                                {% else %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>
+                                {% endif %}
+                              {% endif %}
+                            </span> 
+
                             {%- if my_fields.supply_time != blank -%}
-                              <span class="Supply_Time hide-mobile">
+                              <span class="Supply_Time hide-desktop">
                               {{ my_fields.supply_time }} / {{ my_fields.servings }}
                               </span>
                             {%- endif -%}
-                          </span>
-                          
-                          <span class="Variant_Price">
-                            {% if variant.selling_plan_allocations.size > 0 %}
-                              <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
-                              <s class="variant__compare--price">{{ variant.price | money }}</s>
-                            {% else %}
-                              {% if variant.compare_at_price > variant.price %}
-                                <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
-                                <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
-                              {% else %}
-                                <span class="variant__price--regular">{{ variant.price | money }}</span>
-                              {% endif %}
-                            {% endif %}
-                          </span> 
-
-                          {%- if my_fields.supply_time != blank -%}
-                            <span class="Supply_Time hide-desktop">
-                            {{ my_fields.supply_time }} / {{ my_fields.servings }}
-                            </span>
-                          {%- endif -%}
-                          
-                        </label>
-                      </span>
-                    {%- endunless -%}
-                  {%- endfor -%}
-                  </fieldset>
-                  {%- endfor -%}
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                {{ variantMetafield }}
-              </variant-radios>
-            {%- endunless -%}
-
-            <noscript>
-              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-                <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
-                <div class="select">
-                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
-                    {%- for variant in product.variants -%}
-                      <option
-                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
-                        {% if variant.available == false %}disabled{% endif %}
-                        value="{{ variant.id }}"
-                      >
-                        {{ variant.title }}
-                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                        - {{ variant.price | money | strip_html }}
-                      </option>
+                            
+                          </label>
+                        </span>
+                      {%- endunless -%}
                     {%- endfor -%}
-                  </select>
-                  {% render 'icon-caret' %}
-                </div>
-              </div>
-            </noscript>
+                    </fieldset>
+                    {%- endfor -%}
+                    <script type="application/json">
+                      {{ product.variants | json }}
+                    </script>
+                  {{ variantMetafield }}
+                </variant-radios>
+              {%- endunless -%}
 
-            <div {{ block.shopify_attributes }}>
-              {%- if product != blank -%}
-                <product-form class="product-form">
-                  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <noscript>
+                <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                  <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+                  <div class="select">
+                    <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                      {%- for variant in product.variants -%}
+                        <option
+                          {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                          {% if variant.available == false %}disabled{% endif %}
+                          value="{{ variant.id }}"
+                        >
+                          {{ variant.title }}
+                          {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                          - {{ variant.price | money | strip_html }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    {% render 'icon-caret' %}
+                  </div>
+                </div>
+              </noscript>
+
+              <div {{ block.shopify_attributes }}>
+                {%- if product != blank -%}
+                  <product-form class="product-form">
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      
+                      {% comment %}{% render 'rtx-pdp', product: product, currentVariant: currentVariant %}{% endcomment %}
+                      <input type="hidden" name="selling_plan" value="{{ product.selected_or_first_available_variant.selling_plan_allocations.first.selling_plan.id }}">
+                      <input type="hidden" name="selling_plan_id" value="{{ product.selected_or_first_available_variant.selling_plan_allocations.first.selling_plan.id }}">
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          data-available="{{ currentVariant.available }}"
+                          class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                        >
+                      {% comment %}
+                            {%- if product.selected_or_first_available_variant.available -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- endif -%}
+                      {% endcomment %}
+                        
+                          {%- if currentVariant.available -%}
+                          Subscribe —&nbsp; 
+                          {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                            {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
+                          {% else %}
+                            {{ currentVariant.price | money }}
+                            <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
+                          {% endif %}
+                          {% comment %} {% render 'rtx_price'%} {% endcomment %}
+                          {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                            <span data-smartrr-compare-price></span>
+                            <span data-smartrr-regular-price></span>
+                            <span data-smartrr-subscribe-price></span>
+                          </div> {% endcomment %}
+                          {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                      
+                        </button>
+                        {%- if block.settings.show_dynamic_checkout -%}
+                          {{ form | payment_button }}
+                        {%- endif -%}
+                      </div>
+                      {%- liquid
+                        assign currentVariant = currentVariant
+                        assign requiresPlan = product.requires_selling_plan
+                        assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+                        assign currentAllocations = currentVariant.selling_plan_allocations
+                      -%}
                     
-                    {% comment %}{% render 'rtx-pdp', product: product, currentVariant: currentVariant %}{% endcomment %}
-                    <input type="hidden" name="selling_plan" value="{{ product.selected_or_first_available_variant.selling_plan_allocations.first.selling_plan.id }}">
-                    <input type="hidden" name="selling_plan_id" value="{{ product.selected_or_first_available_variant.selling_plan_allocations.first.selling_plan.id }}">
-                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                    
-                    <div class="product-form__buttons">
+                    {%- comment -%} Subscription Box {%- endcomment -%}
+                      {% comment %}
+                        <div class="rtx-subscription-box">
+                      
+                          <div>
+                            <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
+                            <label for="subscriptionGift">or<span>SEND BUOY AS A GIFT </span><span class="present">🎁</span> </label>
+                          </div>
+                      
+                          <div data-retextion-gift-box class="rtx-gift-box">
+                            <div>
+                              <label for="subscriptionEmail">Recipient's Email</label>
+                              <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]">
+                            </div>
+                            <div>
+                              <label for="subscriptionName">Recipient's Name</label>
+                              <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]">
+                            </div>
+                            <div>
+                              <label for="subscriptionMessage">Gift Message</label>
+                              <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024"></textarea>
+                            </div>
+                            <p>You will provide the shipping information during checkout.</p>
+                          </div>
+                      
+                        </div>
+                      {% endcomment %}
+                                
+                    {%- endform -%}
+                  </product-form>
+                {%- else -%}
+                  <div class="product-form">
+                    <div class="product-form__buttons form">
                       <button
                         type="submit"
                         name="add"
-                        data-available="{{ currentVariant.available }}"
-                        class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                      {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                       data-subscription-price = "{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                        class="product-form__submit button button--full-width button--primary"
+                        disabled
                       >
-                    {% comment %}
-                          {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
-                          {%- endif -%}
-                    {% endcomment %}
-                      
-                        {%- if currentVariant.available -%}
-                         Subscribe —&nbsp; 
-                        {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                          {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
-                        {% else %}
-                          {{ currentVariant.price | money }}
-                          <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
-                        {% endif %}
-                        {% comment %} {% render 'rtx_price'%} {% endcomment %}
-                        {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                          <span data-smartrr-compare-price></span>
-                          <span data-smartrr-regular-price></span>
-                          <span data-smartrr-subscribe-price></span>
-                        </div> {% endcomment %}
-                        {%- else -%}
                         {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
-                    
                       </button>
-                      {%- if block.settings.show_dynamic_checkout -%}
-                        {{ form | payment_button }}
-                      {%- endif -%}
                     </div>
-                    {%- liquid
-                      assign currentVariant = currentVariant
-                      assign requiresPlan = product.requires_selling_plan
-                      assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
-                      assign currentAllocations = currentVariant.selling_plan_allocations
-                    -%}
-                  
-                  {%- comment -%} Subscription Box {%- endcomment -%}
-                    {% comment %}
-                      <div class="rtx-subscription-box">
-                    
-                        <div>
-                          <input id="subscriptionGift" type="checkbox" name="properties[_gifted-subscription]">
-                          <label for="subscriptionGift">or<span>SEND BUOY AS A GIFT </span><span class="present">🎁</span> </label>
-                        </div>
-                    
-                        <div data-retextion-gift-box class="rtx-gift-box">
-                          <div>
-                            <label for="subscriptionEmail">Recipient's Email</label>
-                            <input id="subscriptionEmail" type="email" name="properties[Gift Recipient Email]">
-                          </div>
-                          <div>
-                            <label for="subscriptionName">Recipient's Name</label>
-                            <input id="subscriptionName" type="text" name="properties[Gift Recipient Name]">
-                          </div>
-                          <div>
-                            <label for="subscriptionMessage">Gift Message</label>
-                            <textarea id="subscriptionMessage" name="properties[Gift Message]" maxlength="1024"></textarea>
-                          </div>
-                          <p>You will provide the shipping information during checkout.</p>
-                        </div>
-                    
-                      </div>
-                    {% endcomment %}
-                              
-                  {%- endform -%}
-                </product-form>
-              {%- else -%}
-                <div class="product-form">
-                  <div class="product-form__buttons form">
-                    <button
-                      type="submit"
-                      name="add"
-                      class="product-form__submit button button--full-width button--primary"
-                      disabled
-                    >
-                      {{ 'products.product.sold_out' | t }}
-                    </button>
                   </div>
+                {%- endif -%}
+
+                {% assign servies = product.metafields.custom.chronic_illness_subscription_services.value %}
+                {% if servies != blank %}
+                  <p class="product--service">
+                    {% for text in servies %}
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M3.66699 9.61494L8.32401 14.3327L16.3337 5.66602" stroke="#1F2322" stroke-width="1.33333"/>
+                        </svg>
+                        {{ text }}
+                      </span>
+                    {% endfor %}
+                  </p>
+                {% endif %}
+                
+              </div>
+            
+              {%- if section.settings.free_shipping_text != blank -%}
+                <div class="Sub_Text_Risk body">
+                  {{ section.settings.free_shipping_text }}
                 </div>
               {%- endif -%}
-
-              {% assign servies = product.metafields.custom.chronic_illness_subscription_services.value %}
-              {% if servies != blank %}
-                <p class="product--service">
-                  {% for text in servies %}
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M3.66699 9.61494L8.32401 14.3327L16.3337 5.66602" stroke="#1F2322" stroke-width="1.33333"/>
-                      </svg>
-                      {{ text }}
-                    </span>
-                  {% endfor %}
-                </p>
-              {% endif %}
               
-            </div>
-          
-            {%- if section.settings.free_shipping_text != blank -%}
-              <div class="Sub_Text_Risk body">
-                 {{ section.settings.free_shipping_text }}
-              </div>
-            {%- endif -%}
-            
-            {%- if section.settings.subscription_benefits != blank -%}
-              <div class="Subscription_Benefits">
-                <p>SUBSCRIPTION BENEFITS</p>
-                <ul class="Sub_Text_New body">{{ section.settings.subscription_benefits }}</ul>
-              </div>
-            {%- endif -%}
-            
-            {%- if section.settings.show_view_details -%}
-              <a href="{{ product.url }}" class="link product__view-details animate-arrow">
-                {{ 'products.product.view_full_details' | t }}
-                {% render 'icon-arrow' %}
-              </a>
-            {%- endif -%}
+              {%- if section.settings.subscription_benefits != blank -%}
+                <div class="Subscription_Benefits">
+                  <p>SUBSCRIPTION BENEFITS</p>
+                  <ul class="Sub_Text_New body">{{ section.settings.subscription_benefits }}</ul>
+                </div>
+              {%- endif -%}
+              
+              {%- if section.settings.show_view_details -%}
+                <a href="{{ product.url }}" class="link product__view-details animate-arrow">
+                  {{ 'products.product.view_full_details' | t }}
+                  {% render 'icon-arrow' %}
+                </a>
+              {%- endif -%}
 
-            <div class="dropdown-container-item__container">
-              {% for block in section.blocks %}
-                {% if block.type == "whats_included_dropdown" %}
-                  {% assign whatsDropdown = product.metafields.custom.what_s_included.value %}
-                  {% if whatsDropdown != blank and block.settings.title != blank %}
-                    <div class="dropdown-container-item">
-                      <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
-                        <p>{{ block.settings.title }}</p>
-                        <div class="dropdown-container-item__x"></div>
-                      </div>
-                      <div class="dropdown-container-item__body">
-                        {% if block.settings.subtitle != blank %}
-                          <div class="dropdown-container-item__body-text">
-                            <p class="rhyme">{{ block.settings.subtitle }}</p>
-                          </div>
-                        {% endif %}
-                        {% for data in whatsDropdown %}
-                          <div class="dropdown-container-item__body-list">
-                            <div class="dropdown-container-item__grid">
-                              <div class="dropdown-container-item__image">
-                                <img width="60" src="{{ data.image | img_url: 'master' }}"/>
-                                {% if block.settings.bubble_text != blank %}
-                                  <div class="bubble-text">
-                                    <p>{{ block.settings.bubble_text }}</p>
+              <div class="dropdown-container-item__container">
+                {% for block in section.blocks %}
+                  {% if block.type == "whats_included_dropdown" %}
+                    {% assign whatsDropdown = product.metafields.custom.what_s_included.value %}
+                    {% if whatsDropdown != blank and block.settings.title != blank %}
+                      <div class="dropdown-container-item">
+                        <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
+                          <p>{{ block.settings.title }}</p>
+                          <div class="dropdown-container-item__x"></div>
+                        </div>
+                        <div class="dropdown-container-item__body">
+                          {% if block.settings.subtitle != blank %}
+                            <div class="dropdown-container-item__body-text">
+                              <p class="rhyme">{{ block.settings.subtitle }}</p>
+                            </div>
+                          {% endif %}
+                          {% for data in whatsDropdown %}
+                            <div class="dropdown-container-item__body-list">
+                              <div class="dropdown-container-item__grid">
+                                <div class="dropdown-container-item__image">
+                                  <img width="60" src="{{ data.image | img_url: 'master' }}"/>
+                                  {% if block.settings.bubble_text != blank %}
+                                    <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text }}</p>
+                                    </div>
+                                  {% endif %}
+                                </div>
+                                <div class="dropdown-container-item__content">
+                                  <h4>{{ data.title }}</h4>
+                                  <p>{{ data.short_description }}</p>
+                                  <div class="product__drawer-triggers" data-title="{{ data.title }}">
+                                    {% if data.enable_supplement_facts %}
+                                      <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
+                                    {% endif %}
+                                    {% if data.enable_clinical_trial %}
+                                      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+                                    {% endif %}
                                   </div>
-                                {% endif %}
-                              </div>
-                              <div class="dropdown-container-item__content">
-                                <h4>{{ data.title }}</h4>
-                                <p>{{ data.short_description }}</p>
-                                <div class="product__drawer-triggers" data-title="{{ data.title }}">
-                                  {% if data.enable_supplement_facts %}
-                                    <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
-                                  {% endif %}
-                                  {% if data.enable_clinical_trial %}
-                                    <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
-                                  {% endif %}
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        {% endfor %}                    
-                      </div>
-                    </div>
-                  {% endif %}
-                {% endif %}
-                {% if block.type == "benefit_dropdown" %}
-                  {% assign benefitsDropdown = product.metafields.custom.benefits_dropdown.value %}
-                  {% if benefitsDropdown != blank and block.settings.title != blank %}
-                    <div class="dropdown-container-item dropdown-block-title">
-                      <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
-                        <p>{{ block.settings.title }}</p>
-                        <div class="dropdown-container-item__x"></div>
-                      </div>
-                      <div class="dropdown-container-item__body">
-                        {% if block.settings.subtitle != blank %}
-                          <div class="dropdown-container-item__body-text">
-                            <p class="rhyme">{{ block.settings.subtitle }}</p>
-                          </div>
-                        {% endif %}
-                        {% for data in benefitsDropdown %}
-                          <div class="dropdown-container-item__body-list">
-                          <h4>{{ data.title }}</h4>
-                          <div class="dropdown-container-item__grid">
-                            <div class="dropdown-container-item__image">
-                              <img src="{{ data.image | img_url: 'master' }}"/>
-                            </div>
-                            <div class="dropdown-container-item__content">
-                              <p>{{ data.short_description }}</p>
-                            </div>
-                          </div>
+                          {% endfor %}                    
                         </div>
-                        {% endfor %}
                       </div>
-                    </div>
+                    {% endif %}
                   {% endif %}
-                {% endif %}
-              {% endfor %}
-            </div>                          
-                          
+                  {% if block.type == "benefit_dropdown" %}
+                    {% assign benefitsDropdown = product.metafields.custom.benefits_dropdown.value %}
+                    {% if benefitsDropdown != blank and block.settings.title != blank %}
+                      <div class="dropdown-container-item dropdown-block-title">
+                        <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
+                          <p>{{ block.settings.title }}</p>
+                          <div class="dropdown-container-item__x"></div>
+                        </div>
+                        <div class="dropdown-container-item__body">
+                          {% if block.settings.subtitle != blank %}
+                            <div class="dropdown-container-item__body-text">
+                              <p class="rhyme">{{ block.settings.subtitle }}</p>
+                            </div>
+                          {% endif %}
+                          {% for data in benefitsDropdown %}
+                            <div class="dropdown-container-item__body-list">
+                            <h4>{{ data.title }}</h4>
+                            <div class="dropdown-container-item__grid">
+                              <div class="dropdown-container-item__image">
+                                <img src="{{ data.image | img_url: 'master' }}"/>
+                              </div>
+                              <div class="dropdown-container-item__content">
+                                <p>{{ data.short_description }}</p>
+                              </div>
+                            </div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </div>                          
+                            
+          </div>
         </div>
       </div>
-    </div>
+    {% endunless  %}
 
   </div>
   </div>                  
