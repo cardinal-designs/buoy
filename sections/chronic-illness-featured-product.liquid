@@ -424,9 +424,25 @@
                               <div class="dropdown-container-item__grid">
                                 <div class="dropdown-container-item__image">
                                   <img width="60" src="{{ data.image | img_url: 'master' }}"/>
-                                  {% if block.settings.bubble_text != blank %}
+                                  {% if block.settings.bubble_text1 != blank and forloop.index0 == 0 %}
                                     <div class="bubble-text">
-                                      <p>{{ block.settings.bubble_text }}</p>
+                                      <p>{{ block.settings.bubble_text1 }}</p>
+                                    </div>
+                                  {% elsif block.settings.bubble_text2 != blank and forloop.index0 == 1 %}
+                                    <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text2 }}</p>
+                                    </div>
+                                  {% elsif block.settings.bubble_text3 != blank and forloop.index0 == 2 %}
+                                    <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text3 }}</p>
+                                    </div>
+                                  {% elsif block.settings.bubble_text4 != blank and forloop.index0 == 3 %}
+                                   <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text4 }}</p>
+                                    </div>
+                                  {% elsif block.settings.bubble_text5 != blank and forloop.index0 == 4 %}
+                                   <div class="bubble-text">
+                                      <p>{{ block.settings.bubble_text5 }}</p>
                                     </div>
                                   {% endif %}
                                 </div>
@@ -880,8 +896,28 @@
         },
         {
           "type": "text",
-          "id": "bubble_text",
-          "label": "Dropdown Bubble Text"
+          "id": "bubble_text1",
+          "label": "Dropdown Bubble Text 1"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text2",
+          "label": "Dropdown Bubble Text 2"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text3",
+          "label": "Dropdown Bubble Text 3"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text4",
+          "label": "Dropdown Bubble Text 4"
+        },
+        {
+          "type": "text",
+          "id": "bubble_text5",
+          "label": "Dropdown Bubble Text 5"
         }
       ]
     },
