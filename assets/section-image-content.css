@@ -145,6 +145,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  line-height: normal;
+  overflow-wrap: anywhere;
 }
 
 .image-content__link-copied {
@@ -152,6 +154,7 @@
   color: var(--green-2);
   opacity: 0;
   transition: opacity 0.5s ease;
+  line-height: normal;
 }
 
 .image-content__link-copied.visible {

@@ -153,13 +153,14 @@
   }
 
   .product-grid__grid {
-    display: flex;
+    /* display: flex; */
+    grid-template-columns: 1fr 1fr;
     gap: 28px 17px;
     flex-wrap: wrap;
   }
 
   .product-grid__grid-item {
-    width: calc(50% - 8.5px);
+    /* width: calc(50% - 8.5px); */
   }
 
   .product-grid__header {

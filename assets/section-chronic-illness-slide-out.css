@@ -39,6 +39,7 @@
   padding: 76px 70px 0;
   position: relative;
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 10px;
   background-color: var(--gray-lighest);
   border: 1px solid var(--charcoal-lighter);
@@ -401,7 +402,9 @@
   font-family: inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 25px;
+  /* line-height: 25px; */
+  line-height: normal;
+  overflow-wrap: anywhere;
 }
 
 .chronic__form--aftersubmission .image-content__link-copy-container button {
@@ -771,14 +774,14 @@ custom-select:not(.active) fieldset .selection_list {
 }
 
 @media screen and (max-width: 768px) {
-  .form__product--grid-wrapper {
+  .chronic-illness-slide-out .form__product--grid-wrapper {
     width: calc(100% + 40px);
     overflow-x: hidden;
     margin-left: -20px;
     /* padding-left: 20px; */
   }
 
-  .form__product--grid__grid {
+  .chronic-illness-slide-out .form__product--grid__grid {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -786,11 +789,15 @@ custom-select:not(.active) fieldset .selection_list {
     align-items: stretch;
   }
 
-  .product-grid__grid-item {
+  .chronic-illness-slide-out .product-grid__grid-item {
     min-width: 168px;
   }
 
-  .product-grid__grid-item:first-child {
+  .chronic-illness-slide-out .product-grid__grid-item:first-child {
     margin-left: 20px;
+  }
+
+  .chronic-illness-slide-out .product-grid__grid-item:last-child {
+    margin-right: 20px;
   }
 }
