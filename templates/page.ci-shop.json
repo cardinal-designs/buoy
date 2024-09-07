@@ -216,6 +216,18 @@
             "enable_clinical_trial": true
           }
         },
+        "product_zPWync": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-drops-chronic-illness-discount",
+            "product_title": "Rescue Drops",
+            "image": "shopify:\/\/shop_images\/PDP_RescueDrops_Hero_6.jpg",
+            "show_tags": false,
+            "form_text": "",
+            "enable_supplement_facts": false,
+            "enable_clinical_trial": false
+          }
+        },
         "product_7DXbUL": {
           "type": "product",
           "settings": {
@@ -230,15 +242,15 @@
             "enable_clinical_trial": false
           }
         },
-        "product_cG4NTQ": {
+        "product_UrphGb": {
           "type": "product",
           "settings": {
-            "heading": "immunity-drops-chronic-illness-discount",
-            "product_title": "Immunity Drops",
-            "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
-            "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
+            "heading": "brain-health-drops-chronic-illness-discount",
+            "product_title": "Brain Health Drops",
+            "image": "shopify:\/\/shop_images\/Collection_BHD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_BHD_Hover.mp4",
             "show_tags": true,
-            "form_image": "shopify:\/\/shop_images\/Collection_ID_Add.jpg",
+            "form_image": "shopify:\/\/shop_images\/Collection_BHD_Add.jpg",
             "form_text": "",
             "enable_supplement_facts": true,
             "enable_clinical_trial": false
@@ -258,15 +270,15 @@
             "enable_clinical_trial": false
           }
         },
-        "product_UrphGb": {
+        "product_cG4NTQ": {
           "type": "product",
           "settings": {
-            "heading": "brain-health-drops-chronic-illness-discount",
-            "product_title": "Brain Health Drops",
-            "image": "shopify:\/\/shop_images\/Collection_BHD.jpg",
-            "video_hover": "shopify:\/\/files\/videos\/Collection_BHD_Hover.mp4",
+            "heading": "immunity-drops-chronic-illness-discount",
+            "product_title": "Immunity Drops",
+            "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
             "show_tags": true,
-            "form_image": "shopify:\/\/shop_images\/Collection_BHD_Add.jpg",
+            "form_image": "shopify:\/\/shop_images\/Collection_ID_Add.jpg",
             "form_text": "",
             "enable_supplement_facts": true,
             "enable_clinical_trial": false
@@ -287,10 +299,11 @@
       },
       "block_order": [
         "product_NmGPAi",
+        "product_zPWync",
         "product_7DXbUL",
-        "product_cG4NTQ",
-        "product_P4M4TC",
         "product_UrphGb",
+        "product_P4M4TC",
+        "product_cG4NTQ",
         "product_QPYdpt"
       ],
       "settings": {
