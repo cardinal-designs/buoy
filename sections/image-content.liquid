@@ -56,7 +56,7 @@
       {% endfor %}
     </div>
   </div>
-  <div {% if section.settings.video != blank %}style="padding-bottom: unset;"{% endif %} class="image-content__image">
+  <div {% if section.settings.video != blank %}style="height: unset; padding-bottom: unset;"{% endif %} class="image-content__image">
     {% if section.settings.video != blank %}
       {{
         section.settings.video
@@ -82,7 +82,7 @@
     {% endif %}
 
     {% if section.settings.product_for_reviews != blank %}
-      <div class="image-content__reviews">
+      <div {% if section.settings.video != blank %}style="bottom: 9px;"{% endif %} class="image-content__reviews">
         {% assign reviews_product = section.settings.product_for_reviews %}
         {% render 'okendo-reviews-product-rating-summary', product: reviews_product %}
       </div>
