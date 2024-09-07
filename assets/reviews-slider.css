@@ -79,6 +79,14 @@
   border-radius: 10px;
 }
 
+.reviews-slider__image video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .reviews-slider__image img {
   height: 100%;
   width: 100%;
