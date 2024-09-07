@@ -57,9 +57,21 @@
     </div>
   </div>
   <div class="image-content__image">
-    {%- if section.settings.video != blank -%}
-    
-    {%- elsif section.settings.image != blank -%}
+    {% if section.settings.video_url != blank %}
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-mobile">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+    {% if section.settings.mobile_video_url != blank %}
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-desktop">
+        <source src="{{ section.settings.mobile_video_url }}" type="video/mp4">
+      </video>
+    {% else %}
+      <video {% if section.settings.autoplay %}autoplay{% endif %}{% if section.settings.loop %} loop{% endif %}{% if section.settings.mute %} muted{% endif %} playsinline class="img-fill hide-desktop">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+    {% if section.settings.video_url == blank and section.settings.image != blank %}
       <img
         srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
           {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
@@ -74,9 +86,9 @@
         width="{{ section.settings.image.width }}"
         height="{{ section.settings.image.height }}"
       >
-    {%- else -%}
+    {% else %}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-    {%- endif -%}
+    {% endif %}
 
     {% if section.settings.product_for_reviews != blank %}
       <div class="image-content__reviews">
@@ -92,9 +104,14 @@
     "name": "Image / Content",
     "settings": [
       {
-        "type": "video",
-        "id": "video",
-        "label": "Video"
+        "type": "text",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "text",
+        "id": "mobile_video_url",
+        "label": "Mobile Video URL"
       },
       {
         "type": "image_picker",
