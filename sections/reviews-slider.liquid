@@ -17,7 +17,12 @@
         {% for block in section.blocks %}
           <div class="reviews-slider__item slick-slide" {{ block.shopify_attributes }}>
             <div class="reviews-slider__image">
-              {%- if block.settings.image != blank -%}
+              {%- if block.settings.video != blank -%}
+                {{
+                  block.settings.video
+                  | video_tag: autoplay: true, muted: true, loop: true, controls: false, image_size: '1400x'
+                }}
+              {%- elsif block.settings.image != blank -%}
                 <img
                   srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
                     {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
@@ -85,7 +90,12 @@
       {
         "type": "review",
         "name": "Review",
-        "settings": [
+        "settings": [ 
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          },
           {
             "type": "image_picker",
             "id": "image",
