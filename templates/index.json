@@ -44,8 +44,65 @@
         "overlay_opacity": 0
       }
     },
+    "16318238207c8b14a8": {
+      "type": "press-logos",
+      "blocks": {
+        "9329573b-5a63-4550-b65c-8c6186e2f514": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/mh_logo.png"
+          }
+        },
+        "b836b34c-08bc-4f43-822a-4a9205aafa1d": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/ba_logo.webp"
+          }
+        },
+        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/daily-mail-logo-png-transparent.png"
+          }
+        }
+      },
+      "block_order": [
+        "9329573b-5a63-4550-b65c-8c6186e2f514",
+        "b836b34c-08bc-4f43-822a-4a9205aafa1d",
+        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "enable_marquee": false,
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "chronic_illness_featured_product_z8cLFq": {
+      "type": "chronic-illness-featured-product",
+      "disabled": true,
+      "settings": {
+        "title": "Start With Our Best-Selling Kits",
+        "icon_image_text_1": "D",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "product": "",
+        "product_title": "",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
+      }
+    },
     "chronic_product_grid_3BP7eT": {
       "type": "chronic-product-grid",
+      "disabled": true,
       "settings": {
         "title": "Shop All",
         "link_label": "",
@@ -70,6 +127,7 @@
       "block_order": [
         "block_BXmEpD"
       ],
+      "disabled": true,
       "settings": {
         "suptitle": "",
         "title": "Optimized for function",
@@ -77,40 +135,6 @@
         "background": "",
         "button_label": "",
         "button_link": ""
-      }
-    },
-    "16318238207c8b14a8": {
-      "type": "press-logos",
-      "blocks": {
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/mens-health-vector-logo-xs.png"
-          }
-        },
-        "9329573b-5a63-4550-b65c-8c6186e2f514": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/womenshealthlogo.png"
-          }
-        },
-        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/daily-mail-logo-png-transparent.png"
-          }
-        }
-      },
-      "block_order": [
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d",
-        "9329573b-5a63-4550-b65c-8c6186e2f514",
-        "9b3a736e-f2bf-4466-ba27-3cc9c5d231df"
-      ],
-      "settings": {
-        "background": "#ffffff",
-        "enable_marquee": false,
-        "add_top_border": true,
-        "add_bottom_border": true
       }
     },
     "6484e2d1-6529-43c4-975f-4a239d15a19e": {
@@ -451,9 +475,10 @@
   },
   "order": [
     "new_home_hero_LUNXEb",
+    "16318238207c8b14a8",
+    "chronic_illness_featured_product_z8cLFq",
     "chronic_product_grid_3BP7eT",
     "media_grid_HcgmzD",
-    "16318238207c8b14a8",
     "6484e2d1-6529-43c4-975f-4a239d15a19e",
     "1643601523d98d2b70",
     "660e452d-a582-4c94-9787-50268a2e4460",
