@@ -56,7 +56,7 @@
       {% endfor %}
     </div>
   </div>
-  <div class="image-content__image">
+  <div {% if section.settings.video != blank %}style="padding-bottom: unset;"{% endif %} class="image-content__image">
     {% if section.settings.video != blank %}
       {{
         section.settings.video
