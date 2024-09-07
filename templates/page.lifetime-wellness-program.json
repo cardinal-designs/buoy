@@ -163,7 +163,43 @@
         "block_mNXkFU",
         "block_WeVHQE"
       ],
+      "disabled": true,
       "settings": {
+      }
+    },
+    "donations_Wyp3Di": {
+      "type": "donations",
+      "blocks": {
+        "logo_7NLnyV": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cpn_logo_final-scaled-e1693332510364.png"
+          }
+        },
+        "logo_G7rGbK": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chrodis-logo.png"
+          }
+        },
+        "logo_rdga86": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_ghlf_businessWire_720.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_7NLnyV",
+        "logo_G7rGbK",
+        "logo_rdga86"
+      ],
+      "settings": {
+        "title": "Donations to Chronic Illness 501(c)3 Nonprofits",
+        "text": "We donate to verified 501(c)3 nonprofits specifically dedicated to chronic illnesses with every order on our website."
       }
     },
     "reviews_slider_qYFVcJ": {
@@ -372,38 +408,6 @@
         "button_link": "#chronic"
       }
     },
-    "donations_Wyp3Di": {
-      "type": "donations",
-      "blocks": {
-        "logo_7NLnyV": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cpn_logo_final-scaled-e1693332510364.png"
-          }
-        },
-        "logo_G7rGbK": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/chrodis-logo.png"
-          }
-        },
-        "logo_rdga86": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/logo_ghlf_businessWire_720.png"
-          }
-        }
-      },
-      "block_order": [
-        "logo_7NLnyV",
-        "logo_G7rGbK",
-        "logo_rdga86"
-      ],
-      "settings": {
-        "title": "Donations to Chronic Illness Specific nonprofits with every order",
-        "text": "In addition to our Chronic Illness Lifetime Discount, we donate Buoy bottles to verified 501(c)3 nonprofits with every order."
-      }
-    },
     "16591183242a45c875": {
       "type": "product-bar-illness",
       "settings": {
@@ -435,9 +439,9 @@
     "content_with_media_8pUaVc",
     "content_with_media_JLNWc6",
     "text_columns_Ep33nJ",
+    "donations_Wyp3Di",
     "reviews_slider_qYFVcJ",
     "media_grid_BtrDQh",
-    "donations_Wyp3Di",
     "16591183242a45c875",
     "chronic_review_CpxV3P"
   ]
