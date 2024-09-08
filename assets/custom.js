@@ -577,6 +577,12 @@ $('.dropdown-container-item__title').click(function() {
     $(this).addClass('active');
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
+    } else {
+      var scrollTop     = $(window).scrollTop(),
+          elementOffset = $('#my-element').offset().top,
+          distance      = (elementOffset - scrollTop);
+      console.log(distance)
+      // $(window).scrollTop(0);
     }
     
     $(this).next().slideToggle(false);
