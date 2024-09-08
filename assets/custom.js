@@ -578,7 +578,7 @@ $('.dropdown-container-item__title').click(function() {
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
     } else {
-      var elementOffset = $(this).offset().top,
+      var elementOffset = $(this).offset().top;
 
       console.log(elementOffset)
        // $(window).scrollTop(elementOffset);
