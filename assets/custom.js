@@ -577,10 +577,9 @@ $('.dropdown-container-item__title').click(function() {
     $(this).addClass('active');
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
-    } else {
+    } else if ($(body).hasClass('page-template--page-ci-shop')) {
+      console.log('bb')
       var elementOffset = $(this).parent().parent().offset().top - 100;
-
-    
       $(window).scrollTop(elementOffset);
     }
     
