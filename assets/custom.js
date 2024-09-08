@@ -579,7 +579,7 @@ $('.dropdown-container-item__title').click(function() {
       $(this)[0].scrollIntoView();
     } else {
       var scrollTop     = $(window).scrollTop(),
-          elementOffset = $(this)[0].offset().top,
+          elementOffset = $(this).offset().top,
           distance      = (elementOffset - scrollTop);
       console.log(distance)
        $(window).scrollTop(distance);
