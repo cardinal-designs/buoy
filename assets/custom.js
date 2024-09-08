@@ -580,7 +580,7 @@ $('.dropdown-container-item__title').click(function() {
     } else {
       var elementOffset = $(this).offset().top - 100;
 
-      console.log('f',$(this).prev())
+      console.log('f',$(this).parent())
       $(window).scrollTop(elementOffset);
     }
     
