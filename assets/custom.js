@@ -577,9 +577,11 @@ $('.dropdown-container-item__title').click(function() {
     $(this).addClass('active');
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
-    } 
+    } else {
+      $(this)[0].scrollTop = 0;
+    }
     
-    $(this)[0].scrollIntoView();
+    $(this).next().slideToggle(false);
   }
 });
 
