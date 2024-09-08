@@ -578,7 +578,7 @@ $('.dropdown-container-item__title').click(function() {
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
     } else {
-      $(this)[0].scrollTop = 0;
+      $(this)[0].scrollTop ;
     } 
     
     $(this)[0].scrollIntoView();
