@@ -578,11 +578,10 @@ $('.dropdown-container-item__title').click(function() {
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
     } else {
-      var scrollTop     = $(window).scrollTop(),
-          elementOffset = $(this).offset().top,
-          distance      = (elementOffset - scrollTop);
-      console.log(distance)
-       $(window).scrollTop(elementOffset);
+      var elementOffset = $(this).offset().top,
+
+      console.log(elementOffset)
+       // $(window).scrollTop(elementOffset);
     }
     
     $(this).next().slideToggle(false);
