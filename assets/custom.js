@@ -566,6 +566,7 @@ $('.text-image-toggle__button').click(function() {
 });
 
 $('.dropdown-container-item__title').click(function() {
+  console.log('wfwfwfwfwfw')
   var isActive = $(this).hasClass('active');
   // Remove 'active' class from all titles
   $('.dropdown-container-item__title').removeClass('active');
