@@ -579,7 +579,7 @@ $('.dropdown-container-item__title').click(function() {
     //   $(this)[0].scrollIntoView();
     // }
     
-    $(this).next().slideToggle();
+    $(this).next().slideToggle(false);
     $(this)[0].scrollIntoView();
   }
 });
