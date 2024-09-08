@@ -580,8 +580,8 @@ $('.dropdown-container-item__title').click(function() {
     } else {
       var elementOffset = $(this).offset().top;
 
-      console.log(elementOffset)
-       // $(window).scrollTop(elementOffset);
+      console.log('f',elementOffset)
+      $(window).scrollTop(elementOffset);
     }
     
     $(this).next().slideToggle(false);
