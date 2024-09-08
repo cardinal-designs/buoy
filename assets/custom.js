@@ -582,7 +582,7 @@ $('.dropdown-container-item__title').click(function() {
           elementOffset = $('#my-element').offset().top,
           distance      = (elementOffset - scrollTop);
       console.log(distance)
-      // $(window).scrollTop(0);
+       $(window).scrollTop(distance);
     }
     
     $(this).next().slideToggle(false);
