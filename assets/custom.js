@@ -578,8 +578,9 @@ $('.dropdown-container-item__title').click(function() {
     // if(window.matchMedia("(max-width: 768px)").matches) {
     //   $(this)[0].scrollIntoView();
     // }
-    $(this)[0].scrollIntoView({ behavior: "instant", block: "start" });
+    
     $(this).next().slideToggle();
+    $(this)[0].scrollIntoView();
   }
 });
 
