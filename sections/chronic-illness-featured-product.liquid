@@ -208,11 +208,11 @@
                                 {{ my_fields.supply_time }} / {{ my_fields.servings }}
                                 </span>
                               {%- endif -%}
-                            </span>
+                           
                             {%- if my_fields.quick_add_value_tag != blank -%}
                               <div class="quick-add__best-value-wrapper"><span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span></div>
                             {%- endif -%}
-                            
+                             </span>
                             <span class="Variant_Price">
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
