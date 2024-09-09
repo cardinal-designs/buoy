@@ -268,6 +268,41 @@
         "image": "shopify:\/\/shop_images\/Frame_512.jpg"
       }
     },
+    "donations_Wyp3Di": {
+      "type": "donations",
+      "blocks": {
+        "logo_7NLnyV": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cpn_logo_final-scaled-e1693332510364.png"
+          }
+        },
+        "logo_G7rGbK": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chrodis-logo.png"
+          }
+        },
+        "logo_rdga86": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_ghlf_businessWire_720.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_7NLnyV",
+        "logo_G7rGbK",
+        "logo_rdga86"
+      ],
+      "settings": {
+        "title": "Donations to Chronic Illness 501(c)3 Nonprofits",
+        "text": "We donate to verified 501(c)3 nonprofits specifically dedicated to chronic illnesses with every order on our website."
+      }
+    },
     "text_columns_Ep33nJ": {
       "type": "text-columns",
       "blocks": {
@@ -437,41 +472,6 @@
         "button_link": "#chronic"
       }
     },
-    "donations_Wyp3Di": {
-      "type": "donations",
-      "blocks": {
-        "logo_7NLnyV": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cpn_logo_final-scaled-e1693332510364.png"
-          }
-        },
-        "logo_G7rGbK": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/chrodis-logo.png"
-          }
-        },
-        "logo_rdga86": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/logo_ghlf_businessWire_720.png"
-          }
-        }
-      },
-      "block_order": [
-        "logo_7NLnyV",
-        "logo_G7rGbK",
-        "logo_rdga86"
-      ],
-      "settings": {
-        "title": "Donations to Chronic Illness 501(c)3 Nonprofits",
-        "text": "We donate to verified 501(c)3 nonprofits specifically dedicated to chronic illnesses with every order on our website."
-      }
-    },
     "16591183242a45c875": {
       "type": "product-bar-illness",
       "settings": {
@@ -503,9 +503,9 @@
     "content_with_media_8pUaVc",
     "reviews_slider_qYFVcJ",
     "content_with_media_JLNWc6",
+    "donations_Wyp3Di",
     "text_columns_Ep33nJ",
     "media_grid_BtrDQh",
-    "donations_Wyp3Di",
     "16591183242a45c875",
     "chronic_review_CpxV3P"
   ]
