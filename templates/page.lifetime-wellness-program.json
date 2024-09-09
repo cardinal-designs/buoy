@@ -78,9 +78,9 @@
             "icon_1": "shopify:\/\/shop_images\/no-icon.svg",
             "text_1": "Sugar",
             "icon_2": "shopify:\/\/shop_images\/no-icon.svg",
-            "text_2": "Sweeteners like <i>stevia<\/i>",
+            "text_2": "Sweeteners like stevia",
             "icon_3": "shopify:\/\/shop_images\/no-icon.svg",
-            "text_3": "\"Natural\" Flavors and other Flavoring Agents",
+            "text_3": "\"Natural\" Flavors + Flavorings",
             "icon_4": "shopify:\/\/shop_images\/no-icon.svg",
             "text_4": "Artificial Ingredients",
             "icon_5": "shopify:\/\/shop_images\/no-icon.svg",
@@ -92,10 +92,27 @@
         "text_grfKw3": {
           "type": "text",
           "settings": {
-            "text": "Buoy electrolytes prioritize function over flavor to support foundational health, without the junk."
+            "text": "Buoy electrolytes are formulated for function over flavor to support foundational health and have three pending clinical studies."
           }
         },
         "benefits_dpnJwe": {
+          "type": "benefits",
+          "settings": {
+            "icon_1": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_1": "No Sugar, Sweeteners, Flavors",
+            "icon_2": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_2": "3x More Bioavailable",
+            "icon_3": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_3": "Ocean Harvested, <i>Not Manufactured<\/i>",
+            "icon_4": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_4": "Vegan + NonGMO",
+            "icon_5": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_5": "100% Microplastic Free",
+            "icon_6": "shopify:\/\/shop_images\/check-icon.svg",
+            "text_6": "Third Party Tested"
+          }
+        },
+        "benefits_yJBmf4": {
           "type": "benefits",
           "settings": {
             "icon_1": "shopify:\/\/shop_images\/check-icon.svg",
@@ -126,6 +143,7 @@
         "benefits_4bfr4i",
         "text_grfKw3",
         "benefits_dpnJwe",
+        "benefits_yJBmf4",
         "link_pcFBRn"
       ],
       "settings": {
