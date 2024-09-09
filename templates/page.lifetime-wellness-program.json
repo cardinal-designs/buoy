@@ -114,6 +114,7 @@
         },
         "benefits_yJBmf4": {
           "type": "benefits",
+          "disabled": true,
           "settings": {
             "icon_1": "shopify:\/\/shop_images\/check-icon.svg",
             "text_1": "Maintains Essential Cellular Function",
@@ -165,16 +166,6 @@
             "text": "These drops are AMAZING and great for my POTSie body!!! I decided to try after reading other testimonies of POTS sufferers. Buoy immediately made a huge noticeable difference in my daily symptoms. I would highly recommend these drops for anyone that needs more hydration, sodium, and for those that don’t want it to taste like anything.!!!!"
           }
         },
-        "review_canT38": {
-          "type": "review",
-          "settings": {
-            "video": "shopify:\/\/files\/videos\/PDP_Hydration Drops_UGC_3.mp4",
-            "image": "shopify:\/\/shop_images\/PDP_Water_Bottle_Hero_2.jpg",
-            "tags": "POTS, IST, Fibro",
-            "title": "“I am obsessed!!”",
-            "text": "These drops are my FAVORITE electrolyte supplement, and I’ve tried so many. I have POTS, IST, and Fibromyalgia and these keep me feeling good all day. I love that they can be added to any drink and have no added sweetener because they really simplify the process of adding the electrolytes and I don’t have to worry about additives. Truly amazing!!"
-          }
-        },
         "review_D4VXCC": {
           "type": "review",
           "settings": {
@@ -183,6 +174,16 @@
             "tags": "POTS",
             "title": "“wow”",
             "text": "went from drinking 192 oz of water a day to 48 oz. these drops were even better than the regular drops for me. i'm in process of being formally diagnosed with POTS and in the meantime rescue drops help dramatically with my symptoms. the thirst levels have lowered dramatically. Has dramatically improved my energy and given me a clear head even when my body is not doing so well. So very grateful for this product!!"
+          }
+        },
+        "review_canT38": {
+          "type": "review",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/PDP_Hydration Drops_UGC_3.mp4",
+            "image": "shopify:\/\/shop_images\/PDP_Water_Bottle_Hero_2.jpg",
+            "tags": "POTS, IST, Fibro",
+            "title": "“I am obsessed!!”",
+            "text": "These drops are my FAVORITE electrolyte supplement, and I’ve tried so many. I have POTS, IST, and Fibromyalgia and these keep me feeling good all day. I love that they can be added to any drink and have no added sweetener because they really simplify the process of adding the electrolytes and I don’t have to worry about additives. Truly amazing!!"
           }
         },
         "review_g8Y6Mp": {
@@ -228,8 +229,8 @@
       },
       "block_order": [
         "review_JTabzq",
-        "review_canT38",
         "review_D4VXCC",
+        "review_canT38",
         "review_g8Y6Mp",
         "review_XhihqU",
         "review_nPfmUb",
