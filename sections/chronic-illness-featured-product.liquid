@@ -203,6 +203,9 @@
                             <span class="Variant_Title">
                               <span class="custom-radio"></span>
                               {{ value }}
+                              {%- if my_fields.quick_add_value_tag != blank -%}
+                                <div class="quick-add__best-value-wrapper"><span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span></div>
+                              {%- endif -%}
                               {%- if my_fields.supply_time != blank -%}
                                 <span class="Supply_Time hide-mobile">
                                 {{ my_fields.supply_time }} / {{ my_fields.servings }}
