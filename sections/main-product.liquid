@@ -94,20 +94,7 @@
             </div>
           </div>
         </div>
-          <div class="product__drawer-triggers">
-            {% unless product.handle == 'rescue-kit' %}
-            <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
-            {% endunless %}
-            {% if product.title == 'Hydration Drops' %}
-            <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
-            {% endif %}
-            {% if product.title == "CP3's Secret Stuff" %}
-              <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Why This Collab</a>
-            {% endif %}
-            {% if product.handle == 'rescue-drops' or product.handle == 'rescue-kit' %}
-            <a href="#chronic" class="green-text tabs-label body medium">35% Chronic Illness Discount</a>
-            {% endif %}
-          </div>
+        
         {% if section.settings.show_drawer_triggers == true %}
           <div class="product__drawer-triggers">
             {% unless product.handle == 'rescue-kit' %}
