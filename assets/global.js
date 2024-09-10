@@ -1,3 +1,50 @@
+var Shopify = Shopify || {};
+// ---------------------------------------------------------------------------
+// Money format handler
+// ---------------------------------------------------------------------------
+Shopify.money_format = "${{amount}}";
+Shopify.formatMoney = function(cents, format) {
+  if (typeof cents == 'string') {
+    cents = cents.replace('.','');
+  }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+  function defaultOption(opt, def) {
+     return (typeof opt == 'undefined' ? def : opt);
+  }
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal   = defaultOption(decimal, '.');
+    if (isNaN(number) || number == null) {
+      return 0;
+    }
+    number = (number / 100.0).toFixed(precision);
+    var parts   = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents   = parts[1] ? (decimal + parts[1]) : '';
+    // If the cents part is '00', we remove the decimal point and cents
+    return dollars + cents;
+  }
+  switch(formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+      break;
+  }
+  return formatString.replace(placeholderRegex, value);
+};
+
+
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(
@@ -510,8 +557,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(false, '', false, this.currentVariant.price);
     this.updatePickupAvailability();
     this.updateMetafieldText();
-
-
+    
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true, this.currentVariant.price);
       this.setUnavailable();
@@ -616,6 +662,7 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
+    if(this.closest('quick-add-card')) return
     fetch(this.dataset.url + '?variant=' + this.currentVariant.id + '&section_id=' + this.dataset.section)
       .then((response) => response.text())
       .then((responseText) => {
@@ -634,8 +681,77 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    const addButton = this.closest("product-form").querySelector('[name="add"]'),
-    stickyButton = document.querySelector('.js-sticky-add-to-cart');
+    let productForm = this.closest("product-form");
+    let addButton;
+    if(productForm){
+      addButton = productForm.querySelector('[name="add"]');
+    }
+    let thisData = this;
+    let dataUpdate = thisData.dataset.update;
+    let currentVariant = thisData.currentVariant;
+    if(dataUpdate == 'custom'){
+      let varId = currentVariant?.id;
+      let productInfoWrapper = thisData.closest('.product__info-wrapper') || thisData.closest(".quick-add__form-wrapper");
+      if(!currentVariant?.id){
+        varId = thisData.querySelector('.product-form__input').querySelector('input:checked').closest('.Variant_Blocks').dataset.id;
+        if(productInfoWrapper){
+          let inputId = productInfoWrapper.querySelector("input[name='id']");
+          if(inputId){
+            inputId.value = varId;
+          }
+        }
+      }
+      let variantScript = thisData.parentElement.querySelector('.VariantJSON');      
+      if(variantScript) {
+        const jsonData = variantScript.textContent;
+        const variantData = JSON.parse(jsonData);
+        let foundVariant = variantData?.find(variant => variant.id == varId);   
+        if(foundVariant){
+          let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
+          if(productInfoWrapper){
+            let sellingInput = productInfoWrapper.querySelector(`[name='selling_plan']`);
+            let sellingInput_id = productInfoWrapper.querySelector(`[name='selling_plan_id']`);
+            if(sellingInput){
+              sellingInput.remove();
+            }
+            if(sellingInput_id){
+              sellingInput_id.remove();
+            }
+            let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
+            let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
+            let inputId = productInfoWrapper.querySelector("input[name='id']");
+            if(inputId){
+              inputId.insertAdjacentHTML('beforebegin', sellingInputHtml);
+              inputId.insertAdjacentHTML('beforebegin', sellingInputIDHtml);
+              inputId.value = foundVariant?.id;
+            }
+          }
+          let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
+          let variantPrice = foundVariant?.data?.price;
+          if(productInfoWrapper){
+            let submitBtn = productInfoWrapper.querySelector('[name="add"]');   
+            if(submitBtn){
+              let buttonText = 'Subscribe'
+              if(thisData.closest("quick-add-card")) {
+                buttonText = 'Add'
+              }
+              submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;              
+              submitBtn.dataset.available = (!disable);
+              if (disable) {
+                submitBtn.setAttribute('disabled', true);
+                if (text) submitBtn.innerHTML = text;      
+              } else {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(priceSelling)} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
+              }
+              return;
+            }          
+          }         
+        }
+      }
+    }  
+    
+    const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
 
@@ -1378,7 +1494,7 @@ $('body').on('click', '.js-add-to-cart', function(e) {
   let subid = Number($(this).data('subid'));
   let checked_type = $(this).parent().find('input:checked').val()
   let checked_type_sub = Number($(this).parent().find('input:checked').data('subid'))
-  console.log(id, metafield)
+
   $.getJSON('/cart', function (results) {
     if(Number(results.item_count) > 0) {
       $('.cart-count-bubble').text(`${results.item_count}`)
@@ -1704,6 +1820,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if(anchor.getAttribute('href') !== '#recover' && anchor.getAttribute('href') !== '#login' ){
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        const chronicIllnessInner = document.querySelector(".chronic-illness-slide-out__inner");
+        const chronicFormAfterSubmission = document.querySelector(".chronic__form--aftersubmission");
+        if (chronicIllnessInner) {
+          chronicIllnessInner.style.display = "block";
+          const chronicIllnessForm = document.getElementById('chronicIllnessForm');
+          if (chronicIllnessForm) {
+            chronicIllnessForm.reset();
+          }
+          document.querySelector('.custom__msg--field').style.display = 'none'; 
+          globalCheckedValues = [];  
+        }
+        
+        if (chronicFormAfterSubmission) {
+          chronicFormAfterSubmission.style.display = "none";
+        }
         const element = document.querySelector(this.getAttribute('href'));
         if (!element) return;
         const offset = 100;
@@ -2261,3 +2392,35 @@ class QuickAddCard extends HTMLElement {
 }
 
 customElements.define("quick-add-card", QuickAddCard)
+
+class CustomSelect extends HTMLElement {
+  constructor() {
+    super();
+
+    this.expand = this.querySelector(".fieldset-expand")
+    this.selected_block = this.querySelector(".selected_block")
+
+    this.expand.addEventListener("click", this.toggleSelect.bind(this))
+    this.selected_block.addEventListener("click", this.toggleSelect.bind(this))
+    this.addEventListener('change', this.onVariantChange.bind(this));
+  }
+
+  toggleSelect(event) {
+    event && event.preventDefault()
+    if (this.classList.contains("active")) {
+      this.classList.remove("active")
+    } else {
+      this.classList.add("active")
+    }
+  }
+
+  onVariantChange() {
+    const selected_value = this.querySelector("input:checked").nextElementSibling
+
+    this.querySelector(".selected_block label").innerHTML = selected_value.innerHTML
+
+    this.toggleSelect()
+  }
+}
+
+customElements.define("custom-select", CustomSelect)

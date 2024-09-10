@@ -1,0 +1,150 @@
+{% liquid
+  assign card_product = content.heading
+  assign base = 'quick-add'
+ %}
+
+<quick-add-card class="{{ base }}__container" data-open="false" >
+  <div class="{{ base }}__media">
+
+    <div class="{{ base }}__media-inner">
+      {% if content.image_hover != blank %}
+        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
+      {% elsif content.video_hover != blank %}
+        {{ content.video_hover | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          class: 'quick-add__video-hover hide-mobile',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+      {% endif %}
+
+      {% if content.image != blank %}
+        {{ content.image | image_url: width: 850 | image_tag: class: ''  }}
+      {% elsif content.video != blank %}
+        {{ content.video | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          class: 'quick-add__video',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+      {% else %}
+        {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
+      {% endif %}
+
+      <div class="{{ base }}__product-tags">
+        {% for tag in card_product.tags %}
+          <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+            {{ tag }}
+          </div>
+        {% endfor %}
+        {% assign currentVariant = card_product.selected_or_first_available_variant %}
+        {% capture discount %}
+          {% if currentVariant.selling_plan_allocations.size > 0 %}
+            {{ currentVariant.price | minus:currentVariant.selling_plan_allocations[0].price | times:100 | divided_by:currentVariant.price }}
+          {% else %}
+            {% if currentVariant.compare_at_price > currentVariant.price %}
+              {{ currentVariant.compare_at_price_max | minus:currentVariant.price | times:100 | divided_by:currentVariant.compare_at_price_max }}
+            {% endif %}
+          {% endif %}
+        {% endcapture %}
+        
+        <span class="quick-add__discount-badge">{{ discount | strip }}% off</span>
+      </div>
+
+      {% unless page.handle contains "chronic-illness" %}
+      <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
+      {% endunless %}
+
+      
+    </div>
+
+    <div class="quick-add__overlay"> </div>
+    <div class="quick-add__display">
+      <div class="{{ base }}__form-wrapper no-scrollbar">
+        <button data-toggle class="quick-add__close">
+          <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73115 15.7142L0.785645 14.7687L7.55442 7.99993L0.785645 1.23115L1.73115 0.285645L8.49993 7.05442L15.2687 0.285645L16.2142 1.23115L9.44544 7.99993L16.2142 14.7687L15.2687 15.7142L8.49993 8.94544L1.73115 15.7142Z" fill="#1F2322"/>
+            </svg>          
+        </button>
+        <div class="{{ base }}__form-inner no-scrollbar">
+          <div class="{{ base }}__form-header">
+            <div class="{{ base }}__form-image">
+              {% if content.form_image != blank %}
+                {{ content.form_image | image_url: width: 160 | image_tag: class: '' }}
+              {% else %}
+                {{ card_product.featured_image | image_url: width: 160 | image_tag: class: '' }}
+              {% endif %}
+            </div>
+            <div class="{{  base }}__form-title">
+              {% if card_product.metafields.okendo.ProductListingSnippet != blank %}
+              <div data-oke-reviews-product-listing-rating>
+                {{ card_product.metafields.okendo.ProductListingSnippet }}
+                <div class="{{ base }}__okendo-custom">
+                  {{ card_product.metafields.okendo.summaryData | map: "reviewAverageValue" }}/5.0
+                </div>
+              </div>
+              {% endif %}
+              {% if content.product_title != blank %}
+                <h6 class="">{{ content.product_title }}</h6>
+              {% else %}
+                <h6 class="">{{ card_product.title }}</h6>
+              {% endif %}
+              {% assign category = card_product.metafields.custom.chronic_illness_category.value %}
+              {% if category != blank %}
+                <p class="{{ base }}__category">
+                  {% for cate in category %}
+                    {{ cate }}{% unless forloop.last %} ,{% endunless %}
+                  {% endfor %}
+                </p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="{{  base }}__form">
+            {% render 'chronic-quick-add-product-form', p: card_product, show_onetime_purchase : show_onetime_purchase %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="{{ base }}__content">
+    {% render 'okendo-reviews-product-rating-summary', product: card_product %}
+    {% if content.product_title != blank %}
+      <h5 class="{{ base }}__title">{{ content.product_title }}</h5>
+    {% else %}
+      <h5 class="{{ base }}__title">{{ card_product.title }}</h5>
+    {% endif %}
+    {% if card_product.metafields.my_fields.product_card_text != blank %}
+      <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
+    {% endif %}
+    
+    <div class="{{ base }}__sub--text">
+      {{ card_product.metafields.custom.chronic_illness_product_sub_text }}
+    </div>
+
+    <div class="{{ base }}__price">
+      starting <span class="hide-mobile">at</span>
+      <div class="{{ base }}__price-recurring">
+        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+      </div>
+      <div class="{{ base }}__price-otp">
+        {{ card_product.selected_or_first_available_variant.price | money }}
+      </div>
+    </div>
+    <div class="{{ base }}__btn-wrap">
+      <button data-toggle class="{{ base }}__button">Purchase Options</button>
+    </div>
+    <div class="product__drawer-triggers" data-title="{{ card_product.title }}">
+      {% if content.enable_supplement_facts %}
+        <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Supplement Facts</a>
+      {% endif %}
+      {% if content.enable_clinical_trial %}
+        <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Clinical Trial</a>
+      {% endif %}
+    </div>
+  </div>
+</quick-add-card>

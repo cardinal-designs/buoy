@@ -9,41 +9,20 @@
 */
 {
   "sections": {
-    "902758e5-2326-4116-ab43-a576df7f670e": {
-      "type": "home-hero",
-      "disabled": true,
-      "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
-        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
-        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
-        "review": "Over 4,000 Trusted Reviews",
-        "title": "Add functional benefits to any drink",
-        "text": "Unflavored Hydration Drops",
-        "button_label": "Shop Now",
-        "button_link": "shopify:\/\/collections\/all",
-        "button_style": "beige",
-        "link_label": "",
-        "link_link": "",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "add_background": false
-      }
-    },
     "new_home_hero_LUNXEb": {
       "type": "new-home-hero",
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aa39b7b7bd7744929c93a1e3c6e1a0cb.mp4",
-        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aa39b7b7bd7744929c93a1e3c6e1a0cb.mp4",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/16b4e88a08fd4a1b8c654fe0ee65e6d0.mov",
+        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/16b4e88a08fd4a1b8c654fe0ee65e6d0.mov",
         "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
         "mobile_image": "shopify:\/\/shop_images\/20240122_Buoy_AddToDrink6367w_1.jpg",
-        "review": "Over 5,000 Trusted Reviews",
-        "title": "<strong>Make Any Drink More Hydrating<\/strong>",
+        "review": "\u2028Over 5,000 Trusted Reviews",
+        "title": "Make Any Drink More Hydrating",
         "text": "Unflavored Liquid Electrolytes",
-        "button_label": "Shop All",
+        "button_label": "Shop Electrolytes",
         "button_link": "shopify:\/\/collections\/all",
-        "link_label": "",
-        "link_link": "",
+        "link_label": "Managing a chronic illness?",
+        "link_link": "shopify:\/\/pages\/chronic-illness-support",
         "autoplay": true,
         "mute": true,
         "loop": true,
@@ -54,7 +33,7 @@
         "bg_color": "#ffffff",
         "star_color": "#ffd66b",
         "desktop_font_color": "#1f2322",
-        "mobile_font_color": "#ffffff",
+        "mobile_font_color": "#1f2322",
         "btn_bg_color": "#def647",
         "btn_font_color": "#1f2322",
         "btn_border_color": "#def647",
@@ -62,22 +41,22 @@
         "btn_h_font_color": "#ffffff",
         "btn_h_border_color": "#1f2322",
         "overlay_color": "#000000",
-        "overlay_opacity": 15
+        "overlay_opacity": 0
       }
     },
     "16318238207c8b14a8": {
       "type": "press-logos",
       "blocks": {
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d": {
-          "type": "block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/mens-health-vector-logo-xs.png"
-          }
-        },
         "9329573b-5a63-4550-b65c-8c6186e2f514": {
           "type": "block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/womenshealthlogo.png"
+            "logo": "shopify:\/\/shop_images\/mh_logo.png"
+          }
+        },
+        "b836b34c-08bc-4f43-822a-4a9205aafa1d": {
+          "type": "block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/ba_logo.webp"
           }
         },
         "9b3a736e-f2bf-4466-ba27-3cc9c5d231df": {
@@ -88,15 +67,75 @@
         }
       },
       "block_order": [
-        "b836b34c-08bc-4f43-822a-4a9205aafa1d",
         "9329573b-5a63-4550-b65c-8c6186e2f514",
+        "b836b34c-08bc-4f43-822a-4a9205aafa1d",
         "9b3a736e-f2bf-4466-ba27-3cc9c5d231df"
       ],
+      "disabled": true,
       "settings": {
         "background": "#ffffff",
         "enable_marquee": false,
-        "add_top_border": true,
-        "add_bottom_border": true
+        "add_top_border": false,
+        "add_bottom_border": false
+      }
+    },
+    "chronic_illness_featured_product_z8cLFq": {
+      "type": "chronic-illness-featured-product",
+      "disabled": true,
+      "settings": {
+        "title": "Start With Our Best-Selling Kits",
+        "icon_image_text_1": "D",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "product": "",
+        "product_title": "",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
+      }
+    },
+    "chronic_product_grid_3BP7eT": {
+      "type": "chronic-product-grid",
+      "disabled": true,
+      "settings": {
+        "title": "Shop All",
+        "link_label": "",
+        "link": "",
+        "icon_image_text_1": "",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "icon_image_text_4": "",
+        "show_onetime_purchase": true
+      }
+    },
+    "media_grid_HcgmzD": {
+      "type": "media-grid",
+      "blocks": {
+        "block_BXmEpD": {
+          "type": "block",
+          "settings": {
+            "video": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_BXmEpD"
+      ],
+      "disabled": true,
+      "settings": {
+        "suptitle": "",
+        "title": "Optimized for function",
+        "text": "",
+        "background": "",
+        "button_label": "",
+        "button_link": ""
       }
     },
     "6484e2d1-6529-43c4-975f-4a239d15a19e": {
@@ -104,7 +143,7 @@
       "settings": {
         "video_url": "",
         "image": "shopify:\/\/shop_images\/Single_Tilted_Hydration_1_-min.jpg",
-        "title": "<strong>Optimized for function, <\/strong> not flavor",
+        "title": "Optimized for function,  not flavor",
         "text": "<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nSugar Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nStevia & Sweetener Free\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nUnflavored\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nVegan\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \nNon-GMO\n<\/p>\n<p>\n<svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path><\/svg> \n3x More Bioavailable Form Factor\n<\/p>",
         "subtext": "",
         "button_label": "Learn More",
@@ -436,9 +475,11 @@
     }
   },
   "order": [
-    "902758e5-2326-4116-ab43-a576df7f670e",
     "new_home_hero_LUNXEb",
     "16318238207c8b14a8",
+    "chronic_illness_featured_product_z8cLFq",
+    "chronic_product_grid_3BP7eT",
+    "media_grid_HcgmzD",
     "6484e2d1-6529-43c4-975f-4a239d15a19e",
     "1643601523d98d2b70",
     "660e452d-a582-4c94-9787-50268a2e4460",

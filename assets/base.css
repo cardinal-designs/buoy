@@ -51,7 +51,7 @@ body.lock-scroll-mobile {
   bottom: 0;
   left: 0;
   background: rgba(187, 188, 188);
-  z-index: 9;
+  z-index: 12;
   visibility: hidden;
   opacity: 0;
   mix-blend-mode: multiply;
@@ -100,6 +100,10 @@ body.lock-scroll-mobile {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 100px;
+}
+
+.page-width--wide {
+  padding: 0 70px;
 }
 
 .page-width-desktop {
@@ -1429,6 +1433,11 @@ deferred-media {
   padding: 10px 14px;
 }
 
+.button--green {
+  background: var(--green-1);
+  border: 0;
+}
+
 /* Button - hover */
 
 .button:not([disabled], .product-form .button, .Product_Bar_Container .button, .routine-products__product button):hover,
@@ -2059,7 +2068,7 @@ header-container {
   position: sticky;
   top: 0;
   background-color: #ffffff;
-  z-index: 3;
+  z-index: 5;
 }
 
 header-container.active {
@@ -2297,7 +2306,6 @@ header-container.active .header {
   border-color: transparent;
 }
 
-.page-chronic-illness-support .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-about-sustainability .header--transparent:not(.header--scrolled) .header-wrapper,
 .page-clear-pee-club .header--transparent:not(.header--scrolled) .header-wrapper {
   background-color: #F8F1EB;

@@ -45,11 +45,11 @@
           "block_LM6UX4": {
             "type": "block",
             "settings": {
-              "block_title": "Hydrate with one squeeze.",
-              "block_link": "shopify:\/\/products\/hydration-drops",
-              "badge_text": "Best-Seller",
-              "block_desc": "Turn any drink into a clean, hydrating beverage with unsweetened ocean minerals.",
-              "block_image": "shopify:\/\/shop_images\/Menu_Featured_Product_1.jpg"
+              "block_title": "Chronic Illness Support",
+              "block_link": "shopify:\/\/pages\/chronic-illness-support",
+              "badge_text": "New Web Experience!",
+              "block_desc": "Managing a chronic illness?<br>Get 35% Off for life —>",
+              "block_image": "shopify:\/\/shop_images\/PDP_RescueDrops_Hero_6.jpg"
             }
           },
           "block_TymYNR": {
@@ -246,10 +246,10 @@
           "block_EqHf8E": {
             "type": "block",
             "settings": {
-              "block_image": "shopify:\/\/shop_images\/Menu_Featured_Product_1.jpg",
-              "block_link": "shopify:\/\/products\/hydration-drops",
-              "badge_text": "Best-Seller",
-              "block_desc": "Hydrate with one squeeze."
+              "block_image": "shopify:\/\/shop_images\/Image.jpg",
+              "block_link": "shopify:\/\/pages\/chronic-illness-support",
+              "badge_text": "Chronic Illness Support",
+              "block_desc": "Managing a chronic illness?<br>Get 35% off for life —>"
             }
           },
           "block_6frMkm": {
@@ -257,8 +257,8 @@
             "settings": {
               "block_image": "shopify:\/\/shop_images\/Menu_Featured_Product_2.jpg",
               "block_link": "shopify:\/\/products\/digestion-drops",
-              "badge_text": "New Product",
-              "block_desc": "NEW anti-bloat electrolyte."
+              "badge_text": "Trending",
+              "block_desc": "The Anti-Bloat, IBS-Relieving Liquid Electrolyte."
             }
           },
           "block_EWtqgX": {
@@ -266,8 +266,8 @@
             "settings": {
               "block_image": "shopify:\/\/shop_images\/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
               "block_link": "shopify:\/\/products\/liquid-electrolyte-variety-kit",
-              "badge_text": "Bundle & Save",
-              "block_desc": "Your ocean-powered routine."
+              "badge_text": "Starter Kit",
+              "block_desc": "Everything you need, in one go."
             }
           }
         },
@@ -289,26 +289,59 @@
       },
       "chronic-illness-slide-out": {
         "type": "chronic-illness-slide-out",
+        "blocks": {
+          "product_AxgWVN": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "heading": "hydration-drops-chronic-illness-discount",
+              "product_title": "",
+              "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+              "show_tags": true
+            }
+          },
+          "product_7ELDi7": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "heading": "digestion-drops-chronic-illness-discount",
+              "product_title": "",
+              "image": "shopify:\/\/shop_images\/Collection_DD.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_DD_Hover.mp4",
+              "show_tags": true
+            }
+          },
+          "product_FFDKMm": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "heading": "immunity-drops-chronic-illness-discount",
+              "product_title": "",
+              "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
+              "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
+              "show_tags": true
+            }
+          }
+        },
+        "block_order": [
+          "product_AxgWVN",
+          "product_7ELDi7",
+          "product_FFDKMm"
+        ],
         "settings": {
-          "title": "What everyone else gets:",
-          "item_name_1": "Amazon",
-          "item_price_1": "$14.99\/bottle",
-          "item_name_2": "Website One-Time Purchase",
-          "item_price_2": "$13.00\/bottle",
-          "item_name_3": "Website Clear Pee Club Subscription",
-          "item_price_3": "$10.00\/bottle",
-          "title2": "You’re getting Buoy’s deepest discount, forever.",
-          "check_1": "Free Shipping",
-          "check_2": "Skip or Cancel Anytime",
-          "check_3": "Monthly Deliveries",
-          "product_name_1": "",
-          "product_details_1": "",
-          "product_price_1": "",
-          "product_price_details_1": "",
-          "product_name_2": "Welcome Package",
-          "product_price_2": "Free",
-          "disclaimer": "Chronic illness discount applied to all future orders.",
-          "btn": "Get Started and Save 35%"
+          "subtitle": "Join the Program",
+          "title": "Get 35% Off Buoy <em>For Life <\/em>",
+          "text": "If you're using Buoy to manage a condition, join our Chronic Illness Support Program to get 35% off for life.",
+          "link_title": "Save link for future access!",
+          "link": "justaddbuoy.com\/pages\/chronic-illness-shop",
+          "success_title": "You’re All Set!",
+          "success_content": "This discount is exclusive to our Chronic Illness Program customers. Head to the next page to start shopping.",
+          "success_btn": "Start Shopping",
+          "success_btn_url": "shopify:\/\/pages\/chronic-illness-shop",
+          "product_heading": "<em>Quick Shop<\/em> Your 35% Off Discount",
+          "grid_btn": "Shop All 35% Off Products",
+          "grid_btn_url": "shopify:\/\/pages\/chronic-illness-shop"
         }
       },
       "black-friday-announcement-bar": {
@@ -337,11 +370,12 @@
       "announcement-bar-new": {
         "type": "announcement-bar-new",
         "settings": {
-          "text": "<strong>New Brain Health Drops:<\/strong> Shop the <u>Brain-Fog-Be-Gone Electrolyte<\/u> —>",
-          "link": "shopify:\/\/products\/brain-health-drops",
+          "text": "<strong>NEW! <\/strong>Shop our updated <u>Chronic Illness Web Experience<\/u> —>",
+          "link": "shopify:\/\/pages\/chronic-illness-support",
           "hide_mobile": false,
           "background": "#def647",
-          "text_color": "#1f2322"
+          "text_color": "#1f2322",
+          "image": "shopify:\/\/shop_images\/Promo_Bar_New_Rescue_Kit.jpg"
         }
       },
       "hydration-facts-drawer": {

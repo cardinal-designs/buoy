@@ -1,0 +1,345 @@
+.reviews-grid {
+  padding: 120px 0 70px;
+  background-color: var(--gray-lighest);
+}
+
+.reviews-grid__header {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.reviews-grid__subtitle {
+  margin: 0 0 16px;
+  letter-spacing: 0;
+}
+
+.reviews-grid__title {
+  margin: 0;
+  font-family: inter;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+.reviews-grid__title em {
+  font-family: Rhymes-Light-Italic;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.page-template--page-ci-shop .reviews-grid__button {
+  border: none; 
+}
+
+.reviews-grid__header-right {
+  position: relative;
+}
+
+.reviews-grid__header-right svg {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 20px);
+}
+
+.reviews-grid__button {
+  width: 360px;
+  border: 1px solid #1F2322;
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  padding: 12px 15px;
+  color: #1F2322;
+  min-height: 51px;
+}
+
+.reviews-grid__button:not(.button--green) {
+  background-color: transparent;
+}
+
+#chronic-review-container {
+  column-count: 2;
+  gap: 32px;
+}
+
+.review-grid-item h3 {
+  font-size: 18px;
+  line-height: 21.78px;
+  margin: 12px 0 16px;
+  font-weight: 500;
+}
+
+.review-grid-item h3 + p {
+  margin: 16px 0 20px;
+}
+
+.review-grid-item {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #F8F8F8;
+  margin-bottom: 32px;
+  display: inline-block;
+  width: 100%;
+}
+
+.review-grid-item p:last-child {
+  margin: 20px 0 0;
+  font-weight: 500;
+}
+
+.okeReviews-starRating-indicator {
+  height: 21px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.okeReviews-starRating-indicator-layer {
+  background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23E5E5E5%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-size: 90px 22px;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.okeReviews-starRating-indicator-layer.okeReviews-starRating-indicator-layer--foreground {
+  background-image: url('data:image/svg+xml;charset=UTF-8, %3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FAD16F%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+}
+
+#load-more-reviews {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #1F2322;
+}
+
+.load-more-reviews-wrapper {
+  text-align: center;
+  padding: 38px 0 3px;
+}
+
+.page-chronic-illness-support .review-grid-item {
+  background-color: #FFFFFF;
+}
+
+.promo__banner--image img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.promo__banner {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 32px;
+  display: inline-block;
+  width: 100%;
+}
+
+.promo__banner--content {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.promo__banner--content::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #1F2322;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.promo__description li {
+  list-style: none;
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  color: #fff;
+  padding-left: 36px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Icons_thick_3.svg?v=1724418473');
+  background-repeat: no-repeat;
+  background-position: center left;
+  margin-top: 6px;
+}
+
+.promo__wrapper h3 {
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0;
+  font-weight: 400;
+  color: #fff;
+  max-width: 80%;
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.promo__inner--wrapper {
+  width: 100%;
+}
+
+.promo__description ul {
+  margin: 0;
+  padding: 0;
+}
+
+.promo__button {
+  margin-top: 20px;
+}
+
+.promo__button .button {
+  width: 100%;
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 13px 15px;
+}
+
+.page-template--page-lifetime-wellness-program .load-more-reviews-wrapper .reviews-grid__button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .chronic-review .page-width {
+    padding: 0 20px;
+  }
+  
+  .reviews-grid__title {
+    font-size: 30px;
+  }
+
+  .reviews-grid__header {
+    margin-bottom: 32px;
+    display: block;
+    text-align: center;
+  }
+
+  .reviews-grid__subtitle {
+    margin-bottom: 12px;
+  }
+
+  .reviews-grid__title {
+    font-size: 30px;
+    text-wrap: balance;
+  }
+
+  .reviews-grid__header-right {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .reviews-grid__header-right svg {
+    position: static;
+  }
+
+  #chronic-review-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .load-more-reviews-wrapper {
+    text-align: center;
+    padding: 12px 0 3px;
+  }
+
+  .reviews-grid__button {
+    width: 100%;
+  }
+
+  .okeReviews .okeReviews-reviewsCarousel-slider {
+    padding: 0 34px !important;
+  }
+
+  .load-more-reviews-wrapper .reviews-grid__button {
+    margin-bottom: 24px;
+  }
+
+  .reviews-grid {
+    padding: 80px 0 40px;
+  }
+
+  .page-template--page-ci-shop .reviews-grid__header .reviews-grid__button {
+    display: none;
+  }
+
+  .promo__wrapper h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .promo__banner,
+  .review-grid-item {
+    margin-bottom: 20px;
+  }
+
+  #chronic-review-container {
+    column-count: 1;
+  }
+
+  .promo__banner--content {
+    padding: 15px;
+  }
+
+  .okeReviews-starRating-indicator {
+    height: 21px;
+  }
+
+  .okeReviews-starRating-indicator-layer {
+    background-size: 90px 22px;
+  }
+  
+}
+
+@media screen and (max-width: 374px) {
+
+  .promo__banner--content {
+    padding: 10px;
+  }
+
+  .promo__button .button {
+    font-size: 14px;
+    line-height: 23px;
+    padding: 11px 15px;
+  }
+
+  .promo__description li {
+    margin-top: 0;
+    background-size: 20px;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .promo__wrapper h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+}

@@ -1,27 +1,62 @@
-{{ 'reviews-slider.css' | asset_url | stylesheet_tag }} 
 <script src="{{ 'reviews-slider.js' | asset_url }}"></script>
+{{ 'reviews-slider.css' | asset_url | stylesheet_tag }} 
 
-<div class="Reviews_Slider
-    {% if section.settings.add_top_border %} top-border{% endif %}
-   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
-   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
-  ">
-  <div class="page-width">
-    <div class="Reviews_Slider_Main">
-      <div class="Reviews_Slider_Container">
+<div class="reviews-slider">
+  <div class="page-width page-width--wide">
+    <div class="reviews-slider__arrows"></div>
+    <div class="reviews-slider__container">
+      <div class="reviews-slider__content">
+        <div class="reviews-slider__reviews">
+          {% assign reviews_product = section.settings.product_for_reviews %}
+          {% render 'okendo-reviews-product-rating-summary', product: reviews_product %}
+        </div>
+        <h2 class="reviews-slider__title h2">{{ section.settings.title }}</h2>
+        <a href="{{ section.settings.link }}" class="reviews-slider__link body-small hide-mobile">{{ section.settings.link_label }}</a>
+      </div>
+      <div class="reviews-slider__slider slick-slider">
         {% for block in section.blocks %}
-          <div class="Reviews_Slider_Item">
-            <span class="Testimonials_Rating"></span>
-            <h6 class="Reviews_Slider_Content">
-              {{ block.settings.content }}
-            </h6>
-            <h6 class="Testimonials_Author">{{ block.settings.text }}</h6>
+          <div class="reviews-slider__item slick-slide" {{ block.shopify_attributes }}>
+            <div class="reviews-slider__image">
+              {%- if block.settings.video != blank -%}
+                {{
+                  block.settings.video
+                  | video_tag: autoplay: true, muted: true, loop: true, controls: false, image_size: '1400x'
+                }}
+              {%- elsif block.settings.image != blank -%}
+                <img
+                  srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                    {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}"
+                  src="{{ block.settings.image | img_url: '1500x' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 769px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <div class="reviews-slider__item-content">
+              {% assign tags_split = block.settings.tags | split: ',' %}
+              <div class="reviews-slider__tags">
+                {% for tag in tags_split %}
+                  <div class="reviews-slider__tag body-xs">{{ tag }}</div>
+                {% endfor %}
+              </div>
+              <p class="reviews-slider__item-title body-large">{{ block.settings.title }}</p>
+              <p class="reviews-slider__item-text body-small">{{ block.settings.text }}</p>
+            </div>
           </div>
         {% endfor %}
       </div>
-      {% if section.settings.reviews_btn_txt != blank %}
-        <a href="{{ section.settings.reviews_btn_link }}" class="All_Reviews">{{ section.settings.reviews_btn_txt }}</a>
-      {% endif %}
+      <div class="center hide-desktop">
+        <a href="{{ section.settings.link }}" class="reviews-slider__link body-small">{{ section.settings.link_label }}</a>
+      </div>
     </div>
   </div>
 </div>
@@ -31,65 +66,57 @@
     "name": "Reviews Slider",
     "settings": [
       {
-        "type": "checkbox",
-        "id": "add_top_border",
-        "label": "Add Top Border"
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Title"
       },
       {
-        "type": "checkbox",
-        "id": "add_bottom_border",
-        "label": "Add Bottom Border"
+        "type": "product",
+        "id": "product_for_reviews",
+        "label": "Product for Reviews"
       },
       {
-        "type": "select",
-        "id": "background",
-        "label": "Background",
-        "options": [
-          {
-            "value": "top",
-            "label": "Gradient Top to Bottom"
-          },
-          {
-            "value": "bottom",
-            "label": "Gradient Bottom to Top"
-          },
-          {
-            "value": "bg_color",
-            "label": "Background Color"
-          },
-          {
-            "value": "none",
-            "label": "None"
-          }
-        ],
-        "default": "none"
+        "type": "text",
+        "id": "link_label",
+        "label": "Link Label"
       },
       {
-        "type" : "text",
-        "id" : "reviews_btn_txt",
-        "label" : "Reviews button text"
-      },
-      {
-        "type" : "url",
-        "id" : "reviews_btn_link",
-        "label" : "Reviews button url"
+        "type": "url",
+        "id": "link",
+        "label": "Link"
       }
     ],
     "blocks": [
       {
-        "type": "pr_slide",
-        "name": "Reviews Slide",
-        "settings": [
+        "type": "review",
+        "name": "Review",
+        "settings": [ 
           {
-            "type": "text",
-            "id": "text",
-            "label": "Author"
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
           },
           {
             "type": "textarea",
-            "id": "content",
-            "label": "Content"
-          }          
+            "id": "tags",
+            "label": "Tags", 
+            "info": "Separate each by a comma."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
         ]
       }
     ],

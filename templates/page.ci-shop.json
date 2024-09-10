@@ -10,12 +10,491 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "image-content",
+      "blocks": {
+        "title_VrqJ8p": {
+          "type": "title",
+          "settings": {
+            "text": "Shop Your<em>35% Off Discount<\/em>"
+          }
+        },
+        "text_JhBDNP": {
+          "type": "text",
+          "settings": {
+            "text": "Help offset your healthcare costs with Buoy's Lifetime Chronic Illness Discount exclusively reserved for people living with chronic conditions."
+          }
+        },
+        "link_copy_UTpW9X": {
+          "type": "link_copy",
+          "disabled": true,
+          "settings": {
+            "title": "Save link for future access!",
+            "link": "justaddbuoy.com\/pages\/chronic-illness-shop",
+            "disclaimer": "This discount is exclusive to our Chronic Illness Program customers. Anytime you come back to this page, your discount will be waiting."
+          }
+        },
+        "button_xy9PUV": {
+          "type": "button",
+          "settings": {
+            "text": "Start Shopping",
+            "link": "#shopify-section-template--23234181562668__chronic_illness_featured_product_Hz7mTh"
+          }
+        }
+      },
+      "block_order": [
+        "title_VrqJ8p",
+        "text_JhBDNP",
+        "link_copy_UTpW9X",
+        "button_xy9PUV"
+      ],
+      "custom_css": [
+        "em {display: block;}"
+      ],
       "settings": {
+        "video": "shopify:\/\/files\/videos\/24.08.29_RESCUE_KIT_1X1_FINAL (1).mp4",
+        "image": "shopify:\/\/shop_images\/Image.jpg",
+        "product_for_reviews": ""
+      }
+    },
+    "chronic_illness_featured_product_Hz7mTh": {
+      "type": "chronic-illness-featured-product",
+      "blocks": {
+        "whats_included_dropdown_4mUd3g": {
+          "type": "whats_included_dropdown",
+          "settings": {
+            "title": "What’s Included",
+            "bubble_text1": "6x",
+            "bubble_text2": "1x",
+            "bubble_text3": "",
+            "bubble_text4": "",
+            "bubble_text5": "",
+            "bubble_text6": "",
+            "bubble_text7": ""
+          }
+        },
+        "benefit_dropdown_d9YtaF": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "Liquid electrolytes are 3x more bioavailable than traditional supplement forms."
+          }
+        }
+      },
+      "block_order": [
+        "whats_included_dropdown_4mUd3g",
+        "benefit_dropdown_d9YtaF"
+      ],
+      "settings": {
+        "title": "Start With Our <em>Best-Selling Kits<\/em>",
+        "icon_1": "shopify:\/\/shop_images\/Callouts_2.svg",
+        "icon_image_text_1": "Try 100% Risk Free",
+        "icon_2": "shopify:\/\/shop_images\/Callouts_3.svg",
+        "icon_image_text_2": "Get 35% Off For Life",
+        "icon_3": "shopify:\/\/shop_images\/Callouts_4.svg",
+        "icon_image_text_3": "Free U.S. Shipping",
+        "product": "rescue-kit-chronic-illness-discount",
+        "product_title": "Rescue Kit",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
+      }
+    },
+    "chronic_illness_featured_product_6CVr8Q": {
+      "type": "chronic-illness-featured-product",
+      "blocks": {
+        "whats_included_dropdown_KHgUAy": {
+          "type": "whats_included_dropdown",
+          "settings": {
+            "title": "What's Included",
+            "bubble_text1": "1x",
+            "bubble_text2": "1x",
+            "bubble_text3": "1x",
+            "bubble_text4": "1x",
+            "bubble_text5": "1x",
+            "bubble_text6": "1x",
+            "bubble_text7": "1x"
+          }
+        },
+        "benefit_dropdown_mDb96x": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "Liquid electrolytes are 3x more bioavailable than traditional supplement forms. Add to any beverage."
+          }
+        }
+      },
+      "block_order": [
+        "whats_included_dropdown_KHgUAy",
+        "benefit_dropdown_mDb96x"
+      ],
+      "settings": {
+        "title": "",
+        "icon_image_text_1": "",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "product": "one-of-everything-kit-chronic-illness-discount",
+        "product_title": "One of Everything Kit",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_second"
+      }
+    },
+    "chronic_illness_featured_product_4GgdWM": {
+      "type": "chronic-illness-featured-product",
+      "blocks": {
+        "whats_included_dropdown_WNezLz": {
+          "type": "whats_included_dropdown",
+          "settings": {
+            "title": "What's Included",
+            "bubble_text1": "3x",
+            "bubble_text2": "1x",
+            "bubble_text3": "",
+            "bubble_text4": "",
+            "bubble_text5": "",
+            "bubble_text6": "",
+            "bubble_text7": ""
+          }
+        },
+        "benefit_dropdown_aMWXdF": {
+          "type": "benefit_dropdown",
+          "settings": {
+            "title": "Benefits",
+            "subtitle": "General overview of kit benefits. Get all four of our functional, liquid electrolytes + minerals for ocean-powered cellular health. Add to any drink. No sugar, sweeteners, flavors."
+          }
+        }
+      },
+      "block_order": [
+        "whats_included_dropdown_WNezLz",
+        "benefit_dropdown_aMWXdF"
+      ],
+      "settings": {
+        "title": "",
+        "icon_image_text_1": "",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "product": "ocean-electrolyte-kit-chronic-illness-discount",
+        "product_title": "Ocean Electrolyte Kit",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
+      }
+    },
+    "chronic_product_grid_dfgdYe": {
+      "type": "chronic-product-grid",
+      "blocks": {
+        "product_NmGPAi": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops-chronic-illness-discount",
+            "product_title": "Hydration Drops",
+            "image": "shopify:\/\/shop_images\/Collection_HD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_HD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_HD_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": true
+          }
+        },
+        "product_zPWync": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-drops-chronic-illness-discount",
+            "product_title": "Rescue Drops",
+            "image": "shopify:\/\/shop_images\/PDP_RescueDrops_Hero_6.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/PDP_RescueDrops_Hero_1_compressed (1).mp4",
+            "show_tags": false,
+            "form_image": "shopify:\/\/shop_images\/Collection_RD_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": true
+          }
+        },
+        "product_7DXbUL": {
+          "type": "product",
+          "settings": {
+            "heading": "digestion-drops-chronic-illness-discount",
+            "product_title": "Digestion Drops",
+            "image": "shopify:\/\/shop_images\/Collection_DD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_DD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_DD_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": false
+          }
+        },
+        "product_UrphGb": {
+          "type": "product",
+          "settings": {
+            "heading": "brain-health-drops-chronic-illness-discount",
+            "product_title": "Brain Health Drops",
+            "image": "shopify:\/\/shop_images\/Collection_BHD.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_BHD_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_BHD_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": false
+          }
+        },
+        "product_P4M4TC": {
+          "type": "product",
+          "settings": {
+            "heading": "energy-drops-chronic-illness-discount",
+            "product_title": "Energy Drops",
+            "image": "shopify:\/\/shop_images\/Collection_ED.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ED_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_ED_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": false
+          }
+        },
+        "product_cG4NTQ": {
+          "type": "product",
+          "settings": {
+            "heading": "immunity-drops-chronic-illness-discount",
+            "product_title": "Immunity Drops",
+            "image": "shopify:\/\/shop_images\/Collection_ID.jpg",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_ID_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_ID_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": false
+          }
+        },
+        "product_QPYdpt": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-salt-chronic-illness-discount",
+            "product_title": "Rescue Salt",
+            "video_hover": "shopify:\/\/files\/videos\/Collection_RS_Hover.mp4",
+            "show_tags": true,
+            "form_image": "shopify:\/\/shop_images\/Collection_RD_Add.jpg",
+            "form_text": "",
+            "enable_supplement_facts": true,
+            "enable_clinical_trial": false
+          }
+        }
+      },
+      "block_order": [
+        "product_NmGPAi",
+        "product_zPWync",
+        "product_7DXbUL",
+        "product_UrphGb",
+        "product_P4M4TC",
+        "product_cG4NTQ",
+        "product_QPYdpt"
+      ],
+      "settings": {
+        "title": "Shop All Products <em>35% Off<\/em>",
+        "link_label": "Read Reviews",
+        "link": "#shopify-section-template--23234181562668__chronic_review_F74gnL",
+        "icon_1": "shopify:\/\/shop_images\/drink-icon.svg",
+        "icon_image_text_1": "Add To Any Beverage",
+        "icon_2": "shopify:\/\/shop_images\/Icons_thick_443ff55a-d3b1-413a-a953-0fb8b296e11d.svg",
+        "icon_image_text_2": "Deep Ocean Electrolytes",
+        "icon_3": "shopify:\/\/shop_images\/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+        "icon_image_text_3": "No Sugar, Sweeteners, Flavors",
+        "icon_4": "shopify:\/\/shop_images\/Icons_thick_1.svg",
+        "icon_image_text_4": "Third-Party Tested",
+        "show_onetime_purchase": false
+      }
+    },
+    "text_image_toggle_YQJJzi": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Wellness",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "button_text": "Supplement Facts",
+        "background": "#f8f8f8"
+      }
+    },
+    "chronic_review_F74gnL": {
+      "type": "chronic-review",
+      "settings": {
+        "background_color": "#ffffff",
+        "never_expires": false,
+        "green_button": true,
+        "subtitle": "THE BUOY COMMUNITY",
+        "title": "Real People, <em>Real Health Journeys<\/em>",
+        "button_label": "Back to Shopping",
+        "button_link": "#shopify-section-template--23234181562668__chronic_illness_featured_product_Hz7mTh",
+        "enabled_promo_banner": false,
+        "promo_title": "",
+        "promo_desc": "",
+        "promo_button_label": "",
+        "promo_button_link": ""
+      }
+    },
+    "clinical_trial_drawer_Vya7Lt": {
+      "type": "clinical-trial-drawer",
+      "blocks": {
+        "list_item_fP8rM7": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "General Hydration — Estimated Trial Results Early 2024"
+          }
+        },
+        "list_item_Q8NwKA": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "Type 1 Diabetes — Estimated Trial Results Mid 2024"
+          }
+        },
+        "list_item_3LYVjh": {
+          "type": "list-item",
+          "settings": {
+            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "item_description": "Chemotherapy Dehydration — Estimated Trial Results Late 2024"
+          }
+        },
+        "content_aNhycC": {
+          "type": "content",
+          "settings": {
+            "btn_title": "General Hydration",
+            "notification": "",
+            "heading": "Primary Outcome Measures:",
+            "title": "Net Fluid Balance",
+            "text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "text_block_two": "Determined by subtracting the cumulative urine output from the total fluid load consumed",
+            "block_two_title": "Electrolytes In Urine",
+            "block_two_text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "block_two_text_block_two": "Sodium, Potassium, and Chloride levels will be measured",
+            "block_three_title": "Blood Labs",
+            "block_three_text_block_one": "<p><strong>Time Frame:<\/strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.<\/p>",
+            "block_three_text_block_two": "Venous whole blood will be collected using phlebotomy and 100ul will be analyzed using an i-STAT",
+            "secondary_heading": "Secondary Outcome Measures:",
+            "secondary_title": "Bioimpedence",
+            "secondary_text_block_one": "<p><strong>Time Frame:<\/strong> Each urine collection occurs for a total of 6 hours<\/p>",
+            "secondary_text_block_two": "Bioimpedence measured after each urine collection"
+          }
+        },
+        "content_BWwgzt": {
+          "type": "content",
+          "settings": {
+            "btn_title": "Type 1 Diabetes",
+            "notification": "Coming Soon!",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        },
+        "content_9azzag": {
+          "type": "content",
+          "settings": {
+            "btn_title": "Chemotherapy Dehydration",
+            "notification": "Coming Soon!",
+            "heading": "",
+            "title": "",
+            "text_block_one": "",
+            "text_block_two": "",
+            "block_two_title": "",
+            "block_two_text_block_one": "",
+            "block_two_text_block_two": "",
+            "block_three_title": "",
+            "block_three_text_block_one": "",
+            "block_three_text_block_two": "",
+            "secondary_heading": "",
+            "secondary_title": "",
+            "secondary_text_block_one": "",
+            "secondary_text_block_two": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_item_fP8rM7",
+        "list_item_Q8NwKA",
+        "list_item_3LYVjh",
+        "content_aNhycC",
+        "content_BWwgzt",
+        "content_9azzag"
+      ],
+      "settings": {
+        "year": "2023",
+        "product_name": "Hydration Drops",
+        "title": "Clinical Trial Updates",
+        "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "chronic_illness_featured_product_Hz7mTh",
+    "chronic_illness_featured_product_6CVr8Q",
+    "chronic_illness_featured_product_4GgdWM",
+    "chronic_product_grid_dfgdYe",
+    "text_image_toggle_YQJJzi",
+    "chronic_review_F74gnL",
+    "clinical_trial_drawer_Vya7Lt"
   ]
 }

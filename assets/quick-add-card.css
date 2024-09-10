@@ -74,12 +74,22 @@
 
 .quick-add__product-tag { 
   background: var(--charcoal);
-  padding: 3px 8px;
+  padding: 3px 6px 2px;
   border-radius: 4px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 14.52px;
   font-family: inter, sans-serif;
-  line-height: normal;
+}
+
+.quick-add__discount-badge {
+  background: #398200;
+  padding: 3px 6px 2px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-family: inter, sans-serif;
 }
 
 @media screen and (max-width: 768px) {

@@ -27,7 +27,7 @@ $( document ).ready(function() {
   });
 
   $('.rtx_option_selector input').select(function() {
-    console.log('bbbee')
+    
   })
 
   if(document.querySelector('.rtx_option_selector input:checked')) document.querySelector('.rtx_option_selector input:checked').click();
@@ -110,7 +110,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
    $('.image-slider__img-container').scrollLeft(scroll_percent2)  
 
     let scroll_percent3 = (ui.position.left / drag_width)*scroll_width_mobile
-  console.log('f',scroll_percent3)
    $('.image-slider__img-container-mobile').scrollLeft(scroll_percent3) 
 } );
 // scrollbar js end
@@ -251,7 +250,17 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
       const parentEl = e.target.closest('.dropdown-container-item');
-      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+
+      let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+
+      let dataTitleElement = e.target.closest('[data-title]');
+      if(dataTitleElement){
+        let dataTitleClosest = dataTitleElement.dataset.title;
+        if(dataTitleClosest){
+          dataTitle = dataTitleClosest;
+        }
+      }
       if (!dataTitle) return;
       const clinicalDrawers = document.querySelectorAll('.clinical-trial-drawer');
       clinicalDrawers.forEach((drawer) => {
@@ -262,7 +271,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       });
     } else {
       // For single drawer on PDP
-      const clinicalDrawer = document.getElementById("clinicalSideDrawer");
+      let clinicalDrawer = document.getElementById("clinicalSideDrawer");
       showDrawer(clinicalDrawer);
     }
 
@@ -299,7 +308,18 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     if (parentItemContainer) {
       // For dropdown-container-item__container section
       const parentEl = e.target.closest('.dropdown-container-item');
-      const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      
+      // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+      let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
+
+      let dataTitleElement = e.target.closest('[data-title]');
+      if(dataTitleElement){
+        let dataTitleClosest = dataTitleElement.dataset.title;
+        if(dataTitleClosest){
+          dataTitle = dataTitleClosest;
+        }
+      }
+      
       if (!dataTitle) return;
       supplementDrawers.forEach((drawer) => {
         const drawerName = drawer.dataset.productName;
@@ -345,7 +365,29 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         }
       }
       else{
-        showDrawer(supplementDrawer);
+        let dataTitleElement = e.target.closest('[data-title]');
+        if(dataTitleElement){
+          let dataTitle = dataTitleElement.dataset.title;
+          if(dataTitle){
+            let supplementDrawer = document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`);
+            if(supplementDrawer){
+              showDrawer(supplementDrawer);  
+            }else{
+              let elements = Array?.from(document.querySelectorAll('.supplement-side-drawer'));
+              let matchingElement = elements?.filter(element => 
+                dataTitle?.includes(element.getAttribute('data-product-name'))
+              )[0];
+              
+              if (matchingElement) {
+                showDrawer(matchingElement);
+              }
+            }
+          }else{
+            showDrawer(supplementDrawer);
+          }
+        }else{
+          showDrawer(supplementDrawer);
+        }
       }
     }
 
@@ -404,6 +446,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         closeClinical();
       }
     });
+  }else{
+    document.addEventListener('click', function(event) {
+      const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
+      const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
+      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
+        closeClinical();
+      }
+    });
   }
 
 setTimeout(function(){
@@ -435,7 +486,6 @@ $('.Open_Drawer').click(function(event){
 
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
-console.log("clickedddd");
   $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
@@ -513,9 +563,10 @@ $('.text-image-toggle__button').click(function() {
   $(this).addClass('active')
   $('.text-image-toggle__image').hide()
   $(`.text-image-toggle__image[data-id='${id}']`).show()
-})
+});
 
 $('.dropdown-container-item__title').click(function() {
+
   var isActive = $(this).hasClass('active');
   // Remove 'active' class from all titles
   $('.dropdown-container-item__title').removeClass('active');
@@ -524,7 +575,15 @@ $('.dropdown-container-item__title').click(function() {
   // If the clicked item was not active, make it active and slide down its content
   if (!isActive) {
     $(this).addClass('active');
-    $(this).next().slideToggle();
+    if(window.matchMedia("(max-width: 768px)").matches) {
+      $(this)[0].scrollIntoView();
+    } else if ($('body').hasClass('page-template--page-ci-shop')) {
+      console.log('bb')
+      var elementOffset = $(this).parent().parent().offset().top - 100;
+      $(window).scrollTop(elementOffset);
+    }
+    
+    $(this).next().slideToggle(false);
   }
 });
 

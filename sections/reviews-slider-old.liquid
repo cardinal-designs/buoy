@@ -1,0 +1,102 @@
+{{ 'reviews-slider-old.css' | asset_url | stylesheet_tag }} 
+<script src="{{ 'reviews-slider-old.js' | asset_url }}"></script>
+
+<div class="Reviews_Slider
+    {% if section.settings.add_top_border %} top-border{% endif %}
+   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  ">
+  <div class="page-width">
+    <div class="Reviews_Slider_Main">
+      <div class="Reviews_Slider_Container">
+        {% for block in section.blocks %}
+          <div class="Reviews_Slider_Item">
+            <span class="Testimonials_Rating"></span>
+            <h6 class="Reviews_Slider_Content">
+              {{ block.settings.content }}
+            </h6>
+            <h6 class="Testimonials_Author">{{ block.settings.text }}</h6>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.reviews_btn_txt != blank %}
+        <a href="{{ section.settings.reviews_btn_link }}" class="All_Reviews">{{ section.settings.reviews_btn_txt }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reviews Slider - Old",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "add_top_border",
+        "label": "Add Top Border"
+      },
+      {
+        "type": "checkbox",
+        "id": "add_bottom_border",
+        "label": "Add Bottom Border"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": "Background",
+        "options": [
+          {
+            "value": "top",
+            "label": "Gradient Top to Bottom"
+          },
+          {
+            "value": "bottom",
+            "label": "Gradient Bottom to Top"
+          },
+          {
+            "value": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type" : "text",
+        "id" : "reviews_btn_txt",
+        "label" : "Reviews button text"
+      },
+      {
+        "type" : "url",
+        "id" : "reviews_btn_link",
+        "label" : "Reviews button url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "pr_slide",
+        "name": "Reviews Slide",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Author"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reviews Slider - Old"
+      }
+    ]
+  }
+{% endschema %}

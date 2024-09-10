@@ -1,100 +1,404 @@
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+{{ 'product-grid.css' | asset_url | stylesheet_tag }}
 {{ 'section-chronic-illness-slide-out.css' | asset_url | stylesheet_tag }}
 
+
 <div class="chronic-illness-slide-out">
-  <div class="chronic-illness-slide-out__inner">
-    <div class="chronic-illness-slide-out__header">
-      <button class="chronic-illness-slide-out__close">
-        {% render 'icon-arrow-left' %}
-      </button>
-      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Buoy_Logo_2x_d6014af4-d2a0-4881-a1f8-8d5649f5c079.jpg?v=1658952214" width="50" height="25">
-    </div>
-    <div class="chronic-illness-slide-out__content">
-      <div class="chronic-illness-slide-out__compare">
-        <p class="sh4">{{ section.settings.title }}</p>
-        <div class="chronic-illness__price-list">
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_1 }}</p>
-            <p class="light">{{ section.settings.item_price_1 }}</p>
-          </div>
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_2 }}</p>
-            <p class="light">{{ section.settings.item_price_2 }}</p>
-          </div>
-          <div class="chronic-illness__price-item">
-            <p class="light">{{ section.settings.item_name_3 }}</p>
-            <p class="light">{{ section.settings.item_price_3 }}</p>
-          </div>
-        </div>
+  <button class="chronic-illness-slide-out__overlay"></button>
+  <div class="chronic-illness-slide-out__container">
+    <button class="chronic-illness-slide-out__close">
+      <p class="body-xs">Close</p>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.01257 8.00023L1.84943 2.83709L2.83686 1.84966L8 7.0128L13.1631 1.84966L14.1506 2.83709L8.98743 8.00023L14.1506 13.1634L13.1631 14.1508L8 8.98766L2.83686 14.1508L1.84943 13.1634L7.01257 8.00023Z" fill="#1F2322"/></svg>
+    </button>
+    <div class="chronic-illness-slide-out__inner">
+      <div class="chronic-illness-slide-out__header">
+        <p class="chronic-illness-slide-out__subtitle sh3 medium">{{ section.settings.subtitle }}</p>
+        <h2 class="chronic-illness-slide-out__title h1">{{ section.settings.title }}</h2>
+        <p class="chronic-illness-slide-out__text body-large">{{ section.settings.text }}</p>
       </div>
-      <div class="chronic-illness-slide-out__info">
-        <div class="chronic-illness-slide-out__discount">
-          <p class="sh0">{{ section.settings.title2 }}</p>
-          <div class="chronic-illness-slide-out__checks">
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_1 }}</p>
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_2 }}</p>
-            <p class="body-xs">{% render 'icon-checkmark' %}{{ section.settings.check_3 }}</p>
-          </div>
-          <div class="chronic-illness-slide-out__price">
-            <div class="chronic-illness-slide-out__price-detail">
-              <p class="sh4 medium">{{ section.settings.product_name_1 }}</p>
-              <p class="sh4 medium">{{ section.settings.product_price_1 }}</p>
+      <div class="chronic-illness-slide-out__content">
+        <!-- <h3 class="chronic--illness__form--title">Fill in the appropriate information.*</h3> -->
+        <form method="post" action="#chronicIllnessForm" id="chronicIllnessForm" accept-charset="UTF-8" class="contact-form">
+          <input type="hidden" name="form_type" value="contact">
+          <input type="hidden" name="utf8" value="✓">
+          {%- if form.posted_successfully? -%}
+            <script>
+              $('.chronic-illness-slide-out').addClass('active');
+            </script>
+            <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+              <p>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</p>
+              
+              <div class="chronic--illness__form--btn">
+                <a class="button button--green" href="/pages/chronic-illness-shop">shop all chronic illness products</a>
+              </div>
             </div>
-            <div class="chronic-illness-slide-out__price-subdetail">
-               <p class="body-xs">{{ section.settings.product_details_1 }}</p>
-               <p class="body-xs">{{ section.settings.product_price_details_1 }}</p>
+          {% else %}
+            <div class="contact__fields">
+              <div class="field half-field">
+                <label class="field__label" for="ContactFormFirstName">First Name*</label>
+                <input class="field__input" autocomplete="off" type="text" id="ContactFormFirstName" name="firstName" value="" placeholder="First Name" required>
+              </div>
+              <div class="field half-field">
+                <label class="field__label" for="ContactFormLastName">Last Name*</label>
+                <input class="field__input" autocomplete="off" type="text" id="ContactFormLastName" name="lastName" value="" placeholder="Last Name" required>
+              </div>
+              <div class="field field--with-error half-field">
+                <label class="field__label" for="ContactFormemail">Email*</label>
+                <input
+                  autocomplete="off"
+                  type="email"
+                  id="ContactForm-email"
+                  class="field__input"
+                  name="email"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  value=""
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="ContactForm-email-error"
+                  {% endif %}
+                  placeholder="email@example.com"
+                  required
+                >
+                {%- if form.errors contains 'email' -%}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                    <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+                  </small>
+                {%- endif -%}
+              </div>
+              <div class="field half-field">
+                <label class="field__label" for="ContactFormphone" autocomplete="off">Phone number*</label>
+                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="phoneNumber" value="" placeholder="2345678900" required title="Phone number must be in E.164 format (e.g., +12345678900)">              
+              </div>
             </div>
-            <div class="chronic-illness-slide-out__price-detail">
-              <p class="sh4 medium">{{ section.settings.product_name_2 }}</p>
-              <p class="sh4 medium">{{ section.settings.product_price_2 }}</p>
+            
+            <div class="form__checkbox--button">
+              <div class="form__checkbox--title">
+                <h3>Which of the following illnesses are you managing? <span>Select all that apply.</span></h3>
+              </div>
+              <div class="chronic-illness-slide-out__checkboxs">
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    ADHD or Autism
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__checkbox">
+                  <label for="ContactFormEatingDisorderRecovery" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Eating Disorder Recovery
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__checkbox">
+                  <label for="ContactFormCrohnDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Crohn’s Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__checkbox">
+                  <label for="ContactFormImmunodeficiencyDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Immunodeficiency Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__checkbox">
+                  <label for="ContactFormCysticFibrosis" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Cystic Fibrosis
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__checkbox">
+                  <label for="ContactFormMultipleSclerosis" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Multiple Sclerosis
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__checkbox">
+                  <label for="ContactFormChemotherapyDehydration" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Chemotherapy Dehydration
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__checkbox">
+                  <label for="ContactFormPOTS" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    POTS
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__checkbox">
+                  <label for="ContactFormDysautonomia" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Dysautonomia
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Sjogren’s Disease
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormOther" name="illnessesType" value="Other" class="field__checkbox">
+                  <label for="ContactFormOther" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Other
+                  </label>
+                  <div class="custom__msg--field" style="display: none">
+                    <span class="round--shape"></span>
+                    <input type="test" id="ContactFormCustomMessage" class="field__input" name="contact[Custom Message]" autocomplete="off" value="" placeholder="Type your answer">
+                  </div>
+                </div>
+              </div>
+              <div class="show-more">
+                <a href="javascript:void(0)">Show more</a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="chronic-illness-slide-out__footer">
-          <p class="body-xs">{{ section.settings.disclaimer }}</p>
-          <button class="has-second-slide button">{{ section.settings.btn }}</button>
-        </div>
+            <div class="contact__button">
+              <button type="submit" class="button button--green">
+                Join Now & Get 35% Off
+              </button>
+            </div>
+          {%- endif -%}
+        </form>
+      {% comment %}<div class="klaviyo-form-VT4VtR"></div>{% endcomment %}
       </div>
     </div>
-  </div>
-  <div class="chronic-illness-slide-out__second">
-    <div class="chronic-illness-slide-out__second-header">
-      <button class="chronic-illness-slide-out__second-back">
-        {% render 'icon-arrow-left' %}
-      </button>
-      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Buoy_Logo_2x_d6014af4-d2a0-4881-a1f8-8d5649f5c079.jpg?v=1658952214" width="50" height="25">
-    </div>
-    <div class="chronic-illness-slide-out__second-content">
-      <div class="klaviyo-form-VT4VtR"></div>
+    <div class="chronic__form--aftersubmission">
+      <div class="content__form--aftersubmission">
+        {% if section.settings.success_title != blank %}
+          <h2>
+            {{ section.settings.success_title }}
+          </h2>
+        {% endif %}
+        {% if section.settings.success_content != blank %}
+          <div class="header__form--content">
+            {{ section.settings.success_content }}
+          </div>
+        {% endif %}
+
+        <div class="image-content__link-copy">
+          <p class="image-content__link-copy-title body-large">
+            {{ section.settings.link_title }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="40" viewBox="0 0 37 40" fill="none">
+              <path d="M24.3798 15.7456C25.9323 19.1082 23.9366 24.1896 18.6044 30.5254L18.4939 27.5545C18.46 26.6357 17.4791 26.2004 16.3034 26.5826C15.1278 26.9648 14.2022 28.0189 14.2368 28.9385L14.4662 35.1064C14.4735 35.3169 14.5318 35.5032 14.6315 35.6604C14.948 36.1589 15.6832 36.3566 16.5455 36.1123L24.7243 33.7925C25.9006 33.4599 26.8755 32.4286 26.9031 31.4912C26.9307 30.5538 25.9994 30.0639 24.8237 30.3975L22.3772 31.091C29.7905 22.0127 29.8478 16.5516 28.4364 13.4944C26.0955 8.42564 18.1379 6.51561 7.15046 8.38849C5.99028 8.58635 4.89302 9.53704 4.69977 10.5119C4.50699 11.4879 5.29045 12.1176 6.45138 11.9206C11.0098 11.1435 15.0838 11.0878 18.2325 11.7586C21.3571 12.4244 23.483 13.8039 24.3798 15.7456Z" fill="#1F2322"/>
+            </svg>
+          </p>
+          <div class="image-content__link-copy-container">
+            <p class="body-sm">
+              {{ section.settings.link }}
+              <span class="image-content__link-copied body-xs">Link copied</span>
+            </p>
+            <button class="image-content__link-copy-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M10.5 13.5205C10.9295 14.0946 11.4774 14.5697 12.1066 14.9134C12.7357 15.2572 13.4315 15.4616 14.1467 15.5128C14.8618 15.564 15.5796 15.4608 16.2513 15.2103C16.9231 14.9597 17.5331 14.5675 18.04 14.0605L21.04 11.0605C21.9508 10.1175 22.4548 8.85445 22.4434 7.54347C22.432 6.23248 21.9061 4.97842 20.9791 4.05138C20.0521 3.12434 18.798 2.5985 17.487 2.5871C16.176 2.57571 14.913 3.07968 13.97 3.99047L12.25 5.70047" stroke="#1F2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.5002 11.5198C14.0707 10.9456 13.5228 10.4706 12.8936 10.1268C12.2645 9.78306 11.5687 9.57864 10.8535 9.52742C10.1384 9.47621 9.42061 9.57939 8.74885 9.82997C8.0771 10.0806 7.46709 10.4727 6.9602 10.9798L3.9602 13.9798C3.04941 14.9228 2.54544 16.1858 2.55683 17.4968C2.56822 18.8077 3.09407 20.0618 4.02111 20.9888C4.94815 21.9159 6.20221 22.4417 7.51319 22.4531C8.82418 22.4645 10.0872 21.9605 11.0302 21.0498L12.7402 19.3398" stroke="#1F2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <script>
+            $('.image-content__link-copy-button').click(() => {
+              navigator.clipboard.writeText('{{ section.settings.link }}');
+              $('.image-content__link-copied').addClass('visible');
+              setTimeout(() => {
+                $('.image-content__link-copied').removeClass('visible');
+              }, 2000);
+            });
+          </script>
+        </div>
+
+        {% if section.settings.success_btn != blank %}
+          <div class="header__btn--wrap">
+            <a href="{{ section.settings.success_btn_url }}" class="button button--green">{{ section.settings.success_btn }}</a>
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+            <div class="form__product--grid">
+              <h2>{{ section.settings.product_heading }}</h2>
+              <div class="form__product--grid-wrapper no-scrollbar">
+                <div class="product-grid__grid">
+                  {% for block in section.blocks %}
+                    <div class="product-grid__grid-item" {{ block.shopify_attributes }}>
+                      {% render 'chronic-illness-slide-out-form', content: block.settings %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="grid__btn--wrap">
+                <a href="{{ section.settings.grid_btn_url }}" class="button button--green">{{ section.settings.grid_btn }}</a>
+              </div>
+            </div>
+        {% endif %}
+        
+      </div>
     </div>
   </div>
 </div>
  
 {% javascript %}
-$('[href="#chronic"]').click(function() {
-$('.chronic-illness-slide-out').addClass('active');
-    $('.page-overlay').addClass('is-visible');
- 
-    $('body').click(function(e) {
-      const target = e.target;
-      if ($(target).hasClass('page-overlay')) {
-        $('.chronic-illness-slide-out').removeClass('active');
-        $('.page-overlay').removeClass('is-visible');
-      }
-    });
+
+  
+  $(".show-more a").on("click", function() {
+    var $this = $(this); 
+    var $content = $this.parents('.form__checkbox--button').find(".field");
+    var linkText = $this.text().toUpperCase();    
+  
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.addClass("active");
+    } else {
+        linkText = "Show more";
+        $content.removeClass("active");
+    };
+  
+    $this.text(linkText);
+  });
+  
+  $('[href="#chronic"]').click(function() {
+    $('.chronic-illness-slide-out').addClass('active');
+  });
+
+  $('.chronic-illness-slide-out__overlay').click(function() {
+    closePopup();
   });
 
   $('.chronic-illness-slide-out__close').click(function() {
+    closePopup();
+  });
+
+  function closePopup() {
     $('.chronic-illness-slide-out').removeClass('active');
-    $('.page-overlay').removeClass('is-visible');
-  });
+  }
 
-  $('.has-second-slide').click(function() {
-    $('.chronic-illness-slide-out').addClass('show-second');
-  });
+var $tlt = $(".custom__msg--field");
 
-  $('.chronic-illness-slide-out__second-back').click(function() {
-    $('.chronic-illness-slide-out').removeClass('show-second');
-  });
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
+  var radVal = $(this).val();
+  if (radVal === 'Other' && $(this).is(':checked')) {
+      $tlt.css("display", "flex");
+  } else if (radVal === 'Other' && !$(this).is(':checked')) {
+      $tlt.css("display", "none");
+    $("#ContactFormCustomMessage").val('');
+  }
+});
+var globalCheckedValues = [];
+function updateCheckedValues() {
+  globalCheckedValues = $(".chronic-illness-slide-out__checkboxs input[type=checkbox]:checked").map(function() {
+    return $(this).val(); 
+  }).get();  
+  if (globalCheckedValues.includes("Other")) {
+    var customMessage = $("#ContactFormCustomMessage").val();
+    if (customMessage) {
+       globalCheckedValues.push(customMessage);
+    }
+  }
+}
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
+  var radVal = $(this).val();
+  if (radVal === 'Other' && $(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "flex");
+  } else if (radVal === 'Other' && !$(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "none");
+    $("#ContactFormCustomMessage").val(''); 
+  }
+  updateCheckedValues();
+});
+$("#ContactFormCustomMessage").on('input', function() {
+  updateCheckedValues();
+});
+document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    var checkedValues = globalCheckedValues; 
+    const firstName = document.getElementById('ContactFormFirstName').value;
+    const lastName = document.getElementById('ContactFormLastName').value;
+    const email = document.getElementById('ContactForm-email').value;
+    const mobile = '+1' + document.getElementById('ContactForm-phone').value;
+    const payload = JSON.stringify({
+        data: {
+            type: 'subscription',
+            attributes: {
+                profile: {
+                    data: {
+                        type: 'profile',
+                        attributes: {
+                            properties: {
+                                'Chronic Illness': globalCheckedValues,
+                                'SMS Consent': 'TRUE'
+                            },
+                            email: email,
+                            phone_number: mobile,
+                            first_name: firstName,
+                            last_name: lastName
+                        },
+                        meta: {
+                            patch_properties: {
+                                append: {
+                                    newKey: 'New Value'
+                                },
+                                unappend: {
+                                    newKey: 'New Value'
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            relationships: {
+                list: {
+                    data: {
+                        type: 'list',
+                        id: 'TE6KNC'
+                    }
+                }
+            }
+        }
+    });
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'REVISION': '2024-07-15'
+        },
+        body: payload
+    };
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+            if (text) {
+                try {
+                    const jsonResponse = JSON.parse(text);
+                } catch (e) {
+                    console.error('Failed to parse JSON:', e);
+                }
+            } else {
+                console.log('Empty response body');
+            }
+           globalCheckedValues = [];
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
+});  
 {% endjavascript %}
 
 {% schema %}
@@ -103,98 +407,123 @@ $('.chronic-illness-slide-out').addClass('active');
     "settings": [
       {
         "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "inline_richtext",
         "id": "title",
         "label": "Title"
       },
       {
-        "type": "text",
-        "id": "item_name_1",
-        "label": "Item 1 Name"
+        "type": "inline_richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Link Copy"
       },
       {
         "type": "text",
-        "id": "item_price_1",
-        "label": "Item 1 Price"
+        "id": "link_title",
+        "label": "Title"
       },
       {
         "type": "text",
-        "id": "item_name_2",
-        "label": "Item 2 Name"
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Form After Submission Content"
       },
       {
         "type": "text",
-        "id": "item_price_2",
-        "label": "Item 2 Price"
+        "id": "success_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "success_content",
+        "label": "Description"
       },
       {
         "type": "text",
-        "id": "item_name_3",
-        "label": "Item 3 Name"
-      },
-      {
-        "type": "text",
-        "id": "item_price_3",
-        "label": "Item 3 Price"
-      },
-      {
-        "type": "text",
-        "id": "title2",
-        "label": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "check_1",
-        "label": "Check 1"
-      },
-      {
-        "type": "text",
-        "id": "check_2",
-        "label": "Check 2"
-      },
-      {
-        "type": "text",
-        "id": "check_3",
-        "label": "Check 3"
-      },
-      {
-        "type": "text",
-        "id": "product_name_1",
-        "label": "Product 1 Name"
-      },
-      {
-        "type": "text",
-        "id": "product_details_1",
-        "label": "Product 1 Details"
-      },
-      {
-        "type": "text",
-        "id": "product_price_1",
-        "label": "Product 1 Price"
-      },
-      {
-        "type": "text",
-        "id": "product_price_details_1",
-        "label": "product 1 Price Details"
-      },
-      {
-        "type": "text",
-        "id": "product_name_2",
-        "label": "product 2 Name"
-      },
-      {
-        "type": "text",
-        "id": "product_price_2",
-        "label": "Product 2 Price"
-      },
-      {
-        "type": "text",
-        "id": "disclaimer",
-        "label": "Disclaimer Text"
-      },
-      {
-        "type": "text",
-        "id": "btn",
+        "id": "success_btn",
         "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "success_btn_url",
+        "label": "Button URL"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "product_heading",
+        "label": "Product Section Title"
+      },
+      {
+        "type": "text",
+        "id": "grid_btn",
+        "label": "Grid Button Label"
+      },
+      {
+        "type": "url",
+        "id": "grid_btn_url",
+        "label": "Grid Button URL"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "heading",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "product_title",
+            "label": "Product Title (optional)"
+          },
+          {
+            "type": "header",
+            "content": "Primary media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          },
+          {
+            "type": "header",
+            "content": "Hover media"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_hover",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video_hover",
+            "label": "Video"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_tags",
+            "label": "Show tags?",
+            "default": false
+          },
+        ]
       }
     ]
   }
