@@ -15,13 +15,13 @@
         "3aaebc96-7374-4f5b-808e-92ce2792f5b5": {
           "type": "dropdown",
           "settings": {
-            "title": "Rescue Drops",
+            "title": "Hydration Drops",
             "subtitle": "Unflavored Liquid Electrolytes",
-            "bubble_text": "20 Serv\/Bottle",
-            "icon1": "shopify:\/\/shop_images\/bolt-icon.svg",
-            "list_item1": "300mg Sodium Per Serving",
-            "icon2": "shopify:\/\/shop_images\/water-icon.svg",
-            "list_item2": "3x More Bioavailable",
+            "bubble_text": "40 Serv\/Bottle",
+            "icon1": "shopify:\/\/shop_images\/no-icon.svg",
+            "list_item1": "No Sugar or Sweeteners",
+            "icon2": "shopify:\/\/shop_images\/check.svg",
+            "list_item2": "Electrolytes & Trace Minerals",
             "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
             "list_item3": "Enhance Any Drink"
           }
@@ -33,11 +33,11 @@
             "subtitle": "Harvested, Unrefined Sea Salt",
             "bubble_text": "45 Serv\/Jar",
             "icon1": "shopify:\/\/shop_images\/Icons_thick_1.png",
-            "list_item1": "460mg Sodium Per Serving",
+            "list_item1": "1,215mg Electrolytes Per Serving",
             "icon2": "shopify:\/\/shop_images\/check.svg",
             "list_item2": "87+ Ionic Trace Minerals",
             "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
-            "list_item3": "Add Directly on Tongue or to Food \/ Drinks"
+            "list_item3": "Add To Food, Drinks, or Directly on Tongue"
           }
         },
         "c4d90fb5-0d83-49d5-a9ba-88cc382c6e90": {
@@ -57,25 +57,25 @@
         "b807a726-d1e0-4fb9-96ca-01c7806619c6": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "“Wonderful to help manage my POTS\"",
-            "video_tag": "POTS",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a0e2f7ad83b141ec9103d5376ffb6289.mov"
+            "testimonial_text": "“Overall more energized and not so groggy\"",
+            "video_tag": "Energy",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/92a83b0756a744daa9ec5b4e0305bba7.mp4"
           }
         },
         "006c54ae-0968-491b-aa76-79e4de6d7031": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "\"Helping me reach normal\"",
-            "video_tag": "POTS + MTHFR",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/83a3ce70242d457a8d367e1c1a0e6152.mp4"
+            "testimonial_text": "\"The first electrolytes that don't trigger my IBS\"",
+            "video_tag": "Ingredient Sourcing",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7099f0d88dbc4e4e92d2995137b52617.mp4"
           }
         },
         "d6b99130-55e3-4ed2-b8da-f13041c6ec7d": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "\"The Holy Grail for my POTsie body!!!\"",
-            "video_tag": "POTS",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/330d716d073943c2bcdbd5bf9b31bfba.mp4"
+            "testimonial_text": "\"I'm a chef and these things keep me going all day\"",
+            "video_tag": "Energy",
+            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/44dde4e5b0174adf80337786ab096648.mp4"
           }
         },
         "e70efabd-a066-4a09-837b-bb3e3eb7e0c7": {
@@ -143,7 +143,7 @@
         "testimonial_btn_link": "#Product_Reviews",
         "product_feature_text": "",
         "product_feature_text_two": "",
-        "show_drawer_triggers": false,
+        "show_drawer_triggers": true,
         "dropdown_title": "What’s Included"
       }
     },
@@ -153,29 +153,8 @@
         "1083faa0-a895-49d0-b79a-995556c1a851": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bolt-icon.svg",
-            "title": "High Sodium"
-          }
-        },
-        "da9577ec-04dd-466c-87e8-66511f10d1bc": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/organ-icon.svg",
-            "title": "Bioavailable Form Factors"
-          }
-        },
-        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/no-icon.svg",
-            "title": "No B Vitamins"
-          }
-        },
-        "f094a7d8-7384-4dc5-a296-de548c44952f": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gmo.svg",
-            "title": "100% Microplastic Free"
+            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Deep Ocean Minerals"
           }
         },
         "4cb0a6cc-78b4-4bf3-97f4-836b009452f3": {
@@ -188,8 +167,15 @@
         "48445f51-5b78-409f-8df6-c40635aebfa3": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/keto.svg",
-            "title": "Non-GMO Certified"
+            "image": "shopify:\/\/shop_images\/verified_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Non-GMO Project Verified"
+          }
+        },
+        "da9577ec-04dd-466c-87e8-66511f10d1bc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "3x Bioavailable Form Factor"
           }
         },
         "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
@@ -199,23 +185,37 @@
             "title": "Gluten & Major Allergen Free"
           }
         },
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nutrition_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Keto & Paleo Approved"
+          }
+        },
         "9d38c763-6f85-46a2-9f99-07f2e5b38186": {
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/labs_FILL0_wght400_GRAD0_opsz48_1.png",
             "title": "Third Party Tested"
           }
+        },
+        "f094a7d8-7384-4dc5-a296-de548c44952f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lab_profile_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "White Papers & Clinical Trials"
+          }
         }
       },
       "block_order": [
         "1083faa0-a895-49d0-b79a-995556c1a851",
-        "da9577ec-04dd-466c-87e8-66511f10d1bc",
-        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98",
-        "f094a7d8-7384-4dc5-a296-de548c44952f",
         "4cb0a6cc-78b4-4bf3-97f4-836b009452f3",
         "48445f51-5b78-409f-8df6-c40635aebfa3",
+        "da9577ec-04dd-466c-87e8-66511f10d1bc",
         "11e0a190-5f45-4a12-aeb9-6c17f945d66d",
-        "9d38c763-6f85-46a2-9f99-07f2e5b38186"
+        "6b7754e9-0342-49ec-ad56-a6d0f4de6e98",
+        "9d38c763-6f85-46a2-9f99-07f2e5b38186",
+        "f094a7d8-7384-4dc5-a296-de548c44952f"
       ],
       "settings": {
         "title_one": "Nature's Original",
@@ -228,25 +228,25 @@
         "type5_kA9mf7": {
           "type": "type5",
           "settings": {
-            "title": "Rescue Drops",
+            "title": "Hydration Drops",
             "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
-            "suptext": "Our extra-strength liquid electrolyte 6x stronger than our best-selling Hydration Drops.",
-            "title_text": "HIGHLIGHTS",
-            "sub_text": "* 300mg Sodium Per Serving<br>* Fast-Acting Electrolyte Replacement<br>* MTHFR Gene Mutation Friendly",
-            "title_text_2": "LIQUID FORM FACTOR",
-            "sub_text_2": "3x More Bioavailable",
-            "sub_text_info": "Liquid is more bioavailable than traditional supplement forms such as powders and tablets",
+            "suptext": "Our best-selling, purposefully unflavored ionic ocean electrolyte drops.",
+            "title_text": "FEATURED BENEFITS",
+            "sub_text": "Energy, Gut Health, Brain Function, Glowing Skin",
+            "title_text_2": "FORM FACTOR",
+            "sub_text_2": "Liquid Drops",
+            "sub_text_info": "3x more bioavailable than traditional supplement forms such as powders and tablets",
             "title_text_3": "FEATURED INGREDIENTS",
-            "sub_text_3": "Ocean Electrolytes, 87+ Ionic Ocean Minerals",
-            "sub_text_info_3": "1 serving = The electrolyte equivalent of a sports drink",
+            "sub_text_3": "Electrolytes, 87 Ionic Ocean Minerals, B Vitamin Complex, Antioxidants",
+            "sub_text_info_3": "1 serving = ⅓ electrolyte equivalent of a sports drink",
             "title_text_4": "HOW TO Use",
-            "sub_text_4": "Dose 4-7\/x daily or as directed by your doctor.",
-            "sub_text_info_4": "1200mg-2100mg electrolytes per day.For people managing intense POTS symptoms, more dosing may be needed.",
-            "title_text_5": "INGREDIENT SOURCING",
+            "sub_text_4": "Add one quick squeeze 4-7 times daily to any drink, starting with your morning cup.",
+            "sub_text_info_4": "560mg-980mg electrolytes per day",
+            "title_text_5": "SOURCING",
             "icon_1": "shopify:\/\/shop_images\/Icons_thick.svg",
-            "list_item1": "Ocean Harvested Electrolytes",
-            "icon_2": "shopify:\/\/shop_images\/Icons_thick.svg",
-            "list_item2": "Ocean Harvested Trace Minerals",
+            "list_item1": "Deep Ocean Harvested Electrolytes and Minerals",
+            "icon_2": "shopify:\/\/shop_images\/plant.svg",
+            "list_item2": "Plant-Based Vitamins and Antioxidants",
             "show_ingredients": true,
             "show_clinical": true,
             "show_hsa": false
@@ -256,22 +256,22 @@
           "type": "type5",
           "settings": {
             "title": "Rescue Salt",
-            "image": "shopify:\/\/shop_images\/PDP_Rescue_Salt_Details_1_D.png",
+            "image": "shopify:\/\/shop_images\/Buoy_Shot2_114_1.png",
             "suptext": "Unrefined, solar-evaporated and hand-harvested sea salt rich with trace minerals.",
-            "title_text": "HIGHLIGHTS",
-            "sub_text": "* 460mg Sodium Per Serving* Fast-Acting Electrolyte Replacement* MTHFR Gene Mutation Friendly",
+            "title_text": "FEATURED BENEFITS",
+            "sub_text": "Fast-Acting Hydration, Electrolyte Replenishment",
             "title_text_2": "FORM FACTOR",
-            "sub_text_2": "Unrefined, Harvested + Solar Evaporated Sea Salt",
-            "sub_text_info": "Most electrolytes use inflammatory, processed salts.Resuce Salt is preserved it's naturally-occurring, ionically-charged state and is 100% Microplastic Free + Third Party Tested for pathogens, heavy metals and impurities.",
+            "sub_text_2": "Unrefined, Harvested Whole Food",
+            "sub_text_info": "3x more bioavailable than traditional supplement forms such as powders and tablets",
             "title_text_3": "FEATURED INGREDIENTS",
-            "sub_text_3": "Ocean Electrolytes, 87 Ionic Trace Minerals",
-            "sub_text_info_3": "1 serving = 1215mg of electrolytes \u2028(20% DV Sodium, 30% DV Chloride)",
+            "sub_text_3": "Ocean Electrolytes and 87 Ionic Trace Minerals",
+            "sub_text_info_3": "1 serving = 1215mg of electrolytes \u2028(20% DV Sodium, 30%  DV Chloride)",
             "title_text_4": "HOW TO Use",
             "sub_text_4": "Add a pinch to your drinks, food, or let dissolve directly on your tongue when you need a boost.",
             "sub_text_info_4": "",
             "title_text_5": "SOURCING",
             "icon_1": "shopify:\/\/shop_images\/rescue-salt.svg",
-            "list_item1": "Unrefined, Solar-Evaporated Hand-Harvested",
+            "list_item1": "Unrefined, Solar-Evaporated Hand-Harvested Sea Salt",
             "list_item2": "",
             "show_ingredients": true,
             "show_clinical": false,
@@ -284,7 +284,7 @@
         "type5_WCp8AK"
       ],
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f502998370fc4de9bdfd26589371d540.mp4",
+        "video_url": "",
         "image": "shopify:\/\/shop_images\/PDP_OEK_DetailsMain.png",
         "image_mobile": "shopify:\/\/shop_images\/PDP_OEK_DetailsMain.png"
       }
@@ -295,33 +295,33 @@
         "57802e0c-5306-45c9-8ac3-a570a939a12e": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/89b1f0c79ee94fd5aaeb6658eb2df919.mp4"
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/33e66913d86442749232944ac047e24f.mp4"
           }
         },
         "0da40604-a16a-496a-9f71-134533987bf2": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PDP_Rescue_Kit_How_To_2.jpg",
+            "image": "shopify:\/\/shop_images\/2_PDP_OEK_How_To_c1ea5be2-ace2-46cb-ad16-66ecb2d70259.jpg",
             "video": ""
           }
         },
         "8b4a84ed-5154-49a3-a0db-e0c02b5eccf2": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/08b323d5475b4f8fa7f2de5152c9c188.mp4"
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd46b9d0d604a0dbf7e879b988fd28d.mp4"
           }
         },
         "11c613d1-fb8a-421b-a072-c2e39b7e2c61": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PDP_Rescue_Kit_How_To_4.jpg",
+            "image": "shopify:\/\/shop_images\/4_PDP_OEK_How_To_e9d61371-120e-4ee2-ab3d-512f96253c05.jpg",
             "video": ""
           }
         },
         "07ea710f-c5e1-4493-b9ed-0e00be1787a2": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f8d90b7f47804032a4f79b679af58543.mp4"
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f4424fcb0c6247f3882fd7b78537ad55.mp4"
           }
         },
         "71792e7c-daab-4c20-a32f-bafa9b93a789": {
@@ -344,47 +344,9 @@
         "suptitle": "Stack The Benefits",
         "title": "Daily Doses <span class=\"rhyme-italic\">For<\/span> Fast Replenishing",
         "text": "Use <span class=\"green-outline\">Rescue Drops<\/span> for replenishment throughout the day and <span class=\"green-outline\">Rescue Salt<\/span> whenever you're in a pinch.",
-        "background": "#f8f8f8"
-      }
-    },
-    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
-      "type": "text-image-toggle",
-      "blocks": {
-        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
-          "type": "block",
-          "settings": {
-            "title": "Powder Packets",
-            "image": "PDP_Chart_Powder_Packet.svg",
-            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
-          }
-        },
-        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
-          "type": "block",
-          "settings": {
-            "title": "Sports Drinks",
-            "image": "PDP_Chart_Sports_Drink.svg",
-            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
-          }
-        },
-        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
-          "type": "block",
-          "settings": {
-            "title": "Tablets",
-            "image": "PDP_Chart_Tablet.svg",
-            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
-          }
-        }
-      },
-      "block_order": [
-        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
-        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
-        "f75e4649-78ab-4807-ae2c-31b0c6994095"
-      ],
-      "settings": {
-        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
-        "subtitle": "Compare Buoy with leading competitors:",
-        "supplements": true,
-        "background": "#f8f8f8"
+        "background": "#f8f8f8",
+        "button_label": "",
+        "button_link": ""
       }
     },
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff": {
@@ -441,7 +403,6 @@
     },
     "6cb8bb7b-9996-4d2f-80f1-c4d7bdc1586c": {
       "type": "full-video-text",
-      "disabled": true,
       "settings": {
         "title": "Buoy’s Unflavored Approach",
         "text": "We harvest the worlds most <span>bioactive ingredient<\/span> sources in their <span>unprocessed forms<\/span> and deliver their health benefits in the same <span>naturally-balanced, preserved ratios.<\/span>",
@@ -457,7 +418,7 @@
           "type": "block",
           "settings": {
             "title": "Why should I subscribe?",
-            "text": "Transformative health benefits come with consistent habits. \u2028Our flexible, sustainable subscription plan supports whole-body \u2028at a cellular level, order after order, <span class=\"green-outline\">for just $2.60\/day.<\/span> Try today, 100% Risk Free.",
+            "text": "Transformative health benefits come with consistent habits. \u2028Our flexible, sustainable subscription plan supports whole-body \u2028at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today, \u2028100% Risk Free.",
             "title1": "SHORT-TERM RELIEF",
             "text1": "Fast Hydration · Mineral Support · Soothes Headaches · Eases Cramps · Helps Hangovers",
             "title2": "LONG-TERM HEALTH BENEFITS",
@@ -472,40 +433,8 @@
         "77d41df8-ed22-4a61-a013-a513a156b6b3": {
           "type": "block",
           "settings": {
-            "title": "Is this eligible for the Chronic Illness Lifetime Discount?",
-            "text": "Yes!<br><br>\nAll Buoy products are eligible for Buoy's 35% off Lifetime Chronic Illness Discount.\n<br><br>\nOur Rescue line of Extra-Strength Electrolytes are specifically formulated for those who need clean, pure and potent doses of electrolytes and sodium like those managing chronic conditions and athletes.\n<br><br>\nApply at justaddbuoy.com\/pages\/chronic-illness-support",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a": {
-          "type": "block",
-          "settings": {
-            "title": "What is Buoy's Clinical Trial?",
-            "text": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:\n<br><br>\nGeneral Hydration — Estimated Trial Results Early 2024\n<br><br>\nType 1 Diabetes — Estimated Trial Results Mid 2024\n<br><br>\nChemotherapy Dehydration — Estimated Trial Results Late 2024",
-            "title1": "",
-            "text1": "",
-            "title2": "",
-            "text2": "",
-            "list_item1": "",
-            "list_item2": "",
-            "list_item3": "",
-            "list_item4": "",
-            "list_item5": ""
-          }
-        },
-        "2aa6b2b4-03d7-4b32-80a7-b7589fe419d4": {
-          "type": "block",
-          "settings": {
-            "title": "Do these have B vitamins or caffeine?",
-            "text": "No, our Rescue Line of Extra-Strength Electrolytes are formulated to stack with any diet, including those managing the MTHFR Gene Mutation.\n<br><br>\n<strong>A note on Methylation<\/strong>: Methylation is typically in reference to Vitamins B9 and B12 because of cheap, widely used and non-absorbable forms of these specific vitamins. These vitamins are not used in any Buoy products.\n<br><br>\nBuoy does use B Vitamins in Hydration Drops and we source the cleanest, most absorbable forms of B1, B5, and B6 (for the products used). However, methylation is typically a term used with B vitamins that aren't in Buoy.",
+            "title": "Will Buoy break my fast?",
+            "text": "Nope!<br><br>\nUnlike other electrolytes, Buoy will not change your metabolic state regardless of how many servings you use.",
             "title1": "",
             "text1": "",
             "title2": "",
@@ -532,20 +461,94 @@
             "list_item4": "",
             "list_item5": ""
           }
+        },
+        "2aa6b2b4-03d7-4b32-80a7-b7589fe419d4": {
+          "type": "block",
+          "settings": {
+            "title": "Are your B vitamins methylated?",
+            "text": "Methylation is typically in reference to Vitamins B9 and B12 because of cheap, widely used and non-absorbable forms these specific vitamins. These vitamins are not used in any Buoy products.\n<br><br>\nThe B Vitamins used in Buoy typically do not come in a methylated form (there is a rare B6 form floating around but is not standard or widely used).\n<br><br>\nFor the vitamins used, Buoy sources the cleanest, most absorbable forms of B1, B5, and B6. Methylation is typically a term used with B vitamins that aren't in Buoy.",
+            "title1": "",
+            "text1": "",
+            "title2": "",
+            "text2": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
+        },
+        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a": {
+          "type": "block",
+          "settings": {
+            "title": "Do your products have caffeine?",
+            "text": "The products in this set—Hydration Drops and Rescue Salt—do not contain caffeine.\n<br><br>\nThe only product that contains caffeine is our Energy Drops, which is sourced from organic green tea.",
+            "title1": "",
+            "text1": "",
+            "title2": "",
+            "text2": "",
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": ""
+          }
         }
       },
       "block_order": [
         "99b6b618-f7de-4e2a-91f8-2f0e9a75cffe",
         "77d41df8-ed22-4a61-a013-a513a156b6b3",
-        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a",
+        "923dc080-bc9d-4c6f-8dd9-9f990869eb2f",
         "2aa6b2b4-03d7-4b32-80a7-b7589fe419d4",
-        "923dc080-bc9d-4c6f-8dd9-9f990869eb2f"
+        "e9f64fa2-bb9b-4cd8-bf08-5473294a823a"
       ],
       "settings": {
         "title": "We want you to ask questions",
         "add_top_border": false,
         "add_bottom_border": false,
         "background": "none"
+      }
+    },
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        },
+        "f75e4649-78ab-4807-ae2c-31b0c6994095": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "cf7cf92e-6c93-4310-ab99-05f8d8f68333",
+        "cd0a12c5-410a-4ed3-ab2d-7493afdbf942",
+        "f75e4649-78ab-4807-ae2c-31b0c6994095"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "button_text": "Clinical Study",
+        "background": "#f8f8f8"
       }
     },
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e": {
@@ -1038,10 +1041,10 @@
     "c3b6366d-fdb5-4191-8d83-eafb4d59f6ff",
     "fc0a0d20-89a6-4e30-b9ca-5a68d88a4f5a",
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4",
-    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
     "7f8f9a5e-d9e7-4626-9a5d-1ee5e3cdc1ff",
     "6cb8bb7b-9996-4d2f-80f1-c4d7bdc1586c",
     "dfda59f4-3498-4216-bf73-0eef810f3c0e",
+    "1d8e2e12-f7a8-4072-bb71-da095eef1abe",
     "5ab9acb9-1a2e-4c92-b6bd-012eeb98ed3e",
     "78ecde29-5caf-40ad-b926-8c84cae46127",
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200",
