@@ -434,7 +434,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.addEventListener('click', function(event) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      const isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
