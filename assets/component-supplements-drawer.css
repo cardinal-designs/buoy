@@ -3,8 +3,9 @@
   width: 500px;
   position: fixed;
   z-index: 99;
-  top: 80.5px;
-  right: -100%;
+  top: auto;
+  bottom: -100%;
+  right: 0;
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
