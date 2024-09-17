@@ -129,10 +129,18 @@
             "product": "byob",
             "title": "LSG Bundle"
           }
+        },
+        "bundle_xmaPCg": {
+          "type": "bundle",
+          "settings": {
+            "product": "brain-health-drops",
+            "title": "Flexible Bundle Setup"
+          }
         }
       },
       "block_order": [
-        "bundle_3ibpNJ"
+        "bundle_3ibpNJ",
+        "bundle_xmaPCg"
       ],
       "settings": {
         "setUrl": true,
