@@ -479,7 +479,7 @@ $('.Open_Drawer').click(function(event){
 
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.supplement-side-drawer').css('right','-100%');
+  $('.supplement-side-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -488,7 +488,7 @@ $('.page-blury-overlay').click(function(){
 
 // close clinical drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.clinical-trial-drawer').css('right','-100%');
+  $('.clinical-trial-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -497,7 +497,7 @@ $('.page-blury-overlay').click(function(){
 
 // close hsa drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.hsa-side-drawer').css('right','-100%');
+  $('.hsa-side-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -505,21 +505,21 @@ $('.page-blury-overlay').click(function(){
 });
 
 $('.js-close-supplement-drawer').click(function(){
-  $('.supplement-side-drawer').css('right','-100%');
+  $('.supplement-side-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $('.js-clinical-close').click(function(){
-  $('.clinical-trial-drawer').css('right','-100%');
+  $('.clinical-trial-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $('.js-hsa-close').click(function(){
-  $('.clinical-trial-drawer').css('right','-100%');
+  $('.clinical-trial-drawer').css('bottom','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
