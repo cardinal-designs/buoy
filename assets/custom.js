@@ -150,9 +150,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  if (document.querySelector(selectors.openClinical)) {
+  if (document.querySelectorAll(selectors.openClinical).length > 0) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
       item.addEventListener('click', function(e){
+        console.log('ssss')
         openClinical(e);
       }); 
     });
