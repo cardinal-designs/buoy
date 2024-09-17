@@ -150,10 +150,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }
 
-  if (document.querySelectorAll(selectors.openClinical).length > 0) {
+  if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
       item.addEventListener('click', function(e){
-        console.log('ssss')
         openClinical(e);
       }); 
     });
@@ -170,14 +169,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openIngredients)) {
     document.querySelectorAll(selectors.openIngredients).forEach((item) => {
       item.addEventListener('click', function(e){
+        console.log('sadasdasdsa')
         openNav(e);
       }); 
     });
   }
 
   if (document.querySelector(selectors.openTest) != 'undefined' && document.querySelector(selectors.openTest) != null) {
-    document.querySelector(selectors.openTest).addEventListener('click', function(e){
-      openNav(e);
+    document.querySelector(selectors.openTest).addEventListener('click', function(){
+      openNav();
     }); 
   }
 
