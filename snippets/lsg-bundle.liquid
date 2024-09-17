@@ -36,7 +36,7 @@
 {% unless otp_bundle_min %}
     {% assign otp_bundle_min = bundle_min %}
 {% endunless %}
-{{ product.metafields.rtxn.bundle_products.value }}--product.metafields.rtxn.bundle_products
+{{ product.metafields.rtxn.bundle_products.value | json }}--product.metafields.rtxn.bundle_products
 {% assign sub_bundle_products_count = 0 %}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in collections.all.products %}
