@@ -128,12 +128,20 @@
           "type": "bundle",
           "settings": {
             "product": "byob",
-            "title": ""
+            "title": "Bundle 1"
+          }
+        },
+        "bundle_Cr73aE": {
+          "type": "bundle",
+          "settings": {
+            "product": "brain-health-drops-1-bottle",
+            "title": "Bundle 2"
           }
         }
       },
       "block_order": [
-        "bundle_z9RWjh"
+        "bundle_z9RWjh",
+        "bundle_Cr73aE"
       ],
       "settings": {
         "setUrl": true,
