@@ -289,7 +289,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Close Clinical Drawer
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
-      document.getElementById("clinicalSideDrawer").style.right = "-100%";
+      document.getElementById("clinicalSideDrawer").style.bottom = "-100%";
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
