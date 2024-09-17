@@ -664,9 +664,9 @@ $( document ).ready(function() {
           var $supplementDrawer = $('.supplement-side-drawer');
           $supplementDrawer.each(function() {
               var isClickInsideDrawer = $(this).has(event.target).length > 0;
-              var isDrawerVisible = $(this).css('right') == "0px";
+              var isDrawerVisible = $(this).css('bottom') == "0px";
                if (isDrawerVisible && !isClickInsideDrawer) {
-                  $supplementDrawer.css('right', '-100%');
+                  $supplementDrawer.css('bottom', '-100%');
               }
           });
       }
