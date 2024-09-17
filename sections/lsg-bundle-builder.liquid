@@ -30,12 +30,15 @@
     {% endif %}
 </div>
 
+<link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
+
 
 {% schema %}
 {
   "name": "LSG Bundle",
   "tag": "section",
-  "class": "section lsg-bundle-section",
+  "class": "section",
   "blocks": [
     {
       "type": "@app"
