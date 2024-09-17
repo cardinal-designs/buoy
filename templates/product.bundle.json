@@ -109,6 +109,7 @@
         "e9bc4dda-fce6-4ac7-96d3-29eb11f4d64e",
         "de31a82d-f94b-4cf8-87a7-d2328ea7f767"
       ],
+      "disabled": true,
       "settings": {
         "setUrl": false,
         "frequency_heading": "Select your frequency",
@@ -122,6 +123,18 @@
     },
     "1663729574e4516faa": {
       "type": "lsg-bundle-builder",
+      "blocks": {
+        "bundle_z9RWjh": {
+          "type": "bundle",
+          "settings": {
+            "product": "byob",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "bundle_z9RWjh"
+      ],
       "settings": {
         "setUrl": true,
         "bundle_select_heading": "Select your pack",
