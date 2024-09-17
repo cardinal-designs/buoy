@@ -122,7 +122,18 @@
     },
     "1663729574e4516faa": {
       "type": "lsg-bundle-builder",
-      "disabled": true,
+      "blocks": {
+        "bundle_3ibpNJ": {
+          "type": "bundle",
+          "settings": {
+            "product": "byob",
+            "title": "LSG Bundle"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_3ibpNJ"
+      ],
       "settings": {
         "setUrl": true,
         "bundle_select_heading": "Select your pack",
