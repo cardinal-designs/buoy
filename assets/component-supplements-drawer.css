@@ -27,10 +27,12 @@
 .drawer__header {
   display: flex;
   justify-content: flex-end;
-  padding-top: 25px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: sticky;
   top: 0;
+  background: #fff;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
