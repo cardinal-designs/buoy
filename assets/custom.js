@@ -390,6 +390,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           showDrawer(supplementDrawer);
         }
       }
+
+      console.log('supplementDrawer::: ',supplementDrawer);
     }
 
     // Show drawer
