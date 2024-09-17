@@ -370,6 +370,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           let dataTitle = dataTitleElement.dataset.title;
           if(dataTitle){
             let supplementDrawer = document.querySelector(`.supplement-side-drawer[data-product-name="${dataTitle}"]`);
+            console.log('supplementDrawer::: ',supplementDrawer);
             if(supplementDrawer){
               showDrawer(supplementDrawer);  
             }else{
