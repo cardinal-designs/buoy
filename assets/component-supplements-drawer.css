@@ -29,6 +29,8 @@
   justify-content: flex-end;
   padding-top: 25px;
   padding-bottom: 30px;
+  position: sticky;
+  top: 0;
 }
 
 @media screen and (max-width: 768px) {
