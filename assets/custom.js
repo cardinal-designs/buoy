@@ -405,16 +405,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
   }
   
-  // Close Supplement Drawer
-  // function closeNav() {
-  //   if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-  //   document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-  //   document.querySelector('body').classList.remove('lock-scroll');
-  //   document.querySelector('header-container').style.zIndex = 3;
-    
-  //   if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
-  // }
-
   function closeNav() {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
