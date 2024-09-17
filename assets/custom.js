@@ -418,7 +418,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeNav() {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
-      supplementDrawer.style.right = "-100%";
+      supplementDrawer.style.bottom = "-100%";
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
       document.querySelector('header-container').style.zIndex = "3";
@@ -434,7 +434,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.addEventListener('click', function(event) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      const isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
