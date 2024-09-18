@@ -224,7 +224,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openHsa() {
     event.stopPropagation();
     if (document.getElementById("hsaSideDrawer")) {
-      document.getElementById("hsaSideDrawer").style.bottom = "-60px";
+      document.getElementById("hsaSideDrawer").style.right = "0px";
       document.getElementById("hsaSideDrawer").scrollTop = 0;
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
@@ -236,7 +236,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
    // Close HSA Drawer
   function closeHsa() {
     if (document.getElementById("hsaSideDrawer")) {
-      document.getElementById("hsaSideDrawer").style.bottom = "-100%";
+      document.getElementById("hsaSideDrawer").style.right = "-100%";
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -278,7 +278,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // Show drawer
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
-      drawer.style.bottom = "-60px";
+      drawer.style.right = "0px";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -289,7 +289,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Close Clinical Drawer
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
-      document.getElementById("clinicalSideDrawer").style.bottom = "-100%";
+      document.getElementById("clinicalSideDrawer").style.right = "-100%";
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -397,7 +397,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // Show drawer
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
-      drawer.style.bottom = "-60px";
+      drawer.style.right = "0px";
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -411,7 +411,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeNav() {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
-      supplementDrawer.style.bottom = "-100%";
+      supplementDrawer.style.right = "-100%";
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
       document.querySelector('header-container').style.zIndex = "3";
@@ -427,14 +427,14 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.addEventListener('click', function(event) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-      const isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "-60px";
+      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
   
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
       const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "-60px";
+      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
       }
@@ -443,7 +443,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     document.addEventListener('click', function(event) {
       const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
       const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
-      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "-60px";
+      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
       if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
         closeClinical();
       }
@@ -479,7 +479,7 @@ $('.Open_Drawer').click(function(event){
 
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.supplement-side-drawer').css('bottom','-100%');
+  $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -488,7 +488,7 @@ $('.page-blury-overlay').click(function(){
 
 // close clinical drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.clinical-trial-drawer').css('bottom','-100%');
+  $('.clinical-trial-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -497,7 +497,7 @@ $('.page-blury-overlay').click(function(){
 
 // close hsa drawer (click outside)
 $('.page-blury-overlay').click(function(){
-  $('.hsa-side-drawer').css('bottom','-100%');
+  $('.hsa-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -505,21 +505,21 @@ $('.page-blury-overlay').click(function(){
 });
 
 $('.js-close-supplement-drawer').click(function(){
-  $('.supplement-side-drawer').css('bottom','-100%');
+  $('.supplement-side-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $('.js-clinical-close').click(function(){
-  $('.clinical-trial-drawer').css('bottom','-100%');
+  $('.clinical-trial-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
 });
 
 $('.js-hsa-close').click(function(){
-  $('.clinical-trial-drawer').css('bottom','-100%');
+  $('.clinical-trial-drawer').css('right','-100%');
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -664,7 +664,7 @@ $( document ).ready(function() {
           var $supplementDrawer = $('.supplement-side-drawer');
           $supplementDrawer.each(function() {
               var isClickInsideDrawer = $(this).has(event.target).length > 0;
-              var isDrawerVisible = $(this).css('bottom') == "-60px";
+              var isDrawerVisible = $(this).css('bottom') == "0px";
                if (isDrawerVisible && !isClickInsideDrawer) {
                   $supplementDrawer.css('bottom', '-100%');
               }
