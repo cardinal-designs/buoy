@@ -441,6 +441,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const supplementDrawer = document.getElementById("supplementSideDrawer");
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
+      }
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
@@ -448,6 +451,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
       const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
       const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "0px";
+      }
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
       }
@@ -457,6 +463,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
       const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
       const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "0px";
+      }
       if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
         closeClinical();
       }
