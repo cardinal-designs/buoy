@@ -15,7 +15,8 @@
 @media screen and (max-width: 768px) {
 
   .hsa-side-drawer {
-    top: 54px;
+    top: auto;
+    right: 0 !important;
     width: 100%;
     padding-bottom: 110px;
     padding-left: 20px;
