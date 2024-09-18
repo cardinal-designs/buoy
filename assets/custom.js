@@ -389,8 +389,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
           showDrawer(supplementDrawer);
         }
       }
-
-      console.log('supplementDrawer::: ',supplementDrawer);
     }
 
     // Show drawer
@@ -596,7 +594,7 @@ function cartHtml(){
     const cartid = 'cart-drawer';
     const html = new DOMParser().parseFromString(responseText, 'text/html')  
     const destination = document.querySelector('.cart-drawer');
-    const source = html.getElementById(cartid);			  
+    const source = html.getElementById(cartid);       
     if (source && destination) destination.innerHTML = source.innerHTML;
     subscriptionListener();
     $(document).find('#cart-drawer-loading').addClass('hidden');
@@ -604,11 +602,11 @@ function cartHtml(){
 
   fetch(window.Shopify.routes.root +'?section_id=main-cart-items')
   .then((response) => response.text())
-  .then((responseText) => {			  
+  .then((responseText) => {       
     const cartid = 'main-cart-items';
     const html = new DOMParser().parseFromString(responseText, 'text/html');
     const destination = document.querySelector('.main-cart-items');
-    const source = html.getElementById(cartid);			  
+    const source = html.getElementById(cartid);       
     if (source && destination) destination.innerHTML = source.innerHTML;
     subscriptionListener();
   });
