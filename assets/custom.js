@@ -225,6 +225,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     event.stopPropagation();
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "0px";
+      if(window.innerWidth < 769){
+        document.getElementById("hsaSideDrawer").style.bottom = "54px";
+      }
       document.getElementById("hsaSideDrawer").scrollTop = 0;
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
@@ -284,6 +287,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
       drawer.style.right = "0px";
+      if(window.innerWidth < 769){
+        drawer.style.bottom = "54px";
+      }
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -406,7 +412,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       drawer.scrollTop = 0;
       drawer.style.right = "0px";
       if(window.innerWidth < 769){
-        drawer.style.bottom = "0px";
+        drawer.style.bottom = "54px";
       }
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
@@ -442,7 +448,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
       const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if(window.innerWidth < 769){
-        isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
+        isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "54px";
       }
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
@@ -452,7 +458,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
       const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
       if(window.innerWidth < 769){
-        isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "0px";
+        isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "54px";
       }
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
@@ -464,7 +470,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
       const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
       if(window.innerWidth < 769){
-        isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "0px";
+        isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "54px";
       }
       if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
         closeClinical();
@@ -706,7 +712,7 @@ $( document ).ready(function() {
               var isClickInsideDrawer = $(this).has(event.target).length > 0;
               var isDrawerVisible = $(this).css('right') == "0px";
               if(window.innerWidth < 769){
-                isDrawerVisible = $(this).css('bottom') == "0px";
+                isDrawerVisible = $(this).css('bottom') == "54px";
               }
                if (isDrawerVisible && !isClickInsideDrawer) {
                   $supplementDrawer.css('right', '-100%');
