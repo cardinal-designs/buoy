@@ -38,7 +38,6 @@
 {% endunless %}
 
 {% assign sub_bundle_products_count = 0 %}
-{{ product.metafields.rtxn.bundle_products.value }}--product.metafields.rtxn.bundle_products
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in collections['bundle'].products %}
     {% assign productSubID = productSub.id | strip %}
