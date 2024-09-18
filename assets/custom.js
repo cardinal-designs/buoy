@@ -237,6 +237,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "-100%";
+
+      if(window.innerWidth < 769){
+        document.getElementById("hsaSideDrawer").style.bottom = "-100%";
+      }
+      
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -290,6 +295,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
+
+      if(window.innerWidth < 769){
+        document.getElementById("clinicalSideDrawer").style.bottom = "-100%";
+      }
+      
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -409,6 +419,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     const supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
       supplementDrawer.style.right = "-100%";
+      if(window.innerWidth < 769){
+        supplementDrawer.style.bottom = "-100%";
+      }
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
       document.querySelector('header-container').style.zIndex = "3";
@@ -477,6 +490,9 @@ $('.Open_Drawer').click(function(event){
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.supplement-side-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -486,6 +502,9 @@ $('.page-blury-overlay').click(function(){
 // close clinical drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -495,6 +514,9 @@ $('.page-blury-overlay').click(function(){
 // close hsa drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.hsa-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.hsa-side-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -503,6 +525,9 @@ $('.page-blury-overlay').click(function(){
 
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.supplement-side-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -510,6 +535,9 @@ $('.js-close-supplement-drawer').click(function(){
 
 $('.js-clinical-close').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -517,6 +545,9 @@ $('.js-clinical-close').click(function(){
 
 $('.js-hsa-close').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -662,8 +693,14 @@ $( document ).ready(function() {
           $supplementDrawer.each(function() {
               var isClickInsideDrawer = $(this).has(event.target).length > 0;
               var isDrawerVisible = $(this).css('right') == "0px";
+              if(window.innerWidth < 769){
+                isDrawerVisible = $(this).css('bottom') == "0px";
+              }
                if (isDrawerVisible && !isClickInsideDrawer) {
                   $supplementDrawer.css('right', '-100%');
+                  if(window.innerWidth < 769){
+                    $supplementDrawer.css('bottom', '-100%');
+                  }
               }
           });
       }
