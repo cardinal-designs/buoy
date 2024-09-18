@@ -653,17 +653,17 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     };
     function renderUpsells() {
-        $(`[slidecart-upsell-wrapper].flickity-enabled`).flickity('destroy');
-        $(`[slidecart-upsell-wrapper]`).html('');
+        // $(`[slidecart-upsell-wrapper].flickity-enabled`).flickity('destroy');
+        // $(`[slidecart-upsell-wrapper]`).html('');
         $.ajax({
             type: 'GET',
             url: '/cart/?view=upselljson',
             dataType: 'html',
             success: function(data) {
                 $(`[slidecart-upsell-wrapper]`).html(data.trim());
-                setTimeout(function(){
-                    renderUpsellSlider();
-                }, 50);
+                // setTimeout(function(){
+                //     renderUpsellSlider();
+                // }, 50);
             } 
         });
 

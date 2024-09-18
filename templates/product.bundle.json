@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "bundle-main": {
@@ -128,6 +119,8 @@
           "type": "bundle",
           "settings": {
             "product": "byob",
+            "collection": "affiliate-products-7652349834723012590",
+            "collection2": "",
             "title": "Bundle 1"
           }
         },
@@ -135,6 +128,8 @@
           "type": "bundle",
           "settings": {
             "product": "brain-health-drops-1-bottle",
+            "collection": "",
+            "collection2": "",
             "title": "Bundle 2"
           }
         }
@@ -151,7 +146,22 @@
         "frequency_sub": "Subscribe & Save",
         "atc_text": "Add to Cart",
         "sub_atc_text": "Free Shipping over $49 | 100% Happiness Guarantee",
-        "otp_interval_prefix": "Your bundle:"
+        "otp_interval_prefix": "Your bundle:",
+        "video_url": "",
+        "mobile_video_url": "",
+        "image": "shopify:\/\/shop_images\/bundle-banner-desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/bundle-banner-desktop.png",
+        "title": "<em>Curate<\/em> Your Benefits",
+        "text": "<p>Save up to $XX in bulk discounts and unlock up to $xx in free gifts.<\/p>",
+        "image1": "shopify:\/\/shop_images\/Group_924.png",
+        "text1": "Select at least 3 products.",
+        "image2": "shopify:\/\/shop_images\/Group_924_1.png",
+        "text2": "Select delivery frequency.",
+        "image3": "shopify:\/\/shop_images\/Group_924_2.png",
+        "text3": "Add your bundle to cart.",
+        "autoplay": true,
+        "mute": true,
+        "loop": true
       }
     },
     "3f3689d9-a926-45ad-91b2-23c9c322a354": {

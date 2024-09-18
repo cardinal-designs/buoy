@@ -14,6 +14,9 @@
     {% assign sub_bundle_max = sub_bundle_quantities[1] %}
 {% endif %}
 
+{% assign new_collection = collections[block.collection] %}
+{% comment %} {% assign new_collection2 = collections[block.collection2] %} {% endcomment %}
+
 {% assign bundle_min = 0 %}
 {% assign bundle_max = 0 %}
 {% if sub_bundle_max %}
@@ -39,7 +42,7 @@
 
 {% assign sub_bundle_products_count = 0 %}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
-{% for productSub in collections['bundle'].products %}
+{% for productSub in new_collection.products %}
     {% assign productSubID = productSub.id | strip %}
     {% if sub_bundle_products contains productSubID %}
         {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
@@ -48,7 +51,7 @@
 
 {% assign sub_bundle_variants_count = 0 %}
 {% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
-{% for productSub in collections['bundle'].products %}
+{% for productSub in new_collection.products %}
     {% for variantSub in productSub.variants %}
         {% assign variantSubID = variantSub.id | strip %}
         {% if sub_bundle_variants contains variantSubID %}
@@ -56,6 +59,28 @@
         {% endif %}
     {% endfor %}
 {% endfor %}
+
+{% comment %} collection2 start {% endcomment %}
+{% comment %} {% assign sub_bundle_products_count2 = 0 %}
+{% assign sub_bundle_products2 = product.metafields.rtxn.bundle_products | split: '|' %}
+{% for productSub in new_collection2.products %}
+    {% assign productSubID2 = productSub.id | strip %}
+    {% if sub_bundle_products2 contains productSubID2 %}
+        {% assign sub_bundle_products_count2 = sub_bundle_products_count2 | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+{% assign sub_bundle_variants_count2 = 0 %}
+{% assign sub_bundle_variants2 = product.metafields.rtxn.bundle_variants | split: '|' %}
+{% for productSub in new_collection2.products %}
+    {% for variantSub2 in productSub.variants %}
+        {% assign variantSubID2 = variantSub.id | strip %}
+        {% if sub_bundle_variants2 contains variantSubID2 %}
+            {% assign sub_bundle_variants_count2 = sub_bundle_variants_count2 | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+{% endfor %} {% endcomment %}
+{% comment %} collection2 end {% endcomment %}
 
 <div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %}"
     data-bundle-product="{{ product.id }}"
@@ -67,11 +92,27 @@
     data-product-base-price="{{ product.price }}"
 >
     <div class="lsg-bundle-buybox-block">
-        <div class="lsg-bundle-product-list">
+
+        {%- render 'bundle-banner', settings: section.settings -%}
+
+        <div class="{{ base }}__header">
+            {% if grid.heading != blank %}
+                <h3 class="{{ base }}__heading">
+                {{ grid.heading }}
+                </h3>
+            {% endif %}
+        
+            {% if grid.text != blank %}
+                <p class="{{ base }}__text sh4">
+                {{ grid.text }}
+                </p>
+            {% endif %}
+        </div>
+        {% comment %} <div class="lsg-bundle-product-list">
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
                 <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list" data-lsg-bundle-product-sub-list>
                     {% if sub_bundle_products_count > 0 %}
-                        {% for productSub in collections['bundle'].products %}
+                        {% for productSub in new_collection.products %}
                             {% assign productSubID = productSub.id | strip %}
                             {% if sub_bundle_products contains productSubID %}
                                 {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
@@ -79,7 +120,37 @@
                         {% endfor %}
                     {% endif %}
                     {% if sub_bundle_variants_count > 0 %}
-                        {% for productSub in collections['bundle'].products %}
+                        {% for productSub in new_collection.products %}
+                            {% for variantSub in productSub.variants %}
+                                {% assign variantSubID = variantSub.id | strip %}
+                                {% if sub_bundle_variants contains variantSubID %}
+                                    {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% elsif product.metafields.bundle.products %}
+                <div data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-otp-list" data-lsg-bundle-product-sub-list>
+                    {% for listProduct in product.metafields.bundle.products.value %}
+                        {% render 'lsg-bundle-product-select', product: listProduct, min: otp_bundle_min %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div> {% endcomment %}
+        <div class="lsg-bundle-product-list">
+            {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
+                <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list quick-add-grid__grid" data-lsg-bundle-product-sub-list>
+                    {% if sub_bundle_products_count > 0 %}
+                        {% for productSub in new_collection.products %}
+                            {% assign productSubID = productSub.id | strip %}
+                            {% if sub_bundle_products contains productSubID %}
+                                {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if sub_bundle_variants_count > 0 %}
+                        {% for productSub in new_collection.products %}
                             {% for variantSub in productSub.variants %}
                                 {% assign variantSubID = variantSub.id | strip %}
                                 {% if sub_bundle_variants contains variantSubID %}
@@ -97,6 +168,36 @@
                 </div>
             {% endif %}
         </div>
+        {% comment %} <div class="lsg-bundle-product-list">
+            {% if sub_bundle_products_count2 > 0 or sub_bundle_variants_count2 > 0 %}
+                <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list" data-lsg-bundle-product-sub-list>
+                    {% if sub_bundle_products_count2 > 0 %}
+                        {% for productSub in new_collection2.products %}
+                            {% assign productSubID2 = productSub.id | strip %}
+                            {% if sub_bundle_products2 contains productSubID2 %}
+                                {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if sub_bundle_variants_count2 > 0 %}
+                        {% for productSub in new_collection2.products %}
+                            {% for variantSub2 in productSub.variants %}
+                                {% assign variantSubID2 = variantSub.id | strip %}
+                                {% if sub_bundle_variants2 contains variantSubID2 %}
+                                    {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% elsif product.metafields.bundle.products %}
+                <div data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-otp-list" data-lsg-bundle-product-sub-list>
+                    {% for listProduct in product.metafields.bundle.products.value %}
+                        {% render 'lsg-bundle-product-select', product: listProduct, min: otp_bundle_min %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div> {% endcomment %}
     </div>
     <div class="lsg-bundle-summary-block">
         <div class="lsg-bundle-buybox-product-info">

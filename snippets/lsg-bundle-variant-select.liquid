@@ -15,7 +15,7 @@
     {% assign title = variant.product.title | append: ' - ' | append: variant.title %}
 {% endif %}
 
-<div class="lsg-bundle-product-select-wrapper" data-lsg-bundle-variant-select-id="{{ variant.id }}">
+{% comment %} <div class="lsg-bundle-product-select-wrapper" data-lsg-bundle-variant-select-id="{{ variant.id }}">
     <div class="lsg-bundle-product-select-img-wrap"><img src="{{ featuredImage | img_url: '200x200' }}" alt=""></div>		
     {% if productBadge %}
         <img class="lsg-bundle-product-select-badge" src="{{ productBadge | img_url: '60x60' }}" alt="{{ productBadgeAltText }}">
@@ -39,4 +39,81 @@
             <span class="lsg-bundle-product-select-quantity-increment-add-text">ADD</span>
         </button>
     </div>
+</div> {% endcomment %}
+
+{% liquid
+  assign card_product = block.heading
+  assign base = 'quick-add'
+ %}
+
+ <div class="lsg-bundle-product-select-wrapper" data-lsg-bundle-variant-select-id="{{ variant.id }}">
+  <div class="{{ base }}__media">
+
+    <div class="{{ base }}__media-inner">
+        <img
+            srcset="
+                {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
+                {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ featuredImage | image_url }} {{ featuredImage.width }}w
+            " class="quick-add__image-hover" style="opacity: 1;"
+            src="{{ featuredImage | image_url: width: 1500 }}"
+            sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+            alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
+        >
+
+      <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
+        <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
+            <svg aria-labelledby="minusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title id="minusIconTitle">minus</title>
+            <rect y="5.47754" width="12" height="1.04471" fill="#BBBCBC"/>
+            </svg>
+        </button>
+        <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
+        <div class="lsg-bundle-product-select-quantity-input-display body-small">0</div>
+        <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" disabled>
+            <svg aria-labelledby="plusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <title id="plusIconTitle">plus</title>
+                <path d="M5.47634 6.52366H0L0 5.47634H5.47634V0L6.52366 0V5.47634L12 5.47634V6.52366L6.52366 6.52366L6.52366 12H5.47634L5.47634 6.52366Z" fill="#BBBCBC"/>
+            </svg>
+            <span class="lsg-bundle-product-select-quantity-increment-add-text {{ base }}__button">Add</span>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+  <div class="{{ base }}__content">
+    {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
+    <h5 class="{{ base }}__title lsg-bundle-product-select-title">{{ title }}</h5>
+    <div class="{{ base }}__price">
+      <div class="{{ base }}__price-recurring">
+        {{ variant.product.price | money }}
+      </div>
+    </div>
+    <span>40 Servings/Bottle</span>
+    {% if variant.product.metafields.my_fields.product_card_text != blank %}
+      <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
+    {% endif %}
+    <a href="javascript:void(0);" id="{{ base }}__drawer-open" class="{{ base }}__learn-more tabs-label body medium">Learn More</a>
+  </div>
+
+  <div class="{{ base }}__drawer">
+    <div class="{{ base }}__drawer--inner">
+        <div class="quick-add__close" id="{{ base }}__close">X</div>
+        <div>
+            {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
+    <h5 class="{{ base }}__title lsg-bundle-product-select-title">{{ title }}</h5>
+    <div class="{{ base }}__price">
+      <div class="{{ base }}__price-recurring">
+        {{ variant.product.price | money }}
+      </div>
+    </div>
+    <span>40 Servings/Bottle</span>
+    {% if variant.product.metafields.my_fields.product_card_text != blank %}
+      <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
+    {% endif %}
+        </div>
+    </div>
+  </div>
 </div>

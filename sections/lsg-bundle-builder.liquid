@@ -1,3 +1,6 @@
+{{ 'quick-add-products.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+{{ 'custom-bundle.css' | asset_url | stylesheet_tag }}
 
 {% assign bundlesCount = 0 %}
 {% assign bundlesList = '' %}
@@ -19,7 +22,7 @@
                 {% assign bundleProduct = all_products[block.settings.product] %}
                 {% if bundleProduct %}
                     {% assign bundleLoopCount = bundleLoopCount | plus: 1 %}
-                    {% render 'lsg-bundle', settings: section.settings, product:bundleProduct, bundleIndex: bundleLoopCount, bundles: bundlesArray, bundleFirst: bundleFirst, bundleTitle: block.settings.title %}
+                    {% render 'lsg-bundle', settings: section.settings, block: block.settings, product:bundleProduct, bundleIndex: bundleLoopCount, bundles: bundlesArray, bundleFirst: bundleFirst, bundleTitle: block.settings.title %}
                     {% assign bundleFirst = false %}
                 {% endif %}
             {% endif %}
@@ -31,8 +34,51 @@
 </div>
 
 <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'lsg-cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
 
+<script>
+  // Get all "Learn More" buttons
+  const learnMoreButtons = document.querySelectorAll('.quick-add__learn-more');
+  const overlay = document.querySelector('.page-overlay');
+  const body = document.querySelector('body');
+
+  learnMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Find the nearest wrapper and toggle its drawer
+      const wrapper = this.closest('.lsg-bundle-product-select-wrapper');
+      const drawer = wrapper.querySelector('.quick-add__drawer');
+      drawer.classList.toggle('open');
+      overlay.classList.add('is-visible');
+      body.classList.add('overflow-hidden');
+    });
+  });
+
+  // Get all close buttons and add event listeners
+  const closeButtons = document.querySelectorAll('.quick-add__close');
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Find the nearest wrapper and close its drawer
+      const wrapper = this.closest('.lsg-bundle-product-select-wrapper');
+      const drawer = wrapper.querySelector('.quick-add__drawer');
+      drawer.classList.remove('open');
+      overlay.classList.remove('is-visible');
+      body.classList.remove('overflow-hidden');
+    });
+  });
+
+  // Add event listener to the page overlay to close the drawer when clicked
+  overlay.addEventListener('click', function() {
+    // Close all drawers when overlay is clicked
+    const openDrawers = document.querySelectorAll('.quick-add__drawer.open');
+    openDrawers.forEach(drawer => {
+      drawer.classList.remove('open');
+    });
+    overlay.classList.remove('is-visible');
+    body.classList.remove('overflow-hidden');
+  });
+</script>
 
 {% schema %}
 {
@@ -51,6 +97,16 @@
                 "type": "product",
                 "id": "product",
                 "label": "Bundle Product"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Bundle Collection 1"
+            },
+            {
+                "type": "collection",
+                "id": "collection2",
+                "label": "Bundle Collection 2"
             },
             {
                 "type": "text",
@@ -112,6 +168,96 @@
         "id": "otp_interval_prefix",
         "label": "Interval/Price Prefix",
         "default": "Your bundle:"
+    },
+    {
+      "type": "header",
+      "content": "Left Side"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL"
+    },
+    {
+      "type": "text",
+      "id": "mobile_video_url",
+      "label": "Mobile Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Steps"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Step 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Step 1 text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Step 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Step 2 text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Step 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Step 3 text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "mute",
+      "label": "Mute",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop",
+      "default": true
     }
   ],
   "presets": [

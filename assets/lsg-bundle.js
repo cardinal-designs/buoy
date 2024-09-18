@@ -344,6 +344,7 @@ function addToCart(trigger) {
         if(response.status == 200) {
             // window.location.href = "/cart";
             lsgSlideCartOpen();
+          // window.cartHtml();
         }
     }).catch((error) => {
         console.error(error);
