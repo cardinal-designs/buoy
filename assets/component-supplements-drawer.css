@@ -26,11 +26,6 @@
     transition: 1s;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-    overflow-scrolling: touch;
-    behavior: smooth;
-    overflow-y: auto;
   }
   
 }
