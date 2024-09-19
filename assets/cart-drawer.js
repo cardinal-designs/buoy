@@ -93,7 +93,17 @@ class CartDrawer extends HTMLElement {
     
     fetch('/cart.js')
     .then(response => response.json())
-    .then(data => {  $('.cart-count-bubble').text(data.item_count)});
+    .then(data => {
+      $('.cart-count-bubble').text(data.item_count);
+      if ($('#cart-icon-bubble .cart-count-bubble')?.length == 0) {
+        let cartCountHtml = `<div class="cart-count-bubble sh1">${data.item_count}</div>`;
+        let iconCart = $('#cart-icon-bubble .icon-cart');
+        if (iconCart?.length) {
+          iconCart.after(cartCountHtml);
+        }
+      }
+
+    });
     this.hideShowText()
   }
 
@@ -325,6 +335,7 @@ class CartDrawer extends HTMLElement {
   }
   
 }
+window.CartDrawer = CartDrawer;
 
 /* cart button on click - add class to the body - Start */
 

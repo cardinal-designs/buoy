@@ -282,6 +282,43 @@ function checkoutEnableValidation(trigger) {
     });
 }
 
+function openDrawer() {
+  const cartDrawerInstance = new CartDrawer();
+
+  // Call the open method
+  cartDrawerInstance.open();
+
+}
+function cartRender(openDraw) {
+  
+  fetch(window.Shopify.routes.root +'?section_id=cart-drawer')
+  .then((response) => response.text())
+  .then((responseText) => {
+    
+    const cartid = 'cart-drawer';
+    const html = new DOMParser().parseFromString(responseText, 'text/html')  
+    const destination = document.querySelector('.cart-drawer');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
+    $(document).find('#cart-drawer-loading').addClass('hidden');
+  });
+
+   fetch(window.Shopify.routes.root +'?section_id=main-cart-items')
+  .then((response) => response.text())
+  .then((responseText) => {			  
+    const cartid = 'main-cart-items';
+    const html = new DOMParser().parseFromString(responseText, 'text/html');
+    const destination = document.querySelector('.main-cart-items');
+    const source = html.getElementById(cartid);			  
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    subscriptionListener();
+  });
+  if(openDraw){
+    openDrawer();
+  }
+}
+
 function addToCart(trigger) {
     const bundleID = getGuid();
     const bundleBlock = getBundleBlock(trigger);
@@ -296,6 +333,7 @@ function addToCart(trigger) {
     let bundleCart = {
         'items': []
     };
+  
     let bundleProductQuantity = 0;
     {
         let cartItem = {
@@ -331,7 +369,7 @@ function addToCart(trigger) {
         //quantity is not within bundle size
         return false;
     }
-
+    
     fetch('/cart/add.js', {
         method: 'POST',
         headers: {
@@ -343,8 +381,8 @@ function addToCart(trigger) {
     }).then((response) => {
         if(response.status == 200) {
             // window.location.href = "/cart";
-            lsgSlideCartOpen();
-          // window.cartHtml();
+            // lsgSlideCartOpen();
+          cartRender(true);
         }
     }).catch((error) => {
         console.error(error);
