@@ -12,6 +12,14 @@
   padding-bottom: 100px;
 }
 
+body {
+  scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    overflow-scrolling: touch;
+    behavior: smooth;
+    overflow-y: auto;
+}
+
 @media screen and (max-width: 768px) {
 
   .supplement-side-drawer {
