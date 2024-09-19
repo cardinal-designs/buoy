@@ -437,8 +437,9 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
       localStorage.setItem('registrationComplete', 'true');
   });
   {% if customer %}
-setTimeout(function(){
-          if (localStorage.getItem('registrationComplete')) {
+    $(window).load(function(){
+      setTimeout(function(){
+                if (localStorage.getItem('registrationComplete')) {
           fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
         }
 },1200);
@@ -447,5 +448,7 @@ setTimeout(function(){
         localStorage.removeItem("registrationComplete");
         }
 },5000);
+    });
+
     {% endif %}
 </script>
