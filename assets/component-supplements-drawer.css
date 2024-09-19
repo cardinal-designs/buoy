@@ -12,6 +12,10 @@
   padding-bottom: 100px;
 }
 
+html,body {
+  overscroll-behavior: none;
+}
+
 @media screen and (max-width: 768px) {
 
   .supplement-side-drawer {
