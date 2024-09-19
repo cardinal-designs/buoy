@@ -21,13 +21,16 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     </script>
 
     <script>
-// Check if the user is on the account creation confirmation page
-document.addEventListener("submit", function(event) {
-    if (event.target.id === "create_customer") {
-        // localStorage.setItem('registrationComplete', 'true');
-        alert("set");
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the user is on the account creation confirmation page
+    document.addEventListener("submit", function(event) {
+        if (event.target.id === "create_customer") {
+            // localStorage.setItem('registrationComplete', 'true');
+            alert("set");
+        }
+    });
 });
+
 
     </script>
     <!-- Google Tag Manager -->
