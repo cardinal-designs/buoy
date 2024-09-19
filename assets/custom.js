@@ -1095,6 +1095,6 @@ const observer = new MutationObserver((mutationsList) => {
 
 // Start observing the document body for changes in child elements
 observer.observe(document.body, { childList: true, subtree: true });
-
+ 
 
 /* Popup modal drag and close code  -  End */
