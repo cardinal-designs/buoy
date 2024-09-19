@@ -1,11 +1,9 @@
-
 {% assign otp_bundle_min = nil %}
 {% assign otp_bundle_max = nil %}
 {% if product.metafields.bundle.min != blank and product.metafields.bundle.max != blank %}
     {% assign otp_bundle_min = product.metafields.bundle.min %}
     {% assign otp_bundle_max = product.metafields.bundle.max %}
 {% endif %}
-
 {% assign sub_bundle_min = nil %}
 {% assign sub_bundle_max = nil %}
 {% assign sub_bundle_quantities = product.metafields.rtxn.bundle_quantities | split: '|' %}
@@ -13,10 +11,8 @@
     {% assign sub_bundle_min = sub_bundle_quantities[0] %}
     {% assign sub_bundle_max = sub_bundle_quantities[1] %}
 {% endif %}
-
 {% assign new_collection = collections[block.collection] %}
-{% comment %} {% assign new_collection2 = collections[block.collection2] %} {% endcomment %}
-
+{% assign new_collection2 = collections[block.collection2] %}
 {% assign bundle_min = 0 %}
 {% assign bundle_max = 0 %}
 {% if sub_bundle_max %}
@@ -25,21 +21,17 @@
     {% assign bundle_max = otp_bundle_max | plus: 0 %}
 {% endif %}
 {% assign bundle_max_index0 = bundle_max | minus: 1 %}
-
 {% unless otp_bundle_max %}
     {% assign otp_bundle_max = bundle_max %}
 {% endunless %}
-
 {% if sub_bundle_min %}
     {% assign bundle_min = sub_bundle_min | plus: 0 %}
 {% elsif otp_bundle_min %}
     {% assign bundle_min = otp_bundle_min | plus: 0 %}
 {% endif %}
-
 {% unless otp_bundle_min %}
     {% assign otp_bundle_min = bundle_min %}
 {% endunless %}
-
 {% assign sub_bundle_products_count = 0 %}
 {% assign sub_bundle_products = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in new_collection.products %}
@@ -48,7 +40,6 @@
         {% assign sub_bundle_products_count = sub_bundle_products_count | plus: 1 %}
     {% endif %}
 {% endfor %}
-
 {% assign sub_bundle_variants_count = 0 %}
 {% assign sub_bundle_variants = product.metafields.rtxn.bundle_variants | split: '|' %}
 {% for productSub in new_collection.products %}
@@ -59,9 +50,8 @@
         {% endif %}
     {% endfor %}
 {% endfor %}
-
 {% comment %} collection2 start {% endcomment %}
-{% comment %} {% assign sub_bundle_products_count2 = 0 %}
+{% assign sub_bundle_products_count2 = 0 %}
 {% assign sub_bundle_products2 = product.metafields.rtxn.bundle_products | split: '|' %}
 {% for productSub in new_collection2.products %}
     {% assign productSubID2 = productSub.id | strip %}
@@ -69,7 +59,6 @@
         {% assign sub_bundle_products_count2 = sub_bundle_products_count2 | plus: 1 %}
     {% endif %}
 {% endfor %}
-
 {% assign sub_bundle_variants_count2 = 0 %}
 {% assign sub_bundle_variants2 = product.metafields.rtxn.bundle_variants | split: '|' %}
 {% for productSub in new_collection2.products %}
@@ -79,9 +68,8 @@
             {% assign sub_bundle_variants_count2 = sub_bundle_variants_count2 | plus: 1 %}
         {% endif %}
     {% endfor %}
-{% endfor %} {% endcomment %}
+{% endfor %}
 {% comment %} collection2 end {% endcomment %}
-
 <div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %} page-width"
     data-bundle-product="{{ product.id }}"
     data-bundle-index="{{ bundleIndex }}"
@@ -92,10 +80,9 @@
     data-product-base-price="{{ product.price }}"
 >
     <div class="lsg-bundle-buybox-block">
-
         {%- render 'bundle-banner', settings: section.settings -%}
         
-        <div class="anchor-links__sticky">
+        <div class="anchor-links__sticky--custom">
             <ul class="anchor-links__list no-scrollbar">
             {% if section.blocks != blank %}
                 <li class="anchor-links__item">
@@ -106,16 +93,22 @@
             {% endif %}
             {% for block in section.blocks %}
                 {% if block.settings.collection_title != blank %}
-                <li class="anchor-links__item">
-                    <button data-section="{{ block.settings.collection_title | downcase | handle }}" onclick="document.querySelector('[data-anchor=\'{{ block.settings.collection_title | downcase | handle }}\']').scrollIntoView({behavior: 'smooth'})">
-                    {{ block.settings.collection_title }}
-                    </button>
-                </li>
-            {% endif %}
+                  <li class="anchor-links__item">
+                    <button data-section="{{ block.settings.collection_title | downcase | handle }}">
+                      {{ block.settings.collection_title }}
+                      </button>
+                  </li>
+                {% endif %}
+                {% if block.settings.collection_2_title != blank %}
+                  <li class="anchor-links__item">
+                      <button data-section="{{ block.settings.collection_2_title | downcase | handle }}" >
+                      {{ block.settings.collection_2_title }}
+                      </button>
+                  </li>
+                {% endif %}
             {% endfor %}
             </ul>
         </div>
-
         <div class="quick-add-grid__header" data-anchor="{{ block.collection_title | downcase | handle }}">
             {% if block.collection_tags != blank %}
                 <div class="quick-add-grid__tags">
@@ -183,7 +176,7 @@
                 </div>
             {% endif %}
         </div> {% endcomment %}
-        <div class="lsg-bundle-product-list">
+        <div class="lsg-bundle-product-list" data-anchor-contain="{{ block.collection_title | downcase | handle }}">
             {% if sub_bundle_products_count > 0 or sub_bundle_variants_count > 0 %}
                 <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list quick-add-grid__grid" data-lsg-bundle-product-sub-list>
                     {% if sub_bundle_products_count > 0 %}
@@ -206,16 +199,53 @@
                     {% endif %}
                 </div>
             {% elsif product.metafields.bundle.products %}
-                <div data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-otp-list" data-lsg-bundle-product-sub-list>
+                <div data-bundle-min="{{ otp_bundle_min }}" data-bundle-max="{{ otp_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list quick-add-grid__grid" data-lsg-bundle-product-sub-list>
                     {% for listProduct in product.metafields.bundle.products.value %}
                         {% render 'lsg-bundle-product-select', product: listProduct, min: otp_bundle_min %}
                     {% endfor %}
                 </div>
             {% endif %}
         </div>
-        {% comment %} <div class="lsg-bundle-product-list">
+        <div class="quick-add-grid__header" data-anchor="{{ block.collection_2_title | downcase | handle }}">
+            {% if block.collection_2_tags != blank %}
+                <div class="quick-add-grid__tags">
+                {% assign my_array = block.collection_2_tags | split: ", " %}
+                {% for item in my_array %}
+                    <div class="quick-add-grid__tags-item">{{ item }}</div>
+                {% endfor %}
+                </div>
+            {% else %}
+                <div class="quick-add-grid__tags">
+                {% assign my_array = new_collection2.metafields.custom.badge | split: ", " %}
+                {% for item in my_array %}
+                    <div class="quick-add-grid__tags-item">{{ item }}</div>
+                {% endfor %}                    
+                </div>
+            {% endif %}
+            
+            {% if block.collection_2_title != blank %}
+                <h3 class="quick-add-grid__heading">
+                {{ block.collection_2_title }}
+                </h3>
+            {% else %}
+                <h3 class="quick-add-grid__heading">
+                {{ new_collection2.title }}
+                </h3>
+            {% endif %}
+        
+            {% if block.collection_2_text != blank %}
+                <p class="quick-add-grid__text sh4">
+                {{ block.collection_2_text }}
+                </p>
+                {% else %}
+                <p class="quick-add-grid__text sh4">
+                {{ new_collection2.description }}
+                </p>
+            {% endif %}
+        </div>
+        <div class="lsg-bundle-product-list" data-anchor-contain="{{ block.collection_2_title | downcase | handle }}">
             {% if sub_bundle_products_count2 > 0 or sub_bundle_variants_count2 > 0 %}
-                <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list" data-lsg-bundle-product-sub-list>
+                <div data-bundle-min="{{ sub_bundle_min }}" data-bundle-max="{{ sub_bundle_max }}" class="lsg-bundle-product-set-list lsg-bundle-product-sub-list quick-add-grid__grid" data-lsg-bundle-product-sub-list>
                     {% if sub_bundle_products_count2 > 0 %}
                         {% for productSub in new_collection2.products %}
                             {% assign productSubID2 = productSub.id | strip %}
@@ -242,7 +272,7 @@
                     {% endfor %}
                 </div>
             {% endif %}
-        </div> {% endcomment %}
+        </div> 
     </div>
     <div class="lsg-bundle-summary-block">
         <div class="lsg-bundle-buybox-product-info">

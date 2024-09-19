@@ -2,7 +2,6 @@
 {{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
 {{ 'custom-bundle.css' | asset_url | stylesheet_tag }}
 {{ 'anchor-links.css' | asset_url | stylesheet_tag }}
-
 {% assign bundlesCount = 0 %}
 {% assign bundlesList = '' %}
 {% for block in section.blocks %}
@@ -11,9 +10,7 @@
         {% assign bundlesList = bundlesList | append: block.settings.title | append: '|:|' | append: bundlesCount | append: '|;|' %}
     {% endif %}
 {% endfor %}
-
 {% assign bundlesArray = bundlesList | split: '|;|' %}
-
 <div class="lsg-bundle-wrapper" data-lsg-bundle-wrapper {% if section.settings.setUrl %}data-lsg-bundle-set-url{% endif %}>
     {% assign bundleFirst = true %}
     {% if bundlesCount > 0 %}
@@ -33,18 +30,15 @@
         {% assign bundleFirst = false %}
     {% endif %}
 </div>
-
 <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'lsg-cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'anchor-links.js' | asset_url }}" defer="defer"></script>
-
 <script>
   // Get all "Learn More" buttons
   const learnMoreButtons = document.querySelectorAll('.quick-add__learn-more');
   const overlay = document.querySelector('.page-overlay');
   const body = document.querySelector('body');
-
   learnMoreButtons.forEach(button => {
     button.addEventListener('click', function() {
       // Find the nearest wrapper and toggle its drawer
@@ -55,10 +49,8 @@
       body.classList.add('overflow-hidden');
     });
   });
-
   // Get all close buttons and add event listeners
   const closeButtons = document.querySelectorAll('.quick-add__close');
-
   closeButtons.forEach(button => {
     button.addEventListener('click', function() {
       // Find the nearest wrapper and close its drawer
@@ -69,7 +61,6 @@
       body.classList.remove('overflow-hidden');
     });
   });
-
   // Add event listener to the page overlay to close the drawer when clicked
   overlay.addEventListener('click', function() {
     // Close all drawers when overlay is clicked
@@ -81,7 +72,6 @@
     body.classList.remove('overflow-hidden');
   });
 </script>
-
 {% schema %}
 {
   "name": "LSG Bundle",
@@ -118,17 +108,32 @@
             {
                 "type": "text",
                 "id": "collection_title",
-                "label": "Collection Title"
+                "label": "Collection 1 Title"
             },
             {
                 "type": "textarea",
                 "id": "collection_text",
-                "label": "Collection Text"
+                "label": "Collection 1 Text"
             },
             {
                 "type": "textarea",
                 "id": "collection_tags",
-                "label": "Collection Badge"
+                "label": "Collection 1 Badge"
+            },
+            {
+                "type": "text",
+                "id": "collection_2_title",
+                "label": "Collection 2 Title"
+            },
+            {
+                "type": "textarea",
+                "id": "collection_2_text",
+                "label": "Collection 2 Text"
+            },
+            {
+                "type": "textarea",
+                "id": "collection_2_tags",
+                "label": "Collection 2 Badge"
             }
         ]
     }

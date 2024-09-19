@@ -47,9 +47,9 @@
  %}
 
  <div class="lsg-bundle-product-select-wrapper quick-add__container" data-lsg-bundle-variant-select-id="{{ variant.id }}">
-  <div class="{{ base }}__media">
+  <div class="quick-add__media">
 
-    <div class="{{ base }}__media-inner">
+    <div class="quick-add__media-inner">
 
     {% if variant.product.images.size > 1 %}
       <img
@@ -118,9 +118,9 @@
       > {% endcomment %}
 
       {% if variant.product.tags != blank %}
-        <div class="{{ base }}__product-tags">
+        <div class="quick-add__product-tags">
           {% for tag in variant.product.tags limit: 1 %}
-            <div {% if variant.product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+            <div {% if variant.product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="quick-add__product-tag">
               {{ tag }}
             </div>
           {% endfor %}
@@ -141,45 +141,100 @@
                 <title id="plusIconTitle">plus</title>
                 <path d="M5.47634 6.52366H0L0 5.47634H5.47634V0L6.52366 0V5.47634L12 5.47634V6.52366L6.52366 6.52366L6.52366 12H5.47634L5.47634 6.52366Z" fill="#BBBCBC"/>
             </svg>
-            <span class="lsg-bundle-product-select-quantity-increment-add-text {{ base }}__button">Add</span>
+            <span class="lsg-bundle-product-select-quantity-increment-add-text quick-add__button">Add</span>
         </button>
       </div>
       
     </div>
   </div>
-  <div class="{{ base }}__content">
+  <div class="quick-add__content">
     {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
-    <h5 class="{{ base }}__title lsg-bundle-product-select-title">{{ title }}</h5>
-    <div class="{{ base }}__price">
-      <div class="{{ base }}__price-recurring">
+    <h5 class="quick-add__title lsg-bundle-product-select-title">{{ title }}</h5>
+    <div class="quick-add__price">
+      <div class="quick-add__price-recurring">
         {{ variant.product.price | money }}
       </div>
     </div>
     {% if variant.product.metafields.my_fields.product_grid_2 != blank %}
-      <span class="body-small {{base }}__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
+      <span class="body-small quick-add__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
     {% endif %}
     {% if variant.product.metafields.my_fields.product_card_text != blank %}
       <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
-    <a href="javascript:void(0);" id="{{ base }}__drawer-open" class="{{ base }}__learn-more tabs-label body medium">Learn More</a>
+    <a href="javascript:void(0);" id="quick-add__drawer-open" class="quick-add__learn-more tabs-label body medium">Learn More</a>
   </div>
 
-  <div class="{{ base }}__drawer">
-    <div class="{{ base }}__drawer--inner">
-        <div class="quick-add__close" id="{{ base }}__close">X</div>
-        <div>
-            {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
-    <h5 class="{{ base }}__title lsg-bundle-product-select-title">{{ title }}</h5>
-    <div class="{{ base }}__price">
-      <div class="{{ base }}__price-recurring">
-        {{ variant.product.price | money }}
+  <div class="quick-add__drawer">
+    <div class="quick-add__drawer--inner">
+      <div class="quick-add__close">
+        <span class="body-small">Close</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.01257 6.99999L0.849431 1.83685L1.83686 0.849419L7 6.01256L12.1631 0.849419L13.1506 1.83685L7.98743 6.99999L13.1506 12.1631L12.1631 13.1506L7 7.98742L1.83686 13.1506L0.84943 12.1631L6.01257 6.99999Z" fill="#1F2322"/>
+        </svg>
       </div>
-    </div>
-    <span>40 Servings/Bottle</span>
-    {% if variant.product.metafields.my_fields.product_card_text != blank %}
-      <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
-    {% endif %}
+      <div class="quick-add__images">
+        
+      </div>
+      <div class="quick-add__reviews">
+        {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
+      </div>
+      <div class="quick-add__title">
+        <h3 class="lsg-bundle-product-select-title">{{ title }}</h3>
+        {% if variant.product.metafields.my_fields.product_grid_2 != blank %}
+          <span class="body-small quick-add__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
+        {% endif %}
+        <div class="product__description sh4">
+          {{ product.description }}
         </div>
+        <div class="product-listblock__container-one">
+          <div class="product-listblock">  
+            {%- if section.settings.product_feature_icon != blank -%}
+              {{ section.settings.product_feature_icon | image_url: width: 28 | image_tag: class: 'motion-reduce img-fill' }}
+            {%- endif -%}
+            <div>
+              {%- if section.settings.product_feature_text != blank -%}
+                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
+              {%- endif -%}
+              {%- if section.settings.product_feature_text_two != blank -%}
+                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+        <div class="product__drawer-triggers">
+          {% unless product.handle == 'rescue-kit' %}
+          <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+          {% endunless %}
+          {% if product.title == 'Hydration Drops' %}
+          <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
+          {% endif %}
+          {% if product.title == "CP3's Secret Stuff" %}
+            <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Why This Collab</a>
+          {% endif %}
+          {% if product.handle == 'rescue-drops' or product.handle == 'rescue-kit' %}
+          <a href="#chronic" class="green-text tabs-label body medium">35% Chronic Illness Discount</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="quick-add__buttons">
+        <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
+          <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
+              <svg aria-labelledby="minusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title id="minusIconTitle">minus</title>
+              <rect y="5.47754" width="12" height="1.04471" fill="#BBBCBC"/>
+              </svg>
+          </button>
+          <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
+          <div class="lsg-bundle-product-select-quantity-input-display body-small">0</div>
+          <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" disabled>
+              <svg aria-labelledby="plusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <title id="plusIconTitle">plus</title>
+                  <path d="M5.47634 6.52366H0L0 5.47634H5.47634V0L6.52366 0V5.47634L12 5.47634V6.52366L6.52366 6.52366L6.52366 12H5.47634L5.47634 6.52366Z" fill="#BBBCBC"/>
+              </svg>
+              <span class="lsg-bundle-product-select-quantity-increment-add-text quick-add__button">Add To Bundle — {{ variant.product.price | money }}</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

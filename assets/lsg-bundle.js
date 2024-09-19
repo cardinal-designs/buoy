@@ -1,4 +1,3 @@
-
 let productSelectionButtonClicked = false,
     productSelectionIndex,
     selectedProducts = [];
