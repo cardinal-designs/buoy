@@ -779,117 +779,117 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* Popup modal drag and close code  -  Start */
-let touchStartY = 0;
-let touchEndY = 0;
-let swipeDistance = 0;
-const threshold = 50;  // Minimum swipe distance to trigger the animation
-const maxScreenWidth = 769; // Screen width threshold
+// let touchStartY = 0;
+// let touchEndY = 0;
+// let swipeDistance = 0;
+// const threshold = 50;  // Minimum swipe distance to trigger the animation
+// const maxScreenWidth = 769; // Screen width threshold
 
-// Function to disable body scroll
-function disableBodyScroll() {
-  document.body.style.overflow = 'hidden';
-}
+// // Function to disable body scroll
+// function disableBodyScroll() {
+//   document.body.style.overflow = 'hidden';
+// }
 
-// Function to enable body scroll
-function enableBodyScroll() {
-  document.body.style.overflow = '';
-}
+// // Function to enable body scroll
+// function enableBodyScroll() {
+//   document.body.style.overflow = '';
+// }
 
-// Check screen size
-function isScreenBelowThreshold() {
-  return window.innerWidth < maxScreenWidth;
-}
+// // Check screen size
+// function isScreenBelowThreshold() {
+//   return window.innerWidth < maxScreenWidth;
+// }
 
-// Function to handle touchstart
-function onTouchStart(event, supplementSideDrawer) {
-  if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
+// // Function to handle touchstart
+// function onTouchStart(event, supplementSideDrawer) {
+//   if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
 
-  touchStartY = event.touches[0].clientY;
+//   touchStartY = event.touches[0].clientY;
 
-  // Disable any transition during the swipe
-  supplementSideDrawer.style.transition = 'none';
+//   // Disable any transition during the swipe
+//   supplementSideDrawer.style.transition = 'none';
 
-  // Disable body scroll during the swipe
-  disableBodyScroll();
-}
+//   // Disable body scroll during the swipe
+//   disableBodyScroll();
+// }
 
-// Function to handle touchmove
-function onTouchMove(event, supplementSideDrawer) {
-  if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
+// // Function to handle touchmove
+// function onTouchMove(event, supplementSideDrawer) {
+//   if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
 
-  touchEndY = event.touches[0].clientY;
+//   touchEndY = event.touches[0].clientY;
 
-  // Calculate the swipe distance
-  swipeDistance = touchEndY - touchStartY;
+//   // Calculate the swipe distance
+//   swipeDistance = touchEndY - touchStartY;
 
-  if (swipeDistance > 0) {
-    // Apply drag-down animation in real-time based on swipe distance
-    supplementSideDrawer.style.transform = `translateY(${swipeDistance}px)`;
-  }
-}
+//   if (swipeDistance > 0) {
+//     // Apply drag-down animation in real-time based on swipe distance
+//     supplementSideDrawer.style.transform = `translateY(${swipeDistance}px)`;
+//   }
+// }
 
-// Function to handle touchend
-function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-  if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
+// // Function to handle touchend
+// function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+//   if (!isScreenBelowThreshold()) return; // Exit if screen size is above threshold
 
-  touchEndY = event.changedTouches[0].clientY;
-  swipeDistance = touchEndY - touchStartY;
+//   touchEndY = event.changedTouches[0].clientY;
+//   swipeDistance = touchEndY - touchStartY;
 
-  // Check if the swipe distance is greater than the threshold for a valid swipe
-  if (swipeDistance > threshold) {
-    // Animate the drawer sliding down smoothly after the swipe ends
-    supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
-    supplementSideDrawer.style.transform = 'translateY(100%)'; // Slide down out of view
+//   // Check if the swipe distance is greater than the threshold for a valid swipe
+//   if (swipeDistance > threshold) {
+//     // Animate the drawer sliding down smoothly after the swipe ends
+//     supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+//     supplementSideDrawer.style.transform = 'translateY(100%)'; // Slide down out of view
 
-    // Trigger the close event
-    closeDrawerButton.click();  // Simulate a click to close the drawer
-  } else {
-    // Reset the transform if the swipe distance is less than the threshold
-    supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
-    supplementSideDrawer.style.transform = 'translateY(0)';
-  }
+//     // Trigger the close event
+//     closeDrawerButton.click();  // Simulate a click to close the drawer
+//   } else {
+//     // Reset the transform if the swipe distance is less than the threshold
+//     supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+//     supplementSideDrawer.style.transform = 'translateY(0)';
+//   }
 
-  // Enable body scroll after the swipe ends
-  setTimeout(() => {
-    console.log("Scroll Enabled!!!");
-    supplementSideDrawer.style.transition = '';
-    supplementSideDrawer.style.transform = '';
-    enableBodyScroll();
-  }, 1500);
-}
+//   // Enable body scroll after the swipe ends
+//   setTimeout(() => {
+//     console.log("Scroll Enabled!!!");
+//     supplementSideDrawer.style.transition = '';
+//     supplementSideDrawer.style.transform = '';
+//     enableBodyScroll();
+//   }, 1500);
+// }
 
-// Function to apply touch events to each drawer header and corresponding side drawer
-function applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton) {
-  if (!drawerHeader.dataset.touchEventsApplied) {
-    // Listen for touch start, move, and end
-    drawerHeader.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
-    drawerHeader.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
-    drawerHeader.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+// // Function to apply touch events to each drawer header and corresponding side drawer
+// function applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+//   if (!drawerHeader.dataset.touchEventsApplied) {
+//     // Listen for touch start, move, and end
+//     drawerHeader.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+//     drawerHeader.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+//     drawerHeader.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
 
-    // Mark the event listeners as applied
-    drawerHeader.dataset.touchEventsApplied = 'true';
+//     // Mark the event listeners as applied
+//     drawerHeader.dataset.touchEventsApplied = 'true';
 
-    console.log("Touch events applied to:", drawerHeader);
-  }
-}
+//     console.log("Touch events applied to:", drawerHeader);
+//   }
+// }
 
-// Observe the DOM for dynamically added drawerHeader elements
-const observer = new MutationObserver((mutationsList) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'childList') {
-      // Select all drawer headers and corresponding drawers
-      document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
-        const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-        const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+// // Observe the DOM for dynamically added drawerHeader elements
+// const observer = new MutationObserver((mutationsList) => {
+//   for (const mutation of mutationsList) {
+//     if (mutation.type === 'childList') {
+//       // Select all drawer headers and corresponding drawers
+//       document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
+//         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+//         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
         
-        applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton);
-      });
-    }
-  }
-});
+//         applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton);
+//       });
+//     }
+//   }
+// });
 
-// Start observing the document body for changes in child elements
-observer.observe(document.body, { childList: true, subtree: true });
+// // Start observing the document body for changes in child elements
+// observer.observe(document.body, { childList: true, subtree: true });
 
 
 
