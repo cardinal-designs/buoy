@@ -777,3 +777,81 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/* Popup modal drag and close code  -  Start */
+let touchStartY = 0;
+let touchEndY = 0;
+let swipeDistance = 0;
+const threshold = 50;
+
+function disableBodyScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function enableBodyScroll() {
+  document.body.style.overflow = '';
+}
+
+function onTouchStart(event, supplementSideDrawer) {
+  touchStartY = event.touches[0].clientY;
+  supplementSideDrawer.style.transition = 'none';
+  disableBodyScroll();
+}
+
+function onTouchMove(event, supplementSideDrawer) {
+  touchEndY = event.touches[0].clientY; 
+  swipeDistance = touchEndY - touchStartY;
+
+  if (swipeDistance > 0) {
+    supplementSideDrawer.style.transform = `translateY(${swipeDistance}px)`;
+  }
+}
+
+function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+  touchEndY = event.changedTouches[0].clientY;
+  swipeDistance = touchEndY - touchStartY;
+  if (swipeDistance > threshold) {
+    supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+    supplementSideDrawer.style.transform = 'translateY(100%)';
+    
+    closeDrawerButton.click();
+  } else {
+    supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+    supplementSideDrawer.style.transform = 'translateY(0)';
+  }
+  
+  setTimeout(() => {
+    console.log("Scroll Enabled!!!");
+    supplementSideDrawer.style.transition = '';
+    supplementSideDrawer.style.transform = '';
+    enableBodyScroll();
+  }, 1500);
+}
+
+// Function to apply touch events to each drawer header and corresponding side drawer
+function applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+  if (!drawerHeader.dataset.touchEventsApplied) {
+    drawerHeader.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+    drawerHeader.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+    drawerHeader.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+    drawerHeader.dataset.touchEventsApplied = 'true';
+  }
+}
+
+// Observe the DOM for dynamically added drawerHeader elements
+const observer = new MutationObserver((mutationsList) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
+        const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+        const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+        
+        applyTouchEvents(drawerHeader, supplementSideDrawer, closeDrawerButton);
+      });
+    }
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
+/* Popup modal drag and close code  -  End */
