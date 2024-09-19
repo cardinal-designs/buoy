@@ -434,14 +434,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
 <script>
     // Check if the user is on the account creation confirmation page
   $(document).on("submit","form#create_customer",function(){
-      localStorage.setItem('registrationComplete', 'true');
+      // localStorage.setItem('registrationComplete', 'true');
     alert("set");
   });
-  {% if customer %}
-    $(window).load(function(){
-var registrationComplete = localStorage.getItem('registrationComplete');
-      alert(registrationComplete);
-    });
-
-    {% endif %}
 </script>
