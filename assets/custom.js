@@ -425,7 +425,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   }
   
   function closeNav() {
-    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    let supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
       supplementDrawer.style.right = "-100%";
       if(window.innerWidth < 769){
