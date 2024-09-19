@@ -841,6 +841,7 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
     }
 
     setTimeout(() => {
+      console.log("Scroll Enabled!!!");
       supplementSideDrawer.style.transition = '';
       supplementSideDrawer.style.transform = '';
       enableBodyScroll();
