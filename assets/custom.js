@@ -257,7 +257,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     event.stopPropagation();
     let parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
-      const parentEl = e.target.closest('.dropdown-container-item');
+      let parentEl = e.target.closest('.dropdown-container-item');
       // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
 
       let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
