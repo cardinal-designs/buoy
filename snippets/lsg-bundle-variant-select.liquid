@@ -46,22 +46,86 @@
   assign base = 'quick-add'
  %}
 
- <div class="lsg-bundle-product-select-wrapper" data-lsg-bundle-variant-select-id="{{ variant.id }}">
+ <div class="lsg-bundle-product-select-wrapper quick-add__container" data-lsg-bundle-variant-select-id="{{ variant.id }}">
   <div class="{{ base }}__media">
 
     <div class="{{ base }}__media-inner">
-        <img
-            srcset="
-                {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
-                {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
-                {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
-                {{ featuredImage | image_url }} {{ featuredImage.width }}w
-            " class="quick-add__image-hover" style="opacity: 1;"
-            src="{{ featuredImage | image_url: width: 1500 }}"
-            sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-            alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
-        >
+
+    {% if variant.product.images.size > 1 %}
+      <img
+        srcset="
+          {%- if variant.product.images[1].width >= 535 -%}{{ variant.product.images[1] | image_url: width: 535 }} 535w,{%- endif -%}
+          {%- if variant.product.images[1].width >= 750 -%}{{ variant.product.images[1] | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if variant.product.images[1].width >= 1070 -%}{{ variant.product.images[1] | image_url: width: 1070 }} 1070w,{%- endif -%}
+          {%- if variant.product.images[1].width >= 1500 -%}{{ variant.product.images[1] | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ variant.product.images[1] | image_url }} {{ variant.product.images[1].width }}w
+        " class="quick-add__image-hover hide-mobile"
+        src="{{ variant.product.images[1] | image_url: width: 1500 }}"
+        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+        alt="{{ variant.product.images[1].alt | escape }}" width="{{ variant.product.images[1].width }}" height="{{ variant.product.images[1].height }}"
+      >
+      <img
+        srcset="
+          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
+          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
+          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ featuredImage | image_url }} {{ featuredImage.width }}w
+        " class="" style="opacity: 1;"
+        src="{{ featuredImage | image_url: width: 1500 }}"
+        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
+      >
+    {% else %}
+      <img
+        srcset="
+          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
+          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
+          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ featuredImage | image_url }} {{ featuredImage.width }}w
+        " class="" style="opacity: 1;"
+        src="{{ featuredImage | image_url: width: 1500 }}"
+        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
+      >
+    {% endif %}
+{% comment %} 
+    {% if content.image_hover != blank %}
+      {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
+    {% elsif content.video_hover != blank %}
+      {{ content.video_hover | video_tag:
+        autoplay: true,
+        loop: true,
+        muted: true,
+        controls: false,
+        class: 'quick-add__video-hover hide-mobile',
+        sizes: '100vw',
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+    {% endif %} {% endcomment %}
+
+      {% comment %} <img
+        srcset="
+          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
+          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
+          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ featuredImage | image_url }} {{ featuredImage.width }}w
+        " class="quick-add__image-hover" style="opacity: 1;"
+        src="{{ featuredImage | image_url: width: 1500 }}"
+        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
+      > {% endcomment %}
+
+      {% if variant.product.tags != blank %}
+        <div class="{{ base }}__product-tags">
+          {% for tag in variant.product.tags limit: 1 %}
+            <div {% if variant.product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
 
       <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
         <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
@@ -91,7 +155,9 @@
         {{ variant.product.price | money }}
       </div>
     </div>
-    <span>40 Servings/Bottle</span>
+    {% if variant.product.metafields.my_fields.product_grid_2 != blank %}
+      <span class="body-small {{base }}__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
+    {% endif %}
     {% if variant.product.metafields.my_fields.product_card_text != blank %}
       <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
     {% endif %}

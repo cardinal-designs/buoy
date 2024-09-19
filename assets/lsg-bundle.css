@@ -23,7 +23,7 @@
     padding: 0 0;
 }
 .lsg-bundle-summary-block {
-    width: 32.5%;
+    width: 32.4%;
 }
 .lsg-bundle-buybox-product-info {
     margin-bottom: 1rem;
@@ -420,11 +420,8 @@ button.lsg-bundle-product-select-quantity-increment.lsg-bundle-product-select-qu
     line-height: 1.2;
     gap: 20px;
 }
-.lsg-bundle-product-list,
 .bundle-builder__selected-products {
     margin-top: 30px;
-}
-.bundle-builder__selected-products {
     margin-bottom: 20px;
 }
 .lsg-bundle-submit-button {

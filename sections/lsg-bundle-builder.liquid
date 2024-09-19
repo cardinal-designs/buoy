@@ -1,6 +1,7 @@
 {{ 'quick-add-products.css' | asset_url | stylesheet_tag }}
 {{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
 {{ 'custom-bundle.css' | asset_url | stylesheet_tag }}
+{{ 'anchor-links.css' | asset_url | stylesheet_tag }}
 
 {% assign bundlesCount = 0 %}
 {% assign bundlesList = '' %}
@@ -36,6 +37,7 @@
 <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{ 'lsg-cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'anchor-links.js' | asset_url }}" defer="defer"></script>
 
 <script>
   // Get all "Learn More" buttons
@@ -112,6 +114,21 @@
                 "type": "text",
                 "id": "title",
                 "label": "Bundle Title"
+            },
+            {
+                "type": "text",
+                "id": "collection_title",
+                "label": "Collection Title"
+            },
+            {
+                "type": "textarea",
+                "id": "collection_text",
+                "label": "Collection Text"
+            },
+            {
+                "type": "textarea",
+                "id": "collection_tags",
+                "label": "Collection Badge"
             }
         ]
     }

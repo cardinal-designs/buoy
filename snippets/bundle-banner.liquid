@@ -1,6 +1,6 @@
  <div class="bundle__banner">
     <div class="bundle__banner--inner">
-      <div class="bundle__banner--image" style="position: relative; padding-bottom: 66.66%;">
+      <div class="bundle__banner--image">
         {% if settings.video_url != blank %}
           <video {% if settings.autoplay %}autoplay{% endif %}{% if settings.loop %} loop{% endif %}{% if settings.mute %} muted{% endif %} playsinline class="img-fill hide-mobile">
             <source src="{{ settings.video_url }}" type="video/mp4">
@@ -16,32 +16,8 @@
           </video>
         {% endif %}
         {% if settings.video_url == blank and settings.image != blank %}
-        <img
-          srcset="{%- if settings.image.width >= 165 -%}{{ settings.image | img_url: '165x' }} 165w,{%- endif -%}
-          {%- if settings.image.width >= 360 -%}{{ settings.image | img_url: '360x' }} 360w,{%- endif -%}
-          {%- if settings.image.width >= 533 -%}{{ settings.image | img_url: '533x' }} 533w,{%- endif -%}
-          {%- if settings.image.width >= 720 -%}{{ settings.image | img_url: '720x' }} 720w,{%- endif -%}
-          {%- if settings.image.width >= 940 -%}{{ settings.image | img_url: '940x' }} 940w,{%- endif -%}
-          {%- if settings.image.width >= 1066 -%}{{ settings.image | img_url: '1066x' }} 1066w{%- endif -%}"
-          src="{{ settings.image | img_url: '533x' }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="{{ settings.image.alt | escape }}"
-          loading="lazy" height="100%" width="100%"
-          class="motion-reduce img-fill hide-mobile"
-        >
-        <img
-          srcset="{%- if settings.mobile_image.width >= 165 -%}{{ settings.mobile_image | img_url: '165x' }} 165w,{%- endif -%}
-          {%- if settings.mobile_image.width >= 360 -%}{{ settings.mobile_image | img_url: '360x' }} 360w,{%- endif -%}
-          {%- if settings.mobile_image.width >= 533 -%}{{ settings.mobile_image | img_url: '533x' }} 533w,{%- endif -%}
-          {%- if settings.mobile_image.width >= 720 -%}{{ settings.mobile_image | img_url: '720x' }} 720w,{%- endif -%}
-          {%- if settings.mobile_image.width >= 940 -%}{{ settings.mobile_image | img_url: '940x' }} 940w,{%- endif -%}
-          {%- if settings.mobile_image.width >= 1066 -%}{{ settings.mobile_image | img_url: '1066x' }} 1066w{%- endif -%}"
-          src="{{ settings.mobile_image | img_url: '533x' }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="{{ settings.mobile_image.alt | escape }}"
-          loading="lazy" height="100%" width="100%"
-          class="motion-reduce img-fill hide-desktop"
-        >
+          {{ settings.image | image_url: width: 850 | image_tag: class: 'motion-reduce img-fill hide-mobile' }}
+          {{ settings.image | image_url: width: 850 | image_tag: class: 'motion-reduce img-fill hide-desktop' }}
         {% endif %}
       </div>
       <div class="bundle__banner--title">
@@ -51,60 +27,30 @@
       <div class="bundle__banner--steps">
         <div class="bundle__banner--step">
           <div class="bundle__banner--step-image">
-            <img
-              srcset="{%- if settings.image1.width >= 165 -%}{{ settings.image1 | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if settings.image1.width >= 360 -%}{{ settings.image1 | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if settings.image1.width >= 533 -%}{{ settings.image1 | img_url: '533x' }} 533w,{%- endif -%}
-              {%- if settings.image1.width >= 720 -%}{{ settings.image1 | img_url: '720x' }} 720w,{%- endif -%}
-              {%- if settings.image1.width >= 940 -%}{{ settings.image1 | img_url: '940x' }} 940w,{%- endif -%}
-              {%- if settings.image1.width >= 1066 -%}{{ settings.image1 | img_url: '1066x' }} 1066w{%- endif -%}"
-              src="{{ settings.image1 | img_url: '533x' }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-              alt="{{ settings.image1.alt | escape }}"
-              loading="lazy" height="100%" width="100%"
-              class="motion-reduce img-fill"
-            >
+            {{ settings.image1 | image_url: width: 40 | image_tag: class: 'motion-reduce img-fill' }}
           </div>
-          <span>STEP 1</span>
-          <p class="body-large">{{ settings.text1 }}</p>
+          <div class="bundle__banner--step-text">
+            <span>STEP 1</span>
+            <p class="body-large">{{ settings.text1 }}</p>
+          </div>
         </div>
         <div class="bundle__banner--step">
           <div class="bundle__banner--step-image">
-            <img
-              srcset="{%- if settings.image2.width >= 165 -%}{{ settings.image2 | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if settings.image2.width >= 360 -%}{{ settings.image2 | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if settings.image2.width >= 533 -%}{{ settings.image2 | img_url: '533x' }} 533w,{%- endif -%}
-              {%- if settings.image2.width >= 720 -%}{{ settings.image2 | img_url: '720x' }} 720w,{%- endif -%}
-              {%- if settings.image2.width >= 940 -%}{{ settings.image2 | img_url: '940x' }} 940w,{%- endif -%}
-              {%- if settings.image2.width >= 1066 -%}{{ settings.image2 | img_url: '1066x' }} 1066w{%- endif -%}"
-              src="{{ settings.image2 | img_url: '533x' }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-              alt="{{ settings.image2.alt | escape }}"
-              loading="lazy" height="100%" width="100%"
-              class="motion-reduce img-fill"
-            >
+            {{ settings.image2 | image_url: width: 40 | image_tag: class: 'motion-reduce img-fill' }}
           </div>
-          <span>STEP 2</span>
-          <p class="body-large">{{ settings.text2 }}</p>
+          <div class="bundle__banner--step-text">
+            <span>STEP 2</span>
+            <p class="body-large">{{ settings.text2 }}</p>
+          </div>
         </div>
         <div class="bundle__banner--step">
           <div class="bundle__banner--step-image">
-            <img
-              srcset="{%- if settings.image3.width >= 165 -%}{{ settings.image3 | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if settings.image3.width >= 360 -%}{{ settings.image3 | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if settings.image3.width >= 533 -%}{{ settings.image3 | img_url: '533x' }} 533w,{%- endif -%}
-              {%- if settings.image3.width >= 720 -%}{{ settings.image3 | img_url: '720x' }} 720w,{%- endif -%}
-              {%- if settings.image3.width >= 940 -%}{{ settings.image3 | img_url: '940x' }} 940w,{%- endif -%}
-              {%- if settings.image3.width >= 1066 -%}{{ settings.image3 | img_url: '1066x' }} 1066w{%- endif -%}"
-              src="{{ settings.image3 | img_url: '533x' }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 769px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-              alt="{{ settings.image3.alt | escape }}"
-              loading="lazy" height="100%" width="100%"
-              class="motion-reduce img-fill"
-            >
+            {{ settings.image3 | image_url: width: 40 | image_tag: class: 'motion-reduce img-fill' }}
           </div>
-          <span>STEP 3</span>
-          <p class="body-large">{{ settings.text3 }}</p>
+          <div class="bundle__banner--step-text">
+            <span>STEP 3</span>
+            <p class="body-large">{{ settings.text3 }}</p>
+          </div>
         </div>
       </div>
     </div>

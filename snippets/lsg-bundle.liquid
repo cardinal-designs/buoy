@@ -82,7 +82,7 @@
 {% endfor %} {% endcomment %}
 {% comment %} collection2 end {% endcomment %}
 
-<div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %}"
+<div class="lsg-bundle-block{% if bundleFirst %} lsg-bundle-block-active{% endif %} page-width"
     data-bundle-product="{{ product.id }}"
     data-bundle-index="{{ bundleIndex }}"
     data-otp-bundle-min="{{ otp_bundle_min }}"
@@ -94,17 +94,62 @@
     <div class="lsg-bundle-buybox-block">
 
         {%- render 'bundle-banner', settings: section.settings -%}
+        
+        <div class="anchor-links__sticky">
+            <ul class="anchor-links__list no-scrollbar">
+            {% if section.blocks != blank %}
+                <li class="anchor-links__item">
+                <button data-view-all class="active" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                    Shop All
+                </button>
+                </li>
+            {% endif %}
+            {% for block in section.blocks %}
+                {% if block.settings.collection_title != blank %}
+                <li class="anchor-links__item">
+                    <button data-section="{{ block.settings.collection_title | downcase | handle }}" onclick="document.querySelector('[data-anchor=\'{{ block.settings.collection_title | downcase | handle }}\']').scrollIntoView({behavior: 'smooth'})">
+                    {{ block.settings.collection_title }}
+                    </button>
+                </li>
+            {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
 
-        <div class="{{ base }}__header">
-            {% if grid.heading != blank %}
-                <h3 class="{{ base }}__heading">
-                {{ grid.heading }}
+        <div class="quick-add-grid__header" data-anchor="{{ block.collection_title | downcase | handle }}">
+            {% if block.collection_tags != blank %}
+                <div class="quick-add-grid__tags">
+                {% assign my_array = block.collection_tags | split: ", " %}
+                {% for item in my_array %}
+                    <div class="quick-add-grid__tags-item">{{ item }}</div>
+                {% endfor %}
+                </div>
+            {% else %}
+                <div class="quick-add-grid__tags">
+                {% assign my_array = new_collection.metafields.custom.badge | split: ", " %}
+                {% for item in my_array %}
+                    <div class="quick-add-grid__tags-item">{{ item }}</div>
+                {% endfor %}                    
+                </div>
+            {% endif %}
+            
+            {% if block.collection_title != blank %}
+                <h3 class="quick-add-grid__heading">
+                {{ block.collection_title }}
+                </h3>
+            {% else %}
+                <h3 class="quick-add-grid__heading">
+                {{ new_collection.title }}
                 </h3>
             {% endif %}
         
-            {% if grid.text != blank %}
-                <p class="{{ base }}__text sh4">
-                {{ grid.text }}
+            {% if block.collection_text != blank %}
+                <p class="quick-add-grid__text sh4">
+                {{ block.collection_text }}
+                </p>
+                {% else %}
+                <p class="quick-add-grid__text sh4">
+                {{ new_collection.description }}
                 </p>
             {% endif %}
         </div>
