@@ -13,7 +13,8 @@
 }
 
 .lock-scroll {
-  overscroll-behavior: none;
+  overflow: scroll;
+-webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-width: 768px) {
