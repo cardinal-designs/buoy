@@ -441,11 +441,11 @@ setTimeout(function(){
           if (localStorage.getItem('registrationComplete')) {
           fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
         }
-},500);
+},1200);
 setTimeout(function(){
           if (localStorage.getItem('registrationComplete')) {
         localStorage.removeItem("registrationComplete");
         }
-},1200);
+},5000);
     {% endif %}
 </script>
