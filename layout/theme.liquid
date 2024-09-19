@@ -433,21 +433,14 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
 </html>
 <script>
     // Check if the user is on the account creation confirmation page
-  $("form#create_customer").submit(function(){
+  $(document).on("submit","form#create_customer",function(){
       localStorage.setItem('registrationComplete', 'true');
+    alert("set");
   });
   {% if customer %}
     $(window).load(function(){
-      setTimeout(function(){
-                if (localStorage.getItem('registrationComplete')) {
-          fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
-        }
-},1200);
-setTimeout(function(){
-          if (localStorage.getItem('registrationComplete')) {
-        localStorage.removeItem("registrationComplete");
-        }
-},5000);
+var registrationComplete = localStorage.getItem('registrationComplete');
+      alert(registrationComplete);
     });
 
     {% endif %}
