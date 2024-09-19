@@ -53,8 +53,8 @@
     content: '';
     position: absolute;
     width: 50px;
-    height: 2px;
-    border-radius: 10px;
+    border: 2px solid #1f2322;
+    border-radius: 100px;
     background: #1f2322;
     top: 6px;
     bottom: auto;
