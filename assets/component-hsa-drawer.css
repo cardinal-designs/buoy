@@ -17,6 +17,7 @@
   .hsa-side-drawer {
     top: auto;
     right: 0 !important;
+    bottom: -100%;
     width: 100%;
     height: 80%;
     padding-bottom: 20px;
@@ -64,7 +65,7 @@
     content: '';
     position: absolute;
     width: 50px;
-    border: 2px solid #1f2322;
+    border: 3px solid #1f2322;
     border-radius: 100px;
     top: 6px;
     bottom: auto;
