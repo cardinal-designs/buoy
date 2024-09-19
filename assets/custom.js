@@ -860,7 +860,7 @@ function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, close
 const observer = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
     if (mutation.type === 'childList') {
-      document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
+      document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
         
