@@ -811,10 +811,6 @@ function preventElasticScroll(event, supplementSideDrawer) {
 }
 
 function onTouchStart(event, supplementSideDrawer) {
-
-  event.preventDefault();
-    event.stopImmediatePropagation();
-  
   if (!isScreenBelowThreshold()) return;
   if (isScrolledToTop(supplementSideDrawer)) {
     touchStartY = event.touches[0].clientY;
@@ -824,8 +820,6 @@ function onTouchStart(event, supplementSideDrawer) {
 }
 
 function onTouchMove(event, supplementSideDrawer) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
   if (!isScreenBelowThreshold()) return;
 
   // Always prevent elastic scroll when scrolled to the top
@@ -842,8 +836,6 @@ function onTouchMove(event, supplementSideDrawer) {
 }
 
 function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
   if (!isScreenBelowThreshold()) return;
 
   if (isScrolledToTop(supplementSideDrawer)) {
