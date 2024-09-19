@@ -50,7 +50,17 @@
   }
 
   .drawer__header::before {
-    
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    border-radius: 10px;
+    background: #000;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    bottom: auto;
+    margin: 0 auto;
   }
   
 }
