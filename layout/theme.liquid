@@ -421,31 +421,3 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   </body>
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UFRh4Z"></script>
 </html>
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbq.js');
-  // fbq('init', '2209389259390883');
-</script>
-<script>
-    // Check if the user is on the account creation confirmation page
-  $("form#create_customer").submit(function(){
-      localStorage.setItem('registrationComplete', 'true');
-  });
-  {% if customer %}
-
-            // Check if the event has already been fired
-        if (localStorage.getItem('registrationComplete')) {
-            // Fire the CompleteRegistration event
-          fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
-
-            // Set a flag in local storage to prevent future tracking
-           // localStorage.removeItem("registrationComplete");
-        }
-    {% endif %}
-</script>
