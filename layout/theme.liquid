@@ -19,6 +19,14 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbq.js');
     </script>
+
+    <script>
+            // Check if the user is on the account creation confirmation page
+  $(document).on("submit","form#create_customer",function(){
+      // localStorage.setItem('registrationComplete', 'true');
+    alert("set");
+  });
+    </script>
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
