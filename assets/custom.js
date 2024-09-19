@@ -857,19 +857,66 @@ function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, close
   }
 }
 
-const observer = new MutationObserver((mutationsList) => {
+
+
+
+// Use IntersectionObserver to observe visibility of drawer headers
+const observerOptions = {
+  root: null, // Observe relative to the viewport
+  rootMargin: '0px',
+  threshold: 0.1 // Trigger when 10% of the element is visible
+};
+
+const drawerObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const drawerHeader = entry.target;
+      const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+      const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+
+      applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+    }
+  });
+}, observerOptions);
+
+// Observe all .drawer__header.mobile-fixed-header elements
+function observeDrawerHeaders() {
+  document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
+    drawerObserver.observe(drawerHeader);
+  });
+}
+
+// Listen for mutations to detect dynamically added elements and apply IntersectionObserver
+const mutationObserver = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
     if (mutation.type === 'childList') {
-      document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
-        const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-        const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
-        
-        applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
-      });
+      observeDrawerHeaders();  // Observe new elements
     }
   }
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+// Start observing the document body for added elements
+mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+// Initial run to capture any elements already in the DOM
+observeDrawerHeaders();
+
+
+
+
+// const observer = new MutationObserver((mutationsList) => {
+//   for (const mutation of mutationsList) {
+//     if (mutation.type === 'childList') {
+//       document.querySelectorAll('.drawer__header.mobile-fixed-header').forEach((drawerHeader) => {
+//         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+//         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+        
+//         applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+//       });
+//     }
+//   }
+// });
+
+// observer.observe(document.body, { childList: true, subtree: true });
 
 /* Popup modal drag and close code  -  End */
