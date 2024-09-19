@@ -444,9 +444,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Add event listener to close drawer when clicking outside
   if(!window.location.href?.includes('pages')){
     document.addEventListener('click', function(event) {
-      const supplementDrawer = document.getElementById("supplementSideDrawer");
-      const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      let supplementDrawer = document.getElementById("supplementSideDrawer");
+      let isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
+      let isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
       if(window.innerWidth < 769){
         isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
       }
@@ -454,9 +454,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         closeNav();
       }
   
-      const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
-      const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      let clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+      let isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+      let isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
       if(window.innerWidth < 769){
         isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "0px";
       }
@@ -466,9 +466,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     });
   }else{
     document.addEventListener('click', function(event) {
-      const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
-      const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
-      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      let clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
+      let isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
+      let isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
       if(window.innerWidth < 769){
         isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "0px";
       }
