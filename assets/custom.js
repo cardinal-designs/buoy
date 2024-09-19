@@ -1,4 +1,9 @@
 $( document ).ready(function() {
+      // Check if the user is on the account creation confirmation page
+  $(document).on("submit","form#create_customer",function(){
+      // localStorage.setItem('registrationComplete', 'true');
+    alert("set");
+  });
   // $('.Testimonials_Slider').slick({
   //   dots: true,
   //   arrows: true,
