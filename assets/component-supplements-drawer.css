@@ -12,11 +12,6 @@
   padding-bottom: 100px;
 }
 
-.lock-scroll {
-  overflow: scroll;
--webkit-overflow-scrolling: touch;
-}
-
 @media screen and (max-width: 768px) {
 
   .supplement-side-drawer {
