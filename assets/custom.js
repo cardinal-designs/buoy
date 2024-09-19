@@ -780,7 +780,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Popup modal drag and close code  -  Start */
 
-
 let touchStartY = 0;
 let touchEndY = 0;
 let swipeDistance = 0;
@@ -803,9 +802,10 @@ function isScrolledToTop(supplementSideDrawer) {
   return supplementSideDrawer.scrollTop === 0;
 }
 
-// Prevent default behavior on touchmove if the drawer is scrolled to the top (for iPhone)
+// Prevent default behavior on touchmove if the drawer is scrolled to the top (to prevent elastic scroll)
 function preventElasticScroll(event, supplementSideDrawer) {
-  if (isScrolledToTop(supplementSideDrawer)) {
+  // If the user is swiping down and drawer is at the top, prevent the elastic scroll
+  if (isScrolledToTop(supplementSideDrawer) && event.touches[0].clientY > touchStartY) {
     event.preventDefault();
   }
 }
@@ -821,9 +821,11 @@ function onTouchStart(event, supplementSideDrawer) {
 
 function onTouchMove(event, supplementSideDrawer) {
   if (!isScreenBelowThreshold()) return;
-  if (isScrolledToTop(supplementSideDrawer)) {
-    preventElasticScroll(event, supplementSideDrawer);  // Prevent iPhone elastic scroll behavior
 
+  // Always prevent elastic scroll when scrolled to the top
+  preventElasticScroll(event, supplementSideDrawer);
+
+  if (isScrolledToTop(supplementSideDrawer)) {
     touchEndY = event.touches[0].clientY;
     swipeDistance = touchEndY - touchStartY;
 
@@ -862,11 +864,11 @@ function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, close
     supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
     supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
     supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
-
     supplementSideDrawer.dataset.touchEventsApplied = 'true';
   }
 }
 
+// Observe dynamically added drawers
 const observer = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
     if (mutation.type === 'childList') {
