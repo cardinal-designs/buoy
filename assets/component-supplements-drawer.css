@@ -28,6 +28,9 @@
     border-top-right-radius: 30px;
     scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
+    overflow-scrolling: touch;
+    behavior: smooth;
+    overflow-y: auto;
   }
   
 }
