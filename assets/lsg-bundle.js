@@ -352,6 +352,7 @@ function cartRender(openDraw) {
 function addToCart(trigger) {
     const bundleID = getGuid();
     const bundleBlock = getBundleBlock(trigger);
+    console.log("bundleBlock", bundleBlock)
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
     const bundleSellingPlan = bundleForm.querySelector('input[name="selling_plan"]').value;
@@ -360,6 +361,7 @@ function addToCart(trigger) {
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
     const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
 
+    console.log("bundleProductList", bundleProductList)
   
     const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
     let bundleCart = {
