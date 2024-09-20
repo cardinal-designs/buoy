@@ -224,7 +224,7 @@
               <rect y="5.47754" width="12" height="1.04471" fill="#BBBCBC"/>
               </svg>
           </button>
-          <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
+          <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-2 lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
           <div class="lsg-bundle-product-select-quantity-input-display body-small">0</div>
           <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" disabled>
               <svg aria-labelledby="plusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
