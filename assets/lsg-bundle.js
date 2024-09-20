@@ -232,13 +232,12 @@ function setUrl(trigger) {
 function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
 
-
-    const quantityIncrementButtons = target.closest('.lsg-bundle-product-select-quantity-increment');
+  const productSetList = trigger.closest('.lsg-bundle-product-set-list');
+    const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
     const bundleQuantity = getBundleQuantityByChild(trigger);
     const bundleMax = productSetList.dataset.bundleMax;
 
-  
-    const productSetList = trigger.closest('.lsg-bundle-product-set-list');
+
     //increment button enable/disable
     quantityIncrementButtons.forEach(function(quantityIncrementButton){
         const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
