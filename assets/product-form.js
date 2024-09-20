@@ -73,6 +73,9 @@ class ProductForm extends HTMLElement {
       .then((response) => response.json())
       .then((parsedState) => {
 if ($(".rtx-subscription-box").hasClass("is-visible")) {
+  var selling_option_plan = $(".rtx-subscription-box select[name=selling_plan] option:selected").text();
+  console.log(selling_option_plan);
+   fbq('track', 'Add To cart', {subscription: selling_option_plan});
 }else{
 }
         this.getSectionsToRender().forEach((section => {
