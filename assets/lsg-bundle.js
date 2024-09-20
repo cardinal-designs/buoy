@@ -278,7 +278,6 @@ function checkoutEnableValidation(trigger) {
 
     console.log("addToCartButtons", addToCartButtons)
     console.log("bundleQuantity", bundleQuantity)
-    console.log("interval", interval)
     console.log("bundleMin", bundleMin)
     console.log("bundleMax", bundleMax)
     console.log("quantityToAdd", quantityToAdd)
