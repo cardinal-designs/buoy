@@ -2274,7 +2274,6 @@ function navDropDownMenu() {
         dropDownClose.classList.remove('active');
       }
       document.querySelector('body').classList.remove('lock-scroll');
-      console.log('asdsadasdsadsad:');
       pageBlurOverlay.classList.remove('is-visible');
       headerContainer.classList.remove('active');
       headerWrapper.classList.remove('active-dropdown');
