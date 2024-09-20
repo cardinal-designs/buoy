@@ -725,7 +725,7 @@ function getBundleQuantity(trigger) {
     productList.forEach(function (element) {
       
       element.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-          console.log("input", input)
+          // console.log("input", input)
           quantity = quantity + parseInt(input.value);
       });
     })
