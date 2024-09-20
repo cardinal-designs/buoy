@@ -789,7 +789,7 @@ document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEa
     incrementButton.addEventListener('click', function(e){
         e.preventDefault();
         incrementSubProduct(e.currentTarget);
-        // buildSelectedProductArray(e.currentTarget);
+        buildSelectedProductArray(e.currentTarget);
         // incrementEnableValidation(e.currentTarget);
         // checkoutEnableValidation(e.currentTarget);
         // setUrl(e.currentTarget);
