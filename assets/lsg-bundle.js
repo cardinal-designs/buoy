@@ -231,7 +231,7 @@ function setUrl(trigger) {
 
 function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
-
+    console.log("incrementEnableValidation", trigger)
     const productSetList = trigger.closest('.lsg-bundle-product-set-list');
   
     const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
@@ -390,8 +390,6 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
-
-    console.log("bundleCart", bundleCart)
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
         //quantity is not within bundle size
         return false;
