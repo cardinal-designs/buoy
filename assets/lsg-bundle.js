@@ -284,6 +284,10 @@ function checkoutEnableValidation(trigger) {
         const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
         const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
 
+        console.log("bundleQuantity", bundleQuantity)
+        console.log("bundleMin", bundleMin)
+        console.log("bundleMax", bundleMax)
+        console.log("interval", interval)
         if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
             addToCartButton.classList.remove('disabled');
             addToCartText.classList.remove('hidden');
