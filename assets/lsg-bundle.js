@@ -788,6 +788,7 @@ document.querySelectorAll('[data-bundle-builder-selected-product-remove-button]'
 document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEach(function(incrementButton){
     incrementButton.addEventListener('click', function(e){
         e.preventDefault();
+        console.log("e.currentTarget", e.currentTarget)
         incrementSubProduct(e.currentTarget);
         buildSelectedProductArray(e.currentTarget);
         incrementEnableValidation(e.currentTarget);
