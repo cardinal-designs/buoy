@@ -233,7 +233,7 @@ function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
     const productSetList = trigger.closest('.lsg-bundle-product-set-list');
 
-    condole.log("productSetList", productSetList)
+    console.log("productSetList", productSetList)
   
     const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
     const bundleQuantity = getBundleQuantityByChild(trigger);
