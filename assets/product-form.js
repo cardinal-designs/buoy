@@ -73,9 +73,7 @@ class ProductForm extends HTMLElement {
       .then((response) => response.json())
       .then((parsedState) => {
 if ($(".rtx-subscription-box").hasClass("is-visible")) {
- alert("yes");
 }else{
-   alert("no");
 }
         this.getSectionsToRender().forEach((section => {
           const elementToReplace =
