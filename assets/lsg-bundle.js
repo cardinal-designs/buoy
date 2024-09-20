@@ -246,36 +246,23 @@ function incrementEnableValidation(trigger) {
             const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
             const input = quantityIncrementButton.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
             const quantity = input.value;
-            // console.log("quantity", quantity)
-            // console.log("bundleMax", bundleMax)
-            if(quantity == parseInt(bundleMax)){
-              quantityIncrementButton.disabled = true;
-            }
             switch(method) {
                 case 'minus':
                     quantityIncrementButton.disabled = false;
-                    console.log("minus")
                     if(quantity <= 0) {
-                        console.log("minus iff")
                         quantityIncrementButton.disabled = true;
                     }
                     if(quantity <= parseInt(input.min)) {
-                        console.log("minus iff 2")
                         quantityIncrementButton.disabled = true;
                     }
                     break;
                 case 'plus':
                     quantityIncrementButton.disabled = false;
-                    console.log("plus")
                     if(quantity >= parseInt(input.max)) {
-                        console.log("plus iff")
                         quantityIncrementButton.disabled = true;
                     }
                     if(parseInt(bundleMax) > 0) {
-                        console.log("plus iiff2", bundleMax, bundleQuantity)
                         if(bundleQuantity >= parseInt(bundleMax)) {
-                            console.log("plus iff 3", bundleQuantity)
-                            // console.log("bundleQuantity", bundleQuantity)
                             quantityIncrementButton.disabled = true;
                         }
                     }
@@ -358,16 +345,12 @@ function cartRender(openDraw) {
 function addToCart(trigger) {
     const bundleID = getGuid();
     const bundleBlock = getBundleBlock(trigger);
-    console.log("bundleBlock", bundleBlock)
     const bundleForm = bundleBlock.querySelector('.lsg-bundle-form');
     const bundleProductID = bundleForm.querySelector('input[name="id"]').value;
     const bundleSellingPlan = bundleForm.querySelector('input[name="selling_plan"]').value;
     const interval = (bundleSellingPlan == '' ? 'otp' : 'sub');
     const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-    // const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
-
-    // console.log("bundleProductList", bundleProductList)
 
     let bundleProductLists = bundleBlock.querySelectorAll('.lsg-bundle-product-set-list');
 
@@ -412,13 +395,8 @@ function addToCart(trigger) {
       });
       
     })
-  
-    console.log("bundleProductQuantity", bundleProductQuantity)
-    console.log("bundleMin", bundleMin)
-    console.log("bundleMax", bundleMax)
+
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
-        console.log("ifffffffff")
-        //quantity is not within bundle size
         return false;
     }
     
@@ -752,22 +730,9 @@ function getBundleQuantity(trigger) {
     productList.forEach(function (element) {
       
       element.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-          // console.log("input", input)
           quantity = quantity + parseInt(input.value);
       });
     })
-  
-    // let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
-    // console.log("productList", productList)
-    // if(productList){
-    //     quantity = 0;
-    //     productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-    //         console.log("input", input)
-    //         quantity = quantity + parseInt(input.value);
-    //     });
-    // }
-
-    console.log("quantity", quantity)
     return quantity;
 }
 
@@ -784,14 +749,6 @@ function getBundleQuantityByChild(trigger){
           quantity = quantity + parseInt(input.value);
       });
     })
-
-  
-    // if(productSetList){
-    //     quantity = 0;
-    //     productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-    //         quantity = quantity + parseInt(input.value);
-    //     });
-    // }
     return quantity;
 }
 
