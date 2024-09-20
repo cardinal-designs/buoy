@@ -208,8 +208,6 @@ function setUrl(trigger) {
             }
         }
     }
-
-    console.log("url", url)
     let params = new URLSearchParams(url);
     let uniqueSet = new Set();
     let uniqueParams = new URLSearchParams();
@@ -220,12 +218,8 @@ function setUrl(trigger) {
         uniqueParams.append(key, value);
       }
     });
-    
-    // Rebuild the URL with the unique parameters
     let uniqUrl = '?' + uniqueParams.toString();
 
-    console.log(uniqUrl);
-  
     if (history.pushState) {
         var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + uniqUrl;
         window.history.pushState({path: newurl}, '', newurl);
@@ -272,7 +266,6 @@ function incrementEnableValidation(trigger) {
 function checkoutEnableValidation(trigger) {
     const bundleBlock = getBundleBlock(trigger);
     const addToCartButtons = bundleBlock.querySelectorAll('[data-lsg-bundle-atc');
-    console.log("trigger", trigger)
     const bundleQuantity = getBundleQuantity(trigger);
     const interval = getBundleInterval(trigger);
     const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
@@ -284,11 +277,6 @@ function checkoutEnableValidation(trigger) {
         const addToCartText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-atc-text]'); 
         const addMoreText = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-text]');
         const addMoreQuantity = addToCartButton.querySelector('[data-lsg-bundle-submit-button-add-more-quantity]');
-
-        console.log("bundleQuantity", bundleQuantity)
-        console.log("bundleMin", bundleMin)
-        console.log("bundleMax", bundleMax)
-        console.log("interval", interval)
         if(bundleQuantity >= bundleMin && (bundleQuantity <= bundleMax || bundleMax < bundleMin)) {
             addToCartButton.classList.remove('disabled');
             addToCartText.classList.remove('hidden');
@@ -715,23 +703,15 @@ function initializeBundle() {
 
 function getBundleQuantity(trigger) {
     //gets the quantity of the current active bundle block product list
-    console.log("trigger==", trigger)
     let bundleBlock = getBundleBlock(trigger);
-
-    console.log("bundleBlock", bundleBlock)
     let quantity = -1;
-
-    console.log("quantity", quantity)
     let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
-    console.log("productList", productList)
     if(productList){
         quantity = 0;
         productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-            console.log("input", input, input.value)
             quantity = quantity + parseInt(input.value);
         });
     }
-    console.log("quantity---", quantity)
     return quantity;
 }
 
