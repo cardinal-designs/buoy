@@ -280,6 +280,10 @@
   width: 100%;
 }
 
+.anchor-links__sticky--custom .anchor-links__item button.active {
+  color: var(--charcoal);
+}
+
 @media (max-width: 768px) {
 
   .lsg-bundle-block.page-width {
