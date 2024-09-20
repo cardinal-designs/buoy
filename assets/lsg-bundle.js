@@ -219,10 +219,6 @@ function setUrl(trigger) {
       }
     });
     let uniqUrl = '?' + uniqueParams.toString();
-
-    console.log("url", url)
-    console.log("uniqUrl", uniqUrl)
-
     if (history.pushState) {
         var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + uniqUrl;
         window.history.pushState({path: newurl}, '', newurl);
@@ -244,9 +240,7 @@ function incrementEnableValidation(trigger) {
         
         const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
         const bundleMax = productSetList.dataset.bundleMax;
-    
-      
-    
+
         //increment button enable/disable
         quantityIncrementButtons.forEach(function(quantityIncrementButton){
             const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
