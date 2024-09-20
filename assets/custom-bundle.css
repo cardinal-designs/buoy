@@ -399,6 +399,9 @@
 
   .lsg-bundle-product-select-quantity-wrap:not(.no-quantity) {
     height: 26px !important;
+    width: calc(100% - 16px) !important;
+    bottom: 8px !important;
+    right: 8px !important;
   }
 
   .lsg-bundle-product-list .quick-add__product-tag {
