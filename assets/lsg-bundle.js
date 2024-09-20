@@ -716,15 +716,25 @@ function getBundleQuantity(trigger) {
     //gets the quantity of the current active bundle block product list
     let bundleBlock = getBundleBlock(trigger);
     let quantity = -1;
-    let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
-    console.log("productList", productList)
-    if(productList){
-        quantity = 0;
-        productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-            console.log("input", input)
-            quantity = quantity + parseInt(input.value);
-        });
-    }
+    let productList = bundleBlock.querySelectorAll('.lsg-bundle-product-set-list');
+
+    productList.forEach(function (element) {
+      quantity = 0;      
+      element.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
+          console.log("input", input)
+          quantity = quantity + parseInt(input.value);
+      });
+    })
+  
+    // let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+    // console.log("productList", productList)
+    // if(productList){
+    //     quantity = 0;
+    //     productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
+    //         console.log("input", input)
+    //         quantity = quantity + parseInt(input.value);
+    //     });
+    // }
 
     console.log("quantity", quantity)
     return quantity;
