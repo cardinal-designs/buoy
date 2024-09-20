@@ -155,8 +155,8 @@
         {{ variant.product.price | money }}
       </div>
     </div>
-    {% if variant.product.metafields.my_fields.product_grid_2 != blank %}
-      <span class="body-small quick-add__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
+    {% if variant.product.metafields.custom.bundle_saving_description != blank %}
+      <span class="body-small quick-add__grid-text">{{ variant.product.metafields.custom.bundle_saving_description }}</span>
     {% endif %}
     {% if variant.product.metafields.my_fields.product_card_text != blank %}
       <p class="sh4">{{ variant.product.metafields.my_fields.product_card_text }}</p>
