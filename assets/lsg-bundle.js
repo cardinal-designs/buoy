@@ -221,10 +221,10 @@ function setUrl(trigger) {
     
     console.log(uniqUrl);
   
-    // if (history.pushState) {
-    //     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url;
-    //     window.history.pushState({path: newurl}, '', newurl);
-    // }
+    if (history.pushState) {
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + uniqUrl;
+        window.history.pushState({path: newurl}, '', newurl);
+    }
 }
 
 function incrementEnableValidation(trigger) {
