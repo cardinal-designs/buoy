@@ -398,6 +398,7 @@ function addToCart(trigger) {
         }
     });
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
+        console.log("ifffffffff")
         //quantity is not within bundle size
         return false;
     }
@@ -864,12 +865,9 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
     })
 });
 document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
-    
     bundleATC.addEventListener('click', function(e){
-        console.log("bundleATC", e.currentTarget)
         e.preventDefault();
         if(e.currentTarget.classList.contains('disabled')) {
-          console.log("ifff")
             //scroll to top of the bundle block
             const announcementOffset = parseInt(document.body.style.getPropertyValue('--announcement-offset').replace('px', '')) || 0;
             const headerOffset = parseInt(document.body.style.getPropertyValue('--header-offset').replace('px', '')) || 0;
@@ -877,7 +875,6 @@ document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
             const bundleBlock = getBundleBlock(e.currentTarget);
             window.scrollTo({ top: bundleBlock.offsetTop - offset, behavior: 'smooth' });
         } else {
-          console.log("elsee")
             addToCart(e.currentTarget);
         }
     })
