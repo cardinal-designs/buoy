@@ -253,7 +253,10 @@ function incrementEnableValidation(trigger) {
             const input = quantityIncrementButton.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
             const quantity = input.value;
             console.log("quantity", quantity)
-          console.log("bundleMax", bundleMax)
+            console.log("bundleMax", bundleMax)
+            if(quantity == parseInt(bundleMax)){
+              quantityIncrementButton.disabled = true;
+            }
             switch(method) {
                 case 'minus':
                     quantityIncrementButton.disabled = false;
