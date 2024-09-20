@@ -128,30 +128,20 @@
           "type": "bundle",
           "settings": {
             "product": "byob",
-            "collection": "affiliate-products-7652349834723012590",
-            "collection2": "",
+            "collection": "bundle",
+            "collection2": "affiliate-products-7652349834723012590",
             "title": "Bundle 1",
             "collection_title": "Unflavored Liquid Electrolytes",
             "collection_text": "Add-to-any-beverage ocean electrolytes and 87+ trace minerals. No sugar, sweeteners, or flavors.",
-            "collection_tags": "Clinically Proven"
-          }
-        },
-        "bundle_Cr73aE": {
-          "type": "bundle",
-          "settings": {
-            "product": "byob",
-            "collection": "",
-            "collection2": "",
-            "title": "Bundle 2",
-            "collection_title": "",
-            "collection_text": "",
-            "collection_tags": "Clinically Proven"
+            "collection_tags": "Clinically Proven",
+            "collection_2_title": "Add Ons",
+            "collection_2_text": "Add-to-any-beverage ocean electrolytes and 87+ trace minerals. No sugar, sweeteners, or flavors.",
+            "collection_2_tags": ""
           }
         }
       },
       "block_order": [
-        "bundle_z9RWjh",
-        "bundle_Cr73aE"
+        "bundle_z9RWjh"
       ],
       "settings": {
         "setUrl": true,
