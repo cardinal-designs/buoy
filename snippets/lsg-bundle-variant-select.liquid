@@ -216,8 +216,9 @@
           {% endif %}
         </div>
       </div>
-            
-      <!-- <div class="quick-add__buttons">
+
+      {% comment %}
+      <div class="quick-add__buttons">
         <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
           <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
               <svg aria-labelledby="minusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,8 +236,9 @@
               <span class="lsg-bundle-product-select-quantity-increment-add-text quick-add__button">Add To Bundle — {{ variant.product.price | money }}</span>
           </button>
         </div>
-      </div> -->
-                    
+      </div>
+      {% endcomment %}
+      
     </div>
   </div>
 </div>
