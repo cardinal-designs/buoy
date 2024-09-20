@@ -272,7 +272,7 @@ function incrementEnableValidation(trigger) {
                         quantityIncrementButton.disabled = true;
                     }
                     if(parseInt(bundleMax) > 0) {
-                        console.log("plus iiff2")
+                        console.log("plus iiff2", bundleMax, bundleQuantity)
                         if(bundleQuantity >= parseInt(bundleMax)) {
                             console.log("plus iff 3", bundleQuantity)
                             // console.log("bundleQuantity", bundleQuantity)
