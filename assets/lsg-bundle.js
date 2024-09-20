@@ -790,9 +790,9 @@ document.querySelectorAll('.lsg-bundle-product-select-quantity-increment').forEa
         e.preventDefault();
         incrementSubProduct(e.currentTarget);
         buildSelectedProductArray(e.currentTarget);
-        // incrementEnableValidation(e.currentTarget);
-        // checkoutEnableValidation(e.currentTarget);
-        // setUrl(e.currentTarget);
+        incrementEnableValidation(e.currentTarget);
+        checkoutEnableValidation(e.currentTarget);
+        setUrl(e.currentTarget);
     })
 });
 document.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
