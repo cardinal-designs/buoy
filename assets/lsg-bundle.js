@@ -239,10 +239,10 @@ function incrementEnableValidation(trigger) {
       // const productSetList = trigger.closest('.lsg-bundle-product-set-list');
       
       let productSetLists = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-set-list');
+      const bundleQuantity = getBundleQuantityByChild(trigger);
       productSetLists.forEach(function (productSetList) {
         
         const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
-        const bundleQuantity = getBundleQuantityByChild(trigger);
         const bundleMax = productSetList.dataset.bundleMax;
     
       
