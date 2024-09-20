@@ -237,6 +237,8 @@ function incrementEnableValidation(trigger) {
     const bundleQuantity = getBundleQuantityByChild(trigger);
     const bundleMax = productSetList.dataset.bundleMax;
 
+  
+
     //increment button enable/disable
     quantityIncrementButtons.forEach(function(quantityIncrementButton){
         const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
@@ -259,6 +261,7 @@ function incrementEnableValidation(trigger) {
                 }
                 if(parseInt(bundleMax) > 0) {
                     if(bundleQuantity >= parseInt(bundleMax)) {
+                        console.log("bundleQuantity", bundleQuantity)
                         quantityIncrementButton.disabled = true;
                     }
                 }
