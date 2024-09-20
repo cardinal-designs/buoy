@@ -352,6 +352,8 @@ function addToCart(trigger) {
     const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
     const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+
+  
     const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
     let bundleCart = {
         'items': []
@@ -388,6 +390,8 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
+
+    console.log("bundleCart", bundleCart)
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
         //quantity is not within bundle size
         return false;
