@@ -233,7 +233,7 @@ function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
 
 
-    const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
+    const quantityIncrementButtons = target.closest('.lsg-bundle-product-select-quantity-increment');
     const bundleQuantity = getBundleQuantityByChild(trigger);
     const bundleMax = productSetList.dataset.bundleMax;
 
