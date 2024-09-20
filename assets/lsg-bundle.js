@@ -730,7 +730,7 @@ function getBundleQuantity(trigger) {
             quantity = quantity + parseInt(input.value);
         });
     }
-    console.log("quantity---", quantity---)
+    console.log("quantity---", quantity)
     return quantity;
 }
 
