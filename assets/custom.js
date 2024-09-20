@@ -506,11 +506,12 @@ $('.Open_Drawer').click(function(event){
 });
 
 // close supplement drawer (click outside)
-$('.page-blury-overlay').click(function(){
+$('.page-blury-overlay').click(function(event){
   $('.supplement-side-drawer').css('right','-100%');
   if(window.innerWidth < 769){
     $('.supplement-side-drawer').css('bottom','-100%');
   }
+  console.log('event:: ',event);
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
