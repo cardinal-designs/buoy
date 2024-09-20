@@ -220,6 +220,9 @@ function setUrl(trigger) {
     });
     let uniqUrl = '?' + uniqueParams.toString();
 
+    console.log("url", url)
+    console.log("uniqUrl", uniqUrl)
+
     if (history.pushState) {
         var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + uniqUrl;
         window.history.pushState({path: newurl}, '', newurl);
