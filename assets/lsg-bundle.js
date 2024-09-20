@@ -365,14 +365,15 @@ function addToCart(trigger) {
 
     let bundleProductLists = bundleBlock.querySelectorAll('.lsg-bundle-product-set-list');
 
+    let bundleCart = {
+        'items': []
+    };
+  
+    let bundleProductQuantity = 0;
     bundleProductLists.forEach(function (bundleProductList) {
       
       const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
-      let bundleCart = {
-          'items': []
-      };
-    
-      let bundleProductQuantity = 0;
+      
       {
           let cartItem = {
               id: bundleProductID,
@@ -403,6 +404,7 @@ function addToCart(trigger) {
               bundleCart.items.push(cartItem);
           }
       });
+      
     })
   
     console.log("bundleProductQuantity", bundleProductQuantity)
