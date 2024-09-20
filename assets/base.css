@@ -129,6 +129,10 @@ body.lock-scroll-mobile {
   .page-width-desktop {
     padding: 0;
   }
+
+  .lock-scroll .page-blury-overlay {
+    z-index: 11;
+  }
 }
 
 .element-margin {
