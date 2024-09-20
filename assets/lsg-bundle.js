@@ -715,15 +715,22 @@ function initializeBundle() {
 
 function getBundleQuantity(trigger) {
     //gets the quantity of the current active bundle block product list
+    console.log("trigger==", trigger)
     let bundleBlock = getBundleBlock(trigger);
+
+    console.log("bundleBlock", bundleBlock)
     let quantity = -1;
+
+    console.log("quantity", quantity)
     let productList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+    console.log("productList", productList)
     if(productList){
         quantity = 0;
         productList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
             quantity = quantity + parseInt(input.value);
         });
     }
+    console.log("quantity---", quantity---)
     return quantity;
 }
 
