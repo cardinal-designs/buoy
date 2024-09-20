@@ -359,46 +359,52 @@ function addToCart(trigger) {
     const interval = (bundleSellingPlan == '' ? 'otp' : 'sub');
     const bundleMin = (interval == 'otp' ? bundleBlock.dataset.otpBundleMin : bundleBlock.dataset.subBundleMin);
     const bundleMax = (interval == 'otp' ? bundleBlock.dataset.otpBundleMax : bundleBlock.dataset.subBundleMax);
-    const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
+    // const bundleProductList = bundleBlock.querySelector('.lsg-bundle-product-set-list');
 
-    console.log("bundleProductList", bundleProductList)
+    // console.log("bundleProductList", bundleProductList)
+
+    let bundleProductLists = bundleBlock.querySelectorAll('.lsg-bundle-product-set-list');
+
+    bundleProductLists.forEach(function (bundleProductList) {
+      
+      const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
+      let bundleCart = {
+          'items': []
+      };
+    
+      let bundleProductQuantity = 0;
+      {
+          let cartItem = {
+              id: bundleProductID,
+              quantity: 1,
+              properties: {
+                "bundle_id": bundleID,
+                "bundle_parent": true,
+              },
+          };
+          if (interval == 'sub') {
+              cartItem["selling_plan"] = bundleSellingPlan;
+          }
+          bundleCart.items.push(cartItem);
+      }
+      bundleProductListInputs.forEach(function(bundleProductInput){
+          bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
+          if(parseInt(bundleProductInput.value) > 0) {
+              let cartItem = {
+                  id: bundleProductInput.dataset.product,
+                  quantity: parseInt(bundleProductInput.value),
+                  properties: {
+                      "bundle_id": bundleID,
+                  },
+              };
+              if (interval == 'sub') {
+                  cartItem["selling_plan"] = bundleSellingPlan;
+              }
+              bundleCart.items.push(cartItem);
+          }
+      });
+    })
   
-    const bundleProductListInputs = bundleProductList.querySelectorAll('.lsg-bundle-product-select-quantity-input');
-    let bundleCart = {
-        'items': []
-    };
-  
-    let bundleProductQuantity = 0;
-    {
-        let cartItem = {
-            id: bundleProductID,
-            quantity: 1,
-            properties: {
-              "bundle_id": bundleID,
-              "bundle_parent": true,
-            },
-        };
-        if (interval == 'sub') {
-            cartItem["selling_plan"] = bundleSellingPlan;
-        }
-        bundleCart.items.push(cartItem);
-    }
-    bundleProductListInputs.forEach(function(bundleProductInput){
-        bundleProductQuantity = bundleProductQuantity + parseInt(bundleProductInput.value);
-        if(parseInt(bundleProductInput.value) > 0) {
-            let cartItem = {
-                id: bundleProductInput.dataset.product,
-                quantity: parseInt(bundleProductInput.value),
-                properties: {
-                    "bundle_id": bundleID,
-                },
-            };
-            if (interval == 'sub') {
-                cartItem["selling_plan"] = bundleSellingPlan;
-            }
-            bundleCart.items.push(cartItem);
-        }
-    });
     console.log("bundleProductQuantity", bundleProductQuantity)
     console.log("bundleMin", bundleMin)
     console.log("bundleMax", bundleMax)
