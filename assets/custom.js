@@ -450,6 +450,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       if(window.innerWidth < 769){
         isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
       }
+
+      console.log('event:: ',event);
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
