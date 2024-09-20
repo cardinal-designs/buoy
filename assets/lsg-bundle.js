@@ -231,45 +231,56 @@ function setUrl(trigger) {
 
 function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
-    const productSetList = trigger.closest('.lsg-bundle-product-set-list');
 
-    console.log("productSetList", productSetList)
-  
-    const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
-    const bundleQuantity = getBundleQuantityByChild(trigger);
-    const bundleMax = productSetList.dataset.bundleMax;
+    let lsgBundleBuyboxBlock = trigger.closest(".lsg-bundle-buybox-block");
 
-  
+    if(lsgBundleBuyboxBlock){
 
-    //increment button enable/disable
-    quantityIncrementButtons.forEach(function(quantityIncrementButton){
-        const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
-        const input = quantityIncrementButton.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
-        const quantity = input.value;
-        switch(method) {
-            case 'minus':
-                quantityIncrementButton.disabled = false;
-                if(quantity <= 0) {
-                    quantityIncrementButton.disabled = true;
-                }
-                if(quantity <= parseInt(input.min)) {
-                    quantityIncrementButton.disabled = true;
-                }
-                break;
-            case 'plus':
-                quantityIncrementButton.disabled = false;
-                if(quantity >= parseInt(input.max)) {
-                    quantityIncrementButton.disabled = true;
-                }
-                if(parseInt(bundleMax) > 0) {
-                    if(bundleQuantity >= parseInt(bundleMax)) {
-                        console.log("bundleQuantity", bundleQuantity)
+      // const productSetList = trigger.closest('.lsg-bundle-product-set-list');
+      
+      let productSetLists = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-set-list');
+      productSetLists.forEach(function (productSetList) {
+        
+        const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
+        const bundleQuantity = getBundleQuantityByChild(trigger);
+        const bundleMax = productSetList.dataset.bundleMax;
+    
+      
+    
+        //increment button enable/disable
+        quantityIncrementButtons.forEach(function(quantityIncrementButton){
+            const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
+            const input = quantityIncrementButton.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
+            const quantity = input.value;
+            switch(method) {
+                case 'minus':
+                    quantityIncrementButton.disabled = false;
+                    if(quantity <= 0) {
                         quantityIncrementButton.disabled = true;
                     }
-                }
-                break;
-        }
-    });
+                    if(quantity <= parseInt(input.min)) {
+                        quantityIncrementButton.disabled = true;
+                    }
+                    break;
+                case 'plus':
+                    quantityIncrementButton.disabled = false;
+                    if(quantity >= parseInt(input.max)) {
+                        quantityIncrementButton.disabled = true;
+                    }
+                    if(parseInt(bundleMax) > 0) {
+                        if(bundleQuantity >= parseInt(bundleMax)) {
+                            console.log("bundleQuantity", bundleQuantity)
+                            quantityIncrementButton.disabled = true;
+                        }
+                    }
+                    break;
+            }
+        });
+      })
+      
+    
+    }
+    
 }
 
 function checkoutEnableValidation(trigger) {
