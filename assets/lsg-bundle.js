@@ -774,12 +774,24 @@ function getBundleQuantity(trigger) {
 function getBundleQuantityByChild(trigger){
     const productSetList = trigger.closest('.lsg-bundle-product-set-list');
     let quantity = -1;
-    if(productSetList){
-        quantity = 0;
-        productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-            quantity = quantity + parseInt(input.value);
-        });
-    }
+
+    let lsgBundleBuyboxBlock = trigger.closest(".lsg-bundle-buybox-block");
+    let productSetLists = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-set-list');
+    quantity = 0;
+    productSetLists.forEach(function (productSetList) {
+      
+      productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
+          quantity = quantity + parseInt(input.value);
+      });
+    })
+
+  
+    // if(productSetList){
+    //     quantity = 0;
+    //     productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
+    //         quantity = quantity + parseInt(input.value);
+    //     });
+    // }
     return quantity;
 }
 
