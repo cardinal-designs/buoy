@@ -73,7 +73,7 @@ class ProductForm extends HTMLElement {
       .then((response) => response.json())
       .then((parsedState) => {
        
-if (typeof parsedState.selling_plan_allocation.selling_plan.name !== 'undefined') {
+if (typeof parsedState.selling_plan_allocation.selling_plan !== 'undefined') {
    fbq('track', 'Add To cart', {content_category: parsedState.product_type,content_subscription: parsedState.selling_plan_allocation.selling_plan.name,content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
 }else{
    fbq('track', 'Add To cart', {content_category: parsedState.product_type,content_subscription: "One-Time Purchase",content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
