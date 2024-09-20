@@ -397,6 +397,9 @@ function addToCart(trigger) {
             bundleCart.items.push(cartItem);
         }
     });
+    console.log("bundleProductQuantity", bundleProductQuantity)
+    console.log("bundleMin", bundleMin)
+    console.log("bundleMax", bundleMax)
     if(bundleProductQuantity > bundleMax || bundleProductQuantity < bundleMin) {
         console.log("ifffffffff")
         //quantity is not within bundle size
