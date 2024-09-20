@@ -71,8 +71,8 @@ class ProductForm extends HTMLElement {
 
     fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
       .then((response) => response.json())
-      console.log(response);
       .then((parsedState) => {
+        console.log(parsedState);
 if ($(".rtx-subscription-box").hasClass("is-visible")) {
   var selling_option_plan = $(".rtx-subscription-box select[name=selling_plan] option:selected").text();
    fbq('track', 'Add To cart', {content_subscription: selling_option_plan});
