@@ -77,6 +77,7 @@ if ($(".rtx-subscription-box").hasClass("is-visible")) {
   var selling_option_plan = $(".rtx-subscription-box select[name=selling_plan] option:selected").text();
    fbq('track', 'Add To cart', {content_category: parsedState.product_type,content_subscription: selling_option_plan,content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
 }else{
+   fbq('track', 'Add To cart', {content_category: parsedState.product_type,content_subscription: "One-Time Purchase",content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
 }
         this.getSectionsToRender().forEach((section => {
           const elementToReplace =
