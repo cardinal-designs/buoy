@@ -864,6 +864,7 @@ document.querySelectorAll('.lsg-bundle-interval-frequency-select').forEach(funct
     })
 });
 document.querySelectorAll('[data-lsg-bundle-atc]').forEach((bundleATC) => {
+    console.log("bundleATC", bundleATC)
     bundleATC.addEventListener('click', function(e){
         e.preventDefault();
         if(e.currentTarget.classList.contains('disabled')) {
