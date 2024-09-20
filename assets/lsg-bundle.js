@@ -210,6 +210,17 @@ function setUrl(trigger) {
     }
 
     console.log("url", url)
+    let params = new URLSearchParams(url);
+    let uniqueParams = new URLSearchParams();
+    params.forEach((value, key) => {
+      if (!uniqueParams.has(key)) {
+        uniqueParams.append(key, value); // Add the key-value pair if it hasn't been added yet
+      }
+    });
+    let uniqUrl = '?' + uniqueParams.toString();
+    
+    console.log(uniqUrl);
+  
     // if (history.pushState) {
     //     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url;
     //     window.history.pushState({path: newurl}, '', newurl);
