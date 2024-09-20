@@ -211,14 +211,19 @@ function setUrl(trigger) {
 
     console.log("url", url)
     let params = new URLSearchParams(url);
+    let uniqueSet = new Set();
     let uniqueParams = new URLSearchParams();
     params.forEach((value, key) => {
-      if (!uniqueParams.has(key)) {
-        uniqueParams.append(key, value); // Add the key-value pair if it hasn't been added yet
+      let keyValueString = `${key}=${value}`;
+      if (!uniqueSet.has(keyValueString)) {
+        uniqueSet.add(keyValueString);
+        uniqueParams.append(key, value);
       }
     });
-    let uniqUrl = '?' + uniqueParams.toString();
     
+    // Rebuild the URL with the unique parameters
+    let uniqUrl = '?' + uniqueParams.toString();
+
     console.log(uniqUrl);
   
     if (history.pushState) {
