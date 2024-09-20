@@ -231,9 +231,8 @@ function setUrl(trigger) {
 
 function incrementEnableValidation(trigger) {
     //trigger is input or increment buttons
-    const productSetList = trigger.closest('.lsg-bundle-product-set-list');
 
-    console.log("productSetList==", productSetList)
+    const productSetList = trigger.closest('.lsg-bundle-product-set-list');
   
     const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
     const bundleQuantity = getBundleQuantityByChild(trigger);
