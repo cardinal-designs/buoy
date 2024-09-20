@@ -41,82 +41,17 @@
     </div>
 </div> {% endcomment %}
 
-{% liquid
-  assign card_product = block.heading
-  assign base = 'quick-add'
- %}
+{% assign metaobject_data = variant.product.metafields.custom.bundle_data.value %}
 
  <div class="lsg-bundle-product-select-wrapper quick-add__container" data-lsg-bundle-variant-select-id="{{ variant.id }}">
   <div class="quick-add__media">
-
     <div class="quick-add__media-inner">
-
-    {% if variant.product.images.size > 1 %}
-      <img
-        srcset="
-          {%- if variant.product.images[1].width >= 535 -%}{{ variant.product.images[1] | image_url: width: 535 }} 535w,{%- endif -%}
-          {%- if variant.product.images[1].width >= 750 -%}{{ variant.product.images[1] | image_url: width: 750 }} 750w,{%- endif -%}
-          {%- if variant.product.images[1].width >= 1070 -%}{{ variant.product.images[1] | image_url: width: 1070 }} 1070w,{%- endif -%}
-          {%- if variant.product.images[1].width >= 1500 -%}{{ variant.product.images[1] | image_url: width: 1500 }} 1500w,{%- endif -%}
-          {{ variant.product.images[1] | image_url }} {{ variant.product.images[1].width }}w
-        " class="quick-add__image-hover hide-mobile"
-        src="{{ variant.product.images[1] | image_url: width: 1500 }}"
-        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-        alt="{{ variant.product.images[1].alt | escape }}" width="{{ variant.product.images[1].width }}" height="{{ variant.product.images[1].height }}"
-      >
-      <img
-        srcset="
-          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
-          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
-          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
-          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
-          {{ featuredImage | image_url }} {{ featuredImage.width }}w
-        " class="" style="opacity: 1;"
-        src="{{ featuredImage | image_url: width: 1500 }}"
-        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
-      >
-    {% else %}
-      <img
-        srcset="
-          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
-          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
-          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
-          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
-          {{ featuredImage | image_url }} {{ featuredImage.width }}w
-        " class="" style="opacity: 1;"
-        src="{{ featuredImage | image_url: width: 1500 }}"
-        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
-      >
-    {% endif %}
-{% comment %} 
-    {% if content.image_hover != blank %}
-      {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
-    {% elsif content.video_hover != blank %}
-      {{ content.video_hover | video_tag:
-        autoplay: true,
-        loop: true,
-        muted: true,
-        controls: false,
-        class: 'quick-add__video-hover hide-mobile',
-        sizes: '100vw',
-        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
-    {% endif %} {% endcomment %}
-
-      {% comment %} <img
-        srcset="
-          {%- if featuredImage.width >= 535 -%}{{ featuredImage | image_url: width: 535 }} 535w,{%- endif -%}
-          {%- if featuredImage.width >= 750 -%}{{ featuredImage | image_url: width: 750 }} 750w,{%- endif -%}
-          {%- if featuredImage.width >= 1070 -%}{{ featuredImage | image_url: width: 1070 }} 1070w,{%- endif -%}
-          {%- if featuredImage.width >= 1500 -%}{{ featuredImage | image_url: width: 1500 }} 1500w,{%- endif -%}
-          {{ featuredImage | image_url }} {{ featuredImage.width }}w
-        " class="quick-add__image-hover" style="opacity: 1;"
-        src="{{ featuredImage | image_url: width: 1500 }}"
-        sizes="(min-width: 1440px) {{ 1440 | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-        alt="{{ featuredImage.alt | escape }}" width="{{ featuredImage.width }}" height="{{ featuredImage.height }}"
-      > {% endcomment %}
-
+      {% if variant.product.images.size > 1 %}
+        {{ variant.product.images[1] | image_url: width: 500 | image_tag: class: 'quick-add__image-hover hide-mobile', alt: variant.product.images[1].alt | escape }}
+        {{ featuredImage | image_url: width: 500 | image_tag: style: 'opacity: 1;', alt: featuredImage.alt | escape }}
+      {% else %}
+        {{ featuredImage | image_url: width: 500 | image_tag: style: 'opacity: 1;', alt: featuredImage.alt | escape }}
+      {% endif %}
       {% if variant.product.tags != blank %}
         <div class="quick-add__product-tags">
           {% for tag in variant.product.tags limit: 1 %}
@@ -126,25 +61,23 @@
           {% endfor %}
         </div>
       {% endif %}
-
       <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
         <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
-            <svg aria-labelledby="minusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-labelledby="minusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title id="minusIconTitle">minus</title>
             <rect y="5.47754" width="12" height="1.04471" fill="#BBBCBC"/>
-            </svg>
+          </svg>
         </button>
         <input autocomplete="false" type="number" value="0" min="0" max="{% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}{{ variant.inventory_quantity }}{% else %}999{% endif %}" class="lsg-1 lsg-bundle-product-select-quantity-input lsg-hidden" data-price="{{ variant.price }}" data-price-formatted="{{ variant.price | money }}" data-product="{{ variant.id }}" aria-label="quantity">
         <div class="lsg-bundle-product-select-quantity-input-display body-small">0</div>
         <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-plus" disabled>
-            <svg aria-labelledby="plusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <title id="plusIconTitle">plus</title>
-                <path d="M5.47634 6.52366H0L0 5.47634H5.47634V0L6.52366 0V5.47634L12 5.47634V6.52366L6.52366 6.52366L6.52366 12H5.47634L5.47634 6.52366Z" fill="#BBBCBC"/>
-            </svg>
-            <span class="lsg-bundle-product-select-quantity-increment-add-text quick-add__button">Add</span>
+          <svg aria-labelledby="plusIconTitle" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title id="plusIconTitle">plus</title>
+            <path d="M5.47634 6.52366H0L0 5.47634H5.47634V0L6.52366 0V5.47634L12 5.47634V6.52366L6.52366 6.52366L6.52366 12H5.47634L5.47634 6.52366Z" fill="#BBBCBC"/>
+          </svg>
+          <span class="lsg-bundle-product-select-quantity-increment-add-text quick-add__button">Add</span>
         </button>
       </div>
-      
     </div>
   </div>
   <div class="quick-add__content">
@@ -173,34 +106,36 @@
         </svg>
       </div>
       <div class="quick-add__images">
-        
+        <div class="quick-add__product-slider">
+          {% for media in product.media %}
+            <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+              {% render 'product-thumbnail', media: media, position: forloop.index, loop: true, modal_id: section.id, xr_button: true %}
+            </div>
+          {% endfor %}
+        </div>
+        {% comment %} <div class="quick-add__product-slider-arrows"></div> {% endcomment %}
       </div>
       <div class="quick-add__reviews">
         {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
       </div>
       <div class="quick-add__title">
         <h3 class="lsg-bundle-product-select-title">{{ title }}</h3>
-        {% if variant.product.metafields.my_fields.product_grid_2 != blank %}
-          <span class="body-small quick-add__grid-text">{{ variant.product.metafields.my_fields.product_grid_2 }}</span>
+        {% if variant.product.metafields.custom.bundle_saving_description != blank %}
+          <span class="body-small quick-add__grid-text">{{ variant.product.metafields.custom.bundle_saving_description }}</span>
         {% endif %}
         <div class="product__description sh4">
           {{ product.description }}
         </div>
+        {% if metaobject_data.icon_image != blank or metaobject_data.icon_text != blank  %}
         <div class="product-listblock__container-one">
-          <div class="product-listblock">  
-            {%- if section.settings.product_feature_icon != blank -%}
-              {{ section.settings.product_feature_icon | image_url: width: 28 | image_tag: class: 'motion-reduce img-fill' }}
-            {%- endif -%}
+          <div class="product-listblock">
+            {{ metaobject_data.icon_image | image_url: width: 28 | image_tag: alt: metaobject_data.icon_image.alt | escape }}
             <div>
-              {%- if section.settings.product_feature_text != blank -%}
-                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p> 
-              {%- endif -%}
-              {%- if section.settings.product_feature_text_two != blank -%}
-                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
-              {%- endif -%}
+              <p class="sh3 product-listblock__text">{{ metaobject_data.icon_text }}</p>
             </div>
           </div>
         </div>
+        {% endif %}
         <div class="product__drawer-triggers">
           {% unless product.handle == 'rescue-kit' %}
           <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
@@ -238,7 +173,87 @@
         </div>
       </div>
       {% endcomment %}
-      
+
+      <div class="quick-add__data">
+        <div class="quick-add__info">
+          <ul class="drawer__info-list">
+            {%- if metaobject_data.info_icon_image_1 != blank and metaobject_data.info_icon_text_1 != blank -%}
+              <li class="drawer__info-list-item">
+                {{ metaobject_data.info_icon_image_1 | image_url: width: 24 | image_tag: alt: featuredImage.alt | escape }}
+                <span>{{ metaobject_data.info_icon_text_1 }}</span>
+              </li>
+            {%- endif -%}
+            {%- if metaobject_data.info_icon_image_2 != blank and metaobject_data.info_icon_text_2 != blank -%}
+              <li class="drawer__info-list-item">
+                {{ metaobject_data.info_icon_image_2 | image_url: width: 24 | image_tag: alt: featuredImage.alt | escape }}
+                <span>{{ metaobject_data.info_icon_text_2 }}</span>
+              </li>
+            {%- endif -%}
+            {%- if metaobject_data.info_icon_image_3 != blank and metaobject_data.info_icon_text_3 != blank -%}
+              <li class="drawer__info-list-item">
+                {{ metaobject_data.info_icon_image_3 | image_url: width: 24 | image_tag: alt: featuredImage.alt | escape }}
+                <span>{{ metaobject_data.info_icon_text_3 }}</span>
+              </li>
+            {%- endif -%}
+            {%- if metaobject_data.info_icon_image_4 != blank and metaobject_data.info_icon_text_4 != blank -%}
+              <li class="drawer__info-list-item">
+                {{ metaobject_data.info_icon_image_4 | image_url: width: 24 | image_tag: alt: featuredImage.alt | escape }}
+                <span>{{ metaobject_data.info_icon_text_4 }}</span>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
+        <div class="quick-add__tabs">
+          <div class="image-with-dropdowns__content">
+            <div class="image-with-dropdowns__dropdown">
+              {%- if metaobject_data.tab_health_benefits != blank -%}
+              <div class="image-with-dropdowns__content-point active">
+                <div class="image-with-dropdowns__q active">
+                  <div class="image-with-dropdowns__content-text">
+                    <h5>Health Benefits</h5>
+                  </div>
+                  <div class="image-with-dropdowns__x"></div>
+                </div>
+                <div class="image-with-dropdowns__a">
+                  {{ metaobject_data.tab_health_benefits |  metafield_tag }}
+                </div>
+              </div>
+              {%- endif -%}
+              {%- if metaobject_data.tab_ingredients != blank -%}
+              <div class="image-with-dropdowns__content-point">
+                <div class="image-with-dropdowns__q">
+                  <div class="image-with-dropdowns__content-text">
+                    <h5>Ingredients</h5>
+                  </div>
+                  <div class="image-with-dropdowns__x"></div>
+                </div>
+                <div class="image-with-dropdowns__a">
+                  {{ metaobject_data.tab_ingredients | metafield_tag }}
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if metaobject_data.tab_how_to_use != blank -%}
+              <div class="image-with-dropdowns__content-point">
+                <div class="image-with-dropdowns__q">
+                  <div class="image-with-dropdowns__content-text">
+                    <h5>How To Use</h5>
+                  </div>
+                  <div class="image-with-dropdowns__x"></div>
+                </div>
+                <div class="image-with-dropdowns__a">
+                  {{ metaobject_data.tab_how_to_use | metafield_tag }}
+                </div>
+              </div>
+            {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-add__close quick-add__close-continue">
+        <span class="body-small">Continue Bundling</span>
+      </div>
+
     </div>
   </div>
 </div>

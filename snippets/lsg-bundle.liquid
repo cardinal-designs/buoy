@@ -183,7 +183,7 @@
                         {% for productSub in new_collection.products %}
                             {% assign productSubID = productSub.id | strip %}
                             {% if sub_bundle_products contains productSubID %}
-                                {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min %}
+                                {% render 'lsg-bundle-product-select', product: productSub, min: sub_bundle_min, index: forloop.index %}
                             {% endif %}
                         {% endfor %}
                     {% endif %}
@@ -192,7 +192,7 @@
                             {% for variantSub in productSub.variants %}
                                 {% assign variantSubID = variantSub.id | strip %}
                                 {% if sub_bundle_variants contains variantSubID %}
-                                    {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min %}
+                                    {% render 'lsg-bundle-variant-select', variant: variantSub, min: sub_bundle_min, index: forloop.index %}
                                 {% endif %}
                             {% endfor %}
                         {% endfor %}
