@@ -238,7 +238,7 @@ function incrementEnableValidation(trigger) {
       const bundleQuantity = getBundleQuantityByChild(trigger);
       productSetLists.forEach(function (productSetList) {
         
-        const quantityIncrementButtons = productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
+        const quantityIncrementButtons = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
         const bundleMax = productSetList.dataset.bundleMax;
 
         //increment button enable/disable
