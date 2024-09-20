@@ -252,6 +252,7 @@ function incrementEnableValidation(trigger) {
             const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
             const input = quantityIncrementButton.closest('.lsg-bundle-product-select-quantity-wrap').querySelector('.lsg-bundle-product-select-quantity-input');
             const quantity = input.value;
+            console.log("quantity", quantity)
             switch(method) {
                 case 'minus':
                     quantityIncrementButton.disabled = false;
