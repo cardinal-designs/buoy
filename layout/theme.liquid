@@ -252,7 +252,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   {% endif %}
 
 
-  {% if request.path contains '?' %}
+  {% if request.query_string contains '?' %}
     <meta name="robots" content="noindex, nofollow">
   {% else %}
     <meta name="robots" content="index, follow">
