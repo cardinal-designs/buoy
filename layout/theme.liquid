@@ -251,6 +251,11 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
     <meta name="robots" content="noindex">
   {% endif %}
 
+
+  {% unless request.path contains '?variant' %}
+    <meta name="robots" content="index, follow">
+  {% endunless %}
+
     <!-- Reddit Pixel -->
     <script>
       !function(w,d){
