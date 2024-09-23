@@ -252,11 +252,11 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   {% endif %}
 
 
-  {% unless request.path contains '?' %}
-    <meta name="robots" content="index, follow">
-  {% else %}
+  {% if request.path contains '?' %}
     <meta name="robots" content="noindex, nofollow">
-  {% endunless %}
+  {% else %}
+    <meta name="robots" content="index, follow">
+  {% endif %}
 
     <!-- Reddit Pixel -->
     <script>
