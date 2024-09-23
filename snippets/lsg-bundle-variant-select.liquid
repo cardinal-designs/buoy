@@ -98,14 +98,55 @@
   </div>
 
   <div class="quick-add__drawer">
-    <div class="quick-add__drawer--inner">
+    <div class="quick-add__close-main hide-desktop">
+      {%- if section.settings.svg_logo != blank -%}
+        <div class="quick-add__close-logo">
+          <a href="{{ routes.root_url }}" class="header-icon">
+            <div class="header__logo-wrapper">
+              <div class="header__svg-logo" style="max-width: 42px;">
+                {{ section.settings.svg_logo }}
+              </div>
+            </div>
+          </a>
+        </div>
+      {%- endif -%}
       <div class="quick-add__close">
         <span class="body-small">Close</span>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.01257 6.99999L0.849431 1.83685L1.83686 0.849419L7 6.01256L12.1631 0.849419L13.1506 1.83685L7.98743 6.99999L13.1506 12.1631L12.1631 13.1506L7 7.98742L1.83686 13.1506L0.84943 12.1631L6.01257 6.99999Z" fill="#1F2322"/>
         </svg>
       </div>
+    </div>
+    <div class="quick-add__drawer--inner">
+      <div class="quick-add__close-main hide-mobile">
+        {%- if section.settings.svg_logo != blank -%}
+          <div class="quick-add__close-logo">
+            <a href="{{ routes.root_url }}" class="header-icon">
+              <div class="header__logo-wrapper">
+                <div class="header__svg-logo" style="max-width: 42px;">
+                  {{ section.settings.svg_logo }}
+                </div>
+              </div>
+            </a>
+          </div>
+        {%- endif -%}
+        <div class="quick-add__close">
+          <span class="body-small">Close</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.01257 6.99999L0.849431 1.83685L1.83686 0.849419L7 6.01256L12.1631 0.849419L13.1506 1.83685L7.98743 6.99999L13.1506 12.1631L12.1631 13.1506L7 7.98742L1.83686 13.1506L0.84943 12.1631L6.01257 6.99999Z" fill="#1F2322"/>
+          </svg>
+        </div>
+      </div>
       <div class="quick-add__images">
+        {% if variant.product.tags != blank %}
+          <div class="quick-add__product-tags">
+            {% for tag in variant.product.tags limit: 1 %}
+              <div {% if variant.product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="quick-add__product-tag">
+                {{ tag }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
         <div class="quick-add__product-slider">
           {% for media in product.media %}
             <div class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
@@ -113,7 +154,7 @@
             </div>
           {% endfor %}
         </div>
-        {% comment %} <div class="quick-add__product-slider-arrows"></div> {% endcomment %}
+        <div class="quick-add__product-slider-arrows"></div>
       </div>
       <div class="quick-add__reviews">
         {% render 'okendo-reviews-product-rating-summary', product: variant.product %}
@@ -152,7 +193,6 @@
         </div>
       </div>
 
-      {% comment %}
       <div class="quick-add__buttons">
         <div class="lsg-bundle-product-select-quantity-wrap no-quantity {% if variant.inventory_policy == 'deny' and variant.inventory_management != nil %}product-maxed{% else %}{% endif %}">
           <button class="lsg-bundle-product-select-quantity-increment lsg-bundle-product-select-quantity-minus" disabled>
@@ -172,7 +212,6 @@
           </button>
         </div>
       </div>
-      {% endcomment %}
 
       <div class="quick-add__data">
         <div class="quick-add__info">

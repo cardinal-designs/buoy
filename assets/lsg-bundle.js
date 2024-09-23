@@ -236,11 +236,12 @@ function incrementEnableValidation(trigger) {
       
       let productSetLists = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-set-list');
       const bundleQuantity = getBundleQuantityByChild(trigger);
+      let productIdArr = [];
       productSetLists.forEach(function (productSetList) {
         
         const quantityIncrementButtons = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-select-quantity-increment');
         const bundleMax = productSetList.dataset.bundleMax;
-
+        
         //increment button enable/disable
         quantityIncrementButtons.forEach(function(quantityIncrementButton){
             const method = (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-minus') ? 'minus' : (quantityIncrementButton.classList.contains('lsg-bundle-product-select-quantity-plus') ? 'plus' : 'err'));
@@ -540,14 +541,17 @@ function incrementSubProduct(trigger) {
 }
 
 function mirrorQuantityDisplay(input) {
+    let productIdArr = [];
     const bundleBlock = getBundleBlock(input);
     const productID = input.dataset.product;
     const quantity = input.value;
     const productInputs = bundleBlock.querySelectorAll('[data-product="' + productID + '"].lsg-bundle-product-select-quantity-input');
     productInputs.forEach(function(productInput){
-        if(productInput !== input) {
+        let dataProductId = productInput.dataset.product;
+        if(productInput !== input && !productIdArr?.includes(dataProductId)) {
             productInput.value = quantity;
             inputChangeSubProduct(productInput);
+            productIdArr.push(dataProductId)
         }
     });
 }
@@ -723,6 +727,7 @@ function initializeBundle() {
 
 function getBundleQuantity(trigger) {
     //gets the quantity of the current active bundle block product list
+    let productIdArr = [];
     let bundleBlock = getBundleBlock(trigger);
     let quantity = -1;
     let productList = bundleBlock.querySelectorAll('.lsg-bundle-product-set-list');
@@ -730,7 +735,11 @@ function getBundleQuantity(trigger) {
     productList.forEach(function (element) {
       
       element.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-          quantity = quantity + parseInt(input.value);
+          let dataProductId = input.dataset.product;
+          if(!productIdArr?.includes(dataProductId)){
+            quantity = quantity + parseInt(input.value);
+            productIdArr.push(dataProductId)
+          }
       });
     })
     return quantity;
@@ -743,10 +752,15 @@ function getBundleQuantityByChild(trigger){
     let lsgBundleBuyboxBlock = trigger.closest(".lsg-bundle-buybox-block");
     let productSetLists = lsgBundleBuyboxBlock.querySelectorAll('.lsg-bundle-product-set-list');
     quantity = 0;
+    let productIdArr = [];
     productSetLists.forEach(function (productSetList) {
       
       productSetList.querySelectorAll('.lsg-bundle-product-select-quantity-input').forEach(function(input){
-          quantity = quantity + parseInt(input.value);
+          let dataProductId = input.dataset.product;
+          if(!productIdArr?.includes(dataProductId)){
+            quantity = quantity + parseInt(input.value);
+            productIdArr.push(dataProductId)
+          }
       });
     })
     return quantity;
