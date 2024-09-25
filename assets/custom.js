@@ -777,7 +777,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-  /* Popup modal drag and close code  -  Start */
+/* Popup modal drag and close code  -  Start */
   
   let touchStartY = 0;
   let touchEndY = 0;
