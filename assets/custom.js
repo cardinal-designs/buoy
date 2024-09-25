@@ -830,14 +830,14 @@ document.addEventListener('DOMContentLoaded', function() {
       swipeDistance = touchEndY - touchStartY;
   
       if (swipeDistance > threshold) {
-        supplementSideDrawer.style.transition = 'bottom 0.3s ease-out';
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
         supplementSideDrawer.style.bottom = '-100%';
         
         setTimeout(() => {
           closeDrawerButton.click();
         }, 300);
       } else {
-        supplementSideDrawer.style.transition = 'bottom 0.3s ease-out';
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
         supplementSideDrawer.style.bottom = '0';
       }
   
