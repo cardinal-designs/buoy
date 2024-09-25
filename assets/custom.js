@@ -843,7 +843,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
       setTimeout(() => {
         supplementSideDrawer.style.transition = '';
-        supplementSideDrawer.style.bottom = '';
+        // supplementSideDrawer.style.bottom = '';
         enableBodyScroll();
       }, 300);
     }
