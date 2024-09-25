@@ -835,8 +835,8 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
 
       closeDrawerButton.click();
     } else {
-      supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
-      supplementSideDrawer.style.transform = 'translateY(0)';
+      // supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+      // supplementSideDrawer.style.transform = 'translateY(0)';
     }
 
     setTimeout(() => {
