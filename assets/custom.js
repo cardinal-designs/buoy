@@ -777,98 +777,98 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// /* Popup modal drag and close code  -  Start */
+/* Popup modal drag and close code  -  Start */
 
-// let touchStartY = 0;
-// let touchEndY = 0;
-// let swipeDistance = 0;
-// const threshold = 50;
-// const maxScreenWidth = 769;
+let touchStartY = 0;
+let touchEndY = 0;
+let swipeDistance = 0;
+const threshold = 50;
+const maxScreenWidth = 769;
 
-// function disableBodyScroll() {
-//   document.body.style.overflow = 'hidden';
-// }
+function disableBodyScroll() {
+  document.body.style.overflow = 'hidden';
+}
 
-// function enableBodyScroll() {
-//   document.body.style.overflow = '';
-// }
+function enableBodyScroll() {
+  document.body.style.overflow = '';
+}
 
-// function isScreenBelowThreshold() {
-//   return window.innerWidth < maxScreenWidth;
-// }
+function isScreenBelowThreshold() {
+  return window.innerWidth < maxScreenWidth;
+}
 
-// function isScrolledToTop(supplementSideDrawer) {
-//   return supplementSideDrawer.scrollTop === 0;
-// }
+function isScrolledToTop(supplementSideDrawer) {
+  return supplementSideDrawer.scrollTop === 0;
+}
 
-// function onTouchStart(event, supplementSideDrawer) {
-//   if (!isScreenBelowThreshold()) return;
-//   if (isScrolledToTop(supplementSideDrawer)) {
-//     touchStartY = event.touches[0].clientY;
-//     supplementSideDrawer.style.transition = 'none';
-//     disableBodyScroll();
-//   }
-// }
+function onTouchStart(event, supplementSideDrawer) {
+  if (!isScreenBelowThreshold()) return;
+  if (isScrolledToTop(supplementSideDrawer)) {
+    touchStartY = event.touches[0].clientY;
+    supplementSideDrawer.style.transition = '1s';
+    disableBodyScroll();
+  }
+}
 
-// function onTouchMove(event, supplementSideDrawer) {
-//   if (!isScreenBelowThreshold()) return;
-//   if (isScrolledToTop(supplementSideDrawer)) {
-//     touchEndY = event.touches[0].clientY;
-//     swipeDistance = touchEndY - touchStartY;
+function onTouchMove(event, supplementSideDrawer) {
+  if (!isScreenBelowThreshold()) return;
+  if (isScrolledToTop(supplementSideDrawer)) {
+    touchEndY = event.touches[0].clientY;
+    swipeDistance = touchEndY - touchStartY;
 
-//     if (swipeDistance > 0) {
-//       supplementSideDrawer.style.transform = `translateY(${swipeDistance}px)`;
-//     }
-//   }
-// }
+    if (swipeDistance > 0) {
+      supplementSideDrawer.style.transform = `translateY(${swipeDistance}px)`;
+    }
+  }
+}
 
-// function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-//   if (!isScreenBelowThreshold()) return;
+function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+  if (!isScreenBelowThreshold()) return;
 
-//   if (isScrolledToTop(supplementSideDrawer)) {
-//     touchEndY = event.changedTouches[0].clientY;
-//     swipeDistance = touchEndY - touchStartY;
+  if (isScrolledToTop(supplementSideDrawer)) {
+    touchEndY = event.changedTouches[0].clientY;
+    swipeDistance = touchEndY - touchStartY;
 
-//     if (swipeDistance > threshold) {
-//       supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
-//       supplementSideDrawer.style.transform = 'translateY(100%)';
+    if (swipeDistance > threshold) {
+      supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+      supplementSideDrawer.style.transform = 'translateY(100%)';
 
-//       closeDrawerButton.click();
-//     } else {
-//       supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
-//       supplementSideDrawer.style.transform = 'translateY(0)';
-//     }
+      closeDrawerButton.click();
+    } else {
+      supplementSideDrawer.style.transition = 'transform 0.3s ease-out';
+      supplementSideDrawer.style.transform = 'translateY(0)';
+    }
 
-//     setTimeout(() => {
-//       supplementSideDrawer.style.transition = '';
-//       supplementSideDrawer.style.transform = '';
-//       enableBodyScroll();
-//     }, 1500);
-//   }
-// }
+    setTimeout(() => {
+      supplementSideDrawer.style.transition = '';
+      supplementSideDrawer.style.transform = '';
+      enableBodyScroll();
+    }, 1500);
+  }
+}
 
-// function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
-//   if (!supplementSideDrawer.dataset.touchEventsApplied) {
-//     supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
-//     supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
-//     supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
-//     supplementSideDrawer.dataset.touchEventsApplied = 'true';
-//   }
-// }
+function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+  if (!supplementSideDrawer.dataset.touchEventsApplied) {
+    supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+    supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+    supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+    supplementSideDrawer.dataset.touchEventsApplied = 'true';
+  }
+}
 
-// const observer = new MutationObserver((mutationsList) => {
-//   for (const mutation of mutationsList) {
-//     if (mutation.type === 'childList') {
-//       document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
-//         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-//         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+const observer = new MutationObserver((mutationsList) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
+        const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+        const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
         
-//         applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
-//       });
-//     }
-//   }
-// });
+        applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+      });
+    }
+  }
+});
 
-// observer.observe(document.body, { childList: true, subtree: true });
+observer.observe(document.body, { childList: true, subtree: true });
 
-// /* Popup modal drag and close code  -  End */
+/* Popup modal drag and close code  -  End */
