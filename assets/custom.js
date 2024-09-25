@@ -840,7 +840,7 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
     }
 
     setTimeout(() => {
-      supplementSideDrawer.style.transition = '';
+      // supplementSideDrawer.style.transition = '';
       // supplementSideDrawer.style.transform = '';
       enableBodyScroll();
     }, 1500);
