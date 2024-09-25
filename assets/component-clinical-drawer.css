@@ -8,8 +8,12 @@
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
-  padding: 0 30px;
+  padding: 0;
   padding-bottom: 100px;
+}
+
+.clinical-trial-drawer .drawer__wrapper-main {
+  padding: 0 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -21,11 +25,15 @@
     width: 100%;
     height: 80%;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
     transition: 1s;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+  }
+
+  .clinical-trial-drawer .drawer__wrapper-main {
+    padding: 0 20px;
   }
   
 }
