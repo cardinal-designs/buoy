@@ -930,7 +930,7 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
 
     if (swipeDistance > threshold) {
       // Swiped past the threshold, close the drawer
-      // supplementSideDrawer.style.transition = 'bottom 0.3s ease-out'; // Smooth transition for closing
+      supplementSideDrawer.style.transition = 'bottom 0.3s ease-out'; // Smooth transition for closing
       supplementSideDrawer.style.bottom = '-100%'; // Move drawer completely out of view
       
       setTimeout(() => {
@@ -938,14 +938,14 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
       }, 300); // Match the transition duration
     } else {
       // Not enough swipe distance, reset the drawer back to its original position
-        // supplementSideDrawer.style.transition = 'bottom 0.3s ease-out'; // Smooth transition back to original position
+      supplementSideDrawer.style.transition = 'bottom 0.3s ease-out'; // Smooth transition back to original position
       supplementSideDrawer.style.bottom = '0'; // Return to original position
     }
 
     // Re-enable scrolling and reset styles after transition
     setTimeout(() => {
-      // supplementSideDrawer.style.transition = ''; // Remove transition
-      // supplementSideDrawer.style.bottom = ''; // Reset bottom
+      supplementSideDrawer.style.transition = ''; // Remove transition
+      supplementSideDrawer.style.bottom = ''; // Reset bottom
       enableBodyScroll(); // Re-enable scrolling
     }, 300); // Match the transition duration
   }
