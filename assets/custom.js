@@ -841,7 +841,7 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
 
     setTimeout(() => {
       supplementSideDrawer.style.transition = '';
-      supplementSideDrawer.style.transform = '';
+      // supplementSideDrawer.style.transform = '';
       enableBodyScroll();
     }, 1500);
   }
