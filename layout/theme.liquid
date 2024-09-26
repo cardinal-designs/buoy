@@ -19,7 +19,6 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbq.js');
     </script>
-
     <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Check if the user is on the account creation confirmation page
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     {% if customer %}
-
             // Check if the event has already been fired
         if (localStorage.getItem('registrationComplete')) {
             // Fire the CompleteRegistration event
@@ -38,13 +36,9 @@ setTimeout(function(){
               // Set a flag in local storage to prevent future tracking
            localStorage.removeItem("registrationComplete");
 },5000);
-
         }
     {% endif %}
 });
-
-    
-
     </script>
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
