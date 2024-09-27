@@ -786,11 +786,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const maxScreenWidth = 769;
   
   function disableBodyScroll() {
-    // document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
   
   function enableBodyScroll() {
-    // document.body.style.overflow = '';
+    document.body.style.overflow = '';
   }
   
   function isScreenBelowThreshold() {
