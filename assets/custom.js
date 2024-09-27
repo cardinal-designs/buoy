@@ -858,7 +858,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
     if (!supplementSideDrawer.dataset.touchEventsApplied) {
       supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
-      supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer), { passive: false });
+      supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
       supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
       supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
       supplementSideDrawer.dataset.touchEventsApplied = 'true';
