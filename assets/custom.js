@@ -777,6 +777,111 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// /* Popup modal drag and close code  -  Start */
+  
+//   let touchStartY = 0;
+//   let touchEndY = 0;
+//   let swipeDistance = 0;
+//   const threshold = 50;
+//   const maxScreenWidth = 769;
+  
+//   function disableBodyScroll() {
+//     document.body.style.overflow = 'hidden';
+//   }
+  
+//   function enableBodyScroll() {
+//     document.body.style.overflow = '';
+//   }
+  
+//   function isScreenBelowThreshold() {
+//     return window.innerWidth < maxScreenWidth;
+//   }
+  
+//   function isScrolledToTop(supplementSideDrawer) {
+//     return supplementSideDrawer.scrollTop === 0;
+//   }
+  
+//   function onTouchStart(event, supplementSideDrawer) {
+//     if (!isScreenBelowThreshold()) return;
+//     if (isScrolledToTop(supplementSideDrawer)) {
+//       touchStartY = event.touches[0].clientY;
+//       supplementSideDrawer.style.transition = 'none';
+//       disableBodyScroll();
+//     }
+//   }
+  
+//   function onTouchMove(event, supplementSideDrawer) {
+//     if (!isScreenBelowThreshold()) return;
+//     if (isScrolledToTop(supplementSideDrawer)) {
+//       touchEndY = event.touches[0].clientY;
+//       swipeDistance = touchEndY - touchStartY;
+  
+//       if (swipeDistance > 0) {      
+//         supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
+//       }
+//     }
+//   }
+  
+//   function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+//     if (!isScreenBelowThreshold()) return;
+  
+//     if (isScrolledToTop(supplementSideDrawer)) {
+//       touchEndY = event.changedTouches[0].clientY;
+//       swipeDistance = touchEndY - touchStartY;
+  
+//       if (swipeDistance > threshold) {
+//         supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+//         supplementSideDrawer.style.bottom = '-100%';
+        
+//         setTimeout(() => {
+//           closeDrawerButton.click();
+//         }, 300);
+//       } else {
+//         supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+//         supplementSideDrawer.style.bottom = '0';
+//       }
+  
+//       setTimeout(() => {
+//         supplementSideDrawer.style.transition = '';
+//         // supplementSideDrawer.style.bottom = '';
+//         enableBodyScroll();
+//       }, 300);
+//     }
+//   }
+  
+//   function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+//     if (!supplementSideDrawer.dataset.touchEventsApplied) {
+//       supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+//       supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+//       supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+//       supplementSideDrawer.dataset.touchEventsApplied = 'true';
+//     }
+//   }
+  
+//   const observer = new MutationObserver((mutationsList) => {
+//     for (const mutation of mutationsList) {
+//       if (mutation.type === 'childList') {
+//         document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
+//           const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+//           const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+          
+//           applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+//         });
+//       }
+//     }
+//   });
+  
+//   observer.observe(document.body, { childList: true, subtree: true });
+// /* Popup modal drag and close code  -  End */
+
+
+
+
+
+
+
+
+
 /* Popup modal drag and close code  -  Start */
   
   let touchStartY = 0;
@@ -787,10 +892,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function disableBodyScroll() {
     document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none'; // Prevent scroll chaining
   }
   
   function enableBodyScroll() {
     document.body.style.overflow = '';
+    document.body.style.touchAction = ''; // Re-enable scroll chaining
   }
   
   function isScreenBelowThreshold() {
@@ -818,6 +925,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
       if (swipeDistance > 0) {      
         supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
+        event.preventDefault(); // Prevent default scroll behavior
       }
     }
   }
@@ -843,10 +951,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
       setTimeout(() => {
         supplementSideDrawer.style.transition = '';
-        // supplementSideDrawer.style.bottom = '';
         enableBodyScroll();
       }, 300);
     }
+  }
+
+  function onTouchCancel() {
+    enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
   }
   
   function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
@@ -854,6 +965,7 @@ document.addEventListener('DOMContentLoaded', function() {
       supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
       supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
       supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+      supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
       supplementSideDrawer.dataset.touchEventsApplied = 'true';
     }
   }
@@ -872,4 +984,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   observer.observe(document.body, { childList: true, subtree: true });
+
 /* Popup modal drag and close code  -  End */
