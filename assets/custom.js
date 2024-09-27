@@ -883,7 +883,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // /* Popup modal drag and close code  -  End */
 
 
-
 /* Popup modal drag and close code  -  Start */
 
 let touchStartY = 0;
@@ -892,16 +891,39 @@ let swipeDistance = 0;
 const threshold = 50;
 const maxScreenWidth = 769;
 
-function disableBodyScroll() {
+// Disable body scroll but allow scroll on the popup
+function disableBodyScroll(supplementSideDrawer) {
   document.body.style.overflow = 'hidden';
-  document.body.style.touchAction = 'none'; // Prevent scroll chaining
+  document.body.style.touchAction = 'none'; // Prevent default touch scrolling behavior
+
+  // Allow scroll inside the popup area only
+  supplementSideDrawer.addEventListener('touchmove', handlePopupScroll);
 }
 
-function enableBodyScroll() {
+// Enable body scroll when the popup closes
+function enableBodyScroll(supplementSideDrawer) {
   document.body.style.overflow = '';
-  document.body.style.touchAction = ''; // Re-enable scroll chaining
+  document.body.style.touchAction = ''; // Re-enable default touch scrolling behavior
+  
+  supplementSideDrawer.removeEventListener('touchmove', handlePopupScroll);
 }
 
+// Function to prevent body scrolling while allowing the popup to scroll
+function handlePopupScroll(event) {
+  const scrollableArea = event.currentTarget;
+  const atTop = scrollableArea.scrollTop === 0;
+  const atBottom = scrollableArea.scrollHeight - scrollableArea.scrollTop === scrollableArea.clientHeight;
+  
+  if (atTop && event.touches[0].clientY > touchStartY) {
+    // Prevent scrolling past the top of the popup
+    event.preventDefault();
+  } else if (atBottom && event.touches[0].clientY < touchStartY) {
+    // Prevent scrolling past the bottom of the popup
+    event.preventDefault();
+  }
+}
+
+// Helper functions for screen size and scroll positions
 function isScreenBelowThreshold() {
   return window.innerWidth < maxScreenWidth;
 }
@@ -910,12 +932,13 @@ function isScrolledToTop(supplementSideDrawer) {
   return supplementSideDrawer.scrollTop === 0;
 }
 
+// Touch event handlers
 function onTouchStart(event, supplementSideDrawer) {
   if (!isScreenBelowThreshold()) return;
   if (isScrolledToTop(supplementSideDrawer)) {
     touchStartY = event.touches[0].clientY;
     supplementSideDrawer.style.transition = 'none';
-    disableBodyScroll(); // Already disabled when opened, but just in case
+    disableBodyScroll(supplementSideDrawer); // Disable body scroll
   }
 }
 
@@ -953,37 +976,27 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
 
     setTimeout(() => {
       supplementSideDrawer.style.transition = '';
-      enableBodyScroll(); // Re-enable body scroll after the drawer closes
+      enableBodyScroll(supplementSideDrawer); // Re-enable body scroll
     }, 300);
   }
 }
 
-function onTouchCancel() {
-  enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
+function onTouchCancel(supplementSideDrawer) {
+  enableBodyScroll(supplementSideDrawer); // Ensure scroll is re-enabled if touch is canceled
 }
 
+// Apply touch events to the popup drawer
 function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
   if (!supplementSideDrawer.dataset.touchEventsApplied) {
     supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
     supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
     supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
-    supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
+    supplementSideDrawer.addEventListener('touchcancel', () => onTouchCancel(supplementSideDrawer)); // Handle touchcancel
     supplementSideDrawer.dataset.touchEventsApplied = 'true';
   }
 }
 
-function openPopupDrawer(supplementSideDrawer) {
-  // Open the popup drawer logic (e.g., make it visible)
-  supplementSideDrawer.classList.add('open');
-  disableBodyScroll(); // Disable body scroll when the popup is opened
-}
-
-function closePopupDrawer(supplementSideDrawer) {
-  // Close the popup drawer logic (e.g., hide it)
-  supplementSideDrawer.classList.remove('open');
-  enableBodyScroll(); // Re-enable body scroll when the popup is closed
-}
-
+// Observer to apply touch events to dynamically created popup drawers
 const observer = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
     if (mutation.type === 'childList') {
@@ -994,7 +1007,7 @@ const observer = new MutationObserver((mutationsList) => {
         applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
 
         // Hook into drawer open/close logic here
-        closeDrawerButton.addEventListener('click', () => closePopupDrawer(supplementSideDrawer));
+        closeDrawerButton.addEventListener('click', () => enableBodyScroll(supplementSideDrawer)); // Enable body scroll on close
       });
     }
   }
@@ -1003,4 +1016,5 @@ const observer = new MutationObserver((mutationsList) => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 /* Popup modal drag and close code  -  End */
+
 
