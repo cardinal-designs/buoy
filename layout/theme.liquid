@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (localStorage.getItem('registrationComplete')) {
             // Fire the CompleteRegistration event
           fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
-setTimeout(function(){
-              // Set a flag in local storage to prevent future tracking
-           localStorage.removeItem("registrationComplete");
-},5000);
+// setTimeout(function(){
+//               // Set a flag in local storage to prevent future tracking
+//            localStorage.removeItem("registrationComplete");
+// },5000);
         }
     {% endif %}
 });
