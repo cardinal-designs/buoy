@@ -131,7 +131,8 @@
             "text_3": "Flavorings",
             "icon_4": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
             "text_4": "Artificial Ingredients like Sucralose",
-            "text_5": "",
+            "icon_5": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text_5": "Improper Electrolyte Ratios",
             "text_6": ""
           }
         },
@@ -158,46 +159,6 @@
       "settings": {
         "reverse_layout": true,
         "video": "shopify://files/videos/SNIPPET03_1X1_FINAL (1).mp4"
-      }
-    },
-    "custom_featured_product_ibtfCR": {
-      "type": "custom-featured-product",
-      "settings": {
-        "product": "hydration-drops",
-        "secondary_background": false,
-        "enable_video_looping": false,
-        "free_shipping_text": "",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none"
-      }
-    },
-    "chronic_illness_featured_product_DUBgjx": {
-      "type": "chronic-illness-featured-product",
-      "settings": {
-        "title": "Try the <em>clinically-proven</em> option",
-        "icon_1": "shopify://shop_images/heart-icon.svg",
-        "icon_image_text_1": "Try 100% Risk-Free",
-        "icon_2": "shopify://shop_images/check-icon.svg",
-        "icon_image_text_2": "30-Day Money Back Guarantee",
-        "icon_3": "shopify://shop_images/star-icon.svg",
-        "icon_image_text_3": "Free U.S. Shipping",
-        "product": "liquid-electrolyte-variety-kit",
-        "product_title": "",
-        "enable_video_looping": false,
-        "free_shipping_text": "",
-        "show_price": false,
-        "show_quantity": false,
-        "show_view_details": false,
-        "subscription_benefits": "",
-        "add_top_border": false,
-        "add_bottom_border": false,
-        "background": "none",
-        "position": "image_first"
       }
     },
     "chronic_product_grid_gr64Un": {
@@ -311,7 +272,7 @@
         "product_wwX9Ja"
       ],
       "settings": {
-        "title": "All Buoy Electrolytes Are Equally Hydrating",
+        "title": "Try the",
         "link_label": "",
         "link": "",
         "icon_1": "shopify://shop_images/drink-icon.svg",
@@ -323,6 +284,71 @@
         "icon_4": "shopify://shop_images/Icons_thick_1.svg",
         "icon_image_text_4": "100% Microplastic Free + Third Party Tested",
         "show_onetime_purchase": true
+      }
+    },
+    "text_image_toggle_Eb8nUW": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "block_nmPzjN": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "block_FbzNBQ": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        },
+        "block_atMCXD": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "block_nmPzjN",
+        "block_FbzNBQ",
+        "block_atMCXD"
+      ],
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards</span> For Hydration",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "button_text": "Clinical Study",
+        "background": ""
+      }
+    },
+    "chronic_illness_featured_product_DUBgjx": {
+      "type": "chronic-illness-featured-product",
+      "settings": {
+        "title": "Try the <em>clinically-proven</em> option",
+        "icon_1": "shopify://shop_images/heart-icon.svg",
+        "icon_image_text_1": "Try 100% Risk-Free",
+        "icon_2": "shopify://shop_images/check-icon.svg",
+        "icon_image_text_2": "30-Day Money Back Guarantee",
+        "icon_3": "shopify://shop_images/star-icon.svg",
+        "icon_image_text_3": "Free U.S. Shipping",
+        "product": "liquid-electrolyte-variety-kit",
+        "product_title": "",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
       }
     },
     "reviews_slider_qYFVcJ": {
@@ -447,9 +473,9 @@
     "image_content_K8NGPN",
     "content_with_media_8pUaVc",
     "content_with_media_UPjUQR",
-    "custom_featured_product_ibtfCR",
-    "chronic_illness_featured_product_DUBgjx",
     "chronic_product_grid_gr64Un",
+    "text_image_toggle_Eb8nUW",
+    "chronic_illness_featured_product_DUBgjx",
     "reviews_slider_qYFVcJ",
     "16591183242a45c875",
     "chronic_review_CpxV3P"
