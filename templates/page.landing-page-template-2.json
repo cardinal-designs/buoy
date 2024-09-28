@@ -160,6 +160,22 @@
         "video": "shopify://files/videos/SNIPPET03_1X1_FINAL (1).mp4"
       }
     },
+    "custom_featured_product_ibtfCR": {
+      "type": "custom-featured-product",
+      "settings": {
+        "product": "hydration-drops",
+        "secondary_background": false,
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
     "chronic_illness_featured_product_DUBgjx": {
       "type": "chronic-illness-featured-product",
       "settings": {
@@ -402,6 +418,7 @@
     },
     "16591183242a45c875": {
       "type": "product-bar-illness",
+      "disabled": true,
       "settings": {
         "title": "All regular Buoy Electrolyte Drops are equally hydrating.",
         "btn_label": "Shop Buoy Electrolytes"
@@ -430,6 +447,7 @@
     "image_content_K8NGPN",
     "content_with_media_8pUaVc",
     "content_with_media_UPjUQR",
+    "custom_featured_product_ibtfCR",
     "chronic_illness_featured_product_DUBgjx",
     "chronic_product_grid_gr64Un",
     "reviews_slider_qYFVcJ",
