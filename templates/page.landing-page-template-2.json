@@ -117,17 +117,70 @@
         "text_pY4xQh": {
           "type": "text",
           "settings": {
-            "text": "In a clinical study, Buoy electrolytes were shown to be <strong>49% more hydrating than a leading electrolyte competitor</strong>."
+            "text": "In a clinical study, Buoy electrolytes were shown to be <strong>49% more hydrating than a leading electrolyte competitor</strong> due to sweet and diuretic additives, electrolyte ratios and ingredient sourcing."
+          }
+        },
+        "benefits_ibC3Xb": {
+          "type": "benefits",
+          "settings": {
+            "icon_1": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text_1": "Sugar, Stevia and Other Sweeteners",
+            "icon_2": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text_2": "Carbohydrates",
+            "icon_3": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text_3": "Flavorings",
+            "icon_4": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text_4": "Artificial Ingredients like Sucralose",
+            "text_5": "",
+            "text_6": ""
+          }
+        },
+        "text_R4xDk3": {
+          "type": "text",
+          "settings": {
+            "text": "Buoy's clinical study is only the sixth clinical study to measure ingestion rate, electrolyte ratios and hydration efficacy."
+          }
+        },
+        "text_zi6UfQ": {
+          "type": "text",
+          "settings": {
+            "text": "We found that large, single serving doses of electrolytes induce physiological responses to protect against high blood salt and undermine hydration status at even 60 minutes."
           }
         }
       },
       "block_order": [
         "title_9jbgYN",
-        "text_pY4xQh"
+        "text_pY4xQh",
+        "benefits_ibC3Xb",
+        "text_R4xDk3",
+        "text_zi6UfQ"
       ],
       "settings": {
-        "reverse_layout": false,
+        "reverse_layout": true,
         "video": "shopify://files/videos/SNIPPET03_1X1_FINAL (1).mp4"
+      }
+    },
+    "chronic_illness_featured_product_DUBgjx": {
+      "type": "chronic-illness-featured-product",
+      "settings": {
+        "title": "A Clinically-Proven Option",
+        "icon_1": "shopify://shop_images/heart-icon.svg",
+        "icon_image_text_1": "Try 100% Risk-Free",
+        "icon_2": "shopify://shop_images/check-icon.svg",
+        "icon_image_text_2": "30-Day Money Back Guarantee",
+        "icon_image_text_3": "",
+        "product": "hydration-drops",
+        "product_title": "",
+        "enable_video_looping": false,
+        "free_shipping_text": "",
+        "show_price": false,
+        "show_quantity": false,
+        "show_view_details": false,
+        "subscription_benefits": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none",
+        "position": "image_first"
       }
     },
     "reviews_slider_qYFVcJ": {
@@ -479,6 +532,7 @@
     "image_content_K8NGPN",
     "content_with_media_8pUaVc",
     "content_with_media_UPjUQR",
+    "chronic_illness_featured_product_DUBgjx",
     "reviews_slider_qYFVcJ",
     "content_with_media_JLNWc6",
     "donations_Wyp3Di",
