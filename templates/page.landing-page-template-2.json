@@ -161,6 +161,110 @@
         "video": "shopify://files/videos/SNIPPET03_1X1_FINAL (1).mp4"
       }
     },
+    "text_image_toggle_Eb8nUW": {
+      "type": "text-image-toggle",
+      "blocks": {
+        "block_nmPzjN": {
+          "type": "block",
+          "settings": {
+            "title": "Powder Packets",
+            "image": "PDP_Chart_Powder_Packet.svg",
+            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
+          }
+        },
+        "block_FbzNBQ": {
+          "type": "block",
+          "settings": {
+            "title": "Tablets",
+            "image": "PDP_Chart_Tablet.svg",
+            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
+          }
+        },
+        "block_atMCXD": {
+          "type": "block",
+          "settings": {
+            "title": "Sports Drinks",
+            "image": "PDP_Chart_Sports_Drink.svg",
+            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
+          }
+        }
+      },
+      "block_order": [
+        "block_nmPzjN",
+        "block_FbzNBQ",
+        "block_atMCXD"
+      ],
+      "settings": {
+        "title": "Setting <span class=\"rhyme-italic\">New Standards</span> For Hydration",
+        "subtitle": "Compare Buoy with leading competitors:",
+        "supplements": true,
+        "button_text": "Clinical Study",
+        "background": ""
+      }
+    },
+    "media_grid_Viajpj": {
+      "type": "media-grid",
+      "blocks": {
+        "benefit_CraK3d": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Icons_thick_1.png",
+            "text": "Naturally-Balanced Electrolyte Ratios"
+          }
+        },
+        "benefit_RPGffp": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/water-icon.svg",
+            "text": "Bioavailable Form Factor"
+          }
+        },
+        "benefit_3TmVCg": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Icons_thick_5.png",
+            "text": "Harvested Ingredient Sourcing"
+          }
+        },
+        "benefit_Lf9rpX": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
+            "text": "No Sugar, Sweeteners, Flavors"
+          }
+        },
+        "benefit_gFnwAm": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Icons_thick_1.svg",
+            "text": "Third Party Tested"
+          }
+        },
+        "benefit_Wnk4V6": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Icons_thick.png",
+            "text": "100% Microplastic Free"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_CraK3d",
+        "benefit_RPGffp",
+        "benefit_3TmVCg",
+        "benefit_Lf9rpX",
+        "benefit_gFnwAm",
+        "benefit_Wnk4V6"
+      ],
+      "settings": {
+        "suptitle": "Try Buoy Risk Free",
+        "title": "Clinically-Proven Results",
+        "text": "With Buoy, your body retains both more water and electrolytes compared to water alone and other hydration supplements.",
+        "background": "",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "chronic_product_grid_gr64Un": {
       "type": "chronic-product-grid",
       "blocks": {
@@ -272,65 +376,20 @@
         "product_wwX9Ja"
       ],
       "settings": {
-        "title": "Try the",
+        "title": "",
         "link_label": "",
         "link": "",
-        "icon_1": "shopify://shop_images/drink-icon.svg",
-        "icon_image_text_1": "Add To Any Beverage",
-        "icon_2": "shopify://shop_images/Icons_thick_5.png",
-        "icon_image_text_2": "87+ Deep Ocean Minerals",
-        "icon_3": "shopify://shop_images/no-icon_0b47318d-27f3-4126-9d12-11e5e9c5a901.svg",
-        "icon_image_text_3": "No Sugar, Sweeteners, Flavors",
-        "icon_4": "shopify://shop_images/Icons_thick_1.svg",
-        "icon_image_text_4": "100% Microplastic Free + Third Party Tested",
+        "icon_image_text_1": "",
+        "icon_image_text_2": "",
+        "icon_image_text_3": "",
+        "icon_image_text_4": "",
         "show_onetime_purchase": true
-      }
-    },
-    "text_image_toggle_Eb8nUW": {
-      "type": "text-image-toggle",
-      "blocks": {
-        "block_nmPzjN": {
-          "type": "block",
-          "settings": {
-            "title": "Powder Packets",
-            "image": "PDP_Chart_Powder_Packet.svg",
-            "mobile_image": "PDP_Chart_Powder Packet_Mobile.svg"
-          }
-        },
-        "block_FbzNBQ": {
-          "type": "block",
-          "settings": {
-            "title": "Tablets",
-            "image": "PDP_Chart_Tablet.svg",
-            "mobile_image": "PDP_Chart_Tablet_Mobile.svg"
-          }
-        },
-        "block_atMCXD": {
-          "type": "block",
-          "settings": {
-            "title": "Sports Drinks",
-            "image": "PDP_Chart_Sports_Drink.svg",
-            "mobile_image": "PDP_Chart_Sports Drink_Mobile.svg"
-          }
-        }
-      },
-      "block_order": [
-        "block_nmPzjN",
-        "block_FbzNBQ",
-        "block_atMCXD"
-      ],
-      "settings": {
-        "title": "Setting <span class=\"rhyme-italic\">New Standards</span> For Hydration",
-        "subtitle": "Compare Buoy with leading competitors:",
-        "supplements": true,
-        "button_text": "Clinical Study",
-        "background": ""
       }
     },
     "chronic_illness_featured_product_DUBgjx": {
       "type": "chronic-illness-featured-product",
       "settings": {
-        "title": "Try the <em>clinically-proven</em> option",
+        "title": "Or <em>Try Them All</em>",
         "icon_1": "shopify://shop_images/heart-icon.svg",
         "icon_image_text_1": "Try 100% Risk-Free",
         "icon_2": "shopify://shop_images/check-icon.svg",
@@ -473,8 +532,9 @@
     "image_content_K8NGPN",
     "content_with_media_8pUaVc",
     "content_with_media_UPjUQR",
-    "chronic_product_grid_gr64Un",
     "text_image_toggle_Eb8nUW",
+    "media_grid_Viajpj",
+    "chronic_product_grid_gr64Un",
     "chronic_illness_featured_product_DUBgjx",
     "reviews_slider_qYFVcJ",
     "16591183242a45c875",
