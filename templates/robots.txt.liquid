@@ -1,8 +1,16 @@
 # we use Shopify as our ecommerce platform
 
+User-agent: Googlebot
+allow: /
+
+User-agent: Googlebot-Image
+allow: /
+
 User-agent: *
 Disallow: /admin
 Disallow: /cart
+Disallow: /cart/update
+Disallow: /cart/add
 Disallow: /orders
 Disallow: /checkouts/
 Disallow: /checkout
@@ -33,6 +41,9 @@ Disallow: /*/*?*ls%3d*%3fls%3d*
 Disallow: /search
 Disallow: /apple-app-site-association
 Disallow: /.well-known/shopify/monorail
+Disallow: /wpm@
+Disallow: /products/*?variant=
+Disallow: /*/
 Sitemap: https://justaddbuoy.com/sitemap.xml
 
 # Google adsbot ignores robots.txt unless specifically named!
