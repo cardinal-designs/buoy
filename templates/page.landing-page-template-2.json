@@ -88,6 +88,7 @@
         },
         "link_pcFBRn": {
           "type": "link",
+          "disabled": true,
           "settings": {
             "link_label": "Read Customer Reviews",
             "link": "#shopify-section-template--23171372351788__reviews_slider_qYFVcJ"
@@ -198,7 +199,7 @@
         "title": "Setting <span class=\"rhyme-italic\">New Standards</span> For Hydration",
         "subtitle": "Compare Buoy with leading competitors:",
         "supplements": true,
-        "button_text": "Clinical Study",
+        "button_text": "",
         "background": ""
       }
     },
