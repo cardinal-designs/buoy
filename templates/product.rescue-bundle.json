@@ -15,14 +15,14 @@
         "3aaebc96-7374-4f5b-808e-92ce2792f5b5": {
           "type": "dropdown",
           "settings": {
-            "title": "Hydration Drops",
+            "title": "Rescue Drops",
             "subtitle": "Unflavored Liquid Electrolytes",
-            "bubble_text": "40 Serv\/Bottle",
-            "icon1": "shopify:\/\/shop_images\/no-icon.svg",
-            "list_item1": "No Sugar or Sweeteners",
-            "icon2": "shopify:\/\/shop_images\/check.svg",
-            "list_item2": "Electrolytes & Trace Minerals",
-            "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
+            "bubble_text": "20 Serv/Bottle",
+            "icon1": "shopify://shop_images/bolt-icon.svg",
+            "list_item1": "300mg Sodium Per Serv",
+            "icon2": "shopify://shop_images/check.svg",
+            "list_item2": "87+ Trace Minerals",
+            "icon3": "shopify://shop_images/23_Buoy_Website_BeverageGif_1.gif",
             "list_item3": "Enhance Any Drink"
           }
         },
@@ -31,12 +31,12 @@
           "settings": {
             "title": "Rescue Salt",
             "subtitle": "Harvested, Unrefined Sea Salt",
-            "bubble_text": "45 Serv\/Jar",
-            "icon1": "shopify:\/\/shop_images\/Icons_thick_1.png",
+            "bubble_text": "45 Serv/Jar",
+            "icon1": "shopify://shop_images/Icons_thick_1.png",
             "list_item1": "1,215mg Electrolytes Per Serving",
-            "icon2": "shopify:\/\/shop_images\/check.svg",
+            "icon2": "shopify://shop_images/check.svg",
             "list_item2": "87+ Ionic Trace Minerals",
-            "icon3": "shopify:\/\/shop_images\/23_Buoy_Website_BeverageGif_1.gif",
+            "icon3": "shopify://shop_images/23_Buoy_Website_BeverageGif_1.gif",
             "list_item3": "Add To Food, Drinks, or Directly on Tongue"
           }
         },
@@ -57,25 +57,25 @@
         "b807a726-d1e0-4fb9-96ca-01c7806619c6": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "“Overall more energized and not so groggy\"",
-            "video_tag": "Energy",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/92a83b0756a744daa9ec5b4e0305bba7.mp4"
+            "testimonial_text": "These drops are AMAZING and great for my POTSie body!!!",
+            "video_tag": "POTS",
+            "testimonial_video": "https://cdn.shopify.com/videos/c/o/v/c62ae021095b469caa25e9635d4d0dce.mp4"
           }
         },
         "006c54ae-0968-491b-aa76-79e4de6d7031": {
           "type": "testimonials",
           "settings": {
             "testimonial_text": "\"The first electrolytes that don't trigger my IBS\"",
-            "video_tag": "Ingredient Sourcing",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7099f0d88dbc4e4e92d2995137b52617.mp4"
+            "video_tag": "IBS",
+            "testimonial_video": "https://cdn.shopify.com/videos/c/o/v/83a3ce70242d457a8d367e1c1a0e6152.mp4"
           }
         },
         "d6b99130-55e3-4ed2-b8da-f13041c6ec7d": {
           "type": "testimonials",
           "settings": {
-            "testimonial_text": "\"I'm a chef and these things keep me going all day\"",
-            "video_tag": "Energy",
-            "testimonial_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/44dde4e5b0174adf80337786ab096648.mp4"
+            "testimonial_text": "\"Buoy immediately made a huge difference in my daily symptoms.\"",
+            "video_tag": "POTS",
+            "testimonial_video": "https://cdn.shopify.com/videos/c/o/v/a0e2f7ad83b141ec9103d5376ffb6289.mov"
           }
         },
         "e70efabd-a066-4a09-837b-bb3e3eb7e0c7": {
@@ -85,7 +85,7 @@
             "testimonial_text": "“My hangover hack\"",
             "video_tag": "",
             "testimonial_video": "",
-            "testimonial_image": "shopify:\/\/shop_images\/Screen_Shot_2023-09-20_at_1.55_1.png"
+            "testimonial_image": "shopify://shop_images/Screen_Shot_2023-09-20_at_1.55_1.png"
           }
         },
         "fc2dae20-3e71-4600-bb27-51560d9e8ded": {
@@ -95,14 +95,14 @@
             "testimonial_text": "\"Three days in and I actually feel fresh!\"",
             "video_tag": "",
             "testimonial_video": "",
-            "testimonial_image": "shopify:\/\/shop_images\/Screen_Shot_2023-09-20_at_1.55_1.png"
+            "testimonial_image": "shopify://shop_images/Screen_Shot_2023-09-20_at_1.55_1.png"
           }
         },
         "8c815d42-5465-43da-9c7c-2725d06ac27a": {
           "type": "list_block",
           "disabled": true,
           "settings": {
-            "list_block_type_img": "shopify:\/\/shop_images\/Callouts.png",
+            "list_block_type_img": "shopify://shop_images/Callouts.png",
             "list_block_type_text": "30-Day Money Back Guarantee",
             "list_block_type_subtext": "See how good you feel using Buoy for a month. Don't love it? It's on us."
           }
@@ -110,7 +110,7 @@
         "b89e2a9e-a526-4b3f-82d7-01190d6a9f37": {
           "type": "list_block",
           "settings": {
-            "list_block_type_img": "shopify:\/\/shop_images\/Callouts_1.png",
+            "list_block_type_img": "shopify://shop_images/Callouts_1.png",
             "list_block_type_text": "Doctor Recommended Formula",
             "list_block_type_subtext": "Based on 4-7 daily servings of Buoy reviewed by over 900+ doctors."
           }
@@ -133,7 +133,7 @@
         "picker_type": "button",
         "supplement_fact_text": "Supplement Facts",
         "supplement_fact_link": "",
-        "ship_text": "<label>UNITES STATES:<\/label>\n<p>Free Shipping on all orders<\/p>\n\n<label>INTERNATIONAL ORDERS:<\/label>\n<p class=\"mb-5\">Free Shipping on all International orders over $149<\/p>\n<p class=\"small\">Reach out to us for more information on international orders.<\/p>",
+        "ship_text": "<label>UNITES STATES:</label>\n<p>Free Shipping on all orders</p>\n\n<label>INTERNATIONAL ORDERS:</label>\n<p class=\"mb-5\">Free Shipping on all International orders over $149</p>\n<p class=\"small\">Reach out to us for more information on international orders.</p>",
         "shop_more_text1": "",
         "shop_more_link1": "",
         "shop_more_text2": "",
@@ -153,57 +153,57 @@
         "1083faa0-a895-49d0-b79a-995556c1a851": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "image": "shopify://shop_images/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
             "title": "Deep Ocean Minerals"
           }
         },
         "4cb0a6cc-78b4-4bf3-97f4-836b009452f3": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/psychiatry_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Vegan"
+            "image": "shopify://shop_images/psychiatry_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Vegan + NonGMO"
           }
         },
         "48445f51-5b78-409f-8df6-c40635aebfa3": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/verified_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "Non-GMO Project Verified"
+            "image": "shopify://shop_images/verified_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "High Sodium Electrolytes"
           }
         },
         "da9577ec-04dd-466c-87e8-66511f10d1bc": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
+            "image": "shopify://shop_images/water_drop_FILL0_wght400_GRAD0_opsz48_1.png",
             "title": "3x Bioavailable Form Factor"
           }
         },
         "11e0a190-5f45-4a12-aeb9-6c17f945d66d": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vector_5.png",
+            "image": "shopify://shop_images/Vector_5.png",
             "title": "Gluten & Major Allergen Free"
           }
         },
         "6b7754e9-0342-49ec-ad56-a6d0f4de6e98": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nutrition_FILL0_wght400_GRAD0_opsz48_1.png",
+            "image": "shopify://shop_images/nutrition_FILL0_wght400_GRAD0_opsz48_1.png",
             "title": "Keto & Paleo Approved"
           }
         },
         "9d38c763-6f85-46a2-9f99-07f2e5b38186": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/labs_FILL0_wght400_GRAD0_opsz48_1.png",
+            "image": "shopify://shop_images/labs_FILL0_wght400_GRAD0_opsz48_1.png",
             "title": "Third Party Tested"
           }
         },
         "f094a7d8-7384-4dc5-a296-de548c44952f": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lab_profile_FILL0_wght400_GRAD0_opsz48_1.png",
-            "title": "White Papers & Clinical Trials"
+            "image": "shopify://shop_images/lab_profile_FILL0_wght400_GRAD0_opsz48_1.png",
+            "title": "Clinically Proven"
           }
         }
       },
@@ -228,25 +228,24 @@
         "type5_kA9mf7": {
           "type": "type5",
           "settings": {
-            "title": "Hydration Drops",
-            "image": "shopify:\/\/shop_images\/PDP_Energy_Drops_Details_1_D.png",
-            "suptext": "Our best-selling, purposefully unflavored ionic ocean electrolyte drops.",
+            "title": "Rescue Drops",
+            "image": "shopify://shop_images/PDP_Energy_Drops_Details_1_D.png",
+            "suptext": "6x stronger than our best-selling, purposefully unflavored ionic ocean electrolyte drops.",
             "title_text": "FEATURED BENEFITS",
             "sub_text": "Energy, Gut Health, Brain Function, Glowing Skin",
             "title_text_2": "FORM FACTOR",
             "sub_text_2": "Liquid Drops",
             "sub_text_info": "3x more bioavailable than traditional supplement forms such as powders and tablets",
-            "title_text_3": "FEATURED INGREDIENTS",
-            "sub_text_3": "Electrolytes, 87 Ionic Ocean Minerals, B Vitamin Complex, Antioxidants",
-            "sub_text_info_3": "1 serving = ⅓ electrolyte equivalent of a sports drink",
+            "title_text_3": "INGREDIENTS",
+            "sub_text_3": "Ocean Electrolytes + 87 Ionic Trace Minerals",
+            "sub_text_info_3": "1 serving = 300mg Sodium",
             "title_text_4": "HOW TO Use",
-            "sub_text_4": "Add one quick squeeze 4-7 times daily to any drink, starting with your morning cup.",
-            "sub_text_info_4": "560mg-980mg electrolytes per day",
+            "sub_text_4": "Add two quick squeezes 4-7 times daily to any drink, starting with your morning cup.",
+            "sub_text_info_4": "",
             "title_text_5": "SOURCING",
-            "icon_1": "shopify:\/\/shop_images\/Icons_thick.svg",
+            "icon_1": "shopify://shop_images/Icons_thick.svg",
             "list_item1": "Deep Ocean Harvested Electrolytes and Minerals",
-            "icon_2": "shopify:\/\/shop_images\/plant.svg",
-            "list_item2": "Plant-Based Vitamins and Antioxidants",
+            "list_item2": "",
             "show_ingredients": true,
             "show_clinical": true,
             "show_hsa": false
@@ -256,21 +255,21 @@
           "type": "type5",
           "settings": {
             "title": "Rescue Salt",
-            "image": "shopify:\/\/shop_images\/Buoy_Shot2_114_1.png",
+            "image": "shopify://shop_images/Buoy_Shot2_114_1.png",
             "suptext": "Unrefined, solar-evaporated and hand-harvested sea salt rich with trace minerals.",
             "title_text": "FEATURED BENEFITS",
             "sub_text": "Fast-Acting Hydration, Electrolyte Replenishment",
             "title_text_2": "FORM FACTOR",
             "sub_text_2": "Unrefined, Harvested Whole Food",
-            "sub_text_info": "3x more bioavailable than traditional supplement forms such as powders and tablets",
+            "sub_text_info": "Preserved in naturally-occurring, ionically charged state",
             "title_text_3": "FEATURED INGREDIENTS",
-            "sub_text_3": "Ocean Electrolytes and 87 Ionic Trace Minerals",
-            "sub_text_info_3": "1 serving = 1215mg of electrolytes \u2028(20% DV Sodium, 30%  DV Chloride)",
+            "sub_text_3": "Ocean Electrolytes + 87 Ionic Trace Minerals",
+            "sub_text_info_3": "1 serving = 1215mg of electrolytes  (20% DV Sodium, 30%  DV Chloride)",
             "title_text_4": "HOW TO Use",
             "sub_text_4": "Add a pinch to your drinks, food, or let dissolve directly on your tongue when you need a boost.",
             "sub_text_info_4": "",
             "title_text_5": "SOURCING",
-            "icon_1": "shopify:\/\/shop_images\/rescue-salt.svg",
+            "icon_1": "shopify://shop_images/rescue-salt.svg",
             "list_item1": "Unrefined, Solar-Evaporated Hand-Harvested Sea Salt",
             "list_item2": "",
             "show_ingredients": true,
@@ -284,9 +283,9 @@
         "type5_WCp8AK"
       ],
       "settings": {
-        "video_url": "",
-        "image": "shopify:\/\/shop_images\/PDP_OEK_DetailsMain.png",
-        "image_mobile": "shopify:\/\/shop_images\/PDP_OEK_DetailsMain.png"
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/9866e541812e4003831ef68b4a210d7d.mp4",
+        "image": "shopify://shop_images/PDP_OEK_DetailsMain.png",
+        "image_mobile": "shopify://shop_images/PDP_OEK_DetailsMain.png"
       }
     },
     "cc8941c2-783c-4ab0-89a5-ed80dda021d4": {
@@ -295,39 +294,39 @@
         "57802e0c-5306-45c9-8ac3-a570a939a12e": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/33e66913d86442749232944ac047e24f.mp4"
+            "video": "https://cdn.shopify.com/videos/c/o/v/65c5fd7403f84decb8441c12c516fc8c.mp4"
           }
         },
         "0da40604-a16a-496a-9f71-134533987bf2": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_PDP_OEK_How_To_c1ea5be2-ace2-46cb-ad16-66ecb2d70259.jpg",
-            "video": ""
+            "image": "shopify://shop_images/2_PDP_OEK_How_To_c1ea5be2-ace2-46cb-ad16-66ecb2d70259.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/89b1f0c79ee94fd5aaeb6658eb2df919.mp4"
           }
         },
         "8b4a84ed-5154-49a3-a0db-e0c02b5eccf2": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd46b9d0d604a0dbf7e879b988fd28d.mp4"
+            "video": "https://cdn.shopify.com/videos/c/o/v/08b323d5475b4f8fa7f2de5152c9c188.mp4"
           }
         },
         "11c613d1-fb8a-421b-a072-c2e39b7e2c61": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/4_PDP_OEK_How_To_e9d61371-120e-4ee2-ab3d-512f96253c05.jpg",
+            "image": "shopify://shop_images/4_PDP_OEK_How_To_e9d61371-120e-4ee2-ab3d-512f96253c05.jpg",
             "video": ""
           }
         },
         "07ea710f-c5e1-4493-b9ed-0e00be1787a2": {
           "type": "block",
           "settings": {
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f4424fcb0c6247f3882fd7b78537ad55.mp4"
+            "video": "https://cdn.shopify.com/videos/c/o/v/972ad9e0804548a89561519e7c5187ad.mp4"
           }
         },
         "71792e7c-daab-4c20-a32f-bafa9b93a789": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6_PDP_OEK_How_To_af47a742-4f30-45c4-ab5d-50c3039948b8.jpg",
+            "image": "shopify://shop_images/6_PDP_OEK_How_To_af47a742-4f30-45c4-ab5d-50c3039948b8.jpg",
             "video": ""
           }
         }
@@ -341,9 +340,9 @@
         "71792e7c-daab-4c20-a32f-bafa9b93a789"
       ],
       "settings": {
-        "suptitle": "Stack The Benefits",
-        "title": "Daily Doses <span class=\"rhyme-italic\">For<\/span> Fast Replenishing",
-        "text": "Use <span class=\"green-outline\">Rescue Drops<\/span> for replenishment throughout the day and <span class=\"green-outline\">Rescue Salt<\/span> whenever you're in a pinch.",
+        "suptitle": "Extra Strength",
+        "title": "Clinically Studied Electrolytes",
+        "text": "Use <span class=\"green-outline\">Rescue Drops</span> for replenishment throughout the day and <span class=\"green-outline\">Rescue Salt</span> whenever you're in a pinch.",
         "background": "#f8f8f8",
         "button_label": "",
         "button_link": ""
@@ -355,37 +354,37 @@
         "31bb9375-b10d-45d4-b352-9d615a42b19e": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_14.png"
+            "image": "shopify://shop_images/Frame_14.png"
           }
         },
         "0c4f2581-e1d8-430f-92d1-a3190d1d68cf": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_11.png"
+            "image": "shopify://shop_images/Frame_11.png"
           }
         },
         "e9bbbb20-934a-4e2b-a820-0aee669dc13a": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_12.png"
+            "image": "shopify://shop_images/Frame_12.png"
           }
         },
         "892df876-b22f-4bce-bbf0-0e734aa0e128": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_14.png"
+            "image": "shopify://shop_images/Frame_14.png"
           }
         },
         "d0e5e097-a427-452b-921c-5195897c5fcc": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_11.png"
+            "image": "shopify://shop_images/Frame_11.png"
           }
         },
         "ac06840e-2ab9-4b00-bcfa-32b17335013b": {
           "type": "marquee_item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_12.png"
+            "image": "shopify://shop_images/Frame_12.png"
           }
         }
       },
@@ -405,8 +404,8 @@
       "type": "full-video-text",
       "settings": {
         "title": "Buoy’s Unflavored Approach",
-        "text": "We harvest the worlds most <span>bioactive ingredient<\/span> sources in their <span>unprocessed forms<\/span> and deliver their health benefits in the same <span>naturally-balanced, preserved ratios.<\/span>",
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ac1cc4cd94cd49d7825c0a753bc5ad45.mp4",
+        "text": "We harvest the worlds most <span>bioactive ingredient</span> sources in their <span>unprocessed forms</span> and deliver their health benefits in the same <span>naturally-balanced, preserved ratios.</span>",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/ac1cc4cd94cd49d7825c0a753bc5ad45.mp4",
         "video_url_mobile": "",
         "color": "#ffffff"
       }
@@ -418,14 +417,14 @@
           "type": "block",
           "settings": {
             "title": "Why should I subscribe?",
-            "text": "Transformative health benefits come with consistent habits. \u2028Our flexible, sustainable subscription plan supports whole-body \u2028at a cellular level, order after order, <span class=\"green-outline\">for just $1\/day.<\/span> Try today, \u2028100% Risk Free.",
+            "text": "Transformative health benefits come with consistent habits.  Our flexible, sustainable subscription plan supports whole-body  at a cellular level, order after order, <span class=\"green-outline\">for just $1/day.</span> Try today,  100% Risk Free.",
             "title1": "SHORT-TERM RELIEF",
             "text1": "Fast Hydration · Mineral Support · Soothes Headaches · Eases Cramps · Helps Hangovers",
             "title2": "LONG-TERM HEALTH BENEFITS",
             "text2": "Nutrient Absorption · Alkalizes The Body · Supports Detoxification · Enhanced Cognition · Radiant Skin",
             "list_item1": "Save 24% on every order",
             "list_item2": "Free monthly shipping",
-            "list_item3": "Cancel or pause anytime<br>\n<span class=\"rhymes-subtitle\">Even after your first order<\/span>",
+            "list_item3": "Cancel or pause anytime<br>\n<span class=\"rhymes-subtitle\">Even after your first order</span>",
             "list_item4": "Swap products",
             "list_item5": "Unlock milestone rewards"
           }
@@ -544,7 +543,7 @@
       ],
       "disabled": true,
       "settings": {
-        "title": "Setting <span class=\"rhyme-italic\">New Standards<\/span> For Hydration",
+        "title": "Setting <span class=\"rhyme-italic\">New Standards</span> For Hydration",
         "subtitle": "Compare Buoy with leading competitors:",
         "supplements": true,
         "button_text": "Clinical Study",
@@ -557,10 +556,10 @@
         "07f3e348-5c6b-4818-bb38-8a9d85bcf2ac": {
           "type": "block",
           "settings": {
-            "text": "Add Energy Drops to this stack to \u2028round out your routine.",
+            "text": "Add Energy Drops to this stack to  round out your routine.",
             "new_product": false,
             "extra_savings": true,
-            "image": "shopify:\/\/shop_images\/Upsell_Energy_Drops_D.png",
+            "image": "shopify://shop_images/Upsell_Energy_Drops_D.png",
             "product": "energy-drops-1-bottle",
             "bottom_text": "Energy Drops",
             "add_to_cart": true
@@ -572,7 +571,7 @@
             "text": "Add Immunity Drops to this stack to round out your routine.",
             "new_product": false,
             "extra_savings": true,
-            "image": "shopify:\/\/shop_images\/Upsell_Immunity_Drops_D.png",
+            "image": "shopify://shop_images/Upsell_Immunity_Drops_D.png",
             "product": "immunity-drops-1-bottle",
             "bottom_text": "Immunity Drops",
             "add_to_cart": true
@@ -596,8 +595,8 @@
         "add_bottom_border": false,
         "title": "A better way to hydrate",
         "subtext": "Add a fast-acting electrolyte and mineral replenishment to all your favorite drinks.",
-        "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
-        "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
+        "img": "https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Drink_Timeline_D_2.svg?v=1670363646",
+        "mobile_img": "https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Drink_Timeline_M_1.svg?v=1670362919"
       }
     },
     "99c8aef5-5bbc-4d18-bd04-0ff4170af200": {
@@ -719,7 +718,7 @@
       "disabled": true,
       "settings": {
         "video_url": "",
-        "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
+        "image": "shopify://shop_images/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
         "title": "Sip on functional benefits",
         "text_bottom": "Buoy’s benefits go beyond peak hydration. Refresh, revitalize and restore with the electrolytes and minerals our bodies need to function optimally day after day.",
         "background": "",
@@ -735,7 +734,7 @@
           "settings": {
             "title": "Seawater Electrolytes",
             "text": "Hand harvested, seawater electrolytes from protected marine sea salt in the South of France. Preserved in their naturally-occurring, balanced ratios for deep hydration your cells crave.",
-            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+            "img": "shopify://shop_images/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
           }
         },
         "fbadbbee-ba0e-47c6-9848-cc77c44e3811": {
@@ -743,7 +742,7 @@
           "settings": {
             "title": "Deep Ocean Trace Minerals",
             "text": "87 ionically charged trace minerals and biological elements from the deep ocean that revitalize, restore and rebuild at the cellular level.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+            "img": "shopify://shop_images/Ingredients_Minerals.png"
           }
         },
         "ccf8a2fb-d410-40bb-9fd7-ac99929c0b8d": {
@@ -751,7 +750,7 @@
           "settings": {
             "title": "B Vitamins",
             "text": "A curated blend of plant-powered B vitamins that support routine electrolyte function and facilitate energy production.",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+            "img": "shopify://shop_images/Ingredients_B_Vitamins.png"
           }
         },
         "4b8b39bc-fd7d-4a2b-8b33-d8e3d4944205": {
@@ -759,7 +758,7 @@
           "settings": {
             "title": "Antioxidants",
             "text": "Soothe the daily inflammation that depletes electrolyte and mineral levels faster than your body naturally would with plant-powered antioxidants.",
-            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+            "img": "shopify://shop_images/Ingredients_Antioxidants.png"
           }
         }
       },
@@ -772,7 +771,7 @@
       "disabled": true,
       "settings": {
         "title": "Ingredients your body can actually absorb",
-        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested<\/span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable<\/span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing<\/span>",
+        "subtext": "<span class=\"animated-text-delay1 delay-wave1\">Harvested</span> | <span class=\"animated-text-delay2 delay-wave2\">Bioavailable</span> | <span class=\"animated-text-delay3 delay-wave3\">Fast-Absorbing</span>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bottom",
@@ -784,8 +783,8 @@
       "disabled": true,
       "settings": {
         "title": "A hydration profile like no other",
-        "desktop_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"><\/path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <\/g>\n    <\/g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+<\/tspan><\/text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25<\/tspan><\/text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy<\/tspan><\/text>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
-        "mobile_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"><\/path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"><\/path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, <\/tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean <\/tspan><tspan x=\"0\" y=\"22\">Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not <\/tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy<\/tspan><\/text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25<\/tspan><\/text>\n    <\/g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others<\/tspan><\/text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "desktop_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"></path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"></path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"></path>\n      </g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"></path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"></path>\n      </g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      </g>\n    </g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+</tspan></text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others</tspan></text>\n    </g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25</tspan></text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy</tspan></text>\n    </g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving</tspan></text>\n    </g>\n  </g>\n</svg>",
+        "mobile_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"></path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></path>\n      </g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"></path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></path>\n      </g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></line>\n    </g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, </tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean </tspan><tspan x=\"0\" y=\"22\">Minerals</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not </tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving</tspan></text>\n    </g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy</tspan></text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25</tspan></text>\n    </g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others</tspan></text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+</tspan></text>\n    </g>\n  </g>\n</svg>",
         "add_top_border": false,
         "add_bottom_border": false,
         "background": "none"
@@ -844,10 +843,10 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Homepage_-_D_-_Future_of_Hydration_MP4_2x_4a8a5171-7601-49ad-9f94-a0e6c75e32d7.png",
+        "image": "shopify://shop_images/Homepage_-_D_-_Future_of_Hydration_MP4_2x_4a8a5171-7601-49ad-9f94-a0e6c75e32d7.png",
         "video_url": "",
         "title": "Healthy habits with healthier perks",
-        "subtext": "Join the <span style=\"font-weight: 500;\">Clear Pee Club<\/span> for your daily dose of hydration and minerals. Never run dry with this planet-friendly subscription plan."
+        "subtext": "Join the <span style=\"font-weight: 500;\">Clear Pee Club</span> for your daily dose of hydration and minerals. Never run dry with this planet-friendly subscription plan."
       }
     },
     "1636344367d21ce97f": {
@@ -892,14 +891,14 @@
           "type": "faq_item",
           "settings": {
             "title": "Why do other products have larger serving sizes?",
-            "answer": "Hydration is a turtle’s race—slow and steady wins. \n<br><bar>\nYour body will pass most of the nutrients in large, single-serving doses before you can actually use them. \n<br><br>\nOur approach to hydration is backed by our body's biochemisty and formulated for daily dehydration. \n<br><br>\nWe use high bioavailable and fast-absorbing ingredient sources so you're able to get the most out of every drop.\n<br><br>\nEach bottle has the electrolyte equivalent of 13 sports drinks, without the junk.<\/bar>"
+            "answer": "Hydration is a turtle’s race—slow and steady wins. \n<br><bar>\nYour body will pass most of the nutrients in large, single-serving doses before you can actually use them. \n<br><br>\nOur approach to hydration is backed by our body's biochemisty and formulated for daily dehydration. \n<br><br>\nWe use high bioavailable and fast-absorbing ingredient sources so you're able to get the most out of every drop.\n<br><br>\nEach bottle has the electrolyte equivalent of 13 sports drinks, without the junk.</bar>"
           }
         },
         "2101affa-f21f-476f-867d-ff00f526ced7": {
           "type": "faq_item",
           "settings": {
             "title": "Does this have caffeine?",
-            "answer": "Nope 😊. Only our <strong> Energy Drops<\/strong> contain caffeine."
+            "answer": "Nope 😊. Only our <strong> Energy Drops</strong> contain caffeine."
           }
         }
       },
@@ -938,21 +937,21 @@
         "7bdd56d8-e1ed-4c28-aa0c-53f8a28e06b0": {
           "type": "list-item",
           "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "icon_item": "shopify://shop_images/check.svg",
             "item_description": "General Hydration — Estimated Trial Results Early 2024"
           }
         },
         "6e0ee015-5579-4eea-9494-67ab693f289f": {
           "type": "list-item",
           "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "icon_item": "shopify://shop_images/check.svg",
             "item_description": "Type 1 Diabetes — Estimated Trial Results Mid 2024"
           }
         },
         "9d25f921-f7c3-4dce-983f-17fbfa94e6ea": {
           "type": "list-item",
           "settings": {
-            "icon_item": "shopify:\/\/shop_images\/check.svg",
+            "icon_item": "shopify://shop_images/check.svg",
             "item_description": "Chemotherapy Dehydration — Estimated Trial Results Late 2024"
           }
         },
@@ -963,17 +962,17 @@
             "notification": "",
             "heading": "Primary Outcome Measures:",
             "title": "Net Fluid Balance",
-            "text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "text_block_one": "<p><strong>Time Frame:</strong> Urine will be measured during each visit (3 total visits that each last 6 hours)</p>",
             "text_block_two": "Determined by subtracting the cumulative urine output from the total fluid load consumed",
             "block_two_title": "Electrolytes In Urine",
-            "block_two_text_block_one": "<p><strong>Time Frame:<\/strong> Urine will be measured during each visit (3 total visits that each last 6 hours)<\/p>",
+            "block_two_text_block_one": "<p><strong>Time Frame:</strong> Urine will be measured during each visit (3 total visits that each last 6 hours)</p>",
             "block_two_text_block_two": "Sodium, Potassium, and Chloride levels will be measured",
             "block_three_title": "Blood Labs",
-            "block_three_text_block_one": "<p><strong>Time Frame:<\/strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.<\/p>",
+            "block_three_text_block_one": "<p><strong>Time Frame:</strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.</p>",
             "block_three_text_block_two": "Venous whole blood will be collected using phlebotomy and 100ul will be analyzed using an i-STAT",
             "secondary_heading": "Secondary Outcome Measures:",
             "secondary_title": "Bioimpedence",
-            "secondary_text_block_one": "<p><strong>Time Frame:<\/strong> Each urine collection occurs for a total of 6 hours<\/p>",
+            "secondary_text_block_one": "<p><strong>Time Frame:</strong> Each urine collection occurs for a total of 6 hours</p>",
             "secondary_text_block_two": "Bioimpedence measured after each urine collection"
           }
         },

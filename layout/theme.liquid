@@ -9,6 +9,37 @@
 window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","application/json")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e]),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,url:window.location.href,ref:document.referrer,ver:window.TriplePixelData.ver},O("https://api.config-security.com/",5,p),O("https://triplewhale-pixel.web.app/dot1.9.txt",5)))}}("","TriplePixel",localStorage);
 /* << TriplePixel :: end*/
 </script>  
+        <script>
+           !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbq.js');
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the user is on the account creation confirmation page
+    document.addEventListener("submit", function(event) {
+        if (event.target.id === "create_customer") {
+            localStorage.setItem('registrationComplete', 'true');
+        }
+    });
+    {% if customer %}
+            // Check if the event has already been fired
+        if (localStorage.getItem('registrationComplete')) {
+            // Fire the CompleteRegistration event
+          fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
+setTimeout(function(){
+              // Set a flag in local storage to prevent future tracking
+           localStorage.removeItem("registrationComplete");
+},5000);
+        }
+    {% endif %}
+});
+    </script>
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -246,8 +277,16 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   
   {% render 'shogun-head' %}
 
+
   {% if handle contains 'sample-page' %}
     <meta name="robots" content="noindex">
+  {% endif %}
+
+
+  {% if request.query_string contains '?' %}
+    <meta name="robots" content="noindex, nofollow">
+  {% else %}
+    <meta name="robots" content="index, follow">
   {% endif %}
 
     <!-- Reddit Pixel -->
@@ -273,6 +312,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
 </head>
 
   <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSMDTK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
