@@ -81,15 +81,15 @@ body.lock-scroll-mobile {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* .page-blury-overlay.is-visible {
+.page-blury-overlay.is-visible {
   visibility: visible;
   opacity: 1;
-} */
+}
 
-.page-blury-overlay.is-visible {
+/* .page-blury-overlay.is-visible {
   visibility: hidden;
   opacity: 0;
-}
+} */
 
 .page-blury-overlay.is-visible-mobile {
   visibility: visible;
@@ -128,6 +128,10 @@ body.lock-scroll-mobile {
 
   .page-width-desktop {
     padding: 0;
+  }
+
+  .lock-scroll .page-blury-overlay {
+    z-index: 11;
   }
 }
 
@@ -522,112 +526,114 @@ body.lock-scroll-mobile {
 /* Fonts */
 h1,
 .h1 {
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: -0.015em;
-  line-height: 1.15;
+  line-height: 60px;
 }
 
 @media only screen and (max-width: 768px) {
   h1,
   .h1 {
-    font-size: 33px;
-    line-height: 1.24em;
-    letter-spacing: 0.015em;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: -0.015em;
   }
 }
 
 h2,
 .h2 {
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 40px;
   letter-spacing: -0.015em;
-  line-height: 1.15;
+  line-height: 50px;
 }
 
 @media only screen and (max-width: 768px) {
   h2,
   .h2 {
-    font-size: 33px;
-    line-height: 1.24em;
-    letter-spacing: 0.015em;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -0.015em;
   }
 }
 
 h3,
 .h3 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 45px;
+  font-weight: 400;
+  font-size: 30px;
   letter-spacing: 0;
-  line-height: 1.26;
+  line-height: 34px;
 }
 
 @media only screen and (max-width: 768px) {
   h3,
   .h3 {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
 h4,
 .h4 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
+  font-weight: 400;
+  font-size: 24px;
   letter-spacing: 0;
-  line-height: 1.2;
+  line-height: 34px;
 }
 
 @media only screen and (max-width: 768px) {
   h4,
   .h4 {
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
 h5,
 .h5 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 20px;
   letter-spacing: 0;
-  line-height: 1.36em;
+  line-height: 24.2px;
 }
 
 @media only screen and (max-width: 768px) {
   h5,
   .h5 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 h6,
 .h6 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0;
-  line-height: 1.6em;
+  line-height: 28px;
 }
 
 @media only screen and (max-width: 768px) {
   h6,
   .h6 {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
 .sh0 {
-  font-family:  inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -636,7 +642,7 @@ h6,
 }
 
 .sh1 {
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -651,7 +657,7 @@ h6,
 }
 
 .sh2 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -666,7 +672,7 @@ h6,
 }
 
 .sh3 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -682,7 +688,7 @@ h6,
 }
 
 .sh4 {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -695,6 +701,73 @@ h6,
   }
 }
 
+.lead-lg {
+  font-family: 'inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  .lead-lg {
+    font-size: 14px;
+  }
+}
+
+.lead-sm {
+  font-family: 'inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  .lead-sm {
+    font-size: 12px;
+  }
+}
+.lead-lg.italic {
+  font-family: Rhymes-Light-Italic;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32.35px;
+}
+
+@media only screen and (max-width: 768px) {
+  .lead-lg.italic {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.lead-sm.italic {
+  font-family: Rhymes-Light-Italic;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26.96px;
+}
+
+@media only screen and (max-width: 768px) {
+  .lead-sm.italic {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.promo-banner {
+  font-family: 'inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
 .rhymes-subtitle {
   font-size: 14px;
   font-family: Rhymes-Light-Italic;
@@ -703,12 +776,12 @@ h6,
 
 p,
 .body {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0;
-  line-height: 1.5em;
+  line-height: 28px;
 }
 
 .bold {
@@ -719,44 +792,49 @@ p,
   font-weight: 500;
 }
 
+.semi-bold {
+  font-weight: 600;
+}
+
 .light {
   font-weight: 300;
 }
 
 .body-small {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0;
-  line-height: 1.75em;
+  line-height: 21px;
 }
 
 .body-xs {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.01em;
-  line-height: 1.75em;
+  line-height: 14.52px;
   text-transform: uppercase;
 }
 
 .body-med {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: 0;
-  line-height: 2em;
+  line-height: 25px;
 }
 
 .body-large {
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0;
-  line-height: 2em;
+  line-height: 28px;
 }
 
 .italic {
@@ -780,6 +858,21 @@ blockquote {
   blockquote {
     padding-left: 1.5rem;
   }
+  p,
+  .body {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 989px) {
+  
+  p,
+  .body {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  
 }
 
 table:not([class]) {
@@ -795,12 +888,6 @@ table:not([class]) td,
 table:not([class]) th {
   padding: 1em;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
-}
-
-@media screen and (max-width: 768px) {
-  .small-hide {
-    display: none !important;
-  }
 }
 
 .hidden {
@@ -1388,14 +1475,14 @@ deferred-media {
 .shopify-challenge__button,
 .customer button {
   min-width: 240px;
-  padding: 14px 20px 15px;
+  padding: 13px 20px;
   display: inline-block;
-  font-family: inter, sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.375em;
+  line-height: 25px;
   text-align: center;
   border: 1.5px solid var(--charcoal);
   border-radius: 50px;
@@ -2053,6 +2140,14 @@ input[type='checkbox'] {
   .Announcement_Button {
      margin-right: 40px;
   }
+
+  .button,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 20px;
+  }
   
 }
 /* 
@@ -2272,7 +2367,7 @@ header-container.active .header {
   font-family: Inter;
   font-size: 12px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 14.52px;
 }
 
 .header__icon--cart.active svg circle {
@@ -2580,12 +2675,12 @@ details-disclosure > details {
 
 .badge {
   border: 1px solid transparent;
-  border-radius: 4rem;
+  border-radius: 50px;
   display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: 0.6rem 1.3rem;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  padding: 8px 18px;
   text-align: center;
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
@@ -2730,7 +2825,7 @@ details-disclosure > details {
 
 /* /*   
 .text-shadow {
-  font: normal normal normal 60px/69px Dela Gothic One;
+  font: normal normal normal 60px/69px 'inter', sans-serif;
   letter-spacing: 0.9px;
   color: white;
   opacity: 1;
@@ -2746,7 +2841,7 @@ details-disclosure > details {
   left: 0;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: z-index;
-  font: normal normal normal 60px/69px Dela Gothic One;
+  font: normal normal normal 60px/69px 'inter', sans-serif;
   letter-spacing: 0.9px;
   color: #b7d7ea;
   opacity: 1;
@@ -2761,7 +2856,7 @@ details-disclosure > details {
   opacity: 1;
   right: 0;
    z-index: -1
-    font: normal normal normal 44px/54px Dela Gothic One;
+    font: normal normal normal 44px/54px 'inter', sans-serif;
     margin-bottom: 0;
     max-width: 340px;
   }
@@ -2769,7 +2864,7 @@ details-disclosure > details {
 @media screen and (max-width: 990px) {
   .text-shadow span,
   .text-shadow {
-    font: normal normal normal 38px/44px Dela Gothic One;
+    font: normal normal normal 38px/44px 'inter', sans-serif;
     margin-bottom: 0;
     max-width: 340px;
   }
@@ -2779,7 +2874,7 @@ details-disclosure > details {
 @media screen and (max-width: 768px) {
   .text-shadow span,
   .text-shadow {
-    font: normal normal normal 33px/44px Dela Gothic One;
+    font: normal normal normal 33px/44px 'inter', sans-serif;
     margin-bottom: 0;
     max-width: 340px;
   }

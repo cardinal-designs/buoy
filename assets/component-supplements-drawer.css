@@ -8,26 +8,45 @@
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
-  padding: 0 30px;
+  padding: 0;
   padding-bottom: 100px;
+}
+
+.supplement-side-drawer .drawer__wrapper-main {
+  padding: 0 30px;
 }
 
 @media screen and (max-width: 768px) {
 
   .supplement-side-drawer {
-    top: 54px;
+    top: auto;
+    right: 0 !important;
+    bottom: -100%;
     width: 100%;
-    padding-bottom: 110px;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 80%;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    transition: 1s;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
+
+  .supplement-side-drawer .drawer__wrapper-main {
+    padding: 0 20px;
+  }
+  
 }
 
 .drawer__header {
   display: flex;
   justify-content: flex-end;
   padding-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -36,6 +55,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  .drawer__header::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    border: 3px solid #1f2322;
+    border-radius: 100px;
+    top: 6px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  
 }
 
 .drawer__close {
@@ -75,6 +108,7 @@
   .drawer__title {
     font-size: 30px;
   }
+  
 }
 
 .drawer__serving {
@@ -87,6 +121,7 @@
   .drawer__serving {
     padding-top: 10px;
   }
+  
 }
 
 .drawer__serving-wrapper {
@@ -115,6 +150,7 @@
   .drawer__serving-item {
     font-size: 14px;
   }
+  
 }
 
 .drawer__serving-list {
@@ -133,6 +169,7 @@
   .drawer__serving-container {
     flex-direction: column;
   }
+  
 }
 
 .drawer__recommended {
@@ -166,6 +203,7 @@
   .drawer__recommended-title {
     font-size: 14px;
   }
+  
 }
 
 .drawer__recommended-subtitle {
@@ -258,7 +296,7 @@
   .drawer__info {
     flex-direction: column;
     gap: 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
   
 }
@@ -296,4 +334,5 @@
   .drawer__info-list-item img {
     height: 30px;
   }
+  
 }

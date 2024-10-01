@@ -43,7 +43,7 @@
 
 .text-shadow {
   text-align: center;
-  font: normal normal normal 50px/59px Dela Gothic One;
+  font: normal normal normal 50px/59px 'inter', sans-serif;
   letter-spacing: 0.9px;
   color: #ffffff;
   opacity: 1;
@@ -60,7 +60,7 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: z-index;
   text-align: center;
-  font: normal normal normal 50px/59px Dela Gothic One;
+  font: normal normal normal 50px/59px 'inter', sans-serif;
   letter-spacing: 0.9px;
   color: #b3cdce;
   opacity: 1;
@@ -246,7 +246,7 @@
   }
   
   .text-shadow, .text-shadow span {
-    font: normal normal normal 60px/69px Dela Gothic One;
+    font: normal normal normal 60px/69px 'inter', sans-serif;
     max-width: 700px;
   }
   
@@ -352,7 +352,7 @@
   }
   
   .text-shadow span, .text-shadow {
-    font: normal normal normal 33px/42px Dela Gothic One;
+    font: normal normal normal 33px/42px 'inter', sans-serif;
     max-width: 260px;
   }
   

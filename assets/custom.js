@@ -224,7 +224,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function openHsa() {
     event.stopPropagation();
     if (document.getElementById("hsaSideDrawer")) {
-      document.getElementById("hsaSideDrawer").style.right = "0";
+      document.getElementById("hsaSideDrawer").style.right = "0px";
+      if(window.innerWidth < 769){
+        document.getElementById("hsaSideDrawer").style.bottom = "0px";
+      }
       document.getElementById("hsaSideDrawer").scrollTop = 0;
     }
     document.querySelector('.page-blury-overlay').classList.add('is-visible');
@@ -237,6 +240,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeHsa() {
     if (document.getElementById("hsaSideDrawer")) {
       document.getElementById("hsaSideDrawer").style.right = "-100%";
+
+      if(window.innerWidth < 769){
+        document.getElementById("hsaSideDrawer").style.bottom = "-100%";
+      }
+      
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -247,9 +255,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Open Clinical Drawer
   function openClinical(e) {
     event.stopPropagation();
-    const parentItem = !!e.target.closest('.dropdown-container-item__container');
+    let parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
-      const parentEl = e.target.closest('.dropdown-container-item');
+      let parentEl = e.target.closest('.dropdown-container-item');
       // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
 
       let dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
@@ -278,7 +286,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // Show drawer
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
-      drawer.style.right = "0";
+      drawer.style.right = "0px";
+      if(window.innerWidth < 769){
+        drawer.style.bottom = "0px";
+      }
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -290,6 +301,11 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   function closeClinical() {
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
+
+      if(window.innerWidth < 769){
+        document.getElementById("clinicalSideDrawer").style.bottom = "-100%";
+      }
+      
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
@@ -394,7 +410,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     // Show drawer
     function showDrawer(drawer) {
       drawer.scrollTop = 0;
-      drawer.style.right = "0";
+      drawer.style.right = "0px";
+      if(window.innerWidth < 769){
+        drawer.style.bottom = "0px";
+      }
       document.querySelector('.page-blury-overlay').classList.add('is-visible');
       document.querySelector('body').classList.add('lock-scroll');
       document.querySelector('header-container').style.zIndex = 10;
@@ -405,20 +424,13 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
   }
   
-  // Close Supplement Drawer
-  // function closeNav() {
-  //   if(document.getElementById("supplementSideDrawer"))  document.getElementById("supplementSideDrawer").style.right = "-100%";
-  //   document.querySelector('.page-blury-overlay').classList.remove('is-visible');
-  //   document.querySelector('body').classList.remove('lock-scroll');
-  //   document.querySelector('header-container').style.zIndex = 3;
-    
-  //   if(document.querySelector('.supplement-side-drawer .drawer__header')) document.querySelector('.supplement-side-drawer .drawer__header').classList.remove('mobile-fixed-header');
-  // }
-
   function closeNav() {
-    const supplementDrawer = document.getElementById("supplementSideDrawer");
+    let supplementDrawer = document.getElementById("supplementSideDrawer");
     if(supplementDrawer) {
       supplementDrawer.style.right = "-100%";
+      if(window.innerWidth < 769){
+        supplementDrawer.style.bottom = "-100%";
+      }
       document.querySelector('.page-blury-overlay').classList.remove('is-visible');
       document.querySelector('body').classList.remove('lock-scroll');
       document.querySelector('header-container').style.zIndex = "3";
@@ -432,25 +444,34 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   // Add event listener to close drawer when clicking outside
   if(!window.location.href?.includes('pages')){
     document.addEventListener('click', function(event) {
-      const supplementDrawer = document.getElementById("supplementSideDrawer");
-      const isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
-      const isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      let supplementDrawer = document.getElementById("supplementSideDrawer");
+      let isClickInsideDrawer = supplementDrawer && supplementDrawer.contains(event.target);
+      let isDrawerVisible = supplementDrawer && supplementDrawer.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerVisible = supplementDrawer && supplementDrawer.style.bottom === "0px";
+      }
       if (isDrawerVisible && !isClickInsideDrawer) {
         closeNav();
       }
   
-      const clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
-      const isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
-      const isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      let clinicalSideDrawer = document.getElementById("clinicalSideDrawer");
+      let isClickInsideClinicalDrawer = clinicalSideDrawer && clinicalSideDrawer.contains(event.target);
+      let isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerClinicalVisible = clinicalSideDrawer && clinicalSideDrawer.style.bottom === "0px";
+      }
       if (isDrawerClinicalVisible && !isClickInsideClinicalDrawer) {
         closeClinical();
       }
     });
   }else{
     document.addEventListener('click', function(event) {
-      const clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
-      const isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
-      const isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      let clinicalSideDrawerNew = document.getElementById("clinicalSideDrawer");
+      let isClickInsideClinicalDrawerNew = clinicalSideDrawerNew && clinicalSideDrawerNew.contains(event.target);
+      let isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.right === "0px";
+      if(window.innerWidth < 769){
+        isDrawerClinicalVisibleNew = clinicalSideDrawerNew && clinicalSideDrawerNew.style.bottom === "0px";
+      }
       if (isDrawerClinicalVisibleNew && !isClickInsideClinicalDrawerNew) {
         closeClinical();
       }
@@ -487,6 +508,9 @@ $('.Open_Drawer').click(function(event){
 // close supplement drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.supplement-side-drawer').css('bottom','-100%');
+  } 
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -496,6 +520,9 @@ $('.page-blury-overlay').click(function(){
 // close clinical drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -505,6 +532,9 @@ $('.page-blury-overlay').click(function(){
 // close hsa drawer (click outside)
 $('.page-blury-overlay').click(function(){
   $('.hsa-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.hsa-side-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('.js-product-quick-view-drawer').removeClass('active');
   $('body').removeClass('lock-scroll open-bundle-info');
@@ -513,6 +543,9 @@ $('.page-blury-overlay').click(function(){
 
 $('.js-close-supplement-drawer').click(function(){
   $('.supplement-side-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.supplement-side-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.supplement-side-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -520,6 +553,9 @@ $('.js-close-supplement-drawer').click(function(){
 
 $('.js-clinical-close').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.clinical-trial-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -527,6 +563,9 @@ $('.js-clinical-close').click(function(){
 
 $('.js-hsa-close').click(function(){
   $('.clinical-trial-drawer').css('right','-100%');
+  if(window.innerWidth < 769){
+    $('.clinical-trial-drawer').css('bottom','-100%');
+  }
   $('.page-blury-overlay').removeClass('is-visible');
   $('body').removeClass('lock-scroll');
   $('.hsa-side-drawer .drawer__header').removeClass('mobile-fixed-header');
@@ -578,7 +617,6 @@ $('.dropdown-container-item__title').click(function() {
     if(window.matchMedia("(max-width: 768px)").matches) {
       $(this)[0].scrollIntoView();
     } else if ($('body').hasClass('page-template--page-ci-shop')) {
-      console.log('bb')
       var elementOffset = $(this).parent().parent().offset().top - 100;
       $(window).scrollTop(elementOffset);
     }
@@ -604,7 +642,7 @@ function cartHtml(){
     const cartid = 'cart-drawer';
     const html = new DOMParser().parseFromString(responseText, 'text/html')  
     const destination = document.querySelector('.cart-drawer');
-    const source = html.getElementById(cartid);			  
+    const source = html.getElementById(cartid);       
     if (source && destination) destination.innerHTML = source.innerHTML;
     subscriptionListener();
     $(document).find('#cart-drawer-loading').addClass('hidden');
@@ -612,11 +650,11 @@ function cartHtml(){
 
   fetch(window.Shopify.routes.root +'?section_id=main-cart-items')
   .then((response) => response.text())
-  .then((responseText) => {			  
+  .then((responseText) => {       
     const cartid = 'main-cart-items';
     const html = new DOMParser().parseFromString(responseText, 'text/html');
     const destination = document.querySelector('.main-cart-items');
-    const source = html.getElementById(cartid);			  
+    const source = html.getElementById(cartid);       
     if (source && destination) destination.innerHTML = source.innerHTML;
     subscriptionListener();
   });
@@ -672,8 +710,14 @@ $( document ).ready(function() {
           $supplementDrawer.each(function() {
               var isClickInsideDrawer = $(this).has(event.target).length > 0;
               var isDrawerVisible = $(this).css('right') == "0px";
+              if(window.innerWidth < 769){
+                isDrawerVisible = $(this).css('bottom') == "0px";
+              }
                if (isDrawerVisible && !isClickInsideDrawer) {
                   $supplementDrawer.css('right', '-100%');
+                  if(window.innerWidth < 769){
+                    $supplementDrawer.css('bottom', '-100%');
+                  }
               }
           });
       }
@@ -732,3 +776,110 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/* Popup modal drag and close code  -  Start */
+  
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let swipeDistance = 0;
+  const threshold = 50;
+  const maxScreenWidth = 769;
+  
+  function disableBodyScroll() {
+    document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none'; // Prevent scroll chaining
+  }
+  
+  function enableBodyScroll() {
+    document.body.style.overflow = '';
+    document.body.style.touchAction = ''; // Re-enable scroll chaining
+  }
+  
+  function isScreenBelowThreshold() {
+    return window.innerWidth < maxScreenWidth;
+  }
+  
+  function isScrolledToTop(supplementSideDrawer) {
+    return supplementSideDrawer.scrollTop === 0;
+  }
+  
+  function onTouchStart(event, supplementSideDrawer) {
+    if (!isScreenBelowThreshold()) return;
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchStartY = event.touches[0].clientY;
+      supplementSideDrawer.style.transition = 'none';
+      disableBodyScroll();
+    }
+  }
+  
+  function onTouchMove(event, supplementSideDrawer) {
+    if (!isScreenBelowThreshold()) return;
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchEndY = event.touches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
+  
+      if (swipeDistance > 0) {      
+        supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
+        event.preventDefault(); // Prevent default scroll behavior
+      }
+    }
+  }
+  
+  function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+    if (!isScreenBelowThreshold()) return;
+  
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchEndY = event.changedTouches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
+  
+      if (swipeDistance > threshold) {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '-100%';
+        
+        setTimeout(() => {
+          closeDrawerButton.click();
+        }, 300);
+      } else {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '0';
+      }
+  
+      setTimeout(() => {
+        supplementSideDrawer.style.transition = '';
+        enableBodyScroll();
+      }, 300);
+    }
+  }
+
+  function onTouchCancel() {
+    enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
+  }
+  
+  function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+    if (!supplementSideDrawer.dataset.touchEventsApplied) {
+      supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+      supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+      supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+      supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
+      supplementSideDrawer.dataset.touchEventsApplied = 'true';
+    }
+  }
+  
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
+          const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+          const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+          
+          applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+        });
+      }
+    }
+  });
+  
+  observer.observe(document.body, { childList: true, subtree: true });
+
+/* Popup modal drag and close code  -  End */
+
+

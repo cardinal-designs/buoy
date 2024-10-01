@@ -11,7 +11,7 @@
 
 .inner-banner .text-shadow {
 	text-align: center;
-	font: normal normal normal 50px/59px Dela Gothic One;
+	font: normal normal normal 50px/59px 'inter', sans-serif;
 	letter-spacing: 0.9px;
 	color: #ffffff;
 	opacity: 1;
@@ -29,7 +29,7 @@
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	letter-spacing: 0.9px;
 	text-align: center;
-	font: normal normal normal 50px/59px Dela Gothic One;
+	font: normal normal normal 50px/59px 'inter', sans-serif;
 	letter-spacing: 0.9px;
 	color: #ecd8c5;
 	opacity: 1;
@@ -41,7 +41,7 @@
 @media screen and (max-width: 768px) {
   
 	.inner-banner .text-shadow span, .inner-banner .text-shadow {
-		font: normal normal normal 38px/44px Dela Gothic One;
+		font: normal normal normal 38px/44px 'inter', sans-serif;
 		margin-bottom: 0;
 		max-width: 340px;
 	}

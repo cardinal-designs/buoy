@@ -5,7 +5,7 @@
 <div 
   id="supplementSideDrawer" 
   data-product-name="{{ ss.product_name }}" 
-  class="supplement-side-drawer"
+  class="supplement-side-drawer popup-drawer"
   {% if template == 'page.clear-pee-club' %}
     style="top: 0;"
   {% endif %}
@@ -13,7 +13,7 @@
   <div class="drawer__wrapper-main">
 
     <div class="drawer__header">
-      <a href="javascript:void(0)" class="drawer__close js-close-supplement-drawer hide-mobile">
+      <a href="javascript:void(0)" class="drawer__close js-close-supplement-drawer js-close-popup-drawer">
         <span>Close</span> {% render 'icon-close-drawer' %}</a>
     </div>  
     <div class="drawer__title-wrapper">
@@ -141,15 +141,18 @@
       {%- endfor -%}
     </div>
 
+    {% comment %}
     <div class="drawer__desktop-continue hide-mobile">
       <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-close-supplement-drawer">Keep Shopping</a>        
     </div>
+    {% endcomment %}
 
   </div>
-
+  {% comment %}
     <div class="drawer__mobile-continue hide-desktop">
       <a href="javascript:void(0)" class="drawer__continue-cta drawer__continue-cta-mobile button button--full-width js-close-supplement-drawer">Keep Shopping</a>        
     </div>
+  {% endcomment %}
 </div>
 
 
