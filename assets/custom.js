@@ -851,6 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     else{
       supplementSideDrawer.style.transition = '';
+      enableBodyScroll();
     }
   }
 
