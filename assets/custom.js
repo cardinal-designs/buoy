@@ -779,235 +779,105 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Popup modal drag and close code  -  Start */
   
-  // let touchStartY = 0;
-  // let touchEndY = 0;
-  // let swipeDistance = 0;
-  // const threshold = 50;
-  // const maxScreenWidth = 769;
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let swipeDistance = 0;
+  const threshold = 50;
+  const maxScreenWidth = 769;
   
-  // function disableBodyScroll() {
-  //   document.body.style.overflow = 'hidden';
-  //   document.body.style.touchAction = 'none'; // Prevent scroll chaining
-  // }
-  
-  // function enableBodyScroll() {
-  //   document.body.style.overflow = '';
-  //   document.body.style.touchAction = ''; // Re-enable scroll chaining
-  // }
-  
-  // function isScreenBelowThreshold() {
-  //   return window.innerWidth < maxScreenWidth;
-  // }
-  
-  // function isScrolledToTop(supplementSideDrawer) {
-  //   return supplementSideDrawer.scrollTop === 0;
-  // }
-  
-  // function onTouchStart(event, supplementSideDrawer) {
-  //   if (!isScreenBelowThreshold()) return;
-  //   if (isScrolledToTop(supplementSideDrawer)) {
-  //     touchStartY = event.touches[0].clientY;
-  //     supplementSideDrawer.style.transition = 'none';
-  //     disableBodyScroll();
-  //   }
-  // }
-  
-  // function onTouchMove(event, supplementSideDrawer) {
-  //   if (!isScreenBelowThreshold()) return;
-  //   if (isScrolledToTop(supplementSideDrawer)) {
-  //     touchEndY = event.touches[0].clientY;
-  //     swipeDistance = touchEndY - touchStartY;
-  
-  //     if (swipeDistance > 0) {      
-  //       supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
-  //       event.preventDefault(); // Prevent default scroll behavior
-  //     }
-  //   }
-  // }
-  
-  // function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-  //   if (!isScreenBelowThreshold()) return;
-  
-  //   if (isScrolledToTop(supplementSideDrawer)) {
-  //     touchEndY = event.changedTouches[0].clientY;
-  //     swipeDistance = touchEndY - touchStartY;
-  
-  //     if (swipeDistance > threshold) {
-  //       supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-  //       supplementSideDrawer.style.bottom = '-100%';
-        
-  //       setTimeout(() => {
-  //         closeDrawerButton.click();
-  //       }, 300);
-  //     } else {
-  //       supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-  //       supplementSideDrawer.style.bottom = '0';
-  //     }
-  
-  //     setTimeout(() => {
-  //       supplementSideDrawer.style.transition = '';
-  //       enableBodyScroll();
-  //     }, 300);
-  //   }
-  // }
-
-  // function onTouchCancel() {
-  //   enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
-  // }
-  
-  // function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
-  //   if (!supplementSideDrawer.dataset.touchEventsApplied) {
-  //     supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
-  //     supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
-  //     supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
-  //     supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
-  //     supplementSideDrawer.dataset.touchEventsApplied = 'true';
-  //   }
-  // }
-  
-  // const observer = new MutationObserver((mutationsList) => {
-  //   for (const mutation of mutationsList) {
-  //     if (mutation.type === 'childList') {
-  //       document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
-  //         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-  //         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
-          
-  //         applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
-  //       });
-  //     }
-  //   }
-  // });
-  
-  // observer.observe(document.body, { childList: true, subtree: true });
-
-/* Popup modal drag and close code  -  End */
-
-
-
-
-
-
-
-let touchStartY = 0;
-let touchEndY = 0;
-let swipeDistance = 0;
-let triggeredBySwipe = false; // Flag to track swipe event
-const threshold = 50;
-const maxScreenWidth = 769;
-
-function disableBodyScroll() {
+  function disableBodyScroll() {
     document.body.style.overflow = 'hidden';
     document.body.style.touchAction = 'none'; // Prevent scroll chaining
-}
-
-function enableBodyScroll() {
+  }
+  
+  function enableBodyScroll() {
     document.body.style.overflow = '';
     document.body.style.touchAction = ''; // Re-enable scroll chaining
-}
-
-function isScreenBelowThreshold() {
+  }
+  
+  function isScreenBelowThreshold() {
     return window.innerWidth < maxScreenWidth;
-}
-
-function isScrolledToTop(supplementSideDrawer) {
+  }
+  
+  function isScrolledToTop(supplementSideDrawer) {
     return supplementSideDrawer.scrollTop === 0;
-}
-
-function onTouchStart(event, supplementSideDrawer) {
+  }
+  
+  function onTouchStart(event, supplementSideDrawer) {
     if (!isScreenBelowThreshold()) return;
     if (isScrolledToTop(supplementSideDrawer)) {
-        touchStartY = event.touches[0].clientY;
-        supplementSideDrawer.style.transition = 'none';
-        disableBodyScroll();
+      touchStartY = event.touches[0].clientY;
+      supplementSideDrawer.style.transition = 'none';
+      disableBodyScroll();
     }
-}
-
-function onTouchMove(event, supplementSideDrawer) {
+  }
+  
+  function onTouchMove(event, supplementSideDrawer) {
     if (!isScreenBelowThreshold()) return;
     if (isScrolledToTop(supplementSideDrawer)) {
-        touchEndY = event.touches[0].clientY;
-        swipeDistance = touchEndY - touchStartY;
-
-        if (swipeDistance > 0) {
-            supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
-            event.preventDefault(); // Prevent default scroll behavior
-        }
+      touchEndY = event.touches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
+  
+      if (swipeDistance > 0) {      
+        supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
+        event.preventDefault(); // Prevent default scroll behavior
+      }
     }
-}
-
-function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+  }
+  
+  function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
     if (!isScreenBelowThreshold()) return;
-
+  
     if (isScrolledToTop(supplementSideDrawer)) {
-        touchEndY = event.changedTouches[0].clientY;
-        swipeDistance = touchEndY - touchStartY;
-
-        if (swipeDistance > threshold) {
-            // Set the flag to true since this is triggered by swipe
-            triggeredBySwipe = true;
-            supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-            supplementSideDrawer.style.bottom = '-100%';
-
-            // Wait for the animation to finish before closing the drawer
-            setTimeout(() => {
-                closeDrawerButton.click();
-            }, 300);
-        } else {
-            supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-            supplementSideDrawer.style.bottom = '0';
-        }
-
+      touchEndY = event.changedTouches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
+  
+      if (swipeDistance > threshold) {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '-100%';
+        
         setTimeout(() => {
-            supplementSideDrawer.style.transition = '';
-            enableBodyScroll();
+          closeDrawerButton.click();
         }, 300);
+      } else {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '0';
+      }
+  
+      setTimeout(() => {
+        supplementSideDrawer.style.transition = '';
+        enableBodyScroll();
+      }, 300);
     }
-}
+  }
 
-function onCloseButtonClick(event, supplementSideDrawer) {
-    // If this is triggered by swipe, keep the smooth transition behavior
-    if (triggeredBySwipe) {
-        // Reset the flag
-        triggeredBySwipe = false;
-        return; // Exit, as the swipe logic will handle this case
-    }
-
-    // If not triggered by swipe, perform the default close action (no swipe behavior)
-    supplementSideDrawer.style.transition = ''; // Ensure no transition overrides
-    enableBodyScroll(); // Enable body scroll
-}
-
-function onTouchCancel() {
+  function onTouchCancel() {
     enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
-}
-
-function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
+  }
+  
+  function applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton) {
     if (!supplementSideDrawer.dataset.touchEventsApplied) {
-        supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
-        supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
-        supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
-        supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
-
-        // Add an event listener to handle direct close button clicks
-        closeDrawerButton.addEventListener('click', (event) => onCloseButtonClick(event, supplementSideDrawer));
-
-        supplementSideDrawer.dataset.touchEventsApplied = 'true';
+      supplementSideDrawer.addEventListener('touchstart', (event) => onTouchStart(event, supplementSideDrawer));
+      supplementSideDrawer.addEventListener('touchmove', (event) => onTouchMove(event, supplementSideDrawer));
+      supplementSideDrawer.addEventListener('touchend', (event) => onTouchEnd(event, supplementSideDrawer, closeDrawerButton));
+      supplementSideDrawer.addEventListener('touchcancel', onTouchCancel); // Handle touchcancel
+      supplementSideDrawer.dataset.touchEventsApplied = 'true';
     }
-}
-
-const observer = new MutationObserver((mutationsList) => {
+  }
+  
+  const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
-                const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-                const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
-
-                applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
-            });
-        }
+      if (mutation.type === 'childList') {
+        document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
+          const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+          const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+          
+          applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+        });
+      }
     }
-});
+  });
+  
+  observer.observe(document.body, { childList: true, subtree: true });
 
-observer.observe(document.body, { childList: true, subtree: true });
-
-
+/* Popup modal drag and close code  -  End */
