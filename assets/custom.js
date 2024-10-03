@@ -961,6 +961,7 @@ function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
     }
 }
 
+
   function onTouchCancel() {
     enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
   }
