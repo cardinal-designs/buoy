@@ -931,34 +931,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-      if (!isScreenBelowThreshold()) return;
-  
-      if (isScrolledToTop(supplementSideDrawer)) {
-          touchEndY = event.changedTouches[0].clientY;
-          swipeDistance = touchEndY - touchStartY;
-  
-          if (swipeDistance > threshold) {
-              // Smooth close animation
-              supplementSideDrawer.style.transition = 'bottom 0.5s ease-out'; 
-              supplementSideDrawer.style.bottom = '-100%'; 
-  
-              // Wait for the animation to finish before closing the drawer
-              setTimeout(() => {
-                  closeDrawerButton.click();
-              }, 500); // Matching the transition duration (0.5s)
-          } else {
-              // If the swipe is not enough, return to the original position
-              supplementSideDrawer.style.transition = 'bottom 0.5s ease-out';
-              supplementSideDrawer.style.bottom = '0';
-          }
-  
-          setTimeout(() => {
-              supplementSideDrawer.style.transition = '';
-              enableBodyScroll();
-          }, 500); // Match this with the transition duration (0.5s)
-      }
-  }
+function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
+    if (!isScreenBelowThreshold()) return;
+
+    if (isScrolledToTop(supplementSideDrawer)) {
+        touchEndY = event.changedTouches[0].clientY;
+        swipeDistance = touchEndY - touchStartY;
+
+        if (swipeDistance > threshold) {
+            // Smooth close animation
+            supplementSideDrawer.style.transition = 'bottom 0.5s ease-out'; 
+            supplementSideDrawer.style.bottom = '-100%'; 
+
+            // Wait for the animation to finish before closing the drawer
+            setTimeout(() => {
+                supplementSideDrawer.scrollTop = 0; // Reset scroll position to top
+                closeDrawerButton.click();
+            }, 500); // Matching the transition duration (0.5s)
+        } else {
+            // If the swipe is not enough, return to the original position
+            supplementSideDrawer.style.transition = 'bottom 0.5s ease-out';
+            supplementSideDrawer.style.bottom = '0';
+        }
+
+        setTimeout(() => {
+            supplementSideDrawer.style.transition = '';
+            enableBodyScroll();
+        }, 500); // Match this with the transition duration (0.5s)
+    }
+}
 
   function onTouchCancel() {
     enableBodyScroll(); // Ensure scroll is re-enabled if touch is canceled
