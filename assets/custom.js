@@ -542,7 +542,6 @@ $('.page-blury-overlay').click(function(){
 });
 
 $('.js-close-supplement-drawer').click(function(){
-  document.querySelector('#supplementSideDrawer').scrollTop = 0; 
   $('.supplement-side-drawer').css('right','-100%');
   if(window.innerWidth < 769){
     $('.supplement-side-drawer').css('bottom','-100%');
