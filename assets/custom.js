@@ -807,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!isScreenBelowThreshold()) return;
     if (isScrolledToTop(supplementSideDrawer)) {
       touchStartY = event.touches[0].clientY;
-      supplementSideDrawer.style.transition = 'none';
+      // supplementSideDrawer.style.transition = 'none';
       disableBodyScroll();
     }
   }
