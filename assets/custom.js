@@ -844,11 +844,15 @@ document.addEventListener('DOMContentLoaded', function() {
         supplementSideDrawer.style.bottom = '0';
       }
   
-      setTimeout(() => {
-        supplementSideDrawer.style.transition = '';
-        enableBodyScroll();
-      }, 300);
+      // setTimeout(() => {
+      //   supplementSideDrawer.style.transition = '';
+      //   enableBodyScroll();
+      // }, 300);
     }
+    setTimeout(() => {
+      supplementSideDrawer.style.transition = '';
+      enableBodyScroll();
+    }, 300);
   }
 
   function onTouchCancel() {
