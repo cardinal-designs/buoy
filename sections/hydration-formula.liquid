@@ -90,28 +90,30 @@
 
 
 <script type="text/javascript">
-  $(document).ready(function(){
-
-    $('.slider-nav').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      focusOnSelect: true,
-      centerMode: true,
-      prevArrow: $('.prev-slide'),
-      nextArrow: $('.next-slide')
- 
-    });
-
-    $('a[data-slide]').click(function(e) {
-      $('.hide-slider').css({"opacity":"1", "z-index":"9", "display": "flex" });
-      e.preventDefault();
-      var slideno = $(this).data('slide');
-      $('.slider-nav').slick('slickGoTo', slideno - 1);
-
-    });
-    $('.close').click(function(e) {
-      $('.hide-slider').css({"opacity":"0", "z-index":"-1"});
+  document.addEventListener('jquery-ready', () => {
+    $(document).ready(function(){
+  
+      $('.slider-nav').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        focusOnSelect: true,
+        centerMode: true,
+        prevArrow: $('.prev-slide'),
+        nextArrow: $('.next-slide')
+   
+      });
+  
+      $('a[data-slide]').click(function(e) {
+        $('.hide-slider').css({"opacity":"1", "z-index":"9", "display": "flex" });
+        e.preventDefault();
+        var slideno = $(this).data('slide');
+        $('.slider-nav').slick('slickGoTo', slideno - 1);
+  
+      });
+      $('.close').click(function(e) {
+        $('.hide-slider').css({"opacity":"0", "z-index":"-1"});
+      });
     });
   });
 </script>

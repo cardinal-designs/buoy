@@ -15,7 +15,7 @@ window.TriplePixelData={TripleName:"buoyshop.myshopify.com",ver:"1.9"},function(
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
+  t.dataset.lazySrc=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbq.js');
     </script>
@@ -43,7 +43,7 @@ setTimeout(function(){
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.dataset.lazySrc=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-WHSMDTK');</script>
     <!-- End Google Tag Manager GTM-WHSMDTK -->
@@ -67,22 +67,22 @@ setTimeout(function(){
 
     {% render 'meta-tags' %}
 
+    {%- render 'optimization' -%}
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     
-    <img width="99999" height="99999" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;" alt="LCP" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">
-
     <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
 
   
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" ></script>
+    {% comment %} <script src="{{ 'jquery.min.js' | asset_url }}"></script> {% endcomment %}
+    <script src="https://code.jquery.com/jquery-3.6.0.js" defer onload="document.dispatchEvent(new Event('jquery-ready'))"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" defer ></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script> {% endcomment %}
   
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -92,7 +92,7 @@ setTimeout(function(){
       <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
       <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
     {% endif %}
-
+    {%- assign content_for_header = content_for_header | replace: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'" -%}
     {{ content_for_header }}
 
     {% style %}
@@ -102,6 +102,7 @@ setTimeout(function(){
         src: url('{{ 'Inter-Bold.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
       }
 
       /* Rhymes Light */
@@ -110,6 +111,7 @@ setTimeout(function(){
         src: url('{{ 'Rhymes-Text-Light.woff' | asset_url }}');
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
       }
 
       /* Rhymes Light Italic */
@@ -118,6 +120,7 @@ setTimeout(function(){
         src: url('{{ 'Rhymes-Text-Light-Italic.woff' | asset_url }}');
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
       }
 
       /* Inter Mediun */
@@ -126,6 +129,7 @@ setTimeout(function(){
         src: url('{{ 'Inter-Medium.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
       }
 
       /* Inter Regular */
@@ -134,6 +138,7 @@ setTimeout(function(){
         src: url('{{ 'Inter-Regular.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
       }
 
       /* Inter Light */
@@ -142,6 +147,7 @@ setTimeout(function(){
         src: url('{{ 'Inter-Light.ttf' | asset_url }}');
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
       }
 
       /* Colors */
@@ -288,7 +294,7 @@ setTimeout(function(){
               };
               p.callQueue = [];
               var t = d.createElement("script");
-              t.src = "https://www.redditstatic.com/ads/pixel.js";
+              t.dataset.lazySrc = "https://www.redditstatic.com/ads/pixel.js";
               t.async = true;
               var s = d.getElementsByTagName("script")[0];
               s.parentNode.insertBefore(t, s);
@@ -302,7 +308,7 @@ setTimeout(function(){
 </head>
 
   <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
-    
+    <img role="presentation" alt="" width="2000" height="2000" style="pointer-events:none;position:absolute;top:0;left:0;width:99vw;height:99vh;max-width:99vw;max-height:99vh" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVzYz5DcmVhdGVkIHdpdGggRmFicmljLmpzIDMuNS4wPC9kZXNjPgo8ZGVmcz4KPC9kZWZzPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDApIi8+CjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuOTIyOCAwIDAgMC44Nzg5IDUwNi44NTQ1IDQ4NC45KSIgaWQ9IjQ0NjM1NiI+CjxnIHN0eWxlPSIiIHZlY3Rvci1lZmZlY3Q9Im5vbi1zY2FsaW5nLXN0cm9rZSI+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtNDUwIC00NTApIiBpZD0iODUwMzc5Ij4KPHJlY3Qgc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiA0OyBpcy1jdXN0b20tZm9udDogbm9uZTsgZm9udC1maWxlLXVybDogbm9uZTsgZmlsbDogcmdiKDI1NSwyNTUsMjU1KTsgZmlsbC1vcGFjaXR5OiAwOyBmaWxsLXJ1bGU6IG5vbnplcm87IG9wYWNpdHk6IDA7IiB4PSItNTAiIHk9Ii01MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPgo8L2c+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS43NzU2IDAgMCAxLjc3NTYgMC4wMDg5IDAuMDA5KSIgaWQ9IjgwNDExOCI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1Ni4wMDA1LCAtMjU2LjAwMDUpIiBkPSJNIDQxMC41NjYgNTkuMzU0IFYgMjguOTYyIEMgNDEwLjU2NiAxMi45OTEgMzk3LjU5OSAwIDM4MS42NjUgMCBoIC0yNTEuMzMgYyAtMTUuOTM0IDAgLTI4LjkwMSAxMi45OTEgLTI4LjkwMSAyOC45NjIgdiAzMC4zOTIgYyAtMTYuNjIgNC4zNTEgLTI4Ljk4MSAxOS4zNjggLTI4Ljk4MSAzNy4zMzUgdiAzOC41NTcgYyAwIDUuMzQgNC4zMjUgOS42NiA5LjY2IDkuNjYgaCAxOS45MzggbCAyNi44NzQgMzM5LjcwOCBjIDEuMjI2IDE1LjUgMTQuOTE1IDI3LjM4NyAzMC41MTkgMjcuMzg3IGggMTkzLjExMyBjIDE1Ljg2MyAwIDI5LjI2OSAtMTEuNjIzIDMwLjUxOSAtMjcuMzg3IGwgMjYuODc0IC0zMzkuNzA4IGggMTkuOTM4IGMgNS4zMzUgMCA5LjY2IC00LjMyMSA5LjY2IC05LjY2IFYgOTYuNjg5IEMgNDM5LjU0NyA3OC43MjIgNDI3LjE4NiA2My43MDUgNDEwLjU2NiA1OS4zNTQgeiBNIDEyMC43NTUgMjguOTYyIGMgMCAtNS4zMjEgNC4yOTcgLTkuNjQyIDkuNTggLTkuNjQyIGggMjUxLjMzIGMgNS4yODMgMCA5LjU4IDQuMzIxIDkuNTggOS42NDIgdiAyOSBIIDEyMC43NTUgViAyOC45NjIgeiBNIDM2My44MTEgNDgyLjM1OSBjIC0wLjQzOSA1LjU5NCAtNS41OTQgMTAuMzIxIC0xMS4yNTUgMTAuMzIxIEggMTU5LjQ0MyBjIC01LjU2MSAwIC0xMC44MjEgLTQuODIxIC0xMS4yNTUgLTEwLjMyMSBsIC0yNi42NDIgLTMzNy40NTMgaCAyNjguOTA2IEwgMzYzLjgxMSA0ODIuMzU5IHogTSA0MjAuMjI2IDEyNS41ODUgSCA5MS43NzQgViA5Ni42ODkgYyAwIC0xMC42OTggOC42OTggLTE5LjQwNiAxOS4zOTIgLTE5LjQwNiBoIDI4OS42NyBjIDEwLjY5MyAwIDE5LjM5MiA4LjcwOCAxOS4zOTIgMTkuNDA2IFYgMTI1LjU4NSB6IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9nPgoJCTxnIHRyYW5zZm9ybT0ibWF0cml4KDEuNzc1NiAwIDAgMS43NzU2IDAuMDA4MSA5NC4zNDkzKSIgaWQ9IjQ2NTk0NiI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1NiwgLTMwOS4xMzIpIiBkPSJNIDI1NiAxODMuNTQ3IGMgLTQzLjMzNSAwIC03Ny4yODMgNTUuMTYgLTc3LjI4MyAxMjUuNTg1IFMgMjEyLjY2NSA0MzQuNzE3IDI1NiA0MzQuNzE3IGMgNDMuMzM1IDAgNzcuMjgzIC01NS4xNiA3Ny4yODMgLTEyNS41ODUgUyAyOTkuMzM1IDE4My41NDcgMjU2IDE4My41NDcgeiBNIDI1NiA0MTUuMzk2IGMgLTMxLjQyIDAgLTU3Ljk2MiAtNDguNjYgLTU3Ljk2MiAtMTA2LjI2NCBTIDIyNC41OCAyMDIuODY4IDI1NiAyMDIuODY4IGMgMzEuNDIgMCA1Ny45NjIgNDguNjYgNTcuOTYyIDEwNi4yNjQgQyAzMTMuOTYyIDM2Ni43MzYgMjg3LjQyIDQxNS4zOTYgMjU2IDQxNS4zOTYgeiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPC9nPgo8L2c+Cjwvc3ZnPg==">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSMDTK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -448,6 +454,6 @@ setTimeout(function(){
       });
       </script>
     {% endif %}
+    <script src="{{ 'optimization.js' | asset_url }}" defer></script>
   </body>
-  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UFRh4Z"></script>
 </html>

@@ -82,11 +82,12 @@
 </footer>
 
 {% javascript %}
-
-  $('.footer__content-dropdown-header').click(function() {
-    $(this).toggleClass('active');
-    $(this).siblings('.footer__content-dropdown-content').slideToggle(300);
-  })
+  document.addEventListener('jquery-ready', () => {
+    $('.footer__content-dropdown-header').click(function() {
+      $(this).toggleClass('active');
+      $(this).siblings('.footer__content-dropdown-content').slideToggle(300);
+    })
+  });
 
   class LocalizationForm extends HTMLElement {
     constructor() {
