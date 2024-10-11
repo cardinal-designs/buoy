@@ -1,3 +1,4 @@
+document.addEventListener('jquery-ready', () => {
 $(document).ready(function() {
   const slider = $(".Text_Block_Section .Text_Blocks_Inr_Slider");
   slider
@@ -28,3 +29,4 @@ $(document).ready(function() {
       ]
     });
 }); 
+});
