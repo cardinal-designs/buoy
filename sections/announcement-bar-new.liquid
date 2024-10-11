@@ -11,7 +11,7 @@
     {%- endif -%}
   {%- endif -%}
   {% if section.settings.image != blank %}
-  <img src="{{ section.settings.image | image_url: width: 144 }}" alt="{{ section.settings.text | strip_html | escape | default: shop.name }}" loading="eager" width="72" height="36"/>
+  <img src="{{ section.settings.image | img_url: 'master' }}"/>
   {% endif %}
 </div>
 

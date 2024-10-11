@@ -1,29 +1,6 @@
-{% comment %}
-  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200,1400,1600,1800', image: image -%}{%- endcapture -%}
-  {%- assign image_url = image | img_url: 'master' -%}
-{% endcomment %}
+{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200,1400,1600,1800', image: image -%}{%- endcapture -%}
+{%- assign image_url = image | img_url: 'master' -%}
 
 <div class="aspect-ratio {{ classes }}" style="max-width: 100%; width: 100%; --aspect-ratio: {{ image.aspect_ratio }}">
-  {%- liquid
-    assign classes = 'lazyload lazyloaded'
-    if blur
-      assign classes = classes | append: ' lazyload--blur'
-    endif
-    if fade
-      assign classes = classes | append: ' lazyload--fade'
-    endif
-  -%}
-  {{
-    image
-    | image_url: width: 3840
-    | image_tag:
-      width: image.width,
-      height: image.height,
-      class: classes,
-      sizes: '100vw',
-      widths: '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680',
-      loading: 'lazy',
-      data-media-id: image.id
-  }}
-  {% comment %} <img src="{{ image | img_url: '50x50' }}" class="lazyload{% if blur %} lazyload--blur{% endif %}{% if fade %} lazyload--fade{% endif %}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}"> {% endcomment %}
+  <img src="{{ image | img_url: '50x50' }}" class="lazyload{% if blur %} lazyload--blur{% endif %}{% if fade %} lazyload--fade{% endif %}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}">
 </div>

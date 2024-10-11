@@ -95,7 +95,6 @@
 </div>
 
 {% javascript %}
-document.addEventListener('jquery-ready', () => {
 $('[href="#shop"]').click(function() {
 $('.shop-slide-out').addClass('active');
     $('.page-overlay').addClass('is-visible');
@@ -121,7 +120,6 @@ $('.shop-slide-out').addClass('active');
   $('.shop-slide-out__second-back').click(function() {
     $('.shop-slide-out').removeClass('show-second');
   });
-});
 {% endjavascript %}
 
 {% schema %}

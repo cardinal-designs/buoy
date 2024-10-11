@@ -34,7 +34,7 @@
       {% endfor %}
     </div>
     <div class="card__inner">
-      <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link" aria-label="Link to {{ product_card_product.title | escape }}">
+      <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
         <div class="media" style="padding-bottom: 125%;">
           {% render 'lazy-image' image: product_card_product.featured_media, fade: true, classes: 'img-fill' %}
 
@@ -64,7 +64,7 @@
 
         <div data-oke-reviews-product-listing-rating>{{ product_card_product.metafields.okendo.ProductListingSnippet }}</div>
 
-        <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link" aria-label="Link to {{ product_card_product.title | escape }}">
+        <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
           <div class="h5 card-information__title">{{ product_card_product.title | escape }}</div>
         
         {% if product_card_product.metafields.my_fields.product_card_text != blank %}

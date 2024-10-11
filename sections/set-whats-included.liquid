@@ -130,26 +130,24 @@
 </div>
 
 {% javascript %}
-  document.addEventListener('jquery-ready', () => {
-    $('.included-set__header-tab').click(function() {
-      var tab = $(this).data('tab');
+  $('.included-set__header-tab').click(function() {
+    var tab = $(this).data('tab');
 
-      $('.included-set__header-tab.active').removeClass('active');
-      $(this).addClass('active');
+    $('.included-set__header-tab.active').removeClass('active');
+    $(this).addClass('active');
 
-      $('.included-set__product.active').removeClass('active');
-      $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
-    });
+    $('.included-set__product.active').removeClass('active');
+    $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
+  });
 
-    $('.included-set__product-arrow').click(function() {
-      var tab = $(this).data('tab');
+  $('.included-set__product-arrow').click(function() {
+    var tab = $(this).data('tab');
 
-      $('.included-set__product.active').removeClass('active');
-      $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
+    $('.included-set__product.active').removeClass('active');
+    $(`.included-set__product[data-tab="${tab}"]`).addClass('active');
 
-      $('.included-set__header-tab.active').removeClass('active');
-      $(`.included-set__header-tab[data-tab="${tab}"]`).addClass('active');
-    });
+    $('.included-set__header-tab.active').removeClass('active');
+    $(`.included-set__header-tab[data-tab="${tab}"]`).addClass('active');
   });
 {% endjavascript %}
 

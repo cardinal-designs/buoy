@@ -23,7 +23,6 @@
     //     });
     // }); 
 
-    document.addEventListener('jquery-ready', () => {
       $(document).ready(function() {
         var el = $('.Subscribe_Box').find('input:checked').val()
         if(el === 'subsave') {
@@ -42,7 +41,6 @@
         document.getElementById(`rtx_one_price`).innerText = {{ onePrice | json }};
       }
     })
-  });
    
        
   </script>
