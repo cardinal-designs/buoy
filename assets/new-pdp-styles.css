@@ -4,6 +4,7 @@
     src: url('{{ 'Rhymes-Text-Light.woff' | asset_url }}');
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
   }
 
   /* Rhymes Light Italic */
@@ -12,6 +13,7 @@
     src: url('{{ 'Rhymes-Text-Light-Italic.woff' | asset_url }}');
     font-style: italic;
     font-weight: 100;
+    font-display: swap;
   }
 
 h1 {

@@ -11,23 +11,25 @@
 </div>
 
 {% javascript %}
-  $(window).scroll(function() {
-    var $scrollTop = $(window).scrollTop();
-    var scrollToSectionOffset = $('#MainContent .shopify-section:nth-child(2)');
+  document.addEventListener('jquery-ready', () => {
+    $(window).scroll(function() {
+      var $scrollTop = $(window).scrollTop();
+      var scrollToSectionOffset = $('#MainContent .shopify-section:nth-child(2)');
 
-    if ( $(window).width() > 768 ) {
-      if ($scrollTop > (scrollToSectionOffset.offset().top)) {
-        $('.product-bar').addClass('scrolled');
+      if ( $(window).width() > 768 ) {
+        if ($scrollTop > (scrollToSectionOffset.offset().top)) {
+          $('.product-bar').addClass('scrolled');
+        } else {
+          $('.product-bar').removeClass('scrolled');
+        }
       } else {
-        $('.product-bar').removeClass('scrolled');
-      }
-    } else {
-      if ($scrollTop > 1200) {
-        $('.product-bar').addClass('scrolled');
-      } else {
-        $('.product-bar').removeClass('scrolled');
-      }
-	}
+        if ($scrollTop > 1200) {
+          $('.product-bar').addClass('scrolled');
+        } else {
+          $('.product-bar').removeClass('scrolled');
+        }
+    }
+    });
   });
 {% endjavascript %}
 
