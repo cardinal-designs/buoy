@@ -830,35 +830,35 @@
 {% endcomment %}
 
 {% javascript %}
-document.addEventListener('jquery-ready', () => {
-  // Product tabs
-  $('.product__tabs-header .body').click(function() {
-  if (!$(this).hasClass('active')) {
-  var tab = $(this).data('tab');
+// Product tabs
+$('.product__tabs-header .body').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
 
-  $(this).siblings().removeClass('active');
-  $(this).addClass('active');
+$(this).siblings().removeClass('active');
+$(this).addClass('active');
 
-  $(this).closest('.product__tabs').find('.product__tab').removeClass('active');
-  $(this).closest('.product__tabs').find(`.product__tab[data-tab="${tab}"]`).addClass('active');
-  }
-  });
-
-  // Bundle tabs
-  $('.product__bundle-header-container button').click(function() {
-  if (!$(this).hasClass('active')) {
-  var tab = $(this).data('tab');
-
-  $('.product__bundle-header-container button').removeClass('active');
-  $(this).addClass('active');
-
-  $('.product__tabs').removeClass('active');
-  $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
-  }
-  });
-
-  // Nutrition Label Popup
+$(this).closest('.product__tabs').find('.product__tab').removeClass('active');
+$(this).closest('.product__tabs').find(`.product__tab[data-tab="${tab}"]`).addClass('active');
+}
 });
+
+// Bundle tabs
+$('.product__bundle-header-container button').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
+
+$('.product__bundle-header-container button').removeClass('active');
+$(this).addClass('active');
+
+$('.product__tabs').removeClass('active');
+$(`.product__tabs[data-tab="${tab}"]`).addClass('active');
+}
+});
+
+// Nutrition Label Popup
+
+
 {% endjavascript %}
 
 
@@ -1475,13 +1475,11 @@ function makeTimer() {
   if (minutes < "10") { minutes = "0" + minutes; }
   if (seconds < "10") { seconds = "0" + seconds; }
 
-    document.addEventListener('jquery-ready', () => {
-      // $("#days").html((days) + "<span>Days</span>");
-      $(".js-date-wrapper").find('date').html(dateString);
-      $("#hours").html((parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
-      $("#minutes").html(minutes + "<span>min</span>");
-      $("#seconds").html(seconds + "<span>Seconds</span>");		
-    });
+  // $("#days").html((days) + "<span>Days</span>");
+  $(".js-date-wrapper").find('date').html(dateString);
+  $("#hours").html((parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
+  $("#minutes").html(minutes + "<span>min</span>");
+  $("#seconds").html(seconds + "<span>Seconds</span>");		
 }
 
 setInterval(function() { makeTimer(); }, 1000);

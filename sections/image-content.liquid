@@ -40,17 +40,15 @@
             <p class="image-content__link-copy-disclaimer body-sm">{{ block.settings.disclaimer }}</p>
 
             <script>
-              document.addEventListener('jquery-ready', () => {
-                $('.image-content__link-copy-button').click(() => {
-                  navigator.clipboard.writeText('{{ block.settings.link }}');
-  
-                  console.log()
-  
-                  $('.image-content__link-copied').addClass('visible');
-                  setTimeout(() => {
-                    $('.image-content__link-copied').removeClass('visible');
-                  }, 2000);
-                });
+              $('.image-content__link-copy-button').click(() => {
+                navigator.clipboard.writeText('{{ block.settings.link }}');
+
+                console.log()
+
+                $('.image-content__link-copied').addClass('visible');
+                setTimeout(() => {
+                  $('.image-content__link-copied').removeClass('visible');
+                }, 2000);
               });
             </script>
           </div>

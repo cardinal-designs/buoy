@@ -73,11 +73,9 @@
 </div>
 
 {% javascript %}
-  document.addEventListener('jquery-ready', () => {
-    $('.ingredients-set__header').click(function() {
-      $(this).toggleClass('active');
-      $(this).siblings('.ingredients-set__content').slideToggle(300);
-    });
+  $('.ingredients-set__header').click(function() {
+    $(this).toggleClass('active');
+    $(this).siblings('.ingredients-set__content').slideToggle(300);
   });
 {% endjavascript %}
 

@@ -7,7 +7,6 @@
 </div>
 
 {% javascript %}
-document.addEventListener('jquery-ready', () => {
   $(window).scroll(function() {
     var $scrollTop = $(window).scrollTop();
       var scrollToSectionOffset = $('.show-sticky-header');
@@ -25,7 +24,6 @@ document.addEventListener('jquery-ready', () => {
       }
 	}
   });
-});
 {% endjavascript %}
 
 {% schema %}
