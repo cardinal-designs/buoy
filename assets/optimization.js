@@ -11,7 +11,7 @@
 
   async function onUserActivity() {
     const scriptTagsForLoad = [...document.querySelectorAll("script[data-lazy-src]")];
-    const linkTagsForLoad = [...document.querySelectorAll("link[rel=stylesheet][data-lazy-href]")];
+    const linkTagsForLoad = document.querySelectorAll("link[rel=stylesheet][data-lazy-href]");
 
     const scriptsLoad = [];
 
