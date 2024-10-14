@@ -1,4 +1,4 @@
-$(window).on('load', function (){
+
   $('.reviews-slider__slider').slick({
     dots: false,
     arrows: true,
@@ -26,4 +26,3 @@ $(window).on('load', function (){
       }
     ]
   });
-});
