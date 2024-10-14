@@ -23,9 +23,7 @@
           <input type="hidden" name="utf8" value="✓">
           {%- if form.posted_successfully? -%}
             <script>
-              document.addEventListener('jquery-ready', () => {
-                $('.chronic-illness-slide-out').addClass('active');
-              });
+              $('.chronic-illness-slide-out').addClass('active');
             </script>
             <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
               <p>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</p>
@@ -211,14 +209,12 @@
           </div>
 
           <script>
-            document.addEventListener('jquery-ready', () => {
-              $('.image-content__link-copy-button').click(() => {
-                navigator.clipboard.writeText('{{ section.settings.link }}');
-                $('.image-content__link-copied').addClass('visible');
-                setTimeout(() => {
-                  $('.image-content__link-copied').removeClass('visible');
-                }, 2000);
-              });
+            $('.image-content__link-copy-button').click(() => {
+              navigator.clipboard.writeText('{{ section.settings.link }}');
+              $('.image-content__link-copied').addClass('visible');
+              setTimeout(() => {
+                $('.image-content__link-copied').removeClass('visible');
+              }, 2000);
             });
           </script>
         </div>
@@ -253,156 +249,156 @@
 </div>
  
 {% javascript %}
-  document.addEventListener('jquery-ready', () => {
-    $(".show-more a").on("click", function() {
-      var $this = $(this); 
-      var $content = $this.parents('.form__checkbox--button').find(".field");
-      var linkText = $this.text().toUpperCase();    
-    
-      if(linkText === "SHOW MORE"){
-          linkText = "Show less";
-          $content.addClass("active");
-      } else {
-          linkText = "Show more";
-          $content.removeClass("active");
-      };
-    
-      $this.text(linkText);
-    });
-    
-    $('[href="#chronic"]').click(function() {
-      $('.chronic-illness-slide-out').addClass('active');
-    });
+
   
-    $('.chronic-illness-slide-out__overlay').click(function() {
-      closePopup();
-    });
+  $(".show-more a").on("click", function() {
+    var $this = $(this); 
+    var $content = $this.parents('.form__checkbox--button').find(".field");
+    var linkText = $this.text().toUpperCase();    
   
-    $('.chronic-illness-slide-out__close').click(function() {
-      closePopup();
-    });
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.addClass("active");
+    } else {
+        linkText = "Show more";
+        $content.removeClass("active");
+    };
   
-    function closePopup() {
-      $('.chronic-illness-slide-out').removeClass('active');
+    $this.text(linkText);
+  });
+  
+  $('[href="#chronic"]').click(function() {
+    $('.chronic-illness-slide-out').addClass('active');
+  });
+
+  $('.chronic-illness-slide-out__overlay').click(function() {
+    closePopup();
+  });
+
+  $('.chronic-illness-slide-out__close').click(function() {
+    closePopup();
+  });
+
+  function closePopup() {
+    $('.chronic-illness-slide-out').removeClass('active');
+  }
+
+var $tlt = $(".custom__msg--field");
+
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
+  var radVal = $(this).val();
+  if (radVal === 'Other' && $(this).is(':checked')) {
+      $tlt.css("display", "flex");
+  } else if (radVal === 'Other' && !$(this).is(':checked')) {
+      $tlt.css("display", "none");
+    $("#ContactFormCustomMessage").val('');
+  }
+});
+var globalCheckedValues = [];
+function updateCheckedValues() {
+  globalCheckedValues = $(".chronic-illness-slide-out__checkboxs input[type=checkbox]:checked").map(function() {
+    return $(this).val(); 
+  }).get();  
+  if (globalCheckedValues.includes("Other")) {
+    var customMessage = $("#ContactFormCustomMessage").val();
+    if (customMessage) {
+       globalCheckedValues.push(customMessage);
     }
-  
-    var $tlt = $(".custom__msg--field");
-    
-    $(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
-      var radVal = $(this).val();
-      if (radVal === 'Other' && $(this).is(':checked')) {
-          $tlt.css("display", "flex");
-      } else if (radVal === 'Other' && !$(this).is(':checked')) {
-          $tlt.css("display", "none");
-        $("#ContactFormCustomMessage").val('');
-      }
-    });
-    var globalCheckedValues = [];
-    function updateCheckedValues() {
-      globalCheckedValues = $(".chronic-illness-slide-out__checkboxs input[type=checkbox]:checked").map(function() {
-        return $(this).val(); 
-      }).get();  
-      if (globalCheckedValues.includes("Other")) {
-        var customMessage = $("#ContactFormCustomMessage").val();
-        if (customMessage) {
-          globalCheckedValues.push(customMessage);
-        }
-      }
-    }
-    $(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
-      var radVal = $(this).val();
-      if (radVal === 'Other' && $(this).is(':checked')) {
-        $(".custom__msg--field").css("display", "flex");
-      } else if (radVal === 'Other' && !$(this).is(':checked')) {
-        $(".custom__msg--field").css("display", "none");
-        $("#ContactFormCustomMessage").val(''); 
-      }
-      updateCheckedValues();
-    });
-    $("#ContactFormCustomMessage").on('input', function() {
-      updateCheckedValues();
-    });
-    document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        var checkedValues = globalCheckedValues; 
-        const firstName = document.getElementById('ContactFormFirstName').value;
-        const lastName = document.getElementById('ContactFormLastName').value;
-        const email = document.getElementById('ContactForm-email').value;
-        const mobile = '+1' + document.getElementById('ContactForm-phone').value;
-        const payload = JSON.stringify({
-            data: {
-                type: 'subscription',
-                attributes: {
-                    profile: {
-                        data: {
-                            type: 'profile',
-                            attributes: {
-                                properties: {
-                                    'Chronic Illness': globalCheckedValues,
-                                    'SMS Consent': 'TRUE'
-                                },
-                                email: email,
-                                phone_number: mobile,
-                                first_name: firstName,
-                                last_name: lastName
+  }
+}
+$(".chronic-illness-slide-out__checkboxs input[type=checkbox]").on('change', function() {
+  var radVal = $(this).val();
+  if (radVal === 'Other' && $(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "flex");
+  } else if (radVal === 'Other' && !$(this).is(':checked')) {
+    $(".custom__msg--field").css("display", "none");
+    $("#ContactFormCustomMessage").val(''); 
+  }
+  updateCheckedValues();
+});
+$("#ContactFormCustomMessage").on('input', function() {
+  updateCheckedValues();
+});
+document.getElementById('chronicIllnessForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    var checkedValues = globalCheckedValues; 
+    const firstName = document.getElementById('ContactFormFirstName').value;
+    const lastName = document.getElementById('ContactFormLastName').value;
+    const email = document.getElementById('ContactForm-email').value;
+    const mobile = '+1' + document.getElementById('ContactForm-phone').value;
+    const payload = JSON.stringify({
+        data: {
+            type: 'subscription',
+            attributes: {
+                profile: {
+                    data: {
+                        type: 'profile',
+                        attributes: {
+                            properties: {
+                                'Chronic Illness': globalCheckedValues,
+                                'SMS Consent': 'TRUE'
                             },
-                            meta: {
-                                patch_properties: {
-                                    append: {
-                                        newKey: 'New Value'
-                                    },
-                                    unappend: {
-                                        newKey: 'New Value'
-                                    }
+                            email: email,
+                            phone_number: mobile,
+                            first_name: firstName,
+                            last_name: lastName
+                        },
+                        meta: {
+                            patch_properties: {
+                                append: {
+                                    newKey: 'New Value'
+                                },
+                                unappend: {
+                                    newKey: 'New Value'
                                 }
                             }
                         }
                     }
-                },
-                relationships: {
-                    list: {
-                        data: {
-                            type: 'list',
-                            id: 'TE6KNC'
-                        }
+                }
+            },
+            relationships: {
+                list: {
+                    data: {
+                        type: 'list',
+                        id: 'TE6KNC'
                     }
                 }
             }
+        }
+    });
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'REVISION': '2024-07-15'
+        },
+        body: payload
+    };
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+          document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
+          document.querySelector(".chronic__form--aftersubmission").style.display = "block";
+            if (text) {
+                try {
+                    const jsonResponse = JSON.parse(text);
+                } catch (e) {
+                    console.error('Failed to parse JSON:', e);
+                }
+            } else {
+                console.log('Empty response body');
+            }
+           globalCheckedValues = [];
+        })
+        .catch(err => {
+            console.error('Error:', err);
         });
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'REVISION': '2024-07-15'
-            },
-            body: payload
-        };
-        fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UFRh4Z', options)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok. Status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(text => {
-              document.querySelector(".chronic-illness-slide-out__inner").style.display = "none";
-              document.querySelector(".chronic__form--aftersubmission").style.display = "block";
-                if (text) {
-                    try {
-                        const jsonResponse = JSON.parse(text);
-                    } catch (e) {
-                        console.error('Failed to parse JSON:', e);
-                    }
-                } else {
-                    console.log('Empty response body');
-                }
-              globalCheckedValues = [];
-            })
-            .catch(err => {
-                console.error('Error:', err);
-            });
-    });  
-  });
+});  
 {% endjavascript %}
 
 {% schema %}

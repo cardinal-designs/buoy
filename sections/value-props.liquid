@@ -118,7 +118,6 @@
 </div>
 
 {% javascript %}
-document.addEventListener('jquery-ready', () => {
   $('a[href="#comparison"]').off().click(function() {
     $('.comparison-table-popup-wrapper').fadeIn();
   });
@@ -126,7 +125,6 @@ document.addEventListener('jquery-ready', () => {
   $('.comparison-table-popup__close').off().click(function() {
     $('.comparison-table-popup-wrapper').fadeOut();
   });
-});
 {% endjavascript %}
 
 {% schema %}
