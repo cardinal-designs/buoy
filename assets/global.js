@@ -768,6 +768,7 @@ class VariantSelects extends HTMLElement {
       const variantData = JSON.parse(jsonData);
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
+        addToCartText = `1415Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
              addToCartText = `111Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
