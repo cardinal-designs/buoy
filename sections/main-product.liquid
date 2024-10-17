@@ -1159,8 +1159,10 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             currentVariant = productForm.id.value;
      
         console.log("currentVariant", currentVariant)
+        console.log("productForm", productForm)
 
         let variantScript = productForm.querySelector('.variantMetaJSON');
+        console.log("variantScript", variantScript)
         if(variantScript) {
           const jsonData = variantScript.textContent;
           const variantData = JSON.parse(jsonData);
