@@ -141,6 +141,8 @@
         {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
         {% assign discount_price = variant_price | minus: discount_per_off %}
 
+        discount_price -- {{ discount_price }}
+
         <div class="{{ base }}__price-recurring">{{ discount_price | money }}</div>
         <div class="{{ base }}__price-otp">{{ variant_price | money }}</div>
         
