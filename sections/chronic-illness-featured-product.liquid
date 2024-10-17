@@ -214,6 +214,8 @@
                             {%- endif -%}
                              </span>
                             <span class="Variant_Price">
+                              {% assign discountPrice = variant.price | times: 10 | divided_by: 100 %}
+                              discountPrice -- {{ discountPrice }}
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
                                 <s class="variant__compare--price">{{ variant.price | money }}</s>
