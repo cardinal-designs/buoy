@@ -233,9 +233,9 @@
                       {
                         "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
-                        "discounted_price": "{{ final_price | money_without_currency }}",
-                        "price": "{{ variant.price | money_without_currency }}",
-                        "compare_price": "{{ variant.compare_at_price | money_without_currency }}",
+                        "discounted_price": "{{ final_price | money_with_currency }}",
+                        "price": "{{ variant.price | money_with_currency }}",
+                        "compare_price": "{{ variant.compare_at_price | money_with_currency }}",
                         "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                       }
                       {%- assign comma = true -%}
