@@ -340,13 +340,18 @@
             >
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
-                 Add to Cart —&nbsp; 123112
-                {% if currentVariant.compare_at_price > currentVariant.price %}
-                  <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
-                  &nbsp;
-                  {{ currentVariant.price | money_without_trailing_zeros }}
-                {% else %}
-                  {{ currentVariant.price | money_without_trailing_zeros }}
+                 Add to Cart —&nbsp;
+
+                {%- if product.metafields.custom.auto_discount_percent_off != blank -%}
+                  
+                {%- else -%}
+                  {%- if currentVariant.compare_at_price > currentVariant.price -%}
+                    <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
+                    &nbsp;
+                    {{ currentVariant.price | money_without_trailing_zeros }}
+                  {%- else -%}
+                    {{ currentVariant.price | money_without_trailing_zeros }}
+                  {%- endif -%}
                 {%- endif -%}
 
                 {% comment %} {% render 'rtx_price'%} {% endcomment %}
@@ -747,8 +752,7 @@
                   </div>
                 {% elsif media_alt == 'add-to-any-drink' %}
                   <div class="fixed_badge_center">
-                    🍺
-                  </div>
+                    🀀󮠊                  </div>
                 {% elsif media_alt == 'all-day-energy' %}
                   <div class="fixed_badge_center">
                     🔋
