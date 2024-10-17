@@ -762,9 +762,43 @@ class VariantSelects extends HTMLElement {
     let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
 
     let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+
+    if(subscriptionOption){
+      if(subscriptionOption.value == "purchaseTypeSubscription"){
+         addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+      }
+    }
+ 
+    if(this.closest('product-form').dataset.formType == 'product-card') {
+      
+      addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
+
+      if(subscriptionOption){
+        if(subscriptionOption.value == "purchaseTypeSubscription"){
+          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+        }
+      }
+      this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
+        element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+
+        if(element.classList.contains("js-sub-compare-price")) {
+          element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
+        }
+        
+      })
+    } else {
+        this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
+          element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+
+          if(element.classList.contains("js-sub-compare-price")) {
+            element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
+          }
+      });
+    }
     
     let variantScript = thisData.parentElement.querySelector('.variantMataJSON');      
- 
+
+    
     if(variantScript) {
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
@@ -777,39 +811,6 @@ class VariantSelects extends HTMLElement {
 
 
       
-    }else{
-        if(subscriptionOption){
-          if(subscriptionOption.value == "purchaseTypeSubscription"){
-             addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-          }
-        }
-     
-        if(this.closest('product-form').dataset.formType == 'product-card') {
-          
-          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
-    
-          if(subscriptionOption){
-            if(subscriptionOption.value == "purchaseTypeSubscription"){
-              addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
-            }
-          }
-          this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
-            element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
-    
-            if(element.classList.contains("js-sub-compare-price")) {
-              element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
-            }
-            
-          })
-        } else {
-            this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
-              element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
-    
-              if(element.classList.contains("js-sub-compare-price")) {
-                element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
-              }
-          });
-        }
     }
     
     addButton.dataset.available = (!disable);
