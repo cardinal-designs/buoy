@@ -182,16 +182,20 @@
         {% else %}
           <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
-        {% if currentVariant.selling_plan_allocations.size > 0 %}
-          <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
-          <s>{{ currentVariant.price | money }}</s>
+
+        {% if p.metafields.custom.auto_discount_percent_off != blank %}
         {% else %}
-         {% if currentVariant.compare_at_price > currentVariant.price %}
-          <span>{{ currentVariant.price | money }}</span>&nbsp;
-           <s>{{ currentVariant.compare_at_price | money }}</s>
-         {% else %}
-           <span>{{ currentVariant.price | money }}</span>
-         {% endif %}
+          {% if currentVariant.selling_plan_allocations.size > 0 %}
+            <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
+            <s>{{ currentVariant.price | money }}</s>
+          {% else %}
+           {% if currentVariant.compare_at_price > currentVariant.price %}
+            <span>{{ currentVariant.price | money }}</span>&nbsp;
+             <s>{{ currentVariant.compare_at_price | money }}</s>
+           {% else %}
+             <span>{{ currentVariant.price | money }}</span>
+           {% endif %}
+          {% endif %}
         {% endif %}
         
       </button>
