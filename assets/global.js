@@ -796,7 +796,7 @@ class VariantSelects extends HTMLElement {
       });
     }
     
-    let variantScript = thisData.parentElement.querySelector('.variantMataJSON');      
+    let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');      
 
     
     if(variantScript) {
