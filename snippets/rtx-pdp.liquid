@@ -261,12 +261,12 @@
                       {% if currentVariant.selling_plan_allocations.size > 0 %}
                         {% assign variant_price = currentAllocations[0].price  %}
                       {% else %}
-                        {% assign variant_price = currentVariant.price %}
+                        {% assign variant_price = currentVariant.compare_at_price | default: currentVariant.price %}
                       {% endif %}
 
                       {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign discount_price = variant_price | minus: discount_per_off %}
-
+variant_price -- {{ variant_price }}
                       <!-- <div class="Multi_Price">
                         <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
                           {{ variant_price | money_without_trailing_zeros }}
