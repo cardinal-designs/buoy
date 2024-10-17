@@ -182,7 +182,20 @@
             {% comment %}
             <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
             {% endcomment %}
-            {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {% if product.metafields.custom.auto_discount_percent_off != blank %}
+              {% if currentVariant.selling_plan_allocations.size > 0 %}
+                {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+              {% else %}
+                {% assign variant_price = currentVariant.price %}
+              {% endif %}
+              
+              {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+              {% assign discount_price = variant_price | minus: discount_per_off %}
+              {{ variant_price | money_without_trailing_zeros }}
+              <s>{{ discount_price | money_without_trailing_zeros }}</s>
+            {% else %}
+              {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {% endif %}
           </span>
           {% endif %}
         </button>
