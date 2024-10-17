@@ -353,7 +353,7 @@
                   {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                   {% assign discount_price = variant_price | minus: discount_per_off %}
 
-                  <s>{{ variant_price | money_without_trailing_zeros }}</s>
+                  <s>{{ variant_price | money_without_trailing_zeros }}</s>&nbsp;
                   {{ discount_price | money_without_trailing_zeros }}
                   
                 {%- else -%}
