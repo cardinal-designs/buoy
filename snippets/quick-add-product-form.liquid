@@ -103,12 +103,11 @@
                 </span>
                 <s class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</s>
               {% else %}
-              {% endif %}
                 <span class="js-rtx_one_time_price">
                   {{ p.selected_or_first_available_variant.price | money }}
                 </span>
                 <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
-              
+              {% endif %}
             </span> 
             </label>
           </span>
