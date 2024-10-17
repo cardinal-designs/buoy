@@ -763,11 +763,11 @@ class VariantSelects extends HTMLElement {
 
     let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
 
-    if(subscriptionOption){
-      if(subscriptionOption.value == "purchaseTypeSubscription"){
-         addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-      }
-    }
+    // if(subscriptionOption){
+    //   if(subscriptionOption.value == "purchaseTypeSubscription"){
+    //      addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+    //   }
+    // }
  
     if(this.closest('product-form').dataset.formType == 'product-card') {
       
