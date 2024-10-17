@@ -228,7 +228,7 @@
                     {%- if product.metafields.custom.auto_discount_percent_off -%}
                       {%- if comma -%},{%- endif -%}
                       {
-                        "variant_id": {{ variant.id }},
+                        "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
                         "price": "{{ variant.price }}",
                         "compare_price": "{{ variant.compare_at_price }}"
