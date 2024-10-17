@@ -759,7 +759,7 @@ class VariantSelects extends HTMLElement {
 
     let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
 
-    let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+    let addToCartText = `1414Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
 
     
     let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
