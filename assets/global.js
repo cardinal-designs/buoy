@@ -751,8 +751,6 @@ class VariantSelects extends HTMLElement {
         }
       }
     }  
-    console.log("thisData", thisData)
-
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
@@ -809,7 +807,6 @@ class VariantSelects extends HTMLElement {
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
-          console.log("iff")
           addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
     
           if(subscriptionOption){
