@@ -108,10 +108,10 @@
         {% assign discount_price = variant_price | minus: discount_per_off %}
 
         <div class="{{ base }}__price-recurring">
-          {{ discount_price }}
+          {{ discount_price | money }}
         </div>
         <div class="{{ base }}__price-otp">
-          {{ variant_price }}
+          {{ variant_price | money }}
         </div>
         
       {% else %}
