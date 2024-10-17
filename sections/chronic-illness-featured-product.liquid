@@ -215,9 +215,9 @@
                              </span>
                             <span class="Variant_Price">
                               {% if variant.selling_plan_allocations.size > 0 %}
-                                {% assign variant_price = variant.selling_plan_allocations[0].price %}
+                                {% assign variant_price = variant.selling_plan_allocations[0].price | times: 100 %}
                               {% else %}
-                                {% assign variant_price = variant.price %}
+                                {% assign variant_price = variant.price | times: 100 %}
                               {% endif %}
                               
                               {% assign discount_per_off = product.metafields.custom.auto_discount_percent_off %}
