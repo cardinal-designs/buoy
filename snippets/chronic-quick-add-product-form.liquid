@@ -184,6 +184,13 @@
         {% endif %}
 
         {% if p.metafields.custom.auto_discount_percent_off != blank %}
+          {% if currentVariant.selling_plan_allocations.size > 0 %}
+            {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+          {% else %}
+            {% assign variant_price = currentVariant.price %}
+          {% endif %}
+          {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+          {% assign discount_price = variant_price | minus: discount_per_off %}
         {% else %}
           {% if currentVariant.selling_plan_allocations.size > 0 %}
             <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
