@@ -128,7 +128,6 @@
 
     <div class="{{ base }}__price">
       starting <span class="hide-mobile">at</span>
-      auto_discount_percent_off -- {{ card_product.metafields.custom.auto_discount_percent_off }}
       {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
 
         {% if card_product.selected_or_first_available_selling_plan_allocation.price != blank %}
@@ -136,6 +135,8 @@
         {% else %}
           {% assign variant_price = card_product.selected_or_first_available_variant.price %}
         {% endif %}
+
+        variant_price -- {{ variant_price }}
 
         {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
         {% assign discount_price = variant_price | minus: discount_per_off %}
