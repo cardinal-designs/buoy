@@ -191,6 +191,8 @@
           {% endif %}
           {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
           {% assign discount_price = variant_price | minus: discount_per_off %}
+          <span>{{ discount_price | money }}</span>
+          <s>{{ variant_price | money }}</s>
         {% else %}
           {% if currentVariant.selling_plan_allocations.size > 0 %}
             <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
