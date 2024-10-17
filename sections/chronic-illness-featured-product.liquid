@@ -222,17 +222,20 @@
                               
                               {% assign discount_per_off = product.metafields.custom.auto_discount_percent_off | times: 1.0 %}
                               {% assign discount_price = variant_price | times: discount_per_off | divided_by: 100 %}
-                              discountPrice -- {{ product.title }} -- {{ product.metafields.custom.auto_discount_percent_off }}
                               
-                              {% if variant.selling_plan_allocations.size > 0 %}
-                                <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
-                                <s class="variant__compare--price">{{ variant.price | money }}</s>
+                              {% if discount_per_off != blank %}
+                                discountPrice -- {{ product.title }} -- {{ discount_price }}
                               {% else %}
-                                {% if variant.compare_at_price > variant.price %}
-                                  <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
-                                  <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
+                                {% if variant.selling_plan_allocations.size > 0 %}
+                                  <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                                  <s class="variant__compare--price">{{ variant.price | money }}</s>
                                 {% else %}
-                                  <span class="variant__price--regular">{{ variant.price | money }}</span>
+                                  {% if variant.compare_at_price > variant.price %}
+                                    <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
+                                    <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
+                                  {% else %}
+                                    <span class="variant__price--regular">{{ variant.price | money }}</span>
+                                  {% endif %}
                                 {% endif %}
                               {% endif %}
                             </span> 
