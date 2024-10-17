@@ -286,7 +286,7 @@
                   <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
                       <div class="clear_button">
-                        <p class="clear_tag"><span class="save24">{% if product.metafields.custom.auto_discount_percent_off != blank %}Save {{ product.metafields.custom.auto_discount_percent_off | strip_trailing_zeros }}%{% else %}Save 23%{% endif %}</span></p>
+                        <p class="clear_tag"><span class="save24">{% if product.metafields.custom.auto_discount_percent_off != blank %}Save {{ product.metafields.custom.auto_discount_percent_off | floor }}%{% else %}Save 23%{% endif %}</span></p>
                       </div>
                       <div class="rtx_popup_content">
                         <blockquote class="rtx_text">
