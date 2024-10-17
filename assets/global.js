@@ -752,13 +752,13 @@ class VariantSelects extends HTMLElement {
       }
     }  
     console.log("thisData", thisData)
-    // let variantScript = thisData.parentElement.querySelector('.VariantJSON');      
-    // console.log("variantScript", variantScript)
-    // if(variantScript) {
-    //   const jsonData = variantScript.textContent;
-    //   const variantData = JSON.parse(jsonData);
-    //   console.log("variantData", variantData)
-    // }
+    let variantScript = thisData.querySelector('.VariantJSON');      
+    console.log("variantScript", variantScript)
+    if(variantScript) {
+      const jsonData = variantScript.textContent;
+      const variantData = JSON.parse(jsonData);
+      console.log("variantData", variantData)
+    }
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
