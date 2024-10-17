@@ -808,11 +808,11 @@ class VariantSelects extends HTMLElement {
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
         console.log("foundVariant", foundVariant)
 
-        if(subscriptionOption){
-          if(subscriptionOption.value == "purchaseTypeSubscription"){
-             addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.subscription_price}`;
-          }
-        }
+        // if(subscriptionOption){
+        //   if(subscriptionOption.value == "purchaseTypeSubscription"){
+        //      addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.subscription_price}`;
+        //   }
+        // }
       }
 
 
