@@ -240,14 +240,10 @@
                       {% assign sub_discount_value = sub_variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign sub_final_price = sub_variant_price | minus: sub_discount_value %}
 
-                      {% assign one_discount_value = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                      {% assign one_final_price = variant_price | minus: one_discount_value %}
-                      
                       {
                         "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
                         "sub_discounted_price": "{{ sub_final_price | money_without_trailing_zeros }}",
-                        "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
                         "sub_price": "{{ sub_variant_price | money_without_trailing_zeros }}",
                         "price": "{{ variant_price | money_without_trailing_zeros }}",
                         "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
