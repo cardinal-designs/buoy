@@ -267,16 +267,17 @@
                       {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign discount_price = variant_price | minus: discount_per_off %}
 
-                      <div class="Multi_Price">
+                      <!-- <div class="Multi_Price">
                         <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
                           {{ variant_price | money_without_trailing_zeros }}
                         </s>
                         <span id="rtx_one_price_save" class="js-subscription-price">
                           {{- discount_price | money_without_trailing_zeros -}}
                         </span>
-                      </div>
+                      </div> -->
                       
                     {% else %}
+                    {% endif %}
                       <div class="Multi_Price">
                         <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
                           {{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}
@@ -285,7 +286,7 @@
                           {{- currentAllocations[0].price | money_without_trailing_zeros -}}
                         </span>
                       </div>
-                    {% endif %}
+                    
                   </div>
                   <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
