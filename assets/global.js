@@ -752,7 +752,7 @@ class VariantSelects extends HTMLElement {
       }
     }  
     console.log("thisData", thisData)
-    let variantScript = thisData.parentElement.querySelector('.VariantJSON');      
+    let variantScript = thisData.parentElement.querySelector('.variantMataJSON');      
     console.log("variantScript", variantScript)
     if(variantScript) {
       const jsonData = variantScript.textContent;

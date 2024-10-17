@@ -220,23 +220,25 @@
               </script>
             {{ variantMetafield }}
            </variant-radios>
-            <script type="application/json" class="VariantJSON">
-              [
-                {%- assign comma = false -%}
-                {%- for variant in product.variants -%}
-                  {%- if product.metafields.custom.auto_discount_percent_off -%}
-                    {%- if comma -%},{%- endif -%}
-                    {
-                      "variant_id": {{ variant.id }},
-                      "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
-                      "price": "{{ variant.price }}",
-                      "compare_price": "{{ variant.compare_at_price }}"
-                    }
-                    {%- assign comma = true -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              ]
-            </script>
+            {%- if product.metafields.custom.auto_discount_percent_off != blank -%}
+              <script type="application/json" class="variantMataJSON">
+                [
+                  {%- assign comma = false -%}
+                  {%- for variant in product.variants -%}
+                    {%- if product.metafields.custom.auto_discount_percent_off -%}
+                      {%- if comma -%},{%- endif -%}
+                      {
+                        "variant_id": {{ variant.id }},
+                        "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
+                        "price": "{{ variant.price }}",
+                        "compare_price": "{{ variant.compare_at_price }}"
+                      }
+                      {%- assign comma = true -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                ]
+              </script>
+            {% endif %}
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
