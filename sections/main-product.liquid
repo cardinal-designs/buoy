@@ -228,13 +228,19 @@
                   {%- for variant in product.variants -%}
                     {%- if product.metafields.custom.auto_discount_percent_off -%}
                       {%- if comma -%},{%- endif -%}
-                      {% assign discount_value = variant.price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                      {% assign final_price = variant.price | minus: discount_value %}
+                      {% if variant.selling_plan_allocations.size > 0 %}
+                        {% assign variant_price = variant.selling_plan_allocations[0].price  %}
+                      {% else %}
+                        {% assign variant_price = variant.price %}
+                      {% endif %}
+                      
+                      {% assign discount_value = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign final_price = variant_price | minus: discount_value %}
                       {
                         "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
                         "discounted_price": "{{ final_price | money_without_trailing_zeros }}",
-                        "price": "{{ variant.price | money_without_trailing_zeros }}",
+                        "price": "{{ variant_price | money_without_trailing_zeros }}",
                         "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
                         "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                       }
