@@ -833,13 +833,30 @@ class VariantSelects extends HTMLElement {
           })
         } else {
           console.log("elseee")
-            this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
-              element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
+          //   this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
+          //     element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
     
-              // if(element.classList.contains("js-sub-compare-price")) {
-              //   element.innerText = foundVariant.sub_price || foundVariant.sub_discounted_price
-              // }
+          //     // if(element.classList.contains("js-sub-compare-price")) {
+          //     //   element.innerText = foundVariant.sub_price || foundVariant.sub_discounted_price
+          //     // }
+          // });
+
+
+          this.closest("product-form").querySelectorAll('.rtx_one_time_price').forEach(element => {
+            console.log("element", element)
+
+            // if(element.classList.contains("js-sub-compare-price")){
+            //   element.innerText
+            // }else{
+              
+            // }
+            
+            //   element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
           });
+
+
+
+          
         }
 
         
