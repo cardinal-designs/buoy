@@ -770,6 +770,10 @@ class VariantSelects extends HTMLElement {
       const variantData = JSON.parse(jsonData);
       console.log("variantData", variantData)
 
+      if(variantData){
+        let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
+        console.log("foundVariant", foundVariant)
+      }
 
 
       
