@@ -214,7 +214,8 @@
                             {%- endif -%}
                              </span>
                             <span class="Variant_Price">
-                              {% assign discountPrice = variant.price | times: 10 | divided_by: 100 %}
+                              {% assign discountPerOff = product.metafields.custom.auto_discount_percent_off %}
+                              {% assign discountPrice = variant.price | times: discountPerOff | divided_by: 100 %}
                               discountPrice -- {{ discountPrice }}
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
