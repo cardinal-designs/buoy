@@ -60,9 +60,23 @@
                {% if block.settings.button_price != blank and block.settings.button_discount_price != blank %}
                 <span><span class="discount-price">{{ block.settings.button_price }}</span>&nbsp;{{block.settings.button_discount_price }}</span>
                 {% else %}
-                <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
-                  <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
-                </span>
+                  {% if product.metafields.custom.auto_discount_percent_off != blank %}
+                    {% if product.variants[0].selling_plan_allocations.size > 0 %}
+                      {% assign variant_price = product.variants[0].selling_plan_allocations[0].price_adjustments[0].price  %}
+                    {% else %}
+                      {% assign variant_price = product.price %}
+                    {% endif %}
+                    
+                    {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                    {% assign discount_price = variant_price | minus: discount_per_off %}
+                    <span>{{ discount_price | money_without_trailing_zeros }}
+                      <span class="discount-price">{{ variant_price | money_without_trailing_zeros }}</span>
+                    </span>
+                  {% else %}
+                    <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
+                      <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+                    </span>
+                  {% endif %}
                 {% endif %}
               </button>
             </a>
