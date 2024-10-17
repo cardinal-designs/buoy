@@ -796,18 +796,12 @@ class VariantSelects extends HTMLElement {
       });
     }
     
-    let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');      
-
-    console.log("variantScript", variantScript)
+    let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
     if(variantScript) {
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
-      console.log("variantData", variantData)
-
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
-        console.log("foundVariant", foundVariant)
-
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
              addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
@@ -832,16 +826,6 @@ class VariantSelects extends HTMLElement {
             
           })
         } else {
-          console.log("elseee")
-          //   this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
-          //     element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
-    
-          //     // if(element.classList.contains("js-sub-compare-price")) {
-          //     //   element.innerText = foundVariant.sub_price || foundVariant.sub_discounted_price
-          //     // }
-          // });
-
-
           this.closest("product-form").querySelectorAll('.onetime-multi_Price').forEach(element => {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-rtx_one_time_price');
