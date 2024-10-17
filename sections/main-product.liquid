@@ -242,6 +242,7 @@
 
                       {% assign one_discount_value = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign one_final_price = variant_price | minus: one_discount_value %}
+                      
                       {
                         "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
