@@ -188,10 +188,10 @@
                 {% assign discount_price = variant_price | minus: discount_per_off %}
 
                 <span class="rtx_one_time_price">
-                  <span class="js-rtx_one_time_price">
-                    {{ discount_price | money }}
+                  <span class="rtx_compare_price js-main-compare-price">
+                      {{ variant_price | money_without_trailing_zeros }} 
                   </span>
-                  <span class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</span>
+                  <span class="js-rtx_one_time_price">{{ discount_price | money_without_trailing_zeros }}</span>
                 </span>
                 
               {% else %}
