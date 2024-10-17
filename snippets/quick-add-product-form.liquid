@@ -124,10 +124,22 @@
               <span 
                 class="" 
               >
-                <span class="quick-add__price-recurring js-subscription-price">
-                  {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
-                </span>
-                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                {% if p.metafields.custom.auto_discount_percent_off != blank %}
+                  {% if p.selected_or_first_available_variant.selling_plan_allocations.size > 0 %}
+                    {% assign variant_price = p.selected_or_first_available_selling_plan_allocation.price  %}
+                  {% else %}
+                    {% assign variant_price = p.selected_or_first_available_variant.price %}
+                  {% endif %}
+
+                  {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                  {% assign discount_price = variant_price | minus: discount_per_off %}
+                  
+                {% else %}
+                  <span class="quick-add__price-recurring js-subscription-price">
+                    {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
+                  </span>
+                  <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                {% endif %}
               </span>
 
               {%- if my_fields.supply_time != blank -%}
