@@ -94,10 +94,14 @@
               data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
-              <span class="js-rtx_one_time_price">
-                {{ p.selected_or_first_available_variant.price | money }}
-              </span>
-              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+              {% if p.metafields.custom.auto_discount_percent_off != blank %}
+                
+              {% else %}
+                <span class="js-rtx_one_time_price">
+                  {{ p.selected_or_first_available_variant.price | money }}
+                </span>
+                <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+              {% endif %}
             </span> 
             </label>
           </span>
