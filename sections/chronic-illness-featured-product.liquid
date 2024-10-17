@@ -224,7 +224,7 @@
                               {% assign discount_price = variant_price | times: discount_per_off | divided_by: 100 %}
                               
                               {% if discount_per_off != blank %}
-                                discountPrice -- {{ product.title }} -- {{ discount_price }}
+                                discountPrice -- {{ variant_price }} -- {{ discount_price }}
                               {% else %}
                                 {% if variant.selling_plan_allocations.size > 0 %}
                                   <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
