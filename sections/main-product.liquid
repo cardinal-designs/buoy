@@ -164,26 +164,6 @@
           {% assign my_fields = product.variant.metafields.custom %}
           <p id="selector" class="product-form__text-label">Choose Quantity</p>
           <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
-
-            <script type="application/json" id="VariantJSON">
-              [
-                {%- assign comma = false -%}
-                {%- for variant in product.variants -%}
-                  {%- if product.metafields.custom.auto_discount_percent_off -%}
-                    {%- if comma -%},{%- endif -%}
-                    {
-                      "variant_id": {{ variant.id }},
-                      "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
-                      "price": "{{ variant.price }}",
-                      "compare_price": "{{ variant.compare_at_price }}"
-                    }
-                    {%- assign comma = true -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              ]
-            </script>
-
-            
             {%- for option in product.options_with_values -%}
              {% assign optionIndex = forloop.index0 %}
              {% assign values = "" %}
@@ -240,6 +220,23 @@
               </script>
             {{ variantMetafield }}
            </variant-radios>
+            <script type="application/json" id="VariantJSON">
+              [
+                {%- assign comma = false -%}
+                {%- for variant in product.variants -%}
+                  {%- if product.metafields.custom.auto_discount_percent_off -%}
+                    {%- if comma -%},{%- endif -%}
+                    {
+                      "variant_id": {{ variant.id }},
+                      "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
+                      "price": "{{ variant.price }}",
+                      "compare_price": "{{ variant.compare_at_price }}"
+                    }
+                    {%- assign comma = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              ]
+            </script>
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
