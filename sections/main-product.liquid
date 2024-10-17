@@ -1179,8 +1179,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
                 sellingPlan.disabled = false;
                 document.querySelector('.js-sticky-subscription-btns').value = "subscription";
                 if(mainProductButton.dataset.available == "true"){
-                  mainProductButton.innerHTML = `555Add to Cart —&nbsp;<s>${foundVariant.sub_price }</s>&nbsp;${foundVariant.sub_discounted_price}`;
-                  stickyButton.innerHTML = `666Add to Cart —&nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price }</s>&nbsp;${foundVariant.sub_discounted_price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
                 }
               } else {
                 subscriptionBoxHide();
@@ -1188,8 +1188,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
                 document.querySelector('.js-sticky-subscription-btns').value = "one-time";
                 
                 if(mainProductButton.dataset.available == "true"){
-                  mainProductButton.innerHTML = `777Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
-                  stickyButton.innerHTML = `888Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
                 }
               }
             }
@@ -1200,8 +1200,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             sellingPlan.disabled = false;
             document.querySelector('.js-sticky-subscription-btns').value = "subscription";
             if(mainProductButton.dataset.available == "true"){
-              mainProductButton.innerHTML = `999Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-              stickyButton.innerHTML = `1010Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
             }
           } else {
             subscriptionBoxHide();
@@ -1209,8 +1209,8 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             document.querySelector('.js-sticky-subscription-btns').value = "one-time";
             
             if(mainProductButton.dataset.available == "true"){
-              mainProductButton.innerHTML = `1212Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
-              stickyButton.innerHTML = `1313Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
             }
           }
         }
