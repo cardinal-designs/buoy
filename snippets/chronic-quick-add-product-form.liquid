@@ -61,15 +61,31 @@
                   </span>
                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
                     <span class="Serving_Price">
-                      {% if variant.selling_plan_allocations.size > 0 %}
-                        <span class="quick-add__price-recurring">{{ variant.selling_plan_allocations[0].price | money }}</span>
-                        <s class="rtx_compare_price">{{ variant.price | money }}</s>
-                      {% else %}
-                        {% if variant.compare_at_price > variant.price %}
-                          <span class="quick-add__price-recurring">{{ variant.price | money }}</span>&nbsp;
-                          <s class="rtx_compare_price">{{ variant.compare_at_price | money }}</s>
+
+                      {% if p.metafields.custom.auto_discount_percent_off != blank %}
+                        {% if variant.selling_plan_allocations.size > 0 %}
+                          {% assign variant_price = variant.selling_plan_allocations[0].price  %}
                         {% else %}
-                          <span class="quick-add__price-recurring">{{ variant.price | money }}</span>
+                          {% assign variant_price = variant.price %}
+                        {% endif %}
+
+                        {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                        {% assign discount_price = variant_price | minus: discount_per_off %}
+
+                        <span class="quick-add__price-recurring">{{ discount_price | money }}</span>&nbsp;
+                        <s class="rtx_compare_price">{{ variant_price | money }}</s>
+                        
+                      {% else %}
+                        {% if variant.selling_plan_allocations.size > 0 %}
+                          <span class="quick-add__price-recurring">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                          <s class="rtx_compare_price">{{ variant.price | money }}</s>
+                        {% else %}
+                          {% if variant.compare_at_price > variant.price %}
+                            <span class="quick-add__price-recurring">{{ variant.price | money }}</span>&nbsp;
+                            <s class="rtx_compare_price">{{ variant.compare_at_price | money }}</s>
+                          {% else %}
+                            <span class="quick-add__price-recurring">{{ variant.price | money }}</span>
+                          {% endif %}
                         {% endif %}
                       {% endif %}
                     </span>    
