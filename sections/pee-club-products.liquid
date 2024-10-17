@@ -61,7 +61,7 @@
             <span><span class="discount-price">{{ block.settings.button_price }}</span>&nbsp;{{block.settings.button_discount_price }}</span>
             {% else %}
             <span>{{product.variants[0].selling_plan_allocations[0].price_adjustments[0].price | money_without_trailing_zeros }}
-              <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
+              11 <span class="discount-price">{{ product.price | money_without_trailing_zeros }}</span>
             </span>
             {% endif %}
           </button>
