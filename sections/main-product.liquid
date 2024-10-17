@@ -1157,6 +1157,18 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             stickyButton = document.querySelector('.js-sticky-add-to-cart');
         let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
             currentVariant = productForm.id.value;
+        console.log("currentVariant", currentVariant)
+
+        let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
+        if(variantScript) {
+          const jsonData = variantScript.textContent;
+          const variantData = JSON.parse(jsonData);
+          if(variantData){
+            let foundVariant = variantData?.find(variant => variant.id == currentVariant);
+            console.log("foundVariant", foundVariant)
+          }
+        }
+        
         if (el.value === 'purchaseTypeSubscription') {
           subscriptionBoxShow();
           sellingPlan.disabled = false;
