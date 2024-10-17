@@ -842,16 +842,26 @@ class VariantSelects extends HTMLElement {
           // });
 
 
-          this.closest("product-form").querySelectorAll('.rtx_one_time_price').forEach(element => {
-            console.log("element", element)
+          this.closest("product-form").querySelectorAll('.onetime-multi_Price').forEach(element => {
+            let cmpr_price = element.querySelector('.rtx_compare_price');
+            let reg_price = element.querySelector('.js-rtx_one_time_price');
+            if(cmpr_price){
+              cmpr_price.innerHTML = `${foundVariant.one_discounted_price}`
+            }
+            if(reg_price){
+              reg_price.innerHTML = `${foundVariant.price}`
+            }
+          });
 
-            // if(element.classList.contains("js-sub-compare-price")){
-            //   element.innerText
-            // }else{
-              
-            // }
-            
-            //   element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
+          this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
+            let cmpr_price = element.querySelector('.rtx_compare_price');
+            let reg_price = element.querySelector('.js-subscription-price');
+            if(cmpr_price){
+              cmpr_price.innerHTML = `${foundVariant.one_discounted_price}`
+            }
+            if(reg_price){
+              reg_price.innerHTML = `${foundVariant.price}`
+            }
           });
 
 
