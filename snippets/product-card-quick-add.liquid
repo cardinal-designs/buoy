@@ -96,12 +96,16 @@
     {% endif %}
 
     <div class="{{ base }}__price">
-      <div class="{{ base }}__price-recurring">
-        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
-      </div>
-      <div class="{{ base }}__price-otp">
-        {{ card_product.selected_or_first_available_variant.price | money }}
-      </div>
+      {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
+        
+      {% else %}
+        <div class="{{ base }}__price-recurring">
+          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        </div>
+        <div class="{{ base }}__price-otp">
+          {{ card_product.selected_or_first_available_variant.price | money }}
+        </div>
+      {% endif %}
     </div>
   </div>
 </quick-add-card>
