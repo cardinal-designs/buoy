@@ -705,7 +705,6 @@ class VariantSelects extends HTMLElement {
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
-        console.log("variantData", variantData)
         let foundVariant = variantData?.find(variant => variant.id == varId);   
         if(foundVariant){
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
@@ -729,10 +728,6 @@ class VariantSelects extends HTMLElement {
           }
           let priceSelling = foundVariant?.data?.selling_plan_allocations?.[0]?.price;
           let variantPrice = foundVariant?.data?.price;
-
-          console.log("priceSelling", priceSelling)
-
-          console.log("variantPrice", variantPrice)
           
           if(productInfoWrapper){
             let submitBtn = productInfoWrapper.querySelector('[name="add"]');   
@@ -756,7 +751,14 @@ class VariantSelects extends HTMLElement {
         }
       }
     }  
-    
+
+    let variantScript = thisData.parentElement.querySelector('.VariantJSON');      
+    console.log("variantScript", variantScript)
+    if(variantScript) {
+      const jsonData = variantScript.textContent;
+      const variantData = JSON.parse(jsonData);
+      console.log("variantData", variantData)
+    }
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
 
     if (!addButton) return;
