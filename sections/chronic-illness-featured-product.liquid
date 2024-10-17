@@ -220,11 +220,11 @@
                                 {% assign variant_price = variant.price %}
                               {% endif %}
                               
-                              {% assign discount_per_off = product.metafields.custom.auto_discount_percent_off %}
-                              {% assign discount_price = variant_price | times: discount_per_off | divided_by: 100 %}
+                              {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                              {% assign discount_price = variant_price | minus: discount_per_off %}
                               
-                              {% if discount_per_off != blank %}
-                                discountPrice -- {{ variant_price }} -- {{ discount_price }}
+                              {% if product.metafields.custom.auto_discount_percent_off != blank %}
+                                discountPrice -- {{ discount_price }} -- {{ discount_per_off }}
                               {% else %}
                                 {% if variant.selling_plan_allocations.size > 0 %}
                                   <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
