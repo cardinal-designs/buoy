@@ -221,15 +221,26 @@
             {{ variantMetafield }}
            </variant-radios>
             {%- if product.metafields.custom.auto_discount_percent_off != blank -%}
+
+
+              {% assign original_price = 100 %}
+{% assign discount_percentage = 10 %}
+{% assign discount_value = original_price | times: discount_percentage | divided_by: 100 %}
+{% assign final_price = original_price | minus: discount_value %}
+
+              
               <script type="application/json" class="variantMataJSON">
                 [
                   {%- assign comma = false -%}
                   {%- for variant in product.variants -%}
                     {%- if product.metafields.custom.auto_discount_percent_off -%}
                       {%- if comma -%},{%- endif -%}
+                      {% assign discount_value = variant.price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign final_price = variant.price | minus: discount_value %}
                       {
                         "id": {{ variant.id }},
                         "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
+                        "discounted_price": "{{ final_price }}",
                         "price": "{{ variant.price }}",
                         "compare_price": "{{ variant.compare_at_price }}"
                       }
