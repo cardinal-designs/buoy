@@ -343,6 +343,12 @@
                  Add to Cart —&nbsp;
 
                 {%- if product.metafields.custom.auto_discount_percent_off != blank -%}
+
+                  {% if currentVariant.selling_plan_allocations.size > 0 %}
+                    {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+                  {% else %}
+                    {% assign variant_price = currentVariant.price %}
+                  {% endif %}
                   
                 {%- else -%}
                   {%- if currentVariant.compare_at_price > currentVariant.price -%}
@@ -752,7 +758,8 @@
                   </div>
                 {% elsif media_alt == 'add-to-any-drink' %}
                   <div class="fixed_badge_center">
-                    🀀󮠊                  </div>
+                    🍺
+                  </div>
                 {% elsif media_alt == 'all-day-energy' %}
                   <div class="fixed_badge_center">
                     🔋
