@@ -930,7 +930,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     const date = new Date();
     var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getHours()
     var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getMinutes()
-    console.log("currentHours",currentHours,currentMinutes)
+    // console.log("currentHours",currentHours,currentMinutes)
     var today = new Date();
     var tomorrow =  new Date()
     tomorrow.setDate(today.getDate() + 1)
@@ -982,7 +982,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
     if(Order_Within.length > 0){
       Order_Within.forEach(function(e){
-        console.log('Element :: ',e)
+        // console.log('Element :: ',e)
         e.innerHTML = orderWithin;
       })
     }
@@ -1130,7 +1130,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanUpdate = () => {
       sellingPlanQueryUpdate();
-      console.log('aaa',sellingPlanUrlGenerate());
+      // console.log('aaa',sellingPlanUrlGenerate());
     };
     const sellingPlanUpdateVariant = () => {
       const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
@@ -1168,13 +1168,11 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             currentVariant = productForm.id.value;
      
         let variantScript = productForm.querySelector('.variantMetaJSON');
-        console.log("variantScript", variantScript)
         if(variantScript) {
           const jsonData = variantScript.textContent;
           const variantData = JSON.parse(jsonData);
           if(variantData){
             let foundVariant = variantData?.find(variant => variant.id == currentVariant);
-            console.log("foundVariant", foundVariant)
             if(foundVariant){
               if (el.value === 'purchaseTypeSubscription') {
                 subscriptionBoxShow();
