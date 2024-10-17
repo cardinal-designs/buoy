@@ -1167,9 +1167,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
             currentVariant = productForm.id.value;
      
-        console.log("currentVariant", currentVariant)
-        console.log("productForm", productForm)
-
         let variantScript = productForm.querySelector('.variantMetaJSON');
         console.log("variantScript", variantScript)
         if(variantScript) {
@@ -1178,27 +1175,48 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           if(variantData){
             let foundVariant = variantData?.find(variant => variant.id == currentVariant);
             console.log("foundVariant", foundVariant)
+            if(foundVariant){
+              if (el.value === 'purchaseTypeSubscription') {
+                subscriptionBoxShow();
+                sellingPlan.disabled = false;
+                document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+                if(mainProductButton.dataset.available == "true"){
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price }</s>&nbsp;${foundVariant.sub_discounted_price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+                }
+              } else {
+                subscriptionBoxHide();
+                sellingPlan.disabled = true;
+                document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+                
+                if(mainProductButton.dataset.available == "true"){
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                }
+              }
+            }
+          }
+        }else{
+          if (el.value === 'purchaseTypeSubscription') {
+            subscriptionBoxShow();
+            sellingPlan.disabled = false;
+            document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+            if(mainProductButton.dataset.available == "true"){
+              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            }
+          } else {
+            subscriptionBoxHide();
+            sellingPlan.disabled = true;
+            document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+            
+            if(mainProductButton.dataset.available == "true"){
+              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            }
           }
         }
-        
-        if (el.value === 'purchaseTypeSubscription') {
-          subscriptionBoxShow();
-          sellingPlan.disabled = false;
-          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
-          if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-          }
-        } else {
-          subscriptionBoxHide();
-          sellingPlan.disabled = true;
-          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
-          
-          if(mainProductButton.dataset.available == "true"){
-            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
-            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
-          }
-        }
+
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
           input.disabled = (elValue != 'purchaseTypeSubscription');
         });
