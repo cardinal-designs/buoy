@@ -130,7 +130,7 @@
       starting <span class="hide-mobile">at</span>
       {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
 
-        {% if card_product.selected_or_first_available_selling_plan_allocation.price != blank %}
+        {% if card_product.selected_or_first_available_selling_plan_allocation.price > 0 %}
           {% assign variant_price = card_product.selected_or_first_available_selling_plan_allocation.price  %}
         {% else %}
           {% assign variant_price = card_product.selected_or_first_available_variant.price %}
@@ -139,6 +139,8 @@
         variant_price -- {{ variant_price }}
 
         {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+
+        discount_per_off -- {{ discount_per_off }}
         {% assign discount_price = variant_price | minus: discount_per_off %}
 
         discount_price -- {{ discount_price }}
