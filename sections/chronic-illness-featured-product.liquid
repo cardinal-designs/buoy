@@ -312,18 +312,26 @@
                         
                           {%- if currentVariant.available -%}
                           Subscribe —&nbsp; 
-                          {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                            {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
-                          {% else %}
-                            {{ currentVariant.price | money }}
-                            <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
-                          {% endif %}
-                          {% comment %} {% render 'rtx_price'%} {% endcomment %}
-                          {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                            <span data-smartrr-compare-price></span>
-                            <span data-smartrr-regular-price></span>
-                            <span data-smartrr-subscribe-price></span>
-                          </div> {% endcomment %}
+                            {% if product.metafields.custom.auto_discount_percent_off != blank %}
+
+                              {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                                {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+                              {% else %}
+                                {% assign variant_price = currentVariant.price %}
+                              {% endif %}
+
+                              {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                              {% assign discount_price = variant_price | minus: discount_per_off %}
+
+                              {{ discount_price | money }} <s>{{ variant_price | money }}</s>
+                            {% else %}
+                              {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                                {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
+                              {% else %}
+                                {{ currentVariant.price | money }}
+                                <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
+                              {% endif %}
+                            {% endif %}
                           {%- else -%}
                           {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
