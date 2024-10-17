@@ -181,13 +181,12 @@
                 
                 {% assign variant_price = currentVariant.price %}
                 
-                
                 {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                 {% assign discount_price = variant_price | minus: discount_per_off %}
 
                 <span class="rtx_one_time_price">
                   <span class="rtx_compare_price js-main-compare-price">
-                      {{ variant_price | money_without_trailing_zeros }} 
+                    {{ variant_price | money_without_trailing_zeros }} 
                   </span>
                   <span class="js-rtx_one_time_price">{{ discount_price | money_without_trailing_zeros }}</span>
                 </span>
