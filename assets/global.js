@@ -705,6 +705,7 @@ class VariantSelects extends HTMLElement {
       if(variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
+        console.log("variantData", variantData)
         let foundVariant = variantData?.find(variant => variant.id == varId);   
         if(foundVariant){
           let sellingId = foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
