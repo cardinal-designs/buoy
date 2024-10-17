@@ -256,14 +256,27 @@
                 <div class="rtx-tooltip__flex">
                   <div class="rtx_option_heading">
                     <span>Subscribe - </span>
-                    <div class="Multi_Price">
-                      <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
-                        {{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}
-                      </s>
-                      <span id="rtx_one_price_save" class="js-subscription-price">
-                        {{- currentAllocations[0].price | money_without_trailing_zeros -}}
-                      </span>
-                    </div>
+                    {% if product.metafields.custom.auto_discount_percent_off != blank %}
+
+                      {% if currentVariant.selling_plan_allocations.size > 0 %}
+                        {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+                      {% else %}
+                        {% assign variant_price = currentVariant.price %}
+                      {% endif %}
+
+                      {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign discount_price = variant_price | minus: discount_per_off %}
+                      
+                    {% else %}
+                      <div class="Multi_Price">
+                        <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
+                          {{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}
+                        </s>
+                        <span id="rtx_one_price_save" class="js-subscription-price">
+                          {{- currentAllocations[0].price | money_without_trailing_zeros -}}
+                        </span>
+                      </div>
+                    {% endif %}
                   </div>
                   <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
