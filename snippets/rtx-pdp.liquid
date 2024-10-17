@@ -259,7 +259,7 @@
                     {% if product.metafields.custom.auto_discount_percent_off != blank %}
 
                       {% if currentVariant.selling_plan_allocations.size > 0 %}
-                        {% assign variant_price = currentVariant.selling_plan_allocations[0].price  %}
+                        {% assign variant_price = currentAllocations[0].price  %}
                       {% else %}
                         {% assign variant_price = currentVariant.price %}
                       {% endif %}
