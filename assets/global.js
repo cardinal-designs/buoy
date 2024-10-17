@@ -846,10 +846,10 @@ class VariantSelects extends HTMLElement {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-rtx_one_time_price');
             if(cmpr_price){
-              cmpr_price.innerHTML = `${foundVariant.one_discounted_price}`
+              cmpr_price.innerHTML = `${foundVariant.price}`
             }
             if(reg_price){
-              reg_price.innerHTML = `${foundVariant.price}`
+              reg_price.innerHTML = `${foundVariant.one_discounted_price}`
             }
           });
 
@@ -857,10 +857,10 @@ class VariantSelects extends HTMLElement {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-subscription-price');
             if(cmpr_price){
-              cmpr_price.innerHTML = `${foundVariant.one_discounted_price}`
+              cmpr_price.innerHTML = `${foundVariant.sub_price}`
             }
             if(reg_price){
-              reg_price.innerHTML = `${foundVariant.price}`
+              reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
             }
           });
 
