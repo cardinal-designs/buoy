@@ -815,7 +815,7 @@ class VariantSelects extends HTMLElement {
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
-          
+          console.log("iff")
           addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
     
           if(subscriptionOption){
@@ -832,6 +832,7 @@ class VariantSelects extends HTMLElement {
             
           })
         } else {
+          console.log("elseee")
             this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
               element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : foundVariant.price;
     
