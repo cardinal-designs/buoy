@@ -272,9 +272,7 @@
                           {{- discount_price | money_without_trailing_zeros -}}
                         </span>
                       </div>
-                      
                     {% else %}
-                    {% endif %}
                       <div class="Multi_Price">
                         <s class="rtx_one_time_price js-rtx_one_time_price rtx_compare_price js-sub-compare-price">
                           {{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}
@@ -283,7 +281,7 @@
                           {{- currentAllocations[0].price | money_without_trailing_zeros -}}
                         </span>
                       </div>
-                    
+                    {% endif %}
                   </div>
                   <div class="product__rtx-tooltip hide-mobile">
                     <div class="rtx_popup">
