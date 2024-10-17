@@ -224,7 +224,7 @@
                               {% assign discount_price = variant_price | minus: discount_per_off %}
                               
                               {% if product.metafields.custom.auto_discount_percent_off != blank %}
-                                discountPrice {{ variant_price }} -- {{ discount_price }} -- {{ discount_per_off }}
+                                discountPrice {{ discount_price | money }}
                               {% else %}
                                 {% if variant.selling_plan_allocations.size > 0 %}
                                   <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
