@@ -222,6 +222,8 @@
                               
                               {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                               {% assign discount_price = variant_price | minus: discount_per_off %}
+
+                             auto_discount_percent_off --  {{ product.metafields.custom.auto_discount_percent_off }}
                               
                               {% if product.metafields.custom.auto_discount_percent_off != blank %}
                                 <span class="variant__price--regular">{{ discount_price | money }}</span>&nbsp;
