@@ -201,7 +201,6 @@
           <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
 
-      
           {% assign current_variant_price = p.selected_or_first_available_variant.price %}
           {% if settings.purchase_option_default == 'onetime' %}
             {% if p.metafields.custom.auto_discount_percent_off != blank %}
@@ -229,21 +228,6 @@
              {% endif %}
             {% endif %}
           {% endif %}
-
-
-        {% comment %}
-        {% if currentVariant.selling_plan_allocations.size > 0 %}
-          <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
-          <s>{{ currentVariant.price | money }}</s>
-        {% else %}
-         {% if currentVariant.compare_at_price > currentVariant.price %}
-          <span>{{ currentVariant.price | money }}</span>&nbsp;
-           <s>{{ currentVariant.compare_at_price | money }}</s>
-         {% else %}
-           <span>{{ currentVariant.price | money }}</span>
-         {% endif %}
-        {% endif %}
-        {% endcomment %}
         
       </button>
     </div>
