@@ -220,45 +220,6 @@
               </script>
             {{ variantMetafield }}
            </variant-radios>
-            {%- if product.metafields.custom.auto_discount_percent_off != blank -%}
-
-              <script type="application/json" class="variantMetaJSON">
-                [
-                  {%- assign comma = false -%}
-                  {%- for variant in product.variants -%}
-                    {%- if product.metafields.custom.auto_discount_percent_off -%}
-                      {%- if comma -%},{%- endif -%}
-                      
-                      {% if variant.selling_plan_allocations.size > 0 %}
-                        {% assign sub_variant_price = variant.selling_plan_allocations[0].price  %}
-                      {% else %}
-                        {% assign sub_variant_price = variant.price %}
-                      {% endif %}
-
-                      {% assign variant_price = variant.price %}
-                      
-                      {% assign sub_discount_value = sub_variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                      {% assign sub_final_price = sub_variant_price | minus: sub_discount_value %}
-
-                      {% assign one_discount_value = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                      {% assign one_final_price = variant_price | minus: one_discount_value %}
-                      
-                      {
-                        "id": {{ variant.id }},
-                        "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
-                        "sub_discounted_price": "{{ sub_final_price | money_without_trailing_zeros }}",
-                        "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
-                        "sub_price": "{{ sub_variant_price | money_without_trailing_zeros }}",
-                        "price": "{{ variant_price | money_without_trailing_zeros }}",
-                        "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
-                        "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                      }
-                      {%- assign comma = true -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                ]
-              </script>
-            {% endif %}
           {%- else -%}
             <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
@@ -318,6 +279,8 @@
               </div>
             </div>
           </noscript>
+
+          
 
           {% comment %} {% render 'smartrr-product' %} {% endcomment %}
           {% render 'rtx-pdp' %}
@@ -379,15 +342,14 @@
             >
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
-                 Add to Cart —&nbsp;
-
-                  {%- if currentVariant.compare_at_price > currentVariant.price -%}
-                    <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
-                    &nbsp;
-                    {{ currentVariant.price | money_without_trailing_zeros }}
-                  {%- else -%}
-                    {{ currentVariant.price | money_without_trailing_zeros }}
-                  {%- endif -%}
+                 Add to Cart —&nbsp; 
+                {% if currentVariant.compare_at_price > currentVariant.price %}
+                  <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
+                  &nbsp;
+                  {{ currentVariant.price | money_without_trailing_zeros }}
+                {% else %}
+                  {{ currentVariant.price | money_without_trailing_zeros }}
+                {%- endif -%}
 
                 {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
@@ -905,7 +867,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     const date = new Date();
     var currentHours = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getHours()
     var currentMinutes = new Date(date.toLocaleString('en-US', {timeZone: 'America/Los_Angeles',})).getMinutes()
-    // console.log("currentHours",currentHours,currentMinutes)
+    console.log("currentHours",currentHours,currentMinutes)
     var today = new Date();
     var tomorrow =  new Date()
     tomorrow.setDate(today.getDate() + 1)
@@ -957,7 +919,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 
     if(Order_Within.length > 0){
       Order_Within.forEach(function(e){
-        // console.log('Element :: ',e)
+        console.log('Element :: ',e)
         e.innerHTML = orderWithin;
       })
     }
@@ -1105,7 +1067,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     };
     const sellingPlanUpdate = () => {
       sellingPlanQueryUpdate();
-      // console.log('aaa',sellingPlanUrlGenerate());
+      console.log('aaa',sellingPlanUrlGenerate());
     };
     const sellingPlanUpdateVariant = () => {
       const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0] );
@@ -1141,55 +1103,24 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             stickyButton = document.querySelector('.js-sticky-add-to-cart');
         let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
             currentVariant = productForm.id.value;
-     
-        let variantScript = productForm.querySelector('.variantMetaJSON');
-        if(variantScript) {
-          const jsonData = variantScript.textContent;
-          const variantData = JSON.parse(jsonData);
-          if(variantData){
-            let foundVariant = variantData?.find(variant => variant.id == currentVariant);
-            if(foundVariant){
-              if (el.value === 'purchaseTypeSubscription') {
-                subscriptionBoxShow();
-                sellingPlan.disabled = false;
-                document.querySelector('.js-sticky-subscription-btns').value = "subscription";
-                if(mainProductButton.dataset.available == "true"){
-                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price }</s>&nbsp;${foundVariant.sub_discounted_price}`;
-                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
-                }
-              } else {
-                subscriptionBoxHide();
-                sellingPlan.disabled = true;
-                document.querySelector('.js-sticky-subscription-btns').value = "one-time";
-                
-                if(mainProductButton.dataset.available == "true"){
-                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
-                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
-                }
-              }
-            }
+        if (el.value === 'purchaseTypeSubscription') {
+          subscriptionBoxShow();
+          sellingPlan.disabled = false;
+          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
           }
-        }else{
-          if (el.value === 'purchaseTypeSubscription') {
-            subscriptionBoxShow();
-            sellingPlan.disabled = false;
-            document.querySelector('.js-sticky-subscription-btns').value = "subscription";
-            if(mainProductButton.dataset.available == "true"){
-              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
-            }
-          } else {
-            subscriptionBoxHide();
-            sellingPlan.disabled = true;
-            document.querySelector('.js-sticky-subscription-btns').value = "one-time";
-            
-            if(mainProductButton.dataset.available == "true"){
-              mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
-              stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
-            }
+        } else {
+          subscriptionBoxHide();
+          sellingPlan.disabled = true;
+          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+          
+          if(mainProductButton.dataset.available == "true"){
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
           }
         }
-
         elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
           input.disabled = (elValue != 'purchaseTypeSubscription');
         });
