@@ -904,7 +904,7 @@ class VariantSelects extends HTMLElement {
         let foundVariant = variantData?.find(
           (variant) => variant.id == currentVariant?.id
         );
-        addToCartText = `Add to Cart &mdash; <s>${
+        addToCartText = `aaaAdd to Cart &mdash; <s>${
           foundVariant.price || ""
         }</s>&nbsp;${foundVariant.one_discounted_price}`;
 
