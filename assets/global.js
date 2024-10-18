@@ -2906,7 +2906,7 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
-    console.log(this.querySelector(".quick-add__price"),"thisthisthis")
+    let gridPriceChange = this.querySelector(".quick-add__price");
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
     if (this.addToCart.dataset.available == "true") {
@@ -2921,6 +2921,11 @@ class QuickAddCard extends HTMLElement {
         this.variantJson[this.currentVariant].compare_price ||
         this.variantJson[this.currentVariant].price
       }</s>`;
+        if(gridPriceChange){        
+
+      gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].subscription_price;
+      gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price;
+        }
       this.querySelectorAll(".Serving_Cost").forEach((s) => {
         s.innerText = s.dataset.subprice.replace("ing", "");
       });
@@ -2928,6 +2933,11 @@ class QuickAddCard extends HTMLElement {
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       if (priceMetafield) {
         this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
+        if(gridPriceChange){        
+
+      gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
+      gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
+        }
         this.querySelectorAll(".Serving_Cost").forEach((s) => {
           s.innerText = s.dataset.onetimeprice.replace("ing", "");
         });
@@ -2938,6 +2948,10 @@ class QuickAddCard extends HTMLElement {
         this.querySelectorAll(".Serving_Cost").forEach((s) => {
           s.innerText = s.dataset.onetimeprice.replace("ing", "");
         });
+        if(gridPriceChange){        
+        gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].price;
+      gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price;
+        }
       }
     }
     this.addToCart.innerHTML = this.buttonContent;
