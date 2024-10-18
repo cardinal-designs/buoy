@@ -834,7 +834,7 @@ class VariantSelects extends HTMLElement {
       if(this.closest('product-form').dataset.formType == 'product-card') {
         console.log("ifproductform",this)
         let variantScriptCollection = thisData.parentElement.querySelector('.variantMetaJSONCollection');
-        if(variantScriptCollection){
+        if(variantScriptCollection && !subscriptionOption){
             const jsonDataCollection = variantScriptCollection.textContent;
       const variantDataCollection = JSON.parse(jsonDataCollection);
           let foundVariant = variantDataCollection?.find(variant => variant.id == currentVariant?.id);
