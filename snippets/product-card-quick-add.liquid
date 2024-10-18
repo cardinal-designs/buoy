@@ -104,10 +104,10 @@
         {% assign one_discount_value = cusrrent_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
         {% assign one_final_price = current_variant_price | minus: one_discount_value %}
         {% if settings.purchase_option_default == 'onetime' %}
-          {%- if card_product.metafields.custom.auto_discount_percent_off != blank -%}
-            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
-          {% else %}
+          {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
             {{ one_final_price | money }}
+          {% else %}
+            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
           {% endif %}
         {% else %}
           {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
