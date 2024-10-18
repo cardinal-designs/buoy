@@ -22,7 +22,7 @@
   </div>
 
   {% if blocks != blank %}
-    <div class="{{ base }}__grid">
+    <div class="{{ base }}__grid base__grid ">
       {% for block in blocks %}
         {% case block.type %}
           {% when 'product' %}
