@@ -2451,7 +2451,7 @@ class QuickAddCard extends HTMLElement {
         s.innerText = s.dataset.subprice.replace("ing", '')
       })
     } else {
-      console.log("intargetelse",this)
+      console.log("intargetelse",this.querySelector(".quick-add__metafield-price"))
       
       this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
 
