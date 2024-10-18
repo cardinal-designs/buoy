@@ -119,6 +119,9 @@
         {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
           {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
         {% endif %}
+        {% if settings.purchase_option_default == 'subscription' %}
+          {{ card_product.selected_or_first_available_variant.price | money }}
+        {% endif %}
       </div>
       
     </div>
