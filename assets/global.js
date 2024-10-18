@@ -2453,7 +2453,7 @@ class QuickAddCard extends HTMLElement {
     } else {
       console.log("intargetelse")
       
-      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+      // this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
 
       this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.onetimeprice.replace("ing", '')
