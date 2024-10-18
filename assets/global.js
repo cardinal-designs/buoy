@@ -901,6 +901,7 @@ class VariantSelects extends HTMLElement {
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
       if (variantData) {
+        console.log("iff ")
         let foundVariant = variantData?.find(
           (variant) => variant.id == currentVariant?.id
         );
@@ -1006,6 +1007,7 @@ class VariantSelects extends HTMLElement {
         }
       }
     } else {
+      console.log("elsee")
       if (subscriptionOption) {
         if (subscriptionOption.value == "purchaseTypeSubscription") {
           addToCartText = `Add to Cart &mdash; &nbsp;<s>${
