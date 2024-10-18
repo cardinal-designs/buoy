@@ -128,12 +128,13 @@
 
     <div class="{{ base }}__price">
       starting <span class="hide-mobile">at</span>
-      {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
+      {% if card_product.metafields.custom.auto_discount_percent_off > 0 %}
 
-        {% if card_product.selected_or_first_available_variant.selling_plan_allocations.size > 0 %}
-          {% assign variant_price = card_product.selected_or_first_available_selling_plan_allocation.price  %}
-        {% else %}
-          {% assign variant_price = card_product.selected_or_first_available_variant.price %}
+        {%- if card_product.has_only_default_variant -%}
+          {% assign variant_price = card_product.price %}
+        {%- else -%}
+          {% assign first_variant = card_product.variants.first %}
+          {% assign variant_price = first_variant.price %}
         {% endif %}
         
         {% assign discount_per_off = variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
