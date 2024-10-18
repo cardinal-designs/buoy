@@ -929,6 +929,7 @@ class VariantSelects extends HTMLElement {
           }
         }
         if (this.closest("product-form").dataset.formType == "product-card") {
+          
           const priceElement = thisData
             .closest(".product-form form")
             .querySelector(
@@ -941,12 +942,12 @@ class VariantSelects extends HTMLElement {
             );
             priceElement.setAttribute("data-price", foundVariant.price);
           }
-          addToCartText = `Add to Cart &mdash; ${
+          addToCartText = `1Add to Cart &mdash; ${
             foundVariant.one_discounted_price
           }&nbsp;<s>${foundVariant.price || ""}</s>`;
           if (subscriptionOption) {
             if (subscriptionOption.value == "purchaseTypeSubscription") {
-              addToCartText = `Add to Cart &mdash;&nbsp;<span>${
+              addToCartText = `2Add to Cart &mdash;&nbsp;<span>${
                 variantJson[this.currentVariant.id].subscription_price
               }</span><s>${
                 variantJson[this.currentVariant.id].compare_price ||
