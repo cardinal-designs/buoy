@@ -380,6 +380,10 @@
               <div style="display: flex;">
                 {%- if currentVariant.available -%}
                  Add to Cart —&nbsp;
+                  {% unless product.metafields.custom.hide_subscription %}
+                    <s>{{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
+                    {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros  }}
+                  {% else %}
 
                   {%- if currentVariant.compare_at_price > currentVariant.price -%}
                     <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
@@ -388,6 +392,7 @@
                   {%- else -%}
                     {{ currentVariant.price | money_without_trailing_zeros }}
                   {%- endif -%}
+                  {% endunless %}
 
                 {% comment %} {% render 'rtx_price'%} {% endcomment %}
                 {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
