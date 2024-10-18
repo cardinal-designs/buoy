@@ -133,7 +133,12 @@
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
               {% if p.metafields.custom.auto_discount_percent_off > 0 %}
-                {% assign variant_price = p.selected_or_first_available_variant.price %}
+                {%- if p.has_only_default_variant -%}
+                  {% assign variant_price = p.price %}
+                {%- else -%}
+                  {% assign first_variant = p.variants.first %}
+                  {% assign variant_price = first_variant.price %}
+                {% endif %}
                 {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                 {% assign discount_price = variant_price | minus: discount_per_off %}
                 <span class="js-rtx_one_time_price quick-add__price-recurring quick-add__metafield-price" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
