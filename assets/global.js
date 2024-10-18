@@ -779,9 +779,9 @@ class VariantSelects extends HTMLElement {
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
-      console.log("iiiffffnifvariantscript",subscriptionOption)
-      console.log("iiiffffnifvariantscript",foundVariant.price)
-      console.log("iiiffffnifvariantscript",foundVariant.one_discounted_price)
+      // console.log("iiiffffnifvariantscript",subscriptionOption)
+      // console.log("iiiffffnifvariantscript",foundVariant.price)
+      // console.log("iiiffffnifvariantscript",foundVariant.one_discounted_price)
           console.log(thisData.closest('.product-form form').querySelector(".selling-plan__group"),"thisdata")
           console.log(thisData.closest('.product-form form').querySelector('.selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price'),"thisdata")
           
@@ -801,7 +801,7 @@ class VariantSelects extends HTMLElement {
             
           })
         } else {
-      console.log("innnelsevariantscript")
+      // console.log("innnelsevariantscript")
           
           this.closest("product-form").querySelectorAll('.onetime-multi_Price').forEach(element => {
             let cmpr_price = element.querySelector('.rtx_compare_price');
@@ -814,16 +814,16 @@ class VariantSelects extends HTMLElement {
             }
           });
 
-          this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
-            let cmpr_price = element.querySelector('.rtx_compare_price');
-            let reg_price = element.querySelector('.js-subscription-price');
-            if(cmpr_price){
-              cmpr_price.innerHTML = `${foundVariant.sub_price}`
-            }
-            if(reg_price){
-              reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
-            }
-          });
+          // this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
+          //   let cmpr_price = element.querySelector('.rtx_compare_price');
+          //   let reg_price = element.querySelector('.js-subscription-price');
+          //   if(cmpr_price){
+          //     cmpr_price.innerHTML = `${foundVariant.sub_price}`
+          //   }
+          //   if(reg_price){
+          //     reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
+          //   }
+          // });
         }
 
       }
