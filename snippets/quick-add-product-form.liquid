@@ -121,7 +121,7 @@
       <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }} class="selling-plan__group">
         <fieldset class="js product-form__input">
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" checked  >
             <label for="{{ p.id }}-purchaseTypeOneTime">
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
@@ -157,7 +157,7 @@
           </span>
 
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank %} checked {% endif %} >
+            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" >
             <label for="{{ p.id }}-purchaseTypeSubscription">
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
