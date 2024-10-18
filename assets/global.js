@@ -2438,18 +2438,21 @@ class QuickAddCard extends HTMLElement {
 
     this.buttonContent = ''
     if (this.addToCart.dataset.available == 'true') {
-      this.buttonContent = `<span>11Add To Cart &mdash;&nbsp;</span>`
+      this.buttonContent = `<span>Add To Cart &mdash;&nbsp;</span>`
     } else {
-      this.buttonContent = `<span>11Sold Out &mdash;&nbsp;</span>`
+      this.buttonContent = `<span>Sold Out &mdash;&nbsp;</span>`
     }
 
     if( event.target.value == 'purchaseTypeSubscription' ) {
+      console.log("intargetif")
       this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].subscription_price}</span><s>${this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price}</s>`
 
       this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.subprice.replace("ing", '')
       })
     } else {
+      console.log("intargetelse")
+      
       this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
 
       this.querySelectorAll(".Serving_Cost").forEach( s => {
