@@ -2474,32 +2474,24 @@ class QuickAddCard extends HTMLElement {
     }
 
     if( event.target.value == 'purchaseTypeSubscription' ) {
-      console.log("intargetif")
       this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].subscription_price}</span><s>${this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price}</s>`
-
       this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.subprice.replace("ing", '')
       })
     } else {
-      console.log("intargetelse",this.querySelector(".quick-add__metafield-price"))
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       if(priceMetafield){
-        console.log(priceMetafield.dataset,"priceMetafield")
-              this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`
-
-      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`
+        this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.onetimeprice.replace("ing", '')
-      })
+        })
       }else{
-              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
-
-      this.querySelectorAll(".Serving_Cost").forEach( s => {
-        s.innerText = s.dataset.onetimeprice.replace("ing", '')
-      })
+        this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+        this.querySelectorAll(".Serving_Cost").forEach( s => {
+          s.innerText = s.dataset.onetimeprice.replace("ing", '')
+        })
       }
-
     }
-
     this.addToCart.innerHTML = this.buttonContent
   }
 }
