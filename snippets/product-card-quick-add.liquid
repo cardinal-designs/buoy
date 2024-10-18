@@ -96,7 +96,6 @@
     {% endif %}
 
     <div class="{{ base }}__price">
- {{ card_product.selected_or_first_available_variant.id }} -- {{ card_product.variants.first.id }}
       {% if card_product.selected_or_first_available_variant.id == card_product.variants.first.id %}
         {% if card_product.metafields.custom.auto_discount_percent_off > 0 %}
         {%- if card_product.has_only_default_variant -%}
