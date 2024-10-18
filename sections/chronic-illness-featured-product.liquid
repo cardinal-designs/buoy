@@ -215,7 +215,7 @@
                              </span>
                             <span class="Variant_Price">
 
-                              {{ product.variants.size }}
+                              {{ product.has_only_default_variant }}
                               {% assign first_variant = product.variants.first %}
                               
                               {% if variant.selling_plan_allocations.size > 0 %}
