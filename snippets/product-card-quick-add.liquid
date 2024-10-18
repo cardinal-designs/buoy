@@ -103,8 +103,10 @@
             {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
             {% assign one_final_price = current_variant_price | minus: one_discount_value %}
             {{ one_final_price | money }}
-          {% else %}
+          {% elsif card_product.selected_or_first_available_variant.compare_at_price != blank %}
             {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+          {% else %}
+            {{ card_product.selected_or_first_available_variant.price | money }}
           {% endif %}
         {% else %}
           {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
