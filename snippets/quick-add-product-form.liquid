@@ -98,7 +98,7 @@
                 {% assign variant_price = p.selected_or_first_available_variant.price %}
                 {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                 {% assign discount_price = variant_price | minus: discount_per_off %}
-                <span class="js-rtx_one_time_price quick-add__price-recurring" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
+                <span class="js-rtx_one_time_price quick-add__price-recurring quick-add__metafield-price" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
                   {{ discount_price | money }}
                 </span>
                 <s class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</s>
