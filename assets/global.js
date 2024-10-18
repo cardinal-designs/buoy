@@ -2438,9 +2438,9 @@ class QuickAddCard extends HTMLElement {
 
     this.buttonContent = ''
     if (this.addToCart.dataset.available == 'true') {
-      this.buttonContent = `<span>Add To Cart &mdash;&nbsp;</span>`
+      this.buttonContent = `<span>11Add To Cart &mdash;&nbsp;</span>`
     } else {
-      this.buttonContent = `<span>Sold Out &mdash;&nbsp;</span>`
+      this.buttonContent = `<span>11Sold Out &mdash;&nbsp;</span>`
     }
 
     if( event.target.value == 'purchaseTypeSubscription' ) {
