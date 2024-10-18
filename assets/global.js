@@ -837,6 +837,7 @@ class VariantSelects extends HTMLElement {
         if(variantScriptCollection){
           console.log(variantScriptCollection,"variantScriptCollection")
           console.log(this.currentVariant.id,"this.currentVariant.id]")
+          console.log(variantScriptCollection[this.currentVariant.id].price,"this.currentVariant.id]")
           
         }
         addToCartText = `1Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
