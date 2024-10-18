@@ -22,15 +22,15 @@
   </div>
 
   {% if blocks != blank %}
-    <div class="{{ base }}__grid base__grid ">
+    <div class="{{ base }}__grid">
       {% for block in blocks %}
         {% case block.type %}
           {% when 'product' %}
-            <div class="{{ base }}__grid-item">
+            <div class="{{ base }}__grid-item base__grid">
               {% render 'product-card-quick-add', content: block.settings %}
             </div>
           {% when 'card' %}
-            <div class="{{ base }}__grid-item">
+            <div class="{{ base }}__grid-item base__grid_1">
               <div class="{{ base }}__card" style="--background: {{ block.settings.overlay }}; --color: {{ block.settings.color }}">
                 {% if block.settings.image != blank %}
                   {{ block.settings.image | image_url: width: 850 | image_tag: class: '' }}                  
