@@ -767,9 +767,9 @@ class VariantSelects extends HTMLElement {
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
             if(variantJson[this.currentVariant.id].compare_price){
-              addToCartText = `66Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+              addToCartText = `66Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
             }else{
-              addToCartText = `77Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
+              addToCartText = `77Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
             }
           }
         }
