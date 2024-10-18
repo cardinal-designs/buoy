@@ -929,7 +929,7 @@ class VariantSelects extends HTMLElement {
           }
         }
         if (this.closest("product-form").dataset.formType == "product-card") {
-          
+          console.log(thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price"))
           const priceElement = thisData
             .closest(".product-form form")
             .querySelector(
