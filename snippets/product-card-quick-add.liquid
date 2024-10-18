@@ -97,7 +97,11 @@
 
     <div class="{{ base }}__price">    
       <div class="{{ base }}__price-recurring main__price-recurring">
-        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        {% if settings.purchase_option_default == 'onetime' %}
+          {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+        {% else %}
+          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        {% endif %}
       </div>
       <div class="{{ base }}__price-otp reg__price-recurring">
         {{ card_product.selected_or_first_available_variant.price | money }}
