@@ -762,14 +762,14 @@ class VariantSelects extends HTMLElement {
       const variantData = JSON.parse(jsonData);
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
-        addToCartText = `Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
+        addToCartText = `55Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
 
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
             if(variantJson[this.currentVariant.id].compare_price){
-              addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+              addToCartText = `66Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
             }else{
-              addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
+              addToCartText = `77Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
             }
           }
         }
@@ -779,10 +779,10 @@ class VariantSelects extends HTMLElement {
             priceElement.setAttribute('data-discount-price', foundVariant.one_discounted_price); 
             priceElement.setAttribute('data-price',foundVariant.price );          
           }
-          addToCartText = `Add to Cart &mdash; ${foundVariant.one_discounted_price}&nbsp;<s>${foundVariant.price || ''}</s>`;
+          addToCartText = `88Add to Cart &mdash; ${foundVariant.one_discounted_price}&nbsp;<s>${foundVariant.price || ''}</s>`;
           if(subscriptionOption){
             if(subscriptionOption.value == "purchaseTypeSubscription"){
-              addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+              addToCartText = `99Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
             }
           }
           this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
