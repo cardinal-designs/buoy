@@ -215,13 +215,11 @@
                              </span>
                             <span class="Variant_Price">
 
-                              {{ product.has_only_default_variant }}
-                              {% assign first_variant = product.variants.first %}
-                              
-                              {% if variant.selling_plan_allocations.size > 0 %}
-                                {% assign variant_price = variant.selling_plan_allocations[0].price  %}
-                              {% else %}
-                                {% assign variant_price = variant.price %}
+                              {%- if product.has_only_default_variant -%}
+                                {% assign variant_price = product.price %}
+                              {%- else -%}
+                                {% assign first_variant = product.variants.first %}
+                                {% assign variant_price = first_variant.price %}
                               {% endif %}
                               
                               {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
