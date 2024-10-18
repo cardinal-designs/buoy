@@ -1155,13 +1155,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
             let foundVariant = variantData?.find(variant => variant.id == currentVariant);
             if(foundVariant){
               if (el.value === 'purchaseTypeSubscription') {
-                // subscriptionBoxShow();
-                // sellingPlan.disabled = false;
-                // document.querySelector('.js-sticky-subscription-btns').value = "subscription";
-                // if(mainProductButton.dataset.available == "true"){
-                //   mainProductButton.innerHTML = `1111111Add to Cart —&nbsp;<s>${foundVariant.sub_price }</s>&nbsp;${foundVariant.sub_discounted_price}`;
-                //   stickyButton.innerHTML = `222222Add to Cart —&nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
-                // }
                 subscriptionBoxShow();
                 sellingPlan.disabled = false;
                 document.querySelector('.js-sticky-subscription-btns').value = "subscription";
