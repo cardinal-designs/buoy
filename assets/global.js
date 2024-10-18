@@ -752,21 +752,12 @@ class VariantSelects extends HTMLElement {
       }
     }  
     const stickyButton = document.querySelector('.js-sticky-add-to-cart');
-
     if (!addButton) return;
-
     let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
-
     let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
-
     let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
-
-    
     let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
-    console.log(variantScript,"variantScript")
-    if(variantScript) {
-      console.log("iinifvariantscript")
-      
+    if(variantScript) {      
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
       if(variantData){
@@ -777,46 +768,31 @@ class VariantSelects extends HTMLElement {
         //      addToCartText = `22Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
         //   }
         // }
-
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
              addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
           }
         }
-
         if(this.closest('product-form').dataset.formType == 'product-card') {
-      console.log("iiiffffnifvariantscript",subscriptionOption)
-      console.log("iiiffffnifvariantscript",foundVariant.price)
-      console.log("iiiffffnifvariantscript",foundVariant.one_discounted_price)
-          console.log(thisData.closest('.product-form form').querySelector(".selling-plan__group"),"thisdata")
-          console.log(thisData.closest('.product-form form').querySelector('.selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price'),"thisdata")
-
           const priceElement = thisData.closest('.product-form form').querySelector('.selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price');
-
-priceElement.setAttribute('data-discount-price', foundVariant.one_discounted_price); 
-priceElement.setAttribute('data-price',foundVariant.price );        
-
-
-          addToCartText = `33Add to Cart &mdash; ${foundVariant.one_discounted_price}&nbsp;<s>${foundVariant.price || ''}</s>`;
-    
+          if(priceElement){
+            priceElement.setAttribute('data-discount-price', foundVariant.one_discounted_price); 
+            priceElement.setAttribute('data-price',foundVariant.price );          
+          }
+          addToCartText = `Add to Cart &mdash; ${foundVariant.one_discounted_price}&nbsp;<s>${foundVariant.price || ''}</s>`;
           if(subscriptionOption){
             if(subscriptionOption.value == "purchaseTypeSubscription"){
-              addToCartText = `44Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+              addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
             }
           }
           this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
             // element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
             element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : variantJson[this.currentVariant.id].subscription_price;
-    
             if(element.classList.contains("js-sub-compare-price")) {
-console.log("js-sub-compare-pricejs-sub-compare-pricejs-sub-compare-price", element.innerText," element.innerText")
               element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
-            }
-            
+            }       
           })
-        } else {
-      // console.log("innnelsevariantscript")
-          
+        } else {          
           this.closest("product-form").querySelectorAll('.onetime-multi_Price').forEach(element => {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-rtx_one_time_price');
@@ -854,21 +830,17 @@ console.log("js-sub-compare-pricejs-sub-compare-pricejs-sub-compare-price", elem
       }
       
     }else{
-      console.log("else")
       if(subscriptionOption){
         if(subscriptionOption.value == "purchaseTypeSubscription"){
            addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
         }
       }
-   
-      if(this.closest('product-form').dataset.formType == 'product-card') {
-        console.log("ifproductform")
-        
-        addToCartText = `1Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
+      if(this.closest('product-form').dataset.formType == 'product-card') {        
+        addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
   
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
-            addToCartText = `2Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+            addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
           }
         }
         this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
@@ -879,9 +851,7 @@ console.log("js-sub-compare-pricejs-sub-compare-pricejs-sub-compare-price", elem
           }
           
         })
-      } else {
-        console.log("elseproductform")
-        
+      } else {        
           this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
             element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
   
