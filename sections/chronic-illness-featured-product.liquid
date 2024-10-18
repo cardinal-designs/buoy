@@ -215,8 +215,9 @@
                              </span>
                             <span class="Variant_Price">
 
+                              {{ product.variants.size }}
                               {% assign first_variant = product.variants.first %}
-                              variant -- {{ first_variant.title }}
+                              
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 {% assign variant_price = variant.selling_plan_allocations[0].price  %}
                               {% else %}
