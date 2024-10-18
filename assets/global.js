@@ -773,6 +773,7 @@ class VariantSelects extends HTMLElement {
             console.log(foundVariant,"foundVariantfoundVariant")
             console.log(variantJson[this.currentVariant.id].price,"variantJson[this.currentVariant.id].price");
             console.log(variantJson[this.currentVariant.id].subscription_price,"variantJson[this.currentVariant.id].subscription_price");
+             // addToCartText = `3Add to Cart &mdash; &nbsp;<s>${foundVariant.compare_price}</s>&nbsp;${foundVariant.subscription_price}`;
             
              addToCartText = `3Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
           }
