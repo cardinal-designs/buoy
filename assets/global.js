@@ -862,7 +862,7 @@ class VariantSelects extends HTMLElement {
             if (submitBtn) {
               let buttonText = "Subscribe";
               if (thisData.closest("quick-add-card")) {
-                buttonText = "Add";
+                buttonText = "aaAdd";
               }
               submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(
                 priceSelling
