@@ -112,7 +112,12 @@
       </div>
       <div class="{{ base }}__price-otp reg__price-recurring">
         {% if settings.purchase_option_default == 'onetime' %}
-          {{ card_product.selected_or_first_available_variant.price | money }}
+          {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
+            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+          {% else %}
+            {{ card_product.selected_or_first_available_variant.price | money }}
+          {% endif %}
+          
         {% else %}
           {{ card_product.selected_or_first_available_variant.price | money }}
         {% endif %}
