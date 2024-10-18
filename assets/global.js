@@ -2906,7 +2906,7 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
-    console.log(this,"thisthisthis")
+    console.log(this.querySelector(".quick-add__price"),"thisthisthis")
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
     if (this.addToCart.dataset.available == "true") {
