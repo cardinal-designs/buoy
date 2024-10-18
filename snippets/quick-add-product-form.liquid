@@ -76,6 +76,7 @@
              {{ p.variants | json }}
            </script>
          {{ variantMetafield }}
+        {%- if  p.metafields.custom.auto_discount_percent_off -%}
          <script type="application/json" class="variantMetaJSONCollection">
                 [
                   {%- assign comma = false -%}
@@ -112,6 +113,7 @@
                   {%- endfor -%}
                 ]
               </script>
+      {% endif %}
       </variant-radios>
     {% endunless %}
 
