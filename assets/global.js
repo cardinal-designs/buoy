@@ -832,10 +832,10 @@ class VariantSelects extends HTMLElement {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-subscription-price');
             if(cmpr_price){
-              cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price}`
+              cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].price}`
             }
             if(reg_price){
-              reg_price.innerHTML = `${variantJson[this.currentVariant.id].price}`
+              reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`
             }
           });
         }
