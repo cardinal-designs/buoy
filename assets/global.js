@@ -769,23 +769,19 @@ class VariantSelects extends HTMLElement {
         //   }
         // }
 
+        
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
-             addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+            console.log(foundVariant,"foundVariantfoundVariant")
+            console.log(variantJson[this.currentVariant.id],"variantJson[this.currentVariant.id].price");
+            console.log(variantJson[this.currentVariant.id].subscription_price,"variantJson[this.currentVariant.id].subscription_price");
+            if(variantJson[this.currentVariant.id].compare_price){
+              addToCartText = `3Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+            }else{
+              addToCartText = `3Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
+            }
           }
         }
-        // if(subscriptionOption){
-        //   if(subscriptionOption.value == "purchaseTypeSubscription"){
-        //     console.log(foundVariant,"foundVariantfoundVariant")
-        //     console.log(variantJson[this.currentVariant.id],"variantJson[this.currentVariant.id].price");
-        //     console.log(variantJson[this.currentVariant.id].subscription_price,"variantJson[this.currentVariant.id].subscription_price");
-        //     if(variantJson[this.currentVariant.id].compare_price){
-        //       addToCartText = `3Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
-        //     }else{
-        //       addToCartText = `3Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;             
-        //     }
-        //   }
-        // }
         if(this.closest('product-form').dataset.formType == 'product-card') {
           const priceElement = thisData.closest('.product-form form').querySelector('.selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price');
           if(priceElement){
@@ -832,6 +828,7 @@ class VariantSelects extends HTMLElement {
           // });
 
           this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
+            console.log("variantJson[this.currentVariant.id]", variantJson[this.currentVariant.id])
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-subscription-price');
             if(cmpr_price){
