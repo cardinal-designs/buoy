@@ -215,7 +215,7 @@
                              </span>
                             <span class="Variant_Price">
 
-                              {% if product.metafields.custom.auto_discount_percent_off != blank %}
+                              {% if product.metafields.custom.auto_discount_percent_off != blank and forloop.first %}
                                 {%- if product.has_only_default_variant -%}
                                   {% assign variant_price = product.price %}
                                 {%- else -%}
