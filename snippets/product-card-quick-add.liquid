@@ -95,35 +95,13 @@
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
 
-    <div class="{{ base }}__price">
-
-      allocation -- {{ card_product.selected_or_first_available_selling_plan_allocation.id }}
-      
-      {% if card_product.metafields.custom.auto_discount_percent_off > 0 and card_product.selected_or_first_available_variant.id == card_product.variants.first.id %}
-        {%- if card_product.has_only_default_variant -%}
-          {% assign variant_price = card_product.price %}
-        {%- else -%}
-          {% assign first_variant = card_product.variants.first %}
-          {% assign variant_price = first_variant.price %}
-        {% endif %}
-        
-        {% assign discount_per_off = variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-        {% assign discount_price = variant_price | minus: discount_per_off %}
-
-        <div class="{{ base }}__price-recurring">
-          {{ discount_price | money }}
-        </div>
-        <div class="{{ base }}__price-otp">
-          {{ variant_price | money }}
-        </div>
-      {% else %}
-        <div class="{{ base }}__price-recurring">
-          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
-        </div>
-        <div class="{{ base }}__price-otp">
-          {{ card_product.selected_or_first_available_variant.price | money }}
-        </div>
-      {% endif %}
+    <div class="{{ base }}__price">    
+      <div class="{{ base }}__price-recurring">
+        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+      </div>
+      <div class="{{ base }}__price-otp">
+        {{ card_product.selected_or_first_available_variant.price | money }}
+      </div>
     </div>
   </div>
 </quick-add-card>
