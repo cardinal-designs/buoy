@@ -217,22 +217,19 @@
               <s></s>
             {% endif %}
           {% else %}
-            {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+            {% if currentVariant.selling_plan_allocations.size > 0 %}
+              <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
+              <s>{{ currentVariant.price | money }}</s>
+            {% else %}
+             {% if currentVariant.compare_at_price > currentVariant.price %}
+              <span>{{ currentVariant.price | money }}</span>&nbsp;
+               <s>{{ currentVariant.compare_at_price | money }}</s>
+             {% else %}
+               <span>{{ currentVariant.price | money }}</span>
+             {% endif %}
+            {% endif %}
           {% endif %}
 
-        
-          <div class="{{ base }}__price-recurring main__price-recurring">
-          </div>
-    
-          <div class="{{ base }}__price-otp reg__price-recurring">
-            {% if settings.purchase_option_default == 'onetime' and card_product.metafields.custom.auto_discount_percent_off != blank %}
-              {{ card_product.selected_or_first_available_variant.price | money }}
-            {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
-              {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
-            {% endif %}
-          </div>
-          
-   
 
         {% comment %}
         {% if currentVariant.selling_plan_allocations.size > 0 %}
