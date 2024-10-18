@@ -783,7 +783,7 @@ class VariantSelects extends HTMLElement {
       console.log("iiiffffnifvariantscript",foundVariant.price)
       console.log("iiiffffnifvariantscript",foundVariant.one_discounted_price)
           
-          addToCartText = `33Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
+          addToCartText = `33Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
     
           if(subscriptionOption){
             if(subscriptionOption.value == "purchaseTypeSubscription"){
