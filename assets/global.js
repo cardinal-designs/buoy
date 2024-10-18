@@ -770,6 +770,7 @@ class VariantSelects extends HTMLElement {
         // }
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
+            console.log(foundVariant,"foundVariantfoundVariant")
             console.log(variantJson[this.currentVariant.id].price,"variantJson[this.currentVariant.id].price");
             console.log(variantJson[this.currentVariant.id].subscription_price,"variantJson[this.currentVariant.id].subscription_price");
             
