@@ -835,6 +835,8 @@ class VariantSelects extends HTMLElement {
         console.log("ifproductform",this)
         let variantScriptCollection = thisData.parentElement.querySelector('.variantMetaJSONCollection');
         if(variantScriptCollection){
+          console.log(variantScriptCollection,"variantScriptCollection")
+          console.log(this.currentVariant.id,"this.currentVariant.id]")
           
         }
         addToCartText = `1Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
