@@ -772,9 +772,15 @@ class VariantSelects extends HTMLElement {
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
         addToCartText = `11Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
+        // if(subscriptionOption){
+        //   if(subscriptionOption.value == "purchaseTypeSubscription"){
+        //      addToCartText = `22Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+        //   }
+        // }
+
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
-             addToCartText = `22Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+             addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
           }
         }
 
@@ -824,6 +830,17 @@ class VariantSelects extends HTMLElement {
           //     reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
           //   }
           // });
+
+          this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
+            let cmpr_price = element.querySelector('.rtx_compare_price');
+            let reg_price = element.querySelector('.js-subscription-price');
+            if(cmpr_price){
+              cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price}`
+            }
+            if(reg_price){
+              reg_price.innerHTML = `${variantJson[this.currentVariant.id].price}`
+            }
+          });
         }
 
       }
