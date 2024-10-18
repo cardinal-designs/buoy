@@ -2452,12 +2452,22 @@ class QuickAddCard extends HTMLElement {
       })
     } else {
       console.log("intargetelse",this.querySelector(".quick-add__metafield-price"))
-      
-      this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+      let priceMetafield = this.querySelector(".quick-add__metafield-price");
+      if(priceMetafield){
+        console.log(priceMetafield.dataset,"priceMetafield")
+              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
 
       this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.onetimeprice.replace("ing", '')
       })
+      }else{
+              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+
+      this.querySelectorAll(".Serving_Cost").forEach( s => {
+        s.innerText = s.dataset.onetimeprice.replace("ing", '')
+      })
+      }
+
     }
 
     this.addToCart.innerHTML = this.buttonContent
