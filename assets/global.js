@@ -764,6 +764,8 @@ class VariantSelects extends HTMLElement {
     
     let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
     if(variantScript) {
+      console.log("iinifvariantscript")
+      
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
       if(variantData){
@@ -776,6 +778,8 @@ class VariantSelects extends HTMLElement {
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
+      console.log("iiiffffnifvariantscript")
+          
           addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
     
           if(subscriptionOption){
@@ -792,6 +796,8 @@ class VariantSelects extends HTMLElement {
             
           })
         } else {
+      console.log("innnelsevariantscript")
+          
           this.closest("product-form").querySelectorAll('.onetime-multi_Price').forEach(element => {
             let cmpr_price = element.querySelector('.rtx_compare_price');
             let reg_price = element.querySelector('.js-rtx_one_time_price');
@@ -818,6 +824,7 @@ class VariantSelects extends HTMLElement {
       }
       
     }else{
+      console.log("else")
       if(subscriptionOption){
         if(subscriptionOption.value == "purchaseTypeSubscription"){
            addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
