@@ -931,10 +931,8 @@ class VariantSelects extends HTMLElement {
         if (this.closest("product-form").dataset.formType == "product-card") {
           console.log(thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price"))
           let gridPrice = thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price");
-gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant.one_discounted_price;
-gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.price || "";
-
-
+          gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant.one_discounted_price;
+          gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.price || "";
           const priceElement = thisData
             .closest(".product-form form")
             .querySelector(
@@ -958,6 +956,11 @@ gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.pric
                 variantJson[this.currentVariant.id].compare_price ||
                 variantJson[this.currentVariant.id].price
               }</s>`;
+            gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
+            gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price ||
+                variantJson[this.currentVariant.id].price;
+
+              
             }
           }
           this.closest("product-form")
