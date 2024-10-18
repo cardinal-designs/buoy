@@ -102,6 +102,44 @@
                   {{ discount_price | money }}
                 </span>
                 <s class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</s>
+ <script type="application/json" class="variantMetaJSONCollection">
+                [
+                  {%- assign comma = false -%}
+                  {%- for variant in  p.variants -%}
+                    {%- if  p.metafields.custom.auto_discount_percent_off -%}
+                      {%- if comma -%},{%- endif -%}
+                      
+                      {% if variant.selling_plan_allocations.size > 0 %}
+                        {% assign sub_variant_price = variant.selling_plan_allocations[0].price  %}
+                      {% else %}
+                        {% assign sub_variant_price = variant.price %}
+                      {% endif %}
+
+                      {% assign variant_price = variant.price %}
+                      
+                      {% assign sub_discount_value = sub_variant_price | times:  p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign sub_final_price = sub_variant_price | minus: sub_discount_value %}
+
+                      {% assign one_discount_value = variant_price | times:  p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign one_final_price = variant_price | minus: one_discount_value %}
+                      
+                      {
+                        "id": {{ variant.id }},
+                        "discount": "{{  p.metafields.custom.auto_discount_percent_off }}",
+                        "sub_discounted_price": "{{ sub_final_price | money_without_trailing_zeros }}",
+                        "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
+                        "sub_price": "{{ sub_variant_price | money_without_trailing_zeros }}",
+                        "price": "{{ variant_price | money_without_trailing_zeros }}",
+                        "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
+                        "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                      }
+                      {%- assign comma = true -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                ]
+              </script>
+
+                
               {% else %}
                 <span class="js-rtx_one_time_price">
                   {{ p.selected_or_first_available_variant.price | money }}
