@@ -97,7 +97,7 @@
 
     <div class="{{ base }}__price">    
       {% assign current_variant_price = card_product.selected_or_first_available_variant.price %}
-      <div class="{{ base }}__price-recurring main__price-recurring">
+      <div class="{{ base }}__price-recurring">
         {% if settings.purchase_option_default == 'onetime' %}
           {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
             {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
@@ -113,7 +113,7 @@
         {% endif %}
       </div>
 
-      <div class="{{ base }}__price-otp reg__price-recurring">
+      <div class="{{ base }}__price-otp">
         {% if settings.purchase_option_default == 'onetime' and card_product.metafields.custom.auto_discount_percent_off != blank %}
           {{ card_product.selected_or_first_available_variant.price | money }}
         {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
