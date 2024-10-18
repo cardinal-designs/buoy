@@ -931,8 +931,9 @@ class VariantSelects extends HTMLElement {
         if (this.closest("product-form").dataset.formType == "product-card") {
           console.log(thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price"))
           let gridPrice = thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price");
-          gridPrice.querySelector(".quick-add__price-recurring").text(foundVariant.one_discounted_price);
-          gridPrice.querySelector(".quick-add__price-otp").text(foundVariant.price || "");
+gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant.one_discounted_price;
+gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.price || "";
+
 
           const priceElement = thisData
             .closest(".product-form form")
