@@ -215,28 +215,15 @@
                              </span>
                             <span class="Variant_Price">
 
-                              {% if product.metafields.custom.auto_discount_percent_off > 0 and forloop.first %}
-                                {%- if product.has_only_default_variant -%}
-                                  {% assign variant_price = product.price %}
-                                {%- else -%}
-                                  {% assign first_variant = product.variants.first %}
-                                  {% assign variant_price = first_variant.price %}
-                                {% endif %}
-                                {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                                {% assign discount_price = variant_price | minus: discount_per_off %}
-                                <span class="variant__price--regular">{{ discount_price | money }}</span>&nbsp;
-                                <s class="variant__compare--price">{{ variant_price | money }}</s>
+                              {% if variant.selling_plan_allocations.size > 0 %}
+                                <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                                <s class="variant__compare--price">{{ variant.price | money }}</s>
                               {% else %}
-                                {% if variant.selling_plan_allocations.size > 0 %}
-                                  <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
-                                  <s class="variant__compare--price">{{ variant.price | money }}</s>
+                                {% if variant.compare_at_price > variant.price %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
+                                  <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
                                 {% else %}
-                                  {% if variant.compare_at_price > variant.price %}
-                                    <span class="variant__price--regular">{{ variant.price | money }}</span>&nbsp;
-                                    <s class="variant__compare--price">{{ variant.compare_at_price | money }}</s>
-                                  {% else %}
-                                    <span class="variant__price--regular">{{ variant.price | money }}</span>
-                                  {% endif %}
+                                  <span class="variant__price--regular">{{ variant.price | money }}</span>
                                 {% endif %}
                               {% endif %}
                               
@@ -312,27 +299,12 @@
                         
                           {%- if currentVariant.available -%}
                           Subscribe —&nbsp; 
-                            {% if product.metafields.custom.auto_discount_percent_off > 0 %}
-
-                              {%- if product.has_only_default_variant -%}
-                                {% assign variant_price = product.price %}
-                              {%- else -%}
-                                {% assign first_variant = product.variants.first %}
-                                {% assign variant_price = first_variant.price %}
-                              {% endif %}
-
-                              {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                              {% assign discount_price = variant_price | minus: discount_per_off %}
-
-                              {{ discount_price | money }} <s>{{ variant_price | money }}</s>
-                            {% else %}
                               {% if product.selected_or_first_available_selling_plan_allocation != blank %}
                                 {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
                               {% else %}
                                 {{ currentVariant.price | money }}
                                 <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
                               {% endif %}
-                            {% endif %}
                           {%- else -%}
                           {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
