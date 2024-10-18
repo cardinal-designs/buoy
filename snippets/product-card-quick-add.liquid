@@ -95,35 +95,22 @@
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
 
+    <div class="{{ base }}__content">
+    {% render 'okendo-reviews-product-rating-summary', product: card_product %}
+    <h5 class="{{ base }}__title">{{ card_product.title }}</h5>
+    {% if card_product.metafields.my_fields.product_card_text != blank %}
+      <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
+    {% endif %}
+
     <div class="{{ base }}__price">    
-      {% assign current_variant_price = card_product.selected_or_first_available_variant.price %}
-      <div class="{{ base }}__price-recurring main__price-recurring">
-        {% if settings.purchase_option_default == 'onetime' %}
-          {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
-            {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-            {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-            {{ one_final_price | money }}
-          {% else %}
-            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
-          {% endif %}
-        {% else %}
-          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
-        {% endif %}
+      <div class="{{ base }}__price-recurring">
+        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
       </div>
-      <div class="{{ base }}__price-otp reg__price-recurring">
-        {% if settings.purchase_option_default == 'onetime' %}
-          {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
-            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
-          {% else %}
-            {{ card_product.selected_or_first_available_variant.price | money }}
-          {% endif %}
-          
-        {% else %}
-          {{ card_product.selected_or_first_available_variant.price | money }}
-        {% endif %}
-        
+      <div class="{{ base }}__price-otp">
+        {{ card_product.selected_or_first_available_variant.price | money }}
       </div>
     </div>
+  </div>
 
     
   </div>
