@@ -768,12 +768,12 @@ class VariantSelects extends HTMLElement {
       const variantData = JSON.parse(jsonData);
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
-        // addToCartText = `Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
-        // if(subscriptionOption){
-        //   if(subscriptionOption.value == "purchaseTypeSubscription"){
-        //      addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
-        //   }
-        // }
+        addToCartText = `Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
+        if(subscriptionOption){
+          if(subscriptionOption.value == "purchaseTypeSubscription"){
+             addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+          }
+        }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
           addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
@@ -803,16 +803,16 @@ class VariantSelects extends HTMLElement {
             }
           });
 
-          // this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
-          //   let cmpr_price = element.querySelector('.rtx_compare_price');
-          //   let reg_price = element.querySelector('.js-subscription-price');
-          //   if(cmpr_price){
-          //     cmpr_price.innerHTML = `${foundVariant.sub_price}`
-          //   }
-          //   if(reg_price){
-          //     reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
-          //   }
-          // });
+          this.closest("product-form").querySelectorAll('.subscription-multi_Price').forEach(element => {
+            let cmpr_price = element.querySelector('.rtx_compare_price');
+            let reg_price = element.querySelector('.js-subscription-price');
+            if(cmpr_price){
+              cmpr_price.innerHTML = `${foundVariant.sub_price}`
+            }
+            if(reg_price){
+              reg_price.innerHTML = `${foundVariant.sub_discounted_price}`
+            }
+          });
         }
 
       }
