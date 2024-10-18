@@ -2455,7 +2455,7 @@ class QuickAddCard extends HTMLElement {
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       if(priceMetafield){
         console.log(priceMetafield.dataset,"priceMetafield")
-              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`
+              this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`
 
       this.querySelectorAll(".Serving_Cost").forEach( s => {
         s.innerText = s.dataset.onetimeprice.replace("ing", '')
