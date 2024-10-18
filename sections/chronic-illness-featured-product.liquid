@@ -214,7 +214,7 @@
                             {%- endif -%}
                              </span>
                             <span class="Variant_Price">
-                              selling_plan_allocations -- {{ variant.selling_plan_allocations[0] }}
+                              selling_plan_allocations -- {{ variant.selling_plan.name }}
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 {% assign variant_price = variant.selling_plan_allocations[0].price  %}
                               {% else %}
