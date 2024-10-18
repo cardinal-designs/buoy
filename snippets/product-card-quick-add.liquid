@@ -115,9 +115,9 @@
 
       <div class="{{ base }}__price-otp reg__price-recurring">
         {% if settings.purchase_option_default == 'onetime' and card_product.metafields.custom.auto_discount_percent_off != blank %}
-          {{ card_product.selected_or_first_available_variant.price }}
+          {{ card_product.selected_or_first_available_variant.price | money }}
         {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
-          {{ card_product.selected_or_first_available_variant.compare_at_price }}
+          {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
         {% endif %}
       </div>
 
