@@ -771,21 +771,21 @@ class VariantSelects extends HTMLElement {
       const variantData = JSON.parse(jsonData);
       if(variantData){
         let foundVariant = variantData?.find(variant => variant.id == currentVariant?.id);
-        addToCartText = `Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
+        addToCartText = `11Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
         if(subscriptionOption){
           if(subscriptionOption.value == "purchaseTypeSubscription"){
-             addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
+             addToCartText = `22Add to Cart &mdash; &nbsp;<s>${foundVariant.sub_price}</s>&nbsp;${foundVariant.sub_discounted_price}`;
           }
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
       console.log("iiiffffnifvariantscript")
           
-          addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
+          addToCartText = `33Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
     
           if(subscriptionOption){
             if(subscriptionOption.value == "purchaseTypeSubscription"){
-              addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+              addToCartText = `44Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
             }
           }
           this.closest("product-form").querySelectorAll('.js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price').forEach(element => {
