@@ -782,7 +782,7 @@ class VariantSelects extends HTMLElement {
       console.log("iiiffffnifvariantscript",subscriptionOption)
       console.log("iiiffffnifvariantscript",foundVariant.price)
       console.log("iiiffffnifvariantscript",foundVariant.one_discounted_price)
-          console.log(thisData.closest('.product-form form').querySelector(".selling-plan__group"),"thisdata")
+          console.log(thisData.closest('.product-form form').querySelector('.selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price'),"thisdata")
           addToCartText = `33Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
     
           if(subscriptionOption){
