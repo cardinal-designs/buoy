@@ -214,8 +214,8 @@
                             {%- endif -%}
                              </span>
                             <span class="Variant_Price">
-check -- {{ product.metafields.custom.auto_discount_percent_off }}
-                              {% if product.metafields.custom.auto_discount_percent_off != blank and forloop.first %}
+
+                              {% if product.metafields.custom.auto_discount_percent_off > 0 and forloop.first %}
                                 {%- if product.has_only_default_variant -%}
                                   {% assign variant_price = product.price %}
                                 {%- else -%}
