@@ -202,16 +202,16 @@
         {% endif %}
 
       
-          {% assign current_variant_price = card_product.selected_or_first_available_variant.price %}
+          {% assign current_variant_price = p.selected_or_first_available_variant.price %}
           {% if settings.purchase_option_default == 'onetime' %}
-            {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
-              {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+            {% if p.metafields.custom.auto_discount_percent_off != blank %}
+              {% assign one_discount_value = current_variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
               {% assign one_final_price = current_variant_price | minus: one_discount_value %}
               <span>{{ one_final_price | money }}</span>
               <s>{{ current_variant_price | money }}</s>
-            {% elsif card_product.selected_or_first_available_variant.compare_at_price != blank %}
-              <span>{{ card_product.selected_or_first_available_variant.price | money }}</span>
-              <s>{{ card_product.selected_or_first_available_variant.compare_at_price | money }}</s>
+            {% elsif p.selected_or_first_available_variant.compare_at_price != blank %}
+              <span>{{ p.selected_or_first_available_variant.price | money }}</span>
+              <s>{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
             {% else %}
               <span>{{ current_variant_price | money }}</span>
               <s></s>
