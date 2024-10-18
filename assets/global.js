@@ -797,7 +797,7 @@ priceElement.setAttribute('data-discount-price', foundVariant.one_discounted_pri
 priceElement.setAttribute('data-price',foundVariant.price );        
 
 
-          addToCartText = `33Add to Cart &mdash; <s>${foundVariant.price || ''}</s>&nbsp;${foundVariant.one_discounted_price}`;
+          addToCartText = `33Add to Cart &mdash; ${foundVariant.one_discounted_price}&nbsp;<s>${foundVariant.price || ''}</s>`;
     
           if(subscriptionOption){
             if(subscriptionOption.value == "purchaseTypeSubscription"){
