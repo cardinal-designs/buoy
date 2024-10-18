@@ -957,10 +957,7 @@ class VariantSelects extends HTMLElement {
                 variantJson[this.currentVariant.id].price
               }</s>`;
             gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
-            gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price;
-
-              
+            gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;           
             }
           }
           this.closest("product-form")
@@ -1016,7 +1013,6 @@ class VariantSelects extends HTMLElement {
         }
       }
     } else {
-      console.log("elsee")
       if (subscriptionOption) {
         if (subscriptionOption.value == "purchaseTypeSubscription") {
           addToCartText = `Add to Cart &mdash; &nbsp;<s>${
@@ -2910,6 +2906,7 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
+    console.log(this,"thisthisthis")
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
     if (this.addToCart.dataset.available == "true") {
