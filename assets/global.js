@@ -901,7 +901,6 @@ class VariantSelects extends HTMLElement {
       const jsonData = variantScript.textContent;
       const variantData = JSON.parse(jsonData);
       if (variantData) {
-        console.log("iff ")
         let foundVariant = variantData?.find(
           (variant) => variant.id == currentVariant?.id
         );
@@ -929,10 +928,15 @@ class VariantSelects extends HTMLElement {
           }
         }
         if (this.closest("product-form").dataset.formType == "product-card") {
-          console.log(thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price"))
-          let gridPrice = thisData.closest(".quick-add__container").querySelector(".quick-add__content .quick-add__price");
-          gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant.one_discounted_price;
-          gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.price || "";
+          let gridPrice = thisData
+            .closest(".quick-add__container")
+            .querySelector(".quick-add__content .quick-add__price");
+          if (gridPrice) {
+            gridPrice.querySelector(".quick-add__price-recurring").textContent =
+              foundVariant.one_discounted_price;
+            gridPrice.querySelector(".quick-add__price-otp").textContent =
+              foundVariant.price || "";
+          }
           const priceElement = thisData
             .closest(".product-form form")
             .querySelector(
@@ -956,8 +960,15 @@ class VariantSelects extends HTMLElement {
                 variantJson[this.currentVariant.id].compare_price ||
                 variantJson[this.currentVariant.id].price
               }</s>`;
-            gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
-            gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;           
+              if (gridPrice) {
+                gridPrice.querySelector(
+                  ".quick-add__price-recurring"
+                ).textContent =
+                  variantJson[this.currentVariant.id].subscription_price;
+                gridPrice.querySelector(".quick-add__price-otp").textContent =
+                  variantJson[this.currentVariant.id].compare_price ||
+                  variantJson[this.currentVariant.id].price;
+              }
             }
           }
           this.closest("product-form")
@@ -1013,11 +1024,22 @@ class VariantSelects extends HTMLElement {
         }
       }
     } else {
+      let gridPrice = thisData
+        .closest(".quick-add__container")
+        .querySelector(".quick-add__content .quick-add__price");
+
       if (subscriptionOption) {
         if (subscriptionOption.value == "purchaseTypeSubscription") {
           addToCartText = `Add to Cart &mdash; &nbsp;<s>${
             variantJson[this.currentVariant.id].price
           }</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+
+          if (gridPrice) {
+            gridPrice.querySelector(".quick-add__price-recurring").textContent =
+              variantJson[this.currentVariant.id].price;
+            gridPrice.querySelector(".quick-add__price-otp").textContent =
+              variantJson[this.currentVariant.id].subscription_price;
+          }
         }
       }
       if (this.closest("product-form").dataset.formType == "product-card") {
@@ -1026,7 +1048,12 @@ class VariantSelects extends HTMLElement {
         }</span> <s>${
           variantJson[this.currentVariant.id].compare_price || ""
         }</s>`;
-
+        if (gridPrice) {
+          gridPrice.querySelector(".quick-add__price-recurring").textContent =
+            variantJson[this.currentVariant.id].price;
+          gridPrice.querySelector(".quick-add__price-otp").textContent =
+            variantJson[this.currentVariant.id].compare_price || "";
+        }
         if (subscriptionOption) {
           if (subscriptionOption.value == "purchaseTypeSubscription") {
             addToCartText = `Add to Cart &mdash;&nbsp;<span>${
@@ -1035,6 +1062,16 @@ class VariantSelects extends HTMLElement {
               variantJson[this.currentVariant.id].compare_price ||
               variantJson[this.currentVariant.id].price
             }</s>`;
+
+            if (gridPrice) {
+              gridPrice.querySelector(
+                ".quick-add__price-recurring"
+              ).textContent =
+                variantJson[this.currentVariant.id].subscription_price;
+              gridPrice.querySelector(".quick-add__price-otp").textContent =
+                variantJson[this.currentVariant.id].compare_price ||
+                variantJson[this.currentVariant.id].price;
+            }
           }
         }
         this.closest("product-form")
@@ -2602,7 +2639,6 @@ if (optionList.length > 0) {
           siblings[i].classList.remove("variant-active");
         }
       }
-
       if (data !== "") {
         var variantWrapperDropdown = this.closest(".main__variant--wrap");
         variantWrapperDropdown.querySelector(
@@ -2921,11 +2957,15 @@ class QuickAddCard extends HTMLElement {
         this.variantJson[this.currentVariant].compare_price ||
         this.variantJson[this.currentVariant].price
       }</s>`;
-        if(gridPriceChange){        
-
-      gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].subscription_price;
-      gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price || this.variantJson[this.currentVariant].price;
-        }
+      if (gridPriceChange) {
+        gridPriceChange.querySelector(
+          ".quick-add__price-recurring"
+        ).textContent =
+          this.variantJson[this.currentVariant].subscription_price;
+        gridPriceChange.querySelector(".quick-add__price-otp").textContent =
+          this.variantJson[this.currentVariant].compare_price ||
+          this.variantJson[this.currentVariant].price;
+      }
       this.querySelectorAll(".Serving_Cost").forEach((s) => {
         s.innerText = s.dataset.subprice.replace("ing", "");
       });
@@ -2933,10 +2973,12 @@ class QuickAddCard extends HTMLElement {
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       if (priceMetafield) {
         this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
-        if(gridPriceChange){        
-
-      gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
-      gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
+        if (gridPriceChange) {
+          gridPriceChange.querySelector(
+            ".quick-add__price-recurring"
+          ).textContent = priceMetafield.dataset.discountPrice;
+          gridPriceChange.querySelector(".quick-add__price-otp").textContent =
+            priceMetafield.dataset.price;
         }
         this.querySelectorAll(".Serving_Cost").forEach((s) => {
           s.innerText = s.dataset.onetimeprice.replace("ing", "");
@@ -2948,9 +2990,12 @@ class QuickAddCard extends HTMLElement {
         this.querySelectorAll(".Serving_Cost").forEach((s) => {
           s.innerText = s.dataset.onetimeprice.replace("ing", "");
         });
-        if(gridPriceChange){        
-        gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].price;
-      gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price;
+        if (gridPriceChange) {
+          gridPriceChange.querySelector(
+            ".quick-add__price-recurring"
+          ).textContent = this.variantJson[this.currentVariant].price;
+          gridPriceChange.querySelector(".quick-add__price-otp").textContent =
+            this.variantJson[this.currentVariant].compare_price;
         }
       }
     }
