@@ -182,7 +182,12 @@
             {% comment %}
             <s>{{ currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
             {% endcomment %}
+            {% unless product.metafields.custom.hide_subscription %}
+              <s>{{ currentVariant.compare_at_price | default: currentVariant.price | money_without_trailing_zeros }}</s>&nbsp;
+              {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros  }}
+            {% else %}
             {{ currentAllocations[0].price | default:currentVariant.price | money_without_trailing_zeros }}
+            {% endunless %}
           </span>
           {% endif %}
         </button>
