@@ -779,7 +779,7 @@ class VariantSelects extends HTMLElement {
         }
 
         if(this.closest('product-form').dataset.formType == 'product-card') {
-      console.log("iiiffffnifvariantscript")
+      console.log("iiiffffnifvariantscript",subscriptionOption)
           
           addToCartText = `33Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
     
