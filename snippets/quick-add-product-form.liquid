@@ -77,7 +77,7 @@
            </script>
          {{ variantMetafield }}
         {%- if  p.metafields.custom.auto_discount_percent_off -%}
-         <script type="application/json" class="variantMetaJSONCollection">
+         <script type="application/json" class="variantMetaJSON">
                 [
                   {%- assign comma = false -%}
                   {%- for variant in  p.variants -%}
