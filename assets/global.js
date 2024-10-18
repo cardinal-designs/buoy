@@ -763,6 +763,7 @@ class VariantSelects extends HTMLElement {
 
     
     let variantScript = thisData.parentElement.querySelector('.variantMetaJSON');
+    console.log(variantScript,"variantScript")
     if(variantScript) {
       console.log("iinifvariantscript")
       
