@@ -796,7 +796,7 @@ class VariantSelects extends HTMLElement {
             // element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
             element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? foundVariant.one_discounted_price : (element.classList.contains("js-main-compare-price")) ? foundVariant.price : variantJson[this.currentVariant.id].subscription_price;
             if(element.classList.contains("js-sub-compare-price")) {
-              console.log("hebherf")
+              console.log("subbbbbbb")
               element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price
             }       
           })
