@@ -200,7 +200,41 @@
         {% else %}
           <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
+
+      
+          {% assign current_variant_price = card_product.selected_or_first_available_variant.price %}
+          {% if settings.purchase_option_default == 'onetime' %}
+            {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
+              {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+              <span>{{ one_final_price | money }}</span>
+              <s>{{ current_variant_price | money }}</s>
+            {% elsif card_product.selected_or_first_available_variant.compare_at_price != blank %}
+              <span>{{ card_product.selected_or_first_available_variant.price | money }}</span>
+              <s>{{ card_product.selected_or_first_available_variant.compare_at_price | money }}</s>
+            {% else %}
+              <span>{{ current_variant_price | money }}</span>
+              <s></s>
+            {% endif %}
+          {% else %}
+            {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+          {% endif %}
+
         
+          <div class="{{ base }}__price-recurring main__price-recurring">
+          </div>
+    
+          <div class="{{ base }}__price-otp reg__price-recurring">
+            {% if settings.purchase_option_default == 'onetime' and card_product.metafields.custom.auto_discount_percent_off != blank %}
+              {{ card_product.selected_or_first_available_variant.price | money }}
+            {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
+              {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+            {% endif %}
+          </div>
+          
+   
+
+        {% comment %}
         {% if currentVariant.selling_plan_allocations.size > 0 %}
           <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
           <s>{{ currentVariant.price | money }}</s>
@@ -212,6 +246,8 @@
            <span>{{ currentVariant.price | money }}</span>
          {% endif %}
         {% endif %}
+        {% endcomment %}
+        
       </button>
     </div>
 
