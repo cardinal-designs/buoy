@@ -194,7 +194,7 @@
     <input type="hidden" name="id" value="{{ currentVariant.id }}">
 
     <div class="product-form__buttons">
-      <button type="submit" name="add" class="button button--primary product-form__buttons-new" data-available="{{ currentVariant.available }}">
+      <button type="submit" name="add" class="button button--primary" data-available="{{ currentVariant.available }}">
         {% if currentVariant.available %}
           <span>Add To Cart &mdash;&nbsp;</span>
         {% else %}
