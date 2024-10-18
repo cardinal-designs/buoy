@@ -830,19 +830,10 @@ class VariantSelects extends HTMLElement {
            addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
         }
       }
-     console.log(subscriptionOption,"subscriptionOption")
+   
       if(this.closest('product-form').dataset.formType == 'product-card') {
-        console.log("ifproductform",this)
-        let variantScriptCollection = thisData.parentElement.querySelector('.variantMetaJSONCollection');
-        if(variantScriptCollection ){
-            const jsonDataCollection = variantScriptCollection.textContent;
-      const variantDataCollection = JSON.parse(jsonDataCollection);
-          let foundVariant = variantDataCollection?.find(variant => variant.id == currentVariant?.id);
-          console.log(variantScriptCollection,"variantScriptCollection")
-          console.log(this.currentVariant.id,"this.currentVariant.id]")
-          console.log(foundVariant,"foundVariant")
-          
-        }
+        console.log("ifproductform")
+        
         addToCartText = `1Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ''}</s>`;
   
         if(subscriptionOption){
