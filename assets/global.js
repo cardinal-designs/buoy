@@ -928,20 +928,14 @@ class VariantSelects extends HTMLElement {
           }
         }
         if (this.closest("product-form").dataset.formType == "product-card") {
-          let gridPrice = thisData
-            .closest(".quick-add__container")
-            .querySelector(".quick-add__content .quick-add__price");
+          let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price")
           if (gridPrice) {
             gridPrice.querySelector(".quick-add__price-recurring").textContent =
               foundVariant.one_discounted_price;
             gridPrice.querySelector(".quick-add__price-otp").textContent =
               foundVariant.price || "";
           }
-          const priceElement = thisData
-            .closest(".product-form form")
-            .querySelector(
-              ".selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price"
-            );
+          const priceElement = thisData.closest(".product-form form .selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price")
           if (priceElement) {
             priceElement.setAttribute(
               "data-discount-price",
