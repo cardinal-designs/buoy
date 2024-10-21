@@ -1018,10 +1018,7 @@ class VariantSelects extends HTMLElement {
         }
       }
     } else {
-      let gridPrice = thisData
-        .closest(".quick-add__container")
-        .querySelector(".quick-add__content .quick-add__price");
-
+      let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price")
       if (subscriptionOption) {
         if (subscriptionOption.value == "purchaseTypeSubscription") {
           addToCartText = `Add to Cart &mdash; &nbsp;<s>${
