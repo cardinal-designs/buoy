@@ -363,7 +363,7 @@
     <nav class="header__inline-menu Mobile_Show">
       <ul class="list-menu list-menu--inline" role="list">
         <li>
-          <a href="#menu" class="Mobile_Hamburger header__menu-item list-menu__item link link--text focus-inset sh2">
+          <a href="#menu" class="Mobile_Hamburger header__menu-item list-menu__item link link--text focus-inset sh2" aria-label="hamburger menu">
             {% render 'icon-hamburger-new' %}
           </a>
         </li>
@@ -448,7 +448,7 @@
       {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
-        <a href="/account" class="header__shop-link sh2">
+        <a href="/account" class="header__shop-link sh2" aria-label="account">
           {% render 'icon-account-new' %}
         </a>
       {%- endif -%}
@@ -540,7 +540,7 @@
               {%- if bs.block_link != blank -%}
               <a href="{{ bs.block_link }}">
               {%- endif -%}
-                <img src="{{ bs.block_image | img_url: 'master' }}"/>
+                <img src="{{ bs.block_image | img_url: 'master' }}" loading="lazy"/>
               {%- if bs.block_link != blank -%}
               </a>
               {%- endif -%}
