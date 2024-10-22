@@ -1024,6 +1024,12 @@ class VariantSelects extends HTMLElement {
               }
             }
           }else{
+            if(closestForm){
+              let onetimeClearBtn = closestForm.querySelector('.quick-add__tag');
+              if(onetimeClearBtn){
+                onetimeClearBtn.style.display = 'none';
+              }
+            }
             console.log("thisData", thisData.closest(".quick-add__container"))
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             // console.log("gridPrice--", gridPrice)
