@@ -1012,7 +1012,7 @@ class VariantSelects extends HTMLElement {
               }
             }
           }else{
-            console.log("thisData", thisData)
+            console.log("thisData", thisData.closest(".quick-add__container"))
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             console.log("gridPrice--", gridPrice)
             if (subscriptionOption) {
