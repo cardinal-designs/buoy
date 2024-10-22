@@ -3158,18 +3158,22 @@ class QuickAddCard extends HTMLElement {
       });
     } else {
 
-      // let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
-      // if (variantScript) {
-      //   const jsonData = variantScript.textContent;
-      //   const variantData = JSON.parse(jsonData);
-      //   if (variantData) {
-      //     let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
-
-      //   }
-      // }
-      
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
-      console.log("priceMetafield", priceMetafield)
+      
+      let variantScript = this.querySelector(".variantMetaJSON");
+      let currentVar = this.currentVariant;
+      if (variantScript) {
+        const jsonData = variantScript.textContent;
+        const variantData = JSON.parse(jsonData);
+        if (variantData) {
+          let foundVariant = variantData?.find((variant) => variant.id == currentVar?.id && variant?.discount != "");
+          console.log("foundVariant", foundVariant);
+          
+        }
+      }
+      
+      
+
       if (priceMetafield) {
         this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
         if (gridPriceChange) {
