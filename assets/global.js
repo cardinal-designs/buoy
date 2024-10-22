@@ -926,18 +926,15 @@ class VariantSelects extends HTMLElement {
               addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
               
               if (gridPrice) {
-                  gridPrice.querySelector(".quick-add__price-recurring").textContent = `999 ${foundVariant?.one_discounted_price}`;
-                  gridPrice.querySelector(".quick-add__price-otp").textContent = `1010 ${foundVariant?.price}`;
+                  gridPrice.querySelector(".quick-add__price-recurring").textContent =
+                      foundVariant.one_discounted_price;
+                  gridPrice.querySelector(".quick-add__price-otp").textContent =
+                      foundVariant.price || "";
               }
-              if (subscriptionOption) {
-                  if (subscriptionOption.value == "purchaseTypeSubscription") {
-                      addToCartText = `66 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
-  
-                      if (gridPrice) {
-                          gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
-                          gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
-                      }
-                  }
+              const priceElement = thisData.closest(".product-form form .selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price")
+              if (priceElement) {
+                  priceElement.setAttribute("data-discount-price",foundVariant.one_discounted_price);
+                  priceElement.setAttribute("data-price", foundVariant.price);
               }
 
               this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
