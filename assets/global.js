@@ -907,17 +907,18 @@ class VariantSelects extends HTMLElement {
                 onetimeClearBtn.innerHTML = onetimeClearBtnHtml;
                 onetimeClearBtn.style.display = 'inline-block';
               }
+            }
+            
+            let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
 
-              let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
-
-              if (subscriptionOption) {
-                if (subscriptionOption.value == "purchaseTypeSubscription") {
-                    if (variantJson[this.currentVariant.id].compare_price) {
-                        addToCartText = `111 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-                    } else {
-                        addToCartText = `333 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-                    }
-                }
+            if (subscriptionOption) {
+              if (subscriptionOption.value == "purchaseTypeSubscription") {
+                  if (variantJson[this.currentVariant.id].compare_price) {
+                      addToCartText = `111 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                  } else {
+                      addToCartText = `333 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                  }
+              }
             }
 
             if (this.closest("product-form").dataset.formType == "product-card") {
@@ -974,10 +975,6 @@ class VariantSelects extends HTMLElement {
                     reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
                   }
               });
-            }
-
-
-              
             }
           }else{
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
