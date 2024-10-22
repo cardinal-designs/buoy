@@ -931,10 +931,8 @@ class VariantSelects extends HTMLElement {
               }
               
               if (gridPrice) {
-                  gridPrice.querySelector(".quick-add__price-recurring").textContent =
-                      foundVariant.one_discounted_price;
-                  gridPrice.querySelector(".quick-add__price-otp").textContent =
-                      foundVariant.price || "";
+                  gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant.one_discounted_price;
+                  gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant.price || "";
               }
               const priceElement = thisData.closest(".product-form form .selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price")
               if (priceElement) {
