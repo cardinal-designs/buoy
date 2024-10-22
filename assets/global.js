@@ -952,7 +952,7 @@ class VariantSelects extends HTMLElement {
                     let cmpr_price = element.querySelector(".rtx_compare_price");
                     let reg_price = element.querySelector(".js-rtx_one_time_price");
                     if (cmpr_price) {
-                        cmpr_price.innerHTML = `${foundVariant.price}`;
+                        cmpr_price.innerHTML = `${foundVariant.compare_price}` || `${foundVariant.price}`;
                     }
                     if (reg_price) {
                         reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
