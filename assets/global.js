@@ -798,331 +798,331 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true, price) {
-    let productForm = this.closest("product-form");
-    let addButton;
-    if (productForm) {
-      addButton = productForm.querySelector('[name="add"]');
-    }
-    let thisData = this;
-    let dataUpdate = thisData.dataset.update;
-    let currentVariant = thisData.currentVariant;
-    if (dataUpdate == "custom") {
-      let varId = currentVariant?.id;
-      let productInfoWrapper =
-        thisData.closest(".product__info-wrapper") ||
-        thisData.closest(".quick-add__form-wrapper");
-      if (!currentVariant?.id) {
-        varId = thisData
-          .querySelector(".product-form__input")
-          .querySelector("input:checked")
-          .closest(".Variant_Blocks").dataset.id;
-        if (productInfoWrapper) {
-          let inputId = productInfoWrapper.querySelector("input[name='id']");
-          if (inputId) {
-            inputId.value = varId;
-          }
-        }
+      let productForm = this.closest("product-form");
+      let addButton;
+      if (productForm) {
+          addButton = productForm.querySelector('[name="add"]');
       }
-      let variantScript = thisData.parentElement.querySelector(".VariantJSON");
-      if (variantScript) {
-        const jsonData = variantScript.textContent;
-        const variantData = JSON.parse(jsonData);
-        let foundVariant = variantData?.find((variant) => variant.id == varId);
-        if (foundVariant) {
-          let sellingId =
-            foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
-          if (productInfoWrapper) {
-            let sellingInput = productInfoWrapper.querySelector(
-              `[name='selling_plan']`
-            );
-            let sellingInput_id = productInfoWrapper.querySelector(
-              `[name='selling_plan_id']`
-            );
-            if (sellingInput) {
-              sellingInput.remove();
-            }
-            if (sellingInput_id) {
-              sellingInput_id.remove();
-            }
-            let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
-            let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
-            let inputId = productInfoWrapper.querySelector("input[name='id']");
-            if (inputId) {
-              inputId.insertAdjacentHTML("beforebegin", sellingInputHtml);
-              inputId.insertAdjacentHTML("beforebegin", sellingInputIDHtml);
-              inputId.value = foundVariant?.id;
-            }
-          }
-          let priceSelling =
-            foundVariant?.data?.selling_plan_allocations?.[0]?.price;
-          let variantPrice = foundVariant?.data?.price;
-
-          if (productInfoWrapper) {
-            let submitBtn = productInfoWrapper.querySelector('[name="add"]');
-            if (submitBtn) {
-              let buttonText = "Subscribe";
-              if (thisData.closest("quick-add-card")) {
-                buttonText = "Add";
+      let thisData = this;
+      let dataUpdate = thisData.dataset.update;
+      let currentVariant = thisData.currentVariant;
+      if (dataUpdate == "custom") {
+          let varId = currentVariant?.id;
+          let productInfoWrapper =
+              thisData.closest(".product__info-wrapper") ||
+              thisData.closest(".quick-add__form-wrapper");
+          if (!currentVariant?.id) {
+              varId = thisData
+                  .querySelector(".product-form__input")
+                  .querySelector("input:checked")
+                  .closest(".Variant_Blocks").dataset.id;
+              if (productInfoWrapper) {
+                  let inputId = productInfoWrapper.querySelector("input[name='id']");
+                  if (inputId) {
+                      inputId.value = varId;
+                  }
               }
-              submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(
-                priceSelling
-              )} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
-              submitBtn.dataset.available = !disable;
-              if (disable) {
-                submitBtn.setAttribute("disabled", true);
-                if (text) submitBtn.innerHTML = text;
-              } else {
-                submitBtn.removeAttribute("disabled");
-                submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(
+          }
+          let variantScript = thisData.parentElement.querySelector(".VariantJSON");
+          if (variantScript) {
+              const jsonData = variantScript.textContent;
+              const variantData = JSON.parse(jsonData);
+              let foundVariant = variantData?.find((variant) => variant.id == varId);
+              if (foundVariant) {
+                  let sellingId =
+                      foundVariant?.data?.selling_plan_allocations?.[0]?.selling_plan_id;
+                  if (productInfoWrapper) {
+                      let sellingInput = productInfoWrapper.querySelector(
+                          `[name='selling_plan']`
+                      );
+                      let sellingInput_id = productInfoWrapper.querySelector(
+                          `[name='selling_plan_id']`
+                      );
+                      if (sellingInput) {
+                          sellingInput.remove();
+                      }
+                      if (sellingInput_id) {
+                          sellingInput_id.remove();
+                      }
+                      let sellingInputHtml = `<input type="hidden" name="selling_plan" value="${sellingId}">`;
+                      let sellingInputIDHtml = `<input type="hidden" name="selling_plan_id" value="${sellingId}">`;
+                      let inputId = productInfoWrapper.querySelector("input[name='id']");
+                      if (inputId) {
+                          inputId.insertAdjacentHTML("beforebegin", sellingInputHtml);
+                          inputId.insertAdjacentHTML("beforebegin", sellingInputIDHtml);
+                          inputId.value = foundVariant?.id;
+                      }
+                  }
+                  let priceSelling =
+                      foundVariant?.data?.selling_plan_allocations?.[0]?.price;
+                  let variantPrice = foundVariant?.data?.price;
+  
+                  if (productInfoWrapper) {
+                      let submitBtn = productInfoWrapper.querySelector('[name="add"]');
+                      if (submitBtn) {
+                          let buttonText = "Subscribe";
+                          if (thisData.closest("quick-add-card")) {
+                              buttonText = "Add";
+                          }
+                          submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(
                   priceSelling
                 )} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
+                          submitBtn.dataset.available = !disable;
+                          if (disable) {
+                              submitBtn.setAttribute("disabled", true);
+                              if (text) submitBtn.innerHTML = text;
+                          } else {
+                              submitBtn.removeAttribute("disabled");
+                              submitBtn.innerHTML = `${buttonText} —  ${Shopify.formatMoney(
+                    priceSelling
+                  )} <s> ${Shopify.formatMoney(variantPrice)} </s>`;
+                          }
+                          return;
+                      }
+                  }
               }
-              return;
-            }
           }
-        }
       }
-    }
-    const stickyButton = document.querySelector(".js-sticky-add-to-cart");
-    if (!addButton) return;
-    let variantJson = JSON.parse(
-      this.closest("product-form").querySelector("#js-product-variant-json")
-        .innerText
-    );
-    let subscriptionOption = this.closest("product-form").querySelector(
-      '[name="purchaseType"]:checked'
-    );
-    let addToCartText = `Add to Cart &mdash; <s>${
-      variantJson[this.currentVariant.id].compare_price || ""
-    }</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
-    let variantScript =
-      thisData.parentElement.querySelector(".variantMetaJSON");
-    if (variantScript) {
-      const jsonData = variantScript.textContent;
-      const variantData = JSON.parse(jsonData);
-      if (variantData) {
-        let foundVariant = variantData?.find(
-          (variant) => variant.id == currentVariant?.id
-        );
-        addToCartText = `Add to Cart &mdash; <s>${
-          foundVariant.price || ""
-        }</s>&nbsp;${foundVariant.one_discounted_price}`;
-
-        if (subscriptionOption) {
-          if (subscriptionOption.value == "purchaseTypeSubscription") {
-            if (variantJson[this.currentVariant.id].compare_price) {
-              addToCartText = `Add to Cart &mdash; &nbsp;<s>${
-                variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price
-              }</s>&nbsp;${
-                variantJson[this.currentVariant.id].subscription_price
-              }`;
-            } else {
-              addToCartText = `Add to Cart &mdash; &nbsp;<s>${
-                variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price
-              }</s>&nbsp;${
-                variantJson[this.currentVariant.id].subscription_price
-              }`;
-            }
-          }
-        }
-        if (this.closest("product-form").dataset.formType == "product-card") {
-          let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price")
-          if (gridPrice) {
-            gridPrice.querySelector(".quick-add__price-recurring").textContent =
-              foundVariant.one_discounted_price;
-            gridPrice.querySelector(".quick-add__price-otp").textContent =
-              foundVariant.price || "";
-          }
-          const priceElement = thisData.closest(".product-form form .selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price")
-          if (priceElement) {
-            priceElement.setAttribute(
-              "data-discount-price",
+      const stickyButton = document.querySelector(".js-sticky-add-to-cart");
+      if (!addButton) return;
+      let variantJson = JSON.parse(
+          this.closest("product-form").querySelector("#js-product-variant-json")
+          .innerText
+      );
+      let subscriptionOption = this.closest("product-form").querySelector(
+          '[name="purchaseType"]:checked'
+      );
+      let addToCartText = `Add to Cart &mdash; <s>${
+        variantJson[this.currentVariant.id].compare_price || ""
+      }</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+      let variantScript =
+          thisData.parentElement.querySelector(".variantMetaJSON");
+      if (variantScript) {
+          const jsonData = variantScript.textContent;
+          const variantData = JSON.parse(jsonData);
+          if (variantData) {
+              let foundVariant = variantData?.find(
+                  (variant) => variant.id == currentVariant?.id
+              );
+              addToCartText = `Add to Cart &mdash; <s>${
+            foundVariant.price || ""
+          }</s>&nbsp;${foundVariant.one_discounted_price}`;
+  
+              if (subscriptionOption) {
+                  if (subscriptionOption.value == "purchaseTypeSubscription") {
+                      if (variantJson[this.currentVariant.id].compare_price) {
+                          addToCartText = `Add to Cart &mdash; &nbsp;<s>${
+                  variantJson[this.currentVariant.id].compare_price ||
+                  variantJson[this.currentVariant.id].price
+                }</s>&nbsp;${
+                  variantJson[this.currentVariant.id].subscription_price
+                }`;
+                      } else {
+                          addToCartText = `Add to Cart &mdash; &nbsp;<s>${
+                  variantJson[this.currentVariant.id].compare_price ||
+                  variantJson[this.currentVariant.id].price
+                }</s>&nbsp;${
+                  variantJson[this.currentVariant.id].subscription_price
+                }`;
+                      }
+                  }
+              }
+              if (this.closest("product-form").dataset.formType == "product-card") {
+                  let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price")
+                  if (gridPrice) {
+                      gridPrice.querySelector(".quick-add__price-recurring").textContent =
+                          foundVariant.one_discounted_price;
+                      gridPrice.querySelector(".quick-add__price-otp").textContent =
+                          foundVariant.price || "";
+                  }
+                  const priceElement = thisData.closest(".product-form form .selling-plan__group .js-rtx_one_time_price.quick-add__price-recurring.quick-add__metafield-price")
+                  if (priceElement) {
+                      priceElement.setAttribute(
+                          "data-discount-price",
+                          foundVariant.one_discounted_price
+                      );
+                      priceElement.setAttribute("data-price", foundVariant.price);
+                  }
+                  addToCartText = `Add to Cart &mdash; ${
               foundVariant.one_discounted_price
-            );
-            priceElement.setAttribute("data-price", foundVariant.price);
+            }&nbsp;<s>${foundVariant.price || ""}</s>`;
+                  if (subscriptionOption) {
+                      if (subscriptionOption.value == "purchaseTypeSubscription") {
+                          addToCartText = `Add to Cart &mdash;&nbsp;<span>${
+                  variantJson[this.currentVariant.id].subscription_price
+                }</span><s>${
+                  variantJson[this.currentVariant.id].compare_price ||
+                  variantJson[this.currentVariant.id].price
+                }</s>`;
+                          if (gridPrice) {
+                              gridPrice.querySelector(
+                                      ".quick-add__price-recurring"
+                                  ).textContent =
+                                  variantJson[this.currentVariant.id].subscription_price;
+                              gridPrice.querySelector(".quick-add__price-otp").textContent =
+                                  variantJson[this.currentVariant.id].compare_price ||
+                                  variantJson[this.currentVariant.id].price;
+                          }
+                      }
+                  }
+                  this.closest("product-form")
+                      .querySelectorAll(
+                          ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
+                      )
+                      .forEach((element) => {
+                          // element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
+                          element.innerText = element.classList.contains(
+                                  "js-rtx_one_time_price"
+                              ) ?
+                              foundVariant.one_discounted_price :
+                              element.classList.contains("js-main-compare-price") ?
+                              foundVariant.price :
+                              variantJson[this.currentVariant.id].subscription_price;
+                          if (element.classList.contains("js-sub-compare-price")) {
+                              element.innerText =
+                                  variantJson[this.currentVariant.id].compare_price ||
+                                  variantJson[this.currentVariant.id].price;
+                          }
+                      });
+              } else {
+                  this.closest("product-form")
+                      .querySelectorAll(".onetime-multi_Price")
+                      .forEach((element) => {
+                          let cmpr_price = element.querySelector(".rtx_compare_price");
+                          let reg_price = element.querySelector(".js-rtx_one_time_price");
+                          if (cmpr_price) {
+                              cmpr_price.innerHTML = `${foundVariant.price}`;
+                          }
+                          if (reg_price) {
+                              reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
+                          }
+                      });
+                  this.closest("product-form")
+                      .querySelectorAll(".subscription-multi_Price")
+                      .forEach((element) => {
+                          let cmpr_price = element.querySelector(".rtx_compare_price");
+                          let reg_price = element.querySelector(".js-subscription-price");
+                          if (cmpr_price) {
+                              cmpr_price.innerHTML = `${
+                    variantJson[this.currentVariant.id].compare_price
+                      ? variantJson[this.currentVariant.id].compare_price
+                      : variantJson[this.currentVariant.id].price
+                  }`;
+                          }
+                          if (reg_price) {
+                              reg_price.innerHTML = `${
+                    variantJson[this.currentVariant.id].subscription_price
+                  }`;
+                          }
+                      });
+              }
           }
-          addToCartText = `Add to Cart &mdash; ${
-            foundVariant.one_discounted_price
-          }&nbsp;<s>${foundVariant.price || ""}</s>`;
+      } else {
+          let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
           if (subscriptionOption) {
-            if (subscriptionOption.value == "purchaseTypeSubscription") {
+              if (subscriptionOption.value == "purchaseTypeSubscription") {
+                  addToCartText = `Add to Cart &mdash; &nbsp;<s>${
+              variantJson[this.currentVariant.id].price
+            }</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+  
+                  if (gridPrice) {
+                      gridPrice.querySelector(".quick-add__price-recurring").textContent =
+                          variantJson[this.currentVariant.id].price;
+                      gridPrice.querySelector(".quick-add__price-otp").textContent =
+                          variantJson[this.currentVariant.id].subscription_price;
+                  }
+              }
+          }
+          if (this.closest("product-form").dataset.formType == "product-card") {
               addToCartText = `Add to Cart &mdash;&nbsp;<span>${
+            variantJson[this.currentVariant.id].price
+          }</span> <s>${
+            variantJson[this.currentVariant.id].compare_price || ""
+          }</s>`;
+              if (gridPrice) {
+                  gridPrice.querySelector(".quick-add__price-recurring").textContent =
+                      variantJson[this.currentVariant.id].price;
+                  gridPrice.querySelector(".quick-add__price-otp").textContent =
+                      variantJson[this.currentVariant.id].compare_price || "";
+              }
+              if (subscriptionOption) {
+                  if (subscriptionOption.value == "purchaseTypeSubscription") {
+                      addToCartText = `Add to Cart &mdash;&nbsp;<span>${
                 variantJson[this.currentVariant.id].subscription_price
               }</span><s>${
                 variantJson[this.currentVariant.id].compare_price ||
                 variantJson[this.currentVariant.id].price
               }</s>`;
-              if (gridPrice) {
-                gridPrice.querySelector(
-                  ".quick-add__price-recurring"
-                ).textContent =
-                  variantJson[this.currentVariant.id].subscription_price;
-                gridPrice.querySelector(".quick-add__price-otp").textContent =
-                  variantJson[this.currentVariant.id].compare_price ||
-                  variantJson[this.currentVariant.id].price;
+  
+                      if (gridPrice) {
+                          gridPrice.querySelector(
+                                  ".quick-add__price-recurring"
+                              ).textContent =
+                              variantJson[this.currentVariant.id].subscription_price;
+                          gridPrice.querySelector(".quick-add__price-otp").textContent =
+                              variantJson[this.currentVariant.id].compare_price ||
+                              variantJson[this.currentVariant.id].price;
+                      }
+                  }
               }
-            }
+              this.closest("product-form")
+                  .querySelectorAll(
+                      ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
+                  )
+                  .forEach((element) => {
+                      element.innerText = element.classList.contains(
+                              "js-rtx_one_time_price"
+                          ) ?
+                          variantJson[this.currentVariant.id].price :
+                          element.classList.contains("js-main-compare-price") ?
+                          variantJson[this.currentVariant.id].compare_price :
+                          variantJson[this.currentVariant.id].subscription_price;
+                      if (element.classList.contains("js-sub-compare-price")) {
+                          element.innerText =
+                              variantJson[this.currentVariant.id].compare_price ||
+                              variantJson[this.currentVariant.id].price;
+                      }
+                  });
+          } else {
+              this.closest("product-form")
+                  .querySelectorAll(
+                      ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
+                  )
+                  .forEach((element) => {
+                      element.innerText = element.classList.contains(
+                              "js-rtx_one_time_price"
+                          ) ?
+                          variantJson[this.currentVariant.id].price :
+                          element.classList.contains("js-main-compare-price") ?
+                          variantJson[this.currentVariant.id].compare_price :
+                          variantJson[this.currentVariant.id].subscription_price;
+  
+                      if (element.classList.contains("js-sub-compare-price")) {
+                          element.innerText =
+                              variantJson[this.currentVariant.id].compare_price ||
+                              variantJson[this.currentVariant.id].price;
+                      }
+                  });
           }
-          this.closest("product-form")
-            .querySelectorAll(
-              ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
-            )
-            .forEach((element) => {
-              // element.innerText = (element.classList.contains("js-rtx_one_time_price")) ? variantJson[this.currentVariant.id].price : (element.classList.contains("js-main-compare-price")) ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].subscription_price;
-              element.innerText = element.classList.contains(
-                "js-rtx_one_time_price"
-              )
-                ? foundVariant.one_discounted_price
-                : element.classList.contains("js-main-compare-price")
-                ? foundVariant.price
-                : variantJson[this.currentVariant.id].subscription_price;
-              if (element.classList.contains("js-sub-compare-price")) {
-                element.innerText =
-                  variantJson[this.currentVariant.id].compare_price ||
-                  variantJson[this.currentVariant.id].price;
-              }
-            });
-        } else {
-          this.closest("product-form")
-            .querySelectorAll(".onetime-multi_Price")
-            .forEach((element) => {
-              let cmpr_price = element.querySelector(".rtx_compare_price");
-              let reg_price = element.querySelector(".js-rtx_one_time_price");
-              if (cmpr_price) {
-                cmpr_price.innerHTML = `${foundVariant.price}`;
-              }
-              if (reg_price) {
-                reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
-              }
-            });
-          this.closest("product-form")
-            .querySelectorAll(".subscription-multi_Price")
-            .forEach((element) => {
-              let cmpr_price = element.querySelector(".rtx_compare_price");
-              let reg_price = element.querySelector(".js-subscription-price");
-              if (cmpr_price) {
-                cmpr_price.innerHTML = `${
-                  variantJson[this.currentVariant.id].compare_price
-                    ? variantJson[this.currentVariant.id].compare_price
-                    : variantJson[this.currentVariant.id].price
-                }`;
-              }
-              if (reg_price) {
-                reg_price.innerHTML = `${
-                  variantJson[this.currentVariant.id].subscription_price
-                }`;
-              }
-            });
-        }
       }
-    } else {
-      let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
-      if (subscriptionOption) {
-        if (subscriptionOption.value == "purchaseTypeSubscription") {
-          addToCartText = `Add to Cart &mdash; &nbsp;<s>${
-            variantJson[this.currentVariant.id].price
-          }</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
-
-          if (gridPrice) {
-            gridPrice.querySelector(".quick-add__price-recurring").textContent =
-              variantJson[this.currentVariant.id].price;
-            gridPrice.querySelector(".quick-add__price-otp").textContent =
-              variantJson[this.currentVariant.id].subscription_price;
-          }
-        }
-      }
-      if (this.closest("product-form").dataset.formType == "product-card") {
-        addToCartText = `Add to Cart &mdash;&nbsp;<span>${
-          variantJson[this.currentVariant.id].price
-        }</span> <s>${
-          variantJson[this.currentVariant.id].compare_price || ""
-        }</s>`;
-        if (gridPrice) {
-          gridPrice.querySelector(".quick-add__price-recurring").textContent =
-            variantJson[this.currentVariant.id].price;
-          gridPrice.querySelector(".quick-add__price-otp").textContent =
-            variantJson[this.currentVariant.id].compare_price || "";
-        }
-        if (subscriptionOption) {
-          if (subscriptionOption.value == "purchaseTypeSubscription") {
-            addToCartText = `Add to Cart &mdash;&nbsp;<span>${
-              variantJson[this.currentVariant.id].subscription_price
-            }</span><s>${
-              variantJson[this.currentVariant.id].compare_price ||
-              variantJson[this.currentVariant.id].price
-            }</s>`;
-
-            if (gridPrice) {
-              gridPrice.querySelector(
-                ".quick-add__price-recurring"
-              ).textContent =
-                variantJson[this.currentVariant.id].subscription_price;
-              gridPrice.querySelector(".quick-add__price-otp").textContent =
-                variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price;
-            }
-          }
-        }
-        this.closest("product-form")
-          .querySelectorAll(
-            ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
-          )
-          .forEach((element) => {
-            element.innerText = element.classList.contains(
-              "js-rtx_one_time_price"
-            )
-              ? variantJson[this.currentVariant.id].price
-              : element.classList.contains("js-main-compare-price")
-              ? variantJson[this.currentVariant.id].compare_price
-              : variantJson[this.currentVariant.id].subscription_price;
-            if (element.classList.contains("js-sub-compare-price")) {
-              element.innerText =
-                variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price;
-            }
-          });
+  
+      addButton.dataset.available = !disable;
+  
+      if (disable) {
+          addButton.setAttribute("disabled", true);
+          if (text) addButton.innerHTML = text;
+  
+          stickyButton && stickyButton.setAttribute("disabled", true);
+          if (text && stickyButton) stickyButton.innerHTML = text;
       } else {
-        this.closest("product-form")
-          .querySelectorAll(
-            ".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price"
-          )
-          .forEach((element) => {
-            element.innerText = element.classList.contains(
-              "js-rtx_one_time_price"
-            )
-              ? variantJson[this.currentVariant.id].price
-              : element.classList.contains("js-main-compare-price")
-              ? variantJson[this.currentVariant.id].compare_price
-              : variantJson[this.currentVariant.id].subscription_price;
-
-            if (element.classList.contains("js-sub-compare-price")) {
-              element.innerText =
-                variantJson[this.currentVariant.id].compare_price ||
-                variantJson[this.currentVariant.id].price;
-            }
-          });
+          addButton.removeAttribute("disabled");
+          addButton.innerHTML = addToCartText;
+  
+          stickyButton && stickyButton.removeAttribute("disabled");
+          if (stickyButton) stickyButton.innerHTML = addToCartText;
       }
-    }
-
-    addButton.dataset.available = !disable;
-
-    if (disable) {
-      addButton.setAttribute("disabled", true);
-      if (text) addButton.innerHTML = text;
-
-      stickyButton && stickyButton.setAttribute("disabled", true);
-      if (text && stickyButton) stickyButton.innerHTML = text;
-    } else {
-      addButton.removeAttribute("disabled");
-      addButton.innerHTML = addToCartText;
-
-      stickyButton && stickyButton.removeAttribute("disabled");
-      if (stickyButton) stickyButton.innerHTML = addToCartText;
-    }
-
-    if (!modifyClass) return;
+  
+      if (!modifyClass) return;
   }
 
   setUnavailable() {
