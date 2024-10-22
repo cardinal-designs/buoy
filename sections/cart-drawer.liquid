@@ -225,7 +225,7 @@
           {% endfor %}
     
           {%- if additional_checkout_buttons -%}
-            <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="{{ disable_checkout }} cart__dynamic-checkout-buttons additional-checkout-buttons">
+            <div {% if disable_checkout == true %}style="display: none;"{% endif %} class="{{ disable_checkout }} cart__dynamic-checkout-buttons additional-checkout-buttons hide-mobile">
               {{ content_for_additional_checkout_buttons }}
             </div>
           {%- endif -%}
