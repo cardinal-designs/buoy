@@ -3170,8 +3170,10 @@ class QuickAddCard extends HTMLElement {
 
         let foundVariant;
         if(variantData){foundVariant = variantData?.find((variant) => variant.id == currentVar?.id);}
+        console.log("foundVariant", foundVariant);
+
+        
         if (variantData && foundVariant) {
-          console.log("foundVariant", foundVariant);
           if (priceMetafield) {
             this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
             if (gridPriceChange) {
