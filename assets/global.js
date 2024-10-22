@@ -924,7 +924,11 @@ class VariantSelects extends HTMLElement {
             }
             
             if (this.closest("product-form").dataset.formType == "product-card") {
-              addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
+              if (subscriptionOption && subscriptionOption.value == "purchaseTypeSubscription") {
+                addToCartText = `5566 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span> <s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+              }else{
+                addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
+              }
               
               if (gridPrice) {
                   gridPrice.querySelector(".quick-add__price-recurring").textContent =
