@@ -187,6 +187,7 @@
 
           {% assign current_variant_price = p.selected_or_first_available_variant.price %}
           {% if settings.purchase_option_default == 'onetime' %}
+            
             {% if p.metafields.custom.auto_discount_percent_off != blank %}
               {% assign one_discount_value = current_variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
               {% assign one_final_price = current_variant_price | minus: one_discount_value %}
@@ -199,6 +200,7 @@
               <span>{{ current_variant_price | money }}</span>
               <s></s>
             {% endif %}
+            
           {% else %}
             {% if currentVariant.selling_plan_allocations.size > 0 %}
               <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
