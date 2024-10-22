@@ -3157,6 +3157,7 @@ class QuickAddCard extends HTMLElement {
       });
     } else {
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
+      console.log("priceMetafield", priceMetafield)
       if (priceMetafield) {
         this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
         if (gridPriceChange) {
