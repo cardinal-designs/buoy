@@ -96,17 +96,21 @@
     {% endif %}
 
     <div class="{{ base }}__price">    
-      {% assign current_variant_price = card_product.selected_or_first_available_variant.price %}
+      {% assign current_variant = card_product.selected_or_first_available_variant %}
+      {% assign current_variant_price = current_variant.price %}
       <div class="{{ base }}__price-recurring">
+
+
+        
         {% if settings.purchase_option_default == 'onetime' %}
-          {% if card_product.metafields.custom.auto_discount_percent_off != blank %}
-            {% assign one_discount_value = current_variant_price | times: card_product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+          {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
+            {% assign one_discount_value = current_variant_price | times: current_variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
             {% assign one_final_price = current_variant_price | minus: one_discount_value %}
             {{ one_final_price | money }}
-          {% elsif card_product.selected_or_first_available_variant.compare_at_price != blank %}
-            {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+          {% elsif current_variant.compare_at_price != blank %}
+            {{ current_variant.compare_at_price | money }}
           {% else %}
-            {{ card_product.selected_or_first_available_variant.price | money }}
+            {{ current_variant.price | money }}
           {% endif %}
         {% else %}
           {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
@@ -114,13 +118,13 @@
       </div>
 
       <div class="{{ base }}__price-otp">
-        {% if settings.purchase_option_default == 'onetime' and card_product.metafields.custom.auto_discount_percent_off != blank %}
-          {{ card_product.selected_or_first_available_variant.price | money }}
-        {% elsif settings.purchase_option_default == 'onetime' and card_product.selected_or_first_available_variant.compare_at_price != blank %}
-          {{ card_product.selected_or_first_available_variant.compare_at_price | money }}
+        {% if settings.purchase_option_default == 'onetime' and current_variant.metafields.custom.auto_discount_percent_off != blank %}
+          {{ current_variant.price | money }}
+        {% elsif settings.purchase_option_default == 'onetime' and current_variant.compare_at_price != blank %}
+          {{ current_variant.compare_at_price | money }}
         {% endif %}
         {% if settings.purchase_option_default == 'sub' %}
-          {{ card_product.selected_or_first_available_variant.price | money }}
+          {{ current_variant.price | money }}
         {% endif %}
       </div>
       
