@@ -953,6 +953,14 @@ class VariantSelects extends HTMLElement {
                             element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
                         }
                     });
+
+                let closestForm = this.closest("product-form");
+                if(closestForm){
+                  let onetimeClearBtn = closestForm.querySelector('.clear_button.rtx_popup');
+                  if(onetimeClearBtn){
+                    onetimeClearBtn.style.display = 'none';
+                  }
+                }
             }
           }
         }
