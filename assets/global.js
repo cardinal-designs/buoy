@@ -1014,6 +1014,7 @@ class VariantSelects extends HTMLElement {
           }else{
             console.log("thisData", thisData)
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
+            console.log("gridPrice--", gridPrice)
             if (subscriptionOption) {
                 if (subscriptionOption.value == "purchaseTypeSubscription") {
                   addToCartText = `77 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
