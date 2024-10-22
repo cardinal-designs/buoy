@@ -1200,6 +1200,14 @@ class VariantSelects extends HTMLElement {
     document.getElementById("price-" + this.dataset.section)?.classList.add("visibility-hidden");
   }
 
+
+  // setUnavailable() {
+  //   const addButton = document.getElementById("product-form-" + this.dataset.section)?.querySelector('[name="add"]');
+  //   if (!addButton) return;
+  //   addButton.textContent = window.variantStrings.unavailable;
+  //   document.getElementById("price-" + this.dataset.section)?.classList.add("visibility-hidden");
+  // }
+
   getVariantData() {
     this.variantData =
       this.variantData ||
