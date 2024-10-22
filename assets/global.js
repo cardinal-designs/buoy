@@ -951,7 +951,6 @@ class VariantSelects extends HTMLElement {
                       }
                   });
           } else {
-              console.log("subscriptionOption", subscriptionOption)
               
               this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
                   let cmpr_price = element.querySelector(".rtx_compare_price");
