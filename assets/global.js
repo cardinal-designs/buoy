@@ -897,7 +897,6 @@ class VariantSelects extends HTMLElement {
         const variantData = JSON.parse(jsonData);
         if (variantData) {
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
-          console.log("foundVariant", foundVariant)
           if(foundVariant){
             let closestForm = this.closest("product-form");
             if(closestForm){
@@ -919,7 +918,6 @@ class VariantSelects extends HTMLElement {
                 if(gridAddPrice) {
                   gridPrice = gridAddPrice;
                 }
-                console.log("gridAddPrice", gridAddPrice)
               }
             }
 
@@ -1063,9 +1061,7 @@ class VariantSelects extends HTMLElement {
                 if (subscriptionOption) {
                     if (subscriptionOption.value == "purchaseTypeSubscription") {
                         addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
-                        console.log("gridPrice====", gridPrice)
                         if (gridPrice) {
-                          console.log("gridPrice", gridPrice)
                             gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
                             gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
                         }
@@ -3202,7 +3198,6 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
-    console.log("this", this)
     let gridPriceChange = this.querySelector(".quick-add__price");
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
