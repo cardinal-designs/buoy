@@ -80,7 +80,7 @@
          <script type="application/json" class="variantMetaJSON">
             [
               {%- assign comma = false -%}
-              {%- for variant in product.variants -%}
+              {%- for variant in p.variants -%}
                   {%- if comma -%},{%- endif -%}
                   {% assign variant_price = variant.price %}
                   {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
