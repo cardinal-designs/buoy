@@ -257,7 +257,7 @@
 
                           {
                             "id": {{ variant.id }},
-                            "discount": "{{ product.metafields.custom.auto_discount_percent_off }}",
+                            "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
                             "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
                             "price": "{{ variant_price | money_without_trailing_zeros }}",
                             "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
