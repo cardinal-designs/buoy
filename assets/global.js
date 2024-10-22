@@ -917,6 +917,8 @@ class VariantSelects extends HTMLElement {
                   } else {
                       addToCartText = `333 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
                   }
+              }else{
+                addToCartText = `44 Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
               }
             }
 
@@ -950,10 +952,7 @@ class VariantSelects extends HTMLElement {
                   });
           } else {
               console.log("subscriptionOption", subscriptionOption)
-              if (subscriptionOption && subscriptionOption.value == "purchaseTypeOneTime") {
-                addToCartText = `44 Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
-              }
-
+              
               this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
                   let cmpr_price = element.querySelector(".rtx_compare_price");
                   let reg_price = element.querySelector(".js-rtx_one_time_price");
