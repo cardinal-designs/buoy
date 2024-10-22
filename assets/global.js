@@ -3179,8 +3179,8 @@ class QuickAddCard extends HTMLElement {
             this.buttonContent = `${this.buttonContent}<span>${foundVariant?.one_discounted_price}</span><s>${foundVariant?.discount ? foundVariant.price : foundVariant?.compare_price ? foundVariant?.compare_price : foundVariant.price }</s>`;
             if (gridPriceChange) {
               console.log("gridPriceChange", gridPriceChange)
-              gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
-              gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
+              gridPriceChange.querySelector(".quick-add__price-recurring").textContent = foundVariant?.one_discounted_price;
+              gridPriceChange.querySelector(".quick-add__price-otp").textContent = ${foundVariant?.discount ? foundVariant.price : foundVariant?.compare_price ? foundVariant?.compare_price : foundVariant.price };
             }
             this.querySelectorAll(".Serving_Cost").forEach((s) => {
               s.innerText = s.dataset.onetimeprice.replace("ing", "");
