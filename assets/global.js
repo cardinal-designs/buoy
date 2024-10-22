@@ -3161,57 +3161,41 @@ class QuickAddCard extends HTMLElement {
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       
       let variantScript = this.querySelector(".variantMetaJSON");
-      let currentVar = this.currentVariant;
+      let currentVarId = this.currentVariant;
       console.log("currentVar", currentVar)
       console.log("variantScript", variantScript)
       if (variantScript) {
-        const jsonData = variantScript.textContent;
-        const variantData = JSON.parse(jsonData);
-        if (variantData) {
-          console.log("variantData", variantData)
-          let foundVariant = variantData?.find((variant) => variant.id == currentVar?.id);
+        let jsonData = variantScript.textContent;
+        let variantData = JSON.parse(jsonData);
+        let foundVariant;
+
+        if(variantData){
+          foundVariant = variantData?.find((variant) => variant.id == currentVarId);
+        }
+        
+        if (variantData && foundVariant) {
+    
           console.log("foundVariant", foundVariant);
-          if(foundVariant){
-            if (priceMetafield) {
-              this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
-              if (gridPriceChange) {
-                gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
-                gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
-              }
-              this.querySelectorAll(".Serving_Cost").forEach((s) => {
-                s.innerText = s.dataset.onetimeprice.replace("ing", "");
-              });
-            } else {
-              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`;
-              this.querySelectorAll(".Serving_Cost").forEach((s) => {
-                s.innerText = s.dataset.onetimeprice.replace("ing", "");
-              });
-              if (gridPriceChange) {
-                gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].price;
-                gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price;
-              }
+          if (priceMetafield) {
+            this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
+            if (gridPriceChange) {
+              gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
+              gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
             }
-          }else{
-            if (priceMetafield) {
-              this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
-              if (gridPriceChange) {
-                gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
-                gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
-              }
-              this.querySelectorAll(".Serving_Cost").forEach((s) => {
-                s.innerText = s.dataset.onetimeprice.replace("ing", "");
-              });
-            } else {
-              this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`;
-              this.querySelectorAll(".Serving_Cost").forEach((s) => {
-                s.innerText = s.dataset.onetimeprice.replace("ing", "");
-              });
-              if (gridPriceChange) {
-                gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].price;
-                gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price;
-              }
+            this.querySelectorAll(".Serving_Cost").forEach((s) => {
+              s.innerText = s.dataset.onetimeprice.replace("ing", "");
+            });
+          } else {
+            this.buttonContent = `${this.buttonContent}<span>${this.variantJson[this.currentVariant].price}</span><s>${this.variantJson[this.currentVariant].compare_price}</s>`;
+            this.querySelectorAll(".Serving_Cost").forEach((s) => {
+              s.innerText = s.dataset.onetimeprice.replace("ing", "");
+            });
+            if (gridPriceChange) {
+              gridPriceChange.querySelector(".quick-add__price-recurring").textContent = this.variantJson[this.currentVariant].price;
+              gridPriceChange.querySelector(".quick-add__price-otp").textContent = this.variantJson[this.currentVariant].compare_price;
             }
           }
+          
         }
       }else{
         if (priceMetafield) {
