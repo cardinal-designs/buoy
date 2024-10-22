@@ -903,16 +903,12 @@ class VariantSelects extends HTMLElement {
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             if (subscriptionOption) {
                 if (subscriptionOption.value == "purchaseTypeSubscription") {
-                    addToCartText = `Add to Cart &mdash; &nbsp;<s>${
-                variantJson[this.currentVariant.id].price
-              }</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                  addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
     
-                    if (gridPrice) {
-                        gridPrice.querySelector(".quick-add__price-recurring").textContent =
-                            variantJson[this.currentVariant.id].price;
-                        gridPrice.querySelector(".quick-add__price-otp").textContent =
-                            variantJson[this.currentVariant.id].subscription_price;
-                    }
+                  if (gridPrice) {
+                      gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
+                      gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].subscription_price;
+                  }
                 }
             }
             if (this.closest("product-form").dataset.formType == "product-card") {
