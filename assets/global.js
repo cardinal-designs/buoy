@@ -3162,8 +3162,7 @@ class QuickAddCard extends HTMLElement {
       
       let variantScript = this.querySelector(".variantMetaJSON");
       let currentVarId = this.currentVariant;
-      console.log("currentVar", currentVar)
-      console.log("variantScript", variantScript)
+
       if (variantScript) {
         let jsonData = variantScript.textContent;
         let variantData = JSON.parse(jsonData);
