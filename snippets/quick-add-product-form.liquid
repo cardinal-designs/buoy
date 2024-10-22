@@ -110,7 +110,7 @@
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
               One-Time Purchase
-                <span class="quick-add__tag">Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
+                <span class="quick-add__tag" {% unless currentVariant.metafields.custom.auto_discount_percent_off %}style="display:none;"{% endunless %}>Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
             </span>
             <span 
               class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }}" 
