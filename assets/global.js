@@ -1198,14 +1198,10 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    const addButton = document
-      .getElementById("product-form-" + this.dataset.section)
-      ?.querySelector('[name="add"]');
+    const addButton = document.getElementById("product-form-" + this.dataset.section)?.querySelector('[name="add"]');
     if (!addButton) return;
     addButton.textContent = window.variantStrings.unavailable;
-    document
-      .getElementById("price-" + this.dataset.section)
-      ?.classList.add("visibility-hidden");
+    document.getElementById("price-" + this.dataset.section)?.classList.add("visibility-hidden");
   }
 
   getVariantData() {
