@@ -919,55 +919,55 @@ class VariantSelects extends HTMLElement {
                 }
             }
 
-              if (this.closest("product-form").dataset.formType == "product-card") {
-                addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
-                if (gridPrice) {
-                    gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
-                    gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || "";
-                }
-                if (subscriptionOption) {
-                    if (subscriptionOption.value == "purchaseTypeSubscription") {
-                        addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
-    
-                        if (gridPrice) {
-                            gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
-                            gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
-                        }
-                    }
-                }
-                this.closest("product-form")
-                    .querySelectorAll(".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price")
-                    .forEach((element) => {
-                        element.innerText = element.classList.contains("js-rtx_one_time_price") ?
-                            variantJson[this.currentVariant.id].price :
-                            element.classList.contains("js-main-compare-price") ?
-                            variantJson[this.currentVariant.id].compare_price :
-                            variantJson[this.currentVariant.id].subscription_price;
-                        if (element.classList.contains("js-sub-compare-price")) {
-                            element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
-                        }
-                    });
-            } else {
-                this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
-                    let cmpr_price = element.querySelector(".rtx_compare_price");
-                    let reg_price = element.querySelector(".js-rtx_one_time_price");
-                    if (cmpr_price) {
-                        cmpr_price.innerHTML = `${foundVariant.price}`;
-                    }
-                    if (reg_price) {
-                        reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
-                    }
-                });
-                this.closest("product-form").querySelectorAll(".subscription-multi_Price").forEach((element) => {
-                    let cmpr_price = element.querySelector(".rtx_compare_price");
-                    let reg_price = element.querySelector(".js-subscription-price");
-                    if (cmpr_price) {
-                      cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].price}`;
-                    }
-                    if (reg_price) {
-                      reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
-                    }
-                });
+            if (this.closest("product-form").dataset.formType == "product-card") {
+              addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
+              if (gridPrice) {
+                  gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
+                  gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || "";
+              }
+              if (subscriptionOption) {
+                  if (subscriptionOption.value == "purchaseTypeSubscription") {
+                      addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+  
+                      if (gridPrice) {
+                          gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
+                          gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
+                      }
+                  }
+              }
+              this.closest("product-form")
+                  .querySelectorAll(".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price")
+                  .forEach((element) => {
+                      element.innerText = element.classList.contains("js-rtx_one_time_price") ?
+                          variantJson[this.currentVariant.id].price :
+                          element.classList.contains("js-main-compare-price") ?
+                          variantJson[this.currentVariant.id].compare_price :
+                          variantJson[this.currentVariant.id].subscription_price;
+                      if (element.classList.contains("js-sub-compare-price")) {
+                          element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
+                      }
+                  });
+          } else {
+              this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
+                  let cmpr_price = element.querySelector(".rtx_compare_price");
+                  let reg_price = element.querySelector(".js-rtx_one_time_price");
+                  if (cmpr_price) {
+                      cmpr_price.innerHTML = `${foundVariant.price}`;
+                  }
+                  if (reg_price) {
+                      reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
+                  }
+              });
+              this.closest("product-form").querySelectorAll(".subscription-multi_Price").forEach((element) => {
+                  let cmpr_price = element.querySelector(".rtx_compare_price");
+                  let reg_price = element.querySelector(".js-subscription-price");
+                  if (cmpr_price) {
+                    cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].price}`;
+                  }
+                  if (reg_price) {
+                    reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
+                  }
+              });
             }
 
 
