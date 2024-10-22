@@ -110,21 +110,20 @@
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
               One-Time Purchase
-                <span class="quick-add__tag">Save {{ p.metafields.custom.auto_discount_percent_off | floor }}%</span>
+                <span class="quick-add__tag">Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
             </span>
             <span 
-              class="rtx_one_time_price {{ p.metafields.custom.auto_discount_percent_off }}" 
+              class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }}" 
               data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
-              {% if p.metafields.custom.auto_discount_percent_off > 0 %}
+              {% if currentVariant.metafields.custom.auto_discount_percent_off > 0 %}
                 {%- if p.has_only_default_variant -%}
                   {% assign variant_price = p.price %}
                 {%- else -%}
-                  {% assign first_variant = p.variants.first %}
-                  {% assign variant_price = first_variant.price %}
+                  {% assign variant_price = currentVariant.price %}
                 {% endif %}
-                {% assign discount_per_off = variant_price | times: p.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                {% assign discount_per_off = variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                 {% assign discount_price = variant_price | minus: discount_per_off %}
                 <span class="js-rtx_one_time_price quick-add__price-recurring quick-add__metafield-price" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
                   {{ discount_price | money }}
