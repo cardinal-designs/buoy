@@ -977,7 +977,7 @@ class VariantSelects extends HTMLElement {
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             if (subscriptionOption) {
                 if (subscriptionOption.value == "purchaseTypeSubscription") {
-                  addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                  addToCartText = `55 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
     
                   if (gridPrice) {
                       gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
@@ -986,14 +986,14 @@ class VariantSelects extends HTMLElement {
                 }
             }
             if (this.closest("product-form").dataset.formType == "product-card") {
-                addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
+                addToCartText = `66 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
                 if (gridPrice) {
                     gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
                     gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || "";
                 }
                 if (subscriptionOption) {
                     if (subscriptionOption.value == "purchaseTypeSubscription") {
-                        addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
+                        addToCartText = `77 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
     
                         if (gridPrice) {
                             gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
