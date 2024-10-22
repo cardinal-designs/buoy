@@ -898,7 +898,14 @@ class VariantSelects extends HTMLElement {
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
           console.log("foundVariant", foundVariant)
           if(foundVariant){
-            
+
+            let closestForm = this.closest("product-form");
+            if(closestForm){
+              let onetimeClearBtn = closestForm.querySelector('.clear_button.rtx_popup');
+              if(onetimeClearBtn){
+                onetimeClearBtn.style.display = 'inline-block';
+              }
+            }
           }else{
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             if (subscriptionOption) {
