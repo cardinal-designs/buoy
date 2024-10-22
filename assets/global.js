@@ -1032,8 +1032,9 @@ class VariantSelects extends HTMLElement {
                 if (subscriptionOption) {
                     if (subscriptionOption.value == "purchaseTypeSubscription") {
                         addToCartText = `99 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].subscription_price}</span><s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
-    
+                        console.log("gridPrice====", gridPrice)
                         if (gridPrice) {
+                          console.log("gridPrice", gridPrice)
                             gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].subscription_price;
                             gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
                         }
