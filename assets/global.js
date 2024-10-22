@@ -883,15 +883,11 @@ class VariantSelects extends HTMLElement {
               }
           }
       }
+    
       const stickyButton = document.querySelector(".js-sticky-add-to-cart");
       if (!addButton) return;
-      let variantJson = JSON.parse(
-          this.closest("product-form").querySelector("#js-product-variant-json")
-          .innerText
-      );
-      let subscriptionOption = this.closest("product-form").querySelector(
-          '[name="purchaseType"]:checked'
-      );
+      let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
+      let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
       let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
       let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
 
