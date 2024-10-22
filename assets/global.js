@@ -950,7 +950,7 @@ class VariantSelects extends HTMLElement {
                   });
           } else {
               console.log("subscriptionOption", subscriptionOption)
-              if (!subscriptionOption) {
+              if (subscriptionOption && subscriptionOption.value == "purchaseTypeOneTime") {
                 addToCartText = `44 Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
               }
 
