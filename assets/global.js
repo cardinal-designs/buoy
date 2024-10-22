@@ -912,9 +912,9 @@ class VariantSelects extends HTMLElement {
               if (subscriptionOption) {
                 if (subscriptionOption.value == "purchaseTypeSubscription") {
                     if (variantJson[this.currentVariant.id].compare_price) {
-                        addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                        addToCartText = `111 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
                     } else {
-                        addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                        addToCartText = `333 Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
                     }
                 }
             }
@@ -948,7 +948,7 @@ class VariantSelects extends HTMLElement {
                       }
                   });
           } else {
-              addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+              // addToCartText = `Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
               this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
                   let cmpr_price = element.querySelector(".rtx_compare_price");
                   let reg_price = element.querySelector(".js-rtx_one_time_price");
