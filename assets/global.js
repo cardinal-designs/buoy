@@ -3176,7 +3176,7 @@ class QuickAddCard extends HTMLElement {
     
           console.log("foundVariant", foundVariant);
           if (priceMetafield) {
-            this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
+            this.buttonContent = `${this.buttonContent}<span>${foundVariant?.one_discounted_price}</span><s>${foundVariant?.discount ? foundVariant.price : foundVariant?.compare_price ? foundVariant?.compare_price : foundVariant.price }</s>`;
             if (gridPriceChange) {
               gridPriceChange.querySelector(".quick-add__price-recurring").textContent = priceMetafield.dataset.discountPrice;
               gridPriceChange.querySelector(".quick-add__price-otp").textContent = priceMetafield.dataset.price;
