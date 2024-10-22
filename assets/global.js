@@ -949,7 +949,7 @@ class VariantSelects extends HTMLElement {
                   });
           } else {
 
-              if (subscriptionOption && subscriptionOption.value == "purchaseTypeSubscription") {
+              if (!subscriptionOption) {
                 addToCartText = `44 Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
               }
 
