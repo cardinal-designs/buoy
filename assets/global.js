@@ -1013,14 +1013,17 @@ class VariantSelects extends HTMLElement {
             }
           }else{
             console.log("thisData", thisData.closest(".quick-add__container"))
-            // let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
+            let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
             // console.log("gridPrice--", gridPrice)
 
-            let gridPrice = thisData.closest(".quick-add__container");
-            if(gridPrice){
-              let gridPriceContent = thisData.querySelector(".quick-add__container");
+            let gridPriceUpdate = thisData.closest(".quick-add__container");
+            if(gridPriceUpdate){
+              let gridPriceContent = gridPriceUpdate.querySelector(".quick-add__container");
               if(gridPriceContent){
                 let gridAddPrice = gridPriceContent.querySelector(".quick-add__price");
+                if(gridAddPrice) {
+                  gridPrice = gridAddPrice;
+                }
                 console.log("gridAddPrice", gridAddPrice)
               }
             }
