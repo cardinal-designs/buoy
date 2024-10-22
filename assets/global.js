@@ -948,27 +948,26 @@ class VariantSelects extends HTMLElement {
                         }
                     });
             } else {
-                this.closest("product-form")
-                    .querySelectorAll(".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price")
-                    .forEach((element) => {
-                        element.innerText = element.classList.contains("js-rtx_one_time_price") ?
-                            variantJson[this.currentVariant.id].price :
-                            element.classList.contains("js-main-compare-price") ?
-                            variantJson[this.currentVariant.id].compare_price :
-                            variantJson[this.currentVariant.id].subscription_price;
-    
-                        if (element.classList.contains("js-sub-compare-price")) {
-                            element.innerText = variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price;
-                        }
-                    });
-
-                let closestForm = this.closest("product-form");
-                if(closestForm){
-                  let onetimeClearBtn = closestForm.querySelector('.clear_button.rtx_popup');
-                  if(onetimeClearBtn){
-                    onetimeClearBtn.style.display = 'none';
-                  }
-                }
+                this.closest("product-form").querySelectorAll(".onetime-multi_Price").forEach((element) => {
+                    let cmpr_price = element.querySelector(".rtx_compare_price");
+                    let reg_price = element.querySelector(".js-rtx_one_time_price");
+                    if (cmpr_price) {
+                        cmpr_price.innerHTML = `${foundVariant.price}`;
+                    }
+                    if (reg_price) {
+                        reg_price.innerHTML = `${foundVariant.one_discounted_price}`;
+                    }
+                });
+                this.closest("product-form").querySelectorAll(".subscription-multi_Price").forEach((element) => {
+                    let cmpr_price = element.querySelector(".rtx_compare_price");
+                    let reg_price = element.querySelector(".js-subscription-price");
+                    if (cmpr_price) {
+                      cmpr_price.innerHTML = `${variantJson[this.currentVariant.id].compare_price ? variantJson[this.currentVariant.id].compare_price : variantJson[this.currentVariant.id].price}`;
+                    }
+                    if (reg_price) {
+                      reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
+                    }
+                });
             }
 
 
