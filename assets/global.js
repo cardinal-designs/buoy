@@ -3143,7 +3143,7 @@ class QuickAddCard extends HTMLElement {
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
     if (this.addToCart.dataset.available == "true") {
-      this.buttonContent = `<span>10 Add To Cart &mdash;&nbsp;</span>`;
+      this.buttonContent = `<span>Add To Cart &mdash;&nbsp;</span>`;
     } else {
       this.buttonContent = `<span>Sold Out &mdash;&nbsp;</span>`;
     }
