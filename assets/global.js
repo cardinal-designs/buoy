@@ -3138,6 +3138,7 @@ class QuickAddCard extends HTMLElement {
   }
 
   handlePurchaseTypeChange(event) {
+    console.log("this", this)
     let gridPriceChange = this.querySelector(".quick-add__price");
     this.currentVariant = this.querySelector("form input[name='id']").value;
     this.buttonContent = "";
@@ -3156,6 +3157,17 @@ class QuickAddCard extends HTMLElement {
         s.innerText = s.dataset.subprice.replace("ing", "");
       });
     } else {
+
+      // let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
+      // if (variantScript) {
+      //   const jsonData = variantScript.textContent;
+      //   const variantData = JSON.parse(jsonData);
+      //   if (variantData) {
+      //     let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
+
+      //   }
+      // }
+      
       let priceMetafield = this.querySelector(".quick-add__metafield-price");
       console.log("priceMetafield", priceMetafield)
       if (priceMetafield) {
