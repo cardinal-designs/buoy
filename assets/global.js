@@ -911,6 +911,18 @@ class VariantSelects extends HTMLElement {
             
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
 
+            let gridPriceUpdate = thisData.closest(".quick-add__container");
+            if(gridPriceUpdate){
+              let gridPriceContent = gridPriceUpdate.querySelector(".quick-add__content");
+              if(gridPriceContent){
+                let gridAddPrice = gridPriceContent.querySelector(".quick-add__price");
+                if(gridAddPrice) {
+                  gridPrice = gridAddPrice;
+                }
+                console.log("gridAddPrice", gridAddPrice)
+              }
+            }
+
             if (subscriptionOption) {
               if (subscriptionOption.value == "purchaseTypeSubscription") {
                   if (variantJson[this.currentVariant.id].compare_price) {
