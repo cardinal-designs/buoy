@@ -76,34 +76,71 @@
              {{ p.variants | json }}
            </script>
          {{ variantMetafield }}
+    
+         <script type="application/json" class="variantMetaJSON">
+            [
+              {%- assign comma = false -%}
+              {%- for variant in p.variants -%}
+                  {%- if comma -%},{%- endif -%}
+                  {% assign variant_price = variant.price %}
+                  {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                  {% assign one_final_price = variant_price | minus: one_discount_value %}
+                  {
+                    "id": {{ variant.id }},
+                    "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
+                    "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
+                    "price": "{{ variant_price | money_without_trailing_zeros }}",
+                    "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
+                    "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                  }
+                  {%- assign comma = true -%}
+              {%- endfor -%}
+            ]
+          </script>
+
       </variant-radios>
     {% endunless %}
 
     {% if p.selling_plan_groups.size > 0 %}
-      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
+      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }} class="selling-plan__group">
         <fieldset class="js product-form__input">
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank %} checked {% endif %} >
+            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank and settings.purchase_option_default == 'onetime' %} checked {% endif %} >
             <label for="{{ p.id }}-purchaseTypeOneTime">
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
               One-Time Purchase
+                <span class="quick-add__tag" {% unless currentVariant.metafields.custom.auto_discount_percent_off %}style="display:none;"{% endunless %}>Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
             </span>
             <span 
-              class="rtx_one_time_price" 
+              class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }} onetime-multi_Price" 
               data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
-              <span class="js-rtx_one_time_price">
-                {{ p.selected_or_first_available_variant.price | money }}
-              </span>
-              <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+              {% if currentVariant.metafields.custom.auto_discount_percent_off > 0 %}
+                {%- if p.has_only_default_variant -%}
+                  {% assign variant_price = p.price %}
+                {%- else -%}
+                  {% assign variant_price = currentVariant.price %}
+                {% endif %}
+                {% assign discount_per_off = variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                {% assign discount_price = variant_price | minus: discount_per_off %}
+                <span class="js-rtx_one_time_price quick-add__price-recurring quick-add__metafield-price" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
+                  {{ discount_price | money }}
+                </span>
+                <s class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</s>            
+              {% else %}
+                <span class="js-rtx_one_time_price">
+                  {{ p.selected_or_first_available_variant.price | money }}
+                </span>
+                <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+              {% endif %}
             </span> 
             </label>
           </span>
 
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank %} checked {% endif %} >
+            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank and settings.purchase_option_default == 'sub' %} checked {% endif %} >
             <label for="{{ p.id }}-purchaseTypeSubscription">
               <span class="Variant_Title">
               <span class="custom-radio"> </span>
@@ -112,12 +149,12 @@
               
             </span>
               <span 
-                class="" 
+                class="subscription-multi_Price" 
               >
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
                 </span>
-                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>
+                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>              
               </span>
 
               {%- if my_fields.supply_time != blank -%}
@@ -146,17 +183,37 @@
         {% else %}
           <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
-        {% if currentVariant.selling_plan_allocations.size > 0 %}
-          <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
-          <s>{{ currentVariant.price | money }}</s>
-        {% else %}
-         {% if currentVariant.compare_at_price > currentVariant.price %}
-          <span>{{ currentVariant.price | money }}</span>&nbsp;
-           <s>{{ currentVariant.compare_at_price | money }}</s>
-         {% else %}
-           <span>{{ currentVariant.price | money }}</span>
-         {% endif %}
-        {% endif %}
+
+          {% assign current_variant = p.selected_or_first_available_variant %}
+          {% assign current_variant_price = current_variant.price %}
+          {% if settings.purchase_option_default == 'onetime' %}
+            {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
+              {% assign one_discount_value = current_variant_price | times: current_variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+              <span>{{ one_final_price | money }}</span>
+              <s>{{ current_variant_price | money }}</s>
+            {% elsif current_variant.compare_at_price != blank %}
+              <span>{{ p.selected_or_first_available_variant.price | money }}</span>
+              <s>{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+            {% else %}
+              <span>{{ current_variant_price | money }}</span>
+              <s></s>
+            {% endif %}
+            
+          {% else %}
+            {% if currentVariant.selling_plan_allocations.size > 0 %}
+              <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
+              <s>{{ currentVariant.price | money }}</s>
+            {% else %}
+             {% if currentVariant.compare_at_price > currentVariant.price %}
+              <span>{{ currentVariant.price | money }}</span>&nbsp;
+               <s>{{ currentVariant.compare_at_price | money }}</s>
+             {% else %}
+               <span>{{ currentVariant.price | money }}</span>
+               <s></s>
+             {% endif %}
+            {% endif %}
+          {% endif %}
         
       </button>
     </div>

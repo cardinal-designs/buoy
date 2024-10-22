@@ -214,6 +214,7 @@
                             {%- endif -%}
                              </span>
                             <span class="Variant_Price">
+
                               {% if variant.selling_plan_allocations.size > 0 %}
                                 <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
                                 <s class="variant__compare--price">{{ variant.price | money }}</s>
@@ -225,6 +226,7 @@
                                   <span class="variant__price--regular">{{ variant.price | money }}</span>
                                 {% endif %}
                               {% endif %}
+                              
                             </span> 
 
                             {%- if my_fields.supply_time != blank -%}
@@ -297,18 +299,12 @@
                         
                           {%- if currentVariant.available -%}
                           Subscribe —&nbsp; 
-                          {% if product.selected_or_first_available_selling_plan_allocation != blank %}
-                            {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
-                          {% else %}
-                            {{ currentVariant.price | money }}
-                            <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
-                          {% endif %}
-                          {% comment %} {% render 'rtx_price'%} {% endcomment %}
-                          {% comment %} <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                            <span data-smartrr-compare-price></span>
-                            <span data-smartrr-regular-price></span>
-                            <span data-smartrr-subscribe-price></span>
-                          </div> {% endcomment %}
+                              {% if product.selected_or_first_available_selling_plan_allocation != blank %}
+                                {{ currentVariant.selling_plan_allocations[0].price | money }} <s>{{ currentVariant.price | money }}</s>
+                              {% else %}
+                                {{ currentVariant.price | money }}
+                                <s>{% if currentVariant.compare_at_price > currentVariant.price %}{{ currentVariant.compare_at_price | money }} {% endif %}</s>&nbsp;
+                              {% endif %}
                           {%- else -%}
                           {{ 'products.product.sold_out' | t }}
                           {%- endif -%}

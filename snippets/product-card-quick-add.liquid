@@ -95,13 +95,41 @@
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
 
-    <div class="{{ base }}__price">
+    <div class="{{ base }}__price">    
+      {% assign current_variant = card_product.selected_or_first_available_variant %}
+      {% assign current_variant_price = current_variant.price %}
       <div class="{{ base }}__price-recurring">
-        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+
+
+        
+        {% if settings.purchase_option_default == 'onetime' %}
+          {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
+            {% assign one_discount_value = current_variant_price | times: current_variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+            {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+            {{ one_final_price | money }}
+          {% elsif current_variant.compare_at_price != blank %}
+            {{ current_variant.compare_at_price | money }}
+          {% else %}
+            {{ current_variant.price | money }}
+          {% endif %}
+        {% else %}
+          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        {% endif %}
       </div>
+
       <div class="{{ base }}__price-otp">
-        {{ card_product.selected_or_first_available_variant.price | money }}
+        {% if settings.purchase_option_default == 'onetime' and current_variant.metafields.custom.auto_discount_percent_off != blank %}
+          {{ current_variant.price | money }}
+        {% elsif settings.purchase_option_default == 'onetime' and current_variant.compare_at_price != blank %}
+          {{ current_variant.compare_at_price | money }}
+        {% endif %}
+        {% if settings.purchase_option_default == 'sub' %}
+          {{ current_variant.price | money }}
+        {% endif %}
       </div>
+      
     </div>
+
+    
   </div>
 </quick-add-card>

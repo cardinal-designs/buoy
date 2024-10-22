@@ -128,12 +128,12 @@
 
     <div class="{{ base }}__price">
       starting <span class="hide-mobile">at</span>
-      <div class="{{ base }}__price-recurring">
-        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
-      </div>
-      <div class="{{ base }}__price-otp">
-        {{ card_product.selected_or_first_available_variant.price | money }}
-      </div>
+        <div class="{{ base }}__price-recurring">
+          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        </div>
+        <div class="{{ base }}__price-otp">
+          {{ card_product.selected_or_first_available_variant.price | money }}
+        </div>
     </div>
     <div class="{{ base }}__btn-wrap">
       <button data-toggle class="{{ base }}__button">Purchase Options</button>

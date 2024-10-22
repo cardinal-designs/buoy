@@ -170,5 +170,26 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Common Settings",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "purchase_option_default",
+        "label": "Purchase Option Default",
+        "options": [
+          {
+            "value": "onetime",
+            "label": "Onetime"
+          },
+          {
+            "value": "sub",
+            "label": "Subscription"
+          }
+        ],
+        "default": "sub"
+      }
+    ]
   }
 ]
