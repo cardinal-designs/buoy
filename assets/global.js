@@ -924,9 +924,10 @@ class VariantSelects extends HTMLElement {
 
             if (this.closest("product-form").dataset.formType == "product-card") {
               addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
+              
               if (gridPrice) {
-                  gridPrice.querySelector(".quick-add__price-recurring").textContent = foundVariant?.one_discounted_price;
-                  gridPrice.querySelector(".quick-add__price-otp").textContent = foundVariant?.price || "";
+                  gridPrice.querySelector(".quick-add__price-recurring").textContent = `999 ${foundVariant?.one_discounted_price}`;
+                  gridPrice.querySelector(".quick-add__price-otp").textContent = `1010 ${foundVariant?.price}`;
               }
               if (subscriptionOption) {
                   if (subscriptionOption.value == "purchaseTypeSubscription") {
