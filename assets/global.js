@@ -903,6 +903,8 @@ class VariantSelects extends HTMLElement {
             if(closestForm){
               let onetimeClearBtn = closestForm.querySelector('.clear_button.rtx_popup');
               if(onetimeClearBtn){
+                let onetimeClearBtnHtml = `<p class="clear_tag"><span class="save24">Save ${foundVariant?.discount}</span></p>`;
+                onetimeClearBtn.innerHTML = onetimeClearBtnHtml;
                 onetimeClearBtn.style.display = 'inline-block';
               }
             }
