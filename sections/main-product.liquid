@@ -1183,7 +1183,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
           const jsonData = variantScript.textContent;
           const variantData = JSON.parse(jsonData);
           if(variantData){
-            let foundVariant = variantData?.find(variant => variant.id == currentVariant);
+            let foundVariant = variantData?.find(variant => variant.id == currentVariant && variant?.discount != "");
             if(foundVariant){
               if (el.value === 'purchaseTypeSubscription') {
                 subscriptionBoxShow();
@@ -1201,6 +1201,25 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
                 if(mainProductButton.dataset.available == "true"){
                   mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
                   stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                }
+              }
+            }else{
+              if (el.value === 'purchaseTypeSubscription') {
+                subscriptionBoxShow();
+                sellingPlan.disabled = false;
+                document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+                if(mainProductButton.dataset.available == "true"){
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price }</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+                }
+              } else {
+                subscriptionBoxHide();
+                sellingPlan.disabled = true;
+                document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+                
+                if(mainProductButton.dataset.available == "true"){
+                  mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
+                  stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].price}`;
                 }
               }
             }
