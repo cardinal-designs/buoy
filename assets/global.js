@@ -895,8 +895,9 @@ class VariantSelects extends HTMLElement {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         if (variantData) {
-        let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
-        console.log("foundVariant", foundVariant)
+          let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
+          console.log("foundVariant", foundVariant)
+        }
       }else{
 
 
@@ -1174,23 +1175,23 @@ class VariantSelects extends HTMLElement {
       //     }
       // }
   
-      // addButton.dataset.available = !disable;
+      addButton.dataset.available = !disable;
   
-      // if (disable) {
-      //     addButton.setAttribute("disabled", true);
-      //     if (text) addButton.innerHTML = text;
+      if (disable) {
+          addButton.setAttribute("disabled", true);
+          if (text) addButton.innerHTML = text;
   
-      //     stickyButton && stickyButton.setAttribute("disabled", true);
-      //     if (text && stickyButton) stickyButton.innerHTML = text;
-      // } else {
-      //     addButton.removeAttribute("disabled");
-      //     addButton.innerHTML = addToCartText;
+          stickyButton && stickyButton.setAttribute("disabled", true);
+          if (text && stickyButton) stickyButton.innerHTML = text;
+      } else {
+          addButton.removeAttribute("disabled");
+          addButton.innerHTML = addToCartText;
   
-      //     stickyButton && stickyButton.removeAttribute("disabled");
-      //     if (stickyButton) stickyButton.innerHTML = addToCartText;
-      // }
+          stickyButton && stickyButton.removeAttribute("disabled");
+          if (stickyButton) stickyButton.innerHTML = addToCartText;
+      }
   
-      // if (!modifyClass) return;
+      if (!modifyClass) return;
   }
 
   setUnavailable() {
