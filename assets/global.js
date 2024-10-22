@@ -923,7 +923,7 @@ class VariantSelects extends HTMLElement {
             }
 
             if (this.closest("product-form").dataset.formType == "product-card") {
-              addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span> <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
+              addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.discount}</span> <s>${foundVariant?.price || ""}</s>`;
               if (gridPrice) {
                   gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
                   gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || "";
