@@ -3168,7 +3168,7 @@ class QuickAddCard extends HTMLElement {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         if (variantData) {
-          let foundVariant = variantData?.find((variant) => variant.id == currentVar?.id && variant?.discount != "");
+          let foundVariant = variantData?.find((variant) => variant.id == currentVar?.id);
           console.log("foundVariant", foundVariant);
           if(foundVariant){
             if (priceMetafield) {
