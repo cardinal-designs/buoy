@@ -890,7 +890,8 @@ class VariantSelects extends HTMLElement {
       let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
       let addToCartText = `11 Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
       let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
-
+      let closestForm = this.closest("product-form");
+    
       if (variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
@@ -921,7 +922,7 @@ class VariantSelects extends HTMLElement {
                 addToCartText = `44 Add to Cart &mdash; &nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
               }
             }
-
+            
             if (this.closest("product-form").dataset.formType == "product-card") {
               addToCartText = `55 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
               
@@ -957,6 +958,15 @@ class VariantSelects extends HTMLElement {
                     reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
                   }
               });
+
+              if(closestForm){
+                let onetimeClearBtn = closestForm.querySelector('.quick-add__tag');
+                if(onetimeClearBtn){
+                  let onetimeClearBtnHtml = `Save ${foundVariant?.discount}%`;
+                  onetimeClearBtn.innerHTML = onetimeClearBtnHtml;
+                  onetimeClearBtn.style.display = 'inline-block';
+                }
+              }
               
               // this.closest("product-form")
               //     .querySelectorAll(".js-rtx_one_time_price, .js-subscription-price, .js-main-compare-price, .js-sub-compare-price")
@@ -992,6 +1002,12 @@ class VariantSelects extends HTMLElement {
                     reg_price.innerHTML = `${variantJson[this.currentVariant.id].subscription_price}`;
                   }
               });
+              if(closestForm){
+                let onetimeClearBtn = closestForm.querySelector('.quick-add__tag');
+                if(onetimeClearBtn){
+                  onetimeClearBtn.style.display = 'none';
+                }
+              }
             }
           }else{
             let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
