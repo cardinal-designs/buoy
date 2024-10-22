@@ -113,7 +113,7 @@
                 <span class="quick-add__tag" {% unless currentVariant.metafields.custom.auto_discount_percent_off %}style="display:none;"{% endunless %}>Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
             </span>
             <span 
-              class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }}" 
+              class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }} onetime-multi_Price" 
               data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
               data-onetimeprice="{{ my_fields.serving_cost }}"
             >
@@ -149,7 +149,7 @@
               
             </span>
               <span 
-                class="" 
+                class="subscription-multi_Price" 
               >
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
