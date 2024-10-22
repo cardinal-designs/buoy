@@ -3168,7 +3168,7 @@ class QuickAddCard extends HTMLElement {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
 
-        let foundVariant;
+        let foundVariant = "";
         if(variantData){foundVariant = variantData?.find((variant) => variant.id == currentVar?.id);}
         console.log("foundVariant", foundVariant);
 
