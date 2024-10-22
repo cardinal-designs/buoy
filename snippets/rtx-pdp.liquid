@@ -181,7 +181,7 @@
                 
                 {% assign variant_price = currentVariant.price %}
                 
-                {% assign discount_per_off = variant_price | times: product.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                {% assign discount_per_off = variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                 {% assign discount_price = variant_price | minus: discount_per_off %}
 
                 <span class="rtx_one_time_price onetime-multi_Price">
@@ -202,11 +202,12 @@
                 </span>
               {% endif %}
 
-              {% if product.metafields.custom.auto_discount_percent_off > 0 %}
-                <div class="clear_button rtx_popup">
-                  <p class="clear_tag"><span class="save24">Save {{ product.metafields.custom.auto_discount_percent_off | floor }}%</span></p>
-                </div>
-              {% endif %}
+              <div class="clear_button rtx_popup">
+                <p class="clear_tag">
+                  <span class="save24">{% if currentVariant.metafields.custom.auto_discount_percent_off > 0 %}Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%{% endif %}</span>
+                </p>
+              </div>
+            
             </div>
             
             <div class="Subscribe_Info">
