@@ -1018,7 +1018,7 @@ class VariantSelects extends HTMLElement {
 
             let gridPriceUpdate = thisData.closest(".quick-add__container");
             if(gridPriceUpdate){
-              let gridPriceContent = gridPriceUpdate.querySelector(".quick-add__container");
+              let gridPriceContent = gridPriceUpdate.querySelector(".quick-add__content");
               if(gridPriceContent){
                 let gridAddPrice = gridPriceContent.querySelector(".quick-add__price");
                 if(gridAddPrice) {
