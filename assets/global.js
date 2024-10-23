@@ -892,13 +892,13 @@ class VariantSelects extends HTMLElement {
       let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
       let closestForm = this.closest("product-form");
 
-      console.log("variantScript", variantScript)
       if (variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         console.log("variantData", variantData)
         if (variantData) {
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
+          console.log("foundVariant", foundVariant)
           if(foundVariant){
             let closestForm = this.closest("product-form");
             if(closestForm){
