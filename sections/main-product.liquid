@@ -412,9 +412,8 @@
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      
-                      {{ currentVariant.selling_plan_allocations[0].price }}--currentVariant.selling_plan_allocations[0].price
-                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == "blank" %}
+
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
                         <s>
                           {{-
                             currentVariant.price
