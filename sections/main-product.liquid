@@ -417,7 +417,7 @@
                       {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
                         <s>
                           {{-
-                            currentVariant.compare_at_price
+                            currentVariant.price
                             | default: currentVariant.price
                             | money_without_trailing_zeros
                           -}}</s
@@ -425,8 +425,8 @@
                       {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
                         <s>
                           {{-
-                            currentVariant.price
-                            | default: currentVariant.price
+                            currentVariant.compare_at_price
+                            | default: currentVariant.compare_at_price
                             | money_without_trailing_zeros
                           -}}</s
                         >&nbsp;
