@@ -477,6 +477,7 @@
                         {% endif %}
                       {% endif %}
                     {% else %}
+                      ====
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
                         <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
                         &nbsp;
@@ -891,7 +892,7 @@
                   {% elsif media_alt == 'plant-powered-antioxidants' %}
                     <div class="fixed_badge_center">🫐</div>
                   {% elsif media_alt == 'fortifying-minerals' %}
-                    <div class="fixed_badge_center">🛡</div>
+                    <div class="fixed_badge_center">🐀󈐼/div>
                   {% elsif media_alt == 'more-bioavailable' %}
                     <div class="fixed_badge_center three-x-text">3x</div>
                   {% endif %}
