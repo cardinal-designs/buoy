@@ -446,11 +446,11 @@
                       {% endif %}
                     {% else %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
-                        <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
+                        __<s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
                         &nbsp;
-                        {{ currentVariant.price | money_without_trailing_zeros }}
+                        =={{ currentVariant.price | money_without_trailing_zeros }}
                       {%- else -%}
-                        {{ currentVariant.price | money_without_trailing_zeros }}
+                        --{{ currentVariant.price | money_without_trailing_zeros }}
                       {%- endif -%}
                     {% endunless %}
 
