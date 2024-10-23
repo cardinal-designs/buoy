@@ -457,8 +457,8 @@
                       {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign one_final_price = current_variant_price | minus: one_discount_value %}
 
-                      {% if current_variant_price.metafields.custom.auto_discount_percent_off != blank %}
-                        {% assign one_discount_value = current_variant_price | times: current_variant_price.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                        {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                         {% assign one_final_price = current_variant_price | minus: one_discount_value %}
                         <span>{{ one_final_price | money }}</span>
                         <s>{{ current_variant_price | money }}</s>
