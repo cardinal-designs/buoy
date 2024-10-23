@@ -1010,7 +1010,10 @@ class VariantSelects extends HTMLElement {
                   onetimeClearBtn.style.display = 'none';
                 }
               }
-              console.log("subscriptionOption", subscriptionOption)
+              if(subscriptionOption == null){
+                console.log("subscriptionOption", subscriptionOption)
+                addToCartText = `99 Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
+              }
             }
           }else{
             if(closestForm){
