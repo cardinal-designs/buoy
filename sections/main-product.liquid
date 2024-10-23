@@ -248,13 +248,10 @@
                     [
                       {%- assign comma = false -%}
                       {%- for variant in product.variants -%}
-
                           {%- if comma -%},{%- endif -%}
                           {% assign variant_price = variant.price %}
-
                           {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                           {% assign one_final_price = variant_price | minus: one_discount_value %}
-
                           {
                             "id": {{ variant.id }},
                             "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
@@ -264,7 +261,6 @@
                             "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
                           }
                           {%- assign comma = true -%}
-
                       {%- endfor -%}
                     ]
                   </script>
@@ -423,7 +419,11 @@
                           | money_without_trailing_zeros
                         -}}</s
                       >&nbsp;
-                      {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                      {% if currentVariant.selling_plan_allocations[0].price %}
+                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                      {% else %}
+                        {{ currentVariant.price | money_without_trailing_zeros }}
+                      {% endif %}
                     {% else %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
                         <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
