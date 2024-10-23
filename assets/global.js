@@ -1010,6 +1010,7 @@ class VariantSelects extends HTMLElement {
                   onetimeClearBtn.style.display = 'none';
                 }
               }
+              console.log("subscriptionOption", subscriptionOption)
             }
           }else{
             if(closestForm){
