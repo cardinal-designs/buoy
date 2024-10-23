@@ -446,9 +446,9 @@
                           {% assign current_variant_price = currentVariant.price %}
                           {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                           {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                        1--{{ one_final_price.price | money_without_trailing_zeros }}
+                        1--{{ one_final_price | money_without_trailing_zeros }}
                         {% else %}
-                          {{ one_final_price | money_without_trailing_zeros }}
+                          {{ currentVariant.price | money_without_trailing_zeros }}
                         {% endif %}
                       {% endif %}
                     {% else %}
