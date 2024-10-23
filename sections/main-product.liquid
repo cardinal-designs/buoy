@@ -423,11 +423,20 @@
                         >&nbsp;
                       {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
                         <s>
+                          {% if currentVariant.compare_at_price %}
                           33{{-
-                            currentVariant.price
+                            currentVariant.compare_at_price
                             | default: currentVariant.compare_at_price
                             | money_without_trailing_zeros
-                          -}}</s
+                          -}}
+                          {% else %}
+                            66{{-
+                              currentVariant.price
+                              | default: currentVariant.price
+                              | money_without_trailing_zeros
+                            -}}
+                          {% endif %}
+                          </s
                         >&nbsp;
                       {% endif %}
                       {% if currentVariant.selling_plan_allocations[0].price %}
