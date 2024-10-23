@@ -414,7 +414,7 @@
                     {% unless product.metafields.custom.hide_subscription %}
                       
                       
-                   
+                      {% if currentVariant.compare_at_price != currentVariant.price %}
                         <s>
                           {{-
                             currentVariant.compare_at_price
@@ -422,7 +422,7 @@
                             | money_without_trailing_zeros
                           -}}</s
                         >&nbsp;
-                    
+                      {% endif %}
                       {% if currentVariant.selling_plan_allocations[0].price %}
                         {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                       {% else %}
