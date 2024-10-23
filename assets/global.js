@@ -895,10 +895,8 @@ class VariantSelects extends HTMLElement {
       if (variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
-        console.log("variantData", variantData)
         if (variantData) {
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
-          console.log("foundVariant", foundVariant)
           if(foundVariant){
             let closestForm = this.closest("product-form");
             if(closestForm){
