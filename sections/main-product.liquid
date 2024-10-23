@@ -412,13 +412,15 @@
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      <s>
-                        {{-
-                          currentVariant.compare_at_price
-                          | default: currentVariant.price
-                          | money_without_trailing_zeros
-                        -}}</s
-                      >&nbsp;
+                      {% if currentVariant.selling_plan_allocations[0].price %}
+                        <s>
+                          {{-
+                            currentVariant.compare_at_price
+                            | default: currentVariant.price
+                            | money_without_trailing_zeros
+                          -}}</s
+                        >&nbsp;
+                      {% endif %}
                       {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                     {% else %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
