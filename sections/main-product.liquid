@@ -416,7 +416,8 @@
                       {% assign current_variant_price = currentVariant.price %}
                       {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                       {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                      
+
+                      ---
                       {% if product.has_only_default_variant %}
 
                         {{ currentVariant }}
@@ -438,6 +439,7 @@
                         
                         
                       {% else %}
+                        ++
                         {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
                           <s>
                             {{-
