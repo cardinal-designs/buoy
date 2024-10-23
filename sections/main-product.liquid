@@ -414,9 +414,9 @@
                     {% unless product.metafields.custom.hide_subscription %}
                       
                       
-                      {% if currentVariant.compare_at_price != currentVariant.price %}
+                      {% if currentVariant.compare_at_price and currentVariant.compare_at_price != currentVariant.price %}
                         <s>
-                          22{{-
+                          {{-
                             currentVariant.compare_at_price
                             | default: currentVariant.price
                             | money_without_trailing_zeros
