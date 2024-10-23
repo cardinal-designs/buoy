@@ -462,7 +462,7 @@
                         {% assign one_final_price = current_variant_price | minus: one_discount_value %}
                         <s>{{ current_variant_price | money }}</s>&nbsp;
                         <span>{{ one_final_price | money }}</span>
-                      {% elsif current_variant_price.compare_at_price != blank %}
+                      {% elsif currentVariant.compare_at_price != blank %}
                         <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
                         <span>{{ product.selected_or_first_available_variant.price | money }}</span>
                       {% else %}
