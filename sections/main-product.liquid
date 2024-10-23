@@ -411,45 +411,66 @@
                 <div style="display: flex;">
                   
                   {%- if currentVariant.available -%}
-                    11- Add to Cart —&nbsp;
+                    Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
+                      {% assign current_variant_price = currentVariant.price %}
+                      {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                      
+                      {% if product.has_only_default_variant %}
 
-                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
-                        <s>
-                          {{-
-                            currentVariant.price
-                            | default: currentVariant.price
-                            | money_without_trailing_zeros
-                          -}}</s
-                        >&nbsp;
-                      {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
-                        <s>
-                          {% if currentVariant.compare_at_price %}
-                          {{-
-                            currentVariant.compare_at_price
-                            | default: currentVariant.compare_at_price
-                            | money_without_trailing_zeros
-                          -}}
-                          {% else %}
+                        
+                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                          {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                          <span>{{ one_final_price | money }}</span>
+                          <s>{{ current_variant_price | money }}</s>
+                        {% elsif currentVariant.compare_at_price != blank %}
+                          <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                          <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
+                        {% else %}
+                          <span>{{ current_variant_price | money }}</span>
+                          <s></s>
+                        {% endif %}
+
+
+                        
+                        
+                      {% else %}
+                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
+                          <s>
                             {{-
                               currentVariant.price
                               | default: currentVariant.price
                               | money_without_trailing_zeros
+                            -}}</s
+                          >&nbsp;
+                        {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
+                          <s>
+                            {% if currentVariant.compare_at_price %}
+                            {{-
+                              currentVariant.compare_at_price
+                              | default: currentVariant.compare_at_price
+                              | money_without_trailing_zeros
                             -}}
-                          {% endif %}
-                          </s
-                        >&nbsp;
-                      {% endif %}
-                      {% if currentVariant.selling_plan_allocations[0].price %}
-                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                      {% else %}
-                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-                          {% assign current_variant_price = currentVariant.price %}
-                          {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                          {{ one_final_price | money_without_trailing_zeros }}
+                            {% else %}
+                              {{-
+                                currentVariant.price
+                                | default: currentVariant.price
+                                | money_without_trailing_zeros
+                              -}}
+                            {% endif %}
+                            </s
+                          >&nbsp;
+                        {% endif %}
+                        {% if currentVariant.selling_plan_allocations[0].price %}
+                          {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                         {% else %}
-                          {{ currentVariant.price | money_without_trailing_zeros }}
+                          {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                            {{ one_final_price | money_without_trailing_zeros }}
+                          {% else %}
+                            {{ currentVariant.price | money_without_trailing_zeros }}
+                          {% endif %}
                         {% endif %}
                       {% endif %}
                     {% else %}
