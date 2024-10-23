@@ -424,7 +424,7 @@
                       {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
                         <s>
                           33{{-
-                            currentVariant.compare_at_price
+                            currentVariant.price
                             | default: currentVariant.compare_at_price
                             | money_without_trailing_zeros
                           -}}</s
