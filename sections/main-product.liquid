@@ -412,19 +412,7 @@
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      {% assign current_variant_price = currentVariant.price %}
-                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-                        {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                        {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                        <span>{{ one_final_price | money }}</span>
-                        <s>{{ current_variant_price | money }}</s>
-                      {% elsif currentVariant.compare_at_price != blank %}
-                        <span>{{ product.selected_or_first_available_variant.price | money }}</span>
-                        <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
-                      {% else %}
-                        <span>{{ current_variant_price | money }}</span>
-                        <s></s>
-                      {% endif %}
+                      
                       
                       {% if currentVariant.compare_at_price %}
                         <s>
