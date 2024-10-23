@@ -463,8 +463,8 @@
                         <s>{{ current_variant_price | money }}</s>&nbsp;
                         <span>{{ one_final_price | money }}</span>
                       {% elsif currentVariant.compare_at_price != blank %}
-                        <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
-                        <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                        <s>{{ currentVariant.compare_at_price | money }}</s>&nbsp;
+                        <span>{{ currentVariant.price | money }}</span>
                       {% else %}
                         <s></s>
                         <span>{{ current_variant_price | money }}</span>
