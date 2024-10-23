@@ -419,18 +419,14 @@
                           | money_without_trailing_zeros
                         -}}</s
                       >&nbsp;
-                      {% if currentVariant.selling_plan_allocations[0].price %}
-                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                      {% else %}
-                        88{{ currentVariant.price | money_without_trailing_zeros }}
-                      {% endif %}
+                      {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                     {% else %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
                         <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
                         &nbsp;
-                        =={{ currentVariant.price | money_without_trailing_zeros }}
+                        {{ currentVariant.price | money_without_trailing_zeros }}
                       {%- else -%}
-                        --{{ currentVariant.price | money_without_trailing_zeros }}
+                        {{ currentVariant.price | money_without_trailing_zeros }}
                       {%- endif -%}
                     {% endunless %}
 
