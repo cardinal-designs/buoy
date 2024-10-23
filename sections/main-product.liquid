@@ -412,7 +412,7 @@
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      {% if currentVariant.selling_plan_allocations[0].price %}
+                      {% if currentVariant.compare_at_price %}
                         <s>
                           {{-
                             currentVariant.compare_at_price
