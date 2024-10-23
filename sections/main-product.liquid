@@ -396,7 +396,7 @@
             {% endif %}
 
             <input type="hidden" name="id" value="{{ currentVariant.id }}">
-            <div class="product-form__buttons product-form__buttons_1">
+            <div class="product-form__buttons">
               <button
                 type="submit"
                 name="add"
@@ -408,76 +408,70 @@
                 {% endif %}
                 data-subscription-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
               >
-                <div style="display: flex;" class="flex">
+                <div style="display: flex;">
                   
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      {% assign current_variant_price = currentVariant.price %}
-                      {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                      {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-
-                       {{ current_variant_price }} ---
-                      {% if product.has_only_default_variant %}
-
-                        {{ currentVariant }}
-                        ---------
-                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-                          {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                          <span>{{ one_final_price | money }}</span>
-                          <s>{{ current_variant_price | money }}</s>
-                        {% elsif currentVariant.compare_at_price != blank %}
-                          <span>{{ product.selected_or_first_available_variant.price | money }}</span>
-                          <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
-                        {% else %}
-                          <span>{{ current_variant_price | money }}</span>
-                          <s></s>
-                        {% endif %}
-
-
-                        
-                        
-                      {% else %}
-                        ++
-                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
-                          <s>
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank and currentVariant.selling_plan_allocations[0].price == blank %}
+                        <s>
+                          {{-
+                            currentVariant.price
+                            | default: currentVariant.price
+                            | money_without_trailing_zeros
+                          -}}</s
+                        >&nbsp;
+                      {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
+                        <s>
+                          {% if currentVariant.compare_at_price %}
+                          {{-
+                            currentVariant.compare_at_price
+                            | default: currentVariant.compare_at_price
+                            | money_without_trailing_zeros
+                          -}}
+                          {% else %}
                             {{-
                               currentVariant.price
                               | default: currentVariant.price
                               | money_without_trailing_zeros
-                            -}}</s
-                          >&nbsp;
-                        {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
-                          <s>
-                            {% if currentVariant.compare_at_price %}
-                            {{-
-                              currentVariant.compare_at_price
-                              | default: currentVariant.compare_at_price
-                              | money_without_trailing_zeros
                             -}}
-                            {% else %}
-                              {{-
-                                currentVariant.price
-                                | default: currentVariant.price
-                                | money_without_trailing_zeros
-                              -}}
-                            {% endif %}
-                            </s
-                          >&nbsp;
-                        {% endif %}
-                        {% if currentVariant.selling_plan_allocations[0].price %}
-                          {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                        {% else %}
-                          {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-                            {{ one_final_price | money_without_trailing_zeros }}
-                          {% else %}
-                            {{ currentVariant.price | money_without_trailing_zeros }}
                           {% endif %}
+                          </s
+                        >&nbsp;
+                      {% endif %}
+                      {% if currentVariant.selling_plan_allocations[0].price %}
+                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                      {% else %}
+                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                          {% assign current_variant_price = currentVariant.price %}
+                          {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                          {{ one_final_price | money_without_trailing_zeros }}
+                        {% else %}
+                          {{ currentVariant.price | money_without_trailing_zeros }}
                         {% endif %}
                       {% endif %}
                     {% else %}
-                      ====
+
+                      {% assign current_variant_price = currentVariant.price %}
+                      {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                      {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+
+                      {% if current_variant_price.metafields.custom.auto_discount_percent_off != blank %}
+                        {% assign one_discount_value = current_variant_price | times: current_variant_price.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                        {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                        <span>{{ one_final_price | money }}</span>
+                        <s>{{ current_variant_price | money }}</s>
+                      {% elsif current_variant_price.compare_at_price != blank %}
+                        <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                        <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
+                      {% else %}
+                        <span>{{ current_variant_price | money }}</span>
+                        <s></s>
+                      {% endif %}
+
+
+                      {% comment %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
                         <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
                         &nbsp;
@@ -485,6 +479,8 @@
                       {%- else -%}
                         {{ currentVariant.price | money_without_trailing_zeros }}
                       {%- endif -%}
+                      {% endcomment %}
+                      
                     {% endunless %}
 
                     {% comment %} {% render 'rtx_price'%} {% endcomment %}
@@ -892,7 +888,7 @@
                   {% elsif media_alt == 'plant-powered-antioxidants' %}
                     <div class="fixed_badge_center">🫐</div>
                   {% elsif media_alt == 'fortifying-minerals' %}
-                    <div class="fixed_badge_center">🐀󈐼/div>
+                    <div class="fixed_badge_center">🛡</div>
                   {% elsif media_alt == 'more-bioavailable' %}
                     <div class="fixed_badge_center three-x-text">3x</div>
                   {% endif %}
