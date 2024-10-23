@@ -414,7 +414,7 @@
                     {% unless product.metafields.custom.hide_subscription %}
                       
                       
-                      {% if currentVariant.compare_at_price and currentVariant.compare_at_price != currentVariant.price %}
+                      {% if currentVariant.compare_at_price and currentVariant.selling_plan_allocations[0].price %}
                         <s>
                           {{-
                             currentVariant.compare_at_price
