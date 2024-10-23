@@ -1009,7 +1009,6 @@ class VariantSelects extends HTMLElement {
                 }
               }
               if(subscriptionOption == null){
-                console.log("subscriptionOption", subscriptionOption)
                 addToCartText = `Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span> <s>${foundVariant?.price || ""}</s>`;
               }
             }
@@ -1158,7 +1157,6 @@ class VariantSelects extends HTMLElement {
       }
 
       addButton.dataset.available = !disable;
-      console.log("addToCartText", addToCartText)
       if (disable) {
           addButton.setAttribute("disabled", true);
           if (text) addButton.innerHTML = text;
