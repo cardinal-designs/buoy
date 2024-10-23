@@ -1156,7 +1156,7 @@ class VariantSelects extends HTMLElement {
       }
 
       addButton.dataset.available = !disable;
-  
+      console.log("addToCartText", addToCartText)
       if (disable) {
           addButton.setAttribute("disabled", true);
           if (text) addButton.innerHTML = text;
