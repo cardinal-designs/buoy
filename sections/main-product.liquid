@@ -414,7 +414,7 @@
                     {% unless product.metafields.custom.hide_subscription %}
                       
                       
-                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != 'blank' and currentVariant.selling_plan_allocations[0].price == "blank" %}
                         <s>
                           {{-
                             currentVariant.price
