@@ -440,9 +440,9 @@
                         >&nbsp;
                       {% endif %}
                       {% if currentVariant.selling_plan_allocations[0].price %}
-                        44{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                       {% else %}
-                        55{{ currentVariant.price | money_without_trailing_zeros }}
+                        {{ currentVariant.price | money_without_trailing_zeros }}
                       {% endif %}
                     {% else %}
                       {%- if currentVariant.compare_at_price > currentVariant.price -%}
