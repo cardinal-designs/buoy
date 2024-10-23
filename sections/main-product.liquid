@@ -422,6 +422,14 @@
                             | money_without_trailing_zeros
                           -}}</s
                         >&nbsp;
+                      {% elsif currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                        <s>
+                          {{-
+                            currentVariant.price
+                            | default: currentVariant.price
+                            | money_without_trailing_zeros
+                          -}}</s
+                        >&nbsp;
                       {% endif %}
                       {% if currentVariant.selling_plan_allocations[0].price %}
                         {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
