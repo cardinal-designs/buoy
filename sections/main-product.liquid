@@ -460,7 +460,7 @@
                       {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
                         {% assign one_discount_value = current_variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
                         {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-                        <s>{{ current_variant_price | money }}</s>
+                        <s>{{ current_variant_price | money }}</s>&nbsp;
                         <span>{{ one_final_price | money }}</span>
                       {% elsif current_variant_price.compare_at_price != blank %}
                         <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
