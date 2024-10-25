@@ -5,7 +5,6 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
 });
 
 window.okeReviewsWidgetOnInit = function () {
-
     const warButton = document.querySelector('.okeReviews-reviewsWidget-header-controls-writeReview:not(.is-okeReviews-hidden)');
     const controlsSelect = document.querySelector(".okeReviews-reviews .okeReviews-reviews-controls-sort");
     if (warButton && controlsSelect) {
