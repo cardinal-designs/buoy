@@ -36,6 +36,7 @@
       {% endif %}
 
       {% if card_product.metafields.custom.product_card_bubble_text != blank and content.show_tags == true %}
+        aa
         <div class="1 {{ base }}__product-tags">
           {% for bubble_text in card_product.metafields.custom.product_card_bubble_text %}
             <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
