@@ -12,7 +12,7 @@
 >
   <div class="drawer__wrapper-main">
     <div class="clinical-drawer__header drawer__header">
-      <p class="text-sans-20">Clinical Trial</p>
+      <p class="m-text-sans-16 text-sans-20">Clinical Trial</p>
 
       <a href="javascript:void(0)" class="drawer__close js-clinical-close js-close-popup-drawer">
         <span class="text-sans-12 font-500">Close</span> {% render 'icon-close-drawer' %}</a>
@@ -22,7 +22,7 @@
 
       {% if ss.heading != blank %}
         <div class="clinical__section-heading-wrapper">
-        <h2 class="clinical__section-heading text-sans-40 font-400">
+        <h2 class="clinical__section-heading m-text-sans-30 text-sans-40 font-400">
           {{ ss.heading }}
         </h2>
         </div>
@@ -30,7 +30,7 @@
 
       {% if ss.title != blank %}
         <div class="clinical__section-title-wrapper">
-          <h6 class="clinical__section-title text-sans-20 font-500">
+          <h6 class="clinical__section-title m-text-sans-16 text-sans-20 font-500">
             {{ ss.title }}
           </h6>
         </div>
@@ -80,13 +80,13 @@
             {% endif %}
           {% when 'title' %}
             <div class="clinical__title-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
-              <h3 class="clinical__title text-sans-30 font-300">
+              <h3 class="clinical__title m-text-sans-24 text-sans-30 font-300">
                 {{ b.heading }}
               </h3>
             </div>
           {% when 'heading' %}
             <div class="clinical__heading-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
-              <h4 class="clinical__heading text-sans-24 font-500">
+              <h4 class="clinical__heading m-text-sans-20 text-sans-24 font-500">
                 {{ b.heading }}
               </h4>
             </div>
@@ -117,10 +117,10 @@
 
               <div class="clinical__stat-text">
                 {% if b.heading != blank %}
-                  <h4 class="text-sans-24 font-400">{{ b.heading }}</h4>
+                  <h4 class="m-text-sans-20 text-sans-24 font-400">{{ b.heading }}</h4>
                 {% endif %}
                 {% if b.title != blank %}
-                  <h4 class="text-rhymes-24 font-300">{{ b.title }}</h4>
+                  <h4 class="m-text-rhymes-20 text-rhymes-24 font-300">{{ b.title }}</h4>
                 {% endif %}
               </div>
             </div>
@@ -182,7 +182,7 @@
                       {{ b.image_one | image_url: width: 700 | image_tag: class: '' }}
                     </div>
 
-                    <div class="">
+                    <div class="clinical__chart-text-wrapper">
                       {% if b.heading_one != blank %}<p class="text-sans-12 font-500">{{ b.heading_one }}</p>{% endif %}
                       {% if b.text_one != blank %}<p class="text-sans-14 font-400">{{ b.text_one }}</p>{% endif %}
                       {% if b.note_one != blank %}<p class="text-rhymes-14 font-300 color-gray">{{ b.note_one }}</p>{% endif %}

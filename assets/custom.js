@@ -280,6 +280,16 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else {
       // For single drawer on PDP
       let clinicalDrawer = document.getElementById("clinicalSideDrawer");
+
+      let drawerTop = document.querySelector("header-container").offsetHeight
+
+      if( document.querySelector("announcement-container") && !document.querySelector("announcement-container").classList.contains('announcement--scrolled')) {
+        clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `${ document.querySelector("announcement-container").offsetHeight}px`
+      } else {
+        clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
+      }
+
+      clinicalDrawer.style.top = `${drawerTop}px` || '80px';
       showDrawer(clinicalDrawer);
     }
 
@@ -299,6 +309,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Close Clinical Drawer
   function closeClinical() {
+
+    document.getElementById("clinicalSideDrawer").querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
 
@@ -309,8 +321,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 3;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
+    setTimeout(() => {
+      document.querySelector('header-container').style.zIndex = 3;
+    }, "300");
   }
 
   // Open Supplement Drawer
