@@ -254,7 +254,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
-    event.stopPropagation();
+    e.stopPropagation();
     let parentItem = !!e.target.closest('.dropdown-container-item__container');
     if (parentItem) {
       let parentEl = e.target.closest('.dropdown-container-item');
@@ -885,3 +885,43 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(document.body, { childList: true, subtree: true });
 
 /* Popup modal drag and close code  -  End */
+
+// Clinical Modal Charts
+function initializeClinicalCharts(drawer) {
+  const swipers = drawer.querySelectorAll("[data-swiper='chart-images']")
+
+  if(!swipers) return
+
+  swipers.forEach(s => {
+    const options = {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+    }
+    
+    if(s.nextElementSibling.hasAttribute('data-swiper')) {
+      const textSwiper = new Swiper( s.nextElementSibling, {
+        slidesPerView: 1,
+        effect: 'fade'
+      })
+
+      options.controller = {
+        by: 'slide',
+        control: textSwiper
+      }
+
+      const swiper = new Swiper(s, options) 
+      
+    }
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const clinicalTrialDrawer = document.querySelector("#clinicalSideDrawer")
+  if (clinicalTrialDrawer) {
+    initializeClinicalCharts(clinicalTrialDrawer)
+  }
+}) 

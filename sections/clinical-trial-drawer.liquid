@@ -1,139 +1,217 @@
-{{ 'component-clinical-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'component-clinical-trial-drawer-new.css' | asset_url | stylesheet_tag }}
 
 {%- assign ss = section.settings -%}
 
 <div 
   id="clinicalSideDrawer" 
-  data-product-name="{{ ss.product_name }}" 
   class="clinical-trial-drawer popup-drawer"
   {% if template == 'page.clear-pee-club' %}
     style="top: 0;"
   {% endif %}
+  aria-hidden="true"
 >
   <div class="drawer__wrapper-main">
-    <div class="drawer__header">
-      <a href="javascript:void(0)" class="drawer__close js-clinical-close js-close-popup-drawer">
-        <span>Close</span> {% render 'icon-close-drawer' %}</a>
-    </div>  
-    <div class="drawer__title-wrapper">
-      {%- if ss.product_name != blank -%}
-        <div class="drawer__product-name">
-          {%- if ss.year != blank -%}
-            {{ ss.year }}
-          {%- endif -%}
-          {{ ss.product_name }}
-        </div>
-      {%- endif -%}
-      {%- if ss.title != blank -%}
-        <div class="drawer__title">{{ ss.title }}</div>
-      {%- endif -%}
-    </div>
-    {%- if ss.about != blank -%}
-      <div class="clinical__about-container">
-        <p class="clinical__about">{{ ss.about }}</p>
-      </div>
-    {%- endif -%}
-    <ul class="clinical__info-list">
-      {%- for block in section.blocks -%}
-        {%- assign bs = block.settings -%}
-        {%- if block.type == 'list-item' -%}
-          {%- if bs.icon_item != blank -%}
-            <li class="clinical__info-list-item">
-              <img class="" src="{{ bs.icon_item | img_url: 'master' }}"  alt="{{ bs.icon_item.alt }}" width="24" height="24">
-              {%- if bs.item_description != blank -%}
-                <span>{{ bs.item_description }}</span>
-              {%- endif -%}
-            </li>
-          {%- endif -%}
-        {%- endif -%}
-      {%- endfor -%}
-    </ul>
+    <div class="clinical-drawer__header drawer__header">
+      <p class="text-sans-20">Clinical Trial</p>
 
-    <div class="clinical__info">
-      {%- for block in section.blocks -%}
-        {%- assign bs = block.settings -%}
-        {%- if block.type == 'content' -%}
-          <button class="clinical__info-btn">
-            <div class="clinical__info-title">
-              {%- if bs.btn_title != blank -%}
-                <span>{{ bs.btn_title }}</span>
-              {%- endif -%}
-              {%- if bs.notification != blank -%}
-                <span class="clinical__info-notification">{{ bs.notification }}</span>
-              {%- endif -%}
-            </div>
-            {%- if bs.heading != blank -%}
-              <div class="clinical__info-content">
-                <div class="clinical__info-line"></div>
-                <div class="clinical__info-item clinical__info-item-primary">
-                  <h2 class="clinical__info-heading">{{ bs.heading }}</h2>
-                  <div class="clinical__info-content-block">
-                    {%- if bs.title != blank -%}
-                      <h3 class="clinical__info-title">{{ bs.title }}</h3>
-                    {%- endif -%}
-                    {%- if bs.text_block_one != blank -%}
-                      <p class="clinical__info-text-one">{{ bs.text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                    {%- endif -%}
-                    {%- if bs.text_block_two != blank -%}
-                      <p class="clinical__info-text-two">{{ bs.text_block_two }}</p>
-                    {%- endif -%}
-                  </div>
-                  <div class="clinical__info-content-block">
-                    {%- if bs.block_two_title != blank -%}
-                      <h3 class="clinical__info-title">{{ bs.block_two_title }}</h3>
-                    {%- endif -%}
-                    {%- if bs.block_two_text_block_one != blank -%}
-                      <p class="clinical__info-text-one">{{ bs.block_two_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                    {%- endif -%}
-                    {%- if bs.block_two_text_block_two != blank -%}
-                      <p class="clinical__info-text-two">{{ bs.block_two_text_block_two }}</p>
-                    {%- endif -%}
-                  </div>
-                  <div class="clinical__info-content-block">
-                    {%- if bs.block_three_title != blank -%}
-                      <h3 class="clinical__info-title">{{ bs.block_three_title }}</h3>
-                    {%- endif -%}
-                    {%- if bs.block_three_text_block_one != blank -%}
-                      <p class="clinical__info-text-one">{{ bs.block_three_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                    {%- endif -%}
-                    {%- if bs.block_three_text_block_two != blank -%}
-                      <p class="clinical__info-text-two">{{ bs.block_three_text_block_two }}</p>
-                    {%- endif -%}
-                  </div>
-                </div>
-                <div class="clinical__info-item clinical__info-item-secondary">
-                  {%- if bs.secondary_heading != blank -%}
-                    <h2 class="clinical__info-heading">{{ bs.secondary_heading }}</h2>
-                  {%- endif -%}
-                  <div class="clinical__info-content-block clinical__info-content-block-secondary">
-                    {%- if bs.secondary_title != blank -%}
-                      <h3 class="clinical__info-title">{{ bs.secondary_title }}</h3>
-                    {%- endif -%}
-                    {%- if bs.secondary_text_block_one != blank -%}
-                      <p class="clinical__info-text-one">{{ bs.secondary_text_block_one | replace: '<p>', '' | replace: '</p>', '' }}</p>
-                    {%- endif -%}
-                    {%- if bs.secondary_text_block_two != blank -%}
-                      <p class="clinical__info-text-two">{{ bs.secondary_text_block_two }}</p>
-                    {%- endif -%}
-                  </div>
-                </div>
+      <a href="javascript:void(0)" class="drawer__close js-clinical-close js-close-popup-drawer">
+        <span class="text-sans-12 font-500">Close</span> {% render 'icon-close-drawer' %}</a>
+    </div>
+
+    <div class="drawer__body">
+
+      {% if ss.heading != blank %}
+        <div class="clinical__section-heading-wrapper">
+        <h2 class="clinical__section-heading text-sans-40 font-400">
+          {{ ss.heading }}
+        </h2>
+        </div>
+      {% endif %}
+
+      {% if ss.title != blank %}
+        <div class="clinical__section-title-wrapper">
+          <h6 class="clinical__section-title text-sans-20 font-500">
+            {{ ss.title }}
+          </h6>
+        </div>
+      {% endif %}
+
+      {% if ss.text != blank %}
+        <div class="clinical__section-text-wrapper">
+          <p class="clinical__section-text text-sans-12 font-500">
+            {{ ss.text }}
+          </p>
+        </div>
+      {% endif %}
+
+      {% if ss.url != blank %}
+        <div class="clinical__section-url-wrapper">
+          <a href="{{ ss.url }}" target="_blank" class="clinical__section-url text-sans-12 font-400 bg-gray">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="9" fill="#DEF647"/>
+              <path d="M6.81206 12.244L9.00034 10.9272L11.1886 12.2588L10.6095 9.76678L12.5349 8.09526L9.99532 7.87087L9.00034 5.52621L8.00536 7.85614L5.46578 8.08053L7.39115 9.75772L6.81206 12.244ZM5.80349 13.6379L6.64775 10.0025L3.82715 7.55811L7.54868 7.23515L9.00034 3.80713L10.452 7.23515L14.1735 7.55811L11.3529 10.0025L12.1972 13.6379L9.00034 11.7091L5.80349 13.6379Z" fill="#1F2322"/>
+            </svg> 
+            
+            Registered at clinicaltrials.gov
+          </a>
+        </div>
+      {% endif %}
+
+      {% assign section_count = 0 %}
+      {% assign first_label = true %}
+      {% for block in section.blocks %}
+        {% assign b = block.settings %}
+
+        {% case block.type %}
+          {% when 'label' %}
+            {% if section_count == 1 %}{% assign section_count = 0 %}{% else %}{% assign section_count = 1 %}{% endif %}
+
+            <div class="clinical__spacer {% if section_count == 1 %}bg-white{% else %}bg-gray{% endif %}">
+            </div> 
+
+            <div class="clinical__label-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <div class="clinical__label bg-green text-sans-14">
+                {{ b.heading }}
               </div>
-            {%- endif -%}
-          </button>
-        {%- endif -%}
-      {%- endfor -%}
+            </div>
+
+            {% if first_label == true %}
+              {% assign first_label = false %}
+            {% endif %}
+          {% when 'title' %}
+            <div class="clinical__title-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <h3 class="clinical__title text-sans-30 font-300">
+                {{ b.heading }}
+              </h3>
+            </div>
+          {% when 'heading' %}
+            <div class="clinical__heading-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <h4 class="clinical__heading text-sans-24 font-500">
+                {{ b.heading }}
+              </h4>
+            </div>
+          {% when 'subhead' %}
+            <div class="clinical__subhead-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <h5 class="clinical__subhead text-rhymes-16 font-300">
+                {{ b.heading }}
+              </h5>
+            </div>
+          {% when 'text' %}
+            <div class="clinical__text-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <p class="clinical__text text-sans-14 font-400">
+                {{ b.heading }}
+              </p>
+            </div>
+          {% when 'icon' %}
+            <div class="clinical__icon-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <div class="clinical__icon">
+                {{ b.image }} <span class="text-sans-14">{{ b.heading }}</span>
+              </div>
+            </div>
+          {% when 'stat' %}
+          <div class="clinical__stat-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+            <div class="clinical__stat">
+              <div style="--progress: {% if b.stat contains "%" %}{{ b.stat | remove: "%" | times: 1 | times: 3.6 }}{% else %}360{% endif %}deg;" class="clinical__stat-number text-sans-24">
+                <div class="clinical__stat-number-inner"> {{ b.stat }} </div>
+              </div>
+
+              <div class="clinical__stat-text">
+                {% if b.heading != blank %}
+                  <h4 class="text-sans-24 font-400">{{ b.heading }}</h4>
+                {% endif %}
+                {% if b.title != blank %}
+                  <h4 class="text-rhymes-24 font-300">{{ b.title }}</h4>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% when 'charts' %}
+            <div class="clinical__charts-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              {% if b.image_one != blank %}
+                <div class="clinical__charts">
+                  {% if b.image_two != blank or b.image_three != blank %}
+                    <div class="swiper" data-swiper="chart-images" data-swiper-id="{{ block.id }}">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          {{ b.image_one | image_url: width: 700 | image_tag: class: '' }}
+                        </div>
+
+                        {% if b.image_two != blank %}
+                          <div class="swiper-slide">
+                            {{ b.image_two | image_url: width: 700 | image_tag: class: '' }}
+                          </div>
+                        {% endif %}
+
+                        {% if b.image_three != blank %}
+                          <div class="swiper-slide">
+                            {{ b.image_three | image_url: width: 700 | image_tag: class: '' }}
+                          </div>
+                        {% endif %}
+                      </div>
+
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="swiper" data-swiper="chart-text" data-swiper-id="{{ block.id }}">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          {% if b.heading_one != blank %}<p class="text-sans-12 font-500">{{ b.heading_one }}</p>{% endif %}
+                          {% if b.text_one != blank %}<p class="text-sans-14 font-400">{{ b.text_one }}</p>{% endif %}
+                          {% if b.note_one != blank %}<p class="text-rhymes-14 font-300">{{ b.note_one }}</p>{% endif %}
+                        </div>
+
+                        {% if b.heading_two != blank or b.text_two != blank or b.note_two != blank %}
+                          <div class="swiper-slide">
+                            {% if b.heading_two != blank %}<p class="text-sans-12 font-500">{{ b.heading_two }}</p>{% endif %}
+                            {% if b.text_two != blank %}<p class="text-sans-14 font-400">{{ b.text_two }}</p>{% endif %}
+                            {% if b.note_two != blank %}<p class="text-rhymes-14 font-300 color-gray">{{ b.note_two }}</p>{% endif %}
+                          </div>
+                        {% endif %}
+
+                        {% if b.heading_three != blank or b.text_three != blank or b.note_three != blank %}
+                          <div class="swiper-slide">
+                            {% if b.heading_three != blank %}<p class="text-sans-12 font-500">{{ b.heading_three }}</p>{% endif %}
+                            {% if b.text_three != blank %}<p class="text-sans-14 font-400">{{ b.text_three }}</p>{% endif %}
+                            {% if b.note_three != blank %}<p class="text-rhymes-14 font-300 color-gray">{{ b.note_three }}</p>{% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% else %}
+                    <div class="clinical__chart-wrapper">
+                      {{ b.image_one | image_url: width: 700 | image_tag: class: '' }}
+                    </div>
+
+                    <div class="">
+                      {% if b.heading_one != blank %}<p class="text-sans-12 font-500">{{ b.heading_one }}</p>{% endif %}
+                      {% if b.text_one != blank %}<p class="text-sans-14 font-400">{{ b.text_one }}</p>{% endif %}
+                      {% if b.note_one != blank %}<p class="text-rhymes-14 font-300 color-gray">{{ b.note_one }}</p>{% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% when 'study-link' %}
+            <div class="clinical__study-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
+              <div class="relative citation__study">
+                {% if b.heading != blank %}
+                  <p class="text-sans-14 font-500 underline citation__study-heading">{{ b.heading }}</p>
+                {% endif %}
+
+                {% if b.text != blank %}
+                  <p class="text-sans-12 font-400 color-gray citation__study-text">{{ b.text }}</p>
+                {% endif %}
+
+                {% if b.url != blank %}<a href="{{ b.url }}" class="citation__study-url"></a>{% endif %}
+              </div>
+            </div>
+        {% endcase %}
+
+      {% endfor %}
+
     </div>
-    {% comment %}
-    <div class="drawer__desktop-continue hide-mobile">
-      <a href="javascript:void(0)" class="drawer__continue-cta button button--full-width js-clinical-close">Keep Shopping</a>        
-    </div>
-    {% endcomment %}
+
   </div>
-  {% comment %}
-  <div class="drawer__mobile-continue hide-desktop">
-    <a href="javascript:void(0)" class="drawer__continue-cta drawer__continue-cta-mobile button button--full-width js-clinical-close">Keep Shopping</a>        
-  </div>
-  {% endcomment %}
 </div>
 
 {% schema %}
@@ -141,60 +219,114 @@
     "name": "Clinical Trial Drawer",
     "settings": [
       {
-        "type": "text",
-        "id": "year",
-        "label": "Year"
+        "type": "inline_richtext",
+        "id": "heading",
+        "label": "Heading"
       },
       {
-        "type": "text",
-        "id": "product_name",
-        "label": "Product Name"
-      },
-      {
-        "type": "text",
+        "type": "inline_richtext",
         "id": "title",
-        "label": "Title"
+        "label": "subhead"
       },
       {
         "type": "text",
-        "id": "about",
-        "label": "About"
+        "id": "text",
+        "label": "Text",
+        "placeholder": "Clinical Trial NO: NCT05768789"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Link to registered .gov trial",
+        "info": "Will display star icon with 'Registered at clinicaltrials.gov' message"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
       }
     ],
     "blocks": [
       {
-        "type": "list-item",
-        "name": "List Item",
+        "type": "label",
+        "name": "Section Label",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "icon_item",
-            "label": "Icon"
-          },
-          {
             "type": "text",
-            "id": "item_description",
-            "label": "Description"
+            "id": "heading",
+            "label": "Text"
           }
         ]
       },
       {
-        "type": "content",
-        "name": "Content Item",
+        "type": "title",
+        "name": "Title",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "subhead",
+        "name": "Subhead",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Paragraph",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "name": "Icon Bullet",
+        "settings": [
+          {
+            "type": "liquid",
+            "id": "image",
+            "label": "Icon",
+            "info": "SVG"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "stat",
+        "name": "Stat",
         "settings": [
           {
             "type": "text",
-            "id": "btn_title",
-            "label": "Content Title"
-          },
-          {
-            "type": "text",
-            "id": "notification",
-            "label": "Notification"
-          },
-          {
-            "type": "header",
-            "content": "Primary Content"
+            "id": "stat",
+            "label": "Stat"
           },
           {
             "type": "text",
@@ -202,88 +334,123 @@
             "label": "Heading"
           },
           {
-            "type": "header",
-            "content": "Content Block One"
-          },
-          {
             "type": "text",
             "id": "title",
-            "label": "Block One Title"
-          },
-          {
-            "type": "richtext",
-            "id": "text_block_one",
-            "label": "Block One Text Block One"
-          },
-          {
-            "type": "text",
-            "id": "text_block_two",
-            "label": "Block One Text Block Two"
-          },
-          {
-            "type": "header",
-            "content": "Content Block Two"
-          },
-          {
-            "type": "text",
-            "id": "block_two_title",
-            "label": "Block Two Title"
-          },
-          {
-            "type": "richtext",
-            "id": "block_two_text_block_one",
-            "label": "Block Two Text Block One"
-          },
-          {
-            "type": "text",
-            "id": "block_two_text_block_two",
-            "label": "Block Two Text Block Two"
-          },
-          {
-            "type": "header",
-            "content": "Content Block Three"
-          },
-          {
-            "type": "text",
-            "id": "block_three_title",
-            "label": "Block Three Title"
-          },
-          {
-            "type": "richtext",
-            "id": "block_three_text_block_one",
-            "label": "Block Three Text Block One"
-          },
-          {
-            "type": "text",
-            "id": "block_three_text_block_two",
-            "label": "Block Three Text Block Two"
-          },
-          {
-            "type": "header",
-            "content": "Secondary Content"
-          },
-          {
-            "type": "text",
-            "id": "secondary_heading",
-            "label": "Secondary Heading"
-          },
-          {
-            "type": "text",
-            "id": "secondary_title",
-            "label": "Secondary Block One Title"
-          },
-          {
-            "type": "richtext",
-            "id": "secondary_text_block_one",
-            "label": "Secondary Block One Text Block One"
-          },
-          {
-            "type": "text",
-            "id": "secondary_text_block_two",
-            "label": "Secondary Block One Text Block Two"
+            "label": "Subhead"
           }
         ]
-      }
+      },
+      {
+        "type": "charts",
+        "name": "Charts",
+        "settings": [
+          {
+            "type": "header",
+            "content": "First Chart"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image"
+          },
+          {
+            "type": "paragraph",
+            "content": "Caption"
+          },
+          {
+            "type": "text",
+            "id": "heading_one",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text_one",
+            "label": "Text"
+          },
+          {
+            "type": "textarea",
+            "id": "note_one",
+            "label": "Footnote"
+          },
+          {
+            "type": "header",
+            "content": "Second Chart"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image"
+          },
+          {
+            "type": "paragraph",
+            "content": "Caption"
+          },
+          {
+            "type": "text",
+            "id": "heading_two",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text_two",
+            "label": "Text"
+          },
+          {
+            "type": "textarea",
+            "id": "note_two",
+            "label": "Footnote"
+          },
+          {
+            "type": "header",
+            "content": "Third Chart"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_three",
+            "label": "Image"
+          },
+          {
+            "type": "paragraph",
+            "content": "Caption"
+          },
+          {
+            "type": "text",
+            "id": "heading_three",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "text_three",
+            "label": "Text"
+          },
+          {
+            "type": "textarea",
+            "id": "note_three",
+            "label": "Footnote"
+          }
+        ]
+      },
+      {
+        "type": "study-link",
+        "name": "Study Link",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Url"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Citation"
+          }
+        ]
+      },
     ],
     "presets": [
       {
