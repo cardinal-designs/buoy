@@ -101,6 +101,8 @@
               <p class="clinical__text text-sans-14 font-400">
                 {{ b.heading }}
               </p>
+
+              <hr class="clinical__divider">
             </div>
           {% when 'icon' %}
             <div class="clinical__icon-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
@@ -299,6 +301,12 @@
             "type": "inline_richtext",
             "id": "heading",
             "label": "Text"
+          },
+          {
+            "type": "checkbox",
+            "id": "divider",
+            "label": "Divider line",
+            "default": true
           }
         ]
       },

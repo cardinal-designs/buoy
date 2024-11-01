@@ -478,3 +478,9 @@ body.lock-scroll header-container {
   .clinical__spacer {
     height: 50px;
   }
+  .clinical__divider {
+    background: transparent;
+    border-bottom: 1px solid #E9E9E9;
+    margin: 0;
+    padding: 24px 0 0;
+  }
