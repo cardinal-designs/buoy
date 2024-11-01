@@ -327,12 +327,17 @@ body.lock-scroll header-container {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     margin: 0 0 4px;
   }
 
+  .clinical__icon-svg {
+    width: 24px;
+    text-align: center;
+  }
+
   .clinical__stat-wrapper {
-    padding: 8px 0;
+    padding: 4px 0;
   }
 
   .clinical__stat {
@@ -375,10 +380,19 @@ body.lock-scroll header-container {
     margin: 0;
   }
 
+  .clinical__charts-wrapper {
+    overflow-x: clip;
+  }
+
   .clinical__charts {
     margin: 16px 0 0 ;
     position: relative;
     z-index: 0;
+  }
+
+  .clinical__charts [data-swiper='chart-images'] {
+    overflow-x: visible;
+    overflow-y: clip;
   }
 
   .clinical__charts [data-swiper='chart-images'] .swiper-slide,
