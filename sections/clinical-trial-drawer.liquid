@@ -102,7 +102,9 @@
                 {{ b.heading }}
               </p>
 
-              <hr class="clinical__divider">
+              {% if b.divider == true %}
+                <hr class="clinical__divider">
+              {% endif %}
             </div>
           {% when 'icon' %}
             <div class="clinical__icon-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
