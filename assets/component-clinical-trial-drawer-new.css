@@ -207,6 +207,7 @@ body.lock-scroll header-container {
       padding-left: 0;
       padding-right: 0;
       transition: 1s;
+      z-index: 9;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
     }
