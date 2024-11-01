@@ -105,7 +105,8 @@
           {% when 'icon' %}
             <div class="clinical__icon-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
               <div class="clinical__icon">
-                {{ b.image }} <span class="text-sans-14">{{ b.heading }}</span>
+                <div class="clinical__icon-svg">{{ b.image }}</div> 
+                <span class="text-sans-14">{{ b.heading }}</span>
               </div>
             </div>
           {% when 'stat' %}
