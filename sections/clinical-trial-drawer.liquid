@@ -12,7 +12,7 @@
 >
   <div class="drawer__wrapper-main">
     <div class="clinical-drawer__header drawer__header">
-      <p class="m-text-sans-16 text-sans-20">Clinical Trial</p>
+      <p class="m-text-sans-16 text-sans-20 font-300">Clinical Trial</p>
 
       <a href="javascript:void(0)" class="drawer__close js-clinical-close js-close-popup-drawer">
         <span class="text-sans-12 font-500">Close</span> {% render 'icon-close-drawer' %}</a>
@@ -22,7 +22,7 @@
 
       {% if ss.heading != blank %}
         <div class="clinical__section-heading-wrapper">
-        <h2 class="clinical__section-heading m-text-sans-30 text-sans-40 font-400">
+        <h2 class="clinical__section-heading m-text-sans-30 text-sans-40 font-300">
           {{ ss.heading }}
         </h2>
         </div>
@@ -30,7 +30,7 @@
 
       {% if ss.title != blank %}
         <div class="clinical__section-title-wrapper">
-          <h6 class="clinical__section-title m-text-sans-16 text-sans-20 font-500">
+          <h6 class="clinical__section-title m-text-sans-16 text-sans-20 font-400">
             {{ ss.title }}
           </h6>
         </div>
@@ -38,7 +38,7 @@
 
       {% if ss.text != blank %}
         <div class="clinical__section-text-wrapper">
-          <p class="clinical__section-text text-sans-12 font-500">
+          <p class="clinical__section-text text-sans-12 font-400">
             {{ ss.text }}
           </p>
         </div>
@@ -80,13 +80,13 @@
             {% endif %}
           {% when 'title' %}
             <div class="clinical__title-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
-              <h3 class="clinical__title m-text-sans-24 text-sans-30 font-300">
+              <h3 class="clinical__title m-text-sans-24 text-sans-30 font-200">
                 {{ b.heading }}
               </h3>
             </div>
           {% when 'heading' %}
             <div class="clinical__heading-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
-              <h4 class="clinical__heading m-text-sans-20 text-sans-24 font-500">
+              <h4 class="clinical__heading m-text-sans-20 text-sans-24 font-400">
                 {{ b.heading }}
               </h4>
             </div>
@@ -112,13 +112,13 @@
           {% when 'stat' %}
           <div class="clinical__stat-wrapper {% if section_count == 1 %}bg-gray{% else %}bg-white{% endif %}">
             <div class="clinical__stat">
-              <div style="--progress: {% if b.stat contains "%" %}{{ b.stat | remove: "%" | times: 1 | times: 3.6 }}{% else %}360{% endif %}deg;" class="clinical__stat-number text-sans-24">
+              <div style="--progress: {% if b.stat contains "%" %}{{ b.stat | remove: "%" | times: 1 | times: 3.6 }}{% else %}360{% endif %}deg;" class="clinical__stat-number text-sans-24 font-500">
                 <div class="clinical__stat-number-inner"> {{ b.stat }} </div>
               </div>
 
               <div class="clinical__stat-text">
                 {% if b.heading != blank %}
-                  <h4 class="m-text-sans-20 text-sans-24 font-400">{{ b.heading }}</h4>
+                  <h4 class="m-text-sans-20 text-sans-24 font-300">{{ b.heading }}</h4>
                 {% endif %}
                 {% if b.title != blank %}
                   <h4 class="m-text-rhymes-20 text-rhymes-24 font-300">{{ b.title }}</h4>

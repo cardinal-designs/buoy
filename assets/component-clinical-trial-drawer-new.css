@@ -145,6 +145,10 @@ body.lock-scroll header-container {
     text-underline-offset: 2px;
 }
 
+.font-200 {
+    font-weight: 200;
+}
+
 .font-300 {
     font-weight: 300;
 }
@@ -294,6 +298,7 @@ body.lock-scroll header-container {
     font-style: normal;
     text-decoration: underline;
     text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
   }
 
   .clinical__title-wrapper + .clinical__heading-wrapper .clinical__heading {
@@ -319,7 +324,7 @@ body.lock-scroll header-container {
 
   .clinical__text {
     margin: 0;
-    padding: 0 0 6px;
+    padding: 10px 0 6px;
   }
 
   .clinical__icon {
@@ -328,12 +333,17 @@ body.lock-scroll header-container {
     justify-content: start;
     align-items: center;
     gap: 8px;
-    margin: 0 0 4px;
+    margin: 0;
+    padding: 0 0 4px;
   }
 
   .clinical__icon-svg {
     width: 24px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
   }
 
   .clinical__stat-wrapper {
@@ -437,6 +447,10 @@ body.lock-scroll header-container {
 
   .clinical__charts .swiper-pagination .swiper-pagination-bullet-active {
     background: black;
+  }
+
+  .clinical__charts p {
+    margin: 0 0 8px;
   }
 
   .clinical__chart-text-wrapper,
