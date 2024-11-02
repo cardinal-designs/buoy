@@ -189,6 +189,7 @@ body.lock-scroll header-container {
     transition: 0.5s;
     padding: 0;
     padding-bottom: 100px;
+  padding-top: var(--clinical-trial-padding-top);
   }
 
   .clinical-trial-drawer .drawer__wrapper-main {
