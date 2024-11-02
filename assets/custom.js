@@ -284,13 +284,15 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
       let drawerTop = document.querySelector("header-container").offsetHeight
 
       if( document.querySelector("announcement-container") && !document.querySelector("announcement-container").classList.contains('announcement--scrolled')) {
-        clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `${ document.querySelector("announcement-container").offsetHeight}px`
+        // clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `${ document.querySelector("announcement-container").offsetHeight}px`
+        clinicalDrawer.style.setProperty(`--clinical-trial-padding-top`, `${document.querySelector("announcement-container").offsetHeight}px` || '80px')
       } else {
-        clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
+        // clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
+        clinicalDrawer.style.setProperty(`--clinical-trial-padding-top`, `0px`)
       }
 
       // clinicalDrawer.style.top = `${drawerTop}px` || '80px';
-      document.body.style.setProperty(`--clinical-trial-top`, `${drawerTop}px` || '80px')
+      clinicalDrawer.style.setProperty(`--clinical-trial-top`, `${drawerTop}px` || '80px')
       showDrawer(clinicalDrawer);
     }
 
