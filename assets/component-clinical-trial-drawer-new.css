@@ -182,7 +182,7 @@ body.lock-scroll header-container {
     width: min(720px, 50vw );
     position: fixed;
     z-index: 9;
-    top: 80.5px;
+    top: var(--clinical-trial-top);
     right: -100%;
     background-color: #fff;
     overflow-x: hidden;
