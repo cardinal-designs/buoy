@@ -289,7 +289,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
         clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
       }
 
-      clinicalDrawer.style.top = `${drawerTop}px` || '80px';
+      // clinicalDrawer.style.top = `${drawerTop}px` || '80px';
+      document.body.style.setProperty(`--clinical-trial-top`, `${drawerTop}px` || '80px')
       showDrawer(clinicalDrawer);
     }
 
