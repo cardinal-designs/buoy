@@ -108,7 +108,8 @@
             {% unless product.handle == 'rescue-kit' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             {% endunless %}
-            {% if settings.clinical_trial_display contains product %}
+            {% assign show_clinical_trial = settings.clinical_trial_display | where: 'handle', product.handle %}
+            {% if show_clinical_trial != blank %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
             {% endif %}
             {% if product.title == "CP3's Secret Stuff" %}
