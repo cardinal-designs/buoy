@@ -109,7 +109,7 @@
               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             {% endunless %}
             {% assign is_in_all = product.collections | where: 'url', '/collections/all' %}
-            {{ product.collections | map: 'title' }}
+
             {% if is_in_all != blank and product.handle != 'rescue-salts' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
             {% endif %}
