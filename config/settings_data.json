@@ -23,6 +23,17 @@
     "show_pdp_announce": true,
     "fix_announcement": false,
     "purchase_option_default": "sub",
+    "clinical_trial_display": [
+      "liquid-electrolyte-variety-kit",
+      "rescue-kit",
+      "ocean-electrolyte-kit",
+      "rescue-drops",
+      "hydration-drops",
+      "digestion-drops",
+      "brain-health-drops",
+      "immunity-drops",
+      "energy-drops"
+    ],
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
