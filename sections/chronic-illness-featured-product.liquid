@@ -93,11 +93,11 @@
                 {%- endif -%}
               </h4>
 
-              {% if product.tags != blank %}
+              {% if product.metafields.custom.product_card_bubble_text != blank %}
                 <div class="featured__product-tags">
-                  {% for tag in product.tags %}
+                  {% for bubble_text in product.metafields.custom.product_card_bubble_text.value %}
                     <div class="featured__product-tag">
-                      {{ tag }}
+                      {{ bubble_text }}
                     </div>
                   {% endfor %}
                 </div>

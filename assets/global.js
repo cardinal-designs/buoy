@@ -891,7 +891,7 @@ class VariantSelects extends HTMLElement {
       let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
       let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
       let closestForm = this.closest("product-form");
-    
+
       if (variantScript) {
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
@@ -1007,6 +1007,9 @@ class VariantSelects extends HTMLElement {
                 if(onetimeClearBtn){
                   onetimeClearBtn.style.display = 'none';
                 }
+              }
+              if(subscriptionOption == null){
+                addToCartText = `Add to Cart &mdash;&nbsp;<s>${foundVariant?.price || ""}</s>&nbsp;<span>${foundVariant?.one_discounted_price}</span>`;
               }
             }
           }else{
@@ -1154,7 +1157,6 @@ class VariantSelects extends HTMLElement {
       }
 
       addButton.dataset.available = !disable;
-  
       if (disable) {
           addButton.setAttribute("disabled", true);
           if (text) addButton.innerHTML = text;
