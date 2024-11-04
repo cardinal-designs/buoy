@@ -75,8 +75,7 @@
                         >Buoy's Clinical Trial</a
                       >
                     {% endif %}
-                    {% assign is_in_all = product.collections | where: 'handle', 'all' %}
-                    {% if is_in_all != blank and product.handle != 'rescue-salts' %}
+                    {% if product.handle == 'rescue-drops' %}
                       <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open"
                         >35% Chronic Illness Discount</a
                       >
