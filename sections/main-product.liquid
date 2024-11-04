@@ -71,7 +71,7 @@
                       >Full Supplement Facts</a
                     >
 
-                    {% assign show_clinical_trial_kit = settings.clinical_trial_display | where: 'title', block.settings.titlee %}
+                    {% assign show_clinical_trial_kit = settings.clinical_trial_display | where: 'title', block.settings.title %}
                     {% if show_clinical_trial_kit != blank %}
                       <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
                     {% endif %}
