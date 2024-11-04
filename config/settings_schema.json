@@ -191,5 +191,15 @@
         "default": "sub"
       }
     ]
+  },
+  {
+    "name": "Clinical Trial Drawer",
+    "settings": [
+      {
+        "type": "product_list",
+        "id": "clinical_trial_display",
+        "label": "Display drawer on these products"
+      }
+    ]
   }
 ]

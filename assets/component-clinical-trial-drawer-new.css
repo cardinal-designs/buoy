@@ -1,0 +1,488 @@
+.text-sans-12 {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.text-sans-14 {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.text-sans-16 {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.text-sans-20 {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 1.21;
+}
+
+.text-sans-24 {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.text-sans-30 {
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    line-height: 1.33;
+}
+
+.text-sans-40 {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    line-height: 1.25;
+}
+
+.text-rhymes-14 {
+    font-family: Rhymes-Light-Italic;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.text-rhymes-16 {
+    font-family: Rhymes-Light-Italic;
+    font-size: 16px;
+    line-height: 1.56;
+}
+
+.text-rhymes-20 {
+    font-family: Rhymes-Light-Italic;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.text-rhymes-24 {
+    font-family: Rhymes-Light-Italic;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+@media screen and (max-width: 768px) {
+    .m-text-sans-12 {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        line-height: 1.25;
+    }
+    
+    .m-text-sans-14 {
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .m-text-sans-16 {
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        line-height: 1.25;
+    }
+    
+    .m-text-sans-20 {
+        font-family: Inter, sans-serif;
+        font-size: 20px;
+        line-height: 1.21;
+    }
+    
+    .m-text-sans-24 {
+        font-family: Inter, sans-serif;
+        font-size: 24px;
+        line-height: 1.25;
+    }
+    
+    .m-text-sans-30 {
+        font-family: Inter, sans-serif;
+        font-size: 30px;
+        line-height: 1.33;
+    }
+    
+    .m-text-sans-40 {
+        font-family: Inter, sans-serif;
+        font-size: 40px;
+        line-height: 1.25;
+    }
+    
+    .m-text-rhymes-14 {
+        font-family: Rhymes-Light-Italic;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .m-text-rhymes-16 {
+        font-family: Rhymes-Light-Italic;
+        font-size: 16px;
+        line-height: 1.56;
+    }
+
+    .m-text-rhymes-20 {
+        font-family: Rhymes-Light-Italic;
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    
+    .m-text-rhymes-24 {
+        font-family: Rhymes-Light-Italic;
+        font-size: 24px;
+        line-height: 1.25;
+    }
+}
+
+body.lock-scroll header-container {
+    border-bottom: 1px solid black;
+}
+
+.relative {
+    position: relative;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.font-200 {
+    font-weight: 200;
+}
+
+.font-300 {
+    font-weight: 300;
+}
+
+.font-400 {
+    font-weight: 400;
+}
+
+.font-500 {
+    font-weight: 500;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-green {
+    background: #DEF647;
+}
+
+.bg-gray {
+    background: #F8F8F8;
+}
+
+.color-gray {
+    color: #797B7A
+}
+
+.clinical-trial-drawer {
+    height: 100%;
+    width: min(720px, 50vw );
+    position: fixed;
+    z-index: 9;
+    top: var(--clinical-trial-top);
+    right: -100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+    padding-bottom: 100px;
+  padding-top: var(--clinical-trial-padding-top);
+  }
+
+  .clinical-trial-drawer .drawer__wrapper-main {
+    /* padding: 0 30px; */
+  }
+  
+  @media screen and (max-width: 768px) {
+  
+    .clinical-trial-drawer {
+      top: auto;
+      right: 0 !important;
+      bottom: -100%;
+      width: 100%;
+      height: 80%;
+      padding-bottom: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      transition: 1s;
+      z-index: 99;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+    
+  }
+
+  .drawer__header.clinical-drawer__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px
+  }
+
+  .drawer__header.clinical-drawer__header::before {
+    opacity: 0;
+  }
+
+  .drawer__body > div {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .drawer__body > div {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+  }
+ 
+  .drawer__body > div:last-of-type {
+    padding-bottom: 70px;
+  }
+
+  .clinical__section-heading {
+    margin: 0;
+    padding: 0 0 12px;
+  }
+
+  .clinical__section-title {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+
+  .clinical__section-text {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+
+  .clinical__section-url-wrapper {
+    padding-bottom: 10px;
+  }
+
+  .clinical__section-url {
+    background: #F8F8F8;
+    color: #4C4F4E;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .clinical__label-wrapper {
+    padding: 52px 0 16px;
+  }
+
+  /* * + .clinical__label-wrapper {
+    margin-top: 52px;
+  } */
+
+  .clinical__label {
+    display: inline-block;
+    padding: 3px 7px;
+  }
+
+  .clinical__title {
+    margin: 0;
+    padding: 0 0 32px;
+    text-transform: capitalize;
+  }
+
+  .clinical__title em {
+    font-style: normal;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  .clinical__title-wrapper + .clinical__heading-wrapper .clinical__heading {
+    margin: 0;
+    padding: 0px 0 6px;
+  }
+
+  .clinical__label-wrapper + .clinical__heading-wrapper .clinical__heading {
+    margin: 0;
+    padding: 0px 0 6px;
+  }
+
+  .clinical__heading {
+    margin: 0;
+    padding: 40px 0 6px;
+  }
+
+  .clinical__subhead {
+    margin: 0;
+    padding: 0 0 6px;
+    color: #797B7A;
+  }
+
+  .clinical__text {
+    margin: 0;
+    padding: 10px 0 6px;
+  }
+
+  .clinical__icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0 0 4px;
+  }
+
+  .clinical__icon-svg {
+    width: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .clinical__stat-wrapper {
+    padding: 4px 0;
+  }
+
+  .clinical__stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .clinical__stat-number {
+    position: relative;
+    background: conic-gradient(#DEF647 var(--progress), #F8F8F8 0deg);
+    width: 80px;
+    height: 80px;
+    border: 1px solid #BBBCBC;
+    border-radius: 100%;
+    flex-shrink: 0;
+  }
+
+  .clinical__stat-number-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clinical__stat-text * {
+    margin: 0;
+  }
+
+  .clinical__charts-wrapper {
+    overflow-x: clip;
+  }
+
+  .clinical__charts {
+    margin: 16px 0 0 ;
+    position: relative;
+    z-index: 0;
+  }
+
+  .clinical__charts [data-swiper='chart-images'] {
+    overflow-x: visible;
+    overflow-y: clip;
+  }
+
+  .clinical__charts [data-swiper='chart-images'] .swiper-slide,
+  .clinical__chart-wrapper {
+    width: 100%;
+    max-width: 353px;
+    border: 1px solid #BBBCBC;
+    border-radius: 10px;
+    overflow: clip;
+    height: auto;
+  }
+
+
+  .clinical__charts [data-swiper='chart-images'] .swiper-slide img,
+  .clinical__chart-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .clinical__charts [data-swiper='chart-text'] .swiper-slide {
+    width: 100%;
+    height: auto;
+    background: white;
+  }
+
+  .clinical__charts .swiper-pagination {
+    position: relative;
+    top: unset;
+    bottom: unset;
+    padding-top: 16px;
+  }
+
+  .clinical__charts .swiper-pagination .swiper-pagination-bullet {
+    border: 1px solid black;
+    background: white;
+    transition: all .3s ease;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+  }
+
+  .clinical__charts .swiper-pagination .swiper-pagination-bullet-active {
+    background: black;
+  }
+
+  .clinical__charts p {
+    margin: 0 0 8px;
+  }
+
+  .clinical__chart-text-wrapper,
+  .clinical__carts [data-swiper='chart-text'] {
+    margin-top: 16px;
+  }
+
+  .citation__study {
+    padding: 16px 0 0 ;
+  }
+
+  .citation__study * {
+    margin: 0;
+    padding:0 0 6px;
+  }
+
+  .citation__study-url {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .clinical__spacer {
+    height: 50px;
+  }
+  .clinical__divider {
+    background: transparent;
+    border-bottom: 1px solid #E9E9E9;
+    margin: 0;
+    padding: 24px 0 0;
+  }

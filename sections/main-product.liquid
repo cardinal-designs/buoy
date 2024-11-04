@@ -70,11 +70,16 @@
                     <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open"
                       >Full Supplement Facts</a
                     >
-                    {% if block.settings.title == 'Hydration Drops' %}
+
+                    {% assign show_clinical_trial_kit = settings.clinical_trial_display | where: 'title', block.settings.title %}
+                    {% if show_clinical_trial_kit != blank %}
+                      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
+                    {% endif %}
+                    {% comment %} {% if block.settings.title == 'Hydration Drops' %}
                       <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open"
                         >Buoy's Clinical Trial</a
                       >
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                     {% if product.handle == 'rescue-drops' %}
                       <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open"
                         >35% Chronic Illness Discount</a
@@ -108,7 +113,8 @@
             {% unless product.handle == 'rescue-kit' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             {% endunless %}
-            {% if product.title == 'Hydration Drops' %}
+            {% assign show_clinical_trial = settings.clinical_trial_display | where: 'handle', product.handle %}
+            {% if show_clinical_trial != blank %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
             {% endif %}
             {% if product.title == "CP3's Secret Stuff" %}

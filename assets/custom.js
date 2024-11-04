@@ -254,8 +254,9 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Open Clinical Drawer
   function openClinical(e) {
-    event.stopPropagation();
-    let parentItem = !!e.target.closest('.dropdown-container-item__container');
+    e.stopPropagation();
+    // let parentItem = !!e.target.closest('.dropdown-container-item__container');
+    let parentItem = null
     if (parentItem) {
       let parentEl = e.target.closest('.dropdown-container-item');
       // const dataTitle = parentEl.querySelector('.dropdown-container-item__title').dataset.title;
@@ -280,6 +281,19 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     } else {
       // For single drawer on PDP
       let clinicalDrawer = document.getElementById("clinicalSideDrawer");
+
+      let drawerTop = document.querySelector("header-container").offsetHeight
+
+      if( document.querySelector("announcement-container") && !document.querySelector("announcement-container").classList.contains('announcement--scrolled')) {
+        // clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `${ document.querySelector("announcement-container").offsetHeight}px`
+        clinicalDrawer.style.setProperty(`--clinical-trial-padding-top`, `${document.querySelector("announcement-container").offsetHeight}px` || '80px')
+      } else {
+        // clinicalDrawer.querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
+        clinicalDrawer.style.setProperty(`--clinical-trial-padding-top`, `0px`)
+      }
+
+      // clinicalDrawer.style.top = `${drawerTop}px` || '80px';
+      clinicalDrawer.style.setProperty(`--clinical-trial-top`, `${drawerTop}px` || '80px')
       showDrawer(clinicalDrawer);
     }
 
@@ -299,6 +313,8 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
 
   // Close Clinical Drawer
   function closeClinical() {
+
+    document.getElementById("clinicalSideDrawer").querySelector('.drawer__wrapper-main').style.paddingTop = `0px`
     if (document.getElementById("clinicalSideDrawer")) {
       document.getElementById("clinicalSideDrawer").style.right = "-100%";
 
@@ -309,8 +325,10 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
     }
     document.querySelector('.page-blury-overlay').classList.remove('is-visible');
     document.querySelector('body').classList.remove('lock-scroll');
-    document.querySelector('header-container').style.zIndex = 3;
     document.querySelector('.clinical-trial-drawer .drawer__header').classList.remove('mobile-fixed-header');
+    setTimeout(() => {
+      document.querySelector('header-container').style.zIndex = 3;
+    }, "300");
   }
 
   // Open Supplement Drawer
@@ -885,3 +903,43 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(document.body, { childList: true, subtree: true });
 
 /* Popup modal drag and close code  -  End */
+
+// Clinical Modal Charts
+function initializeClinicalCharts(drawer) {
+  const swipers = drawer.querySelectorAll("[data-swiper='chart-images']")
+
+  if(!swipers) return
+
+  swipers.forEach(s => {
+    const options = {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+    }
+    
+    if(s.nextElementSibling.hasAttribute('data-swiper')) {
+      const textSwiper = new Swiper( s.nextElementSibling, {
+        slidesPerView: 1,
+        effect: 'fade'
+      })
+
+      options.controller = {
+        by: 'slide',
+        control: textSwiper
+      }
+
+      const swiper = new Swiper(s, options) 
+      
+    }
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const clinicalTrialDrawer = document.querySelector("#clinicalSideDrawer")
+  if (clinicalTrialDrawer) {
+    initializeClinicalCharts(clinicalTrialDrawer)
+  }
+}) 
