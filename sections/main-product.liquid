@@ -108,7 +108,8 @@
             {% unless product.handle == 'rescue-kit' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             {% endunless %}
-            {% if product.title == 'Hydration Drops' %}
+            {% assign is_in_all = product.collections | where: 'handle', 'all' %}
+            {% if is_in_all != blank and product.handle != 'rescue-salts' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
             {% endif %}
             {% if product.title == "CP3's Secret Stuff" %}
