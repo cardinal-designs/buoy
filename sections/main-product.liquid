@@ -108,7 +108,7 @@
             {% unless product.handle == 'rescue-kit' %}
               <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
             {% endunless %}
-            {{ settings.clinical_trial_display }}
+            {{ settings.clinical_trial_display | map: 'title' }}
             {% if settings.clinical_trial_display contains product %}
               <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
             {% endif %}
