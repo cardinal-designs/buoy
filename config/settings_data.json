@@ -20,7 +20,7 @@
     "order_icon": "shopify://shop_images/shipping-time.svg",
     "favicon": "shopify://shop_images/Buoy_Favicon-01.png",
     "show_announcement_bar": true,
-    "show_pdp_announce": true,
+    "show_pdp_announce": false,
     "fix_announcement": false,
     "purchase_option_default": "sub",
     "clinical_trial_display": [
@@ -37,9 +37,7 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "text": "Try all of our drops with  our new<strong> <u>Liquid Electrolyte Variety Kit </u>—> </strong>",
           "link": "shopify://products/liquid-electrolyte-kit",
@@ -1340,7 +1338,8 @@
           "text_pKi4NG": {
             "type": "text",
             "settings": {
-              "heading": "Our bodies induce a physiological response against bolus water intake or bolus electrolyte ingestion to protect against low blood salt and high blood salt, respectively."
+              "heading": "Our bodies induce a physiological response against bolus water intake or bolus electrolyte ingestion to protect against low blood salt and high blood salt, respectively.",
+              "divider": true
             }
           },
           "heading_FcYfd7": {
@@ -1510,14 +1509,11 @@
           "heading": "The Impact of Buoy on Hydration Status of Active Men and Women",
           "title": "University of Pittsburgh — Academic Medical Center",
           "text": "Clinical Trial NO: NCT05768789",
-          "url": "https://clinicaltrials.gov/study/NCT05768789?term=Buoy%20hydration&rank=1",
-          "product": ""
+          "url": "https://clinicaltrials.gov/study/NCT05768789?term=Buoy%20hydration&rank=1"
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "733389323033596483": {
         "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -1529,8 +1525,7 @@
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15885745614559378752": {
         "type": "shopify://apps/accessibly/blocks/app-embed/4b59303e-1141-4c8a-945f-bf4adb516864",
@@ -1549,8 +1544,7 @@
       "2728461494843721857": {
         "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "10605408327587305396": {
         "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
@@ -1571,14 +1565,12 @@
       "1291562577487733835": {
         "type": "shopify://apps/black-crow-more-new-customers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   }
