@@ -1555,6 +1555,27 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
     color: #797b7a;
     margin: 0 0 2px;
 }
+ul.list_faq {
+    padding: 0;
+    list-style: none;
+}
+ul.list_faq  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-family: inter, sans-serif;
+    font-style: normal;
+    margin: 0 0 6px;
+}
+ul.list_faq li:last-child {
+    margin: 0;
+}
+ul.list_faq li span {
+    display: flex;
+    align-items: center;
+}
+
 .swiper-container.swiper.cv_marque {
     padding: 20px 0;
 }
