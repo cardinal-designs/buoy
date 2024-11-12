@@ -170,7 +170,7 @@
           </div>
         </div>
         <script>
-  function showMoreBlocks() {
+function showMoreBlocks() {
     const hiddenBlocks = document.querySelectorAll('.cv_product_list .product-listblock-cv.hiddens');
     const showMoreButton = document.getElementById('show-more-button');
     const buttonIcon = document.getElementById('button-icon');
@@ -191,6 +191,33 @@
     `;
 
     showMoreButton.setAttribute('onclick', 'showLessBlocks()'); // Update the onclick to show less
+}
+
+function showLessBlocks() {
+    const allBlocks = document.querySelectorAll('.cv_product_list .product-listblock-cv');
+    const showMoreButton = document.getElementById('show-more-button');
+    const buttonIcon = document.getElementById('button-icon');
+
+    // Hide blocks greater than the first 3 by adding the 'hiddens' class
+    allBlocks.forEach((block, index) => {
+        if (index >= 3) {
+            block.classList.add('hiddens');
+        }
+    });
+
+    // Change the button text back to "Show More"
+    showMoreButton.textContent = ''; // Clear existing text content
+    showMoreButton.appendChild(buttonIcon); // Add the same icon back
+    showMoreButton.appendChild(document.createTextNode(' Show More'));
+
+    // Update the icon to point down
+    buttonIcon.innerHTML = `
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.05881 8.15884L13.6765 1.54245L12.7221 0.588257L7.05881 6.2685L1.39554 0.60625L0.441162 1.56045L7.05881 8.15884Z" fill="#1F2322" />
+      </svg>
+    `;
+
+    showMoreButton.setAttribute('onclick', 'showMoreBlocks()'); // Update the onclick to show more
 }
 
 document.addEventListener("DOMContentLoaded", function() {
