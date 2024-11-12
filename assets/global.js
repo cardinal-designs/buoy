@@ -1009,7 +1009,7 @@ class VariantSelects extends HTMLElement {
                 }
               }
               if(subscriptionOption == null){
-                addToCartText = `Add to Cart &mdash;&nbsp;<s>${foundVariant?.price || ""}</s>&nbsp;<span>${foundVariant?.one_discounted_price}</span>`;
+                addToCartText = `Add to Cart &mdash;&nbsp;<span>${foundVariant?.one_discounted_price}</span><s>${foundVariant?.price || ""}</s>`;
               }
             }
           }else{
