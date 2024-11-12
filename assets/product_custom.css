@@ -1616,7 +1616,7 @@ p.price_cv_sale {
 }
 @media screen and (max-width: 1023px) {
 .comparison-table .fixed-columns {
-    grid-template-columns: 140px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 140px 1fr 1fr 1fr 1fr;
 }
 }
 @media screen and (max-width: 991px) {
@@ -1661,7 +1661,7 @@ p.price_cv_sale {
     margin: inherit;
 }
 .comparison-table .fixed-columns {
-    grid-template-columns: 115px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 115px 1fr 1fr 1fr 1fr;
 } 
 .feature-rows .competitor-row {
     min-width: 100px;
