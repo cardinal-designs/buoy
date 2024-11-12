@@ -3,6 +3,11 @@ h1, h2, h3 ,h4, h5, h6, p, a {
     margin: 0;
     padding: 0;
 }
+cross-price {
+    color: #797b7a;
+    text-decoration: line-through;
+}
+
 .pdp_cv_new .product__media-list .slick-list {
     overflow: hidden;
 }
