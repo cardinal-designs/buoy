@@ -377,9 +377,8 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
-      {% unless template == 'product.new_best_of_buoy_bundle' %}
-        {% section 'clinical-trial-drawer' %}
-      {% endunless %}
+
+      {% section 'clinical-trial-drawer' %}
     </main>
 
     <div class="footer-container">
