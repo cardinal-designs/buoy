@@ -1719,6 +1719,15 @@ p.price_cv_sale {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+  .clinical-trial-drawer .clinical__spacer.bg-white {
+    height: 24px;
+}
+.clinical-trial-drawer  .clinical__spacer.bg-gray {
+    height: 24px;
+}
+body .clinical__label-wrapper {
+    padding: 24px 0 16px;
+}
   body .drawer__table {
     margin-top: 24px;
 }
