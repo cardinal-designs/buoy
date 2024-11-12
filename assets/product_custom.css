@@ -1656,19 +1656,15 @@ p.price_cv_sale {
     font-size: 15px;
     line-height: 23px;
 } 
-  .swiper-container.swiper.cv_marque .swiper-slide {
-width: calc(100% / 3.5) !important; 
+.swiper-container.swiper.cv_marque .swiper-slide {
+    width: calc(100% / 3.5) !important; 
 }  
 }
-
 @media screen and (max-width: 1023px) {
-  
 .comparison-table .fixed-columns {
- grid-template-columns: 140px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 140px 1fr 1fr 1fr 1fr 1fr;
 }
 }
-
-
 @media screen and (max-width: 991px){
   
 .product.pdp_cv_new .Testimonials_Rating {

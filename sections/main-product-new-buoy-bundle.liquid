@@ -92,11 +92,16 @@
         <div class="cv_product_list">
           <div class="main_heading_price">
             <p class="heading_pro_list">{{ section.settings.mheading }}</p>
-            {% if section.settings.price_mpro != blank %}
-              <p class="mian_prolist">
-                Save up to <span class="price_innpro"> {{ section.settings.price_mpro }}</span>
-              </p>
-            {% endif %}
+            {% assign current_variant_price = currentVariant.price %}
+            {% assign one_discount_value = current_variant_price
+              | times: currentVariant.metafields.custom.auto_discount_percent_off
+              | divided_by: 100
+            %}
+            {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+
+            <p class="mian_prolist">
+              Save up to <span class="price_innpro">{{ one_final_price }}</span>
+            </p>
           </div>
           <div class="product-listblock__container_cv pro_list_outermain">
             {%- assign block_count = section.blocks.size -%}
