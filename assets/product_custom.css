@@ -1,21 +1,18 @@
 /* PDP  */
 h1, h2, h3 ,h4, h5, h6, p, a {
     margin: 0;
-  padding: 0;
+    padding: 0;
 }
-/* html, body {
-    overflow-x: hidden;
-} */
 .pdp_cv_new .product__media-list .slick-list {
     overflow: hidden;
 }
 img {
-  display:inline-block;
-  vertical-align: middle;
-  max-width: 100%;
+    display:inline-block;
+    vertical-align: middle;
+    max-width: 100%;
 }
 .showOnMob {
-  display: none;
+    display: none;
 }
 body header-container {
     z-index: 99999;
@@ -120,10 +117,8 @@ body .section_right_content .okeReviews-reviewsSummary-starRating span.okeReview
     font-family: 'Ryhmes Text';
     letter-spacing: -0.02em;
 }
-
 .media-section img {
-    /* filter: blur(3px); */
-        width: 100%;
+    width: 100%;
     display: block;
 }
 .cv_image_video_pdp .review_cv {
