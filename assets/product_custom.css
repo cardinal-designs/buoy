@@ -1590,6 +1590,9 @@ ul.list_faq li span {
 .clinical__charts>.swiper>.swiper-wrapper {
     display: block;
 }
+.clinical__charts [data-swiper=chart-text] .swiper-slide p {
+    text-align: left;
+}
 
 /* +++++++++++++++++ */
 /* Responsive start */
