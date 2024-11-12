@@ -1,0 +1,1777 @@
+{% comment %}theme-check-disable TemplateLength{% endcomment %}
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-supplements-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sticky-atc.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+{% assign currentVariant = product.selected_or_first_available_variant %}
+<section data="{{product | json}}" class="page-width">
+  <input type="hidden" id="current_variant_price" value="{{ currentVariant.price | money_without_trailing_zeros }}">
+  <div class="product pdp_cv_new {% if product.handle == 'wellness-kit' %}wellness-set{% endif %}">
+    <div class="product__media-wrapper">
+      <div class="sticky-images">
+        <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+          {{ 'accessibility.skip_to_product_info' | t }}
+        </a>
+        <div class="product__media-list">
+          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+          {% comment %}
+            {%- if currentVariant.featured_media != null -%}
+              {%- assign media = currentVariant.featured_media -%}
+              <div
+                class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+                data-media-id="{{ section.id }}-{{ media.id }}"
+              >
+                {% render 'product-thumbnail',
+                  media: media,
+                  position: 'featured',
+                  loop: section.settings.enable_video_looping,
+                  modal_id: section.id,
+                  xr_button: true
+                %}
+                <!-- Add custom text for the featured image -->
+                <div class="image-text-overlay">{{ section.settings.img_1 }}</div>
+              </div>
+            {%- endif -%}
+          {% endcomment %}
+          {%- for media in product.media -%}
+            <div
+              class="product__media-item{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+              data-media-id="{{ section.id }}-{{ media.id }}"
+            >
+              {% render 'product-thumbnail',
+                media: media,
+                position: forloop.index,
+                loop: section.settings.enable_video_looping,
+                modal_id: section.id,
+                xr_button: true
+              %}
+
+              <!-- Add custom text for each image based on index -->
+              <div class="image-text-overlay">
+                {%- if forloop.index == 0 -%}
+                  <p>8 Bottles 1 Rescue Salt 2 Free Accessories</p>
+                {%- elsif forloop.index == 1 -%}
+                  {{ section.settings.img_2 }}
+                {%- elsif forloop.index == 2 -%}
+                  <p>Limited Time: 20% Off</p>
+                {%- elsif forloop.index == 3 -%}
+                  <p>Free Shipping on Orders Over $50</p>
+                {%- else -%}
+                  <p>Check Out Our Latest Collection!</p>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="product__media-arrows"></div>
+      </div>
+    </div>
+
+    <div class="product__info-wrapper">
+      <div
+        id="ProductInfo-{{ section.id }}"
+        class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"
+      >
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+        <h1 class="product__title h4">
+          The {{ product.title | escape }}
+          {% if product.metafields.custom.curved_icon == true %}
+          {% endif %}
+        </h1>
+        <div class="price-container">
+          <div class="custom price"></div>
+        </div>
+        <div class="product__description sh4">
+          <p>{{ section.settings.text_desc }}</p>
+        </div>
+        <div class="cv_product_list">
+          <div class="main_heading_price">
+            <p class="heading_pro_list">{{ section.settings.mheading }}</p>
+            {% if section.settings.price_mpro != blank %}
+              <p class="mian_prolist">
+                Save up to <span class="price_innpro"> {{ section.settings.price_mpro }}</span>
+              </p>
+            {% endif %}
+          </div>
+          <div class="product-listblock__container_cv pro_list_outermain">
+            {%- assign block_count = section.blocks.size -%}
+            {%- assign block_limit = 3 -%}
+            {%- assign displayed_count = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'pro_list' -%}
+                  <div class="product-listblock-cv {% if displayed_count >= block_limit %}hiddens{% endif %}">
+                    <div class="img_pro_list">
+                      <div class="img_pro_list_inner">
+                        <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}">
+                        {% if block.settings.image_qua != blank %}
+                          <p>{{ block.settings.image_qua }}</p>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="title_price">
+                        <p class="pro_list_title">{{ block.settings.title_pro }}</p>
+                        <div class="pro_list_price">
+                          <p class="pro_list_pricce">{{ block.settings.pro_price_pro }}</p>
+                        </div>
+                      </div>
+
+                      <p class="pro_list_quantity">{{ block.settings.quantity_pro }}</p>
+                      <p class="pro_list_desc">{{ block.settings.desc_pro }}</p>
+                      <!-- Add onclick to open specific popup for this block -->
+                      {% if block.settings.popup_title_pro != blank %}
+                        <p class="pro_list_popup_title block__{{ block.id }}">
+                          {{ block.settings.popup_title_pro }}
+                        </p>
+                      {% endif %}
+                    </div>
+                  </div>
+                  {%- assign displayed_count = displayed_count | plus: 1 -%}
+                  {% comment %}
+                    <!-- Popup for this block -->
+                    <!--
+                      <div id="popup-modal-{{ block.id }}" class="popup-modal" style="display:none;">
+                        <div class="popup-content">
+                          <span class="close-button" onclick="closePopup('{{ block.id }}')">×</span>
+                          <div id="popup-title-{{ block.id }}">
+                            <p>{{ block.settings.popup_title_pro }}</p>
+                          </div>
+                          <div id="popup-description-{{ block.id }}">{{ block.settings.popup_desc }}</div>
+                        </div>
+                      </div>
+                    -->
+                  {% endcomment %}
+              {%- endcase -%}
+            {%- endfor -%}
+            {%- if block_count > block_limit -%}
+              <button id="show-more-button" onclick="showMoreBlocks()">
+                <span id="button-icon">
+                  <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.05881 8.15884L0.441162 1.54245L1.39554 0.588257L7.05881 6.2685L12.7221 0.606249L13.6765 1.56045L7.05881 8.15884Z" fill="#1F2322" />
+                  </svg>
+                </span>
+                Show More
+              </button>
+            {%- endif -%}
+          </div>
+        </div>
+        <script>
+  function showMoreBlocks() {
+    const hiddenBlocks = document.querySelectorAll('.cv_product_list .product-listblock-cv.hiddens');
+    const showMoreButton = document.getElementById('show-more-button');
+    const buttonIcon = document.getElementById('button-icon');
+
+    // Show hidden blocks by removing the 'hiddens' class
+    hiddenBlocks.forEach((block) => block.classList.remove('hiddens'));
+
+    // Change the button text to "Show Less"
+    showMoreButton.textContent = ''; // Clear existing text content
+    showMoreButton.appendChild(buttonIcon); // Add the same icon back
+    showMoreButton.appendChild(document.createTextNode(' Show Less'));
+
+    // Update the icon to point up
+    buttonIcon.innerHTML = `
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.05881 0.84116L0.441162 7.45755L1.39554 8.41174L7.05881 2.7315L12.7221 8.39375L13.6765 7.43955L7.05881 0.84116Z" fill="#1F2322" />
+      </svg>
+    `;
+
+    showMoreButton.setAttribute('onclick', 'showLessBlocks()'); // Update the onclick to show less
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  document.querySelectorAll('.pro_list_popup_title').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('.content').querySelector('.pro_list_title').innerHTML;
+        if (window.innerWidth < 768) {
+           document.querySelector(`[data-product-name="${TitlePdp}"]`).style.bottom = "0px";
+           document.querySelector(`[data-product-name="${TitlePdp}"]`).style.right = "";
+        } else {  
+           document.querySelector(`[data-product-name="${TitlePdp}"]`).style.right = "0px";
+           document.querySelector(`[data-product-name="${TitlePdp}"]`).style.bottom = "";
+        }      
+        document.body.classList.add('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.add('is-visibles');
+    });
+  });
+
+  document.querySelectorAll('.js-close-popup-drawer').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  });  
+
+  document.querySelectorAll('.drawer__close').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  });   
+});
+
+
+
+
+          {% comment %}
+// Open the specific popup for each block
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = 'flex'; // Show the popup
+    }
+}
+
+          // Close the popup
+          function closePopup(blockId) {
+            const popup = document.getElementById('popup-modal-' + blockId);
+            if (popup) {
+              popup.style.display = 'none'; // Hide the popup
+            }
+          }
+ // Add class to body when any element with 'pro_list_popup_title' class is clicked
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all elements with the 'pro_list_popup_title' class
+    const popupTitles = document.querySelectorAll('.pro_list_popup_title');
+    
+    // Get all elements with 'close-button' class
+    const popupCloses = document.querySelectorAll('.close-button');
+    
+    // Loop through each element with 'pro_list_popup_title' class
+    popupTitles.forEach(function(popupTitle) {
+        popupTitle.addEventListener('click', function() {
+            // Add the class to the body when clicked
+            document.body.classList.add('popupNAME');
+
+            // Get the popup ID from the data attribute
+            const popupId = popupTitle.getAttribute('data-popup-id'); 
+            openPopup(popupId); // Open the specific popup
+        });
+    });
+
+    // Loop through each close button and attach a click event listener
+    popupCloses.forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+            // Get the associated popup ID to close
+            const blockId = closeButton.getAttribute('data-block-id'); 
+            closePopup(blockId); // Close the specific popup
+
+            // Remove the class from the body when the close button is clicked
+            document.body.classList.remove('popupNAME');
+        });
+    });
+});
+  
+
+          // Close popup when clicking outside of it
+          window.onclick = function (event) {
+            const popups = document.querySelectorAll('.popup-modal');
+            popups.forEach(function (popup) {
+              if (event.target === popup) {
+                popup.style.display = 'none';
+              }
+            });
+          }
+{% endcomment %}
+        </script>
+        <style>
+          .hiddens {
+            display: none !important;
+          }
+
+          /* Popup Modal Styles */
+          .popup-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+          }
+
+          .close-button {
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+          }
+
+          .close-button:hover {
+            color: #f00;
+          }
+        </style>
+
+        <div class="dropdown-container-item__container">
+          {%- if section.settings.dropdown_title != blank -%}
+            <div class="dropdown-container-item__main-title">{{ section.settings.dropdown_title }}</div>
+          {%- endif -%}
+          {% for block in section.blocks %}
+            {% if block.type == 'dropdown' %}
+              <div class="dropdown-container-item">
+                <div class="dropdown-container-item__title" data-title="{{ block.settings.title }}">
+                  <p>{{ block.settings.title }}</p>
+                  <div class="dropdown-container-item__x"></div>
+                </div>
+                <div class="dropdown-container-item__body">
+                  <div class="dropdown-container-item__body-text">
+                    <p class="rhyme">{{ block.settings.subtitle }}</p>
+                    <div class="bubble-text">
+                      <p>{{ block.settings.bubble_text }}</p>
+                    </div>
+                  </div>
+                  <div class="dropdown-container-item__body-list">
+                    <img src="{{ block.settings.icon1 | img_url: 'master' }}">
+                    <p>{{ block.settings.list_item1 }}</p>
+                  </div>
+                  <div class="dropdown-container-item__body-list">
+                    <img src="{{ block.settings.icon2 | img_url: 'master' }}">
+                    <p>{{ block.settings.list_item2 }}</p>
+                  </div>
+                  <div class="dropdown-container-item__body-list">
+                    <img src="{{ block.settings.icon3 | img_url: 'master' }}">
+                    <p>{{ block.settings.list_item3 }}</p>
+                  </div>
+                  <div class="product__drawer-triggers">
+                    <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open"
+                      >Full Supplement Facts</a
+                    >
+                    {% if block.settings.title == 'Hydration Drops' %}
+                      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open"
+                        >Buoy's Clinical Trial</a
+                      >
+                    {% endif %}
+                    {% if product.handle == 'rescue-drops' %}
+                      <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open"
+                        >35% Chronic Illness Discount</a
+                      >
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="product-listblock__container-one">
+          <div class="product-listblock">
+            {%- if section.settings.product_feature_icon != blank -%}
+              <img src="{{ section.settings.product_feature_icon | img_url: 'master' }}">
+            {%- endif -%}
+            <div>
+              {%- if section.settings.product_feature_text != blank -%}
+                <p class="sh3 product-listblock__text">{{ section.settings.product_feature_text }}</p>
+              {%- endif -%}
+              {%- if section.settings.product_feature_text_two != blank -%}
+                <p class="product-listblock__subtext">{{ section.settings.product_feature_text_two }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+        {% if section.settings.show_drawer_triggers == true %}
+          <div class="product__drawer-triggers">
+            {% unless product.handle == 'rescue-kit' %}
+              <a href="javascript:void(0);" class="tabs-label body medium js-ingredients-open">Full Supplement Facts</a>
+            {% endunless %}
+            {% if product.title == 'Hydration Drops' %}
+              <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Buoy's Clinical Trial</a>
+            {% endif %}
+            {% if product.title == "CP3's Secret Stuff" %}
+              <a href="javascript:void(0);" class="tabs-label body medium js-clinical-open">Why This Collab</a>
+            {% endif %}
+            {% if product.handle == 'rescue-drops' or product.handle == 'rescue-kit' %}
+              <a href="#chronic" class="green-text tabs-label body medium">35% Chronic Illness Discount</a>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% capture variantMetafield %}
+        <select class="js-variant-metafield hidden">
+          {% for variant in product.variants %}
+          <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}"
+            data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
+          {% endfor %}
+        </select>
+        {% endcapture %}
+        <product-form class="product-form">
+          {%- form 'product',
+            product,
+            id: product_form_id,
+            data-smartrr-form-id: product.id,
+            class: 'form',
+            novalidate: 'novalidate',
+            data-type: 'add-to-cart-form'
+          -%}
+            {%- unless product.has_only_default_variant -%}
+              {%- if section.settings.picker_type == 'button' -%}
+                {% assign my_fields = product.variant.metafields.custom %}
+                <p id="selector" class="product-form__text-label">Choose Quantity</p>
+                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
+                  {%- for option in product.options_with_values -%}
+                    {% assign optionIndex = forloop.index0 %}
+                    {% assign values = '' %}
+                    <fieldset class="js product-form__input">
+                      {%- for variant in product.variants -%}
+                        {% assign value = variant.options[optionIndex] %}
+                        {%- unless values contains value -%}
+                          {% assign values = values | join: ',' %}
+                          {% assign values = values | append: ',' | append: value %}
+                          {% assign values = values | split: ',' %}
+                          {% assign my_fields = variant.metafields.custom %}
+                          <span class="Variant_Blocks" data-id="{{ variant.id }}">
+                            <input
+                              type="radio"
+                              id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                              name="{{ option.name }}"
+                              value="{{ value | escape }}"
+                              form="product-form-{{ section.id }}"
+                              {% if option.selected_value == value %}
+                                checked
+                              {% endif %}
+                            >
+                            <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                              {%- if my_fields.supply_time != blank -%}
+                                <span class="Supply_Time">
+                                  {{ my_fields.supply_time }} /<br class="hide-desktop">
+                                  {{ my_fields.servings }}
+                                </span>
+                              {%- endif -%}
+                              {%- if my_fields.product_image != blank -%}
+                                <img
+                                  src="{{ my_fields.product_image | img_url: 'master' }}"
+                                  width="{{ my_fields.product_image.value.width }}"
+                                  height="{{ my_fields.product_image.value.height }}"
+                                >
+                              {%- endif -%}
+                              <div class="variant_mian">
+                                <div class="mainpriceDiv">
+                                  <div class="Variant_Title-outer">
+                                    <p class="Variant_Title">
+                                      <span class="svg_variant">
+                                        <svg
+                                          width="12"
+                                          height="10"
+                                          viewBox="0 0 12 10"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M4.0473 9.03966L0 4.99238L0.626978 4.37281L4.0473 7.79313L11.333 0.5L11.96 1.12696L4.0473 9.03966Z"
+                                            fill="white" />
+                                        </svg>
+                                      </span>
+                                      {%- if forloop.index0 == 0 -%}
+                                        {{ value -}}
+                                      {%- else -%}
+                                        3 Bundles + <span class="free_element">4th Free</span>
+                                      {%- endif %}
+                                    </p>
+                                    <span class="smw-text">
+                                      {%- if forloop.index0 == 0 -%}
+                                        <p>8 Bottles, 1 Rescue Salt, 2 Free Accessories</p>
+                                      {%- elsif forloop.index0 == 1 -%}
+                                        <p>32 Bottles, 4 Rescue Salt, 8 Free Accessories</p>
+                                        <img
+                                          class="content_variant"
+                                          src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Frame_1000006577.png?v=1730807532"
+                                        >
+                                      {%- endif -%}
+                                    </span>
+                                  </div>
+
+                                  <div class="pricevariantWrap">
+                                    <p class="variantPriceDiv smw-text-price">
+                                      <span class="price">{{ variant.price | money_without_trailing_zeros }}</span>
+                                      <span class="compare-price">
+                                        {% if variant.metafields.custom.compare_price != blank %}
+                                          <del>${{ variant.metafields.custom.compare_price }}</del>
+                                        {% else %}
+                                          <del>{{ variant.compare_at_price | money }}</del>
+                                        {% endif %}
+                                      </span>
+                                    </p>
+
+                                    <div class="bestdIV">
+                                      {% assign var_price = variant.price
+                                        | money_without_trailing_zeros
+                                        | remove: '$'
+                                        | remove: ','
+                                      %}
+                                      {% assign var_price_number = var_price | times: 1 %}
+
+                                      <!-- Fetch the compare_price stored as text -->
+                                      {% assign compare_price = variant.metafields.custom.compare_price %}
+
+                                      <!-- Convert the compare_price (text) to a number -->
+                                      {% assign compare_price_number = compare_price | times: 1 %}
+
+                                      <!-- Calculate the saved amount dynamically -->
+                                      {% assign saved_amount = compare_price_number | minus: var_price_number %}
+
+                                      <!-- Display the calculated savings -->
+                                      <span class="Best_Value"> Save {{ saved_amount | money | remove: '-' }}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="price_variant"></div>
+                              {%- if my_fields.serving_cost != blank -%}
+                                <span
+                                  class="Serving_Cost"
+                                  data-subprice="{{ product.metafields.custom.serving_sub_price }}"
+                                  data-onetimeprice="{{ my_fields.serving_cost }}"
+                                >
+                                  {{ my_fields.serving_cost }}
+                                </span>
+                              {%- endif -%}
+                            </label>
+                          </span>
+                        {%- endunless -%}
+                      {%- endfor -%}
+                    </fieldset>
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                  {{ variantMetafield }}
+                </variant-radios>
+                {% comment %}
+                  <script type="application/json" class="variantMetaJSON">
+                            [
+                              {%- assign comma = false -%}
+                              {%- for variant in product.variants -%}
+                                  {%- if comma -%},{%- endif -%}
+                                  {% assign variant_price = variant.price %}
+                                  {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                                  {% assign one_final_price = variant_price | minus: one_discount_value %}
+                                  {
+                                    "id": {{ variant.id }},
+                                    "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
+                                    "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
+                                    "price": "{{ variant_price | money_without_trailing_zeros }}",
+                                    "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
+                                    "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                                  }
+                                  {%- assign comma = true -%}
+                              {%- endfor -%}
+                            ]
+                          </script>
+                {% endcomment %}
+              {%- else -%}
+                <variant-selects
+                  class="no-js-hidden"
+                  data-section="{{ section.id }}"
+                  data-url="{{ product.url }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {%- for option in product.options_with_values -%}
+                    <div class="product-form__input product-form__input--dropdown">
+                      <div class="select">
+                        <select
+                          id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="select__select body"
+                          name="options[{{ option.name | escape }}]"
+                          form="product-form-{{ section.id }}"
+                        >
+                          {%- for value in option.values -%}
+                            <option
+                              value="{{ value | escape }}"
+                              {% if option.selected_value == value %}
+                                selected="selected"
+                              {% endif %}
+                            >
+                              {{ value }}
+                              {% if value == 'Single' %}
+                                — 40 Servings (1 week supply)
+                              {% elsif value == '3 Pack' %}
+                                — 120 Servings (1 month supply)
+                              {% elsif value == '6 Pack' %}
+                                — 240 Servings (2 month supply)
+                              {% elsif value == '12 Pack' %}
+                                — 480 Servings (4 month supply)
+                              {% endif %}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                        {% render 'icon-caret' %}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                  {{ variantMetafield }}
+                </variant-selects>
+              {%- endif -%}
+            {%- endunless -%}
+            <noscript>
+              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}">
+                  {{- 'products.product.product_variants' | t -}}
+                </label>
+                <div class="select">
+                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                    {%- for variant in product.variants -%}
+                      <option
+                        {% if variant == currentVariant %}
+                          selected="selected"
+                        {% endif %}
+                        {% if variant.available == false %}
+                          disabled
+                        {% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+            </noscript>
+
+            {% if settings.show_shipping_countdown != blank %}
+              {% if product.tags contains 'Pre-Order Promo' %}
+                <div id="Order_Within" class="Order_Within Risk_Free">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.35678 17.9278C4.64129 17.9278 4.03381 17.6776 3.53435 17.1772C3.03489 16.6767 2.78516 16.069 2.78516 15.3541H1.23389V5.78206C1.23389 5.31902 1.3943 4.92708 1.71514 4.60625C2.03597 4.28542 2.4279 4.125 2.89092 4.125H15.3717V7.61539H17.8043L20.7659 11.5817V15.3541H19.1089C19.1089 16.069 18.8584 16.6767 18.3576 17.1772C17.8567 17.6776 17.2486 17.9278 16.5331 17.9278C15.8176 17.9278 15.2101 17.6776 14.7107 17.1772C14.2112 16.6767 13.9614 16.069 13.9614 15.3541H7.93257C7.93257 16.071 7.68214 16.6792 7.18129 17.1786C6.68045 17.6781 6.07228 17.9278 5.35678 17.9278ZM5.35886 16.5529C5.69498 16.5529 5.97879 16.4371 6.21031 16.2056C6.44183 15.9741 6.55759 15.6902 6.55759 15.3541C6.55759 15.018 6.44183 14.7342 6.21031 14.5027C5.97879 14.2712 5.69498 14.1554 5.35886 14.1554C5.02274 14.1554 4.73891 14.2712 4.5074 14.5027C4.27588 14.7342 4.16012 15.018 4.16012 15.3541C4.16012 15.6902 4.27588 15.9741 4.5074 16.2056C4.73891 16.4371 5.02274 16.5529 5.35886 16.5529ZM2.60886 13.9792H3.27168C3.46675 13.6395 3.7485 13.3548 4.11694 13.1251C4.48538 12.8953 4.89935 12.7804 5.35886 12.7804C5.80663 12.7804 6.21766 12.8938 6.59196 13.1207C6.96627 13.3475 7.25096 13.6336 7.44605 13.9792H13.9967V5.49998H2.89092C2.82042 5.49998 2.75578 5.52936 2.697 5.58812C2.63824 5.64689 2.60886 5.71154 2.60886 5.78206V13.9792ZM16.5352 16.5529C16.8713 16.5529 17.1551 16.4371 17.3866 16.2056C17.6181 15.9741 17.7339 15.6902 17.7339 15.3541C17.7339 15.018 17.6181 14.7342 17.3866 14.5027C17.1551 14.2712 16.8713 14.1554 16.5352 14.1554C16.199 14.1554 15.9152 14.2712 15.6837 14.5027C15.4522 14.7342 15.3364 15.018 15.3364 15.3541C15.3364 15.6902 15.4522 15.9741 15.6837 16.2056C15.9152 16.4371 16.199 16.5529 16.5352 16.5529ZM15.3717 12.1458H19.4791L17.0992 8.99035H15.3717V12.1458Z"
+                      fill="#F00000" />
+                  </svg>
+                  <span style="margin-left: 5px; color: #F00000">
+                    {{- product.metafields.my_fields.custom_shipping_text -}}
+                  </span>
+                </div>
+              {% elsif product.metafields.my_fields.custom_shipping_text != blank %}
+                <div id="Order_Within" class="Order_Within Risk_Free">
+                  <img src="{{ settings.order_icon | img_url: 'master' }}">
+                  <span>{{ product.metafields.my_fields.custom_shipping_text }}</span>
+                </div>
+              {% else %}
+                <div id="Order_Within" class="Order_Within Risk_Free">
+                  <img src="{{ settings.order_icon | img_url: 'master' }}">
+                  <span class="autoDay">{{ settings.order_within_text }}</span>
+                </div>
+              {% endif %}
+            {% endif %}
+
+            {% if product.selling_plan_groups[0].selling_plans[0].id %}
+              <input
+                type="hidden"
+                name="selling_plan_id"
+                value="{{ product.selling_plan_groups[0].selling_plans[0].id }}"
+              >
+            {% endif %}
+
+            <input type="hidden" name="id" value="{{ currentVariant.id }}">
+            <div class="product-form__buttons">
+              <button
+                type="submit"
+                name="add"
+                style="flex-direction: initial; padding: 12px 10px;"
+                data-available="{{ currentVariant.available }}"
+                class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                {% if currentVariant.available == false %}
+                  disabled
+                {% endif %}
+                data-subscription-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                {% if currentVariant.metafields.custom.compare_price != blank %}
+                  data-compare="{{ currentVariant.metafields.custom.compare_price }}"
+                {% endif %}
+              >
+                <div style="display: flex;">
+                  {%- if currentVariant.available -%}
+                    Add to Cart —&nbsp;
+
+                    <span class="discounted-price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+                    {% if currentVariant.metafields.custom.compare_price != blank %}
+                      <del>${{ currentVariant.metafields.custom.compare_price }}</del>
+                    {% else %}
+                      <del>{{ currentVariant.compare_at_price }}</del>
+                    {% endif %}
+                  {%- else -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                </div>
+              </button>
+              {% comment %} Mobile sticky ATC {% endcomment %}
+              <div class="product-form__sticky-atc hide-desktop">
+                <p class="product-form__sticky-atc-text">30-Day Risk Free</p>
+                <a
+                  href="#selector"
+                  name="add"
+                  style="flex-direction: initial; padding: 12px 10px;"
+                  data-available="{{ currentVariant.available }}"
+                  class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                >
+                  <div style="display: flex;">Add to Cart</div>
+                </a>
+              </div>
+              {% comment %} Mobile sticky ATC end {% endcomment %}
+              {%- if block.settings.show_dynamic_checkout -%}
+                {% comment %} {{ form | payment_button }} {% endcomment %}
+                <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                  <span data-smartrr-compare-price></span>
+                  <span data-smartrr-regular-price></span>
+                  <span data-smartrr-subscribe-price></span>
+                </div>
+              {%- endif -%}
+            </div>
+
+            {% if product.metafields.custom.discount_bubble != blank %}
+              <div class="discount-bubble">
+                <p>{{ product.metafields.custom.discount_bubble }}</p>
+              </div>
+            {% endif %}
+
+            {%- liquid
+              assign currentVariant = currentVariant
+              assign requiresPlan = product.requires_selling_plan
+              assign selectedAllocation = product.selected_or_first_available_selling_plan_allocation
+              assign currentAllocations = currentVariant.selling_plan_allocations
+            -%}
+            {%- comment -%} Subscription Box {%- endcomment -%}
+          {%- endform -%}
+          <script type="application/json" id="js-product-variant-json">
+            {
+              {% for variant in product.variants %}
+                "{{ variant.id }}":{
+                  "price":"{{ variant.price | money_without_trailing_zeros }}",
+                  "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money_without_trailing_zeros | json }}{% else %}""{% endif %},
+                  "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            }
+          </script>
+          <script id="productJSON" type="application/json">
+            {
+              {% for variant in product.variants %}
+                "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            }
+          </script>
+        </product-form>
+        <div class="text_cv_below">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Callouts_a7d021a6-7c87-44be-ba50-8f67d4b613a2.png?v=1730704659"
+          >
+          <p>Free Shipping + 30-Day Guarantee</p>
+        </div>
+        <div class="product-listblock__container_clinstudy">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'list_block' -%}
+                <div class="product-listblock_clinstudy">
+                  <div class="product-listblock_clinstudy_img">
+                    <img src="{{ block.settings.list_block_type_img | img_url: 'master' }}">
+                  </div>
+                  <div>
+                    <p class="sh2 product-listblock__text">{{ block.settings.list_block_type_text }}</p>
+                    <p class="product-listblock__subtext">{{ block.settings.list_block_type_subtext }}</p>
+                    <div class="btn_clistdy">
+                      <span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M11.0717 7.14005L5.80671 12.3994L6.58828 13.1765L13.1765 6.58824L6.58828 0L5.80671 0.777064L11.0717 6.03642H4.29153e-05V7.14005H11.0717Z"
+                            fill="#1F2322" />
+                        </svg>
+                      </span>
+                      <a href="javascript:void(0);" class="tabs-labels bodys js-clinical-opens" id="cv_clinical-drawer"
+                        >View Clinical Study</a
+                      >
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="Testimonials_Mains">
+          <p class="Testimonials_Main_Titles">What They’ve Been Saying</p>
+          <div class="testonmial_outers">
+            <div class="swiper-container_ts_cv swiper Testimonials_Sliders">
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'testimonials' -%}
+                      <div class="swiper-slide Testimonials_Wrappers">
+                        <div class="innerslide-testo">
+                          {% if block.settings.testimonial_video != blank %}
+                            <div class="slidetest-inner" style="position: relative;">
+                              <!--
+                                <div class="video-tag">
+                                  <p>{{ block.settings.video_tag }}</p>
+                                </div>
+                              -->
+                              <!--
+                                <div class="reviews_button hide-mobile">
+                                  <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Exclude.png?v=1699317160">
+                                </div>
+                              -->
+                              <div class="video_slide-testo">
+                                <video class="hide-mobile" autoplay muted loop webkit-playsinline playsinline>
+                                  <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
+                                </video>
+                                <video class="hide-desktop" autoplay muted loop webkit-playsinline playsinline>
+                                  <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
+                                </video>
+                              </div>
+                            </div>
+                          {% elsif block.settings.testimonial_image != blank %}
+                            <div style="position: relative;">
+                              <div class="video-tag">
+                                <p>{{ block.settings.video_tag }}</p>
+                              </div>
+                              <div class="rest-slideimg">
+                                <img src="{{ block.settings.testimonial_image | img_url: 'master' }}">
+                              </div>
+                            </div>
+                          {% endif %}
+                          <span class="Testimonials_Rating"></span>
+                          {% if block.settings.testimonial_text != blank %}
+                            <p>{{ block.settings.testimonial_text }}</p>
+                          {% endif %}
+                        </div>
+                      </div>
+                  {%- endcase -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+          {% if section.settings.testimonial_btn_txt != blank %}
+            <a href="{{ section.settings.testimonial_btn_link }}" class="All_Reviews">
+              {{- section.settings.testimonial_btn_txt -}}
+            </a>
+          {% endif %}
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper('.swiper-container_ts_cv', {
+              loop: true,
+              autoplay: {
+                delay: 1000, // Adjust delay time as needed
+                disableOnInteraction: false,
+              },
+              spaceBetween: 18,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              breakpoints: {
+                // Mobile (up to 767px): Show 2 slides
+                0: {
+                  slidesPerView: 2,
+                },
+                // Desktop (768px and above): Show 3.5 slides
+                768: {
+                  slidesPerView: 4,
+                }
+              }
+            });
+          });
+        </script>
+
+        {% if section.settings.shop_more_text1 != blank or section.settings.shop_more_text2 != blank %}
+          <div class="product__links">
+            {% if section.settings.shop_more_text1 != blank %}
+              <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+                {{ section.settings.shop_more_text1 }}
+                {% render 'icon-arrow-right' %}
+              </a>
+            {% endif %}
+            {% if section.settings.shop_more_text2 != blank %}
+              <a href="{{ section.settings.shop_more_link1 }}" class="body bold">
+                {{ section.settings.shop_more_text2 }}
+                {% render 'icon-arrow-right' %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<div class="Supplements_Popup"></div>
+<div class="show-product-bar"></div>
+{% javascript %}
+// Product tabs
+$('.product__tabs-header .body').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
+$(this).siblings().removeClass('active');
+$(this).addClass('active');
+$(this).closest('.product__tabs').find('.product__tab').removeClass('active');
+$(this).closest('.product__tabs').find(`.product__tab[data-tab="${tab}"]`).addClass('active');
+}
+});
+// Bundle tabs
+$('.product__bundle-header-container button').click(function() {
+if (!$(this).hasClass('active')) {
+var tab = $(this).data('tab');
+$('.product__bundle-header-container button').removeClass('active');
+$(this).addClass('active');
+$('.product__tabs').removeClass('active');
+$(`.product__tabs[data-tab="${tab}"]`).addClass('active');
+}
+});
+// Nutrition Label Popup
+{% endjavascript %}
+<script>
+  window.Order_Within = function () {
+    const date = new Date();
+    var currentHours = new Date(date.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', })).getHours()
+    var currentMinutes = new Date(date.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', })).getMinutes()
+    // console.log("currentHours",currentHours,currentMinutes)
+    var today = new Date();
+    var tomorrow = new Date()
+    tomorrow.setDate(today.getDate() + 1)
+
+    var options = { day: "numeric", month: "long" }
+    var sDay = today.toLocaleDateString("en-US", options);
+    var tDay = tomorrow.toLocaleDateString("en-US", options);
+    var orderWithin;
+
+    if (today.getDay() == 0 || today.getDay() == 6) {
+      if (today.getDay() == 5 && currentHours >= 10 && currentHours < 12) {
+        if (currentMinutes == 0) {
+          orderWithin = `Ships <span>today</span> If ordered in the next <span style="color: #C6DB76">60mins</span>`;
+        } else {
+          orderWithin = `Ships <span>today</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes}mins</span>`;
+        }
+      }
+      else {
+        orderWithin = `Ships <span>Monday morning</span> if ordered now`;
+      }
+      orderWithin = `Ships <span>Monday morning</span> if ordered now`;
+    } else {
+      if (currentMinutes != 0) {
+        currentMinutes = 60 - currentMinutes
+      }
+      if (currentHours >= 10 && currentHours < 12) {
+        if (currentMinutes == 0) {
+          orderWithin = `Ships <span>today</span>`;
+        } else {
+          if (today.getDay() != 5) {
+            if (currentHours == 10 && currentMinutes > 0) {
+              orderWithin = `Ships <span>tomorrow</span> If ordered in the next <span style="color: #C6DB76">${24 - currentHours}hr ${currentMinutes}mins</span>`;
+            }
+            else {
+              orderWithin = `Ships <span>today</span> If ordered in the next <span style="color: #C6DB76">${currentMinutes}mins</span>`;
+            }
+          }
+          else {
+            orderWithin = `Ships <span>Monday morning</span> if ordered now`;
+          }
+        }
+      } else if (currentHours < 10) {
+        orderWithin = `Ships <span>today</span> If ordered in the next <span style="color: #C6DB76"> ${currentMinutes}mins</span>`;
+      } else {
+        orderWithin = `Ships <span>tomorrow</span> If ordered in the next <span style="color: #C6DB76">${23 - currentHours}hr ${currentMinutes}mins</span>`;
+      }
+    }
+    let Order_Within = document.querySelectorAll('.Order_Within');
+
+    if (Order_Within.length > 0) {
+      Order_Within.forEach(function (e) {
+        // console.log('Element :: ',e)
+        e.innerHTML = orderWithin;
+      })
+    }
+  }
+  // window.Order_Within();
+</script>
+{% # rtx-pfp.liquid Script start %}
+<script
+  type="text/javascript"
+>
+  // $(document).ready(function(){
+  //   var urlParams = new URLSearchParams(window.location.search);
+  //   var checkSellingPlan = urlParams.get('selling_plan');
+  //   if(checkSellingPlan != '' && checkSellingPlan != null && checkSellingPlan != undefined){
+  //     $('#purchaseTypeSbubscription').trigger('click')
+  //   }else{
+  //     $('select[name="selling_plan"]').prop('disabled' , true);
+  //   }
+  // })
+  document.getElementById('purchaseTypeOneTime').addEventListener('change', function () {
+    document.querySelectorAll('.Serving_Cost').forEach(function (element) {
+      element.textContent = element.dataset.onetimeprice;
+    });
+  });
+  document.getElementById('purchaseTypeSbubscription').addEventListener('change', function () {
+    document.querySelectorAll('.Serving_Cost').forEach(function (element) {
+      element.textContent = element.dataset.subprice;
+    });
+  });
+  ((api) => {
+    const boxId = "{{ product.id }}-{{ section.id }}-{{ block.id }}";
+    const boxProduct = {{ product | json
+  }};
+  const elementRoot = document.querySelector('[data-rtx-subscription-' + boxId + ']');
+  const productForm = elementRoot.closest('form[action="/cart/add"]') || elementRoot.closest('form') || document.querySelector('form[action="/cart/add"]') || document.documentElement;
+  const elementSubscriptionBox = productForm.querySelector('[data-retextion-subscription-box]');
+  const elementGiftBox = productForm.querySelector('[data-retextion-gift-box]');
+  const elementGiftCheckbox = productForm.querySelector('[name="properties[_gifted-subscription]"]');
+  const elementSellingPlan = productForm.querySelector('[name="selling_plan"]');
+  const elementQuantitySelector = productForm.querySelector('[name="quantity"]');
+  const elementsPurcahseTypeRadio = productForm.querySelectorAll('[name="purchaseType"]');
+  const elementsVariantSelectors = productForm.querySelectorAll('[name="id"]');
+  const elementsInputs = productForm.querySelectorAll('button, input, textarea, select, option, data-list, optgroup ');
+  const sellingPlan = productForm.querySelector('[name="selling_plan"]');
+  let selectedVariantId = {{ currentVariant.id | json }};
+  const elementSellingPlanID = productForm.querySelector('[name="selling_plan_id"]');
+  if (elementSellingPlan.value != elementSellingPlanID.value) {
+    elementSellingPlanID.value = elementSellingPlan.value;
+  }
+  const queryParamsGet = () => {
+    let [origin, searchAndHash] = window.location.toString().split('?');
+    searchAndHash = searchAndHash || "";
+    let [search] = searchAndHash.split('#');
+    return (search || '').split('&').reduce((o, e) => {
+      let [key, value] = e.split('=').map(x =>
+        decodeURIComponent(x));
+      if (!key || !value) return o;
+      o[key] = value;
+      return o;
+    }, {});
+  };
+  const queryParamsGenerate = (qp) => {
+    qp = qp || {};
+    //Remove undefined
+    Object.keys(qp).forEach(key => {
+      if (typeof qp[key] !== typeof undefined) return;
+      delete qp[key];
+    });
+    return Object.keys(qp).reduce((x, key, i) => {
+      let value = qp[key];
+      if (i != 0) x += '&';
+      return x += encodeURIComponent(key) + '=' + encodeURIComponent(value);
+    }, '');
+  };
+  const subscriptionBoxHide = () => {
+    elementSubscriptionBox.classList.remove('is-visible');
+  };
+  const subscriptionBoxShow = () => {
+    sellingPlan.disabled = false;
+    elementSubscriptionBox.classList.add('is-visible');
+  };
+  const subscriptionGiftShow = () => {
+    elementGiftBox.classList.add('is-visible');
+  };
+  const subscriptionGiftHide = () => {
+    elementGiftBox.classList.remove('is-visible');
+  };
+  const sellingPlanQueryUpdate = () => {
+    const queryParams = queryParamsGet();
+    if (elementSubscriptionBox.classList.contains('is-visible')) {
+      queryParams['selling_plan'] = sellingPlanSelectionGet() || undefined;
+    } else {
+      delete queryParams['selling_plan'];
+    }
+    const qs = queryParamsGenerate(queryParams);
+    try {
+      let hash;
+      hash = (hash = window.location.toString().split('#')).length > 1 ? hash[1] : null;
+      const url = window.location.toString().split('?')[0] + '?' + qs + (hash ? '#' + hash : '');
+
+    } catch (e) {
+      // Catching since older browsers and iOS can have issues
+      console.error(e);
+    }
+  };
+  const sellingPlanSelectionGet = () => {
+    return parseInt(elementSellingPlan.value);
+  };
+  const sellingPlanSelectionSet = (sellingPlan) => {
+    sellingPlan = sellingPlan && sellingPlan.id ? sellingPlan.id : sellingPlan;
+    elementSellingPlan.value = sellingPlan.toString();
+  };
+  const sellingPlanPropertiesGet = () => {
+    const formData = new FormData(productForm);
+    return Array.from(formData.entries());
+  };
+  const sellingPlanUrlGenerate = () => {
+    const props = sellingPlanPropertiesGet();
+    let strProperties = '';
+    sellingPlanPropertiesGet().forEach(prop => {
+      const key = prop[0];
+      if (!key.startsWith('properties[')) return;
+      const val = prop[1];
+      if (!val || !val.toString().length) return;
+      strProperties += '&items[][' + encodeURIComponent(key) + '] = ' + encodeURIComponent(val);
+    });
+
+    let selling_plan_id = sellingPlanSelectionGet();
+    let sellingPlanInput = $('input[name="selling_plan_id"]');
+    let sellingPlanInputVal = sellingPlanInput.val();
+    if (selling_plan_id != sellingPlanInputVal) {
+      sellingPlanInput.val(selling_plan_id);
+    }
+    return window.location.origin + '/cart/clear?return_to=' + encodeURIComponent('/cart/add' + '?items[][id]=' + selectedVariantId + '&items[][quantity]=' + (elementQuantitySelector ? elementQuantitySelector.value : 1) + strProperties + '&items[][selling_plan]=' + sellingPlanSelectionGet() + '&return_to=/checkout');
+  };
+  const sellingPlanUpdate = () => {
+    sellingPlanQueryUpdate();
+    // console.log('aaa',sellingPlanUrlGenerate());
+  };
+  const sellingPlanUpdateVariant = () => {
+    const variant = (boxProduct.variants.find(v => v.id == selectedVariantId) || boxProduct.variants.find(v => v.available) || boxProduct.variants[0]);
+    let newOptions = '';
+    // Determine the selected option
+    let selected = sellingPlanSelectionGet();
+    if (!variant.selling_plan_allocations.some(spa => {
+      return spa.selling_plan_id == selected;
+    })) {
+      selected = variant.selling_plan_allocations[0].selling_plan_id;
+    }
+    // Generate new options
+    variant.selling_plan_allocations.forEach((spa, i) => {
+      const sellingGroup = boxProduct.selling_plan_groups.find(spg => spg.id === spa.selling_plan_group_id);
+      const sellingPlan = sellingGroup.selling_plans.find(sp => sp.id === spa.selling_plan_id);
+      const opt = document.createElement('option');
+      if (sellingPlan.id == selected) {
+        opt.setAttribute('selected', 'selected');
+      }
+      opt.value = sellingPlan.id;
+      opt.textContent = sellingPlan.name;
+      newOptions += opt.outerHTML;
+    });
+    // Update select
+    elementSellingPlan.innerHTML = newOptions;
+    sellingPlanUpdate();
+  };
+  // Event Listeners
+    {% comment %}
+  elementsPurcahseTypeRadio.forEach(el => {
+    el.addEventListener('change', e => {
+      let elValue = el.value;
+      let mainProductButton = document.querySelector('.js-mainproduct-submit'),
+        stickyButton = document.querySelector('.js-sticky-add-to-cart');
+      let variantJson = JSON.parse(document.querySelector("#js-product-variant-json").innerText),
+        currentVariant = productForm.id.value;
+
+      let variantScript = productForm.querySelector('.variantMetaJSON');
+      if (variantScript) {
+        const jsonData = variantScript.textContent;
+        const variantData = JSON.parse(jsonData);
+        if (variantData) {
+          let foundVariant = variantData?.find(variant => variant.id == currentVariant && variant?.discount != "");
+          if (foundVariant) {
+            if (el.value === 'purchaseTypeSubscription') {
+              subscriptionBoxShow();
+              sellingPlan.disabled = false;
+              document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+              if (mainProductButton.dataset.available == "true") {
+                mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+                stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+              }
+            } else {
+              subscriptionBoxHide();
+              sellingPlan.disabled = true;
+              document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+
+              if (mainProductButton.dataset.available == "true") {
+                mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+                stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${foundVariant.price}</s>&nbsp;${foundVariant.one_discounted_price}`;
+              }
+            }
+          } else {
+            if (el.value === 'purchaseTypeSubscription') {
+              subscriptionBoxShow();
+              sellingPlan.disabled = false;
+              document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+              if (mainProductButton.dataset.available == "true") {
+                mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+                stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+              }
+            } else {
+              subscriptionBoxHide();
+              sellingPlan.disabled = true;
+              document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+
+              if (mainProductButton.dataset.available == "true") {
+                mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+                stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+              }
+            }
+          }
+        }
+      } else {
+        if (el.value === 'purchaseTypeSubscription') {
+          subscriptionBoxShow();
+          sellingPlan.disabled = false;
+          document.querySelector('.js-sticky-subscription-btns').value = "subscription";
+          if (mainProductButton.dataset.available == "true") {
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+          }
+        } else {
+          subscriptionBoxHide();
+          sellingPlan.disabled = true;
+          document.querySelector('.js-sticky-subscription-btns').value = "one-time";
+
+          if (mainProductButton.dataset.available == "true") {
+            mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+            stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price}</s>&nbsp;${variantJson[currentVariant].price}`;
+          }
+        }
+      }
+      elementGiftBox.querySelectorAll('[name*="properties"]').forEach(input => {
+        input.disabled = (elValue != 'purchaseTypeSubscription');
+      });
+      sellingPlanUpdate();
+    });
+  });
+{% endcomment %}
+
+
+
+  elementGiftCheckbox.addEventListener('change', e => {
+    if (e.target.checked) {
+      subscriptionGiftShow();
+    } else {
+      subscriptionGiftHide();
+    }
+    sellingPlanUpdate();
+  });
+  elementSellingPlan.addEventListener('change', e => {
+    sellingPlanUpdate();
+  });
+  elementsVariantSelectors.forEach(vs => {
+    vs.addEventListener('change', e => {
+      selectedVariantId = e.target.value;
+      sellingPlanUpdateVariant();
+    });
+  });
+  elementsInputs.forEach(inp => {
+    inp.addEventListener('change', e => {
+      sellingPlanUpdate();
+    });
+  });
+  // Public API
+  return Object.assign(api, {
+    [boxId]: {
+      boxId,
+      boxProduct,
+      subscriptionBoxHide,
+      subscriptionBoxShow,
+      subscriptionGiftShow,
+      subscriptionGiftHide,
+      sellingPlanUrlGenerate
+    }
+  });
+  }) ((window.retextionBuyBox = {}));
+</script>
+{% # rtx-pfp.liquid Script End %}
+{% schema %}
+{
+"name": "t:sections.main-product.name",
+"tag": "section",
+"class": "product-section",
+"settings": [
+{
+"type": "select",
+"id": "picker_type",
+"options": [
+{
+"value": "dropdown",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+},
+{
+"value": "button",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+}
+],
+"default": "button",
+"label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+},
+{
+"type" : "header",
+"content" : "Product Listing header and price"
+},
+{
+"type": "textarea",
+"id": "text_desc",
+"label": "Text below price"
+},
+{
+"type": "text",
+"id" :"mheading",
+"label": "Main Heading"
+},
+{
+"type": "text",
+"id" :"price_mpro",
+"label": "Main price"
+},
+{
+"type" : "header",
+"content" : "Supplement Facts"
+},
+{
+"type" : "text",
+"id" : "supplement_fact_text",
+"label" : "Supplement Fact Text"
+},
+{
+"type" : "url",
+"id" : "supplement_fact_link",
+"label" : "Supplement Fact URL"
+},
+{
+"type": "textarea",
+"id": "ship_text",
+"label": "Shipping text"
+},
+{
+"type" : "header",
+"content" : "Shop More"
+},
+{
+"type" : "text",
+"id" : "shop_more_text1",
+"label" : "Shop More Text 1"
+},
+{
+"type" : "url",
+"id" : "shop_more_link1",
+"label" : "Shop More URL 1"
+},
+{
+"type" : "text",
+"id" : "shop_more_text2",
+"label" : "Shop More Text 2"
+},
+{
+"type" : "url",
+"id" : "shop_more_link2",
+"label" : "Shop More URL 2"
+},
+{
+"type" : "text",
+"id" : "one_time_text",
+"label" : "One Time Purchase Text"
+},
+{
+"type" : "header",
+"content" : "Testimonials"
+},
+{
+"type" : "text",
+"id" : "testimonial_btn_txt",
+"label" : "Testimonials button text"
+},
+{
+"type" : "url",
+"id" : "testimonial_btn_link",
+"label" : "Testimonials button url"
+},
+{
+"type" : "header",
+"content" : "Product Features"
+},
+{
+"type" : "image_picker",
+"id" : "product_feature_icon",
+"label" : "Product Feature Icon"
+},
+{
+"type" : "text",
+"id" : "product_feature_text",
+"label" : "Product Feature Text"
+},
+{
+"type" : "text",
+"id" : "product_feature_text_two",
+"label" : "Product Feature Text Two"
+},
+{
+"type" : "checkbox",
+"id" : "show_drawer_triggers",
+"label" : "Show Drawer Links?",
+"default": true
+},
+{
+"type": "text",
+"id": "dropdown_title",
+"label": "Dropdown Title"
+},
+{
+"type": "richtext",
+"id": "img_1",
+"label": "Product Image Text first"
+},
+{
+"type": "richtext",
+"id": "img_2",
+"label": "Product Image Text Second"
+},
+{
+"type": "richtext",
+"id": "img_3",
+"label": "Product Image Text Third"
+},
+{
+"type": "richtext",
+"id": "img_4",
+"label": "Product Image Text Forth"
+}
+],
+"blocks": [
+{
+"type": "dropdown",
+"name": "Dropdown Block",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Dropdown Title"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Dropdown Subtitle"
+},
+{
+"type": "text",
+"id": "bubble_text",
+"label": "Dropdown Bubble Text"
+},
+{
+"type": "image_picker",
+"id": "icon1",
+"label": "Dropdown Icon 1"
+},
+{
+"type": "text",
+"id": "list_item1",
+"label": "Dropdown List Item 1"
+},
+{
+"type": "image_picker",
+"id": "icon2",
+"label": "Dropdown Icon 1"
+},
+{
+"type": "text",
+"id": "list_item2",
+"label": "Dropdown List Item 2"
+},
+{
+"type": "image_picker",
+"id": "icon3",
+"label": "Dropdown Icon 3"
+},
+{
+"type": "text",
+"id": "list_item3",
+"label": "Dropdown List Item 3"
+}
+]
+},
+{
+"type": "block",
+"name": "Subscribe Block",
+"limit":1,
+"settings": [
+{
+"type": "image_picker",
+"id": "purchase_type_img",
+"label": "Subscription subimage"
+},
+{
+"type": "text",
+"id": "purchase_type_text",
+"label": "Subscription text"
+},
+{
+"type": "textarea",
+"id": "purchase_type_subtext",
+"label": "Subscription subtext"
+}
+]
+},
+{
+"type": "onetime_block",
+"name": "OneTime Block",
+"limit":1,
+"settings": [
+{
+"type": "image_picker",
+"id": "onetime_purchase_type_img",
+"label": "OneTime Purchase subimage"
+},
+{
+"type": "text",
+"id": "onetime_purchase_type_text",
+"label": "OneTime Purchase text"
+},
+{
+"type": "textarea",
+"id": "onetime_purchase_type_subtext",
+"label": "OneTime Purchase subtext"
+}
+]
+},
+{
+"type": "list_block",
+"name": "List Block",
+"limit":3,
+"settings": [
+{
+"type": "image_picker",
+"id": "list_block_type_img",
+"label": "List Item Image"
+},
+{
+"type": "text",
+"id": "list_block_type_text",
+"label": "List Item Text"
+},
+{
+"type": "text",
+"id": "list_block_type_subtext",
+"label": "List Item Subtext"
+}
+]
+},
+{
+"type": "pro_list",
+"name": "pro list",
+"settings": [
+{
+"type": "image_picker",
+"id": "list_block_type_img",
+"label": "List Item Image"
+},
+{
+"type": "text",
+"id": "image_qua",
+"label": "Image badge quantity"
+},
+{
+"type": "text",
+"id": "title_pro",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "quantity_pro",
+"label": "Quantity have"
+},
+{
+"type": "text",
+"id": "desc_pro",
+"label": "Content"
+},
+{
+"type": "text",
+"id": "popup_title_pro",
+"label": "popup title",
+"default": "Supplement Facts"
+
+},
+{
+"type": "textarea",
+"id": "pro_price_pro",
+"label": "price"
+},
+{
+"type": "header",
+"content": "popUp Content"
+},
+{
+
+"type": "text",
+"id": "popup_title",
+"label": "Popup title",
+"default": "POPup"
+
+},
+{
+"type": "richtext",
+"id": "popup_desc",
+"label": "PopUp content"
+}
+]
+},
+{
+"type": "testimonials",
+"name": "Testimonials",
+"settings": [
+{
+"type": "text",
+"id": "testimonial_text",
+"label": "Testimonial text"
+},
+{
+"type": "text",
+"id": "video_tag",
+"label": "Video Tag"
+},
+{
+"type": "text",
+"id": "testimonial_video",
+"label": "Testimonial Video URL"
+},
+{
+"type": "image_picker",
+"id": "testimonial_image",
+"label": "Testimonial Image"
+}
+
+]
+}
+]
+}
+{% endschema %}
+<script>
+  function makeTimer() {
+    function addZero(number) {
+      var number = number.toString();
+      var newNumber = number;
+      if (number.length == 1) {
+        newNumber = `0${number}`;
+      }
+      return newNumber;
+    }
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var currentDate = new Date(),
+      endCmsDate = new Date("{{ section.settings.timer }}"),
+      endDate = new Date(`${endCmsDate.getFullYear()}-${addZero(endCmsDate.getMonth() + 1)}-${addZero(endCmsDate.getDate())}T${addZero(currentDate.getHours())}:${addZero(currentDate.getMinutes())}:${addZero(currentDate.getSeconds())}`);
+    var tomorrowDate = new Date();
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    // console.log(`EndDate :: ${endDate}\ntomorrowDate:: ${tomorrowDate}`,`\n${endCmsDate.getFullYear()}-${endCmsDate.getMonth() + 1}-${endCmsDate.getDate()}T${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`)
+   var dateString = `${endCmsDate.getDate()} ${monthNames[endCmsDate.getMonth()]} ${endCmsDate.getFullYear()}`
+    if (endDate.getTime() <= tomorrowDate.getTime()) {
+      dateString = 'tomorrow';
+    }
+    var endTime = new Date("{{ section.settings.timer }}");
+    endTime = (Date.parse(endTime) / 1000);
+    var now = new Date();
+    now = (Date.parse(now) / 1000);
+    var timeLeft = endTime - now;
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    if (hours < "10") { hours = "0" + hours; }
+    if (minutes < "10") { minutes = "0" + minutes; }
+    if (seconds < "10") { seconds = "0" + seconds; }
+    // $("#days").html((days) + "<span>Days</span>");
+    $(".js-date-wrapper").find('date').html(dateString);
+    $("#hours").html((parseInt(hours) + (parseInt(days) * 24)) + "<span>hrs</span>");
+    $("#minutes").html(minutes + "<span>min</span>");
+    $("#seconds").html(seconds + "<span>Seconds</span>");
+  }
+  setInterval(function () { makeTimer(); }, 1000);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".Variant_Blocks").forEach(function(block) {
+            block.addEventListener("click", function() {
+  // alert('aaff');
+            });
+        });
+    });
+</script>
+<script>
+  // Function to update button data and price display
+  function updateButtonData() {
+    // Select the button within the product-form__buttons div
+    const button = document.querySelector('.product-form__buttons button');
+    // Select the target div where you want to display the button content
+    const priceContainer = document.querySelector('.price-container .custom.price');
+    // Fetch the inner HTML content of the selected button
+    if (button && priceContainer) {
+      // Get the button's inner HTML
+      let buttonContent = button.innerHTML;
+      // Remove the text "Add to Cart —" from the button content
+      buttonContent = buttonContent.replace('Add to Cart —', '').trim(); // Trim any extra spaces
+      // Set the modified content to the priceContainer
+      priceContainer.innerHTML = buttonContent;
+    } else {
+      console.log('Button or price container not found');
+    }
+
+   let PricePP = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
+   let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
+   document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
+  }
+  // Call the updateButtonData function every 2 seconds (2000 milliseconds)
+  setInterval(updateButtonData, 100);
+</script>
+
+<script>
+  $(document).ready(function () {
+    document.querySelector('.js-clinical-opens').addEventListener('click', function () {
+      // Change the style to make `right: 0px`
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+      if (window.innerWidth <= 768) {
+        // Apply `bottom: 0px` for mobile screens
+        clinicalDrawer.style.bottom = '0px';
+      } else {
+        // Apply `right: 0px` for desktop screens
+        clinicalDrawer.style.right = '0px';
+      }
+      // Add the class `mobile-fixed-header` to `.drawer__header`
+      document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+      document.body.classList.add('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.add('is-visibles');      
+    });
+    // Revert changes on close button click
+    document.querySelector('.js-clinical-closes').addEventListener('click', function () {
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+      // Revert the styles
+      clinicalDrawer.style.bottom = '';
+      clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+      // Remove the class `mobile-fixed-header` from `.drawer__header`
+      document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
+      document.body.classList.remove('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');      
+    });
+  });
+</script>
