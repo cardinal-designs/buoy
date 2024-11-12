@@ -43,6 +43,20 @@
     "main": {
       "type": "main-product-new-buoy-bundle",
       "blocks": {
+        "pro_list_7cXUVQ": {
+          "type": "pro_list",
+          "settings": {
+            "list_block_type_img": "shopify://shop_images/Hydration_Drops_Square_2_deaec09a-51a5-4090-b247-5bbf73238417.png",
+            "image_qua": "x3",
+            "title_pro": "Hydration Drops",
+            "quantity_pro": "3 Bottles / 120 Servings",
+            "desc_pro": "Our original, best-selling liquid electrolyte + 87 trace minerals clinically proven to hydrate 64% better than water alone.",
+            "popup_title_pro": "Supplement Facts",
+            "pro_price_pro": "$39",
+            "popup_title": "POPup",
+            "popup_desc": "<p>Hydration Drops</p>"
+          }
+        },
         "pro_list_6CwWDX": {
           "type": "pro_list",
           "settings": {
@@ -83,20 +97,6 @@
             "pro_price_pro": "$15",
             "popup_title": "POPup",
             "popup_desc": "<p>Energy Drops</p>"
-          }
-        },
-        "pro_list_7cXUVQ": {
-          "type": "pro_list",
-          "settings": {
-            "list_block_type_img": "shopify://shop_images/Hydration_Drops_Square_2_deaec09a-51a5-4090-b247-5bbf73238417.png",
-            "image_qua": "x3",
-            "title_pro": "Hydration Drops",
-            "quantity_pro": "3 Bottles / 120 Servings",
-            "desc_pro": "Our original, best-selling liquid electrolyte + 87 trace minerals clinically proven to hydrate 64% better than water alone.",
-            "popup_title_pro": "Supplement Facts",
-            "pro_price_pro": "$39",
-            "popup_title": "POPup",
-            "popup_desc": "<p>Hydration Drops</p>"
           }
         },
         "pro_list_t8PApR": {
@@ -228,10 +228,10 @@
         }
       },
       "block_order": [
+        "pro_list_7cXUVQ",
         "pro_list_6CwWDX",
         "pro_list_DJm76p",
         "pro_list_CRWiGF",
-        "pro_list_7cXUVQ",
         "pro_list_t8PApR",
         "pro_list_BW7RbH",
         "pro_list_FaGcUm",
