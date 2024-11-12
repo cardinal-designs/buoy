@@ -1,0 +1,267 @@
+<div class="cv_section_top_desktop {{ section.settings.custom_class }}">
+  <div class="section_left_content">
+    <div class="cv_sale_content_pdp">
+      <div class="cv-sale_text">
+        {% if section.settings.text01 != blank %}
+          <p class="text_sub">{{ section.settings.text01 }}</p>
+        {% endif %}
+        {% if section.settings.text02 != blank %}
+          {{ section.settings.text02 }}
+        {% endif %}
+        {% if section.settings.save_price != blank %}
+          <p class="price_cv_sale">Save up to {{ section.settings.save_price }}</p>
+        {% endif %}
+
+        {% if section.settings.content != blank %}
+          {{ section.settings.content }}
+        {% endif %}
+      </div>
+
+      <div class="cv_btnscroll">
+        <a href="#" class="scroll-to-product">Shop The Sale</a>
+      </div>
+      <div class="text_cv_below">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Callouts_a7d021a6-7c87-44be-ba50-8f67d4b613a2.png?v=1730704659"
+        >
+        <p>Free Shipping + 30-Day Guarantee</p>
+      </div>
+    </div>
+    <script>
+      document.querySelector('.scroll-to-product').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const productDiv = document.querySelector('.product'); // Select the div with the class .product
+        if (productDiv) {
+          const offsetTop = productDiv.getBoundingClientRect().top + window.pageYOffset - 70; // Calculate the position with a 10px offset
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth' // Smooth scroll to the calculated position
+          });
+        }
+      });
+    </script>
+  </div>
+
+  <div class="section_right_content">
+    <style>
+      .review_cv .okeReviews-starRating--small span.okeReviews-a11yText {
+        height: 100% !important;
+        clip: inherit !important;
+        right: -50px;
+        font-family: inter, sans-serif;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 21px !important;
+        width: auto !important;
+        overflow: hidden;
+        top: 3px;
+        color: var(--charcoal-60);
+      }
+
+      .review_cv .okeReviews-reviewsSummary-ratingCount span {
+        font-family: inter, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1.375em;
+        color: var(--charcoal-60);
+      }
+
+      .review_cv .okeReviews-starRating--small span.okeReviews-a11yText .rated-text {
+        display: none;
+        margin-left: 20px;
+      }
+
+      .review_cv .okeReviews .okeReviews-starRating--small {
+        height: 22px;
+
+        .review_cv .okeReviews {
+          margin-bottom: 10px !important;
+        }
+      }
+    </style>
+
+    <div class="cv_image_video_pdp {{ section.settings.custom_class }}">
+      <div class="out_stock_text">
+        <p>{{ section.settings.out_stock }}</p>
+      </div>
+      <div class="media-section showOnMob">
+        {% if section.settings.section_video_file != blank %}
+          <video controls muted autoplay height="400px" width="100%">
+            <source src="{{ section.settings.section_video_file | video_tag  }}">
+          </video>
+        {% elsif section.settings.section_video_url != blank %}
+          <iframe
+            src="{{ section.settings.section_video_url }}"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="width: 100%; height: 400px;"
+          ></iframe>
+        {% elsif section.settings.section_image != blank %}
+          <img
+            src="{{ section.settings.section_image | img_url: '' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+      <div class="media-section showOnDesk">
+        {% if section.settings.section_video_file_d != blank %}
+          <video controls muted autoplay height="400px" width="100%">
+            <source src="{{ section.settings.section_video_file_d | video_tag  }}">
+          </video>
+        {% elsif section.settings.section_video_url_d != blank %}
+          <iframe
+            src="{{ section.settings.section_video_url_d }}"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="width: 100%; height: 400px;"
+          ></iframe>
+        {% elsif section.settings.section_image_d != blank %}
+          <img
+            src="{{ section.settings.section_image_d | img_url: '' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+      <div class="review_cv">
+        {% assign selected_product = section.settings.selected_product %}
+
+        {% if selected_product %}
+          <div class="product-info">
+            {% comment %}
+            <!-- Render the Okendo reviews product rating summary -->
+              {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
+             {% endcomment %}
+
+              <div class="wp_productRvw">
+                <div class="ratings_Way_stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="101" height="19" viewBox="0 0 101 19" fill="none">
+                    <path d="M9.46316 0.5L12.0482 6.89212L18.9263 7.37539L13.6459 11.8092L15.3117 18.5L9.46316 14.8481L3.61461 18.5L5.28044 11.8092L0 7.37539L6.8781 6.89212L9.46316 0.5Z" fill="#FFD66B"/>
+                    <path d="M29.7431 0.5L32.3281 6.89212L39.2062 7.37539L33.9258 11.8092L35.5916 18.5L29.7431 14.8481L23.8945 18.5L25.5604 11.8092L20.2799 7.37539L27.158 6.89212L29.7431 0.5Z" fill="#FFD66B"/>
+                    <path d="M50.0132 0.5L52.5983 6.89212L59.4764 7.37539L54.1959 11.8092L55.8618 18.5L50.0132 14.8481L44.1647 18.5L45.8305 11.8092L40.55 7.37539L47.4281 6.89212L50.0132 0.5Z" fill="#FFD66B"/>
+                    <path d="M70.3041 0.5L72.8892 6.89212L79.7673 7.37539L74.4868 11.8092L76.1527 18.5L70.3041 14.8481L64.4555 18.5L66.1214 11.8092L60.8409 7.37539L67.719 6.89212L70.3041 0.5Z" fill="#FFD66B"/>
+                    <path d="M90.5734 0.5L93.1585 6.89212L100.037 7.37539L94.7561 11.8092L96.4219 18.5L90.5734 14.8481L84.7248 18.5L86.3907 11.8092L81.1102 7.37539L87.9883 6.89212L90.5734 0.5Z" fill="#FFD66B"/>
+                  </svg>
+                </div>
+                <div class="ratingBriefWy">
+                  <span>4.7/5 19,678 Reviews</span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+          {% comment %}
+            Add structured data for the selected product (JSON-LD format).
+          {% endcomment %}
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "name": "{{ selected_product.title }}",
+              "image": "{{ selected_product.images.first.src }}",
+              "description": "{{ selected_product.description | strip_html | escape }}",
+              "sku": "{{ selected_product.sku }}",
+              "offers": {
+                "@type": "Offer",
+                "url": "{{ shop.url }}{{ selected_product.url }}",
+                "priceCurrency": "USD",
+                "price": "{{ selected_product.price | money_without_currency }}",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          </script>
+        {% else %}
+          <p>No product selected.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "cv image text desktop",
+"settings": [
+
+{
+"type": "text",
+"id": "out_stock",
+"label": "Out Stock text"
+},
+{
+"type": "image_picker",
+"id": "section_image",
+"label": "Image Mobile"
+},
+{
+"type": "url",
+"id": "section_video_url",
+"label": "Video URL mobile",
+"info": "Enter a video URL (e.g., from YouTube or Vimeo)"
+},
+{
+"type": "video",
+"id": "section_video_file",
+"label": "MP4 Video File mobile"
+},
+{
+"type": "image_picker",
+"id": "section_image_d",
+"label": "Image Desktop"
+},
+{
+"type": "url",
+"id": "section_video_url_d",
+"label": "Video URL Desktop",
+"info": "Enter a video URL (e.g., from YouTube or Vimeo)"
+},
+{
+"type": "video",
+"id": "section_video_file_d",
+"label": "MP4 Video File Desktop"
+},
+{
+"type": "product",
+"id": "selected_product",
+"label": "Select a product for rating"
+},
+{
+"type": "text",
+"id": "text01",
+"label": "Text Sale heading",
+"default" : "Black Friday Sale"
+},
+{
+"type": "richtext",
+"id": "text02",
+"label": "Title Sale"
+},
+{
+"type": "text",
+"id": "save_price",
+"label": "Save price"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content"
+}
+
+],
+"presets": [
+{
+"name": "cv image text desktop"
+}
+]
+}
+{% endschema %}
