@@ -1692,10 +1692,10 @@ body h2.faq-section__title.h3 {
     max-width: 194px;
     max-height: 194px;
 }
-  .swiper-container.swiper.cv_marque .swiper-slide {
-width: calc(100% / 1.5) !important; 
+.swiper-container.swiper.cv_marque .swiper-slide {
+   width: calc(100% / 1.5) !important; 
 }
-  .cv_accordion .cv_accordion_heading h2 {
+.cv_accordion .cv_accordion_heading h2 {
     font-size: 30px;
     line-height: 39px;
 }
