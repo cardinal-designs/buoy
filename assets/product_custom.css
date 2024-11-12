@@ -1728,6 +1728,14 @@ p.price_cv_sale {
 body .clinical__label-wrapper {
     padding: 24px 0 16px;
 }
+  .clinical-trial-drawer .drawer__body>div:last-of-type {
+    padding-bottom: 24px;
+}
+
+
+.clinical-trial-drawer .clinical__label-wrapper {
+    padding: 24px 0 16px;
+}
   body .drawer__table {
     margin-top: 24px;
 }
