@@ -1574,7 +1574,7 @@ div#myPopup02 {
     font-size: 20px;
     line-height: 30px;
 } 
-  .cv-sale_text p:nth-child(2) {
+.cv-sale_text p:nth-child(2) {
     font-size: 39px;
     line-height: 49px;
 }
@@ -1599,7 +1599,7 @@ p.price_cv_sale {
 }    
 }
 @media screen and (max-width: 1279px){
- .cv_sale_content_pdp {
+.cv_sale_content_pdp {
     padding: 20px 30px 15px 20px;
 } 
 .cv-sale_text p:nth-child(2) {
@@ -1650,7 +1650,6 @@ p.price_cv_sale {
     font-size: 28px;
 }  
 }
-
 @media screen and (max-width: 820px){
 .cv_electrolyte_boost {
     max-width: 750px;
@@ -1718,7 +1717,6 @@ width: calc(100% / 1.5) !important;
     width: 18px;
     height: 18px;
 }
-  
 p.price_cv_sale {
     font-size: 16px;
 }  
@@ -1753,7 +1751,7 @@ body .comparison-slideshow .slider_navigation {
     width: auto;
 } 
 .comparison-slideshow .swiper-button-next:after, .comparison-slideshow .swiper-button-prev:after {
-  display: none;
+    display: none;
 }  
 .comparison-slideshow .swiper-pagination-bullet {
     border: 1px solid #1F2322;
@@ -1767,10 +1765,10 @@ body .comparison-slideshow {
     margin: 52px auto;
     position: relative;
 }
-  .cv_sale_content_pdp {
+.cv_sale_content_pdp {
     padding: 40px 20px 32px;
 }
-  .cv-sale_text p:nth-child(2) {
+.cv-sale_text p:nth-child(2) {
     font-size: 40px;
     line-height: 47px;
     max-width: 350px;
