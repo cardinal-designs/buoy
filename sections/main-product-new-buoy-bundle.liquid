@@ -238,31 +238,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-// Close drawer when clicking outside of 'supplementSideDrawer'
-document.addEventListener('click', (event) => {
-  const drawer = document.getElementById('supplementSideDrawer');
-  const isDrawerOpen = document.body.classList.contains('wp_popup_drawer');
-
-  // Check if click is outside the drawer and drawer is open
-  if (isDrawerOpen && !drawer.contains(event.target)) {
-    closeDrawer();
-  }
-});
-
-// Function to close the drawer (same as existing functionality)
-function closeDrawer() {
-  let TitlePdp = document.querySelector('[data-product-name]');
-  if (window.innerWidth < 768) {
-    TitlePdp.style.bottom = "-100%";
-    TitlePdp.style.right = "-100%";
-  } else {  
-    TitlePdp.style.right = "-100%";
-    TitlePdp.style.bottom = "-100%";
-  }
-  document.body.classList.remove('wp_popup_drawer');
-  document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
-}
-  
+  document.querySelectorAll('.js-close-popup-drawer').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  });  
 
   document.querySelectorAll('.drawer__close').forEach((elm)=>{
     elm.addEventListener('click', (target)=>{
