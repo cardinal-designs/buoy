@@ -267,6 +267,8 @@ body .product__media-item .image-text-overlay {
     border-radius: 4px;
     margin: 12px;
     padding: 5px 8px;
+    min-width: 77px;
+    text-align: center;
 }
 .cv_electrolyte_boost {
     margin: 80px auto;
