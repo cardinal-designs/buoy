@@ -1690,8 +1690,8 @@ width: calc(100% / 3.5) !important;
  .product.pdp_cv_new .product__media-list {
     padding: 0;
 }
-  .swiper-container.swiper.cv_marque .swiper-slide {
-width: calc(100% / 2.5) !important; 
+.swiper-container.swiper.cv_marque .swiper-slide {
+    width: calc(100% / 2.5) !important; 
 }  
 .cv-sale_text p:nth-child(2) {
     font-size: 38px;
