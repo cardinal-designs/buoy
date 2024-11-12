@@ -54,15 +54,15 @@
               <!-- Add custom text for each image based on index -->
               <div class="image-text-overlay dd">
                 {%- if forloop.index == 0 -%}
-                  <p>8 Bottles 1 Rescue Salt 2 Free Accessories</p>
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- elsif forloop.index == 1 -%}
                   <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- elsif forloop.index == 2 -%}
-                  <p>Limited Time: 20% Off</p>
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- elsif forloop.index == 3 -%}
-                  <p>Free Shipping on Orders Over $50</p>
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- else -%}
-                  <p>Check Out Our Latest Collection!</p>
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- endif -%}
               </div>
             </div>
