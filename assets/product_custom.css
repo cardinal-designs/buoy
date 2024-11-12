@@ -1334,12 +1334,13 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
     margin: 24px 0 0;
 }
 .product.pdp_cv_new span.smw-text p {
-    color: #1F2322;
+    color: #1f2322;
     font-size: 12px;
     line-height: 15px;
     font-style: italic;
     font-weight: 300;
-    font-family: 'Ryhmes Text';
+    font-family: Ryhmes Text;
+    display: inline-block;
 }
 .product.pdp_cv_new .autoDay {
     font-size: 12px;
