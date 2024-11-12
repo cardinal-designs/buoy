@@ -1,0 +1,310 @@
+<style>
+  .popup {
+    /* display: none; */
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* Black background with transparency */
+    z-index: 1000;
+    /* Sit on top */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    /* Popup width */
+    text-align: center;
+  }
+
+  .close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+<div class="cv_electrolyte_boost">
+  <div class="electro_boost_headings">
+    {% if section.settings.text != blank %}
+      <p>{{ section.settings.text }}</p>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      {{ section.settings.heading }}
+    {% endif %}
+  </div>
+
+  <div class="electro_boost_accor">
+    <div class="electro_boost_left">
+      <p>{{ section.settings.acc_heading_01 }}</p>
+      <p>{{ section.settings.acc_heading_02 }}</p>
+      <p>{{ section.settings.acc_heading_03 }}</p>
+    </div>
+
+    <div class="electro_boost_right">
+      <div class="main_image showOnMob">
+        <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/image_changed.jpg?v=1731391556">
+      </div>
+
+      <div class="main_image showOnDesk">
+        <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/image_changed.jpg?v=1731391556">
+      </div>
+
+      <div class="btn_text_outer">
+        <div class="btn_text first-one" data-id="myPopup">
+          <button id="popupBtn">
+            <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Group_1000006032.png?v=1730709978">
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_01 }}</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="btn_text second-one" data-id="myPopup01">
+          <button id="popupBtn01">
+            <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Group_1000006032.png?v=1730709978">
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_02 }}</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="btn_text third-one" data-id="myPopup02">
+          <button id="popupBtn02">
+            <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Group_1000006032.png?v=1730709978">
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_03 }}</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <!-- <span class="close" id="closeBtn">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.45086 7.50006L0.965021 2.01423L2.01416 0.965084L7.5 6.45092L12.9858 0.965083L14.035 2.01423L8.54914 7.50006L14.035 12.9859L12.9858 14.035L7.5 8.5492L2.01416 14.035L0.96502 12.9859L6.45086 7.50006Z"
+            fill="white" />
+        </svg>
+      </span> -->
+      <div class="popup_inner">
+        {{ section.settings.acc_content_01 }}
+        {% if section.settings.acc_content_video_01 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_01 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        {% elsif section.settings.acc_content_img_01 != blank %}
+          <div class="mgf_wppopup_sc"><img
+            src="{{ section.settings.acc_content_img_01 | img_url: 'master' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          ></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup01" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <!-- <span class="close" id="closeBtn01">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.45086 7.50006L0.965021 2.01423L2.01416 0.965084L7.5 6.45092L12.9858 0.965083L14.035 2.01423L8.54914 7.50006L14.035 12.9859L12.9858 14.035L7.5 8.5492L2.01416 14.035L0.96502 12.9859L6.45086 7.50006Z"
+            fill="white" />
+        </svg>
+      </span> -->
+      <div class="popup_inner">
+        {{ section.settings.acc_content_02 }}
+        {% if section.settings.acc_content_video_02 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_02 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        {% elsif section.settings.acc_content_img_02 != blank %}
+          <div class="mgf_wppopup_sc"><img
+            src="{{ section.settings.acc_content_img_02 | img_url: 'master' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          ></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup02" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <!-- <span class="close" id="closeBtn02">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.45086 7.50006L0.965021 2.01423L2.01416 0.965084L7.5 6.45092L12.9858 0.965083L14.035 2.01423L8.54914 7.50006L14.035 12.9859L12.9858 14.035L7.5 8.5492L2.01416 14.035L0.96502 12.9859L6.45086 7.50006Z"
+            fill="white" />
+        </svg>
+      </span> -->
+      <div class="popup_inner">
+        {{ section.settings.acc_content_03 }}
+        {% if section.settings.acc_content_video_03 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_03 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        {% elsif section.settings.acc_content_img_03 != blank %}
+          <div class="imageMainContent">
+            <div class="mgf_wppopup_sc"><img
+              src="{{ section.settings.acc_content_img_03 | img_url: 'master' }}"
+              alt="Section Image"
+              style="max-width: 100%; height: auto;"
+            ></div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm)=>{
+    elm.addEventListener('mouseenter', (target)=>{
+      let getIDs = target.target.closest('.btn_text').getAttribute('data-id');
+      document.querySelector(`#${getIDs}`).style.opacity = '1';
+      document.querySelector('.cv_electrolyte_boost').classList.add('popup_open_cv');
+    })
+    elm.addEventListener('mouseleave', (target)=>{
+      let getIDs = target.target.closest('.btn_text').getAttribute('data-id');
+      document.querySelector(`#${getIDs}`).style.opacity = '0';
+      document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+    })  
+  })
+  
+  document.querySelectorAll('.wp_popup_lyt .popup_inner_out').forEach((elm)=>{
+    elm.addEventListener('mouseenter', (target)=>{
+      target.target.closest('.wp_popup_lyt').style.opacity = '1';
+      document.querySelector('.cv_electrolyte_boost').classList.add('popup_open_cv');
+    })
+    elm.addEventListener('mouseleave', (target)=>{
+      target.target.closest('.wp_popup_lyt').style.opacity = '0';
+      document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+    })
+  })  
+</script>
+
+{% schema %}
+{
+  "name": "cv_electrolyte_boost",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Sub heading"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Accordion First"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_01",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_01",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_01",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_01",
+      "label": "Accordion MP4 Video File"
+    },
+    {
+      "type": "header",
+      "content": "Accordion Second"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_02",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_02",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_02",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_02",
+      "label": "Accordion MP4 Video File"
+    },
+    {
+      "type": "header",
+      "content": "Accordion Second"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_03",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_03",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_03",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_03",
+      "label": "Accordion MP4 Video File"
+    }
+  ],
+  "presets": [
+    {
+      "name": "cv_electrolyte_boost"
+    }
+  ]
+}
+{% endschema %}
