@@ -1665,8 +1665,7 @@ p.price_cv_sale {
     grid-template-columns: 140px 1fr 1fr 1fr 1fr 1fr;
 }
 }
-@media screen and (max-width: 991px){
-  
+@media screen and (max-width: 991px) {
 .product.pdp_cv_new .Testimonials_Rating {
     background-size: 77px 14px;
     height: 14px;
