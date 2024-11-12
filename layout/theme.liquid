@@ -62,7 +62,7 @@ setTimeout(function(){
     {% endif %}
 
     {% render 'meta-tags' %}
- {% render 'custom_fonts' %}
+  {% render 'custom_fonts' %}
     {%- render 'optimization' -%}
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,7 +77,6 @@ setTimeout(function(){
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" ></script>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script> {% endcomment %}
   
@@ -252,9 +251,7 @@ setTimeout(function(){
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
-{% if template == 'product.new_best_of_buoy_bundle' %}
- {{ 'product_custom.css' | asset_url | stylesheet_tag }}
-{% endif %}
+
     {% if template.suffix == 'ci-shop' %}
       {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
     {% endif %} 
@@ -304,14 +301,6 @@ setTimeout(function(){
     </script>
     <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
     <!-- End Reddit Pixel -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </head>
 
   <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
@@ -370,8 +359,6 @@ setTimeout(function(){
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
-
-      {% section 'clinical-trial-drawer' %}
     </main>
 
     <div class="footer-container">
