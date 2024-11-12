@@ -864,25 +864,6 @@ document.addEventListener('DOMContentLoaded', function() {
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
                     {% unless product.metafields.custom.hide_subscription %}
-                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank
-                        and currentVariant.selling_plan_allocations[0].price == blank
-                      %}
-                        <s>
-                          {{- currentVariant.price | default: currentVariant.price | money_without_trailing_zeros -}}</s
-                        >&nbsp;
-                      {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
-                        <s>
-                          {% if currentVariant.compare_at_price %}
-                            {{-
-                              currentVariant.compare_at_price
-                              | default: currentVariant.compare_at_price
-                              | money_without_trailing_zeros
-                            -}}
-                          {% else %}
-                            {{- currentVariant.price | default: currentVariant.price | money_without_trailing_zeros -}}
-                          {% endif %} </s
-                        >&nbsp;
-                      {% endif %}
                       {% if currentVariant.selling_plan_allocations[0].price %}
                         {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                       {% else %}
