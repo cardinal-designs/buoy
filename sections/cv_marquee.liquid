@@ -1,0 +1,69 @@
+<div class="swiper-container swiper cv_marque">
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        {% if block.settings.text %}
+          <div class="marquee__text">{{ block.settings.text }}</div>
+        {% endif %}
+
+        <div class="marquee__logo-img">
+          <img src="{{ block.settings.image | img_url: '' }}">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+    let SwiperMarquee = new Swiper('.cv_marque', {
+    spaceBetween: 0,
+    slidesPerView: 4,
+    centeredSlides: true,
+    speed: 6000,
+    autoplay: {
+      delay: 1,
+    },
+    loop: true,
+    slidesPerView:'auto',
+    // allowTouchMove: true,
+    disableOnInteraction: true
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "CV Marquee",
+  "settings": [
+    {
+      "type": "number",
+      "id": "show_images",
+      "label": "Show First X Image(s)",
+      "default": 3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "marquee_item",
+      "name": "Marquee Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CV Marquee"
+    }
+  ]
+}
+{% endschema %}
