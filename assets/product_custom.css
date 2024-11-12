@@ -1722,6 +1722,9 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+.clinical__charts [data-swiper=chart-images] .swiper-slide, .clinical__chart-wrapper {
+    max-width: 100% !important;
+}  
  body .clinical__title {
     padding: 0 0 24px;
 }
