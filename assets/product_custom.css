@@ -1711,6 +1711,10 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+  .supplement-side-drawer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
   .product.pdp_cv_new .product__media-arrows {
     margin: 0 0 16px;
 }
