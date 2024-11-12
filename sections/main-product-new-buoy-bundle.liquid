@@ -579,8 +579,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                           <span>{{ variant.price | money }}</span>
                                           <s>{{ variant.compare_at_price | money }}</s>
                                         {% else %}
-                                          <s></s>
                                           <span>{{ current_variant_price | money }}</span>
+                                          <s></s>
                                         {% endif %}
                                       {% endunless %}
                                     </p>
