@@ -519,35 +519,84 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                   <div class="pricevariantWrap">
                                     <p class="variantPriceDiv smw-text-price">
-                                      <span class="price">{{ variant.price | money_without_trailing_zeros }}</span>
-                                      <span class="compare-price">
-                                        {% if variant.metafields.custom.compare_price != blank %}
-                                          <del>${{ variant.metafields.custom.compare_price }}</del>
-                                        {% else %}
-                                          <del>{{ variant.compare_at_price | money }}</del>
+                                      {% unless product.metafields.custom.hide_subscription %}
+                                        {% if variant.metafields.custom.auto_discount_percent_off != blank
+                                          and variant.selling_plan_allocations[0].price == blank
+                                        %}
+                                          <s>
+                                            {{-
+                                              variant.price
+                                              | default: variant.price
+                                              | money_without_trailing_zeros
+                                            -}}</s
+                                          >&nbsp;
+                                        {% elsif variant.compare_at_price
+                                          or variant.selling_plan_allocations[0].price
+                                        %}
+                                          <s>
+                                            {% if variant.compare_at_price %}
+                                              {{-
+                                                variant.compare_at_price
+                                                | default: variant.compare_at_price
+                                                | money_without_trailing_zeros
+                                              -}}
+                                            {% else %}
+                                              {{-
+                                                variant.price
+                                                | default: variant.price
+                                                | money_without_trailing_zeros
+                                              -}}
+                                            {% endif %} </s
+                                          >&nbsp;
                                         {% endif %}
-                                      </span>
+                                        {% if variant.selling_plan_allocations[0].price %}
+                                          {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                                        {% else %}
+                                          {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                                            {% assign current_variant_price = variant.price %}
+                                            {% assign one_discount_value = current_variant_price
+                                              | times: variant.metafields.custom.auto_discount_percent_off
+                                              | divided_by: 100
+                                            %}
+                                            {% assign one_final_price = current_variant_price
+                                              | minus: one_discount_value
+                                            %}
+                                            {{ one_final_price | money_without_trailing_zeros }}
+                                          {% else %}
+                                            {{ variant.price | money_without_trailing_zeros }}
+                                          {% endif %}
+                                        {% endif %}
+                                      {% else %}
+                                        {% assign current_variant_price = variant.price %}
+                                        {% assign one_discount_value = current_variant_price
+                                          | times: variant.metafields.custom.auto_discount_percent_off
+                                          | divided_by: 100
+                                        %}
+                                        {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+
+                                        {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                                          <s>{{ current_variant_price | money }}</s>&nbsp;
+                                          <span>{{ one_final_price | money }}</span>
+                                        {% elsif variant.compare_at_price != blank %}
+                                          <s>{{ variant.compare_at_price | money }}</s>&nbsp;
+                                          <span>{{ variant.price | money }}</span>
+                                        {% else %}
+                                          <s></s>
+                                          <span>{{ current_variant_price | money }}</span>
+                                        {% endif %}
+                                      {% endunless %}
                                     </p>
-
+                                    {% comment %}
+                                      <div class="bestdIV_off">
+                                        {%- if my_fields.best_value != blank -%}
+                                          <span class="Best_Value_off">{{ my_fields.best_value }}</span>
+                                        {%- endif -%}
+                                      </div>
+                                    {% endcomment %}
                                     <div class="bestdIV">
-                                      {% assign var_price = variant.price
-                                        | money_without_trailing_zeros
-                                        | remove: '$'
-                                        | remove: ','
-                                      %}
-                                      {% assign var_price_number = var_price | times: 1 %}
-
-                                      <!-- Fetch the compare_price stored as text -->
-                                      {% assign compare_price = variant.metafields.custom.compare_price %}
-
-                                      <!-- Convert the compare_price (text) to a number -->
-                                      {% assign compare_price_number = compare_price | times: 1 %}
-
-                                      <!-- Calculate the saved amount dynamically -->
-                                      {% assign saved_amount = compare_price_number | minus: var_price_number %}
-
-                                      <!-- Display the calculated savings -->
-                                      <span class="Best_Value"> Save {{ saved_amount | money | remove: '-' }}</span>
+                                      {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                                        <span class="Best_Value">Save {{ one_discount_value | money }}</span>
+                                      {% endif %}
                                     </div>
                                   </div>
                                 </div>
@@ -573,28 +622,28 @@ document.addEventListener('DOMContentLoaded', function() {
                   </script>
                   {{ variantMetafield }}
                 </variant-radios>
-                {% comment %}
-                  <script type="application/json" class="variantMetaJSON">
-                            [
-                              {%- assign comma = false -%}
-                              {%- for variant in product.variants -%}
-                                  {%- if comma -%},{%- endif -%}
-                                  {% assign variant_price = variant.price %}
-                                  {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                                  {% assign one_final_price = variant_price | minus: one_discount_value %}
-                                  {
-                                    "id": {{ variant.id }},
-                                    "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
-                                    "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
-                                    "price": "{{ variant_price | money_without_trailing_zeros }}",
-                                    "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
-                                    "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                                  }
-                                  {%- assign comma = true -%}
-                              {%- endfor -%}
-                            ]
-                          </script>
-                {% endcomment %}
+
+                <script type="application/json" class="variantMetaJSON">
+                  [
+                    {%- assign comma = false -%}
+                    {%- for variant in product.variants -%}
+                        {%- if comma -%},{%- endif -%}
+                        {% assign variant_price = variant.price %}
+                        {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                        {% assign one_final_price = variant_price | minus: one_discount_value %}
+                        {
+                          "id": {{ variant.id }},
+                          "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
+                          "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
+                          "price": "{{ variant_price | money_without_trailing_zeros }}",
+                          "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
+                          "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                        }
+                        {%- assign comma = true -%}
+                    {%- endfor -%}
+                  ]
+                </script>
+
               {%- else -%}
                 <variant-selects
                   class="no-js-hidden"
@@ -704,6 +753,61 @@ document.addEventListener('DOMContentLoaded', function() {
             {% endif %}
 
             <input type="hidden" name="id" value="{{ currentVariant.id }}">
+            <!--
+              <div class="product-form__buttons">
+                <button
+                  type="submit"
+                  name="add"
+                  style="flex-direction: initial; padding: 12px 10px;"
+                  data-available="{{ currentVariant.available }}"
+                  class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                  {% if currentVariant.available == false %}
+                    disabled
+                  {% endif %}
+                  data-subscription-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                  {% if currentVariant.metafields.custom.compare_price != blank %}
+                    data-compare="{{ currentVariant.metafields.custom.compare_price }}"
+                  {% endif %}
+                >
+                  <div style="display: flex;">
+                    {%- if currentVariant.available -%}
+                      Add to Cart —&nbsp;
+
+                      <span class="discounted-price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
+                      {% if currentVariant.metafields.custom.compare_price != blank %}
+                        <del>${{ currentVariant.metafields.custom.compare_price }}</del>
+                      {% else %}
+                        <del>{{ currentVariant.compare_at_price }}</del>
+                      {% endif %}
+                    {%- else -%}
+                      {{ 'products.product.sold_out' | t }}
+                    {%- endif -%}
+                  </div>
+                </button>
+                {% comment %} Mobile sticky ATC {% endcomment %}
+                <div class="product-form__sticky-atc hide-desktop">
+                  <p class="product-form__sticky-atc-text">30-Day Risk Free</p>
+                  <a
+                    href="#selector"
+                    name="add"
+                    style="flex-direction: initial; padding: 12px 10px;"
+                    data-available="{{ currentVariant.available }}"
+                    class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                  >
+                    <div style="display: flex;">Add to Cart</div>
+                  </a>
+                </div>
+                {% comment %} Mobile sticky ATC end {% endcomment %}
+                {%- if block.settings.show_dynamic_checkout -%}
+                  {% comment %} {{ form | payment_button }} {% endcomment %}
+                  <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                    <span data-smartrr-compare-price></span>
+                    <span data-smartrr-regular-price></span>
+                    <span data-smartrr-subscribe-price></span>
+                  </div>
+                {%- endif -%}
+              </div>
+            -->
             <div class="product-form__buttons">
               <button
                 type="submit"
@@ -715,20 +819,88 @@ document.addEventListener('DOMContentLoaded', function() {
                   disabled
                 {% endif %}
                 data-subscription-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                {% if currentVariant.metafields.custom.compare_price != blank %}
-                  data-compare="{{ currentVariant.metafields.custom.compare_price }}"
-                {% endif %}
               >
                 <div style="display: flex;">
                   {%- if currentVariant.available -%}
                     Add to Cart —&nbsp;
-
-                    <span class="discounted-price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
-                    {% if currentVariant.metafields.custom.compare_price != blank %}
-                      <del>${{ currentVariant.metafields.custom.compare_price }}</del>
+                    {% unless product.metafields.custom.hide_subscription %}
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank
+                        and currentVariant.selling_plan_allocations[0].price == blank
+                      %}
+                        <s>
+                          {{- currentVariant.price | default: currentVariant.price | money_without_trailing_zeros -}}</s
+                        >&nbsp;
+                      {% elsif currentVariant.compare_at_price or currentVariant.selling_plan_allocations[0].price %}
+                        <s>
+                          {% if currentVariant.compare_at_price %}
+                            {{-
+                              currentVariant.compare_at_price
+                              | default: currentVariant.compare_at_price
+                              | money_without_trailing_zeros
+                            -}}
+                          {% else %}
+                            {{- currentVariant.price | default: currentVariant.price | money_without_trailing_zeros -}}
+                          {% endif %} </s
+                        >&nbsp;
+                      {% endif %}
+                      {% if currentVariant.selling_plan_allocations[0].price %}
+                        {{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                      {% else %}
+                        {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                          {% assign current_variant_price = currentVariant.price %}
+                          {% assign one_discount_value = current_variant_price
+                            | times: currentVariant.metafields.custom.auto_discount_percent_off
+                            | divided_by: 100
+                          %}
+                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                          {{ one_final_price | money_without_trailing_zeros }}
+                        {% else %}
+                          {{ currentVariant.price | money_without_trailing_zeros }}
+                        {% endif %}
+                      {% endif %}
                     {% else %}
-                      <del>{{ currentVariant.compare_at_price }}</del>
-                    {% endif %}
+                      {% assign current_variant_price = currentVariant.price %}
+                      {% assign one_discount_value = current_variant_price
+                        | times: currentVariant.metafields.custom.auto_discount_percent_off
+                        | divided_by: 100
+                      %}
+                      {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+
+                      {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                        {% assign one_discount_value = current_variant_price
+                          | times: currentVariant.metafields.custom.auto_discount_percent_off
+                          | divided_by: 100
+                        %}
+                        {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                        <s>{{ current_variant_price | money }}</s>&nbsp;
+                        <span>{{ one_final_price | money }}</span>
+                      {% elsif currentVariant.compare_at_price != blank %}
+                        <s>{{ currentVariant.compare_at_price | money }}</s>&nbsp;
+                        <span>{{ currentVariant.price | money }}</span>
+                      {% else %}
+                        <s></s>
+                        <span>{{ current_variant_price | money }}</span>
+                      {% endif %}
+
+                      {% comment %}
+                        {%- if currentVariant.compare_at_price > currentVariant.price -%}
+                          <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
+                          &nbsp;
+                          {{ currentVariant.price | money_without_trailing_zeros }}
+                        {%- else -%}
+                          {{ currentVariant.price | money_without_trailing_zeros }}
+                        {%- endif -%}
+                      {% endcomment %}
+                    {% endunless %}
+
+                    {% comment %} {% render 'rtx_price'%} {% endcomment %}
+                    {% comment %}
+                      <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
+                        <span data-smartrr-compare-price></span>
+                        <span data-smartrr-regular-price></span>
+                        <span data-smartrr-subscribe-price></span>
+                      </div>
+                    {% endcomment %}
                   {%- else -%}
                     {{ 'products.product.sold_out' | t }}
                   {%- endif -%}
@@ -1184,7 +1356,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     sellingPlanUpdate();
   };
   // Event Listeners
-    {% comment %}
+
   elementsPurcahseTypeRadio.forEach(el => {
     el.addEventListener('change', e => {
       let elValue = el.value;
@@ -1265,7 +1437,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       sellingPlanUpdate();
     });
   });
-{% endcomment %}
+
 
 
 
@@ -1737,9 +1909,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       console.log('Button or price container not found');
     }
 
-   let PricePP = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
-   let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
-   document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
+   // let PricePP = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
+   // let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
+   // document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
   }
   // Call the updateButtonData function every 2 seconds (2000 milliseconds)
   setInterval(updateButtonData, 100);
