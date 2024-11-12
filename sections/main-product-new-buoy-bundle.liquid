@@ -222,68 +222,68 @@ function showLessBlocks() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Open the drawer when a `.pro_list_popup_title` element is clicked
-  document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
-    elm.addEventListener('click', (target) => {
-      target.preventDefault();
-      let TitlePdp = target.target.closest('.content').querySelector('.pro_list_title').innerHTML;
-      let sideDrawer = document.querySelector(`[data-product-name="${TitlePdp}"]`);
+// Open the drawer when a `.pro_list_popup_title` element is clicked
+document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
+  elm.addEventListener('click', (target) => {
+    target.preventDefault();
+    let TitlePdp = target.target.closest('.content').querySelector('.pro_list_title').innerHTML;
+    let sideDrawer = document.querySelector(`[data-product-name="${TitlePdp}"]`);
 
-      // Open the side drawer depending on the window width
-      if (window.innerWidth < 768) {
-        sideDrawer.style.bottom = "0px";
-        sideDrawer.style.right = "";
-      } else {  
-        sideDrawer.style.right = "0px";
-        sideDrawer.style.bottom = "";
-      }
+    // Open the side drawer depending on the window width
+    if (window.innerWidth < 768) {
+      sideDrawer.style.bottom = "0px";
+      sideDrawer.style.right = "";
+    } else {  
+      sideDrawer.style.right = "0px";
+      sideDrawer.style.bottom = "";
+    }
 
-      // Add the 'wp_popup_drawer' class to the body
-      document.body.classList.add('wp_popup_drawer');
+    // Add the 'wp_popup_drawer' class to the body
+    document.body.classList.add('wp_popup_drawer');
 
-      // Show the overlay
-      var overlay = document.querySelector('.page-blury-overlay');
-      if (overlay) {
-        overlay.classList.add('is-visibles');
-      }
-    });
-  });
-
-  // Close the drawer when clicking on the close buttons
-  document.querySelectorAll('.js-close-popup-drawer, .drawer__close').forEach((elm) => {
-    elm.addEventListener('click', (target) => {
-      target.preventDefault();
-      let TitlePdp = target.target.closest('[data-product-name]');
-      if (window.innerWidth < 768) {
-        TitlePdp.style.bottom = "-100%";
-        TitlePdp.style.right = "-100%";
-      } else {  
-        TitlePdp.style.right = "-100%";
-        TitlePdp.style.bottom = "-100%";
-      }
-      document.body.classList.remove('wp_popup_drawer');
-      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
-    });
-  });
-
-  // Close the drawer when clicking outside of it
-  document.addEventListener('click', (event) => {
-    const sideDrawer = document.querySelector('.wp_popup_drawer');
-    if (sideDrawer && !sideDrawer.contains(event.target) && !event.target.closest('.pro_list_popup_title')) {
-      // Close the drawer
-      let TitlePdp = sideDrawer.querySelector('[data-product-name]');
-      if (window.innerWidth < 768) {
-        TitlePdp.style.bottom = "-100%";
-        TitlePdp.style.right = "-100%";
-      } else {  
-        TitlePdp.style.right = "-100%";
-        TitlePdp.style.bottom = "-100%";
-      }
-      document.body.classList.remove('wp_popup_drawer');
-      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    // Show the overlay
+    var overlay = document.querySelector('.page-blury-overlay');
+    if (overlay) {
+      overlay.classList.add('is-visibles');
     }
   });
+});
 
+// Close the drawer when clicking outside
+
+
+
+  document.querySelectorAll('.js-close-popup-drawer').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  });  
+
+  document.querySelectorAll('.drawer__close').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  });   
 });
         </script>
         <style>
