@@ -13,8 +13,8 @@
       <h2 class="faq-section__title h3">{{ section.settings['title-01'] }}</h2>
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
       {% for block in section.blocks %}
-        <div class="faq__items">
-          <button class="faq__headers ">
+        <div class="faq__item">
+          <button class="faq__header ">
             <p class="sh2 medium">{{ block.settings.title }}</p>
             <div class="icon_pluse_minus">
               <span class="pluse_icon">
@@ -29,7 +29,7 @@
               </span>
             </div>
           </button>
-          <div class="faq__contents">
+          <div class="faq__content">
             <p class="sh4">{{ block.settings.answer }}</p>
           </div>
         </div>
@@ -37,39 +37,7 @@
     </div>
   </div>
 </div>
-<script>
-  // Open the first FAQ item by default
-  $(document).ready(function () {
-    $(".faq__item").first().find(".faq__headers").addClass("active");
-    $(".faq__item").first().find(".faq__contents").show();
-  });
 
-  $("body").on("click", ".faq__header", function () {
-    $(this)
-      .parent(".faq__items")
-      .siblings(".faq__items")
-      .children(".faq__headers")
-      .removeClass("active");
-    $(this)
-      .parent(".faq__items")
-      .siblings(".faq__items")
-      .children(".faq__contents")
-      .slideUp(300);
-    $(this).toggleClass("active");
-    $(this).siblings(".faq__contents").slideToggle(300);
-
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      setTimeout(() => {
-        $("body, html").animate(
-          {
-            scrollTop: $(this).offset().top - 50,
-          },
-          500
-        );
-      }, 400);
-    }
-  });
-</script>
 {% schema %}
 {
   "name": "CV FAQ",
