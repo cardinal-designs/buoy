@@ -1,49 +1,51 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head> 
-<link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
-<link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
-<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
+  <head>
+    <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://conf.config-security.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin>
 
-        <script>
-           !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.dataset.lazySrc=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbq.js');
+    <script>
+               !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.dataset.lazySrc=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbq.js');
     </script>
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if the user is on the account creation confirmation page
-    document.addEventListener("submit", function(event) {
-        if (event.target.id === "create_customer") {
-            localStorage.setItem('registrationComplete', 'true');
-        }
-    });
-    {% if customer %}
-            // Check if the event has already been fired
-        if (localStorage.getItem('registrationComplete')) {
-            // Fire the CompleteRegistration event
-          fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
-setTimeout(function(){
-              // Set a flag in local storage to prevent future tracking
-           localStorage.removeItem("registrationComplete");
-},5000);
-        }
-    {% endif %}
-});
+      document.addEventListener("DOMContentLoaded", function() {
+          // Check if the user is on the account creation confirmation page
+          document.addEventListener("submit", function(event) {
+              if (event.target.id === "create_customer") {
+                  localStorage.setItem('registrationComplete', 'true');
+              }
+          });
+          {% if customer %}
+                  // Check if the event has already been fired
+              if (localStorage.getItem('registrationComplete')) {
+                  // Fire the CompleteRegistration event
+                fbq('track', 'Rewards Sign Up', {email: '{{ customer.email }}'});
+      setTimeout(function(){
+                    // Set a flag in local storage to prevent future tracking
+                 localStorage.removeItem("registrationComplete");
+      },5000);
+              }
+          {% endif %}
+      });
     </script>
     <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.dataset.lazySrc=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WHSMDTK');</script>
+      })(window,document,'script','dataLayer','GTM-WHSMDTK');
+    </script>
     <!-- End Google Tag Manager GTM-WHSMDTK -->
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -62,33 +64,34 @@ setTimeout(function(){
     {% endif %}
 
     {% render 'meta-tags' %}
-  {% render 'custom_fonts' %}
+    {% render 'custom_fonts' %}
     {%- render 'optimization' -%}
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
     <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
 
-  
     {% comment %} <script src="{{ 'jquery.min.js' | asset_url }}"></script> {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-  
+
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 
-    {% if template.suffix == "bundle" %}
+    {% if template.suffix == 'bundle' %}
       <link rel="stylesheet" href="{{ 'lsg-bundle.css' | asset_url }}" media="print" onload="this.media='all'">
       <script src="{{ 'lsg-bundle.js' | asset_url }}" defer="defer"></script>
     {% endif %}
-    {%- assign content_for_header = content_for_header | replace: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'" -%}
+    {%- assign content_for_header = content_for_header
+      | replace: "window.addEventListener('load'", "window.addEventListener('load-head-scripts'"
+    -%}
     {{ content_for_header }}
 
     {% style %}
@@ -150,7 +153,7 @@ setTimeout(function(){
       :root {
         --black: #000000;
         --white: #FFFFFF;
-        
+
         --charcoal: #1F2322;
         --charcoal-light: #545759;
         --charcoal-lighter: #BBBCBC;
@@ -251,38 +254,39 @@ setTimeout(function(){
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
-{% if template == 'product.new_best_of_buoy_bundle' %}
-  {{ 'product_custom.css' | asset_url | stylesheet_tag }}
-{% endif %}
+    {% if template == 'product.new_best_of_buoy_bundle' %}
+      {{ 'product_custom.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
     {% if template.suffix == 'ci-shop' %}
       {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
-    {% endif %} 
+    {% endif %}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
 
-    <!-- <script type="text/javascript">
-      (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/EsWsQMpIqYVArTrsO8ytc3A4xAEDkO54aOivPDUj/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
-    </script> -->
+    <!--
+      <script type="text/javascript">
+        (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/EsWsQMpIqYVArTrsO8ytc3A4xAEDkO54aOivPDUj/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+      </script>
+    -->
 
     {% if template contains 'product' or template.suffix == 'okendo-reviews' or page.title == 'Reviews' %}
       <script src="{{ 'okendo-reviews.js' | asset_url }}" defer="defer" async></script>
     {% endif %}
 
-  
-  {% render 'shogun-head' %}
+    {% render 'shogun-head' %}
 
+    {% if handle contains 'sample-page' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
 
-  {% if handle contains 'sample-page' %}
-    <meta name="robots" content="noindex">
-  {% endif %}
-
-
-  {% if request.query_string contains '?' %}
-    <meta name="robots" content="noindex, nofollow">
-  {% else %}
-    <meta name="robots" content="index, follow">
-  {% endif %}
+    {% if request.query_string contains '?' %}
+      <meta name="robots" content="noindex, nofollow">
+    {% else %}
+      <meta name="robots" content="index, follow">
+    {% endif %}
 
     <!-- Reddit Pixel -->
     <script>
@@ -304,50 +308,61 @@ setTimeout(function(){
     </script>
     <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
     <!-- End Reddit Pixel -->
-</head>
+  </head>
 
   <body class="page-template--{{ template | handleize }} {% if template.directory %}template-{{ template.directory | handle }} {% endif %}template-{{ template.name | handle }}{% if page.handle %} page-{{ page.handle }}{% endif %} {% if page.metafields.custom.hide_klaviyo_footer == true %}page--hide-klaviyo-footer{% endif %}">
-     <img role="presentation" alt="" width="2000" height="2000" style="pointer-events:none;position:absolute;top:0;left:0;width:99vw;height:99vh;max-width:99vw;max-height:99vh" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVzYz5DcmVhdGVkIHdpdGggRmFicmljLmpzIDMuNS4wPC9kZXNjPgo8ZGVmcz4KPC9kZWZzPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDApIi8+CjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuOTIyOCAwIDAgMC44Nzg5IDUwNi44NTQ1IDQ4NC45KSIgaWQ9IjQ0NjM1NiI+CjxnIHN0eWxlPSIiIHZlY3Rvci1lZmZlY3Q9Im5vbi1zY2FsaW5nLXN0cm9rZSI+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtNDUwIC00NTApIiBpZD0iODUwMzc5Ij4KPHJlY3Qgc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiA0OyBpcy1jdXN0b20tZm9udDogbm9uZTsgZm9udC1maWxlLXVybDogbm9uZTsgZmlsbDogcmdiKDI1NSwyNTUsMjU1KTsgZmlsbC1vcGFjaXR5OiAwOyBmaWxsLXJ1bGU6IG5vbnplcm87IG9wYWNpdHk6IDA7IiB4PSItNTAiIHk9Ii01MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPgo8L2c+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS43NzU2IDAgMCAxLjc3NTYgMC4wMDg5IDAuMDA5KSIgaWQ9IjgwNDExOCI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1Ni4wMDA1LCAtMjU2LjAwMDUpIiBkPSJNIDQxMC41NjYgNTkuMzU0IFYgMjguOTYyIEMgNDEwLjU2NiAxMi45OTEgMzk3LjU5OSAwIDM4MS42NjUgMCBoIC0yNTEuMzMgYyAtMTUuOTM0IDAgLTI4LjkwMSAxMi45OTEgLTI4LjkwMSAyOC45NjIgdiAzMC4zOTIgYyAtMTYuNjIgNC4zNTEgLTI4Ljk4MSAxOS4zNjggLTI4Ljk4MSAzNy4zMzUgdiAzOC41NTcgYyAwIDUuMzQgNC4zMjUgOS42NiA5LjY2IDkuNjYgaCAxOS45MzggbCAyNi44NzQgMzM5LjcwOCBjIDEuMjI2IDE1LjUgMTQuOTE1IDI3LjM4NyAzMC41MTkgMjcuMzg3IGggMTkzLjExMyBjIDE1Ljg2MyAwIDI5LjI2OSAtMTEuNjIzIDMwLjUxOSAtMjcuMzg3IGwgMjYuODc0IC0zMzkuNzA4IGggMTkuOTM4IGMgNS4zMzUgMCA5LjY2IC00LjMyMSA5LjY2IC05LjY2IFYgOTYuNjg5IEMgNDM5LjU0NyA3OC43MjIgNDI3LjE4NiA2My43MDUgNDEwLjU2NiA1OS4zNTQgeiBNIDEyMC43NTUgMjguOTYyIGMgMCAtNS4zMjEgNC4yOTcgLTkuNjQyIDkuNTggLTkuNjQyIGggMjUxLjMzIGMgNS4yODMgMCA5LjU4IDQuMzIxIDkuNTggOS42NDIgdiAyOSBIIDEyMC43NTUgViAyOC45NjIgeiBNIDM2My44MTEgNDgyLjM1OSBjIC0wLjQzOSA1LjU5NCAtNS41OTQgMTAuMzIxIC0xMS4yNTUgMTAuMzIxIEggMTU5LjQ0MyBjIC01LjU2MSAwIC0xMC44MjEgLTQuODIxIC0xMS4yNTUgLTEwLjMyMSBsIC0yNi42NDIgLTMzNy40NTMgaCAyNjguOTA2IEwgMzYzLjgxMSA0ODIuMzU5IHogTSA0MjAuMjI2IDEyNS41ODUgSCA5MS43NzQgViA5Ni42ODkgYyAwIC0xMC42OTggOC42OTggLTE5LjQwNiAxOS4zOTIgLTE5LjQwNiBoIDI4OS42NyBjIDEwLjY5MyAwIDE5LjM5MiA4LjcwOCAxOS4zOTIgMTkuNDA2IFYgMTI1LjU4NSB6IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9nPgoJCTxnIHRyYW5zZm9ybT0ibWF0cml4KDEuNzc1NiAwIDAgMS43NzU2IDAuMDA4MSA5NC4zNDkzKSIgaWQ9IjQ2NTk0NiI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1NiwgLTMwOS4xMzIpIiBkPSJNIDI1NiAxODMuNTQ3IGMgLTQzLjMzNSAwIC03Ny4yODMgNTUuMTYgLTc3LjI4MyAxMjUuNTg1IFMgMjEyLjY2NSA0MzQuNzE3IDI1NiA0MzQuNzE3IGMgNDMuMzM1IDAgNzcuMjgzIC01NS4xNiA3Ny4yODMgLTEyNS41ODUgUyAyOTkuMzM1IDE4My41NDcgMjU2IDE4My41NDcgeiBNIDI1NiA0MTUuMzk2IGMgLTMxLjQyIDAgLTU3Ljk2MiAtNDguNjYgLTU3Ljk2MiAtMTA2LjI2NCBTIDIyNC41OCAyMDIuODY4IDI1NiAyMDIuODY4IGMgMzEuNDIgMCA1Ny45NjIgNDguNjYgNTcuOTYyIDEwNi4yNjQgQyAzMTMuOTYyIDM2Ni43MzYgMjg3LjQyIDQxNS4zOTYgMjU2IDQxNS4zOTYgeiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPC9nPgo8L2c+Cjwvc3ZnPg==">
+    <img
+      role="presentation"
+      alt=""
+      width="2000"
+      height="2000"
+      style="pointer-events:none;position:absolute;top:0;left:0;width:99vw;height:99vh;max-width:99vw;max-height:99vh"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVzYz5DcmVhdGVkIHdpdGggRmFicmljLmpzIDMuNS4wPC9kZXNjPgo8ZGVmcz4KPC9kZWZzPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDApIi8+CjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuOTIyOCAwIDAgMC44Nzg5IDUwNi44NTQ1IDQ4NC45KSIgaWQ9IjQ0NjM1NiI+CjxnIHN0eWxlPSIiIHZlY3Rvci1lZmZlY3Q9Im5vbi1zY2FsaW5nLXN0cm9rZSI+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtNDUwIC00NTApIiBpZD0iODUwMzc5Ij4KPHJlY3Qgc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiA0OyBpcy1jdXN0b20tZm9udDogbm9uZTsgZm9udC1maWxlLXVybDogbm9uZTsgZmlsbDogcmdiKDI1NSwyNTUsMjU1KTsgZmlsbC1vcGFjaXR5OiAwOyBmaWxsLXJ1bGU6IG5vbnplcm87IG9wYWNpdHk6IDA7IiB4PSItNTAiIHk9Ii01MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPgo8L2c+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS43NzU2IDAgMCAxLjc3NTYgMC4wMDg5IDAuMDA5KSIgaWQ9IjgwNDExOCI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1Ni4wMDA1LCAtMjU2LjAwMDUpIiBkPSJNIDQxMC41NjYgNTkuMzU0IFYgMjguOTYyIEMgNDEwLjU2NiAxMi45OTEgMzk3LjU5OSAwIDM4MS42NjUgMCBoIC0yNTEuMzMgYyAtMTUuOTM0IDAgLTI4LjkwMSAxMi45OTEgLTI4LjkwMSAyOC45NjIgdiAzMC4zOTIgYyAtMTYuNjIgNC4zNTEgLTI4Ljk4MSAxOS4zNjggLTI4Ljk4MSAzNy4zMzUgdiAzOC41NTcgYyAwIDUuMzQgNC4zMjUgOS42NiA5LjY2IDkuNjYgaCAxOS45MzggbCAyNi44NzQgMzM5LjcwOCBjIDEuMjI2IDE1LjUgMTQuOTE1IDI3LjM4NyAzMC41MTkgMjcuMzg3IGggMTkzLjExMyBjIDE1Ljg2MyAwIDI5LjI2OSAtMTEuNjIzIDMwLjUxOSAtMjcuMzg3IGwgMjYuODc0IC0zMzkuNzA4IGggMTkuOTM4IGMgNS4zMzUgMCA5LjY2IC00LjMyMSA5LjY2IC05LjY2IFYgOTYuNjg5IEMgNDM5LjU0NyA3OC43MjIgNDI3LjE4NiA2My43MDUgNDEwLjU2NiA1OS4zNTQgeiBNIDEyMC43NTUgMjguOTYyIGMgMCAtNS4zMjEgNC4yOTcgLTkuNjQyIDkuNTggLTkuNjQyIGggMjUxLjMzIGMgNS4yODMgMCA5LjU4IDQuMzIxIDkuNTggOS42NDIgdiAyOSBIIDEyMC43NTUgViAyOC45NjIgeiBNIDM2My44MTEgNDgyLjM1OSBjIC0wLjQzOSA1LjU5NCAtNS41OTQgMTAuMzIxIC0xMS4yNTUgMTAuMzIxIEggMTU5LjQ0MyBjIC01LjU2MSAwIC0xMC44MjEgLTQuODIxIC0xMS4yNTUgLTEwLjMyMSBsIC0yNi42NDIgLTMzNy40NTMgaCAyNjguOTA2IEwgMzYzLjgxMSA0ODIuMzU5IHogTSA0MjAuMjI2IDEyNS41ODUgSCA5MS43NzQgViA5Ni42ODkgYyAwIC0xMC42OTggOC42OTggLTE5LjQwNiAxOS4zOTIgLTE5LjQwNiBoIDI4OS42NyBjIDEwLjY5MyAwIDE5LjM5MiA4LjcwOCAxOS4zOTIgMTkuNDA2IFYgMTI1LjU4NSB6IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9nPgoJCTxnIHRyYW5zZm9ybT0ibWF0cml4KDEuNzc1NiAwIDAgMS43NzU2IDAuMDA4MSA5NC4zNDkzKSIgaWQ9IjQ2NTk0NiI+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgaXMtY3VzdG9tLWZvbnQ6IG5vbmU7IGZvbnQtZmlsZS11cmw6IG5vbmU7IGZpbGw6IHJnYigwLDAsMCk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAwOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTI1NiwgLTMwOS4xMzIpIiBkPSJNIDI1NiAxODMuNTQ3IGMgLTQzLjMzNSAwIC03Ny4yODMgNTUuMTYgLTc3LjI4MyAxMjUuNTg1IFMgMjEyLjY2NSA0MzQuNzE3IDI1NiA0MzQuNzE3IGMgNDMuMzM1IDAgNzcuMjgzIC01NS4xNiA3Ny4yODMgLTEyNS41ODUgUyAyOTkuMzM1IDE4My41NDcgMjU2IDE4My41NDcgeiBNIDI1NiA0MTUuMzk2IGMgLTMxLjQyIDAgLTU3Ljk2MiAtNDguNjYgLTU3Ljk2MiAtMTA2LjI2NCBTIDIyNC41OCAyMDIuODY4IDI1NiAyMDIuODY4IGMgMzEuNDIgMCA1Ny45NjIgNDguNjYgNTcuOTYyIDEwNi4yNjQgQyAzMTMuOTYyIDM2Ni43MzYgMjg3LjQyIDQxNS4zOTYgMjU2IDQxNS4zOTYgeiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPC9nPgo8L2c+Cjwvc3ZnPg=="
+    >
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHSMDTK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WHSMDTK"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     <div class="page-overlay"></div>
     <div class="page-blury-overlay"></div>
 
     {% comment %}
-   {% unless template.name == 'product' %} 
-    {% if page.handle == 'buoy-black-friday-offer' %}
-      <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'black-friday-announcement-bar' %}
-      </announcement-container>
-    {% else %}
-    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'announcement-bar' %}
-    </announcement-container>
-    {% endif %}
-   {% endunless %}
-   {% endcomment %}
+      {% unless template.name == 'product' %}
+       {% if page.handle == 'buoy-black-friday-offer' %}
+         <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
+         {% section 'black-friday-announcement-bar' %}
+         </announcement-container>
+       {% else %}
+       <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true %}Fixed_Bar{% endif %} announcement--transparent">
+         {% section 'announcement-bar' %}
+       </announcement-container>
+       {% endif %}
+      {% endunless %}
+    {% endcomment %}
 
     {% unless page.handle == 'chronic-illness-support' or page.handle == 'chronic-illness-shop' %}
-    {% if template.name == 'product' and settings.show_pdp_announce == true %} 
-    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'announcement-bar-new' %}
-    </announcement-container>
-    {% elsif template.name != 'product' %}
-    <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
-      {% section 'announcement-bar-new' %}
-    </announcement-container>
-    {% endif %}
+      {% if template.name == 'product' and settings.show_pdp_announce == true %}
+        <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
+          {% section 'announcement-bar-new' %}
+        </announcement-container>
+      {% elsif template.name != 'product' %}
+        <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
+          {% section 'announcement-bar-new' %}
+        </announcement-container>
+      {% endif %}
     {% endunless %}
 
-    
     <header-container class="header--transparent">
       {% section 'header' %}
       {% section 'main-menu' %}
@@ -370,6 +385,7 @@ setTimeout(function(){
             event_key: 'd678e729-c7f8-4e15-8968-ebb4c272158d'
         };
       </script>
+      {% section 'clinical-trial-drawer' %}
       <script src="https://c.albss.com/p/l/loader.iife.js" async></script>
       {% section 'newsletter-footer' %}
       {% section 'footer' %}
@@ -387,7 +403,7 @@ setTimeout(function(){
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
-   
+
     <script>
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -412,7 +428,7 @@ setTimeout(function(){
     </script>
 
     {% if product %}
-    <script>
+      <script>
       window.addEventListener('load', function() {
       var _learnq = window._learnq || [];
       function addedToCart() {
