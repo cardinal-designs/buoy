@@ -14,7 +14,7 @@
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
       {% for block in section.blocks %}
         <div class="faq__item">
-          <button class="faq__header active">
+          <button class="faq__header ">
             <p class="sh2 medium">{{ block.settings.title }}</p>
             <div class="icon_pluse_minus">
               <span class="pluse_icon">
@@ -29,7 +29,7 @@
               </span>
             </div>
           </button>
-          <div class="faq__content" style="display: block;">
+          <div class="faq__content">
             <p class="sh4">{{ block.settings.answer }}</p>
           </div>
         </div>
