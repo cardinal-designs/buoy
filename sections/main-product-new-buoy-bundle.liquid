@@ -1324,7 +1324,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
               sellingPlan.disabled = false;
               document.querySelector('.js-sticky-subscription-btns').value = "subscription";
               if (mainProductButton.dataset.available == "true") {
-                mainProductButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
+                mainProductButton.innerHTML = `Add to Cart —&nbsp;${variantJson[currentVariant].subscription_price}<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>`;
                 stickyButton.innerHTML = `Add to Cart —&nbsp;<s>${variantJson[currentVariant].compare_price || variantJson[currentVariant].price}</s>&nbsp;${variantJson[currentVariant].subscription_price}`;
               }
             } else {
