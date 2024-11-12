@@ -1707,6 +1707,9 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+  .product-section .product.pdp_cv_new {
+    gap: 20px;
+}
   .cv_image_video_pdp:after {
     height: 74px;
 }
@@ -1928,7 +1931,7 @@ body .comparison-slideshow {
     padding: 0 !important;
 }
 .product.pdp_cv_new .product__info-wrapper .product__info-container {
-    padding: 20px 0 0;
+    padding: 0;
 }
 .product.pdp_cv_new .product__media-wrapper {
     overflow: hidden;
