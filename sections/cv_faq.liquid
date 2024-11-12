@@ -37,7 +37,39 @@
     </div>
   </div>
 </div>
+<script>
+  // Open the first FAQ item by default
+  $(document).ready(function () {
+    $(".faq__item").first().find(".faq__header").addClass("active");
+    $(".faq__item").first().find(".faq__content").show();
+  });
 
+  $("body").on("click", ".faq__header", function () {
+    $(this)
+      .parent(".faq__item")
+      .siblings(".faq__item")
+      .children(".faq__header")
+      .removeClass("active");
+    $(this)
+      .parent(".faq__item")
+      .siblings(".faq__item")
+      .children(".faq__content")
+      .slideUp(300);
+    $(this).toggleClass("active");
+    $(this).siblings(".faq__content").slideToggle(300);
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      setTimeout(() => {
+        $("body, html").animate(
+          {
+            scrollTop: $(this).offset().top - 50,
+          },
+          500
+        );
+      }, 400);
+    }
+  });
+</script>
 {% schema %}
 {
   "name": "CV FAQ",
