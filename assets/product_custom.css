@@ -1729,6 +1729,9 @@ p.price_cv_sale {
     margin-top: 24px;
     margin-bottom: 24px;
 }
+ body .drawer__serving-container .drawer__serving {
+    padding-top: 0;
+}
   .product.pdp_cv_new .product__media-arrows {
     margin: 0 0 16px;
 }
