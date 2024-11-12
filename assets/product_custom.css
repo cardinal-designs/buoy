@@ -1251,6 +1251,7 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
 }
 .Variant_Title-outer .smw-text {
     margin: 6px 0 0;
+    display: inline-block;
 }
 .product.pdp_cv_new .Variant_Blocks .Variant_Title {
     font-size: 14px;
