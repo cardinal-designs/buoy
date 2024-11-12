@@ -888,7 +888,7 @@ class VariantSelects extends HTMLElement {
       if (!addButton) return;
       let variantJson = JSON.parse(this.closest("product-form").querySelector("#js-product-variant-json").innerText);
       let subscriptionOption = this.closest("product-form").querySelector('[name="purchaseType"]:checked');
-      let addToCartText = `Add to Cart &mdash; <s>${variantJson[this.currentVariant.id].compare_price || ""}</s>&nbsp;${variantJson[this.currentVariant.id].price}`;
+      let addToCartText = `Add to Cart &mdash; ${variantJson[this.currentVariant.id].price}<s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
       let variantScript = thisData.parentElement.querySelector(".variantMetaJSON");
       let closestForm = this.closest("product-form");
 
@@ -1035,7 +1035,7 @@ class VariantSelects extends HTMLElement {
             
             if (subscriptionOption) {
                 if (subscriptionOption.value == "purchaseTypeSubscription") {
-                  addToCartText = `Add to Cart &mdash; &nbsp;<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>&nbsp;${variantJson[this.currentVariant.id].subscription_price}`;
+                  addToCartText = `Add to Cart &mdash; &nbsp;${variantJson[this.currentVariant.id].subscription_price}<s>${variantJson[this.currentVariant.id].compare_price || variantJson[this.currentVariant.id].price}</s>`;
     
                   if (gridPrice) {
                       gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
