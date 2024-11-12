@@ -1544,7 +1544,13 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
 .faq__item .faq__content p.sh4 {
     margin: 0;
 }
-
+.faq__item .faq__content p {
+    font-family: inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 0 16px 0;
+}
 .swiper-container.swiper.cv_marque {
     padding: 20px 0;
 }
