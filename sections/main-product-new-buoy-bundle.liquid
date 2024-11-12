@@ -575,11 +575,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                         {% assign one_final_price = current_variant_price | minus: one_discount_value %}
 
                                         {% if variant.metafields.custom.auto_discount_percent_off != blank %}
-                                          <s>{{ current_variant_price | money }}</s>&nbsp;
                                           <span>{{ one_final_price | money }}</span>
+                                          <s>{{ current_variant_price | money }}</s>
                                         {% elsif variant.compare_at_price != blank %}
-                                          <s>{{ variant.compare_at_price | money }}</s>&nbsp;
                                           <span>{{ variant.price | money }}</span>
+                                          <s>{{ variant.compare_at_price | money }}</s>
                                         {% else %}
                                           <s></s>
                                           <span>{{ current_variant_price | money }}</span>
