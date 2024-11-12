@@ -251,7 +251,7 @@ setTimeout(function(){
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
-
+{{ 'product_custom.css' | asset_url | stylesheet_tag }}
     {% if template.suffix == 'ci-shop' %}
       {{ 'new-pdp-styles.css' | asset_url | stylesheet_tag }}
     {% endif %} 
