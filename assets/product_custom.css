@@ -1701,7 +1701,10 @@ width: calc(100% / 1.5) !important;
 }
  .product.pdp_cv_new .product__media-wrapper, .product.pdp_cv_new .product__info-wrapper {
     width: 100%;
-} 
+}
+.cv_progress_section_pdp .progressbar {
+    margin: 0 0 8px;
+}
 .cv_progress_section_pdp .progressbar:last-child {
     margin: 0;
 }  
