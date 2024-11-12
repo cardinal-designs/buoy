@@ -520,6 +520,33 @@ document.addEventListener('DOMContentLoaded', function() {
                                   <div class="pricevariantWrap">
                                     <p class="variantPriceDiv smw-text-price">
                                       {% unless product.metafields.custom.hide_subscription %}
+                                        {% if variant.compare_at_price or variant.selling_plan_allocations[0].price %}
+                                          <s>
+                                            {% if variant.compare_at_price %}
+                                              {{-
+                                                variant.compare_at_price
+                                                | default: variant.compare_at_price
+                                                | money_without_trailing_zeros
+                                              -}}
+                                            {% else %}
+                                              {{-
+                                                variant.price
+                                                | default: variant.price
+                                                | money_without_trailing_zeros
+                                              -}}
+                                            {% endif %}
+                                          </s>
+                                        {% elsif variant.metafields.custom.auto_discount_percent_off != blank
+                                          and variant.selling_plan_allocations[0].price == blank
+                                        %}
+                                          <s>
+                                            {{-
+                                              variant.price
+                                              | default: variant.price
+                                              | money_without_trailing_zeros
+                                            -}}
+                                          </s>
+                                        {% endif %}
                                         {% if variant.selling_plan_allocations[0].price %}
                                           {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
                                         {% else %}
@@ -554,33 +581,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                         {% else %}
                                           <span>{{ current_variant_price | money }}</span>
                                           <s></s>
-                                        {% endif %}
-                                        {% if variant.compare_at_price or variant.selling_plan_allocations[0].price %}
-                                          <s>
-                                            {% if variant.compare_at_price %}
-                                              {{-
-                                                variant.compare_at_price
-                                                | default: variant.compare_at_price
-                                                | money_without_trailing_zeros
-                                              -}}
-                                            {% else %}
-                                              {{-
-                                                variant.price
-                                                | default: variant.price
-                                                | money_without_trailing_zeros
-                                              -}}
-                                            {% endif %}
-                                          </s>
-                                        {% elsif variant.metafields.custom.auto_discount_percent_off != blank
-                                          and variant.selling_plan_allocations[0].price == blank
-                                        %}
-                                          <s>
-                                            {{-
-                                              variant.price
-                                              | default: variant.price
-                                              | money_without_trailing_zeros
-                                            -}}
-                                          </s>
                                         {% endif %}
                                       {% endunless %}
                                     </p>
