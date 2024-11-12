@@ -377,6 +377,7 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
+      {% section 'clinical-trial-drawer' %}
     </main>
 
     <div class="footer-container">
@@ -385,7 +386,7 @@
             event_key: 'd678e729-c7f8-4e15-8968-ebb4c272158d'
         };
       </script>
-      {% section 'clinical-trial-drawer' %}
+
       <script src="https://c.albss.com/p/l/loader.iife.js" async></script>
       {% section 'newsletter-footer' %}
       {% section 'footer' %}
