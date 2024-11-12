@@ -1859,7 +1859,7 @@ body .comparison-slideshow {
     left: 0;
 }
 .comparison-table .fixed-columns {
-    width: 263px;
+    width: 243px;
     display: flex;
     padding: 0;
     position: relative;
@@ -1867,7 +1867,7 @@ body .comparison-slideshow {
     background: #fff;
 }
 .comparison-slideshow .swiper-container-unique {
-    width: calc(100% - 263px);
+    width: calc(100% - 243px);
 }  
 .cv_electrolyte_boost {
     overflow-x: hidden;
