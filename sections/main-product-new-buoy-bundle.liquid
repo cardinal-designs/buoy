@@ -1869,6 +1869,10 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     document.querySelector('.js-clinical-opens').addEventListener('click', function () {
       // Change the style to make `right: 0px`
       const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+ // Update CSS variables when opening the drawer
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+
       if (window.innerWidth <= 768) {
         // Apply `bottom: 0px` for mobile screens
         clinicalDrawer.style.bottom = '0px';
@@ -1882,7 +1886,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       document.querySelector('.page-blury-overlay').classList.add('is-visibles');      
     });
     // Revert changes on close button click
-    document.querySelector('.js-clinical-closes').addEventListener('click', function () {
+    document.querySelector('.js-clinical-close').addEventListener('click', function () {
       const clinicalDrawer = document.getElementById('clinicalSideDrawer');
       // Revert the styles
       clinicalDrawer.style.bottom = '';
