@@ -269,7 +269,25 @@ document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
         document.body.classList.remove('wp_popup_drawer');
         document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
     });
-  });   
+  });  
+
+  document.querySelectorAll('.drawer__continue-cta').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      let TitlePdp =  target.target.closest('[data-product-name]');
+        if (window.innerWidth < 768) {
+           TitlePdp.style.bottom = "-100%";
+           TitlePdp.style.right = "-100%";
+        } else {  
+           TitlePdp.style.right = "-100%";
+           TitlePdp.style.bottom = "-100%";
+        }      
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    });
+  }); 
+
+ 
 });
         </script>
         <style>
