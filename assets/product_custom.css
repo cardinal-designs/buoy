@@ -1706,10 +1706,10 @@ width: calc(100% / 2.5) !important;
 .cv_electrolyte_boost {
     max-width: 750px;
 }  
-.main_image.showOnDesk {
+/* .main_image.showOnDesk {
     width: 315px;
     flex: 0 0 315px;
-}
+} */
 .btn_text.first-one, .btn_text.third-one {
     margin-left: -50px;
 }
