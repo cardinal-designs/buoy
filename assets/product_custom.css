@@ -1711,7 +1711,7 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
-  .supplement-side-drawer {
+ body .supplement-side-drawer {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
