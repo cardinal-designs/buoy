@@ -747,7 +747,7 @@ p.inn_title {
 /* end Unlike The Others */
 /* comparison-slideshow */
 .comparison-table .fixed-columns {
-    padding: 32px 0 0 20px;
+    padding: 32px 20px 0;
     display: grid;
     grid-template-columns: 230px 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
