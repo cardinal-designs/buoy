@@ -1742,6 +1742,9 @@ body .drawer__recommended {
  body .drawer__serving-container {
     padding-top: 20px;
 }
+  .drawer__serving-container {
+    gap: 20px;
+}
   .product.pdp_cv_new .product__media-arrows {
     margin: 0 0 16px;
 }
