@@ -563,110 +563,6 @@
         "add_bottom_border": false,
         "background": "none"
       }
-    },
-    "cv_clinical_trial_drawer_nFWKY9": {
-      "type": "cv_clinical-trial-drawer",
-      "blocks": {
-        "list_item_3akeJG": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify://shop_images/check.svg",
-            "item_description": "General Hydration — Estimated Trial Results Early 2024"
-          }
-        },
-        "list_item_bYTz6c": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify://shop_images/check.svg",
-            "item_description": "Type 1 Diabetes — Estimated Trial Results Mid 2024"
-          }
-        },
-        "list_item_tmyXBE": {
-          "type": "list-item",
-          "settings": {
-            "icon_item": "shopify://shop_images/check.svg",
-            "item_description": "Chemotherapy Dehydration — Estimated Trial Results Late 2024"
-          }
-        },
-        "content_TWFq4i": {
-          "type": "content",
-          "settings": {
-            "btn_title": "General Hydration",
-            "notification": "",
-            "heading": "Primary Outcome Measures:",
-            "title": "Net Fluid Balance",
-            "text_block_one": "<p><strong>Time Frame:</strong> Urine will be measured during each visit (3 total visits that each last 6 hours)</p>",
-            "text_block_two": "Determined by subtracting the cumulative urine output from the total fluid load consumed",
-            "block_two_title": "Electrolytes In Urine",
-            "block_two_text_block_one": "<p><strong>Time Frame:</strong> Urine will be measured during each visit (3 total visits that each last 6 hours)</p>",
-            "block_two_text_block_two": "Sodium, Potassium, and Chloride levels will be measured",
-            "block_three_title": "Blood Labs",
-            "block_three_text_block_one": "<p><strong>Time Frame:</strong> Venous blood collection will occur at the screening visit and as necessary pending any changes to the patient's medical history and status.</p>",
-            "block_three_text_block_two": "Venous whole blood will be collected using phlebotomy and 100ul will be analyzed using an i-STAT",
-            "secondary_heading": "Secondary Outcome Measures:",
-            "secondary_title": "Bioimpedence",
-            "secondary_text_block_one": "<p><strong>Time Frame:</strong> Each urine collection occurs for a total of 6 hours</p>",
-            "secondary_text_block_two": "Bioimpedence measured after each urine collection"
-          }
-        },
-        "content_T4jFRM": {
-          "type": "content",
-          "settings": {
-            "btn_title": "Type 1 Diabetes",
-            "notification": "Coming Soon!",
-            "heading": "",
-            "title": "",
-            "text_block_one": "",
-            "text_block_two": "",
-            "block_two_title": "",
-            "block_two_text_block_one": "",
-            "block_two_text_block_two": "",
-            "block_three_title": "",
-            "block_three_text_block_one": "",
-            "block_three_text_block_two": "",
-            "secondary_heading": "",
-            "secondary_title": "",
-            "secondary_text_block_one": "",
-            "secondary_text_block_two": ""
-          }
-        },
-        "content_HerFR9": {
-          "type": "content",
-          "settings": {
-            "btn_title": "Chemotherapy Dehydration",
-            "notification": "Coming Soon!",
-            "heading": "",
-            "title": "",
-            "text_block_one": "",
-            "text_block_two": "",
-            "block_two_title": "",
-            "block_two_text_block_one": "",
-            "block_two_text_block_two": "",
-            "block_three_title": "",
-            "block_three_text_block_one": "",
-            "block_three_text_block_two": "",
-            "secondary_heading": "",
-            "secondary_title": "",
-            "secondary_text_block_one": "",
-            "secondary_text_block_two": ""
-          }
-        }
-      },
-      "block_order": [
-        "list_item_3akeJG",
-        "list_item_bYTz6c",
-        "list_item_tmyXBE",
-        "content_TWFq4i",
-        "content_T4jFRM",
-        "content_HerFR9"
-      ],
-      "disabled": true,
-      "settings": {
-        "year": "",
-        "product_name": "Best of Buoy Bundle",
-        "title": "Clinical Trial Updates",
-        "about": "In 2023, Buoy’s Hydration Drops were greenlit for three third-party clinical trials registered with the National Institute of Health highlighting efficacy for:"
-      }
     }
   },
   "order": [
@@ -677,7 +573,6 @@
     "cv_progress_section_pdp_bVVPad",
     "cv_table_XWneKw",
     "cv_marquee_6BbYkm",
-    "cv_faq_pctM7F",
-    "cv_clinical_trial_drawer_nFWKY9"
+    "cv_faq_pctM7F"
   ]
 }
