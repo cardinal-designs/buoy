@@ -249,26 +249,7 @@ document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
   });
 });
 
-// Close the drawer when clicking outside
-document.addEventListener('click', function(event) {
-  var sideDrawer = document.getElementById('supplementSideDrawer');
 
-  // Check if the click happened outside the side drawer or the trigger elements
-  if (!sideDrawer.contains(event.target) && !event.target.closest('.pro_list_popup_title')) {
-    // Close the side drawer by setting the style to 'right: -100%' and 'bottom: -100%'
-    sideDrawer.style.right = '-100%';
-    sideDrawer.style.bottom = '-100%';
-
-    // Remove the 'wp_popup_drawer' class from the body
-    document.body.classList.remove('wp_popup_drawer');
-    
-    // Remove the 'is-visibles' class from the overlay
-    var overlay = document.querySelector('.page-blury-overlay');
-    if (overlay) {
-      overlay.classList.remove('is-visibles');
-    }
-  }
-});
 
 
   document.querySelectorAll('.js-close-popup-drawer').forEach((elm)=>{
