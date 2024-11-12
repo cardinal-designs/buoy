@@ -1587,6 +1587,10 @@ ul.list_faq li span {
 .header__inline-menu .list-menu.list-menu--inline {
     display: none;
 }
+.clinical__charts>.swiper>.swiper-wrapper {
+    display: block;
+}
+
 /* +++++++++++++++++ */
 /* Responsive start */
 /* +++++++++++++++++ */
