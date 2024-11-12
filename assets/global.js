@@ -1593,22 +1593,63 @@ $(".chronic-multicolumn__slider").slick({
 });
 
 // PDP main slider
+// $(document).ready(function () {
+//   $(".product__media-list").slick({
+//     infinite: false,
+//     prevArrow:
+//       '<button type="button" class="slick-prev slider-arrow-disable"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
+//     nextArrow:
+//       '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
+//     appendArrows: ".product__media-arrows",
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           arrows: false,
+//           centerMode: true,
+//           centerPadding: "194px",
+//           variableWidth: true,
+//         },
+//       },
+//     ],
+//   });
+//   // disable/enable arrows
+//   $(".product__media-list").on("afterChange", function (slick) {
+//     if ($(".slick-prev").hasClass("slick-disabled")) {
+//       $(".slick-prev").addClass("slider-arrow-disable");
+//     } else {
+//       $(".slick-prev").removeClass("slider-arrow-disable");
+//     }
+
+//     if ($(".slick-next").hasClass("slick-disabled")) {
+//       $(".slick-next").addClass("slider-arrow-disable");
+//     } else {
+//       $(".slick-next").removeClass("slider-arrow-disable");
+//     }
+//   });
+// });
+
 $(document).ready(function () {
   $(".product__media-list").slick({
-    infinite: false,
+    infinite: true,
+
     prevArrow:
-      '<button type="button" class="slick-prev slider-arrow-disable"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path stroke="#1F2322" d="M1.467 10.557H23M10.223 20l-9.5-9.5 9.5-9.5"/></svg></button>',
-    nextArrow:
-      '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><g stroke="#1F2322"><path d="M21.533 10.443H0M12.777 1l9.5 9.5-9.5 9.5"/></g></svg></button>',
+      '<button type="button" class="slick-prev slider-arrow-disable"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.50688 10.2001L11.0283 17.7134L9.91176 18.8235L0.5 9.41177L9.91176 0L11.0283 1.11009L3.50688 8.62346H19.3235V10.2001H3.50688Z" fill="#1F2322"/></svg></button>',
+     dots: true,
+ nextArrow:
+      '<button type="button" class="slick-next"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.3167 10.2001L8.79526 17.7134L9.91178 18.8235L19.3235 9.41176L9.91178 0L8.79526 1.11009L16.3167 8.62346H0.500018V10.2001H16.3167Z" fill="#1F2322"/></svg></button>',
     appendArrows: ".product__media-arrows",
+ appendDots: ".product__media-arrows",
     responsive: [
       {
         breakpoint: 768,
         settings: {
           arrows: false,
-          centerMode: true,
-          centerPadding: "194px",
+          // centerMode: true,
+          // centerPadding: "194px",
           variableWidth: true,
+slidesToShow:1,
+dots: true,
         },
       },
     ],
@@ -1628,6 +1669,9 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
 
 // People
 $(".people-slider__drink-slider--1").slick({
