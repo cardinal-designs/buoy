@@ -1734,7 +1734,9 @@ body .clinical__label-wrapper {
 .clinical-trial-drawer .clinical__heading {
     padding: 24px 0 6px;
 }
-
+body .clinical-trial-drawer {
+    padding-bottom: 0;
+}
 .clinical-trial-drawer .clinical__label-wrapper {
     padding: 24px 0 16px;
 }
