@@ -1555,6 +1555,7 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
 .faq_teaxrteding {
     color: #797b7a;
     margin: 0 0 2px;
+    font-size: 16px;
 }
 ul.list_faq {
     padding: 0;
@@ -1704,6 +1705,10 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+  .faq_teaxrteding {
+    line-height: 21px;
+    font-size: 14px;
+}
 .product.pdp_cv_new .product__media-wrapper .slick-dots li button {
     width: 8px;
     height: 8px;
