@@ -1707,6 +1707,13 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+  .product.pdp_cv_new .product__media-arrows {
+    margin: 0 0 16px;
+}
+  /* .product-section .product.pdp_cv_new {
+    padding: 0 20px!important;
+    gap: 0;
+} */
   .product-section .product.pdp_cv_new {
     gap: 20px;
 }
