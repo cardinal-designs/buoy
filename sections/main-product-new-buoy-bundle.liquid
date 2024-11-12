@@ -603,7 +603,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                     {% endcomment %}
                                     <div class="bestdIV">
                                       {% if variant.metafields.custom.auto_discount_percent_off != blank %}
-                                        <span class="Best_Value">Save {{ one_discount_value | money }}</span>
+                                        <span
+                                          class="Best_Value"
+                                          idsave="{{ one_discount_value | money }}"
+                                          prcnt="{{ my_fields.best_value }}"
+                                          >Save {{ one_discount_value | money -}}
+                                        </span>
                                       {% endif %}
                                     </div>
                                   </div>
@@ -1917,9 +1922,9 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       console.log('Button or price container not found');
     }
 
-   // let PricePP = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
-   // let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
-   // document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
+   let SaveOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
+   let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
+   document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
   }
   // Call the updateButtonData function every 2 seconds (2000 milliseconds)
   setInterval(updateButtonData, 100);
