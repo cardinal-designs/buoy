@@ -1,0 +1,144 @@
+<style>
+.review_cv .okeReviews-starRating--small span.okeReviews-a11yText {
+    height: 100%!important;
+    clip: inherit!important;
+    right: -50px;
+    font-family: inter,sans-serif;
+    font-style: normal;
+    font-weight: 400!important;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 21px!important;
+    width: auto!important;
+    overflow: hidden;
+    top: 3px;
+    color: var(--charcoal-60);
+}
+
+.review_cv .okeReviews-reviewsSummary-ratingCount span {
+    font-family: inter,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 1.375em;
+    color: var(--charcoal-60);
+}
+.review_cv .okeReviews-starRating--small span.okeReviews-a11yText .rated-text {
+    display: none;
+    margin-left: 20px;
+}
+.review_cv .okeReviews .okeReviews-starRating--small {
+    height: 22px;
+
+.review_cv .okeReviews {
+    margin-bottom: 10px!important;
+}
+}
+
+</style>
+
+<div class="tsssssst cv_image_video_pdp {{ section.settings.custom_class }}">
+  <div class="out_stock_text">
+<p>{{ section.settings.out_stock }}</p>
+  </div>
+  <div class="media-section">
+    {% if section.settings.section_video_file != blank %}
+     <video controls muted autoplay height="400px" width="100%">
+       <source src="{{ section.settings.section_video_file | video_tag  }}"
+      </video>
+    {% elsif section.settings.section_video_url != blank %}
+      <iframe
+        src="{{ section.settings.section_video_url }}"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        style="width: 100%; height: 400px;"
+      ></iframe>
+    {% elsif section.settings.section_image != blank %}
+      <img
+        src="{{ section.settings.section_image | img_url: 'master' }}"
+        alt="Section Image"
+        style="max-width: 100%; height: auto;"
+      />
+    {% endif %}
+  </div>
+
+<div class="review_cv">
+{% assign selected_product = section.settings.selected_product %}
+
+{% if selected_product %}
+  <div class="product-info">
+      <!-- Render the Okendo reviews product rating summary -->
+    {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
+
+  {% comment %}
+  Add structured data for the selected product (JSON-LD format).
+  {% endcomment %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "{{ selected_product.title }}",
+    "image": "{{ selected_product.images.first.src }}",
+    "description": "{{ selected_product.description | strip_html | escape }}",
+    "sku": "{{ selected_product.sku }}",
+    "offers": {
+      "@type": "Offer",
+      "url": "{{ shop.url }}{{ selected_product.url }}",
+      "priceCurrency": "USD",
+      "price": "{{ selected_product.price | money_without_currency }}",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+{% else %}
+  <p>No product selected.</p>
+{% endif %}
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "CV Image/Video Mobile",
+  "settings": [
+{
+  "type": "text",
+"id": "custom_class",
+"label": "Custom class"
+},
+{
+"type": "text",
+"id": "out_stock",
+"label": "Out Stock text"
+},
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "section_video_url",
+      "label": "Video URL",
+      "info": "Enter a video URL (e.g., from YouTube or Vimeo)"
+    },
+    {
+      "type": "video",
+      "id": "section_video_file",
+      "label": "MP4 Video File"
+    },
+ {
+      "type": "product",
+      "id": "selected_product",
+      "label": "Select a product for rating"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CV Image/Video"
+    }
+  ]
+}
+{% endschema %}
