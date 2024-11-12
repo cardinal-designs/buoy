@@ -1861,7 +1861,7 @@ body .comparison-slideshow {
 .comparison-table .fixed-columns {
     width: 263px;
     display: flex;
-    padding: 0 0 0 20px;
+    padding: 0;
     position: relative;
     z-index: 2;
     background: #fff;
