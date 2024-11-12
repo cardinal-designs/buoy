@@ -1,6 +1,630 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<style>
+  .comparison-slideshow {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
   }
+
+  .comparison-table {
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .fixed-columns {
+    display: flex;
+    width: 60%;
+    /* Width for fixed columns */
+    padding: 10px;
+  }
+
+  .feature-rows {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    width: 30%%;
+    /* Full width for feature rows */
+  }
+
+  .competitor-rows {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .feature-row {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .buoy-logo {
+    font-weight: bold;
+    color: #4caf50;
+  }
+
+  .swiper-container-unique {
+    width: 30%;
+    /* 30% for the Swiper slider */
+    padding: 10px;
+    position: relative;
+    /* Ensure proper positioning */
+  }
+
+  .comparison-table .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    opacity: -0.5;
+    /* Make non-active slides semi-transparent */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for opacity */
+  }
+
+  .comparison-table .swiper-slide-active {
+    opacity: 1;
+    /* Fully visible active slide */
+  }
+
+  .competitor-row {
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+
+<div class="comparison-slideshow">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.sub_heading }}</p>
+
+  <div class="comparison-table">
+    <!-- Fixed Column for Features and Buoy Logo -->
+    <div class="fixed-columns">
+      <div class="feature-rows">
+        <div class="competitor-row">
+          <h3 class="heading_table"></h3>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_01 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_02 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_03 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_04 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_05 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_06 }}</p>
+        </div>
+        <div class="competitor-row">
+          <p>{{ section.settings.heading_07 }}</p>
+        </div>
+        {% if section.settings.heading_08 != blank %}
+          <div class="competitor-row">
+            <p>{{ section.settings.heading_08 }}</p>
+          </div>
+        {% endif %}
+      </div>
+      <div class="feature-rows">
+        <div class="competitor-row">
+          <h3 class="heading_table">
+            <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Buoy_Logo.png?v=1730787600">
+          </h3>
+        </div>
+        <div class="competitor-row">{{ section.settings.heading_21 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_22 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_23 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_24 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_25 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_26 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_27 }}</div>
+        {% if section.settings.heading_28 != blank %}
+          <div class="competitor-row">{{ section.settings.heading_28 }}</div>
+        {% endif %}
+      </div>
+
+      <div class="feature-rows showOnDesk">
+        <div class="competitor-row">
+          <h3 class="heading_table">{{ section.settings.tp_heading_03 }}</h3>
+        </div>
+        <div class="competitor-row">{{ section.settings.heading_31 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_32 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_33 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_34 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_35 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_36 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_37 }}</div>
+        {% if section.settings.heading_38 != blank %}
+          <div class="competitor-row">{{ section.settings.heading_38 }}</div>
+        {% endif %}
+      </div>
+
+      <div class="feature-rows showOnDesk">
+        <div class="competitor-row">
+          <h3 class="heading_table">{{ section.settings.tp_heading_04 }}</h3>
+        </div>
+        <div class="competitor-row">{{ section.settings.heading_41 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_42 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_43 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_44 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_45 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_46 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_47 }}</div>
+        {% if section.settings.heading_48 != blank %}
+          <div class="competitor-row">{{ section.settings.heading_48 }}</div>
+        {% endif %}
+      </div>
+
+      <div class="feature-rows showOnDesk">
+        <div class="competitor-row">
+          <h3 class="heading_table">{{ section.settings.tp_heading_05 }}</h3>
+        </div>
+        <div class="competitor-row">{{ section.settings.heading_51 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_52 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_53 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_54 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_55 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_56 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_57 }}</div>
+        {% if section.settings.heading_58 != blank %}
+          <div class="competitor-row">{{ section.settings.heading_58 }}</div>
+        {% endif %}
+      </div>
+
+      <div class="feature-rows showOnDesk">
+        <div class="competitor-row">
+          <h3 class="heading_table">{{ section.settings.tp_heading_06 }}</h3>
+        </div>
+        <div class="competitor-row">{{ section.settings.heading_61 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_62 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_63 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_64 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_65 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_66 }}</div>
+        <div class="competitor-row">{{ section.settings.heading_67 }}</div>
+        {% if section.settings.heading_68 != blank %}
+          <div class="competitor-row">{{ section.settings.heading_68 }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Swiper Slider for Competitors -->
+    <div class="swiper-container swiper-container-unique showOnMob">
+      <div class="swiper-wrapper showOnMob">
+        <!-- Competitor Column as Swiper Slide -->
+        <div class="swiper-slide cv_table_slide showOnMob">
+          <div class="competitor-row">
+            <h3 class="heading_table">{{ section.settings.tp_heading_03 }}</h3>
+          </div>
+          <div class="competitor-row">{{ section.settings.heading_31 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_32 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_33 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_34 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_35 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_36 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_37 }}</div>
+          {% if section.settings.heading_38 != blank %}
+            <div class="competitor-row">{{ section.settings.heading_38 }}</div>
+          {% endif %}
+        </div>
+        <div class="swiper-slide cv_table_slide showOnMob">
+          <div class="competitor-row">
+            <h3 class="heading_table">{{ section.settings.tp_heading_04 }}</h3>
+          </div>
+          <div class="competitor-row">{{ section.settings.heading_41 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_42 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_43 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_44 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_45 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_46 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_47 }}</div>
+          {% if section.settings.heading_48 != blank %}
+            <div class="competitor-row">{{ section.settings.heading_48 }}</div>
+          {% endif %}
+        </div>
+        <div class="swiper-slide cv_table_slide showOnMob">
+          <div class="competitor-row">
+            <h3 class="heading_table">{{ section.settings.tp_heading_05 }}</h3>
+          </div>
+          <div class="competitor-row">{{ section.settings.heading_51 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_52 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_53 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_54 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_55 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_56 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_57 }}</div>
+          {% if section.settings.heading_58 != blank %}
+            <div class="competitor-row">{{ section.settings.heading_58 }}</div>
+          {% endif %}
+        </div>
+        {% if section.settings.tp_heading_06 != blank %}
+          <div class="swiper-slide cv_table_slide showOnMob">
+            <div class="competitor-row">
+              <h3 class="heading_table">{{ section.settings.tp_heading_06 }}</h3>
+            </div>
+            <div class="competitor-row">{{ section.settings.heading_61 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_62 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_63 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_64 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_65 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_66 }}</div>
+            <div class="competitor-row">{{ section.settings.heading_67 }}</div>
+            {% if section.settings.heading_68 != blank %}
+              <div class="competitor-row">{{ section.settings.heading_68 }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+        <!-- Add more slides as needed -->
+      </div>
+
+      <!-- Swiper Navigation -->
+    </div>
+  </div>
+  <div class="slider_navigation">
+    <div id="swiper-button-prev-unique" class="swiper-button-prev">
+      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Vector_3.svg?v=1730808248">
+    </div>
+    <div id="swiper-pagination-unique" class="swiper-pagination"></div>
+    <div id="swiper-button-next-unique" class="swiper-button-next">
+      <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Actions_84bbef5f-8b92-45cb-8787-4538a0744e50.svg?v=1730808248">
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"
+></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    function initializeSwiper() {
+      new Swiper('.swiper-container-unique', {
+  allowTouchMove: true,
+        slidesPerView: 1, // Show one competitor column at a time
+        centeredSlides: true, // Center the active slide
+        spaceBetween: 30, // Space between slides
+        navigation: {
+          nextEl: '#swiper-button-next-unique',
+          prevEl: '#swiper-button-prev-unique',
+        },
+        pagination: {
+          el: '#swiper-pagination-unique',
+          clickable: true, // Allows clicking on dots to navigate
+        },
+        loop: true, // Enable looping
+      });
+    }
+
+    // Initialize on load
+    initializeSwiper();
+</script>
+{% schema %}
+{
+"name": "cv table",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading"
+},
+{
+"type": "text",
+"id": "sub_heading",
+"label": "Sub Heading"
+},
+{
+  "type": "header",
+"content": "First Column Headings"
+},
+{
+"type": "text",
+"id": "heading_01",
+"label": "Heading One"
+},
+{
+"type": "text",
+"id": "heading_02",
+"label": "Heading two"
+},
+{
+"type": "text",
+"id": "heading_03",
+"label": "Heading Third"
+},
+{
+"type": "text",
+"id": "heading_04",
+"label": "Heading Forth"
+},
+{
+"type": "text",
+"id": "heading_05",
+"label": "Heading Fifth"
+},
+{
+"type": "text",
+"id": "heading_06",
+"label": "Heading Sixth"
+},
+{
+"type": "text",
+"id": "heading_07",
+"label": "Heading Seventh"
+},
+{
+"type": "text",
+"id": "heading_08",
+"label": "Heading Eight"
+},
+{
+  "type": "header",
+"content": "Second Column Content"
+},
+
+  {
+"type": "text",
+"id": "tp_heading_02",
+"label": "Main heading"
+},
+{
+"type": "html",
+"id": "heading_21",
+"label": "Icon tik and cross add svg One"
+},
+{
+"type": "html",
+"id": "heading_22",
+"label": "Icon tik and cross add svg Two"
+},
+{
+"type": "html",
+"id": "heading_23",
+"label": "Icon tik and cross add svg third"
+},
+{
+"type": "html",
+"id": "heading_24",
+"label": "Icon tik and cross add svg forth"
+},
+{
+"type": "html",
+"id": "heading_25",
+"label": "Icon tik and cross add svg fifth"
+},
+{
+"type": "html",
+"id": "heading_26",
+"label": "Icon tik and cross add svg sixth"
+},
+{
+"type": "html",
+"id": "heading_27",
+"label": "Icon tik and cross add svg Seventh"
+},
+{
+"type": "html",
+"id": "heading_28",
+"label": "Icon tik and cross add svg Eight"
+},
+{
+  "type": "header",
+"content": "Third Column Content"
+},
+
+  {
+"type": "text",
+"id": "tp_heading_03",
+"label": "Main heading"
+},
+{
+"type": "html",
+"id": "heading_31",
+"label": "Icon tik and cross add svg One"
+},
+{
+"type": "html",
+"id": "heading_32",
+"label": "Icon tik and cross add svg Two"
+},
+{
+"type": "html",
+"id": "heading_33",
+"label": "Icon tik and cross add svg third"
+},
+{
+"type": "html",
+"id": "heading_34",
+"label": "Icon tik and cross add svg forth"
+},
+{
+"type": "html",
+"id": "heading_35",
+"label": "Icon tik and cross add svg fifth"
+},
+{
+"type": "html",
+"id": "heading_36",
+"label": "Icon tik and cross add svg sixth"
+},
+{
+"type": "html",
+"id": "heading_37",
+"label": "Icon tik and cross add svg Seventh"
+},
+{
+"type": "html",
+"id": "heading_38",
+"label": "Icon tik and cross add svg Eight"
+},
+{
+  "type": "header",
+"content": "Forth Column Content"
+},
+
+  {
+"type": "text",
+"id": "tp_heading_04",
+"label": "Main heading"
+},
+{
+"type": "html",
+"id": "heading_41",
+"label": "Icon tik and cross add svg One"
+},
+{
+"type": "html",
+"id": "heading_42",
+"label": "Icon tik and cross add svg Two"
+},
+{
+"type": "html",
+"id": "heading_43",
+"label": "Icon tik and cross add svg third"
+},
+{
+"type": "html",
+"id": "heading_44",
+"label": "Icon tik and cross add svg forth"
+},
+{
+"type": "html",
+"id": "heading_45",
+"label": "Icon tik and cross add svg fifth"
+},
+{
+"type": "html",
+"id": "heading_46",
+"label": "Icon tik and cross add svg sixth"
+},
+{
+"type": "html",
+"id": "heading_47",
+"label": "Icon tik and cross add svg Seventh"
+},
+{
+"type": "html",
+"id": "heading_48",
+"label": "Icon tik and cross add svg Eight"
+},
+{
+  "type": "header",
+"content": "Fifith Column Content"
+},
+
+  {
+"type": "text",
+"id": "tp_heading_05",
+"label": "Main heading"
+},
+{
+"type": "html",
+"id": "heading_51",
+"label": "Icon tik and cross add svg One"
+},
+{
+"type": "html",
+"id": "heading_52",
+"label": "Icon tik and cross add svg Two"
+},
+{
+"type": "html",
+"id": "heading_53",
+"label": "Icon tik and cross add svg third"
+},
+{
+"type": "html",
+"id": "heading_54",
+"label": "Icon tik and cross add svg forth"
+},
+{
+"type": "html",
+"id": "heading_55",
+"label": "Icon tik and cross add svg fifth"
+},
+{
+"type": "html",
+"id": "heading_56",
+"label": "Icon tik and cross add svg sixth"
+},
+{
+"type": "html",
+"id": "heading_57",
+"label": "Icon tik and cross add svg Seventh"
+},
+{
+"type": "html",
+"id": "heading_58",
+"label": "Icon tik and cross add svg Eight"
+},
+{
+  "type": "header",
+"content": "Sixth Column Content"
+},
+
+  {
+"type": "text",
+"id": "tp_heading_06",
+"label": "Main heading"
+},
+{
+"type": "html",
+"id": "heading_61",
+"label": "Icon tik and cross add svg One"
+},
+{
+"type": "html",
+"id": "heading_62",
+"label": "Icon tik and cross add svg Two"
+},
+{
+"type": "html",
+"id": "heading_63",
+"label": "Icon tik and cross add svg third"
+},
+{
+"type": "html",
+"id": "heading_64",
+"label": "Icon tik and cross add svg forth"
+},
+{
+"type": "html",
+"id": "heading_65",
+"label": "Icon tik and cross add svg fifth"
+},
+{
+"type": "html",
+"id": "heading_66",
+"label": "Icon tik and cross add svg sixth"
+},
+{
+"type": "html",
+"id": "heading_67",
+"label": "Icon tik and cross add svg Seventh"
+},
+{
+"type": "html",
+"id": "heading_68",
+"label": "Icon tik and cross add svg Eight"
+}
+
+
+
+
+],
+"presets": [
+{
+"name": "cv table"
+}
+]
+}
 {% endschema %}
