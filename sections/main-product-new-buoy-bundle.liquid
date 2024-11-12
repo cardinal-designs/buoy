@@ -520,6 +520,23 @@ document.addEventListener('DOMContentLoaded', function() {
                                   <div class="pricevariantWrap">
                                     <p class="variantPriceDiv smw-text-price">
                                       {% unless product.metafields.custom.hide_subscription %}
+                                        {% if variant.selling_plan_allocations[0].price %}
+                                          {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                                        {% else %}
+                                          {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                                            {% assign current_variant_price = variant.price %}
+                                            {% assign one_discount_value = current_variant_price
+                                              | times: variant.metafields.custom.auto_discount_percent_off
+                                              | divided_by: 100
+                                            %}
+                                            {% assign one_final_price = current_variant_price
+                                              | minus: one_discount_value
+                                            %}
+                                            {{ one_final_price | money_without_trailing_zeros }}
+                                          {% else %}
+                                            {{ variant.price | money_without_trailing_zeros }}
+                                          {% endif %}
+                                        {% endif %}
                                         {% if variant.compare_at_price or variant.selling_plan_allocations[0].price %}
                                           <s>
                                             {% if variant.compare_at_price %}
@@ -547,23 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             -}}
                                           </s>
                                         {% endif %}
-                                        {% if variant.selling_plan_allocations[0].price %}
-                                          {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
-                                        {% else %}
-                                          {% if variant.metafields.custom.auto_discount_percent_off != blank %}
-                                            {% assign current_variant_price = variant.price %}
-                                            {% assign one_discount_value = current_variant_price
-                                              | times: variant.metafields.custom.auto_discount_percent_off
-                                              | divided_by: 100
-                                            %}
-                                            {% assign one_final_price = current_variant_price
-                                              | minus: one_discount_value
-                                            %}
-                                            {{ one_final_price | money_without_trailing_zeros }}
-                                          {% else %}
-                                            {{ variant.price | money_without_trailing_zeros }}
-                                          {% endif %}
-                                        {% endif %}
+
                                       {% else %}
                                         {% assign current_variant_price = variant.price %}
                                         {% assign one_discount_value = current_variant_price
