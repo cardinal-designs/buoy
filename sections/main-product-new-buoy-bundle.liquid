@@ -1855,11 +1855,10 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     } else {
       console.log('Button or price container not found');
     }
-
-   let SaveOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.Best_Value').getAttribute('idsave');
+  let SaveOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.Best_Value').getAttribute('idsave');
    let PercentOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.Best_Value').getAttribute('prcnt');
    document.querySelector('.price_innpro').innerHTML = SaveOffCalculate;
-   document.querySelector('.image-text-overlay .fp').forEach((elm)=>{ elm.innerHTML = PercentOffCalculate});
+   document.querySelectorAll('.image-text-overlay .fp').forEach((elm)=>{ elm.innerHTML = PercentOffCalculate});
   }
   // Call the updateButtonData function every 2 seconds (2000 milliseconds)
   setInterval(updateButtonData, 100);
