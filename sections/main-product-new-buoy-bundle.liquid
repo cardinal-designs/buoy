@@ -56,7 +56,7 @@
                 {%- if forloop.index == 0 -%}
                   <p>8 Bottles 1 Rescue Salt 2 Free Accessories</p>
                 {%- elsif forloop.index == 1 -%}
-                  <p>{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 {%- elsif forloop.index == 2 -%}
                   <p>Limited Time: 20% Off</p>
                 {%- elsif forloop.index == 3 -%}
@@ -1922,9 +1922,11 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
       console.log('Button or price container not found');
     }
 
-   let SaveOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.price').innerHTML;
-   let ComparePrice = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.compare-price del').innerHTML;
-   document.querySelector('.js-mainproduct-submit').innerHTML = `Add to Cart — ${PricePP}&nbsp;<s>${ComparePrice}</s>`
+   let SaveOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.Best_Value').getAttribute('idsave');
+   let PercentOffCalculate = document.querySelector('[name="Size"]:checked').closest('.Variant_Blocks').querySelector('.Best_Value').getAttribute('prcnt');
+   document.querySelector('.price_innpro').innerHTML = SaveOffCalculate;
+   document.querySelector('.image-text-overlay .fp').innerHTML = PercentOffCalculate;
+
   }
   // Call the updateButtonData function every 2 seconds (2000 milliseconds)
   setInterval(updateButtonData, 100);
