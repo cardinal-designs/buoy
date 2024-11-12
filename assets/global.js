@@ -1460,32 +1460,7 @@ function slickOnDesktop(slider, settings) {
 }
 
 // FAQ
-$("body").on("click", ".faq__header", function () {
-  $(this)
-    .parent(".faq__item")
-    .siblings(".faq__item")
-    .children(".faq__header")
-    .removeClass("active");
-  $(this)
-    .parent(".faq__item")
-    .siblings(".faq__item")
-    .children(".faq__header")
-    .siblings(".faq__content")
-    .slideUp(300);
-  $(this).toggleClass("active");
-  $(this).siblings(".faq__content").slideToggle(300);
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    setTimeout(() => {
-      $("body, html").animate(
-        {
-          scrollTop: $(this).offset().top - 50,
-        },
-        500
-      );
-    }, 400);
-  }
-});
 
 /* ---------- SLIDERS ---------- */
 // Product Slider
