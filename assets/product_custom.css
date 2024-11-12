@@ -2088,5 +2088,12 @@ body .comparison-slideshow {
 }
 .product.pdp_cv_new span.smw-text p {
     width: 100%;
-}    
+}
+.comparison-table .fixed-columns {
+    width: 225px;
+}  
+ .comparison-slideshow .swiper-container-unique {
+    width: calc(100% - 225px);
+}
+  
 }
