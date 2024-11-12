@@ -1,6 +1,951 @@
+<div class="cv_accordion">
+  <style>
+    .accordion_cv {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .accordion_cv.active,
+    .accordion_cv:hover {
+      background-color: #ccc;
+    }
+    /* .accordion_cv:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .accordion_cv.active:after {
+      content: '\2212';
+    } */
+    .panel_cv {
+      padding: 0;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+  <div class="cv_accordion_main">
+    <div class="cv_accordion_heading">
+      {{ section.settings.heading }}
+    </div>
+    <div class="cv_accordion_pdp">
+      {% for block in section.blocks %}
+        <div class="inner_loop">
+          {% case block.type %}
+            {% when 'icon_text' %}
+              <div class="icon_text_inner">
+                <button class="accordion_cv {% if forloop.first %}active{% endif %}">
+                  {{ block.settings.title }}
+
+                  <div class="icon_pluse_minus">
+                    <span class="pluse_icon">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.29213 9.30191H0.142822L0.142822 7.8182L8.29213 7.8182V0.0600586L9.85065 0.0600586V7.8182H18V9.30191L9.85065 9.30191L9.85065 17.0601H8.29213L8.29213 9.30191Z" fill="#1F2322"/>
+                      </svg>
+                    </span>
+                    <span class="minus_icon">
+                      <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.76001" width="17" height="1.48" fill="#1F2322"/>
+                      </svg>
+                    </span>
+                  </div>
+                </button>
+                <div class="panel_cv {% if forloop.first %}default-open{% endif %}">
+                  <div class="pannet_inner">
+                    <p>{{ block.settings.content }}</p>
+                    <ul>
+                      <li>
+                        {% if block.settings.icon_01 != blank %}
+                          <img src="{{ block.settings.icon_01 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_01 }}</p>
+                        {% endif %}
+                      </li>
+
+                      {% if block.settings.icon_02 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_02 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_02 }}</p>
+                        </li>
+                      {% endif %}
+
+                      {% if block.settings.icon_03 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_03 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_03 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_04 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_04 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_04 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_05 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_05 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_05 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_06 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_06 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_06 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_07 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_07 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_07 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_08 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_08 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_08 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_09 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_09 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_09 }}</p>
+                        </li>
+                      {% endif %}
+                      {% if block.settings.icon_010 != blank %}
+                        <li>
+                          <img src="{{ block.settings.icon_010 | img_url: 'master'}}">
+                          <p>{{ block.settings.text_010 }}</p>
+                        </li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% when 'image_text' %}
+              <div class="image_text">
+                <button class="accordion_cv">
+                  {{ block.settings.title_02 }}
+                  <div class="icon_pluse_minus">
+                    <span class="pluse_icon">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.29213 9.30191H0.142822L0.142822 7.8182L8.29213 7.8182V0.0600586L9.85065 0.0600586V7.8182H18V9.30191L9.85065 9.30191L9.85065 17.0601H8.29213L8.29213 9.30191Z" fill="#1F2322"/>
+                      </svg>
+                    </span>
+                    <span class="minus_icon">
+                      <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.76001" width="17" height="1.48" fill="#1F2322"/>
+                      </svg>
+                    </span>
+                  </div>
+                </button>
+                <div class="panel_cv">
+                  {{ block.settings.content_02 }}
+                  <!-- Demo styles -->
+                  <style>
+                    .swiper {
+                      width: 100%;
+                      height: 100%;
+                    }
+
+                    .swiper-slide {
+                      text-align: center;
+                      font-size: 18px;
+                      background: #fff;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+
+                    .swiper-slide img {
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
+
+                    .swiper {
+                      margin-left: auto;
+                      margin-right: auto;
+                    }
+                  </style>
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper_pdp_cv">
+                    <div class="swiper-wrapper">
+                      {% if block.settings.img_01 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_01 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_01 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_01 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_02 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_02 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_02 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_02 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_03 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_03 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_03 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_03 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_04 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_04 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_04 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_04 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_05 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_05 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_05 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_05 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+
+                      {% if block.settings.img_06 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_06 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_06 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_06 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_07 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_07 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_07 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_07 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_08 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_08 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_08 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_08 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_09 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_09 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_09 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_09 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.img_010 != blank %}
+                        <div class="swiper-slide">
+                          <div class="cv_accor_slide_inn">
+                            <img src="{{ block.settings.img_010 | img_url: 'master' }}">
+                            <div class="time_text">
+                              <p class="timeInner">
+                                {{ block.settings.time_010 }}
+                              </p>
+                              <p class="inn_title">
+                                {{ block.settings.titl_010 }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            {% when 'text' %}
+              <button class="accordion_cv">
+                {{ block.settings.title_03 }}
+                <div class="icon_pluse_minus">
+                  <span class="pluse_icon">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.29213 9.30191H0.142822L0.142822 7.8182L8.29213 7.8182V0.0600586L9.85065 0.0600586V7.8182H18V9.30191L9.85065 9.30191L9.85065 17.0601H8.29213L8.29213 9.30191Z" fill="#1F2322"/>
+                    </svg>
+                  </span>
+                  <span class="minus_icon">
+                    <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect y="0.76001" width="17" height="1.48" fill="#1F2322"/>
+                    </svg>
+                  </span>
+                </div>
+              </button>
+              <div class="panel_cv">
+                {{ block.settings.content_03 }}
+
+                <ul>
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_01 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_02 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_03 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_04 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_05 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_06 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_07 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_08 }}
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                      </svg>
+                    </span>
+                    {{ block.settings.list_09 }}
+                  </li>
+                  {% if block.settings.list_10 != blank %}
+                    <li>
+                      <span>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                        </svg>
+                      </span>
+                      {{ block.settings.list_10 }}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.list_11 != blank %}
+                    <li>
+                      <span>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                        </svg>
+                      </span>
+                      {{ block.settings.list_11 }}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.list_12 != blank %}
+                    <li>
+                      <span>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.3125 19L13 14.3125L17.6875 19L19 17.6875L14.3125 13L19 8.3125L17.6875 7L13 11.6875L8.3125 7L7 8.3125L11.6875 13L7 17.6875L8.3125 19ZM13 25.5C11.2917 25.5 9.67708 25.1719 8.15625 24.5156C6.63542 23.8594 5.30729 22.9635 4.17188 21.8281C3.03646 20.6927 2.14062 19.3646 1.48438 17.8438C0.828125 16.3229 0.5 14.7083 0.5 13C0.5 11.2708 0.828125 9.64583 1.48438 8.125C2.14062 6.60417 3.03646 5.28125 4.17188 4.15625C5.30729 3.03125 6.63542 2.14062 8.15625 1.48438C9.67708 0.828125 11.2917 0.5 13 0.5C14.7292 0.5 16.3542 0.828125 17.875 1.48438C19.3958 2.14062 20.7188 3.03125 21.8438 4.15625C22.9688 5.28125 23.8594 6.60417 24.5156 8.125C25.1719 9.64583 25.5 11.2708 25.5 13C25.5 14.7083 25.1719 16.3229 24.5156 17.8438C23.8594 19.3646 22.9688 20.6927 21.8438 21.8281C20.7188 22.9635 19.3958 23.8594 17.875 24.5156C16.3542 25.1719 14.7292 25.5 13 25.5ZM13 23.625C15.9583 23.625 18.4688 22.5885 20.5312 20.5156C22.5938 18.4427 23.625 15.9375 23.625 13C23.625 10.0417 22.5938 7.53125 20.5312 5.46875C18.4688 3.40625 15.9583 2.375 13 2.375C10.0625 2.375 7.55729 3.40625 5.48438 5.46875C3.41146 7.53125 2.375 10.0417 2.375 13C2.375 15.9375 3.41146 18.4427 5.48438 20.5156C7.55729 22.5885 10.0625 23.625 13 23.625Z" fill="#F00000"/>
+                        </svg>
+                      </span>
+                      {{ block.settings.list_12 }}
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+          {% endcase %}
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper_pdp_cv', {
+        slidesPerView: 3.5,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <!--
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var acc = document.getElementsByClassName('accordion_cv');
+          var panels = document.getElementsByClassName('panel_cv');
+
+          // Open the first accordion by default
+          if (acc.length > 1) {
+            acc[0].classList.add('active');
+            panels[0].style.maxHeight = panels[0].scrollHeight + 'px';
+          }
+
+          for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener('click', function () {
+              // Close all other panels
+              for (var j = 0; j < acc.length; j++) {
+                if (acc[j] !== this) {
+                  acc[j].classList.remove('active');
+                  panels[j].style.maxHeight = null;
+                }
+              }
+
+              // Toggle the clicked panel
+              this.classList.toggle('active');
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+              }
+            });
+          }
+        });
+      </script>
+    -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var acc = document.getElementsByClassName('accordion_cv');
+        var panels = document.getElementsByClassName('panel_cv');
+        var accordionContainer = document.querySelector('.cv_accordion'); // Assuming .cv_accordion is a container for the accordion
+        // Open the first accordion by default
+        if (acc.length > 1) {
+          acc[0].classList.add('active');
+          panels[0].style.maxHeight = panels[0].scrollHeight + 'px';
+        }
+        for (var i = 0; i < acc.length; i++) {
+          acc[i].addEventListener('click', function () {
+            // Close all other panels
+            for (var j = 0; j < acc.length; j++) {
+              if (acc[j] !== this) {
+                acc[j].classList.remove('active');
+                panels[j].style.maxHeight = null;
+              }
+            }
+            // Toggle the clicked panel
+            this.classList.toggle('active');
+            var panel = this.nextElementSibling;
+            // Scroll to the .cv_accordion container when the panel is opened
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + 'px';
+              // Scroll to the .cv_accordion container with a 30px offset
+              if (accordionContainer) {
+                // Calculate the position with a 30px top margin
+                window.scrollTo({
+                  top: accordionContainer.offsetTop - 90, // Subtract 30px from the top offset
+                  behavior: 'smooth' // Smooth scrolling
+                });
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "CV Accordion",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_text",
+      "name": "Icon and Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_01",
+          "label": "Icon one"
+        },
+        {
+          "type": "richtext",
+          "id": "text_01",
+          "label": "Text one"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_02",
+          "label": "Icon Two"
+        },
+        {
+          "type": "richtext",
+          "id": "text_02",
+          "label": "Text Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_03",
+          "label": "Icon third"
+        },
+        {
+          "type": "richtext",
+          "id": "text_03",
+          "label": "Text third"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_04",
+          "label": "Icon Forth"
+        },
+        {
+          "type": "richtext",
+          "id": "text_04",
+          "label": "Text Forth"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_05",
+          "label": "Icon Fifth"
+        },
+        {
+          "type": "richtext",
+          "id": "text_05",
+          "label": "Text Fifth"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_06",
+          "label": "Icon Sixth"
+        },
+        {
+          "type": "richtext",
+          "id": "text_06",
+          "label": "Text Sixth"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_07",
+          "label": "Icon Seventh"
+        },
+        {
+          "type": "richtext",
+          "id": "text_07",
+          "label": "Text Seventh"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_08",
+          "label": "Icon eight"
+        },
+        {
+          "type": "richtext",
+          "id": "text_08",
+          "label": "Text eight"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_09",
+          "label": "Icon Ninth"
+        },
+        {
+          "type": "richtext",
+          "id": "text_09",
+          "label": "Text Ninth"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_010",
+          "label": "Icon Tenth"
+        },
+        {
+          "type": "richtext",
+          "id": "text_010",
+          "label": "Text Tenth"
+        }
+      ]
+    },
+    {
+      "type": "image_text",
+      "name": "Image and Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_02",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content_02",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_01",
+          "label": "Image One"
+        },
+        {
+          "type": "text",
+          "id": "time_01",
+          "label": "Time One"
+        },
+        {
+          "type": "text",
+          "id": "titl_01",
+          "label": "Title One"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_02",
+          "label": "Image Two"
+        },
+        {
+          "type": "text",
+          "id": "time_02",
+          "label": "Time Two"
+        },
+        {
+          "type": "text",
+          "id": "titl_02",
+          "label": "Title Two"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_03",
+          "label": "Image third"
+        },
+        {
+          "type": "text",
+          "id": "time_03",
+          "label": "Time third"
+        },
+        {
+          "type": "text",
+          "id": "titl_03",
+          "label": "Title third"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_04",
+          "label": "Image Forth"
+        },
+        {
+          "type": "text",
+          "id": "time_04",
+          "label": "Time Forth"
+        },
+        {
+          "type": "text",
+          "id": "titl_04",
+          "label": "Title Forth"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_05",
+          "label": "Image Fifth"
+        },
+        {
+          "type": "text",
+          "id": "time_05",
+          "label": "Time Fifth"
+        },
+        {
+          "type": "text",
+          "id": "titl_05",
+          "label": "Title Fifth"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_06",
+          "label": "Image Sixth"
+        },
+        {
+          "type": "text",
+          "id": "time_06",
+          "label": "Time Sixth"
+        },
+        {
+          "type": "text",
+          "id": "titl_06",
+          "label": "Title Sixth"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_07",
+          "label": "Image Seventh"
+        },
+        {
+          "type": "text",
+          "id": "time_07",
+          "label": "Time Seventh"
+        },
+        {
+          "type": "text",
+          "id": "titl_07",
+          "label": "Title Seventh"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_08",
+          "label": "Image Eight"
+        },
+        {
+          "type": "text",
+          "id": "time_08",
+          "label": "Time Eight"
+        },
+        {
+          "type": "text",
+          "id": "titl_08",
+          "label": "Title Eight"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_09",
+          "label": "Image Ninth"
+        },
+        {
+          "type": "text",
+          "id": "time_09",
+          "label": "Time Ninth"
+        },
+        {
+          "type": "text",
+          "id": "titl_09",
+          "label": "Title Ninth"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_010",
+          "label": "Image Tenth"
+        },
+        {
+          "type": "text",
+          "id": "time_010",
+          "label": "Time Tenth"
+        },
+        {
+          "type": "text",
+          "id": "titl_010",
+          "label": "Title Tenth"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text Only",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_03",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content_03",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "list_01",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_02",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_03",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_04",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_05",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_06",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_07",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_08",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_09",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_10",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_11",
+          "label": "List text"
+        },
+        {
+          "type": "text",
+          "id": "list_12",
+          "label": "List text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CV Accordion"
+    }
+  ]
+}
 {% endschema %}
