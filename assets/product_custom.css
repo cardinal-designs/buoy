@@ -1719,6 +1719,9 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+ body .clinical__title {
+    padding: 0 0 24px;
+}
  body .supplement-side-drawer, body .clinical-trial-drawer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
