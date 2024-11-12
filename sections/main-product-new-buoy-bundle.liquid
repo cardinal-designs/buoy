@@ -53,17 +53,7 @@
 
               <!-- Add custom text for each image based on index -->
               <div class="image-text-overlay dd">
-                {%- if forloop.index == 0 -%}
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                {%- elsif forloop.index == 1 -%}
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                {%- elsif forloop.index == 2 -%}
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                {%- elsif forloop.index == 3 -%}
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                {%- else -%}
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                {%- endif -%}
+                <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
               </div>
             </div>
           {%- endfor -%}
