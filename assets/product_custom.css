@@ -1329,6 +1329,9 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
     display: flex;
     align-items: center;
 }
+.product.pdp_cv_new .smw-text-price s {
+    color: #797B7A;
+}
 .product.pdp_cv_new .smw-text-price .price {
     font-size: 14px;
 }
