@@ -1,28 +1,33 @@
-{{ 'section-faq.css' | asset_url | stylesheet_tag }} 
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
 
-<div class="faq-section
-    {% if section.settings.add_top_border %} top-border{% endif %}
-   {% if section.settings.add_bottom_border %} bottom-border{% endif %}
-   {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
-  ">
+<div
+  class="
+    faq-section
+     {% if section.settings.add_top_border %} top-border{% endif %}
+    {% if section.settings.add_bottom_border %} bottom-border{% endif %}
+    {% if section.settings.background %} background--{{ section.settings.background }}{% endif %}
+  "
+>
   <div class="page-width">
     <div class="faq-section__container">
-      <h2 class="faq-section__title h3">{{ section.settings.title-01 }}</h2>
+      <h2 class="faq-section__title h3">{{ section.settings['title-01'] }}</h2>
       <p class="faq-section__text sh2">{{ section.settings.text }}</p>
       {% for block in section.blocks %}
         <div class="faq__item">
           <button class="faq__header">
             <p class="sh2 medium">{{ block.settings.title }}</p>
-                                      <div class="icon_pluse_minus">
-              <span class="pluse_icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.29213 9.30191H0.142822L0.142822 7.8182L8.29213 7.8182V0.0600586L9.85065 0.0600586V7.8182H18V9.30191L9.85065 9.30191L9.85065 17.0601H8.29213L8.29213 9.30191Z" fill="#1F2322"/>
-</svg>
-</span>
-<span class="minus_icon"><svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="0.76001" width="17" height="1.48" fill="#1F2322"/>
-</svg>
-</span>
-</div>
+            <div class="icon_pluse_minus">
+              <span class="pluse_icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.29213 9.30191H0.142822L0.142822 7.8182L8.29213 7.8182V0.0600586L9.85065 0.0600586V7.8182H18V9.30191L9.85065 9.30191L9.85065 17.0601H8.29213L8.29213 9.30191Z" fill="#1F2322"/>
+                </svg>
+              </span>
+              <span class="minus_icon">
+                <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="0.76001" width="17" height="1.48" fill="#1F2322"/>
+                </svg>
+              </span>
+            </div>
           </button>
           <div class="faq__content">
             <p class="sh4">{{ block.settings.answer }}</p>
@@ -34,76 +39,76 @@
 </div>
 
 {% schema %}
-  {
-    "name": "CV FAQ",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title-01",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "text",
-        "label": "Text"
-      },
-      {
-        "type": "checkbox",
-        "id": "add_top_border",
-        "label": "Add Top Border"
-      },
-      {
-        "type": "checkbox",
-        "id": "add_bottom_border",
-        "label": "Add Bottom Border"
-      },
-      {
-        "type": "select",
-        "id": "background",
-        "label": "Background",
-        "options": [
-          {
-            "value": "top",
-            "label": "Gradient Top to Bottom"
-          },
-          {
-            "value": "bottom",
-            "label": "Gradient Bottom to Top"
-          },
-          {
-            "value": "bg_color",
-            "label": "Background Color"
-          },
-          {
-            "value": "none",
-            "label": "None"
-          }
-        ],
-        "default": "none"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "faq_item",
-        "name": "FAQ Item",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Question"
-          },
-          {
-            "type": "textarea",
-            "id": "answer",
-            "label": "Answer"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "CV FAQ"
-      }
-    ]
-  }
+{
+  "name": "CV FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title-01",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_top_border",
+      "label": "Add Top Border"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_bottom_border",
+      "label": "Add Bottom Border"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background",
+      "options": [
+        {
+          "value": "top",
+          "label": "Gradient Top to Bottom"
+        },
+        {
+          "value": "bottom",
+          "label": "Gradient Bottom to Top"
+        },
+        {
+          "value": "bg_color",
+          "label": "Background Color"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CV FAQ"
+    }
+  ]
+}
 {% endschema %}
