@@ -179,22 +179,23 @@
           <div class="competitor-row">{{ section.settings.heading_58 }}</div>
         {% endif %}
       </div>
-
-      <div class="feature-rows showOnDesk">
-        <div class="competitor-row">
-          <h3 class="heading_table">{{ section.settings.tp_heading_06 }}</h3>
+      {% if section.settings.tp_heading_06 != blank %}
+        <div class="feature-rows showOnDesk">
+          <div class="competitor-row">
+            <h3 class="heading_table">{{ section.settings.tp_heading_06 }}</h3>
+          </div>
+          <div class="competitor-row">{{ section.settings.heading_61 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_62 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_63 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_64 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_65 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_66 }}</div>
+          <div class="competitor-row">{{ section.settings.heading_67 }}</div>
+          {% if section.settings.heading_68 != blank %}
+            <div class="competitor-row">{{ section.settings.heading_68 }}</div>
+          {% endif %}
         </div>
-        <div class="competitor-row">{{ section.settings.heading_61 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_62 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_63 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_64 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_65 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_66 }}</div>
-        <div class="competitor-row">{{ section.settings.heading_67 }}</div>
-        {% if section.settings.heading_68 != blank %}
-          <div class="competitor-row">{{ section.settings.heading_68 }}</div>
-        {% endif %}
-      </div>
+      {% endif %}
     </div>
 
     <!-- Swiper Slider for Competitors -->
