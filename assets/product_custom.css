@@ -1735,7 +1735,10 @@ p.price_cv_sale {
 body .drawer__recommended {
     padding: 20px 20px 20px;
     margin-top: 20px;
-}  
+} 
+ body .drawer__serving-list {
+    margin-bottom: 0;
+}
   .product.pdp_cv_new .product__media-arrows {
     margin: 0 0 16px;
 }

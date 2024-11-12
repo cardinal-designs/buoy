@@ -36,7 +36,9 @@
   </div>
 
   <div class="progress_footer">
-    <a href="javascript:void(0);" class="tabs-labels bodys js-clinical-openss" id="cv_clinical-drawer">View Clinical Study</a>
+    <a href="javascript:void(0);" class="tabs-labels bodys js-clinical-openss" id="cv_clinical-drawer"
+      >View Clinical Study</a
+    >
     <p>*According to a university-led, crossover design clinical study</p>
   </div>
 </div>
@@ -46,64 +48,63 @@
 <script src="scripts/index.js"></script>
 
 <script>
-$(document).ready(function ($) {
-  function animateElements() {
-    $('.progressbar').each(function () {
-      var elementPos = $(this).offset().top;
-      var topOfWindow = $(window).scrollTop();
-      var percent = $(this).find('.circle').attr('data-percent');
-      var data_count = $(this).find('.circle').attr('data-count');
-      var percentage = parseInt(percent, 10) / 100;
-      var $digits = $(this).children('.circle').children('.digitsLyt').children('st');
-      var animate = $(this).data('animate');
+  $(document).ready(function ($) {
+    function animateElements() {
+      $('.progressbar').each(function () {
+        var elementPos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        var percent = $(this).find('.circle').attr('data-percent');
+        var data_count = $(this).find('.circle').attr('data-count');
+        var percentage = parseInt(percent, 10) / 100;
+        var $digits = $(this).children('.circle').children('.digitsLyt').children('st');
+        var animate = $(this).data('animate');
 
-      // Check if the element is in the viewport (visible)
-      if (elementPos < topOfWindow + $(window).height() - 30 && elementPos > topOfWindow) {
-        // If not animated yet, trigger the animation
-        if (!animate) {
-          $(this).data('animate', true); // Set the flag to prevent re-triggering animation
+        // Check if the element is in the viewport (visible)
+        if (elementPos < topOfWindow + $(window).height() - 30 && elementPos > topOfWindow) {
+          // If not animated yet, trigger the animation
+          if (!animate) {
+            $(this).data('animate', true); // Set the flag to prevent re-triggering animation
 
-          // Animate the circle progress
-          $(this).find('.circle').circleProgress({
-            startAngle: -Math.PI / 2,
-            value: percentage,
-            thickness: 5,
-            fill: { color: '#DEF647' },
-          });
+            // Animate the circle progress
+            $(this).find('.circle').circleProgress({
+              startAngle: -Math.PI / 2,
+              value: percentage,
+              thickness: 5,
+              fill: { color: '#DEF647' },
+            });
 
-          // Animate the digits from 0 to the target value
-          var targetValue = parseInt(data_count, 10);
-          $digits.each(function () {
-            $(this).prop('Counter', 0).animate(
-              {
-                Counter: targetValue,
-              },
-              {
-                duration: 1500, // Duration of animation in milliseconds
-                easing: 'swing',
-                step: function (now) {
-                  $(this).text(Math.ceil(now)); // Update the text with the current number
+            // Animate the digits from 0 to the target value
+            var targetValue = parseInt(data_count, 10);
+            $digits.each(function () {
+              $(this).prop('Counter', 0).animate(
+                {
+                  Counter: targetValue,
                 },
-              }
-            );
-          });
+                {
+                  duration: 1500, // Duration of animation in milliseconds
+                  easing: 'swing',
+                  step: function (now) {
+                    $(this).text(Math.ceil(now)); // Update the text with the current number
+                  },
+                }
+              );
+            });
+          }
+        } else {
+          // Reset animation flag when the element is out of view
+          $(this).data('animate', false);
         }
-      } else {
-        // Reset animation flag when the element is out of view
-        $(this).data('animate', false);
-      }
-    });
-  }
+      });
+    }
 
-  // Initial call to show animated elements
-  animateElements();
-
-  // Attach scroll event to check for visibility
-  $(window).scroll(function () {
+    // Initial call to show animated elements
     animateElements();
-  });
-});
 
+    // Attach scroll event to check for visibility
+    $(window).scroll(function () {
+      animateElements();
+    });
+  });
 </script>
 
 <!--
@@ -152,6 +153,11 @@ $(document).ready(function ($) {
     document.querySelector('.js-clinical-openss').addEventListener('click', function () {
       // Change the style to make right: 0px
       const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+
+      // Update CSS variables when opening the drawer
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+
       if (window.innerWidth <= 768) {
         // Apply bottom: 0px for mobile screens
         clinicalDrawer.style.bottom = '0px';
@@ -159,21 +165,29 @@ $(document).ready(function ($) {
         // Apply right: 0px for desktop screens
         clinicalDrawer.style.right = '0px';
       }
+
       // Add the class mobile-fixed-header to .drawer__header
       document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
       document.body.classList.add('wp_popup_drawer');
-      document.querySelector('.page-blury-overlay').classList.add('is-visibles');      
+      document.querySelector('.page-blury-overlay').classList.add('is-visibles');
     });
+
     // Revert changes on close button click
     document.querySelector('.js-clinical-closes').addEventListener('click', function () {
       const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+
       // Revert the styles
       clinicalDrawer.style.bottom = '';
       clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+
       // Remove the class mobile-fixed-header from .drawer__header
       document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
       document.body.classList.remove('wp_popup_drawer');
-      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');      
+      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+
+      // Reset CSS variables when closing the drawer
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+      document.documentElement.style.setProperty('--clinical-trial-top', '');
     });
   });
 </script>
