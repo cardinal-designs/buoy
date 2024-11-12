@@ -1,0 +1,75 @@
+<div class="cv_sale_content_pdp">
+<div class="cv-sale_text">
+{% if section.settings.text01 != blank %}
+ <p class="text_sub">{{ section.settings.text01 }}</p> 
+{% endif %}
+{% if section.settings.text02 != blank %}
+ {{ section.settings.text02}} 
+{% endif %}
+{% if section.settings.save_price != blank %}
+  <p class='price_cv_sale'>Save up to {{ section.settings.save_price }}</p>
+{% endif %}
+
+{% if section.settings.content != blank %}
+{{ section.settings.content  }}
+{% endif %}
+
+
+
+</div>
+
+  <div class="cv_btnscroll">
+<a href="#" class="scroll-to-product">Shop The Sale</a>
+  </div>
+<div class="text_cv_below">
+<img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Callouts_a7d021a6-7c87-44be-ba50-8f67d4b613a2.png?v=1730704659">
+   <p>Free Shipping + 30-Day Guarantee</p>
+</div>
+ 
+</div>
+<script>
+   document.querySelector('.scroll-to-product').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const productDiv = document.querySelector('.product'); // Select the div with the class .product
+        if (productDiv) {
+            productDiv.scrollIntoView({ behavior: 'smooth' }); // Scroll to the div smoothly
+        }
+    });
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "cv_sale_content_pdp",
+    "settings": [
+{
+"type": "text",
+  "id": "text01",
+"label": "Text Sale heading",
+"default" : "Black Friday Sale"
+},
+{
+  "type": "richtext",
+"id": "text02",
+"label": "Title Sale"
+},
+{
+"type": "text",
+"id": "save_price",
+  "label": "Save price"
+},
+{
+  "type": "richtext",
+"id": "content",
+"label": "Content"
+}
+],
+"presets": [
+
+{
+"name": "cv_sale_content_pdp"
+}
+]
+  }
+{% endschema %}
