@@ -1715,6 +1715,9 @@ p.price_cv_sale {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+  body .drawer__table {
+    margin-top: 24px;
+}
   .product.pdp_cv_new .product__media-arrows {
     margin: 0 0 16px;
 }
