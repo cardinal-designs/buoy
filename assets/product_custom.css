@@ -1747,6 +1747,9 @@ p.price_cv_sale {
 }  
 }
 @media screen and (max-width: 749px){
+  .section_left_content {
+    padding-left: 0;
+}
  body .drawer__mobile-continue {
     padding: 0 20px;
 }
