@@ -138,6 +138,20 @@
         {% if selected_product %}
           <div class="product-info">
             <!-- Render the Okendo reviews product rating summary -->
+            <div class="wp_productRvw">
+              <div class="ratings_Way_stars">
+                <svg xmlns="http://www.w3.org/2000/svg" width="101" height="19" viewBox="0 0 101 19" fill="none">
+                  <path d="M9.46316 0.5L12.0482 6.89212L18.9263 7.37539L13.6459 11.8092L15.3117 18.5L9.46316 14.8481L3.61461 18.5L5.28044 11.8092L0 7.37539L6.8781 6.89212L9.46316 0.5Z" fill="#FFD66B"/>
+                  <path d="M29.7431 0.5L32.3281 6.89212L39.2062 7.37539L33.9258 11.8092L35.5916 18.5L29.7431 14.8481L23.8945 18.5L25.5604 11.8092L20.2799 7.37539L27.158 6.89212L29.7431 0.5Z" fill="#FFD66B"/>
+                  <path d="M50.0132 0.5L52.5983 6.89212L59.4764 7.37539L54.1959 11.8092L55.8618 18.5L50.0132 14.8481L44.1647 18.5L45.8305 11.8092L40.55 7.37539L47.4281 6.89212L50.0132 0.5Z" fill="#FFD66B"/>
+                  <path d="M70.3041 0.5L72.8892 6.89212L79.7673 7.37539L74.4868 11.8092L76.1527 18.5L70.3041 14.8481L64.4555 18.5L66.1214 11.8092L60.8409 7.37539L67.719 6.89212L70.3041 0.5Z" fill="#FFD66B"/>
+                  <path d="M90.5734 0.5L93.1585 6.89212L100.037 7.37539L94.7561 11.8092L96.4219 18.5L90.5734 14.8481L84.7248 18.5L86.3907 11.8092L81.1102 7.37539L87.9883 6.89212L90.5734 0.5Z" fill="#FFD66B"/>
+                </svg>
+              </div>
+              <div class="ratingBriefWy">
+                <span>4.7/5</span>
+              </div>
+            </div>
             {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
 
             <!--
