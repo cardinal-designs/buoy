@@ -1694,6 +1694,9 @@ p.price_cv_sale {
 .comparison-table .fixed-columns {
     grid-template-columns: 140px 1fr 1fr 1fr 1fr;
 }
+.section_left_content {
+    padding-left: 45px;
+}  
 }
 @media screen and (max-width: 991px) {
 .product.pdp_cv_new .Testimonials_Rating {
