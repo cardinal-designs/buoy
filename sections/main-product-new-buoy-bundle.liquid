@@ -752,61 +752,6 @@ document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
             {% endif %}
 
             <input type="hidden" name="id" value="{{ currentVariant.id }}">
-            <!--
-              <div class="product-form__buttons">
-                <button
-                  type="submit"
-                  name="add"
-                  style="flex-direction: initial; padding: 12px 10px;"
-                  data-available="{{ currentVariant.available }}"
-                  class="js-mainproduct-submit product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                  {% if currentVariant.available == false %}
-                    disabled
-                  {% endif %}
-                  data-subscription-price="{{ currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                  {% if currentVariant.metafields.custom.compare_price != blank %}
-                    data-compare="{{ currentVariant.metafields.custom.compare_price }}"
-                  {% endif %}
-                >
-                  <div style="display: flex;">
-                    {%- if currentVariant.available -%}
-                      Add to Cart —&nbsp;
-
-                      <span class="discounted-price">{{ currentVariant.price | money_without_trailing_zeros }}</span>
-                      {% if currentVariant.metafields.custom.compare_price != blank %}
-                        <del>${{ currentVariant.metafields.custom.compare_price }}</del>
-                      {% else %}
-                        <del>{{ currentVariant.compare_at_price }}</del>
-                      {% endif %}
-                    {%- else -%}
-                      {{ 'products.product.sold_out' | t }}
-                    {%- endif -%}
-                  </div>
-                </button>
-                {% comment %} Mobile sticky ATC {% endcomment %}
-                <div class="product-form__sticky-atc hide-desktop">
-                  <p class="product-form__sticky-atc-text">30-Day Risk Free</p>
-                  <a
-                    href="#selector"
-                    name="add"
-                    style="flex-direction: initial; padding: 12px 10px;"
-                    data-available="{{ currentVariant.available }}"
-                    class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                  >
-                    <div style="display: flex;">Add to Cart</div>
-                  </a>
-                </div>
-                {% comment %} Mobile sticky ATC end {% endcomment %}
-                {%- if block.settings.show_dynamic_checkout -%}
-                  {% comment %} {{ form | payment_button }} {% endcomment %}
-                  <div data-smartrr-product-id="{{ product.id }}" data-smartrr-price-style="overwrite">
-                    <span data-smartrr-compare-price></span>
-                    <span data-smartrr-regular-price></span>
-                    <span data-smartrr-subscribe-price></span>
-                  </div>
-                {%- endif -%}
-              </div>
-            -->
             <div class="product-form__buttons">
               <button
                 type="submit"
