@@ -2,7 +2,7 @@
  * Sticky Add to Cart
  */
 function stickAtc() {
-  const iconTextHeader = document.querySelector('.icon-text__header');
+  const iconTextHeader = document.querySelector('.cv_accordion_heading');
   const stickyAtc = document.querySelector('.product-form__sticky-atc');
   const stickyAtcBtn = document.querySelector('.product-form__submit-sticky');
 
