@@ -168,41 +168,6 @@
   </div>
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to update the text content
-    function updateRatingText() {
-        const ratingTextElement = document.querySelector('.okeReviews-a11yText');
-
-        if (ratingTextElement && /Rated (\d\.\d) out of 5/.test(ratingTextElement.textContent)) {
-            const rating = ratingTextElement.textContent.match(/Rated (\d\.\d) out of 5/)[1];
-            ratingTextElement.textContent = `${rating}/5`;
-            console.log("Updated text:", ratingTextElement.textContent);
-        }
-    }
-
-    // Set up a MutationObserver to detect changes in the DOM
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            // Only check the target if it's the text content you're looking for
-            if (mutation.type === "childList") {
-                updateRatingText();
-            }
-        });
-    });
-
-    // Select the target node to observe (this could be a parent container)
-    const targetNode = document.querySelector('.okeReviews-reviewsSummary');
-    
-    // If the targetNode exists, start observing changes
-    if (targetNode) {
-        observer.observe(targetNode, { childList: true, subtree: true });
-    }
-
-    // Initial call in case the content is already present
-    updateRatingText();
-});
-</script>
 {% schema %}
 {
 "name": "cv image text desktop",
