@@ -240,48 +240,8 @@
         class="button button--primary btnchk"
         data-available="{{ currentVariant.available }}"
       >
-        {% if currentVariant.available %}
-          <span>Add To Cart &mdash;&nbsp;</span>
-        {% else %}
-          <span>Sold Out &mdash;&nbsp;</span>
-        {% endif %}
-
-        {% assign current_variant = p.selected_or_first_available_variant %}
-        {% assign current_variant_price = current_variant.price %}
-        {% if settings.purchase_option_default == 'onetime' %}
-          {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
-            {% assign one_discount_value = current_variant_price
-              | times: current_variant.metafields.custom.auto_discount_percent_off
-              | divided_by: 100
-            %}
-            {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-            <span>{{ one_final_price | money }}</span>
-            <s>{{ current_variant_price | money }}</s>
-          {% elsif current_variant.compare_at_price != blank %}
-            <span>{{ p.selected_or_first_available_variant.price | money }}</span>
-            <s>{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
-          {% else %}
-            <span>{{ current_variant_price | money }}</span>
-            <s></s>
-          {% endif %}
-
-        {% else %}
-          {% if currentVariant.selling_plan_allocations.size > 0 %}
-            <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
-            <s>{{ currentVariant.price | money }}</s>
-          {% else %}
-            {% if currentVariant.compare_at_price > currentVariant.price %}
-              <span>{{ currentVariant.price | money }}</span>&nbsp;
-              <s>{{ currentVariant.compare_at_price | money }}</s>
-            {% else %}
-              <span>{{ currentVariant.price | money }}</span>
-              <s></s>
-            {% endif %}
-          {% endif %}
-        {% endif %}
-
         {% if product_form_id == 'product-form-9680479355180' %}
-          dg Add to Cart —&nbsp;
+          Add to Cart —&nbsp;
           {% unless product.metafields.custom.hide_subscription %}
             {% assign current_variant_price = currentVariant.price %}
 
@@ -325,6 +285,47 @@
               <span>{{ current_variant_price | money }}</span>
             {% endif %}
           {% endunless %}
+
+        {% else %}
+          {% if currentVariant.available %}
+            <span>Add To Cart &mdash;&nbsp;</span>
+          {% else %}
+            <span>Sold Out &mdash;&nbsp;</span>
+          {% endif %}
+
+          {% assign current_variant = p.selected_or_first_available_variant %}
+          {% assign current_variant_price = current_variant.price %}
+          {% if settings.purchase_option_default == 'onetime' %}
+            {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
+              {% assign one_discount_value = current_variant_price
+                | times: current_variant.metafields.custom.auto_discount_percent_off
+                | divided_by: 100
+              %}
+              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+              <span>{{ one_final_price | money }}</span>
+              <s>{{ current_variant_price | money }}</s>
+            {% elsif current_variant.compare_at_price != blank %}
+              <span>{{ p.selected_or_first_available_variant.price | money }}</span>
+              <s>{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
+            {% else %}
+              <span>{{ current_variant_price | money }}</span>
+              <s></s>
+            {% endif %}
+
+          {% else %}
+            {% if currentVariant.selling_plan_allocations.size > 0 %}
+              <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
+              <s>{{ currentVariant.price | money }}</s>
+            {% else %}
+              {% if currentVariant.compare_at_price > currentVariant.price %}
+                <span>{{ currentVariant.price | money }}</span>&nbsp;
+                <s>{{ currentVariant.compare_at_price | money }}</s>
+              {% else %}
+                <span>{{ currentVariant.price | money }}</span>
+                <s></s>
+              {% endif %}
+            {% endif %}
+          {% endif %}
         {% endif %}
       </button>
     </div>
