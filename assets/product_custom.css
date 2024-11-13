@@ -3,7 +3,7 @@ h1, h2, h3 ,h4, h5, h6, p, a {
     margin: 0;
     padding: 0;
 }
-cross-price {
+span.cross-price {
     color: #797b7a;
     text-decoration: line-through;
 }
@@ -174,9 +174,9 @@ body .section_right_content .okeReviews-reviewsSummary-starRating span.okeReview
     color: #fff;
 }
 .cv_sale_content_pdp {
-    padding: 40px 70px 32px 20px;
+    padding: 40px 55px 32px 70px;
     background-color: #f8f8f8;
-    max-width: 670px;
+    max-width: 875px;
     margin-left: auto;
 }
 .cv-sale_text .text_sub {
@@ -216,12 +216,14 @@ p.price_cv_sale {
     line-height: 28px;
     font-weight: 400;
     color: #1f2322;
+    max-width: 580px;
 }
 .cv-sale_text p:last-child strong {
     font-weight: 500;
 }
 .cv_btnscroll {
     margin: 24px 0 12px;
+    max-width: 580px;
 }
 a.scroll-to-product {
     background-color: #DEF647;
@@ -254,6 +256,7 @@ a.scroll-to-product {
     justify-content: center;
     padding: 6px 7px;
     gap: 4px;
+    max-width: 580px;
 }
 /* pdp banner */
 /* Nature’s orignal sec */
