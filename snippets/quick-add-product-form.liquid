@@ -1,16 +1,23 @@
 {% liquid
-  assign product_form_id = "product-form-" | append: p.id
-  assign currentVariant = p.selected_or_first_available_variant 
+  assign product_form_id = 'product-form-' | append: p.id
+  assign currentVariant = p.selected_or_first_available_variant
 
   if p.selling_plan_groups.size > 0
     assign requiresPlan = p.requires_selling_plan
     assign selectedAllocation = ''
     assign currentAllocations = currentVariant.selling_plan_allocations
   endif
- %}
+%}
 
 <product-form data-form-type="product-card" class="product-form">
-  {% form 'product', p, id: product_form_id, data-smartrr-form-id: p.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
+  {% form 'product',
+    p,
+    id: product_form_id,
+    data-smartrr-form-id: p.id,
+    class: 'form',
+    novalidate: 'novalidate',
+    data-type: 'add-to-cart-form'
+  %}
     {% capture variantMetafield %}
       <select class="js-variant-metafield hidden">
         {% for variant in p.variants %}
@@ -19,151 +26,152 @@
       </select>
     {% endcapture %}
     {% unless p.has_only_default_variant %}
-      <variant-radios class="no-js-hidden" data-section="{{ section.id }}"  data-product="{{ p.id }}"  data-url="{{ p.url }}" data-update-url="false" data-form-type="product-card">
+      <variant-radios
+        class="no-js-hidden"
+        data-section="{{ section.id }}"
+        data-product="{{ p.id }}"
+        data-url="{{ p.url }}"
+        data-update-url="false"
+        data-form-type="product-card"
+      >
         {%- for option in p.options_with_values -%}
           {% assign optionIndex = forloop.index0 %}
-          {% assign values = "" %}
-           <fieldset class="js product-form__input">
-           {%- for variant in p.variants -%}
-             {% assign value = variant.options[optionIndex] %}
-             {%- unless values contains value -%}
-             {% assign values = values | join: ',' %}
-             {% assign values = values | append: ',' | append:value %}
-             {% assign values = values | split: ',' %}
+          {% assign values = '' %}
+          <fieldset class="js product-form__input">
+            {%- for variant in p.variants -%}
+              {% assign value = variant.options[optionIndex] %}
+              {%- unless values contains value -%}
+                {% assign values = values | join: ',' %}
+                {% assign values = values | append: ',' | append: value %}
+                {% assign values = values | split: ',' %}
 
-              {% assign my_fields = variant.metafields.custom %}
+                {% assign my_fields = variant.metafields.custom %}
 
-               <span class="Variant_Blocks" data-id="{{ variant.id }}">
-                 <input type="radio" id="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                   name="{{ option.name }}"
-                   value="{{ value | escape }}"
-                   form="product-form-{{ p.id }}"
-                   {% if option.selected_value == value %}checked{% endif %}
-                 >
-                 <label for="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                   <span class="Variant_Title">
-                    <span class="custom-radio"> </span>
-                    {{ value }}
-                    {%- if my_fields.quick_add_value_tag != blank -%}
-                      <span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span>
-                    {%- endif -%}
-                  </span>
-                   {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
-                    <span 
-                      class="Serving_Cost" 
-                      data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
-                      data-onetimeprice="{{ my_fields.serving_cost }}"
-                    >
-                      {{ p.metafields.custom.serving_sub_price | replace: "serving", "serv"}}
-                    </span>    
-                  {%- endif -%}
-
-                   {%- if my_fields.supply_time != blank -%}
-                    <span 
-                      class="Supply_Time"
-                    >
-                      {{ my_fields.supply_time }} /
-                      {{ my_fields.servings }}
+                <span class="Variant_Blocks" data-id="{{ variant.id }}">
+                  <input
+                    type="radio"
+                    id="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="product-form-{{ p.id }}"
+                    {% if option.selected_value == value %}
+                      checked
+                    {% endif %}
+                  >
+                  <label for="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                    <span class="Variant_Title">
+                      <span class="custom-radio"> </span>
+                      {{ value }}
+                      {%- if my_fields.quick_add_value_tag != blank -%}
+                        <span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span>
+                      {%- endif -%}
                     </span>
-                  {%- endif -%}
-                 </label>
-               </span>
-             {%- endunless -%}
-           {%- endfor -%}
-           </fieldset>
-           {%- endfor -%}
-           <script type="application/json">
-             {{ p.variants | json }}
-           </script>
-         {{ variantMetafield }}
-    
-         <script type="application/json" class="variantMetaJSON">
-            [
-              {%- assign comma = false -%}
-              {%- for variant in p.variants -%}
-                  {%- if comma -%},{%- endif -%}
-                  {% assign variant_price = variant.price %}
-                  {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                  {% assign one_final_price = variant_price | minus: one_discount_value %}
-                  {
-                    "id": {{ variant.id }},
-                    "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
-                    "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
-                    "price": "{{ variant_price | money_without_trailing_zeros }}",
-                    "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
-                    "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
-                  }
-                  {%- assign comma = true -%}
-              {%- endfor -%}
-            ]
-          </script>
+                    {%- if my_fields.serving_cost != blank and p.metafields.custom.serving_sub_price != blank -%}
+                      <span
+                        class="Serving_Cost"
+                        data-subprice="{{ p.metafields.custom.serving_sub_price}}"
+                        data-onetimeprice="{{ my_fields.serving_cost }}"
+                      >
+                        {{ p.metafields.custom.serving_sub_price | replace: 'serving', 'serv' }}
+                      </span>
+                    {%- endif -%}
 
+                    {%- if my_fields.supply_time != blank -%}
+                      <span
+                        class="Supply_Time"
+                      >
+                        {{ my_fields.supply_time }} /
+                        {{ my_fields.servings }}
+                      </span>
+                    {%- endif -%}
+                  </label>
+                </span>
+              {%- endunless -%}
+            {%- endfor -%}
+          </fieldset>
+        {%- endfor -%}
+        <script type="application/json">
+          {{ p.variants | json }}
+        </script>
+        {{ variantMetafield }}
       </variant-radios>
     {% endunless %}
 
     {% if p.selling_plan_groups.size > 0 %}
-      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }} class="selling-plan__group">
+      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }}>
         <fieldset class="js product-form__input">
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeOneTime" name="purchaseType" value="purchaseTypeOneTime" {% if selectedAllocation == blank and settings.purchase_option_default == 'onetime' %} checked {% endif %} >
+            <input
+              type="radio"
+              id="{{ p.id }}-purchaseTypeOneTime"
+              name="purchaseType"
+              value="purchaseTypeOneTime"
+              {% if selectedAllocation == blank %}
+                checked
+              {% endif %}
+            >
             <label for="{{ p.id }}-purchaseTypeOneTime">
               <span class="Variant_Title">
-              <span class="custom-radio"> </span>
-              One-Time Purchase
-                <span class="quick-add__tag" {% unless currentVariant.metafields.custom.auto_discount_percent_off %}style="display:none;"{% endunless %}>Save {{ currentVariant.metafields.custom.auto_discount_percent_off | floor }}%</span>
-            </span>
-            <span 
-              class="rtx_one_time_price {{ currentVariant.metafields.custom.auto_discount_percent_off }} onetime-multi_Price" 
-              data-subprice="{{ p.metafields.custom.serving_sub_price}}" 
-              data-onetimeprice="{{ my_fields.serving_cost }}"
-            >
-              {% if currentVariant.metafields.custom.auto_discount_percent_off > 0 %}
-                {%- if p.has_only_default_variant -%}
-                  {% assign variant_price = p.price %}
-                {%- else -%}
-                  {% assign variant_price = currentVariant.price %}
-                {% endif %}
-                {% assign discount_per_off = variant_price | times: currentVariant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-                {% assign discount_price = variant_price | minus: discount_per_off %}
-                <span class="js-rtx_one_time_price quick-add__price-recurring quick-add__metafield-price" data-discount-price="{{ discount_price | money}}" data-price="{{ variant_price |money}}">
-                  {{ discount_price | money }}
-                </span>
-                <s class="rtx_compare_price js-main-compare-price">{{ variant_price | money }}</s>            
-              {% else %}
+                <span class="custom-radio"> </span>
+                One-Time Purchase
+              </span>
+              <span
+                class="rtx_one_time_price"
+                data-subprice="{{ p.metafields.custom.serving_sub_price}}"
+                data-onetimeprice="{{ my_fields.serving_cost }}"
+              >
                 <span class="js-rtx_one_time_price">
                   {{ p.selected_or_first_available_variant.price | money }}
                 </span>
-                <s class="rtx_compare_price js-main-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
-              {% endif %}
-            </span> 
+                <s class="rtx_compare_price js-main-compare-price">
+                  {{- p.selected_or_first_available_variant.compare_at_price | money -}}
+                </s>
+              </span>
             </label>
           </span>
 
           <span class="Variant_Blocks">
-            <input type="radio" id="{{ p.id }}-purchaseTypeSubscription" name="purchaseType" value="purchaseTypeSubscription" {% if selectedAllocation == blank and settings.purchase_option_default == 'sub' %} checked {% endif %} >
+            <input
+              type="radio"
+              id="{{ p.id }}-purchaseTypeSubscription"
+              name="purchaseType"
+              value="purchaseTypeSubscription"
+              {% if selectedAllocation == blank %}
+                checked
+              {% endif %}
+            >
             <label for="{{ p.id }}-purchaseTypeSubscription">
               <span class="Variant_Title">
-              <span class="custom-radio"> </span>
-              Subscribe
-              <span class="quick-add__tag">Save 23%</span>
-              
-            </span>
-              <span 
-                class="subscription-multi_Price" 
+                <span class="custom-radio"> </span>
+                Subscribe
+                <span class="quick-add__tag">Save 23%</span>
+              </span>
+              <span
+                class=""
               >
                 <span class="quick-add__price-recurring js-subscription-price">
                   {{ p.selected_or_first_available_selling_plan_allocation.price | money }}
                 </span>
-                <s class="rtx_compare_price js-sub-compare-price">{{ p.selected_or_first_available_variant.compare_at_price | default: p.selected_or_first_available_variant.price | money }}</s>              
+                <s class="rtx_compare_price js-sub-compare-price">
+                  {{-
+                    p.selected_or_first_available_variant.compare_at_price
+                    | default: p.selected_or_first_available_variant.price
+                    | money
+                  -}}
+                </s>
               </span>
 
               {%- if my_fields.supply_time != blank -%}
-              <span 
-                class="Subscription_Subtext"
-              >
-                {{ p.metafields.custom.subscription_widget_subtext.value | replace: " • ", ", " | replace: "30 Day Money Back", "30-Day" }} 
-              </span>
-            {%- endif -%}
+                <span
+                  class="Subscription_Subtext"
+                >
+                  {{
+                    p.metafields.custom.subscription_widget_subtext.value
+                    | replace: ' • ', ', '
+                    | replace: '30 Day Money Back', '30-Day'
+                  }}
+                </span>
+              {%- endif -%}
             </label>
           </span>
         </fieldset>
@@ -183,38 +191,17 @@
         {% else %}
           <span>Sold Out &mdash;&nbsp;</span>
         {% endif %}
-
-          {% assign current_variant = p.selected_or_first_available_variant %}
-          {% assign current_variant_price = current_variant.price %}
-          {% if settings.purchase_option_default == 'onetime' %}
-            {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
-              {% assign one_discount_value = current_variant_price | times: current_variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
-              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-              <span>{{ one_final_price | money }}</span>
-              <s>{{ current_variant_price | money }}</s>
-            {% elsif current_variant.compare_at_price != blank %}
-              <span>{{ p.selected_or_first_available_variant.price | money }}</span>
-              <s>{{ p.selected_or_first_available_variant.compare_at_price | money }}</s>
-            {% else %}
-              <span>{{ current_variant_price | money }}</span>
-              <s></s>
-            {% endif %}
-            
+        {% if currentVariant.selling_plan_allocations.size > 0 %}
+          <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
+          <s>{{ currentVariant.price | money }}</s>
+        {% else %}
+          {% if currentVariant.compare_at_price > currentVariant.price %}
+            <span>{{ currentVariant.price | money }}</span>&nbsp;
+            <s>{{ currentVariant.compare_at_price | money }}</s>
           {% else %}
-            {% if currentVariant.selling_plan_allocations.size > 0 %}
-              <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
-              <s>{{ currentVariant.price | money }}</s>
-            {% else %}
-             {% if currentVariant.compare_at_price > currentVariant.price %}
-              <span>{{ currentVariant.price | money }}</span>&nbsp;
-               <s>{{ currentVariant.compare_at_price | money }}</s>
-             {% else %}
-               <span>{{ currentVariant.price | money }}</span>
-               <s></s>
-             {% endif %}
-            {% endif %}
+            <span>{{ currentVariant.price | money }}</span>
           {% endif %}
-        
+        {% endif %}
       </button>
     </div>
 
