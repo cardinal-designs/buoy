@@ -1862,3 +1862,16 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     });
   });
 </script>
+<script>
+  document.querySelector('.product-form__submit-sticky').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    const productDiv = document.querySelector('.product'); // Select the .product div
+    if (productDiv) {
+      const offsetTop = productDiv.offsetTop - 60; // Position with a 60px offset
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth' // Smooth scroll to calculated position
+      });
+    }
+  });
+</script>
