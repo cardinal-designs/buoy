@@ -1,44 +1,54 @@
 {% liquid
   assign card_product = content.heading
   assign base = 'quick-add'
- %}
+%}
 
-<quick-add-card class="{{ base }}__container" data-open="false" >
+<quick-add-card class="{{ base }}__container" data-open="false">
   <div class="{{ base }}__media">
-
     <div class="{{ base }}__media-inner">
       {% if content.image_hover != blank %}
-        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
+        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile' }}
       {% elsif content.video_hover != blank %}
-        {{ content.video_hover | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          class: 'quick-add__video-hover hide-mobile',
-          sizes: '100vw',
-          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+        {{
+          content.video_hover
+          | video_tag:
+            autoplay: true,
+            loop: true,
+            muted: true,
+            controls: false,
+            class: 'quick-add__video-hover hide-mobile',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000'
+        }}
       {% endif %}
 
       {% if content.image != blank %}
-        {{ content.image | image_url: width: 850 | image_tag: class: ''  }}
+        {{ content.image | image_url: width: 850 | image_tag: class: '' }}
       {% elsif content.video != blank %}
-        {{ content.video | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          class: 'quick-add__video',
-          sizes: '100vw',
-          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+        {{
+          content.video
+          | video_tag:
+            autoplay: true,
+            loop: true,
+            muted: true,
+            controls: false,
+            class: 'quick-add__video',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000'
+        }}
       {% else %}
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
 
       {% if card_product.metafields.custom.product_card_bubble_text != blank and content.show_tags == true %}
-        <div class="{{ base }}__product-tags">     
+        <div class="{{ base }}__product-tags">
           {% for bubble_text in card_product.metafields.custom.product_card_bubble_text.value %}
-            <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+            <div
+              {% if card_product.handle == 'rescue-drops' %}
+                style="background: #DEF647; color: black;"
+              {% endif %}
+              class="{{ base }}__product-tag"
+            >
               {{ bubble_text }}
             </div>
           {% endfor %}
@@ -50,13 +60,13 @@
       <button data-toggle class="{{ base }}__button">Add</button>
     </div>
 
-    <div class="quick-add__overlay"> </div>
+    <div class="qcheck-1 quick-add__overlay"></div>
     <div class="quick-add__display">
       <div class="{{ base }}__form-wrapper no-scrollbar">
         <button data-toggle class="quick-add__close">
           <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.73115 15.7142L0.785645 14.7687L7.55442 7.99993L0.785645 1.23115L1.73115 0.285645L8.49993 7.05442L15.2687 0.285645L16.2142 1.23115L9.44544 7.99993L16.2142 14.7687L15.2687 15.7142L8.49993 8.94544L1.73115 15.7142Z" fill="#1F2322"/>
-            </svg>          
+          </svg>
         </button>
         <div class="{{ base }}__form-inner no-scrollbar">
           <div class="{{ base }}__form-header">
@@ -71,7 +81,7 @@
               <div data-oke-reviews-product-listing-rating>
                 {{ card_product.metafields.okendo.ProductListingSnippet }}
                 <div class="{{ base }}__okendo-custom">
-                  {{ card_product.metafields.okendo.summaryData | map: "reviewAverageValue" }}/5.0
+                  {{ card_product.metafields.okendo.summaryData | map: 'reviewAverageValue' }}/5.0
                 </div>
               </div>
               <h6 class="">{{ card_product.title }}</h6>
@@ -95,16 +105,16 @@
       <p class="sh4">{{ card_product.metafields.my_fields.product_card_text }}</p>
     {% endif %}
 
-    <div class="{{ base }}__price">    
+    <div class="{{ base }}__price">
       {% assign current_variant = card_product.selected_or_first_available_variant %}
       {% assign current_variant_price = current_variant.price %}
       <div class="{{ base }}__price-recurring">
-
-
-        
         {% if settings.purchase_option_default == 'onetime' %}
           {% if current_variant.metafields.custom.auto_discount_percent_off != blank %}
-            {% assign one_discount_value = current_variant_price | times: current_variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+            {% assign one_discount_value = current_variant_price
+              | times: current_variant.metafields.custom.auto_discount_percent_off
+              | divided_by: 100
+            %}
             {% assign one_final_price = current_variant_price | minus: one_discount_value %}
             {{ one_final_price | money }}
           {% elsif current_variant.compare_at_price != blank %}
@@ -118,7 +128,9 @@
       </div>
 
       <div class="{{ base }}__price-otp">
-        {% if settings.purchase_option_default == 'onetime' and current_variant.metafields.custom.auto_discount_percent_off != blank %}
+        {% if settings.purchase_option_default == 'onetime'
+          and current_variant.metafields.custom.auto_discount_percent_off != blank
+        %}
           {{ current_variant.price | money }}
         {% elsif settings.purchase_option_default == 'onetime' and current_variant.compare_at_price != blank %}
           {{ current_variant.compare_at_price | money }}
@@ -127,9 +139,6 @@
           {{ current_variant.price | money }}
         {% endif %}
       </div>
-      
     </div>
-
-    
   </div>
 </quick-add-card>
