@@ -137,10 +137,8 @@
 
         {% if selected_product %}
           <div class="product-info">
-            {% comment %}
-              <!-- Render the Okendo reviews product rating summary -->
-                {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
-            {% endcomment %}
+            <!-- Render the Okendo reviews product rating summary -->
+            {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
 
             <div class="wp_productRvw">
               <div class="ratings_Way_stars">
