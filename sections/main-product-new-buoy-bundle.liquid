@@ -820,12 +820,12 @@ document.querySelectorAll('.pro_list_popup_title').forEach((elm) => {
               <div class="product-form__sticky-atc hide-desktop">
                 <p class="product-form__sticky-atc-text">30-Day Risk Free</p>
                 <a
-                  href="#selector"
+                  href="#"
                   id="scroll-button"
                   name="add"
                   style="flex-direction: initial; padding: 12px 10px;"
                   data-available="{{ currentVariant.available }}"
-                  class="product-form__submit product-form__submit-stickys button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                  class="product-form__submit product-form__submit-sticky button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                 >
                   <div style="display: flex;">Save 43% + 2 Gifts</div>
                 </a>
