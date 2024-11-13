@@ -5,8 +5,12 @@
   assign grid = section.settings
   assign blocks = section.blocks
   assign base = 'quick-add-grid'
- %}
-<div class="{{ base }} page-width" data-anchor="{{ section.settings.heading | downcase | handle }}" style="scroll-margin-top: calc(var(--sticky-header-height) + 90px);">
+%}
+<div
+  class="qcheck-1 {{ base }} page-width"
+  data-anchor="{{ section.settings.heading | downcase | handle }}"
+  style="scroll-margin-top: calc(var(--sticky-header-height) + 90px);"
+>
   <div class="{{ base }}__header">
     {% if grid.heading != blank %}
       <h3 class="{{ base }}__heading">
@@ -31,24 +35,28 @@
             </div>
           {% when 'card' %}
             <div class="{{ base }}__grid-item">
-              <div class="{{ base }}__card" style="--background: {{ block.settings.overlay }}; --color: {{ block.settings.color }}">
+              <div
+                class="{{ base }}__card"
+                style="--background: {{ block.settings.overlay }}; --color: {{ block.settings.color }}"
+              >
                 {% if block.settings.image != blank %}
-                  {{ block.settings.image | image_url: width: 850 | image_tag: class: '' }}                  
+                  {{ block.settings.image | image_url: width: 850 | image_tag: class: '' }}
                 {% endif %}
 
-                <div class="{{ base }}__card-overlay"> </div>
+                <div class="{{ base }}__card-overlay"></div>
 
                 {% if block.settings.link != blank %}
-                <a href="{{ block.settings.link }}" class="{{ base }}__card-link"> </a>{% endif %}
+                  <a href="{{ block.settings.link }}" class="{{ base }}__card-link"> </a>
+                {%- endif %}
 
                 <div class="{{ base }}__card-content">
                   {% if block.settings.heading != blank %}
-                    <h3 class="{{ base }}__card-heading">{{  block.settings.heading }}</h3>
+                    <h3 class="{{ base }}__card-heading">{{ block.settings.heading }}</h3>
                   {% endif %}
 
                   {% if block.settings.text != blank %}
                     <div class="{{ base }}__card-text">
-                      {% assign bullets = block.settings.text | newline_to_br | split: '<br />'  %}
+                      {% assign bullets = block.settings.text | newline_to_br | split: '<br />' %}
 
                       <ul>
                         {% for bullet in bullets %}
@@ -60,148 +68,148 @@
                 </div>
               </div>
             </div>
-          {% endcase %}
+        {% endcase %}
       {% endfor %}
     </div>
   {% endif %}
 </div>
 
 {% schema %}
-  {
-    "name": "Quick Add Products Grid",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading"
-      },
-      {
-        "type": "textarea",
-        "id": "text",
-        "label": "Description"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "product",
-        "name": "Product",
-        "settings": [
-          {
-            "type": "product",
-            "id": "heading",
-            "label": "Product"
-          },
-          {
-            "type": "header",
-            "content": "Primary media"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "video",
-            "id": "video",
-            "label": "Video"
-          },
-          {
-            "type": "header",
-            "content": "Hover media"
-          },
-          {
-            "type": "image_picker",
-            "id": "image_hover",
-            "label": "Image"
-          },
-          {
-            "type": "video",
-            "id": "video_hover",
-            "label": "Video"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_tags",
-            "label": "Show tags?",
-            "default": false
-          },
-          {
-            "type": "header",
-            "content": "Product Form"
-          },
-          {
-            "type": "image_picker",
-            "id": "form_image",
-            "label": "Product Image"
-          },
-          {
-            "type": "text",
-            "id": "form_text",
-            "label": "Form Text"
-          }
-        ]
-      },
-      {
-        "type": "card",
-        "name": "Card",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          },
-          {
-            "type": "text",
-            "id": "heading",
-            "label": "Heading"
-          },
-          {
-            "type": "textarea",
-            "id": "text",
-            "label": "Text"
-          },
-          {
-            "type": "select",
-            "id": "checkmarks",
-            "label": "Checkmarks",
-            "options": [
-              {
-                "value": "show",
-                "label": "Show"
-              },
-              {
-                "value": "hide",
-                "label": "Hide"
-              }
-            ],
-            "default": "show"
-          },
-          {
-            "type": "header",
-            "content": "Style"
-          },
-          {
-            "type": "color_background",
-            "id": "overlay",
-            "label": "Overlay"
-          },
-          {
-            "type": "color",
-            "id": "color",
-            "label": "Color"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Quick Add Products Grid"
-      }
-    ]
-  }
+{
+  "name": "Quick Add Products Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "heading",
+          "label": "Product"
+        },
+        {
+          "type": "header",
+          "content": "Primary media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "Hover media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_hover",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video_hover",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_tags",
+          "label": "Show tags?",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Product Form"
+        },
+        {
+          "type": "image_picker",
+          "id": "form_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "form_text",
+          "label": "Form Text"
+        }
+      ]
+    },
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "checkmarks",
+          "label": "Checkmarks",
+          "options": [
+            {
+              "value": "show",
+              "label": "Show"
+            },
+            {
+              "value": "hide",
+              "label": "Hide"
+            }
+          ],
+          "default": "show"
+        },
+        {
+          "type": "header",
+          "content": "Style"
+        },
+        {
+          "type": "color_background",
+          "id": "overlay",
+          "label": "Overlay"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick Add Products Grid"
+    }
+  ]
+}
 {% endschema %}
