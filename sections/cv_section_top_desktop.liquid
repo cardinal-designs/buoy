@@ -167,6 +167,33 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Set a 2-second delay before running the code
+    setTimeout(function() {
+        // Select the element containing the rating text
+        const ratingTextElement = document.querySelector('.okeReviews-a11yText');
+
+        // Debug: Log the selected element to check if it was selected successfully
+        console.log("Selected element:", ratingTextElement);
+
+        // Check if the element exists and if the text matches the pattern "Rated X out of 5"
+        if (ratingTextElement && /Rated (\d\.\d) out of 5/.test(ratingTextElement.textContent)) {
+            // Extract the rating number using regex
+            const rating = ratingTextElement.textContent.match(/Rated (\d\.\d) out of 5/)[1];
+
+            // Replace the text with the desired format
+            ratingTextElement.textContent = `${rating}/5`;
+
+            // Debug: Confirm the change
+            console.log("Updated text:", ratingTextElement.textContent);
+        } else {
+            console.log("Element not found or text does not match.");
+        }
+    }, 2000); // 2000 milliseconds = 2 seconds delay
+});
+</script>
 {% schema %}
 {
 "name": "cv image text desktop",
