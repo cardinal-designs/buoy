@@ -1861,3 +1861,14 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
     });
   });
 </script>
+
+<script>
+  document.getElementById("scroll-button").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      // Scroll smoothly to the product section
+      document.getElementById("product-section").scrollIntoView({
+          behavior: "smooth"
+      });
+  });
+</script>
