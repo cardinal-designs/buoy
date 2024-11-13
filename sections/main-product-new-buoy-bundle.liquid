@@ -82,19 +82,23 @@
         <div class="cv_product_list">
           <div class="main_heading_price">
             <p class="heading_pro_list">{{ section.settings.mheading }}</p>
-            {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-              {% assign current_variant_price = currentVariant.price %}
-              {% assign one_discount_value = current_variant_price
-                | times: currentVariant.metafields.custom.auto_discount_percent_off
-                | divided_by: 100
-              %}
-              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
-              {% assign selectedOFF = currentVariant.price | minus: one_final_price | money %}
-
-              <p class="mian_prolist">
-                Save up to <span class="price_innpro">{{ selectedOFF }}</span>
-              </p>
-            {% endif %}
+            {% comment %}
+              {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+                {% assign current_variant_price = currentVariant.price %}
+                {% assign one_discount_value = current_variant_price
+                  | times: currentVariant.metafields.custom.auto_discount_percent_off
+                  | divided_by: 100
+                %}
+                {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                {% assign selectedOFF = currentVariant.price | minus: one_final_price | money %} %}
+                <p class="mian_prolist">
+                  Save up to <span class="price_innpro">{{ selectedOFF }}</span>
+                </p>
+              {% endif %}
+            {% endcomment %}
+            <p class="mian_prolist">
+              Save up to <span class="price_innpro">{{ section.settings.price_mpro }}</span>
+            </p>
           </div>
           <div class="product-listblock__container_cv pro_list_outermain">
             {%- assign block_count = section.blocks.size -%}
