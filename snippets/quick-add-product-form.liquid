@@ -64,7 +64,7 @@
                       {{ value }}
                       {%- if my_fields.quick_add_value_tag != blank -%}
                         <span class="quick-add__best-value-tag Best_Value">{{ my_fields.quick_add_value_tag }}</span>
-                        {% if card_product.title == 'Best of Buoy Bundle' %}
+                        {% if product_form_id == 'product-form-9680479355180' %}
                           {% unless product.metafields.custom.hide_subscription %}
                             {% if variant.selling_plan_allocations[0].price %}
                               {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
