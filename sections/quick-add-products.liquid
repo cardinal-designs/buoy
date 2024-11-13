@@ -30,7 +30,7 @@
       {% for block in blocks %}
         {% case block.type %}
           {% when 'product' %}
-            <div class="{{ base }}__grid-item">
+            <div class="qcheck-1 {{ base }}__grid-item">
               {% render 'product-card-quick-add', content: block.settings %}
             </div>
           {% when 'card' %}
