@@ -198,6 +198,15 @@
   </div>
 </div>
 <script>
+// Function to close the popup
+function closePopup() {
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
+    let getIDs = elm.closest('.btn_text').getAttribute('data-id');
+    document.querySelector(`#${getIDs}`).style.opacity = '0';
+    document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+  });
+}
+
 // Check if the device has a fine pointer (desktop) or coarse pointer (mobile)
 if (window.matchMedia("(pointer: fine)").matches) {
   // Desktop: Use mouseenter and mouseleave events
@@ -237,8 +246,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
 
       // Toggle opacity and popup class on click
       if (targetElement.style.opacity === '1') {
-        targetElement.style.opacity = '0';
-        popup.classList.remove('popup_open_cv');
+        closePopup();
       } else {
         targetElement.style.opacity = '1';
         popup.classList.add('popup_open_cv');
@@ -253,13 +261,19 @@ if (window.matchMedia("(pointer: fine)").matches) {
 
       // Toggle opacity and popup class on click
       if (targetElement.style.opacity === '1') {
-        targetElement.style.opacity = '0';
-        popup.classList.remove('popup_open_cv');
+        closePopup();
       } else {
         targetElement.style.opacity = '1';
         popup.classList.add('popup_open_cv');
       }
     });
+  });
+
+  // Close popup when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.cv_electrolyte_boost') && !event.target.closest('.btn_text_outer .btn_text img') && !event.target.closest('.wp_popup_lyt .popup_inner_out')) {
+      closePopup();
+    }
   });
 }
 </script>
