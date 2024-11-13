@@ -1896,6 +1896,7 @@ body .faq-section:not(.pdp-faq-section) {
     position: static;
     height: auto;
     margin: 0;
+    z-index: 1;
 }
 body .comparison-slideshow .slider_navigation {
     display: flex;
