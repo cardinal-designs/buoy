@@ -170,28 +170,37 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Set a 2-second delay before running the code
-    setTimeout(function() {
-        // Select the element containing the rating text
+    // Function to update the text content
+    function updateRatingText() {
         const ratingTextElement = document.querySelector('.okeReviews-a11yText');
 
-        // Debug: Log the selected element to check if it was selected successfully
-        console.log("Selected element:", ratingTextElement);
-
-        // Check if the element exists and contains the text
         if (ratingTextElement && /Rated (\d\.\d) out of 5/.test(ratingTextElement.textContent)) {
-            // Extract the rating number using regex
             const rating = ratingTextElement.textContent.match(/Rated (\d\.\d) out of 5/)[1];
-
-            // Replace the text with the desired format
             ratingTextElement.textContent = `${rating}/5`;
-
-            // Debug: Confirm the change
             console.log("Updated text:", ratingTextElement.textContent);
-        } else {
-            console.log("Element not found or text does not match.");
         }
-    }, 5000); // 2000 milliseconds = 2 seconds delay
+    }
+
+    // Set up a MutationObserver to detect changes in the DOM
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            // Only check the target if it's the text content you're looking for
+            if (mutation.type === "childList") {
+                updateRatingText();
+            }
+        });
+    });
+
+    // Select the target node to observe (this could be a parent container)
+    const targetNode = document.querySelector('.okeReviews-reviewsSummary');
+    
+    // If the targetNode exists, start observing changes
+    if (targetNode) {
+        observer.observe(targetNode, { childList: true, subtree: true });
+    }
+
+    // Initial call in case the content is already present
+    updateRatingText();
 });
 </script>
 {% schema %}
