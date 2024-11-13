@@ -1,44 +1,53 @@
 {% liquid
   assign card_product = content.heading
   assign base = 'quick-add'
- %}
+%}
 
-<quick-add-card class="{{ base }}__container" data-open="false" >
+<quick-add-card class="{{ base }}__container" data-open="false">
   <div class="{{ base }}__media">
-
     <div class="{{ base }}__media-inner">
       {% if content.image_hover != blank %}
-        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile'  }}
+        {{ content.image_hover | image_url: width: 850 | image_tag: class: 'quick-add__image-hover hide-mobile' }}
       {% elsif content.video_hover != blank %}
-        {{ content.video_hover | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          class: 'quick-add__video-hover hide-mobile',
-          sizes: '100vw',
-          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+        {{
+          content.video_hover
+          | video_tag:
+            autoplay: true,
+            loop: true,
+            muted: true,
+            controls: false,
+            class: 'quick-add__video-hover hide-mobile',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000'
+        }}
       {% endif %}
 
       {% if content.image != blank %}
-        {{ content.image | image_url: width: 850 | image_tag: class: ''  }}
+        {{ content.image | image_url: width: 850 | image_tag: class: '' }}
       {% elsif content.video != blank %}
-        {{ content.video | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          class: 'quick-add__video',
-          sizes: '100vw',
-          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000' }}
+        {{
+          content.video
+          | video_tag:
+            autoplay: true,
+            loop: true,
+            muted: true,
+            controls: false,
+            class: 'quick-add__video',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000'
+        }}
       {% else %}
         {{ card_product.featured_image | image_url: width: 850 | image_tag: class: '' }}
       {% endif %}
 
-      
       <div class="{{ base }}__product-tags">
         {% for tag in card_product.tags %}
-          <div {% if card_product.handle == 'rescue-drops' %}style="background: #DEF647; color: black;"{% endif %} class="{{ base }}__product-tag">
+          <div
+            {% if card_product.handle == 'rescue-drops' %}
+              style="background: #DEF647; color: black;"
+            {% endif %}
+            class="{{ base }}__product-tag"
+          >
             {{ tag }}
           </div>
         {% endfor %}
@@ -54,25 +63,25 @@
         {% endcapture %}
         <span class="11 quick-add__discount-badge">{{ discount | strip }}% off</span>
       </div>
-   
+
       <a class="{{ base }}__link" href="{{ card_product.url }}">
         {% if content.product_title != blank %}
           {{ content.product_title }}
         {% else %}
           {{ card_product.title }}
         {% endif %}
-      </a>      
+      </a>
 
       {% liquid
-        assign product_form_id = "product-form-" | append: card_product.id
-        assign currentVariant = card_product.selected_or_first_available_variant 
-      
+        assign product_form_id = 'product-form-' | append: card_product.id
+        assign currentVariant = card_product.selected_or_first_available_variant
+
         if product.selling_plan_groups.size > 0
           assign requiresPlan = card_product.requires_selling_plan
           assign selectedAllocation = ''
           assign currentAllocations = currentVariant.selling_plan_allocations
         endif
-       %}
+      %}
     </div>
   </div>
   <div class="{{ base }}__content product__info-wrapper">
@@ -83,11 +92,24 @@
     {% endif %}
 
     <product-form data-form-type="product-card" class="product-form">
-      {% form 'product', card_product, id: product_form_id, data-smartrr-form-id: card_product.id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form'  %}
-    
-
-        <input type="hidden" name="selling_plan" value="{{ currentVariant.selling_plan_allocations.first.selling_plan.id}}">
-        <input type="hidden" name="selling_plan_id" value="{{ currentVariant.selling_plan_allocations.first.selling_plan.id }}">
+      {% form 'product',
+        card_product,
+        id: product_form_id,
+        data-smartrr-form-id: card_product.id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      %}
+        <input
+          type="hidden"
+          name="selling_plan"
+          value="{{ currentVariant.selling_plan_allocations.first.selling_plan.id}}"
+        >
+        <input
+          type="hidden"
+          name="selling_plan_id"
+          value="{{ currentVariant.selling_plan_allocations.first.selling_plan.id }}"
+        >
 
         <input type="hidden" name="id" value="{{ currentVariant.id }}">
 
@@ -99,26 +121,32 @@
             </select>
           {% endcapture %}
 
-          {%- unless product.has_only_default_variant -%}
-            <script type="application/json" class="VariantJSON">
-              [
-                {%- for variant in card_product.variants -%}
-                  {
-                    "id": {{ variant.id }},
-                    "data": {{ variant | json }}
-                  }
-                  {% unless forloop.last %},{% endunless %}
-                {%- endfor -%}
-              ]
-            </script>
+        {%- unless product.has_only_default_variant -%}
+          <script type="application/json" class="VariantJSON">
+            [
+              {%- for variant in card_product.variants -%}
+                {
+                  "id": {{ variant.id }},
+                  "data": {{ variant | json }}
+                }
+                {% unless forloop.last %},{% endunless %}
+              {%- endfor -%}
+            ]
+          </script>
 
-            <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ card_product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-update="custom">
-              {%- for option in card_product.options_with_values -%}
-               {% assign optionIndex = forloop.index0 %}
-               {% assign values = "" %}
-               <custom-select class="text-class">
+          <variant-radios
+            class="no-js-hidden"
+            data-section="{{ section.id }}"
+            data-url="{{ card_product.url }}"
+            data-update-url="false"
+            {{ block.shopify_attributes }}
+            data-update="custom"
+          >
+            {%- for option in card_product.options_with_values -%}
+              {% assign optionIndex = forloop.index0 %}
+              {% assign values = '' %}
+              <custom-select class="text-class">
                 <fieldset class="js product-form__input">
-
                   <span class="selected_block">
                     <span class="Variant_Blocks">
                       {% assign my_fields = card_product.selected_or_first_available_variant.metafields.custom %}
@@ -126,14 +154,13 @@
                       <label>
                         <span class="Variant_Title">
                           <span class="custom-radio"></span>
-                          {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
+                          {{ my_fields.supply_time | replace: 'One', '1' | replace: 'Three', '3' }}
                           {%- if my_fields.supply_time != blank -%}
                             <span class="Supply_Time">
-                              {{ value }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
+                              {{ value }}/{{ my_fields.servings | replace: 'Servings', 'Serv' }}
                             </span>
                           {%- endif -%}
                         </span>
-                        
                       </label>
                     </span>
                   </span>
@@ -142,33 +169,39 @@
                     {%- for variant in card_product.variants -%}
                       {% assign value = variant.options[optionIndex] %}
                       {%- unless values contains value -%}
-                      {% assign values = values | join: ',' %}
-                      {% assign values = values | append: ',' | append:value %}
-                      {% assign values = values | split: ',' %}
-      
-                      {% assign my_fields = variant.metafields.custom %}
-      
+                        {% assign values = values | join: ',' %}
+                        {% assign values = values | append: ',' | append: value %}
+                        {% assign values = values | split: ',' %}
+
+                        {% assign my_fields = variant.metafields.custom %}
+
                         <span class="Variant_Blocks" data-id="{{ variant.id }}">
-                          <input type="radio" id="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                          <input
+                            type="radio"
+                            id="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
                             name="{{ option.name }}"
                             value="{{ value | escape }}"
                             form="product-form-{{ card_product.id }}"
-                            {% if option.selected_value == value %}checked{% endif %}
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
                           >
                           <label for="{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}">
                             <span class="Variant_Title">
                               <span class="custom-radio"></span>
-                              {{ my_fields.supply_time | replace: "One", "1" | replace: "Three", "3" }}
+                              {{ my_fields.supply_time | replace: 'One', '1' | replace: 'Three', '3' }}
                               {%- if my_fields.supply_time != blank -%}
                                 <span class="Supply_Time">
-                                  {{ value }}/{{ my_fields.servings | replace: "Servings", "Serv" }}
+                                  {{ value }}/{{ my_fields.servings | replace: 'Servings', 'Serv' }}
                                 </span>
                               {%- endif -%}
                             </span>
-                            
+
                             <span class="Variant_Price">
                               {% if variant.selling_plan_allocations.size > 0 %}
-                                <span class="variant__price--regular">{{ variant.selling_plan_allocations[0].price | money }}</span>
+                                <span class="variant__price--regular">
+                                  {{- variant.selling_plan_allocations[0].price | money -}}
+                                </span>
                                 <s class="variant__compare--price">{{ variant.price | money }}</s>
                               {% else %}
                                 {% if variant.compare_at_price > variant.price %}
@@ -178,8 +211,7 @@
                                   <span class="variant__price--regular">{{ variant.price | money }}</span>
                                 {% endif %}
                               {% endif %}
-                            </span> 
-                            
+                            </span>
                           </label>
                         </span>
                       {%- endunless -%}
@@ -189,20 +221,25 @@
                   <button class="fieldset-expand">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.55905 11.1588L0.941406 4.54244L1.89578 3.58824L7.55905 9.26849L13.2223 3.60623L14.1767 4.56043L7.55905 11.1588Z" fill="#1F2322"/>
-                      </svg>                    
+                    </svg>
                   </button>
                 </fieldset>
               </custom-select>
-                {%- endfor -%}
-                <script type="application/json">
-                  {{ card_product.variants | json }}
-                </script>
-              {{ variantMetafield }}
-            </variant-radios>
-          {%- endunless -%}
-    
-        <div class="product-form__buttons">
-          <button type="submit" name="add" class="button button--primary" data-available="{{ currentVariant.available }}">
+            {%- endfor -%}
+            <script type="application/json">
+              {{ card_product.variants | json }}
+            </script>
+            {{ variantMetafield }}
+          </variant-radios>
+        {%- endunless -%}
+
+        <div class="product-form__buttons check-2">
+          <button
+            type="submit"
+            name="add"
+            class="button button--primary"
+            data-available="{{ currentVariant.available }}"
+          >
             {% if currentVariant.available %}
               <span>Add &mdash;&nbsp;</span>
             {% else %}
@@ -212,22 +249,23 @@
               <span>{{ currentVariant.selling_plan_allocations[0].price | money }}</span>
               {% comment %} <s>{{ currentVariant.price | money }}</s> {% endcomment %}
             {% else %}
-             {% if currentVariant.compare_at_price > currentVariant.price %}
-              <span>{{ currentVariant.price | money }}</span>&nbsp;
-               {% comment %} <s>{{ currentVariant.compare_at_price | money }}</s> {% endcomment %}
-             {% else %}
-               <span>{{ currentVariant.price | money }}</span>
-             {% endif %}
+              {% if currentVariant.compare_at_price > currentVariant.price %}
+                <span>{{ currentVariant.price | money }}</span>&nbsp;
+                {% comment %} <s>{{ currentVariant.compare_at_price | money }}</s> {% endcomment %}
+              {% else %}
+                <span>{{ currentVariant.price | money }}</span>
+              {% endif %}
             {% endif %}
-            
           </button>
-          {% comment %} <button type="submit" name="add" class="{{ base }}__button" data-available="{{ currentVariant.available }}">
-            {% if currentVariant.available %}
-              <span>Add</span>
-            {% else %}
-              <span>Sold Out</span>
-            {% endif %}        
-          </button> {% endcomment %}
+          {% comment %}
+            <button type="submit" name="add" class="{{ base }}__button" data-available="{{ currentVariant.available }}">
+              {% if currentVariant.available %}
+                <span>Add</span>
+              {% else %}
+                <span>Sold Out</span>
+              {% endif %}
+            </button>
+          {% endcomment %}
         </div>
       {% endform %}
 
@@ -251,14 +289,16 @@
       </script>
     </product-form>
 
-    {% comment %} <div class="{{ base }}__price">
-      starting
-      <div class="{{ base }}__price-recurring">
-        {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+    {% comment %}
+      <div class="{{ base }}__price">
+        starting
+        <div class="{{ base }}__price-recurring">
+          {{ card_product.selected_or_first_available_selling_plan_allocation.price | money }}
+        </div>
+        <div class="{{ base }}__price-otp">
+          {{ card_product.selected_or_first_available_variant.price | money }}
+        </div>
       </div>
-      <div class="{{ base }}__price-otp">
-        {{ card_product.selected_or_first_available_variant.price | money }}
-      </div>
-    </div> {% endcomment %}
+    {% endcomment %}
   </div>
 </quick-add-card>
