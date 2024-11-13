@@ -137,7 +137,11 @@
 
         {% if selected_product %}
           <div class="product-info">
-            {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
+            {% if template == 'product.new_best_of_buoy_bundle' %}
+              {% render 'okendo-reviews-product-rating-summary-bundle', product: selected_product %}
+            {% else %}
+              {% render 'okendo-reviews-product-rating-summary', product: selected_product %}
+            {% endif %}
           </div>
 
           </div>
