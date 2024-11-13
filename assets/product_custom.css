@@ -1676,7 +1676,7 @@ p.price_cv_sale {
 }
 @media screen and (max-width: 1279px){
 .cv_sale_content_pdp {
-    padding: 20px 30px 15px 20px;
+    padding: 20px 30px 15px 0;
 } 
 .cv-sale_text p:nth-child(2) {
     font-size: 52px;
