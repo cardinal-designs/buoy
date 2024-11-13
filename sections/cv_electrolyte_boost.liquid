@@ -269,9 +269,10 @@ if (window.matchMedia("(pointer: fine)").matches) {
     });
   });
 
-  // Close popup when clicking outside
+  // Close popup when clicking outside .wp_popup_lyt
   document.addEventListener('click', (event) => {
-    if (!event.target.closest('.wp_popup_lyt') && !event.target.closest('.btn_text_outer .btn_text img') && !event.target.closest('.wp_popup_lyt .popup_inner_out')) {
+    // Check if the click happened outside .wp_popup_lyt
+    if (!event.target.closest('.wp_popup_lyt') && !event.target.closest('.btn_text_outer .btn_text img')) {
       closePopup();
     }
   });
