@@ -280,50 +280,52 @@
           {% endif %}
         {% endif %}
 
-        Add to Cart —&nbsp;
-        {% unless product.metafields.custom.hide_subscription %}
-          {% assign current_variant_price = currentVariant.price %}
+        {% if product.title == 'Best of Buoy Bundle' %}
+          dg Add to Cart —&nbsp;
+          {% unless product.metafields.custom.hide_subscription %}
+            {% assign current_variant_price = currentVariant.price %}
 
-          {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+            {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+              {% assign discount_value = current_variant_price
+                | times: currentVariant.metafields.custom.auto_discount_percent_off
+                | divided_by: 100
+              %}
+              {% assign discounted_price = current_variant_price | minus: discount_value %}
+
+              <span>{{ discounted_price | money_without_trailing_zeros }}</span>&nbsp;
+              <s>{{ current_variant_price | money_without_trailing_zeros }}</s>
+
+            {% elsif currentVariant.compare_at_price %}
+              <span>{{ currentVariant.price | money_without_trailing_zeros }}</span>&nbsp;
+              <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
+
+            {% elsif currentVariant.selling_plan_allocations[0].price %}
+              <span>
+                {{- currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros -}}</span
+              >&nbsp;
+              <s>{{ current_variant_price | money_without_trailing_zeros }}</s>
+
+            {% else %}
+              <span>{{ current_variant_price | money_without_trailing_zeros }}</span>
+            {% endif %}
+          {% else %}
             {% assign discount_value = current_variant_price
               | times: currentVariant.metafields.custom.auto_discount_percent_off
               | divided_by: 100
             %}
             {% assign discounted_price = current_variant_price | minus: discount_value %}
 
-            <span>{{ discounted_price | money_without_trailing_zeros }}</span>&nbsp;
-            <s>{{ current_variant_price | money_without_trailing_zeros }}</s>
-
-          {% elsif currentVariant.compare_at_price %}
-            <span>{{ currentVariant.price | money_without_trailing_zeros }}</span>&nbsp;
-            <s>{{ currentVariant.compare_at_price | money_without_trailing_zeros }}</s>
-
-          {% elsif currentVariant.selling_plan_allocations[0].price %}
-            <span>
-              {{- currentVariant.selling_plan_allocations[0].price | money_without_trailing_zeros -}}</span
-            >&nbsp;
-            <s>{{ current_variant_price | money_without_trailing_zeros }}</s>
-
-          {% else %}
-            <span>{{ current_variant_price | money_without_trailing_zeros }}</span>
-          {% endif %}
-        {% else %}
-          {% assign discount_value = current_variant_price
-            | times: currentVariant.metafields.custom.auto_discount_percent_off
-            | divided_by: 100
-          %}
-          {% assign discounted_price = current_variant_price | minus: discount_value %}
-
-          {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
-            <span>{{ discounted_price | money }}</span>&nbsp;
-            <s>{{ current_variant_price | money }}</s>
-          {% elsif currentVariant.compare_at_price != blank %}
-            <span>{{ currentVariant.price | money }}</span>&nbsp;
-            <s>{{ currentVariant.compare_at_price | money }}</s>
-          {% else %}
-            <span>{{ current_variant_price | money }}</span>
-          {% endif %}
-        {% endunless %}
+            {% if currentVariant.metafields.custom.auto_discount_percent_off != blank %}
+              <span>{{ discounted_price | money }}</span>&nbsp;
+              <s>{{ current_variant_price | money }}</s>
+            {% elsif currentVariant.compare_at_price != blank %}
+              <span>{{ currentVariant.price | money }}</span>&nbsp;
+              <s>{{ currentVariant.compare_at_price | money }}</s>
+            {% else %}
+              <span>{{ current_variant_price | money }}</span>
+            {% endif %}
+          {% endunless %}
+        {% endif %}
       </button>
     </div>
 
