@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Debug: Log the selected element to check if it was selected successfully
         console.log("Selected element:", ratingTextElement);
 
-        // Check if the element exists and if the text matches the pattern "Rated X out of 5"
+        // Check if the element exists and contains the text
         if (ratingTextElement && /Rated (\d\.\d) out of 5/.test(ratingTextElement.textContent)) {
             // Extract the rating number using regex
             const rating = ratingTextElement.textContent.match(/Rated (\d\.\d) out of 5/)[1];
