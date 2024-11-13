@@ -198,9 +198,9 @@
   </div>
 </div>
 <script>
-// Only apply mouse events if the device has a fine pointer (desktop)
+// Check if the device has a fine pointer (desktop) or coarse pointer (mobile)
 if (window.matchMedia("(pointer: fine)").matches) {
-  
+  // Desktop: Use mouseenter and mouseleave events
   document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
     elm.addEventListener('mouseenter', (event) => {
       let getIDs = event.target.closest('.btn_text').getAttribute('data-id');
@@ -224,6 +224,41 @@ if (window.matchMedia("(pointer: fine)").matches) {
     elm.addEventListener('mouseleave', (event) => {
       event.target.closest('.wp_popup_lyt').style.opacity = '0';
       document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+    });
+  });
+
+} else {
+  // Mobile: Use click events
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+      let getIDs = event.target.closest('.btn_text').getAttribute('data-id');
+      let targetElement = document.querySelector(`#${getIDs}`);
+      let popup = document.querySelector('.cv_electrolyte_boost');
+
+      // Toggle opacity and popup class on click
+      if (targetElement.style.opacity === '1') {
+        targetElement.style.opacity = '0';
+        popup.classList.remove('popup_open_cv');
+      } else {
+        targetElement.style.opacity = '1';
+        popup.classList.add('popup_open_cv');
+      }
+    });
+  });
+
+  document.querySelectorAll('.wp_popup_lyt .popup_inner_out').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+      let targetElement = event.target.closest('.wp_popup_lyt');
+      let popup = document.querySelector('.cv_electrolyte_boost');
+
+      // Toggle opacity and popup class on click
+      if (targetElement.style.opacity === '1') {
+        targetElement.style.opacity = '0';
+        popup.classList.remove('popup_open_cv');
+      } else {
+        targetElement.style.opacity = '1';
+        popup.classList.add('popup_open_cv');
+      }
     });
   });
 }
