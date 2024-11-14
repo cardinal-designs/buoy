@@ -19,7 +19,11 @@
             {{- block.settings.text -}}
           </a>
           {% if request.path == '/pages/buoy-clinical-study' %}
-            Results of Buoy's Clinical Trial
+            <div class="clinical_pagebtn">
+              <a href="javascript:void(0);" class="tabs-labels bodys js-clinical-openss" id="cv_clinical-drawer"
+                >Results of Buoy's Clinical Trial</a
+              >
+            </div>
           {% endif %}
         {% elsif block.type == 'value_props' %}
           <div class="image-content__value_props" {{ block.shopify_attributes }}>
@@ -114,6 +118,50 @@
     {% endif %}
   </div>
 </div>
+
+<script>
+  $(document).ready(function () {
+    document.querySelector('.js-clinical-opens-page').addEventListener('click', function () {
+      // Change the style to make right: 0px
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+
+      // Update CSS variables when opening the drawer
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+
+      if (window.innerWidth <= 768) {
+        // Apply bottom: 0px for mobile screens
+        clinicalDrawer.style.bottom = '0px';
+      } else {
+        // Apply right: 0px for desktop screens
+        clinicalDrawer.style.right = '0px';
+      }
+
+      // Add the class mobile-fixed-header to .drawer__header
+      document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+      document.body.classList.add('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.add('is-visibles');
+    });
+
+    // Revert changes on close button click
+    document.querySelector('.js-clinical-close').addEventListener('click', function () {
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+
+      // Revert the styles
+      clinicalDrawer.style.bottom = '';
+      clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+
+      // Remove the class mobile-fixed-header from .drawer__header
+      document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
+      document.body.classList.remove('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+
+      // Reset CSS variables when closing the drawer
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+      document.documentElement.style.setProperty('--clinical-trial-top', '');
+    });
+  });
+</script>
 
 {% schema %}
 {
