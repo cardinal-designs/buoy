@@ -393,6 +393,14 @@ body .product__media-item .image-text-overlay {
     align-items: center;
     gap: 12px;
 }
+.main_lowstoc_free {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 0;
+    margin: 10px;
+}
 /* animation popup */
 .cv_electrolyte_boost.popup_open_cv .electro_boost_headings, .cv_electrolyte_boost.popup_open_cv .electro_boost_accor {
     filter: blur(1px);
