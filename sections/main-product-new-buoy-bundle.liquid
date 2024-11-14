@@ -51,15 +51,17 @@
                 xr_button: true
               %}
 
-              <!-- Add custom text for each image based on index -->
-              <div class="image-text-overlay dd">
-                <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-              </div>
-              {% if section.settings.show_low_stock %}
-                <div class="additional-info">
-                  <p>Low Stock</p>
+              <div class="main_lowstoc_free">
+                <!-- Add custom text for each image based on index -->
+                <div class="image-text-overlay dd">
+                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 </div>
-              {% endif %}
+                {% if section.settings.show_low_stock %}
+                  <div class="additional-info">
+                    <p>Low Stock</p>
+                  </div>
+                {% endif %}
+              </div>
             </div>
           {%- endfor -%}
         </div>
