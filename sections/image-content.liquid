@@ -163,6 +163,7 @@
         // Revert the styles
         clinicalDrawer.style.bottom = '';
         clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+ clinicalDrawer.classList.remove('clinical-drawer-mobile');
 
         // Remove the class mobile-fixed-header from .drawer__header
         document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
