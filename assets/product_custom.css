@@ -278,6 +278,11 @@ a.scroll-to-product {
     font-weight: 400;
     color: #fff;
 }
+.additional-info {
+    min-height: 28px;
+    padding: 5px 8px;
+    min-width: 77px;
+}
 body .product__media-item .image-text-overlay {
     min-height: 28px;
     background: #398200;
