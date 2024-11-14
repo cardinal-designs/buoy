@@ -62,6 +62,10 @@
     letter-spacing: 0;
     font-family: 'Inter';
 }
+.page-blury-overlay.is-visibles {
+    visibility: visible;
+    opacity: 1;
+}
 .image-content__value_props {
   padding-top: 5px;
   display: flex;
