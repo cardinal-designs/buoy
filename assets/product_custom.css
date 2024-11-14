@@ -1,4 +1,13 @@
 
+.main_lowstoc_free {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* PDP  */
 h1, h2, h3 ,h4, h5, h6, p, a {
