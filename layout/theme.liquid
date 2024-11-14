@@ -353,11 +353,15 @@
       {% endunless %}
     {% endcomment %}
 
-    {% unless page.handle == 'chronic-illness-support' or page.handle == 'chronic-illness-shop' %}
+    {% unless page.handle == 'chronic-illness-support'
+      or page.handle == 'chronic-illness-shop'
+      or product.handle == 'best-of-buoy-bundle'
+    %}
       {% if template.name == 'product' and settings.show_pdp_announce == true %}
         <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
           {% section 'announcement-bar-new' %}
         </announcement-container>
+
       {% elsif template.name != 'product' %}
         <announcement-container class="{% if settings.show_announcement_bar == false %}Hide_Announcement_Bar{% else %}Show_Announcement_Bar{% endif %} {% if settings.fix_announcement == true and template.name != 'product' %}Fixed_Bar{% endif %} announcement--transparent">
           {% section 'announcement-bar-new' %}

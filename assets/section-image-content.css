@@ -54,6 +54,14 @@
     width: 100%;
     text-align: center;
 }
+.clinical_pagebtn .tabs-labels {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #1f2322;
+    letter-spacing: 0;
+    font-family: 'Inter';
+}
 .image-content__value_props {
   padding-top: 5px;
   display: flex;
