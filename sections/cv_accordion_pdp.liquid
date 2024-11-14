@@ -481,8 +481,9 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper('.mySwiper_pdp_cv', {
-        slidesPerView: 3.5,
-        spaceBetween: 10,
+        slidesPerView: 3.5,  // Number of slides visible at once (can be adjusted as needed)
+        spaceBetween: 10,  // Space between slides
+        loop: false,  // Disable infinite loop
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -491,11 +492,12 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        loop: false,  // Disable the loop (no infinite loop)
+        slidesPerGroup: 1,  // Move one slide at a time
+        centeredSlides: true,  // Optional: Center the active slide
         on: {
           reachEnd: function () {
-            // When the swiper reaches the last slide, go back to the first slide.
-            swiper.slideTo(0); // Move to the first slide
+            // When the swiper reaches the last slide, go back to the first slide
+            swiper.slideTo(0);
           },
         },
       });
