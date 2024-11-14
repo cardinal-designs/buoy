@@ -483,6 +483,7 @@
       var swiper = new Swiper('.mySwiper_pdp_cv', {
         slidesPerView: 3.5,
         spaceBetween: 10,
+        loop: true,  // Keeps the loop enabled for smooth transitions
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -490,6 +491,16 @@
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        on: {
+          slideChange: function () {
+            // Check if we are at the last slide, and if so, stop the loop.
+            if (swiper.isEnd) {
+              swiper.loopDestroy();  // Stop looping when reaching the last slide
+            } else {
+              swiper.loopCreate();  // Reactivate the loop for other slides
+            }
+          },
         },
       });
     </script>
