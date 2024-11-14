@@ -143,23 +143,23 @@
       document.querySelector('.page-blury-overlay').classList.add('is-visibles');
     });
 
-    // Revert changes on close button click
-    document.querySelector('.js-clinical-close').addEventListener('click', function () {
-      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+    // // Revert changes on close button click
+    // document.querySelector('.js-clinical-close').addEventListener('click', function () {
+    //   const clinicalDrawer = document.getElementById('clinicalSideDrawer');
 
-      // Revert the styles
-      clinicalDrawer.style.bottom = '';
-      clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+    //   // Revert the styles
+    //   clinicalDrawer.style.bottom = '';
+    //   clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
 
-      // Remove the class mobile-fixed-header from .drawer__header
-      document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
-      document.body.classList.remove('wp_popup_drawer');
-      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    //   // Remove the class mobile-fixed-header from .drawer__header
+    //   document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
+    //   document.body.classList.remove('wp_popup_drawer');
+    //   document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
 
-      // Reset CSS variables when closing the drawer
-      document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
-      document.documentElement.style.setProperty('--clinical-trial-top', '');
-    });
+    //   // Reset CSS variables when closing the drawer
+    //   document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+    //   document.documentElement.style.setProperty('--clinical-trial-top', '');
+    // });
   });
 </script>
 
