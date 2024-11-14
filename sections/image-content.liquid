@@ -133,14 +133,11 @@
     $(document).ready(function () {
    document.querySelector('.js-clinical-opens-page').addEventListener('click', function () {
     const clinicalDrawer = document.getElementById('clinicalSideDrawer');
-
     // Update CSS variables when opening the drawer
     document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
     document.documentElement.style.setProperty('--clinical-trial-top', '84px');
-
     // Remove both classes first to avoid conflicts
     clinicalDrawer.classList.remove('clinical-drawer-mobile', 'clinical-drawer-desktop');
-
     if (window.innerWidth <= 768) {
       // Apply the mobile class for mobile screens
       clinicalDrawer.classList.add('clinical-drawer-mobile');
@@ -148,28 +145,22 @@
       // Apply the desktop class for desktop screens
       clinicalDrawer.classList.add('clinical-drawer-desktop');
     }
-
     // Add other classes to elements as needed
     document.querySelector('.drawer__header').classList.add('mobile-fixed-headers');
     document.body.classList.add('wp_popup_drawer');
     document.querySelector('.page-blury-overlay').classList.add('is-visibles');
   });
-
-
       // Revert changes on close button click
       document.querySelector('.js-clinical-close').addEventListener('click', function () {
         const clinicalDrawer = document.getElementById('clinicalSideDrawer');
-
         // Revert the styles
         clinicalDrawer.style.bottom = '';
         clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
         clinicalDrawer.classList.remove('clinical-drawer-mobile');
-
         // Remove the class mobile-fixed-header from .drawer__header
         document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
         document.body.classList.remove('wp_popup_drawer');
         document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
-
         // Reset CSS variables when closing the drawer
         document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
         document.documentElement.style.setProperty('--clinical-trial-top', '');
