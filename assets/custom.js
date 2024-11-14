@@ -887,18 +887,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
-          const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
-          const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
+  // const observer = new MutationObserver((mutationsList) => {
+  //   for (const mutation of mutationsList) {
+  //     if (mutation.type === 'childList') {
+  //       document.querySelectorAll('.drawer__header').forEach((drawerHeader) => {
+  //         const supplementSideDrawer = drawerHeader.closest('.popup-drawer');
+  //         const closeDrawerButton = supplementSideDrawer.querySelector('.js-close-popup-drawer');
           
-          applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
-        });
-      }
-    }
-  });
+  //         applyTouchEventsToPopupDrawer(drawerHeader, supplementSideDrawer, closeDrawerButton);
+  //       });
+  //     }
+  //   }
+  // });
   
   observer.observe(document.body, { childList: true, subtree: true });
 
