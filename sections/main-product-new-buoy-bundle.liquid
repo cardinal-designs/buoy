@@ -55,6 +55,11 @@
               <div class="image-text-overlay dd">
                 <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
               </div>
+              {% if settings.show_additional_info %}
+                <div class="additional-info">
+                  <p>Low Stock</p>
+                </div>
+              {% endif %}
             </div>
           {%- endfor -%}
         </div>
