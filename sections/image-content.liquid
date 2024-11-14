@@ -151,8 +151,8 @@
 
     // Add other classes to elements as needed
     document.querySelector('.drawer__header').classList.add('mobile-fixed-headers');
-    document.body.classList.add('wp_popup_drawers');
-    document.querySelector('.page-blury-overlay').classList.add('is-visibles-std');
+    document.body.classList.add('wp_popup_drawer');
+    document.querySelector('.page-blury-overlay').classList.add('is-visibles');
   });
 
 
@@ -166,8 +166,8 @@
 
         // Remove the class mobile-fixed-header from .drawer__header
         document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
-        document.body.classList.remove('wp_popup_drawers');
-        document.querySelector('.page-blury-overlay').classList.remove('is-visibles-std');
+        document.body.classList.remove('wp_popup_drawer');
+        document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
 
         // Reset CSS variables when closing the drawer
         document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
