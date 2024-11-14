@@ -513,6 +513,13 @@
     "cv_faq_pctM7F": {
       "type": "cv_faq",
       "blocks": {
+        "faq_item_nTPAfD": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Why Are Trace Minerals So Important?",
+            "answer": "Modern agriculture and commercial water have stripped our soil and water of essential trace minerals, making them hard to find even in the most balance diets.\n\nEven just minor deficiencies in these minerals can cause inabilities to absorb and use nutrients effectively.\n\nEvery drop of Buoy contains 87 trace minerals preserved in their naturally ionic state for high bioavailability and fast absorption."
+          }
+        },
         "faq_item_FR33cN": {
           "type": "faq_item",
           "settings": {
@@ -550,6 +557,7 @@
         }
       },
       "block_order": [
+        "faq_item_nTPAfD",
         "faq_item_FR33cN",
         "faq_item_97CU8z",
         "faq_item_UcAQ8U",
