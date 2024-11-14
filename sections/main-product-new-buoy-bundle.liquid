@@ -57,8 +57,11 @@
                   <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 </div>
                 {% if section.settings.show_low_stock %}
-                  <div class="additional-info">
-                    <p>Low Stock</p>
+                  <div
+                    class="additional-info"
+                    style="background-color: {{ settings.bg_color }}; color: {{ settings.text_color }};"
+                  >
+                    <p>{{ section.settings.media_text }}</p>
                   </div>
                 {% endif %}
               </div>
@@ -1408,6 +1411,24 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
         "label": "Show and Hide Low stock",
         "default": false
       },
+{
+"type": "text",
+"id": "media_text",
+"label": "Media Test Add to show"
+
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "Text Color",
+
+
+},
+{
+"type": "color",
+"id": "bg_color",
+"label": "Background Color",
+},
 
 {
 "type": "select",
