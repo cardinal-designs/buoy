@@ -490,9 +490,12 @@
       el: '.swiper-pagination',
       clickable: true,
     },
+    autoplay: {
+      delay: 3000, // Auto-slide every 3 seconds
+      disableOnInteraction: false, // Continue auto-slide after user interaction
+    },
     on: {
       reachEnd: function () {
-        // Optional: Log when the user reaches the last slide
         console.log('Reached last slide');
       },
       touchEnd: function () {
@@ -501,9 +504,18 @@
           this.slideTo(0); // Scroll to the first slide
         }
       },
+      slideChangeTransitionEnd: function () {
+        // Automatically go to the first slide after the last slide on auto-slide
+        if (this.isEnd) {
+          setTimeout(() => {
+            this.slideTo(0);
+          }, 3000); // Small delay before resetting
+        }
+      },
     },
   });
 </script>
+
 
 
 
