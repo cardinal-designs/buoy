@@ -3,7 +3,7 @@ p {
 }
 
 
-body .product__media-item .image-text-overlay, .additional-info {
+body .product__media-item .image-text-overlay, body .main_lowstoc_free .additional-info {
     min-height: 28px;
     border-radius: 4px;
     padding: 5px 8px;
@@ -19,3 +19,9 @@ body .main_lowstoc_free {
     top: 0;
     left: 0;
 }
+.image-text-overlay p, .additional-info p {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 400;
+}
+
