@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "main-product",
@@ -59,6 +59,10 @@
         "687e272c-0c62-4732-8291-02999f5c24e6"
       ],
       "settings": {
+        "show_low_stock": false,
+        "media_text": "{{ product.metafields.custom.media_test_add_to_show.value }}",
+        "text_color": "{{ product.metafields.custom.text_color.value }}",
+        "bg_color": "{{ product.metafields.custom.background_color.value }}",
         "picker_type": "button",
         "supplement_fact_text": "",
         "supplement_fact_link": "",
@@ -550,7 +554,8 @@
         "text_pKi4NG": {
           "type": "text",
           "settings": {
-            "heading": "Our bodies induce a physiological response against bolus water intake or bolus electrolyte ingestion to protect against low blood salt and high blood salt, respectively."
+            "heading": "Our bodies induce a physiological response against bolus water intake or bolus electrolyte ingestion to protect against low blood salt and high blood salt, respectively.",
+            "divider": true
           }
         },
         "heading_FcYfd7": {
@@ -720,8 +725,7 @@
         "heading": "The Impact of Buoy on Hydration Status of Active Men and Women",
         "title": "University of Pittsburgh — Academic Medical Center",
         "text": "Clinical Trial NO: NCT05768789",
-        "url": "https://clinicaltrials.gov/study/NCT05768789?term=Buoy%20hydration&rank=1",
-        "product": ""
+        "url": "https://clinicaltrials.gov/study/NCT05768789?term=Buoy%20hydration&rank=1"
       }
     }
   },
