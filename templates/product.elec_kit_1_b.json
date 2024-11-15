@@ -174,6 +174,13 @@
         "b89e2a9e-a526-4b3f-82d7-01190d6a9f37"
       ],
       "settings": {
+        "show_low_stock_1": false,
+        "text_color_1": "",
+        "bg_color_1": "",
+        "show_low_stock": true,
+        "media_text": "Electrolyte",
+        "text_color": "#FFFFFF",
+        "bg_color": "#1f2322",
         "picker_type": "button",
         "supplement_fact_text": "Supplement Facts",
         "supplement_fact_link": "",
@@ -1029,9 +1036,8 @@
     },
     "165168225907175bb6": {
       "type": "product-bar-toggle",
-      "settings": {
-      }
-    },
+      "settings": {}
+    }
   },
   "order": [
     "main",
@@ -1051,6 +1057,6 @@
     "91da1537-2987-42c0-8813-ee1b4ee1058e",
     "1636344367d21ce97f",
     "1637720233f9199bd5",
-    "165168225907175bb6",
+    "165168225907175bb6"
   ]
 }
