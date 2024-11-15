@@ -53,9 +53,11 @@
 
               <div class="main_lowstoc_free">
                 <!-- Add custom text for each image based on index -->
-                <div class="image-text-overlay dd">
+ {% if section.settings.show_low_stock_1 %}
+                <div class="image-text-overlay dd" style="background-color: {{ section.settings.bg_color_1 }}; color: {{ section.settings.text_color_1 }};">
                   <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
                 </div>
+{% endif %}
                 {% if section.settings.show_low_stock %}
                   <div
                     class="additional-info"
