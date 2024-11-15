@@ -484,32 +484,27 @@
     slidesPerView: 3, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
     loop: false, // Disable infinite loop
+    slidesPerGroup: 1, // Move one slide at a time
+    centeredSlides: false, // Optional: Center the active slide
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    on: {
+      reachEnd: function () {
+        // Optional: Log when the user reaches the last slide
+        console.log('Reached last slide');
+      },
+      touchEnd: function () {
+        // When the user drags while on the last slide, go to the first slide
+        if (this.isEnd) {
+          this.slideTo(0); // Scroll to the first slide
+        }
+      },
     },
-    slidesPerGroup: 1, // Move one slide at a time
-    centeredSlides: false, // Optional: Center the active slide
-  });
-
-  // Add logic to move to the first slide when at the last slide
-  document.querySelector('.swiper-button-next').addEventListener('click', function () {
-    if (swiper.isEnd) {
-      swiper.slideTo(0); // Go back to the first slide
-    }
-  });
-
-  // Handle swipe (drag) behavior when reaching the last slide
-  document.querySelector('.mySwiper_pdp_cv').addEventListener('touchend', function () {
-    if (swiper.isEnd) {
-      swiper.slideTo(0); // Go back to the first slide
-    }
   });
 </script>
+
 
 
 
