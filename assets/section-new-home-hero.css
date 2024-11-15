@@ -5,7 +5,9 @@
 	font-style: italic;
 	font-family: Ryhmes Text;
 }
-
+.homepage__hero--image .img-fill {
+    object-fit: contain;
+}
 /*  */
 .homepage__hero {
   min-height: 100vh;
