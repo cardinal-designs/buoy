@@ -5,8 +5,12 @@
 	font-style: italic;
 	font-family: Ryhmes Text;
 }
-.homepage__hero--image .img-fill {
+
+
+@media screen and(min-width:769px){
+ .homepage__hero--image .img-fill {
     object-fit: contain;
+} 
 }
 /*  */
 .homepage__hero {
