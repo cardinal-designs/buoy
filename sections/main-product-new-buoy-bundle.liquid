@@ -53,11 +53,6 @@
 
               <div class="main_lowstoc_free">
                 <!-- Add custom text for each image based on index -->
- {% if section.settings.show_low_stock_1 %}
-                <div class="image-text-overlay dd" style="background-color: {{ section.settings.bg_color_1 }}; color: {{ section.settings.text_color_1 }};">
-                  <p class="fp">{{ currentVariant.metafields.custom.quick_add_value_tag }}</p>
-                </div>
-{% endif %}
                 {% if section.settings.show_low_stock %}
                   <div
                     class="additional-info"
@@ -1407,24 +1402,7 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 "tag": "section",
 "class": "product-section",
 "settings": [
-   {
-        "type": "checkbox",
-        "id": "show_low_stock_1",
-        "label": "Percentage hide and show",
-        "default": true
-      },
-{
-"type": "color",
-"id": "text_color_1",
-"label": "Text Color",
 
-
-},
-{
-"type": "color",
-"id": "bg_color_1",
-"label": "Background Color",
-},
 {
 "type": "header",
 "content": "Add and remove badge"
