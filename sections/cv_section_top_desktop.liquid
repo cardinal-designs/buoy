@@ -90,13 +90,15 @@
           <p>{{ section.settings.out_stock }}</p>
         </div>
       {% endcomment %}
- {% if section.settings.show_low_stock %}
+  {% if product.metafields.custom.hide_badge %}
+    {% if section.settings.out_stock != blank %}
       <div
         class="out_stock_text"
         style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"
       >
         <p>{{ section.settings.out_stock }}</p>
       </div>
+      {% endif %}
 {% endif %}
 
       <div class="media-section showOnMob">
