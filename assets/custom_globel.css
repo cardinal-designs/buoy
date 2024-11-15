@@ -3,7 +3,7 @@ p {
 }
 
 
-body .product__media-item .image-text-overlay {
+body .product__media-item .image-text-overlay, .additional-info {
     min-height: 28px;
     border-radius: 4px;
     padding: 5px 8px;
