@@ -259,5 +259,7 @@ body .homepage__hero--content {
     position: static;
     padding: 0;
 }
-  
+.homepage__hero--image .img-fill.hide-desktop {
+    object-position: 50% 0%;
+}  
 }
