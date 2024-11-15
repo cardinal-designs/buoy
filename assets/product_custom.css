@@ -42,6 +42,8 @@ body header-container {
 }
 .mySwiper_pdp_cv .cv_accor_slide_inn img {
     border-radius: 6px;
+    max-width: 100px;
+    margin: 0 auto;
 }
 /* pdp banner */
 .mgf_wppopup_sc img {
