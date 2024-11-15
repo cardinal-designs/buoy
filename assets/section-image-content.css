@@ -55,12 +55,13 @@
     text-align: center;
 }
 .clinical_pagebtn .tabs-labels {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 500;
-    color: #1f2322;
-    letter-spacing: 0;
-    font-family: 'Inter';
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 500;
+	color: #1f2322;
+	letter-spacing: 0;
+	font-family: Inter;
+	text-decoration: underline;
 }
 .page-blury-overlay.is-visibles {
     visibility: visible;
