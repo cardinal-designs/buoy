@@ -1265,6 +1265,9 @@ body .product__media-arrows .slick-arrow:hover.slick-prev svg, body .product__me
 .popupNAME {
     overflow: hidden;
 }
+.product__media-arrows .slick-arrow {
+    opacity: 1;
+}
 .product.pdp_cv_new .product-form__input .Variant_Blocks label {
     padding: 16px;!important;
     border: 0!important;
