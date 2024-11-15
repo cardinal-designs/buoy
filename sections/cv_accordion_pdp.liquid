@@ -479,42 +479,29 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.mySwiper_pdp_cv', {
-        slidesPerView: 3,  // Number of slides visible at once
-        spaceBetween: 10,  // Space between slides
-        loop: false,       // Disable infinite loop
-        autoplay: {
-            delay: 3000,               // Adjust delay time as needed
-            disableOnInteraction: false,
-        },
-        pagination: {
+    <script>
+        var swiper = new Swiper('.mySwiper_pdp_cv', {
+          slidesPerView: 3,  // Number of slides visible at once (can be adjusted as needed)
+          spaceBetween: 10,  // Space between slides
+          loop: false,  // Disable infinite loop
+            pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        },
-        navigation: {
+          },
+          navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-        slidesPerGroup: 1,  // Move one slide at a time
-        on: {
+          },
+          slidesPerGroup: 1,  // Move one slide at a time
+          centeredSlides: false,  // Optional: Center the active slide
+          on: {
             reachEnd: function () {
-                // Stop autoplay when reaching the last slide
-                swiper.autoplay.stop();
+              // When the swiper reaches the last slide, go back to the first slide
+              swiper.slideTo(0);
             },
-        },
-    });
-
-    // Restart autoplay on manual navigation or other triggers
-    document.querySelector('.swiper-button-next').addEventListener('click', function () {
-        if (swiper.isEnd) {
-            swiper.slideTo(0); // Go back to the first slide on next button click at the end
-            swiper.autoplay.start(); // Restart autoplay
-        }
-    });
-</script>
-
-
+          },
+        });
+    </script>
 
     <!--
       <script>
