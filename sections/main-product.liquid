@@ -914,13 +914,15 @@
               <div class="main_lowstoc_free">
                 <!-- Add custom text for each image based on index -->
         
-                {% if section.settings.show_low_stock %}
+                      {% if product.metafields.custom.hide_badge %}
+                  {% if section.settings.media_text != blank %}
                   <div
                     class="additional-info"
                     style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"
                   >
                     <p>{{ section.settings.media_text }}</p>
                   </div>
+                    {% endif %}
                 {% endif %}
               </div>
 
