@@ -480,27 +480,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.mySwiper_pdp_cv', {
-        slidesPerView: 3,  // Number of slides visible at once (can be adjusted as needed)
-        spaceBetween: 10,  // Space between slides
-        loop: false,  // Disable infinite loop
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        slidesPerGroup: 1,  // Move one slide at a time
-        centeredSlides: false,  // Optional: Center the active slide
-        on: {
-          reachEnd: function () {
-            // When the swiper reaches the last slide, go back to the first slide
-            swiper.slideTo(0);
+        var swiper = new Swiper('.mySwiper_pdp_cv', {
+          slidesPerView: 3,  // Number of slides visible at once (can be adjusted as needed)
+          spaceBetween: 10,  // Space between slides
+          loop: false,  // Disable infinite loop
+      autoplay: {
+                  delay: 2000, // Adjust delay time as needed
+                  disableOnInteraction: false,
+                },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
           },
-        },
-      });
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          slidesPerGroup: 1,  // Move one slide at a time
+          centeredSlides: false,  // Optional: Center the active slide
+          on: {
+            reachEnd: function () {
+              // When the swiper reaches the last slide, go back to the first slide
+              swiper.slideTo(0);
+            },
+          },
+        });
     </script>
 
     <!--
