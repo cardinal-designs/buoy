@@ -894,6 +894,9 @@ body .comparison-slideshow {
 }
 /* end comparison-slideshow */
 /* faq-section */
+.faq__item .faq__content br {
+	display: none;
+}
 .faq-section__container {
     max-width: 100% !important;
 }
