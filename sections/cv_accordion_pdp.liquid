@@ -483,11 +483,10 @@
     var swiper = new Swiper('.mySwiper_pdp_cv', {
         slidesPerView: 3,  // Number of slides visible at once
         spaceBetween: 10,  // Space between slides
-        loop: true,        // Enable infinite loop
+        loop: false,       // Disable infinite loop
         autoplay: {
-            delay: 3000,              // Adjust delay time as needed
+            delay: 3000,               // Adjust delay time as needed
             disableOnInteraction: false,
-            reverseDirection: true,   // Play in reverse direction
         },
         pagination: {
             el: '.swiper-pagination',
@@ -498,8 +497,23 @@
             prevEl: '.swiper-button-prev',
         },
         slidesPerGroup: 1,  // Move one slide at a time
+        on: {
+            reachEnd: function () {
+                // Stop autoplay when reaching the last slide
+                swiper.autoplay.stop();
+            },
+        },
+    });
+
+    // Restart autoplay on manual navigation or other triggers
+    document.querySelector('.swiper-button-next').addEventListener('click', function () {
+        if (swiper.isEnd) {
+            swiper.slideTo(0); // Go back to the first slide on next button click at the end
+            swiper.autoplay.start(); // Restart autoplay
+        }
     });
 </script>
+
 
 
     <!--
