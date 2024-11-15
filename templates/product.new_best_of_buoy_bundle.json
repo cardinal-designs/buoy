@@ -12,7 +12,7 @@
     "cv_section_top_desktop_fnMmPK": {
       "type": "cv_section_top_desktop",
       "settings": {
-        "show_low_stock": false,
+        "show_low_stock": true,
         "out_stock": "Only 1,000 In Stock",
         "text_color": "#000000",
         "bg_color": "#ffffff",
@@ -294,6 +294,9 @@
         "testimonials_kyGY6B"
       ],
       "settings": {
+        "show_low_stock_1": true,
+        "text_color_1": "",
+        "bg_color_1": "",
         "show_low_stock": false,
         "media_text": "Low Stock",
         "text_color": "#5e2626",
