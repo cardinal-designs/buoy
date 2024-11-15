@@ -494,27 +494,23 @@
     },
     slidesPerGroup: 1, // Move one slide at a time
     centeredSlides: false, // Optional: Center the active slide
-    on: {
-      reachEnd: function () {
-        // Optional: Log when the end is reached (not resetting yet)
-        console.log('Reached last slide');
-      },
-    },
   });
 
-  // Add custom logic to move back to the first slide on the next interaction
+  // Add logic to move to the first slide when at the last slide
   document.querySelector('.swiper-button-next').addEventListener('click', function () {
     if (swiper.isEnd) {
       swiper.slideTo(0); // Go back to the first slide
     }
   });
 
+  // Handle swipe (drag) behavior when reaching the last slide
   document.querySelector('.mySwiper_pdp_cv').addEventListener('touchend', function () {
     if (swiper.isEnd) {
-      swiper.slideTo(0); // Go back to the first slide on drag
+      swiper.slideTo(0); // Go back to the first slide
     }
   });
 </script>
+
 
 
 
