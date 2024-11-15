@@ -5,3 +5,12 @@ body .product__media-item .image-text-overlay {
     min-width: 77px;
     text-align: center;
 }
+body .main_lowstoc_free {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
