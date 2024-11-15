@@ -483,7 +483,7 @@
   var swiper = new Swiper('.mySwiper_pdp_cv', {
     slidesPerView: 3, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
-    loop: false, // Keep loop disabled for manual control
+    loop: false, // Disable infinite loop
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -496,14 +496,26 @@
     centeredSlides: false, // Optional: Center the active slide
     on: {
       reachEnd: function () {
-        // When the swiper reaches the last slide, wait for an extra interaction
-        setTimeout(() => {
-          swiper.slideTo(0);
-        }, 500); // Small delay for better user experience
+        // Optional: Log when the end is reached (not resetting yet)
+        console.log('Reached last slide');
       },
     },
   });
+
+  // Add custom logic to move back to the first slide on the next interaction
+  document.querySelector('.swiper-button-next').addEventListener('click', function () {
+    if (swiper.isEnd) {
+      swiper.slideTo(0); // Go back to the first slide
+    }
+  });
+
+  document.querySelector('.mySwiper_pdp_cv').addEventListener('touchend', function () {
+    if (swiper.isEnd) {
+      swiper.slideTo(0); // Go back to the first slide on drag
+    }
+  });
 </script>
+
 
 
     <!--
