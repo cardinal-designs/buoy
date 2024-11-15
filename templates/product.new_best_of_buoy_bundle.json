@@ -12,10 +12,9 @@
     "cv_section_top_desktop_fnMmPK": {
       "type": "cv_section_top_desktop",
       "settings": {
-        "show_low_stock": false,
-        "out_stock": "{{ section.settings.selected_product.metafields.custom.media_test_add_to_show.value }}",
-        "text_color": "{{ section.settings.selected_product.metafields.custom.text_color.value }}",
-        "bg_color": "{{ section.settings.selected_product.metafields.custom.background_color.value }}",
+        "out_stock": "{{ section.settings.selected_product.metafields.custom.media_test_add_to_show.value }}Low Stock",
+        "text_color": "#ec1818",
+        "bg_color": "#FFFFFF",
         "section_image": "shopify://shop_images/PDP_BOBB_Hero_M_2acb59eb-1da9-4ecf-a0f9-a39e8acf9226.jpg",
         "section_video_url": "",
         "section_image_d": "shopify://shop_images/PDP_BOBB_Hero_D_a4fb0df4-d345-4062-bc04-09705f5048d3.jpg",
