@@ -1,0 +1,115 @@
+{% render 'upsell_style_bundle' %}
+<div js-targetupsellhtml>
+  <cus-upsell class="UpsellPopupMain__WP">
+    <div class="popupClosedupsell">{{ images['updated_upsell_cross.svg'] | image_url:width:images['updated_upsell_cross.svg'].width | image_tag:loading:'lazy' }}</div>
+    <div class="ContainerPopupMain">
+      <div class="headingPopupMain">
+        Three is <i>Better</i> Than One
+      </div>
+      <div class="popupWrapperInit">
+        <div class="WP__containerbox__wt">
+          <div class="wpcontainerBox">
+            <div class="wp_boxesImages">
+              <div class="image__container_bx box_bt">
+                {{ images['sold_out_container.png'] | image_url:width:images['sold_out_container.png'].width | image_tag:loading:'lazy' }}
+              </div>
+              <div class="wp__priceXt">$25 value</div>
+            </div>
+            <div class="wp_boxesImages">
+              <div class="image__container_bx icon_ar">
+                {{ images['arrow_right.svg'] | image_url:width:images['arrow_right.svg'].width | image_tag:loading:'lazy' }}
+              </div> 
+            </div>
+            <div class="wp_boxesImages">
+              <div class="image__container_bx giftModal">
+                {{ images['Gift_Modal_3_Gifts.png'] | image_url:width:images['Gift_Modal_3_Gifts.png'].width | image_tag:loading:'lazy' }}
+              </div>  
+              <div class="wp__priceXt pricemdl">up to $68 value</div>
+            </div>
+          </div>
+          <div class="bottom__makeUp">Our Water Bottle sold out. To make up for it, select 3 additional FREE gifts <span>(while supplies last).</span></div>
+        </div>
+        <div class="ProductLists__container">
+          <div class="xpSwiperInit swiper">
+            <div class="MentoinsLists__grid swiper-wrapper">
+              {% for product in settings.product_list %}
+                {%- if product.available -%}
+                  <div class="Grid__listed_pdp swiper-slide" indexproduct="{{ forloop.index0 }}">
+                    <div class="Grid__listed_wp">
+                      <div class="mg__listed">
+                        {{ product.featured_image | image_url:width:product.featured_image.width | image_tag:loading:'lazy' }}
+                      </div>
+                      <div class="deatils__listed_wp">
+                        <div class="rvw_wp_xt"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="15" viewBox="0 0 56 15" fill="none"> <path d="M5.25731 2.5L6.69346 6.05118L10.5146 6.31966L7.58104 8.78289L8.50651 12.5L5.25731 10.4712L2.00811 12.5L2.93358 8.78289L0 6.31966L3.82117 6.05118L5.25731 2.5Z" fill="#FFD66B"/> <path d="M16.5249 2.5L17.961 6.05118L21.7822 6.31966L18.8486 8.78289L19.7741 12.5L16.5249 10.4712L13.2757 12.5L14.2012 8.78289L11.2676 6.31966L15.0887 6.05118L16.5249 2.5Z" fill="#FFD66B"/> <path d="M27.7886 2.5L29.2247 6.05118L33.0459 6.31966L30.1123 8.78289L31.0378 12.5L27.7886 10.4712L24.5394 12.5L25.4648 8.78289L22.5312 6.31966L26.3524 6.05118L27.7886 2.5Z" fill="#FFD66B"/> <path d="M39.0542 2.5L40.4903 6.05118L44.3115 6.31966L41.3779 8.78289L42.3034 12.5L39.0542 10.4712L35.805 12.5L36.7305 8.78289L33.7969 6.31966L37.618 6.05118L39.0542 2.5Z" fill="#FFD66B"/> <path d="M50.3179 2.5L51.754 6.05118L55.5752 6.31966L52.6416 8.78289L53.5671 12.5L50.3179 10.4712L47.0687 12.5L47.9941 8.78289L45.0605 6.31966L48.8817 6.05118L50.3179 2.5Z" fill="#FFD66B"/> </svg></div>
+                        <div class="title_wp_xt">{{ product.title }}</div>
+                        <div class="price__wp_xt"><span class="msgfree">FREE</span><span class="strike_wpfree">{{ product.price | money }}</span></div>
+                        <div class="wp_selection_process" js-up-act>Select</div>
+                        <div class="qty_choosen_wy hidden" js-show-act>
+                          <span class="qty_minus_up"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none"><rect y="5.97754" width="12" height="1.04471" fill="#BBBCBC"/></svg></span>
+                          <span class="qty_box_up">1</span>
+                          <span class="qty_add_up" js-up-qtyupsell><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none"> <path d="M5.47634 7.02366H0L0 5.97634H5.47634V0.5H6.52366V5.97634L12 5.97634V7.02366L6.52366 7.02366L6.52366 12.5H5.47634L5.47634 7.02366Z" fill="#BBBCBC"/> </svg></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="paginationWp__bar"><div class="swiper-pagination"></div></div>
+          </div>
+        </div>
+        <div class="wp__bottom_txt_up">
+          <div class="wp__kit__mesage">
+            <p>Each bundle still ships with 1 free Electrolyte Dopp Kit.</p>
+            <span>{{ images['Dopp_Kit.png'] | image_url:width:images['Dopp_Kit.png'].width | image_tag:loading:'lazy' }}</span>
+          </div>
+          <div class="notes_upsell">If purchasing 3 bundles + 4th free, your 3 choices will be multiplied by 4 for a total of 12 additional gifts.</div>
+        </div>
+      </div>
+    </div>
+  </cus-upsell>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    class customUpsell extends HTMLElement{
+      constructor(){
+      super();
+        
+        let IntervalHTML = setInterval(()=>{
+          if( document.querySelectorAll("#aca-modal-container").length && document.querySelector('#aca-modal-wrapper').childElementCount == 1 ){
+            let targetElement = document.getElementById("aca-modal-container");
+            let html = document.querySelector('[js-targetupsellhtml]').innerHTML;
+            targetElement.insertAdjacentHTML("afterend", html); 
+          }
+        },500);
+    
+        this.querySelectorAll(`[js-up-act]`).forEach((elm)=>{
+          elm.addEventListener('click', (target)=>{
+            target.preventDefault();
+            target.currentTarget.classList.add('hidden');
+            target.target.closest('.Grid__listed_pdp').classList.add('active');
+            let IndexMap = target.target.closest('.Grid__listed_pdp').getAttribute('indexproduct');
+            document.querySelector(`.aca-product[product-index="${IndexMap}"]`).querySelector('.aca-product-button').click();
+            target.target.closest('.deatils__listed_wp').querySelector('[js-show-act]').classList.remove('hidden');
+          });
+        });
+    
+        this.querySelector('.popupClosedupsell').addEventListener('click', (target)=>{
+          target.preventDefault();
+          document.querySelector('#aca-bottom-close').click();
+        });
+
+        var SwiperUpsell = new Swiper(this.querySelector(`.xpSwiperInit`), {
+          pagination: {el: ".swiper-pagination",type: "progressbar",},
+          breakpoints: {
+            320: { slidesPerView: 1.2, spaceBetween: 10 },
+            768: { slidesPerView: 3.2, spaceBetween: 10 },
+            1024: { slidesPerView: 3.25, spaceBetween: 10 },
+          },          
+        });
+      }
+    }
+    customElements.define('cus-upsell',customUpsell)
+  })
+</script>
