@@ -485,5 +485,12 @@
       </script>
     {% endif %}
     <script src="{{ 'optimization.js' | asset_url }}" defer></script>
+
+    {% comment %}
+      {% if template == 'product.new_best_of_buoy_bundle' %}
+        {% render 'best_buoy_bundle_upsell_popup' %}
+      {% endif %}
+    {% endcomment %}
+    
   </body>
 </html>
