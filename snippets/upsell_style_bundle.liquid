@@ -1,0 +1,297 @@
+<style>
+#aca-modal {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: #00000029;
+}
+#aca-modal-container {
+    display: none;
+}
+.ContainerPopupMain {
+    width: 100%;
+}
+.MentoinsLists__grid {
+    display: flex;
+    padding: 0 0 24px 0px;
+}
+.xpSwiperInit.swiper {
+    padding: 0 30px;
+}
+.Grid__listed_wp {
+    display: flex;
+    border: 1px solid transparent;
+    background: #F8F8F8;
+    border-radius: 10px;
+    height: 100%;
+}
+.Grid__listed_pdp.swiper-slide.active .Grid__listed_wp {
+    border: 1px solid #DEF647;
+}
+.rvw_wp_xt {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1px;
+}
+.WP__containerbox__wt {
+    margin: 0 0 32px;
+    padding: 0 30px;
+}
+.deatils__listed_wp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12.5px 8px 12.5px 5px;
+    align-items: flex-start;
+}
+.wp_selection_process {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    color: #1F2322;
+    padding: 6px;
+    border: 1px solid #1F2322;
+    border-radius: 50px;
+    margin: 6px 0 0;
+    min-width: 81px;
+    display: flex;
+    min-height: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.popupClosedupsell {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.qty_choosen_wy {
+    display: flex;
+    align-items: center;
+    border: 1px solid #BBBCBC;
+    border-radius: 10px;
+    min-width: 81px;
+    min-height: 30px;
+    justify-content: space-between;
+    margin: 6px 0 0;
+}
+.qty_minus_up, .qty_add_up {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+.qty_box_up {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    color: #1F2322;
+}
+.mg__listed {
+    flex: 0 0 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mg__listed img {
+    width: 100%;
+    height: auto;
+}
+.headingPopupMain {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1F2322;
+    margin: 6px 0 24px;
+    padding: 0 30px;
+}
+.headingPopupMain i, .bottom__makeUp span {
+    font-family: 'Ryhmes Text';
+    font-weight: 300;
+    font-style: italic;
+}
+.wpcontainerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.image__container_bx.giftModal img {
+    max-width: 131px;
+    height: auto;
+}
+.wp__priceXt {
+    font-family: 'Ryhmes Text';
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: #1F2322;
+    margin: 8px 0 0;
+}
+.image__container_bx.giftModal {
+    margin-top: -34px;
+}
+.wp__priceXt.pricemdl {
+    margin: -10px 0 0;
+}
+.bottom__makeUp {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    margin: 24px 0 0;
+    color: #1F2322;
+}
+.wp__kit__mesage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 0 0 12px;
+}
+.wp__kit__mesage p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    font-family: Inter;
+    color: #1F2322;
+    text-align: center;
+}
+.notes_upsell {
+    font-family: 'Ryhmes Text';
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 15px;
+    text-align: center;
+    color: #1F2322;
+}
+.title_wp_xt {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    color: #1F2322;
+    margin: 0 0 3px;
+}
+.price__wp_xt {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.price__wp_xt .msgfree {
+    color: #398200;
+}
+.price__wp_xt .strike_wpfree {
+    color: #7b797999;
+    text-decoration: line-through;
+}
+#aca-modal .UpsellPopupMain__WP {
+    display: flex;
+}
+.wp__bottom_txt_up {
+    margin: 32px 0 0;
+    padding: 0 30px;
+}
+.UpsellPopupMain__WP {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px 0px #1F23221F;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.Grid__listed_pdp.swiper-slide {
+    height: auto;
+}
+.xpSwiperInit .swiper-pagination.swiper-pagination-progressbar {
+    position: static;
+    margin: 0;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #E9E9E9;
+}
+.xpSwiperInit .swiper-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #797B7A;
+    border-radius: 10px;
+}
+/* media css start here */
+@media (max-width: 767px) {
+#aca-modal-wrapper {
+    width: 94%;
+}
+.wp__bottom_txt_up {
+    padding: 0 20px;
+}
+.MentoinsLists__grid {
+    padding: 0 0 20px 0px;
+}
+.xpSwiperInit.swiper {
+    padding: 0 20px;
+}
+.UpsellPopupMain__WP {
+    padding: 30px 0px;
+}
+.headingPopupMain {
+    font-size: 30px;
+    line-height: 39px;
+    margin: 6px 0 20px;
+    padding: 0 20px;
+}
+.bottom__makeUp {
+    margin: 20px 0 0;
+}
+.WP__containerbox__wt {
+    margin: 0 0 24px;
+    padding: 0 20px;
+}
+.wp__kit__mesage {
+    gap: 8px;
+    flex-direction: column;
+}
+}
+@media (max-width: 375px) {
+.headingPopupMain {
+    font-size: 28px;
+}
+}
+@media (max-width: 360px) {
+.headingPopupMain {
+    font-size: 26px;
+}
+}
+@media (max-width: 359px) {
+.headingPopupMain {
+    font-size: 23px;
+    line-height: 29px;
+}
+}
+
+
+</style>
