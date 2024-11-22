@@ -8,6 +8,21 @@
     "theme_support_url": "https:\/\/cardinalco.agency\/"
   },
   {
+    "name": "Best of Buoy Bundle | UPSELL",
+    "settings": [
+      {
+        "type": "header",
+        "content": "ALSO IMPORTANT NOTE",
+        "info": "kindly add same products with same order in EG Auto Add to Cart for Best of Buoy Bundle products to makes it working!"
+      },      
+      {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "Product List"
+      }
+    ]
+  },  
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
