@@ -55,7 +55,7 @@
     text-align: center;
     color: #1F2322;
     padding: 6px;
-    border: 1px solid #1F2322;
+    /* border: 1px solid #1F2322; */
     border-radius: 50px;
     margin: 6px 0 0;
     min-width: 81px;
@@ -65,6 +65,10 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    background: #def647;
+}
+  .qty_choosen_wy span:empty {
+    display: none !important;
 }
 .popupClosedupsell {
     position: absolute;
@@ -83,8 +87,9 @@
     border-radius: 10px;
     min-width: 81px;
     min-height: 30px;
-    justify-content: space-between;
+    justify-content: center;
     margin: 6px 0 0;
+    gap: 5px;
 }
 .qty_minus_up, .qty_add_up {
     display: flex;
@@ -99,6 +104,14 @@
     line-height: 15px;
     text-align: center;
     color: #1F2322;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+}
+  .qty_box_up svg {
+    width: 13px;
+    height: 13px;
 }
 .mg__listed {
     flex: 0 0 96px;
