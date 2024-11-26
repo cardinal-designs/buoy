@@ -112,7 +112,7 @@
                 {%- if product.available -%}
                   <div class="Grid__listed_pdp swiper-slide" indexproduct="{{ forloop.index0 }}">
                     <div class="Grid__listed_wp">
-                      <div class="mg__listed">
+                      <div class="mg__listed rk">
                         {{ product.featured_image | image_url:width:product.featured_image.width | image_tag:loading:'lazy' }}
                       </div>
                       <div class="deatils__listed_wp">
