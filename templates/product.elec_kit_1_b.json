@@ -174,7 +174,6 @@
         "b89e2a9e-a526-4b3f-82d7-01190d6a9f37"
       ],
       "settings": {
-        "show_low_stock": false,
         "media_text": "Electrolyte",
         "text_color": "#ffffff",
         "bg_color": "#1f2322",
@@ -674,8 +673,8 @@
           "type": "block",
           "settings": {
             "text": "Add the world's best sea salt harvested with 87 ionic trace minerals.",
-            "new_product": true,
-            "extra_savings": false,
+            "new_product": false,
+            "extra_savings": true,
             "image": "shopify://shop_images/Upsell_Rescue_Salt_D_1.png",
             "product": "rescue-salts-1-jar",
             "bottom_text": "Rescue Salt",
