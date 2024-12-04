@@ -48,44 +48,44 @@
 <script src="scripts/index.js"></script>
 
 <script>
-function initializeClinicalChartsnw(drawer) {
-  const swipers = drawer.querySelectorAll("[data-swiper='chart-images']")
-
-  if(!swipers) return
-
-  swipers.forEach(s => {
-    const options = {
-      slidesPerView: 'auto',
-      spaceBetween: 8,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-    }
-    
-    if(s.nextElementSibling.hasAttribute('data-swiper')) {
-      const textSwiper = new Swiper( s.nextElementSibling, {
-        slidesPerView: 1,
-        effect: 'fade'
-      })
-
-      options.controller = {
-        by: 'slide',
-        control: textSwiper
+  function initializeClinicalChartsnw(drawer) {
+    const swipers = drawer.querySelectorAll("[data-swiper='chart-images']")
+  
+    if(!swipers) return
+  
+    swipers.forEach(s => {
+      const options = {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
       }
-
-      const swiper = new Swiper(s, options) 
       
-    }
-  })
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const clinicalTrialDrawer = document.querySelector("#clinicalSideDrawer")
-  if (clinicalTrialDrawer) {
-    initializeClinicalChartsnw(clinicalTrialDrawer)
+      if(s.nextElementSibling.hasAttribute('data-swiper')) {
+        const textSwiper = new Swiper( s.nextElementSibling, {
+          slidesPerView: 1,
+          effect: 'fade'
+        })
+  
+        options.controller = {
+          by: 'slide',
+          control: textSwiper
+        }
+  
+        const swiper = new Swiper(s, options) 
+        
+      }
+    })
   }
-})  
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const clinicalTrialDrawer = document.querySelector("#clinicalSideDrawer")
+    if (clinicalTrialDrawer) {
+      initializeClinicalChartsnw(clinicalTrialDrawer)
+    }
+  })  
   $(document).ready(function ($) {
     function animateElements() {
       $('.progressbar').each(function () {
