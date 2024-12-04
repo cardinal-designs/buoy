@@ -1,3 +1,15 @@
+.drawer__header:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #fff;
+    filter: blur(2px);
+}
 .mb-5 {
   margin-bottom: 5px !important;
 }
