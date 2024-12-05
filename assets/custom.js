@@ -928,7 +928,7 @@ function initializeClinicalCharts(drawer) {
 
   swipers.forEach(s => {
     const options = {
-      slidesPerView: 1.2,
+      slidesPerView: 'auto',
       spaceBetween: 8,
       pagination: {
         el: '.swiper-pagination',
