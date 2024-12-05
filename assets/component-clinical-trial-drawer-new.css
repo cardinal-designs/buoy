@@ -225,6 +225,9 @@ body.lock-scroll header-container {
   .clinical__label-wrapper {
     padding: 24px 0 16px;
 }
+.clinical-trial-drawer .drawer__body  .clinical__spacer.bg-white {
+    height: 20px;
+}
     .clinical-trial-drawer {
       top: auto;
       right: 0 !important;
