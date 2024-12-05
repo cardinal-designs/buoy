@@ -153,6 +153,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.openClinical)) {
     document.querySelectorAll(selectors.openClinical).forEach((item) => {
       item.addEventListener('click', function(e){
+        document.body.classList.add('noscrollEvent');
         openClinical(e);
       }); 
     });
@@ -161,6 +162,7 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.closeClinical)) {
     document.querySelectorAll(selectors.closeClinical).forEach((item) => {
       item.addEventListener('click', function(){
+        document.body.classList.remove('noscrollEvent');
         closeClinical();
       }); 
     });
