@@ -228,17 +228,18 @@
     margin-bottom: 16px;
   }
 
-  .homepage__hero--content .button {
+.homepage__hero--content .button {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
-    padding: 5px 46px;
+    padding: 5px 26px;
     width: 203px;
     height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    min-width: inherit;
+}
 
   .homepage__hero--content-container.mobile-content-top {
     justify-content: flex-start;
