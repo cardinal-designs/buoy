@@ -805,73 +805,73 @@ document.addEventListener('DOMContentLoaded', function() {
   const maxScreenWidth = 769;
   
   function disableBodyScroll() {
-    // document.body.style.overflow = 'hidden';
-    // document.body.style.touchAction = 'none'; // Prevent scroll chaining
+    document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none'; // Prevent scroll chaining
   }
   
   function enableBodyScroll() {
-    // document.body.style.overflow = '';
-    // document.body.style.touchAction = ''; // Re-enable scroll chaining
+    document.body.style.overflow = '';
+    document.body.style.touchAction = ''; // Re-enable scroll chaining
   }
   
   function isScreenBelowThreshold() {
-    // return window.innerWidth < maxScreenWidth;
+    return window.innerWidth < maxScreenWidth;
   }
   
   function isScrolledToTop(supplementSideDrawer) {
-    // return supplementSideDrawer.scrollTop === 0;
+    return supplementSideDrawer.scrollTop === 0;
   }
   
   function onTouchStart(event, supplementSideDrawer) {
-    // if (!isScreenBelowThreshold()) return;
-    // if (isScrolledToTop(supplementSideDrawer)) {
-    //   touchStartY = event.touches[0].clientY;
-    //   supplementSideDrawer.style.transition = 'none';
-    //   disableBodyScroll();
-    // }
+    if (!isScreenBelowThreshold()) return;
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchStartY = event.touches[0].clientY;
+      supplementSideDrawer.style.transition = 'none';
+      disableBodyScroll();
+    }
   }
   
   function onTouchMove(event, supplementSideDrawer) {
-    // if (!isScreenBelowThreshold()) return;
-    // if (isScrolledToTop(supplementSideDrawer)) {
-    //   touchEndY = event.touches[0].clientY;
-    //   swipeDistance = touchEndY - touchStartY;
+    if (!isScreenBelowThreshold()) return;
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchEndY = event.touches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
   
-    //   if (swipeDistance > 0) {      
-    //     supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
-    //     event.preventDefault(); // Prevent default scroll behavior
-    //   }
-    // }
+      if (swipeDistance > 0) {      
+        supplementSideDrawer.style.bottom = `-${swipeDistance}px`;
+        event.preventDefault(); // Prevent default scroll behavior
+      }
+    }
   }
   
   function onTouchEnd(event, supplementSideDrawer, closeDrawerButton) {
-    // if (!isScreenBelowThreshold()) return;
+    if (!isScreenBelowThreshold()) return;
   
-    // if (isScrolledToTop(supplementSideDrawer)) {
-    //   touchEndY = event.changedTouches[0].clientY;
-    //   swipeDistance = touchEndY - touchStartY;
+    if (isScrolledToTop(supplementSideDrawer)) {
+      touchEndY = event.changedTouches[0].clientY;
+      swipeDistance = touchEndY - touchStartY;
   
-    //   if (swipeDistance > threshold) {
-    //     supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-    //     supplementSideDrawer.style.bottom = '-100%';
+      if (swipeDistance > threshold) {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '-100%';
         
-    //     setTimeout(() => {
-    //       closeDrawerButton.click();
-    //     }, 300);
-    //   } else {
-    //     supplementSideDrawer.style.transition = 'bottom 1s ease-out';
-    //     supplementSideDrawer.style.bottom = '0';
-    //   }
+        setTimeout(() => {
+          closeDrawerButton.click();
+        }, 300);
+      } else {
+        supplementSideDrawer.style.transition = 'bottom 1s ease-out';
+        supplementSideDrawer.style.bottom = '0';
+      }
   
-    //   setTimeout(() => {
-    //     supplementSideDrawer.style.transition = '';
-    //     enableBodyScroll();
-    //   }, 300);
-    // }
-    // else{
-    //   supplementSideDrawer.style.transition = '';
-    //   enableBodyScroll();
-    // }
+      setTimeout(() => {
+        supplementSideDrawer.style.transition = '';
+        enableBodyScroll();
+      }, 300);
+    }
+    else{
+      supplementSideDrawer.style.transition = '';
+      enableBodyScroll();
+    }
   }
 
   function onTouchCancel() {
