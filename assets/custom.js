@@ -162,7 +162,6 @@ $( ".image-slider__dot" ).on( "drag", function( event, ui ) {
   if (document.querySelector(selectors.closeClinical)) {
     document.querySelectorAll(selectors.closeClinical).forEach((item) => {
       item.addEventListener('click', function(){
-        document.body.classList.remove('noscrollEvent');
         closeClinical();
       }); 
     });
