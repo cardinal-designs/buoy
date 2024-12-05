@@ -214,7 +214,9 @@ body.lock-scroll header-container {
     padding-bottom: 100px;
   padding-top: var(--clinical-trial-padding-top);
   }
-
+.lock-scroll .clinical-trial-drawer {
+    bottom: 0 !important;
+}
   .clinical-trial-drawer .drawer__wrapper-main {
     /* padding: 0 30px; */
   }
