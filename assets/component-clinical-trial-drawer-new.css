@@ -262,7 +262,7 @@ body.lock-scroll header-container {
   }
 
   @media screen and (max-width: 768px) {
-    .clinical__label-wrapper {
+    .clinical-trial-drawer .drawer__wrapper-main .clinical__label-wrapper {
     padding: 24px 0 16px;
 }
     .drawer__body > div {
