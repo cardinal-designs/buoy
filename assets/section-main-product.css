@@ -1987,6 +1987,12 @@ fieldset.product-form__input .form__label {
 }
 }
 
+@media (max-width: 1400px) {
+.template-product .product__info-wrapper {
+    padding-right: 40px;
+}
+}
+
 @media screen and (max-width: 768px) {
   
   .three-x-text {
