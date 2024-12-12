@@ -2039,6 +2039,13 @@ $("body").on("click", ".js-add-to-cart", function (e) {
   fetch(`${routes.cart_add_url}`, { ...fetchConfig("javascript"), body })
     .then((response) => response.json())
     .then((parsedState) => {
+      
+      if (typeof parsedState.selling_plan_allocation !== 'undefined') {
+         fbq('track', 'Custom-Add-To-cart-Subscription', {content_category: parsedState.product_type,content_subscription: parsedState.selling_plan_allocation.selling_plan.name,content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }else{
+         fbq('track', 'Custom-Add-To-cart', {content_category: parsedState.product_type,content_subscription: "One-Time Purchase",content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }
+      
       atcGetSectionsToRender().forEach((section) => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) ||
@@ -2124,6 +2131,13 @@ $("body").on("click", ".pee-club-add-to-cart", function (e) {
   fetch(`${routes.cart_add_url}`, { ...fetchConfig("javascript"), body })
     .then((response) => response.json())
     .then((parsedState) => {
+      
+      if (typeof parsedState.selling_plan_allocation !== 'undefined') {
+         fbq('track', 'Custom-Add-To-cart-Subscription', {content_category: parsedState.product_type,content_subscription: parsedState.selling_plan_allocation.selling_plan.name,content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }else{
+         fbq('track', 'Custom-Add-To-cart', {content_category: parsedState.product_type,content_subscription: "One-Time Purchase",content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }
+      
       atcGetSectionsToRender().forEach((section) => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) ||
@@ -2233,6 +2247,13 @@ $(document).on("click", ".slideout-button", function (e) {
   fetch(`${routes.cart_add_url}`, { ...fetchConfig("javascript"), body })
     .then((response) => response.json())
     .then((parsedState) => {
+
+      if (typeof parsedState.selling_plan_allocation !== 'undefined') {
+         fbq('track', 'Custom-Add-To-cart-Subscription', {content_category: parsedState.product_type,content_subscription: parsedState.selling_plan_allocation.selling_plan.name,content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }else{
+         fbq('track', 'Custom-Add-To-cart', {content_category: parsedState.product_type,content_subscription: "One-Time Purchase",content_ids:parsedState.product_id,content_name:parsedState.title,currency:"USD",num_items:"1",value:parsedState.final_price/100});
+      }      
+      
       atcGetSectionsToRender().forEach((section) => {
         const elementToReplace =
           document.getElementById(section.id).querySelector(section.selector) ||
