@@ -798,7 +798,9 @@
                     {% endif %}
                     <span class="Testimonials_Rating"></span>
                     {% if block.settings.testimonial_text != blank %}
+                      <div class="testimonial_text">
                       <p>{{ block.settings.testimonial_text }}</p>
+                      </div>
                     {% endif %}
                   </div>
               {%- endcase -%}
