@@ -779,12 +779,14 @@
                         <div class="reviews_button hide-mobile">
                           <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Exclude.png?v=1699317160">
                         </div>
+                        <div class="viedoDesk-Moblie">
                         <video class="hide-mobile" muted loop preload="metadata">
                           <source src="{{ block.settings.testimonial_video }}#t=0.1" type="video/mp4">
                         </video>
                         <video class="hide-desktop" autoplay muted loop webkit-playsinline playsinline>
                           <source src="{{ block.settings.testimonial_video }}" type="video/mp4">
                         </video>
+                        </div>
                       </div>
                     {% elsif block.settings.testimonial_image != blank %}
                       <div style="position: relative;">
@@ -1375,12 +1377,6 @@ $(`.product__tabs[data-tab="${tab}"]`).addClass('active');
 "type": "header",
 "content": "Add and remove badge"
 },
-   {
-        "type": "checkbox",
-        "id": "show_low_stock",
-        "label": "Show and Hide badge",
-        "default": false
-      },
 {
 "type": "text",
 "id": "media_text",
