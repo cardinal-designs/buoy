@@ -1799,10 +1799,18 @@ fieldset.product-form__input .form__label {
   margin: 0;
 }
 
-.Testimonials_Wrapper img, .Testimonials_Wrapper video {
+.Testimonials_Wrapper img {
   width: 100%;
   border-radius: 10px;
 }
+
+.Testimonials_Wrapper video {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 0 10px;
+  display: block;
+}
+
 
 .Testimonials_Main .slick-dots {
   padding: 0 !important;
