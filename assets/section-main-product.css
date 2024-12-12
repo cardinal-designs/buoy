@@ -1980,6 +1980,13 @@ fieldset.product-form__input .form__label {
   top: 21px !important;
 }
 
+@media (max-width: 1500px) {
+.testimonial_text p {
+    font-size: 16px;
+    line-height: 24px;
+}
+}
+
 @media screen and (max-width: 768px) {
   
   .three-x-text {
