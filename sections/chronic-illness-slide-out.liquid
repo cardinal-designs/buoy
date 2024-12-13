@@ -392,7 +392,7 @@
   
   $(".show-more a").on("click", function() {
     var $this = $(this); 
-    var $content = $this.parents('.form__checkbox--button').find(".field");
+    var $content = $this.parents('.form__checkbox--button').find(".collapsible_field");
     var linkText = $this.text().toUpperCase();    
   
     if(linkText === "SHOW MORE"){
