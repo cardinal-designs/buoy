@@ -1,3 +1,9 @@
+.field .collapsible_field{
+  display:none;
+}
+.field .collapsible_field.active{
+  display:block;
+}
 .chronic-illness-slide-out {
   padding: 20px;
   position: fixed;

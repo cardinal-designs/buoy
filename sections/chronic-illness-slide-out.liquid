@@ -79,77 +79,215 @@
                 <h3>Which of the following illnesses are you managing? <span>Select all that apply.</span></h3>
               </div>
               <div class="chronic-illness-slide-out__checkboxs">
+                {% comment %} START BELOW CHECKBOXES ARE SHWOING DEFAULT {% endcomment %}
                 <div class="field">
-                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="ADHD or Autism" class="field__checkbox" >
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Dysautonomia" class="field__checkbox" >
                   <label for="ContactFormADHD" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    ADHD or Autism
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Eating Disorder Recovery" class="field__checkbox">
-                  <label for="ContactFormEatingDisorderRecovery" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Eating Disorder Recovery
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormCrohnDisease" name="illnessesType" value="Crohn’s Disease" class="field__checkbox">
-                  <label for="ContactFormCrohnDisease" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Crohn’s Disease
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Immunodeficiency Disease" class="field__checkbox">
-                  <label for="ContactFormImmunodeficiencyDisease" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Immunodeficiency Disease
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormCysticFibrosis" name="illnessesType" value="Cystic Fibrosis" class="field__checkbox">
-                  <label for="ContactFormCysticFibrosis" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Cystic Fibrosis
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormMultipleSclerosis" name="illnessesType" value="Multiple Sclerosis" class="field__checkbox">
-                  <label for="ContactFormMultipleSclerosis" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Multiple Sclerosis
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Chemotherapy Dehydration" class="field__checkbox">
-                  <label for="ContactFormChemotherapyDehydration" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    Chemotherapy Dehydration
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormPOTS" name="illnessesType" value="POTS" class="field__checkbox">
-                  <label for="ContactFormPOTS" class="field__checkbox--label">
-                    <span>{% render 'check-icon' %}</span>
-                    POTS
-                  </label>
-                </div>
-                <div class="field">
-                  <input type="checkbox" id="ContactFormDysautonomia" name="illnessesType" value="Dysautonomia" class="field__checkbox">
-                  <label for="ContactFormDysautonomia" class="field__checkbox--label">
                     <span>{% render 'check-icon' %}</span>
                     Dysautonomia
                   </label>
                 </div>
                 <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Orthostatic Intolerance (OI)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Orthostatic Intolerance (OI)
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Postural Orthostatic Tachycardia Syndrome (POTS)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Postural Orthostatic Tachycardia Syndrome (POTS)
+                  </label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Chronic Fatigue Syndrome (CFS/Myalgic Encephalomyelitis)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Chronic Fatigue Syndrome (CFS/Myalgic Encephalomyelitis)
+                  </label>
+                </div>                    
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Ehlers-Danlos Syndrome (EDS)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Ehlers-Danlos Syndrome (EDS)
+                  </label>
+                </div> 
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Hypermobility Spectrum Disorder (HSD)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Hypermobility Spectrum Disorder (HSD)
+                  </label>
+                </div> 
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Mast Cell Activation Syndrome (MCAS)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Mast Cell Activation Syndrome (MCAS)
+                  </label>
+                </div> 
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="IBS (Constipation, Diarrhea, or Mixed)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    IBS (Constipation, Diarrhea, or Mixed)
+                  </label>
+                </div> 
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Constipation" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Constipation
+                  </label>
+                </div> 
+                <div class="field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Ulcerative Colitis (UC)" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Ulcerative Colitis (UC)
+                  </label>
+                </div> 
+                {% comment %} END BELOW CHECKBOXES ARE SHWOING DEFAULT {% endcomment %}
+
+
+                {% comment %} START COLLAPSIBLE CHECKBOXES ARE SHWOING {% endcomment %}
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormADHD" name="illnessesType" value="Crohn's Disease" class="field__checkbox" >
+                  <label for="ContactFormADHD" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Crohn's Disease
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormEatingDisorderRecovery" name="illnessesType" value="Diabetes (Pre, Type 1 and 2)" class="field__checkbox">
+                  <label for="ContactFormEatingDisorderRecovery" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Diabetes (Pre, Type 1 and 2)
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormCrohnDisease" name="illnessesType" value="Polycystic Ovarian Syndrome (PCOS)" class="field__checkbox">
+                  <label for="ContactFormCrohnDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Polycystic Ovarian Syndrome (PCOS)
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormImmunodeficiencyDisease" name="illnessesType" value="Endometriosis" class="field__checkbox">
+                  <label for="ContactFormImmunodeficiencyDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Endometriosis
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormCysticFibrosis" name="illnessesType" value="Migraine" class="field__checkbox">
+                  <label for="ContactFormCysticFibrosis" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Migraine
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormMultipleSclerosis" name="illnessesType" value="Fibromyalgia" class="field__checkbox">
+                  <label for="ContactFormMultipleSclerosis" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Fibromyalgia
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormChemotherapyDehydration" name="illnessesType" value="Arthritis" class="field__checkbox">
+                  <label for="ContactFormChemotherapyDehydration" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Arthritis
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormPOTS" name="illnessesType" value="Cystic Fibrosis (CF)" class="field__checkbox">
+                  <label for="ContactFormPOTS" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Cystic Fibrosis (CF)
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormDysautonomia" name="illnessesType" value="Cancer" class="field__checkbox">
+                  <label for="ContactFormDysautonomia" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Cancer
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Parkinsons" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Parkinsons
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Multiple Sclerosis" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Multiple Sclerosis
+                  </label>
+                </div>
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Lyme Disease" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Lyme Disease
+                  </label>
+                </div>
+                <div class="field collapsible_field">
                   <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Sjogren’s Disease" class="field__checkbox">
                   <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
                     <span>{% render 'check-icon' %}</span>
                     Sjogren’s Disease
                   </label>
+                </div>  
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Immunodeficiencies" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Immunodeficiencies
+                  </label>
+                </div>  
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Eating Disorder" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Eating Disorder
+                  </label>
+                </div> 
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Depression" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Depression
+                  </label>
                 </div>
-                <div class="field">
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="ADHD" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    ADHD
+                  </label>
+                </div> 
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Autism" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Autism
+                  </label>
+                </div>  
+                <div class="field collapsible_field">
+                  <input type="checkbox" id="ContactFormSjogrenDisease" name="illnessesType" value="Anxiety" class="field__checkbox">
+                  <label for="ContactFormSjogrenDisease" class="field__checkbox--label">
+                    <span>{% render 'check-icon' %}</span>
+                    Anxiety
+                  </label>
+                </div>                  
+                <div class="field collapsible_field">
                   <input type="checkbox" id="ContactFormOther" name="illnessesType" value="Other" class="field__checkbox">
                   <label for="ContactFormOther" class="field__checkbox--label">
                     <span>{% render 'check-icon' %}</span>
@@ -160,6 +298,7 @@
                     <input type="test" id="ContactFormCustomMessage" class="field__input" name="contact[Custom Message]" autocomplete="off" value="" placeholder="Type your answer">
                   </div>
                 </div>
+                {% comment %} END COLLAPSIBLE CHECKBOXES ARE SHWOING {% endcomment %}
               </div>
               <div class="show-more">
                 <a href="javascript:void(0)">Show more</a>
