@@ -252,6 +252,7 @@
   text-align: center;
   line-height: 24px;
   background-color: #F8F8F8;
+  flex: 0 0 20px;
 }
 
 .chronic-illness-slide-out__checkboxs input[type=checkbox].field__checkbox + label span svg {
