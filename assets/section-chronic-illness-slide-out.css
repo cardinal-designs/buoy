@@ -1,7 +1,7 @@
-.field .collapsible_field{
+.field.collapsible_field{
   display:none;
 }
-.field .collapsible_field.active{
+.field.collapsible_field.active{
   display:block;
 }
 .chronic-illness-slide-out {
