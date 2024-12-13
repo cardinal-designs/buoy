@@ -36,7 +36,7 @@
             <div class="contact__fields">
               <div class="field half-field">
                 <label class="field__label" for="ContactFormFirstName">First Name*</label>
-                <input class="field__input" autocomplete="off" type="text" id="ContactFormFirstName" name="firstName" value="" placeholder="First Name" required>
+                <input class="field__input" pattern="[A-Za-z]*" autocomplete="off" type="text" id="ContactFormFirstName" name="firstName" value="" placeholder="First Name" required>
               </div>
               <div class="field half-field">
                 <label class="field__label" for="ContactFormLastName">Last Name*</label>
@@ -389,6 +389,9 @@
  
 {% javascript %}
 
+  document.addEventListener('DOMContentLoaded', ()=>{
+    
+  });
   
   $(".show-more a").on("click", function() {
     var $this = $(this); 
