@@ -893,9 +893,15 @@ class VariantSelects extends HTMLElement {
       let closestForm = this.closest("product-form");
 
       if (variantScript) {
+
+        console.log('yested');
+        
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         if (variantData) {
+
+          console.log('ThisOne');
+          
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
           if(foundVariant){
             let closestForm = this.closest("product-form");
@@ -1044,7 +1050,11 @@ class VariantSelects extends HTMLElement {
                 }
             }
             if (this.closest("product-form").dataset.formType == "product-card") {
+              if( this.currentVariant.available ){
                 addToCartText = `Add to Cart &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span>&nbsp;<s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
+              }else{
+                addToCartText = `Sold Out &mdash;&nbsp;<span>${variantJson[this.currentVariant.id].price}</span>&nbsp;<s>${variantJson[this.currentVariant.id].compare_price || ""}</s>`;
+              }
                 if (gridPrice) {
                     gridPrice.querySelector(".quick-add__price-recurring").textContent = variantJson[this.currentVariant.id].price;
                     gridPrice.querySelector(".quick-add__price-otp").textContent = variantJson[this.currentVariant.id].compare_price || "";
@@ -1096,7 +1106,6 @@ class VariantSelects extends HTMLElement {
           }
         }
       }else{
-
 
         let gridPrice = thisData.closest(".quick-add__container .quick-add__content .quick-add__price");
         if (subscriptionOption) {
@@ -1156,6 +1165,7 @@ class VariantSelects extends HTMLElement {
         }   
       }
 
+    if( currentVariant.available ){
       addButton.dataset.available = !disable;
       if (disable) {
           addButton.setAttribute("disabled", true);
@@ -1170,6 +1180,13 @@ class VariantSelects extends HTMLElement {
           stickyButton && stickyButton.removeAttribute("disabled");
           if (stickyButton) stickyButton.innerHTML = addToCartText;
       }
+    }else{
+          addButton.setAttribute("disabled", true);
+          if (text) addButton.innerHTML = text;
+  
+          stickyButton && stickyButton.setAttribute("disabled", true);
+          if (text && stickyButton) stickyButton.innerHTML = text;
+    }
   
       if (!modifyClass) return;
   }
