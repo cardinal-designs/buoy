@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
               
             }else if( textbutton == 'view clinical study' ){
-              document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-              document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
+              // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
+              // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
               const clinicalDrawerXt = document.getElementById('clinicalSideDrawer');
               document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
               document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
@@ -226,6 +226,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     elm.addEventListener('click', (target)=>{
       target.preventDefault();
       document.body.classList.add('active_slider_quick');
+      var ua = navigator?.userAgent?.toLowerCase(); 
+      ua.indexOf('safari') != -1 ? ( ua.indexOf('chrome') > -1 ? '' : document?.body?.classList.add('SafariBrowserObserver') ) : '';      
       target.target.closest('.quick-add__container').classList.add('activated');
     })
   })
