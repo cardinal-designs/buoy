@@ -1167,6 +1167,8 @@ class VariantSelects extends HTMLElement {
       }
 
     if( currentVariant.available ){
+      console.log(currentVariant.featured_image);
+      // addButton.closest('.outerDivSlider').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
       addButton.dataset.available = !disable;
       if (disable) {
           addButton.setAttribute("disabled", true);
