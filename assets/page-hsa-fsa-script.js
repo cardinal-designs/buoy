@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.querySelector('.Html__HighlightedWylyt').innerHTML = data;
         document.querySelector('.LearnMoreLayout__container').classList.add('is-visible-popup');
         document.body.classList.add('learn__more_masked');
+        document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+        document.documentElement.style.setProperty('--clinical-trial-top', '84px');         
       })  
       .catch( error => { console.log('error'); })
       .finally( () =>{
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             target.preventDefault();
             document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
             document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
+            document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+            document.documentElement.style.setProperty('--clinical-trial-top', '');           
           })  
 
         var swiperImages = new Swiper(document.querySelector('#shopify-section-popup-initiate .learn__more_images_bk'), {
