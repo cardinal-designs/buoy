@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.documentElement.style.setProperty('--clinical-trial-top', ''); 
     document.querySelectorAll('.popup-drawer[data-product-name]').forEach((elm)=>{elm.style.right = '-100%'; elm.style.bottom = '';})
     document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.style.right = '-100%'; elm.style.bottom = '';})
-  }))
+  })
 
   document.querySelectorAll('.outerDivSlider .quick-add__button').forEach((elm)=>{
     elm.addEventListener('click', (target)=>{
