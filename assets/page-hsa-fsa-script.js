@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         var ingredientSwiper = new Swiper(document.querySelector('#shopify-section-popup-initiate .wp_inredients__conatiner'), {
             slidesPerView: 1.2,
-            spaceBetween: 10,
+            spaceBetween: 12,
             allowTouchMove: true,
         })
 
