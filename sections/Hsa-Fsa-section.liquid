@@ -1,6 +1,278 @@
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.querySelector('.jsclicalcondition').addEventListener('click', function () {
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+      if (window.innerWidth <= 768) {
+        clinicalDrawer.style.bottom = '0px';
+      } else {
+        clinicalDrawer.style.right = '0px';
+      }
+      document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+      document.body.classList.add('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.add('is-visibles');
+    });
+
+    document.querySelector('.js-clinical-close').addEventListener('click', function () {
+      const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+      clinicalDrawer.style.bottom = '';
+      clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+      document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
+      document.body.classList.remove('wp_popup_drawer');
+      document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+      document.documentElement.style.setProperty('--clinical-trial-top', '');
+    });
+  });
+</script>
+
+<div class="cv_section_top_desktop {{ section.settings.custom_class }}">
+  <div class="section_left_content">
+    <div class="cv_sale_content_pdp">
+          <div class="mainhsa-fsa">
+            {% if section.settings.svgiconText1 != blank or  section.settings.ICONtEXT1 != blank  %}
+      <div class="iconsvg">
+        {{ section.settings.svgiconText1 }}
+        <p>{{ section.settings.ICONtEXT1 }}</p>
+    </div>
+              {% endif %}
+            {% if section.settings.svgiconText2 != blank or  section.settings.ICONtEXT2 != blank  %}
+      <div class="iconsvg">
+        {{ section.settings.svgiconText2 }}
+        <p>{{ section.settings.ICONtEXT2 }}</p>
+    </div>
+              {% endif %}
+    </div>
+      <div class="cv-sale_text">
+       
+        {% if section.settings.text012 != blank %}
+         <h2>{{ section.settings.text012 }}</h2>
+        {% endif %}
+        {% if section.settings.save_price != blank %}
+          <div class="price_cv_sale">{{ section.settings.save_price }}</div>
+        {% endif %}
+
+        {% if section.settings.content != blank %}
+          {{ section.settings.content }}
+        {% endif %}
+      </div>
+
+      <div class="cv_btnscroll">
+        <a href="{{ section.settings.button_link }}" class="scroll-to-product">{{ section.settings.button_label }}</a>
+      </div>
+      <div class="text_cv_below">
+        <a href="{{ section.settings.link_link }}" class="link-labal jsclicalcondition">{{ section.settings.link_label }}</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="section_right_content">
+    <style>
+      .review_cv .okeReviews-starRating--small span.okeReviews-a11yText {
+        height: 100% !important;
+        clip: inherit !important;
+        right: -50px;
+        font-family: inter, sans-serif;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 21px !important;
+        width: auto !important;
+        overflow: hidden;
+        top: 3px;
+        color: var(--charcoal-60);
+      }
+
+      .review_cv .okeReviews-reviewsSummary-ratingCount span {
+        font-family: inter, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1.375em;
+        color: var(--charcoal-60);
+      }
+
+      .review_cv .okeReviews-starRating--small span.okeReviews-a11yText .rated-text {
+        display: none;
+        margin-left: 20px;
+      }
+
+      .review_cv .okeReviews .okeReviews-starRating--small {
+        height: 22px;
+
+        .review_cv .okeReviews {
+          margin-bottom: 10px !important;
+        }
+      }
+    </style>
+
+    <div class="cv_image_video_pdp {{ section.settings.custom_class }}">
+
+      <div class="media-section showOnMob">
+        {% if section.settings.section_video_file != blank %}
+          <video controls muted autoplay height="400px" width="100%">
+            <source src="{{ section.settings.section_video_file | video_tag  }}">
+          </video>
+        {% elsif section.settings.section_video_url != blank %}
+          <iframe
+            src="{{ section.settings.section_video_url }}"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="width: 100%; height: 400px;"
+          ></iframe>
+        {% elsif section.settings.section_image != blank %}
+          <img
+            src="{{ section.settings.section_image | img_url: '' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+      <div class="media-section showOnDesk">
+        {% if section.settings.section_video_file_d != blank %}
+          <video controls muted autoplay height="400px" width="100%">
+            <source src="{{ section.settings.section_video_file_d | video_tag  }}">
+          </video>
+        {% elsif section.settings.section_video_url_d != blank %}
+          <iframe
+            src="{{ section.settings.section_video_url_d }}"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="width: 100%; height: 400px;"
+          ></iframe>
+        {% elsif section.settings.section_image_d != blank %}
+          <img
+            src="{{ section.settings.section_image_d | img_url: '' }}"
+            alt="Section Image"
+            style="max-width: 100%; height: auto;"
+          >
+        {% endif %}
+      </div>
+
+  
+    </div>
+  </div>
+</div>
+
 {% schema %}
+{
+"name": "Hsa image text desktop",
+"settings": [
   {
-    "name": "Section name",
-    "settings": []
-  }
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom-class"
+      },
+{
+        "type": "textarea",
+        "id": "svgiconText1",
+        "label": "SVG Icon 1"
+      },
+      {
+        "type": "text",
+        "id": "ICONtEXT1",
+        "label": "Icon Text 1"
+      },
+      {
+        "type": "textarea",
+        "id": "svgiconText2",
+        "label": "SVG Icon 2"
+      },
+      {
+        "type": "text",
+        "id": "ICONtEXT2",
+        "label": "Icon Text 2"
+      },
+{
+"type": "color",
+"id": "text_color",
+"label": "Text Color",
+},
+{
+"type": "color",
+"id": "bg_color",
+"label": "Background Color",
+},
+{
+"type": "image_picker",
+"id": "section_image",
+"label": "Image Mobile"
+},
+{
+"type": "url",
+"id": "section_video_url",
+"label": "Video URL mobile",
+"info": "Enter a video URL (e.g., from YouTube or Vimeo)"
+},
+{
+"type": "video",
+"id": "section_video_file",
+"label": "MP4 Video File mobile"
+},
+{
+"type": "image_picker",
+"id": "section_image_d",
+"label": "Image Desktop"
+},
+{
+"type": "url",
+"id": "section_video_url_d",
+"label": "Video URL Desktop",
+"info": "Enter a video URL (e.g., from YouTube or Vimeo)"
+},
+{
+"type": "video",
+"id": "section_video_file_d",
+"label": "MP4 Video File Desktop"
+},
+ {
+"type": "text",
+"id": "text012",
+"label": "Title Sale"
+},
+  {
+"type": "text",
+"id": "save_price",
+"label": "Save price"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content"
+},
+  {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+  {
+        "type": "text",
+        "id": "link_label",
+        "label": "Link Label"
+      },
+      {
+        "type": "url",
+        "id": "link_link",
+        "label": "Link Link"
+      }
+
+],
+"presets": [
+{
+"name": "Hsa image text desktop"
+}
+]
+}
 {% endschema %}
