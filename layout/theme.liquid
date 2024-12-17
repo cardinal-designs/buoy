@@ -84,6 +84,7 @@
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    {% if template == 'page.Hsa-Fsa' %}<script src="{{ 'page-hsa-fsa-script.js' | asset_url }}" defer="defer"></script>{% endif %}
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
@@ -492,7 +493,10 @@
       {% if template == 'product.new_best_of_buoy_bundle' %}
         {% render 'best_buoy_bundle_upsell_popup' %}
       {% endif %}
-    
+
+    {% if template == 'page.Hsa-Fsa' %}
+      <div class="LearnMoreLayout__container"><div class="Html__HighlightedWylyt"></div></div>
+    {% endif %}    
     
   </body>
 </html>
