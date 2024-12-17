@@ -56,7 +56,7 @@
 
       <a class="{{ base }}__link" href="{{ card_product.url }}">{{ card_product.title }}</a>
 
-      <button data-toggle class="{{ base }}__button">Add</button>
+      <button data-toggle class="{{ base }}__button" data-product-map-add="{{- card_product.title | downcase -}}">Add</button>
     </div>
 
     <div class="qcheck-1 quick-add__overlay"></div>
