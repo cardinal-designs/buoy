@@ -46,9 +46,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
 
         var ingredientSwiper = new Swiper(document.querySelector('#shopify-section-popup-initiate .wp_inredients__conatiner'), {
-            slidesPerView: 1.8,
-            spaceBetween: 12,
             allowTouchMove: true,
+            breakpoints: {
+              320: {
+                slidesPerView: 1.2,
+                spaceBetween: 12,
+              },
+              1024: {
+                slidesPerView: 1.8,
+                spaceBetween: 12
+              },
+            }          
         })
 
         document.querySelectorAll('.image-with-dropdowns__q').forEach((elm)=>{
