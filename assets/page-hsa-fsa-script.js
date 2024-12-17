@@ -259,15 +259,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }    
   });
 
-$(document).on("click",".reviews_button",function() {  
-  if (!$(this).hasClass("active")) {
-    $(this).next().get(0).play();
-    $(this).toggleClass("active");
-  } else {
-    $(this).next().get(0).pause();
-    $(this).toggleClass("active");
-  }
-});
-  
- 
+  $(document).on("click",".reviews_button",function() {  
+    if (!$(this).hasClass("active")) {
+      $(this).next().get(0).play();
+      $(this).toggleClass("active");
+    } else {
+      $(this).next().get(0).pause();
+      $(this).toggleClass("active");
+    }
+  });
 });
