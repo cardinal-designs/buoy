@@ -735,9 +735,10 @@ class VariantSelects extends HTMLElement {
       const sellingPlan = productForm.querySelector(
         'input[name="selling_plan"]'
       );
-      sellingPlan.value =
-        this.currentVariant.selling_plan_allocations[0].selling_plan_id;
-      sellingPlan.dispatchEvent(new Event("change", { bubbles: true }));
+      if( this.currentVariant.selling_plan_allocations[0] ){
+        sellingPlan.value = this.currentVariant.selling_plan_allocations[0].selling_plan_id;
+        sellingPlan.dispatchEvent(new Event("change", { bubbles: true }));
+      }
     } else {
       const productForms = document.querySelectorAll(
         `#product-form-${this.dataset.section}, #product-form-installment`
