@@ -75,8 +75,13 @@
     text-align: center;
   }
 </style>
-
-<div class="comparison-slideshow">
+{% if template == 'page.Hsa-Fsa' %}
+<div class="new-textAboveTABLE">
+  <div class="textdivTable">*HSA/FSA eligible for qualifying customers</div>
+</div>
+<div class="hsa-comparison-slideshow">
+{% endif %}
+<div class="custom__table_design comparison-slideshow">
   <h2>{{ section.settings.heading }}</h2>
   <p>{{ section.settings.sub_heading }}</p>
 
@@ -280,6 +285,9 @@
     </div>
   </div>
 </div>
+{% if template == 'page.Hsa-Fsa' %}  
+</div>
+{% endif %}
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -313,6 +321,7 @@
 {
 "name": "cv table",
 "settings": [
+
 {
 "type": "text",
 "id": "heading",
