@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
           })
         })
 
-
         var reviewsSlider = new Swiper(document.querySelector('#shopify-section-popup-initiate .swiper-container_ts_cv'), {
           spaceBetween: 12,
           allowTouchMove: true,
