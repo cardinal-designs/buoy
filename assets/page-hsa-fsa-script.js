@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     target.preventDefault();
     var targetElement = document.querySelector('.outerFeatureddiv');
     window.scrollTo({
-      top: 0,
+      top: targetElement.offsetTop,
       behavior: 'smooth'
     });
   });
