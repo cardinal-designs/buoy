@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })  
       .catch( error => { console.log('error'); })
       .finally( () =>{
+         document.querySelector('.Reviews__layout').classList.remove('active');
          document.querySelector('#shopify-section-popup-initiate .Closed__drawer_learnMore').addEventListener('click',(target)=>{
             target.preventDefault();
             document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
