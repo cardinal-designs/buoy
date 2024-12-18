@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
   })  
 
-  var swiper = new Swiper(".grid__swiper_products", {
+  var swiper = new Swiper(".grid__swiper_products",{
     freeMode: true,
     keyboard: {
       enabled: true,
