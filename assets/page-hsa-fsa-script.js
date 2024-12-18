@@ -191,12 +191,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             let Target$QuickAdd = target.target.closest('.product-name').querySelector('h2').textContent;
             Target$QuickAdd = Target$QuickAdd.trim().toLowerCase();
             if ( target.target.closest('.append_htmlbody').classList.contains('kit_product') ){
-              if( document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open') == true){
+              if( document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open') == 'true'){
               }else{
                 document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).click();
               }
             }else{
-              if( document.querySelector('.Collection__Gridwrap_single').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open') == true){
+              if( document.querySelector('.Collection__Gridwrap_single').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open') == 'true'){
               }else{              
                 document.querySelector('.Collection__Gridwrap_single').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).click();
               }
