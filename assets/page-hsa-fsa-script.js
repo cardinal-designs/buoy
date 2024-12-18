@@ -188,12 +188,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             target.preventDefault();
             document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
             document.querySelector('.Html__HighlightedWylyt').innerHTML = ''; 
-
-console.log(document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open'));
-            
             let Target$QuickAdd = target.target.closest('.product-name').querySelector('h2').textContent;
             Target$QuickAdd = Target$QuickAdd.trim().toLowerCase();
             if ( target.target.closest('.append_htmlbody').classList.contains('kit_product') ){
+              console.log(document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).closest('.quick-add__container').getAttribute('data-open'));
               document.querySelector('.outerDivSlider').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).click();
             }else{
               document.querySelector('.Collection__Gridwrap_single').querySelector(`[data-product-map-add="${Target$QuickAdd}"]`).click();
