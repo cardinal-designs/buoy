@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.body.classList.add('learn__more_masked');
         document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
         document.documentElement.style.setProperty('--clinical-trial-top', '84px');  
-        document.querySelector('.Reviews__layout').classList.remove('active');
       })  
       .catch( error => { console.log('error'); })
       .finally( () =>{
