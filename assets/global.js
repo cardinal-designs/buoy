@@ -3168,8 +3168,11 @@ class QuickAddCard extends HTMLElement {
           }
         }
       }
-      
-      
+
+      console.log(foundVariant);
+      // if (addButton.closest('.outerDivSlider')){
+      //   addButton.closest('.outerDivSlider').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
+      // }      
 
       // if (priceMetafield) {
       //   this.buttonContent = `${this.buttonContent}<span>${priceMetafield.dataset.discountPrice}</span><s>${priceMetafield.dataset.price}</s>`;
