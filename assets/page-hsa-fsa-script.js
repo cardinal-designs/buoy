@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           slidesPerView: 1.1,
           spaceBetween: 10,
           allowTouchMove: true,
+          freeMode: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         var ingredientSwiper = new Swiper(document.querySelector('#shopify-section-popup-initiate .wp_inredients__conatiner'), {
             allowTouchMove: true,
+            freeMode: true,
             breakpoints: {
               320: {
                 slidesPerView: 1.2,
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         var reviewsSlider = new Swiper(document.querySelector('#shopify-section-popup-initiate .swiper-container_ts_cv'), {
           spaceBetween: 12,
           allowTouchMove: true,
+          freeMode: true,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -248,6 +251,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   })  
 
   var swiper = new Swiper(".grid__swiper_products", {
+    freeMode: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
