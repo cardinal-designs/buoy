@@ -902,7 +902,8 @@ class VariantSelects extends HTMLElement {
         if (variantData) {
 
           // console.log('ThisOne');
-          
+
+          console.log(currentVariant.featured_image);
           if (addButton.closest('.quick-add__form-inner') && currentVariant.featured_image ){
             addButton.closest('.quick-add__form-inner').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
           }
