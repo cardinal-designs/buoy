@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 spaceBetween: 12,
               },
               768: {
-                slidesPerView: 2.31,
+                slidesPerView: 2.33,
                 spaceBetween: 12
               },
             }          
