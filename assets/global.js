@@ -895,13 +895,18 @@ class VariantSelects extends HTMLElement {
 
       if (variantScript) {
 
-        console.log('yested');
+        // console.log('yested');
         
         const jsonData = variantScript.textContent;
         const variantData = JSON.parse(jsonData);
         if (variantData) {
 
-          console.log('ThisOne');
+          // console.log('ThisOne');
+
+          if (addButton.closest('.outerDivSlider') && currentVariant.featured_image ){
+            addButton.closest('.outerDivSlider').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
+          }
+          
           
           let foundVariant = variantData?.find((variant) => variant.id == currentVariant?.id && variant?.discount != "");
           if(foundVariant){
