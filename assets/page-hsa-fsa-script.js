@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             keyboard: {
               enabled: true,
             },
+            mousewheel: {
+              enabled: true,
+              sensitivity: 4,
+            },            
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
