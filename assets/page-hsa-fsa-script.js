@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             DrawerSupplyment = DrawerSupplyment.trim();
             let Selector$Supplyment = document.querySelector(`[data-product-name="${DrawerSupplyment}"]#supplementSideDrawer`)
             if ( Selector$Supplyment ){
-              document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-              document.querySelector('.Html__HighlightedWylyt').innerHTML = '';              
+              // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
+              // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';              
               document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
               document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
               if (window.innerWidth <= 768) {
