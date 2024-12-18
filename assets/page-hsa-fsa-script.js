@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-
   document.querySelectorAll('[js-expand__layout]').forEach((elm)=>{
     elm.addEventListener('click',(target)=>{
       target.preventDefault();
@@ -95,8 +94,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
               if( target.target.closest('.append_htmlbody').classList.contains('kit_product')){
                 let supllymnt = target.target.closest('.innerDivMORE').querySelector('.product-listblock__container_cv').children[0].querySelector('.pro_list_title').textContent;
-                // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-                // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
                 let Selector$SupplymentUnq = document.querySelector(`[data-product-name="${supllymnt}"]`)
                 document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
                 document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
@@ -110,8 +107,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 document.querySelector('.page-blury-overlay').classList.add('is-visibles');                
               }else{
                 let supllymnt = target.target.closest('.product-name').querySelector('h2').textContent;
-                // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-                // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
                 let Selector$SupplymentUnq = document.querySelector(`[data-product-name="${supllymnt}"]`)
                 document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
                 document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
@@ -127,8 +122,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
               
             }else if( textbutton == 'view clinical study' ){
-              // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-              // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
               const clinicalDrawerXt = document.getElementById('clinicalSideDrawer');
               document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
               document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
@@ -157,8 +150,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             DrawerSupplyment = DrawerSupplyment.trim();
             let Selector$Supplyment = document.querySelector(`[data-product-name="${DrawerSupplyment}"]#supplementSideDrawer`)
             if ( Selector$Supplyment ){
-              // document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
-              // document.querySelector('.Html__HighlightedWylyt').innerHTML = '';              
               document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
               document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
               if (window.innerWidth <= 768) {
