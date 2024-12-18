@@ -1,3 +1,11 @@
+.anchor-links__item .link_redirect_within {
+    font-size: 14px;
+    line-height: normal;
+    font-family: inter, sans-serif;
+    font-weight: 500;
+    color: #000;
+    transition: color .3s ease;
+}
 .drawer__header:after {
     content: '';
     position: absolute;
