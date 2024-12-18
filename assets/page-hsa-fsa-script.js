@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
           var swiperImages = new Swiper(document.querySelector('#shopify-section-popup-initiate .learn__more_images_bk'), {
             slidesPerView: 1.1,
             spaceBetween: 10,
+            mousewheel: {
+              forceToAxis: true,
+            },            
             allowTouchMove: true,
             freeMode: true,
             keyboard: {
@@ -49,6 +52,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
           })
           var ingredientSwiper = new Swiper(document.querySelector('#shopify-section-popup-initiate .wp_inredients__conatiner'), {
+              mousewheel: {
+                forceToAxis: true,
+              },            
               allowTouchMove: true,
               freeMode: true,
               keyboard: {
@@ -73,6 +79,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
           })
           var reviewsSlider = new Swiper(document.querySelector('#shopify-section-popup-initiate .swiper-container_ts_cv'), {
             spaceBetween: 12,
+            mousewheel: {
+              forceToAxis: true,
+            },            
             allowTouchMove: true,
             freeMode: true,
             keyboard: {
