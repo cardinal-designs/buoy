@@ -221,6 +221,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   });
 
+  document.querySelectorAll('.reviews-grid__button').forEach((elm)=>{
+    elm.addEventListener('click', (target)=>{
+      target.preventDefault();
+      var targetElement = document.querySelector('.outerFeatureddiv');
+      window.scrollTo({
+        top: targetElement.offsetTop - document.querySelector('#shopify-section-header').clientHeight,
+        behavior: 'smooth'
+      });
+    })
+  });  
+
+  
+
   document.querySelector('.page-blury-overlay').addEventListener('click', (elm)=>{
     document.body.classList.remove('learn__more_masked','wp_popup_drawer');
     document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');
