@@ -12,9 +12,15 @@
       {% endif %}
       {% for link in section.blocks %}
         <li class="anchor-links__item">
-          <button data-section="{{ link.settings.heading | downcase | handle }}" onclick="document.querySelector('[data-anchor=\'{{ link.settings.heading | downcase | handle }}\']').scrollIntoView({behavior: 'smooth'})">
-            {{ link.settings.heading }}
-          </button>
+          {% if link.type == 'Link' %}
+            <button data-section="{{ link.settings.heading | downcase | handle }}" onclick="document.querySelector('[data-anchor=\'{{ link.settings.heading | downcase | handle }}\']').scrollIntoView({behavior: 'smooth'})">
+              {{ link.settings.heading }}
+            </button>
+          {% elsif link.type == 'link_to_redirect' %}
+            {% if link.settings.link != blank and link.settings.title != blank %}
+              <a href="{{ link.settings.link }}">{{ link.settings.title }}</a>
+            {% endif %}
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
@@ -48,7 +54,23 @@
             "label": "Section heading to link to"
           }
         ]
-      }
+      },
+      {
+        "name": "Link to redirect",
+        "type": "link_to_redirect",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }          
+        ]
+      }      
     ],
     "presets": [
       {
