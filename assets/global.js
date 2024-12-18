@@ -3169,7 +3169,7 @@ class QuickAddCard extends HTMLElement {
         }
       }
 
-      console.log(foundVariant);
+      // console.log(foundVariant);
       // if (addButton.closest('.outerDivSlider')){
       //   addButton.closest('.outerDivSlider').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
       // }      
