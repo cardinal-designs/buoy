@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     target.preventDefault();
     var targetElement = document.querySelector('.outerFeatureddiv');
     window.scrollTo({
-      top: targetElement.offsetTop - document.querySelector('#shopify-section-header').clientHeight,
+      top: 0,
       behavior: 'smooth'
     });
   });
