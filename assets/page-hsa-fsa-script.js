@@ -232,8 +232,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
   });  
 
-  
-
   document.querySelector('.page-blury-overlay').addEventListener('click', (elm)=>{
     document.body.classList.remove('learn__more_masked','wp_popup_drawer');
     document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');
