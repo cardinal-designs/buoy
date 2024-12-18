@@ -18,7 +18,7 @@
             </button>
           {% elsif link.type == 'link_to_redirect' %}
             {% if link.settings.link != blank and link.settings.title != blank %}
-              <a href="{{ link.settings.link }}">{{ link.settings.title }}</a>
+              <a href="{{ link.settings.link }}" class="link_redirect_within">{{ link.settings.title }}</a>
             {% endif %}
           {% endif %}
         </li>
