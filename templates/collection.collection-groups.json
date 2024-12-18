@@ -58,12 +58,20 @@
           "settings": {
             "heading": "Add-Ons"
           }
+        },
+        "link_to_redirect_rbCGTY": {
+          "type": "link_to_redirect",
+          "settings": {
+            "title": "HSA/FSA",
+            "link": "shopify://pages/hsa-fsa"
+          }
         }
       },
       "block_order": [
         "link_DRKtrB",
         "link_Y8qLDD",
-        "link_Kg8w8H"
+        "link_Kg8w8H",
+        "link_to_redirect_rbCGTY"
       ],
       "settings": {}
     },
