@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
           var ingredientSwiper = new Swiper(document.querySelector('#shopify-section-popup-initiate .wp_inredients__conatiner'), {
               allowTouchMove: true,
               freeMode: true,
+              keyboard: {
+                enabled: true,
+              },            
               breakpoints: {
                 320: {
                   slidesPerView: 1.2,
@@ -72,6 +75,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             spaceBetween: 12,
             allowTouchMove: true,
             freeMode: true,
+            keyboard: {
+              enabled: true,
+            },             
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
@@ -251,6 +257,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   var swiper = new Swiper(".grid__swiper_products", {
     freeMode: true,
+    keyboard: {
+      enabled: true,
+    },     
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
