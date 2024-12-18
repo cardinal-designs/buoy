@@ -903,9 +903,9 @@ class VariantSelects extends HTMLElement {
 
           // console.log('ThisOne');
 
-          console.log(addButton.classList.add('ok'));
-          if (addButton.closest('.outerDivSlider') && currentVariant.featured_image ){
-            addButton.closest('.outerDivSlider').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
+          
+          if (addButton.closest('.quick-add__form-inner') && currentVariant.featured_image ){
+            addButton.closest('.quick-add__form-inner').querySelector('.quick-add__form-image').innerHTML = `<img src="${currentVariant.featured_image.src}">`
           }
           
           
