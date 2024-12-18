@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             spaceBetween: 10,
             allowTouchMove: true,
             freeMode: true,
+            keyboard: {
+              enabled: true,
+            },
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
