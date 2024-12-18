@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.querySelector('.LearnMoreLayout__container').classList.add('is-visible-popup');
         document.body.classList.add('learn__more_masked');
         document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
-        document.documentElement.style.setProperty('--clinical-trial-top', '84px');         
+        document.documentElement.style.setProperty('--clinical-trial-top', '84px');  
+        document.querySelector('.Reviews__layout').classList.remove('active');
       })  
       .catch( error => { console.log('error'); })
       .finally( () =>{
-         document.querySelector('.Reviews__layout').classList.remove('active');
+         
          document.querySelector('#shopify-section-popup-initiate .Closed__drawer_learnMore').addEventListener('click',(target)=>{
             target.preventDefault();
             document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
