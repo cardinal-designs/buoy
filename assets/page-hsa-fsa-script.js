@@ -257,7 +257,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   var swiper = new Swiper(".grid__swiper_products",{
     freeMode: true,
-
+    mousewheel: {
+        forceToAxis: true,
+    },
     keyboard: {
       enabled: true,
     },     
