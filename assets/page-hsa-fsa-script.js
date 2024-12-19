@@ -323,6 +323,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelector('.page-blury-overlay').classList.add('is-visibles');
   });
 
+  document.querySelector('.linkImageText').addEventListener('click', function () {
+    const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+    clinicalDrawer.querySelector('.drawer__body').scroll(0,0);
+    document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+    document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+    if (window.innerWidth <= 768) {
+      clinicalDrawer.style.bottom = '0px';
+    } else {
+      clinicalDrawer.style.right = '0px';
+    }
+    document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+    document.body.classList.add('wp_popup_drawer');
+    document.querySelector('.page-blury-overlay').classList.add('is-visibles');
+  });  
+
   document.querySelector('.js-clinical-close').addEventListener('click', function () {
     const clinicalDrawer = document.getElementById('clinicalSideDrawer');
     clinicalDrawer.style.bottom = '';
