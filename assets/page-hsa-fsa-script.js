@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
             document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
             document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.querySelector('.drawer__close').innerHTML = `<span>Close</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Actions"> <path id="Expand &amp; Collapse" d="M7.01257 7.99999L1.84943 2.83685L2.83686 1.84942L8 7.01256L13.1631 1.84942L14.1506 2.83685L8.98743 7.99999L14.1506 13.1631L13.1631 14.1506L8 8.98742L2.83686 14.1506L1.84943 13.1631L7.01257 7.99999Z" fill="#1F2322"></path> </g> </svg>`});
+            document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.remove('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.remove('hidden');})
           })
           document.querySelectorAll('.pro_list_popup_title').forEach((elm)=>{
             elm.addEventListener('click', (target)=>{
@@ -211,6 +212,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
           })
           document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.querySelector('.drawer__close').innerHTML = `<span>Back</span> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"> <path d="M3.05585 9.17006L9.44904 15.5564L8.5 16.5L0.5 8.5L8.5 0.5L9.44904 1.44358L3.05585 7.82994H16.5V9.17006H3.05585Z" fill="#1F2322"/> </svg>`});
+          document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.add('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.add('hidden');})
       })
     })
   })
@@ -245,6 +247,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelectorAll('.popup-drawer[data-product-name]').forEach((elm)=>{elm.style.right = '-100%'; elm.style.bottom = '';})
     document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.style.right = '-100%'; elm.style.bottom = '';})
     document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.querySelector('.drawer__close').innerHTML = `<span>Close</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Actions"> <path id="Expand &amp; Collapse" d="M7.01257 7.99999L1.84943 2.83685L2.83686 1.84942L8 7.01256L13.1631 1.84942L14.1506 2.83685L8.98743 7.99999L14.1506 13.1631L13.1631 14.1506L8 8.98742L2.83686 14.1506L1.84943 13.1631L7.01257 7.99999Z" fill="#1F2322"></path> </g> </svg>`});    
+    document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.remove('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.remove('hidden');})    
   })
 
   document.querySelectorAll('.outerDivSlider .quick-add__button').forEach((elm)=>{
