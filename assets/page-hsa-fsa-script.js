@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   document.querySelector('.jsclicalcondition').addEventListener('click', function () {
     const clinicalDrawer = document.getElementById('clinicalSideDrawer');
-    clinicalDrawer.querySelector('.drawer__body').scroll(0,0);
+    // clinicalDrawer.querySelector('.drawer__body').scroll(0,0);
     if( document.querySelector('announcement-container').classList.contains('announcement--scrolled') ){
       document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
       document.documentElement.style.setProperty('--clinical-trial-top', '84px');
