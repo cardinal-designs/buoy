@@ -136,17 +136,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
                   document.querySelector('.page-blury-overlay').classList.add('is-visibles');
                 }
               }else if( textbutton == 'view clinical study' ){
-                const clinicalDrawerXt = document.getElementById('clinicalSideDrawer');
-                document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
-                document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
-                if (window.innerWidth <= 768) {
-                  clinicalDrawerXt.style.bottom = '0px';
-                } else {
-                  clinicalDrawerXt.style.right = '0px';
-                }          
-                document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
-                document.body.classList.add('wp_popup_drawer');
-                document.querySelector('.page-blury-overlay').classList.add('is-visibles');            
+                  const clinicalDrawerXt = document.getElementById('clinicalSideDrawer');
+                  document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+                  document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
+                  if (window.innerWidth <= 768) {
+                    clinicalDrawerXt.style.bottom = '0px';
+                  } else {
+                    clinicalDrawerXt.style.right = '0px';
+                  }          
+                  document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+                  document.body.classList.add('wp_popup_drawer');
+                  document.querySelector('.page-blury-overlay').classList.add('is-visibles');            
               }
             })
           })
