@@ -17,12 +17,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
          document.querySelector('.Reviews__layout').classList.add('active');
          document.querySelector('#shopify-section-popup-initiate .Closed__drawer_learnMore').addEventListener('click',(target)=>{
             target.preventDefault();
-            document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked');
+            document.querySelector('.LearnMoreLayout__container').classList.remove('is-visible-popup');document.body.classList.remove('learn__more_masked','active_slider_quick');
             document.querySelector('.Html__HighlightedWylyt').innerHTML = '';
             document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
             document.documentElement.style.setProperty('--clinical-trial-top', '');           
             document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.querySelector('.drawer__close').innerHTML = `<span>Close</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Actions"> <path id="Expand &amp; Collapse" d="M7.01257 7.99999L1.84943 2.83685L2.83686 1.84942L8 7.01256L13.1631 1.84942L14.1506 2.83685L8.98743 7.99999L14.1506 13.1631L13.1631 14.1506L8 8.98742L2.83686 14.1506L1.84943 13.1631L7.01257 7.99999Z" fill="#1F2322"></path> </g> </svg>`});
             document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.remove('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.remove('hidden');})
+            document.querySelectorAll('.quick-add__container').forEach((quick_add)=>{ quick_add.classList.remove('activated'); quick_add.setAttribute('data-open','false'); });
           })  
           var swiperImages = new Swiper(document.querySelector('#shopify-section-popup-initiate .learn__more_images_bk'), {
             slidesPerView: 1.1,
