@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 }
               }else if( textbutton == 'view clinical study' ){
                   const clinicalDrawerXt = document.getElementById('clinicalSideDrawer');
+                  clinicalDrawerXt.querySelector('.drawer__body').scroll(0,0)
                   document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
                   document.documentElement.style.setProperty('--clinical-trial-top', '84px');              
                   if (window.innerWidth <= 768) {
