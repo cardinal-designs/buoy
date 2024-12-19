@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   document.querySelector('.linkImageText').addEventListener('click', function () {
     const clinicalDrawer = document.getElementById('clinicalSideDrawer');
-    clinicalDrawer.querySelector('.drawer__body').scroll(0,0);
+    // clinicalDrawer.querySelector('.drawer__body').scroll(0,0);
     document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
     document.documentElement.style.setProperty('--clinical-trial-top', '84px');
     if (window.innerWidth <= 768) {
