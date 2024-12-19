@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
           })
           document.querySelectorAll('.popup-drawer').forEach((elm)=>{elm.querySelector('.drawer__close').innerHTML = `<span>Back</span> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"> <path d="M3.05585 9.17006L9.44904 15.5564L8.5 16.5L0.5 8.5L8.5 0.5L9.44904 1.44358L3.05585 7.82994H16.5V9.17006H3.05585Z" fill="#1F2322"/> </svg>`});
           document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.add('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.add('hidden');})
-          document.querySelectorAll('.quick-add__container').forEach((quick_add)=>{ quick_add.classList.remove('activated'); quick_add.setAttribute('data-open','false'); });
-          document.body.classList.remove('active_slider_quick');
+          // document.querySelectorAll('.quick-add__container').forEach((quick_add)=>{ quick_add.classList.remove('activated'); quick_add.setAttribute('data-open','false'); });
+          // document.body.classList.remove('active_slider_quick');
       })
     })
   })
