@@ -299,6 +299,40 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }    
   });
 
+  document.querySelector('.jsclicalcondition').addEventListener('click', function () {
+    const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+    if( document.querySelector('announcement-container').classList.contains('announcement--scrolled') ){
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', '84px');
+    }else{
+      let annBar = document.querySelector('announcement-container').clientHeight;
+      let headerBar = document.querySelector('header-container').clientHeight;
+      let Totalhbar = parseInt(annBar) + parseInt(headerBar);
+      document.documentElement.style.setProperty('--clinical-trial-padding-top', '0px');
+      document.documentElement.style.setProperty('--clinical-trial-top', `${Totalhbar}px`);        
+    }
+      
+    if (window.innerWidth <= 768) {
+      clinicalDrawer.style.bottom = '0px';
+    } else {
+      clinicalDrawer.style.right = '0px';
+    }
+    document.querySelector('.drawer__header').classList.add('mobile-fixed-header');
+    document.body.classList.add('wp_popup_drawer');
+    document.querySelector('.page-blury-overlay').classList.add('is-visibles');
+  });
+
+  document.querySelector('.js-clinical-close').addEventListener('click', function () {
+    const clinicalDrawer = document.getElementById('clinicalSideDrawer');
+    clinicalDrawer.style.bottom = '';
+    clinicalDrawer.style.right = '-100%';  // Removed the semicolon here
+    document.querySelector('.drawer__header').classList.remove('mobile-fixed-header');
+    document.body.classList.remove('wp_popup_drawer');
+    document.querySelector('.page-blury-overlay').classList.remove('is-visibles');
+    document.documentElement.style.setProperty('--clinical-trial-padding-top', '');
+    document.documentElement.style.setProperty('--clinical-trial-top', '');
+  });  
+
   $(document).on("click",".reviews_button",function() {  
     if (!$(this).hasClass("active")) {
       $(this).next().get(0).play();
