@@ -11,11 +11,461 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "hsa_fsa_section_BGxcpi": {
+      "type": "Hsa-Fsa-section",
       "settings": {
+        "custom_class": "hsa-fsa-sECTION-live",
+        "svgiconText1": "<svg width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"#DEF647\"></circle>\n<path d=\"M6.81108 12.244L8.99936 10.9272L11.1876 12.2588L10.6086 9.76678L12.5339 8.09526L9.99434 7.87087L8.99936 5.52621L8.00438 7.85614L5.4648 8.08053L7.39017 9.75772L6.81108 12.244ZM5.80252 13.6379L6.64677 10.0025L3.82617 7.55811L7.5477 7.23515L8.99936 3.80713L10.451 7.23515L14.1726 7.55811L11.352 10.0025L12.1962 13.6379L8.99936 11.7091L5.80252 13.6379Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "ICONtEXT1": "HSA/FSA Eligibile<sup>*</sup>",
+        "svgiconText2": "<svg width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"#DEF647\"></circle>\n<path d=\"M6.81108 12.244L8.99936 10.9272L11.1876 12.2588L10.6086 9.76678L12.5339 8.09526L9.99434 7.87087L8.99936 5.52621L8.00438 7.85614L5.4648 8.08053L7.39017 9.75772L6.81108 12.244ZM5.80252 13.6379L6.64677 10.0025L3.82617 7.55811L7.5477 7.23515L8.99936 3.80713L10.451 7.23515L14.1726 7.55811L11.352 10.0025L12.1962 13.6379L8.99936 11.7091L5.80252 13.6379Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "ICONtEXT2": "Registered at clinicaltrial.gov",
+        "text_color": "",
+        "bg_color": "",
+        "section_image": "shopify://shop_images/mobile_banner_image.jpg",
+        "section_video_url": "",
+        "section_image_d": "shopify://shop_images/BUOY_9_1.png",
+        "section_video_url_d": "",
+        "text012": "Pay With HSA/FSA",
+        "save_price": "Save up to $261 + Free Items",
+        "content": "<p><strong>Clinically-proven liquid electrolytes that hydrate 64% more than water alone</strong>.</p> <p><sup></sup>Now eligible for purchase using your HSA and FSA accounts.*</p>",
+        "button_label": "Shop Eligible Products<sup>*</sup>",
+        "button_link": "shopify://collections/bundle",
+        "link_label": "View Clinical Study",
+        "link_link": "#"
+      }
+    },
+    "hsa_slider_collection_xmBxLj": {
+      "type": "hsa-slider-collection",
+      "blocks": {
+        "product_ntiHVG": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-kit-hsa-fsa",
+            "image": "shopify://shop_images/LP_HSAFSA_RK.jpg",
+            "show_tags": true,
+            "custom_tags": "6x Stronger,✓ MTHFR",
+            "custom_description": "High-sodium, extra-strength electrolytes in 2 bioavailable factors.",
+            "custom_savings": "Save up to $241.00",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "rescue-kit-learn-more",
+            "form_text": "Rescue Drops & Rescue Salt",
+            "first_supply": "3 Mo Supply (495 servings), Dopp Kit, 1 Free Gift",
+            "second_supply": "6 Mo Supply (990 servings), Dopp Kit, 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_CRWFC8": {
+          "type": "product",
+          "settings": {
+            "heading": "best-of-buoy-bundle-hsa-fsa",
+            "image": "shopify://shop_images/LP_HSAFSA_BoBB.jpg",
+            "show_tags": true,
+            "custom_tags": "Sold Out",
+            "custom_description": "The best deal on Buoy. A complete ocean-powered wellness routine with exclusive gifts.",
+            "custom_savings": "Save up to $261.00",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "best-buoy-bundle-learn-more",
+            "form_text": "Everything at Buoy + exclusive gifts.",
+            "first_supply": "8 Bottles, 1 Rescue Salt, 2 Dopp Kits, 1 Water Bottle + 1 Free Gift",
+            "second_supply": "32 Bottles, 4 Rescue Salt, 5 Dopp Kits, 4 Water Bottles + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_ypWGFk": {
+          "type": "product",
+          "settings": {
+            "heading": "liquid-electrolyte-variety-kit-hsa-fsa",
+            "image": "shopify://shop_images/LP_HSAFSA_LEVK.jpg",
+            "show_tags": true,
+            "custom_tags": "Sampler Pack",
+            "custom_description": "All six of our liquid electrolytes in one go.",
+            "custom_savings": "Save up to $220.00",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "liquid-electrolyte-variety-kit-learn-more",
+            "form_text": "Energy, Brain Health, Anti-Bloat, Immune Support,  Hydration + extra-strength Rescue Drops",
+            "first_supply": "3 Mo Supply (660 servings), Dopp Kit, 1 Free Gift",
+            "second_supply": "6 Mo Supply (1,320 servings), Dopp Kit, 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_DNHd8d": {
+          "type": "product",
+          "settings": {
+            "heading": "ocean-electrolyte-kit-hsa-fsa",
+            "image": "shopify://shop_images/LP_HSAFSA_OEK.jpg",
+            "show_tags": true,
+            "custom_tags": "Starter Pack",
+            "custom_description": "Our original ocean-powered hydration routine in 2 form factors.",
+            "custom_savings": "Save up to $164.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "ocean-electrolyte-kit-learn-more",
+            "form_text": "Hydration Drops + Rescue Salt",
+            "first_supply": "3 Mo Supply (495 servings), Dopp Kit, 1 Free Gift",
+            "second_supply": "6 Mo Supply (990 servings), Dopp Kit, 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        }
+      },
+      "block_order": [
+        "product_ntiHVG",
+        "product_CRWFC8",
+        "product_ypWGFk",
+        "product_DNHd8d"
+      ],
+      "settings": {
+        "subtitlehsa": "HSA/FSA Eligible<sup>*</sup>",
+        "heading": "<span>Featured</span> Bundles",
+        "text": "The best place to start. Get our largest discounts on curated kits.",
+        "svgiconText3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
+        "ICONtEXT3": "Free Shipping + 30-Day Guarantee",
+        "svgiconText4": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
+        "ICONtEXT4": "Up To 4 Free Gifts With Every Purchase"
+      }
+    },
+    "collection_hsa_yDFB4Q": {
+      "type": "collection-hsa",
+      "blocks": {
+        "product_teYaM6": {
+          "type": "product",
+          "settings": {
+            "heading": "hydration-drops-hsa-fsa",
+            "image": "shopify://shop_images/Hydration-Drops_bff22a59-38bc-4480-9e27-e6fc1e44d5aa.png",
+            "show_tags": true,
+            "custom_tags": "Best-Seller",
+            "custom_description": "Our flagship ocean electrolyte with 87 trace minerals.",
+            "custom_savings": "Save up to $146.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "hydration-drops-learn-more",
+            "form_text": "Hydrate & remineralize with any drink",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_dPWwwq": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-drops-hsa-fsa",
+            "image": "shopify://shop_images/Rescue-Drops.png",
+            "show_tags": true,
+            "custom_tags": "2x pack-size!",
+            "custom_description": "Our 6x stronger, extra-strength electrolyte.",
+            "custom_savings": "Save up to $223.00",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "rescue-drops-learn-more",
+            "form_text": "High-sodium, extra-strength electrolyte + trace minerals without B vitamins",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_WLBdcp": {
+          "type": "product",
+          "settings": {
+            "heading": "digestion-drops-hsa-fsa",
+            "image": "shopify://shop_images/Digestion_Drops.png",
+            "show_tags": true,
+            "custom_tags": "Cult Favorite",
+            "custom_description": "Anti-bloat, gas + IBS support",
+            "custom_savings": "Save up to $155.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "digestion-drops-learn-more",
+            "form_text": "3-in-1 herbal, enzyme-rich and high mineral digestive aid",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_DFTWhh": {
+          "type": "product",
+          "settings": {
+            "heading": "brain-health-drops-hsa-fsa",
+            "image": "shopify://shop_images/Brain_Health_Drops.png",
+            "show_tags": true,
+            "custom_tags": "New",
+            "custom_description": "Clarity, brain fog, focus and neuroprotection",
+            "custom_savings": "Save up to $155.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "brain-health-drops-learn-more",
+            "form_text": "Clarity, brain fog, focus and neuroprotection",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_tMc3kg": {
+          "type": "product",
+          "settings": {
+            "heading": "immunity-drops-hsa-fsa",
+            "image": "shopify://shop_images/Immunity_Drops.png",
+            "show_tags": true,
+            "custom_tags": "",
+            "custom_description": "3-in-1 daily immune support",
+            "custom_savings": "Save up to $155.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "immunity-drops-learn-more",
+            "form_text": "3-in-1 daily immune support",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_D8ixiC": {
+          "type": "product",
+          "settings": {
+            "heading": "energy-drops-hsa-fsa",
+            "image": "shopify://shop_images/Energy_Drops.png",
+            "show_tags": true,
+            "custom_tags": "",
+            "custom_description": "No-crash, no-jitters energy + lifted moods",
+            "custom_savings": "Save up to $155.50",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "energy-drops-learn-more",
+            "form_text": "No crash, no jitters energy from clean caffeine + electrolytes.",
+            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "product_kNAJ8j": {
+          "type": "product",
+          "settings": {
+            "heading": "rescue-salt-hsa-fsa",
+            "image": "shopify://shop_images/Rescue_Salt.png",
+            "show_tags": true,
+            "custom_tags": "",
+            "custom_description": "Unrefined, solar-evaporated, high-mineral sea salt",
+            "custom_savings": "Save up to $142.00",
+            "Buttontext": "Learn More",
+            "learn-more-handle": "rescue-salt-learn-more",
+            "form_text": "Unrefined, solar-evaporated, hand-harvested, high-mineral sea salt.",
+            "first_supply": "405 Servings, 1 Dopp Kit + 1 Gift",
+            "second_supply": "810 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "kit_length": "1",
+            "gift_length": "1",
+            "kit_length_second": "1",
+            "gift_length_second": "3"
+          }
+        },
+        "image_weQyea": {
+          "type": "image",
+          "settings": {
+            "image--block": "shopify://shop_images/Media_Thumbnail_1.png",
+            "text_heading": "Proven to be 64% more hydrating than water alone.",
+            "svgiconText7": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\">\n<path d=\"M14.2352 9.18006L7.46595 15.9421L8.47082 16.9412L16.9414 8.47059L8.47082 0L7.46595 0.999082L14.2352 7.76112H0.000232516V9.18006H14.2352Z\" fill=\"#1F2322\"></path>\n</svg>",
+            "text-button": "View Clinical Study",
+            "text_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "product_teYaM6",
+        "product_dPWwwq",
+        "product_WLBdcp",
+        "product_DFTWhh",
+        "product_tMc3kg",
+        "product_D8ixiC",
+        "product_kNAJ8j",
+        "image_weQyea"
+      ],
+      "settings": {
+        "subtitlehsa": "HSA/FSA Eligible<sup>*</sup>",
+        "heading": "<span>Best-Selling</span> Electrolytes",
+        "text": "Add-to-any-drink electrolytes and 87+ trace minerals. No sugar, sweeteners or flavors.",
+        "svgiconText3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
+        "ICONtEXT3": "Free Shipping + 30-Day Guarantee",
+        "svgiconText4": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
+        "ICONtEXT4": "Up To 4 Free Gifts With Every Purchase"
+      }
+    },
+    "cv_table_mVfDi6": {
+      "type": "cv_table",
+      "settings": {
+        "heading": "Setting New Standards",
+        "sub_heading": "Compare Buoy with leading competitors:",
+        "heading_01": "Free of Sugar & Sweeteners",
+        "heading_02": "No Flavors",
+        "heading_03": "Harvested Salt Source",
+        "heading_04": "Bioavailable Form Factor",
+        "heading_05": "Sustainably Made",
+        "heading_06": "Clinical Study",
+        "heading_07": "Add To Any Drink",
+        "heading_08": "",
+        "tp_heading_02": "",
+        "heading_21": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_22": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_23": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_24": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_25": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_26": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_27": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_28": "",
+        "tp_heading_03": "Leading Powder",
+        "heading_31": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_32": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_33": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_34": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_35": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_36": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_37": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_38": "",
+        "tp_heading_04": "Leading Tablet",
+        "heading_41": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_42": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_43": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_44": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_45": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_46": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_47": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_48": "",
+        "tp_heading_05": "Sports Drink",
+        "heading_51": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_52": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_53": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_54": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" fill=\"#DEF647\" stroke=\"#DEF647\"></circle>\n<path d=\"M11.8999 18.6786L7.51367 14.2924L8.19315 13.6209L11.8999 17.3277L19.7957 9.42383L20.4752 10.1033L11.8999 18.6786Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_55": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_56": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_57": "<svg width=\"28\" height=\"29\" viewbox=\"0 0 28 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"14\" cy=\"14.0601\" r=\"13.5\" stroke=\"#1F2322\"></circle>\n<path d=\"M8.7354 20.0601L8 19.3247L13.2646 14.0601L8 8.79545L8.7354 8.06006L14 13.3247L19.2646 8.06006L20 8.79545L14.7354 14.0601L20 19.3247L19.2646 20.0601L14 14.7955L8.7354 20.0601Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "heading_58": "",
+        "tp_heading_06": "",
+        "heading_61": "",
+        "heading_62": "",
+        "heading_63": "",
+        "heading_64": "",
+        "heading_65": "",
+        "heading_66": "",
+        "heading_67": "",
+        "heading_68": ""
+      }
+    },
+    "hsa_faq_y98MPi": {
+      "type": "hsa-faq",
+      "blocks": {
+        "faq_item_q8R9Kn": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Why Are Trace Minerals So Important?",
+            "answer": "<p class=\"sh4\"></p><h5 class=\"faq_teaxrteding\">\n90% MINERAL DEFICIENCY \n</h5>\n<p>\nModern agriculture and commercial water have stripped our soil and water of essential trace minerals, making them hard to find even in the most balance diets.</p>\n<p>\nEven just minor deficiencies in these minerals can cause <strong>inabilities to absorb and use nutrients effectively.\n</strong></p>\n<p>\nEvery drop of Buoy liquid electrolytes contains 87 trace minerals preserved in their naturally ionic state for high bioavailability and fast absorption.</p><p></p>"
+          }
+        },
+        "faq_item_nCNtwA": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Are You Getting Bad Salt?",
+            "answer": "<p class=\"sh4\"></p><h5 class=\"faq_teaxrteding\">\nMANUFACTURED SALT\n</h5>\n<p>\nMost electrolyte supplements use the cheaply manufactured sodium sources like sodium bicarbonate and sodium chloride, which are essentially baking soda and road salt.\n</p>\n<p>You can find the same salt in your zero sugar electrolyte powder in processed and refined foods. \n</p>\n<h5 class=\"faq_teaxrteding\">\nBUOY'S HARVESTED SEA SALT\n</h5>\n<p>\nBuoy hand-harvests salt from the ocean and is solar evaporated to maintain its naturally-balanced electrolyte ratio, ionically-charged state and high mineral density.\n</p><p></p>\nGetting quality salt in your diet everyday is the solid foundation for every cell and system.<p></p>"
+          }
+        },
+        "faq_item_zPqWMp": {
+          "type": "faq_item",
+          "settings": {
+            "title": "How Long Until You See Results?",
+            "answer": "<p class=\"sh4\"></p><p>Buoy’s hard-to-find essential nutrients are important for foundational health in the long run.\n</p>\n<p>\nDepending on how chronically dehydrated you are when you start Buoy will affect how intense of a feeling you might notice. Headaches, cramping, midday fatigue, grogginess and drier skin are all symptoms of dehydration.\n</p>\n<h5 class=\"faq_teaxrteding\">AFTER A WEEK</h5>\n<p>\nWhile a lot of people using Buoy notice results after about a week of consistent use, some don’t—and that’s okay.\n</p>\n<h5 class=\"faq_teaxrteding\">\nAFTER A MONTH</h5>\n<p>\nIt can take up to a month or two for your body to reach a new normal. Rest assured, our high bioavailable and fast-absorbing ingredients get to work quickly and target nutrient gaps in the American diet.\n</p><p></p>"
+          }
+        },
+        "faq_item_LdTYVN": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Will I Taste Anything?",
+            "answer": "<p class=\"sh4\"></p><p>Buoy is <span class=\"txt-highlitfaq\">purposefully </span>unflavored, which means we do not hide behind the sweet and inflammatory ingredients like sugar, stevia, dextrose and \"natural\" flavors which most other electrolyte products include.\n</p>\n<h5 class=\"faq_teaxrteding\">\nSUBTLE MINERAL TASTE\n</h5>\n<p>\nHydration Drops harvest electrolytes and minerals in their most bioavailable form. While many people don't notice a taste in most beverages, everyone's palette is different and so you may notice hints of a subtle mineral flavor.\n</p>\n<h5 class=\"faq_teaxrteding\">\nA LITTLE GOES A LONG WAY\n</h5>\n<p>\nOne serving is a single, short squeeze into a full beverage. Each serving contains a ⅓ of the electrolyte content of a sports drink. For those noticing a strong taste, you've likely squeezed too much into a single beverage or a half-full beverage.\n</p><p></p>"
+          }
+        },
+        "faq_item_ytT6Wd": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Will Buoy Break My Fast?",
+            "answer": "<p class=\"sh4\"></p><p>Nope!\n</p>\n<p>\nUnlike other electrolytes, Buoy will not change your metabolic state regardless of how many servings you use.\n</p>\n<ul class=\"list_faq\">\n<li>\n<span>\n<svg width=\"30\" height=\"30\" viewbox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M10.3125 21L15 16.3125L19.6875 21L21 19.6875L16.3125 15L21 10.3125L19.6875 9L15 13.6875L10.3125 9L9 10.3125L13.6875 15L9 19.6875L10.3125 21ZM15 27.5C13.2917 27.5 11.6771 27.1719 10.1562 26.5156C8.63542 25.8594 7.30729 24.9635 6.17188 23.8281C5.03646 22.6927 4.14062 21.3646 3.48438 19.8438C2.82812 18.3229 2.5 16.7083 2.5 15C2.5 13.2708 2.82812 11.6458 3.48438 10.125C4.14062 8.60417 5.03646 7.28125 6.17188 6.15625C7.30729 5.03125 8.63542 4.14062 10.1562 3.48438C11.6771 2.82812 13.2917 2.5 15 2.5C16.7292 2.5 18.3542 2.82812 19.875 3.48438C21.3958 4.14062 22.7188 5.03125 23.8438 6.15625C24.9688 7.28125 25.8594 8.60417 26.5156 10.125C27.1719 11.6458 27.5 13.2708 27.5 15C27.5 16.7083 27.1719 18.3229 26.5156 19.8438C25.8594 21.3646 24.9688 22.6927 23.8438 23.8281C22.7188 24.9635 21.3958 25.8594 19.875 26.5156C18.3542 27.1719 16.7292 27.5 15 27.5ZM15 25.625C17.9583 25.625 20.4688 24.5885 22.5312 22.5156C24.5938 20.4427 25.625 17.9375 25.625 15C25.625 12.0417 24.5938 9.53125 22.5312 7.46875C20.4688 5.40625 17.9583 4.375 15 4.375C12.0625 4.375 9.55729 5.40625 7.48438 7.46875C5.41146 9.53125 4.375 12.0417 4.375 15C4.375 17.9375 5.41146 20.4427 7.48438 22.5156C9.55729 24.5885 12.0625 25.625 15 25.625Z\" fill=\"#1F2322\"></path>\n</svg>\n\n</span>0 Calories</li>\n<li>\n<span>\n<svg width=\"30\" height=\"30\" viewbox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M10.3125 21L15 16.3125L19.6875 21L21 19.6875L16.3125 15L21 10.3125L19.6875 9L15 13.6875L10.3125 9L9 10.3125L13.6875 15L9 19.6875L10.3125 21ZM15 27.5C13.2917 27.5 11.6771 27.1719 10.1562 26.5156C8.63542 25.8594 7.30729 24.9635 6.17188 23.8281C5.03646 22.6927 4.14062 21.3646 3.48438 19.8438C2.82812 18.3229 2.5 16.7083 2.5 15C2.5 13.2708 2.82812 11.6458 3.48438 10.125C4.14062 8.60417 5.03646 7.28125 6.17188 6.15625C7.30729 5.03125 8.63542 4.14062 10.1562 3.48438C11.6771 2.82812 13.2917 2.5 15 2.5C16.7292 2.5 18.3542 2.82812 19.875 3.48438C21.3958 4.14062 22.7188 5.03125 23.8438 6.15625C24.9688 7.28125 25.8594 8.60417 26.5156 10.125C27.1719 11.6458 27.5 13.2708 27.5 15C27.5 16.7083 27.1719 18.3229 26.5156 19.8438C25.8594 21.3646 24.9688 22.6927 23.8438 23.8281C22.7188 24.9635 21.3958 25.8594 19.875 26.5156C18.3542 27.1719 16.7292 27.5 15 27.5ZM15 25.625C17.9583 25.625 20.4688 24.5885 22.5312 22.5156C24.5938 20.4427 25.625 17.9375 25.625 15C25.625 12.0417 24.5938 9.53125 22.5312 7.46875C20.4688 5.40625 17.9583 4.375 15 4.375C12.0625 4.375 9.55729 5.40625 7.48438 7.46875C5.41146 9.53125 4.375 12.0417 4.375 15C4.375 17.9375 5.41146 20.4427 7.48438 22.5156C9.55729 24.5885 12.0625 25.625 15 25.625Z\" fill=\"#1F2322\"></path>\n</svg>\n\n</span>0 Carbohydrates</li>\n<li>\n<span>\n<svg width=\"30\" height=\"30\" viewbox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M10.3125 21L15 16.3125L19.6875 21L21 19.6875L16.3125 15L21 10.3125L19.6875 9L15 13.6875L10.3125 9L9 10.3125L13.6875 15L9 19.6875L10.3125 21ZM15 27.5C13.2917 27.5 11.6771 27.1719 10.1562 26.5156C8.63542 25.8594 7.30729 24.9635 6.17188 23.8281C5.03646 22.6927 4.14062 21.3646 3.48438 19.8438C2.82812 18.3229 2.5 16.7083 2.5 15C2.5 13.2708 2.82812 11.6458 3.48438 10.125C4.14062 8.60417 5.03646 7.28125 6.17188 6.15625C7.30729 5.03125 8.63542 4.14062 10.1562 3.48438C11.6771 2.82812 13.2917 2.5 15 2.5C16.7292 2.5 18.3542 2.82812 19.875 3.48438C21.3958 4.14062 22.7188 5.03125 23.8438 6.15625C24.9688 7.28125 25.8594 8.60417 26.5156 10.125C27.1719 11.6458 27.5 13.2708 27.5 15C27.5 16.7083 27.1719 18.3229 26.5156 19.8438C25.8594 21.3646 24.9688 22.6927 23.8438 23.8281C22.7188 24.9635 21.3958 25.8594 19.875 26.5156C18.3542 27.1719 16.7292 27.5 15 27.5ZM15 25.625C17.9583 25.625 20.4688 24.5885 22.5312 22.5156C24.5938 20.4427 25.625 17.9375 25.625 15C25.625 12.0417 24.5938 9.53125 22.5312 7.46875C20.4688 5.40625 17.9583 4.375 15 4.375C12.0625 4.375 9.55729 5.40625 7.48438 7.46875C5.41146 9.53125 4.375 12.0417 4.375 15C4.375 17.9375 5.41146 20.4427 7.48438 22.5156C9.55729 24.5885 12.0625 25.625 15 25.625Z\" fill=\"#1F2322\"></path>\n</svg>\n\n</span>0 Sugar</li>\n</ul><p></p>"
+          }
+        },
+        "faq_item_xNfWUR": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Are Your B Vitamins Methylated?",
+            "answer": "<p class=\"sh4\"></p><p>Methylation is typically in reference to Vitamins B9 and B12 because of cheap, widely used and non-absorbable forms these specific vitamins. These vitamins are not used in any Buoy products.\n</p>\n<p>\nThe B Vitamins used in Buoy typically do not come in a methylated form (there is a rare B6 form floating around but is not standard or widely used).\n</p>\n<p>\nFor the vitamins used, Buoy sources the cleanest, most absorbable forms of B1, B5, and B6. Methylation is typically a term used with B vitamins that aren't in Buoy.\n</p><p></p>"
+          }
+        },
+        "faq_item_TWAwAr": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Do Your Products Have Caffeine?",
+            "answer": "<p class=\"sh4\"></p><p>Hydration Drops does not contain caffeine.\n</p>\n<p>\nThe only product that contains caffeine is our Energy Drops, which is sourced from organic green tea.\n</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_q8R9Kn",
+        "faq_item_nCNtwA",
+        "faq_item_zPqWMp",
+        "faq_item_LdTYVN",
+        "faq_item_ytT6Wd",
+        "faq_item_xNfWUR",
+        "faq_item_TWAwAr"
+      ],
+      "settings": {
+        "title-01": "We want you to ask questions",
+        "text": "",
+        "add_top_border": false,
+        "add_bottom_border": false,
+        "background": "none"
+      }
+    },
+    "hsa_chronic_review_yzRggL": {
+      "type": "hsa-chronic-review",
+      "settings": {
+        "background_color": "#f8f8f8",
+        "never_expires": false,
+        "green_button": true,
+        "subtitle": "THE BUOY COMMUNITY",
+        "title": "Real People, <em>Real Health Journeys</em>",
+        "button_label": "Back To Shopping",
+        "button_link": "",
+        "enabled_promo_banner": false,
+        "promo_title": "",
+        "promo_desc": "",
+        "promo_button_label": "",
+        "promo_button_link": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hsa_fsa_section_BGxcpi",
+    "hsa_slider_collection_xmBxLj",
+    "collection_hsa_yDFB4Q",
+    "cv_table_mVfDi6",
+    "hsa_faq_y98MPi",
+    "hsa_chronic_review_yzRggL"
   ]
 }
