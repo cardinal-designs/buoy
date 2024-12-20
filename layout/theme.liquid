@@ -75,7 +75,7 @@
 
     <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
-    {% if template == 'page.Hsa-Fsa' %}{% render 'style-hsa-fsa' %}{% endif %}
+    {% if template == 'page.Hsa-Fsa' or template == 'page.nysale' %}{% render 'style-hsa-fsa' %}{% endif %}
 
     {% comment %} <script src="{{ 'jquery.min.js' | asset_url }}"></script> {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
