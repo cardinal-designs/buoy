@@ -11,10 +11,57 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
+    },
+    "featured_blog_new_NJiDQ4": {
+      "type": "featured-blog-new",
+      "blocks": {
+        "article_dMBXtc": {
+          "type": "article",
+          "settings": {
+            "article": "pots-resources/pots-digestive-issues-management",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "article_dMBXtc"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "featured_blog_bXb7mk": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Hydration Station Blogs",
+        "blog": "hydration-station",
+        "post_limit": 3,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "soft_background": false,
+        "show_view_all": true
+      }
+    },
+    "featured_blog_L6fRaU": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Chronic Illness Blogs",
+        "blog": "pots-resources",
+        "post_limit": 3,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "soft_background": false,
+        "show_view_all": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured_blog_new_NJiDQ4",
+    "featured_blog_bXb7mk",
+    "featured_blog_L6fRaU"
   ]
 }
