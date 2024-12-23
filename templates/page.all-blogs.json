@@ -9,6 +9,24 @@
  */
 {
   "sections": {
+    "animate_heading_text_zaXbpr": {
+      "type": "animate-heading-text",
+      "blocks": {
+        "heading_jkQVwE": {
+          "type": "heading",
+          "settings": {
+            "heading": "All Blogs"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jkQVwE"
+      ],
+      "settings": {
+        "full_width": true,
+        "checkbox_backgound": false
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -59,6 +77,7 @@
     }
   },
   "order": [
+    "animate_heading_text_zaXbpr",
     "main",
     "featured_blog_new_NJiDQ4",
     "featured_blog_bXb7mk",
