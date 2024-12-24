@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })  
       .catch( error => { console.log('error'); })
       .finally( () =>{
+
+        if( elm.closest('.quick-add-grid__grid-item').querySelector('.quick-add__content').querySelectorAll('.okeReviews-reviewsSummary-ratingCount').length > 0 ){
+          let servings$text = elm.closest('.quick-add-grid__grid-item').querySelector('.serving__gridadd').textContent;
+          document.querySelector('.Supply_Time').innerHTML = servings$text;
+          let Reviews$Count = elm.closest('.quick-add-grid__grid-item').querySelector('.quick-add__content').querySelector('.okeReviews-reviewsSummary-ratingCount').children[0].innerHTML;
+          document.querySelector('.svg_icons').querySelector('.okeReviews-reviewsSummary-ratingCount').children[0].innerHTML = Reviews$Count;
+          document.querySelector('.Review__details_odo').querySelector('.okeReviews-reviewsSummary-ratingCount').children[0].innerHTML = Reviews$Count;
+        }
+        
          document.querySelector('.Reviews__layout').classList.add('active');
          document.querySelector('#shopify-section-popup-initiate .Closed__drawer_learnMore').addEventListener('click',(target)=>{
             target.preventDefault();
