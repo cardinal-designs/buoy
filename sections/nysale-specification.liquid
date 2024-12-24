@@ -1,0 +1,309 @@
+<div class="cv_electrolyte_boost">
+  <div class="electro_boost_headings">
+    {% if section.settings.text != blank %}
+      <p>{{ section.settings.text }}</p>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      {{ section.settings.heading }}
+    {% endif %}
+  </div>
+  <div class="electro_boost_accor">
+    <div class="electro_boost_left">
+      <p>{{ section.settings.acc_heading_01 }}</p>
+      <p>{{ section.settings.acc_heading_02 }}</p>
+      <p>{{ section.settings.acc_heading_03 }}</p>
+    </div>
+
+    <div class="electro_boost_right">
+      <div class="main_image showOnMob">
+        <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/image_changed.jpg?v=1731391556">
+      </div>
+
+      <div class="main_image showOnDesk">
+        <img src="https://cdn.shopify.com/s/files/1/0267/3351/0727/files/image_changed.jpg?v=1731391556">
+      </div>
+
+      <div class="btn_text_outer">
+        <div class="btn_text first-one" data-id="myPopup">
+          <button id="popupBtn">
+            {{ images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'] | image_url: width:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].width , height:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].height | image_tag:loading:'lazy' }}
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_01 }}</p>
+            </div>
+          </button>
+        </div>
+        <div class="btn_text second-one" data-id="myPopup01">
+          <button id="popupBtn01">
+            {{ images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'] | image_url: width:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].width , height:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].height | image_tag:loading:'lazy' }}
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_02 }}</p>
+            </div>
+          </button>
+        </div>
+        <div class="btn_text third-one" data-id="myPopup02">
+          <button id="popupBtn02">
+            {{ images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'] | image_url: width:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].width , height:images['collapsible_icon_29da7e17-169c-4a8c-9056-f2c818a3cfa1.svg'].height | image_tag:loading:'lazy' }}
+            <div class="electro_boost_left showOnDesk">
+              <p>{{ section.settings.acc_heading_03 }}</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <div class="popup_inner">
+        {{ section.settings.acc_content_01 }}
+        {% if section.settings.acc_content_video_01 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_01 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        {% elsif section.settings.acc_content_img_01 != blank %}
+          <div class="mgf_wppopup_sc">
+            <img
+              src="{{ section.settings.acc_content_img_01 | img_url: 'master' }}"
+              alt="Section Image"
+              style="max-width: 100%; height: auto;"
+            >
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup01" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <div class="popup_inner">
+        {{ section.settings.acc_content_02 }}
+        {% if section.settings.acc_content_video_02 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_02 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        {% elsif section.settings.acc_content_img_02 != blank %}
+          <div class="mgf_wppopup_sc">
+            <img
+              src="{{ section.settings.acc_content_img_02 | img_url: 'master' }}"
+              alt="Section Image"
+              style="max-width: 100%; height: auto;"
+            >
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div id="myPopup02" class="popup wp_popup_lyt">
+    <div class="popup_inner_out">
+      <div class="popup_inner">
+        {{ section.settings.acc_content_03 }}
+        {% if section.settings.acc_content_video_03 != blank %}
+          <div class="viedoMainContent">
+            <video autoplay muted loop playsinline height="300px" width="100%">
+              <source src="{{ section.settings.acc_content_video_03 }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        {% elsif section.settings.acc_content_img_03 != blank %}
+          <div class="imageMainContent">
+            <div class="mgf_wppopup_sc">
+              <img
+                src="{{ section.settings.acc_content_img_03 | img_url: 'master' }}"
+                alt="Section Image"
+                style="max-width: 100%; height: auto;"
+              >
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Function to close the popup
+function closePopup() {
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
+    let getIDs = elm.closest('.btn_text').getAttribute('data-id');
+    document.querySelector(`#${getIDs}`).style.opacity = '0';
+    document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+  });
+}
+
+// Check if the device has a fine pointer (desktop) or coarse pointer (mobile)
+if (window.matchMedia("(pointer: fine)").matches) {
+  // Desktop: Use mouseenter and mouseleave events
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
+    elm.addEventListener('mouseenter', (event) => {
+      let getIDs = event.target.closest('.btn_text').getAttribute('data-id');
+      document.querySelector(`#${getIDs}`).style.opacity = '1';
+      document.querySelector('.cv_electrolyte_boost').classList.add('popup_open_cv');
+    });
+    
+    elm.addEventListener('mouseleave', (event) => {
+      let getIDs = event.target.closest('.btn_text').getAttribute('data-id');
+      document.querySelector(`#${getIDs}`).style.opacity = '0';
+      document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+    });
+  });
+
+  document.querySelectorAll('.wp_popup_lyt .popup_inner_out').forEach((elm) => {
+    elm.addEventListener('mouseenter', (event) => {
+      event.target.closest('.wp_popup_lyt').style.opacity = '1';
+      document.querySelector('.cv_electrolyte_boost').classList.add('popup_open_cv');
+    });
+    
+    elm.addEventListener('mouseleave', (event) => {
+      event.target.closest('.wp_popup_lyt').style.opacity = '0';
+      document.querySelector('.cv_electrolyte_boost').classList.remove('popup_open_cv');
+    });
+  });
+
+} else {
+  // Mobile: Use click events
+  document.querySelectorAll('.btn_text_outer .btn_text img').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+      let getIDs = event.target.closest('.btn_text').getAttribute('data-id');
+      let targetElement = document.querySelector(`#${getIDs}`);
+      let popup = document.querySelector('.cv_electrolyte_boost');
+
+      // Toggle opacity and popup class on click
+      if (targetElement.style.opacity === '1') {
+        closePopup();
+      } else {
+        targetElement.style.opacity = '1';
+        popup.classList.add('popup_open_cv');
+      }
+    });
+  });
+
+  document.querySelectorAll('.wp_popup_lyt .popup_inner_out').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+      let targetElement = event.target.closest('.wp_popup_lyt');
+      let popup = document.querySelector('.cv_electrolyte_boost');
+
+      // Toggle opacity and popup class on click
+      if (targetElement.style.opacity === '1') {
+        closePopup();
+      } else {
+        targetElement.style.opacity = '1';
+        popup.classList.add('popup_open_cv');
+      }
+    });
+  });
+
+  // Close popup when clicking outside .wp_popup_lyt
+  document.addEventListener('click', (event) => {
+    // Check if the click happened outside .wp_popup_lyt
+    if (!event.target.closest('.wp_popup_lyt') && !event.target.closest('.btn_text_outer .btn_text img')) {
+      closePopup();
+    }
+  });
+}
+</script>
+
+{% schema %}
+{
+  "name": "Nysale specification",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Sub heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Accordion First"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_01",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_01",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_01",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_01",
+      "label": "Accordion MP4 Video File"
+    },
+    {
+      "type": "header",
+      "content": "Accordion Second"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_02",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_02",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_02",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_02",
+      "label": "Accordion MP4 Video File"
+    },
+    {
+      "type": "header",
+      "content": "Accordion Second"
+    },
+    {
+      "type": "text",
+      "id": "acc_heading_03",
+      "label": "Text first title"
+    },
+    {
+      "type": "richtext",
+      "id": "acc_content_03",
+      "label": "Content first accordion"
+    },
+    {
+      "type": "image_picker",
+      "id": "acc_content_img_03",
+      "label": "Content first accordion Image"
+    },
+
+    {
+      "type": "url",
+      "id": "acc_content_video_03",
+      "label": "Accordion MP4 Video File"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nysale specification"
+    }
+  ]
+}
+{% endschema %}
