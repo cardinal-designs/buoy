@@ -1,0 +1,317 @@
+{{ 'quick-add-products.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign grid = section.settings
+  assign blocks = section.blocks
+  assign base = 'quick-add-grid'
+%}
+<script>
+    function initializeClinicalChartsnw(drawer) {
+    const swipers = drawer.querySelectorAll("[data-swiper='chart-images']")
+  
+    if(!swipers) return
+  
+    swipers.forEach(s => {
+      const options = {
+        slidesPerView: 1.2,
+        spaceBetween: 8,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+      }
+      
+      if(s.nextElementSibling.hasAttribute('data-swiper')) {
+        const textSwiper = new Swiper( s.nextElementSibling, {
+          slidesPerView: 1,
+          effect: 'fade'
+        })
+  
+        options.controller = {
+          by: 'slide',
+          control: textSwiper
+        }
+  
+        const swiper = new Swiper(s, options) 
+        
+      }
+    })
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const clinicalTrialDrawer = document.querySelector("#clinicalSideDrawer")
+    if (clinicalTrialDrawer) {
+      initializeClinicalChartsnw(clinicalTrialDrawer)
+    }
+  })  
+</script>
+<div class="Collection__Gridwrap_single">
+<div
+  class="qcheck-1 {{ base }} page-width"
+  data-anchor="{{ section.settings.heading | downcase | handle }}"
+  style="scroll-margin-top: calc(var(--sticky-header-height) + 90px);"
+>
+  <div class="{{ base }}__header">
+    <div class="subtitles">
+      {{ section.settings.subtitlehsa }}
+    </div>
+    {% if grid.heading != blank %}
+      <h2 class="{{ base }}__heading">
+        {{ grid.heading }}
+      </h2>
+    {% endif %}
+
+    {% if grid.text != blank %}
+      <div class="{{ base }}__text sh4">
+        {{ grid.text }}
+      </div>
+    {% endif %}
+     <div class="mainhsa-fsas">
+            {% if section.settings.svgiconText3 != blank or section.settings.ICONtEXT3 != blank  %}
+      <div class="iconsvgs">
+        {{ section.settings.svgiconText3 }}
+        <p>{{ section.settings.ICONtEXT3 }}</p>
+    </div>
+            {% endif %}
+                {% if section.settings.svgiconText4 != blank or section.settings.ICONtEXT4 != blank  %}
+      <div class="iconsvgs">
+        {{ section.settings.svgiconText4 }}
+        <p>{{ section.settings.ICONtEXT4 }}</p>
+    </div>
+                  {% endif %}
+                  </div>
+  </div>
+
+  {% if blocks != blank %}
+    <div class="{{ base }}__grid">
+      {% for block in blocks %}
+        {% case block.type %}
+          {% when 'product' %}
+            <div class="qcheck-1 {{ base }}__grid-item">
+              {% render 'nysale-product-card-quick-add', content: block.settings %}
+              <div class="buttonTextLearn"><a href="{{ block.settings.learn-more-handle }}" js-expand__layout>{{ block.settings.Buttontext }}</a></div>
+            </div>
+            {% when 'image' %}
+          <div class="qcheck-1 {{ base }}__grid-item">
+          <div class="main-containerProduct">
+            <div class="imageTextDivLink">
+              <div class="imageLink">{{ block.settings.image--block | image_url: width:block.settings.image--block.width |image_tag  }}</div>
+              <div class="innerDivText">
+              <div class="textImageLink">
+                {{ block.settings.text_heading }}
+              </div>
+              <div class="linkImageText"><a href="{{ block.settings.text_url }}">{{ block.settings.svgiconText7 }}
+                     <span>{{ block.settings.text-button }}</span></a>
+            </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Nysale Products Grid",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "subtitlehsa",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description"
+    },
+    {
+        "type": "textarea",
+        "id": "svgiconText3",
+        "label": "SVG Icon 1"
+      },
+      {
+        "type": "text",
+        "id": "ICONtEXT3",
+        "label": "Icon Text 1"
+      },
+      {
+        "type": "textarea",
+        "id": "svgiconText4",
+        "label": "SVG Icon 2"
+      },
+      {
+        "type": "text",
+        "id": "ICONtEXT4",
+        "label": "Icon Text 2"
+      },
+   
+    
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "heading",
+          "label": "Product"
+        },
+        {
+          "type": "header",
+          "content": "Primary media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "Hover media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_hover",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video_hover",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_tags",
+          "label": "Show tags?",
+          "default": false
+        },
+        {
+          "type": "liquid",
+          "id": "custom_tags",
+          "label": "Custom Tags"
+        },         
+        {
+          "type": "liquid",
+          "id": "custom_description",
+          "label": "Custom Description"
+        }, 
+        {
+          "type": "liquid",
+          "id": "custom_servings",
+          "label": "Custom Servings"
+        },          
+        {
+          "type": "text",
+          "id": "Buttontext",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "text",
+          "id": "learn-more-handle",
+          "label": "Page handle"
+        },         
+        {
+          "type": "header",
+          "content": "Product Form"
+        },
+        {
+          "type": "image_picker",
+          "id": "form_image",
+          "label": "Product Image"
+        },             
+        {
+          "type": "text",
+          "id": "form_text",
+          "label": "Form Text"
+        },
+        {
+          "type": "text",
+          "id": "kit_length",
+          "label": "Number of kits (ONE-TIME)"
+        }, 
+        {
+          "type": "text",
+          "id": "gift_length",
+          "label": "Number of gifts (ONE-TIME)"
+        },
+        {
+          "type": "text",
+          "id": "kit_length_second",
+          "label": "Number of kits (SUBSCRIPTION)"
+        }, 
+        {
+          "type": "text",
+          "id": "gift_length_second",
+          "label": "Number of gifts (SUBSCRIPTION)"
+        },
+        {
+          "type": "liquid",
+          "id": "delivery_message",
+          "label": "Deivery message (SUBSCRIPTION)"
+        } 
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image--block",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text_heading",
+          "label": "Text"
+        },
+        {
+          "type": "textarea",
+          "id": "svgiconText7",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "text-button",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "text_url",
+          "label": "Button url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nysale Products Grid",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
