@@ -14,305 +14,319 @@
       "disabled": true,
       "settings": {}
     },
-    "hsa_fsa_section_BGxcpi": {
-      "type": "Hsa-Fsa-section",
+    "nysale_banner_ppAxDg": {
+      "type": "nysale-banner",
       "settings": {
         "custom_class": "hsa-fsa-sECTION-live",
-        "svgiconText1": "<svg width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"#DEF647\"></circle>\n<path d=\"M6.81108 12.244L8.99936 10.9272L11.1876 12.2588L10.6086 9.76678L12.5339 8.09526L9.99434 7.87087L8.99936 5.52621L8.00438 7.85614L5.4648 8.08053L7.39017 9.75772L6.81108 12.244ZM5.80252 13.6379L6.64677 10.0025L3.82617 7.55811L7.5477 7.23515L8.99936 3.80713L10.451 7.23515L14.1726 7.55811L11.352 10.0025L12.1962 13.6379L8.99936 11.7091L5.80252 13.6379Z\" fill=\"#1F2322\"></path>\n</svg>",
-        "ICONtEXT1": "HSA/FSA Eligibile<sup>*</sup>",
-        "svgiconText2": "<svg width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"#DEF647\"></circle>\n<path d=\"M6.81108 12.244L8.99936 10.9272L11.1876 12.2588L10.6086 9.76678L12.5339 8.09526L9.99434 7.87087L8.99936 5.52621L8.00438 7.85614L5.4648 8.08053L7.39017 9.75772L6.81108 12.244ZM5.80252 13.6379L6.64677 10.0025L3.82617 7.55811L7.5477 7.23515L8.99936 3.80713L10.451 7.23515L14.1726 7.55811L11.352 10.0025L12.1962 13.6379L8.99936 11.7091L5.80252 13.6379Z\" fill=\"#1F2322\"></path>\n</svg>",
-        "ICONtEXT2": "Registered at clinicaltrial.gov",
+        "svg_icon": "<svg width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"9\" cy=\"9\" r=\"9\" fill=\"#DEF647\"></circle>\n<path d=\"M6.81108 12.244L8.99936 10.9272L11.1876 12.2588L10.6086 9.76678L12.5339 8.09526L9.99434 7.87087L8.99936 5.52621L8.00438 7.85614L5.4648 8.08053L7.39017 9.75772L6.81108 12.244ZM5.80252 13.6379L6.64677 10.0025L3.82617 7.55811L7.5477 7.23515L8.99936 3.80713L10.451 7.23515L14.1726 7.55811L11.352 10.0025L12.1962 13.6379L8.99936 11.7091L5.80252 13.6379Z\" fill=\"#1F2322\"></path>\n</svg>",
+        "badge_text": "Registered at clinicaltrial.gov",
         "text_color": "",
         "bg_color": "",
-        "section_image": "shopify://shop_images/mobile_banner_image.jpg",
+        "section_image": "shopify://shop_images/mobile_banner.jpg",
         "section_video_url": "",
-        "section_image_d": "shopify://shop_images/BUOY_9_1.png",
+        "section_image_d": "shopify://shop_images/LP_NYSale_25_Hero_D.jpg",
         "section_video_url_d": "",
-        "text012": "Pay With HSA/FSA",
-        "save_price": "Save up to $261 + Free Items",
-        "content": "<p><strong>Clinically-proven liquid electrolytes that hydrate 64% more than water alone</strong>.</p> <p><sup></sup>Now eligible for purchase using your HSA and FSA accounts.*</p>",
-        "button_label": "Shop Eligible Products<sup>*</sup>",
-        "button_link": "shopify://collections/bundle",
+        "text012": "<span>New Resolution's</span> Sale",
+        "save_price": "Choose 3 FREE Items + 1 FREE Exclusive Gift ($67 Value)",
+        "content": "<p>Transformation starts with changes to small, daily habits. Invest in a 3 Month Supply of any of our clinically-proven electrolytes to unlock savings that start at $67.</p>",
+        "button_label": "Shop Sale",
+        "button_link": "",
         "link_label": "View Clinical Study",
-        "link_link": "#"
+        "link_link": ""
       }
     },
-    "hsa_slider_collection_xmBxLj": {
-      "type": "hsa-slider-collection",
+    "nysale_specification_f7wUMH": {
+      "type": "nysale-specification",
+      "settings": {
+        "text": "unflavored ‧ Liquid ‧ Bioavailable",
+        "heading": "<h3>\n<em>Nature’s Original </em>Electrolyte Boost</h3>",
+        "acc_heading_01": "Hydrates 64% better than water alone",
+        "acc_content_01": "<p>Buoy is 64% more hydrating than water alone and 49% more hydrating than the leading electrolyte competitor.*<br/><br/><em>*According to a university-led, crossover design clinical study.</em></p>",
+        "acc_content_video_01": "",
+        "acc_heading_02": "No sugar, sweeteners or flavors",
+        "acc_content_02": "<p>We avoid the sweet and inflammatory ingredients other electrolytes use that undermine hydration and can exacerbate existing health conditions.</p>",
+        "acc_content_video_02": "",
+        "acc_heading_03": "Harvested, not manufactured, salt",
+        "acc_content_03": "<p>85% of the average American's sodium intake comes from the refined and nutrient sparse sodium sources found in table salt and processed foods. These contain anti-clumping compounds and bleaching agents.<br/><br/><em>Buoy's hand-harvested ocean salt is naturally-balanced with 4 electrolytes + 87  trace minerals and preserved in naturally-occurring, ionically-charged state.</em></p>",
+        "acc_content_video_03": ""
+      }
+    },
+    "nysale_products_slider_qHipgH": {
+      "type": "nysale-products-slider",
       "blocks": {
-        "product_ntiHVG": {
+        "product_qGA7FH": {
           "type": "product",
           "settings": {
-            "heading": "rescue-kit-hsa-fsa",
+            "heading": "rescue-kit",
             "image": "shopify://shop_images/LP_HSAFSA_RK.jpg",
             "show_tags": true,
             "custom_tags": "6x Stronger,✓ MTHFR",
             "custom_description": "High-sodium, extra-strength electrolytes in 2 bioavailable factors.",
-            "custom_savings": "Save up to $241.00",
+            "custom_servings": "18 Bottles + 3 Jars / 465 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "rescue-kit-learn-more",
-            "form_text": "Rescue Drops & Rescue Salt",
-            "first_supply": "3 Mo Supply (495 servings), Dopp Kit, 1 Free Gift",
-            "second_supply": "6 Mo Supply (990 servings), Dopp Kit, 3 Free Gifts",
+            "form_image": "shopify://shop_images/rescue-18-bottles.png",
+            "form_text": "18 Rescue Drops & 3 Rescue Salt",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_CRWFC8": {
+        "product_8fagR9": {
           "type": "product",
           "settings": {
-            "heading": "best-of-buoy-bundle-hsa-fsa",
+            "heading": "best-of-buoy-bundle",
             "image": "shopify://shop_images/LP_HSAFSA_BoBB.jpg",
             "show_tags": true,
             "custom_tags": "Sold Out",
             "custom_description": "The best deal on Buoy. A complete ocean-powered wellness routine with exclusive gifts.",
-            "custom_savings": "Save up to $261.00",
+            "custom_servings": "8 Bottles + 1 Jar / 345 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "best-buoy-bundle-learn-more",
-            "form_text": "Everything at Buoy + exclusive gifts.",
-            "first_supply": "8 Bottles, 1 Rescue Salt, 2 Dopp Kits, 1 Water Bottle + 1 Free Gift",
-            "second_supply": "32 Bottles, 4 Rescue Salt, 5 Dopp Kits, 4 Water Bottles + 3 Free Gifts",
+            "form_image": "shopify://shop_images/best_of_buoy_4_bundles.png",
+            "form_text": "3 Month Supply of Everything at Buoy",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_ypWGFk": {
+        "product_HiDTCM": {
           "type": "product",
           "settings": {
-            "heading": "liquid-electrolyte-variety-kit-hsa-fsa",
+            "heading": "liquid-electrolyte-variety-bundle",
             "image": "shopify://shop_images/LP_HSAFSA_LEVK.jpg",
             "show_tags": true,
             "custom_tags": "Sampler Pack",
             "custom_description": "All six of our liquid electrolytes in one go.",
-            "custom_savings": "Save up to $220.00",
+            "custom_servings": "18 Bottles / 660 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "liquid-electrolyte-variety-kit-learn-more",
-            "form_text": "Energy, Brain Health, Anti-Bloat, Immune Support,  Hydration + extra-strength Rescue Drops",
-            "first_supply": "3 Mo Supply (660 servings), Dopp Kit, 1 Free Gift",
-            "second_supply": "6 Mo Supply (1,320 servings), Dopp Kit, 3 Free Gifts",
+            "form_image": "shopify://shop_images/liquid_v_kit_18.png",
+            "form_text": "3 Month Supply of All Our Liquid Electrolytes",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_DNHd8d": {
+        "product_pRB4L8": {
           "type": "product",
           "settings": {
-            "heading": "ocean-electrolyte-kit-hsa-fsa",
+            "heading": "ocean-electrolyte-kit",
             "image": "shopify://shop_images/LP_HSAFSA_OEK.jpg",
             "show_tags": true,
             "custom_tags": "Starter Pack",
             "custom_description": "Our original ocean-powered hydration routine in 2 form factors.",
-            "custom_savings": "Save up to $164.50",
+            "custom_servings": "9 Bottles + 3 Jars / 495 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "ocean-electrolyte-kit-learn-more",
-            "form_text": "Hydration Drops + Rescue Salt",
-            "first_supply": "3 Mo Supply (495 servings), Dopp Kit, 1 Free Gift",
-            "second_supply": "6 Mo Supply (990 servings), Dopp Kit, 3 Free Gifts",
+            "form_image": "shopify://shop_images/ocean_e_kit_9_3.png",
+            "form_text": "9 Hydration Drops + 3 Rescue Salt",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         }
       },
       "block_order": [
-        "product_ntiHVG",
-        "product_CRWFC8",
-        "product_ypWGFk",
-        "product_DNHd8d"
+        "product_qGA7FH",
+        "product_8fagR9",
+        "product_HiDTCM",
+        "product_pRB4L8"
       ],
       "settings": {
-        "subtitlehsa": "HSA/FSA Eligible<sup>*</sup>",
+        "subtitlehsa": "",
         "heading": "<span>Featured</span> Bundles",
-        "text": "The best place to start. Get our largest discounts on curated kits.",
+        "text": "Add some variety to over 3 Months worth of electrolytes. The best place to start.",
         "svgiconText3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
         "ICONtEXT3": "Free Shipping + 30-Day Guarantee",
         "svgiconText4": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
-        "ICONtEXT4": "Up To 4 Free Gifts With Every Purchase"
+        "ICONtEXT4": "Choose 3 FREE Items + 1 FREE Exclusive Gift ($67 Value)"
       }
     },
-    "collection_hsa_yDFB4Q": {
-      "type": "collection-hsa",
+    "nysale_single_products_T6DaEF": {
+      "type": "nysale-single-products",
       "blocks": {
-        "product_teYaM6": {
+        "product_Q4yBVg": {
           "type": "product",
           "settings": {
-            "heading": "hydration-drops-hsa-fsa",
+            "heading": "hydration-drops",
             "image": "shopify://shop_images/Hydration-Drops_bff22a59-38bc-4480-9e27-e6fc1e44d5aa.png",
             "show_tags": true,
             "custom_tags": "Best-Seller",
-            "custom_description": "Our flagship ocean electrolyte with 87 trace minerals.",
-            "custom_savings": "Save up to $146.50",
+            "custom_description": "Our flagship ocean<br> electrolyte + trace minerals",
+            "custom_servings": "9 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "hydration-drops-learn-more",
-            "form_text": "Hydrate & remineralize with any drink",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/hydration_9.png",
+            "form_text": "3 Month Supply / 9 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_dPWwwq": {
+        "product_VCenQb": {
           "type": "product",
           "settings": {
-            "heading": "rescue-drops-hsa-fsa",
+            "heading": "rescue-drops",
             "image": "shopify://shop_images/Rescue-Drops.png",
             "show_tags": true,
             "custom_tags": "2x pack-size!",
-            "custom_description": "Our 6x stronger, extra-strength electrolyte.",
-            "custom_savings": "Save up to $223.00",
+            "custom_description": "Our 6x stronger, extra<br>-strength electrolyte.",
+            "custom_servings": "18 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "rescue-drops-learn-more",
-            "form_text": "High-sodium, extra-strength electrolyte + trace minerals without B vitamins",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/rescue_drops_18.png",
+            "form_text": "3 Month Supply / 18 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_WLBdcp": {
+        "product_wH8En4": {
           "type": "product",
           "settings": {
-            "heading": "digestion-drops-hsa-fsa",
+            "heading": "digestion-drops",
             "image": "shopify://shop_images/Digestion_Drops.png",
             "show_tags": true,
             "custom_tags": "Cult Favorite",
             "custom_description": "Anti-bloat, gas + IBS support",
-            "custom_savings": "Save up to $155.50",
+            "custom_servings": "9 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "digestion-drops-learn-more",
-            "form_text": "3-in-1 herbal, enzyme-rich and high mineral digestive aid",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/digestion_drops_9.png",
+            "form_text": "3 Month Supply / 9 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_DFTWhh": {
+        "product_j7QDKt": {
           "type": "product",
           "settings": {
-            "heading": "brain-health-drops-hsa-fsa",
+            "heading": "brain-health-drops",
             "image": "shopify://shop_images/Brain_Health_Drops.png",
             "show_tags": true,
             "custom_tags": "New",
             "custom_description": "Clarity, brain fog, focus and neuroprotection",
-            "custom_savings": "Save up to $155.50",
+            "custom_servings": "9 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "brain-health-drops-learn-more",
-            "form_text": "Clarity, brain fog, focus and neuroprotection",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/brain_health_drops_9.png",
+            "form_text": "3 Month Supply / 9 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_tMc3kg": {
+        "product_RmDzwJ": {
           "type": "product",
           "settings": {
-            "heading": "immunity-drops-hsa-fsa",
+            "heading": "immunity-drops",
             "image": "shopify://shop_images/Immunity_Drops.png",
-            "show_tags": true,
+            "show_tags": false,
             "custom_tags": "",
             "custom_description": "3-in-1 daily immune support",
-            "custom_savings": "Save up to $155.50",
+            "custom_servings": "9 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "immunity-drops-learn-more",
-            "form_text": "3-in-1 daily immune support",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/immunity_drops_9.png",
+            "form_text": "3 Month Supply / 9 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_D8ixiC": {
+        "product_xqjG9N": {
           "type": "product",
           "settings": {
-            "heading": "energy-drops-hsa-fsa",
+            "heading": "energy-drops",
             "image": "shopify://shop_images/Energy_Drops.png",
-            "show_tags": true,
+            "show_tags": false,
             "custom_tags": "",
             "custom_description": "No-crash, no-jitters energy + lifted moods",
-            "custom_savings": "Save up to $155.50",
+            "custom_servings": "9 Bottles / 360 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "energy-drops-learn-more",
-            "form_text": "No crash, no jitters energy from clean caffeine + electrolytes.",
-            "first_supply": "360 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "720 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/energy_drops_9.png",
+            "form_text": "3 Month Supply / 9 Bottles (360 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "product_kNAJ8j": {
+        "product_NTVy8c": {
           "type": "product",
           "settings": {
-            "heading": "rescue-salt-hsa-fsa",
+            "heading": "rescue-salts",
             "image": "shopify://shop_images/Rescue_Salt.png",
-            "show_tags": true,
+            "show_tags": false,
             "custom_tags": "",
             "custom_description": "Unrefined, solar-evaporated, high-mineral sea salt",
-            "custom_savings": "Save up to $142.00",
+            "custom_servings": "9 Jars / 405 Servings",
             "Buttontext": "Learn More",
             "learn-more-handle": "rescue-salt-learn-more",
-            "form_text": "Unrefined, solar-evaporated, hand-harvested, high-mineral sea salt.",
-            "first_supply": "405 Servings, 1 Dopp Kit + 1 Gift",
-            "second_supply": "810 Servings, 1 Dopp Kit + 3 Free Gifts",
+            "form_image": "shopify://shop_images/rescue-salt_9.png",
+            "form_text": "3 Month Supply / 9 Jars (405 Servings)",
             "kit_length": "1",
-            "gift_length": "1",
+            "gift_length": "3",
             "kit_length_second": "1",
-            "gift_length_second": "3"
+            "gift_length_second": "3",
+            "delivery_message": "Delivered FREE Every 3 Months"
           }
         },
-        "image_weQyea": {
+        "image_pTyfyz": {
           "type": "image",
           "settings": {
             "image--block": "shopify://shop_images/Media_Thumbnail_1.png",
             "text_heading": "Proven to be 64% more hydrating than water alone.",
             "svgiconText7": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewbox=\"0 0 18 18\" fill=\"none\">\n<path d=\"M14.2352 9.18006L7.46595 15.9421L8.47082 16.9412L16.9414 8.47059L8.47082 0L7.46595 0.999082L14.2352 7.76112H0.000232516V9.18006H14.2352Z\" fill=\"#1F2322\"></path>\n</svg>",
             "text-button": "View Clinical Study",
-            "text_url": "#"
+            "text_url": ""
           }
         }
       },
       "block_order": [
-        "product_teYaM6",
-        "product_dPWwwq",
-        "product_WLBdcp",
-        "product_DFTWhh",
-        "product_tMc3kg",
-        "product_D8ixiC",
-        "product_kNAJ8j",
-        "image_weQyea"
+        "product_Q4yBVg",
+        "product_VCenQb",
+        "product_wH8En4",
+        "product_j7QDKt",
+        "product_RmDzwJ",
+        "product_xqjG9N",
+        "product_NTVy8c",
+        "image_pTyfyz"
       ],
       "settings": {
-        "subtitlehsa": "HSA/FSA Eligible<sup>*</sup>",
+        "subtitlehsa": "",
         "heading": "<span>Best-Selling</span> Electrolytes",
         "text": "Add-to-any-drink electrolytes and 87+ trace minerals. No sugar, sweeteners or flavors.",
         "svgiconText3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
         "ICONtEXT3": "Free Shipping + 30-Day Guarantee",
         "svgiconText4": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.40039 11.5388L9.98882 17.2L19.6004 6.80005\" stroke=\"#398200\" stroke-width=\"1.6\"></path>\n</svg>",
-        "ICONtEXT4": "Up To 4 Free Gifts With Every Purchase"
+        "ICONtEXT4": "Choose 3 FREE Items + 1 FREE Exclusive Gift ($67 Value)"
       }
     },
-    "cv_table_mVfDi6": {
-      "type": "cv_table",
+    "nysale_table_x38FeT": {
+      "type": "nysale-table",
       "settings": {
         "heading": "Setting New Standards",
         "sub_heading": "Compare Buoy with leading competitors:",
@@ -461,10 +475,11 @@
   },
   "order": [
     "main",
-    "hsa_fsa_section_BGxcpi",
-    "hsa_slider_collection_xmBxLj",
-    "collection_hsa_yDFB4Q",
-    "cv_table_mVfDi6",
+    "nysale_banner_ppAxDg",
+    "nysale_specification_f7wUMH",
+    "nysale_products_slider_qHipgH",
+    "nysale_single_products_T6DaEF",
+    "nysale_table_x38FeT",
     "hsa_faq_y98MPi",
     "hsa_chronic_review_yzRggL"
   ]
