@@ -1,0 +1,236 @@
+{{ 'quick-add-products.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add-card.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign grid = section.settings
+  assign blocks = section.blocks
+  assign base = 'quick-add-grid'
+%}
+<div class="outerFeatureddiv">
+<div
+  class="qcheck-1 {{ base }} page-width FeaturedCollectionDiv"
+  data-anchor="{{ section.settings.heading | downcase | handle }}"
+  style="scroll-margin-top: calc(var(--sticky-header-height) + 90px);"
+>
+  <div class="{{ base }}__header">
+    {% if grid.subtitlehsa != blank %}
+      <div class="subtitles">
+        {{ grid.subtitlehsa }}
+      </div>
+    {% endif %}
+    {% if grid.heading != blank %}
+      <h2 class="{{ base }}__heading">
+        {{ grid.heading }}
+      </h2>
+    {% endif %}
+    {% if grid.text != blank %}
+      <div class="{{ base }}__text sh4">
+        {{ grid.text }}
+      </div>
+    {% endif %}
+    <div class="mainhsa-fsas">
+      {% if section.settings.svgiconText3 != blank or section.settings.ICONtEXT3 != blank  %}
+        <div class="iconsvgs">
+          {{ section.settings.svgiconText3 }}
+          <p>{{ section.settings.ICONtEXT3 }}</p>
+        </div>
+      {% endif %}
+      {% if section.settings.svgiconText4 != blank or section.settings.ICONtEXT4 != blank  %}
+        <div class="iconsvgs">
+          {{ section.settings.svgiconText4 }}
+          <p>{{ section.settings.ICONtEXT4 }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if blocks != blank %}
+    <div class="outerDivSlider">
+      <div class="{{ base }}__grid itemss grid__swiper_products swiper">
+        <div class="swiper-wrapper">
+          {% for block in blocks %}
+          {% case block.type %}
+          {% when 'product' %}
+            <div class="qcheck-1 {{ base }}__grid-item swiper-slide">
+              {% render 'nysale-product-card-quick-add', content: block.settings %}
+              <div class="buttonTextLearn">
+                <a href="{{ block.settings.learn-more-handle }}" js-expand__layout>{{ block.settings.Buttontext }}</a>
+              </div>
+            </div>
+          {% endcase %}
+          {% endfor %}
+        </div>
+        <div class="wp__swiperPaginationSlider">
+          <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none"> <line x1="22.2598" y1="10.4434" x2="0.726454" y2="10.4434" stroke="#1F2322"/> <path d="M13.502 1L23.0019 10.5L13.502 20" stroke="#1F2322"/> </svg></div>
+          <div class="swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"> <line x1="2.19531" y1="10.5566" x2="23.7286" y2="10.5566" stroke="#1F2322"/> <path d="M10.9492 20L1.44923 10.5L10.9492 1.00002" stroke="#1F2322"/> </svg></div>        
+        </div>  
+      </div>
+    </div>
+  {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nysale Products Slider",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "subtitlehsa",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "svgiconText3",
+      "label": "SVG Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "ICONtEXT3",
+      "label": "Icon Text 1"
+    },
+    {
+      "type": "textarea",
+      "id": "svgiconText4",
+      "label": "SVG Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "ICONtEXT4",
+      "label": "Icon Text 2"
+    }   
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "heading",
+          "label": "Product"
+        },
+        {
+          "type": "header",
+          "content": "Primary media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "Hover media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_hover",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video_hover",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_tags",
+          "label": "Show tags?",
+          "default": false
+        },
+        {
+          "type": "liquid",
+          "id": "custom_tags",
+          "label": "Custom Tags"
+        },         
+        {
+          "type": "liquid",
+          "id": "custom_description",
+          "label": "Custom Description"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_servings",
+          "label": "Custom Servings"
+        },         
+        {
+          "type": "text",
+          "id": "Buttontext",
+          "label": "Button Text",
+          "default": "Learn More"
+        }, 
+        {
+          "type": "text",
+          "id": "learn-more-handle",
+          "label": "Page handle"
+        },         
+        {
+          "type": "header",
+          "content": "Product Form"
+        },
+        {
+          "type": "image_picker",
+          "id": "form_image",
+          "label": "Product Image"
+        },             
+        {
+          "type": "text",
+          "id": "form_text",
+          "label": "Form Text"
+        },
+        {
+          "type": "text",
+          "id": "kit_length",
+          "label": "Number of kits (ONE-TIME)"
+        }, 
+        {
+          "type": "text",
+          "id": "gift_length",
+          "label": "Number of gifts (ONE-TIME)"
+        },
+        {
+          "type": "text",
+          "id": "kit_length_second",
+          "label": "Number of kits (SUBSCRIPTION)"
+        }, 
+        {
+          "type": "text",
+          "id": "gift_length_second",
+          "label": "Number of gifts (SUBSCRIPTION)"
+        },
+        {
+          "type": "liquid",
+          "id": "delivery_message",
+          "label": "Deivery message (SUBSCRIPTION)"
+        }        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nysale Products Slider",
+      "blocks": [
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
