@@ -75,7 +75,8 @@
 
     <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
-    {% if template == 'page.Hsa-Fsa' or template == 'page.nysale' %}{% render 'style-hsa-fsa' %}{% endif %}
+    {% if template == 'page.Hsa-Fsa' %}{% render 'style-hsa-fsa' %}{% endif %}
+    {% if template == 'page.nysale' %} {{ 'nysale-page.css' | asset_url | stylesheet_tag }}{% endif %}
 
     {% comment %} <script src="{{ 'jquery.min.js' | asset_url }}"></script> {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -84,7 +85,8 @@
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     {% comment %} <script src="{{ 'lazysizes.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    {% if template == 'page.Hsa-Fsa' or template == 'page.nysale' %}<script src="{{ 'page-hsa-fsa-script.js' | asset_url }}" defer="defer"></script>{% endif %}
+    {% if template == 'page.Hsa-Fsa' %}<script src="{{ 'page-hsa-fsa-script.js' | asset_url }}" defer="defer"></script>{% endif %}
+    {% if template == 'page.nysale' %}<script src="{{ 'nysale-page.js' | asset_url }}" defer="defer"></script>{% endif %}
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
