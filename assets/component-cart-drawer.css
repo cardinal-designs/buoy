@@ -127,6 +127,7 @@
   border-radius: 10px;
   overflow: hidden;
   display: block;
+  object-fit: contain;
 }
 .cart-drawer__item-content {
   width: 100%;
