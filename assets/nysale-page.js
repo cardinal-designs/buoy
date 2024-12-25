@@ -282,33 +282,49 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
   })  
 
-  var swiper = new Swiper(".grid__swiper_products",{
-    freeMode: true,
-    mousewheel: {
-      forceToAxis: true,
-    },
-    keyboard: {
-      enabled: true,
-    },     
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1.22,
-        spaceBetween: 18,
-      },      
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 18,
+  let SwiperDragged;
+  const DraggedSlider = async ()=> {
+     SwiperDragged = new Swiper(".grid__swiper_products",{
+      freeMode: true,
+      mousewheel: {
+        forceToAxis: true,
       },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 18,
+      keyboard: {
+        enabled: true,
+      },     
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.22,
+          spaceBetween: 18,
+        },      
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 18,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 18,
+        }
       }
-    }    
-  });
+    });
+  }
+  
+  const breakpointChecker = function() {
+     if ( breakpoint.matches === true ) {
+        if ( SwiperDragged !== undefined ) SwiperDragged.destroy( true, true );
+        return;
+     } else if ( breakpoint.matches === false ) {
+        return DraggedSlider();
+     }
+  };
+  
+  const breakpoint = window.matchMedia( '(max-width:749px)' );
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
   document.querySelector('.jsclicalcondition').addEventListener('click', function (e) {
     e.preventDefault();
