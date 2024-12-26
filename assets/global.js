@@ -3061,6 +3061,18 @@ class QuickAddCard extends HTMLElement {
   }
 
   handleToggle() {
+
+    if ( (this.querySelector('[data-toggle]').classList.contains('nysale_GridToggleMobile')) && (window.screen.width < 769 ) ){
+        let IndexMapped = this.querySelector('[data-map-index]').getAttribute(`data-map-index`);
+        document.querySelector(`[data-mobile-index="${IndexMapped}"]`).setAttribute('data-open','true');
+        document.body.classList.add('active_slider_quick');
+        var ua = navigator?.userAgent?.toLowerCase(); 
+        ua.indexOf('safari') != -1 ? ( ua.indexOf('chrome') > -1 ? '' : document?.body?.classList.add('SafariBrowserObserver') ) : '';      
+        document.querySelector(`[data-mobile-index="${IndexMapped}"]`).classList.add('activated');
+        document.querySelector('.Mobile__Grid__LayoutQuickAdd').classList.add('OverlayMasked');
+      
+    }else{    
+    
     if (this.dataset.open == "false") {
       const closeOpenCards = document.querySelectorAll(
         "quick-add-card[data-open='true']"
@@ -3093,6 +3105,7 @@ class QuickAddCard extends HTMLElement {
           .querySelector(".amped-wrapper")
           .classList.remove("hide-mobile");
     }
+   }
   }
 
   handlePurchaseTypeChange(event) {
