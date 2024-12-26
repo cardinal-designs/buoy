@@ -1781,9 +1781,15 @@ body .clinical-trial-drawer, body .supplement-side-drawer {
 }
 /* cart drawer end */
 /* quick add section css start */
+.Mobile__Grid__LayoutQuickAdd {
+    height: 0;
+}
+.Mobile__Grid__LayoutQuickAdd.OverlayMasked {
+    height: auto;
+}
 .LearnMoreLayout__container, body .clinical-trial-drawer, body .supplement-side-drawer {
     transition: ease all .5s !important;
-}
+} 
 .reviews-grid__header .reviews-grid__header-right {
     display: none;
 }
@@ -1818,9 +1824,9 @@ body .quick-add__form .product-form__buttons .button {
 .active_slider_quick.SafariBrowserObserver .outerFeatureddiv {
     overflow: initial;
 }
-.active_slider_quick .outerDivSlider .quick-add-grid__grid .swiper-wrapper .swiper-slide {
+/* .active_slider_quick .outerDivSlider .quick-add-grid__grid .swiper-wrapper .swiper-slide {
     transform: inherit !important;
-}
+} */
 .active_slider_quick .outerDivSlider .quick-add-grid__grid {
     position: relative;
     z-index: 2;
@@ -1828,10 +1834,10 @@ body .quick-add__form .product-form__buttons .button {
 .active_slider_quick #mcforms-2335-5029 {
     display: none !important;
 }
-.active_slider_quick .outerDivSlider .quick-add-grid__grid .swiper-wrapper {
+/* .active_slider_quick .outerDivSlider .quick-add-grid__grid .swiper-wrapper {
     z-index: 9999999999;
     transform: inherit !important;
-}
+} */
 .active_slider_quick .outerDivSlider .quick-add-grid__grid:before, .active_slider_quick #accessiblyAppWidgetButton {
     display: none !important;
 }

@@ -52,7 +52,7 @@
           {% case block.type %}
           {% when 'product' %}
             <div class="qcheck-1 {{ base }}__grid-item swiper-slide">
-              {% render 'nysale-product-card-quick-add', content: block.settings %}
+              {% render 'nysale-product-card-quick-add-uq', content: block.settings %}
               <div class="buttonTextLearn">
                 <a href="{{ block.settings.learn-more-handle }}" js-expand__layout>{{ block.settings.Buttontext }}</a>
               </div>
@@ -63,7 +63,22 @@
         <div class="wp__swiperPaginationSlider">
           <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none"> <line x1="22.2598" y1="10.4434" x2="0.726454" y2="10.4434" stroke="#1F2322"/> <path d="M13.502 1L23.0019 10.5L13.502 20" stroke="#1F2322"/> </svg></div>
           <div class="swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"> <line x1="2.19531" y1="10.5566" x2="23.7286" y2="10.5566" stroke="#1F2322"/> <path d="M10.9492 20L1.44923 10.5L10.9492 1.00002" stroke="#1F2322"/> </svg></div>        
-        </div>  
+        </div> 
+        {% comment %} MOBILE QUICK ADD STRUCTURE APPEND {% endcomment %}
+        <div class="Mobile__Grid__LayoutQuickAdd">
+          <div class="Mobile__ContainerQuickAdd">
+            <div class="Mobile_quickAddOverlay"></div>
+            <div class="Mobile__ElementStructure">
+              {% for block in blocks %}
+                {% case block.type %}
+                {% when 'product' %}     
+                  {% render 'nysale-product-card-quick-add-slider', content: block.settings %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% comment %} MOBILE QUICK ADD STRUCTURE APPEND {% endcomment %}
       </div>
     </div>
   {% endif %}
