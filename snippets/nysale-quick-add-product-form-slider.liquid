@@ -1,0 +1,317 @@
+{% liquid
+  assign product_form_id = 'product-form-' | append: p.id
+  assign currentVariant = p.selected_or_first_available_variant
+
+  if p.selling_plan_groups.size > 0
+    assign requiresPlan = p.requires_selling_plan
+    assign selectedAllocation = ''
+    assign currentAllocations = currentVariant.selling_plan_allocations
+  endif
+%}
+
+<product-form data-form-type="product-card" class="product-form">
+  {% form 'product',
+    p,
+    id: product_form_id,
+    data-smartrr-form-id: p.id,
+    class: 'form',
+    novalidate: 'novalidate',
+    data-type: 'add-to-cart-form'
+  %}
+    {% capture variantMetafield %}
+      <select class="js-variant-metafield hidden">
+        {% for variant in p.variants %}
+          <option value="{{ variant.id }}" data-otp-text="{{ variant.metafields.custom.one_time_purchase_subtext }}" data-subscription_text="{{ variant.metafields.custom.subscription_text }}"></option>
+        {% endfor %}
+      </select>
+    {% endcapture %}
+    {% unless p.has_only_default_variant %}
+      <variant-radios
+        class="no-js-hidden hidden"
+        data-section="{{ section.id }}"
+        data-product="{{ p.id }}"
+        data-url="{{ p.url }}"
+        data-update-url="false"
+        data-form-type="product-card"
+      >
+        {%- for option in p.options_with_values -%}
+          {% assign optionIndex = forloop.index0 %}
+          {% assign values = '' %}
+          <fieldset class="js product-form__input">
+            {%- for variant in p.variants -%}
+              {% assign value = variant.options[optionIndex] %}
+              {%- unless values contains value -%}
+                {% assign values = values | join: ',' %}
+                {% assign values = values | append: ',' | append: value %}
+                {% assign values = values | split: ',' %}
+                {% assign my_fields = variant.metafields.custom %}
+
+                <span class="Variant_Blocks" data-id="{{ variant.id }}">
+                  <input
+                    type="radio"
+                    id="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="product-form-{{ p.id }}"
+                    {% if forloop.index == 2 %}
+                      checked
+                    {% endif %}
+                  >
+                  <label for="{{ p.id }}-{{ option.name }}-{{ forloop.index0 }}">
+                    <div class="wp_price_titlecontainer">
+                      <span class="Variant_Title">
+                        <span class="custom-radio"> </span>
+                        {{ value }}
+                      </span>
+                      <div class="quick_price">
+                        {% unless product.metafields.custom.hide_subscription %}
+                          {% if variant.selling_plan_allocations[0].price %}
+                            {{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}
+                          {% else %}
+                            {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                              {% assign current_variant_price = variant.price %}
+                              {% assign one_discount_value = current_variant_price
+                                | times: variant.metafields.custom.auto_discount_percent_off
+                                | divided_by: 100
+                              %}
+                              {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+                              {{ one_final_price | money_without_trailing_zeros }}
+                            {% else %}
+                              {{ variant.price | money_without_trailing_zeros }}
+                            {% endif %}
+                          {% endif %}
+                          {% if variant.compare_at_price or variant.selling_plan_allocations[0].price %}
+                            <s>
+                              {% if variant.compare_at_price %}
+                                {{-
+                                  variant.compare_at_price
+                                  | default: variant.compare_at_price
+                                  | money_without_trailing_zeros
+                                -}}
+                              {% else %}
+                                {{- variant.price | default: variant.price | money_without_trailing_zeros -}}
+                              {% endif %}
+                            </s>
+                          {% elsif variant.metafields.custom.auto_discount_percent_off != blank
+                            and variant.selling_plan_allocations[0].price == blank
+                          %}
+                            <s>
+                              {{- variant.price | default: variant.price | money_without_trailing_zeros -}}
+                            </s>
+                          {% endif %}
+  
+                        {% else %}
+                          {% assign current_variant_price = variant.price %}
+                          {% assign one_discount_value = current_variant_price
+                            | times: variant.metafields.custom.auto_discount_percent_off
+                            | divided_by: 100
+                          %}
+                          {% assign one_final_price = current_variant_price | minus: one_discount_value %}
+  
+                          {% if variant.metafields.custom.auto_discount_percent_off != blank %}
+                            <span>{{ one_final_price | money }}</span>
+                            <s>{{ current_variant_price | money }}</s>
+                          {% elsif variant.compare_at_price != blank %}
+                            <span>{{ variant.price | money }}</span>
+                            <s>{{ variant.compare_at_price | money }}</s>
+                          {% else %}
+                            <span>{{ current_variant_price | money }}</span>
+                            <s></s>
+                          {% endif %}
+                        {% endunless %}
+                      </div>
+                    </div>
+                  </label>
+                </span>
+              {%- endunless -%}
+            {%- endfor -%}
+          </fieldset>
+        {%- endfor -%}
+        <script type="application/json">
+          {{ p.variants | json }}
+        </script>
+        {{ variantMetafield }}
+
+        <script type="application/json" class="variantMetaJSON">
+          [
+            {%- assign comma = false -%}
+            {%- for variant in p.variants -%}
+                {%- if comma -%},{%- endif -%}
+                {% assign variant_price = variant.price %}
+                {% assign one_discount_value = variant_price | times: variant.metafields.custom.auto_discount_percent_off | divided_by: 100 %}
+                {% assign one_final_price = variant_price | minus: one_discount_value %}
+                {
+                  "id": {{ variant.id }},
+                  "discount": "{{ variant.metafields.custom.auto_discount_percent_off }}",
+                  "one_discounted_price": "{{ one_final_price | money_without_trailing_zeros }}",
+                  "price": "{{ variant_price | money_without_trailing_zeros }}",
+                  "compare_price": "{{ variant.compare_at_price | money_without_trailing_zeros }}",
+                  "subscription_price":"{{ variant.selling_plan_allocations[0].price | money_without_trailing_zeros }}"
+                }
+                {%- assign comma = true -%}
+            {%- endfor -%}
+          ]
+        </script>
+      </variant-radios>
+    {% endunless %}
+
+    {% if p.selling_plan_groups.size > 0 %}
+      <div data-rtx-subscription-{{ p.id }}-{{ section.id }}-{{ block.id }} class="selling-plan__group Nysale__SubscriptionGrouped">
+        <fieldset class="js product-form__input">
+          <span class="Variant_Blocks">
+            <input
+              type="radio"
+              id="{{ p.id }}-purchaseTypeOneTime-alter"
+              name="purchaseType"
+              value="purchaseTypeOneTime"
+              checked
+            >
+            <label for="{{ p.id }}-purchaseTypeOneTime-alter">
+              <div class="wp_price_titlecontainer">
+                <span class="Variant_Title">
+                  <span class="custom-radio"> </span>
+                  One-Time Purchase
+                </span>
+                <span
+                  class="rtx_one_time_price onetime-multi_Price"
+                  data-subprice="{{ p.metafields.custom.serving_sub_price}}"
+                  data-onetimeprice="{{ my_fields.serving_cost }}"
+                >
+                <span class="quick-add__price-onetime js-rtx_one_time_price">
+                  {{ p.variants[1].price | money }}
+                </span>
+                <s class="rtx_compare_price js-main-compare-price">
+                  {{- p.variants[1].compare_at_price | money -}}
+                </s>
+                </span>
+              </div>
+              {% if content.kit_length != blank or content.gift_length != blank %}
+                <div class="boxes__wp_gifts">
+                  {%- assign lower_limit_icon = 1 -%}
+                  {%- assign upper_limit_kit_length = content.kit_length -%}
+                  {%- assign upper_limit_gift_length = content.gift_length -%}
+                  {% for i in (lower_limit_icon..upper_limit_kit_length) -%}
+                    <span class="Icons_listed kit_ic">{{ images['drop_kit_quick_add.png'] | image_url:width:images['drop_kit_quick_add.png'].width | image_tag:preload:true }}</span>
+                  {%- endfor %}                      
+                  <span class="Icons_listed plus_ic"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"> <line x1="6.81641" y1="2.18556e-08" x2="6.81641" y2="12" stroke="#1F2322"/> <line x1="12.7773" y1="6.03857" x2="0.777344" y2="6.03857" stroke="#1F2322"/> </svg></span>
+                  {% for i in (lower_limit_icon..upper_limit_gift_length) -%}
+                    <span class="Icons_listed gift_ic"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none"> <path d="M1.80573 18.8708V7.86713H0.777344V3.80501H6.0478C5.80785 3.61648 5.64074 3.38672 5.54647 3.11574C5.4522 2.84493 5.40506 2.5605 5.40506 2.26244C5.40506 1.63393 5.62505 1.09977 6.06503 0.659964C6.50483 0.219988 7.03899 0 7.66751 0C8.06172 0 8.42165 0.0985533 8.74731 0.29566C9.07296 0.492767 9.3472 0.745577 9.57001 1.05409C9.79283 0.745577 10.0671 0.492767 10.3927 0.29566C10.7184 0.0985533 11.0783 0 11.4725 0C12.101 0 12.6352 0.219988 13.075 0.659964C13.515 1.09977 13.735 1.63393 13.735 2.26244C13.735 2.55382 13.6878 2.83662 13.5936 3.11086C13.4993 3.38509 13.3322 3.61648 13.0922 3.80501H18.6712V7.86713H17.6428V18.8708H1.80573ZM11.4725 0.719868C11.0355 0.719868 10.6691 0.867698 10.3734 1.16336C10.0778 1.45902 9.92995 1.82538 9.92995 2.26244C9.92995 2.6995 10.0778 3.06587 10.3734 3.36153C10.6691 3.65718 11.0355 3.80501 11.4725 3.80501C11.9096 3.80501 12.2759 3.65718 12.5716 3.36153C12.8673 3.06587 13.0151 2.6995 13.0151 2.26244C13.0151 1.82538 12.8673 1.45902 12.5716 1.16336C12.2759 0.867698 11.9096 0.719868 11.4725 0.719868ZM6.12493 2.26244C6.12493 2.6995 6.27276 3.06587 6.56842 3.36153C6.86408 3.65718 7.23044 3.80501 7.66751 3.80501C8.10457 3.80501 8.47093 3.65718 8.76659 3.36153C9.06225 3.06587 9.21008 2.6995 9.21008 2.26244C9.21008 1.82538 9.06225 1.45902 8.76659 1.16336C8.47093 0.867698 8.10457 0.719868 7.66751 0.719868C7.23044 0.719868 6.86408 0.867698 6.56842 1.16336C6.27276 1.45902 6.12493 1.82538 6.12493 2.26244ZM1.49721 4.52488V7.14726H9.36434V4.52488H1.49721ZM9.36434 18.1509V7.86713H2.52559V18.1509H9.36434ZM10.0842 18.1509H16.9229V7.86713H10.0842V18.1509ZM17.9513 7.14726V4.52488H10.0842V7.14726H17.9513Z" fill="#398200"/> </svg></span>
+                  {%- endfor %}     
+                  <span style="color: rgb(57, 130, 0);">($67 Value)</span>
+                </div> 
+              {% endif %}
+            </label>
+          </span>
+
+          <span class="Variant_Blocks">
+            <input
+              type="radio"
+              id="{{ p.id }}-purchaseTypeSubscription-alter"
+              name="purchaseType"
+              value="purchaseTypeSubscription"
+            >
+            <label for="{{ p.id }}-purchaseTypeSubscription-alter">
+              <div class="wp_price_titlecontainer">
+                <span class="Variant_Title">
+                  <span class="custom-radio"> </span>
+                  Subscribe
+                  <span class="quick-add__tag">Save 23%</span>
+                </span>
+                <span
+                  class="subscription-multi_Price"
+                >
+                  <span class="quick-add__price-recurring js-subscription-price">
+                    {{ p.variants[1].selling_plan_allocations[1].price | money }}
+                  </span>
+                  <s class="rtx_compare_price js-sub-compare-price">
+                    {{-
+                      p.variants[1].compare_at_price
+                      | default: p.variants[1].price
+                      | money
+                    -}}
+                  </s>
+                </span>
+              </div>
+              {% if content.kit_length_second != blank or content.gift_length_second != blank %}
+                <div class="boxes__wp_gifts">
+                  {%- assign lower_limit_icon_second = 1 -%}
+                  {%- assign upper_limit_kit_length_kit_length_second = content.kit_length_second -%}
+                  {%- assign upper_limit_gift_length_kit_length_second = content.gift_length_second -%}
+                  {% for i in (lower_limit_icon_second..upper_limit_kit_length_kit_length_second) -%}
+                    <span class="Icons_listed kit_ic">{{ images['drop_kit_quick_add.png'] | image_url:width:images['drop_kit_quick_add.png'].width | image_tag:preload:true }}</span>
+                  {%- endfor %}                      
+                  <span class="Icons_listed plus_ic"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"> <line x1="6.81641" y1="2.18556e-08" x2="6.81641" y2="12" stroke="#1F2322"/> <line x1="12.7773" y1="6.03857" x2="0.777344" y2="6.03857" stroke="#1F2322"/> </svg></span>
+                  {% for i in (lower_limit_icon_second..upper_limit_gift_length_kit_length_second) -%}
+                    <span class="Icons_listed gift_ic"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none"> <path d="M1.80573 18.8708V7.86713H0.777344V3.80501H6.0478C5.80785 3.61648 5.64074 3.38672 5.54647 3.11574C5.4522 2.84493 5.40506 2.5605 5.40506 2.26244C5.40506 1.63393 5.62505 1.09977 6.06503 0.659964C6.50483 0.219988 7.03899 0 7.66751 0C8.06172 0 8.42165 0.0985533 8.74731 0.29566C9.07296 0.492767 9.3472 0.745577 9.57001 1.05409C9.79283 0.745577 10.0671 0.492767 10.3927 0.29566C10.7184 0.0985533 11.0783 0 11.4725 0C12.101 0 12.6352 0.219988 13.075 0.659964C13.515 1.09977 13.735 1.63393 13.735 2.26244C13.735 2.55382 13.6878 2.83662 13.5936 3.11086C13.4993 3.38509 13.3322 3.61648 13.0922 3.80501H18.6712V7.86713H17.6428V18.8708H1.80573ZM11.4725 0.719868C11.0355 0.719868 10.6691 0.867698 10.3734 1.16336C10.0778 1.45902 9.92995 1.82538 9.92995 2.26244C9.92995 2.6995 10.0778 3.06587 10.3734 3.36153C10.6691 3.65718 11.0355 3.80501 11.4725 3.80501C11.9096 3.80501 12.2759 3.65718 12.5716 3.36153C12.8673 3.06587 13.0151 2.6995 13.0151 2.26244C13.0151 1.82538 12.8673 1.45902 12.5716 1.16336C12.2759 0.867698 11.9096 0.719868 11.4725 0.719868ZM6.12493 2.26244C6.12493 2.6995 6.27276 3.06587 6.56842 3.36153C6.86408 3.65718 7.23044 3.80501 7.66751 3.80501C8.10457 3.80501 8.47093 3.65718 8.76659 3.36153C9.06225 3.06587 9.21008 2.6995 9.21008 2.26244C9.21008 1.82538 9.06225 1.45902 8.76659 1.16336C8.47093 0.867698 8.10457 0.719868 7.66751 0.719868C7.23044 0.719868 6.86408 0.867698 6.56842 1.16336C6.27276 1.45902 6.12493 1.82538 6.12493 2.26244ZM1.49721 4.52488V7.14726H9.36434V4.52488H1.49721ZM9.36434 18.1509V7.86713H2.52559V18.1509H9.36434ZM10.0842 18.1509H16.9229V7.86713H10.0842V18.1509ZM17.9513 7.14726V4.52488H10.0842V7.14726H17.9513Z" fill="#398200"/> </svg></span>
+                  {%- endfor %}
+                  <span style="color: rgb(57, 130, 0);">($67 Value)</span>
+                </div>  
+              {% endif %}
+              {% if content.delivery_message != blank %}
+                <div class="DeliveryMsg__Grid">
+                  <span class="deliverymsgIcn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"> <path d="M7.50066 13.8622C6.70618 13.8622 5.96157 13.7138 5.26683 13.4172C4.57208 13.1206 3.96484 12.7126 3.44511 12.1935C2.92537 11.6743 2.51747 11.068 2.22142 10.3745C1.92537 9.68105 1.77734 8.93621 1.77734 8.14003H2.84189C2.84189 9.4346 3.29466 10.5339 4.20019 11.4379C5.10572 12.3419 6.20527 12.7939 7.49883 12.7939C8.79136 12.7939 9.89025 12.3414 10.7955 11.4365C11.7007 10.5316 12.1534 9.43273 12.1534 8.14003C12.1534 6.84544 11.714 5.74615 10.8353 4.84215C9.95666 3.93815 8.86951 3.48615 7.57389 3.48615H7.21452L8.33272 4.60435L7.65847 5.29049L5.29059 2.91889L7.65847 0.551025L8.33272 1.22528L7.13639 2.41787H7.49577C8.29153 2.41787 9.03689 2.56619 9.73184 2.86284C10.4268 3.15949 11.0339 3.56739 11.553 4.08653C12.0721 4.60566 12.48 5.21218 12.7767 5.90607C13.0733 6.59998 13.2217 7.34421 13.2217 8.13876C13.2217 8.9333 13.0736 9.67781 12.7775 10.3723C12.4814 11.0668 12.0734 11.674 11.5536 12.1939C11.0338 12.7138 10.427 13.1218 9.73314 13.4179C9.0393 13.7141 8.29514 13.8622 7.50066 13.8622Z" fill="#797B7A"/> </svg></span>
+                  <span>{{ content.delivery_message }}</span>
+                </div>
+              {% endif %}
+              {%- if my_fields.supply_time != blank -%}
+                <span
+                  class="Subscription_Subtext"
+                >
+                  Cancel Anytime, Money Back Guarantee
+                </span>
+              {%- endif -%}
+            </label>
+          </span>
+        </fieldset>
+      </div>
+    {% endif %}
+
+    <input type="hidden" name="selling_plan" value="{{ p.selling_plan_groups[0].selling_plans[1].id }}">
+    <input type="hidden" name="id" value="{{ p.variants[1].id }}">
+
+    <div class="product-form__buttons">
+      <button
+        type="submit"
+        name="add"
+        class="button button--primary btnchk"
+        data-available="{{ currentVariant.available }}" {% unless currentVariant.available %} disabled="disabled"{% endunless %}
+      >
+      {% if currentVariant.available %}
+        <span>Add To Cart &mdash;&nbsp;</span>
+      {% else %}
+        <span>Sold Out &mdash;&nbsp;</span>
+      {% endif %}
+        <span>{{ p.variants[1].price | money }}</span>
+        <s>{{ p.variants[1].compare_at_price | money }}</s>
+      </button>
+    </div>
+
+    <div class="quick__OffersBottom">
+      <div class="quick-add__form-subtext">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"> <path d="M6.39375 11.4125L11.7 6.10625L10.8375 5.2625L6.39375 9.70625L4.14375 7.45625L3.3 8.3L6.39375 11.4125ZM7.5 15.5C6.475 15.5 5.50625 15.3031 4.59375 14.9094C3.68125 14.5156 2.88438 13.9781 2.20313 13.2969C1.52188 12.6156 0.984375 11.8188 0.590625 10.9063C0.196875 9.99375 0 9.025 0 8C0 6.9625 0.196875 5.9875 0.590625 5.075C0.984375 4.1625 1.52188 3.36875 2.20313 2.69375C2.88438 2.01875 3.68125 1.48438 4.59375 1.09063C5.50625 0.696875 6.475 0.5 7.5 0.5C8.5375 0.5 9.5125 0.696875 10.425 1.09063C11.3375 1.48438 12.1313 2.01875 12.8063 2.69375C13.4813 3.36875 14.0156 4.1625 14.4094 5.075C14.8031 5.9875 15 6.9625 15 8C15 9.025 14.8031 9.99375 14.4094 10.9063C14.0156 11.8188 13.4813 12.6156 12.8063 13.2969C12.1313 13.9781 11.3375 14.5156 10.425 14.9094C9.5125 15.3031 8.5375 15.5 7.5 15.5ZM7.5 14.375C9.275 14.375 10.7813 13.7531 12.0188 12.5094C13.2563 11.2656 13.875 9.7625 13.875 8C13.875 6.225 13.2563 4.71875 12.0188 3.48125C10.7813 2.24375 9.275 1.625 7.5 1.625C5.7375 1.625 4.23438 2.24375 2.99063 3.48125C1.74688 4.71875 1.125 6.225 1.125 8C1.125 9.7625 1.74688 11.2656 2.99063 12.5094C4.23438 13.7531 5.7375 14.375 7.5 14.375Z" fill="#1F2322"/> </svg></span>New Year’s Limited Promo
+      </div>
+      <div class="quick-add__form-subtext">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"> <path d="M6.39375 11.4125L11.7 6.10625L10.8375 5.2625L6.39375 9.70625L4.14375 7.45625L3.3 8.3L6.39375 11.4125ZM7.5 15.5C6.475 15.5 5.50625 15.3031 4.59375 14.9094C3.68125 14.5156 2.88438 13.9781 2.20313 13.2969C1.52188 12.6156 0.984375 11.8188 0.590625 10.9063C0.196875 9.99375 0 9.025 0 8C0 6.9625 0.196875 5.9875 0.590625 5.075C0.984375 4.1625 1.52188 3.36875 2.20313 2.69375C2.88438 2.01875 3.68125 1.48438 4.59375 1.09063C5.50625 0.696875 6.475 0.5 7.5 0.5C8.5375 0.5 9.5125 0.696875 10.425 1.09063C11.3375 1.48438 12.1313 2.01875 12.8063 2.69375C13.4813 3.36875 14.0156 4.1625 14.4094 5.075C14.8031 5.9875 15 6.9625 15 8C15 9.025 14.8031 9.99375 14.4094 10.9063C14.0156 11.8188 13.4813 12.6156 12.8063 13.2969C12.1313 13.9781 11.3375 14.5156 10.425 14.9094C9.5125 15.3031 8.5375 15.5 7.5 15.5ZM7.5 14.375C9.275 14.375 10.7813 13.7531 12.0188 12.5094C13.2563 11.2656 13.875 9.7625 13.875 8C13.875 6.225 13.2563 4.71875 12.0188 3.48125C10.7813 2.24375 9.275 1.625 7.5 1.625C5.7375 1.625 4.23438 2.24375 2.99063 3.48125C1.74688 4.71875 1.125 6.225 1.125 8C1.125 9.7625 1.74688 11.2656 2.99063 12.5094C4.23438 13.7531 5.7375 14.375 7.5 14.375Z" fill="#1F2322"/> </svg></span>Free US Shipping
+      </div>    
+    </div>
+  {% endform %}
+
+  <script type="application/json" id="js-product-variant-json">
+    {
+      {% for variant in p.variants %}
+        "{{ variant.id }}":{
+          "price":"{{ variant.price | money }}",
+          "compare_price":{% if variant.compare_at_price %}{{ variant.compare_at_price | money | json }}{% else %}""{% endif %},
+          "subscription_price":"{{ variant.selling_plan_allocations[0].price | money }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  </script>
+  <script id="productJSON" type="application/json">
+    {
+      {% for variant in p.variants %}
+        "{{ variant.id }}":"{{ variant.metafields.custom.checkout_msrp_text }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  </script>
+</product-form>
