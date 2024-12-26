@@ -1781,6 +1781,9 @@ body .clinical-trial-drawer, body .supplement-side-drawer {
 }
 /* cart drawer end */
 /* quick add section css start */
+.LearnMoreLayout__container, body .clinical-trial-drawer, body .supplement-side-drawer {
+    transition: .5s !important;
+}
 .reviews-grid__header .reviews-grid__header-right {
     display: none;
 }
@@ -1819,7 +1822,8 @@ body .quick-add__form .product-form__buttons .button {
     transform: inherit !important;
 }
 .active_slider_quick .outerDivSlider .quick-add-grid__grid {
-    position: relative;;
+    position: relative;
+    z-index: 2;
 }
 .active_slider_quick #mcforms-2335-5029 {
     display: none !important;
