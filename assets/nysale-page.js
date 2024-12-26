@@ -282,9 +282,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
   })  
 
-  let SwiperDragged;
-  const DraggedSlider = async ()=> {
-     SwiperDragged = new Swiper(".grid__swiper_products",{
+  
+  // const DraggedSlider = async ()=> {
+     let SwiperDragged = new Swiper(".grid__swiper_products",{
       freeMode: true,
       mousewheel: {
         forceToAxis: true,
@@ -311,20 +311,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
       }
     });
-  }
+  // }
   
-  const breakpointChecker = function() {
-     if ( breakpoint.matches === true ) {
-        if ( SwiperDragged !== undefined ) SwiperDragged.destroy( true, true );
-        return;
-     } else if ( breakpoint.matches === false ) {
-        return DraggedSlider();
-     }
-  };
+  // const breakpointChecker = function() {
+  //    if ( breakpoint.matches === true ) {
+  //       if ( SwiperDragged !== undefined ) SwiperDragged.destroy( true, true );
+  //       return;
+  //    } else if ( breakpoint.matches === false ) {
+  //       return DraggedSlider();
+  //    }
+  // };
   
-  const breakpoint = window.matchMedia( '(max-width:749px)' );
-  breakpoint.addListener(breakpointChecker);
-  breakpointChecker();
+  // const breakpoint = window.matchMedia( '(max-width:749px)' );
+  // breakpoint.addListener(breakpointChecker);
+  // breakpointChecker();
 
   document.querySelector('.jsclicalcondition').addEventListener('click', function (e) {
     e.preventDefault();

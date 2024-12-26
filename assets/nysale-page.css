@@ -1130,6 +1130,12 @@ body .okeReviews-starRating-indicator {
 } 
 /* review section end here */
 /* quick card section start here */
+.outerDivSlider .quick-add-grid__grid.swiper {
+    opacity: 0;
+}
+.outerDivSlider .quick-add-grid__grid.swiper.swiper-initialized {
+    opacity: 1;
+}
 body .quick-add__form-image img {
     object-fit: contain;
 }
@@ -1650,12 +1656,6 @@ body .quick-add__form input[type=radio]:checked+label .custom-radio:after {
     top: -1px;
     left: -1px;
 }
-.outerDivSlider .quick-add-grid__grid.swiper {
-    opacity: 0;
-}
-.outerDivSlider .quick-add-grid__grid.swiper.swiper-initialized {
-    opacity: 1;
-}
 /* quick card section end here */
 }
 @media (min-width: 769px) {
@@ -2032,11 +2032,10 @@ body:has(.Collection__Gridwrap_single .quick-add__container[data-open="true"]) {
 }
 /* faq section css end here */
 /* quick card section start here */
-.outerDivSlider .quick-add-grid__grid .swiper-wrapper {
+/* .outerDivSlider .quick-add-grid__grid .swiper-wrapper {
     gap: 18px;
     overflow: auto;
     padding: 0 40px 10px 20px;
-    transform: inherit;
 }
 .outerDivSlider .quick-add-grid__grid .swiper-wrapper::-webkit-scrollbar {
     display: none;
@@ -2054,7 +2053,7 @@ body .FeaturedCollectionDiv .quick-add-grid__header {
 }
 .outerDivSlider .quick-add-grid__grid {
     padding-right: 40px;
-}
+} */
 .new-textAboveTABLE {
     margin: 0 0 52px;
 }
