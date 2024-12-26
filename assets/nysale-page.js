@@ -264,21 +264,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelectorAll('.supplement-side-drawer').forEach((continue_shopping)=>{ continue_shopping.querySelector('.drawer__desktop-continue').classList.remove('hidden'); continue_shopping.querySelector('.drawer__mobile-continue').classList.remove('hidden');})    
   })
 
-  document.querySelectorAll('.outerDivSlider .quick-add__button').forEach((elm)=>{
-    elm.addEventListener('click', (target)=>{
-      target.preventDefault();
-      document.body.classList.add('active_slider_quick');
-      var ua = navigator?.userAgent?.toLowerCase(); 
-      ua.indexOf('safari') != -1 ? ( ua.indexOf('chrome') > -1 ? '' : document?.body?.classList.add('SafariBrowserObserver') ) : '';      
-      target.target.closest('.quick-add__container').classList.add('activated');
-    })
-  })
+  // document.querySelectorAll('.outerDivSlider .quick-add__button').forEach((elm)=>{
+  //   elm.addEventListener('click', (target)=>{
+  //     target.preventDefault();
+  //     document.body.classList.add('active_slider_quick');
+  //     var ua = navigator?.userAgent?.toLowerCase(); 
+  //     ua.indexOf('safari') != -1 ? ( ua.indexOf('chrome') > -1 ? '' : document?.body?.classList.add('SafariBrowserObserver') ) : '';      
+  //     target.target.closest('.quick-add__container').classList.add('activated');
+  //   })
+  // })
 
   document.querySelectorAll('.outerDivSlider .quick-add__close').forEach((elm)=>{
     elm.addEventListener('click', (target)=>{
       target.preventDefault();
       document.body.classList.remove('active_slider_quick');
       target.target.closest('.quick-add__container').classList.remove('activated');
+      // document.querySelector('.Mobile__Grid__LayoutQuickAdd').classList.add('hidden');
+      document.querySelector('.Mobile__Grid__LayoutQuickAdd').classList.remove('OverlayMasked');
     })
   })  
 
