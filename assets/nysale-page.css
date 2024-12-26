@@ -2036,6 +2036,7 @@ body:has(.Collection__Gridwrap_single .quick-add__container[data-open="true"]) {
     gap: 18px;
     overflow: auto;
     padding: 0 40px 10px 20px;
+    transform: inherit;
 }
 .outerDivSlider .quick-add-grid__grid .swiper-wrapper::-webkit-scrollbar {
     display: none;
