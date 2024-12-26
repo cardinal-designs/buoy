@@ -1782,7 +1782,7 @@ body .clinical-trial-drawer, body .supplement-side-drawer {
 /* cart drawer end */
 /* quick add section css start */
 .LearnMoreLayout__container, body .clinical-trial-drawer, body .supplement-side-drawer {
-    transition: .5s !important;
+    transition: ease all .5s !important;
 }
 .reviews-grid__header .reviews-grid__header-right {
     display: none;
