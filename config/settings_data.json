@@ -26,9 +26,7 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "text": "Try all of our drops with  our new<strong> <u>Liquid Electrolyte Variety Kit </u>—> </strong>",
           "link": "shopify://products/liquid-electrolyte-kit",
@@ -57,7 +55,7 @@
             "type": "block",
             "settings": {
               "block_title": "Your ocean-powered routine.",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Bundle & Save",
               "block_desc": "Support your hydration, energy, digestion, brain health and immune system in one go.",
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg"
@@ -105,7 +103,7 @@
             "type": "block",
             "settings": {
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Bundle & Save",
               "block_desc": "Your ocean-powered routine."
             }
@@ -219,7 +217,7 @@
           "bfca5931-b24f-4ac1-9b13-773176cf0945": {
             "type": "product",
             "settings": {
-              "product": "liquid-electrolyte-variety-kit",
+              "product": "liquid-electrolyte-kit-1",
               "description": "All five of our liquid electrolytes in one go.",
               "show_second_slide": false,
               "second_description": ""
@@ -266,7 +264,7 @@
             "type": "block",
             "settings": {
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Starter Kit",
               "block_desc": "Everything you need, in one go."
             }
@@ -1042,9 +1040,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "733389323033596483": {
         "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -1056,8 +1052,7 @@
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15885745614559378752": {
         "type": "shopify://apps/accessibly/blocks/app-embed/4b59303e-1141-4c8a-945f-bf4adb516864",
@@ -1071,12 +1066,6 @@
           "iconSize": "custom",
           "iconCustomSize": 30,
           "position": "middle-right"
-        }
-      },
-      "2728461494843721857": {
-        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {
         }
       },
       "10605408327587305396": {
@@ -1098,14 +1087,12 @@
       "1291562577487733835": {
         "type": "shopify://apps/black-crow-more-new-customers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   }
