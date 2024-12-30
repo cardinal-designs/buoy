@@ -44,7 +44,7 @@
     "fix_announcement": false,
     "purchase_option_default": "sub",
     "clinical_trial_display": [
-      "liquid-electrolyte-variety-kit",
+      "liquid-electrolyte-kit-1",
       "rescue-kit",
       "ocean-electrolyte-kit",
       "rescue-drops",
@@ -86,7 +86,7 @@
             "type": "block",
             "settings": {
               "block_title": "Your ocean-powered routine.",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Bundle & Save",
               "block_desc": "Support your hydration, energy, digestion, brain health and immune system in one go.",
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg"
@@ -134,7 +134,7 @@
             "type": "block",
             "settings": {
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Bundle & Save",
               "block_desc": "Your ocean-powered routine."
             }
@@ -248,7 +248,7 @@
           "bfca5931-b24f-4ac1-9b13-773176cf0945": {
             "type": "product",
             "settings": {
-              "product": "liquid-electrolyte-variety-kit",
+              "product": "liquid-electrolyte-kit-1",
               "description": "All five of our liquid electrolytes in one go.",
               "show_second_slide": false,
               "second_description": ""
@@ -295,7 +295,7 @@
             "type": "block",
             "settings": {
               "block_image": "shopify://shop_images/PDP_LEVK_Hero_1_db62982e-f294-4ed5-81cb-c6a33cc5aeb0.jpg",
-              "block_link": "shopify://products/liquid-electrolyte-variety-kit",
+              "block_link": "shopify://products/liquid-electrolyte-kit-1",
               "badge_text": "Starter Kit",
               "block_desc": "Everything you need, in one go."
             }
@@ -1559,11 +1559,6 @@
           "iconCustomSize": 30,
           "position": "middle-right"
         }
-      },
-      "2728461494843721857": {
-        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
-        "disabled": false,
-        "settings": {}
       },
       "10605408327587305396": {
         "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
