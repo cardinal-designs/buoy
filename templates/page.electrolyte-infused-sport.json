@@ -1,18 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ad2c8412-90a8-4ed0-a847-f1bc9f2b3e5b": {
       "type": "home-hero",
       "disabled": true,
       "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6f60b05b167642e3956c8f0b878ab977.mp4",
-        "mobile_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8c6d64d873ad4728992e238b581feaa9.mp4",
-        "image": "shopify:\/\/shop_images\/Hero_Hero_Image.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Hero_Image_Mobile.jpg",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/6f60b05b167642e3956c8f0b878ab977.mp4",
+        "mobile_video_url": "https://cdn.shopify.com/videos/c/o/v/8c6d64d873ad4728992e238b581feaa9.mp4",
+        "image": "shopify://shop_images/Hero_Hero_Image.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Image_Mobile.jpg",
         "review": "Over 3,000 Trusted Reviews",
         "title": "Add Functional Benefits To Any Drink",
         "text": "Unflavored Hydration Drops",
         "button_label": "Start Squeezing",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_style": "beige",
         "link_label": "",
         "link_link": "",
@@ -28,13 +37,13 @@
           "type": "block",
           "settings": {
             "product": "hydration-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a633aaa25f89406b94b0566547ec67a8.mp4"
+            "hover_video": "https://cdn.shopify.com/videos/c/o/v/a633aaa25f89406b94b0566547ec67a8.mp4"
           }
         },
         "block_URN7U6": {
           "type": "block",
           "settings": {
-            "product": "ocean-electrolyte-kit",
+            "product": "hydration-essentials-kit",
             "hover_video": ""
           }
         },
@@ -49,21 +58,21 @@
           "type": "block",
           "settings": {
             "product": "energy-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3049d69530c74c6aae4f6076319781ff.mp4"
+            "hover_video": "https://cdn.shopify.com/videos/c/o/v/3049d69530c74c6aae4f6076319781ff.mp4"
           }
         },
         "dca0e5dd-357d-4543-b722-8d65bedef3b1": {
           "type": "block",
           "settings": {
             "product": "immunity-drops",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
+            "hover_video": "https://cdn.shopify.com/videos/c/o/v/49f08c0ca84c4f17a15483bb3eeed13c.mp4"
           }
         },
         "9d231586-a60b-42ac-9721-d7ea47797c99": {
           "type": "block",
           "settings": {
             "product": "wellness-kit",
-            "hover_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3298af6ff2844f28bae823974c5c0fbb.mp4"
+            "hover_video": "https://cdn.shopify.com/videos/c/o/v/3298af6ff2844f28bae823974c5c0fbb.mp4"
           }
         },
         "block_weftjX": {
@@ -84,10 +93,10 @@
         "block_weftjX"
       ],
       "settings": {
-        "title": "<h1>Elevate Your Game with Electrolyte-Infused Sports Drinks<\/h1>",
-        "text": "<p style=\"font-size: 15px\">Unlock the secret to peak athletic performance with electrolyte-infused sports drinks. Designed for the dedicated athlete in you, these hydration powerhouses are more than just refreshments. They're your key to maintaining crucial hydration and elevating your game to new heights.<br><br>\n\nWith the right balance of essential electrolytes, every sip you take works to fuel your muscles, sharpen your focus, and keep you pushing forward, no matter the challenge. Discover how integrating electrolyte-rich sports drinks into your routine can transform your approach to hydration and unlock your full athletic potential.<\/p>",
+        "title": "<h1>Elevate Your Game with Electrolyte-Infused Sports Drinks</h1>",
+        "text": "<p style=\"font-size: 15px\">Unlock the secret to peak athletic performance with electrolyte-infused sports drinks. Designed for the dedicated athlete in you, these hydration powerhouses are more than just refreshments. They're your key to maintaining crucial hydration and elevating your game to new heights.<br><br>\n\nWith the right balance of essential electrolytes, every sip you take works to fuel your muscles, sharpen your focus, and keep you pushing forward, no matter the challenge. Discover how integrating electrolyte-rich sports drinks into your routine can transform your approach to hydration and unlock your full athletic potential.</p>",
         "shop_all_label": "Elevate Your Hydration Now",
-        "shop_all_link": "https:\/\/justaddbuoy.com\/collections\/all",
+        "shop_all_link": "https://justaddbuoy.com/collections/all",
         "promo_link_text": "",
         "promo_link": "",
         "background": "bg_color",
@@ -101,19 +110,19 @@
         "972554b0-f893-4fbb-9013-5f80d5a5209d": {
           "type": "block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/CVS_Health_Logo_Charcoal.png"
+            "logo": "shopify://shop_images/CVS_Health_Logo_Charcoal.png"
           }
         },
         "ab756480-b649-4d6a-907d-d03203ded3a7": {
           "type": "block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Walgreens-New-Icon.png"
+            "logo": "shopify://shop_images/Walgreens-New-Icon.png"
           }
         },
         "058fd1fa-4f6a-4d9b-88ad-18fe67eceef5": {
           "type": "block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Urban_Outfitters.png"
+            "logo": "shopify://shop_images/Urban_Outfitters.png"
           }
         }
       },
@@ -135,29 +144,29 @@
         "2f43efe1-ad3b-4f4d-a788-5f9b10a12e2c": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">💦 Hydration Balance<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Electrolytes are critical in using fluids effectively, maintaining hydration, and avoiding dehydration. Losing electrolytes through sweat during intense activity makes replenishing them essential for fluid balance and performance.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">💦 Hydration Balance</h3>",
+            "text": "<p style=\"font-size: 15px\">Electrolytes are critical in using fluids effectively, maintaining hydration, and avoiding dehydration. Losing electrolytes through sweat during intense activity makes replenishing them essential for fluid balance and performance.</p>"
           }
         },
         "567d47d4-055a-4540-b107-674adf874ee1": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">💪 Muscle Function<\/h3>",
-            "text": "<p style=\"font-size: 15px\">They influence muscle contractions and nerve communications, with low levels leading to weakness, cramps, and fatigue. Maintaining electrolyte levels supports muscle efficiency, enhancing strength, endurance, and recovery.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">💪 Muscle Function</h3>",
+            "text": "<p style=\"font-size: 15px\">They influence muscle contractions and nerve communications, with low levels leading to weakness, cramps, and fatigue. Maintaining electrolyte levels supports muscle efficiency, enhancing strength, endurance, and recovery.</p>"
           }
         },
         "4326ad19-ec24-4b0a-840d-9a17b0914868": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">🦵 Preventing Cramps<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Cramps often indicate electrolyte imbalances. Electrolyte-infused sports drinks provide necessary minerals to prevent cramps, ensuring smooth muscle and nerve function.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">🦵 Preventing Cramps</h3>",
+            "text": "<p style=\"font-size: 15px\">Cramps often indicate electrolyte imbalances. Electrolyte-infused sports drinks provide necessary minerals to prevent cramps, ensuring smooth muscle and nerve function.</p>"
           }
         },
         "c8221bc7-1128-47ef-aa8c-bc586af3f7f1": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">🔬 Science-Backed Benefits<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Research shows electrolyte balance is key for improving endurance, reducing cramping and dehydration risks, and aiding recovery. Consuming electrolyte-rich sports drinks supports performance and recovery.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">🔬 Science-Backed Benefits</h3>",
+            "text": "<p style=\"font-size: 15px\">Research shows electrolyte balance is key for improving endurance, reducing cramping and dehydration risks, and aiding recovery. Consuming electrolyte-rich sports drinks supports performance and recovery.</p>"
           }
         }
       },
@@ -169,9 +178,9 @@
       ],
       "settings": {
         "video_url": "",
-        "image": "shopify:\/\/shop_images\/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
-        "title": "<h2 style=\"font-size: 35px\">Why Electrolytes Matter in Sports Hydration<\/h2>",
-        "text_bottom": "<p style=\"font-size: 15px\">Electrolytes are vital for athletic performance, ensuring hydration, muscle function, and endurance. Key minerals like sodium, potassium, magnesium, and calcium are essential for fluid balance, muscle energy, and cell hydration.<br><br>\n\nElectrolytes are crucial for anyone pushing their limits in physical activities. Using electrolyte-rich hydration solutions is essential for optimal health and performance.<\/p>",
+        "image": "shopify://shop_images/01-HOW_TO_SQUEEZE_A_BUOY_4x5_06_2x_2cb6bcbe-b181-4e77-8255-c72f62d49586.png",
+        "title": "<h2 style=\"font-size: 35px\">Why Electrolytes Matter in Sports Hydration</h2>",
+        "text_bottom": "<p style=\"font-size: 15px\">Electrolytes are vital for athletic performance, ensuring hydration, muscle function, and endurance. Key minerals like sodium, potassium, magnesium, and calcium are essential for fluid balance, muscle energy, and cell hydration.<br><br>\n\nElectrolytes are crucial for anyone pushing their limits in physical activities. Using electrolyte-rich hydration solutions is essential for optimal health and performance.</p>",
         "background": "",
         "add_top_border": true,
         "add_bottom_border": false
@@ -183,51 +192,51 @@
         "038404e6-07ff-4263-843c-2cc50033bfd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buoy_on_a_Plane_1_-min.jpg",
-            "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
+            "image": "shopify://shop_images/Buoy_on_a_Plane_1_-min.jpg",
+            "tags": "<li>Hydration</li>\n<li>Immunity</li>\n<li>Energy</li>",
             "title": "Easy electrolyte boost",
             "content": "\"You have no idea how much I have come to use Buoy. I take these drops with me everywhere.\"",
             "reviewer_name": "Remy H",
-            "video_poster": "shopify:\/\/shop_images\/IMG_1573-min.jpg",
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6ee13c9393e5410bbe30e14d5fb0aadb.mov"
+            "video_poster": "shopify://shop_images/IMG_1573-min.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/6ee13c9393e5410bbe30e14d5fb0aadb.mov"
           }
         },
         "23a5c523-2b5a-4ebe-a612-0c0050ccfa43": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_4CA27A23F307-1.jpg",
-            "tags": "<li>Hydration<\/li>\n<li>Immunity<\/li>\n<li>Energy<\/li>",
+            "image": "shopify://shop_images/IMG_4CA27A23F307-1.jpg",
+            "tags": "<li>Hydration</li>\n<li>Immunity</li>\n<li>Energy</li>",
             "title": "Sugar free hydration",
             "content": "Great hydration that mixes well with almost anything. Love that it's sugar and stevia free without natural flavors.",
             "reviewer_name": "Abigail G",
-            "video_poster": "shopify:\/\/shop_images\/IMG_1569.jpg",
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2da558ba094b41db81352ab9252f7c8e.mov"
+            "video_poster": "shopify://shop_images/IMG_1569.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/2da558ba094b41db81352ab9252f7c8e.mov"
           }
         },
         "71adfca4-a0ed-46ea-a2c4-30e35bd0b1b4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_FCC75D1016B9-1.jpg",
-            "tags": "<li>Hydration<\/li>",
+            "image": "shopify://shop_images/IMG_FCC75D1016B9-1.jpg",
+            "tags": "<li>Hydration</li>",
             "title": "Amazingly hydrated",
             "content": "I've finally found my go to electrolyte product that I can add to all my drinks",
             "reviewer_name": "Christy V",
-            "video_poster": "shopify:\/\/shop_images\/IMG_11441F06E148-1.jpg",
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cedf03267ec940f2b31c036f8347a9cd.mov",
-            "video_image": "shopify:\/\/shop_images\/Image_Section_4b_D.png"
+            "video_poster": "shopify://shop_images/IMG_11441F06E148-1.jpg",
+            "video": "https://cdn.shopify.com/videos/c/o/v/cedf03267ec940f2b31c036f8347a9cd.mov",
+            "video_image": "shopify://shop_images/Image_Section_4b_D.png"
           }
         },
         "f54ea5f1-1ba4-4eda-bc34-aa7bbd9f2ce3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_4b_D.png",
-            "tags": "<li>Hydration<\/li>",
+            "image": "shopify://shop_images/Image_Section_4b_D.png",
+            "tags": "<li>Hydration</li>",
             "title": "Electrolytes for recovery!",
             "content": "Whether it's from a workout or from a night out, these electrolytes are a part of my recovery routine.",
             "reviewer_name": "Nick N",
-            "video_poster": "shopify:\/\/shop_images\/IMG_1578-min.jpg",
-            "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/IMG_1578-min.jpg?v=1676327238",
-            "video_image": "shopify:\/\/shop_images\/IMG_1578-min.jpg"
+            "video_poster": "shopify://shop_images/IMG_1578-min.jpg",
+            "video": "https://cdn.shopify.com/s/files/1/0267/3351/0727/files/IMG_1578-min.jpg?v=1676327238",
+            "video_image": "shopify://shop_images/IMG_1578-min.jpg"
           }
         }
       },
@@ -242,7 +251,7 @@
         "head-title": "3,000 +trusted reviews",
         "sub-text": "",
         "button_label": "Read All Reviews",
-        "button_link": "shopify:\/\/pages\/reviews",
+        "button_link": "shopify://pages/reviews",
         "background": "bg_color",
         "add_top_border": true,
         "add_bottom_border": false
@@ -254,33 +263,33 @@
         "b46d22a2-dc4c-4952-920e-df027e14433e": {
           "type": "dropdown",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">🌱 Natural Ingredients<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Every sip of Buoy is packed with naturally sourced electrolytes and minerals, free from synthetic compounds, offering a cleaner, more effective hydration experience.<\/p>",
-            "img": "shopify:\/\/shop_images\/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
+            "title": "<h3 style=\"font-size: 25px\">🌱 Natural Ingredients</h3>",
+            "text": "<p style=\"font-size: 15px\">Every sip of Buoy is packed with naturally sourced electrolytes and minerals, free from synthetic compounds, offering a cleaner, more effective hydration experience.</p>",
+            "img": "shopify://shop_images/BUOYHYDRATION_55833_2x_c96ff4d0-ded5-48e1-8839-92e2c468c7cf.png"
           }
         },
         "e704a7e2-eec8-427a-b18c-3fb1f1858281": {
           "type": "dropdown",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">⚖️ Optimal Electrolyte Balance<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Precision in the formula means the right mix of sodium, potassium, magnesium, and calcium to support hydration and aid in recovery, without overloading your system with unnecessary salts.<\/p>",
-            "img": "shopify:\/\/shop_images\/Ingredients_Minerals.png"
+            "title": "<h3 style=\"font-size: 25px\">⚖️ Optimal Electrolyte Balance</h3>",
+            "text": "<p style=\"font-size: 15px\">Precision in the formula means the right mix of sodium, potassium, magnesium, and calcium to support hydration and aid in recovery, without overloading your system with unnecessary salts.</p>",
+            "img": "shopify://shop_images/Ingredients_Minerals.png"
           }
         },
         "07c66f31-6bda-4e4c-9097-b51e4c178122": {
           "type": "dropdown",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">🚫 No Added Sugars<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Buoy focuses on hydration without the high sugar content found in traditional sports drinks, eliminating unnecessary calories and promoting a healthier lifestyle.<\/p>",
-            "img": "shopify:\/\/shop_images\/Ingredients_Antioxidants.png"
+            "title": "<h3 style=\"font-size: 25px\">🚫 No Added Sugars</h3>",
+            "text": "<p style=\"font-size: 15px\">Buoy focuses on hydration without the high sugar content found in traditional sports drinks, eliminating unnecessary calories and promoting a healthier lifestyle.</p>",
+            "img": "shopify://shop_images/Ingredients_Antioxidants.png"
           }
         },
         "98a930a8-d687-48b2-a08a-85c17f6c1e3b": {
           "type": "dropdown",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">❌ Free from Artificial Colors or Flavors<\/h3>",
-            "text": "<p style=\"font-size: 15px\">Pure, uncomplicated, and transparent, Buoy's hydration supplements are devoid of artificial colors and flavors, aligning with the preferences of health-conscious athletes and individuals.<br><br>\n\nBuoy's commitment to natural, effective hydration solutions means you can push harder, recover faster, and perform at your best, all while supporting your body with what it genuinely needs.<\/p>",
-            "img": "shopify:\/\/shop_images\/Ingredients_B_Vitamins.png"
+            "title": "<h3 style=\"font-size: 25px\">❌ Free from Artificial Colors or Flavors</h3>",
+            "text": "<p style=\"font-size: 15px\">Pure, uncomplicated, and transparent, Buoy's hydration supplements are devoid of artificial colors and flavors, aligning with the preferences of health-conscious athletes and individuals.<br><br>\n\nBuoy's commitment to natural, effective hydration solutions means you can push harder, recover faster, and perform at your best, all while supporting your body with what it genuinely needs.</p>",
+            "img": "shopify://shop_images/Ingredients_B_Vitamins.png"
           }
         }
       },
@@ -292,7 +301,7 @@
       ],
       "settings": {
         "title": "The Buoy Difference: Beyond Ordinary Sports Drinks",
-        "subtext": "<p style=\"font-size: 15px\">Buoy's hydration solutions redefine what athletes can expect from sports drinks. Moving beyond the typical, sugar-laden beverages, Buoy offers a sophisticated blend of hydration that focuses on health, performance, and natural ingredients.<br><br>\n\nUnlike ordinary sports drinks, Buoy's products boast an optimal electrolyte balance designed to match your body's needs closely, ensuring efficient hydration and nutrient delivery without the common pitfalls of excessive sugars or artificial additives.<br><br>\n\nKey features that set Buoy apart include:<\/p>",
+        "subtext": "<p style=\"font-size: 15px\">Buoy's hydration solutions redefine what athletes can expect from sports drinks. Moving beyond the typical, sugar-laden beverages, Buoy offers a sophisticated blend of hydration that focuses on health, performance, and natural ingredients.<br><br>\n\nUnlike ordinary sports drinks, Buoy's products boast an optimal electrolyte balance designed to match your body's needs closely, ensuring efficient hydration and nutrient delivery without the common pitfalls of excessive sugars or artificial additives.<br><br>\n\nKey features that set Buoy apart include:</p>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bg_color",
@@ -354,15 +363,15 @@
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Mineral Deficiencies<\/strong>",
-            "text": "The main cause of leg cramps is having low electrolyte and mineral levels. <br><br>Electrolytes—<i>specifically <strong>sodium, potassium, chloride<\/strong> and <strong>magnesium<\/strong><\/i>—are essential to proper muscle functions like contractions and repair. <br><br> If you're not replenishing them often throughout the day, you'll be at higher risk for leg cramps, especially at night when they can be the most disruptive."
+            "suptext": "<strong>Mineral Deficiencies</strong>",
+            "text": "The main cause of leg cramps is having low electrolyte and mineral levels. <br><br>Electrolytes—<i>specifically <strong>sodium, potassium, chloride</strong> and <strong>magnesium</strong></i>—are essential to proper muscle functions like contractions and repair. <br><br> If you're not replenishing them often throughout the day, you'll be at higher risk for leg cramps, especially at night when they can be the most disruptive."
           }
         },
         "995875da-7462-4aaa-a036-35bf1899a1d1": {
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Dehydration<\/strong>",
+            "suptext": "<strong>Dehydration</strong>",
             "text": "Without an adequate balance of electrolytes and fluids, your muscles can't properly relax.<br><br>Replenishing fluids and electrolytes throughout the morning, afternoon and late evening, especially for people leading an active lifestyle, is a great way to prevent leg cramps."
           }
         },
@@ -370,7 +379,7 @@
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Stress<\/strong>",
+            "suptext": "<strong>Stress</strong>",
             "text": "When stressed or feeling anxious, our muscles tense up and become  rigid, which can lead to muscle cramping.<br><br>While anxiety and stress are hard to control, having plenty of electrolytes and fluids in your body allows your body to handle excess levels of cortisol better than it would without."
           }
         },
@@ -378,7 +387,7 @@
           "type": "block",
           "settings": {
             "title": "",
-            "suptext": "<strong>Nerve Compression<\/strong>",
+            "suptext": "<strong>Nerve Compression</strong>",
             "text": "Poor posture and overworking muscle groups may restrict blood flow, which is a common cause of leg cramps.<br><br>Daily things like sitting too long in one spot, standing on hard and flat floors and even poor posture while standing and sitting may be a factor for leg cramps."
           }
         }
@@ -391,7 +400,7 @@
       ],
       "disabled": true,
       "settings": {
-        "section_title": "<strong>Common causes<\/strong> <i>of leg cramps<\/i>",
+        "section_title": "<strong>Common causes</strong> <i>of leg cramps</i>",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bottom"
@@ -403,28 +412,28 @@
         "3a944d2e-08e6-4382-b541-79f7dbb279f3": {
           "type": "pr_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Daily_Mail_1.svg",
+            "image": "shopify://shop_images/Daily_Mail_1.svg",
             "text": "\"Enter Buoy hydration drops, the easy-to-use formula that’s designed to give you a big boost of the electrolytes and trace minerals that you need every day to feel your best.\""
           }
         },
         "1a5f176f-d949-477e-a735-f63ba2c6bd80": {
           "type": "pr_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo.a477d95.svg",
+            "image": "shopify://shop_images/logo.a477d95.svg",
             "text": "“Best electrolytes for daily use\""
           }
         },
         "20f2efcc-4640-43b7-9239-3abd290c09ca": {
           "type": "pr_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
+            "image": "shopify://shop_images/Men_s_Health_Logo_2x_fb75b2f6-162d-4d37-8e7a-7cdde4f4344c.png",
             "text": "\"It's purposefully unflavored which means sugar-free, stevia, and sweetener-free\""
           }
         },
         "70b64ff0-82c1-4a54-8203-afe718ed3640": {
           "type": "pr_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
+            "image": "shopify://shop_images/inTouch_Logo_2x_a034a4c4-baef-4f4f-9b3d-6b5895d4b479.png",
             "text": "“Buoy Daily Wellness Drops will be your latest obsession.”"
           }
         }
@@ -444,9 +453,9 @@
     "08ef6276-74b2-46fa-a6d7-ff6f7f16fa88": {
       "type": "title-text",
       "settings": {
-        "title": "<h2>Tailored Hydration for<i> Every Athlete<\/i>\n<\/h2>",
+        "title": "<h2>Tailored Hydration for<i> Every Athlete</i>\n</h2>",
         "italic_title": "",
-        "text": "<p style=\"font-size: 15px; text-align: left\">Understanding that hydration needs can vary dramatically from one athlete to another, Buoy offers a range of products to suit everyone from sprinters to marathoners, weightlifters to yogis.<br><br>\n\nWhether your focus is on endurance, building strength, or quick recovery, Buoy has a hydration solution tailored to your specific athletic needs. Buoy's versatility stands out in its suitability for athletes of all levels:<br><br>\n\n<b>Endurance Athletes<\/b>: For long-distance runners, cyclists, and triathletes, Buoy's formula supports sustained performance and aids in recovery, helping you go the distance.<br><br>\n\n<b>Strength and Power Athletes<\/b>: Bodybuilders and strength trainers will find Buoy's electrolyte balance supports muscle function and growth, aiding in both performance and recovery.<br><br>\n\n<b>Team Sports and High-Intensity Training<\/b>: Athletes engaged in soccer, basketball, CrossFit, and similar disciplines benefit from Buoy's rapid rehydration capabilities, keeping them agile, focused, and ready for action.<br><br>\n\n<b>Recovery and Wellness<\/b>: Post-workout recovery or active rest days, Buoy helps replenish lost minerals and supports the body's natural recovery processes, ensuring you're ready for the next challenge.<br><br>\n\nWith Buoy, athletes and active individuals no longer have to compromise between hydration and health. The tailored, natural, and effective hydration solutions ensure that whatever your sport, level, or goal, you're supported every sip of the way.<\/p><br><br>\n\n<a href=\"https:\/\/justaddbuoy.com\/collections\/all\" class=\"button\">Find Your Perfect Hydration Match with Buoy<\/a>",
+        "text": "<p style=\"font-size: 15px; text-align: left\">Understanding that hydration needs can vary dramatically from one athlete to another, Buoy offers a range of products to suit everyone from sprinters to marathoners, weightlifters to yogis.<br><br>\n\nWhether your focus is on endurance, building strength, or quick recovery, Buoy has a hydration solution tailored to your specific athletic needs. Buoy's versatility stands out in its suitability for athletes of all levels:<br><br>\n\n<b>Endurance Athletes</b>: For long-distance runners, cyclists, and triathletes, Buoy's formula supports sustained performance and aids in recovery, helping you go the distance.<br><br>\n\n<b>Strength and Power Athletes</b>: Bodybuilders and strength trainers will find Buoy's electrolyte balance supports muscle function and growth, aiding in both performance and recovery.<br><br>\n\n<b>Team Sports and High-Intensity Training</b>: Athletes engaged in soccer, basketball, CrossFit, and similar disciplines benefit from Buoy's rapid rehydration capabilities, keeping them agile, focused, and ready for action.<br><br>\n\n<b>Recovery and Wellness</b>: Post-workout recovery or active rest days, Buoy helps replenish lost minerals and supports the body's natural recovery processes, ensuring you're ready for the next challenge.<br><br>\n\nWith Buoy, athletes and active individuals no longer have to compromise between hydration and health. The tailored, natural, and effective hydration solutions ensure that whatever your sport, level, or goal, you're supported every sip of the way.</p><br><br>\n\n<a href=\"https://justaddbuoy.com/collections/all\" class=\"button\">Find Your Perfect Hydration Match with Buoy</a>",
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
@@ -456,8 +465,8 @@
       "type": "profile-table",
       "settings": {
         "title": "How Buoy's electrolytes stack up",
-        "desktop_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"><\/path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"><\/path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"><\/path>\n      <\/g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <\/g>\n    <\/g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+<\/tspan><\/text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25<\/tspan><\/text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy<\/tspan><\/text>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
-        "mobile_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"><\/path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"><\/path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/path>\n      <\/g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"><\/line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"><\/line>\n    <\/g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, <\/tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean <\/tspan><tspan x=\"0\" y=\"22\">Minerals<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not <\/tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink<\/tspan><\/text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving<\/tspan><\/text>\n    <\/g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy<\/tspan><\/text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅<\/tspan><\/text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25<\/tspan><\/text>\n    <\/g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others<\/tspan><\/text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫<\/tspan><\/text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+<\/tspan><\/text>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "desktop_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"964\" height=\"529\" viewbox=\"0 0 964 529\">\n  <g id=\"Comparison_Chart_D\" data-name=\"Comparison Chart_D\" transform=\"translate(-201 -3800)\">\n    <g id=\"Chart\">\n      <path id=\"Rectangle_785\" data-name=\"Rectangle 785\" d=\"M7,0H275a0,0,0,0,1,0,0V529a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" transform=\"translate(615 3800)\" fill=\"#f8f1eb\"></path>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(201 3849)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H964a0,0,0,0,1,0,0V473a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" stroke=\"none\"></path>\n        <path d=\"M7,.75H963.25a0,0,0,0,1,0,0V473a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,473V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"></path>\n      </g>\n      <g id=\"Rectangle_783\" data-name=\"Rectangle 783\" transform=\"translate(615 3800)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\">\n        <path d=\"M7,0H543a7,7,0,0,1,7,7V522a7,7,0,0,1-7,7H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z\" stroke=\"none\"></path>\n        <path d=\"M7,.75H543A6.25,6.25,0,0,1,549.25,7V522a6.25,6.25,0,0,1-6.25,6.25H.75a0,0,0,0,1,0,0V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\"></path>\n      </g>\n      <line id=\"Line_409\" data-name=\"Line 409\" y2=\"527\" transform=\"translate(890.5 3800.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></line>\n      <g id=\"Dividers\">\n        <line id=\"Line_323\" data-name=\"Line 323\" x2=\"964\" transform=\"translate(201 3909)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_326\" data-name=\"Line 326\" x2=\"964\" transform=\"translate(201 4029)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_328\" data-name=\"Line 328\" x2=\"964\" transform=\"translate(201 4149)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_324\" data-name=\"Line 324\" x2=\"964\" transform=\"translate(201 3969)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_325\" data-name=\"Line 325\" x2=\"964\" transform=\"translate(201 4089)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_327\" data-name=\"Line 327\" x2=\"964\" transform=\"translate(201 4209)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n        <line id=\"Line_408\" data-name=\"Line 408\" x2=\"964\" transform=\"translate(201 4269)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      </g>\n    </g>\n    <g id=\"Others\">\n      <text id=\"_\" data-name=\"🚫\" transform=\"translate(1015 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_2\" data-name=\"🚫\" transform=\"translate(1015 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_3\" data-name=\"🚫\" transform=\"translate(1015 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_4\" data-name=\"🚫\" transform=\"translate(1015 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_5\" data-name=\"🚫\" transform=\"translate(1015 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_6\" data-name=\"🚫\" transform=\"translate(1015 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_7\" data-name=\"🚫\" transform=\"translate(1015 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(1028 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-28.502\" y=\"0\">$1.53+</tspan></text>\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(1028 3832)\" fill=\"#545759\" font-size=\"22\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-34.758\" y=\"0\">Others</tspan></text>\n    </g>\n    <g id=\"Buoy\">\n      <text id=\"_8\" data-name=\"✅\" transform=\"translate(742 3888)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_9\" data-name=\"✅\" transform=\"translate(742 4008)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_10\" data-name=\"✅\" transform=\"translate(742 4128)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_11\" data-name=\"✅\" transform=\"translate(742 3948)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_12\" data-name=\"✅\" transform=\"translate(742 4068)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_13\" data-name=\"✅\" transform=\"translate(742 4188)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_14\" data-name=\"✅\" transform=\"translate(742 4248)\" fill=\"#1f2322\" font-size=\"26\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(755 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"-24.181\" y=\"0\">$0.25</tspan></text>\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(755 3832)\" fill=\"#1f2322\" font-size=\"22\" font-family=\"Inter-Regular, Inter\"><tspan x=\"-26.016\" y=\"0\">Buoy</tspan></text>\n    </g>\n    <g id=\"List_Items\" data-name=\"List Items\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(221 3886)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, Dextrose, Natural Flavors</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(221 3946)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean Minerals</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(221 4006)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not Manufactured, Sea Salt</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(221 4066)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(221 4126)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(221 4186)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(221 4246)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(221 4306)\" fill=\"#1f2322\" font-size=\"18\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving</tspan></text>\n    </g>\n  </g>\n</svg>",
+        "mobile_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"469\" viewbox=\"0 0 320 469\">\n  <g id=\"Comparison_Chart_M\" data-name=\"Comparison Chart_M\" transform=\"translate(-27 -4650)\">\n    <g id=\"Chart\" transform=\"translate(0 -8)\">\n      <g id=\"Rectangle_724\" data-name=\"Rectangle 724\" transform=\"translate(223 4658)\">\n        <path id=\"Path_1258\" data-name=\"Path 1258\" d=\"M7,0H117a7,7,0,0,1,7,7V462a7,7,0,0,1-7,7H0V7A7,7,0,0,1,7,0Z\" fill=\"#f8f1eb\"></path>\n        <path id=\"Path_1259\" data-name=\"Path 1259\" d=\"M7,.75H117A6.25,6.25,0,0,1,123.25,7V462a6.25,6.25,0,0,1-6.25,6.25H.75V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></path>\n      </g>\n      <g id=\"Rectangle_723\" data-name=\"Rectangle 723\" transform=\"translate(27 4701)\">\n        <path id=\"Path_1260\" data-name=\"Path 1260\" d=\"M7,0H320V419a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z\" fill=\"none\"></path>\n        <path id=\"Path_1261\" data-name=\"Path 1261\" d=\"M7,.75H319.25V419a6.25,6.25,0,0,1-6.25,6.25H7A6.25,6.25,0,0,1,.75,419V7A6.25,6.25,0,0,1,7,.75Z\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></path>\n      </g>\n      <line id=\"Line_323\" data-name=\"Line 323\" x2=\"320\" transform=\"translate(27 4768)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_326\" data-name=\"Line 326\" x2=\"320\" transform=\"translate(27 4902)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_328\" data-name=\"Line 328\" x2=\"320\" transform=\"translate(27 4992)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_324\" data-name=\"Line 324\" x2=\"320\" transform=\"translate(27 4835)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_325\" data-name=\"Line 325\" x2=\"320\" transform=\"translate(27 4947)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_327\" data-name=\"Line 327\" x2=\"320\" transform=\"translate(27 5037)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_417\" data-name=\"Line 417\" x2=\"320\" transform=\"translate(27 5082)\" fill=\"none\" stroke=\"#545759\" stroke-width=\"1.5\" opacity=\"0.1\"></line>\n      <line id=\"Line_416\" data-name=\"Line 416\" y2=\"467\" transform=\"translate(285 4658.5)\" fill=\"none\" stroke=\"#1f2322\" stroke-width=\"1.5\"></line>\n    </g>\n    <g id=\"List_Items\" data-name=\"List Items\" transform=\"translate(0 -8)\">\n      <text style=\"font-weight: 300;\" id=\"No_Sugar_Stevia_Dextrose_Natural_Flavors\" data-name=\"No Sugar, Stevia, Dextrose, Natural Flavors\" transform=\"translate(41 4729)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">No Sugar, Stevia, </tspan><tspan x=\"0\" y=\"22\">Dextrose, Natural Flavors</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"_87_Ionic_Deep_Ocean_Minerals\" data-name=\"87 Ionic Deep Ocean Minerals\" transform=\"translate(41 4796)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">87 Ionic Deep Ocean </tspan><tspan x=\"0\" y=\"22\">Minerals</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Harvested_Not_Manufactured_Sea_Salt\" data-name=\"Harvested, Not Manufactured, Sea Salt\" transform=\"translate(41 4863)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Harvested, Not </tspan><tspan x=\"0\" y=\"22\">Manufactured, Sea Salt</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioavailable\" transform=\"translate(41 4930)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioavailable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Bioactive\" transform=\"translate(41 4975)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Bioactive</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Sustainable\" transform=\"translate(41 5020)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Sustainable</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Blends_With_Any_Drink\" data-name=\"Blends With Any Drink\" transform=\"translate(41 5065)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Blends With Any Drink</tspan></text>\n      <text style=\"font-weight: 300;\" id=\"Cost_Per_Serving\" data-name=\"Cost Per Serving\" transform=\"translate(41 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Cost Per Serving</tspan></text>\n    </g>\n    <g id=\"Buoy\" transform=\"translate(0 -8)\">\n      <text id=\"Buoy-2\" data-name=\"Buoy\" transform=\"translate(236.08 4685)\" fill=\"#1f2322\" font-size=\"16\" font-family=\"Inter-Regular, Inter\"><tspan x=\"0\" y=\"0\">Buoy</tspan></text>\n      <text id=\"_\" data-name=\"✅\" transform=\"translate(244 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_2\" data-name=\"✅\" transform=\"translate(244 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_3\" data-name=\"✅\" transform=\"translate(244 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_4\" data-name=\"✅\" transform=\"translate(244 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_5\" data-name=\"✅\" transform=\"translate(244 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_6\" data-name=\"✅\" transform=\"translate(244 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_7\" data-name=\"✅\" transform=\"translate(244 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">✅</tspan></text>\n      <text id=\"_0.25\" data-name=\"$0.25\" transform=\"translate(235.192 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$0.25</tspan></text>\n    </g>\n    <g id=\"Others\" transform=\"translate(0 -8)\">\n      <text id=\"Others-2\" data-name=\"Others\" transform=\"translate(293.881 4684)\" fill=\"#545759\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">Others</tspan></text>\n      <text id=\"_8\" data-name=\"🚫\" transform=\"translate(306 4742)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_9\" data-name=\"🚫\" transform=\"translate(306 4809)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_10\" data-name=\"🚫\" transform=\"translate(306 4977)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_11\" data-name=\"🚫\" transform=\"translate(306 4876)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_12\" data-name=\"🚫\" transform=\"translate(306 5022)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_13\" data-name=\"🚫\" transform=\"translate(306 5067)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_14\" data-name=\"🚫\" transform=\"translate(306 4932)\" fill=\"#1f2322\" font-size=\"20\" font-family=\"AppleColorEmoji, Apple Color Emoji\"><tspan x=\"0\" y=\"0\">🚫</tspan></text>\n      <text id=\"_1.53_\" data-name=\"$1.53+\" transform=\"translate(293.832 5110)\" fill=\"#1f2322\" font-size=\"14\" font-family=\"Inter-Light, Inter\" font-weight=\"300\"><tspan x=\"0\" y=\"0\">$1.53+</tspan></text>\n    </g>\n  </g>\n</svg>",
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "none"
@@ -469,29 +478,29 @@
         "2a6bd8e3-7b04-400d-a28b-a3a907955de4": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">Pre-Workout: Prime Your Body<\/h3>",
-            "text": "<p style=\"font-size: 15px\"><b>Timing<\/b>: About 30 minutes before starting your workout, mix Buoy with your preferred drink. This could be water, a smoothie, or even your morning coffee.<br><br>\n\n<b>Benefits<\/b>: The pre-workout boost of electrolytes prepares your body for the exertion to come, ensuring you start your session fully hydrated, which can enhance endurance and prevent early fatigue.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">Pre-Workout: Prime Your Body</h3>",
+            "text": "<p style=\"font-size: 15px\"><b>Timing</b>: About 30 minutes before starting your workout, mix Buoy with your preferred drink. This could be water, a smoothie, or even your morning coffee.<br><br>\n\n<b>Benefits</b>: The pre-workout boost of electrolytes prepares your body for the exertion to come, ensuring you start your session fully hydrated, which can enhance endurance and prevent early fatigue.</p>"
           }
         },
         "7d0679b9-e537-4027-af9f-ddebb9b41e54": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">Intra-Workout: Sustain Your Performance<\/h3>",
-            "text": "<p style=\"font-size: 15px\"><b>During Exercise<\/b>: Keep a water bottle infused with Buoy handy during your workouts. A few sips every 15-20 minutes can help maintain electrolyte levels and hydration.<br><br>\n\n<b>Benefits<\/b>: Staying hydrated with Buoy while exercising helps maintain energy levels, supports muscle function, and prevents the electrolyte imbalances that can lead to cramping.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">Intra-Workout: Sustain Your Performance</h3>",
+            "text": "<p style=\"font-size: 15px\"><b>During Exercise</b>: Keep a water bottle infused with Buoy handy during your workouts. A few sips every 15-20 minutes can help maintain electrolyte levels and hydration.<br><br>\n\n<b>Benefits</b>: Staying hydrated with Buoy while exercising helps maintain energy levels, supports muscle function, and prevents the electrolyte imbalances that can lead to cramping.</p>"
           }
         },
         "block_YLfger": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">Post-Workout: Accelerate Recovery<\/h3>",
-            "text": "<p style=\"font-size: 15px\"><b>Immediately After<\/b>: Within 30 minutes of completing your workout, have another Buoy-infused drink. This is crucial for replenishing the electrolytes lost through sweat and aiding in the recovery process.<br><br>\n\n<b>Benefits<\/b>: Post-workout hydration with Buoy helps speed up muscle recovery, reduces soreness, and replenishes the body’s hydration levels, preparing you for the next day’s activities or training session.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">Post-Workout: Accelerate Recovery</h3>",
+            "text": "<p style=\"font-size: 15px\"><b>Immediately After</b>: Within 30 minutes of completing your workout, have another Buoy-infused drink. This is crucial for replenishing the electrolytes lost through sweat and aiding in the recovery process.<br><br>\n\n<b>Benefits</b>: Post-workout hydration with Buoy helps speed up muscle recovery, reduces soreness, and replenishes the body’s hydration levels, preparing you for the next day’s activities or training session.</p>"
           }
         },
         "block_GCnKMP": {
           "type": "block",
           "settings": {
-            "title": "<h3 style=\"font-size: 25px\">Maintain Hydration Throughout the Day<\/h3>",
-            "text": "<p style=\"font-size: 15px\"><b>All Day<\/b>: Beyond your workouts, adding Buoy to your daily water intake can ensure you're consistently meeting your hydration needs.<br><br>\n\n<b>Benefits<\/b>: Regular consumption of electrolyte-enhanced drinks keeps your body optimally hydrated throughout the day, supporting overall health, wellness, and readiness for physical activities.<\/p>"
+            "title": "<h3 style=\"font-size: 25px\">Maintain Hydration Throughout the Day</h3>",
+            "text": "<p style=\"font-size: 15px\"><b>All Day</b>: Beyond your workouts, adding Buoy to your daily water intake can ensure you're consistently meeting your hydration needs.<br><br>\n\n<b>Benefits</b>: Regular consumption of electrolyte-enhanced drinks keeps your body optimally hydrated throughout the day, supporting overall health, wellness, and readiness for physical activities.</p>"
           }
         }
       },
@@ -502,9 +511,9 @@
         "block_GCnKMP"
       ],
       "settings": {
-        "title": "<b>How to Incorporate Buoy into Your Training Regimen<\/b>",
+        "title": "<b>How to Incorporate Buoy into Your Training Regimen</b>",
         "link_text": "Maximize Your Training with Buoy ->",
-        "link": "https:\/\/justaddbuoy.com\/collections\/all",
+        "link": "https://justaddbuoy.com/collections/all",
         "add_top_border": false,
         "add_bottom_border": true,
         "background": "bg_color"
@@ -522,7 +531,7 @@
             "servings": "3 BOTTLES · 120 SERVINGS",
             "text": "The complete electrolyte and mineral supplement for premium hydration",
             "list_item1": "One month supply",
-            "list_item2": "Hydrate for less than $1\/day",
+            "list_item2": "Hydrate for less than $1/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
             "button_text": "Start A Healthy Habit",
             "checkout_link": "",
@@ -557,7 +566,7 @@
             "servings": "3 PACK · 120 SERVINGS",
             "text": "3-in-1 immune support with electrolytes, vitamins and zinc.",
             "list_item1": "One month supply",
-            "list_item2": "Hydrate for around $1\/day",
+            "list_item2": "Hydrate for around $1/day",
             "list_item3": "No sugar, sweeteners, flavors or artificial ingredients",
             "button_text": "Start A Healthy Habit",
             "checkout_link": "",
@@ -591,9 +600,9 @@
       ],
       "disabled": true,
       "settings": {
-        "title": "The Best Electrolyte Drink for Leg Cramps: <br><u>Our Top Pick<\/u>",
-        "text": "Stop muscle cramps in their tracks with Buoy's seawater electrolytes, 87 ionic ocean minerals and plant-powered vitamins in their most bioavailable form.<br><br>Incorporate these on-the-go electrolytes into your routine for long term, lasting relief.<br><br><strong>Save 24%<\/strong> and try risk free for a month to feel how good clean hydration feels.",
-        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Delivered monthly<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Free shipping, always<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> Free Welcome Kit<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> No commitment, cancel anytime<\/p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"><\/path>\n<\/svg> 30 Day Money Back Guarantee<\/p>",
+        "title": "The Best Electrolyte Drink for Leg Cramps: <br><u>Our Top Pick</u>",
+        "text": "Stop muscle cramps in their tracks with Buoy's seawater electrolytes, 87 ionic ocean minerals and plant-powered vitamins in their most bioavailable form.<br><br>Incorporate these on-the-go electrolytes into your routine for long term, lasting relief.<br><br><strong>Save 24%</strong> and try risk free for a month to feel how good clean hydration feels.",
+        "text_bottom": "<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"></path>\n</svg> Delivered monthly</p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"></path>\n</svg> Free shipping, always</p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"></path>\n</svg> Free Welcome Kit</p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"></path>\n</svg> No commitment, cancel anytime</p>\n<p><svg class=\"icon icon-checkmark\" width=\"16px\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 12 9\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z\" fill=\"currentColor\"></path>\n</svg> 30 Day Money Back Guarantee</p>",
         "button_label": "Read our reviews",
         "button_link": "#shopify-section-template--17817534824748__74a67b66-5d60-41fe-b3b9-b73374644bbe",
         "background": "",
@@ -612,7 +621,7 @@
         "show_price": false,
         "show_quantity": false,
         "show_view_details": false,
-        "subscription_benefits": "<li>\n<span class=\"Tick\">✓<\/span> Save 24% Every Order<\/li><li>\n<span class=\"Tick\">✓<\/span> Cancel Anytime<\/li><li>\n<span class=\"Tick\">✓<\/span> 30 Day Money Back Guarantee<\/li>",
+        "subscription_benefits": "<li>\n<span class=\"Tick\">✓</span> Save 24% Every Order</li><li>\n<span class=\"Tick\">✓</span> Cancel Anytime</li><li>\n<span class=\"Tick\">✓</span> 30 Day Money Back Guarantee</li>",
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
@@ -627,8 +636,8 @@
         "add_bottom_border": true,
         "title": "Easily incorporate electrolytes into your routine",
         "subtext": "Buoy turns any drink an electrolyte and multi-mineral beverage in one squeeze.",
-        "img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_D_2.svg?v=1670363646",
-        "mobile_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/3351\/0727\/files\/Drink_Timeline_M_1.svg?v=1670362919"
+        "img": "https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Drink_Timeline_D_2.svg?v=1670363646",
+        "mobile_img": "https://cdn.shopify.com/s/files/1/0267/3351/0727/files/Drink_Timeline_M_1.svg?v=1670362919"
       }
     },
     "97b52c19-9232-4b33-a84e-be1d55a585da": {
@@ -637,7 +646,7 @@
         "2b0ca0c7-01b2-4b6a-b297-230a3e9dfb0f": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
+            "image": "shopify://shop_images/Image_Section_6_Expert_1_D_2x_3b2799ab-33bb-46e2-893f-9cc666cb23a7.png",
             "title": "Dr. Lianli Li, Ph.D.",
             "title_person": "President",
             "title_location": "President Gateway Pharmaceutical, St. Louis, Missouri",
@@ -647,7 +656,7 @@
         "dc59093e-f56d-4c7e-8b7e-d1cc3ce80cbe": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
+            "image": "shopify://shop_images/Image_Section_6_Expert_2_D_2x_8f862af3-8685-4ba5-879b-066bf83db16d.png",
             "title": "Martha Rosenau",
             "title_person": "Title",
             "title_location": "Location",
@@ -657,7 +666,7 @@
         "2b5efa08-8895-40da-b13e-bf8a0e1b45c5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
+            "image": "shopify://shop_images/Image_Section_6_Expert_3_D_2x_4eb6ba1f-7be3-415e-9614-7cc8c9caf914.png",
             "title": "Melissa Nohr, JD, BCHHP, CBNP",
             "title_person": "Title",
             "title_location": "Location",
@@ -672,7 +681,7 @@
       ],
       "settings": {
         "text": "BOARD OF HEALTH PROFESSIONALS",
-        "head-title": "<span class=\"medium no-italic\">Trust the<\/span> Experts",
+        "head-title": "<span class=\"medium no-italic\">Trust the</span> Experts",
         "sub-text": "Consisting of scientists, researchers, pharmaceutical experts, and health professionals, our board of health professionals continue to challenge and uphold us and our products to the highest standards.",
         "button_label": "Customer Reviews",
         "button_link": "#shopify-section-template--18635850055980__16390276435f9f6aac",
@@ -686,8 +695,8 @@
       "type": "text-above",
       "settings": {
         "emoji": "💗",
-        "suptitle": "<h2>Join the Clear Pee Club for Exclusive Benefits<\/h2>",
-        "suptext": "<p style=\"font-size: 15px\">For athletes dedicated to maintaining peak hydration and performance, the Clear Pee Club offers exclusive benefits designed to support an active and healthy lifestyle. Members enjoy savings on orders, free shipping, and access to exclusive content that goes hand in hand with a commitment to excellence in sports and wellness.<br><br>\n\n<a href=\"https:\/\/justaddbuoy.com\/pages\/clear-pee-club-1\"> Join the Clear Pee Club today<\/a> and ensure a consistent supply of Buoy's hydration supplements to support your athletic journey.<\/p>",
+        "suptitle": "<h2>Join the Clear Pee Club for Exclusive Benefits</h2>",
+        "suptext": "<p style=\"font-size: 15px\">For athletes dedicated to maintaining peak hydration and performance, the Clear Pee Club offers exclusive benefits designed to support an active and healthy lifestyle. Members enjoy savings on orders, free shipping, and access to exclusive content that goes hand in hand with a commitment to excellence in sports and wellness.<br><br>\n\n<a href=\"https://justaddbuoy.com/pages/clear-pee-club-1\"> Join the Clear Pee Club today</a> and ensure a consistent supply of Buoy's hydration supplements to support your athletic journey.</p>",
         "add_top_border": true,
         "add_bottom_border": true,
         "background": "bg_color"
